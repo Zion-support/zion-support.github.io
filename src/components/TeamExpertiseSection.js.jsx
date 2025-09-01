@@ -1,5 +1,5 @@
-import React, { useState } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Users, Award, Star, Globe, CheckCircle, ArrowRight, Linkedin, Github, Mail, Shield, Zap, Brain, Cloud, Database } from 'lucide-react';
 const teamMembers = [
     {
@@ -455,8 +455,7 @@ const stats = ["
                             </a>
                             <a href = {
 '`
-  `mailto:${member.name.toLowerCase().replace(' ','
-  '.')
+  `mailto:${member.name.toLowerCase().replace(' ',.')
 "`
 }@ziontechgroup.com`} className="text-zion-cyan hover:text-zion-cyan-light transition-colors">"
                               <Mail className="w-4 h-4"/>
@@ -492,7 +491,7 @@ const stats = ["
               <h3 className="text-2xl font-bold text-white mb-4">
                 Ready to Work with Our Experts?
               </h3>"
-              <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">'
+              <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
                 Our team is ready to bring your vision to life. Let's discuss how we can help you achieve your technology goals.
               </p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"

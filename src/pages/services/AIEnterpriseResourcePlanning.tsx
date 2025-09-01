@@ -1,6 +1,36 @@
-import React from 'react.ts';'
-import { motion   } from 'framer-motion.ts';'
-import { Link   } from 'react-router-dom.ts';        "Up to 50 users"
+<<<<<<< HEAD
+import { Brain, 
+  Database, 
+  BarChart3, 
+  Users, 
+  Clock, 
+  CheckCircle, 
+  Zap,
+  Shield,
+  TrendingUp,
+  Globe,
+  ArrowRight,
+  Target,
+  PieChart,
+  Activity'
+  } from 'lucide-react.ts';
+};
+  ];
+
+  const services = [
+    {
+"
+      name: "Starter Plan","
+      price: "$2,999","
+      period: "/month",
+      features[;"
+        "Core ERP modules","
+        "AI-powered analytics","
+        "Basic automation","
+        "Standard support","
+        "Up to 50 users"
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ],;
       popular: false
     },
@@ -32,35 +62,23 @@ import { Link   } from 'react-router-dom.ts';        "Up to 50 users"
         "Advanced security","
         "Multi-tenant architecture"
       ],;
-      popular: false;
-    };
-  ];
-
-  const useCases = [
-    {
-"
-      industry: "Manufacturing","
-      description: "Optimize production planning, inventory management, and supply chain operations with AI-driven insights","
-      benefits["30% reduction in inventory costs", "25% improvement in production efficiency", "40% faster decision-making"];
-    },;
+      popular: false};
+  ]},;
     {
 "
       industry: "Retail","
       description: "Streamline operations from procurement to customer service with intelligent automation and analytics","
-      benefits["20% increase in customer satisfaction", "35% reduction in operational costs", "50% faster market response"];
-    },;
+      benefits["20% increase in customer satisfaction", "35% reduction in operational costs", "50% faster market response"]},;
     {
 "
       industry: "Healthcare","
       description: "Enhance patient care coordination, resource management, and administrative efficiency","
-      benefits["Improved patient outcomes", "25% reduction in administrative overhead", "Better resource utilization"];
-    },;
+      benefits["Improved patient outcomes", "25% reduction in administrative overhead", "Better resource utilization"]},;
     {
 "
       industry: "Financial Services","
       description: "Optimize risk management, compliance, and customer relationship management","
-      benefits["Enhanced risk assessment", "Improved regulatory compliance", "Better customer insights"];
-    };
+      benefits["Enhanced risk assessment", "Improved regulatory compliance", "Better customer insights"]};
   ];
 
   const technologies = ["
@@ -76,9 +94,16 @@ import { Link   } from 'react-router-dom.ts';        "Up to 50 users"
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-blue-dark">
       <SEO "
+<<<<<<< HEAD
+        title="AI-Powered Enterprise Resource Planning | Zion Tech Group"
+        description="Transform your business operations with our AI-driven ERP solution. Streamline processes, optimize resources, and drive growth with intelligent automation."
+        keywords="AI ERP, Enterprise Resource Planning, Business Automation, AI Analytics, Process Optimization"
+       />
+=======
         title="AI-Powered Enterprise Resource Planning | Zion Tech Group""
         description="Transform your business operations with our AI-driven ERP solution. Streamline processes, optimize resources, and drive growth with intelligent automation.""        keywords="AI ERP, Enterprise Resource Planning, Business Automation, AI Analytics, Process Optimization"
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
@@ -108,11 +133,11 @@ import { Link   } from 'react-router-dom.ts';        "Up to 50 users"
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1"
               >
                 Get Started Today"
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5"  />
               </Link>"              <button className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-2xl hover:bg-zion-cyan hover:text-white transition-all duration-300">
                 Schedule Demo
               </button>
@@ -262,7 +287,7 @@ import { Link   } from 'react-router-dom.ts';        "Up to 50 users"
                 <ul className="space-y-4 mb-8">
                   {service.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center text-zion-slate-light">"
-                      <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />                      {feature}
+                      <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0"  />                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -277,7 +302,7 @@ import { Link   } from 'react-router-dom.ts';        "Up to 50 users"
                   }`}
                 >
                   Get Started"
-                  <ArrowRight className="ml-2 w-4 h-4" />                </Link>
+                  <ArrowRight className="ml-2 w-4 h-4"  />                </Link>
               </motion.div>
             ))}
           </div>
@@ -338,13 +363,13 @@ import { Link   } from 'react-router-dom.ts';        "Up to 50 users"
                 className="bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-2xl p-8"
               >"
                 <div className="flex items-center mb-6">"
-                  <Target className="w-8 h-8 text-zion-cyan mr-3" />"                  <h3 className="text-2xl font-bold text-white">{useCase.industry}</h3>
+                  <Target className="w-8 h-8 text-zion-cyan mr-3"  />"                  <h3 className="text-2xl font-bold text-white">{useCase.industry}</h3>
                 </div>"
                 <p className="text-zion-slate-light mb-6 leading-relaxed">{useCase.description}</p>"
                 <div className="space-y-2">
                   {useCase.benefits.map((benefit, benefitIndex) => ("
                     <div key={benefitIndex} className="flex items-center text-zion-slate-light">"
-                      <TrendingUp className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />                      {benefit}
+                      <TrendingUp className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0"  />                      {benefit}
                     </div>
                   ))}
                 </div>
@@ -408,7 +433,7 @@ import { Link   } from 'react-router-dom.ts';        "Up to 50 users"
                 className="bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-xl p-6 text-center hover:border-zion-cyan/50 transition-all duration-300"
               >"
                 <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4">"
-                  <Activity className="w-6 h-6 text-white" />
+                  <Activity className="w-6 h-6 text-white"  />
                 </div>"                <p className="text-white font-medium">{tech}</p>
               </motion.div>
             ))}
@@ -445,11 +470,11 @@ import { Link   } from 'react-router-dom.ts';        "Up to 50 users"
               </p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link"
-                  to="/contact""
+                  to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1"
                 >
                   Start Your Transformation"
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  <ArrowRight className="ml-2 w-5 h-5"  />
                 </Link>"                <button className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-2xl hover:bg-zion-cyan hover:text-white transition-all duration-300">
                   Book a Consultation
                 </button>
@@ -465,15 +490,15 @@ import { Link   } from 'react-router-dom.ts';        "Up to 50 users"
           <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>"
           <div className="flex flex-col md:flex-row justify-center items-center gap-8 text-zion-slate-light">"
             <div className="flex items-center">"
-              <Globe className="w-5 h-5 text-zion-cyan mr-2" />
+              <Globe className="w-5 h-5 text-zion-cyan mr-2"  />
               <span>https://ziontechgroup.com</span>
             </div>"
             <div className="flex items-center">"
-              <Clock className="w-5 h-5 text-zion-cyan mr-2" />
+              <Clock className="w-5 h-5 text-zion-cyan mr-2"  />
               <span>+1 302 464 0950</span>
             </div>"
             <div className="flex items-center">"
-              <Users className="w-5 h-5 text-zion-cyan mr-2" />              <span>kleber@ziontechgroup.com</span>
+              <Users className="w-5 h-5 text-zion-cyan mr-2"  />              <span>kleber@ziontechgroup.com</span>
             </div>
           </div>"
           <p className="text-zion-slate-light mt-4">

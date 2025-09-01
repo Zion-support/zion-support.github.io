@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousWriting = () => {
   return()
@@ -6,15 +6,15 @@ const AIAutonomousWriting = () => {
       <Helmet>
         <title>AI Autonomous Writing Platform | Zion Tech Group</title>
         <meta
-          name="description""
+          name="description"
           content="Revolutionary AI autonomous writing platform that creates content, generates articles, and produces written materials with advanced AI capabilities and human-like creativity."
         />
         <meta"
-          name="keywords""
+          name="keywords"
           content="AI writing, autonomous writing, AI content creation, AI article generation, AI writing platform"
         />
         <link"
-          rel="canonical""
+          rel="canonical"
           href="https://ziontechgroup.com/ai-autonomous-writing"
         />
       </Helmet>
@@ -26,7 +26,7 @@ const AIAutonomousWriting = () => {
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-amber-400 via-orange-400 to-red-400 bg-clip-text text-transparent">
               AI Autonomous Writing Platform
             </h1>"
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">'
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               Your AI writing partner that never gets writer's block, never runs
               out of ideas, and creates compelling content 24/7
             </p>
@@ -198,14 +198,7 @@ const AIAutonomousWriting = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Blog Posts','
-                'Articles','
-                'Reports','
-                'Marketing Copy','
-                'Social Media','
-                'Product Descriptions','
-                'Technical Documentation','
-                'Creative Stories',
+                'Blog Posts',Articles',Reports',Marketing Copy',Social Media',Product Descriptions',Technical Documentation',Creative Stories',
               ].map(type => (
                 <div
                   key={type}"

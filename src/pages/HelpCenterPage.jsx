@@ -1,16 +1,16 @@
-import React from 'react';'
-import SEO from '@/components/SEO';'
-import { GradientHeading } from '@/components/GradientHeading';'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';'
-import { Button } from '@/components/ui/button';'
-import { Input } from '@/components/ui/input';'
+import React from 'react';
+import SEO from '@/components/SEO';
+import { GradientHeading } from '@/components/GradientHeading';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 import { Search, MessageCircle, Phone, Mail, FileText, Users, ShoppingCart, User, Settings import { Link } from 'react-router-dom';
 export default function HelpCenterPage() {
     const helpCategories = [
         {
 
             icon: <User className="w-8 h-8 text-zion-cyan"/>,"
-            title: "Getting Started",'"
+            title: "Getting Started","
             description: "Learn the basics of using Zion's marketplace platform","
             articles["Creating an account", "Setting up your profile", "First steps guide"],;"
             color: "text-zion-cyan"
@@ -43,7 +43,7 @@ export default function HelpCenterPage() {
     const faqs = [
         {
 "
-            question: "How do I create an account on Zion?",'"
+            question: "How do I create an account on Zion?","
             answer: "Creating an account is simple! Click the 'Sign Up' button in the top right corner, fill in your basic information, verify your email, and you're ready to start using our platform."
         },
         {
@@ -63,7 +63,7 @@ export default function HelpCenterPage() {
         },
         {
 '"
-            question: "What if I'm not satisfied with a service?",'"
+            question: "What if I'm not satisfied with a service?","
             answer: "We have a comprehensive dispute resolution process. If you're not satisfied, contact our support team within 7 days of service completion, and we'll work to resolve the issue."
         },
         {
@@ -168,7 +168,7 @@ export default function HelpCenterPage() {
                   <CardTitle className="text-zion-purple">Email Support</CardTitle>
                 </CardHeader>
                 <CardContent>"
-                  <p className="text-zion-slate-light mb-4">'
+                  <p className="text-zion-slate-light mb-4">
                     Send us an email and we'll respond within 2 hours
                   </p>"
                   <Button variant="outline" className="border-zion-purple text-zion-purple hover:bg-zion-purple/10">

@@ -1,60 +1,42 @@
-import React from 'react';
 import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Store, BarChart3 export default function AIRetail() {
-  const features = [
-    'AI-powered customer behavior analysis and personalization','
-    'Intelligent inventory management and demand forecasting',;'
-    'Automated pricing optimization and dynamic pricing',;'
-    'Real-time customer sentiment and feedback analysis',;'
-    'Predictive analytics for sales and customer lifetime value',;'
-    'Smart recommendation engines and cross-selling',;'
-    'Integration with major e-commerce and POS platforms',;'
+  
+    'Automated pricing optimization and dynamic pricing',;
+    'Real-time customer sentiment and feedback analysis',;
+    'Predictive analytics for sales and customer lifetime value',;
+    'Smart recommendation engines and cross-selling',;
+    'Integration with major e-commerce and POS platforms',;
     'Custom AI models for retail-specific insights';
+  ]},;
+    { ;
+      name: 'Large Retailer', ;
+      price: '$1,999/mo', ;
+      details: ['Unlimited products',Custom AI models',Full platform integration',24/7 dedicated support'] },;
   ];
 
-  const tiers = [
-    {
-'
-      name: 'Small Retailer','
-      price: '$299/mo','
-      details: ['Up to 1,000 products', 'Basic AI features', 'Standard reports', 'Email support']
-    },
-    {
-'
-      name: 'Medium Retailer', '
-      price: '$799/mo', '
-      details: ['Up to 10,000 products', 'Advanced AI features', 'Custom reports', 'Priority support'] ;
-    },;
-    { ;'
-      name: 'Large Retailer', ;'
-      price: '$1,999/mo', ;'
-      details: ['Unlimited products', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] ;
-    },;
-  ];
-
-  const useCases = [;'
-    'E-commerce optimization and conversion rate improvement',;'
-    'Brick-and-mortar store analytics and optimization',;'
-    'Inventory management and supply chain optimization',;'
-    'Customer segmentation and targeted marketing',;'
-    'Price optimization and competitive analysis',;'
+  
+    'E-commerce optimization and conversion rate improvement',;
+    'Brick-and-mortar store analytics and optimization',;
+    'Inventory management and supply chain optimization',;
+    'Customer segmentation and targeted marketing',;
+    'Price optimization and competitive analysis',;
     'Omnichannel retail experience enhancement';
   ];
 
-  const benefits = [;'
-    'Increase sales conversion rates by 20-40%',;'
-    'Improve customer retention by 30-50%',;'
-    'Reduce inventory costs by 25-40%',;'
-    'Optimize pricing for maximum profitability',;'
-    'Enhance customer experience and satisfaction',;'
+  
+    'Increase sales conversion rates by 20-40%',;
+    'Improve customer retention by 30-50%',;
+    'Reduce inventory costs by 25-40%',;
+    'Optimize pricing for maximum profitability',;
+    'Enhance customer experience and satisfaction',;
     'Scale retail operations efficiently';
   ];
 
-  const industries = [;'
-    'E-commerce & Online Retail',;'
-    'Brick & Mortar Stores',;'
-    'Fashion & Apparel',;'
-    'Electronics & Technology',;'
-    'Home & Garden',;'
+  
+    'E-commerce & Online Retail',;
+    'Brick & Mortar Stores',;
+    'Fashion & Apparel',;
+    'Electronics & Technology',;
+    'Home & Garden',;
     'Food & Beverage Retail';
   ];
 
@@ -63,7 +45,7 @@ import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Targ
       <section className="bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 py-20 text-center">"
         <div className="max-w-5xl mx-auto px-6">"
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">"
-            <ShoppingCart className="w-4 h-4 mr-2" /> AI-Powered Retail Intelligence
+            <ShoppingCart className="w-4 h-4 mr-2"  /> AI-Powered Retail Intelligence
           </div>"
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">AI Retail Platform</h1>"          <p className="text-indigo-100 text-xl">Transform your retail business with AI-powered insights that optimize pricing, enhance customer experience, and maximize sales performance.</p>
         </div>
@@ -76,7 +58,7 @@ import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Targ
             <ul className="space-y-3">
               {features.map((f) => ("
                 <li key={f} className="flex items-start">"
-                  <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />"                  <span className="text-gray-700">{f}</span>
+                  <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"  />"                  <span className="text-gray-700">{f}</span>
                 </li>
               ))}
             </ul>"
@@ -99,18 +81,18 @@ import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Targ
             </div>"
             <div className="mt-6 flex flex-wrap gap-3">"
               <a href="/pricing" className="px-5 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors inline-flex items-center">"
-                View Full Pricing <ArrowRight className="w-4 h-4 ml-2" />
+                View Full Pricing <ArrowRight className="w-4 h-4 ml-2"  />
               </a>"
               <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="px-5 py-3 border border-gray-300 rounded-lg hover:border-blue-400 transition-colors inline-flex items-center">"
-                Learn More <ExternalLink className="w-4 h-4 ml-2" />              </a>
+                Learn More <ExternalLink className="w-4 h-4 ml-2"  />              </a>
             </div>
           </div>
         </div>
 "
-        <div className="mt-12 grid md:grid-cols-3 gap-6">'
-          {['20-40% conversion improvement', '30-50% retention increase', '25-40% cost reduction'].map((t) => ("
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          {['20-40% conversion improvement',30-50% retention increase',25-40% cost reduction'].map((t) => ("
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">"
-              <Brain className="w-6 h-6 text-blue-600 mb-3" />"              <div className="text-gray-900 font-semibold">{t}</div>
+              <Brain className="w-6 h-6 text-blue-600 mb-3"  />"              <div className="text-gray-900 font-semibold">{t}</div>
             </div>
           ))}
         </div>
@@ -120,7 +102,7 @@ import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Targ
           <div className="grid md:grid-cols-2 gap-6">
             {useCases.map((useCase) => ("
               <div key={useCase} className="flex items-center p-4 bg-white rounded-lg border border-gray-200">"
-                <Target className="w-5 h-5 text-blue-600 mr-3" />"                <span className="text-gray-700">{useCase}</span>
+                <Target className="w-5 h-5 text-blue-600 mr-3"  />"                <span className="text-gray-700">{useCase}</span>
               </div>
             ))}
           </div>
@@ -131,7 +113,7 @@ import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Targ
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit) => ("
               <div key={benefit} className="flex items-start p-4 bg-white rounded-lg border border-blue-200">"
-                <Zap className="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />"                <span className="text-gray-700">{benefit}</span>
+                <Zap className="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0"  />"                <span className="text-gray-700">{benefit}</span>
               </div>
             ))}
           </div>
@@ -142,7 +124,7 @@ import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Targ
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {industries.map((industry) => ("
               <div key={industry} className="flex items-center p-4 bg-gray-50 rounded-lg border border-gray-200">"
-                <Store className="w-5 h-5 text-blue-600 mr-3" />"                <span className="text-gray-700">{industry}</span>
+                <Store className="w-5 h-5 text-blue-600 mr-3"  />"                <span className="text-gray-700">{industry}</span>
               </div>
             ))}
           </div>
@@ -152,10 +134,10 @@ import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Targ
           <div className="text-sm text-gray-600 mb-2">Ready to transform your retail business with AI?</div>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             <a href="tel:+13024640950" className="inline-flex items-center px-5 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">"
-              <Phone className="w-4 h-4 mr-2"/> +1 302 464 0950
+              <Phone className="w-4 h-4 mr-2" /> +1 302 464 0950
             </a>"
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors">"
-              <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com            </a>
+              <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
           </div>;"
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
@@ -163,5 +145,4 @@ import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Targ
         </div>;
       </section>;
     </div>;
-  );
-}}'"
+  )}}'"

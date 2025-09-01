@@ -25,7 +25,7 @@ export default function TranslationManager() {
     const [isSaving, setIsSaving] = useState(false);
     // Simulated translation data - in a real app, this would come from your backend
     useEffect(() => {
-'
+
         // For demo purposes, we're using the loaded translations from i18next
         const currentTranslations = { /* empty */ };
         supportedLanguages.forEach(lang => {
@@ -37,8 +37,8 @@ export default function TranslationManager() {
                 const flattenObject = (obj, prefix = '') => {
 
                     return Object.keys(obj).reduce((acc, key) => {
-'
-                        const pre = prefix.length ? `${prefix}.` : '';'
+
+                        const pre = prefix.length ? `${prefix}.` : '';
                         if (typeof obj[key] === 'object' && obj[key] !== null) {
 `
                             Object.assign(acc, flattenObject(obj[key], `${pre}${key}`))}
@@ -85,7 +85,7 @@ export default function TranslationManager() {
         // Initialize edited translations for this key
         const initialEdits = { /* empty */ };
         supportedLanguages.forEach(lang => {
-'
+
             initialEdits[lang.code] = translations[lang.code]?.[key] || ''});
         setEditedTranslations({
 
@@ -127,18 +127,18 @@ export default function TranslationManager() {
         if (!sourceText) {
 
             toast({
-'
-                title: t('translation.no_content'),'
+
+                title: t('translation.no_content'),
                 description: t('translation.add_content_first'),"
                 variant: "destructive"});
             return}
         try {
-'
-            const { translations: translatedText, error } = await translateContent(sourceText, 'general', sourceLanguage);
+
+            const { translations: translatedText, error } = await translateContent(sourceText,general', sourceLanguage);
             if (error) {
 
                 toast({
-'
+
                     title: t('translation.translation_failed'),
                     description: error,"
                     variant: "destructive"});
@@ -150,15 +150,15 @@ export default function TranslationManager() {
                 [key]: translatedText
             });
             toast({
-'
-                title: t('translation.translation_success'),'
+
+                title: t('translation.translation_success'),
                 description: t('translation.content_translated')})}
         catch (error) {
 `
             // // // // // // // // console.error(`Error translating key ${key}:`, error);
             toast({
-'
-                title: t('translation.translation_failed'),'
+
+                title: t('translation.translation_failed'),
                 description: error instanceof Error ? error.message : t('translation.unknown_error'),"
                 variant: "destructive"})}
     };
@@ -178,7 +178,7 @@ export default function TranslationManager() {
         return supportedLanguages
             .map(lang => lang.code)
             .filter(lang => !translations[lang]?.[key])};
-    return (<>'
+    return (<>
       <SEO title={t('translation.manager_title')} description={t('translation.manager_description')}/>
 '`
       <main className={`container mx-auto px-${isMobile ? '4' : '6'} py-8`}>
@@ -210,7 +210,7 @@ export default function TranslationManager() {
                   <div className="hidden sm:block p-3 font-medium">{t('translation.actions')}</div>
                 </div>
 "
-                {filteredKeys.length === 0 ? (<div className="p-6 text-center text-muted-foreground">'
+                {filteredKeys.length === 0 ? (<div className="p-6 text-center text-muted-foreground">
                     {t('translation.no_results')}"
                   </div>) : (<div className="divide-y">"
                     {filteredKeys.map((key) => (<div key={key} className="grid grid-cols-[1fr_2fr] sm:grid-cols-[1fr_2fr_auto]">"
@@ -221,7 +221,7 @@ export default function TranslationManager() {
                                   <div className="flex items-center gap-2 mb-1">
                                     <span>{lang.flag}</span>
                                     <span>{lang.name}</span>
-                                  </div>'
+                                  </div>
                                   {editedTranslations[key][lang.code]?.includes('\n') ||'
                             editedTranslations[key][lang.code]?.length > 100 ? (<Textarea value={editedTranslations[key][lang.code] || ''} onChange = {
 
@@ -242,25 +242,25 @@ export default function TranslationManager() {
 
 
 
-'
+
 } dir={lang.code === 'ar' ? 'rtl' : 'ltr'}/>)}
                                 </div>))}
                             </div>"
                             <div className="flex gap-2 mt-4">"
                               <Button size="sm" onClick={() => handleSave(key)} disabled={isSaving}>
                                 {isSaving ? (<>"
-                                    <Loader2 className="mr-2 h-4 w-4 animate-spin"/>'
+                                    <Loader2 className="mr-2 h-4 w-4 animate-spin"/>
                                     {t('general.saving')}
                                   </>) : (<>"
-                                    <Check className="mr-2 h-4 w-4"/>'
+                                    <Check className="mr-2 h-4 w-4"/>
                                     {t('general.save')}
                                   </>)}
                               </Button>"
-                              <Button size="sm" variant="outline" onClick={handleCancel}>'
+                              <Button size="sm" variant="outline" onClick={handleCancel}>
                                 {t('general.cancel')}
                               </Button>"
                               <Button size="sm" variant="secondary" onClick={() => handleTranslateKey(key)} disabled={isTranslating}>"
-                                {isTranslating ? (<Loader2 className="mr-2 h-4 w-4 animate-spin"/>) : (<Globe className="mr-2 h-4 w-4"/>)}'
+                                {isTranslating ? (<Loader2 className="mr-2 h-4 w-4 animate-spin"/>) : (<Globe className="mr-2 h-4 w-4"/>)}
                                 {t('translation.auto_translate')}
                               </Button>
                             </div>"
@@ -268,18 +268,18 @@ export default function TranslationManager() {
                             <div className="space-y-2">"
                               {supportedLanguages.slice(0, 2).map((lang) => (<div key={lang.code} className="flex items-start gap-2">"
                                   <span className="mt-0.5 flex-shrink-0">{lang.flag}</span>'`
-                                  <span className={`${!translations[lang.code]?.[key] ? 'text-zion-purple italic' : ''}`} dir={lang.code === 'ar' ? 'rtl' : 'ltr'}>'
+                                  <span className={`${!translations[lang.code]?.[key] ? 'text-zion-purple italic' : ''}`} dir={lang.code === 'ar' ? 'rtl' : 'ltr'}>
                                     {translations[lang.code]?.[key] || t('translation.missing')}
                                   </span>
                                 </div>))}"
                               {getMissingLanguages(key).length > 0 && (<div className="flex items-center gap-2 text-sm text-zion-purple">"
-                                  <AlertTriangle className="h-4 w-4"/>'
+                                  <AlertTriangle className="h-4 w-4"/>
                                   {t('translation.missing_languages', { count: getMissingLanguages(key).length })}
                                 </div>)}
                             </div>
                           </div>)}"
                         <div className="p-3 flex items-center justify-end">"
-                          {editingKey === key ? null : (<Button size="sm" variant="outline" onClick={() => handleEdit(key)}>'
+                          {editingKey === key ? null : (<Button size="sm" variant="outline" onClick={() => handleEdit(key)}>
                               {t('translation.edit')}
                             </Button>)}
                         </div>

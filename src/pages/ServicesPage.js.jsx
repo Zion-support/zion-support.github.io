@@ -570,17 +570,17 @@ function generateRandomService(idNum) {
         reviewCount: Math.floor(50 + Math.random() * 150)}}
 // Enhanced filter options for all service categories
 const SERVICE_FILTERS = [
-    { label: 'AI & ML', value: 'ai-ml' },'
-    { label: 'Cybersecurity', value: 'cybersecurity' },'
-    { label: 'Cloud & Infrastructure', value: 'cloud-infrastructure' },'
-    { label: 'Business Intelligence', value: 'business-intelligence' },'
-    { label: 'Communication', value: 'communication' },'
-    { label: 'Specialized Tools', value: 'specialized-tools' },'
-    { label: 'Development', value: 'development' },'
-    { label: 'Management', value: 'management' },'
-    { label: 'Security', value: 'security' },'
-    { label: 'Analytics', value: 'analytics' },'
-    { label: 'Consulting', value: 'consulting' },'
+    { label: 'AI & ML', value: 'ai-ml' },
+    { label: 'Cybersecurity', value: 'cybersecurity' },
+    { label: 'Cloud & Infrastructure', value: 'cloud-infrastructure' },
+    { label: 'Business Intelligence', value: 'business-intelligence' },
+    { label: 'Communication', value: 'communication' },
+    { label: 'Specialized Tools', value: 'specialized-tools' },
+    { label: 'Development', value: 'development' },
+    { label: 'Management', value: 'management' },
+    { label: 'Security', value: 'security' },
+    { label: 'Analytics', value: 'analytics' },
+    { label: 'Consulting', value: 'consulting' },
     { label: 'Strategy', value: 'strategy' },
 ];
 export default function ServicesPage() {

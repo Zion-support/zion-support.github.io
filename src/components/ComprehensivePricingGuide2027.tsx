@@ -1,9 +1,39 @@
-import React, { useState, useEffect } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
+import {
+
+  DollarSign,
+  TrendingUp,
+  Clock,
+  Users,
+  Star,
+  CheckCircle,
+  ArrowRight,
+  ExternalLink,
+  Search,
+  Filter,
+  Download,
+  Phone,
+  Mail,
+  MapPin,
+  Calculator,
+  BarChart3,
+  Target,
+  Zap,
+  Shield,
+  Brain,
+  Rocket'
+} from 'lucide-react';
+
+export const ComprehensivePricingGuide2027: React.FC = () => {;
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<any>('All');
+  const [priceRange, setPriceRange] = useState<any>('All');
+=======
 export const ComprehensivePricingGuide2027: React.FC = () => {;'
   const [searchQuery, setSearchQuery] = useState('');'
   const [selectedCategory, setSelectedCategory] = useState<any>('All');'
   const [priceRange, setPriceRange] = useState<any>('All');'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   const [sortBy, setSortBy] = useState<any>('name');
   const [isVisible, setIsVisible] = useState(false);
 
@@ -12,109 +42,98 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
       },;
       { threshold: 0.1 }
     );
+<<<<<<< HEAD
+
+    
+    if (element) {
+=======
 '
     const element = document.getElementById('comprehensive-pricing-guide');    if (element) {
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       observer.observe(element)}
 
     return () => observer.disconnect () }, []) ;
 
   // Combine all services
-  const allServices = [
-    ...servicesCatalog.flatMap(category =>
-      category.items.map(item => ({
-
-        ...item,'
-        source: 'catalog',
-        category: category.name
-      }))
-    ),
-    ...innovativeServices2027.map(service  => ({
-
-      ...service,;'
+  
       source: 'innovative',;
       category: service.category,;
-      features: service.features || [],;'
-      ctaLabel: service.ctaLabel || 'Get Started',;'
-      href: service.href || '/contact';
-    }) ) ;  ];
+      features: service.features || [],;
+      ctaLabel: service.ctaLabel || 'Get Started',;
+      href: service.href || '/contact'}) ) ;  ];
 
   // Filter services based on search and category
   
     
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          service.category.toLowerCase().includes(searchQuery.toLowerCase());
-'
-    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
-'
-    const matchesPrice = priceRange === 'All' ||'
-      (priceRange === 'Low' && parseFloat(service.price.replace(/[^0-9.]/g, '')) < 100) ||'
-      (priceRange === 'Medium' && parseFloat(service.price.replace(/[^0-9.]/g, '')) >= 100 && parseFloat(service.price.replace(/[^0-9.]/g, '')) < 1000) ||'
-      (priceRange === 'High' && parseFloat(service.price.replace(/[^0-9.]/g, '')) >= 1000);
 
+    
+    
     return matchesSearch && matchesCategory && matchesPrice}) ;
 
   // Sort services
-  const sortedServices = [...filteredServices].sort((a, b) => {;
+  
+<<<<<<< HEAD
+    switch (sortBy) {;
+      case 'name':;
+        return a.title.localeCompare(b.title);
+      case 'price':;
+        return parseFloat(a.price.replace(/[^0-9.]/g,)) - parseFloat(b.price.replace(/[^0-9.]/g,));
+=======
     switch (sortBy) {;'      case 'name':;
         return a.title.localeCompare(b.title);'
       case 'price':;'
         return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       case 'category':;
         return a.category.localeCompare (b.category) ;
       default:;
         return 0}
   });
-'
-  const categories = ['All', ...Array.from(new Set(allServices.map(s => s.category)))];'
-  const priceRanges = ['All', 'Low (<$100)', 'Medium ($100-$999)', 'High ($1000+)'];
 
-  const contactInfo = {
+  
+  
+  
+  ;
+=======
 '
   phone: '+1 302 464 0950','
     email: 'kleber@ziontechgroup.com',;  ;
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
-  ;'
+  ;
   address: '364 E Main St STE 1008 Middletown DE 19709';
   ;
 
-;
 };
 
+<<<<<<< HEAD
+  
+    
+    if (numPrice < 100) return 'Low';
+    if (numPrice < 1000) return 'Medium';
+    return 'High'};
+
+=======
   const getPriceRange = (price: string) => {;'
     const numPrice = parseFloat(price.replace(/[^0-9.]/g, ''));'
     if (numPrice < 100) return 'Low';'
     if (numPrice < 1000) return 'Medium';'    return 'High'};
 '
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       default: return 'text-white'}
   };
 
-  const getCategoryIcon = (category: string)  => {
-
-    const iconMap: { [key: string]: React.ComponentType<any> } = {
-'
-      'AI Solutions': Brain,'
-      'Micro SaaS': Zap,'
-      'IT Services': Shield,'
-      'Cybersecurity': Shield,'
-      'Data & Analytics': BarChart3,'
-      'Cloud & DevOps': Cloud,'
-      'Quantum Computing': Atom,'
-      'Blockchain Solutions': Lock,'
-      'IoT & Edge Computing': Network,'
-      'FinTech Solutions': DollarSign,'
-      'HealthTech Solutions': Heart,'
-      'EdTech Solutions': BookOpen,'
-      'GreenTech Solutions': Leaf,'
-      'SpaceTech Solutions': Rocket,;'
-      'Robotics & Automation': Cpu,;'
-      'AR/VR Solutions': Eye,;'
-      'Biotech Solutions': Dna,;'
-      'LegalTech Solutions': Scale,;'
-      'Real Estate Tech': Home,;'
-      'Supply Chain Solutions': Truck;
-    };    return iconMap[category] || Target};
+  
+      'Robotics & Automation': Cpu,;
+      'AR/VR Solutions': Eye,;
+      'Biotech Solutions': Dna,;
+      'LegalTech Solutions': Scale,;
+      'Real Estate Tech': Home,;
+      'Supply Chain Solutions': Truck};    return iconMap[category] || Target};
 
   return ("
     <section id = "comprehensive-pricing-guide" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative overflow-hidden">
@@ -143,7 +162,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
           className="text-center mb-16"
 "
           <div className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 rounded-full border border-zion-cyan/30 mb-6">"
-            <Calculator className="w-5 h-5 text-zion-cyan mr-2" />"            <span className="text-zion-cyan font-semibold">2027 Pricing Guide</span>
+            <Calculator className="w-5 h-5 text-zion-cyan mr-2"  />"            <span className="text-zion-cyan font-semibold">2027 Pricing Guide</span>
           </div>
 "
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">"
@@ -191,9 +210,14 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
               {/* Search */}"
               <div className="relative">"
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4"  />
                 <input"
+<<<<<<< HEAD
+                  type="text"
+                  placeholder="Search services..."
+=======
                   type="text""                  placeholder="Search services..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}"
                   className="w-full pl-10 pr-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
@@ -254,24 +278,13 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
           initial = {
 
   { opacity: 0,
-  y: 30 ;
-
-}}          animate = {
+  y: 30 }}          animate = {
 
   isVisible ? { opacity: 1,;
-  y: 0 ;
-
-} : { opacity: 0, y: 30 }}          transition = {
+  y: 0 } : { opacity: 0, y: 30 }}          transition = {
 
   { duration: 0.8,
-  delay: 0.4 ;
-
-
-
-
-
-
-}}"          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
+  delay: 0.4 }}"          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
           {sortedServices.map ( (service, index) => (;
             <motion.div
@@ -343,16 +356,16 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
                     <div className={`text-2xl font-bold ${getPriceColor(service.price)}`}>
                       {service.price}
                     </div>"
-                    <div className="text-gray-400 text-sm">'
-                      {service.billing === 'month' && 'per month'}'
-                      {service.billing === 'project' && 'per project'}'
-                      {service.billing === 'hour' && 'per hour'}'
+                    <div className="text-gray-400 text-sm">
+                      {service.billing === 'month' && 'per month'}
+                      {service.billing === 'project' && 'per project'}
+                      {service.billing === 'hour' && 'per hour'}
                       {service.billing === 'year' && 'per year'}
                     </div>
                   </div>
                 </div>
 
-                {/* Additional Info for Innovative Services */}'
+                {/* Additional Info for Innovative Services */}
                 {service.source === 'innovative' && 'marketSize' in service && ("
                   <div className="grid grid-cols-2 gap-4 mb-4">"
                     <div className="text-center">"
@@ -373,8 +386,8 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
                   className="w-full px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2 group"
 
                   {service.ctaLabel}"
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />"
-                  {service.external && <ExternalLink className="w-4 h-4" />}                </a>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300"  />"
+                  {service.external && <ExternalLink className="w-4 h-4"  />}                </a>
               </div>
             </motion.div>) ) }
         </motion.div>
@@ -384,24 +397,13 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
           initial = {
 
   { opacity: 0,
-  y: 30 ;
-
-}}          animate = {
+  y: 30 }}          animate = {
 
   isVisible ? { opacity: 1,;
-  y: 0 ;
-
-} : { opacity: 0, y: 30 }}          transition = {
+  y: 0 } : { opacity: 0, y: 30 }}          transition = {
 
   { duration: 0.8,
-  delay: 0.6 ;
-
-
-
-
-
-
-}}"          className="text-center"
+  delay: 0.6 }}"          className="text-center"
 "
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8">;"
             <h3 className="text-3xl font-bold text-white mb-6">
@@ -414,37 +416,36 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
 "
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">"
               <div className="flex items-center justify-center gap-3 text-zion-cyan">"
-                <Phone className="w-5 h-5" />"
+                <Phone className="w-5 h-5"  />"
                 <span className="font-semibold">{contactInfo.phone}</span>
               </div>"
               <div className="flex items-center justify-center gap-3 text-zion-purple">"
-                <Mail className="w-5 h-5" />"
+                <Mail className="w-5 h-5"  />"
                 <span className="font-semibold">{contactInfo.email}</span>
               </div>"
               <div className="flex items-center justify-center gap-3 text-zion-cyan">"
-                <MapPin className="w-5 h-5" />"                <span className="font-semibold text-center">{contactInfo.address}</span>
+                <MapPin className="w-5 h-5"  />"                <span className="font-semibold text-center">{contactInfo.address}</span>
               </div>
             </div>
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="/contact""
+                href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
 
                 Get Custom Quote"
-                <ArrowRight className="w-4 h-4" />              </a>
+                <ArrowRight className="w-4 h-4"  />              </a>
               <a"
-                href="https://ziontechgroup.com""
-                target="_blank""
-                rel="noopener noreferrer""
+                href="https://ziontechgroup.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan/10 transition-all duration-300 flex items-center justify-center gap-2"
 
                 Visit Website"
-                <ExternalLink className="w-4 h-4" />              </a>
+                <ExternalLink className="w-4 h-4"  />              </a>
             </div>;
           </div>;
         </motion.div>;
       </div>;
-    </section>;) ;
-};
+    </section>;) };
 '"`

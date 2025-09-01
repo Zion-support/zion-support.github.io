@@ -1,5 +1,3 @@
-import React from 'react.ts';'
-import { SEO } from '../../components/SEO';
 import {
 
   FileText,
@@ -9,7 +7,7 @@ import {
   TrendingUp,
   Shield,  Clock,
   BarChart3,
-  Headphones,'
+  Headphones,
   Bot} from 'lucide-react.ts';
 
 export default function AIContentGenerator(...args: any[]): any {
@@ -17,7 +15,7 @@ export default function AIContentGenerator(...args: any[]): any {
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEO"
-        title="AI Content Generator - Zion Tech Group""
+        title="AI Content Generator - Zion Tech Group"
         description="Revolutionary AI-powered content creation that writes, optimizes, and scales your content strategy. Generate high-quality, SEO-optimized content in minutes."
       />
 
@@ -37,7 +35,7 @@ export default function AIContentGenerator(...args: any[]): any {
             </div>"
             <div className="mb-16">
               <a"
-                href="/contact""
+                href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-lg rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25"
               >
                 Get Started with AI Content Generator
@@ -63,7 +61,7 @@ export default function AIContentGenerator(...args: any[]): any {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">"
               <div className="w-16 h-16 bg-blue-600/20 rounded-2xl flex items-center justify-center mb-6">"
-                <Brain className="w-8 h-8 text-blue-400" />
+                <Brain className="w-8 h-8 text-blue-400"  />
               </div>"
               <h3 className="text-xl font-bold text-white mb-4">
                 Intelligent Content Creation
@@ -75,7 +73,7 @@ export default function AIContentGenerator(...args: any[]): any {
 "
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">"
               <div className="w-16 h-16 bg-green-600/20 rounded-2xl flex items-center justify-center mb-6">"
-                <Zap className="w-8 h-8 text-green-400" />
+                <Zap className="w-8 h-8 text-green-400"  />
               </div>"
               <h3 className="text-xl font-bold text-white mb-4">
                 SEO Optimization
@@ -87,7 +85,7 @@ export default function AIContentGenerator(...args: any[]): any {
 "
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">"
               <div className="w-16 h-16 bg-purple-600/20 rounded-2xl flex items-center justify-center mb-6">"
-                <Users className="w-8 h-8 text-purple-400" />
+                <Users className="w-8 h-8 text-purple-400"  />
               </div>"
               <h3 className="text-xl font-bold text-white mb-4">
                 Audience Targeting
@@ -99,7 +97,7 @@ export default function AIContentGenerator(...args: any[]): any {
 "
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">"
               <div className="w-16 h-16 bg-yellow-600/20 rounded-2xl flex items-center justify-center mb-6">"
-                <TrendingUp className="w-8 h-8 text-yellow-400" />
+                <TrendingUp className="w-8 h-8 text-yellow-400"  />
               </div>"
               <h3 className="text-xl font-bold text-white mb-4">
                 Performance Analytics
@@ -111,7 +109,7 @@ export default function AIContentGenerator(...args: any[]): any {
 "
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">"
               <div className="w-16 h-16 bg-red-600/20 rounded-2xl flex items-center justify-center mb-6">"
-                <Shield className="w-8 h-8 text-red-400" />
+                <Shield className="w-8 h-8 text-red-400"  />
               </div>"
               <h3 className="text-xl font-bold text-white mb-4">
                 Quality Assurance
@@ -123,7 +121,7 @@ export default function AIContentGenerator(...args: any[]): any {
 "
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">"
               <div className="w-16 h-16 bg-indigo-600/20 rounded-2xl flex items-center justify-center mb-6">"
-                <Clock className="w-8 h-8 text-indigo-400" />
+                <Clock className="w-8 h-8 text-indigo-400"  />
               </div>"
               <h3 className="text-xl font-bold text-white mb-4">
                 Rapid Content Scaling
@@ -145,7 +143,7 @@ export default function AIContentGenerator(...args: any[]): any {
             Start generating high-quality, SEO-optimized content today
           </p>
           <a"
-            href="/contact""
+            href="/contact"
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-lg rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25"
           >
             Get Started with AI Content Generator
@@ -153,6 +151,5 @@ export default function AIContentGenerator(...args: any[]): any {
         </div>
       </section>
     </div>
-  );
-}
+  )}
 '"

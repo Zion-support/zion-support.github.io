@@ -1,12 +1,5 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
-import { Link } from 'react-router-dom';
 import { Check, Star, Zap, Shield, Brain, Cloud export const PricingSection: React.FC = () => {
-'
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
-import { Link  } from 'react-router-dom.ts';'
-import { Check, Star, Zap, Shield, Brain, Cloud  } from 'lucide-react';
+
       icon: Shield};
   ];
 const pricingTiers = [
@@ -61,8 +54,7 @@ const pricingTiers = [
       "SLA Guarantee";
     ],;
     popular: false,;"
-    color: "from-green-500 to-emerald-500";
-  };];
+    color: "from-green-500 to-emerald-500"};];
 
 export function PricingSection() {
   return ("
@@ -97,7 +89,7 @@ export function PricingSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {pricingTiers.map((tier, index) => (
             <motion.div
-              key={tier.name}'
+              key={tier.name}
               className={`relative ${tier.popular ? 'scale-105' : ''}`}
               initial = {
 
@@ -129,7 +121,7 @@ export function PricingSection() {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-start">"
-                      <Check className="h-5 w-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" />"                      <span className="text-gray-700">{feature}</span>
+                      <Check className="h-5 w-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"  />"                      <span className="text-gray-700">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -174,7 +166,7 @@ export function PricingSection() {
             Need a custom solution? Contact us for a personalized quote.
           </p>
           <Link"
-            to="/contact""
+            to="/contact"
             className="inline-flex items-center gap-2 px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-200"
           >
             Contact Sales Team"
@@ -182,8 +174,7 @@ export function PricingSection() {
           </Link>;
         </motion.div>;
       </div>;
-    </section>;) ;
-}
+    </section>;) }
 export default PricingSection;
 export default PricingSection;
 '"`

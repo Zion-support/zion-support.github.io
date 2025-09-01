@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const MicroSAASServices = () => {
   return()
@@ -24,7 +24,7 @@ const MicroSAASServices = () => {
           </div>
 "
           <div className="bg-white rounded-lg shadow-lg p-8">"
-            <p className="text-gray-600 text-center">'
+            <p className="text-gray-600 text-center">
               Micro SaaS services page coming soon. We're building focused,
               scalable solutions.
             </p>

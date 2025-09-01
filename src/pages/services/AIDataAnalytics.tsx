@@ -1,200 +1,24 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
-import { CheckCircle, BarChart3, TrendingUp, Target, Zap, Shield, Brain, Database, Globe, Smartphone, Users, PieChart } from 'lucide-react';'
-import { SEO } from '@/components/SEO';
 ;
 export { function };
 export default function AIDataAnalytics(...args: unknown[]): unknown {
-  const features = [
-    {
-
-      title: "Predictive Analytics Engine","
-      description: "AI algorithms forecast future trends, customer behavior, and business outcomes with high accuracy",
-      icon: Brain,"
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-"
-      title: "Real-time Data Processing","
-      description: "Process millions of data points in real-time to provide instant insights and recommendations",
-      icon: Zap,"
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-"
-      title: "Natural Language Queries","
-      description: "Ask complex data questions in plain English and get instant, visual answers",
-      icon: Globe,"
-      color: "from-orange-500 to-red-500"
-    },
-    {
-"
-      title: "Automated Insights Discovery","
-      description: "AI automatically identifies patterns, anomalies, and opportunities in your data",
-      icon: Target,"
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-"
-      title: "Multi-Source Data Integration","
-      description: "Connect and analyze data from databases, APIs, cloud services, and third-party tools",
-      icon: Database,"
-      color: "from-indigo-500 to-blue-500"
-    },
-    {
-"
-      title: "Interactive Visualizations","
-      description: "Create stunning, interactive dashboards that make complex data easy to understand",
-      icon: PieChart,"
-      color: "from-teal-500 to-cyan-500"
-    }
-  ];
-
-  const pricingPlans = [
-    {
-"
-      name: "Starter","
-      price: "$49","
-      period: "/month","
-      description: "Perfect for small businesses",
-      features: ["
-        "Up to 100,000 data points/month","
-        "Basic predictive analytics","
-        "5 custom dashboards","
-        "Email support","
-        "Mobile app access"
-      ],"
-      cta: "Start Free Trial",
-      popular: false
-    },
-    {
-"
-      name: "Professional","
-      price: "$129","
-      period: "/month","
-      description: "Ideal for growing businesses",
-      features: ["
-        "Up to 1,000,000 data points/month","
-        "Advanced AI analytics","
-        "Unlimited dashboards","
-        "Priority support","
-        "API access","
-        "Custom data models"
-      ],"
-      cta: "Start Free Trial",
-      popular: true
-    },
-    {
-"
-      name: "Enterprise","
-      price: "$399","
-      period: "/month","
-      description: "For large organizations",
-      features: ["
-        "Unlimited data points","
-        "Custom AI models","
-        "White-label solution","
-        "Dedicated support","
-        "Advanced security","
-        "Custom integrations"
-      ],"
-      cta: "Contact Sales",
-      popular: false
-    }
-  ];
-
-  const benefits = [
-    {
-"
-      title: "300% Faster Insights","
-      description: "AI automation delivers insights in minutes instead of days",
-      icon: Zap,"
-      metric: "300%"
-    },
-    {
-"
-      title: "40% Better Decision Making","
-      description: "Data-driven insights lead to more informed business decisions",
-      icon: Target,"
-      metric: "40%"
-    },
-    {
-"
-      title: "90% Cost Reduction","
-      description: "Automated analytics reduce manual data analysis overhead",
-      icon: TrendingUp,"
-      metric: "90%"
-    }
-  ];
-
-  const useCases = [
-    {
-"
-      title: "Customer Analytics","
-      description: "Understand customer behavior, preferences, and lifetime value",
-      icon: Users,"
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-"
-      title: "Financial Forecasting","
-      description: "Predict revenue, expenses, and cash flow with AI accuracy",
-      icon: BarChart3,"
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-"
-      title: "Operational Intelligence","
-      description: "Monitor and optimize business operations in real-time",
-      icon: TrendingUp,"
-      color: "from-orange-500 to-red-500"
-    },
-    {
-"
-      title: "Market Analysis","
-      description: "Track competitors, market trends, and business opportunities",
-      icon: Globe,"
-      color: "from-green-500 to-emerald-500"
-    }
-  ];
-
-  const integrations = [
-    {
-"
-      name: "Salesforce","
-      description: "Integrate CRM data for comprehensive customer insights",
-      icon: Users,"
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-"
-      name: "Google Analytics","
-      description: "Combine web analytics with business data for complete picture",
-      icon: BarChart3,"
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-"
-      name: "Shopify","
-      description: "Analyze e-commerce performance and customer behavior",
-      icon: Globe,"
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-"
-      name: "QuickBooks","
-      description: "Connect financial data for comprehensive business analytics",
-      icon: PieChart,"
-      color: "from-orange-500 to-red-500"
-    }
-  ];
-
+  
+  
+  
+  
+  
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
+<<<<<<< HEAD
+        title="AI Data Analytics - Intelligent Business Intelligence Platform | Zion Tech Group"
+        description="Transform your business with AI-powered data analytics, predictive insights, and automated reporting. Start free trial today."
+        keywords="AI data analytics, business intelligence, predictive analytics, data insights, AI analytics platform"
+       />
+=======
         title="AI Data Analytics - Intelligent Business Intelligence Platform | Zion Tech Group""
         description="Transform your business with AI-powered data analytics, predictive insights, and automated reporting. Start free trial today.""        keywords="AI data analytics, business intelligence, predictive analytics, data insights, AI analytics platform"
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
@@ -407,7 +231,7 @@ export default function AIDataAnalytics(...args: unknown[]): unknown {
               <motion.div
                 key={index}`
                 className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
-'
+
                   plan.popular ? 'border-blue-500/50 bg-blue-500/10' : 'border-white/10'`
                 }`}
                 initial={{ opacity: 0, y: 30 }}
@@ -436,7 +260,7 @@ export default function AIDataAnalytics(...args: unknown[]): unknown {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"                      <span className="text-white">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />"                      <span className="text-white">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -482,5 +306,4 @@ export default function AIDataAnalytics(...args: unknown[]): unknown {
         </div>
       </section>
     </div>
-  );
-}}}}'"`
+  )}}}}'"`

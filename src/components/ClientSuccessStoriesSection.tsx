@@ -1,5 +1,79 @@
-import React from 'react';'
-import { motion } from 'framer-motion';];
+<<<<<<< HEAD
+import {
+
+  Star,
+  Quote,
+  TrendingUp,
+  Users,
+  Award,
+  CheckCircle,
+  ArrowRight,
+  Heart'
+} from 'lucide-react';
+
+      metrics['8 Week Launch',MVP Ready',Scalable Architecture']};
+  ];
+
+  
+    { label: 'Average Rating', value: '4.9/5', icon: Star };
+  ];
+const successStories = [
+  {
+
+    id: 1,
+    client: "TechCorp Solutions","
+    industry: "Technology","
+    challenge: "Legacy systems causing 40% productivity loss","
+    solution: "Modernized infrastructure with AI-powered automation",
+    results: ["
+      "Increased productivity by 60%","
+      "Reduced operational costs by 35%","
+      "Improved customer satisfaction by 45%"
+    ],"
+    testimonial: "Zion Tech Group transformed our entire operation. The results exceeded our expectations.","
+    author: "Sarah Johnson","
+    position: "CTO",
+    rating: 5,"
+    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400"
+  },
+  {
+
+    id: 2,"
+    client: "Global Finance Ltd","
+    industry: "Financial Services","
+    challenge: "Security vulnerabilities and compliance issues","
+    solution: "Comprehensive cybersecurity and compliance platform",
+    results: ["
+      "100% compliance achievement","
+      "Zero security breaches","
+      "Reduced audit time by 70%"
+    ],"
+    testimonial: "Their security solutions are world-class. We feel completely protected now.","
+    author: "Michael Chen","
+    position: "CISO",
+    rating: 5,"
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400"
+  },
+  {
+
+    id: 3,"
+    client: "HealthTech Innovations","
+    industry: "Healthcare","
+    challenge: "Patient data management inefficiencies","
+    solution: "AI-powered healthcare analytics platform",
+    results: ["
+      "Improved patient outcomes by 30%","
+      "Reduced administrative overhead by 50%","
+      "Enhanced data accuracy by 95%"
+    ],;"
+    testimonial: "The AI platform revolutionized how we handle patient data and make decisions.",;"
+    author: "Dr. Emily Rodriguez",;"
+    position: "Chief Medical Officer",;
+    rating: 5,;"
+    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400"};
+];
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
 export function ClientSuccessStoriesSection() {
   return ("
@@ -25,7 +99,7 @@ export function ClientSuccessStoriesSection() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Client Success Stories
           </h2>"
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">'
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Real results from real clients. Discover how we've helped businesses
             across industries achieve remarkable transformations and measurable success.
           </p>
@@ -52,12 +126,12 @@ export function ClientSuccessStoriesSection() {
           className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"
         >;
           {successMetrics.map ( (metric, index) => {;
-            const IconComponent = metric.icon;
+            
             return ("
               <div key = {metric.label} className="text-center">"
                 <div className="flex justify-center mb-4">"
                   <div className="p-3 bg-green-100 rounded-full">"
-                    <IconComponent className="h-8 w-8 text-green-600" />                  </div>
+                    <IconComponent className="h-8 w-8 text-green-600"  />                  </div>
                 </div>"
                 <div className="text-3xl font-bold text-gray-900 mb-2">
                   {metric.value}
@@ -146,7 +220,7 @@ export function ClientSuccessStoriesSection() {
                   </blockquote>"
                   <div className="flex items-center gap-3">"
                     <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center">"
-                      <span className="text-white font-semibold text-sm">'
+                      <span className="text-white font-semibold text-sm">
                         {story.author.split(' ').map(n => n[0]).join('')}
                       </span>
                     </div>
@@ -242,11 +316,11 @@ export function ClientSuccessStoriesSection() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="inline-flex items-center px-6 py-3 bg-white text-green-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
                 Start Your Project"
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5"  />
               </button>"
               <button className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-white hover:text-green-600 rounded-lg font-medium transition-colors duration-200">
                 View All Case Studies"
-                <Award className="ml-2 h-5 w-5" />              </button>
+                <Award className="ml-2 h-5 w-5"  />              </button>
             </div>
           </div>
         </motion.div>
@@ -258,8 +332,7 @@ export default ClientSuccessStoriesSection;"
           </div>;
         </motion.div>;
       </div>;
-    </section>;) ;
-}
+    </section>;) }
 export default ClientSuccessStoriesSection;
 export default ClientSuccessStoriesSection;
 '"

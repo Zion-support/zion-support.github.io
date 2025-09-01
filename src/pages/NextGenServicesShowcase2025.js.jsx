@@ -1,126 +1,126 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
-import Link from 'next/link';'
+import React from 'react';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Brain, Cpu, Shield, Zap, Rocket, Star, ChevronRight, CheckCircle, TrendingUp, Globe, Settings, Users, Play } from 'lucide-react';
 export default function NextGenServicesShowcase2025() {
     const featuredServices = [
         {
-'
-            id: 'ai-consciousness-simulator','
-            title: 'AI Consciousness Simulation Platform','
-            description: 'Revolutionary AI platform that simulates human-like consciousness for advanced decision-making and creative problem-solving.','
-            price: '$25,000/month','
-            category: 'Advanced AI','
-            features['Consciousness-level reasoning', 'Emotional intelligence processing', 'Creative problem solving'],;'
-            benefits['98%+ decision accuracy', 'Human-level creative solutions', '24/7 intelligent assistance'],;
-            icon: Brain,'
+
+            id: 'ai-consciousness-simulator',
+            title: 'AI Consciousness Simulation Platform',
+            description: 'Revolutionary AI platform that simulates human-like consciousness for advanced decision-making and creative problem-solving.',
+            price: '$25,000/month',
+            category: 'Advanced AI',
+            features['Consciousness-level reasoning',Emotional intelligence processing',Creative problem solving'],;
+            benefits['98%+ decision accuracy',Human-level creative solutions',24/7 intelligent assistance'],;
+            icon: Brain,
             gradient: 'from-purple-600 to-pink-600',
-            popular: true,'
-            demoUrl: 'https://ziontechgroup.com/demo/ai-consciousness','
-            ctaText: 'Explore AI Consciousness','
+            popular: true,
+            demoUrl: 'https://ziontechgroup.com/demo/ai-consciousness',
+            ctaText: 'Explore AI Consciousness',
             path: '/ai-consciousness-simulation'
         },
         {
-'
-            id: 'quantum-ai-optimization','
-            title: 'Quantum-Enhanced AI Optimization Suite','
-            description: 'Cutting-edge quantum computing integration with AI for exponentially faster optimization and breakthrough problem-solving.','
-            price: '$35,000/month','
-            category: 'Quantum AI','
-            features['Quantum-classical hybrid computing', 'Exponential optimization speed', 'Complex system modeling'],;'
-            benefits['10,000x faster optimization', 'Solve impossible problems', 'Revolutionary computational power'],;
-            icon: Cpu,'
+
+            id: 'quantum-ai-optimization',
+            title: 'Quantum-Enhanced AI Optimization Suite',
+            description: 'Cutting-edge quantum computing integration with AI for exponentially faster optimization and breakthrough problem-solving.',
+            price: '$35,000/month',
+            category: 'Quantum AI',
+            features['Quantum-classical hybrid computing',Exponential optimization speed',Complex system modeling'],;
+            benefits['10,000x faster optimization',Solve impossible problems',Revolutionary computational power'],;
+            icon: Cpu,
             gradient: 'from-blue-600 to-cyan-600',
-            popular: false,'
-            demoUrl: 'https://ziontechgroup.com/demo/quantum-ai','
-            ctaText: 'Experience Quantum Power','
+            popular: false,
+            demoUrl: 'https://ziontechgroup.com/demo/quantum-ai',
+            ctaText: 'Experience Quantum Power',
             path: '/quantum-ai-optimization'
         },
         {
-'
-            id: 'intelligent-edge-computing','
-            title: 'Intelligent Edge Computing Platform','
-            description: 'Next-generation edge computing infrastructure with AI acceleration, 5G integration, and real-time decision-making capabilities.','
-            price: '$15,000/month','
-            category: 'Edge Computing','
-            features['AI-accelerated edge processors', '5G network integration', 'Ultra-low latency (<1ms)'],;'
-            benefits['99.99% uptime guarantee', '95% latency reduction', '10x faster data processing'],;
-            icon: Zap,'
+
+            id: 'intelligent-edge-computing',
+            title: 'Intelligent Edge Computing Platform',
+            description: 'Next-generation edge computing infrastructure with AI acceleration, 5G integration, and real-time decision-making capabilities.',
+            price: '$15,000/month',
+            category: 'Edge Computing',
+            features['AI-accelerated edge processors',5G network integration',Ultra-low latency (<1ms)],;
+            benefits['99.99% uptime guarantee',95% latency reduction',10x faster data processing'],;
+            icon: Zap,
             gradient: 'from-green-600 to-emerald-600',
-            popular: false,'
-            demoUrl: 'https://ziontechgroup.com/demo/edge-computing','
-            ctaText: 'Power Your Edge','
+            popular: false,
+            demoUrl: 'https://ziontechgroup.com/demo/edge-computing',
+            ctaText: 'Power Your Edge',
             path: '/intelligent-edge-computing'
         },
         {
-'
-            id: 'multimodal-ai-platform','
-            title: 'Unified Multimodal AI Intelligence Platform','
-            description: 'Advanced AI platform that processes text, images, audio, video, and sensor data simultaneously for comprehensive understanding.','
-            price: '$22,000/month','
-            category: 'Multimodal AI','
-            features['Text-to-everything generation', 'Cross-modal understanding', 'Real-time multimodal analysis'],;'
-            benefits['Comprehensive data understanding', 'Enhanced user experiences', 'Unified AI capabilities'],;
-            icon: Globe,'
+
+            id: 'multimodal-ai-platform',
+            title: 'Unified Multimodal AI Intelligence Platform',
+            description: 'Advanced AI platform that processes text, images, audio, video, and sensor data simultaneously for comprehensive understanding.',
+            price: '$22,000/month',
+            category: 'Multimodal AI',
+            features['Text-to-everything generation',Cross-modal understanding',Real-time multimodal analysis'],;
+            benefits['Comprehensive data understanding',Enhanced user experiences',Unified AI capabilities'],;
+            icon: Globe,
             gradient: 'from-orange-600 to-red-600',
-            popular: false,'
-            demoUrl: 'https://ziontechgroup.com/demo/multimodal-ai','
-            ctaText: 'Unite Your AI','
+            popular: false,
+            demoUrl: 'https://ziontechgroup.com/demo/multimodal-ai',
+            ctaText: 'Unite Your AI',
             path: '/multimodal-ai-platform'
         }
     ];
     const microSaasServices = [
         {
-'
-            title: 'AI-Powered Social Media Scheduling Suite','
-            description: 'Intelligent social media management with AI content generation and optimal posting optimization.','
-            price: '$149/month','
-            features['AI content generation', 'Optimal posting times', 'Multi-platform management'],;'
-            category: 'Marketing Automation','
+
+            title: 'AI-Powered Social Media Scheduling Suite',
+            description: 'Intelligent social media management with AI content generation and optimal posting optimization.',
+            price: '$149/month',
+            features['AI content generation',Optimal posting times',Multi-platform management'],;
+            category: 'Marketing Automation',
             trial: '14 days free'
         },
         {
-'
-            title: 'Smart Inventory Optimization System','
-            description: 'AI-driven inventory management that predicts demand and automates reordering to prevent stockouts.','
-            price: '$299/month','
-            features['Demand forecasting AI', 'Automated reorder points', 'Multi-location management'],;'
-            category: 'Supply Chain','
+
+            title: 'Smart Inventory Optimization System',
+            description: 'AI-driven inventory management that predicts demand and automates reordering to prevent stockouts.',
+            price: '$299/month',
+            features['Demand forecasting AI',Automated reorder points',Multi-location management'],;
+            category: 'Supply Chain',
             trial: '30 days free'
         },
         {
-'
-            title: 'Customer Behavior Prediction Engine','
-            description: 'Advanced analytics platform that predicts customer behavior and identifies churn risks.','
-            price: '$399/month','
-            features['Churn prediction modeling', 'Customer lifetime value', 'Behavioral pattern analysis'],;'
-            category: 'Customer Analytics','
+
+            title: 'Customer Behavior Prediction Engine',
+            description: 'Advanced analytics platform that predicts customer behavior and identifies churn risks.',
+            price: '$399/month',
+            features['Churn prediction modeling',Customer lifetime value',Behavioral pattern analysis'],;
+            category: 'Customer Analytics',
             trial: '21 days free'
         }
     ];
     const infrastructureServices = [
         {
-'
-            title: 'Quantum-Secure Cloud Infrastructure','
-            description: 'Revolutionary cloud infrastructure protected by quantum-resistant encryption for ultimate security.','
-            price: '$25,000/month','
-            features['Post-quantum cryptography', 'Quantum key distribution', 'Zero-trust security model'],;'
+
+            title: 'Quantum-Secure Cloud Infrastructure',
+            description: 'Revolutionary cloud infrastructure protected by quantum-resistant encryption for ultimate security.',
+            price: '$25,000/month',
+            features['Post-quantum cryptography',Quantum key distribution',Zero-trust security model'],;
             category: 'Cloud Security'
         },
         {
-'
-            title: 'Autonomous Infrastructure Management','
-            description: 'Self-managing IT infrastructure that automatically optimizes performance and resolves issues.','
-            price: '$12,000/month','
-            features['Autonomous healing systems', 'Predictive failure analysis', '24/7 automated operations'],;'
+
+            title: 'Autonomous Infrastructure Management',
+            description: 'Self-managing IT infrastructure that automatically optimizes performance and resolves issues.',
+            price: '$12,000/month',
+            features['Autonomous healing systems',Predictive failure analysis',24/7 automated operations'],;
             category: 'Infrastructure Automation'
         },
         {
-'
-            title: 'Blockchain Infrastructure as a Service','
-            description: 'Complete blockchain platform supporting multiple protocols and enterprise-grade security.','
-            price: '$20,000/month','
-            features['Multi-protocol blockchain support', 'Smart contract deployment', 'DeFi integration platform'],;'
+
+            title: 'Blockchain Infrastructure as a Service',
+            description: 'Complete blockchain platform supporting multiple protocols and enterprise-grade security.',
+            price: '$20,000/month',
+            features['Multi-protocol blockchain support',Smart contract deployment',DeFi integration platform'],;
             category: 'Blockchain Infrastructure'
         }
     ];
@@ -199,7 +199,7 @@ export default function NextGenServicesShowcase2025() {
 
   { duration: 0.8,
   delay: index * 0.2 
-'
+
 }} className={`relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm group hover:border-cyan-500/50 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400/50' : ''}`}>"
                 {service.popular && (<div className="absolute -top-3 left-8">"
                     <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center">"

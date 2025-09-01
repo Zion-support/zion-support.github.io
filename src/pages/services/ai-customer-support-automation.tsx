@@ -1,5 +1,3 @@
-import React from 'react';'
-import { motion } from 'framer-motion';
 import {
 
   MessageCircle,
@@ -54,143 +52,14 @@ import {
   BarChart3,
   Heart,
   Monitor,
-  Laptop,'
+  Laptop,
   ShoppingBag} from 'lucide-react';
 
 export default function AICustomerSupportAutomation() {
-  const features = [
-    {
-
-      icon: Bot,'
-      title: 'Intelligent Chatbots',
-      description:'
-        'AI-powered chatbots that understand context and provide accurate responses 24/7'},
-    {
-
-      icon: MessageCircle,'
-      title: 'Multi-Channel Support',
-      description:'
-        'Seamless support across email, chat, social media, and phone channels'},
-    {
-
-      icon: Brain,'
-      title: 'Natural Language Processing',
-      description:'
-        'Advanced NLP that understands customer intent and provides relevant solutions'},
-    {
-
-      icon: Zap,'
-      title: 'Instant Response',
-      description:'
-        'Lightning-fast response times with automated ticket routing and escalation'},
-    {
-
-      icon: Shield,'
-      title: 'Secure & Compliant',
-      description:'
-        'Enterprise-grade security with GDPR and HIPAA compliance built-in'},
-    {
-
-      icon: BarChart3,'
-      title: 'Performance Analytics',
-      description:'
-        'Comprehensive insights into support performance and customer satisfaction'},
-  ];
-
-  const benefits = ['
-    'Reduce response time by 90% with instant automated support','
-    'Handle 80% of customer inquiries without human intervention','
-    'Improve customer satisfaction scores by 40%','
-    'Reduce support costs by 60% through automation','
-    'Scale support operations without proportional cost increases','
-    'Provide 24/7 customer support across all time zones',
-  ];
-
-  const supportChannels = [
-    {
-
-      icon: MessageCircle,'
-      title: 'Live Chat','
-      description: 'Real-time chat support with instant responses',
-      features: ['
-        'Instant responses','
-        'Context awareness','
-        'File sharing','
-        'Screen sharing',
-      ]},
-    {
-
-      icon: Phone,'
-      title: 'Voice Support','
-      description: 'AI-powered voice assistants and call routing',
-      features: ['
-        'Voice recognition','
-        'Call routing','
-        'Voice analytics','
-        'Call recording',
-      ]},
-    {
-
-      icon: Video,'
-      title: 'Video Support','
-      description: 'Video chat with AI assistance and screen sharing','
-      features: ['Video calls', 'Screen sharing', 'Recording', 'AI assistance']},
-    {
-
-      icon: Globe,'
-      title: 'Social Media','
-      description: 'Multi-platform social media support integration',
-      features: ['
-        'Multi-platform','
-        'Sentiment analysis','
-        'Auto-responses','
-        'Escalation',
-      ]},
-  ];
-
-  const useCases = [
-    {
-'
-      industry: 'E-commerce',
-      icon: ShoppingBag,
-      applications: ['
-        'Order status inquiries and tracking','
-        'Product recommendations and support','
-        'Return and refund processing','
-        'Payment and billing assistance',
-      ]},
-    {
-'
-      industry: 'SaaS',
-      icon: Cpu,
-      applications: ['
-        'Technical support and troubleshooting','
-        'Account management and billing','
-        'Feature requests and feedback','
-        'Onboarding and training support',
-      ]},
-    {
-'
-      industry: 'Healthcare',
-      icon: Heart,
-      applications: ['
-        'Appointment scheduling and reminders','
-        'Medical information and FAQs','
-        'Insurance and billing support','
-        'Patient portal assistance',
-      ]},
-    {
-'
-      industry: 'Financial Services',
-      icon: Coins,
-      applications: ['
-        'Account balance and transaction inquiries','
-        'Fraud detection and security alerts','
-        'Loan and credit applications','
-        'Investment advice and portfolio management',
-      ]},
-  ];
-
+  
+  
+  
+  
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}"
       <section className="relative overflow-hidden pt-32 pb-20">"
@@ -202,7 +71,7 @@ export default function AICustomerSupportAutomation() {
             className="text-center"
           >"
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-300 px-4 py-2 rounded-full text-sm font-medium mb-6">"
-              <Bot className="w-4 h-4" />              <span>AI-Powered Customer Support</span>
+              <Bot className="w-4 h-4"  />              <span>AI-Powered Customer Support</span>
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI Customer Support Automation
@@ -219,7 +88,7 @@ export default function AICustomerSupportAutomation() {
                 className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 transition-all duration-300"
               >
                 Start Free Trial"
-                <ArrowRight className="inline ml-2 w-5 h-5" />              </motion.button>
+                <ArrowRight className="inline ml-2 w-5 h-5"  />              </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
@@ -293,7 +162,7 @@ export default function AICustomerSupportAutomation() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}"
                 className="flex items-start"
               >"
-                <CheckCircle className="w-6 h-6 text-green-400 mr-3 mt-1 flex-shrink-0" />"                <span className="text-gray-300 text-lg">{benefit}</span>
+                <CheckCircle className="w-6 h-6 text-green-400 mr-3 mt-1 flex-shrink-0"  />"                <span className="text-gray-300 text-lg">{benefit}</span>
               </motion.div>
             ))}
           </div>
@@ -337,7 +206,7 @@ export default function AICustomerSupportAutomation() {
                 <ul className="space-y-3">
                   {channel.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-start">"
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />"                      <span className="text-gray-300 text-sm">{feature}</span>
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0"  />"                      <span className="text-gray-300 text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -381,7 +250,7 @@ export default function AICustomerSupportAutomation() {
                 <ul className="space-y-3">
                   {useCase.applications.map((application, appIndex) => ("
                     <li key={appIndex} className="flex items-start">"
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />"
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0"  />"
                       <span className="text-gray-300 text-sm">
                         {application}
                       </span>                    </li>
@@ -417,7 +286,7 @@ export default function AICustomerSupportAutomation() {
                 className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 transition-all duration-300"
               >
                 Get Started Now"
-                <ArrowRight className="inline ml-2 w-5 h-5" />              </motion.button>
+                <ArrowRight className="inline ml-2 w-5 h-5"  />              </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
@@ -430,6 +299,5 @@ export default function AICustomerSupportAutomation() {
         </div>
       </section>
     </div>
-  );
-}
+  )}
 '"

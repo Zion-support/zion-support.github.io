@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Link } from 'react-router-dom';
 const AutonomousBusinessOperationsPlatform = () => {
   return()
@@ -17,13 +17,13 @@ const AutonomousBusinessOperationsPlatform = () => {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-300 text-lg"
               >
                 Start Automation
               </Link>
               <Link"
-                to="/services/ai-automation""
+                to="/services/ai-automation"
                 className="border border-green-500 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-300 text-lg"
               >
                 Learn More
@@ -197,13 +197,13 @@ const AutonomousBusinessOperationsPlatform = () => {
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link"
-              to="/contact""
+              to="/contact"
               className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-300 text-lg"
             >
               Schedule a Demo
             </Link>
             <Link"
-              to="/services/ai-automation""
+              to="/services/ai-automation"
               className="border border-green-500 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-300 text-lg"
             >
               Explore Services

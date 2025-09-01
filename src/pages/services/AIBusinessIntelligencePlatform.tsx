@@ -1,5 +1,62 @@
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';        "Monthly reports"
+<<<<<<< HEAD
+import { Brain, 
+  TrendingUp, 
+  BarChart3, 
+  Zap, 
+  Shield, 
+  Users, 
+  Globe, 
+  CheckCircle,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink,
+  Star,
+  Clock,
+  DollarSign,
+  Target,
+  PieChart,
+  LineChart,
+  Activity'
+ } from 'lucide-react';
+;
+export { function };
+export default function AIBusinessIntelligencePlatform(...args[]):  {
+
+  
+    },;
+    {;
+      icon: Users,;"
+      title: "Collaborative Insights",;"
+      description: "Share dashboards and reports with team members, enabling better collaboration and decision-making."};
+  ];
+
+  const benefits = [;"
+    "Improve decision-making speed by 80%",;"
+    "Reduce manual reporting by 90%",;"
+    "Identify business opportunities 3x faster",;"
+    "Increase operational efficiency by 45%",;"
+    "Reduce data analysis time by 70%",;"
+    "Improve forecast accuracy by 60%";
+  ];
+
+  const pricingTiers = [
+    {
+"
+      name: "Starter",
+      price: 199,"
+      period: "month","
+      description: "Perfect for small businesses getting started with AI analytics",
+      features[;"
+        "Up to 5 users","
+        "Basic AI analytics","
+        "Standard dashboards","
+        "Email support","
+        "Data integration (3 sources)","
+        "Monthly reports"
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ],;
       popular: false
     },
@@ -59,18 +116,22 @@ import { motion  } from 'framer-motion.ts';        "Monthly reports"
     {
 "
       industry: "Manufacturing",;"
-      description: "Predictive maintenance, quality control, and supply chain optimization";
-    },;
+      description: "Predictive maintenance, quality control, and supply chain optimization"},;
     {;"
       industry: "Retail",;"
-      description: "Demand forecasting, customer segmentation, and store performance analysis";
-    };  ];
+      description: "Demand forecasting, customer segmentation, and store performance analysis"};  ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
+<<<<<<< HEAD
+        title="AI Business Intelligence Platform - Zion Tech Group"
+        description="Advanced AI-powered business intelligence platform providing real-time insights, predictive analytics, and automated reporting for data-driven decision making."
+       />
+=======
         title="AI Business Intelligence Platform - Zion Tech Group""        description="Advanced AI-powered business intelligence platform providing real-time insights, predictive analytics, and automated reporting for data-driven decision making."
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
@@ -114,7 +175,7 @@ import { motion  } from 'framer-motion.ts';        "Monthly reports"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700">
                 Start Free Trial"
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5"  />
               </Button>"              <Button size="lg" variant="outline" className="border-gray-600 text-white hover:bg-gray-800">
                 Schedule Demo
               </Button>
@@ -291,7 +352,7 @@ import { motion  } from 'framer-motion.ts';        "Monthly reports"
                 viewport={{ once: true }}"
                 className="flex items-start space-x-3"
 "
-                <CheckCircle className="h-6 w-6 text-cyan-500 mt-1 flex-shrink-0" />"                <span className="text-gray-300">{benefit}</span>
+                <CheckCircle className="h-6 w-6 text-cyan-500 mt-1 flex-shrink-0"  />"                <span className="text-gray-300">{benefit}</span>
               </motion.div>;
             ))}
           </div>
@@ -401,7 +462,7 @@ import { motion  } from 'framer-motion.ts';        "Monthly reports"
                 <ul className="space-y-4 mb-8">
                   {tier.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center">"
-                      <CheckCircle className="h-5 w-5 text-cyan-500 mr-3 flex-shrink-0" />"                      <span className="text-gray-300">{feature}</span>
+                      <CheckCircle className="h-5 w-5 text-cyan-500 mr-3 flex-shrink-0"  />"                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -546,7 +607,7 @@ import { motion  } from 'framer-motion.ts';        "Monthly reports"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700">
                 Start Free Trial"
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5"  />
               </Button>"              <Button size="lg" variant="outline" className="border-gray-600 text-white hover:bg-gray-800">
                 Contact Sales
               </Button>
@@ -593,17 +654,17 @@ import { motion  } from 'framer-motion.ts';        "Monthly reports"
 "
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">"
               <div className="flex flex-col items-center">"
-                <Phone className="h-8 w-8 text-cyan-500 mb-4" />"
+                <Phone className="h-8 w-8 text-cyan-500 mb-4"  />"
                 <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>"
                 <p className="text-gray-300">+1 302 464 0950</p>
               </div>"
               <div className="flex flex-col items-center">"
-                <Mail className="h-8 w-8 text-cyan-500 mb-4" />"
+                <Mail className="h-8 w-8 text-cyan-500 mb-4"  />"
                 <h3 className="text-lg font-semibold text-white mb-2">Email</h3>"
                 <p className="text-gray-300">kleber@ziontechgroup.com</p>
               </div>"
               <div className="flex flex-col items-center">"
-                <MapPin className="h-8 w-8 text-cyan-500 mb-4" />"
+                <MapPin className="h-8 w-8 text-cyan-500 mb-4"  />"
                 <h3 className="text-lg font-semibold text-white mb-2">Address</h3>"                <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
               </div>
             </div>
@@ -620,6 +681,5 @@ import { motion  } from 'framer-motion.ts';        "Monthly reports"
         </div>;
       </section>;
     </div>;
-  );
-}
+  )}
 '"`

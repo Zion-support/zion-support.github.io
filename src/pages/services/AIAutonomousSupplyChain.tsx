@@ -1,5 +1,109 @@
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';  ];
+<<<<<<< HEAD
+import { Truck, 
+  Brain, 
+  Shield, 
+  Zap, 
+  BarChart3, 
+  Target, 
+  CheckCircle, 
+  Star,
+  ArrowRight,
+  Cpu,
+  Lock,
+  Globe,
+  Users,
+  Clock,
+  Phone,
+  Mail,
+  MapPin,
+  Package,
+  Route,
+  Warehouse,
+  TrendingUp,
+  AlertTriangle,
+  Database,
+  Network,
+  Smartphone,
+  Eye,
+  ShoppingCart,
+  Heart,
+  Leaf'
+ } from 'lucide-react.ts';
+;
+
+    {;"
+      title: "End-to-End Visibility",;"
+      description: "Complete transparency across the entire supply chain from raw materials to final delivery",;
+      icon: Eye,;"
+      color: "from-cyan-500 to-blue-500"};
+  ];
+
+  const pricingPlans = [
+    {
+"
+      name: "Starter","
+      price: "$1,999","
+      period: "/month","
+      description: "Perfect for small to medium businesses",
+      features: ["
+        "AI demand forecasting","
+        "Basic inventory management","
+        "Route optimization","
+        "Up to 5 warehouses","
+        "Email support","
+        "Mobile app access"
+      ],
+      popular: false
+    },
+    {
+"
+      name: "Professional","
+      price: "$4,999","
+      period: "/month","
+      description: "Ideal for growing enterprises",
+      features: ["
+        "Advanced AI algorithms","
+        "Multi-warehouse management","
+        "Predictive maintenance","
+        "Supplier risk assessment","
+        "Priority support","
+        "API access","
+        "Custom integrations"
+      ],
+      popular: true
+    },
+    {
+"
+      name: "Enterprise","
+      price: "$12,999","
+      period: "/month","
+      description: "For large corporations and global operations",
+      features: ["
+        "Custom AI model development","
+        "Global supply chain visibility","
+        "Advanced analytics dashboard","
+        "Dedicated support team",;"
+        "SLA guarantees",;"
+        "On-premise deployment",;"
+        "White-label solutions";
+      ],;
+      popular: false};
+  ]},;
+    {;"
+      title: "Risk Mitigation",;"
+      description: "Identify and prevent supply chain disruptions proactively",;"
+      metric: "80% risk reduction"};
+  ];
+
+  
+    {;"
+      title: "Food & Beverage",;"
+      description: "Manage perishable inventory, optimize delivery routes, and reduce food waste",;
+      icon: Leaf,;"
+      color: "from-green-500 to-emerald-500"};
+  ];
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -33,7 +137,7 @@ import { motion  } from 'framer-motion.ts';  ];
             transition={{ duration: 0.8 }}
           >"
             <div className="flex items-center justify-center mb-6">"
-              <Truck className="w-12 h-12 text-blue-400 mr-3" />"              <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-blue-400 via-green-400 to-blue-400 bg-clip-text text-transparent">
+              <Truck className="w-12 h-12 text-blue-400 mr-3"  />"              <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-blue-400 via-green-400 to-blue-400 bg-clip-text text-transparent">
                 AI Autonomous Supply Chain
               </h1>
             </div>"
@@ -43,13 +147,13 @@ import { motion  } from 'framer-motion.ts';  ];
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="/contact""
+                href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-green-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-green-600 transition-all duration-300 transform hover:scale-105"
               >
                 Optimize Supply Chain"
-                <ArrowRight className="ml-2 w-5 h-5" />              </a>
+                <ArrowRight className="ml-2 w-5 h-5"  />              </a>
               <a"
-                href="#demo""
+                href="#demo"
                 className="inline-flex items-center px-8 py-4 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
               >
                 Watch Demo
@@ -428,7 +532,7 @@ import { motion  } from 'framer-motion.ts';  ];
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"                      <span className="text-gray-300">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />"                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -487,16 +591,16 @@ import { motion  } from 'framer-motion.ts';  ];
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="/contact""
+                href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-green-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-green-600 transition-all duration-300 transform hover:scale-105"
               >
                 Start Free Trial"
-                <ArrowRight className="ml-2 w-5 h-5" />              </a>
+                <ArrowRight className="ml-2 w-5 h-5"  />              </a>
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
               >"
-                <Phone className="mr-2 w-5 h-5" />                Call Now
+                <Phone className="mr-2 w-5 h-5"  />                Call Now
               </a>
             </div>
           </motion.div>
@@ -509,21 +613,21 @@ import { motion  } from 'framer-motion.ts';  ];
           <h3 className="text-2xl font-bold text-white mb-8">Contact Zion Tech Group</h3>"
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
             <div className="flex flex-col items-center">"
-              <Phone className="w-8 h-8 text-blue-400 mb-4" />"
+              <Phone className="w-8 h-8 text-blue-400 mb-4"  />"
               <p className="text-gray-300">Phone</p>"
               <a href="tel:+13024640950" className="text-white hover:text-blue-400 transition-colors">
                 +1 302 464 0950
               </a>
             </div>"
             <div className="flex flex-col items-center">"
-              <Mail className="w-8 h-8 text-blue-400 mb-4" />"
+              <Mail className="w-8 h-8 text-blue-400 mb-4"  />"
               <p className="text-gray-300">Email</p>"
               <a href="mailto:kleber@ziontechgroup.com" className="text-white hover:text-blue-400 transition-colors">
                 kleber@ziontechgroup.com
               </a>
             </div>"
             <div className="flex flex-col items-center">"
-              <MapPin className="w-8 h-8 text-blue-400 mb-4" />"
+              <MapPin className="w-8 h-8 text-blue-400 mb-4"  />"
               <p className="text-gray-300">Address</p>;"              <p className="text-white">364 E Main St STE 1008<br />Middletown DE 19709</p>;
             </div>;
           </div>;

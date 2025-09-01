@@ -1,38 +1,20 @@
-import React, { useState } from 'react';'
-import { motion } from 'framer-motion';'
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { Star, CheckCircle, Clock, Users, TrendingUp, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
 import { advancedRealServices2025 } from "../data/2025-advanced-real-services-expansion";"
 import { specializedITServices2025 } from "../data/2025-specialized-it-ai-services";"
 import SEOHead from "../components/SEOHead";
 const AdvancedServicesShowcase2025 = () => {
-'
-    const [selectedCategory, setSelectedCategory] = useState('all');'
-    const [searchTerm, setSearchTerm] = useState('');'
+
+    const [selectedCategory, setSelectedCategory] = useState('all');
+    const [searchTerm, setSearchTerm] = useState('');
     const [sortBy, setSortBy] = useState('name');
     // Combine all services
     const allServices = [...advancedRealServices2025, ...specializedITServices2025];
     const categories = ['
-        'all','
-        'AI & Machine Learning','
-        'Cybersecurity','
-        'Healthcare Technology','
-        'Blockchain & Supply Chain','
-        'Financial Technology','
-        'Edge Computing & IoT','
-        'Marketing Technology','
-        'Quantum Computing','
-        'Human Resources Technology','
-        'Energy & Sustainability','
-        'Legal Technology','
-        'Neuromorphic Computing','
-        'Privacy AI','
-        'AI Governance','
-        'DevOps & Automation','
-        'Data Quality & Analytics','
-        'API Management','
-        'Network Security'
+        'all',AI & Machine Learning',Cybersecurity',Healthcare Technology',Blockchain & Supply Chain',Financial Technology',Edge Computing & IoT',Marketing Technology',Quantum Computing',Human Resources Technology',Energy & Sustainability',Legal Technology',Neuromorphic Computing',Privacy AI',AI Governance',DevOps & Automation',Data Quality & Analytics',API Management',Network Security'
     ];
-    const filteredServices = allServices;'
+    const filteredServices = allServices;
         .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
         .filter(service => service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -40,13 +22,13 @@ const AdvancedServicesShowcase2025 = () => {
         .sort((a, b) => {
 
         switch (sortBy) {
-'
+
             case 'price':'
-                return parseFloat(a.price.replace('$', '').replace(',', '')) - parseFloat(b.price.replace('$', '').replace(',', ''));'
+                return parseFloat(a.price.replace('$',).replace(',,)) - parseFloat(b.price.replace('$',).replace(',,));
             case 'rating':
-                return b.rating - a.rating;'
+                return b.rating - a.rating;
             case 'category':
-                return a.category.localeCompare(b.category);'
+                return a.category.localeCompare(b.category);
             case 'name':
             default:
                 return a.name.localeCompare (b.name) }
@@ -54,27 +36,10 @@ const AdvancedServicesShowcase2025 = () => {
     const getCategoryIcon = (category) => {
 
         const icons = {
-'
-  'AI & Machine Learning': '🤖','
-            'Cybersecurity': '🔐','
-            'Healthcare Technology': '🏥','
-            'Blockchain & Supply Chain': '⛓️','
-            'Financial Technology': '💰','
-            'Edge Computing & IoT': '🌐','
-            'Marketing Technology': '📢','
-            'Quantum Computing': '🔮','
-            'Human Resources Technology': '👥','
-            'Energy & Sustainability': '🌱','
-            'Legal Technology': '⚖️','
-            'Neuromorphic Computing': '🧠','
-            'Privacy AI': '🔒','
-            'AI Governance': '⚖️','
-            'DevOps & Automation': '⚡','
-            'Data Quality & Analytics': '📊','
-            'API Management': '🔌','
-  'Network Security': '🛡️'
 
-};'
+  'AI & Machine Learning': '🤖',Cybersecurity': '🔐',Healthcare Technology': '🏥',Blockchain & Supply Chain': '⛓️',Financial Technology': '💰',Edge Computing & IoT': '🌐',Marketing Technology': '📢',Quantum Computing': '🔮',Human Resources Technology': '👥',Energy & Sustainability': '🌱',Legal Technology': '⚖️',Neuromorphic Computing': '🧠',Privacy AI': '🔒',AI Governance': '⚖️',DevOps & Automation': '⚡',Data Quality & Analytics': '📊',API Management': '🔌',Network Security': '🛡️'
+
+};
         return icons[category] || '🚀'};
     const containerVariants = {
 
@@ -247,7 +212,7 @@ const AdvancedServicesShowcase2025 = () => {
               <div>"
                 <label className="block text-sm font-medium text-gray-300 mb-2">Category</label>"
                 <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500">"
-                  {categories.map(category => (<option key={category} value={category} className="bg-slate-800 text-white">'
+                  {categories.map(category => (<option key={category} value={category} className="bg-slate-800 text-white">
                       {category === 'all' ? 'All Categories' : category}
                     </option>) ) }
                 </select>

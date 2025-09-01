@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
+import React, { useState, useRef, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { MessageSquare, Send, Bot, User, X, Minimize2, Maximize2, Mic, MicOff, Settings, Brain, Paperclip, Smile } from 'lucide-react';
 import { Button } from "./button";"
 export function AIChatAssistant({ enabled = true, className = "", onMessageSend, onAssistantResponse }) {
@@ -10,26 +10,26 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
     const [showSettings, setShowSettings] = useState(false);
     const [messages, setMessages] = useState([
         {
-'
-            id: '1','
-            type: 'assistant','
+
+            id: '1',
+            type: 'assistant',
             content: 'Hello! I\'m Zion AI Assistant. I can help you with technology solutions, business insights, and answer  questions about our services. How can I assist you today?',
-            timestamp: new Date(),'
+            timestamp: new Date(),
             status: 'sent',
             metadata: {
 
-                confidence: 0.95,'
-                suggestions['Tell me about your AI services', 'What cloud solutions do you offer?', 'How can I get started?'];
+                confidence: 0.95,
+                suggestions['Tell me about your AI services',What cloud solutions do you offer?',How can I get started?'];
             }
         }
-    ]);'
+    ]);
     const [inputValue, setInputValue] = useState('');
     const [isTyping, setIsTyping] = useState(false);
     const messagesEndRef = useRef(null);
     const inputRef = useRef(null);
     // Auto-scroll to bottom
     const scrollToBottom = () => {
-'
+
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })};
     useEffect(() => {
         scrollToBottom()}, [messages]);
@@ -54,16 +54,16 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
         // Simulate API call delay
         const timer = setTimeout(() => {
             // Mock AI responses based on user input'
-                    suggestions['Schedule consultation', 'View case studies', 'Meet the team']
+                    suggestions['Schedule consultation',View case studies',Meet the team']
                 }
             ];
             const randomResponse = responses[Math.floor(Math.random() * responses.length)];
             const aiMessage = {
 
-  id: Date.now().toString(),'
+  id: Date.now().toString(),
                 type: 'assistant',
                 content: randomResponse.content,
-                timestamp: new Date(),'
+                timestamp: new Date(),
                 status: 'sent',
                 metadata: {
 
@@ -88,10 +88,10 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
             return;
         const userMessage = {
 
-  id: Date.now().toString(),'
+  id: Date.now().toString(),
             type: 'user',
             content: inputValue.trim(),
-            timestamp: new Date(),'
+            timestamp: new Date(),
   status: 'sending'
         
 
@@ -107,7 +107,7 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
         generateAIResponse(userMessage.content)};
     // Handle enter key
     const handleKeyPress = (e) => {
-'
+
         if (e.key === 'Enter' && !e.shiftKey) {
 
             e.preventDefault();
@@ -193,7 +193,7 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
                     <h3 className="text-white font-semibold">Zion AI Assistant</h3>"
                     <div className="flex items-center gap-2">'`
                       <div className={`w-2 h-2 rounded-full ${isTyping ? 'bg-zion-cyan animate-pulse' : 'bg-green-400'}`}/>"
-                      <span className="text-zinc-400 text-xs">'
+                      <span className="text-zinc-400 text-xs">
                         {isTyping ? 'Typing...' : 'Online'}
                       </span>
                     </div>
@@ -226,7 +226,7 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
 
 
 }} animate = {
-'
+
   { height: 'auto',
   opacity: 1 
 
@@ -391,7 +391,7 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
 
                   {/* Quick actions */}"
                   <div className="mt-3 flex flex-wrap gap-2">'"
-                    {['AI Services', 'Cloud Solutions', 'Cybersecurity', 'Get Started'].map((action) => (<button key={action} onClick={() => handleSuggestionClick(action)} className="px-3 py-1 bg-zion-blue/20 hover:bg-zion-blue/30 border border-zion-blue-light/30 rounded-full text-xs text-zinc-300 hover:text-white transition-all duration-200">
+                    {['AI Services',Cloud Solutions',Cybersecurity',Get Started'].map((action) => (<button key={action} onClick={() => handleSuggestionClick(action)} className="px-3 py-1 bg-zion-blue/20 hover:bg-zion-blue/30 border border-zion-blue-light/30 rounded-full text-xs text-zinc-300 hover:text-white transition-all duration-200">
                         {action}
                       </button>))}
                   </div>

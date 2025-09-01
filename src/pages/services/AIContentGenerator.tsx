@@ -1,6 +1,3 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
-import SEO from '@/components/SEO';
 import {
   PenTool, 
   FileText, 
@@ -52,47 +49,9 @@ export default function AIContentGenerator(...args[]):  {
 
       icon: Globe,"
       title: "Multi-language Support","
-      description: "Generate content in over 50 languages with native-level quality and cultural adaptation.";    };
+      description: "Generate content in over 50 languages with native-level quality and cultural adaptation."};
   ]};
-  ];
-
-  const contentTypes = [
-    {
-
-      icon: Edit3,"
-      title: "Blog Posts & Articles","
-      description: "Long-form content with research, citations, and engaging narratives"
-    },
-    {
-
-      icon: Type,"
-      title: "Social Media Content","
-      description: "Platform-optimized posts for Twitter, LinkedIn, Instagram, and Facebook"
-    },
-    {
-
-      icon: FileText,"
-      title: "Marketing Copy","
-      description: "Compelling ad copy, landing pages, and promotional materials"
-    },
-    {
-
-      icon: Mail,"
-      title: "Email Campaigns","
-      description: "Newsletters, drip campaigns, and personalized email content"
-    },
-    {
-
-      icon: Image,'
-      title: 'AI Image Generation','
-      description: 'Create stunning visuals, graphics, and illustrations using advanced AI image generation models'
-    },
-    {
-
-      icon: Video,"
-      title: "Video Scripts","
-      description: "Scripts for YouTube, TikTok, and marketing videos";
-    };
+  ]};
   ];
 
   const pricingPlans = [
@@ -130,70 +89,29 @@ export default function AIContentGenerator(...args[]):  {
     },
     {
 
-      icon: Target,'
-      title: 'Audience Targeting','
-      description: 'Content tailored to specific demographics, industries, and customer personas';
-    },;
+      icon: Target,
+      title: 'Audience Targeting',
+      description: 'Content tailored to specific demographics, industries, and customer personas'},;
     {;
-      icon: BarChart3,;'
-      title: 'Performance Analytics',;'
-      description: 'Track content performance with AI-powered insights and optimization recommendations';
-    };
+      icon: BarChart3,;
+      title: 'Performance Analytics',;
+      description: 'Track content performance with AI-powered insights and optimization recommendations'};
   ];
 
-  const benefits = [;'
-    'Increase content production by 10x with AI assistance',;'
-    'Improve SEO rankings by 45% with optimized content',;'
-    'Reduce content creation costs by 60%',;'
-    'Boost engagement rates by 35% with targeted content',;'
-    'Save 20+ hours per week on content creation',;'
+  
+    'Increase content production by 10x with AI assistance',;
+    'Improve SEO rankings by 45% with optimized content',;
+    'Reduce content creation costs by 60%',;
+    'Boost engagement rates by 35% with targeted content',;
+    'Save 20+ hours per week on content creation',;
     'Maintain consistent brand voice across all content';
   ];
 
-  const pricing = [
-    {
-'
-      name: 'Creator','
-      price: '$49','
-      period: '/month','
-      description: 'Perfect for individual creators and small businesses',
-      features: ['
-        'Up to 50 AI-generated articles per month','
-        'Basic image generation (10 images/month)','
-        'SEO optimization tools','
-        'Content templates','
-        'Email support','
-        'Basic analytics'
-      ],'
-      cta: 'Start Free Trial',
-      popular: false
-    },
-    {
-'
-      name: 'Professional','
-      price: '$149','
-      period: '/month','
-      description: 'Ideal for marketing teams and growing businesses',
-      features: ['
-        'Up to 200 AI-generated articles per month','
-        'Advanced image generation (50 images/month)','
-        'Video script generation','
-        'Multi-language support','
-        'Priority support','
-        'Advanced analytics dashboard','
-        'API access','
-        'Team collaboration tools'
-      ],'
-      cta: 'Start Free Trial',
-      popular: true
-    },
-    {
-'
-      name: 'Enterprise','
-      price: '$399','
-      period: '/month','
-      description: 'For large organizations with high content demands',
-      features: ['
+  
+        'Advanced security features',;
+        'Custom integrations';
+      ],;
+=======
         'Unlimited AI-generated content','
         'Unlimited image generation','
         'Custom AI model training','
@@ -202,6 +120,7 @@ export default function AIContentGenerator(...args[]):  {
         'SLA guarantees',;'
         'Advanced security features',;'        'Custom integrations';
       ],;'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       cta: 'Contact Sales',;
       popular: false};
   ];
@@ -209,10 +128,10 @@ export default function AIContentGenerator(...args[]):  {
   return()
     <>
       <SEO "
-        title = "AI Content Generator - Create Engaging Content with AI""
-        description="Generate high-quality, SEO-optimized content 10x faster with AI. Create articles, images, videos, and more for blogs, social media, and marketing campaigns.""
+        title = "AI Content Generator - Create Engaging Content with AI"
+        description="Generate high-quality, SEO-optimized content 10x faster with AI. Create articles, images, videos, and more for blogs, social media, and marketing campaigns."
         canonical="/services/ai-content-generator"
-      />
+       />
 "      <div className="min-h-screen bg-futuristic">
         {/* Hero Section */}"
         <section className="relative py-20 overflow-hidden">"
@@ -405,7 +324,7 @@ export default function AIContentGenerator(...args[]):  {
               <h2 className="text-4xl font-bold mb-6 text-white">
                 Perfect for Every Team
               </h2>"
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">'
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Whether you're a solo creator or enterprise team, our platform scales with you
               </p>
             </div>
@@ -522,7 +441,7 @@ export default function AIContentGenerator(...args[]):  {
 }}"
                   className="flex items-start space-x-3"
 "
-                  <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />"                  <span className="text-gray-300">{benefit}</span>
+                  <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0"  />"                  <span className="text-gray-300">{benefit}</span>
                 </motion.div>;
               ))}
             </div>
@@ -631,7 +550,7 @@ export default function AIContentGenerator(...args[]):  {
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => ("
                       <li key={featureIndex} className="flex items-center space-x-3">"
-                        <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0" />"                        <span className="text-gray-300">{feature}</span>
+                        <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0"  />"                        <span className="text-gray-300">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -699,6 +618,5 @@ export default function AIContentGenerator(...args[]):  {
         </section>;
       </div>;
     </>
-  );
-}
+  )}
 '"`

@@ -1,26 +1,26 @@
-import React, { useState } from 'react';'
-import { Link } from 'react-router-dom';'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Brain, Cpu, Cloud, Zap, Globe, CheckCircle, Star, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
 import { SEOHead } from "../components/SEOHead";"
 import { INNOVATIVE_NEW_SERVICES_2025 } from "../data/innovativeNewServices2025";"
 import { SPECIALIZED_IT_SERVICES_2025 } from "../data/specializedITServices2025";
 const InnovativeNewServices2025 = () => {
-'
-    const [selectedCategory, setSelectedCategory] = useState('all');'
+
+    const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedPriceRange, setSelectedPriceRange] = useState('all');
-    const allServices = [...INNOVATIVE_NEW_SERVICES_2025, ...SPECIALIZED_IT_SERVICES_2025];'
+    const allServices = [...INNOVATIVE_NEW_SERVICES_2025, ...SPECIALIZED_IT_SERVICES_2025];
     const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
     const priceRanges = ['
-        { value: 'all', label: 'All Prices' },'
-        { value: '0-2000', label: 'Under $2,000/month' },'
-        { value: '2000-5000', label: '$2,000 - $5,000/month' },'
+        { value: 'all', label: 'All Prices' },
+        { value: '0-2000', label: 'Under $2,000/month' },
+        { value: '2000-5000', label: '$2,000 - $5,000/month' },
         { value: '5000+', label: '$5,000+/month' }
     ];
     const filteredServices = allServices.filter(service => {
-'
+
         const categoryMatch = selectedCategory === 'all' || service.category === selectedCategory;
         // All services have a price property
-        const servicePrice = service.price;'
+        const servicePrice = service.price;
         const priceMatch = selectedPriceRange === 'all' ||'
             (selectedPriceRange === '0-2000' && service.price < 2000) ||'
             (selectedPriceRange === '2000-5000' && service.price >= 2000 && service.price < 5000) ||'
@@ -29,13 +29,13 @@ const InnovativeNewServices2025 = () => {
     const getCategoryIcon = (category) => {
 
         switch (category) {
-'
+
             case 'AI & Analytics':
-                return Brain;'
+                return Brain;
             case 'AI & Development':
-                return Cpu;'
+                return Cpu;
             case 'Network Infrastructure':
-                return Globe;'
+                return Globe;
             case 'Edge Computing':
                 return Cloud;
             default:
@@ -44,13 +44,13 @@ const InnovativeNewServices2025 = () => {
     const getCategoryColor = (category) => {
 
         switch (category) {
-'
+
             case 'AI & Analytics':'
-                return 'from-purple-500 to-pink-600';'
+                return 'from-purple-500 to-pink-600';
             case 'AI & Development':'
-                return 'from-blue-500 to-cyan-600';'
+                return 'from-blue-500 to-cyan-600';
             case 'Network Infrastructure':'
-                return 'from-green-500 to-emerald-600';'
+                return 'from-green-500 to-emerald-600';
             case 'Edge Computing':'
                 return 'from-orange-500 to-red-600';
             default:'
@@ -112,7 +112,7 @@ const InnovativeNewServices2025 = () => {
             <div className="flex items-center gap-4">"
               <label className="text-gray-300 font-medium">Category:</label>"
               <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="bg-gray-800 border border-gray-600 rounded-lg px-4 py-2 text-white focus:border-cyan-500 focus:outline-none">
-                {categories.map(category => (<option key={category} value={category}>'
+                {categories.map(category => (<option key={category} value={category}>
                     {category === 'all' ? 'All Categories' : category}
                   </option>) ) }
               </select>
@@ -219,7 +219,7 @@ const InnovativeNewServices2025 = () => {
               <h3 className="text-2xl font-bold text-gray-400 mb-4">No services found</h3>"
               <p className="text-gray-500 mb-6">Try adjusting your filters to see more services</p>
               <button onClick={() => {
-'
+
                 setSelectedCategory('all');'"
                 setSelectedPriceRange('all')}} className="px-6 py-3 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors">
                 Clear Filters

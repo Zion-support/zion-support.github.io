@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { motion } from 'framer-motion';
 import {
 
@@ -9,76 +9,71 @@ import {
   Users,
   ArrowRight,
   CheckCircle,
-  Rocket,'
-  Shield} from 'lucide-react';'
-import AdvancedServiceRecommendation from '../components/AdvancedServiceRecommendation';'
+  Rocket,
+  Shield} from 'lucide-react';
+import AdvancedServiceRecommendation from '../components/AdvancedServiceRecommendation';
 import { Button } from '../components/ui/button';
 import {
 
   Card,
   CardContent,
-  CardHeader,'
+  CardHeader,
   CardTitle} from '../components/ui/card';
 const ServiceRecommendations = () => {
   const features = [
     {
 
-      icon: <Brain className="w-6 h-6 text-zion-cyan" />,'
+      icon: <Brain className="w-6 h-6 text-zion-cyan" />,
       title: 'AI-Powered Analysis',
       description:'
         'Advanced algorithms analyze your business profile to find perfect service matches'},
     {
 "
-      icon: <Target className="w-6 h-6 text-zion-purple" />,'
+      icon: <Target className="w-6 h-6 text-zion-purple" />,
       title: 'Personalized Matching',
       description:'
         'Get recommendations tailored to your industry, budget, and technology maturity'},
     {
 "
-      icon: <TrendingUp className="w-6 h-6 text-zion-green" />,'
+      icon: <TrendingUp className="w-6 h-6 text-zion-green" />,
       title: 'ROI Optimization',
       description:'
         'Focus on services that deliver the highest return on investment for your business'},
     {
 "
-      icon: <Award className="w-6 h-6 text-zion-orange" />,'
+      icon: <Award className="w-6 h-6 text-zion-orange" />,
       title: 'Expert Validation',
       description:'
         'All recommendations are validated by our technology experts and industry specialists'},
   ];
   const benefits = ['
-    'Save time researching and comparing different service options','
-    'Get personalized recommendations based on your specific business needs','
-    'Understand implementation complexity and expected timelines','
-    'Focus on high-priority solutions with proven ROI potential','
-    'Access to our comprehensive portfolio of cutting-edge services','
-    'Expert guidance throughout the selection and implementation process',
+    'Save time researching and comparing different service options',Get personalized recommendations based on your specific business needs',Understand implementation complexity and expected timelines',Focus on high-priority solutions with proven ROI potential',Access to our comprehensive portfolio of cutting-edge services',Expert guidance throughout the selection and implementation process',
   ];
   const processSteps = [
     {
 
-      step: 1,'
+      step: 1,
       title: 'Tell Us About Your Business',
       description:'
         'Fill out our comprehensive business profile form with industry, size, goals, and challenges',"
       icon: <Users className="w-8 h-8 text-zion-cyan" />},
     {
 
-      step: 2,'
+      step: 2,
       title: 'AI Analysis & Matching',
       description:'
         'Our AI engine analyzes your profile and matches it with the most suitable services',"
       icon: <Brain className="w-8 h-8 text-zion-purple" />},
     {
 
-      step: 3,'
+      step: 3,
       title: 'Personalized Recommendations',
       description:'
         'Receive detailed recommendations with match scores, priorities, and implementation details',"
       icon: <Target className="w-8 h-8 text-zion-green" />},
     {
 
-      step: 4,'
+      step: 4,
       title: 'Expert Consultation',
       description:'
         'Connect with our experts to discuss implementation and get started with your chosen solution',"
@@ -113,7 +108,7 @@ const ServiceRecommendations = () => {
                 className="bg-white text-zion-purple hover:bg-zion-slate-light text-lg px-8 py-4"
                 onClick={() =>
                   document'
-                    .getElementById('recommendation-engine')'
+                    .getElementById('recommendation-engine')
                     ?.scrollIntoView({ behavior: 'smooth' })
                 }
               >
@@ -124,8 +119,7 @@ const ServiceRecommendations = () => {
                 className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4"
                 onClick={() =>
                   window.open('
-                    'mailto:kleber@ziontechgroup.com?subject=Service Recommendation Help','
-                    '_blank'
+                    'mailto:kleber@ziontechgroup.com?subject=Service Recommendation Help',_blank'
                   )
                 }
               >
@@ -274,7 +268,7 @@ const ServiceRecommendations = () => {
 
       {/* Recommendation Engine Section */}
       <section"
-        id="recommendation-engine""
+        id="recommendation-engine"
         className="py-16 px-6 bg-zion-blue-light/5"
       >"
         <div className="max-w-7xl mx-auto">
@@ -320,8 +314,7 @@ const ServiceRecommendations = () => {
                 className="bg-white text-zion-purple hover:bg-zion-slate-light text-lg px-8 py-4"
                 onClick={() =>
                   window.open('
-                    'mailto:kleber@ziontechgroup.com?subject=Business Transformation Consultation','
-                    '_blank'
+                    'mailto:kleber@ziontechgroup.com?subject=Business Transformation Consultation',_blank'
                   )
                 }
               >"
@@ -330,7 +323,7 @@ const ServiceRecommendations = () => {
               </Button>
               <Button"
                 className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4"'
-                onClick={() => window.open('tel:+13024640950', '_blank')}
+                onClick={() => window.open('tel:+13024640950',_blank')}
               >"
                 <Shield className="w-5 h-5 mr-2" />
                 Speak with an Expert

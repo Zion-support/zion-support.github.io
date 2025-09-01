@@ -1,5 +1,3 @@
-import React from 'react.ts';'
-import { motion } from 'framer-motion.ts';
 import {
 
   Atom,
@@ -21,142 +19,15 @@ import {
   MapPin,
   ExternalLink,
   Rocket,
-  Microscope,'
+  Microscope,
   TestTube} from 'lucide-react.ts';
 
 const QuantumComputingElite: React.FC = (): JSX.Element => {
 
-  const features = [
-    {
-
-      icon: Atom,'
-      title: 'Quantum Processing Units',
-      description:'
-        'Access to 1000+ qubit quantum computers with error correction and quantum advantage algorithms'},
-    {
-
-      icon: Brain,'
-      title: 'AI-Quantum Hybrid Systems',
-      description:'
-        'Combines quantum computing with AI for unprecedented computational power and problem-solving'},
-    {
-
-      icon: Zap,'
-      title: 'Quantum-Classical Integration',
-      description:'
-        'Seamless integration between quantum and classical computing resources for optimal performance'},
-    {
-
-      icon: Lock,'
-      title: 'Quantum-Safe Cryptography',
-      description:'
-        'Post-quantum cryptography solutions that protect against future quantum attacks'},
-    {
-
-      icon: Users,'
-      title: 'Multi-User Quantum Access',
-      description:'
-        'Collaborative quantum computing with real-time sharing and resource optimization'},
-    {
-
-      icon: Globe,'
-      title: 'Global Quantum Network',
-      description:'
-        'Access to quantum computers across multiple locations and cloud providers'},
-  ];
-
-  const pricing = [
-    {
-'
-      name: 'Quantum Starter','
-      price: '$8,500','
-      period: '/month','
-      description: 'Perfect for research institutions and startups',
-      features: ['
-        'Up to 100 qubit access','
-        'Basic quantum algorithms','
-        'Standard quantum simulators','
-        'Email support','
-        '5 user licenses','
-        'Basic quantum education',
-      ]},
-    {
-'
-      name: 'Quantum Professional','
-      price: '$18,000','
-      period: '/month','
-      description: 'Ideal for growing businesses and research teams',
-      features: ['
-        'Up to 500 qubit access','
-        'Advanced quantum algorithms','
-        'Custom quantum circuits','
-        'Priority support','
-        '25 user licenses','
-        'API access','
-        'Quantum consulting',
-      ],
-      popular: true},
-    {
-'
-      name: 'Quantum Enterprise','
-      price: '$45,000','
-      period: '/month','
-      description: 'For large organizations with complex quantum needs',
-      features: ['
-        'Unlimited qubit access','
-        'Full quantum suite','
-        'Custom quantum development','
-        '24/7 dedicated support','
-        'Unlimited users','
-        'White-label options','
-        'On-premise quantum computers',
-      ]},
-  ];
-
-  const quantumApplications = [
-    {
-'
-      title: 'Drug Discovery & Pharmaceuticals',
-      description:'
-        'Quantum molecular modeling for faster drug discovery, protein folding, and chemical simulations'},
-    {
-'
-      title: 'Financial Modeling & Optimization',
-      description:'
-        'Portfolio optimization, risk assessment, and algorithmic trading using quantum algorithms'},
-    {
-'
-      title: 'Machine Learning & AI',
-      description:'
-        'Quantum machine learning algorithms for pattern recognition and data analysis'},
-    {
-'
-      title: 'Cryptography & Security',
-      description:'
-        'Quantum-resistant encryption and quantum key distribution for ultra-secure communications'},
-    {
-'
-      title: 'Supply Chain Optimization',
-      description:'
-        'Complex logistics optimization and route planning using quantum algorithms'},
-    {
-'
-      title: 'Climate Modeling',
-      description:'
-        'Advanced climate simulations and weather forecasting with quantum computing power'},
-  ];
-
-  const quantumTechnologies = ['
-    'Superconducting Qubits','
-    'Trapped Ion Qubits','
-    'Topological Qubits','
-    'Photonic Qubits','
-    'Silicon Spin Qubits','
-    'Quantum Annealing','
-    'Quantum Error Correction','
-    'Quantum Memory Systems',
-  ];
-
+  
+  
+  
+  
   return()    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
@@ -168,7 +39,7 @@ const QuantumComputingElite: React.FC = (): JSX.Element => {
           >"
             <div className="flex justify-center mb-6">"
               <div className="p-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full">"
-                <Atom className="h-12 w-12 text-white" />              </div>
+                <Atom className="h-12 w-12 text-white"  />              </div>
             </div>"
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Quantum Computing Elite
@@ -180,16 +51,16 @@ const QuantumComputingElite: React.FC = (): JSX.Element => {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="https://ziontechgroup.com/contact""
+                href="https://ziontechgroup.com/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
               >
                 Access Quantum Computing"
-                <ArrowRight className="ml-2 h-5 w-5" />              </a>
+                <ArrowRight className="ml-2 h-5 w-5"  />              </a>
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 bg-zion-slate text-white font-semibold rounded-lg hover:bg-zion-slate-light transition-all duration-300"
               >"
-                <Phone className="mr-2 h-5 w-5" />                Call Quantum Team
+                <Phone className="mr-2 h-5 w-5"  />                Call Quantum Team
               </a>
             </div>
           </motion.div>
@@ -309,7 +180,7 @@ const QuantumComputingElite: React.FC = (): JSX.Element => {
                 className="bg-zion-slate p-6 rounded-xl border border-zion-slate-light text-center"
               >"
                 <div className="p-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg w-fit mx-auto mb-4">"
-                  <Microscope className="h-6 w-6 text-white" />
+                  <Microscope className="h-6 w-6 text-white"  />
                 </div>"                <h3 className="text-lg font-semibold text-white">{tech}</h3>
               </motion.div>
             ))}
@@ -380,13 +251,13 @@ const QuantumComputingElite: React.FC = (): JSX.Element => {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center">"
-                      <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />"                      <span className="text-white">{feature}</span>
+                      <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0"  />"                      <span className="text-white">{feature}</span>
                     </li>
                   ))}
                 </ul>
 
                 <a"
-                  href="https://ziontechgroup.com/contact""
+                  href="https://ziontechgroup.com/contact"
                   className="w-full inline-flex justify-center items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
                 >
                   Get Quantum Access
@@ -420,13 +291,18 @@ const QuantumComputingElite: React.FC = (): JSX.Element => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">"
             <div className="text-center">"
               <div className="p-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full w-fit mx-auto mb-4">"
-                <Phone className="h-8 w-8 text-white" />
+                <Phone className="h-8 w-8 text-white"  />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-2">
                 Call Quantum Team
               </h3>
               <a"
+<<<<<<< HEAD
+                href="tel:+13024640950"
+                className="text-zion-slate-light hover:text-white transition-colors duration-300"
+=======
                 href="tel:+13024640950""                className="text-zion-slate-light hover:text-white transition-colors duration-300"
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
               >
                 +1 (302) 464-0950
               </a>
@@ -434,13 +310,18 @@ const QuantumComputingElite: React.FC = (): JSX.Element => {
 "
             <div className="text-center">"
               <div className="p-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full w-fit mx-auto mb-4">"
-                <Mail className="h-8 w-8 text-white" />
+                <Mail className="h-8 w-8 text-white"  />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-2">
                 Email Quantum Team
               </h3>
               <a"
+<<<<<<< HEAD
+                href="mailto:kleber@ziontechgroup.com"
+                className="text-zion-slate-light hover:text-white transition-colors duration-300"
+=======
                 href="mailto:kleber@ziontechgroup.com""                className="text-zion-slate-light hover:text-white transition-colors duration-300"
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
               >
                 kleber@ziontechgroup.com
               </a>
@@ -448,7 +329,7 @@ const QuantumComputingElite: React.FC = (): JSX.Element => {
 "
             <div className="text-center">"
               <div className="p-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full w-fit mx-auto mb-4">"
-                <MapPin className="h-8 w-8 text-white" />
+                <MapPin className="h-8 w-8 text-white"  />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-2">
                 Visit Quantum Center
@@ -462,11 +343,11 @@ const QuantumComputingElite: React.FC = (): JSX.Element => {
 "
           <div className="text-center">
             <a"
-              href="https://ziontechgroup.com/contact""
+              href="https://ziontechgroup.com/contact"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
             >
               Schedule Quantum Demo"
-              <ArrowRight className="ml-2 h-5 w-5" />            </a>
+              <ArrowRight className="ml-2 h-5 w-5"  />            </a>
           </div>
         </div>
       </section>
@@ -479,19 +360,19 @@ const QuantumComputingElite: React.FC = (): JSX.Element => {
           </p>"
           <div className="flex justify-center space-x-6">
             <a"
-              href="https://ziontechgroup.com""
+              href="https://ziontechgroup.com"
               className="text-zion-slate-light hover:text-white transition-colors duration-300"
             >
               Visit Website"
-              <ExternalLink className="inline ml-1 h-4 w-4" />            </a>
+              <ExternalLink className="inline ml-1 h-4 w-4"  />            </a>
             <a"
-              href="https://ziontechgroup.com/privacy""
+              href="https://ziontechgroup.com/privacy"
               className="text-zion-slate-light hover:text-white transition-colors duration-300"
             >
               Privacy Policy
             </a>
             <a"
-              href="https://ziontechgroup.com/terms""
+              href="https://ziontechgroup.com/terms"
               className="text-zion-slate-light hover:text-white transition-colors duration-300"
             >
               Terms of Service

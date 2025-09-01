@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { BarChart3, TrendingUp, Brain, ArrowRight, CheckCircle, Zap, Shield, Database const AIAnalyticsCopilot = () => { return (<> <Helmet> <title>AI Analytics Copilot - Zion Tech Group</title> <meta name="description" content="Intelligent analytics copilot that transforms raw data into actionable insights with AI-powered analysis and visualization."/> <meta name="keywords" content="AI analytics, data insights, business intelligence, analytics copilot, data visualization"/> </Helmet> <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"> {/* Hero Section */ }"
         <section className="pt-32 pb-20 px-4 relative overflow-hidden">"

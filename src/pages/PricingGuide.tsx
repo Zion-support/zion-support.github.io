@@ -1,5 +1,51 @@
-import React, { useState } from 'react.ts';'
-import { Link  } from 'react-router-dom.ts';        "2 User Licenses"
+<<<<<<< HEAD
+import { Calculator, 
+
+
+  Check, 
+  X, 
+  Star, 
+  Zap, 
+  Brain, 
+  Cloud, 
+  Shield, 
+  Rocket, 
+  Cpu, 
+  Lock, 
+  Heart, 
+  Globe, 
+  Atom,
+  Satellite'
+} from 'lucide-react';
+
+export default function PricingGuide(...args[]):  {
+
+  const [selectedCurrency, setSelectedCurrency] = useState('USD');
+  const [selectedPeriod, setSelectedPeriod] = useState('monthly');
+
+  
+;
+;
+},;
+    EUR: { symbol: '€', rate: 0.85 },;
+    GBP: { symbol: '£', rate: 0.73 }};
+
+export const PricingGuide: React.FC = () => {
+  const pricingTiers = [
+    {
+"
+      name: "Starter",
+      icon: Zap,"
+      description: "Perfect for small businesses getting started with AI",
+      price: { monthly: 299, yearly: 2990 },
+      features[;"
+        "AI Business Intelligence Basic","
+        "Cloud Infrastructure (10GB)","
+        "Basic Support (Email)","
+        "Monthly Reports","
+        "2 User Licenses"
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ],;
       notIncluded[;"
         "Advanced Analytics","
@@ -106,15 +152,21 @@ import { Link  } from 'react-router-dom.ts';        "2 User Licenses"
 "
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
+<<<<<<< HEAD
+        title="Pricing Guide - Zion Tech Group"
+        description="Comprehensive pricing information for AI, cloud, cybersecurity, and emerging technology services. Transparent pricing with flexible plans for all business sizes."
+       />
+=======
         title="Pricing Guide - Zion Tech Group""        description="Comprehensive pricing information for AI, cloud, cybersecurity, and emerging technology services. Transparent pricing with flexible plans for all business sizes."
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto">"
           <div className="text-center">"
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mb-6">"
-              <Calculator className="h-10 w-10 text-white" />
+              <Calculator className="h-10 w-10 text-white"  />
             </div>"            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Pricing Guide
             </h1>"
@@ -144,7 +196,7 @@ import { Link  } from 'react-router-dom.ts';        "2 User Licenses"
                   <button'
                     onClick={() => setSelectedPeriod('monthly')}
                     className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
-'
+
                       selectedPeriod === 'monthly''
                         ? 'bg-cyan-500 text-white''
                         : 'text-slate-300 hover:text-white'`
@@ -155,7 +207,7 @@ import { Link  } from 'react-router-dom.ts';        "2 User Licenses"
                   <button'
                     onClick={() => setSelectedPeriod('yearly')}`
                     className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
-'
+
                       selectedPeriod === 'yearly''
                         ? 'bg-cyan-500 text-white''
                         : 'text-slate-300 hover:text-white'`
@@ -215,7 +267,7 @@ import { Link  } from 'react-router-dom.ts';        "2 User Licenses"
                   <div className="mb-6">"
                     <div className="text-4xl font-bold text-white">
                       {calculatePrice(plan.price[selectedPeriod as keyof typeof plan.price])}"
-                      <span className="text-lg text-slate-400 font-normal">'
+                      <span className="text-lg text-slate-400 font-normal">
                         /{selectedPeriod === 'monthly' ? 'month' : 'year'}
                       </span>
                       <span className="text-slate-400">{tier.period}</span>
@@ -232,7 +284,7 @@ import { Link  } from 'react-router-dom.ts';        "2 User Licenses"
                     }`}
                   >
                     {tier.cta}
-                    <ArrowRight className="w-4 h-4" />
+                    <ArrowRight className="w-4 h-4"  />
                   </Link>
                 </div>
 "
@@ -240,7 +292,7 @@ import { Link  } from 'react-router-dom.ts';        "2 User Licenses"
                   <h4 className="text-lg font-semibold text-white mb-4">What's Included: any</h4>
                   {plan.features.map((feature, featureIndex)  => ("
                     <div key={featureIndex} className="flex items-center text-slate-300">"
-                      <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"                      <span className="text-sm">{feature}</span>
+                      <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />"                      <span className="text-sm">{feature}</span>
                     </div>
                   ))}
 
@@ -249,7 +301,7 @@ import { Link  } from 'react-router-dom.ts';        "2 User Licenses"
                       <h4 className="text-lg font-semibold text-white mb-4 mt-6">Not Included: any</h4>
                       {plan.notIncluded.map((feature, featureIndex)  => ("
                         <div key={featureIndex} className="flex items-center text-slate-500">"
-                          <X className="w-5 h-5 text-red-400 mr-3 flex-shrink-0" />"                          <span className="text-sm">{feature}</span>
+                          <X className="w-5 h-5 text-red-400 mr-3 flex-shrink-0"  />"                          <span className="text-sm">{feature}</span>
                         </div>
                       ))}
                     </>
@@ -363,14 +415,14 @@ import { Link  } from 'react-router-dom.ts';        "2 User Licenses"
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
 "
-                <MessageCircle className="w-5 h-5 mr-2" />
+                <MessageCircle className="w-5 h-5 mr-2"  />
                 Get Custom Quote
               </Link>
               <Link"
-                to="/services-overview""
+                to="/services-overview"
                 className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
 "
                 <BarChart3 className="w-5 h-5 mr-2" />                View All Services
@@ -379,6 +431,5 @@ import { Link  } from 'react-router-dom.ts';        "2 User Licenses"
           </div>;
         </div>;
       </section>;
-    </div>;) ;
-}
+    </div>;) }
 '"`

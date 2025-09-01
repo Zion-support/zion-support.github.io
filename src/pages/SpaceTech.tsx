@@ -1,6 +1,3 @@
-import React from 'react.ts';'
-import { motion } from 'framer-motion.ts';'
-import { Link } from 'react-router-dom.ts';
 import {
 
   Rocket,
@@ -50,90 +47,14 @@ import {
   Cloud,
   Eye,
   Brain,
-  Network,'
+  Network,
   Cpu} from 'lucide-react.ts';
 
 export default function SpaceTech(...args: any[]): any {
 
-  const features = [
-    {
-
-      icon: Rocket,'
-      title: 'Space Launch Systems','
-      description: 'Advanced propulsion and launch vehicle technologies','
-      color: 'from-red-500 to-orange-500'},
-    {
-
-      icon: Satellite,'
-      title: 'Satellite Technology','
-      description: 'Earth observation and communication satellites','
-      color: 'from-blue-500 to-cyan-500'},
-    {
-
-      icon: Globe,'
-      title: 'Earth Observation','
-      description: 'Remote sensing and environmental monitoring','
-      color: 'from-green-500 to-emerald-500'},
-    {
-
-      icon: Zap,'
-      title: 'Space Communications','
-      description: 'High-speed data transmission and networking','
-      color: 'from-yellow-500 to-orange-500'},
-    {
-
-      icon: Shield,'
-      title: 'Space Security','
-      description: 'Cybersecurity and space defense systems','
-      color: 'from-purple-500 to-pink-500'},
-    {
-
-      icon: Target,'
-      title: 'Navigation Systems','
-      description: 'Precise positioning and navigation technologies','
-      color: 'from-indigo-500 to-blue-500'},
-  ];
-
-  const applications = [
-    {
-'
-      title: 'Telecommunications','
-      description: 'Global communication networks and internet connectivity',
-      icon: Wifi,'
-      benefits: ['Global coverage', 'High bandwidth', 'Low latency']},
-    {
-'
-      title: 'Environmental Monitoring','
-      description: 'Climate change tracking and natural disaster prediction',
-      icon: Activity,'
-      benefits: ['Climate data', 'Disaster response', 'Resource management']},
-    {
-'
-      title: 'Navigation & GPS','
-      description: 'Precise positioning and location services',
-      icon: Target,'
-      benefits: ['Global positioning', 'Navigation systems', 'Timing services']},
-    {
-'
-      title: 'Scientific Research','
-      description: 'Space exploration and astronomical discoveries',
-      icon: Eye,'
-      benefits: ['Astronomy', 'Planetary science', 'Space physics']},
-  ];
-
-  const technologies = ['
-    'Propulsion Systems','
-    'Satellite Design','
-    'Ground Stations','
-    'Launch Vehicles','
-    'Earth Observation','
-    'Space Communications','
-    'Navigation Systems','
-    'Space Robotics','
-    'Space Mining','
-    'Space Habitats',
-  ];
-
+  
+  
+  
   return()    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">"
@@ -154,17 +75,17 @@ export default function SpaceTech(...args: any[]): any {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-red-500/25 flex items-center space-x-2"
               >
                 <span>Get Started</span>"
-                <ArrowRight className="w-5 h-5" />              </Link>
+                <ArrowRight className="w-5 h-5"  />              </Link>
               <Link"
-                to="/services""
+                to="/services"
                 className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-red-400/30 hover:bg-white/20 text-white font-bold rounded-xl transition-all duration-300 hover:border-red-400/50 flex items-center space-x-2"
               >
                 <span>Explore Services</span>"
-                <ArrowRight className="w-5 h-5" />              </Link>
+                <ArrowRight className="w-5 h-5"  />              </Link>
             </div>
           </motion.div>
         </div>
@@ -259,7 +180,7 @@ export default function SpaceTech(...args: any[]): any {
                       key={benefitIndex}"
                       className="flex items-center text-gray-300"
                     >"
-                      <CheckCircle className="w-5 h-5 text-red-400 mr-3 flex-shrink-0" />                      {benefit}
+                      <CheckCircle className="w-5 h-5 text-red-400 mr-3 flex-shrink-0"  />                      {benefit}
                     </li>) ) }
                 </ul>
               </motion.div>) ) }
@@ -322,22 +243,21 @@ export default function SpaceTech(...args: any[]): any {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-red-500/25 flex items-center space-x-2"
               >
                 <span>Get Started Today</span>"
-                <ArrowRight className="w-5 h-5" />              </Link>
+                <ArrowRight className="w-5 h-5"  />              </Link>
               <Link"
-                to="/services""
+                to="/services"
                 className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-red-400/30 hover:bg-white/20 text-white font-bold rounded-xl transition-all duration-300 hover:border-red-400/50 flex items-center space-x-2"
               >
                 <span>Explore Services</span>"
-                <ArrowRight className="w-5 h-5" />              </Link>
+                <ArrowRight className="w-5 h-5"  />              </Link>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
-  );
-}
+  )}
 '"`

@@ -1,20 +1,39 @@
-import React, { useState } from 'react.ts';'
-import { useNavigate, Link  } from 'react-router-dom.ts';'
-import { Badge  } from '@/components/ui/badge';'
-import { Button  } from '@/components/ui/button';'
-import { ProductListing  } from '@/types/listings';'
-import { DollarSign  } from 'lucide-react';'
-import { RatingStars  } from '@/components/RatingStars';'
-import { FavoriteButton  } from '@/components/FavoriteButton';'
-import { useDispatch  } from 'react-redux.ts';'
-import type { AppDispatch } from '@/store';'
-import { addItem } from '@/store/cartSlice';    <div
+<<<<<<< HEAD
+// Regular img tag will be used instead of next/image
+
+  listing: ProductListing;
+  view?: 'grid' | 'list';
+  onRequestQuote?: (id: string) => void;
+  /**
+   * Base path for linking to the detail page. Defaults to
+   * `/marketplace / listing` to preserve existing behaviour.
+   */
+  detailBasePath?: string}
+
+  
+  };
+
+  
+    e.stopPropagation();
+
+    if (onRequestQuote) {
+
+      onRequestQuote(listing.id)} else {
+`
+      router(`/request-quote?listing=${listing.id}`)}
+  };
+
+  
+  return()
+    <div
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       data-testid = "equipment-link";'`
       className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`};
       onClick={handleViewListing};
       tabIndex={0};"
       role="button";
-      onKeyDown={(e) => {;'
+      onKeyDown={(e) => {;
         if (e.key === 'Enter' || e.key === ' ') {;
           e.preventDefault () ;
           handleViewListing () }
@@ -26,7 +45,7 @@ import { addItem } from '@/store/cartSlice';    <div
         onClick={handleViewListing} // Keep existing onClick for navigation;"
         role="button";
         tabIndex={-1} // Remove from tab order as parent is focusable;
-        onKeyDown={(e) => {;'
+        onKeyDown={(e) => {;
           if (e.key === 'Enter' || e.key === ' ') {;
             e.preventDefault () ;
             handleViewListing () }
@@ -44,7 +63,7 @@ import { addItem } from '@/store/cartSlice';    <div
               Featured
             </Badge>
           )}"
-          <FavoriteButton itemId={listing.id} itemType="product" />        </div>
+          <FavoriteButton itemId={listing.id} itemType="product"  />        </div>
       </div>
 
       {/* Content */}'`
@@ -55,7 +74,7 @@ import { addItem } from '@/store/cartSlice';    <div
             <Badge variant="outline" className="bg-background text-foreground/80 border-primary/10">
               {listing.category}
             </Badge>
-            {listing.rating && (<RatingStars value={listing.rating} count={listing.reviewCount} />) }          </div>
+            {listing.rating && (<RatingStars value={listing.rating} count={listing.reviewCount}  />) }          </div>
 
           {/* Title & Description */}"
           <div onClick={handleViewListing} className="block">"
@@ -85,7 +104,7 @@ import { addItem } from '@/store/cartSlice';    <div
           <div className="text-sm font-medium">
             {listing.price !== null ? ("
               <div className="flex items-center text-primary">"
-                <DollarSign className="h-4 w-4 mr-1" />                {formatPrice()}
+                <DollarSign className="h-4 w-4 mr-1"  />                {formatPrice()}
               </div>
             ) : ("
               <span className="text-foreground/80">
@@ -96,13 +115,12 @@ import { addItem } from '@/store/cartSlice';    <div
 "
           <div className="flex gap-2">
             <Button"
-              size="sm""
+              size="sm"
               className="bg-primary hover:bg-primary/80 text-primary-foreground"
               onClick={(e) => {
 
                 e.stopPropagation();`
-                router(`${detailBasePath}/${listing.id}`);
-              }}              disabled = {loading}
+                router(`${detailBasePath}/${listing.id}`)}}              disabled = {loading}
             >
               {loading ? (
                 <>"
@@ -118,7 +136,7 @@ import { addItem } from '@/store/cartSlice';    <div
             </Button>
             {onRequestQuote && (
               <Button"
-                size="sm""
+                size="sm"
                 variant="outline"
                 onClick={handleRequestQuote}"
                 className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground"
@@ -128,8 +146,7 @@ import { addItem } from '@/store/cartSlice';    <div
           </div>;
         </div>;
       </div>;
-    </div>;) ;
-}
+    </div>;) }
 export default React.memo(ProductListingCard);
 
 export default ProductListingCard;

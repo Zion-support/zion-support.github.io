@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Settings, FileText, Eye, Zap, Volume2, VolumeX } from 'lucide-react';
 import { Button } from "./button";
 export function AccessibilityMenu() {
     const [isOpen, setIsOpen] = useState(false);
     const [settings, setSettings] = useState({
-'
+
         fontSize: 'medium',
         highContrast: false,
         reducedMotion: false,
@@ -31,17 +31,17 @@ export function AccessibilityMenu() {
             newSettings.fontSize === 'large' ? '1.125' : '1');
         // High contrast
         if (newSettings.highContrast) {
-'
+
             root.classList.add('high-contrast')}
         else {
-'
+
             root.classList.remove('high-contrast')}
         // Reduced motion
         if (newSettings.reducedMotion) {
-'
+
             root.classList.add('reduced-motion')}
         else {
-'
+
             root.classList.remove('reduced-motion')}
     };
     const toggleSetting = (key) => {
@@ -56,8 +56,7 @@ export function AccessibilityMenu() {
         setSettings(prev => ({ ...prev, fontSize: size }))};
     const resetSettings = () => {
         const defaultSettings = {
-'
+
   fontSize: 'medium',
             highContrast: false,
-            reducedMotion: false,
-'"
+            reducedMotion: false,"

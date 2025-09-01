@@ -1,5 +1,3 @@
-import React from 'react.ts';'
-import { motion } from 'framer-motion.ts';
 import {
 
   Search,
@@ -21,58 +19,13 @@ import {
   MessageSquare,
   Share2,
   Brain,
-  Zap,'
+  Zap,
   Shield} from 'lucide-react.ts';
 
 const AISEO: React.FC = (): JSX.Element => {
 
-  const features = [
-    {
-
-      icon: Brain,'
-      title: 'AI-Powered Keyword Research',
-      description:'
-        'Advanced algorithms to discover high-value keywords and search opportunities'},
-    {
-
-      icon: Target,'
-      title: 'Content Optimization',
-      description:'
-        'AI-driven recommendations to improve content relevance and search rankings'},
-    {
-
-      icon: TrendingUp,'
-      title: 'Performance Tracking',
-      description:'
-        'Real-time monitoring of SEO metrics and ranking improvements'},
-    {
-
-      icon: Shield,'
-      title: 'Technical SEO Audit','
-      description: 'Automated detection and fixing of technical SEO issues'},
-    {
-
-      icon: Zap,'
-      title: 'Competitive Analysis',
-      description:'
-        'AI-powered insights into competitor strategies and opportunities'},
-    {
-
-      icon: BarChart3,'
-      title: 'Ranking Predictions',
-      description:'
-        'Predict future ranking changes based on current optimization efforts'},
-  ];
-
-  const benefits = ['
-    'Improve search rankings by 40%','
-    'Increase organic traffic by 60%','
-    'Reduce SEO audit time by 80%','
-    'Boost conversion rates by 25%','
-    'Identify new keyword opportunities','
-    'Automate technical SEO fixes',
-  ];
-
+  
+  
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}"
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">"
@@ -83,12 +36,12 @@ const AISEO: React.FC = (): JSX.Element => {
             transition={{ duration: 0.8 }}
           >"
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-orange-500/20 to-red-500/20 border border-orange-500/30 text-orange-400 text-sm font-medium mb-6">"
-              <Search className="w-4 h-4 mr-2" />              AI-Powered SEO Optimization
+              <Search className="w-4 h-4 mr-2"  />              AI-Powered SEO Optimization
             </div>
 "
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Dominate Search Rankings with"
-              <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
                 {' '}
                 AI-Powered SEO
               </span>
@@ -186,7 +139,7 @@ const AISEO: React.FC = (): JSX.Element => {
               <div className="space-y-4">
                 {benefits.map((benefit, index) => ("
                   <div key={index} className="flex items-center space-x-3">"
-                    <CheckCircle className="w-5 h-5 text-orange-400 flex-shrink-0" />"                    <span className="text-gray-300">{benefit}</span>
+                    <CheckCircle className="w-5 h-5 text-orange-400 flex-shrink-0"  />"                    <span className="text-gray-300">{benefit}</span>
                   </div>
                 ))}
               </div>

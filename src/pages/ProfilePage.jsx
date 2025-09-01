@@ -153,8 +153,8 @@ import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle
 
   {
 
-            id: profileData?.id || '','
-            full_name: profileData?.full_name || '','
+            id: profileData?.id || '',
+            full_name: profileData?.full_name || '',
             professional_title: profileData?.professional_title || '',
   hourly_rate: profileData?.hourly_rate || 0
 

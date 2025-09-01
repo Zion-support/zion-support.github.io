@@ -1,34 +1,69 @@
-import React, { useState, useMemo } from 'react';'
-import { motion } from 'framer-motion';
+<<<<<<< HEAD
+import {
+
+  DollarSign,
+  TrendingUp,
+  Users,
+  Clock,
+  CheckCircle,
+  Star,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink,
+  CheckCircle,
+  ArrowRight,
+  Search,
+  Filter,
+  Grid,
+  List,
+  DollarSign,
+  Clock,
+  Award,
+  Target,
+  BarChart3,
+  Globe,
+  Rocket,
+  Cpu,
+  Brain'
+} from 'lucide-react';
+
+const ComprehensivePricingGuide2026: React.FC = (): JSX.Element => {;
+  const [selectedService, setSelectedService] = useState<any>('all');
+  const [selectedTier, setSelectedTier] = useState<any>('all')} from 'lucide-react';
+
+const ComprehensivePricingGuide2026: React.FC = () => {;
+  const [selectedService, setSelectedService] = useState<string>('all');
+=======
 const ComprehensivePricingGuide2026: React.FC = () => {;'
   const [selectedService, setSelectedService] = useState<string>('all');'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   const [selectedTier, setSelectedTier] = useState<string>('all');
-'
-  const services = ['all', ...ALL_PRICING_GUIDES_2026.map(s => s.serviceName)];'
-  const tiers = ['all', 'Starter', 'Professional', 'Enterprise'];
 
-  const filteredPricing = useMemo ( () => {
-    let filtered = ALL_PRICING_GUIDES_2026;
-'
+  
+  
+  
     if (selectedService !== 'all') {
 
-      filtered = filtered.filter(service => service.serviceName === selectedService);
-    }
+      filtered = filtered.filter(service => service.serviceName === selectedService)}
   };
 
-    return filtered;
-  }, [selectedService]);
+    return filtered}, [selectedService]);
 "
-      default: return <Zap className = "w-6 h-6" />};
-  };
+      default: return <Zap className = "w-6 h-6"  />}};
+<<<<<<< HEAD
+
+      default: return 'from-gray-500 to-gray-600'}
+=======
 '      default: return 'from-gray-500 to-gray-600'}
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   };
 
   return()
     <>
       <SEO"
         title="Comprehensive Pricing Guide 2026 - Zion Tech Group"'"
-        description="Explore detailed pricing for Zion Tech Group's revolutionary 2026 services. Compare pricing tiers, ROI analysis, and market comparisons.""
+        description="Explore detailed pricing for Zion Tech Group's revolutionary 2026 services. Compare pricing tiers, ROI analysis, and market comparisons."
         keywords="pricing guide, service pricing, ROI analysis, market comparison, 2026 services, Zion Tech Group"
       />
 "      <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900">
@@ -96,7 +131,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;'
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-blue-500"
                   >
                     {services.map(service  => ("
-                      <option key={service} value={service} className="bg-zinc-800 text-white">'
+                      <option key={service} value={service} className="bg-zinc-800 text-white">
                         {service === 'all' ? 'All Services' : service}
                       </option>) ) }
                   </select>
@@ -112,7 +147,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;'
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-blue-500"
                   >
                     {tiers.map(tier  => ("
-                      <option key={tier} value={tier} className="bg-zinc-800 text-white">'
+                      <option key={tier} value={tier} className="bg-zinc-800 text-white">
                         {tier === 'all' ? 'All Tiers' : tier}
                       </option>) ) }
                   </select>
@@ -241,7 +276,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;'
                       {/* Tier Header */}"
                       <div className="text-center mb-6">
                         <div className={`inline-block p-2 rounded-lg bg-gradient-to-r ${getTierColor(tier.name)} mb-4`}>"
-                          <Star className="w-6 h-6 text-white" />
+                          <Star className="w-6 h-6 text-white"  />
                         </div>"
                         <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>"                        <div className="text-4xl font-bold text-white mb-1">
                           ${tier.price.toLocaleString()}
@@ -255,7 +290,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;'
                         <div className="space-y-2">
                           {tier.features.map((feature, idx) => ("
                             <div key={idx} className="flex items-center gap-2 text-sm text-zinc-300">"
-                              <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />                              <span>{feature}</span>
+                              <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0"  />                              <span>{feature}</span>
                             </div>) ) }
                         </div>
                       </div>;
@@ -424,11 +459,11 @@ const ComprehensivePricingGuide2026: React.FC = () => {;'
                     ))}
                   </div>
                   <div className="flex items-center justify-center space-x-2">
-                    <CheckCircle className="w-4 h-4 text-green-400" />
+                    <CheckCircle className="w-4 h-4 text-green-400"  />
                     <span>Custom Integration</span>
                   </div>
                   <div className="flex items-center justify-center space-x-2">
-                    <CheckCircle className="w-4 h-4 text-green-400" />
+                    <CheckCircle className="w-4 h-4 text-green-400"  />
                     <span>Training & Onboarding</span>
                   </div>
                 </motion.div>
@@ -468,16 +503,16 @@ const ComprehensivePricingGuide2026: React.FC = () => {;'
               </p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a"
-                  href="tel:+13024640950""
+                  href="tel:+13024640950"
                   className="flex items-center justify-center gap-2 px-8 py-4 bg-green-500 text-white font-medium rounded-lg hover:bg-green-600 transition-colors"
 "
-                  <Phone className="w-5 h-5" />                  Call +1 302 464 0950
+                  <Phone className="w-5 h-5"  />                  Call +1 302 464 0950
                 </a>
                 <a"
-                  href="mailto:kleber@ziontechgroup.com""
+                  href="mailto:kleber@ziontechgroup.com"
                   className="flex items-center justify-center gap-2 px-8 py-4 bg-blue-500 text-white font-medium rounded-lg hover:bg-blue-600 transition-colors"
 "
-                  <Mail className="w-5 h-5" />                  Email kleber@ziontechgroup.com
+                  <Mail className="w-5 h-5"  />                  Email kleber@ziontechgroup.com
                 </a>
               </div>"
               <div className="mt-8 text-zinc-400">
@@ -489,8 +524,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;'
         </section>;
       </div>;
     </>
-  );
-};
+  )};
 export default ComprehensivePricingGuide2026;
 export default ComprehensivePricingGuide2026;
 '"`

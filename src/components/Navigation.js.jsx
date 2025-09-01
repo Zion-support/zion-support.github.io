@@ -1,49 +1,49 @@
-import React, { useState } from 'react';'
-import { Link, useLocation } from 'react-router-dom';'
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, Globe, Brain, Zap, Shield, Building, ChevronDown } from 'lucide-react';
 const Navigation = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isServicesOpen, setIsServicesOpen] = useState(false);
     const location = useLocation();
     const navigationItems = ['
-        { name: 'Home', href: '/', icon: Globe },'
-        { name: 'Micro SAAS Services', href: '/micro-saas-services', icon: Zap },'
-        { name: 'Comprehensive Services', href: '/comprehensive-services', icon: Brain },'
+        { name: 'Home', href: '/', icon: Globe },
+        { name: 'Micro SAAS Services', href: '/micro-saas-services', icon: Zap },
+        { name: 'Comprehensive Services', href: '/comprehensive-services', icon: Brain },
         { name: 'Pricing', href: '/pricing', icon: Building },
     ];
     const serviceCategories = [
         {
-'
+
             name: 'AI & Machine Learning',
-            services[;'
-                { name: 'AI-Powered CRM', href: '/comprehensive-services#ai-powered-crm' },'
-                { name: 'Quantum Computing', href: '/comprehensive-services#quantum-computing-simulation' },'
+            services[;
+                { name: 'AI-Powered CRM', href: '/comprehensive-services#ai-powered-crm' },
+                { name: 'Quantum Computing', href: '/comprehensive-services#quantum-computing-simulation' },
                 { name: 'Edge AI Computing', href: '/comprehensive-services#edge-ai-computing' },
             ]
         },;
         {
-'
+
             name: 'Emerging Technologies',
-            services[;'
-                { name: 'Blockchain Solutions', href: '/comprehensive-services#blockchain-supply-chain' },'
-                { name: 'AR/VR Business', href: '/comprehensive-services#ar-vr-business-solutions' },'
+            services[;
+                { name: 'Blockchain Solutions', href: '/comprehensive-services#blockchain-supply-chain' },
+                { name: 'AR/VR Business', href: '/comprehensive-services#ar-vr-business-solutions' },
                 { name: 'IoT Intelligence', href: '/comprehensive-services#iot-intelligence-hub' },
             ]
         },;
         {
-'
+
             name: 'Industry Solutions',
-            services[;'
-                { name: 'Healthcare IT', href: '/comprehensive-services#healthcare-it-solutions' },'
-                { name: 'FinTech Solutions', href: '/comprehensive-services#fintech-solutions-pro' },'
+            services[;
+                { name: 'Healthcare IT', href: '/comprehensive-services#healthcare-it-solutions' },
+                { name: 'FinTech Solutions', href: '/comprehensive-services#fintech-solutions-pro' },
                 { name: 'GreenTech Analytics', href: '/comprehensive-services#greentech-analytics' },
             ]
         }
     ];
     const isActive = (href) => {
-'
+
         if (href === '/') {
-'
+
             return location.pathname === '/'}
         return location.pathname.startsWith(href)};
     return (<nav className="bg-zion-blue-dark/95 backdrop-blur-sm border-b border-zion-blue-light/30 fixed top-0 left-0 right-0 z-50">"
@@ -64,7 +64,7 @@ const Navigation = () => {
             {navigationItems.map((item) => {
 
             const Icon = item.icon;
-            return (<Link key={item.name} to={item.href} className={`flex items-center space-x-1 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${isActive(item.href)'
+            return (<Link key={item.name} to={item.href} className={`flex items-center space-x-1 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${isActive(item.href)
                     ? 'text-zion-cyan bg-zion-cyan/10''`
                     : 'text-zion-slate-light hover:text-white hover:bg-white/10'}`}>"
                   <Icon className="w-4 h-4"/>
@@ -117,7 +117,7 @@ const Navigation = () => {
             {navigationItems.map((item) => {
 
                 const Icon = item.icon;`
-                return (<Link key={item.name} to={item.href} className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-base font-medium transition-colors ${isActive(item.href)'
+                return (<Link key={item.name} to={item.href} className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-base font-medium transition-colors ${isActive(item.href)
                         ? 'text-zion-cyan bg-zion-cyan/10''`
                         : 'text-zion-slate-light hover:text-white hover:bg-white/10'}`} onClick={() => setIsOpen(false)}>"
                   <Icon className="w-5 h-5"/>

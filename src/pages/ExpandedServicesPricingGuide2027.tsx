@@ -1,5 +1,69 @@
-import React, { useState, useEffect } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_PRICING,
+<<<<<<< HEAD
+import {
+
+  Search,
+  Filter,
+  Grid3X3,
+  List,
+  ChevronDown,
+  ChevronUp,
+  Star,
+  Users,
+  Globe,
+  Lock,
+  Code,
+  BarChart3,
+  Target,
+  Rocket,
+  Lightbulb,
+  Award,
+  Clock,
+  DollarSign,
+  TrendingUp,
+  Eye,
+  Handshake,
+  Building,
+  ShieldCheck,
+  Network2,
+  Smartphone as Mobile,
+  Server as Infrastructure,
+  Monitor as Analytics,
+  Zap as Lightning,
+  Users2,
+  Award as Trophy,
+  Clock as Time,
+  DollarSign as Money,
+  TrendingUp as Growth,
+  Eye as Vision,
+  Handshake as Partnership,
+  Building as Enterprise,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink,
+  CheckCircle,
+  ArrowRight,
+  Shield,
+  Brain,
+  Cloud,
+  Database,
+  Smartphone,
+  Server,
+  Monitor,
+  Cpu,
+  Network,
+  Smartphone as IoT,
+  Server as Edge,
+  Monitor as Healthcare,
+  Cpu as FinTech,
+  ChevronRight,
+  Info,
+  AlertTriangle,
+  Zap'
+
+  ALL_EXPANDED_SERVICES_PRICING,
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   type ExpandedServicePricing'
 } from '@/data/expandedServicesPricing2027';
 
@@ -13,39 +77,40 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
       )};
     setFilteredPricing(pricing)}, [selectedCategory, searchQuery]);
 
-  const getCategoryIcon = (category: string)  => {
-
-    switch (category) {
-'
-      case 'Cybersecurity':;
+  
       pricing = pricing.filter (p => ;
         p.serviceName.toLowerCase () .includes (searchQuery.toLowerCase () ) ||;
         p.category.toLowerCase () .includes (searchQuery.toLowerCase () ) ||;
         p.subcategory.toLowerCase () .includes (searchQuery.toLowerCase () ) ;) ;
 
-    setFilteredPricing (pricing) ;
-  }, [selectedCategory, searchQuery]) ;
+    setFilteredPricing (pricing) }, [selectedCategory, searchQuery]) ;
 
-  const getCategoryIcon = (category: string) => {;
+  
+<<<<<<< HEAD
+    switch (category) {;
+      case 'Cybersecurity':;
+        return Shield;
+=======
     switch (category) {;'      case 'Cybersecurity':;
         return Shield;'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       case 'Data Analytics':;
-        return BarChart3;'
+        return BarChart3;
       case 'Cloud & DevOps':;
-        return Cloud;'
+        return Cloud;
       case 'IoT & Edge Computing':;
-        return IoT;'
+        return IoT;
       case 'Financial Technology':;
-        return FinTech;'
+        return FinTech;
       case 'Healthcare Technology':;
         return Healthcare;
       default:;
         return Rocket}
   };
-'
+
         return 'from-gray-500 to-slate-600'}
   };
-'
+
         return 'bg-gray-100 text-gray-800'}
   };
 
@@ -53,14 +118,20 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
             </div>;
           </div>;
         </div>;
-      </motion.div>;) ;
-  };
+      </motion.div>;) };
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
       <SEO"
+<<<<<<< HEAD
+        title="Expanded Services Pricing Guide 2027 - Zion Tech Group"
+        description="Comprehensive pricing guide for our expanded innovative services. Compare pricing tiers, ROI analysis, and market positioning across all service categories."
+        keywords="pricing guide, service pricing, ROI analysis, market comparison, cybersecurity pricing, data analytics pricing, cloud DevOps pricing"
+      />
+=======
         title="Expanded Services Pricing Guide 2027 - Zion Tech Group""
         description="Comprehensive pricing guide for our expanded innovative services. Compare pricing tiers, ROI analysis, and market positioning across all service categories.""        keywords="pricing guide, service pricing, ROI analysis, market comparison, cybersecurity pricing, data analytics pricing, cloud DevOps pricing"
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <div className="relative overflow-hidden">"
@@ -146,21 +217,21 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
 "
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">"
                 <div className="flex items-center space-x-3">"
-                  <Phone className="w-5 h-5 text-blue-600" />
+                  <Phone className="w-5 h-5 text-blue-600"  />
                   <div>"
                     <p className="text-sm text-gray-500 dark:text-gray-400">Phone</p>"
                     <p className="font-semibold text-gray-900 dark:text-white">+1 302 464 0950</p>
                   </div>
                 </div>"
                 <div className="flex items-center space-x-3">"
-                  <Mail className="w-5 h-5 text-blue-600" />
+                  <Mail className="w-5 h-5 text-blue-600"  />
                   <div>"
                     <p className="text-sm text-gray-500 dark:text-gray-400">Email</p>"
                     <p className="font-semibold text-gray-900 dark:text-white">kleber@ziontechgroup.com</p>
                   </div>
                 </div>"
                 <div className="flex items-center space-x-3">"
-                  <MapPin className="w-5 h-5 text-blue-600" />
+                  <MapPin className="w-5 h-5 text-blue-600"  />
                   <div>"
                     <p className="text-sm text-gray-500 dark:text-gray-400">Address</p>"
                     <p className="font-semibold text-gray-900 dark:text-white">364 E Main St STE 1008</p>"                    <p className="font-semibold text-gray-900 dark:text-white">Middletown DE 19709</p>
@@ -180,9 +251,14 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
             {/* Search */}"
             <div className="flex-1 max-w-md">"
               <div className="relative">"
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
                 <input"
+<<<<<<< HEAD
+                  type="text"
+                  placeholder="Search pricing..."
+=======
                   type="text""                  placeholder="Search pricing..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}"
                   className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
@@ -220,7 +296,7 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
         ) : ("
           <div className="text-center py-16">"
             <div className="text-gray-400 dark:text-gray-500 mb-4">"
-              <Search className="w-16 h-16 mx-auto" />
+              <Search className="w-16 h-16 mx-auto"  />
             </div>"
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">No pricing plans found</h3>"            <p className="text-gray-600 dark:text-gray-300">
               Try adjusting your search criteria or category filter
@@ -240,21 +316,20 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
           </p>"
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
             <a"
-              href="mailto:kleber@ziontechgroup.com""
+              href="mailto:kleber@ziontechgroup.com"
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center space-x-2"
 "
-              <Mail className="w-5 h-5" />              <span>Get Custom Quote</span>
+              <Mail className="w-5 h-5"  />              <span>Get Custom Quote</span>
             </a>
             <a"
-              href="tel:+13024640950""
+              href="tel:+13024640950"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200 flex items-center space-x-2"
 "
-              <Phone className="w-5 h-5" />              <span>Call Sales Team</span>
+              <Phone className="w-5 h-5"  />              <span>Call Sales Team</span>
             </a>;
           </div>;
         </div>;
       </div>;
-    </div>;) ;
-};
+    </div>;) };
 
-export default ExpandedServicesPricingGuide2027;}}}}}}'"
+export default ExpandedServicesPricingGuide2027}}}}}}'"

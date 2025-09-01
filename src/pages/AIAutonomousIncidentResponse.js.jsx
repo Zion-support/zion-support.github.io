@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousIncidentResponse = () => {
   return()
@@ -8,15 +8,15 @@ const AIAutonomousIncidentResponse = () => {
           AI Autonomous Incident Response Platform | Zion Tech Group
         </title>
         <meta
-          name="description""
+          name="description"
           content="Revolutionary AI autonomous incident response platform that continuously detects incidents, responds automatically, and resolves issues with advanced AI capabilities and autonomous operation."
         />
         <meta"
-          name="keywords""
+          name="keywords"
           content="AI incident response, autonomous incident response, incident detection, automatic response, autonomous operations, AI incident response platform"
         />
         <link"
-          rel="canonical""
+          rel="canonical"
           href="https://ziontechgroup.com/ai-autonomous-incident-response"
         />
       </Helmet>
@@ -181,14 +181,7 @@ const AIAutonomousIncidentResponse = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Security Incident Response','
-                'IT Incident Response','
-                'Network Incident Response','
-                'System Incident Response','
-                'Data Incident Response','
-                'Service Incident Response','
-                'Performance Incident Response','
-                'Availability Incident Response',
+                'Security Incident Response',IT Incident Response',Network Incident Response',System Incident Response',Data Incident Response',Service Incident Response',Performance Incident Response',Availability Incident Response',
               ].map(type => (
                 <div
                   key={type}"

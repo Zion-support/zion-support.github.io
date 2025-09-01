@@ -1,5 +1,5 @@
-import React, { useState } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Globe, MapPin, Users, Award, Star, TrendingUp, Building, ArrowRight, CheckCircle, Clock } from 'lucide-react';
 const globalStats = [
     { icon: <Globe className="w-6 h-6"/>, value: "25+", label: "Countries Served" },"
@@ -529,7 +529,7 @@ const industries = ["
               <h3 className="text-2xl font-bold text-white mb-4">
                 Ready to Go Global with Zion?
               </h3>"
-              <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">'
+              <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
                 Whether you're in San Francisco or Singapore, our global team is ready to help you
                 scale your business worldwide with cutting-edge technology solutions.
               </p>"

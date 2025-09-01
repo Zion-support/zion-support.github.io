@@ -1,9 +1,9 @@
 import { Brain, Cloud, Shield, Database, Wifi, Link as LinkIcon, Zap, Server, Users, Target, Check, ArrowRight } from 'lucide - react';
 import { Link } from 'react - router - dom';
 import React from 'react';
-import { SEO } from "@/components/SEO";'
-import { Link } from 'react-router-dom';'
-import { motion } from 'framer-motion';'
+import { SEO } from "@/components/SEO";
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { Brain, Cloud, Shield, Database, Wifi, Link as LinkIcon, Zap, Server, Users, Target, Check, ArrowRight } from 'lucide-react';
 export default function ServicesOverview() {
     const stats = ["

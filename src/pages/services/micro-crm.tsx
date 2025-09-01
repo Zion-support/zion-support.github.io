@@ -1,4 +1,3 @@
-import React from 'react.ts';
 import {
 
   Users,
@@ -20,79 +19,18 @@ import {
   Network,
   Server,
   Cloud,
-  Smartphone,'
-  Building} from 'lucide-react.ts';'
-import { SEO } from '../../components/SEO';
+  Smartphone,
+  Building} from 'lucide-react.ts';
 
 export default function MicroCRM(...args: any[]): any {
 
-  const features = [
-    {
-
-      icon: Users,'
-      title: 'Contact Management',
-      description:'
-        'Centralized database for all customer contacts with detailed profiles and interaction history.'},
-    {
-
-      icon: Target,'
-      title: 'Lead Tracking',
-      description:'
-        'Track leads through the sales funnel with automated scoring and qualification processes.'},
-    {
-
-      icon: Calendar,'
-      title: 'Task Management',
-      description:'
-        'Schedule follow-ups, meetings, and reminders with integrated calendar functionality.'},
-    {
-
-      icon: BarChart3,'
-      title: 'Sales Analytics',
-      description:'
-        'Comprehensive reporting and analytics to track performance and identify opportunities.'},
-  ];
-
-  const benefits = ['
-    'Streamline customer relationship management','
-    'Improve sales team productivity','
-    'Enhance customer communication','
-    'Track sales performance metrics','
-    'Automate repetitive tasks','
-    'Centralize customer data',
-  ];
-
-  const useCases = [
-    {
-'
-      title: 'Small Business CRM',
-      description:'
-        'Perfect for small businesses looking to manage customer relationships efficiently.',
-      icon: Building},
-    {
-'
-      title: 'Sales Team Management',
-      description:'
-        'Empower sales teams with tools to track leads and manage customer interactions.',
-      icon: Users},
-    {
-'
-      title: 'Customer Support',
-      description:'
-        'Track customer issues and provide timely support with integrated ticketing.',
-      icon: Phone},
-    {
-'
-      title: 'Marketing Campaigns',
-      description:'
-        'Manage marketing campaigns and track customer engagement and responses.',
-      icon: Target},
-  ];
-
+  
+  
+  
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
-        title="Micro CRM - Zion Tech Group""
+        title="Micro CRM - Zion Tech Group"
         description="Streamline your customer relationship management with our Micro CRM solution. Perfect for small businesses and growing teams."
       />
 
@@ -102,7 +40,7 @@ export default function MicroCRM(...args: any[]): any {
         <div className="container mx-auto px-4 relative z-10">"
           <div className="text-center max-w-4xl mx-auto">"
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full border border-cyan-400/30 mb-6">"
-              <Users className="w-5 h-5 text-cyan-400 mr-2" />"
+              <Users className="w-5 h-5 text-cyan-400 mr-2"  />"
               <span className="text-cyan-300 text-sm font-medium">
                 Customer Relationship Management
               </span>            </div>
@@ -178,7 +116,7 @@ export default function MicroCRM(...args: any[]): any {
           <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => ("
               <div key={index} className="flex items-start space-x-3">"
-                <CheckCircle className="w-6 h-6 text-cyan-400 flex-shrink-0 mt-1" />"                <span className="text-slate-300 text-lg">{benefit}</span>
+                <CheckCircle className="w-6 h-6 text-cyan-400 flex-shrink-0 mt-1"  />"                <span className="text-slate-300 text-lg">{benefit}</span>
               </div>
             ))}
           </div>
@@ -192,7 +130,7 @@ export default function MicroCRM(...args: any[]): any {
             <h2 className="text-4xl font-bold text-white mb-4">
               Perfect For Your Business
             </h2>"
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">'
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               Whether you're a small business owner or managing a growing sales
               team, our Micro CRM adapts to your needs.
             </p>
@@ -240,6 +178,5 @@ export default function MicroCRM(...args: any[]): any {
         </div>
       </section>
     </div>
-  );
-}
+  )}
 '"

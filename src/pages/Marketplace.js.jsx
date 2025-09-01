@@ -30,7 +30,7 @@ export default function Marketplace() {
         const timeout = setTimeout(() => setIsLoading(false), 300);
         return () => clearTimeout(timeout)}, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]);
     useEffect(() => {
-'
+
         localStorage.setItem('marketplaceView', view)}, [view]);
     // Filter listings based on selected filters
     const filteredListings = listings.filter(listing => {
@@ -62,13 +62,13 @@ export default function Marketplace() {
 
         // console.log(`Filter changed: ${filterType} = ${value}`);
         switch (filterType) {
-'
+
             case 'productTypes':
                 setSelectedProductTypes(prev => prev.includes(value) ? prev.filter(item => item !== value) [...prev, value]);
-                break;'
+                break;
             case 'locations':
                 setSelectedLocations(prev => prev.includes(value) ? prev.filter(item => item !== value) [...prev, value]);
-                break;'
+                break;
             case 'availability':
                 setSelectedAvailability (prev => prev.includes (value) ? prev.filter (item => item !== value) [...prev, value]) ;
                 break}
@@ -116,7 +116,7 @@ export default function Marketplace() {
         {/* Search and filter bar */}"
         <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 mb-8">"
           <div className="flex flex-col md:flex-row gap-4">"
-            <div className="relative flex-1">'
+            <div className="relative flex-1">
               <EnhancedSearchInput value={searchQuery} onChange={setSearchQuery} onSelectSuggestion={setSearchQuery} placeholder={t('marketplace.search_placeholder')} searchSuggestions={searchSuggestions}/>
             </div>"
             <div className="flex gap-2">'"
@@ -161,11 +161,11 @@ export default function Marketplace() {
             
             {/* Display actual marketplace listings */}"
             {isLoading ? (<div className="flex justify-center py-20">"
-                <Loader2 className="h-8 w-8 animate-spin text-zion-purple"/>'
+                <Loader2 className="h-8 w-8 animate-spin text-zion-purple"/>
               </div>) : (<div className={view === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 gap-6' : 'flex flex-col gap-6'}>"
                 {filteredListings.length > 0 ? (filteredListings.map((listing) => (<ProductListingCard key={listing.id} listing={listing} view={view} onRequestQuote={handleRequestQuote}/>))) : (<div className="col-span-2 text-center py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg">"
                   <h2 className="text-2xl font-bold text-white mb-4">No Results Found</h2>"
-                  <p className="text-zion-slate-light max-w-md mx-auto mb-8">'
+                  <p className="text-zion-slate-light max-w-md mx-auto mb-8">
                     We couldn't find  listings matching your filters. Try adjusting your search criteria.
                   </p>"
                   <Button onClick={clearAllFilters} className="bg-zion-purple hover:bg-zion-purple-dark">

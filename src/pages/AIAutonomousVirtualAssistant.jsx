@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousVirtualAssistant = () => {
   return()
@@ -6,15 +6,15 @@ const AIAutonomousVirtualAssistant = () => {
       <Helmet>
         <title>AI Autonomous Virtual Assistant | Zion Tech Group</title>
         <meta
-          name="description""
+          name="description"
           content="Revolutionary AI autonomous virtual assistant that provides 24/7 intelligent support, task automation, and personalized assistance with advanced AI capabilities."
         />
         <meta"
-          name="keywords""
+          name="keywords"
           content="AI virtual assistant, autonomous assistant, AI assistant, virtual AI, intelligent assistant, AI automation"
         />
         <link"
-          rel="canonical""
+          rel="canonical"
           href="https://ziontechgroup.com/ai-autonomous-virtual-assistant"
         />
       </Helmet>
@@ -194,14 +194,7 @@ const AIAutonomousVirtualAssistant = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Email Management','
-                'Calendar Scheduling','
-                'Task Organization','
-                'Information Search','
-                'Document Creation','
-                'Data Analysis','
-                'Communication','
-                'Reminders',
+                'Email Management',Calendar Scheduling',Task Organization',Information Search',Document Creation',Data Analysis',Communication',Reminders',
               ].map(task => (
                 <div
                   key={task}"

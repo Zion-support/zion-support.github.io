@@ -1,6 +1,16 @@
-import React, { useState } from 'react';
-export default ComprehensiveZionTechPricing2025;}}
-import { ENHANCED_ZION_TECH_SERVICES_2025, getEnhancedServiceCategories } from "../data / enhancedZionTechServices2025";    selectedCategory === 'All' || service.category === selectedCategory;
+export default ComprehensiveZionTechPricing2025}}
+<<<<<<< HEAD
+
+
+const ComprehensiveZionTechPricing2025: React.FC = () => {;
+  const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
+
+  
+  
+    selectedCategory === 'All' || service.category === selectedCategory;
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   );
 
           "
@@ -10,7 +20,6 @@ import { ENHANCED_ZION_TECH_SERVICES_2025, getEnhancedServiceCategories } from "
           </div>;
         </div>;
       </div>;
-    </div>;) ;
-};
+    </div>;) };
 
-export default ComprehensiveZionTechPricing2025;}}'"
+export default ComprehensiveZionTechPricing2025}}'"

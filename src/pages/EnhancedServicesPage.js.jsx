@@ -3,25 +3,25 @@ import {
 
   ENHANCED_SERVICES,
   ENHANCED_SERVICE_CATEGORIES,
-  SERVICE_PRICING_TIERS,'
-  CONTACT_INFO} from '@/data/enhancedServices';'
+  SERVICE_PRICING_TIERS,
+  CONTACT_INFO} from '@/data/enhancedServices';
 import { Button } from '@/components/ui/button';
 import {
 
   Card,
   CardContent,
   CardDescription,
-  CardHeader,'
-  CardTitle} from '@/components/ui/card';'
-import { Badge } from '@/components/ui/badge';'
+  CardHeader,
+  CardTitle} from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import {
 
   Select,
   SelectContent,
   SelectItem,
-  SelectTrigger,'
-  SelectValue} from '@/components/ui/select';'
+  SelectTrigger,
+  SelectValue} from '@/components/ui/select';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import {
 
@@ -42,13 +42,13 @@ import {
   Heart,
   DollarSign,
   Link,
-  Users,'
-  CheckCircle} from 'lucide-react';'
+  Users,
+  CheckCircle} from 'lucide-react';
 import { SEO } from '@/components/SEO';
 export default function EnhancedServicesPage() {
-'
-  const [searchTerm, setSearchTerm] = useState('');'
-  const [selectedCategory, setSelectedCategory] = useState('all');'
+
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
   const filteredServices = ENHANCED_SERVICES.filter(service => {
 
@@ -64,32 +64,32 @@ export default function EnhancedServicesPage() {
   const getCategoryIcon = category => {
 
     switch (category.toLowerCase()) {
-'
+
       case 'ai automation':'
       case 'ai & machine learning':
-        return <Brain className="w-5 h-5" />;'
+        return <Brain className="w-5 h-5" />;
       case 'cloud management':'
       case 'cloud & infrastructure':"
-        return <Cloud className="w-5 h-5" />;'
+        return <Cloud className="w-5 h-5" />;
       case 'cybersecurity':'
       case 'security framework':"
-        return <Shield className="w-5 h-5" />;'
+        return <Shield className="w-5 h-5" />;
       case 'data engineering':'
       case 'data & analytics':"
-        return <Database className="w-5 h-5" />;'
+        return <Database className="w-5 h-5" />;
       case 'business intelligence':"
-        return <TrendingUp className="w-5 h-5" />;'
+        return <TrendingUp className="w-5 h-5" />;
       case 'developer tools':'
       case 'development & devops':"
-        return <Code className="w-5 h-5" />;'
+        return <Code className="w-5 h-5" />;
       case 'digital transformation':"
-        return <Zap className="w-5 h-5" />;'
+        return <Zap className="w-5 h-5" />;
       case 'healthcare technology':"
-        return <Heart className="w-5 h-5" />;'
+        return <Heart className="w-5 h-5" />;
       case 'financial technology':"
-        return <DollarSign className="w-5 h-5" />;'
+        return <DollarSign className="w-5 h-5" />;
       case 'blockchain':"
-        return <Link className="w-5 h-5" />;'
+        return <Link className="w-5 h-5" />;
       case 'quantum computing':"
         return <Zap className="w-5 h-5" />;
       default:"
@@ -97,17 +97,17 @@ export default function EnhancedServicesPage() {
     }
   };
   const getPriceRange = price => {
-'
-    if (price <= 2000) return 'basic';'
-    if (price <= 8000) return 'professional';'
+
+    if (price <= 2000) return 'basic';
+    if (price <= 8000) return 'professional';
     return 'enterprise';
   };
   return ("
     <div className="min-h-screen bg-background">
       <SEO"
-        title="Enhanced IT & AI Services - Zion Tech Group""
-        description="Discover our comprehensive suite of AI services, IT solutions, and micro SAAS offerings. From AI automation to quantum computing readiness.""
-        keywords="AI services, IT solutions, micro SAAS, cybersecurity, cloud computing, data analytics, Zion Tech Group""
+        title="Enhanced IT & AI Services - Zion Tech Group"
+        description="Discover our comprehensive suite of AI services, IT solutions, and micro SAAS offerings. From AI automation to quantum computing readiness."
+        keywords="AI services, IT solutions, micro SAAS, cybersecurity, cloud computing, data analytics, Zion Tech Group"
         canonical="https://ziontechgroup.com/enhanced-services"
       />
 
@@ -123,23 +123,23 @@ export default function EnhancedServicesPage() {
           </p>"
           <div className="flex flex-wrap justify-center gap-4">
             <Button"
-              size="lg""
+              size="lg"
               className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light"
               onClick={() =>
                 document'
-                  .getElementById('services-grid')'
+                  .getElementById('services-grid')
                   ?.scrollIntoView({ behavior: 'smooth' })
               }
             >
               Explore Services
             </Button>
             <Button"
-              size="lg""
-              variant="outline""
+              size="lg"
+              variant="outline"
               className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
               onClick={() =>
                 document'
-                  .getElementById('contact-section')'
+                  .getElementById('contact-section')
                   ?.scrollIntoView({ behavior: 'smooth' })
               }
             >
@@ -248,7 +248,7 @@ export default function EnhancedServicesPage() {
                       {getCategoryIcon(service.category)}
                       <Badge
                         variant={
-'
+
                           getPriceRange(service.price) === 'enterprise''
                             ? 'default''
                             : 'secondary'
@@ -317,11 +317,11 @@ export default function EnhancedServicesPage() {
                         By {service.author.name}
                       </span>
                       <Button"
-                        size="sm""
+                        size="sm"
                         className="bg-zion-purple hover:bg-zion-purple-dark text-white"
                         onClick={() =>
                           document'
-                            .getElementById('contact-section')'
+                            .getElementById('contact-section')
                             ?.scrollIntoView({ behavior: 'smooth' })
                         }
                       >
@@ -388,8 +388,8 @@ export default function EnhancedServicesPage() {
                               {service.price?.toLocaleString()}
                             </span>
                             <Button"
-                              size="sm""
-                              variant="outline""
+                              size="sm"
+                              variant="outline"
                               className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
                             >
                               Learn More
@@ -500,31 +500,31 @@ export default function EnhancedServicesPage() {
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button"
-                size="lg""
+                size="lg"
                 className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light"
-                onClick={() =>'
-                  window.open(`tel:${CONTACT_INFO.mobile}`, '_self')
+                onClick={() =>
+                  window.open(`tel:${CONTACT_INFO.mobile}`,_self')
                 }
               >"
                 <Phone className="w-5 h-5 mr-2" />
                 Call Now
               </Button>
               <Button"
-                size="lg""
-                variant="outline""
+                size="lg"
+                variant="outline"
                 className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
                 onClick={() =>'`
-                  window.open(`mailto:${CONTACT_INFO.email}`, '_self')
+                  window.open(`mailto:${CONTACT_INFO.email}`,_self')
                 }
               >"
                 <Mail className="w-5 h-5 mr-2" />
                 Send Email
               </Button>
               <Button"
-                size="lg""
-                variant="outline""
+                size="lg"
+                variant="outline"
                 className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"'
-                onClick={() => window.open(CONTACT_INFO.website, '_blank')}
+                onClick={() => window.open(CONTACT_INFO.website,_blank')}
               >"
                 <ExternalLink className="w-5 h-5 mr-2" />
                 Visit Website
@@ -544,8 +544,7 @@ export default function EnhancedServicesPage() {
                 className="bg-zion-purple hover:bg-zion-purple-dark text-white"
                 onClick={() =>
                   window.open()`
-                    `mailto:${CONTACT_INFO.email}?subject=Enterprise%20Inquiry`,'
-                    '_self'
+                    `mailto:${CONTACT_INFO.email}?subject=Enterprise%20Inquiry`,_self'
                   )
                 }
               >

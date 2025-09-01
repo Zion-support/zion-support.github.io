@@ -1,135 +1,81 @@
-import React from 'react';'
-import { SEO } from '../components/SEO';    },;
+<<<<<<< HEAD
+import {
+
+  Code,
+  Zap,
+  Users,
+  TrendingUp,
+  Shield,
+  Globe,
+  Building,
+  Rocket,
+  Cpu,
+  BarChart3,
+  Database,
+  Cloud,
+  Lock,
+  Smartphone,
+  Target,
+  DollarSign,
+  Clock,
+  CheckCircle,
+  Star,
+  ArrowRight,
+  Brain'
+ } from 'lucide-react';
+
+export default function MicroSAASSolutions(...args[]):  {
+
+  
+    },;
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     {
 "
       title: "Multi-tenant Architecture","
       description: "Efficient multi-tenant systems that maximize resource utilization while maintaining data isolation and security.",
       icon: Users,"
-      features["Data isolation", "Resource sharing", "Customization options", "Performance optimization"];
-    },;    {
+      features["Data isolation", "Resource sharing", "Customization options", "Performance optimization"]},;    {
 "
       title: "Subscription Management","
       description: "Comprehensive billing and subscription systems with flexible pricing models and automated renewals.",
       icon: BarChart3,"
-      features["Flexible pricing", "Automated billing", "Usage tracking", "Payment processing"];
-    },;    {
+      features["Flexible pricing", "Automated billing", "Usage tracking", "Payment processing"]},;    {
 "
       title: "API Development & Integration","
       description: "Robust APIs that enable seamless integration with existing systems and third-party applications.",
       icon: Cpu,"
-      features["RESTful APIs", "GraphQL support", "Webhook integration", "API documentation"];
-    },;
+      features["RESTful APIs", "GraphQL support", "Webhook integration", "API documentation"]},;
     {
 "
-      features["Real-time metrics", "Custom reports", "Data visualization", "Export capabilities"];
-    };"
+      features["Real-time metrics", "Custom reports", "Data visualization", "Export capabilities"]};"
       title: "Analytics & Reporting",;"
       description: "Advanced analytics dashboards providing insights into user behavior, system performance, and business metrics.",;
       icon: TrendingUp,;"
-      features: ["Real-time metrics", "Custom reports", "Data visualization", "Export capabilities"];
-    };
-  ];
-
-  const benefits = [
-    {
-"
-      title: "Rapid Deployment","
-      description: "Quick time-to-market with agile development methodologies",
-      icon: Zap
-    },
-    {
-"
-      title: "Scalability","
-      description: "Built to grow with your business from day one",
-      icon: TrendingUp
-    },
-    {
-"
-      title: "Cost Efficiency","
-      description: "Reduced infrastructure costs with cloud-native solutions",
-      icon: BarChart3;
-    },;
+      features: ["Real-time metrics", "Custom reports", "Data visualization", "Export capabilities"]};
+  ]},;
     {;"
       title: "Security",;"
       description: "Enterprise-grade security and compliance standards",;
-      icon: Shield;
-    };
-  ];
-
-  const industries = [
-    {
-"
-      name: "Healthcare","
-      description: "HIPAA-compliant patient management systems",
-      icon: Building
-    },
-    {
-"
-      name: "Finance","
-      description: "Regulatory-compliant financial tools",
-      icon: Building
-    },
-    {
-"
-      name: "Education","
-      description: "Learning management and student tracking",
-      icon: Building
-    },
-    {
-"
-      name: "Manufacturing","
-      description: "Production planning and inventory management",
-      icon: Building
-    },
-    {
-"
-      name: "Retail","
-      description: "E-commerce and point-of-sale solutions",
-      icon: Building;
-    },;
+      icon: Shield};
+  ]},;
     {;"
       name: "Real Estate",;"      description: "Property management and client portals",;
       icon: Building};
   ];
 
-  const processSteps = [
-    {
-
-      step: 1,"
-      title: "Discovery & Planning","
-      description: "Understanding your business requirements and creating a comprehensive project plan",
-      icon: Target,"
-      duration: "1-2 weeks"
-    },
-    {
-
-      step: 2,"
-      title: "Design & Architecture","
-      description: "Creating the system architecture and user interface designs",
-      icon: Code,"
-      duration: "2-4 weeks"
-    },
-    {
-
-      step: 3,"
-      title: "Development","
-      description: "Building the core application with iterative development cycles",
-      icon: Cpu,"
-      duration: "8-16 weeks"
-    },
-    {;
+  
       step: 4,;"
       title: "Testing & Deployment",;"
       description: "Comprehensive testing and production deployment",;
       icon: Rocket,;"
-      duration: "2-4 weeks";
-    };  ];
+      duration: "2-4 weeks"};  ];
 
   return()
     <>
       <SEO"
-        title="Micro SAAS Solutions - Custom Software Development""
-        description="Transform your business with custom Micro SAAS solutions. From development to deployment, we deliver scalable, secure, and efficient software-as-a-service applications.""
+        title="Micro SAAS Solutions - Custom Software Development"
+        description="Transform your business with custom Micro SAAS solutions. From development to deployment, we deliver scalable, secure, and efficient software-as-a-service applications."
         keywords="micro saas, custom software, saas development, software solutions, business applications"
       />
 "      <div className="min-h-screen bg-futuristic">
@@ -144,7 +90,7 @@ import { SEO } from '../components/SEO';    },;
           <div className="container-responsive relative z-10">"
             <div className="text-center max-w-4xl mx-auto">"
               <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8">"
-                <Code className="w-10 h-10 text-white" />              </div>
+                <Code className="w-10 h-10 text-white"  />              </div>
 "
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 Micro SAAS"
@@ -158,15 +104,15 @@ import { SEO } from '../components/SEO';    },;
 "
               <div className="flex flex-wrap justify-center gap-4 text-sm">"
                 <div className="flex items-center gap-2 text-zion-cyan">"
-                  <Code className="w-4 h-4" />
+                  <Code className="w-4 h-4"  />
                   <span>Custom Development</span>
                 </div>"
                 <div className="flex items-center gap-2 text-zion-purple">"
-                  <Cloud className="w-4 h-4" />
+                  <Cloud className="w-4 h-4"  />
                   <span>Cloud Native</span>
                 </div>"
                 <div className="flex items-center gap-2 text-zion-blue">"
-                  <Shield className="w-4 h-4" />                  <span>Enterprise Security</span>
+                  <Shield className="w-4 h-4"  />                  <span>Enterprise Security</span>
                 </div>
               </div>
             </div>
@@ -199,7 +145,7 @@ import { SEO } from '../components/SEO';    },;
                   <div className="space-y-3">
                     {service.features.map((feature, featureIndex) => ("
                       <div key={featureIndex} className="flex items-center gap-3">"
-                        <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />"                        <span className="text-zion-slate-light text-sm">{feature}</span>
+                        <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0"  />"                        <span className="text-zion-slate-light text-sm">{feature}</span>
                       </div>
                     ))}
                   </div>
@@ -301,20 +247,20 @@ import { SEO } from '../components/SEO';    },;
           <div className="container-responsive">"
             <div className="text-center max-w-4xl mx-auto">"
               <h2 className="text-4xl font-bold text-white mb-6">Ready to Build Your Micro SAAS?</h2>"
-              <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">'
+              <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
                 Let's discuss how custom Micro SAAS solutions can transform your business
                 and accelerate your growth in the digital marketplace.
               </p>
 "
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a"
-                  href="/contact""
+                  href="/contact"
                   className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
 
                   Start Your Project
                 </a>
                 <a"
-                  href="/contact""
+                  href="/contact"
                   className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
 
                   Get Consultation
@@ -325,6 +271,5 @@ import { SEO } from '../components/SEO';    },;
         </section>;
       </div>;
     </>
-  );
-}
+  )}
 '"

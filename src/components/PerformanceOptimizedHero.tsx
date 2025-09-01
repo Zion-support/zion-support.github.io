@@ -1,21 +1,15 @@
-import React, { useState, useEffect, useCallback } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
-import { Link } from 'react-router-dom';
   useEffect ( () => {
     setIsVisible (true) ;
     
-    const interval = setInterval ( () => {;
-      setCurrentFeature ( (prev) => (prev + 1) % features.length) ;
-    }, 3000) ;
+    
+      setCurrentFeature ( (prev) => (prev + 1) % features.length) }, 3000) ;
 
-    return () => clearInterval(interval);
-  }, [features.length]);
-'
+    return () => clearInterval(interval)}, [features.length]);
+
     // // // // // // // // console.log('Hero CTA clicked');
-  const handleCTAClick = useCallback(() => {;
-    // Analytics tracking could be added here;'
-    // console.log('Hero CTA clicked');
-  }, []);
+  
+    // Analytics tracking could be added here;
+    // console.log('Hero CTA clicked')}, []);
 
   const containerVariants = {
 
@@ -30,22 +24,16 @@ import { Link } from 'react-router-dom';
         duration: 0.8,;
         staggerChildren: 0.2}}};
 
-  const itemVariants = {
-
-  hidden: { opacity: 0,;
+  
   ;
   y: 30 ;
-;
 ;
 },;
     visible: { opacity: 1, y: 0 }};
 
-  const featureVariants = {
-
-  hidden: { opacity: 0,;
+  
   ;
   scale: 0.8 ;
-;
 ;
 },;
     visible: { opacity: 1, scale: 1 }};
@@ -63,7 +51,7 @@ import { Link } from 'react-router-dom';
       <motion.div"
         className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
         variants={containerVariants}"
-        initial="hidden""
+        initial="hidden"
         animate={isVisible ? "visible" : "hidden"}
 
         {/* Badge */}
@@ -71,7 +59,7 @@ import { Link } from 'react-router-dom';
           className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-cyan-400 text-sm font-medium mb-8"
           variants={itemVariants}
 "
-          <Star className="w-4 h-4 mr-2" />          {subtitle}
+          <Star className="w-4 h-4 mr-2"  />          {subtitle}
         </motion.div>
 
         {/* Main title */}
@@ -97,18 +85,17 @@ import { Link } from 'react-router-dom';
           className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
           variants={itemVariants}
 
-          <Link
-            to={ctaLink}
+          <Link to={ctaLink}
             onClick={handleCTAClick}"
             className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-full text-lg shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 hover:scale-105"
 
             {ctaText}"
-            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />"
+            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"  />"
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-400 to-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </Link>
 "
           <button className="group inline-flex items-center px-8 py-4 border-2 border-cyan-500/30 text-cyan-400 font-semibold rounded-full text-lg hover:bg-cyan-500/10 transition-all duration-300">"
-            <Play className="mr-2 w-5 h-5" />            Watch Demo
+            <Play className="mr-2 w-5 h-5"  />            Watch Demo
           </button>
         </motion.div>
 

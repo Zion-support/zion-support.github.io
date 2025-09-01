@@ -1,5 +1,42 @@
-import React, { useState, useMemo } from 'react';'
-import { motion } from 'framer-motion';    if (selectedCategory !== 'all') {
+<<<<<<< HEAD
+import {
+
+  Brain,
+  Zap,
+  Globe,
+  Shield,
+  Cpu,
+  Database,
+  Network,
+  Lock,
+  TrendingUp,
+  Users,
+  Search,
+  Filter,
+  Star,
+  Clock,
+  DollarSign,
+  Target,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink'
+} from 'lucide-react';
+
+const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('innovation');
+
+  
+    return ['all', ...Array.from(cats)]}, []);
+
+  
+    // Filter by category'
+    if (selectedCategory !== 'all') {
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       filtered = filtered.filter(service => service.category === selectedCategory)}
 
@@ -16,13 +53,13 @@ import { motion } from 'framer-motion';    if (selectedCategory !== 'all') {
     filtered.sort((a, b) => {
 
       switch (sortBy) {
-'
+
         case 'innovation':
-          return b.innovationLevel.localeCompare(a.innovationLevel);'
+          return b.innovationLevel.localeCompare(a.innovationLevel);
         case 'roi':'
-          return parseFloat(b.roi.replace('%', '')) - parseFloat(a.roi.replace('%', ''));'
+          return parseFloat(b.roi.replace('%',)) - parseFloat(a.roi.replace('%',));
         case 'price':
-          return a.price - b.price;'
+          return a.price - b.price;
         case 'delivery':
           return a.estimatedDelivery.localeCompare (b.estimatedDelivery) ;
         default:
@@ -31,31 +68,16 @@ import { motion } from 'framer-motion';    if (selectedCategory !== 'all') {
 
     return filtered}, [searchTerm, selectedCategory, sortBy]) ;
 
-  const containerVariants = {
-
-    hidden: { opacity: 0 },;
+  
     visible: {
       opacity: 1,;
       transition: {
-        staggerChildren: 0.1;
-      };
-    };
-  };
+        staggerChildren: 0.1}}};
 
-  const itemVariants = {
-
-  hidden: { y: 20,
-  opacity: 0 
-
-},
-    visible: {
-      y: 0,;
+  
       opacity: 1,;
       transition: {
-        duration: 0.5;
-      };
-    };
-  };
+        duration: 0.5}}};
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Header Section */}
@@ -176,9 +198,14 @@ import { motion } from 'framer-motion';    if (selectedCategory !== 'all') {
           <div className="flex flex-col lg:flex-row gap-4 items-center">
             {/* Search */}"
             <div className="flex-1 relative">"
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5"  />
               <input"
+<<<<<<< HEAD
+                type="text"
+                placeholder="Search innovative services..."
+=======
                 type="text""                placeholder="Search innovative services..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}"
                 className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-transparent"
@@ -187,13 +214,13 @@ import { motion } from 'framer-motion';    if (selectedCategory !== 'all') {
 
             {/* Category Filter */}"
             <div className="flex items-center gap-2">"
-              <Filter className="text-slate-400 w-5 h-5" />              <select
+              <Filter className="text-slate-400 w-5 h-5"  />              <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}"
                 className="px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white focus: outline-none focus:ring-2 focus:ring-blue-500/50"
               >
                 {categories.map(category  => (
-                  <option key={category} value={category}>'
+                  <option key={category} value={category}>
                     {category === 'all' ? 'All Categories' : category.charAt(0).toUpperCase() + category.slice(1)}
                   </option>
                 ))}
@@ -202,7 +229,7 @@ import { motion } from 'framer-motion';    if (selectedCategory !== 'all') {
 
             {/* Sort */}"
             <div className="flex items-center gap-2">"
-              <TrendingUp className="text-slate-400 w-5 h-5" />              <select
+              <TrendingUp className="text-slate-400 w-5 h-5"  />              <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}"
                 className="px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50"
@@ -221,7 +248,7 @@ import { motion } from 'framer-motion';    if (selectedCategory !== 'all') {
       <motion.div"
         className="container mx-auto px-4 pb-20"
         variants={containerVariants}"
-        initial="hidden""
+        initial="hidden"
         animate="visible"
       >"
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
@@ -312,11 +339,11 @@ import { motion } from 'framer-motion';    if (selectedCategory !== 'all') {
                 </div>
                 <a
                   href={service.contactInfo.website}"
-                  target="_blank""
-                  rel="noopener noreferrer""
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 text-sm font-medium group-hover:gap-3 transition-all duration-300"
 "
-                  Learn More <ExternalLink className="w-4 h-4" />                </a>
+                  Learn More <ExternalLink className="w-4 h-4"  />                </a>
               </div>
             </motion.div>;) ) }
         </div>
@@ -340,19 +367,13 @@ import { motion } from 'framer-motion';    if (selectedCategory !== 'all') {
         initial = {
 
   { opacity: 0,
-  y: 50 ;
-
-}}        animate = {
+  y: 50 }}        animate = {
 
   { opacity: 1,
-  y: 0 ;
-
-}}        transition = {
+  y: 0 }}        transition = {
 
   { duration: 0.8,
-  delay: 1 ;
-
-}}
+  delay: 1 }}
       >"
         <div className="container mx-auto px-4 py-20">"
           <div className="text-center mb-12">"            <h2 className="text-4xl font-bold text-white mb-4">
@@ -366,7 +387,7 @@ import { motion } from 'framer-motion';    if (selectedCategory !== 'all') {
 "
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">"
             <div className="text-center p-6 bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50">"
-              <Phone className="w-12 h-12 text-blue-400 mx-auto mb-4" />"
+              <Phone className="w-12 h-12 text-blue-400 mx-auto mb-4"  />"
               <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>"
               <p className="text-slate-300 mb-3">Speak directly with our experts</p>"              <a href="tel:+13024640950" className="text-blue-400 hover:text-blue-300 font-medium">
                 +1 (302) 464-0950
@@ -374,7 +395,7 @@ import { motion } from 'framer-motion';    if (selectedCategory !== 'all') {
             </div>
 "
             <div className="text-center p-6 bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50">"
-              <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" />"
+              <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4"  />"
               <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>"
               <p className="text-slate-300 mb-3">Send us a detailed message</p>"              <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 font-medium">
                 kleber@ziontechgroup.com
@@ -382,7 +403,7 @@ import { motion } from 'framer-motion';    if (selectedCategory !== 'all') {
             </div>
 "
             <div className="text-center p-6 bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50">"
-              <MapPin className="w-12 h-12 text-green-400 mx-auto mb-4" />"
+              <MapPin className="w-12 h-12 text-green-400 mx-auto mb-4"  />"
               <h3 className="text-xl font-bold text-white mb-2">Visit Us</h3>"
               <p className="text-slate-300 mb-3">Come see our innovation center</p>"              <p className="text-green-400 font-medium">
                 364 E Main St STE 1008<br />
@@ -393,17 +414,16 @@ import { motion } from 'framer-motion';    if (selectedCategory !== 'all') {
 "
           <div className="text-center mt-12">
             <a"
-              href="https://ziontechgroup.com""
-              target="_blank""
-              rel="noopener noreferrer""
+              href="https://ziontechgroup.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25"
 
               Visit Our Website"
-              <ArrowRight className="w-5 h-5" />            </a>;
+              <ArrowRight className="w-5 h-5"  />            </a>;
           </div>;
         </div>;
       </motion.div>;
-    </div>;) ;
-};
+    </div>;) };
 
-export default AdvancedInnovativeServicesShowcase2026;}}}}}}}}'"
+export default AdvancedInnovativeServicesShowcase2026}}}}}}}}'"

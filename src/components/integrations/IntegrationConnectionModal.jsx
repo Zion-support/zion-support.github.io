@@ -22,7 +22,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
             toast.success(`Connected to ${integration.name} successfully`);
             onClose()}, 2000);
         // In a real application, this would open a popup for OAuth authentication`
-        // window.open(`/api/oauth/${integration.id}`, 'oauth', 'width=600,height=600')};
+        // window.open(`/api/oauth/${integration.id}`,oauth',width=600,height=600')};
     const handleDisconnect = () => {
         // In a real application, this would revoke the OAuth token`
         toast.info(`Disconnected from ${integration.name}`);
@@ -40,7 +40,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
           <div>
             <DialogTitle>{integration.name} Integration</DialogTitle>
             <DialogDescription>"
-              {integration.status === "connected" || integration.status === "warning""
+              {integration.status === "connected" || integration.status === "warning"
             ? "Manage your connection settings"`
             : `Connect your ${integration.name} account`}
             </DialogDescription>

@@ -1,43 +1,108 @@
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
-import { SEO  } from '../../components/SEO';        "SLA guarantees";
-      ],;"
-      cta: "Contact Sales",;
-      popular: false;
-    };
+<<<<<<< HEAD
+import { MessageSquare, 
+  TrendingUp, 
+  BarChart3, 
+  Users, 
+  Zap, 
+  Globe, 
+  Lock, 
+  Eye,
+  Star,
+  Cpu,
+  Database,
+  Search,
+  Filter,
+  Download,
+  Share2,
+  Play,
+  ArrowRight,
+  CheckCircle,
+  AlertTriangle,
+  FileText,
+  Clock,
+  Award,
+  Brain,
+  Target,
+  PieChart,
+  Activity,
+  ShoppingCart,
+  Shield,
+  Settings'
+ } from 'lucide-react.ts';
+
+export default function AICustomerFeedbackAnalytics(...args: any[]): any {
+
+  
+    },;
+    {;
+      icon: Activity,;"
+      title: "Automated Reporting",;"
+      description: "Generate comprehensive reports and alerts for stakeholders with actionable insights and recommendations."};
+  ]},;
+    {;
+      icon: Clock,;"
+      title: "Time Savings",;"
+      description: "Automate feedback analysis and reporting, saving hours of manual work each week."};
   ];
 
-  const useCases = [
+  const pricingPlans = [
     {
 "
-      industry: "E-commerce","
-      description: "Analyze product reviews, customer service feedback, and shopping experience to optimize conversion rates",
-      icon: ShoppingCart
+      name: "Starter","
+      price: "$299","
+      period: "/month","
+      description: "Perfect for small businesses starting their feedback analytics journey",
+      features: ["
+        "Up to 10,000 feedback entries/month","
+        "Basic sentiment analysis","
+        "Email support","
+        "Standard integrations","
+        "Basic reporting","
+        "5 team members"
+      ],"
+      cta: "Start Free Trial",
+      popular: false
     },
     {
 "
-      industry: "SaaS","
-      description: "Monitor user satisfaction, feature requests, and churn indicators to improve product-market fit",
-      icon: Cpu
+      name: "Professional","
+      price: "$799","
+      period: "/month","
+      description: "Ideal for growing companies with advanced analytics needs",
+      features: ["
+        "Up to 100,000 feedback entries/month","
+        "Advanced AI sentiment analysis","
+        "Priority support","
+        "Custom integrations","
+        "Advanced reporting & dashboards","
+        "Predictive analytics","
+        "Unlimited team members","
+        "API access"
+      ],"
+      cta: "Start Free Trial",
+      popular: true
     },
     {
 "
-      industry: "Healthcare","
-      description: "Track patient satisfaction, service quality feedback, and improve healthcare delivery",
-      icon: Users
-    },
-    {
-"
-      industry: "Financial Services","
-      description: "Monitor customer satisfaction with banking services, investment products, and support quality",
-      icon: Shield
-    },
-    {
-"
-      industry: "Education","
-      description: "Analyze student feedback, course satisfaction, and institutional improvement opportunities",
-      icon: Award;
-    },;
+      name: "Enterprise","
+      price: "$2,499","
+      period: "/month","
+      description: "For large organizations requiring enterprise-grade solutions",
+      features: ["
+        "Unlimited feedback entries","
+        "Custom AI models","
+        "Dedicated account manager","
+        "White-label solutions","
+        "Advanced security features","
+        "Custom reporting",;"
+        "On-premise deployment options",;"
+        "SLA guarantees";
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+      ],;"
+      cta: "Contact Sales",;
+      popular: false};
+  ]},;
     {;"
       industry: "Manufacturing",;"      description: "Track customer satisfaction with products, service quality, and identify improvement areas",;
       icon: Settings};
@@ -67,18 +132,22 @@ import { SEO  } from '../../components/SEO';        "SLA guarantees";
     {
 "
       name: "Review Platforms",;"
-      platforms: ["Google Reviews", "Yelp", "Trustpilot", "G2"];
-    },;
+      platforms: ["Google Reviews", "Yelp", "Trustpilot", "G2"]},;
     {;"
       name: "Analytics Tools",;"
-      platforms: ["Google Analytics", "Mixpanel", "Amplitude", "Hotjar"];
-    };  ];
+      platforms: ["Google Analytics", "Mixpanel", "Amplitude", "Hotjar"]};  ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
+<<<<<<< HEAD
+        title="AI Customer Feedback Analytics - Zion Tech Group"
+        description="Transform customer feedback into actionable insights with our AI-powered analytics platform. Analyze sentiment, predict churn, and improve customer satisfaction."
+      />
+=======
         title="AI Customer Feedback Analytics - Zion Tech Group""        description="Transform customer feedback into actionable insights with our AI-powered analytics platform. Analyze sentiment, predict churn, and improve customer satisfaction."
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 lg:py-32">"
@@ -111,11 +180,11 @@ import { SEO  } from '../../components/SEO';        "SLA guarantees";
             transition={{ duration: 0.8 }}
           >"
             <div className="inline-flex items-center px-4 py-2 bg-blue-600/20 text-blue-400 rounded-full text-sm font-medium mb-6">"
-              <Brain className="w-4 h-4 mr-2" />              AI-Powered Analytics
+              <Brain className="w-4 h-4 mr-2"  />              AI-Powered Analytics
             </div>"
             <h1 className="text-4xl md:text-7xl font-bold text-white mb-6">
               AI Customer Feedback"
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 {' '}Analytics
               </span>
             </h1>"
@@ -125,11 +194,11 @@ import { SEO  } from '../../components/SEO';        "SLA guarantees";
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-lg flex items-center justify-center">"
-                <Play className="w-5 h-5 mr-2" />
+                <Play className="w-5 h-5 mr-2"  />
                 Start Free Trial
               </button>"
               <button className="border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 text-lg">"
-                <Download className="w-5 h-5 mr-2 inline" />                Download Brochure
+                <Download className="w-5 h-5 mr-2 inline"  />                Download Brochure
               </button>
             </div>
           </motion.div>
@@ -445,7 +514,7 @@ import { SEO  } from '../../components/SEO';        "SLA guarantees";
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center text-gray-300">"
-                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />"                      <span className="text-sm">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0"  />"                      <span className="text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -702,7 +771,7 @@ import { SEO  } from '../../components/SEO';        "SLA guarantees";
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-lg flex items-center justify-center">"
-                <Star className="w-5 h-5 mr-2" />                Start Free Trial
+                <Star className="w-5 h-5 mr-2"  />                Start Free Trial
               </button>"
               <button className="border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 text-lg">"
                 <Share2 className="w-5 h-5 mr-2 inline" />
@@ -713,5 +782,4 @@ import { SEO  } from '../../components/SEO';        "SLA guarantees";
         </div>;
       </section>;
     </div>;
-  );
-}'"`
+  )}'"`

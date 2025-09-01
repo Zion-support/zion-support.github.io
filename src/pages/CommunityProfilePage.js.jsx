@@ -74,7 +74,7 @@ const userPosts = [
     {
 "
         id: "11","
-        title: "How to structure an AI prompt for best results",'"
+        title: "How to structure an AI prompt for best results","
         content: "After experimenting with different prompt formats, I've found these patterns to work consistently better...","
         authorId: "user1","
         authorName: "Alex Johnson","
@@ -91,7 +91,7 @@ const userPosts = [
     {
 "
         id: "12","
-        title: "Setting up effective monitoring for AI systems",'"
+        title: "Setting up effective monitoring for AI systems","
         content: "Here's my approach to monitoring AI systems in production environments...","
         authorId: "user1","
         authorName: "Alex Johnson","
@@ -131,7 +131,7 @@ export default function CommunityProfilePage() {
           <Button asChild className="mt-4">"
             <Link to="/community">Back to Community</Link>
           </Button>
-        </div>)}'
+        </div>)}
     return (<SEO title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`} description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`} keywords = {
 `
   `community, forum, profile, user profile,

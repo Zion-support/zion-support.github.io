@@ -1,9 +1,9 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
-import { Link } from 'react-router-dom';'
-import { Code, Shield, Zap, Brain, Users, CheckCircle, ArrowRight, Play, Star, Cpu, GitBranch } from 'lucide-react';'
-import SEO from '@/components/SEO';'
-import { Code, Shield, Zap, Brain, Users, CheckCircle, ArrowRight, Play, Star, Cpu, GitFork } from 'lucide-react';'
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { Code, Shield, Zap, Brain, Users, CheckCircle, ArrowRight, Play, Star, Cpu, GitBranch } from 'lucide-react';
+import SEO from '@/components/SEO';
+import { Code, Shield, Zap, Brain, Users, CheckCircle, ArrowRight, Play, Star, Cpu, GitFork } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 const features = [
     {
@@ -29,7 +29,7 @@ const features = [
     },
     {
 "
-        title: "Learning & Adaptation",'"
+        title: "Learning & Adaptation","
         description: "Machine learning algorithms that continuously improve based on your team's coding patterns and preferences.",
         icon: Brain,"
         color: "from-purple-500 to-indigo-500"
@@ -398,7 +398,7 @@ export default function AIAutonomousCodeReview() {
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
               What Developers Say
             </h2>"
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">'
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Don't just take our word for it. Here's what development teams have to say about our AI code review.
             </p>
           </motion.div>

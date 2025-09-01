@@ -9,25 +9,25 @@ import {
   CheckCircle,
   TrendingUp,
   Users,
-  Shield,'
-  Zap} from 'lucide-react';'
-import { Button } from '@/components/ui/button';'
-import { Input } from '@/components/ui/input';'
+  Shield,
+  Zap} from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import {
 
   Card,
   CardContent,
   CardDescription,
-  CardHeader,'
-  CardTitle} from '@/components/ui/card';'
-import { EXPANDED_SERVICES, SERVICE_CATEGORIES } from '@/data/expandedServices';'
+  CardHeader,
+  CardTitle} from '@/components/ui/card';
+import { EXPANDED_SERVICES, SERVICE_CATEGORIES } from '@/data/expandedServices';
 import { TrustedBySection } from '@/components/TrustedBySection';
 export default function ExpandedServicesPage() {
-'
-  const [searchQuery, setSearchQuery] = useState('');'
+
+  const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [filteredServices, setFilteredServices] = useState(EXPANDED_SERVICES);'
+  const [filteredServices, setFilteredServices] = useState(EXPANDED_SERVICES);
   const [sortBy, setSortBy] = useState('rating');
   useEffect(() => {
     let filtered = EXPANDED_SERVICES;
@@ -54,9 +54,9 @@ export default function ExpandedServicesPage() {
     }
     // Sort services
     filtered.sort((a, b) => {
-'
-      if (sortBy === 'rating') return b.rating - a.rating;'
-      if (sortBy === 'price') return a.price - b.price;'
+
+      if (sortBy === 'rating') return b.rating - a.rating;
+      if (sortBy === 'price') return a.price - b.price;
       if (sortBy === 'aiScore') return b.aiScore - a.aiScore;
       return 0;
     });
@@ -65,13 +65,13 @@ export default function ExpandedServicesPage() {
   const getCategoryIcon = category => {
 
     switch (category) {
-'
+
       case 'AI Services':'
-        return '🤖';'
+        return '🤖';
       case 'Micro SAAS':'
-        return '☁️';'
+        return '☁️';
       case 'IT Services':'
-        return '💻';'
+        return '💻';
       case 'Digital Services':'
         return '🚀';
       default:'
@@ -81,13 +81,13 @@ export default function ExpandedServicesPage() {
   const getPricingModelColor = model => {
 
     switch (model) {
-'
+
       case 'subscription':'
-        return 'bg-blue-100 text-blue-800';'
+        return 'bg-blue-100 text-blue-800';
       case 'project-based':'
-        return 'bg-purple-100 text-purple-800';'
+        return 'bg-purple-100 text-purple-800';
       case 'one-time':'
-        return 'bg-green-100 text-green-800';'
+        return 'bg-green-100 text-green-800';
       case 'usage-based':'
         return 'bg-orange-100 text-orange-800';
       default:'
@@ -184,8 +184,8 @@ export default function ExpandedServicesPage() {
                     </div>
                     <Badge
                       className={getPricingModelColor(service.pricingModel)}
-                    >'
-                      {service.pricingModel.replace('-', ' ')}
+                    >
+                      {service.pricingModel.replace('-',)}
                     </Badge>
                   </div>"
                   <CardTitle className="text-xl text-zion-blue-dark">
@@ -239,7 +239,7 @@ export default function ExpandedServicesPage() {
                       {service.features.slice(0, 3).map((feature, index) => (
                         <Badge
                           key={index}"
-                          variant="secondary""
+                          variant="secondary"
                           className="text-xs"
                         >
                           {feature}
@@ -286,8 +286,8 @@ export default function ExpandedServicesPage() {
                         <Globe className="h-4 w-4" />
                         <a
                           href={service.contactInfo.website}"
-                          target="_blank""
-                          rel="noopener noreferrer""
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="text-zion-cyan hover:underline"
                         >
                           Visit Website
@@ -424,15 +424,15 @@ export default function ExpandedServicesPage() {
 "
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button"
-              size="lg""
+              size="lg"
               className="bg-white text-zion-purple hover:bg-gray-100"
             >"
               <Phone className="h-5 w-5 mr-2" />
               Call +1 302 464 0950
             </Button>
             <Button"
-              size="lg""
-              variant="outline""
+              size="lg"
+              variant="outline"
               className="border-white text-white hover:bg-white hover:text-zion-purple"
             >"
               <Mail className="h-5 w-5 mr-2" />
@@ -442,12 +442,12 @@ export default function ExpandedServicesPage() {
 "
           <div className="mt-8 text-zion-slate-light">
             <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-            <p>'
+            <p>
               Website:{' '}
               <a"
-                href="https://ziontechgroup.com""
-                target="_blank""
-                rel="noopener noreferrer""
+                href="https://ziontechgroup.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-white hover:underline"
               >
                 https://ziontechgroup.com

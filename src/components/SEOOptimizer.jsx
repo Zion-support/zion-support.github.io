@@ -13,34 +13,34 @@ import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download const SEOOp
             // Simulate analyzing all pages for SEO
             const samplePages = [
                 {
-'
-                    url: '/','
-                    title: 'Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services','
-                    metaDescription: 'Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services.','
-                    headings['AI-Powered Business Solutions', 'Comprehensive IT Services', 'Micro-SaaS Solutions'],'
-                    images['/images/hero-ai-solutions.jpg', '/images/hero-it-services.jpg'],'
-                    links['/services', '/ai-solutions', '/about', '/contact'],'
-                    keywords['AI solutions', 'quantum computing', 'cybersecurity', 'digital transformation']
+
+                    url: '/',
+                    title: 'Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services',
+                    metaDescription: 'Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services.',
+                    headings['AI-Powered Business Solutions',Comprehensive IT Services',Micro-SaaS Solutions'],
+                    images['/images/hero-ai-solutions.jpg',/images/hero-it-services.jpg'],
+                    links['/services',/ai-solutions',/about',/contact'],
+                    keywords['AI solutions',quantum computing',cybersecurity',digital transformation']
                 },
                 {
-'
-                    url: '/services','
-                    title: 'Our Services - Comprehensive Technology Solutions','
-                    metaDescription: 'Comprehensive technology services including AI solutions, cloud infrastructure, cybersecurity, and digital transformation.','
-                    headings['AI Solutions', 'Cloud & DevOps', 'Cybersecurity', 'Digital Transformation'],'
-                    images['/images/services-overview.jpg'],'
-                    links['/ai-solutions', '/cloud-devops', '/cybersecurity', '/about'],'
-                    keywords['technology services', 'AI solutions', 'cloud infrastructure', 'cybersecurity']
+
+                    url: '/services',
+                    title: 'Our Services - Comprehensive Technology Solutions',
+                    metaDescription: 'Comprehensive technology services including AI solutions, cloud infrastructure, cybersecurity, and digital transformation.',
+                    headings['AI Solutions',Cloud & DevOps',Cybersecurity',Digital Transformation'],
+                    images['/images/services-overview.jpg'],
+                    links['/ai-solutions',/cloud-devops',/cybersecurity',/about'],
+                    keywords['technology services',AI solutions',cloud infrastructure',cybersecurity']
                 },
                 {
-'
-                    url: '/ai-solutions','
-                    title: 'AI Solutions - Artificial Intelligence Services','
-                    metaDescription: 'Cutting-edge artificial intelligence solutions including machine learning, predictive analytics, and AI automation.','
-                    headings['Machine Learning', 'Predictive Analytics', 'AI Automation', 'Business Intelligence'],'
-                    images['/images/ai-solutions.jpg'],'
-                    links['/services', '/about', '/contact'],'
-                    keywords['artificial intelligence', 'machine learning', 'predictive analytics', 'AI automation']
+
+                    url: '/ai-solutions',
+                    title: 'AI Solutions - Artificial Intelligence Services',
+                    metaDescription: 'Cutting-edge artificial intelligence solutions including machine learning, predictive analytics, and AI automation.',
+                    headings['Machine Learning',Predictive Analytics',AI Automation',Business Intelligence'],
+                    images['/images/ai-solutions.jpg'],
+                    links['/services',/about',/contact'],
+                    keywords['artificial intelligence',machine learning',predictive analytics',AI automation']
                 }
             ];
             const pageAnalyses = samplePages.map(page => {
@@ -92,7 +92,7 @@ import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download const SEOOp
 
             }) }
         catch (error) {
-'
+
             // console.error('Error analyzing SEO:', error)}
         finally {
 
@@ -148,7 +148,7 @@ import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download const SEOOp
 
             score += 5}
         // URL structure (0-15 points)
-        maxScore += 15;'
+        maxScore += 15;
         if (page.url === '/' || page.url.includes('-')) {
 
             score += 15}
@@ -160,59 +160,59 @@ import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download const SEOOp
     };
     const issues = [];
         if (!page.title || page.title.length < 30) {
-'
-            issues.push('Title is too short (should be 30-60 characters)')}
+
+            issues.push('Title is too short (should be 30-60 characters))}
         else if (page.title.length > 60) {
-'
-            issues.push('Title is too long (should be 30-60 characters)')}
+
+            issues.push('Title is too long (should be 30-60 characters))}
         if (!page.metaDescription || page.metaDescription.length < 120) {
-'
-            issues.push('Meta description is too short (should be 120-160 characters)')}
+
+            issues.push('Meta description is too short (should be 120-160 characters))}
         else if (page.metaDescription.length > 160) {
-'
-            issues.push('Meta description is too long (should be 120-160 characters)')}
+
+            issues.push('Meta description is too long (should be 120-160 characters))}
         if (page.headings.length < 2) {
-'
-            issues.push('Insufficient heading structure (should have at least 2 headings)')}
+
+            issues.push('Insufficient heading structure (should have at least 2 headings))}
         if (page.images.length === 0) {
-'
-            issues.push('No images found (consider adding relevant images with alt text)')}
+
+            issues.push('No images found (consider adding relevant images with alt text))}
         if (page.links.length < 2) {
-'
-            issues.push('Insufficient internal linking (should have at least 2 internal links)')}
+
+            issues.push('Insufficient internal linking (should have at least 2 internal links))}
         if (page.keywords.length < 2) {
-'
-            issues.push('Insufficient keyword targeting (should have at least 2 relevant keywords)')}'
+
+            issues.push('Insufficient keyword targeting (should have at least 2 relevant keywords))}
         if (page.url !== '/' && !page.url.includes('-')) {
-'
-            issues.push('URL could be more SEO-friendly (consider using hyphens)')}
+
+            issues.push('URL could be more SEO-friendly (consider using hyphens))}
         return issues};
     const generateSEORecommendations = (issues) => {
 
-        const recommendations = [];'
+        const recommendations = [];
         if (issues.some(issue => issue.includes('Title'))) {
-'
-            recommendations.push('Optimize page titles with relevant keywords and compelling copy')}'
+
+            recommendations.push('Optimize page titles with relevant keywords and compelling copy')}
         if (issues.some(issue => issue.includes('Meta description'))) {
-'
-            recommendations.push('Write compelling meta descriptions that accurately describe the page content')}'
+
+            recommendations.push('Write compelling meta descriptions that accurately describe the page content')}
         if (issues.some(issue => issue.includes('heading structure'))) {
-'
-            recommendations.push('Add H1, H2, and H3 headings to improve content structure and SEO')}'
+
+            recommendations.push('Add H1, H2, and H3 headings to improve content structure and SEO')}
         if (issues.some(issue => issue.includes('No images'))) {
-'
-            recommendations.push('Add relevant images with descriptive alt text for better accessibility and SEO')}'
+
+            recommendations.push('Add relevant images with descriptive alt text for better accessibility and SEO')}
         if (issues.some(issue => issue.includes('internal linking'))) {
-'
-            recommendations.push('Add internal links to related pages to improve navigation and SEO')}'
+
+            recommendations.push('Add internal links to related pages to improve navigation and SEO')}
         if (issues.some(issue => issue.includes('keyword targeting'))) {
-'
-            recommendations.push('Research and include relevant keywords naturally throughout the content')}'
+
+            recommendations.push('Research and include relevant keywords naturally throughout the content')}
         if (issues.some(issue => issue.includes('URL'))) {
-'
-            recommendations.push('Use SEO-friendly URLs with hyphens and descriptive terms')}'
-        recommendations.push('Ensure content is unique, valuable, and addresses user intent');'
-        recommendations.push('Implement structured data markup for better search engine understanding');'
+
+            recommendations.push('Use SEO-friendly URLs with hyphens and descriptive terms')}
+        recommendations.push('Ensure content is unique, valuable, and addresses user intent');
+        recommendations.push('Implement structured data markup for better search engine understanding');
         recommendations.push('Optimize page loading speed for better user experience and SEO');
         return recommendations};
     const generateSummary = (pageAnalyses, topIssues) => {
@@ -233,45 +233,45 @@ import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download const SEOOp
             summary += `${poorPages} pages need significant SEO improvement. `}
         if (topIssues.length > 0) {
 '`
-            summary += `Top SEO issues to address: ${topIssues.slice(0, 3).join(', ')}.`}
+            summary += `Top SEO issues to address: ${topIssues.slice(0, 3).join(',)}.`}
         return summary};
     const exportSEOReport = () => {
         if (!report)
             return;
         const csvContent = ['
-            ['Page URL', 'Title', 'SEO Score', 'Issues', 'Recommendations'],
+            ['Page URL',Title',SEO Score',Issues',Recommendations'],
             ...report.pageAnalyses.map (page => [
                 page.pageUrl,
                 page.title,
-                page.score.toString(),'
-                page.issues.join('; '),'
+                page.score.toString(),
+                page.issues.join('; '),
                 page.recommendations.join('; ')
             ])'`
-        ].map(row => row.map(cell => `"${cell}"`).join(',')).join('\n');'
+        ].map(row => row.map(cell => `"${cell}"`).join(',)).join('\n');
         const blob = new Blob([csvContent], { type: 'text/csv' });
-        const url = window.URL.createObjectURL(blob);'
+        const url = window.URL.createObjectURL(blob);
         const a = document.createElement('a');
-        a.href = url;'
+        a.href = url;
         a.download = 'seo-optimization-report.csv';
         a.click();
         window.URL.revokeObjectURL(url)};
     const getScoreColor = (score) => {
 
-        if (score >= 80)'
+        if (score >= 80)
             return 'text-green-600 bg-green-50 border-green-200';
-        if (score >= 60)'
+        if (score >= 60)
             return 'text-yellow-600 bg-yellow-50 border-yellow-200';
-        if (score >= 40)'
-            return 'text-orange-600 bg-orange-50 border-orange-200';'
+        if (score >= 40)
+            return 'text-orange-600 bg-orange-50 border-orange-200';
         return 'text-red-600 bg-red-50 border-red-200'};
     const getScoreText = (score) => {
 
-        if (score >= 80)'
+        if (score >= 80)
             return 'Excellent';
-        if (score >= 60)'
+        if (score >= 60)
             return 'Good';
-        if (score >= 40)'
-            return 'Fair';'
+        if (score >= 40)
+            return 'Fair';
         return 'Poor'};"
     return (<div className="fixed bottom-6 right-24 z-50">
       {/* Floating Action Button */}"
@@ -438,7 +438,7 @@ import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download const SEOOp
           {/* Footer Actions */}"
           <div className="bg-gray-50 dark:bg-gray-800 p-3 flex gap-2">"
             <button onClick={analyzeSEO} disabled={isAnalyzing} className="flex-1 bg-purple-600 hover:bg-purple-700 disabled:bg-purple-400 text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center justify-center gap-2">'`
-              <RefreshCw className={`w-4 h-4 ${isAnalyzing ? 'animate-spin' : ''}`}/>'
+              <RefreshCw className={`w-4 h-4 ${isAnalyzing ? 'animate-spin' : ''}`}/>
               {isAnalyzing ? 'Analyzing...' : 'Analyze SEO'}
             </button>"
             <button onClick={exportSEOReport} className="px-3 py-2 bg-pink-600 hover:bg-pink-700 text-white rounded-md transition-colors flex items-center gap-2">"

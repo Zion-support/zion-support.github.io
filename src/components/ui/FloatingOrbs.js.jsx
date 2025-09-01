@@ -1,10 +1,10 @@
-import React, { useEffect, useRef } from 'react';'
+import React, { useEffect, useRef } from 'react';
 export function FloatingOrbs({ count = 6, className = '' }) {
 
   const canvasRef = useRef(null);
   useEffect(() => {
     const canvas = canvasRef.current;
-    if (!canvas) return;'
+    if (!canvas) return;
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
     // Set canvas size
@@ -12,7 +12,7 @@ export function FloatingOrbs({ count = 6, className = '' }) {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
-    resizeCanvas();'
+    resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
     // Orb class
     class Orb {
@@ -54,8 +54,8 @@ export function FloatingOrbs({ count = 6, className = '' }) {
           this.y,
           this.radius
         );
-        gradient.addColorStop(0, this.color);'
-        gradient.addColorStop(1, 'transparent');
+        gradient.addColorStop(0, this.color);
+        gradient.addColorStop(1,transparent');
         ctx.fillStyle = gradient;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
@@ -82,7 +82,7 @@ export function FloatingOrbs({ count = 6, className = '' }) {
     animate();
     // Cleanup
     return () => {
-'
+
       window.removeEventListener('resize', resizeCanvas);
       cancelAnimationFrame(animationId);
     };
@@ -90,7 +90,7 @@ export function FloatingOrbs({ count = 6, className = '' }) {
   return()
     <canvas
       ref={canvasRef}`
-      className={`fixed inset-0 pointer-events-none z-0 ${className}`}'
+      className={`fixed inset-0 pointer-events-none z-0 ${className}`}
       style={{ background: 'transparent' }}
     />
   );

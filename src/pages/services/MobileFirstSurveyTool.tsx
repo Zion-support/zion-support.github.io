@@ -1,4 +1,3 @@
-import React from 'react.ts';
 ;const MobileFirstSurveyTool: React.FC = (): JSX.Element => {
 
   return()
@@ -58,9 +57,9 @@ import React from 'react.ts';
               <ul className="list-disc ml-6 space-y-2 text-cyan-300">
                 <li>
                   <a"
-                    className="hover:underline""
-                    href="https://developers.google.com/forms/api""
-                    target="_blank""
+                    className="hover:underline"
+                    href="https://developers.google.com/forms/api"
+                    target="_blank"
                     rel="noreferrer"
                   >
                     Google Forms API
@@ -68,9 +67,9 @@ import React from 'react.ts';
                 </li>
                 <li>
                   <a"
-                    className="hover:underline""
-                    href="https://api.slack.com/""
-                    target="_blank""
+                    className="hover:underline"
+                    href="https://api.slack.com/"
+                    target="_blank"
                     rel="noreferrer"
                   >
                     Slack API
@@ -78,9 +77,9 @@ import React from 'react.ts';
                 </li>
                 <li>
                   <a"
-                    className="hover:underline""
-                    href="https://developers.hubspot.com/""
-                    target="_blank""
+                    className="hover:underline"
+                    href="https://developers.hubspot.com/"
+                    target="_blank"
                     rel="noreferrer"
                   >
                     HubSpot Developer
@@ -94,7 +93,7 @@ import React from 'react.ts';
             <div className="rounded-2xl border border-fuchsia-400/20 bg-slate-900/60 p-6">"
               <h3 className="text-xl font-semibold">Try a Live Demo</h3>
               <a"
-                href="/contact""
+                href="/contact"
                 className="mt-4 inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-fuchsia-400 to-cyan-400 text-white hover:from-fuchsia-500 hover:to-cyan-500"
               >
                 Request Access
@@ -104,7 +103,6 @@ import React from 'react.ts';
         </section>
       </div>
     </div>
-  );
-};
+  )};
 export default MobileFirstSurveyTool;
 '"

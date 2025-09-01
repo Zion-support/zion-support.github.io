@@ -96,8 +96,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
       integrations["AWS", "Azure", "Google Cloud", "DigitalOcean", "Vultr"],;
       apiEndpoints: 400,"
       uptime: "99.99%","
-      security["SOC 2", "ISO 27001", "Zero Trust", "End-to-end encryption"];
-    },;"
+      security["SOC 2", "ISO 27001", "Zero Trust", "End-to-end encryption"]},;"
     competitors["HashiCorp", "Pulumi", "CloudBees", "CircleCI", "GitLab"],;"    marketSize: "$832.1 billion by 2025"
   },
 
@@ -163,8 +162,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
       integrations["IoT platforms", "Cloud services", "Network equipment", "Industrial systems", "Mobile networks"],;
       apiEndpoints: 300,"
       uptime: "99.9%","
-      security["Edge security", "Data encryption", "Device authentication", "Network isolation"];
-    },;"
+      security["Edge security", "Data encryption", "Device authentication", "Network isolation"]},;"
     competitors["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "Cisco Edge", "HPE Edge"],;"    marketSize: "$43.4 billion by 2025"
   },
 
@@ -230,8 +228,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
       integrations["Quantum computers", "Classical networks", "Security systems", "Monitoring tools", "Research platforms"],;
       apiEndpoints: 150,"
       uptime: "99.9%","
-      security["Quantum security", "Post-quantum crypto", "Quantum key distribution", "Advanced encryption"];
-    },;"
+      security["Quantum security", "Post-quantum crypto", "Quantum key distribution", "Advanced encryption"]},;"
     competitors["IBM Quantum Network", "Microsoft Azure Quantum", "Google Quantum", "Rigetti", "IonQ"],;"    marketSize: "$89.2 billion by 2025"
   },
 
@@ -297,8 +294,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
       integrations["Building management systems", "Power monitoring", "Cooling systems", "Server management", "Environmental sensors"],;
       apiEndpoints: 200,"
       uptime: "99.9%","
-      security["SOC 2", "Data encryption", "Access controls", "Audit logging"];
-    },;"
+      security["SOC 2", "Data encryption", "Access controls", "Audit logging"]},;"
     competitors["Schneider Electric", "Eaton", "Vertiv", "Emerson", "HPE"],;"    marketSize: "$59.7 billion by 2025"
   },
 
@@ -364,9 +360,8 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
       integrations["Core networks", "Radio access networks", "Edge computing", "Cloud services", "IoT platforms"],;
       apiEndpoints: 500,"
       uptime: "99.99%","
-      security["Network security", "Encryption", "Authentication", "Privacy protection"];
-    },;"
+      security["Network security", "Encryption", "Authentication", "Privacy protection"]},;"
     competitors["Ericsson", "Nokia", "Huawei", "Samsung", "Qualcomm"],;"
     marketSize: "$667.9 billion by 2025"
 
-];}}"
+]}}"

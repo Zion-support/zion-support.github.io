@@ -1,6 +1,3 @@
-import React from 'react.ts';'
-import { Link } from 'react-router-dom.ts';'
-import { motion } from 'framer-motion.ts';
 import {
 
   Users,  Target,
@@ -22,124 +19,15 @@ import {
   Linkedin,
   Twitter,
   Github,
-  Facebook,'
+  Facebook,
   Instagram} from 'lucide-react.ts';
 
 export function AboutPage(...args: any[]): any {
 
-  const values = [
-    {
-'
-      title: 'Innovation First',
-      description:'
-        "We push the boundaries of what's possible with cutting-edge technology",
-      icon: Zap,'
-      color: 'from-cyan-500 to-blue-600'},
-    {
-'
-      title: 'Excellence',
-      description:'
-        'We strive for excellence in everything we do, from code to customer service',
-      icon: Star,'
-      color: 'from-yellow-500 to-orange-600'},
-    {
-'
-      title: 'Integrity',
-      description:'
-        'We operate with honesty, transparency, and ethical business practices',
-      icon: Shield,'
-      color: 'from-green-500 to-teal-600'},
-    {
-'
-      title: 'Collaboration',
-      description:'
-        'We believe in the power of teamwork and partnership to achieve great things',
-      icon: Users,'
-      color: 'from-purple-500 to-pink-600'},
-  ];
-
-  const team = [
-    {
-'
-      name: 'Dr. Sarah Chen','
-      role: 'Chief Executive Officer','"
-      bio: "Former AI researcher at Stanford, leading Zion Tech Group's vision for the future of technology.",
-      expertise: ['
-        'AI & Machine Learning','
-        'Strategic Leadership','
-        'Technology Innovation',
-      ],'
-      avatar: '👩‍💼'},
-    {
-'
-      name: 'Michael Rodriguez','
-      role: 'Chief Technology Officer','
-      bio: 'Quantum computing expert with 15+ years in advanced technology development.',
-      expertise: ['
-        'Quantum Computing','
-        'System Architecture','
-        'Research & Development',
-      ],'
-      avatar: '👨‍💻'},
-    {
-'
-      name: 'Dr. Emily Watson','
-      role: 'Chief Security Officer','
-      bio: 'Cybersecurity specialist with deep expertise in AI-powered threat detection.','
-      expertise: ['Cybersecurity', 'AI Security', 'Risk Management'],'
-      avatar: '👩‍🔬'},
-    {
-'
-      name: 'David Kim','
-      role: 'VP of Engineering','
-      bio: 'Full-stack engineer passionate about building scalable, secure systems.','
-      expertise: ['Software Engineering', 'DevOps', 'Cloud Architecture'],'
-      avatar: '👨‍🔧'},
-  ];
-
-  const milestones = [
-    {
-'
-      year: '2020','
-      title: 'Company Founded',
-      description:'
-        'Zion Tech Group was established with a vision to democratize advanced technology'},
-    {
-'
-      year: '2021','
-      title: 'First AI Solution','
-      description: 'Launched our flagship AI business intelligence platform'},
-    {
-'
-      year: '2022','
-      title: 'Quantum Breakthrough',
-      description:'
-        'Developed our first quantum computing algorithms for financial modeling'},
-    {
-'
-      year: '2023','
-      title: 'Enterprise Expansion','
-      description: 'Secured partnerships with Fortune 500 companies'},
-    {
-'
-      year: '2024','
-      title: 'Global Reach','
-      description: 'Expanded operations to serve clients in 25+ countries'},
-    {
-'
-      year: '2025','
-      title: 'Future Vision',
-      description:'
-        'Leading the next generation of AI and quantum computing solutions'},
-  ];
-
-  const stats = ['
-    { number: '1000+', label: 'Clients Worldwide', icon: Globe },'
-    { number: '50+', label: 'Technology Patents', icon: Award },'
-    { number: '99.9%', label: 'Client Satisfaction', icon: Star },'
-    { number: '24/7', label: 'Global Support', icon: Users },
-  ];
-
+  
+  
+  
+  
   return ("
     <div className="min-h-screen py-8">"      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Page Header */}"
@@ -170,7 +58,7 @@ export function AboutPage(...args: any[]): any {
           >"
             <div className="flex items-center space-x-4 mb-6">"
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center">"
-                <Target className="w-8 h-8 text-white" />
+                <Target className="w-8 h-8 text-white"  />
               </div>"              <h2 className="text-3xl font-bold text-white">Our Mission</h2>
             </div>"
             <p className="text-gray-300 text-lg leading-relaxed">
@@ -188,7 +76,7 @@ export function AboutPage(...args: any[]): any {
           >"
             <div className="flex items-center space-x-4 mb-6">"
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center">"
-                <Rocket className="w-8 h-8 text-white" />
+                <Rocket className="w-8 h-8 text-white"  />
               </div>"              <h2 className="text-3xl font-bold text-white">Our Vision</h2>
             </div>"
             <p className="text-gray-300 text-lg leading-relaxed">
@@ -288,7 +176,7 @@ export function AboutPage(...args: any[]): any {
                       key={skillIndex}"
                       className="flex items-center space-x-2 text-sm text-gray-300"
                     >"
-                      <CheckCircle className="w-4 h-4 text-cyan-400" />                      <span>{skill}</span>
+                      <CheckCircle className="w-4 h-4 text-cyan-400"  />                      <span>{skill}</span>
                     </div>) ) }
                 </div>
               </motion.div>) ) }
@@ -312,7 +200,7 @@ export function AboutPage(...args: any[]): any {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}`
                   className={`relative flex items-center ${
-'
+
                     index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'`
                   }`}
                 >
@@ -349,20 +237,20 @@ export function AboutPage(...args: any[]): any {
             <h2 className="text-3xl font-bold text-white mb-4">
               Join Us in Shaping the Future
             </h2>"
-            <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">'
+            <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">
               Whether you're looking to partner with us, join our team, or learn'
               more about our solutions, we'd love to hear from you.
             </p>
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-cyan-600 rounded-lg hover:bg-gray-100 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
               >
                 <span>Get in Touch</span>"
-                <ArrowRight className="w-5 h-5" />              </Link>
+                <ArrowRight className="w-5 h-5"  />              </Link>
               <Link"
-                to="/careers""
+                to="/careers"
                 className="inline-flex items-center space-x-2 px-8 py-4 bg-transparent text-white rounded-lg hover:bg-white/10 transition-all duration-200 font-semibold text-lg border-2 border-white"
               >
                 <span > Join Our Team</span>
@@ -372,15 +260,15 @@ export function AboutPage(...args: any[]): any {
             {/* Contact Info */}"
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-cyan-100">"
               <div className="flex items-center justify-center space-x-3">"
-                <Phone className="w-5 h-5" />
+                <Phone className="w-5 h-5"  />
                 <span>+1 302 464 0950</span>
               </div>"
               <div className="flex items-center justify-center space-x-3">"
-                <Mail className="w-5 h-5" />
+                <Mail className="w-5 h-5"  />
                 <span>kleber@ziontechgroup.com</span>
               </div>"
               <div className="flex items-center justify-center space-x-3">"
-                <MapPin className="w-5 h-5" />                <span>364 E Main St STE 1008 Middletown DE 19709</span>
+                <MapPin className="w-5 h-5"  />                <span>364 E Main St STE 1008 Middletown DE 19709</span>
               </div>
             </div>
 
@@ -389,35 +277,35 @@ export function AboutPage(...args: any[]): any {
               {[
                 {
 
-                  icon: anyLinkedin,'
-                  href: 'https://linkedin.com/company/ziontechgroup','
+                  icon: anyLinkedin,
+                  href: 'https://linkedin.com/company/ziontechgroup',
                   label: 'LinkedIn'},
                 {
 
-                  icon: Twitter,'
-                  href: 'https://twitter.com/ziontechgroup','
+                  icon: Twitter,
+                  href: 'https://twitter.com/ziontechgroup',
                   label: 'Twitter'},
                 {
 
-                  icon: Github,'
-                  href: 'https://github.com/ziontechgroup','
+                  icon: Github,
+                  href: 'https://github.com/ziontechgroup',
                   label: 'GitHub'},
                 {
 
-                  icon: Facebook,'
-                  href: 'https://facebook.com/ziontechgroup','
+                  icon: Facebook,
+                  href: 'https://facebook.com/ziontechgroup',
                   label: 'Facebook'},
                 {
 
-                  icon: Instagram,'
-                  href: 'https://instagram.com/ziontechgroup','
+                  icon: Instagram,
+                  href: 'https://instagram.com/ziontechgroup',
                   label: 'Instagram'},
               ].map(social => (
                 <a
                   key={social.label}
                   href={social.href}"
-                  target="_blank""
-                  rel="noopener noreferrer""
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-colors group"
                 >"
                   <social.icon className="w-5 h-5 text-white group-hover:scale-110 transition-transform" />
@@ -428,6 +316,5 @@ export function AboutPage(...args: any[]): any {
         </div>
       </div>
     </div>
-  );
-}
+  )}
 '"`

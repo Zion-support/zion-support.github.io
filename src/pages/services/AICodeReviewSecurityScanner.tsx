@@ -1,94 +1,17 @@
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
-import { Code, Shield, Eye, AlertTriangle, CheckCircle, ArrowRight, Brain, Zap, Target, Globe, Lock, Clock, DollarSign, Star, Rocket, Cpu, Cloud, Database, Network, FileText, Search, Filter, Activity, Sparkles, Award, GitFork, Atom, Leaf, Gamepad2, Coins, Satellite, MessageCircle, Server, ShoppingCart, Smartphone, Users, Eye as EyeIcon, Heart, Building, Car, Plane, Ship, Truck, CreditCard, PiggyBank, Calculator, PieChart, LineChart, Activity as ActivityIcon, TrendingDown, AlertCircle, CheckCircle2, XCircle, Info, HelpCircle, Settings, RefreshCw, Download, Upload, Share2, ExternalLink, ArrowUpRight, ChevronRight, ChevronDown, ChevronUp, Minus, Plus, Equal, Divide, Percent, Hash, AtSign, Hash as HashIcon, AtSign as AtSignIcon, GitBranch, GitCommit, GitPullRequest, GitMerge, GitCompare, GitBranch as GitBranchIcon, GitCommit as GitCommitIcon, GitPullRequest as GitPullRequestIcon, GitMerge as GitMergeIcon, GitCompare as GitCompareIcon  } from 'lucide-react.ts';
 
-const AICodeReviewSecurityScanner = () => {
-  const features = [
-    {
 
-      icon: Brain,'
-      title: 'AI-Powered Vulnerability Detection','
-      description: 'Advanced machine learning algorithms that analyze code patterns, identify security vulnerabilities, and suggest remediation strategies.','
-      benefits: ['Automated vulnerability scanning', 'Pattern recognition', 'False positive reduction', 'Continuous learning']
-    },
-    {
-
-      icon: Shield,'
-      title: 'Comprehensive Security Coverage','
-      description: 'Cover all major security vulnerabilities including OWASP Top 10, CWE, and industry-specific security requirements.','
-      benefits: ['OWASP Top 10 coverage', 'CWE compliance', 'Industry standards', 'Custom rule sets']
-    },
-    {
-
-      icon: Code,'
-      title: 'Multi-Language Support','
-      description: 'Support for all major programming languages including Python, JavaScript, Java, C#, Go, Rust, and more.','
-      benefits: ['25+ programming languages', 'Framework-specific rules', 'Language-specific patterns', 'Cross-language analysis']
-    },
-    {
-
-      icon: Eye,'
-      title: 'Real-time Code Analysis','
-      description: 'Continuous monitoring of code changes with instant security feedback during development and CI/CD pipelines.','
-      benefits: ['Real-time scanning', 'CI/CD integration', 'Instant feedback', 'Automated blocking']
-    },
-    {
-
-      icon: AlertTriangle,'
-      title: 'Intelligent Risk Scoring','
-      description: 'AI-driven risk assessment that prioritizes vulnerabilities based on severity, exploitability, and business impact.','
-      benefits: ['Risk-based prioritization', 'Business context awareness', 'Exploitability assessment', 'Impact analysis']
-    },;
     {;
-      icon: GitBranch,;'
-      title: 'Git Integration & Workflow',;'
-      description: 'Seamless integration with Git workflows, pull request reviews, and automated security checks.',;'
-      benefits: ['Pull request scanning', 'Branch protection', 'Automated reviews', 'Workflow integration'];
-    };
+      icon: GitBranch,;
+      title: 'Git Integration & Workflow',;
+      description: 'Seamless integration with Git workflows, pull request reviews, and automated security checks.',;
+      benefits: ['Pull request scanning',Branch protection',Automated reviews',Workflow integration']};
   ];
 
-  const pricing = [
-    {
-'
-      name: 'Developer','
-      price: '$99','
-      period: '/month','
-      description: 'Perfect for individual developers',
-      features: ['
-        'Up to 10 repositories','
-        'Basic security scanning','
-        'Standard vulnerability database','
-        'Email support','
-        'Basic reporting'
-      ],'
-      cta: 'Get Started',
-      popular: false
-    },
-    {
-'
-      name: 'Team','
-      price: '$299','
-      period: '/month','
-      description: 'Ideal for development teams',
-      features: ['
-        'Up to 50 repositories','
-        'Advanced AI scanning','
-        'Full vulnerability database','
-        'Priority support','
-        'Custom rule sets','
-        'API access','
-        'CI/CD integration'
-      ],'
-      cta: 'Start Free Trial',
-      popular: true
-    },
-    {
-'
-      name: 'Enterprise','
-      price: '$999','
-      period: '/month','
-      description: 'For large organizations',
-      features: ['
+  
+        'Custom workflows',;
+        'On-premise deployment';
+      ],;
+=======
         'Unlimited repositories','
         'Custom AI models','
         'White-label solutions','
@@ -96,68 +19,31 @@ const AICodeReviewSecurityScanner = () => {
         'Advanced integrations',;'
         'Custom workflows',;'        'On-premise deployment';
       ],;'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       cta: 'Contact Sales',;
       popular: false};
   ];
 
-  const useCases = [
-    {
-'
-      title: 'Application Development','
-      description: 'Integrate security scanning into your development workflow to catch vulnerabilities before they reach production.',
-      icon: Code,'
-      benefits: ['Early vulnerability detection', 'Developer education', 'Secure coding practices', 'Quality assurance']
-    },
-    {
-'
-      title: 'DevOps & CI/CD','
-      description: 'Automate security checks in your CI/CD pipeline to ensure code quality and security at every stage.',
-      icon: GitBranch,'
-      benefits: ['Automated security gates', 'Pipeline integration', 'Quality gates', 'Deployment safety']
-    },
-    {
-'
-      title: 'Code Review Process','
-      description: 'Enhance your code review process with AI-powered security analysis and automated vulnerability detection.',
-      icon: Eye,'
-      benefits: ['Automated security reviews', 'Pull request scanning', 'Reviewer assistance', 'Quality improvement']
-    },;
-    {;'
-      title: 'Compliance & Auditing',;'
+  
+    {;
+      title: 'Compliance & Auditing',;
       description: 'Meet regulatory requirements and maintain security standards with comprehensive code security auditing.',;
-      icon: Shield,;'
-      benefits: ['Regulatory compliance', 'Security audits', 'Documentation', 'Risk assessment'];
-    };
+      icon: Shield,;
+      benefits: ['Regulatory compliance',Security audits',Documentation',Risk assessment']};
   ];
 
-  const vulnerabilityTypes = [
-    {
-'
-      title: 'SQL Injection','
-      description: 'Prevent unauthorized database access through malicious SQL queries.',
-      icon: Database,'
-      examples: ['Parameterized queries', 'Input validation', 'ORM usage', 'Database permissions']
-    },
-    {
-'
-      title: 'Cross-Site Scripting (XSS)','
-      description: 'Protect against malicious script injection in web applications.',
-      icon: Globe,'
-      examples: ['Output encoding', 'Content Security Policy', 'Input sanitization', 'HTTPS enforcement']
-    },
-    {
-'
-      title: 'Authentication Bypass','
-      description: 'Secure authentication mechanisms and prevent unauthorized access.',
-      icon: Lock,'
-      examples: ['Multi-factor authentication', 'Session management', 'Password policies', 'Access controls']
-    },;
-    {;'
-      title: 'Insecure Dependencies',;'
+  
+    {;
+      title: 'Insecure Dependencies',;
       description: 'Identify and update vulnerable third-party libraries and dependencies.',;
+<<<<<<< HEAD
+      icon: Package,;
+      examples: ['Dependency scanning',Vulnerability databases',Update automation',License compliance']};
+  ];
+=======
       icon: Package,;'
-      examples: ['Dependency scanning', 'Vulnerability databases', 'Update automation', 'License compliance'];
-    };  ];
+      examples: ['Dependency scanning', 'Vulnerability databases', 'Update automation', 'License compliance']};  ];
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -191,7 +77,7 @@ const AICodeReviewSecurityScanner = () => {
             className="text-center"
           >"
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 text-white text-sm font-medium mb-6">"
-              <Code className="w-4 h-4 mr-2" />              AI-Powered Code Security
+              <Code className="w-4 h-4 mr-2"  />              AI-Powered Code Security
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI Code Review"
@@ -211,14 +97,14 @@ const AICodeReviewSecurityScanner = () => {
                 className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-200 flex items-center justify-center"
               >
                 Start Free Trial"
-                <ArrowRight className="ml-2 w-5 h-5" />              </motion.button>
+                <ArrowRight className="ml-2 w-5 h-5"  />              </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
                 className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200 flex items-center justify-center"
               >
                 Schedule Demo"
-                <ArrowRight className="ml-2 w-5 h-5" />              </motion.button>
+                <ArrowRight className="ml-2 w-5 h-5"  />              </motion.button>
             </div>
           </motion.div>
         </div>
@@ -315,7 +201,7 @@ const AICodeReviewSecurityScanner = () => {
                   <ul className="space-y-1">
                     {vulnType.examples.map((example, idx) => ("
                       <li key={idx} className="flex items-center text-sm text-gray-400">"
-                        <Minus className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />                        {example}
+                        <Minus className="w-3 h-3 text-green-400 mr-2 flex-shrink-0"  />                        {example}
                       </li>
                     ))}
                   </ul>
@@ -411,7 +297,7 @@ const AICodeReviewSecurityScanner = () => {
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, idx) => ("
                     <li key={idx} className="flex items-center text-sm text-gray-400">"
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />                      {benefit}
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0"  />                      {benefit}
                     </li>
                   ))}
                 </ul>
@@ -453,7 +339,7 @@ const AICodeReviewSecurityScanner = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Transparent Pricing
             </h2>"
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">'
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose the plan that fits your development team's security needs. 
               All plans include our core AI-powered security scanning features.
             </p>
@@ -523,7 +409,7 @@ const AICodeReviewSecurityScanner = () => {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, idx) => ("
                     <li key={idx} className="flex items-center text-gray-300">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />                      {feature}
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -635,7 +521,7 @@ const AICodeReviewSecurityScanner = () => {
                 <ul className="space-y-2">
                   {useCase.benefits.map((benefit, idx) => ("
                     <li key={idx} className="flex items-center text-sm text-gray-400">"
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />                      {benefit}
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0"  />                      {benefit}
                     </li>
                   ))}
                 </ul>
@@ -687,14 +573,14 @@ const AICodeReviewSecurityScanner = () => {
                 className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-200 flex items-center justify-center"
               >
                 Start Free Trial"
-                <ArrowRight className="ml-2 w-5 h-5" />              </motion.button>
+                <ArrowRight className="ml-2 w-5 h-5"  />              </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
                 className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200 flex items-center justify-center"
               >
                 Contact Sales"
-                <ArrowRight className="ml-2 w-5 h-5" />;              </motion.button>;
+                <ArrowRight className="ml-2 w-5 h-5"  />;              </motion.button>;
             </div>;
           </motion.div>;
         </div>;

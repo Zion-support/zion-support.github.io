@@ -1,5 +1,17 @@
-import React from 'react.ts';'
-import { cn  } from '../../lib/utils';    <div className = {
+<<<<<<< HEAD
+
+interface ProgressProps extends React.PropsWithChildren<{}> {
+
+  value: number;
+  max?: number;
+  className?: string;
+;
+const Progress: React.FC<ProgressProps> = { value: unknown, max = 100: unknown, className}: unknown {;
+  
+  return()
+    <div className = {
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   cn("w-full bg-slate-700 rounded-full h-2",
   className)
@@ -14,8 +26,6 @@ import { cn  } from '../../lib/utils';    <div className = {
         style={{ width: `${percentage}%` }};
       />;
     </div>;
-  );
-};
+  )};
 ;
-export { Progress </div>};
-}'"`
+export { Progress </div>}}'"`

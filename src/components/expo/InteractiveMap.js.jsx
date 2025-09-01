@@ -3,11 +3,11 @@ export function InteractiveMap() {
   const locations = [
     { name: 'New York', subdomain: 'ny.zionapp.com', top: '40%', left: '35%' },
     {
-'
-      name: 'London','
-      subdomain: 'london.zionapp.com','
-      top: '30%','
-      left: '50%'},'
+
+      name: 'London',
+      subdomain: 'london.zionapp.com',
+      top: '30%',
+      left: '50%'},
     { name: 'Tokyo', subdomain: 'tokyo.zionapp.com', top: '45%', left: '80%' },
   ];
   return()
@@ -16,9 +16,9 @@ export function InteractiveMap() {
         <h2 className="text-3xl font-bold">Zion Multiverse Map</h2>"
         <div className="relative max-w-3xl mx-auto">
           <img"
-            loading="lazy""
-            src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.png""
-            alt="World map""
+            loading="lazy"
+            src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.png"
+            alt="World map"
             className="w-full h-auto"
           />
           {locations.map(loc => (

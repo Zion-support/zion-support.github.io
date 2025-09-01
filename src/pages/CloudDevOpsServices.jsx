@@ -1,21 +1,21 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { Search, Zap, Cloud, Shield, Server, Code, GitFork, Phone, Mail, MapPin } from 'lucide-react';
 const CloudDevOpsServices = () => {
-'
-    const [searchTerm, setSearchTerm] = useState('');'
-    const [selectedCategory, setSelectedCategory] = useState('all');'
+
+    const [searchTerm, setSearchTerm] = useState('');
+    const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedPricing, setSelectedPricing] = useState('all');
     // Cloud & DevOps Services data'
-    const categories = ['all', 'Cloud Management', 'Container Orchestration', 'DevOps Automation', 'Serverless', 'Infrastructure', 'Security'];'
-    const pricingOptions = ['all', 'Enterprise', 'Professional', 'Standard'];
+    const categories = ['all',Cloud Management',Container Orchestration',DevOps Automation',Serverless',Infrastructure',Security'];
+    const pricingOptions = ['all',Enterprise',Professional',Standard'];
     const filteredServices = cloudDevOpsServices.filter(service => {
-'
+
         const matchesPricing = selectedPricing === 'all' || service.pricing === selectedPricing;
         return matchesSearch && matchesCategory && matchesPricing}) ;
     const getCategoryIcon = (category) => {
 
         switch (category) {
-'
+
             case 'Cloud Management': return <Cloud className="w-6 h-6"/>;'"
             case 'Container Orchestration': return <Server className="w-6 h-6"/>;'"
             case 'DevOps Automation': return <GitFork className="w-6 h-6"/>;'"
@@ -27,10 +27,10 @@ const CloudDevOpsServices = () => {
     const getPricingColor = (pricing) => {
 
         switch (pricing) {
-'
-            case 'Enterprise': return 'text-purple-400';'
-            case 'Professional': return 'text-blue-400';'
-            case 'Standard': return 'text-green-400';'
+
+            case 'Enterprise': return 'text-purple-400';
+            case 'Professional': return 'text-blue-400';
+            case 'Standard': return 'text-green-400';
             default: return 'text-gray-400'}
     };"
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">"
@@ -54,13 +54,13 @@ const CloudDevOpsServices = () => {
 "
           <div className="flex flex-wrap gap-4">"
             <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="px-4 py-2 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500">"
-              {categories.map(category => (<option key={category} value={category} className="bg-gray-800 text-white">'
+              {categories.map(category => (<option key={category} value={category} className="bg-gray-800 text-white">
                   {category === 'all' ? 'All Categories' : category}
                 </option>) ) }
             </select>
 "
             <select value={selectedPricing} onChange={(e) => setSelectedPricing(e.target.value)} className="px-4 py-2 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500">"
-              {pricingOptions.map(pricing => (<option key={pricing} value={pricing} className="bg-gray-800 text-white">'
+              {pricingOptions.map(pricing => (<option key={pricing} value={pricing} className="bg-gray-800 text-white">
                   {pricing === 'all' ? 'All Pricing Tiers' : pricing}
                 </option>) ) }
             </select>

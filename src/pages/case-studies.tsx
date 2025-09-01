@@ -1,6 +1,31 @@
-import React, { useState } from 'react';'
-import { motion } from 'framer-motion';'
-import { Link } from 'react-router-dom';    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+<<<<<<< HEAD
+import {
+
+  CheckCircle,
+  TrendingUp,
+  Users,
+  DollarSign,
+  Clock,
+  Target,
+  ArrowRight,
+  Star,
+  Award,
+  Zap,
+  Shield,
+  Cloud,
+  Brain,
+  Globe} from 'lucide-react';
+
+
+
+  const [selectedCaseStudy, setSelectedCaseStudy] = useState(null);
+
+  
+  
+  return()
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       {/* Hero Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto text-center">
@@ -11,7 +36,7 @@ import { Link } from 'react-router-dom';    <div className="min-h-screen bg-grad
           >"
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Case"
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">'
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
                 {' '}
                 Studies
               </span>
@@ -60,7 +85,7 @@ import { Link } from 'react-router-dom';    <div className="min-h-screen bg-grad
               >"
                 <div className="flex items-center gap-4 mb-6">"
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center text-white">"
-                    <Award className="w-8 h-8" />                  </div>
+                    <Award className="w-8 h-8"  />                  </div>
                   <div>"
                     <h3 className="text-2xl font-bold text-white">
                       {study.title}
@@ -109,7 +134,7 @@ import { Link } from 'react-router-dom';    <div className="min-h-screen bg-grad
                   </span>"
                   <button className="inline-flex items-center gap-2 text-blue-400 hover:text-white transition-colors duration-300">"
                     <span className="text-sm font-medium">View Details</span>"
-                    <ArrowRight className="w-4 h-4" />                  </button>
+                    <ArrowRight className="w-4 h-4"  />                  </button>
                 </div>
               </motion.div>) ) }
           </div>
@@ -128,20 +153,20 @@ import { Link } from 'react-router-dom';    <div className="min-h-screen bg-grad
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Create Your Success Story?
             </h2>"
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">'
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
               Let's discuss how our technology solutions can transform your
               business and create measurable results like these case studies.
             </p>
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105"
               >
                 Start Your Project
               </Link>
               <Link"
-                to="/contact""
+                to="/contact"
                 className="px-8 py-4 border border-blue-500 text-blue-400 font-semibold rounded-xl hover:bg-blue-500 hover:text-white transition-all duration-300"
               >
                 Schedule Consultation
@@ -150,7 +175,6 @@ import { Link } from 'react-router-dom';    <div className="min-h-screen bg-grad
           </motion.div>
         </div>
       </section>
-    </div>) ;
-};
+    </div>) };
 export default CaseStudies;
 '"`

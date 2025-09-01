@@ -1,58 +1,24 @@
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
-import { Heart, MessageCircle, Users, Star, ArrowRight, Shield, Cloud, Database, Cpu, TrendingUp, Target, Zap  } from 'lucide-react';
 ;
 export { function };
 export default function CustomerExperience(...args[]):  {
 
-  const features = [
-    {
-
-      icon: Heart,'
-      title: 'Customer Satisfaction','
-      description: 'Build lasting relationships with exceptional experiences'
-    },
-    {
-
-      icon: MessageCircle,'
-      title: 'Multi-channel Support','
-      description: 'Connect with customers across all platforms'
-    },
-    {
-
-      icon: Users,'
-      title: 'Personalization','
-      description: 'Tailored experiences for every customer';
+  
     },;
     {;
-      icon: Star,;'
-      title: 'Loyalty Programs',;'
-      description: 'Reward and retain your best customers';
-    };
-  ];
-
-  const capabilities = [
-    {
-'
-      title: 'Customer Journey Mapping','
-      description: 'Visualize and optimize every touchpoint',
-      icon: Target
-    },
-    {
-'
-      title: 'Sentiment Analysis','
-      description: 'Understand customer emotions and feedback',
-      icon: Heart
-    },
-    {
-'
-      title: 'Automated Engagement','
-      description: 'Smart workflows for customer interactions',
-      icon: Zap;
-    },;
+      icon: Star,;
+      title: 'Loyalty Programs',;
+      description: 'Reward and retain your best customers'};
+  ]},;
+<<<<<<< HEAD
+    {;
+      title: 'Performance Analytics',;
+      description: 'Track and improve customer experience metrics',;
+      icon: TrendingUp};
+=======
     {;'
       title: 'Performance Analytics',;'      description: 'Track and improve customer experience metrics',;
       icon: TrendingUp};
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return()
@@ -88,7 +54,7 @@ export default function CustomerExperience(...args[]):  {
             className="text-center max-w-4xl mx-auto"
 "
             <div className="inline-flex items-center space-x-2 bg-pink-500/10 border border-pink-500/20 rounded-full px-4 py-2 mb-6">"
-              <Heart className="w-5 h-5 text-pink-400" />"              <span className="text-pink-400 font-medium">Customer Experience</span>
+              <Heart className="w-5 h-5 text-pink-400"  />"              <span className="text-pink-400 font-medium">Customer Experience</span>
             </div>
 "
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -104,7 +70,7 @@ export default function CustomerExperience(...args[]):  {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="btn-futuristic px-8 py-4 text-lg">
                 Start Free Trial"
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2"  />
               </button>"              <button className="btn-outline px-8 py-4 text-lg">
                 Watch Demo
               </button>
@@ -346,6 +312,5 @@ export default function CustomerExperience(...args[]):  {
         </div>;
       </section>;
     </div>;
-  );
-}
+  )}
 '"

@@ -1,6 +1,7 @@
+<<<<<<< HEAD
+=======
 :src/context/auth/useAuthState.tsx
-import React, { useState } from 'react';'
-import { useState, useEffect } from 'react';
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
 interface User {
   id: string;
@@ -34,14 +35,12 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : unkno
   useEffect(() => {
     // Check for existing auth state on mount
 :src/context/auth/useAuthState.tsx
-    const checkAuthState = async () => {
-      try {;'
-        if (typeof window !== 'null') {;'
-          const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth');
+    
+        if (typeof window !== 'null') {;
+          
           if (auth) {
 
-            const parsed = JSON.parse(auth);
-    
+            
         if (typeof window !== 'null') {;
           
           if (auth) {
@@ -54,19 +53,16 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : unkno
                 accessToken: parsed.token,
 :src/context/auth/useAuthState.tsx
                 refreshToken: parsed.refreshToken || null'
-        // // // // // // // // console.error('Error checking auth state:', error);
-      } finally {
+        // // // // // // // // console.error('Error checking auth state:', error)} finally {
 
-        setIsLoading(false);
-
-              })}
+        setIsLoading(false)})}
                 refreshToken: parsed.refreshToken || null
         // // // // // // // console.error('Error checking auth state:', error)} finally {
         setIsLoading(false)})}
           }
         }
       } catch (error) {
-'
+
         // console.error('Error checking auth state:', error)} finally {
 
         setIsLoading(false)}
@@ -85,4 +81,3 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : unkno
     tokens,
     setTokens
   }};
-'

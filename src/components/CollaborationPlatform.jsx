@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Video, VideoOff, Mic, MicOff, Monitor, Users, MessageSquare, X, Maximize2, Minimize2, PhoneOff const mockParticipants = [;'
-    { id: '1', name: 'John Smith', isVideoOn: true, isAudioOn: true, isScreenSharing: false, isSpeaking: true, avatar: '👨‍💼' },'
-    { id: '2', name: 'Sarah Johnson', isVideoOn: false, isAudioOn: true, isScreenSharing: true, isSpeaking: false, avatar: '👩‍💻' },'
-    { id: '3', name: 'Mike Chen', isVideoOn: true, isAudioOn: false, isScreenSharing: false, isSpeaking: false, avatar: '👨‍🔬' },'
+import { Video, VideoOff, Mic, MicOff, Monitor, Users, MessageSquare, X, Maximize2, Minimize2, PhoneOff const mockParticipants = [;
+    { id: '1', name: 'John Smith', isVideoOn: true, isAudioOn: true, isScreenSharing: false, isSpeaking: true, avatar: '👨‍💼' },
+    { id: '2', name: 'Sarah Johnson', isVideoOn: false, isAudioOn: true, isScreenSharing: true, isSpeaking: false, avatar: '👩‍💻' },
+    { id: '3', name: 'Mike Chen', isVideoOn: true, isAudioOn: false, isScreenSharing: false, isSpeaking: false, avatar: '👨‍🔬' },
     { id: '4', name: 'Emily Davis', isVideoOn: true, isAudioOn: true, isScreenSharing: false, isSpeaking: false, avatar: '👩‍🎨' }
 ];
 export function CollaborationPlatform() {
@@ -19,9 +19,9 @@ export function CollaborationPlatform() {
     });
     const [activeChat, setActiveChat] = useState(false);
     const [chatMessages, setChatMessages] = useState(['
-        { id: '1', user: 'John Smith', message: 'Great presentation!', timestamp: new Date() },'
+        { id: '1', user: 'John Smith', message: 'Great presentation!', timestamp: new Date() },
         { id: '2', user: 'Sarah Johnson', message: 'I have some questions about the implementation', timestamp: new Date() }
-    ]);'
+    ]);
     const [newMessage, setNewMessage] = useState('');
     const [isRecording, setIsRecording] = useState(false);
     const [meetingDuration, setMeetingDuration] = useState(0);
@@ -39,7 +39,7 @@ export function CollaborationPlatform() {
 
             const message = {
 
-  id: Date.now().toString(),'
+  id: Date.now().toString(),
                 user: 'You',
                 message: newMessage,
   timestamp: new Date()
@@ -51,15 +51,15 @@ export function CollaborationPlatform() {
 
 
 };
-            setChatMessages(prev => [...prev, message]);'
+            setChatMessages(prev => [...prev, message]);
             setNewMessage('')}
     };
     const formatTime = (seconds) => {
 
         const hours = Math.floor(seconds / 3600);
         const minutes = Math.floor((seconds % 3600) / 60);
-        const secs = seconds % 60;'
-        return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`};
+        const secs = seconds % 60;
+        return `${hours.toString().padStart(2,0')}:${minutes.toString().padStart(2,0')}:${secs.toString().padStart(2,0')}`};
     const toggleChat = () => {
         setActiveChat (!activeChat) };
     if (!isOpen) {
@@ -192,7 +192,7 @@ export function CollaborationPlatform() {
               {chatMessages.map((message) => (<div key={message.id} className="space-y-1">"
                   <div className="flex items-center gap-2">"
                     <span className="font-medium text-zion-cyan text-sm">{message.user}</span>"
-                    <span className="text-xs text-zion-slate-light">'
+                    <span className="text-xs text-zion-slate-light">
                       {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                     </span>
                   </div>"

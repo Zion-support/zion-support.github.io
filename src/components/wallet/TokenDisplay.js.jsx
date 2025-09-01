@@ -1,14 +1,14 @@
-import React from 'react';'
-import { BadgeDollarSign } from 'lucide-react';'
+import React from 'react';
+import { BadgeDollarSign } from 'lucide-react';
 import { useWallet } from '@/hooks/useWallet';
 import {
 
   Card,
   CardContent,
   CardDescription,
-  CardHeader,'
-  CardTitle} from '@/components/ui/card';'
-import { Button } from '@/components/ui/button';'
+  CardHeader,
+  CardTitle} from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 import Skeleton from '@/components/ui/skeleton';
 export function TokenDisplay() {
   const { wallet, loading } = useWallet();

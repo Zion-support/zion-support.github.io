@@ -1,6 +1,6 @@
-import React, { useState } from 'react';'
-import { useTranslation } from 'react-i18next';'
-import { Card, CardContent } from '@/components/ui/card';'
+import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { Card, CardContent } from '@/components/ui/card';
 import { Briefcase, Users, Check } from 'lucide-react';
 export function RolePicker({ onSelect }) {
 
@@ -19,11 +19,11 @@ export function RolePicker({ onSelect }) {
       <div className="space-y-3 mt-6">
         <Card
           className={`cursor-pointer transition-all ${
-'
+
             selectedRole === 'talent''
               ? 'border-primary bg-primary/5''
               : 'border-border hover:border-primary/40'`
-          }`}'
+          }`}
           onClick={() => handleSelect('talent')}
         >"
           <CardContent className="p-5">"
@@ -33,10 +33,10 @@ export function RolePicker({ onSelect }) {
               </div>"
               <div className="flex-1">'"
                 <h3 className="font-medium">{t('onboarding.talent_title')}</h3>"
-                <p className="text-sm text-muted-foreground">'
+                <p className="text-sm text-muted-foreground">
                   {t('onboarding.talent_desc')}
                 </p>
-              </div>'
+              </div>
               {selectedRole === 'talent' && ("
                 <Check className="h-5 w-5 text-primary" />
               )}
@@ -46,11 +46,11 @@ export function RolePicker({ onSelect }) {
 
         <Card`
           className={`cursor-pointer transition-all ${
-'
+
             selectedRole === 'client''
               ? 'border-primary bg-primary/5''
               : 'border-border hover:border-primary/40'`
-          }`}'
+          }`}
           onClick={() => handleSelect('client')}
         >"
           <CardContent className="p-5">"
@@ -60,10 +60,10 @@ export function RolePicker({ onSelect }) {
               </div>"
               <div className="flex-1">'"
                 <h3 className="font-medium">{t('onboarding.client_title')}</h3>"
-                <p className="text-sm text-muted-foreground">'
+                <p className="text-sm text-muted-foreground">
                   {t('onboarding.client_desc')}
                 </p>
-              </div>'
+              </div>
               {selectedRole === 'client' && ("
                 <Check className="h-5 w-5 text-primary" />
               )}

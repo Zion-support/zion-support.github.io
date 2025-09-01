@@ -1,25 +1,25 @@
 import React, { useState } from 'react';
 export default IndustrySolutions;
 import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory, Store, Home, GraduationCap, Stethoscope const IndustrySolutions = () => {
-'
-    const [searchTerm, setSearchTerm] = useState('');'
-    const [selectedIndustry, setSelectedIndustry] = useState('all');'
+
+    const [searchTerm, setSearchTerm] = useState('');
+    const [selectedIndustry, setSelectedIndustry] = useState('all');
     const [selectedSolutionType, setSelectedSolutionType] = useState('all');
     // Industry-specific solutions data'
-    const industries = ['all', 'Healthcare', 'Finance', 'Manufacturing', 'Retail', 'Education', 'Logistics', 'Real Estate', 'Energy', 'Cybersecurity', 'Legal', 'Media', 'Transportation'];'
-    const solutionTypes = ['all', 'Digital Health', 'FinTech', 'Industry 4.0', 'Digital Commerce', 'EdTech', 'Supply Chain', 'PropTech', 'Energy Tech', 'Security', 'LegalTech', 'MediaTech', 'Mobility'];
+    const industries = ['all',Healthcare',Finance',Manufacturing',Retail',Education',Logistics',Real Estate',Energy',Cybersecurity',Legal',Media',Transportation'];
+    const solutionTypes = ['all',Digital Health',FinTech',Industry 4.0',Digital Commerce',EdTech',Supply Chain',PropTech',Energy Tech',Security',LegalTech',MediaTech',Mobility'];
     const filteredSolutions = industrySolutions.filter(solution => {
-'
+
         const matchesSolutionType = selectedSolutionType === 'all' || solution.solutionType === selectedSolutionType;
         return matchesSearch && matchesIndustry && matchesSolutionType}) ;
     const formatPrice = (price, model) => {
 
         switch (model) {
-'
+
             case 'monthly':
-                return `$${price.toLocaleString()}/month`;'
+                return `$${price.toLocaleString()}/month`;
             case 'hourly':`
-                return `$${price}/hour`;'
+                return `$${price}/hour`;
             case 'project-based':`
                 return `$${price.toLocaleString()}`;
             default:`
@@ -27,17 +27,17 @@ import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory,
     };
     const getIndustryColor = (score) => {
 
-        if (score >= 95)'
+        if (score >= 95)
             return 'text-green-500';
-        if (score >= 90)'
+        if (score >= 90)
             return 'text-blue-500';
-        if (score >= 85)'
-            return 'text-yellow-500';'
+        if (score >= 85)
+            return 'text-yellow-500';
         return 'text-orange-500'};
     const getIndustryIcon = (industry) => {
 
         switch (industry) {
-'
+
             case 'Healthcare': return <Stethoscope className="w-6 h-6"/>;'"
             case 'Finance': return <CreditCard className="w-6 h-6"/>;'"
             case 'Manufacturing': return <Factory className="w-6 h-6"/>;'"
@@ -55,7 +55,7 @@ import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory,
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-green-400 to-blue-600 bg-clip-text text-transparent mb-4">
             Industry Solutions
           </h1>"
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">'
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Specialized technology solutions designed for your industry's unique challenges and compliance requirements
           </p>
         </div>
@@ -69,13 +69,13 @@ import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory,
 "
           <div className="flex flex-wrap gap-4">"
             <select value={selectedIndustry} onChange={(e) => setSelectedIndustry(e.target.value)} className="px-4 py-2 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500">"
-              {industries.map(industry => (<option key={industry} value={industry} className="bg-gray-800 text-white">'
+              {industries.map(industry => (<option key={industry} value={industry} className="bg-gray-800 text-white">
                   {industry === 'all' ? 'All Industries' : industry}
                 </option>) ) }
             </select>
 "
             <select value={selectedSolutionType} onChange={(e) => setSelectedSolutionType(e.target.value)} className="px-4 py-2 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500">"
-              {solutionTypes.map(type => (<option key={type} value={type} className="bg-gray-800 text-white">'
+              {solutionTypes.map(type => (<option key={type} value={type} className="bg-gray-800 text-white">
                   {type === 'all' ? 'All Solution Types' : type}
                 </option>) ) }
             </select>
@@ -110,7 +110,7 @@ import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory,
                 <div className="text-2xl font-bold text-white mb-2">
                   {formatPrice(solution.price, solution.pricingModel)}
                 </div>'"
-                <div className="text-sm text-gray-400">{solution.pricingModel.replace('-', ' ')}</div>
+                <div className="text-sm text-gray-400">{solution.pricingModel.replace('-',)}</div>
               </div>
 "
               <div className="mb-4">"
@@ -146,7 +146,7 @@ import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory,
         <div className="mt-16 text-center">"
           <div className="bg-white/5 backdrop-blur-sm border border-gray-600 rounded-xl p-8">"
             <h2 className="text-2xl font-bold text-white mb-4">Need Industry-Specific Solutions?</h2>"
-            <p className="text-gray-300 mb-6">'
+            <p className="text-gray-300 mb-6">
               Our team has deep expertise in your industry's unique challenges and compliance requirements
             </p>"
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">

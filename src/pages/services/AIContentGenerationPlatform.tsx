@@ -1,6 +1,3 @@
-import React from 'react';'
-import { motion } from 'framer-motion';
-import { SEO } from "../../components/SEO";
 import {
   PenTool, 
   FileText, 
@@ -27,138 +24,82 @@ import {
 export { function };
 export default function AIContentGenerationPlatform(...args[]):  {
 
-  const features = [
-    {
-
-      icon: Brain,'
-      title: 'AI-Powered Writing','
-      description: 'Advanced language models that generate high-quality, engaging content across multiple formats and industries.','
-      benefits['SEO-optimized content', 'Brand voice consistency', 'Multi-language support', 'Context-aware generation'];
+  
     },;
     {
 
-      icon: Palette,'
-      title: 'Visual Content Creation','
-      description: 'Generate stunning images, graphics, and visual assets using cutting-edge AI image generation technology.','
-      benefits['Custom brand styling', 'High-resolution output', 'Style transfer', 'Batch generation'];
-    },;
+      icon: Palette,
+      title: 'Visual Content Creation',
+      description: 'Generate stunning images, graphics, and visual assets using cutting-edge AI image generation technology.',
+      benefits['Custom brand styling',High-resolution output',Style transfer',Batch generation']},;
     {
 
-      icon: Video,'
-      title: 'Video Content Generation','
-      description: 'Create professional videos, animations, and multimedia content with AI-powered video generation tools.','
-      benefits['Auto-script generation', 'Voice synthesis', 'Background music', 'Template library'];
-    },;
+      icon: Video,
+      title: 'Video Content Generation',
+      description: 'Create professional videos, animations, and multimedia content with AI-powered video generation tools.',
+      benefits['Auto-script generation',Voice synthesis',Background music',Template library']},;
     {
 
-      icon: Code,'
-      title: 'Technical Content','
-      description: 'Generate technical documentation, code comments, and developer resources with specialized AI models.','
-      benefits['Code documentation', 'API guides', 'Tutorial generation', 'Technical writing'];
-    },;
+      icon: Code,
+      title: 'Technical Content',
+      description: 'Generate technical documentation, code comments, and developer resources with specialized AI models.',
+      benefits['Code documentation',API guides',Tutorial generation',Technical writing']},;
     {
 
-      icon: Shield,'
-      title: 'Content Moderation','
-      description: 'Built-in AI content filtering and moderation to ensure all generated content meets quality and safety standards.','
-      benefits['Plagiarism detection', 'Content filtering', 'Quality scoring', 'Compliance checking'];
-    },;
+      icon: Shield,
+      title: 'Content Moderation',
+      description: 'Built-in AI content filtering and moderation to ensure all generated content meets quality and safety standards.',
+      benefits['Plagiarism detection',Content filtering',Quality scoring',Compliance checking']},;
     {
-'
-      benefits['Real-time editing', 'Approval workflows', 'Version history', 'Team analytics'];
-    };
-      icon: Users,;'
-      title: 'Team Collaboration',;'
-      description: 'Collaborative workspace for teams to create, edit, and manage content with version control and approval workflows.',;'
-      benefits: ['Real-time editing', 'Approval workflows', 'Version history', 'Team analytics'];
-    };
+
+      benefits['Real-time editing',Approval workflows',Version history',Team analytics']};
+      icon: Users,;
+      title: 'Team Collaboration',;
+      description: 'Collaborative workspace for teams to create, edit, and manage content with version control and approval workflows.',;
+      benefits: ['Real-time editing',Approval workflows',Version history',Team analytics']};
+  ]},;
+    {
+
+      industry: 'E-commerce',
+      title: 'Product Descriptions & Marketing',
+      description: 'Create compelling product descriptions, marketing copy, and visual assets for online stores.',
+      metrics['60% faster product onboarding',35% improvement in conversion rates',25% increase in SEO traffic']},;
+    {
+
+      industry: 'Publishing & Media',
+      title: 'Content Production',
+      description: 'Generate articles, blog posts, and multimedia content for digital publishing platforms.',
+      metrics['70% increase in content output',45% reduction in editorial time',40% improvement in reader engagement']},;
+    {
+
+      metrics['55% faster report creation',50% improvement in brand consistency',35% reduction in review cycles']};
+      industry: 'Corporate Communications',;
+      title: 'Business Content',;
+      description: 'Create professional reports, presentations, and corporate communications with consistent branding.',;
+      metrics: ['55% faster report creation',50% improvement in brand consistency',35% reduction in review cycles']};
   ];
 
-  const useCases = [
-    {
-'
-      industry: 'Marketing & Advertising','
-      title: 'Campaign Content Creation','
-      description: 'Generate complete marketing campaigns including copy, visuals, and video content for multiple channels.','
-      metrics['50% faster campaign creation', '40% increase in engagement', '30% reduction in content costs'];
-    },;
-    {
-'
-      industry: 'E-commerce','
-      title: 'Product Descriptions & Marketing','
-      description: 'Create compelling product descriptions, marketing copy, and visual assets for online stores.','
-      metrics['60% faster product onboarding', '35% improvement in conversion rates', '25% increase in SEO traffic'];
-    },;
-    {
-'
-      industry: 'Publishing & Media','
-      title: 'Content Production','
-      description: 'Generate articles, blog posts, and multimedia content for digital publishing platforms.','
-      metrics['70% increase in content output', '45% reduction in editorial time', '40% improvement in reader engagement'];
-    },;
-    {
-'
-      metrics['55% faster report creation', '50% improvement in brand consistency', '35% reduction in review cycles'];
-    };'
-      industry: 'Corporate Communications',;'
-      title: 'Business Content',;'
-      description: 'Create professional reports, presentations, and corporate communications with consistent branding.',;'
-      metrics: ['55% faster report creation', '50% improvement in brand consistency', '35% reduction in review cycles'];
-    };
-  ];
-
-  const benefits = [
-    {
-
-      icon: Clock,'
-      title: 'Time Savings','
-      description: 'Generate high-quality content in minutes instead of hours or days.','
-      value: '80-90%'
-    },
-    {
-
-      icon: DollarSign,'
-      title: 'Cost Reduction','
-      description: 'Reduce content creation costs while maintaining or improving quality.','
-      value: '40-60%'
-    },
-    {
-
-      icon: Target,'
-      title: 'Quality Improvement','
-      description: 'Consistent, high-quality content that resonates with your target audience.','
-      value: '95%+'
-    },;
+  
     {;
-      icon: TrendingUp,;'
-      title: 'Scalability',;'
-      description: 'Scale content production without proportional increases in resources.',;'
-      value: '10x';
-    };
+      icon: TrendingUp,;
+      title: 'Scalability',;
+      description: 'Scale content production without proportional increases in resources.',;
+      value: '10x'};
   ];
 
-  const technologies = ['
-    'GPT-4 & Claude Models','
-    'DALL-E 3 & Midjourney','
-    'Stable Diffusion','
-    'Natural Language Processing','
-    'Computer Vision','
-    'Speech Synthesis',;'
-    'Machine Learning',;'
-    'Cloud Computing',;'
-    'Real-time Processing',;'
-    'API Integration',;'
-    'Content Management',;'
+  
+    'Machine Learning',;
+    'Cloud Computing',;
+    'Real-time Processing',;
+    'API Integration',;
+    'Content Management',;
     'Analytics & Insights';
   ];
 
-  const pricing = [
-    {
-'
-      plan: 'Starter','
-      price: '$99','
-      period: '/month','
-      description: 'Perfect for small businesses and individual creators',
+  
+        '10,000 words per month',100 AI-generated images',5 video generations',Basic templates',Email support',Standard quality output'
+      ],;
+=======
       features[;'
         '10,000 words per month','
         '100 AI-generated images','
@@ -166,45 +107,33 @@ export default function AIContentGenerationPlatform(...args[]):  {
         'Basic templates','
         'Email support','        'Standard quality output'
       ],;'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       cta: 'Start Free Trial',
       popular: false
     },
     {
-'
-      plan: 'Professional','
-      price: '$299','
-      period: '/month','
+
+      plan: 'Professional',
+      price: '$299',
+      period: '/month',
       description: 'Ideal for growing businesses and marketing teams',
-      features[;'
-        '100,000 words per month','
-        '1,000 AI-generated images','
-        '50 video generations','
-        'Advanced templates','
-        'Priority support','
-        'High-quality output','
-        'Team collaboration','
-        'Brand voice training'
-      ],;'
+      features[;
+        '100,000 words per month',1,000 AI-generated images',50 video generations',Advanced templates',Priority support',High-quality output',Team collaboration',Brand voice training'
+      ],;
       cta: 'Start Free Trial',
       popular: true
     },
     {
-'
-      plan: 'Enterprise','
-      price: '$999','
-      period: '/month','
+
+      plan: 'Enterprise',
+      price: '$999',
+      period: '/month',
       description: 'For large organizations with high-volume content needs',
-      features[;'
-        'Unlimited words','
-        'Unlimited images','
-        'Unlimited videos','
-        'Custom templates','
-        'Dedicated support','
-        'Highest quality output','
-        'Advanced analytics',;'
-        'Custom integrations',;'
+      features[;
+        'Unlimited words',Unlimited images',Unlimited videos',Custom templates',Dedicated support',Highest quality output',Advanced analytics',;
+        'Custom integrations',;
         'SLA guarantees';
-      ],;'
+      ],;
       cta: 'Contact Sales',;
       popular: false};
   ];
@@ -212,8 +141,14 @@ export default function AIContentGenerationPlatform(...args[]):  {
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
+<<<<<<< HEAD
+        title="AI Content Generation Platform - Zion Tech Group"
+        description="Transform your content creation with our AI-powered platform. Generate high-quality text, images, videos, and more with advanced AI technology."
+       />
+=======
         title="AI Content Generation Platform - Zion Tech Group""        description="Transform your content creation with our AI-powered platform. Generate high-quality text, images, videos, and more with advanced AI technology."
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20">"
@@ -245,10 +180,10 @@ export default function AIContentGenerationPlatform(...args[]):  {
             className="text-center mb-16"
 "
             <div className="w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-8">"
-              <PenTool className="w-10 h-10 text-white" />
+              <PenTool className="w-10 h-10 text-white"  />
             </div>"            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI-Powered"
-              <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-600 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-600 bg-clip-text text-transparent">
                 {' '}Content Generation
               </span>
             </h1>"
@@ -259,17 +194,17 @@ export default function AIContentGenerationPlatform(...args[]):  {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="/contact""
+                href="/contact"
                 className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-400 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-500 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
 
                 <span>Start Free Trial</span>"
-                <ArrowRight className="w-5 h-5" />              </a>
+                <ArrowRight className="w-5 h-5"  />              </a>
               <a"
-                href="#pricing""
+                href="#pricing"
                 className="inline-flex items-center space-x-2 border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
 
                 <span>View Pricing</span>"
-                <ArrowRight className="w-5 h-5" />              </a>
+                <ArrowRight className="w-5 h-5"  />              </a>
             </div>
           </motion.div>;
 
@@ -286,14 +221,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
             transition = {
 
   { duration: 0.8,
-  delay: 0.2 ;
-
-
-
-
-
-
-}}"            className="grid grid-cols-2 md:grid-cols-4 gap-8"
+  delay: 0.2 }}"            className="grid grid-cols-2 md:grid-cols-4 gap-8"
 "
             <div className="text-center">;"
               <div className="text-3xl font-bold text-white mb-2">80-90%</div>"
@@ -346,7 +274,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
 "
             <h2 className="text-4xl font-bold text-white mb-6">
               Powerful Features for"
-              <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
                 {' '}Content Creators
               </span>
             </h2>"
@@ -403,7 +331,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, idx) => ("
                     <li key={idx} className="flex items-center space-x-2 text-sm">"
-                      <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0" />"                      <span className="text-slate-300">{benefit}</span>
+                      <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0"  />"                      <span className="text-slate-300">{benefit}</span>
                     </li>
                   ))}
                 </ul>
@@ -444,7 +372,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
 "
             <h2 className="text-4xl font-bold text-white mb-6">
               Real-World"
-              <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
                 {' '}Applications
               </span>
             </h2>"
@@ -503,7 +431,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
                   <h4 className="text-white font-semibold">Key Results: any</h4>
                   {useCase.metrics.map((metric, idx)  => ("
                     <div key={idx} className="flex items-center space-x-2 text-sm">"
-                      <Star className="w-4 h-4 text-yellow-400 flex-shrink-0" />"                      <span className="text-slate-300">{metric}</span>
+                      <Star className="w-4 h-4 text-yellow-400 flex-shrink-0"  />"                      <span className="text-slate-300">{metric}</span>
                     </div>
                   ))}
                 </div>
@@ -544,7 +472,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
 "
             <h2 className="text-4xl font-bold text-white mb-6">
               Measurable"
-              <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
                 {' '}Business Impact
               </span>
             </h2>"
@@ -635,7 +563,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
 "
             <h2 className="text-4xl font-bold text-white mb-6">
               Cutting-Edge"
-              <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
                 {' '}Technologies
               </span>
             </h2>"
@@ -721,7 +649,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
 "
             <h2 className="text-4xl font-bold text-white mb-6">
               Transparent"
-              <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
                 {' '}Pricing
               </span>
             </h2>"
@@ -794,7 +722,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, idx) => ("
                     <li key={idx} className="flex items-center space-x-3">"
-                      <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0" />"                      <span className="text-slate-300">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0"  />"                      <span className="text-slate-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -846,7 +774,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
 "
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your"
-              <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
                 {' '}Content Creation?
               </span>
             </h2>"
@@ -856,17 +784,17 @@ export default function AIContentGenerationPlatform(...args[]):  {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="/contact""
+                href="/contact"
                 className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-400 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-500 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
 
                 <span>Start Free Trial</span>"
-                <ArrowRight className="w-5 h-5" />              </a>
+                <ArrowRight className="w-5 h-5"  />              </a>
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="inline-flex items-center space-x-2 border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
 
                 <span>Call +1 302 464 0950</span>"
-                <ArrowRight className="w-5 h-5" />              </a>
+                <ArrowRight className="w-5 h-5"  />              </a>
             </div>"
             <div className="mt-6 text-slate-400">"
               <p>Questions? Email us at <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300">kleber@ziontechgroup.com</a></p>"
@@ -876,6 +804,5 @@ export default function AIContentGenerationPlatform(...args[]):  {
         </div>;
       </section>;
     </div>;
-  );
-}
+  )}
 '"`

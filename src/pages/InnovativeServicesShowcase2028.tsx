@@ -1,8 +1,72 @@
-import React, { useState } from 'react';'
-import { motion } from 'framer-motion';'
-import { SEO } from '@/components/SEO';'
-import { Link } from 'react-router-dom';        canonicalUrl="https://ziontechgroup.com/innovative-services-showcase-2028"
+<<<<<<< HEAD
+import {
+
+  Brain,
+  Shield,
+  Cloud,
+  Cpu,
+  Rocket,
+  Lock,
+  Globe,
+  Heart,
+  Code,
+  Users,
+  BarChart3,
+  MessageCircle,
+  DollarSign,
+  Settings,
+  Globe,
+  Rocket,
+  Star,
+  CheckCircle,
+  ArrowRight,
+  Play,
+  Award,
+  Cpu,
+  Lock,
+  Eye,
+  Activity,
+  Clock,
+  Database,
+  Cloud,
+  Smartphone,
+  FileText,
+  PenTool,
+  ShoppingCart,
+  HelpCircle,
+  Activity,
+  Link as LinkIcon,
+  Layers,
+  Cpu as CpuIcon,
+  Database as DatabaseIcon,
+  Shield as ShieldIcon,
+  Zap as ZapIcon,
+  Brain as BrainIcon,
+  Atom as AtomIcon,
+  Rocket as RocketIcon,
+  Leaf as LeafIcon} from 'lucide-react';
+
+export default function InnovativeServicesShowcase2028() {
+
+  const [activeCategory, setActiveCategory] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('');
+
+  
+  
+  
+  
+  
+  return()
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+      <SEO"
+        title="2028 Innovative Services Showcase - Zion Tech Group"
+        description="Explore our cutting-edge AI services, micro SAAS solutions, IT infrastructure, and emerging technologies. Real market prices and proven ROI."
+        keywords="AI services, micro SAAS, IT services, quantum computing, blockchain, IoT, green technology, space technology, Zion Tech Group"
+        canonicalUrl="https://ziontechgroup.com/innovative-services-showcase-2028"
+      />
+=======
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative pt-28 pb-16 overflow-hidden">"
@@ -16,7 +80,7 @@ import { Link } from 'react-router-dom';        canonicalUrl="https://ziontechgr
           >"
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               2028 Innovative Services"
-              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 {' '}
                 Showcase
               </span>
@@ -28,16 +92,16 @@ import { Link } from 'react-router-dom';        canonicalUrl="https://ziontechgr
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25"
               >
                 Get Started Today
               </Link>
               <Link"
-                to="/case-studies""
+                to="/case-studies"
                 className="px-8 py-4 border border-cyan-500 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
               >
-                <Play className="w-5 h-5 inline mr-2" />
+                <Play className="w-5 h-5 inline mr-2"  />
                 Schedule Demo
               </Link>
             </div>
@@ -52,20 +116,20 @@ import { Link } from 'react-router-dom';        canonicalUrl="https://ziontechgr
             {/* Search */}"
             <div className="relative flex-1 max-w-md">
               <input"
-                type="text""
+                type="text"
                 placeholder="Search services..."
                 value={searchQuery}
                 onChange={e => setSearchQuery(e.target.value)}"
                 className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
               />"
-              <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />            </div>
+              <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5"  />            </div>
 
             {/* Category Filter */}"
             <div className="flex flex-wrap gap-2">
               <button'
                 onClick={() => setActiveCategory('all')}
                 className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
-'
+
                   activeCategory === 'all''
                     ? 'bg-cyan-500 text-white shadow-lg shadow-cyan-500/25''
                     : 'bg-slate-700 text-slate-300 hover:bg-slate-600'`
@@ -97,7 +161,7 @@ import { Link } from 'react-router-dom';        canonicalUrl="https://ziontechgr
           <motion.div"
             className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -115,7 +179,7 @@ import { Link } from 'react-router-dom';        canonicalUrl="https://ziontechgr
                     {service.badge && (
                       <span`
                         className={`px-3 py-1 text-xs font-semibold rounded-full ${
-'
+
                           service.badge === 'Popular''
                             ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30''
                             : service.badge === 'New''
@@ -168,7 +232,7 @@ import { Link } from 'react-router-dom';        canonicalUrl="https://ziontechgr
                         key={idx}"
                         className="flex items-center text-sm text-slate-400"
                       >"
-                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />                        {feature}
+                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0"  />                        {feature}
                       </div>) ) }
                   </div>
 
@@ -182,17 +246,17 @@ import { Link } from 'react-router-dom';        canonicalUrl="https://ziontechgr
                         key={idx}"
                         className="flex items-center text-sm text-slate-400"
                       >"
-                        <TrendingUp className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />                        {benefit}
+                        <TrendingUp className="w-4 h-4 text-green-400 mr-3 flex-shrink-0"  />                        {benefit}
                       </div>) ) }
                   </div>
 
                   {/* CTA */}
                   <Link"
-                    to="/contact""
+                    to="/contact"
                     className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:scale-105 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25"
                   >
                     Get Started"
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />                  </Link>
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300"  />                  </Link>
                 </div>
                 
                 <div className="mb-6">
@@ -205,7 +269,7 @@ import { Link } from 'react-router-dom';        canonicalUrl="https://ziontechgr
                   className="w-full py-3 px-6 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-lg font-semibold text-center hover:from-purple-600 hover:to-pink-700 transition-all duration-300 flex items-center justify-center"
                 >
                   Learn More
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                  <ArrowRight className="w-4 h-4 ml-2"  />
                 </Link>
               </motion.div>
             ))}
@@ -243,7 +307,7 @@ import { Link } from 'react-router-dom';        canonicalUrl="https://ziontechgr
               className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8"
             >"
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">"
-                <Phone className="w-8 h-8 text-white" />
+                <Phone className="w-8 h-8 text-white"  />
               </div>"
               <h3 className="text-2xl font-bold text-white mb-4 text-center">
                 Call Us
@@ -266,7 +330,7 @@ import { Link } from 'react-router-dom';        canonicalUrl="https://ziontechgr
               className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8"
             >"
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6">"
-                <Mail className="w-8 h-8 text-white" />
+                <Mail className="w-8 h-8 text-white"  />
               </div>"
               <h3 className="text-2xl font-bold text-white mb-4 text-center">
                 Email Us
@@ -289,7 +353,7 @@ import { Link } from 'react-router-dom';        canonicalUrl="https://ziontechgr
               className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8"
             >"
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6">"
-                <MapPin className="w-8 h-8 text-white" />
+                <MapPin className="w-8 h-8 text-white"  />
               </div>"
               <h3 className="text-2xl font-bold text-white mb-4 text-center">
                 Visit Us
@@ -316,13 +380,13 @@ import { Link } from 'react-router-dom';        canonicalUrl="https://ziontechgr
           >"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25"
               >
                 Get Free Consultation
               </Link>
               <Link"
-                to="/pricing""
+                to="/pricing"
                 className="px-8 py-4 border border-cyan-500 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
               >
                 View Full Pricing
@@ -354,7 +418,7 @@ import { Link } from 'react-router-dom';        canonicalUrl="https://ziontechgr
                   className="text-purple-400 hover:text-purple-300 text-sm font-medium flex items-center"
                 >
                   Learn More
-                  <ArrowRight className="w-3 h-3 ml-1" />
+                  <ArrowRight className="w-3 h-3 ml-1"  />
                 </Link>
               </motion.div>
             ))}
@@ -384,32 +448,32 @@ import { Link } from 'react-router-dom';        canonicalUrl="https://ziontechgr
           <motion.div"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >
             {[
               {
 
-                icon: Award,'
+                icon: Award,
                 title: 'Proven Expertise',
                 description:'
                   '500+ successful projects across industries with measurable results'},
               {
 
-                icon: Zap,'
+                icon: Zap,
                 title: 'Innovation First',
                 description:'
                   'Cutting-edge technologies and methodologies for competitive advantage'},
               {
 
-                icon: Shield,'
+                icon: Shield,
                 title: 'Enterprise Security',
                 description:'
                   'Bank-level security and compliance for enterprise-grade solutions'},
               {
 
-                icon: Heart,'
+                icon: Heart,
                 title: '24/7 Support',
                 description:'
                   'Round-the-clock technical support and maintenance services'},
@@ -431,6 +495,5 @@ import { Link } from 'react-router-dom';        canonicalUrl="https://ziontechgr
           </motion.div>
         </div>
       </section>
-    </div>) ;
-}
+    </div>) }
 '"`

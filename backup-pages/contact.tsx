@@ -1,23 +1,23 @@
 import React from 'react';
 
-import type { NextPage } from 'next';'
-import Head from 'next/head';'
-import Link from 'next/link';'
-import { useState } from 'react';'
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 
 
 
 
-  const [isSubmitting, setIsSubmitting] = useState(false);'
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-'
+
 		// // // // // // // // console.log('Form submitted:', formData)
 		setIsSubmitted(true)
 		// Reset form after submission
 		setTimeout(() => {
-			setIsSubmitted(false)'
+			setIsSubmitted(false)
 			setFormData({ name: '', email: '', company: '', message: '' })
 		}, 3000)
 
@@ -25,7 +25,7 @@ import { motion } from 'framer-motion';
   const handleSubmit = async (e: React.FormEvent) => {
 
     e.preventDefault();
-    setIsSubmitting(true);'
+    setIsSubmitting(true);
     setSubmitStatus('idle');
 
     try {
@@ -37,18 +37,18 @@ import { motion } from 'framer-motion';
       '
       setSubmitStatus('success');
       setFormData({
-'
-        name: '','
-        email: '','
-        company: '','
-        phone: '','
-        service: '','
-        message: '','
-        budget: '','
+
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        service: '',
+        message: '',
+        budget: '',
         timeline: ''
       });
     } catch (error) {
-'
+
       setSubmitStatus('error');
     } finally {
 
@@ -58,57 +58,41 @@ import { motion } from 'framer-motion';
 
   const contactMethods = [
     {
-'
-      title: 'Phone','
-      value: '+1 302 464 0950','
-      description: 'Call us directly for immediate assistance','
-      icon: '📱','
+
+      title: 'Phone',
+      value: '+1 302 464 0950',
+      description: 'Call us directly for immediate assistance',
+      icon: '📱',
       action: 'tel:+13024640950'
     },
     {
-'
-      title: 'Email','
-      value: 'kleber@ziontechgroup.com','
-      description: 'Send us a detailed message','
-      icon: '✉️','
+
+      title: 'Email',
+      value: 'kleber@ziontechgroup.com',
+      description: 'Send us a detailed message',
+      icon: '✉️',
       action: 'mailto:kleber@ziontechgroup.com'
     },
     {
-'
-      title: 'Address','
-      value: '364 E Main St STE 1008, Middletown DE 19709','
-      description: 'Visit our office','
-      icon: '📍','
+
+      title: 'Address',
+      value: '364 E Main St STE 1008, Middletown DE 19709',
+      description: 'Visit our office',
+      icon: '📍',
       action: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709'
     }
   ];
 
   const services = ['
-    'Micro SaaS Development','
-    'AI & Machine Learning','
-    'Cloud Infrastructure','
-    'Cybersecurity Solutions','
-    'Custom Software Development','
-    'API Integration','
-    'DevOps & CI/CD','
-    'Data Analytics','
-    'Other'
+    'Micro SaaS Development',AI & Machine Learning',Cloud Infrastructure',Cybersecurity Solutions',Custom Software Development',API Integration',DevOps & CI/CD',Data Analytics',Other'
   ];
 
   const budgets = ['
-    'Under $10,000','
-    '$10,000 - $25,000','
-    '$25,000 - $50,000','
-    '$50,000 - $100,000','
-    '$100,000+'
+    'Under $10,000',$10,000 - $25,000',$25,000 - $50,000',$50,000 - $100,000',$100,000+'
   ];
 
   const timelines = ['
-    'ASAP','
-    '1-2 months','
-    '3-6 months','
-    '6+ months','
-    'Not sure yet'
+    'ASAP',1-2 months',3-6 months',6+ months',Not sure yet'
   ];
 
   return()
@@ -211,7 +195,7 @@ import { motion } from 'framer-motion';
             onSubmit={handleSubmit}"
             className="bg-gray-800 rounded-lg p-8 space-y-6"
           >
-            {/* Success/Error Messages */}'
+            {/* Success/Error Messages */}
             {submitStatus === 'success' && ("
               <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded">
                 Thank you! Your message has been sent successfully. We&apos;ll get back to you within 24 hours.
@@ -231,13 +215,13 @@ import { motion } from 'framer-motion';
                   Full Name *
                 </label>
                 <input"
-                  type="text""
-                  id="name""
+                  type="text"
+                  id="name"
                   name="name"
                   value={formData.name}
                   onChange={handleInputChange}
                   required"
-                  className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent""
+                  className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="Your full name"
                 />
               </div>
@@ -248,13 +232,13 @@ import { motion } from 'framer-motion';
                   Email Address *
                 </label>
                 <input"
-                  type="email""
-                  id="email""
+                  type="email"
+                  id="email"
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
                   required"
-                  className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent""
+                  className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="your.email@company.com"
                 />
               </div>
@@ -265,12 +249,12 @@ import { motion } from 'framer-motion';
                   Company
                 </label>
                 <input"
-                  type="text""
-                  id="company""
+                  type="text"
+                  id="company"
                   name="company"
                   value={formData.company}
                   onChange={handleInputChange}"
-                  className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent""
+                  className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="Your company name"
                 />
               </div>
@@ -281,12 +265,12 @@ import { motion } from 'framer-motion';
                   Phone Number
                 </label>
                 <input"
-                  type="tel""
-                  id="phone""
+                  type="tel"
+                  id="phone"
                   name="phone"
                   value={formData.phone}
                   onChange={handleInputChange}"
-                  className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent""
+                  className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="+1 (555) 123-4567"
                 />
               </div>
@@ -297,7 +281,7 @@ import { motion } from 'framer-motion';
                   Service Interest *
                 </label>
                 <select"
-                  id="service""
+                  id="service"
                   name="service"
                   value={formData.service}
                   onChange={handleInputChange}
@@ -317,7 +301,7 @@ import { motion } from 'framer-motion';
                   Budget Range
                 </label>
                 <select"
-                  id="budget""
+                  id="budget"
                   name="budget"
                   value={formData.budget}
                   onChange={handleInputChange}"
@@ -337,7 +321,7 @@ import { motion } from 'framer-motion';
                 Project Timeline
               </label>
               <select"
-                id="timeline""
+                id="timeline"
                 name="timeline"
                 value={formData.timeline}
                 onChange={handleInputChange}"
@@ -356,13 +340,13 @@ import { motion } from 'framer-motion';
                 Project Details *
               </label>
               <textarea"
-                id="message""
+                id="message"
                 name="message"
                 value={formData.message}
                 onChange={handleInputChange}
                 required
                 rows={6}"
-                className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent""
+                className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="Tell us about your project, goals, and requirements..."
               />
             </div>
@@ -373,7 +357,7 @@ import { motion } from 'framer-motion';
                 type="submit"
                 disabled={isSubmitting}"
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-12 rounded-full text-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 disabled:opacity-50 disabled:cursor-not-allowed"
-              >'
+              >
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
 
@@ -419,9 +403,9 @@ import { motion } from 'framer-motion';
             </div>"
             <div className="mt-8">
               <a"
-                href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709""
-                target="_blank""
-                rel="noopener noreferrer""
+                href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200 inline-flex items-center"
               >
                 📍 Get Directions
@@ -434,7 +418,7 @@ import { motion } from 'framer-motion';
       {/* Privacy Policy Notice */}"
       <section className="py-12 bg-gray-900">"
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">"
-          <p className="text-sm text-gray-400">'
+          <p className="text-sm text-gray-400">
             By submitting this form, you agree to our{' '}"
             <Link href="/privacy" className="text-blue-400 hover:text-blue-300 underline">
               Privacy Policy

@@ -1,19 +1,19 @@
-import type { NextPage } from 'next';'
-import { Helmet } from 'react-helmet-async';'
+import type { NextPage } from 'next';
+import { Helmet } from 'react-helmet-async';
 import { useState } from 'react';
 import { EMERGING_TECH_SERVICES_2027 } from "../data/emergingTechServices2027";
 
-const EmergingTechServices: NextPage = () => {;'
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');'
-  const [searchTerm, setSearchTerm] = useState('');'
+const EmergingTechServices: NextPage = () => {;
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState<any>('innovation');
 
-  const categories = [;'
-    { id: 'all', name: 'All Technologies', color: 'from-blue-500 to-purple-600' },;'
-    { id: 'Quantum Technology', name: 'Quantum Technology', color: 'from-purple-500 to-pink-600' },;'
-    { id: 'Space Technology', name: 'Space Technology', color: 'from-indigo-500 to-blue-600' },;'
-    { id: 'Biotechnology', name: 'Biotechnology', color: 'from-green-500 to-teal-600' },;'
-    { id: 'Advanced AI', name: 'Advanced AI', color: 'from-orange-500 to-red-600' },;'
+  const categories = [;
+    { id: 'all', name: 'All Technologies', color: 'from-blue-500 to-purple-600' },;
+    { id: 'Quantum Technology', name: 'Quantum Technology', color: 'from-purple-500 to-pink-600' },;
+    { id: 'Space Technology', name: 'Space Technology', color: 'from-indigo-500 to-blue-600' },;
+    { id: 'Biotechnology', name: 'Biotechnology', color: 'from-green-500 to-teal-600' },;
+    { id: 'Advanced AI', name: 'Advanced AI', color: 'from-orange-500 to-red-600' },;
     { id: 'Energy Technology', name: 'Energy Technology', color: 'from-yellow-500 to-orange-600' };
   ];
 
@@ -23,20 +23,20 @@ const EmergingTechServices: NextPage = () => {;'
     return matchesCategory && matchesSearch});
 
   const sortedServices = [...filteredServices].sort((a, b) => {;
-    switch (sortBy) {;'
+    switch (sortBy) {;
       case 'price':;
-        return a.pricing.monthly - b.pricing.monthly;'
+        return a.pricing.monthly - b.pricing.monthly;
       case 'innovation':'
-        return b.innovationLevel === 'Revolutionary' ? 1 : -1;'
+        return b.innovationLevel === 'Revolutionary' ? 1 : -1;
       case 'roi':'
         return parseInt(b.roi.split('%')[0]) - parseInt(a.roi.split('%')[0]);
       default:
         return 0}
   });
-'
+
       default: return 'from-gray-500 to-gray-600'}
   };
-'
+
       default: return 'bg-gradient-to-r from-gray-500 to-gray-600'}
   };
 
@@ -89,7 +89,7 @@ const EmergingTechServices: NextPage = () => {;'
             {/* Search */}"
             <div className="relative">
               <input"
-                type="text""
+                type="text"
                 placeholder="Search emerging tech services..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}"
@@ -252,13 +252,13 @@ const EmergingTechServices: NextPage = () => {;'
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a"
-              href="/contact""
+              href="/contact"
               className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
 
               Get Started Today
             </a>
             <a"
-              href="tel:+13024640950""
+              href="tel:+13024640950"
               className="bg-white/10 text-white px-8 py-4 rounded-xl font-semibold text-lg border border-white/20 hover:bg-white/20 transition-all duration-300"
 
               📞 Call +1 (302) 464-0950

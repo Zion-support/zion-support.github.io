@@ -1,43 +1,118 @@
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
-import { SEO  } from '../../components/SEO';        "24/7 support";
-      ],;"
-      cta: "Contact Sales",;
-      popular: false;
-    };
+<<<<<<< HEAD
+import { Package, 
+  TrendingUp, 
+  BarChart3, 
+  Users, 
+  Zap, 
+  Globe, 
+  Lock, 
+  Eye,
+  Star,
+  Cpu,
+  Database,
+  Search,
+  Filter,
+  Download,
+  Share2,
+  Play,
+  ArrowRight,
+  CheckCircle,
+  AlertTriangle,
+  FileText,
+  Clock,
+  Award,
+  Brain,
+  Target,
+  PieChart,
+  Activity,
+  Truck,
+  Warehouse,
+  ShoppingCart,
+  Shield,
+  Settings,
+  DollarSign,
+  AlertCircle,
+  Calendar,
+  MapPin,
+  Store'
+ } from 'lucide-react.ts';
+
+export default function AIInventoryManagement(...args: any[]): any {
+
+  
+    },;
+    {;
+      icon: Activity,;"
+      title: "Supply Chain Integration",;"
+      description: "Seamless integration with suppliers, logistics partners, and e-commerce platforms for end-to-end visibility."};
+  ]},;
+    {;
+      icon: Clock,;"
+      title: "Time Savings",;"
+      description: "Automate routine inventory tasks and focus on strategic business decisions."};
   ];
 
-  const useCases = [
+  const pricingPlans = [
     {
 "
-      industry: "E-commerce","
-      description: "Manage inventory across multiple sales channels, prevent stockouts, and optimize fulfillment",
-      icon: ShoppingCart
+      name: "Starter","
+      price: "$199","
+      period: "/month","
+      description: "Perfect for small businesses with basic inventory management needs",
+      features: ["
+        "Up to 1,000 SKUs","
+        "Basic demand forecasting","
+        "Email support","
+        "Standard integrations","
+        "Basic reporting","
+        "2 warehouse locations","
+        "Mobile app access"
+      ],"
+      cta: "Start Free Trial",
+      popular: false
     },
     {
 "
-      industry: "Retail","
-      description: "Track stock levels across multiple stores, manage seasonal inventory, and optimize shelf space",
-      icon: Store
+      name: "Professional","
+      price: "$599","
+      period: "/month","
+      description: "Ideal for growing businesses with advanced inventory requirements",
+      features: ["
+        "Up to 10,000 SKUs","
+        "Advanced AI forecasting","
+        "Priority support","
+        "Custom integrations","
+        "Advanced analytics","
+        "Multi-location support","
+        "API access","
+        "Barcode scanning","
+        "Supplier management"
+      ],"
+      cta: "Start Free Trial",
+      popular: true
     },
     {
 "
-      industry: "Manufacturing","
-      description: "Manage raw materials, work-in-progress, and finished goods with real-time tracking",
-      icon: Settings
-    },
-    {
-"
-      industry: "Healthcare","
-      description: "Track medical supplies, pharmaceuticals, and equipment with compliance monitoring",
-      icon: Shield
-    },
-    {
-"
-      industry: "Food & Beverage","
-      description: "Manage perishable inventory, track expiration dates, and optimize food waste reduction",
-      icon: Package;
-    },;
+      name: "Enterprise","
+      price: "$1,999","
+      period: "/month","
+      description: "For large organizations requiring enterprise-grade inventory solutions",
+      features: ["
+        "Unlimited SKUs","
+        "Custom AI models","
+        "Dedicated account manager","
+        "White-label solutions","
+        "Advanced security features","
+        "Custom reporting","
+        "On-premise deployment",;"
+        "SLA guarantees",;"
+        "24/7 support";
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+      ],;"
+      cta: "Contact Sales",;
+      popular: false};
+  ]},;
     {;"
       industry: "Automotive",;"      description: "Track spare parts, manage service inventory, and optimize supply chain for dealerships",;
       icon: Truck};
@@ -67,44 +142,27 @@ import { SEO  } from '../../components/SEO';        "24/7 support";
     {
 "
       name: "ERP Systems",;"
-      platforms: ["SAP", "Oracle", "Microsoft Dynamics", "Infor"];
-    },;
+      platforms: ["SAP", "Oracle", "Microsoft Dynamics", "Infor"]},;
     {;"
       name: "Supplier Platforms",;"
-      platforms: ["Alibaba", "Amazon Business", "ThomasNet", "Global Sources"];
-    };
-  ];
-
-  const keyMetrics = [
-    {
-"
-      metric: "95%","
-      label: "Forecast Accuracy","
-      description: "AI-powered demand prediction accuracy"
-    },
-    {
-"
-      metric: "40%","
-      label: "Cost Reduction","
-      description: "Average reduction in inventory carrying costs"
-    },
-    {
-"
-      metric: "60%","
-      label: "Stockout Reduction","
-      description: "Decrease in stockout incidents";
-    },;
+      platforms: ["Alibaba", "Amazon Business", "ThomasNet", "Global Sources"]};
+  ]},;
     {;"
       metric: "3x",;"
       label: "Faster Processing",;"
-      description: "Improved inventory processing speed";
-    };  ];
+      description: "Improved inventory processing speed"};  ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
+<<<<<<< HEAD
+        title="AI Inventory Management - Zion Tech Group"
+        description="Optimize your inventory with AI-powered demand forecasting, real-time tracking, and automated reordering. Reduce costs and prevent stockouts."
+      />
+=======
         title="AI Inventory Management - Zion Tech Group""        description="Optimize your inventory with AI-powered demand forecasting, real-time tracking, and automated reordering. Reduce costs and prevent stockouts."
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 lg:py-32">"
@@ -137,11 +195,11 @@ import { SEO  } from '../../components/SEO';        "24/7 support";
             transition={{ duration: 0.8 }}
           >"
             <div className="inline-flex items-center px-4 py-2 bg-green-600/20 text-green-400 rounded-full text-sm font-medium mb-6">"
-              <Package className="w-4 h-4 mr-2" />              AI-Powered Inventory
+              <Package className="w-4 h-4 mr-2"  />              AI-Powered Inventory
             </div>"
             <h1 className="text-4xl md:text-7xl font-bold text-white mb-6">
               AI Inventory"
-              <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
                 {' '}Management
               </span>
             </h1>"
@@ -151,11 +209,11 @@ import { SEO  } from '../../components/SEO';        "24/7 support";
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 text-lg flex items-center justify-center">"
-                <Play className="w-5 h-5 mr-2" />
+                <Play className="w-5 h-5 mr-2"  />
                 Start Free Trial
               </button>"
               <button className="border border-green-500 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-300 text-lg">"
-                <Download className="w-5 h-5 mr-2 inline" />                Download Brochure
+                <Download className="w-5 h-5 mr-2 inline"  />                Download Brochure
               </button>
             </div>
           </motion.div>
@@ -529,7 +587,7 @@ import { SEO  } from '../../components/SEO';        "24/7 support";
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center text-gray-300">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"                      <span className="text-sm">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />"                      <span className="text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -786,7 +844,7 @@ import { SEO  } from '../../components/SEO';        "24/7 support";
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 text-lg flex items-center justify-center">"
-                <Star className="w-5 h-5 mr-2" />                Start Free Trial
+                <Star className="w-5 h-5 mr-2"  />                Start Free Trial
               </button>"
               <button className="border border-green-500 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-300 text-lg">"
                 <Share2 className="w-5 h-5 mr-2 inline" />
@@ -797,5 +855,4 @@ import { SEO  } from '../../components/SEO';        "24/7 support";
         </div>;
       </section>;
     </div>;
-  );
-}'"`
+  )}'"`

@@ -1,9 +1,9 @@
-import React, { useState, useEffect, useRef } from 'react';'
-import { Link, useLocation } from 'react-router-dom';'
+import React, { useState, useEffect, useRef } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, onToggle }) => {
 
-    const [activeDropdown, setActiveDropdown] = useState(null);'
+    const [activeDropdown, setActiveDropdown] = useState(null);
     const [searchQuery, setSearchQuery] = useState('');
     const location = useLocation();
     const menuRef = useRef(null);
@@ -19,59 +19,59 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
                 onToggle()}
         };
         if (isOpen) {
-'
-            document.addEventListener('mousedown', handleClickOutside);'
+
+            document.addEventListener('mousedown', handleClickOutside);
             document.body.style.overflow = 'hidden'}
         return () => {
-'
-            document.removeEventListener('mousedown', handleClickOutside);'
+
+            document.removeEventListener('mousedown', handleClickOutside);
             document.body.style.overflow = 'unset'}}, [isOpen, onToggle]);
     const navigationItems = [
         {
-'
-            label: 'Services','
+
+            label: 'Services',
             href: '/services',
-            children[;'
-                { label: 'AI & Machine Learning', href: '/services/ai' },'
-                { label: 'Quantum Computing', href: '/services/quantum' },'
-                { label: 'Cybersecurity', href: '/services/cybersecurity' },'
-                { label: 'Cloud Services', href: '/services/cloud' },'
-                { label: 'Digital Transformation', href: '/services/transformation' },'
+            children[;
+                { label: 'AI & Machine Learning', href: '/services/ai' },
+                { label: 'Quantum Computing', href: '/services/quantum' },
+                { label: 'Cybersecurity', href: '/services/cybersecurity' },
+                { label: 'Cloud Services', href: '/services/cloud' },
+                { label: 'Digital Transformation', href: '/services/transformation' },
                 { label: 'Consulting', href: '/services/consulting' }
             ]
         },;
         {
-'
-            label: 'Solutions','
+
+            label: 'Solutions',
             href: '/solutions',
-            children[;'
-                { label: 'Enterprise Solutions', href: '/solutions/enterprise' },'
-                { label: 'Startup Solutions', href: '/solutions/startup' },'
-                { label: 'Government Solutions', href: '/solutions/government' },'
+            children[;
+                { label: 'Enterprise Solutions', href: '/solutions/enterprise' },
+                { label: 'Startup Solutions', href: '/solutions/startup' },
+                { label: 'Government Solutions', href: '/solutions/government' },
                 { label: 'Healthcare Solutions', href: '/solutions/healthcare' }
             ]
         },;
         {
-'
-            label: 'Industries','
+
+            label: 'Industries',
             href: '/industries',
-            children[;'
-                { label: 'Technology', href: '/industries/technology' },'
-                { label: 'Healthcare', href: '/industries/healthcare' },'
-                { label: 'Finance', href: '/industries/finance' },'
-                { label: 'Manufacturing', href: '/industries/manufacturing' },'
+            children[;
+                { label: 'Technology', href: '/industries/technology' },
+                { label: 'Healthcare', href: '/industries/healthcare' },
+                { label: 'Finance', href: '/industries/finance' },
+                { label: 'Manufacturing', href: '/industries/manufacturing' },
                 { label: 'Education', href: '/industries/education' }
             ]
         },;
         {
-'
-            label: 'Comp','
+
+            label: 'Comp',
             href: '/about',
-            children[;'
-                { label: 'About Us', href: '/about' },'
-                { label: 'Careers', href: '/careers' },'
-                { label: 'News', href: '/news' },'
-                { label: 'Press', href: '/press' },'
+            children[;
+                { label: 'About Us', href: '/about' },
+                { label: 'Careers', href: '/careers' },
+                { label: 'News', href: '/news' },
+                { label: 'Press', href: '/press' },
                 { label: 'Contact', href: '/contact' }
             ]
 
@@ -84,17 +84,17 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
         e.preventDefault();
         // Implement search functionality'
         // // // // // // // // console.log('Search query:', searchQuery);
-    };'
+    };
         // console.log('Search query:', searchQuery)};
     const menuVariants = {
 
   closed: {
-'
+
             x: '100%',
             opacity: 0,
             transition: {
 
-                duration: 0.3,'
+                duration: 0.3,
   ease: 'easeInOut'
 
 }
@@ -105,7 +105,7 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
             opacity: 1,
             transition: {
 
-                duration: 0.3,'
+                duration: 0.3,
                 ease: 'easeInOut'
 
     };
@@ -117,18 +117,18 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
             opacity: 0,
             transition: {
 
-                duration: 0.2,'
+                duration: 0.2,
   ease: 'easeInOut'
 
 }
         },
         open: {
-'
+
             height: 'auto',
             opacity: 1,
             transition: {
 
-                duration: 0.2,'
+                duration: 0.2,
                 ease: 'easeInOut'
 
     };
@@ -177,7 +177,7 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
                 {navigationItems.map((item) => (<div key={item.label} className="px-4">
                     {item.children ? (<div>"
                         <button onClick={() => toggleDropdown(item.label)} className="w-full flex items-center justify-between py-3 px-4 text-white hover:bg-white/10 rounded-lg transition-colors">
-                          <span>{item.label}</span>'
+                          <span>{item.label}</span>
                           <ChevronDown size={20} className={`text-zion-slate-light transition-transform ${activeDropdown === item.label ? 'rotate-180' : ''}`}/>
                         </button>
                         <AnimatePresence>"

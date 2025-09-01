@@ -9,79 +9,67 @@ export default function CaseStudies(...args[]):  {
 	const caseStudies = [
 		{
 
-			id: 1,'
-			title: 'TechCorp: 300% Efficiency Increase with AI Automation','
-			client: 'TechCorp Inc.','
-			industry: 'Technology','
-			challenge: 'Manual processes were slowing down operations and causing errors in customer service.','
+			id: 1,
+			title: 'TechCorp: 300% Efficiency Increase with AI Automation',
+			client: 'TechCorp Inc.',
+			industry: 'Technology',
+			challenge: 'Manual processes were slowing down operations and causing errors in customer service.',
 			solution: 'Implemented AI-powered multi-agent system for customer service and sales operations.',
 			results = ['
-				'300% increase in operational efficiency','
-				'90% reduction in response time','
-				'$2.5M annual cost savings','
-				'Improved customer satisfaction scores'
-			],'
+				'300% increase in operational efficiency',90% reduction in response time',$2.5M annual cost savings',Improved customer satisfaction scores'
+			],
 			duration: '6 months',
 			team: 12,
 			rating: 5
 		},
 		{
 
-			id: 2,'
-			title: 'HealthCare Solutions: Secure Cloud Migration','
-			client: 'HealthCare Solutions','
-			industry: 'Healthcare','
-			challenge: 'Legacy on-premise systems were expensive to maintain and lacked scalability.','
+			id: 2,
+			title: 'HealthCare Solutions: Secure Cloud Migration',
+			client: 'HealthCare Solutions',
+			industry: 'Healthcare',
+			challenge: 'Legacy on-premise systems were expensive to maintain and lacked scalability.',
 			solution: 'Migrated to secure cloud infrastructure with HIPAA compliance and disaster recovery.',
 			results = ['
-				'40% reduction in infrastructure costs','
-				'99.9% uptime achieved','
-				'Full HIPAA compliance','
-				'Improved data security'
-			],'
+				'40% reduction in infrastructure costs',99.9% uptime achieved',Full HIPAA compliance',Improved data security'
+			],
 			duration: '8 months',
 			team: 8,
 			rating: 5
 		},
 		{
 
-			id: 3,'
-			title: 'ManufacturingCo: IoT and AI Integration','
-			client: 'ManufacturingCo','
-			industry: 'Manufacturing','
-			challenge: 'Production inefficiencies and lack of real-time monitoring were causing delays.','
+			id: 3,
+			title: 'ManufacturingCo: IoT and AI Integration',
+			client: 'ManufacturingCo',
+			industry: 'Manufacturing',
+			challenge: 'Production inefficiencies and lack of real-time monitoring were causing delays.',
 			solution: 'Deployed IoT sensors and AI analytics for predictive maintenance and optimization.',
 			results = ['
-				'25% increase in production output','
-				'60% reduction in downtime','
-				'Predictive maintenance alerts','
-				'Real-time production monitoring'
-			],'
+				'25% increase in production output',60% reduction in downtime',Predictive maintenance alerts',Real-time production monitoring'
+			],
 			duration: '10 months',
 			team: 15,
 			rating: 5
 		},
 		{
 
-			id: 4,'
-			title: 'FinTech Startup: Micro SaaS Platform','
-			client: 'FinTech Startup','
-			industry: 'Financial Services','
-			challenge: 'Needed a scalable platform to manage multiple financial services efficiently.','
+			id: 4,
+			title: 'FinTech Startup: Micro SaaS Platform',
+			client: 'FinTech Startup',
+			industry: 'Financial Services',
+			challenge: 'Needed a scalable platform to manage multiple financial services efficiently.',
 			solution: 'Built custom micro SaaS platform with automated workflows and AI-powered insights.',
 			results = ['
-				'50% faster service delivery','
-				'Automated compliance reporting','
-				'Scalable architecture','
-				'Reduced operational overhead'
-			],'
+				'50% faster service delivery',Automated compliance reporting',Scalable architecture',Reduced operational overhead'
+			],
 			duration: '4 months',
 			team: 6,
 			rating: 5
 
 	]
-'
-	const industries = ['All', 'Technology', 'Healthcare', 'Manufacturing', 'Financial Services', 'Retail', 'Education']
+
+	const industries = ['All',Technology',Healthcare',Manufacturing',Financial Services',Retail',Education']
 
 	return()
 		<>
@@ -92,7 +80,7 @@ export default function CaseStudies(...args[]):  {
 						<h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
 							Case Studies
 						</h1>"
-						<p className="mt-6 text-lg leading-8 text-gray-600">'
+						<p className="mt-6 text-lg leading-8 text-gray-600">
 							Real results from real clients. See how we've transformed businesses across industries.
 						</p>
 					</div>
@@ -120,7 +108,7 @@ export default function CaseStudies(...args[]):  {
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">"
 					<div className="mx-auto max-w-2xl text-center mb-16">"
 						<h2 className="text-3xl font-bold tracking-tight text-gray-900">Featured Success Story</h2>"
-						<p className="mt-6 text-lg text-gray-600">'
+						<p className="mt-6 text-lg text-gray-600">
 							How we transformed TechCorp's operations with AI automation
 						</p>
 					</div>"
@@ -144,7 +132,7 @@ export default function CaseStudies(...args[]):  {
 									</div>
 								</div>
 								<Link"
-									to="/contact""
+									to="/contact"
 									className="inline-flex items-center text-blue-600 hover:text-blue-500 font-medium"
 "
 									Learn More <ArrowRight className="ml-2 h-4 w-4" />
@@ -171,7 +159,7 @@ export default function CaseStudies(...args[]):  {
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">"
 					<div className="mx-auto max-w-2xl text-center mb-16">"
 						<h2 className="text-3xl font-bold tracking-tight text-gray-900">More Success Stories</h2>"
-						<p className="mt-6 text-lg text-gray-600">'
+						<p className="mt-6 text-lg text-gray-600">
 							Explore how we've helped businesses across different industries achieve their goals
 						</p>
 					</div>"
@@ -202,7 +190,7 @@ export default function CaseStudies(...args[]):  {
 									</div>
 								</div>
 								<Link"
-									to="/contact""
+									to="/contact"
 									className="inline-flex items-center text-blue-600 hover:text-blue-500 font-medium"
 "
 									View Details <ArrowRight className="ml-2 h-4 w-4" />
@@ -298,18 +286,18 @@ export default function CaseStudies(...args[]):  {
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">"
 					<div className="mx-auto max-w-2xl text-center">"
 						<h2 className="text-3xl font-bold tracking-tight text-white">Ready to Write Your Success Story?</h2>"
-						<p className="mt-6 text-lg text-blue-100">'
+						<p className="mt-6 text-lg text-blue-100">
 							Let's discuss how our expertise can help your business achieve similar results.
 						</p>"
 						<div className="mt-10 flex items-center justify-center gap-x-6">
 							<Link"
-								to="/contact""
+								to="/contact"
 								className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
 
 								Get Started Today
 							</Link>
 							<Link"
-								to="/services""
+								to="/services"
 								className="text-sm font-semibold leading-6 text-white hover:text-blue-100"
 
 								Explore Our Services →

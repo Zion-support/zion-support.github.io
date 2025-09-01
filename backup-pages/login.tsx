@@ -17,30 +17,30 @@ export { function };
 export default function Login(...args[]):  {
 
   const [formData, setFormData] = useState({
-'
-    email: '','
+
+    email: '',
     password: ''
   })
 
   const [showPassword, setShowPassword] = useState<typeof false>(false)
   const [isSubmitting, setIsSubmitting] = useState<typeof false>(false)
   const [errors, setErrors] = useState<Record<string, any>>({})
-'
+
       // // // // // // // // console.log('Login successful:', formData)
 
     } catch (error) {
-'
-      // // // // // // // // console.error('Login error:', error)'
+
+      // // // // // // // // console.error('Login error:', error)
       // // // // // console.log('Login successful:', formData)
       
     } catch (error) {
-'
+
       // // // // // console.error('Login error:', error)
     } finally {
 
       setIsSubmitting(false)
 
-'
+
   const title = 'Sign In — Zion Tech Group''
   const description = 'Access your Zion Tech Group account to manage AI, cloud, and cybersecurity solutions.'
 
@@ -179,13 +179,13 @@ export default function Login(...args[]):  {
                     <div className="relative">"
                       <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
                       <input"
-                        type="email""
-                        id="email""
+                        type="email"
+                        id="email"
                         name="email"
                         value={formData.email}
                         onChange={handleInputChange}
                         className={`w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-all ${
-'
+
                           errors.email ? 'border-red-500' : 'border-zion-blue-light'`
                         }`}"
                         placeholder="Enter your email address"
@@ -208,12 +208,12 @@ export default function Login(...args[]):  {
                       <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
                       <input'
                         type={showPassword ? 'text' : 'password'}"
-                        id="password""
+                        id="password"
                         name="password"
                         value={formData.password}
                         onChange={handleInputChange}`
                         className={`w-full pl-10 pr-12 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-all ${
-'
+
                           errors.password ? 'border-red-500' : 'border-zion-blue-light'`
                         }`}"
                         placeholder="Enter your password"
@@ -238,13 +238,13 @@ export default function Login(...args[]):  {
                   <div className="flex items-center justify-between">"
                     <label className="flex items-center">
                       <input"
-                        type="checkbox""
+                        type="checkbox"
                         className="w-4 h-4 text-zion-cyan bg-zion-blue-light/20 border-zion-blue-light rounded focus:ring-zion-cyan focus:ring-2"
                       />"
                       <span className="ml-2 text-sm text-zion-slate-light">Remember me</span>
                     </label>
                     <a"
-                      href="/forgot-password""
+                      href="/forgot-password"
                       className="text-sm text-zion-cyan hover:text-zion-cyan-light transition-colors"
 
                       Forgot password?
@@ -274,7 +274,7 @@ export default function Login(...args[]):  {
 
                 {/* Additional Info */}"
                 <div className="mt-8 text-center">"
-                  <p className="text-zion-slate-light text-sm">'
+                  <p className="text-zion-slate-light text-sm">
                     Don't have an account?{' '}"
                     <a href="/signup" className="text-zion-cyan hover:text-zion-cyan-light transition-colors font-medium">
                       Sign up here

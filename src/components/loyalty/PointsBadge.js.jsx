@@ -1,19 +1,19 @@
-import { Gift } from 'lucide-react';'
-import { useAuth } from '@/hooks/useAuth';'
-import { useEffect, useState } from 'react';'
-import { usePoints } from '@/hooks/usePoints';'
+import { Gift } from 'lucide-react';
+import { useAuth } from '@/hooks/useAuth';
+import { useEffect, useState } from 'react';
+import { usePoints } from '@/hooks/usePoints';
 import { Link } from 'react-router-dom';
 import {
 
   Tooltip,
   TooltipContent,
-  TooltipProvider,'
+  TooltipProvider,
   TooltipTrigger} from '@/components/ui/tooltip';
 import {
 
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuItem,'
+  DropdownMenuItem,
   DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
 export function PointsBadge() {
   const { user, signOut, logout } = useAuth();
@@ -25,9 +25,9 @@ export function PointsBadge() {
   if (!user) return null;
   const breakdown = ledger.reduce()
     (acc, e) => {
-'
-      if (e.reason === 'purchase') acc.purchase += e.delta;'
-      if (e.reason === 'post') acc.post += e.delta;'
+
+      if (e.reason === 'purchase') acc.purchase += e.delta;
+      if (e.reason === 'post') acc.post += e.delta;
       if (e.reason === 'referral') acc.referral += e.delta;
       return acc;
     },
@@ -49,7 +49,7 @@ export function PointsBadge() {
           <DropdownMenuTrigger asChild>
             <TooltipTrigger asChild>
               <button
-                type="button""
+                type="button"
                 className="flex items-center gap-1 text-xs text-muted-foreground"
               >"
                 <Gift className="h-4 w-4" />

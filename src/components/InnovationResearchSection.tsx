@@ -1,5 +1,56 @@
-import React from 'react';'
-import { motion } from 'framer-motion';
+<<<<<<< HEAD
+import {
+
+  Lightbulb,
+  TestTube,
+  BookOpen,
+  Award,
+  Users,
+  TrendingUp,
+  Rocket,
+  Brain,
+  Microscope,
+  Target'
+} from 'lucide-react';
+
+      patents: '11'};
+  ];
+const researchAreas = [
+  {
+
+    icon: "🧠","
+    title: "Artificial Intelligence","
+    description: "Advanced AI algorithms and neural network architectures",
+    progress: 85,"
+    color: "from-purple-500 to-pink-500"
+  },
+  {
+"
+    icon: "⚛️","
+    title: "Quantum Computing","
+    description: "Quantum algorithms and quantum machine learning",
+    progress: 70,"
+    color: "from-blue-500 to-cyan-500"
+  },
+  {
+"
+    icon: "🔗","
+    title: "Blockchain Technology","
+    description: "Next-generation blockchain and Web3 solutions",
+    progress: 90,"
+    color: "from-green-500 to-emerald-500"
+  },
+  {;"
+    icon: "🌐",;"
+    title: "Edge Computing",;"
+    description: "Distributed computing and IoT optimization",;
+    progress: 80,;"
+    color: "from-orange-500 to-red-500"};
+];
+
+
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 export function InnovationResearchSection() {
   return ("
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
@@ -230,11 +281,11 @@ export function InnovationResearchSection() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="inline-flex items-center px-6 py-3 bg-white text-indigo-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
                 Research Partnership"
-                <Flask className="ml-2 h-5 w-5" />
+                <Flask className="ml-2 h-5 w-5"  />
               </button>"
               <button className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-white hover:text-indigo-600 rounded-lg font-medium transition-colors duration-200">
                 View Publications"
-                <BookOpen className="ml-2 h-5 w-5" />              </button>
+                <BookOpen className="ml-2 h-5 w-5"  />              </button>
             </div>
           </div>
         </motion.div>
@@ -246,8 +297,7 @@ export default InnovationResearchSection;"
           </div>;
         </motion.div>;
       </div>;
-    </section>;) ;
-}
+    </section>;) }
 export default IconComponent;
 export default IconComponent;
 '"`

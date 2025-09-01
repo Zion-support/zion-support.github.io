@@ -1,7 +1,3 @@
-import React, { useState } from 'react';'
-import { motion } from 'framer-motion';'
-import { SEO } from '../components/SEO';'
-import { Link } from 'react-router-dom';
 import {
   Check, 
   Star, 
@@ -20,84 +16,20 @@ import {
 } from 'lucide-react';
 
       popular: false,
-      icon: Rocket,;'
-      color: 'from-orange-500 to-red-500';
-    }
+      icon: Rocket,;
+      color: 'from-orange-500 to-red-500'}
   ];
 
-  const servicePackages = [
-    {
-'
-      name: 'AI Implementation','
-      description: 'Custom AI solutions for your business','
-      price: 'From $5,000','
-      duration: '4-8 weeks',
-      features: ['
-        'Custom AI model development','
-        'Data preparation & training','
-        'Integration with existing systems','
-        'User training & documentation','
-        '3 months of support'
-      ],
-      icon: Brain
-    },
-    {
-'
-      name: 'Cloud Migration','
-      description: 'Seamless cloud infrastructure setup','
-      price: 'From $10,000','
-      duration: '6-12 weeks',
-      features: ['
-        'Infrastructure assessment','
-        'Migration planning & execution','
-        'Performance optimization','
-        'Security implementation','
-        'Monitoring & alerting setup'
-      ],
-      icon: Cloud
-    },
-    {
-'
-      name: 'Security Audit','
-      description: 'Comprehensive security assessment','
-      price: 'From $3,000','
-      duration: '2-4 weeks',
-      features: ['
-        'Vulnerability assessment','
-        'Penetration testing','
-        'Compliance review','
-        'Security recommendations','
-        'Remediation guidance'
-      ],
-      icon: Shield
-    }
-  ];
+  
+  
+<<<<<<< HEAD
 
-  const addOns = [
-    {
-'
-      name: 'Priority Support','
-      description: '24/7 dedicated support with 2-hour response time','
-      price: '$500/month',
-      icon: MessageSquare
-    },
-    {
-'
-      name: 'Custom Development','
-      description: 'Bespoke features and integrations','
-      price: '$150/hour',
-      icon: Rocket
-    },
-    {
-'
-      name: 'Training & Onboarding','
-      description: 'Comprehensive team training and setup','
-      price: '$2,000/day',
-      icon: Users
-    }
-  ];
+  
+interface PricingTier {
+=======
 '
   const savings = billingCycle === 'annual' ? 20 : 0;interface PricingTier {
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   name: string;
   description: string;
@@ -108,137 +40,60 @@ import {
   color: string;
   icon: unknown;
   cta: string;
-  ctaLink: string;
-}
+  ctaLink: string}
 ;
 const pricingTiers: PricingTier[] = [
   {
-'
-    name: 'Starter','
-    description: 'Perfect for small businesses and startups','
-    price: '$299','
+
+    name: 'Starter',
+    description: 'Perfect for small businesses and startups',
+    price: '$299',
     period: '/month',
     features: ['
-      'AI-powered business intelligence dashboard','
-      'Basic cloud infrastructure setup','
-      'Security monitoring & alerts','
-      'Email support','
-      'Monthly performance reports','
-      'Up to 5 team members','
-      'Basic API access','
-      'Standard compliance features','
-      'AI Workflow Orchestrator (Basic)','
-      'AI Data Governance (Foundation)'
-    ],'
+      'AI-powered business intelligence dashboard',Basic cloud infrastructure setup',Security monitoring & alerts',Email support',Monthly performance reports',Up to 5 team members',Basic API access',Standard compliance features',AI Workflow Orchestrator (Basic),AI Data Governance (Foundation)
+    ],
     color: 'from-blue-500 to-cyan-500',
-    icon: Zap,'
-    cta: 'Get Started','
+    icon: Zap,
+    cta: 'Get Started',
     ctaLink: '/contact'
   },
   {
-'
-    name: 'Professional','
-    description: 'Ideal for growing businesses and teams','
-    price: '$799','
+
+    name: 'Professional',
+    description: 'Ideal for growing businesses and teams',
+    price: '$799',
     period: '/month',
     popular: true,
     features: ['
-      'Everything in Starter, plus:','
-      'Advanced AI workflow automation','
-      'Custom cloud architecture design','
-      'Advanced cybersecurity features','
-      'Priority support (4-hour response)','
-      'Up to 25 team members','
-      'Custom integrations','
-      'Advanced analytics & reporting','
-      'Compliance automation tools','
-      'Monthly strategy sessions','
-      'AI Workflow Orchestrator (Professional)','
-      'AI Data Governance (Enterprise)','
-      'AI Customer Experience Analytics (Professional)'
-    ],'
+      'Everything in Starter, plus:',Advanced AI workflow automation',Custom cloud architecture design',Advanced cybersecurity features',Priority support (4-hour response),Up to 25 team members',Custom integrations',Advanced analytics & reporting',Compliance automation tools',Monthly strategy sessions',AI Workflow Orchestrator (Professional),AI Data Governance (Enterprise),AI Customer Experience Analytics (Professional)
+    ],
     color: 'from-zion-cyan to-zion-purple',
-    icon: Brain,'
-    cta: 'Start Free Trial','
+    icon: Brain,
+    cta: 'Start Free Trial',
     ctaLink: '/contact'
   },
   {
-'
-    name: 'Enterprise','
-    description: 'For large organizations with complex needs','
-    price: 'Custom','
+
+    name: 'Enterprise',
+    description: 'For large organizations with complex needs',
+    price: 'Custom',
     period: '',
     features: ['
-      'Everything in Professional, plus:','
-      'Custom AI model development','
-      'Multi-cloud architecture','
-      'Advanced threat intelligence','
-      '24/7 dedicated support','
-      'Unlimited team members','
-      'Custom software development','
-      'Advanced data governance','
-      'Compliance certification support','
-      'Quarterly business reviews','
-      'Dedicated success manager'
-    ],'
+      'Everything in Professional, plus:',Custom AI model development',Multi-cloud architecture',Advanced threat intelligence',24/7 dedicated support',Unlimited team members',Custom software development',Advanced data governance',Compliance certification support',Quarterly business reviews',Dedicated success manager'
+    ],
     color: 'from-purple-500 to-pink-500',
-    icon: Building,'
-    cta: 'Contact Sales','
+    icon: Building,
+    cta: 'Contact Sales',
     ctaLink: '/contact'
   }
 ];
 ;
-const servicePricing = [
-  {
-'
-    category: 'AI & Machine Learning',
-    icon: Brain,
-    services: ['
-      { name: 'AI Workflow Orchestrator', price: '$299/month', description: 'AI-powered workflow automation' },'
-      { name: 'AI Data Governance Platform', price: '$199/month', description: 'AI-powered data governance' },'
-      { name: 'AI Customer Experience Analytics', price: '$399/month', description: 'AI-powered customer insights' },'
-      { name: 'AI Business Intelligence Analytics', price: '$599/month', description: 'Advanced analytics & ML insights' }
-    ]
-  },
-  {
-'
-    category: 'Cloud & DevOps',
-    icon: Cloud,
-    services: ['
-      { name: 'Cloud DevOps', price: '$799/month', description: 'Infrastructure automation & scaling' },'
-      { name: 'IT Infrastructure', price: '$1,199/month', description: 'Enterprise infrastructure solutions' },'
-      { name: 'FinOps Advisor', price: '$299/month', description: 'Cloud cost optimization' },'
-      { name: 'Cloud FinOps Optimizer', price: '$499/month', description: 'Financial operations automation' }
-    ]
-  },
-  {
-'
-    category: 'Cybersecurity & Privacy',
-    icon: Shield,
-    services: ['
-      { name: 'AI Cybersecurity Platform', price: '$899/month', description: 'Advanced AI-powered security' },'
-      { name: 'Security Headers & CSP', price: '$199/month', description: 'Web security hardening' },'
-      { name: 'DSR Privacy Portal', price: '$299/month', description: 'GDPR/CCPA compliance' },'
-      { name: 'Zero Trust Network Access', price: '$599/month', description: 'Modern security architecture' }
-    ]
-  },
-  {
-'
-    category: 'Micro SaaS Solutions',
-    icon: ShoppingCart,
-    services: ['
-      { name: 'Micro CRM', price: '$49/month', description: 'Customer relationship management' },'
-      { name: 'Helpdesk Platform', price: '$79/month', description: 'Customer support system' },'
-      { name: 'Website Analytics', price: '$29/month', description: 'Performance tracking & insights' },'
-      { name: 'IT Helpdesk', price: '$99/month', description: 'IT support system' }
-    ]
-  }
-];
+
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
         title="Pricing - Zion Tech Group"'"        description="Transparent pricing for Zion Tech Group's AI, cloud, and technology services. Choose the plan that fits your business needs."
-       />
+        />
       
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
@@ -274,7 +129,7 @@ const servicePricing = [
               <button'
                 onClick={() => setBillingCycle('monthly')}
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
-'
+
                   billingCycle === 'monthly''
                     ? 'bg-cyan-400 text-white''
                     : 'text-gray-300 hover:text-white'`
@@ -285,7 +140,7 @@ const servicePricing = [
               <button'
                 onClick={() => setBillingCycle('annual')}`
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
-'
+
                   billingCycle === 'annual''
                     ? 'bg-cyan-400 text-white''
                     : 'text-white'`
@@ -316,13 +171,13 @@ const servicePricing = [
             </p>"
             <div className="flex flex-wrap justify-center gap-4">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg hover:from-zion-cyan/80 hover:to-zion-purple/80 transition-all duration-300"
               >
                 Get Custom Quote
               </Link>
               <Link"
-                to="/services""
+                to="/services"
                 className="px-6 py-3 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-all duration-300 border border-zion-cyan/20"
               >
                 View All Services
@@ -364,7 +219,7 @@ const servicePricing = [
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => ("
                       <li key={featureIndex} className="flex items-center text-gray-300">"
-                        <Check className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />                        {feature}
+                        <Check className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0"  />                        {feature}
                       </li>) ) }
                   </ul>
 
@@ -419,16 +274,16 @@ const servicePricing = [
                 <ul className="space-y-2 mb-6">
                   {pkg.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center text-sm text-gray-300">"
-                      <Check className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />                      {feature}
+                      <Check className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0"  />                      {feature}
                     </li>) ) }
                 </ul>
 
                 <Link"
-                  to="/contact""
+                  to="/contact"
                   className="inline-flex items-center w-full justify-center py-2 px-4 border border-cyan-400 text-cyan-400 font-medium rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-200"
                 >
                   Get Quote"
-                  <ArrowRight className="w-4 h-4 ml-2" />                </Link>
+                  <ArrowRight className="w-4 h-4 ml-2"  />                </Link>
               </motion.div>) ) }
           </div>
         </div>
@@ -488,7 +343,7 @@ const servicePricing = [
             {[
               {
 "
-                question: "Can I change my plan at any time?",'"
+                question: "Can I change my plan at any time?","
                 answer: "Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate any billing adjustments."
               },
               {
@@ -543,7 +398,7 @@ const servicePricing = [
                 <ul className="space-y-4 mb-8">
                   {tier.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-start gap-3">"
-                      <Check className="w-5 h-5 text-zion-cyan mt-0.5 flex-shrink-0" />"                      <span className="text-gray-300 text-sm">{feature}</span>
+                      <Check className="w-5 h-5 text-zion-cyan mt-0.5 flex-shrink-0"  />"                      <span className="text-gray-300 text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -558,7 +413,7 @@ const servicePricing = [
                   }`}
                 >
                   {tier.cta}"
-                  <ArrowRight className="w-4 h-4" />                </Link>
+                  <ArrowRight className="w-4 h-4"  />                </Link>
               </div>
             </motion.div>) ) }
         </div>
@@ -604,7 +459,7 @@ const servicePricing = [
                       <p className="text-gray-400 text-sm mb-4">{service.description}</p>"
                       <div className="text-2xl font-bold text-zion-cyan mb-4">{service.price}</div>
                       <Link'`
-                        to={`/services/${service.name.toLowerCase().replace(/\s+/g, '-')}`}"
+                        to={`/services/${service.name.toLowerCase().replace(/\s+/g,-')}`}"
                         className="w-full py-2 px-4 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-all duration-300 text-sm font-medium text-center block"
                       >
                         Learn More
@@ -625,7 +480,7 @@ const servicePricing = [
         >"
           <div className="text-center p-6">"
             <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4">"
-              <Clock className="w-8 h-8 text-white" />
+              <Clock className="w-8 h-8 text-white"  />
             </div>"
             <h3 className="text-xl font-bold text-white mb-2">30-Day Free Trial</h3>"
             <p className="text-gray-400">Try our Professional plan free for 30 days with no commitment.</p>
@@ -633,7 +488,7 @@ const servicePricing = [
           "
           <div className="text-center p-6">"
             <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-4">"
-              <Globe className="w-8 h-8 text-white" />
+              <Globe className="w-8 h-8 text-white"  />
             </div>"
             <h3 className="text-xl font-bold text-white mb-2">Global Support</h3>"
             <p className="text-gray-400">24/7 support available across all time zones for Enterprise customers.</p>
@@ -641,7 +496,7 @@ const servicePricing = [
           "
           <div className="text-center p-6">"
             <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4">"
-              <Lock className="w-8 h-8 text-white" />
+              <Lock className="w-8 h-8 text-white"  />
             </div>"
             <h3 className="text-xl font-bold text-white mb-2">Enterprise Security</h3>"            <p className="text-gray-400">Bank-level security with SOC 2, ISO 27001, and GDPR compliance.</p>
           </div>
@@ -661,13 +516,13 @@ const servicePricing = [
             </p>"
             <div className="flex flex-wrap justify-center gap-4">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg hover:from-zion-cyan/80 hover:to-zion-purple/80 transition-all duration-300 font-semibold"
               >
                 Get Custom Quote
               </Link>
               <Link"
-                to="/case-studies""
+                to="/case-studies"
                 className="px-8 py-4 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-all duration-300 border border-zion-cyan/20 font-semibold"
               >
                 View Case Studies
@@ -702,7 +557,7 @@ const servicePricing = [
             >"
               <div className="text-center mb-6">"
                 <div className="p-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full w-fit mx-auto mb-4">"
-                  <Workflow className="w-8 h-8 text-white" />
+                  <Workflow className="w-8 h-8 text-white"  />
                 </div>"
                 <h3 className="text-2xl font-bold text-white mb-2">AI Workflow Orchestrator</h3>"
                 <p className="text-gray-400 mb-4">Intelligent workflow automation platform</p>"
@@ -713,23 +568,23 @@ const servicePricing = [
               </div>"
               <ul className="space-y-3 mb-6">"
                 <li className="flex items-center text-gray-300">"
-                  <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                  <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />
                   Up to 10 workflows
                 </li>"
                 <li className="flex items-center text-gray-300">"
-                  <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                  <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />
                   Basic AI optimization
                 </li>"
                 <li className="flex items-center text-gray-300">"
-                  <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                  <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />
                   Standard integrations
                 </li>"
                 <li className="flex items-center text-gray-300">"
-                  <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />                  Email support
+                  <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />                  Email support
                 </li>
               </ul>
               <Link"
-                to="/services/ai-workflow-orchestrator""
+                to="/services/ai-workflow-orchestrator"
                 className="w-full text-center py-3 px-6 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300"
               >
                 Learn More
@@ -745,7 +600,7 @@ const servicePricing = [
             >"
               <div className="text-center mb-6">"
                 <div className="p-3 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-full w-fit mx-auto mb-4">"
-                  <Shield className="w-8 h-8 text-white" />
+                  <Shield className="w-8 h-8 text-white"  />
                 </div>"
                 <h3 className="text-2xl font-bold text-white mb-2">AI Data Governance Platform</h3>"
                 <p className="text-gray-400 mb-4">Intelligent data protection & compliance</p>"
@@ -756,23 +611,23 @@ const servicePricing = [
               </div>"
               <ul className="space-y-3 mb-6">"
                 <li className="flex items-center text-gray-300">"
-                  <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                  <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />
                   Up to 10 data sources
                 </li>"
                 <li className="flex items-center text-gray-300">"
-                  <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                  <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />
                   Basic AI discovery
                 </li>"
                 <li className="flex items-center text-gray-300">"
-                  <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                  <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />
                   GDPR & CCPA compliance
                 </li>"
                 <li className="flex items-center text-gray-300">"
-                  <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />                  Standard access control
+                  <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />                  Standard access control
                 </li>
               </ul>
               <Link"
-                to="/services/ai-data-governance-platform""
+                to="/services/ai-data-governance-platform"
                 className="w-full text-center py-3 px-6 bg-gradient-to-r from-indigo-500 to-blue-500 text-white rounded-lg font-semibold hover:from-indigo-600 hover:to-blue-600 transition-all duration-300"
               >
                 Learn More
@@ -788,7 +643,7 @@ const servicePricing = [
             >"
               <div className="text-center mb-6">"
                 <div className="p-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full w-fit mx-auto mb-4">"
-                  <Users className="w-8 h-8 text-white" />
+                  <Users className="w-8 h-8 text-white"  />
                 </div>"
                 <h3 className="text-2xl font-bold text-white mb-2">AI Customer Experience Analytics</h3>"
                 <p className="text-gray-400 mb-4">Customer insights & analytics platform</p>"
@@ -799,23 +654,23 @@ const servicePricing = [
               </div>"
               <ul className="space-y-3 mb-6">"
                 <li className="flex items-center text-gray-300">"
-                  <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                  <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />
                   Up to 10K interactions/month
                 </li>"
                 <li className="flex items-center text-gray-300">"
-                  <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                  <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />
                   Basic sentiment analysis
                 </li>"
                 <li className="flex items-center text-gray-300">"
-                  <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                  <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />
                   Standard reporting
                 </li>"
                 <li className="flex items-center text-gray-300">"
-                  <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />                  Email support
+                  <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />                  Email support
                 </li>
               </ul>
               <Link"
-                to="/services/ai-customer-experience-analytics""
+                to="/services/ai-customer-experience-analytics"
                 className="w-full text-center py-3 px-6 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
               >
                 Learn More
@@ -824,7 +679,6 @@ const servicePricing = [
           </div>
         </motion.div>
       </div>
-    </div>) ;
-}
+    </div>) }
 export default Pricing;
 '"`

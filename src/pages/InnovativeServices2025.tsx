@@ -1,11 +1,175 @@
-import React, { useState, useEffect } from 'react.ts';'
-import { Link  } from 'react-router-dom.ts';'
-import { motion, AnimatePresence  } from 'framer-motion.ts';      case 'rating':
+<<<<<<< HEAD
+import { Brain, 
+
+
+  Shield, 
+  Cloud, 
+  Rocket, 
+  Globe, 
+  Cpu, 
+  Lock, 
+  Heart, 
+  Users, 
+  ShoppingCart, 
+  BookOpen, 
+  MessageCircle, 
+  HelpCircle, 
+  DollarSign, 
+  Gauge, 
+  Workflow, 
+  Atom, 
+  Star, 
+  Target, 
+  TrendingUp, 
+  Award, 
+  Code, 
+  Truck, 
+  Building, 
+  BarChart3, 
+  PenTool, 
+  Eye, 
+  Server, 
+  Smartphone, 
+  Database, 
+  Network, 
+  Clock, 
+  ArrowRight, 
+  Sparkles, 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Satellite, 
+  FileText,
+  Zap,
+  Palette,
+  Camera,
+  Video,
+  Music,
+  Gamepad2,
+  Car,
+  Plane,
+  Ship,
+  Train,
+  Leaf,
+  Sun,
+  Wind,
+  Droplets,
+  Mountain,
+  TreePine,
+  Recycle,
+  Lightbulb,
+  Battery,
+  Wifi,
+  Bluetooth,
+  Radio,
+  Satellite,
+  Telescope,
+  Microscope,
+  Flask,
+  TestTube,
+  Beaker,
+  Pill,
+  Stethoscope,
+  Syringe,
+  HeartPulse,
+  Activity,
+  Thermometer,
+  Droplet,
+  EyeOff,
+  Eye,
+  Key,
+  Fingerprint,
+  Scan,
+  QrCode,
+  CreditCard,
+  Wallet,
+  PiggyBank,
+  TrendingDown,
+  BarChart,
+  PieChart,
+  LineChart,
+  ScatterChart,
+  AreaChart,
+  CandlestickChart,
+  GanttChart,
+  Kanban,
+  Calendar,
+  Clock,
+  Timer,
+  Stopwatch,
+  Hourglass,
+  CalendarDays,
+  CalendarCheck,
+  CalendarX,
+  CalendarPlus,
+  CalendarMinus,
+  CalendarRange,
+  CalendarSearch,
+  CalendarClock,
+  CalendarHeart,
+  CalendarStar,
+  CalendarUser,
+  CalendarSettings,
+  CalendarEdit,
+  CalendarTrash,
+  CalendarOff,
+  CalendarEvent,
+  CalendarTime,
+  CalendarWeek,
+  CalendarMonth,
+  CalendarYear,
+  CalendarDays2,
+  CalendarCheck2,
+  CalendarX2,
+  CalendarPlus2,
+  CalendarMinus2,
+  CalendarRange2,
+  CalendarSearch2,
+  CalendarClock2,
+  CalendarHeart2,
+  CalendarStar2,
+  CalendarUser2,
+  CalendarSettings2,
+  CalendarEdit2,
+  CalendarTrash2,
+  CalendarOff2,
+  CalendarEvent2,
+  CalendarTime2,
+  CalendarWeek2,
+  CalendarMonth2,
+  CalendarYear2'
+ } from 'lucide-react.ts';
+
+export default function InnovativeServices2025(...args: any[]): any {
+
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [sortBy, setSortBy] = useState('popularity');
+
+  // Enhanced Services Catalog 2025
+  
+  
+    { id: 'AI & ML', name: 'AI & Machine Learning', icon: Brain, count: services.filter(s  => s.category === 'AI & ML').length },
+    { id: anyIT Infrastructure', name: 'IT Infrastructure', icon: Server, count: services.filter(s  => s.category === 'IT Infrastructure').length },;
+    { id: anyMicro SaaS', name: 'Micro SaaS', icon: Rocket, count: services.filter(s  => s.category === 'Micro SaaS').length },;
+    { id: anyEmerging Tech', name: 'Emerging Technology', icon: Atom, count: services.filter(s  => s.category === 'Emerging Tech').length }
+  ];
+
+  
+    
+    return matchesCategory && matchesSearch}) ;
+
+  
+      case 'price-high':'
+        return parseFloat(b.price.replace(/[^0-9.]/g,)) - parseFloat(a.price.replace(/[^0-9.]/g,));
+      case 'rating':
+        return b.rating - a.rating;
+=======
         return b.rating - a.rating;'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       case 'popularity':
       default:
-        return b.reviews - a.reviews;
-    }
+        return b.reviews - a.reviews}
   }) ;
   return()
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -36,13 +200,13 @@ import { motion, AnimatePresence  } from 'framer-motion.ts';      case 'rating':
             className="flex flex-wrap justify-center gap-4"
           >
             <Link"
-              to="/contact""
+              to="/contact"
               className="bg-white text-zion-blue-dark px-8 py-3 rounded-full font-semibold hover:bg-zion-blue-light transition-colors duration-300"
             >
               Get Started Today
             </Link>
             <Link"
-              to="/pricing""
+              to="/pricing"
               className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-zion-blue-dark transition-colors duration-300"
             >
               View Pricing
@@ -56,15 +220,15 @@ import { motion, AnimatePresence  } from 'framer-motion.ts';      case 'rating':
         <div className="container mx-auto px-4">"
           <div className="flex flex-wrap items-center justify-center gap-8 text-zion-blue-light">"
             <div className="flex items-center gap-2">"
-              <Phone className="w-5 h-5" />
+              <Phone className="w-5 h-5"  />
               <span>+1 302 464 0950</span>
             </div>"
             <div className="flex items-center gap-2">"
-              <Mail className="w-5 h-5" />
+              <Mail className="w-5 h-5"  />
               <span>kleber@ziontechgroup.com</span>
             </div>"
             <div className="flex items-center gap-2">"
-              <MapPin className="w-5 h-5" />              <span>364 E Main St STE 1008, Middletown DE 19709</span>
+              <MapPin className="w-5 h-5"  />              <span>364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
           </div>
         </div>
@@ -99,13 +263,13 @@ import { motion, AnimatePresence  } from 'framer-motion.ts';      case 'rating':
             <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">"
               <div className="relative">
                 <input"
-                  type="text""
+                  type="text"
                   placeholder="Search services..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}"
                   className="w-full sm:w-64 px-4 py-2 pl-10 bg-zion-slate text-white rounded-lg border border-zion-slate-light focus:border-zion-blue focus:outline-none"
                 />"
-                <Search className="absolute left-3 top-2.5 w-4 h-4 text-zion-blue-light" />              </div>
+                <Search className="absolute left-3 top-2.5 w-4 h-4 text-zion-blue-light"  />              </div>
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}"
@@ -144,7 +308,7 @@ import { motion, AnimatePresence  } from 'framer-motion.ts';      case 'rating':
                   {service.badge && ("
                     <div className="absolute top-4 right-4">`
                       <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-'
+
                         service.badge === 'New' ? 'bg-green-500 text-white' :'
                         service.badge === 'Popular' ? 'bg-blue-500 text-white' :'
                         service.badge === 'Featured' ? 'bg-purple-500 text-white' :'
@@ -189,14 +353,13 @@ import { motion, AnimatePresence  } from 'framer-motion.ts';      case 'rating':
                     <div className="text-center">"
                       <div className="flex items-center gap-1 mb-1">
                         {[...Array(5)].map((_, i) => (
-                          <Star
-                            key={i}`                            className={`w-4 h-4 ${
+                          <Star key={i}`                            className={`w-4 h-4 ${
 
-                              i < Math.floor(service.rating)'
+                              i < Math.floor(service.rating)
                                 ? 'text-yellow-400 fill-current''
                                 : 'text-zion-slate-light'`
                             }`}
-                           />
+                            />
                         ))}
                       </div>"
                       <div className="text-xs text-zion-blue-light">
@@ -213,7 +376,7 @@ import { motion, AnimatePresence  } from 'framer-motion.ts';      case 'rating':
                     className="w-full bg-gradient-to-r from-zion-blue to-zion-blue-light text-white py-3 px-6 rounded-xl font-semibold hover:from-zion-blue-light hover:to-zion-blue transition-all duration-300 text-center block group-hover:shadow-lg group-hover:shadow-zion-blue/25"
                   >
                     Learn More"
-                    <ArrowRight className="inline-block w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />                  </Link>
+                    <ArrowRight className="inline-block w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300"  />                  </Link>
                 </motion.div>) ) }
             </motion.div>
           </AnimatePresence>
@@ -258,13 +421,13 @@ import { motion, AnimatePresence  } from 'framer-motion.ts';      case 'rating':
             className="flex flex-wrap justify-center gap-4"
           >
             <Link"
-              to="/contact""
+              to="/contact"
               className="bg-white text-zion-blue-dark px-8 py-4 rounded-full font-semibold hover:bg-zion-blue-light transition-colors duration-300 text-lg"
             >
               Schedule a Demo
             </Link>
             <Link"
-              to="/pricing""
+              to="/pricing"
               className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-zion-blue-dark transition-colors duration-300 text-lg"
             >
               View Full Pricing
@@ -273,5 +436,4 @@ import { motion, AnimatePresence  } from 'framer-motion.ts';      case 'rating':
         </div>
       </section>
     </div>
-  );
-}'"`
+  )}'"`

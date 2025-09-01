@@ -1,97 +1,19 @@
-import React from 'react.ts';'
-import { SEO  } from '@/components/SEO';'
-import { motion  } from 'framer-motion.ts';'
-import { Atom, Cpu, Shield, Zap, Target, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink, Activity, Users, Clock, DollarSign, Database, Lock, BarChart3, TrendingUp, Globe, Brain  } from 'lucide-react';
 
 const QuantumComputingAsAService: React.FC = (): JSX.Element => {
 
-  const features = [
-    {
-
-      icon: Atom,'
-      title: 'Quantum Processing Units','
-      description: 'Access to state-of-the-art quantum processors with 100+ qubits and quantum error correction','
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-
-      icon: Brain,'
-      title: 'Quantum Machine Learning','
-      description: 'Quantum algorithms for optimization, classification, and pattern recognition tasks','
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-
-      icon: Cpu,'
-      title: 'Hybrid Quantum-Classical','
-      description: 'Seamless integration between quantum and classical computing resources','
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-
-      icon: Shield,'
-      title: 'Quantum Security','
-      description: 'Post-quantum cryptography and quantum-resistant encryption solutions','
-      color: 'from-red-500 to-orange-500'
-    },
-    {
-
-      icon: Zap,'
-      title: 'Real-time Optimization','
-      description: 'Quantum algorithms for complex optimization problems in logistics and finance','
-      color: 'from-yellow-500 to-orange-500'
-    },;
+  
     {;
-      icon: Target,;'
-      title: 'Quantum Simulation',;'
-      description: 'Molecular modeling, material science, and chemical reaction simulations',;'
-      color: 'from-indigo-500 to-purple-500';
-    };
+      icon: Target,;
+      title: 'Quantum Simulation',;
+      description: 'Molecular modeling, material science, and chemical reaction simulations',;
+      color: 'from-indigo-500 to-purple-500'};
   ];
 
-  const pricingPlans = [
-    {
-'
-      name: 'Quantum Starter','
-      price: '$2,999','
-      period: '/month','
-      description: 'Perfect for research institutions and startups',
-      features: ['
-        'Up to 50 quantum computing hours','
-        'Basic quantum algorithms','
-        'Standard support','
-        'API access','
-        'Documentation','
-        'Community forum access'
-      ],'
-      cta: 'Start Free Trial',
-      popular: false
-    },
-    {
-'
-      name: 'Quantum Professional','
-      price: '$7,999','
-      period: '/month','
-      description: 'Ideal for growing businesses and research teams',
-      features: ['
-        'Up to 200 quantum computing hours','
-        'Advanced quantum algorithms','
-        'Custom algorithm development','
-        'Priority support','
-        'Dedicated quantum engineer','
-        'White-label solutions','
-        'SLA guarantees'
-      ],'
-      cta: 'Get Started',
-      popular: true
-    },
-    {
-'
-      name: 'Quantum Enterprise','
-      price: '$19,999','
-      period: '/month','
-      description: 'For large enterprises and government agencies',
-      features: ['
+  
+        'On-premise deployment options',;
+        'Research partnerships';
+      ],;
+=======
         'Unlimited quantum computing hours','
         'Custom quantum hardware access','
         'Dedicated quantum team','
@@ -99,67 +21,37 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
         'Custom integrations',;'
         'On-premise deployment options',;'        'Research partnerships';
       ],;'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       cta: 'Contact Sales',;
-      popular: false;
-    };
-  ];
-
-  const useCases = [
-    {
-'
-      title: 'Financial Services','
-      description: 'Portfolio optimization, risk assessment, and option pricing with quantum algorithms','
-      metrics: ['50x faster optimization', '30% better risk models', 'Real-time pricing calculations']
-    },
-    {
-'
-      title: 'Pharmaceutical Research','
-      description: 'Drug discovery, molecular modeling, and protein folding simulations','
-      metrics: ['100x faster simulations', 'Accurate molecular predictions', 'Reduced R&D costs'];
-    },;
-    {;'
-      title: 'Logistics & Supply Chain',;'
-      description: 'Route optimization, inventory management, and supply chain optimization',;'
-      metrics: ['40% cost reduction', 'Optimal route planning', 'Real-time optimization'];
-    };
-  ];
-
-  const integrations = [;'
-    'Python', 'Qiskit', 'Cirq', 'PennyLane', 'Q#', 'Julia', 'MATLAB',;'
-    'AWS Braket', 'Azure Quantum', 'Google Cloud', 'IBM Quantum',;'
-    'REST APIs', 'GraphQL', 'Webhooks', 'Docker', 'Kubernetes';
-  ];
-
-  const benefits = [
-    {
-
-      icon: TrendingUp,'
-      title: '100x Performance Boost','
-      description: 'Quantum algorithms solve complex problems exponentially faster than classical computers'
-    },
-    {
-
-      icon: Users,'
-      title: 'No Hardware Investment','
-      description: 'Access quantum computing power without expensive infrastructure and maintenance'
-    },
-    {
-
-      icon: DollarSign,'
-      title: 'Competitive Advantage','
-      description: 'Stay ahead of the competition with cutting-edge quantum computing capabilities';
-    },;
+      popular: false};
+  ]},;
     {;
-      icon: Clock,;'
-      title: 'Immediate Access',;'
-      description: 'Start using quantum computing today with our cloud-based platform';
-    };  ];
+      title: 'Logistics & Supply Chain',;
+      description: 'Route optimization, inventory management, and supply chain optimization',;
+      metrics: ['40% cost reduction',Optimal route planning',Real-time optimization']};
+  ];
+
+  
+    'Python',Qiskit',Cirq',PennyLane',Q#',Julia',MATLAB',;
+    'AWS Braket',Azure Quantum',Google Cloud',IBM Quantum',;
+    'REST APIs',GraphQL',Webhooks',Docker',Kubernetes';
+  ]},;
+    {;
+      icon: Clock,;
+      title: 'Immediate Access',;
+      description: 'Start using quantum computing today with our cloud-based platform'};  ];
 
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
+<<<<<<< HEAD
+        title="Quantum Computing as a Service - Zion Tech Group"
+        description="Access cutting-edge quantum computing power without infrastructure investment. Solve complex problems 100x faster with our quantum computing platform and expert support."
+       />
+=======
         title="Quantum Computing as a Service - Zion Tech Group""        description="Access cutting-edge quantum computing power without infrastructure investment. Solve complex problems 100x faster with our quantum computing platform and expert support."
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20">"
@@ -193,7 +85,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
 "
             <div className="flex justify-center mb-6">"
               <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center">"
-                <Atom className="w-10 h-10 text-white" />              </div>
+                <Atom className="w-10 h-10 text-white"  />              </div>
             </div>"
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Quantum Computing as a Service
@@ -204,13 +96,13 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="/contact""
+                href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 shadow-lg hover:shadow-xl"
 
                 Start Free Trial"
-                <ArrowRight className="ml-2 w-5 h-5" />              </a>
+                <ArrowRight className="ml-2 w-5 h-5"  />              </a>
               <a"
-                href="#demo""
+                href="#demo"
                 className="inline-flex items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all duration-200 border border-slate-600"
               >
                 Watch Demo
@@ -413,7 +305,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-slate-300">
-                      <CheckCircle className="w-5 h-5 text-purple-500 mr-3 flex-shrink-0"  />
+                      <CheckCircle className="w-5 h-5 text-purple-500 mr-3 flex-shrink-0"   />
                       {feature}
                     </li>
                   ))}
@@ -572,7 +464,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center text-slate-300">"
-                      <CheckCircle className="w-5 h-5 text-purple-500 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-purple-500 mr-3 flex-shrink-0"  />
                       {feature}
                     </li>
                   ))}
@@ -651,7 +543,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
                 <ul className="space-y-2">
                   {useCase.metrics.map((metric, metricIndex) => ("
                     <li key={metricIndex} className="flex items-center text-slate-300">"
-                      <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
+                      <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0"  />
                       {metric}
                     </li>
                   ))}
@@ -760,7 +652,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
               className="bg-slate-800 rounded-xl p-6 border border-slate-700 text-center"
 "
               <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">"
-                <Lock className="w-8 h-8 text-white" />
+                <Lock className="w-8 h-8 text-white"  />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-2">Quantum-Safe Security</h3>"              <p className="text-slate-300">Post-quantum cryptography and quantum-resistant encryption protocols</p>
             </motion.div>
@@ -802,7 +694,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
               className="bg-slate-800 rounded-xl p-6 border border-slate-700 text-center"
 "
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">"
-                <Shield className="w-8 h-8 text-white" />
+                <Shield className="w-8 h-8 text-white"  />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-2">SOC 2 Type II</h3>"              <p className="text-slate-300">SOC 2 Type II certification for enterprise-grade security and reliability</p>
             </motion.div>
@@ -844,7 +736,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
               className="bg-slate-800 rounded-xl p-6 border border-slate-700 text-center"
 "
               <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">"
-                <Activity className="w-8 h-8 text-white" />
+                <Activity className="w-8 h-8 text-white"  />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-2">Real-Time Monitoring</h3>"              <p className="text-slate-300">24/7 quantum system monitoring with automated threat detection</p>
             </motion.div>
@@ -890,31 +782,31 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <a"
-                href="/contact""
+                href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 shadow-lg hover:shadow-xl"
 
                 Start Free Trial"
-                <ArrowRight className="ml-2 w-5 h-5" />              </a>
+                <ArrowRight className="ml-2 w-5 h-5"  />              </a>
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all duration-200 border border-slate-600"
 "
-                <Phone className="w-5 h-5 mr-2" />
+                <Phone className="w-5 h-5 mr-2"  />
                 Call Us
               </a>
             </div>
 "
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-slate-400">"
               <div className="flex items-center">"
-                <CheckCircle className="w-5 h-5 text-purple-500 mr-2" />
+                <CheckCircle className="w-5 h-5 text-purple-500 mr-2"  />
                 <span>14-day free trial</span>
               </div>"
               <div className="flex items-center">"
-                <CheckCircle className="w-5 h-5 text-purple-500 mr-2" />
+                <CheckCircle className="w-5 h-5 text-purple-500 mr-2"  />
                 <span>No credit card required</span>
               </div>"
               <div className="flex items-center">"
-                <CheckCircle className="w-5 h-5 text-purple-500 mr-2" />
+                <CheckCircle className="w-5 h-5 text-purple-500 mr-2"  />
                 <span>Cancel anytime</span>              </div>
             </div>
           </motion.div>
@@ -928,21 +820,21 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
             <h2 className="text-3xl font-bold text-white mb-8">Get in Touch</h2>"
             <div className="grid md:grid-cols-3 gap-8">"
               <div className="flex flex-col items-center">"
-                <Phone className="w-8 h-8 text-purple-500 mb-4" />"
+                <Phone className="w-8 h-8 text-purple-500 mb-4"  />"
                 <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>"
                 <a href="tel:+13024640950" className="text-slate-300 hover:text-white transition-colors">
                   +1 302 464 0950
                 </a>
               </div>"
               <div className="flex flex-col items-center">"
-                <Mail className="w-8 h-8 text-purple-500 mb-4" />"
+                <Mail className="w-8 h-8 text-purple-500 mb-4"  />"
                 <h3 className="text-xl font-semibold text-white mb-2">Email</h3>"
                 <a href="mailto:kleber@ziontechgroup.com" className="text-slate-300 hover:text-white transition-colors">
                   kleber@ziontechgroup.com
                 </a>
               </div>"
               <div className="flex flex-col items-center">"
-                <ExternalLink className="w-8 h-8 text-purple-500 mb-4" />"
+                <ExternalLink className="w-8 h-8 text-purple-500 mb-4"  />"
                 <h3 className="text-xl font-semibold text-white mb-2">Website</h3>"
                 <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-white transition-colors">
                   ziontechgroup.com
@@ -953,7 +845,6 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
-export default QuantumComputingAsAService;}}}}}'"`
+export default QuantumComputingAsAService}}}}}'"`

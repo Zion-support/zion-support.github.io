@@ -1,21 +1,64 @@
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
-import { Link  } from 'react-router-dom.ts';  ;
-  ;
-  ;
-  ;'
-  'Fusion Energy': Zap;
-  ;
+<<<<<<< HEAD
+import { Brain, 
 
-};
+
+  Rocket, 
+  Zap, 
+  Shield, 
+  Cloud, 
+  Cpu, 
+  ArrowRight, 
+  Star, 
+  TrendingUp, 
+  CheckCircle,
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Award,
+  Users,
+  Target,
+  BarChart3,
+  Lightbulb,
+  Code,
+  Database,
+  Network,
+  Lock,
+  Eye,
+  Heart,
+  Zap as Lightning'
+} from 'lucide-react';
+
+export default function EmergingTech2030(...args[]):  {
+
+  
+    visible: {
+      opacity: 1,;
+      transition: {
+        staggerChildren: 0.1}}};
+
+  
+      opacity: 1,;
+      transition: {
+        duration: 0.5}}};
+
+  
+  ;
+  ;
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+  ;
+  ;
+  'Fusion Energy': Zap;
+  };
   return()
     <>
       <SEO "
-        title = "Emerging Technology Services 2030 - Zion Tech Group""
-        description="Discover cutting-edge emerging technology services for 2030 including quantum computing, neuromorphic computing, synthetic biology, and more. Future-ready solutions for forward-thinking businesses.""
-        canonical="/emerging-tech-2030""
+        title = "Emerging Technology Services 2030 - Zion Tech Group"
+        description="Discover cutting-edge emerging technology services for 2030 including quantum computing, neuromorphic computing, synthetic biology, and more. Future-ready solutions for forward-thinking businesses."
+        canonical="/emerging-tech-2030"
         url="https://ziontechgroup.com/emerging-tech-2030"
-      />
+       />
 "      <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
         {/* Hero Section */}"
         <section className="relative py-20 px-4 overflow-hidden">'"
@@ -24,50 +67,50 @@ import { Link  } from 'react-router-dom.ts';  ;
           <motion.div"
             className="relative z-10 container mx-auto text-center max-w-6xl"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             animate="visible"
 
             <motion.div variants={itemVariants}>"
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 Emerging Tech 2030
               </h1>"
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">'
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Pioneering the future with revolutionary technologies that will transform industries and redefine what's possible
               </p>"
               <div className="flex flex-wrap justify-center gap-4 mb-12">"
                 <div className="flex items-center gap-2 bg-cyan-500/20 text-cyan-400 px-4 py-2 rounded-full">"
-                  <Star className="w-5 h-5" />
+                  <Star className="w-5 h-5"  />
                   <span>Quantum Computing</span>
                 </div>"
                 <div className="flex items-center gap-2 bg-purple-500/20 text-purple-400 px-4 py-2 rounded-full">"
-                  <Brain className="w-5 h-5" />
+                  <Brain className="w-5 h-5"  />
                   <span>Neuromorphic AI</span>
                 </div>"
                 <div className="flex items-center gap-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full">"
-                  <Heart className="w-5 h-5" />
+                  <Heart className="w-5 h-5"  />
                   <span>Synthetic Biology</span>
                 </div>"
                 <div className="flex items-center gap-2 bg-blue-500/20 text-blue-400 px-4 py-2 rounded-full">"
-                  <Rocket className="w-5 h-5" />                  <span>Space Technology</span>
+                  <Rocket className="w-5 h-5"  />                  <span>Space Technology</span>
                 </div>
               </div>
             </motion.div>
 "
             <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
 
                 Get Started
               </Link>
               <Link"
-                to="/request-quote""
+                to="/request-quote"
                 className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
 
                 Request Quote
               </Link>
               <Link"
-                to="/services-catalog""
+                to="/services-catalog"
                 className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
 
                 View All Services
@@ -81,7 +124,7 @@ import { Link  } from 'react-router-dom.ts';  ;
           <motion.div"
             className="container mx-auto max-w-7xl"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             animate="visible"
 "
             <motion.div variants={itemVariants} className="text-center mb-16">"
@@ -95,8 +138,7 @@ import { Link  } from 'react-router-dom.ts';  ;
 ;"
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {emergingTechServices2030.map((service, index) => {;
-                const IconComponent = serviceIcons[service.category as keyof typeof serviceIcons] || Cpu;
-
+                
                 return()                  <motion.div
                     key = {service.id}
                     variants={itemVariants}"
@@ -104,7 +146,7 @@ import { Link  } from 'react-router-dom.ts';  ;
 "
                     <div className="flex items-center gap-4 mb-6">
                       <div className={`p-3 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 group-hover:from-cyan-400 group-hover:to-blue-500 transition-all duration-300`}>"
-                        <IconComponent className="w-6 h-6 text-white" />                      </div>
+                        <IconComponent className="w-6 h-6 text-white"  />                      </div>
                       <div>"
                         <h3 className="text-xl font-bold text-white">{service.title}</h3>"
                         <p className="text-sm text-cyan-400">{service.category}</p>
@@ -143,8 +185,7 @@ import { Link  } from 'react-router-dom.ts';  ;
                     <Link
                       to = {
 `
-  `/services/${service.id.replace(/-/g,'
-  '-')
+  `/services/${service.id.replace(/-/g,-')
 
 
 
@@ -155,10 +196,9 @@ import { Link  } from 'react-router-dom.ts';  ;
                       className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors group"
                     >;
                       Learn More;"
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />;
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform"  />;
                     </Link>;
-                  </motion.div>;) ;
-              }) }            </div>
+                  </motion.div>;) }) }            </div>
           </motion.div>
         </section>
 
@@ -167,7 +207,7 @@ import { Link  } from 'react-router-dom.ts';  ;
           <motion.div "
             className="container mx-auto max-w-6xl"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
 "
@@ -184,44 +224,44 @@ import { Link  } from 'react-router-dom.ts';  ;
               {[
                 {
 
-                  icon: Award,'
-                  title: 'Industry Expertise','
-                  description: 'Deep knowledge across multiple industries with proven track records of successful implementations.','
+                  icon: Award,
+                  title: 'Industry Expertise',
+                  description: 'Deep knowledge across multiple industries with proven track records of successful implementations.',
                   color: 'from-yellow-500 to-orange-600'
                 },
                 {
 
-                  icon: Users,'
-                  title: 'Expert Team','
-                  description: 'World-class engineers, scientists, and consultants with advanced degrees and industry experience.','
+                  icon: Users,
+                  title: 'Expert Team',
+                  description: 'World-class engineers, scientists, and consultants with advanced degrees and industry experience.',
                   color: 'from-blue-500 to-cyan-600'
                 },
                 {
 
-                  icon: Target,'
-                  title: 'Custom Solutions','
-                  description: 'Tailored solutions designed specifically for your business needs and industry requirements.','
+                  icon: Target,
+                  title: 'Custom Solutions',
+                  description: 'Tailored solutions designed specifically for your business needs and industry requirements.',
                   color: 'from-green-500 to-emerald-600'
                 },
                 {
 
-                  icon: BarChart3,'
-                  title: 'Proven Results','
-                  description: 'Track record of delivering measurable business outcomes and ROI for our clients.','
+                  icon: BarChart3,
+                  title: 'Proven Results',
+                  description: 'Track record of delivering measurable business outcomes and ROI for our clients.',
                   color: 'from-purple-500 to-pink-600'
                 },
                 {
 
-                  icon: Lightbulb,'
-                  title: 'Innovation First','
-                  description: 'Always at the forefront of technology, exploring emerging trends and cutting-edge solutions.','
+                  icon: Lightbulb,
+                  title: 'Innovation First',
+                  description: 'Always at the forefront of technology, exploring emerging trends and cutting-edge solutions.',
                   color: 'from-indigo-500 to-purple-600'
                 },
                 {
 
-                  icon: Shield,'
-                  title: 'Enterprise Security','
-                  description: 'Bank-grade security with SOC 2 compliance and enterprise-level data protection.','
+                  icon: Shield,
+                  title: 'Enterprise Security',
+                  description: 'Bank-grade security with SOC 2 compliance and enterprise-level data protection.',
                   color: 'from-red-500 to-pink-600'
                 }
               ].map ( (feature, index) => (<motion.div
@@ -245,7 +285,7 @@ import { Link  } from 'react-router-dom.ts';  ;
           <motion.div"
             className="container mx-auto max-w-4xl text-center"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
 
@@ -253,34 +293,34 @@ import { Link  } from 'react-router-dom.ts';  ;
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
                 Ready to Transform Your Business?
               </h2>"
-              <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">'
+              <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
                 Let's discuss how our emerging technology services can help you stay ahead of the competition and prepare for the future
               </p>
             </motion.div>
 "
             <motion.div variants={itemVariants} className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">"
               <div className="flex items-center justify-center gap-3 text-gray-300">"
-                <Phone className="w-5 h-5 text-cyan-400" />
+                <Phone className="w-5 h-5 text-cyan-400"  />
                 <span>+1 302 464 0950</span>
               </div>"
               <div className="flex items-center justify-center gap-3 text-gray-300">"
-                <Mail className="w-5 h-5 text-cyan-400" />
+                <Mail className="w-5 h-5 text-cyan-400"  />
                 <span>kleber@ziontechgroup.com</span>
               </div>"
               <div className="flex items-center justify-center gap-3 text-gray-300">"
-                <MapPin className="w-5 h-5 text-cyan-400" />                <span>Middletown, DE</span>
+                <MapPin className="w-5 h-5 text-cyan-400"  />                <span>Middletown, DE</span>
               </div>
             </motion.div>
 "
             <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
 
                 Schedule a Consultation
               </Link>
               <Link"
-                to="/request-quote""
+                to="/request-quote"
                 className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
 
                 Get Custom Quote
@@ -290,6 +330,5 @@ import { Link  } from 'react-router-dom.ts';  ;
         </section>;
       </div>;
     </>
-  );
-}
+  )}
 '"`

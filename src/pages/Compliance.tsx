@@ -1,5 +1,50 @@
-import React from 'react';'
-import { motion } from 'framer-motion';            </div>
+<<<<<<< HEAD
+import {
+
+  Shield,
+  CheckCircle,
+  Award,
+  FileText,
+  Users,
+  Globe,
+  Zap,
+  Brain,
+  Cloud,
+  Rocket,
+  Heart,
+  Cpu,
+  Network,
+  Server,
+  Key,
+  Fingerprint,
+  Monitor,
+  Smartphone,
+  Tablet,
+  Laptop,
+  ShieldCheck,
+  Gauge,
+  TrendingUp,
+  BarChart3} from 'lucide-react';
+
+  
+  
+  
+  
+  return()
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      {/* Hero Section */}"
+      <section className="relative overflow-hidden py-20 lg:py-32">"
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-green-500/10"></div>"
+        <div className="container mx-auto px-4 relative z-10">"
+          <div className="text-center max-w-4xl mx-auto">"
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500/20 to-green-500/20 rounded-full border border-blue-400/30 mb-6">"
+              <Shield className="w-5 h-5 text-blue-400 mr-2"  />"
+              <span className="text-blue-300 font-medium">
+                Compliance & Security
+              </span>
+            </div>
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 "
             <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">"
               <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-green-600 bg-clip-text text-transparent">
@@ -117,7 +162,7 @@ import { motion } from 'framer-motion';            </div>
                     <ul className="space-y-2">
                       {framework.benefits.map((benefit, benefitIndex) => ("
                         <li key={benefitIndex} className="flex items-start">"
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />"
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0"  />"
                           <span className="text-gray-300 text-sm">
                             {benefit}
                           </span>                        </li>
@@ -202,7 +247,7 @@ import { motion } from 'framer-motion';            </div>
                 <ul className="space-y-3">
                   {category.measures.map((measure, measureIndex) => ("
                     <li key={measureIndex} className="flex items-start">"
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />"                      <span className="text-gray-300 text-sm">{measure}</span>
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0"  />"                      <span className="text-gray-300 text-sm">{measure}</span>
                     </li>
                   ))}
                 </ul>
@@ -240,15 +285,15 @@ import { motion } from 'framer-motion';            </div>
 "
                   <div className="space-y-4">"
                     <div className="flex items-center">"
-                      <Mail className="w-5 h-5 text-blue-400 mr-3" />"
+                      <Mail className="w-5 h-5 text-blue-400 mr-3"  />"
                       <span className="text-gray-300">{contact.email}</span>
                     </div>"
                     <div className="flex items-center">"
-                      <Phone className="w-5 h-5 text-blue-400 mr-3" />"
+                      <Phone className="w-5 h-5 text-blue-400 mr-3"  />"
                       <span className="text-gray-300">{contact.phone}</span>
                     </div>"
                     <div className="flex items-center">"
-                      <Clock className="w-5 h-5 text-blue-400 mr-3" />"
+                      <Clock className="w-5 h-5 text-blue-400 mr-3"  />"
                       <span className="text-gray-300">
                         Response time: {contact.responseTime}
                       </span>                    </div>
@@ -258,6 +303,5 @@ import { motion } from 'framer-motion';            </div>
           </motion.div>
         </div>
       </section>
-    </div>) ;
-}
+    </div>) }
 '"`

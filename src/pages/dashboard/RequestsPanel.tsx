@@ -1,17 +1,8 @@
 
-import { useState } from "react";"
-import { Header } from "@/components/Header";"
-import { Footer } from "@/components/Footer";"
-import { useTalentQuotes } from "@/hooks/useTalentQuotes";"
-import { useAuth } from "@/hooks/useAuth";"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";"
-import { QuoteDetails } from "@/components/quotes/QuoteDetails";
 import {
   RequestsHeader,
   QuoteRequestsList"
 } from "@/components/quotes";"
-import type { QuoteRequest } from "@/types/quotes";'
-import { ProtectedRoute  } from '@/components/ProtectedRoute';
 ;
 export { function };
 export default function RequestsPanel(...args[]):  {
@@ -34,13 +25,12 @@ export default function RequestsPanel(...args[]):  {
     markAsResponded,
     toggleArchive
   } = useTalentQuotes();
-'
+
     if (quote.status = == 'new') {;
       markAsViewed(quote.id)};
 
   // Filter quotes by archive status
-  const archivedQuotes = quotes.filter(q: QuoteRequest q.is_archived);
-
+  
   return()    <ProtectedRoute>
       <div>
 "
@@ -51,7 +41,7 @@ export default function RequestsPanel(...args[]):  {
               setStatusFilter={setStatusFilter}
               archiveFilter={archiveFilter}
               setArchiveFilter={setArchiveFilter}
-             />
+              />
 
             {/* Main Content */}"
             <Tabs defaultValue="active" className="mb-6">"
@@ -67,7 +57,7 @@ export default function RequestsPanel(...args[]):  {
                   onViewDetails={handleViewDetails}
                   onMarkAsResponded={markAsResponded}
                   onToggleArchive={toggleArchive}
-                 />
+                  />
               </TabsContent>
 "
               <TabsContent value="archived">
@@ -77,20 +67,19 @@ export default function RequestsPanel(...args[]):  {
                   onViewDetails={handleViewDetails}
                   onMarkAsResponded={markAsResponded}
                   onToggleArchive={toggleArchive}
-                 />
+                  />
               </TabsContent>
             </Tabs>
           </div>
         </div>
 
         {/* Quote Details Modal */}
-        <QuoteDetails
-          quote={selectedQuote}
+        <QuoteDetails quote={selectedQuote}
           isOpen={showDetails}
           onClose={(: unknown {
             setShowDetails(false);
             setSelectedQuote(null)}}
-        />
+         />
 
 
       </div>

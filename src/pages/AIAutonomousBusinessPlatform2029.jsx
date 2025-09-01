@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Link } from 'react-router-dom';
 const AIAutonomousBusinessPlatform2029 = () => {
   return()
@@ -331,7 +331,7 @@ const AIAutonomousBusinessPlatform2029 = () => {
               Pre-Order 2029 Edition
             </button>
             <Link"
-              to="/contact""
+              to="/contact"
               className="px-8 py-4 border border-purple-400 text-purple-400 font-bold rounded-lg hover:bg-purple-400/20 transition-all duration-300"
             >
               Schedule Consultation

@@ -1,71 +1,58 @@
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';  ;
+<<<<<<< HEAD
+import { AlertTriangle, 
+  Clock, 
+  TrendingUp, 
+  Shield, 
+  Users, 
+  Database, 
+  BarChart3, 
+  Zap,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  DollarSign,
+  Target,
+  Globe,
+  Lock,
+  Search,
+  FileText,
+  Calendar,
+  MessageSquare,
+  Bell,
+  Phone,
+  Mail,
+  MapPin,
+  Server'
+} from 'lucide-react';
+;
+export { function };
+export default function AIIncidentPostmortems(...args[]): {
   ;
-  ;'
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+  ;
+  ;
   website: 'https://ziontechgroup.com';
-  ;
-
-
-
-
-
-
-};
-
-  const features = [
-    {
-
-      icon: AlertTriangle,'
-      title: 'AI-Powered Root Cause Analysis','
-      description: 'Advanced machine learning algorithms automatically identify the root causes of incidents with 95% accuracy'
-    },
-    {
-
-      icon: Clock,'
-      title: 'Real-time Incident Tracking','
-      description: 'Monitor incidents in real-time with automated alerts and escalation workflows'
-    },
-    {
-
-      icon: TrendingUp,'
-      title: 'Predictive Incident Prevention','
-      description: 'Predict potential incidents before they occur using historical data and AI analytics'
-    },
-    {
-
-      icon: Shield,'
-      title: 'Automated Documentation','
-      description: 'Generate comprehensive incident reports automatically with AI-powered insights'
-    },
-    {
-
-      icon: Users,'
-      title: 'Team Collaboration Tools','
-      description: 'Built-in communication and collaboration features for incident response teams';
-    },;
+  }},;
     {;
-      icon: Database,;'
-      title: 'Centralized Knowledge Base',;'
-      description: 'Maintain a searchable repository of all incidents and resolutions';
-    };
+      icon: Database,;
+      title: 'Centralized Knowledge Base',;
+      description: 'Maintain a searchable repository of all incidents and resolutions'};
   ];
 
-  const benefits = [;'
-    'Reduce incident resolution time by 60%',;'
-    'Improve team productivity by 45%',;'
-    'Decrease repeat incidents by 80%',;'
-    'Enhance customer satisfaction scores',;'
-    'Streamline compliance reporting',;'
+  
+    'Reduce incident resolution time by 60%',;
+    'Improve team productivity by 45%',;
+    'Decrease repeat incidents by 80%',;
+    'Enhance customer satisfaction scores',;
+    'Streamline compliance reporting',;
     'Optimize resource allocation';
   ];
 
-  const pricingPlans = [
-    {
-'
-      name: 'Starter','
-      price: '$299','
-      period: '/month','
-      description: 'Perfect for small teams and startups',
+  
+        'Up to 10 incidents per month',Basic AI analysis',Email support',Standard reporting',Team collaboration (up to 5 users),Basic integrations'
+      ],;
+=======
       features[;'
         'Up to 10 incidents per month','
         'Basic AI analysis','
@@ -73,81 +60,61 @@ import { motion  } from 'framer-motion.ts';  ;
         'Standard reporting','
         'Team collaboration (up to 5 users)','        'Basic integrations'
       ],;'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       cta: 'Start Free Trial',
       popular: false
     },
     {
-'
-      name: 'Professional','
-      price: '$599','
-      period: '/month','
+
+      name: 'Professional',
+      price: '$599',
+      period: '/month',
       description: 'Ideal for growing organizations',
-      features[;'
-        'Up to 50 incidents per month','
-        'Advanced AI analysis','
-        'Priority support','
-        'Custom reporting','
-        'Team collaboration (up to 20 users)','
-        'Advanced integrations','
-        'API access','
-        'Custom workflows'
-      ],;'
+      features[;
+        'Up to 50 incidents per month',Advanced AI analysis',Priority support',Custom reporting',Team collaboration (up to 20 users),Advanced integrations',API access',Custom workflows'
+      ],;
       cta: 'Start Free Trial',
       popular: true
     },
     {
-'
-      name: 'Enterprise','
-      price: '$1,299','
-      period: '/month','
-      description: 'For large enterprises with complex needs',
-      features[;'
-        'Unlimited incidents','
-        'Premium AI analysis','
-        '24/7 dedicated support','
-        'Custom dashboards','
-        'Unlimited team members','
-        'Enterprise integrations','
-        'Advanced analytics','
-        'Custom AI models',;'
-        'On-premise deployment option',;'
-        'Dedicated account manager';
-      ],;'
-      cta: 'Contact Sales',;
-      popular: false;
-    };
-  ];
 
-  const useCases = [
-    {
-'
-      title: 'IT Operations','
-      description: 'Streamline incident management for IT teams with automated workflows and AI insights',
-      icon: Server
-    },
-    {
-'
-      title: 'DevOps','
-      description: 'Integrate with CI/CD pipelines for automated incident detection and response',
-      icon: Zap
-    },
-    {
-'
-      title: 'Security Teams','
-      description: 'Enhance security incident response with AI-powered threat analysis',
-      icon: Shield;
-    },;
+      name: 'Enterprise',
+      price: '$1,299',
+      period: '/month',
+      description: 'For large enterprises with complex needs',
+      features[;
+        'Unlimited incidents',Premium AI analysis',24/7 dedicated support',Custom dashboards',Unlimited team members',Enterprise integrations',Advanced analytics',Custom AI models',;
+        'On-premise deployment option',;
+        'Dedicated account manager';
+      ],;
+      cta: 'Contact Sales',;
+      popular: false};
+  ]},;
+<<<<<<< HEAD
+    {;
+      title: 'Customer Support',;
+      description: 'Improve customer experience with faster incident resolution and communication',;
+      icon: MessageSquare};
+=======
     {;'
       title: 'Customer Support',;'      description: 'Improve customer experience with faster incident resolution and communication',;
       icon: MessageSquare};
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEO "
+<<<<<<< HEAD
+        title="AI Incident Postmortems Platform | Zion Tech Group"
+        description="Revolutionize your incident management with AI-powered postmortems. Automate root cause analysis, prevent future incidents, and improve team productivity."
+        keywords="AI incident management, incident postmortems, root cause analysis, DevOps, IT operations, incident response"
+       />
+=======
         title="AI Incident Postmortems Platform | Zion Tech Group""
         description="Revolutionize your incident management with AI-powered postmortems. Automate root cause analysis, prevent future incidents, and improve team productivity.""        keywords="AI incident management, incident postmortems, root cause analysis, DevOps, IT operations, incident response"
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
@@ -178,7 +145,7 @@ import { motion  } from 'framer-motion.ts';  ;
             transition={{ duration: 0.8 }}
 "
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-100/10 border border-purple-200/20 text-purple-200 text-sm font-medium mb-6">"
-              <AlertTriangle className="w-4 h-4 mr-2" />              AI-Powered Incident Management
+              <AlertTriangle className="w-4 h-4 mr-2"  />              AI-Powered Incident Management
             </div>
 "
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -372,7 +339,7 @@ import { motion  } from 'framer-motion.ts';  ;
                 viewport={{ once: true }}"
                 className="flex items-start space-x-3"
 "
-                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />"                <span className="text-slate-300 text-lg">{benefit}</span>
+                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"  />"                <span className="text-slate-300 text-lg">{benefit}</span>
               </motion.div>;
             ))}
           </div>
@@ -482,7 +449,7 @@ import { motion  } from 'framer-motion.ts';  ;
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-start space-x-3">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />"                      <span className="text-slate-300">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0"  />"                      <span className="text-slate-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -534,7 +501,7 @@ import { motion  } from 'framer-motion.ts';  ;
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Perfect for Every Team
             </h2>"
-            <p className="text-xl text-slate-300 max-w-2xl mx-auto">'
+            <p className="text-xl text-slate-300 max-w-2xl mx-auto">
               Whether you're in IT, DevOps, Security, or Customer Support, our platform adapts to your needs
             </p>
           </motion.div>
@@ -680,17 +647,17 @@ import { motion  } from 'framer-motion.ts';  ;
 "
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">"
               <div className="flex flex-col items-center">"
-                <Phone className="w-8 h-8 text-purple-400 mb-3" />"
+                <Phone className="w-8 h-8 text-purple-400 mb-3"  />"
                 <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>"
                 <p className="text-slate-300">{contactInfo.phone}</p>
               </div>"
               <div className="flex flex-col items-center">"
-                <Mail className="w-8 h-8 text-purple-400 mb-3" />"
+                <Mail className="w-8 h-8 text-purple-400 mb-3"  />"
                 <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>"
                 <p className="text-slate-300">{contactInfo.email}</p>
               </div>"
               <div className="flex flex-col items-center">"
-                <MapPin className="w-8 h-8 text-purple-400 mb-3" />"
+                <MapPin className="w-8 h-8 text-purple-400 mb-3"  />"
                 <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>"                <p className="text-slate-300">{contactInfo.address}</p>
               </div>
             </div>
@@ -700,7 +667,7 @@ import { motion  } from 'framer-motion.ts';  ;
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
 
               Get in Touch"
-              <ArrowRight className="w-5 h-5 ml-2" />            </a>;
+              <ArrowRight className="w-5 h-5 ml-2"  />            </a>;
           </motion.div>;
         </div>;
       </section>;

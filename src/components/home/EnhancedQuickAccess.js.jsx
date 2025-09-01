@@ -8,7 +8,7 @@ export function EnhancedQuickAccess() {
     const quickLinks = [
         {
 "
-            title: t('home.tool_ai_matcher') || "AI Matcher",'"
+            title: t('home.tool_ai_matcher') || "AI Matcher","
             description: t('home.tool_ai_matcher_desc') || "Find perfect matches","
             icon: _jsx(Search, { className: "h-7 w-7" }),"
             link: "/match","
@@ -19,7 +19,7 @@ export function EnhancedQuickAccess() {
         },
         {
 '"
-            title: t('home.tool_talent') || "Talent Directory",'"
+            title: t('home.tool_talent') || "Talent Directory","
             description: t('home.tool_talent_desc') || "Browse verified experts","
             icon: _jsx(Users, { className: "h-7 w-7" }),"
             link: "/talent","
@@ -30,7 +30,7 @@ export function EnhancedQuickAccess() {
         },
         {
 '"
-            title: t('home.tool_services') || "Services",'"
+            title: t('home.tool_services') || "Services","
             description: t('home.tool_services_desc') || "Professional solutions","
             icon: _jsx(Briefcase, { className: "h-7 w-7" }),"
             link: "/services","
@@ -41,7 +41,7 @@ export function EnhancedQuickAccess() {
         },
         {
 '"
-            title: t('home.tool_equipment') || "Equipment",'"
+            title: t('home.tool_equipment') || "Equipment","
             description: t('home.tool_equipment_desc') || "Cutting-edge tech","
             icon: _jsx(Settings, { className: "h-7 w-7" }),"
             link: "/equipment","
@@ -52,7 +52,7 @@ export function EnhancedQuickAccess() {
         },
         {
 '"
-            title: t('nav.community') || "Community",'"
+            title: t('nav.community') || "Community","
             description: t('home.tool_chat_desc') || "Connect & collaborate","
             icon: _jsx(MessageSquare, { className: "h-7 w-7" }),"
             link: "/community","

@@ -1,5 +1,3 @@
-import React from 'react.ts';'
-import { motion } from 'framer-motion.ts';
 import {
 
   Search,
@@ -23,58 +21,13 @@ import {
   TrendingUp,
   Zap,
   Shield,
-  Users,'
+  Users,
   Fingerprint} from 'lucide-react.ts';
 
 const AIAutonomousForensics: React.FC = (): JSX.Element => {
 
-  const features = [
-    {
-
-      icon: Brain,'
-      title: 'AI-Powered Investigation',
-      description:'
-        'Advanced machine learning for autonomous incident investigation and evidence analysis'},
-    {
-
-      icon: Search,'
-      title: 'Evidence Collection',
-      description:'
-        'Automated collection and preservation of digital evidence across multiple sources'},
-    {
-
-      icon: Target,'
-      title: 'Pattern Recognition',
-      description:'
-        'AI-driven pattern recognition to identify connections and anomalies in evidence'},
-    {
-
-      icon: BarChart3,'
-      title: 'Forensic Analytics',
-      description:'
-        'Comprehensive analysis and reporting of forensic findings with AI insights'},
-    {
-
-      icon: Shield,'
-      title: 'Chain of Custody',
-      description:'
-        'Secure chain of custody tracking with blockchain verification'},
-    {
-
-      icon: Fingerprint,'
-      title: 'Digital Fingerprinting','
-      description: 'Advanced digital fingerprinting and evidence correlation'},
-  ];
-
-  const benefits = ['
-    'Reduce investigation time by 70%','
-    'Improve evidence discovery by 80%','
-    'Enhance forensic accuracy by 90%','
-    'Automate routine forensics tasks','
-    '24/7 autonomous operation','
-    'Real-time incident response',
-  ];
-
+  
+  
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}"
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">"
@@ -85,12 +38,12 @@ const AIAutonomousForensics: React.FC = (): JSX.Element => {
             transition={{ duration: 0.8 }}
           >"
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-500/20 to-blue-500/20 border border-indigo-500/30 text-indigo-400 text-sm font-medium mb-6">"
-              <Search className="w-4 h-4 mr-2" />              AI-Powered Autonomous Forensics
+              <Search className="w-4 h-4 mr-2"  />              AI-Powered Autonomous Forensics
             </div>
 "
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Revolutionize Digital Forensics with"
-              <span className="bg-gradient-to-r from-indigo-400 to-blue-500 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-indigo-400 to-blue-500 bg-clip-text text-transparent">
                 {' '}
                 AI Intelligence
               </span>
@@ -188,7 +141,7 @@ const AIAutonomousForensics: React.FC = (): JSX.Element => {
               <div className="space-y-4">
                 {benefits.map((benefit, index) => ("
                   <div key={index} className="flex items-center space-x-3">"
-                    <CheckCircle className="w-5 h-5 text-indigo-400 flex-shrink-0" />"                    <span className="text-gray-300">{benefit}</span>
+                    <CheckCircle className="w-5 h-5 text-indigo-400 flex-shrink-0"  />"                    <span className="text-gray-300">{benefit}</span>
                   </div>
                 ))}
               </div>

@@ -1,5 +1,5 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
+import React from 'react';
+import { motion } from 'framer-motion';
 import { ExclamationTriangleIcon, ArrowPathIcon, HomeIcon, DocumentTextIcon, BugAntIcon } from '@heroicons/react/24/outline';
 class EnhancedErrorBoundary extends Component {
 
@@ -67,16 +67,16 @@ class EnhancedErrorBoundary extends Component {
         };
         // Log to console for development'
         if (process.env.NODE_ENV === 'development') {
-'
-            console.group('Error Report');'
-            // // // // // // // // console.log('Error ID:', errorReport.id);'
+
+            console.group('Error Report');
+            // // // // // // // // console.log('Error ID:', errorReport.id);
             // // // // // // // // console.log('Error Details:', errorReport);
             console.groupEnd();
 
         // In production, you would send this to your error reporting service
         // Example: Sentry.captureException(error, { extra: errorReport });
-'
-            // console.log('Error ID:', errorReport.id);'
+
+            // console.log('Error ID:', errorReport.id);
             // console.log('Error Details:', errorReport);
             console.groupEnd()}
         // In production, you would send this to your error reporting service
@@ -91,14 +91,14 @@ class EnhancedErrorBoundary extends Component {
             showStackTrace: false
         })};
     handleGoHome = () => {
-'
+
         window.location.href = '/'};
     handleReportIssue = () => {
         const errorInfo = this.state.errorInfo;
         if (error && errorInfo) {
 `
-            const issueUrl = `https://github.com/ziontechgroup/zion-website/issues/new?title=Error: ${encodeURIComponent(error.message)}&body=${encodeURIComponent(issueBody)}`;'
-            window.open(issueUrl, '_blank')}
+            const issueUrl = `https://github.com/ziontechgroup/zion-website/issues/new?title=Error: ${encodeURIComponent(error.message)}&body=${encodeURIComponent(issueBody)}`;
+            window.open(issueUrl,_blank')}
     };
                 return this.props.fallback}
             // Default error UI
@@ -123,15 +123,15 @@ class EnhancedErrorBoundary extends Component {
                   <p className="text-red-100">We've encountered an unexpected error</p>
 
     // Add global error handler'
-    window.addEventListener('error', handleError);'
+    window.addEventListener('error', handleError);
     window.addEventListener('unhandledrejection', (event) => {
-'
+
       handleError(event.reason, { componentStack: 'Promise rejection' });
     });
 
     return () => {
-'
-      window.removeEventListener('error', handleError);'
+
+      window.removeEventListener('error', handleError);
       window.removeEventListener('unhandledrejection', handleError);
     };
   }, []);
@@ -172,7 +172,7 @@ class EnhancedErrorBoundary extends Component {
           </div>
           "
           <h1 className="text-2xl font-bold text-gray-900 mb-2">Something went wrong</h1>"
-          <p className="text-gray-600 mb-6">'
+          <p className="text-gray-600 mb-6">
             We're sorry, but something unexpected happened. Please try refreshing the page.
           </p>
           "

@@ -1,48 +1,13 @@
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
-import { Link  } from 'react-router-dom.ts';'
-import { TrendingUp, Users, BarChart3, Target, Zap, Shield, Globe, DollarSign, CheckCircle, Star, ArrowRight, BarChart, PieChart, Activity, Mail, Smartphone, Monitor  } from 'lucide-react';'
-import { SEO  } from '@/components/SEO';
 ;
 export { function };
 export default function AffiliateMarketingTracker(...args[]):  {
 
-  const features = [
-    {
-
-      icon: Target,
-      title: "Smart Affiliate Tracking","
-      description: "Advanced pixel tracking, UTM management, and real-time conversion monitoring across all channels."
-    },
-    {
-
-      icon: BarChart3,"
-      title: "Performance Analytics","
-      description: "Comprehensive dashboards with ROI analysis, conversion rates, and affiliate performance metrics."
-    },
-    {
-
-      icon: Users,"
-      title: "Affiliate Management","
-      description: "Complete affiliate onboarding, commission structures, and automated payouts system."
-    },
-    {
-
-      icon: Zap,"
-      title: "Real-time Reporting","
-      description: "Live dashboards with instant updates on clicks, conversions, and revenue generation."
-    },
-    {
-
-      icon: Shield,"
-      title: "Fraud Detection","
-      description: "AI-powered fraud detection to prevent click fraud and ensure campaign integrity.";
+  
     },;
     {;
       icon: Globe,;"
       title: "Multi-channel Support",;"
-      description: "Track performance across social media, email, influencer partnerships, and more.";
-    };
+      description: "Track performance across social media, email, influencer partnerships, and more."};
   ];
 
   const pricingPlans = [
@@ -90,29 +55,8 @@ export default function AffiliateMarketingTracker(...args[]):  {
         "Advanced fraud protection",;"
         "Custom commission structures";
       ],;
-      popular: false;
-    };
-  ];
-
-  const benefits = [
-    {
-"
-      title: "Increase Revenue","
-      description: "Optimize affiliate performance and boost conversion rates with data-driven insights.",
-      icon: TrendingUp
-    },
-    {
-"
-      title: "Save Time","
-      description: "Automate affiliate management, tracking, and reporting to focus on growth strategies.",
-      icon: Zap
-    },
-    {
-"
-      title: "Reduce Fraud","
-      description: "AI-powered detection prevents click fraud and ensures campaign integrity.",
-      icon: Shield;
-    },;
+      popular: false};
+  ]},;
     {;"
       title: "Scale Efficiently",;"      description: "Manage thousands of affiliates with automated systems and smart workflows.",;
       icon: Users};
@@ -121,10 +65,10 @@ export default function AffiliateMarketingTracker(...args[]):  {
   return()
     <>
       <SEO "
-        title = "Affiliate Marketing Tracker - Zion Tech Group""
-        description="Advanced affiliate marketing tracking platform with AI-powered analytics, fraud detection, and real-time reporting. Boost your affiliate program ROI.""
+        title = "Affiliate Marketing Tracker - Zion Tech Group"
+        description="Advanced affiliate marketing tracking platform with AI-powered analytics, fraud detection, and real-time reporting. Boost your affiliate program ROI."
         canonical="/services/affiliate-marketing-tracker"
-      />
+       />
 "      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}"
         <section className="relative py-20 overflow-hidden">"
@@ -167,13 +111,13 @@ export default function AffiliateMarketingTracker(...args[]):  {
                 </p>"
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link"
-                    to="/request-quote""
+                    to="/request-quote"
                     className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
 
                     Get Started
                   </Link>
                   <Link"
-                    to="/contact""
+                    to="/contact"
                     className="px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300"
 
                     Schedule Demo
@@ -386,7 +330,7 @@ export default function AffiliateMarketingTracker(...args[]):  {
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => ("
                       <li key={featureIndex} className="flex items-center space-x-3">"
-                        <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />"                        <span className="text-gray-300">{feature}</span>
+                        <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0"  />"                        <span className="text-gray-300">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -444,13 +388,13 @@ export default function AffiliateMarketingTracker(...args[]):  {
               </p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link"
-                  to="/request-quote""
+                  to="/request-quote"
                   className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
 
                   Start Free Trial
                 </Link>
                 <Link"
-                  to="/contact""
+                  to="/contact"
                   className="px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300"
 
                   Contact Sales
@@ -461,6 +405,5 @@ export default function AffiliateMarketingTracker(...args[]):  {
         </section>;
       </div>;
     </>
-  );
-}
+  )}
 '"`

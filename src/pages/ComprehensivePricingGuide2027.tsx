@@ -1,12 +1,65 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
-import { Link } from 'react-router-dom';
 import {
 
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { servicesCatalog } from '@/data/servicesCatalog';    <div className="min-h-screen bg-gradient-to-br from-zion-slate-900 via-zion-slate-800 to-zion-slate-900">
+<<<<<<< HEAD
+  Check, 
+  Star, 
+  Zap, 
+  Shield, 
+  Users, 
+  Globe, 
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink,
+  TrendingUp,
+  Award,
+  Clock,
+  DollarSign,
+  Target,
+  Rocket,
+  Brain,
+  Cpu,
+  Database,
+  Cloud,
+  Network,
+  Monitor,
+  Smartphone,
+  Code,
+  BarChart3,
+  Server,
+  Shield as ShieldIcon,
+  Globe as GlobeIcon,
+  Zap as ZapIcon,
+  Users as UsersIcon,
+  TrendingUp as TrendingUpIcon,
+  Award as AwardIcon,
+  Rocket as RocketIcon,
+  Lightbulb as LightbulbIcon,
+  Handshake as HandshakeIcon,
+  Target as TargetIcon2,
+  Users2 as Users2Icon,
+  Briefcase as BriefcaseIcon,
+  Building as BuildingIcon,
+  Truck as TruckIcon,
+  Leaf as LeafIcon2,
+  Gamepad2 as Gamepad2Icon2,
+  Coins as CoinsIcon2,
+  Satellite as SatelliteIcon2,
+  Atom as AtomIcon,
+  Leaf as LeafIcon3,
+  Gamepad2 as Gamepad2Icon3,
+  Coins as CoinsIcon3,
+  Satellite as SatelliteIcon3'
+} from 'lucide-react';
+
+  
+  
+  
+  return ("
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-900 via-zion-slate-800 to-zion-slate-900">
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       {/* Futuristic Animated Background */}"
       <div className="fixed inset-0 overflow-hidden pointer-events-none" aria-hidden="true">"
         <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>"
@@ -23,7 +76,7 @@ import { servicesCatalog } from '@/data/servicesCatalog';    <div className="min
               transition={{ duration: 0.8 }}
             >"
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-zion-cyan/10 border border-zion-cyan/20 text-zion-cyan text-sm font-medium mb-8">"
-                <DollarSign className="w-4 h-4 mr-2" />                Comprehensive Pricing Guide 2027
+                <DollarSign className="w-4 h-4 mr-2"  />                Comprehensive Pricing Guide 2027
               </div>
               "
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent">
@@ -41,14 +94,14 @@ import { servicesCatalog } from '@/data/servicesCatalog';    <div className="min
                   whileTap={{ scale: 0.95 }}"
                   className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center"
                 >"
-                  <Play className="w-5 h-5 mr-2" />                  Start Free Trial
+                  <Play className="w-5 h-5 mr-2"  />                  Start Free Trial
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}"
                   className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan/10 transition-all duration-300 flex items-center"
                 >"
-                  <MessageCircle className="w-5 h-5 mr-2" />                  Contact Sales
+                  <MessageCircle className="w-5 h-5 mr-2"  />                  Contact Sales
                 </motion.button>
               </div>
             </motion.div>
@@ -99,7 +152,7 @@ import { servicesCatalog } from '@/data/servicesCatalog';    <div className="min
                       transition={{ duration: 0.8, delay: serviceIndex * 0.1 }}
                       viewport={{ once: true }}`
                       className={`relative bg-zion-slate-800/50 backdrop-blur-sm border rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 ${
-'
+
                         service.popular ? 'border-zion-cyan/50 bg-zion-cyan/5' : 'border-zion-slate-600/50'`
                       }`}
                     >
@@ -121,7 +174,7 @@ import { servicesCatalog } from '@/data/servicesCatalog';    <div className="min
                       <ul className="space-y-3 mb-6">
                         {service.features.map((feature, idx) => ("
                           <li key={idx} className="flex items-center text-zion-slate-300">"
-                            <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />                            {feature}
+                            <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0"  />                            {feature}
                           </li>) ) }
                       </ul>
                       
@@ -198,7 +251,7 @@ import { servicesCatalog } from '@/data/servicesCatalog';    <div className="min
                   <ul className="space-y-4 mb-8">
                     {pkg.features.map((feature, idx) => ("
                       <li key={idx} className="flex items-center text-zion-slate-300">"
-                        <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />                        {feature}
+                        <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0"  />                        {feature}
                       </li>) ) }
                   </ul>
                   
@@ -290,18 +343,17 @@ import { servicesCatalog } from '@/data/servicesCatalog';    <div className="min
                   whileTap={{ scale: 0.95 }}"
                   className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center"
                 >"
-                  <Rocket className="w-5 h-5 mr-2" />                  Start Free Trial
+                  <Rocket className="w-5 h-5 mr-2"  />                  Start Free Trial
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}"
                   className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan/10 transition-all duration-300 flex items-center"
                 >"
-                  <MessageCircle className="w-5 h-5 mr-2" />                  Schedule Consultation
+                  <MessageCircle className="w-5 h-5 mr-2"  />                  Schedule Consultation
                 </motion.button>
               </motion.div>
-            );
-          })}
+            )})}
         </div>
 
         {/* No Results */}
@@ -312,8 +364,7 @@ import { servicesCatalog } from '@/data/servicesCatalog';    <div className="min
               onClick={() => {
                 setSearchTerm('');
                 setSelectedCategory('all');
-                setSelectedPriceRange('all');
-              }}
+                setSelectedPriceRange('all')}}
               className="text-cyan-400 hover:text-cyan-300 transition-colors"
             >
               Clear all filters
@@ -328,22 +379,21 @@ import { servicesCatalog } from '@/data/servicesCatalog';    <div className="min
             <h3 className="text-2xl font-bold text-white mb-8">Get in Touch</h3>"
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
               <div className="flex flex-col items-center">"
-                <Phone className="w-8 h-8 text-zion-cyan mb-4" />"
+                <Phone className="w-8 h-8 text-zion-cyan mb-4"  />"
                 <p className="text-zion-slate-300">+1 302 464 0950</p>
               </div>"
               <div className="flex flex-col items-center">"
-                <Mail className="w-8 h-8 text-zion-cyan mb-4" />"
+                <Mail className="w-8 h-8 text-zion-cyan mb-4"  />"
                 <p className="text-zion-slate-300">kleber@ziontechgroup.com</p>
               </div>"
               <div className="flex flex-col items-center">"
-                <MapPin className="w-8 h-8 text-zion-cyan mb-4" />"                <p className="text-zion-slate-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                <MapPin className="w-8 h-8 text-zion-cyan mb-4"  />"                <p className="text-zion-slate-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
               </div>
             </div>
           </div>
         </section>
       </main>
     </>
-  );
-}
+  )}
 export default ComprehensivePricingGuide2027;
 '"`

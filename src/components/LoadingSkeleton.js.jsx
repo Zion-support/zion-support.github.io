@@ -1,25 +1,25 @@
-import React from 'react';'
+import React from 'react';
 import { cn } from '@/lib/utils';
 export function Skeleton({
 
   className,
   width,
-  height,'
+  height,
   rounded = 'md',
   animated = true}) {
 
   const roundedClasses = {
-'
-    none: '','
-    sm: 'rounded-sm','
-    md: 'rounded-md','
-    lg: 'rounded-lg','
+
+    none: '',
+    sm: 'rounded-sm',
+    md: 'rounded-md',
+    lg: 'rounded-lg',
     full: 'rounded-full'};
   return()
     <div
       className={cn('
         'bg-muted',
-        roundedClasses[rounded],'
+        roundedClasses[rounded],
         animated && 'animate-pulse',
         className
       )}
@@ -50,7 +50,7 @@ export function CardSkeleton({
           <div className="space-y-2">
             {Array.from({ length: lines }).map((_, i) => (
               <Skeleton
-                key={i}'
+                key={i}
                 className={cn('h-4', i === lines - 1 ? 'w-2/3' : 'w-full')}
               />
             ))}
@@ -123,7 +123,7 @@ export function TableSkeleton({
           <div key={rowIndex} className="flex gap-4">
             {Array.from({ length: columns }).map((_, colIndex) => (
               <Skeleton
-                key={colIndex}'
+                key={colIndex}
                 className={cn('h-4', colIndex === 0 ? 'w-1/3' : 'flex-1')}
               />
             ))}

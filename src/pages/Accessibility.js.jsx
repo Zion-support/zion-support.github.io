@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Eye, Ear, Hand, Brain, Shield, Award, CheckCircle } from 'lucide-react';
 const Accessibility = () => {
     const accessibilityFeatures = [

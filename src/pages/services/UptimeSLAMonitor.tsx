@@ -1,86 +1,18 @@
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
-import { Link  } from 'react-router-dom.ts';'
-import { Activity, AlertTriangle, Clock, CheckCircle, Shield, Zap, BarChart3, Globe, Smartphone, Monitor, Server, Wifi, Database, Cloud, Bell, TrendingUp, Users, Target  } from 'lucide-react';'
-import { SEO  } from '@/components/SEO';
 ;
 export { function };
 export default function UptimeSLAMonitor(...args: []):  {
 
-  const features = [
-    {
-
-      icon: Activity,
-      title: "Real-time Monitoring","
-      description: "24/7 monitoring of websites, APIs, databases, and infrastructure with sub-second response times."
-    },
-    {
-
-      icon: AlertTriangle,"
-      title: "Instant Alerts","
-      description: "Smart notifications via email, SMS, Slack, Discord, and webhooks when issues are detected."
-    },
-    {
-
-      icon: Clock,"
-      title: "SLA Tracking","
-      description: "Automated SLA compliance monitoring with detailed uptime reports and performance metrics."
-    },
-    {
-
-      icon: BarChart3,"
-      title: "Advanced Analytics","
-      description: "Comprehensive dashboards showing response times, error rates, and performance trends."
-    },
-    {
-
-      icon: Globe,"
-      title: "Global Monitoring","
-      description: "Monitor from multiple locations worldwide to ensure consistent user experience.";
+  
     },;
     {;
       icon: Shield,;"
       title: "Security Monitoring",;"
-      description: "SSL certificate monitoring, security headers, and vulnerability scanning included.";
-    };
-  ];
-
-  const monitoringTypes = [
-    {
-
-      icon: Monitor,"
-      title: "Website Monitoring","
-      description: "HTTP/HTTPS monitoring, content validation, and performance tracking"
-    },
-    {
-
-      icon: Server,"
-      title: "Server Monitoring","
-      description: "CPU, memory, disk usage, and process monitoring"
-    },
-    {
-
-      icon: Database,"
-      title: "Database Monitoring","
-      description: "Query performance, connection pools, and replication status"
-    },
-    {
-
-      icon: Wifi,"
-      title: "Network Monitoring","
-      description: "Bandwidth usage, latency, packet loss, and connectivity"
-    },
-    {
-
-      icon: Cloud,"
-      title: "Cloud Services","
-      description: "AWS, Azure, GCP service monitoring and cost tracking";
-    },;
+      description: "SSL certificate monitoring, security headers, and vulnerability scanning included."};
+  ]},;
     {;
       icon: Smartphone,;"
       title: "Mobile App Monitoring",;"
-      description: "API endpoints, push notifications, and mobile performance";
-    };
+      description: "API endpoints, push notifications, and mobile performance"};
   ];
 
   const pricingPlans = [
@@ -132,29 +64,8 @@ export default function UptimeSLAMonitor(...args: []):  {
         "White-label options",;"
         "Custom integrations";
       ],;
-      popular: false;
-    };
-  ];
-
-  const benefits = [
-    {
-"
-      title: "Prevent Downtime","
-      description: "Detect issues before they affect users with proactive monitoring and instant alerts.",
-      icon: Shield
-    },
-    {
-"
-      title: "Meet SLA Requirements","
-      description: "Automatically track and report on SLA compliance for client contracts and internal metrics.",
-      icon: Target
-    },
-    {
-"
-      title: "Improve Performance","
-      description: "Identify performance bottlenecks and optimize your infrastructure based on real data.",
-      icon: TrendingUp;
-    },;
+      popular: false};
+  ]},;
     {;"
       title: "Reduce MTTR",;"      description: "Faster incident response with detailed error information and automated escalation.",;
       icon: Zap};
@@ -163,10 +74,10 @@ export default function UptimeSLAMonitor(...args: []):  {
   return()
     <>
       <SEO "
-        title = "Uptime SLA Monitor - Zion Tech Group""
-        description="Professional uptime monitoring and SLA tracking platform. Monitor websites, APIs, servers, and infrastructure with real-time alerts and comprehensive reporting.""
+        title = "Uptime SLA Monitor - Zion Tech Group"
+        description="Professional uptime monitoring and SLA tracking platform. Monitor websites, APIs, servers, and infrastructure with real-time alerts and comprehensive reporting."
         canonical="/services/uptime-sla-monitor"
-      />
+       />
 "      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}"
         <section className="relative py-20 overflow-hidden">"
@@ -209,13 +120,13 @@ export default function UptimeSLAMonitor(...args: []):  {
                 </p>"
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link"
-                    to="/request-quote""
+                    to="/request-quote"
                     className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
 
                     Start Monitoring
                   </Link>
                   <Link"
-                    to="/contact""
+                    to="/contact"
                     className="px-8 py-4 border-2 border-green-500 text-green-400 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-300"
 
                     Schedule Demo
@@ -490,7 +401,7 @@ export default function UptimeSLAMonitor(...args: []):  {
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => ("
                       <li key={featureIndex} className="flex items-center space-x-3">"
-                        <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />"                        <span className="text-gray-300">{feature}</span>
+                        <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0"  />"                        <span className="text-gray-300">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -548,13 +459,13 @@ export default function UptimeSLAMonitor(...args: []):  {
               </p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link"
-                  to="/request-quote""
+                  to="/request-quote"
                   className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
 
                   Start Free Trial
                 </Link>
                 <Link"
-                  to="/contact""
+                  to="/contact"
                   className="px-8 py-4 border-2 border-green-500 text-green-400 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-300"
 
                   Contact Sales
@@ -565,5 +476,4 @@ export default function UptimeSLAMonitor(...args: []):  {
         </section>;
       </div>;
     </>
-  );
-}}}}}}'"`
+  )}}}}}}'"`

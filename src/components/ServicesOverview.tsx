@@ -1,6 +1,43 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
-import { Link } from 'react-router-dom';  ];
+<<<<<<< HEAD
+import {
+
+  Brain,
+  Shield,
+  Rocket,
+  Lock,
+  Cpu,
+  Code,
+  Users,
+  Globe,
+  Heart,
+  TrendingUp,
+  Zap,
+  Database,
+  Network,
+  Server,
+  Cloud,
+  FileText,
+  BarChart3,
+  MessageCircle,
+  Phone,
+  Mail,
+  MapPin,
+  ArrowRight,
+  Star,
+  CheckCircle,
+  Clock'
+ } from 'lucide-react';
+
+export function ServicesOverview(...args[]):  {
+
+  
+      icon: Heart,;
+      color: 'from-zion-pink to-zion-purple',;
+      description: 'Healthcare artificial intelligence solutions',;
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category.includes('Healthcare'))};
+  ];
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   return()
     <div className = "py-20 bg-futuristic relative overflow-hidden">
@@ -93,7 +130,7 @@ import { Link } from 'react-router-dom';  ];
 
                   {/* Hover Arrow */}"
                   <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">"
-                    <ArrowRight className="w-5 h-5 text-zion-cyan" />                  </div>
+                    <ArrowRight className="w-5 h-5 text-zion-cyan"  />                  </div>
                 </div>
               </Link>
             </motion.div>;) ) }
@@ -164,7 +201,7 @@ import { Link } from 'react-router-dom';  ];
                   <div className="flex items-center justify-between text-sm">"
                     <span className="text-zion-cyan font-medium">{service.category}</span>`
                     <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-'
+
                       service.innovationLevel === 'Cutting-edge''
                         ? 'bg-zion-cyan/20 text-zion-cyan''
                         : 'bg-zion-purple/20 text-zion-purple'`
@@ -175,7 +212,7 @@ import { Link } from 'react-router-dom';  ];
 "
                   <div className="flex items-center justify-between text-sm">"
                     <div className="flex items-center gap-1 text-zion-green">"
-                      <TrendingUp className="w-4 h-4" />                      <span>ROI: {service.roi}</span>
+                      <TrendingUp className="w-4 h-4"  />                      <span>ROI: {service.roi}</span>
                     </div>"
                     <div className="text-zion-slate-light">
                       Market: {service.marketPrice}
@@ -186,11 +223,11 @@ import { Link } from 'react-router-dom';  ];
                 <div className="flex items-center justify-between pt-4 border-t border-zion-cyan/20">"
                   <div className="flex items-center gap-4 text-sm text-zion-slate-light">"
                     <div className="flex items-center gap-1">"
-                      <Clock className="w-4 h-4" />
+                      <Clock className="w-4 h-4"  />
                       <span>{service.estimatedDelivery}</span>
                     </div>"
                     <div className="flex items-center gap-1">"
-                      <Star className="w-4 h-4 text-zion-cyan" />                      <span>{service.supportLevel}</span>
+                      <Star className="w-4 h-4 text-zion-cyan"  />                      <span>{service.supportLevel}</span>
                     </div>
                   </div>
 
@@ -199,7 +236,7 @@ import { Link } from 'react-router-dom';  ];
                     className="btn-futuristic px-4 py-2 text-sm"
 
                     Learn More"
-                    <ArrowRight className="w-4 h-4 ml-2" />                  </Link>
+                    <ArrowRight className="w-4 h-4 ml-2"  />                  </Link>
                 </div>;
               </motion.div>) ) }
           </div>
@@ -211,14 +248,10 @@ import { Link } from 'react-router-dom';  ];
           initial = {
 
   { opacity: 0,
-  y: 30 ;
-
-}}          whileInView = {
+  y: 30 }}          whileInView = {
 
   { opacity: 1,
-  y: 0 ;
-
-}}          transition={{ duration: 0.8 }}
+  y: 0 }}          transition={{ duration: 0.8 }}
 "
           <div className="bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10 rounded-2xl p-12 border border-zion-cyan/20">"
             <h2 className="heading-responsive font-bold mb-6">
@@ -231,38 +264,38 @@ import { Link } from 'react-router-dom';  ];
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="btn-futuristic px-8 py-4 text-lg"
 "
-                <MessageCircle className="w-5 h-5 mr-2" />                Get Free Consultation
+                <MessageCircle className="w-5 h-5 mr-2"  />                Get Free Consultation
               </Link>
 
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="btn-neon px-8 py-4 text-lg"
 "
-                <Phone className="w-5 h-5 mr-2" />                Call Now: +1 302 464 0950
+                <Phone className="w-5 h-5 mr-2"  />                Call Now: +1 302 464 0950
               </a>
             </div>
 
             {/* Contact Info Grid */}"
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">;"
               <div className="text-center p-4 rounded-xl bg-zion-slate-light/5 border border-zion-cyan/20">"
-                <MapPin className="w-8 h-8 text-zion-cyan mx-auto mb-2" />"
+                <MapPin className="w-8 h-8 text-zion-cyan mx-auto mb-2"  />"
                 <p className="font-medium text-white mb-1">Address</p>"
                 <p className="text-sm text-zion-slate-light">364 E Main St STE 1008</p>"
                 <p className="text-sm text-zion-slate-light">Middletown DE 19709</p>
               </div>
 "
               <div className="text-center p-4 rounded-xl bg-zion-slate-light/5 border border-zion-purple/20">"
-                <Mail className="w-8 h-8 text-zion-purple mx-auto mb-2" />"
+                <Mail className="w-8 h-8 text-zion-purple mx-auto mb-2"  />"
                 <p className="font-medium text-white mb-1">Email</p>"                <a href="mailto:kleber@ziontechgroup.com" className="text-zion-cyan hover:text-zion-purple transition-colors duration-300 text-sm">
                   kleber@ziontechgroup.com
                 </a>
               </div>
 "
               <div className="text-center p-4 rounded-xl bg-zion-slate-light/5 border border-zion-blue/20">"
-                <Globe className="w-8 h-8 text-zion-blue mx-auto mb-2" />"
+                <Globe className="w-8 h-8 text-zion-blue mx-auto mb-2"  />"
                 <p className="font-medium text-white mb-1">Website</p>"                <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-zion-cyan hover:text-zion-blue transition-colors duration-300 text-sm">
                   ziontechgroup.com
                 </a>
@@ -271,6 +304,5 @@ import { Link } from 'react-router-dom';  ];
           </div>;
         </motion.div>;
       </div>;
-    </div>;) ;
-}
+    </div>;) }
 '"`

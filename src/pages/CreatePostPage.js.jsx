@@ -1,6 +1,6 @@
-import { Link, useNavigate, useSearchParams } from 'react-router-dom';'
-import { SEO } from '@/components/SEO';'
-import PostForm from '@/components/community/PostForm';'
+import { Link, useNavigate, useSearchParams } from 'react-router-dom';
+import { SEO } from '@/components/SEO';
+import PostForm from '@/components/community/PostForm';
 import { useToast } from '@/hooks/use-toast';
 export default function CreatePostPage() {
   const navigate = useNavigate();
@@ -8,7 +8,7 @@ export default function CreatePostPage() {
   const [searchParams] = useSearchParams();
   // Get category from URL query params if available
   const initialValues = {
-'
+
     categoryId: initialCategory || 'project-help'};
   const handleSubmit = async values => {
 
@@ -16,26 +16,26 @@ export default function CreatePostPage() {
       // Here we would normally save to the database'
       // For now, we'll just simulate a successful post creation
       // Parse tags into an array'
-      const tagsArray = values.tags.split(',').map(tag => tag.trim());
+      const tagsArray = values.tags.split(',).map(tag => tag.trim());
       toast({
-'
-        title: 'Post created','
+
+        title: 'Post created',
         description: 'Your post has been published successfully'});
       // Redirect to the forum category
       router(`/community/category/${values.categoryId}`);
     } catch (error) {
       toast({
-'
-        title: 'Error','
-        description: 'There was a problem creating your post','
+
+        title: 'Error',
+        description: 'There was a problem creating your post',
         variant: 'destructive'});
     }
   };
   return()
     (
       <SEO
-        title="Create New Post | Community Forum | Zion AI Marketplace""
-        description="Create a new discussion post in the Zion AI Marketplace community forum.""
+        title="Create New Post | Community Forum | Zion AI Marketplace"
+        description="Create a new discussion post in the Zion AI Marketplace community forum."
         keywords="community, forum, discussion, create post, new thread"
       />
     ),
@@ -43,7 +43,7 @@ export default function CreatePostPage() {
       <div className="container py-8">"
         <div className="flex items-center gap-3 mb-6">
           <Link"
-            to="/community""
+            to="/community"
             className="text-sm text-muted-foreground hover:text-foreground"
           >
             Forum

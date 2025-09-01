@@ -16,7 +16,7 @@ console.log('🔗 Link Integrity Checker Started');
 
 class LinkIntegrityChecker {
   constructor() {
-    this.projectRoot = path.resolve(__dirname, '..');
+    this.projectRoot = path.resolve(__dirname,..');
     this.issues = [];
     this.checkedFiles = 0;
   }
@@ -55,7 +55,7 @@ class LinkIntegrityChecker {
       
       for (const file of htmlFiles) {
         this.checkedFiles++;
-        const content = fs.readFileSync(file, 'utf8');
+        const content = fs.readFileSync(file,utf8');
         
         // Check for broken image references
         const imgRegex = /<img[^>]+src=["']([^"']+)["']/g;
@@ -100,7 +100,7 @@ class LinkIntegrityChecker {
       
       for (const file of cssFiles) {
         this.checkedFiles++;
-        const content = fs.readFileSync(file, 'utf8');
+        const content = fs.readFileSync(file,utf8');
         
         // Check for broken image references in CSS
         const urlRegex = /url\(['"]?([^'")\s]+)['"]?\)/g;
@@ -129,7 +129,7 @@ class LinkIntegrityChecker {
       
       for (const file of allFiles) {
         this.checkedFiles++;
-        const content = fs.readFileSync(file, 'utf8');
+        const content = fs.readFileSync(file,utf8');
         
         // Check for broken import statements
         const importRegex = /import\s+.*?from\s+['"]([^'"]+)['"]/g;
@@ -161,7 +161,7 @@ class LinkIntegrityChecker {
     try {
       console.log('🔨 Checking build artifacts...');
       
-      const distPath = path.join(this.projectRoot, 'dist');
+      const distPath = path.join(this.projectRoot,dist');
       if (!fs.existsSync(distPath)) {
         this.issues.push('Build directory (dist) does not exist');
         return;
@@ -169,10 +169,7 @@ class LinkIntegrityChecker {
       
       // Check for essential build files
       const essentialFiles = [
-        'index.html',
-        'css',
-        'js',
-        'assets'
+        'index.html',css',js',assets'
       ];
       
       for (const file of essentialFiles) {
@@ -183,9 +180,9 @@ class LinkIntegrityChecker {
       }
       
       // Check for broken internal links in build
-      const indexHtmlPath = path.join(distPath, 'index.html');
+      const indexHtmlPath = path.join(distPath,index.html');
       if (fs.existsSync(indexHtmlPath)) {
-        const content = fs.readFileSync(indexHtmlPath, 'utf8');
+        const content = fs.readFileSync(indexHtmlPath,utf8');
         
         // Check for broken asset references
         const assetRegex = /(src|href)=["']([^"']+)["']/g;
@@ -194,7 +191,7 @@ class LinkIntegrityChecker {
         while ((match = assetRegex.exec(content)) !== null) {
           const assetPath = match[2];
           if (assetPath.startsWith('./') || assetPath.startsWith('/')) {
-            const fullPath = path.join(distPath, assetPath.replace(/^\.?\//, ''));
+            const fullPath = path.join(distPath, assetPath.replace(/^\.?\//,));
             if (!fs.existsSync(fullPath)) {
               this.issues.push(`Broken asset reference in build: ${assetPath}`);
             }
@@ -248,7 +245,7 @@ class LinkIntegrityChecker {
       const fullPath = path.resolve(sourceDir, importPath);
       
       // Check for .js, .ts, .tsx, .jsx extensions
-      const extensions = ['.js', '.ts', '.tsx', '.jsx', ''];
+      const extensions = ['.js',.ts',.tsx',.jsx',];
       return extensions.some(ext => {
         const testPath = ext ? `${fullPath}${ext}` : fullPath;
         return fs.existsSync(testPath);
@@ -258,7 +255,7 @@ class LinkIntegrityChecker {
     // Handle absolute imports from project root
     if (importPath.startsWith('/')) {
       const fullPath = path.join(this.projectRoot, importPath.substring(1));
-      const extensions = ['.js', '.ts', '.tsx', '.jsx', ''];
+      const extensions = ['.js',.ts',.tsx',.jsx',];
       return extensions.some(ext => {
         const testPath = ext ? `${fullPath}${ext}` : fullPath;
         return fs.existsSync(testPath);
@@ -306,7 +303,7 @@ class LinkIntegrityChecker {
     };
     
     // Save report to file
-    const reportPath = path.join(this.projectRoot, 'logs', 'link-integrity-report.json');
+    const reportPath = path.join(this.projectRoot,logs',link-integrity-report.json');
     try {
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
       console.log(`📊 Report saved to: ${reportPath}`);

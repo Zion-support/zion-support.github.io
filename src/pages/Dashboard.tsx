@@ -1,133 +1,61 @@
-import React from 'react';'
-import { motion } from 'framer-motion';    };
+<<<<<<< HEAD
+  DollarSign,
+  Activity,
+  DollarSign,
+  Activity,
+  Shield,
+  Zap,
+  Settings,
+  Bell,
+  Search,
+  Calendar,
+  FileText,
+  MessageSquare,
+  Star,
+  ArrowRight'
+ } from 'lucide-react';
+
+export default function Dashboard(...args[]):  {
+
+  
+    };
+=======
+  ]};
+  ]};
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ]};
   ]};
   ];
 
-  const recentProjects = [
-    {
-
-      id: 1,"
-      name: "AI Chatbot Development","
-      status: "In Progress",
-      progress: 75,"
-      dueDate: "2024-02-15","
-      priority: "High"
-    },
-    {
-
-      id: 2,"
-      name: "Cybersecurity Audit","
-      status: "Completed",
-      progress: 100,"
-      dueDate: "2024-01-30","
-      priority: "Medium"
-    },
-    {
-
-      id: 3,"
-      name: "Cloud Migration","
-      status: "Planning",
-      progress: 25,"
-      dueDate: "2024-03-01","
-      priority: "High"
-    },
-    {
-
-      id: 4,"
-      name: "Mobile App Development","
-      status: "In Progress",
-      progress: 60,"
-      dueDate: "2024-02-28","
-      priority: "Medium";
-    };
-  ];
-
-  const notifications = [
-    {
-
-      id: 1,"
-      title: "New project assigned","
-      message: "You have been assigned to the AI Chatbot project","
-      time: "2 hours ago",
-      read: false
-    },
-    {
-
-      id: 2,"
-      title: "Meeting reminder","
-      message: "Team standup meeting in 30 minutes","
-      time: "4 hours ago",
-      read: false
-    },
-    {
-
-      id: 3,"
-      title: "System update","
-      message: "Scheduled maintenance completed successfully","
-      time: "1 day ago",
-      read: true;
-    };
-  ];
-
-  const quickActions = [
-    {
-"
-      title: "Create Project","
-      description: "Start a new project","
-      icon: <FileText className="h-8 w-8 text-zion-cyan" />,"
-      color: "bg-zion-cyan/10 border-zion-cyan/20"
-    },
-    {
-"
-      title: "Schedule Meeting","
-      description: "Book a team meeting","
-      icon: <Calendar className="h-8 w-8 text-zion-purple" />,"
-      color: "bg-zion-purple/10 border-zion-purple/20"
-    },
-    {
-"
-      title: "Generate Report","
-      description: "Create analytics report","
-      icon: <BarChart3 className="h-8 w-8 text-zion-cyan" />,"
-      color: "bg-zion-cyan/10 border-zion-cyan/20"
-    },
-    {
-"
-      title: "Support Ticket","
-      description: "Submit support request","
-      icon: <MessageSquare className="h-8 w-8 text-zion-purple" />,"
-      color: "bg-zion-purple/10 border-zion-purple/20"
-    }'
-    { name: 'Active Services', value: '12', icon: Zap, change: '+2', changeType: 'positive', color: 'from-blue-500 to-cyan-500' },;'
-    { name: 'AI Solutions', value: '8', icon: Brain, change: '+3', changeType: 'positive', color: 'from-purple-500 to-pink-500' },;'
-    { name: 'Cloud Services', value: '5', icon: Cloud, change: '+1', changeType: 'positive', color: 'from-indigo-500 to-blue-500' },;'
-    { name: 'Security Score', value: '98%', icon: Shield, change: '+2%', changeType: 'positive', color: 'from-green-500 to-emerald-500' },;'
-    { name: 'Monthly Usage', value: '2.4TB', icon: Database, change: '+15%', changeType: 'positive', color: 'from-orange-500 to-red-500' },;'
+  
+    { name: 'AI Solutions', value: '8', icon: Brain, change: '+3', changeType: 'positive', color: 'from-purple-500 to-pink-500' },;
+    { name: 'Cloud Services', value: '5', icon: Cloud, change: '+1', changeType: 'positive', color: 'from-indigo-500 to-blue-500' },;
+    { name: 'Security Score', value: '98%', icon: Shield, change: '+2%', changeType: 'positive', color: 'from-green-500 to-emerald-500' },;
+    { name: 'Monthly Usage', value: '2.4TB', icon: Database, change: '+15%', changeType: 'positive', color: 'from-orange-500 to-red-500' },;
     { name: 'Response Time', value: '45ms', icon: Activity, change: '-12ms', changeType: 'negative', color: 'from-teal-500 to-green-500' };
   ];
 
-  const recentServices = [;'
-    { name: 'AI Business Intelligence', status: 'Active', lastUsed: '2 hours ago', usage: '85%', icon: Brain, color: 'from-blue-500 to-indigo-500' },;'
-    { name: 'Cloud DevOps Platform', status: 'Active', lastUsed: '1 day ago', usage: '92%', icon: Cloud, color: 'from-indigo-500 to-blue-500' },;'
-    { name: 'AI Cybersecurity Suite', status: 'Active', lastUsed: '3 days ago', usage: '78%', icon: Shield, color: 'from-red-500 to-orange-500' },;'
-    { name: 'Quantum Computing Lab', status: 'Active', lastUsed: '1 week ago', usage: '45%', icon: Atom, color: 'from-purple-500 to-indigo-500' },;'
+  
+    { name: 'AI Business Intelligence', status: 'Active', lastUsed: '2 hours ago', usage: '85%', icon: Brain, color: 'from-blue-500 to-indigo-500' },;
+    { name: 'Cloud DevOps Platform', status: 'Active', lastUsed: '1 day ago', usage: '92%', icon: Cloud, color: 'from-indigo-500 to-blue-500' },;
+    { name: 'AI Cybersecurity Suite', status: 'Active', lastUsed: '3 days ago', usage: '78%', icon: Shield, color: 'from-red-500 to-orange-500' },;
+    { name: 'Quantum Computing Lab', status: 'Active', lastUsed: '1 week ago', usage: '45%', icon: Atom, color: 'from-purple-500 to-indigo-500' },;
     { name: 'IoT Edge Platform', status: 'Active', lastUsed: '2 weeks ago', usage: '67%', icon: Network, color: 'from-cyan-500 to-blue-500' };
   ];
 
-  const upcomingEvents = [;'
-    { title: 'AI Strategy Workshop', date: 'Dec 15, 2024', time: '10:00 AM', type: 'Workshop', icon: Brain },;'
-    { title: 'Security Audit Review', date: 'Dec 18, 2024', time: '2:00 PM', type: 'Review', icon: Shield },;'
-    { title: 'Cloud Migration Planning', date: 'Dec 22, 2024', time: '11:00 AM', type: 'Planning', icon: Cloud },;'
+  
+    { title: 'AI Strategy Workshop', date: 'Dec 15, 2024', time: '10:00 AM', type: 'Workshop', icon: Brain },;
+    { title: 'Security Audit Review', date: 'Dec 18, 2024', time: '2:00 PM', type: 'Review', icon: Shield },;
+    { title: 'Cloud Migration Planning', date: 'Dec 22, 2024', time: '11:00 AM', type: 'Planning', icon: Cloud },;
     { title: 'Quantum Computing Demo', date: 'Dec 25, 2024', time: '3:00 PM', type: 'Demo', icon: Atom };
   ];
 
-  const quickActions = [;'
-    { name: 'Add New Service', icon: Plus, href: '/services', color: 'from-green-500 to-emerald-500' },;'
-    { name: 'View Analytics', icon: BarChart3, href: '/analytics', color: 'from-blue-500 to-indigo-500' },;'
-    { name: 'Security Settings', icon: Shield, href: '/security', color: 'from-red-500 to-orange-500' },;'
-    { name: 'Support Request', icon: HelpCircle, href: '/help', color: 'from-purple-500 to-pink-500' },;'
-    { name: 'Billing & Plans', icon: DollarSign, href: '/pricing', color: 'from-yellow-500 to-orange-500' },;'
+  
+    { name: 'Add New Service', icon: Plus, href: '/services', color: 'from-green-500 to-emerald-500' },;
+    { name: 'View Analytics', icon: BarChart3, href: '/analytics', color: 'from-blue-500 to-indigo-500' },;
+    { name: 'Security Settings', icon: Shield, href: '/security', color: 'from-red-500 to-orange-500' },;
+    { name: 'Support Request', icon: HelpCircle, href: '/help', color: 'from-purple-500 to-pink-500' },;
+    { name: 'Billing & Plans', icon: DollarSign, href: '/pricing', color: 'from-yellow-500 to-orange-500' },;
     { name: 'API Documentation', icon: Code, href: '/api-docs', color: 'from-gray-500 to-slate-500' };
   ];
 
@@ -166,11 +94,11 @@ import { motion } from 'framer-motion';    };
           </div>"
           <div className="flex items-center gap-4">"
             <button className="relative p-2 text-zion-slate-light hover:text-white transition-colors">"
-              <Bell className="h-6 w-6" />"
+              <Bell className="h-6 w-6"  />"
               <span className="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full"></span>
             </button>"
             <button className="p-2 text-zion-slate-light hover:text-white transition-colors">"
-              <Settings className="h-6 w-6" />            </button>
+              <Settings className="h-6 w-6"  />            </button>
 import {
 
   BarChart3, 
@@ -224,36 +152,40 @@ import {
 } from 'lucide-react';
 
 export default function Dashboard() {
-  const stats = ['
-    { name: 'Active Services', value: '12', icon: Zap, change: '+2', changeType: 'positive', color: 'from-blue-500 to-cyan-500' },;'
-    { name: 'AI Solutions', value: '8', icon: Brain, change: '+3', changeType: 'positive', color: 'from-purple-500 to-pink-500' },;'
-    { name: 'Cloud Services', value: '5', icon: Cloud, change: '+1', changeType: 'positive', color: 'from-indigo-500 to-blue-500' },;'
-    { name: 'Security Score', value: '98%', icon: Shield, change: '+2%', changeType: 'positive', color: 'from-green-500 to-emerald-500' },;'
-    { name: 'Monthly Usage', value: '2.4TB', icon: Database, change: '+15%', changeType: 'positive', color: 'from-orange-500 to-red-500' },;'
+  
+    { name: 'AI Solutions', value: '8', icon: Brain, change: '+3', changeType: 'positive', color: 'from-purple-500 to-pink-500' },;
+    { name: 'Cloud Services', value: '5', icon: Cloud, change: '+1', changeType: 'positive', color: 'from-indigo-500 to-blue-500' },;
+    { name: 'Security Score', value: '98%', icon: Shield, change: '+2%', changeType: 'positive', color: 'from-green-500 to-emerald-500' },;
+    { name: 'Monthly Usage', value: '2.4TB', icon: Database, change: '+15%', changeType: 'positive', color: 'from-orange-500 to-red-500' },;
     { name: 'Response Time', value: '45ms', icon: Activity, change: '-12ms', changeType: 'negative', color: 'from-teal-500 to-green-500' }
   ];
 
-  const recentServices = ['
-    { name: 'AI Business Intelligence', status: 'Active', lastUsed: '2 hours ago', usage: '85%', icon: Brain, color: 'from-blue-500 to-indigo-500' },;'
-    { name: 'Cloud DevOps Platform', status: 'Active', lastUsed: '1 day ago', usage: '92%', icon: Cloud, color: 'from-indigo-500 to-blue-500' },;'
-    { name: 'AI Cybersecurity Suite', status: 'Active', lastUsed: '3 days ago', usage: '78%', icon: Shield, color: 'from-red-500 to-orange-500' },;'
-    { name: 'Quantum Computing Lab', status: 'Active', lastUsed: '1 week ago', usage: '45%', icon: Atom, color: 'from-purple-500 to-indigo-500' },;'
+  
+    { name: 'Cloud DevOps Platform', status: 'Active', lastUsed: '1 day ago', usage: '92%', icon: Cloud, color: 'from-indigo-500 to-blue-500' },;
+    { name: 'AI Cybersecurity Suite', status: 'Active', lastUsed: '3 days ago', usage: '78%', icon: Shield, color: 'from-red-500 to-orange-500' },;
+    { name: 'Quantum Computing Lab', status: 'Active', lastUsed: '1 week ago', usage: '45%', icon: Atom, color: 'from-purple-500 to-indigo-500' },;
     { name: 'IoT Edge Platform', status: 'Active', lastUsed: '2 weeks ago', usage: '67%', icon: Network, color: 'from-cyan-500 to-blue-500' }
   ];
 
-  const upcomingEvents = ['
-    { title: 'AI Strategy Workshop', date: 'Dec 15, 2024', time: '10:00 AM', type: 'Workshop', icon: Brain },;'
-    { title: 'Security Audit Review', date: 'Dec 18, 2024', time: '2:00 PM', type: 'Review', icon: Shield },;'
-    { title: 'Cloud Migration Planning', date: 'Dec 22, 2024', time: '11:00 AM', type: 'Planning', icon: Cloud },;'
+  
+    { title: 'Security Audit Review', date: 'Dec 18, 2024', time: '2:00 PM', type: 'Review', icon: Shield },;
+    { title: 'Cloud Migration Planning', date: 'Dec 22, 2024', time: '11:00 AM', type: 'Planning', icon: Cloud },;
     { title: 'Quantum Computing Demo', date: 'Dec 25, 2024', time: '3:00 PM', type: 'Demo', icon: Atom }
   ];
 
-  const quickActions = ['
+  
+    { name: 'View Analytics', icon: BarChart3, href: '/analytics', color: 'from-blue-500 to-indigo-500' },;
+    { name: 'Security Settings', icon: Shield, href: '/security', color: 'from-red-500 to-orange-500' },;
+    { name: 'Support Request', icon: HelpCircle, href: '/help', color: 'from-purple-500 to-pink-500' },;
+    { name: 'Billing & Plans', icon: DollarSign, href: '/pricing', color: 'from-yellow-500 to-orange-500' },;
+    { name: 'API Documentation', icon: Code, href: '/api-docs', color: 'from-gray-500 to-slate-500' }
+=======
     { name: 'Add New Service', icon: Plus, href: '/services', color: 'from-green-500 to-emerald-500' },;'
     { name: 'View Analytics', icon: BarChart3, href: '/analytics', color: 'from-blue-500 to-indigo-500' },;'
     { name: 'Security Settings', icon: Shield, href: '/security', color: 'from-red-500 to-orange-500' },;'
     { name: 'Support Request', icon: HelpCircle, href: '/help', color: 'from-purple-500 to-pink-500' },;'
     { name: 'Billing & Plans', icon: DollarSign, href: '/pricing', color: 'from-yellow-500 to-orange-500' },;'    { name: 'API Documentation', icon: Code, href: '/api-docs', color: 'from-gray-500 to-slate-500' }
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return ("
@@ -268,10 +200,10 @@ export default function Dashboard() {
             </div>"
             <div className="flex items-center space-x-4">"
               <button className="p-2 text-gray-400 hover:text-gray-600 transition-colors">"
-                <Bell className="h-6 w-6" />
+                <Bell className="h-6 w-6"  />
               </button>"
               <button className="p-2 text-gray-400 hover:text-gray-600 transition-colors">"
-                <Settings className="h-6 w-6" />
+                <Settings className="h-6 w-6"  />
               </button>"              <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-semibold">
                 ZT
               </div>
@@ -343,7 +275,7 @@ export default function Dashboard() {
                   <p className="text-sm font-medium text-gray-600">{stat.name}</p>"
                   <p className="text-2xl font-bold text-gray-900 mt-1">{stat.value}</p>`
                   <div className={`flex items-center mt-2 text-sm ${
-'
+
                     stat.changeType === 'positive' ? 'text-green-600' : 'text-red-600'`
                   }`}>
                     <span>{stat.change}</span>"
@@ -413,7 +345,7 @@ export default function Dashboard() {
                 <h2 className="text-xl font-semibold text-gray-900">Recent Services</h2>"
                 <button className="text-blue-600 hover:text-blue-700 text-sm font-medium flex items-center">
                   View All"
-                  <ArrowRight className="h-4 w-4 ml-1" />                </button>
+                  <ArrowRight className="h-4 w-4 ml-1"  />                </button>
               </div>"
               <div className="space-y-4">
                 {recentServices.map((service, index) => (
@@ -502,7 +434,7 @@ export default function Dashboard() {
                       <h3 className="font-medium text-gray-900">{service.name}</h3>"
                       <div className="flex items-center mt-1 space-x-4 text-sm text-gray-500">"
                         <span className="flex items-center">"
-                          <CheckCircle className="h-4 w-4 text-green-500 mr-1" />                          {service.status}
+                          <CheckCircle className="h-4 w-4 text-green-500 mr-1"  />                          {service.status}
                         </span>
                         <span>{service.lastUsed}</span>
                       </div>
@@ -570,7 +502,7 @@ export default function Dashboard() {
                       <h4 className="text-sm font-medium text-gray-900">{event.title}</h4>"
                       <div className="flex items-center mt-1 text-xs text-gray-500 space-x-2">"
                         <span className="flex items-center">"
-                          <Calendar className="h-3 w-3 mr-1" />                          {event.date}
+                          <Calendar className="h-3 w-3 mr-1"  />                          {event.date}
                         </span>
                         <span>{event.time}</span>"
                         <span className="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">
@@ -678,6 +610,5 @@ export default function Dashboard() {
           </div>;
         </div>;
       </div>;
-    </div>;) ;
-}}
+    </div>;) }}
 '"`

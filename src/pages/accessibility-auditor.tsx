@@ -1,5 +1,40 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+<<<<<<< HEAD
+import {
+
+  Eye,
+  Shield,
+  CheckCircle,
+  AlertTriangle,
+  BarChart3,
+  Users,
+  Globe,
+  ArrowRight,
+  Star,
+  Heart,
+  Users,
+  Zap,
+  Lock,
+  FileText,
+  Phone,
+  Mail,
+  MessageCircle'
+} from 'lucide-react'},;
+    {;"
+      category: "Technical Accessibility",;"
+      items: ["Code validation", "Performance optimization", "Mobile responsiveness", "Cross-browser compatibility"]};
+  ];
+
+  
+  
+  
+  return ("
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">"
+      <section className="py-20 px-4 sm:px-6 lg:px-8">"
+        <div className="max-w-7xl mx-auto">"
+          <div className="text-center mb-16">"
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
               Accessibility"
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">"
                 {" "}Auditor
@@ -156,13 +191,13 @@ import { Link } from 'react-router-dom';            <h1 className="text-4xl md:t
               </p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link"
-                  to="/contact""
+                  to="/contact"
                   className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
 
                   Get Accessibility Audit
                 </Link>
                 <Link"
-                  to="/services""
+                  to="/services"
                   className="inline-flex items-center px-6 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
 
                   View All Services
@@ -172,6 +207,5 @@ import { Link } from 'react-router-dom';            <h1 className="text-4xl md:t
           </div>;
         </div>;
       </section>;
-    </div>;) ;
-}
+    </div>;) }
 '"

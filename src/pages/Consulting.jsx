@@ -272,7 +272,7 @@ import { Users, Lightbulb, Target, TrendingUp, Shield, Globe, Zap, Cpu, Database
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>"
-          <p className="text-xl text-gray-300 mb-8">'
+          <p className="text-xl text-gray-300 mb-8">
             Let's discuss how our consulting services can help you navigate
             digital transformation and achieve your business goals.
           </p>"

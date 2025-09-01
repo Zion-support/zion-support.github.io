@@ -1,92 +1,526 @@
-import React, { useState, useEffect } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';    { id: 'Revolutionary', name: 'Revolutionary', icon: '💫' };
+<<<<<<< HEAD
+import {
+
+  Search,
+  Filter,
+  Star,
+  ArrowRight,
+  ChevronDown,
+  Globe,
+  Zap,
+  Shield,
+  Brain,
+  Cloud,
+  Lock,
+  Users,
+  TrendingUp,
+  Award,
+  Clock,
+  DollarSign,
+  CheckCircle,
+  Rocket,
+  Target,
+  Handshake,
+  Lightbulb,
+  Cpu,
+  Database,
+  Network,
+  Smartphone,
+  BarChart3,
+  Code,
+  Server,
+  Chip,
+  Wifi,
+  ShieldCheck,
+  Globe2,
+  Bot,
+  GitFork,
+  Eye,
+  Sparkles,
+  Atom,
+  Blockchain,
+  Leaf,
+  Factory,
+  Car,
+  Building,
+  Heart,
+  ShoppingCart,
+  BookOpen,
+  MessageCircle,
+  HelpCircle,
+  Gauge,
+  PenTool,
+  Truck,
+  Building2,
+  Palette,
+  Camera,
+  Video,
+  Music,
+  Gamepad2,
+  CreditCard,
+  Wallet,
+  PiggyBank,
+  TrendingDown,
+  Activity,
+  PieChart,
+  LineChart,
+  ScatterChart,
+  BarChart,
+  AreaChart,
+  Layers,
+  Grid,
+  List,
+  Columns,
+  Rows,
+  Layout,
+  Monitor,
+  Smartphone2,
+  Tablet,
+  Watch,
+  Headphones,
+  Speaker,
+  Microphone,
+  Keyboard,
+  Mouse,
+  HardDrive,
+  Usb,
+  Bluetooth,
+  Wifi2,
+  Signal,
+  Battery,
+  Power,
+  Zap2,
+  Sun,
+  Moon,
+  Cloud2,
+  CloudRain,
+  CloudLightning,
+  CloudSnow,
+  Wind,
+  Thermometer,
+  Droplets,
+  Umbrella,
+  Snowflake,
+  Sunrise,
+  Sunset,
+  Moon2,
+  Star2,
+  Planet,
+  Satellite,
+  Telescope,
+  Microscope,
+  Flask,
+  TestTube,
+  Beaker,
+  Atom2,
+  Dna,
+  Pill,
+  Stethoscope,
+  HeartPulse,
+  Activity2,
+  Brain2,
+  Eye2,
+  Ear,
+  Nose,
+  Mouth,
+  Hand,
+  Foot,
+  Arm,
+  Leg,
+  Bone,
+  Muscle,
+  Nerve,
+  Cell,
+  Virus,
+  Bacteria,
+  Parasite,
+  Fungus,
+  Algae,
+  Moss,
+  Fern,
+  Tree,
+  Flower,
+  Seed,
+  Leaf2,
+  Root,
+  Bark,
+  Wood,
+  Paper,
+  Book,
+  Newspaper,
+  Magazine,
+  Document,
+  File,
+  Folder,
+  Archive,
+  Download,
+  Upload,
+  Share,
+  Link,
+  ExternalLink,
+  Copy,
+  Cut,
+  Paste,
+  Save,
+  Edit,
+  Trash,
+  Undo,
+  Redo,
+  Refresh,
+  RotateCcw,
+  RotateCw,
+  ZoomIn,
+  ZoomOut,
+  Move,
+  Crop,
+  Filter2,
+  Sliders,
+  Settings,
+  Tool,
+  Wrench,
+  Screwdriver,
+  Hammer,
+  Saw,
+  Drill,
+  Screw,
+  Nut,
+  Bolt,
+  Washer,
+  Nail,
+  Wire,
+  Cable,
+  Plug,
+  Socket,
+  Switch,
+  Button,
+  Knob,
+  Dial,
+  Gauge2,
+  Meter,
+  Scale,
+  Weight,
+  Timer,
+  Stopwatch,
+  Calendar,
+  Clock2,
+  Alarm,
+  Bell,
+  Notification,
+  Alert,
+  Warning,
+  Info,
+  Help,
+  Question,
+  Check,
+  X,
+  Plus,
+  Minus,
+  Divide,
+  Multiply,
+  Equal,
+  NotEqual,
+  GreaterThan,
+  LessThan,
+  GreaterThanOrEqual,
+  LessThanOrEqual,
+  Infinity,
+  Pi,
+  Sigma,
+  Sum,
+  Product,
+  Average,
+  Median,
+  Mode,
+  Range,
+  Variance,
+  StandardDeviation,
+  Correlation,
+  Regression,
+  Hypothesis,
+  Confidence,
+  PValue,
+  Significance,
+  Power,
+  EffectSize,
+  SampleSize,
+  Population,
+  Sample,
+  Random,
+  Systematic,
+  Stratified,
+  Cluster,
+  Convenience,
+  Snowball,
+  Purposive,
+  Quota,
+  Theoretical,
+  MaximumVariation,
+  Homogeneous,
+  Heterogeneous,
+  Representative,
+  Biased,
+  Unbiased,
+  Valid,
+  Reliable,
+  Accurate,
+  Precise,
+  Consistent,
+  Stable,
+  Robust,
+  Flexible,
+  Adaptable,
+  Scalable,
+  Extensible,
+  Maintainable,
+  Readable,
+  Testable,
+  Deployable,
+  Portable,
+  Interoperable,
+  Compatible,
+  Secure,
+  Private,
+  Confidential,
+  Anonymous,
+  Pseudonymous,
+  Transparent,
+  Accountable,
+  Traceable,
+  Auditable,
+  Verifiable,
+  Authentic,
+  Genuine,
+  Original,
+  Unique,
+  Distinct,
+  Different,
+  Similar,
+  Identical,
+  Equivalent,
+  Comparable,
+  Relative,
+  Absolute,
+  Objective,
+  Subjective,
+  Qualitative,
+  Quantitative,
+  Discrete,
+  Continuous,
+  Categorical,
+  Numerical,
+  Ordinal,
+  Nominal,
+  Interval,
+  Ratio,
+  Binary,
+  Ternary,
+  Quaternary,
+  Quinary,
+  Senary,
+  Septenary,
+  Octonary,
+  Nonary,
+  Decimal,
+  Duodecimal,
+  Hexadecimal,
+  Vigesimal,
+  Sexagesimal,
+  Centesimal,
+  Mille,
+  Million,
+  Billion,
+  Trillion,
+  Quadrillion,
+  Quintillion,
+  Sextillion,
+  Septillion,
+  Octillion,
+  Nonillion,
+  Decillion,
+  Undecillion,
+  Duodecillion,
+  Tredecillion,
+  Quattuordecillion,
+  Quindecillion,
+  Sexdecillion,
+  Septendecillion,
+  Octodecillion,
+  Novemdecillion,
+  Vigintillion,
+  Centillion,
+  Googol,
+  Googolplex,
+  Infinity2,
+  AlephNull,
+  AlephOne,
+  AlephOmega,
+  BethNull,
+  BethOne,
+  BethOmega,
+  Gimel,
+  Daleth,
+  He,
+  Vav,
+  Zayin,
+  Chet,
+  Tet,
+  Yod,
+  Kaf,
+  Lamed,
+  Mem,
+  Nun,
+  Samekh,
+  Ayin,
+  Pe,
+  Tsadi,
+  Qof,
+  Resh,
+  Shin,
+  Tav,
+  Alpha,
+  Beta,
+  Gamma,
+  Delta,
+  Epsilon,
+  Zeta,
+  Eta,
+  Theta,
+  Iota,
+  Kappa,
+  Lambda,
+  Mu,
+  Nu,
+  Xi,
+  Omicron,
+  Pi2,
+  Rho,
+  Sigma2,
+  Tau,
+  Upsilon,
+  Phi,
+  Chi,
+  Psi,
+  Omega,
+  Crown'
+} from 'lucide-react';
+
+interface ServiceContact {
+
+  mobile: string;
+  email: string;
+  address: string;
+  website: string;
+
+const ComprehensiveServicesShowcase2025: React.FC = () => {;
+  const [activeCategory, setActiveCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedService, setSelectedService] = useState<any>(null);
+  const [sortBy, setSortBy] = useState('rating');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [priceRange, setPriceRange] = useState<[number, number]>([0, 10000]);
+  const [innovationLevel, setInnovationLevel] = useState('all');
+
+  
+  
+    { id: 'AI & Healthcare', name: 'AI & Healthcare', count: allServices.filter(s => s.category === 'AI & Healthcare').length, icon: '🏥' },;
+    { id: 'Quantum Computing', name: 'Quantum Computing', count: allServices.filter(s => s.category === 'Quantum Computing').length, icon: '⚛️' },;
+    { id: 'Blockchain', name: 'Blockchain', count: allServices.filter(s => s.category === 'Blockchain').length, icon: '🔗' },;
+    { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s => s.category === 'Metaverse').length, icon: '🌍' },;
+    { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s => s.category === 'Edge Computing').length, icon: '🌐' },;
+    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️' };
+  ];
+
+  
+    { id: 'all', name: 'All Levels', icon: '🌟' },;
+    { id: 'Advanced', name: 'Advanced', icon: '🚀' },;
+    { id: 'Cutting-edge', name: 'Cutting-edge', icon: '⚡' },;
+    { id: 'Revolutionary', name: 'Revolutionary', icon: '💫' };
   ];
 
   
     
+=======
+  ];
+
+  
+    
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));'
-    const matchesInnovation = innovationLevel === 'all' || service.innovationLevel === innovationLevel;
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    
+    return matchesCategory && matchesSearch && matchesPrice && matchesInnovation}) ;
 
-    return matchesCategory && matchesSearch && matchesPrice && matchesInnovation;
-  }) ;
-
-  const sortedServices = [...filteredServices].sort((a, b) => {;
+  
+<<<<<<< HEAD
+    switch (sortBy) {;
+      case 'price':;
+        return a.price - b.price;
+=======
     switch (sortBy) {;'      case 'price':;
         return a.price - b.price;'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       case 'name':;
-        return a.title.localeCompare(b.title);'
+        return a.title.localeCompare(b.title);
       case 'innovation':;
-        const innovationOrder = {
+        
+  ;
+  ;
+=======
 '
   'Advanced': 1, 'Cutting-edge': 2,;  ;
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   ;
-  ;'
   'Revolutionary': 3 ;
 
+<<<<<<< HEAD
+};
+        return (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0) - ;
+               (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0);
+=======
 };        return (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0) - ;
                (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0);'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       case 'category':;
         return a.category.localeCompare (b.category) ;
       default:;
-        return 0;
-
-  }) ;
+        return 0}) ;
 
     hidden: { opacity: 0 },;
     visible: {
       opacity: 1,;
       transition: {
-        staggerChildren: 0.1;
-      };
-    };
-  };
+        staggerChildren: 0.1}}};
 
-  const itemVariants = {
-
-  hidden: { y: 20,
-  opacity: 0 
-
-},
-    visible: {
-
-      y: 0,;
+  
       opacity: 1,;
       transition: {
         duration: 0.5,;"
-        ease: "easeOut";
-      };
-    };
-  };
+        ease: "easeOut"}}};
 
-  const getCategoryIcon = (category: string) => {;
+  
     switch (category) {;'"
-      case 'AI & Automation': return <Bot className="w-5 h-5" />;'"
+      case 'AI & Automation': return <Bot className="w-5 h-5"  />;'"
       case 'AI & Analytics': return <BarChart3 className="w-5 h-5" />;'"
-      case 'AI & Research': return <Search className="w-5 h-5" />;'"
-      case 'AI & Logistics': return <Truck className="w-5 h-5" />;'"
-      case 'AI & Marketing': return <TrendingUp className="w-5 h-5" />;'"
-      case 'AI & Healthcare': return <Heart className="w-5 h-5" />;'"
-      case 'Quantum Computing': return <Atom className="w-5 h-5" />;'"
-      case 'Blockchain': return <Link className="w-5 h-5" />;'"
+      case 'AI & Research': return <Search className="w-5 h-5"  />;'"
+      case 'AI & Logistics': return <Truck className="w-5 h-5"  />;'"
+      case 'AI & Marketing': return <TrendingUp className="w-5 h-5"  />;'"
+      case 'AI & Healthcare': return <Heart className="w-5 h-5"  />;'"
+      case 'Quantum Computing': return <Atom className="w-5 h-5"  />;'"
+      case 'Blockchain': return <Link className="w-5 h-5"  />;'"
       case 'Metaverse': return <Globe2 className="w-5 h-5" />;'"
-      case 'Edge Computing': return <Network className="w-5 h-5" />;'"
-      case 'Cybersecurity': return <Shield className="w-5 h-5" />;"
-      default: return <Zap className="w-5 h-5" />;
+      case 'Edge Computing': return <Network className="w-5 h-5"  />;'"
+      case 'Cybersecurity': return <Shield className="w-5 h-5"  />;"
+      default: return <Zap className="w-5 h-5"  />};
 
-  };
-
-  const getInnovationIcon = (level: string) => {;
+  
     switch (level) {;'"
-      case 'Advanced': return <Star className="w-4 h-4 text-yellow-500" />;'"
-      case 'Cutting-edge': return <Zap className="w-4 h-4 text-blue-500" />;'"
-      case 'Revolutionary': return <Crown className="w-4 h-4 text-purple-500" />;"
-      default: return <Star className="w-4 h-4 text-gray-400" />;
-
-  };
+      case 'Advanced': return <Star className="w-4 h-4 text-yellow-500"  />;'"
+      case 'Cutting-edge': return <Zap className="w-4 h-4 text-blue-500"  />;'"
+      case 'Revolutionary': return <Crown className="w-4 h-4 text-purple-500"  />;"
+      default: return <Star className="w-4 h-4 text-gray-400"  />};
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light text-white relative overflow-hidden">
       {/* Animated Background */}"
@@ -166,9 +600,14 @@ import { motion, AnimatePresence } from 'framer-motion';    { id: 'Revolutionary
 
             {/* Search Bar */}"
             <div className="relative mb-6">"
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-400 w-5 h-5" />
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-400 w-5 h-5"  />
               <input"
+<<<<<<< HEAD
+                type="text"
+                placeholder="Search services, categories, or features..."
+=======
                 type="text""                placeholder="Search services, categories, or features..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}"
                 className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl pl-12 pr-4 py-3 text-white placeholder-zion-slate-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan"
@@ -190,7 +629,7 @@ import { motion, AnimatePresence } from 'framer-motion';    { id: 'Revolutionary
                     </option>
                   ))}
                 </select>"
-                <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zion-slate-400 w-4 h-4 pointer-events-none" />              </div>
+                <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zion-slate-400 w-4 h-4 pointer-events-none"  />              </div>
 
               {/* Innovation Level Filter */}"
               <div className="relative">
@@ -205,7 +644,7 @@ import { motion, AnimatePresence } from 'framer-motion';    { id: 'Revolutionary
                     </option>
                   ))}
                 </select>"
-                <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zion-slate-400 w-4 h-4 pointer-events-none" />              </div>
+                <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zion-slate-400 w-4 h-4 pointer-events-none"  />              </div>
 
               {/* Sort By */}"
               <div className="relative">
@@ -219,30 +658,30 @@ import { motion, AnimatePresence } from 'framer-motion';    { id: 'Revolutionary
                   <option value="innovation">Sort by Innovation</option>"
                   <option value="category">Sort by Category</option>
                 </select>"
-                <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zion-slate-400 w-4 h-4 pointer-events-none" />              </div>
+                <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zion-slate-400 w-4 h-4 pointer-events-none"  />              </div>
 
               {/* View Mode Toggle */}"
               <div className="flex bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl p-1">;
                 <button'
                   onClick={() => setViewMode('grid')}
                   className={`flex-1 px-3 py-2 rounded-lg transition-all ${
-'
+
                     viewMode === 'grid''
                       ? 'bg-zion-cyan text-white''
                       : 'text-zion-slate-400 hover:text-white'`
                   }`}
 "
-                  <Grid className="w-4 h-4 mx-auto" />                </button>
+                  <Grid className="w-4 h-4 mx-auto"  />                </button>
                 <button'
                   onClick={() => setViewMode('list')}`
                   className={`flex-1 px-3 py-2 rounded-lg transition-all ${
-'
+
                     viewMode === 'list''
                       ? 'bg-zion-cyan text-white''
                       : 'text-zion-slate-400 hover:text-white'`
                   }`}
 "
-                  <List className="w-4 h-4 mx-auto" />                </button>
+                  <List className="w-4 h-4 mx-auto"  />                </button>
               </div>
             </div>
 
@@ -253,8 +692,8 @@ import { motion, AnimatePresence } from 'framer-motion';    { id: 'Revolutionary
               </label>"
               <div className="flex gap-4 items-center">
                 <input"
-                  type="range""
-                  min="0""
+                  type="range"
+                  min="0"
                   max="10000"
                   value={priceRange[0]}
                   onChange = {
@@ -271,8 +710,8 @@ import { motion, AnimatePresence } from 'framer-motion';    { id: 'Revolutionary
                   className="flex-1 h-2 bg-zion-slate-600 rounded-lg appearance-none cursor-pointer slider"
                 />
                 <input"
-                  type="range""
-                  min="0""
+                  type="range"
+                  min="0"
                   max="10000"
                   value={priceRange[1]}
                   onChange = {
@@ -307,7 +746,7 @@ import { motion, AnimatePresence } from 'framer-motion';    { id: 'Revolutionary
           {/* Services Grid / List */}
           <motion.div
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             animate="visible"'
             className={viewMode === 'grid''
               ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6''
@@ -318,11 +757,11 @@ import { motion, AnimatePresence } from 'framer-motion';    { id: 'Revolutionary
                 key={service.id}
                 variants={itemVariants}`
                 className={`bg-zion-slate-800/50 backdrop-blur-sm border border-zion-slate-700 rounded-2xl p-6 hover:border-zion-cyan/50 hover:shadow-lg hover:shadow-zion-cyan/20 transition-all duration-300 cursor-pointer group ${
-'
+
                   viewMode === 'list' ? 'flex items-center gap-6' : ''`
                 }`}
                 onClick={() => handleServiceClick(service)}
-'
+
                 {viewMode === 'grid' ? (;
                   // Grid View
                   <>
@@ -366,19 +805,19 @@ import { motion, AnimatePresence } from 'framer-motion';    { id: 'Revolutionary
                       </div>
 "
                       <div className="flex items-center gap-2 text-sm text-zion-slate-400">"
-                        <Clock className="w-4 h-4" />
+                        <Clock className="w-4 h-4"  />
                         <span>{service.estimatedDelivery}</span>
                       </div>
 "
                       <div className="flex items-center gap-2 text-sm text-zion-slate-400">"
-                        <Shield className="w-4 h-4" />                        <span>{service.supportLevel}</span>
+                        <Shield className="w-4 h-4"  />                        <span>{service.supportLevel}</span>
                       </div>
                     </div>
 
                     {/* CTA Button */}"
                     <button className="w-full mt-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-2 px-4 rounded-xl font-medium hover:from-zion-cyan/90 hover:to-zion-purple/90 transition-all duration-300 flex items-center justify-center gap-2">
                       Learn More"
-                      <ArrowRight className="w-4 h-4" />                    </button>
+                      <ArrowRight className="w-4 h-4"  />                    </button>
                   </>) : (;
                   // List View
                   <>"
@@ -418,7 +857,7 @@ import { motion, AnimatePresence } from 'framer-motion';    { id: 'Revolutionary
                       <div className="text-sm text-zion-slate-400">/month</div>"
                       <button className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-2 px-4 rounded-xl font-medium hover:from-zion-cyan/90 hover:to-zion-purple/90 transition-all duration-300 flex items-center gap-2">
                         Learn More"
-                        <ArrowRight className="w-4 h-4" />                      </button>
+                        <ArrowRight className="w-4 h-4"  />                      </button>
                     </div>
                   </>) }
               </motion.div>) ) }
@@ -440,20 +879,12 @@ import { motion, AnimatePresence } from 'framer-motion';    { id: 'Revolutionary
   ;
   ;
   ;
-  () => {;'
-                  setSearchTerm('');'
+  () => {;
+                  setSearchTerm('');
                   setActiveCategory('all');
                   setPriceRange([0,
-  10000]);'
-                  setInnovationLevel('all');
-                
-
-
-
-
-
-
-}}"                className = "bg-zion-cyan text-white px-6 py-3 rounded-xl font-medium hover:bg-zion-cyan/90 transition-colors"
+  10000]);
+                  setInnovationLevel('all')}}"                className = "bg-zion-cyan text-white px-6 py-3 rounded-xl font-medium hover:bg-zion-cyan/90 transition-colors"
               >
                 Clear All Filters;
               </button>
@@ -516,7 +947,7 @@ import { motion, AnimatePresence } from 'framer-motion';    { id: 'Revolutionary
                     onClick={closeModal}"
                     className="text-zion-slate-400 hover:text-white transition-colors"
 "
-                    <X className="w-6 h-6" />                  </button>
+                    <X className="w-6 h-6"  />                  </button>
                 </div>
 
                 {/* Price and Key Info */}"
@@ -545,7 +976,7 @@ import { motion, AnimatePresence } from 'framer-motion';    { id: 'Revolutionary
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                   <div>"
                     <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">"
-                      <CheckCircle className="w-5 h-5 text-zion-green" />                      Key Features
+                      <CheckCircle className="w-5 h-5 text-zion-green"  />                      Key Features
                     </h3>"
                     <ul className="space-y-2">
                       {selectedService.features.map((feature, index) => ("
@@ -557,7 +988,7 @@ import { motion, AnimatePresence } from 'framer-motion';    { id: 'Revolutionary
                   </div>
                   <div>"
                     <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">"
-                      <TrendingUp className="w-5 h-5 text-zion-green" />                      Benefits
+                      <TrendingUp className="w-5 h-5 text-zion-green"  />                      Benefits
                     </h3>"
                     <ul className="space-y-2">
                       {selectedService.benefits.map((benefit, index) => ("
@@ -573,7 +1004,7 @@ import { motion, AnimatePresence } from 'framer-motion';    { id: 'Revolutionary
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                   <div>"
                     <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">"
-                      <Target className="w-5 h-5 text-zion-cyan" />                      Use Cases
+                      <Target className="w-5 h-5 text-zion-cyan"  />                      Use Cases
                     </h3>"
                     <ul className="space-y-2">
                       {selectedService.useCases.map((useCase, index) => ("
@@ -585,7 +1016,7 @@ import { motion, AnimatePresence } from 'framer-motion';    { id: 'Revolutionary
                   </div>
                   <div>"
                     <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">"
-                      <Users className="w-5 h-5 text-zion-purple" />                      Target Audience
+                      <Users className="w-5 h-5 text-zion-purple"  />                      Target Audience
                     </h3>"
                     <ul className="space-y-2">
                       {selectedService.targetAudience.map((audience, index) => ("
@@ -601,7 +1032,7 @@ import { motion, AnimatePresence } from 'framer-motion';    { id: 'Revolutionary
                 {selectedService.technicalSpecs && ("
                   <div className="mb-8">"
                     <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">"
-                      <Code className="w-5 h-5 text-zion-cyan" />                      Technical Specifications
+                      <Code className="w-5 h-5 text-zion-cyan"  />                      Technical Specifications
                     </h3>"
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>"
@@ -652,4 +1083,4 @@ import { motion, AnimatePresence } from 'framer-motion';    { id: 'Revolutionary
     </div>;) ;
 </div></div></div></div></div></div></div>};
 
-export default ComprehensiveServicesShowcase2025;}}}}}}}}}}'"`
+export default ComprehensiveServicesShowcase2025}}}}}}}}}}'"`

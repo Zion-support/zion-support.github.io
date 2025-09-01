@@ -1,12 +1,32 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
-import { motion } from 'framer-motion';  ];
+<<<<<<< HEAD
+import {
+
+  Zap, Sparkles, TrendingUp, Route, Users, PenTool,
+  CheckCircle, ArrowRight, ExternalLink, Phone, Mail,
+  BarChart3, Shield, Briefcase, Package, Target'
+} from 'lucide-react';
+
+  
+        'Supplier performance analytics and risk assessment';
+      ],;
+      benefits: ['20-30% reduced inventory costs',25% improved delivery times',40% fewer disruptions'],;
+      pricing: { starter: '$299/mo', professional: '$799/mo', enterprise: '$1,999/mo' },;
+      route: '/services/ai-supply-chain-optimization'};
+  ];
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO "
+<<<<<<< HEAD
+        title="Innovative AI Services Showcase - Zion Tech Group"
+        description="Discover our comprehensive suite of AI-powered business solutions including project management, content marketing, financial analytics, HR talent management, and supply chain optimization."
+       />
+=======
         title="Innovative AI Services Showcase - Zion Tech Group""        description="Discover our comprehensive suite of AI-powered business solutions including project management, content marketing, financial analytics, HR talent management, and supply chain optimization."
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 sm:py-24">"
@@ -27,7 +47,7 @@ import { motion } from 'framer-motion';  ];
             transition={{ duration: 0.6 }}"
             className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-900 font-semibold mb-6"
 "
-            <Sparkles className="w-4 h-4 mr-2" />            Innovative AI-Powered Solutions
+            <Sparkles className="w-4 h-4 mr-2"  />            Innovative AI-Powered Solutions
           </motion.div>
           
           <motion.h1 
@@ -143,7 +163,7 @@ import { motion } from 'framer-motion';  ];
                   <ul className="space-y-1">
                     {service.features.slice(0, 3).map((feature, featureIndex) => ("
                       <li key={featureIndex} className="flex items-start text-xs text-slate-300">"
-                        <CheckCircle className="w-3 h-3 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />                        {feature}
+                        <CheckCircle className="w-3 h-3 text-cyan-400 mr-2 mt-0.5 flex-shrink-0"  />                        {feature}
                       </li>) ) }
                   </ul>
                 </div>
@@ -163,11 +183,10 @@ import { motion } from 'framer-motion';  ];
                   <div className="text-lg font-bold text-white">{service.pricing.starter}</div>
                 </div>
 
-                <Link
-                  to={service.route}"
+                <Link to={service.route}"
                   className="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm font-semibold group-hover:translate-x-1 transition-all duration-300"
 "
-                  Learn More <ArrowRight className="w-4 h-4 ml-1" />                </Link>;
+                  Learn More <ArrowRight className="w-4 h-4 ml-1"  />                </Link>;
               </motion.div>) ) }
           </div>
         </div>
@@ -184,7 +203,7 @@ import { motion } from 'framer-motion';  ];
           <div className="grid md:grid-cols-3 gap-8">"
             <div className="text-center">"
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">"
-                <Shield className="w-8 h-8 text-white" />
+                <Shield className="w-8 h-8 text-white"  />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-2">Enterprise-Grade Security</h3>"
               <p className="text-slate-300">SOC 2 compliant, end-to-end encryption, and multi-factor authentication</p>
@@ -192,7 +211,7 @@ import { motion } from 'framer-motion';  ];
 "
             <div className="text-center">"
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">"
-                <Target className="w-8 h-8 text-white" />
+                <Target className="w-8 h-8 text-white"  />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-2">Proven Results</h3>"
               <p className="text-slate-300">Track record of delivering measurable ROI and business transformation</p>
@@ -200,7 +219,7 @@ import { motion } from 'framer-motion';  ];
 "
             <div className="text-center">"
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">"
-                <Zap className="w-8 h-8 text-white" />
+                <Zap className="w-8 h-8 text-white"  />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-2">Cutting-Edge AI</h3>"              <p className="text-slate-300">Latest AI technologies and continuous innovation in all our solutions</p>
             </div>
@@ -219,13 +238,13 @@ import { motion } from 'framer-motion';  ];
 "
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a"
-              href="mailto:kleber@ziontechgroup.com""
+              href="mailto:kleber@ziontechgroup.com"
               className="px-8 py-4 bg-white text-cyan-600 rounded-lg font-semibold hover:bg-cyan-50 transition-colors"
 
               Start Free Trial
             </a>
             <a"
-              href="tel:+13024640950""
+              href="tel:+13024640950"
               className="px-8 py-4 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-colors"
 
               Call Us
@@ -248,15 +267,14 @@ import { motion } from 'framer-motion';  ];
               how we can help transform your organization.
             </p>
             <a"
-              href="https://ziontechgroup.com""
-              target="_blank""
-              rel="noreferrer""
+              href="https://ziontechgroup.com"
+              target="_blank"
+              rel="noreferrer"
               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-900 font-semibold rounded-lg hover:from-cyan-300 hover:to-blue-400 transition-all duration-300"
             >;"
-              Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />;            </a>;
+              Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2"  />;            </a>;
           </div>;
         </div>;
       </section>;
     </div>;
-  );
-}}}'"`
+  )}}}'"`

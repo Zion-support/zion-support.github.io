@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import {
 
-  EXPANDED_SERVICES,'
-  EXPANDED_SERVICE_CATEGORIES} from '@/data/expandedServices';'
+  EXPANDED_SERVICES,
+  EXPANDED_SERVICE_CATEGORIES} from '@/data/expandedServices';
 import { Button } from '@/components/ui/button';
 import {
 
   Card,
   CardContent,
   CardDescription,
-  CardHeader,'
-  CardTitle} from '@/components/ui/card';'
-import { Badge } from '@/components/ui/badge';'
+  CardHeader,
+  CardTitle} from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import {
 
@@ -19,7 +19,7 @@ import {
   TableBody,
   TableCell,
   TableHead,
-  TableHeader,'
+  TableHeader,
   TableRow} from '@/components/ui/table';
 import {
 
@@ -33,34 +33,34 @@ import {
   ExternalLink,
   TrendingUp,
   Shield,
-  Zap,'
-  DollarSign} from 'lucide-react';'
+  Zap,
+  DollarSign} from 'lucide-react';
 import SEO from '@/components/SEO';
 export default function ServicesPricingGuide() {
-'
+
   const [selectedCategory, setSelectedCategory] = useState('all');
   const filteredServices ='
     selectedCategory === 'all'
       ? EXPANDED_SERVICES
       : EXPANDED_SERVICES.filter()
-          service =>'
-            service.category.toLowerCase().replace(/\s+/g, '-') ===
+          service =>
+            service.category.toLowerCase().replace(/\s+/g,-') ===
             selectedCategory
         );
   const getPriceTier = price => {
-'
-    if (price < 10000) return 'Starter';'
-    if (price < 25000) return 'Professional';'
+
+    if (price < 10000) return 'Starter';
+    if (price < 25000) return 'Professional';
     return 'Enterprise';
   };
   const getPriceTierColor = tier => {
 
     switch (tier) {
-'
+
       case 'Starter':'
-        return 'bg-green-500';'
+        return 'bg-green-500';
       case 'Professional':'
-        return 'bg-blue-500';'
+        return 'bg-blue-500';
       case 'Enterprise':'
         return 'bg-purple-500';
       default:'
@@ -70,21 +70,21 @@ export default function ServicesPricingGuide() {
   const getServiceIcon = category => {
 
     switch (category) {
-'
+
       case 'AI Development':
-        return <TrendingUp className="w-5 h-5 text-blue-500" />;'
+        return <TrendingUp className="w-5 h-5 text-blue-500" />;
       case 'Cloud Services':"
-        return <Globe className="w-5 h-5 text-green-500" />;'
+        return <Globe className="w-5 h-5 text-green-500" />;
       case 'Cybersecurity':"
-        return <Shield className="w-5 h-5 text-red-500" />;'
+        return <Shield className="w-5 h-5 text-red-500" />;
       case 'Data & Analytics':"
-        return <TrendingUp className="w-5 h-5 text-purple-500" />;'
+        return <TrendingUp className="w-5 h-5 text-purple-500" />;
       case 'Digital Transformation':"
-        return <Zap className="w-5 h-5 text-yellow-500" />;'
+        return <Zap className="w-5 h-5 text-yellow-500" />;
       case 'IoT & Edge Computing':"
-        return <Globe className="w-5 h-5 text-indigo-500" />;'
+        return <Globe className="w-5 h-5 text-indigo-500" />;
       case 'Blockchain & Web3':"
-        return <TrendingUp className="w-5 h-5 text-orange-500" />;'
+        return <TrendingUp className="w-5 h-5 text-orange-500" />;
       case 'AR/VR & Metaverse':"
         return <Globe className="w-5 h-5 text-pink-500" />;
       default:"
@@ -94,9 +94,9 @@ export default function ServicesPricingGuide() {
   return ("
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">
       <SEO"
-        title="Services Pricing Guide - Zion Tech Group""
-        description="Comprehensive pricing guide for all our IT and AI services. Compare features, pricing, and benefits across our service portfolio.""
-        keywords="pricing guide, IT services pricing, AI development cost, cloud migration pricing, cybersecurity pricing""
+        title="Services Pricing Guide - Zion Tech Group"
+        description="Comprehensive pricing guide for all our IT and AI services. Compare features, pricing, and benefits across our service portfolio."
+        keywords="pricing guide, IT services pricing, AI development cost, cloud migration pricing, cybersecurity pricing"
         canonical="https://ziontechgroup.com/services-pricing-guide"
       />
 
@@ -113,15 +113,15 @@ export default function ServicesPricingGuide() {
           </p>"
           <div className="flex flex-wrap justify-center gap-4">
             <Button"
-              size="lg""
+              size="lg"
               className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light"
             >"
               <Mail className="w-5 h-5 mr-2" />
               Get Custom Quote
             </Button>
             <Button"
-              size="lg""
-              variant="outline""
+              size="lg"
+              variant="outline"
               className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
             >"
               <Phone className="w-5 h-5 mr-2" />
@@ -150,9 +150,9 @@ export default function ServicesPricingGuide() {
             <div className="flex items-center gap-2">"
               <ExternalLink className="w-5 h-5" />
               <a"
-                href="https://ziontechgroup.com""
-                target="_blank""
-                rel="noopener noreferrer""
+                href="https://ziontechgroup.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:underline"
               >
                 ziontechgroup.com
@@ -167,10 +167,10 @@ export default function ServicesPricingGuide() {
         <div className="container mx-auto">"
           <div className="flex flex-wrap justify-center gap-4">
             <Button'
-              variant={selectedCategory === 'all' ? 'default' : 'outline'}'
+              variant={selectedCategory === 'all' ? 'default' : 'outline'}
               onClick={() => setSelectedCategory('all')}
               className={
-'
+
                 selectedCategory === 'all''
                   ? 'bg-zion-purple text-white''
                   : 'border-zion-purple/50 text-zion-purple hover:bg-zion-purple/10'
@@ -182,7 +182,7 @@ export default function ServicesPricingGuide() {
               <Button
                 key={category.value}
                 variant={
-'
+
                   selectedCategory === category.value ? 'default' : 'outline'
                 }
                 onClick={() => setSelectedCategory(category.value)}
@@ -357,7 +357,7 @@ export default function ServicesPricingGuide() {
                         </TableCell>"
                         <TableCell className="text-white">
                           <Badge"
-                            variant="secondary""
+                            variant="secondary"
                             className="bg-zion-blue-light text-zion-cyan"
                           >
                             {service.category}
@@ -389,7 +389,7 @@ export default function ServicesPricingGuide() {
                         </TableCell>
                         <TableCell>
                           <Button"
-                            size="sm""
+                            size="sm"
                             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
                           >"
                             <Mail className="w-4 h-4 mr-2" />
@@ -482,15 +482,15 @@ export default function ServicesPricingGuide() {
           </p>"
           <div className="flex flex-wrap justify-center gap-4">
             <Button"
-              size="lg""
+              size="lg"
               className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light"
             >"
               <Mail className="w-5 h-5 mr-2" />
               Request Custom Quote
             </Button>
             <Button"
-              size="lg""
-              variant="outline""
+              size="lg"
+              variant="outline"
               className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
             >"
               <Phone className="w-5 h-5 mr-2" />
@@ -498,12 +498,12 @@ export default function ServicesPricingGuide() {
             </Button>
           </div>"
           <div className="mt-8 text-zion-cyan">
-            <p>'
+            <p>
               Visit us at:{' '}
               <a"
-                href="https://ziontechgroup.com""
-                target="_blank""
-                rel="noopener noreferrer""
+                href="https://ziontechgroup.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="underline hover:text-zion-cyan-light"
               >
                 ziontechgroup.com

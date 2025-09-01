@@ -9,24 +9,18 @@ import {
   Code,
   GitBranch,
   Phone,
-  Mail,'
+  Mail,
   MapPin} from 'lucide-react';
 const CloudDevOpsServices = () => {
-'
-  const [searchTerm, setSearchTerm] = useState('');'
-  const [selectedCategory, setSelectedCategory] = useState('all');'
+
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPricing, setSelectedPricing] = useState('all');
   // Cloud & DevOps Services data
   const categories = ['
-    'all','
-    'Cloud Management','
-    'Container Orchestration','
-    'DevOps Automation','
-    'Serverless','
-    'Infrastructure','
-    'Security',
-  ];'
-  const pricingOptions = ['all', 'Enterprise', 'Professional', 'Standard'];
+    'all',Cloud Management',Container Orchestration',DevOps Automation',Serverless',Infrastructure',Security',
+  ];
+  const pricingOptions = ['all',Enterprise',Professional',Standard'];
   const filteredServices = cloudDevOpsServices.filter(service => {
 
     const matchesPricing ='
@@ -36,17 +30,17 @@ const CloudDevOpsServices = () => {
   const getCategoryIcon = category => {
 
     switch (category) {
-'
+
       case 'Cloud Management':
-        return <Cloud className="w-6 h-6" />;'
+        return <Cloud className="w-6 h-6" />;
       case 'Container Orchestration':"
-        return <Server className="w-6 h-6" />;'
+        return <Server className="w-6 h-6" />;
       case 'DevOps Automation':"
-        return <GitBranch className="w-6 h-6" />;'
+        return <GitBranch className="w-6 h-6" />;
       case 'Serverless':"
-        return <Zap className="w-6 h-6" />;'
+        return <Zap className="w-6 h-6" />;
       case 'Infrastructure':"
-        return <Server className="w-6 h-6" />;'
+        return <Server className="w-6 h-6" />;
       case 'Security':"
         return <Shield className="w-6 h-6" />;
       default:"
@@ -56,11 +50,11 @@ const CloudDevOpsServices = () => {
   const getPricingColor = pricing => {
 
     switch (pricing) {
-'
+
       case 'Enterprise':'
-        return 'text-purple-400';'
+        return 'text-purple-400';
       case 'Professional':'
-        return 'text-blue-400';'
+        return 'text-blue-400';
       case 'Standard':'
         return 'text-green-400';
       default:'
@@ -87,7 +81,7 @@ const CloudDevOpsServices = () => {
           <div className="relative">"
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
             <input"
-              type="text""
+              type="text"
               placeholder="Search cloud & DevOps services..."
               value={searchTerm}
               onChange={e => setSearchTerm(e.target.value)}"
@@ -106,7 +100,7 @@ const CloudDevOpsServices = () => {
                   key={category}
                   value={category}"
                   className="bg-gray-800 text-white"
-                >'
+                >
                   {category === 'all' ? 'All Categories' : category}
                 </option>
               ))}
@@ -122,7 +116,7 @@ const CloudDevOpsServices = () => {
                   key={pricing}
                   value={pricing}"
                   className="bg-gray-800 text-white"
-                >'
+                >
                   {pricing === 'all' ? 'All Pricing Tiers' : pricing}
                 </option>
               ))}
@@ -206,8 +200,8 @@ const CloudDevOpsServices = () => {
                   <span>Delivery: {service.deliveryTime}</span>
                   <a
                     href={service.contactInfo.website}"
-                    className="text-blue-400 hover:text-blue-300 transition-colors""
-                    target="_blank""
+                    className="text-blue-400 hover:text-blue-300 transition-colors"
+                    target="_blank"
                     rel="noopener noreferrer"
                   >
                     Get Started →

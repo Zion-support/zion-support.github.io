@@ -5,11 +5,11 @@ interface AccessibilityEnhancerProps {
 
 
   children: React.ReactNode;
-  role?: string;'
-  'aria-label'?: string;'
-  'aria-describedby'?: string;'
-  'aria-expanded'?: boolean;'
-  'aria-controls'?: string;'
+  role?: string;
+  'aria-label'?: string;
+  'aria-describedby'?: string;
+  'aria-expanded'?: boolean;
+  'aria-controls'?: string;
   'aria-haspopup'?: boolean;
   tabIndex?: number;
   onKeyDown?: event: React.KeyboardEvent void;
@@ -20,14 +20,9 @@ interface AccessibilityEnhancerProps {
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
   children,
-  role,'
-  'aria-label': ariaLabel,'
-  'aria-describedby': ariaDescribedby,'
-  'aria-expanded': ariaExpanded,'
-  'aria-controls': ariaControls,'
-  'aria-haspopup': ariaHaspopup,
+  role,aria-label': ariaLabel,aria-describedby': ariaDescribedby,aria-expanded': ariaExpanded,aria-controls': ariaControls,aria-haspopup': ariaHaspopup,
   tabIndex,
-  onKeyDown,'
+  onKeyDown,
   className = '',
   focusable = true,
   skipToContent = false;
@@ -46,7 +41,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
     // Handle common keyboard interactions
     switch (event.key) {
-'
+
       case 'Enter':'
       case ' ':'
         if (role === 'button' || role === 'link') {
@@ -61,7 +56,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           });
           event.currentTarget.dispatchEvent(clickEvent);
         }
-        break;'
+        break;
       case 'Escape':
         if (ariaExpanded !== undefined) {
 
@@ -83,14 +78,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
   const accessibilityProps = {
 
-    role,'
-    'aria-label': ariaLabel,'
-    'aria-describedby': ariaDescribedby,'
-    'aria-expanded': ariaExpanded,'
-    'aria-controls': ariaControls,'
-    'aria-haspopup': ariaHaspopup,
+    role,aria-label': ariaLabel,aria-describedby': ariaDescribedby,aria-expanded': ariaExpanded,aria-controls': ariaControls,aria-haspopup': ariaHaspopup,
     tabIndex: focusable ? tabIndex : -1,
-    onKeyDown: handleKeyDown,'
+    onKeyDown: handleKeyDown,
     className: `${className} ${focusable ? 'focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2' : ''}`,
     ref
   };

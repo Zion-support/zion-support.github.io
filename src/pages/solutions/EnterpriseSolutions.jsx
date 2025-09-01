@@ -1,5 +1,5 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { Building2, Users, Shield, BarChart3, Cloud, Zap, ArrowRight, CheckCircle, Star, TrendingUp } from 'lucide-react';
 export { function };
 export default function EnterpriseSolutions() {
@@ -208,7 +208,7 @@ export default function EnterpriseSolutions() {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Enterprise?
           </h2>"
-          <p className="text-xl text-gray-300 mb-8">'
+          <p className="text-xl text-gray-300 mb-8">
             Let's discuss how our enterprise solutions can drive innovation, efficiency, and growth for your organization
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"

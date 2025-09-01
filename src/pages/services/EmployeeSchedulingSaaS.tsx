@@ -1,86 +1,18 @@
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
-import { Link  } from 'react-router-dom.ts';'
-import { Calendar, Users, Clock, CheckCircle, Shield, Zap, BarChart3, Smartphone, Globe, TrendingUp, Target, Bell, Settings, FileText, Database, Cloud, Server, Award, BookOpen  } from 'lucide-react';'
-import { SEO  } from '@/components/SEO';
 ;
 export { function };
 export default function EmployeeSchedulingSaaS(...args: []):  {
 
-  const features = [
-    {
-
-      icon: Calendar,
-      title: "Smart Scheduling","
-      description: "AI-powered scheduling that automatically creates optimal shifts based on availability, skills, and business needs."
-    },
-    {
-
-      icon: Users,"
-      title: "Employee Management","
-      description: "Complete employee profiles with skills, availability, preferences, and performance tracking."
-    },
-    {
-
-      icon: Clock,"
-      title: "Time Tracking","
-      description: "Accurate time tracking with clock-in/out, break management, and overtime calculation."
-    },
-    {
-
-      icon: BarChart3,"
-      title: "Analytics & Reporting","
-      description: "Comprehensive insights into labor costs, productivity, and scheduling efficiency."
-    },
-    {
-
-      icon: Smartphone,"
-      title: "Mobile App","
-      description: "Full-featured mobile app for employees to view schedules, request time off, and clock in/out.";
+  
     },;
     {;
       icon: Globe,;"
       title: "Multi-location Support",;"
-      description: "Manage schedules across multiple locations, departments, and time zones seamlessly.";
-    };
-  ];
-
-  const schedulingCapabilities = [
-    {
-
-      icon: Calendar,"
-      title: "Automated Scheduling","
-      description: "AI algorithms create optimal schedules considering availability, skills, and business rules"
-    },
-    {
-
-      icon: Users,"
-      title: "Shift Management","
-      description: "Easy shift creation, editing, and assignment with drag-and-drop interface"
-    },
-    {
-
-      icon: Clock,"
-      title: "Time Off Management","
-      description: "Streamlined PTO requests, approvals, and calendar integration"
-    },
-    {
-
-      icon: Bell,"
-      title: "Notifications","
-      description: "Automated reminders for shift changes, time off approvals, and schedule updates"
-    },
-    {
-
-      icon: Settings,"
-      title: "Custom Rules","
-      description: "Configurable business rules for scheduling, overtime, and compliance";
-    },;
+      description: "Manage schedules across multiple locations, departments, and time zones seamlessly."};
+  ]},;
     {;
       icon: FileText,;"
       title: "Compliance Tracking",;"
-      description: "Ensure compliance with labor laws, break requirements, and overtime regulations";
-    };
+      description: "Ensure compliance with labor laws, break requirements, and overtime regulations"};
   ];
 
   const pricingPlans = [
@@ -132,80 +64,25 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
         "Custom training",;"
         "On-premise options";
       ],;
-      popular: false;
-    };
-  ];
-
-  const benefits = [
-    {
-"
-      title: "Reduce Scheduling Time","
-      description: "Cut scheduling time by up to 80% with AI-powered automation and smart tools.",
-      icon: Clock
-    },
-    {
-"
-      title: "Improve Employee Satisfaction","
-      description: "Give employees control over their schedules and improve work-life balance.",
-      icon: Users
-    },
-    {
-"
-      title: "Optimize Labor Costs","
-      description: "Reduce overtime costs and optimize staffing levels with data-driven insights.",
-      icon: TrendingUp;
-    },;
+      popular: false};
+  ]},;
     {;"
       title: "Ensure Compliance",;"
       description: "Automatically comply with labor laws and avoid costly violations.",;
-      icon: Shield;
-    };
-  ];
-
-  const industries = [
-    {
-
-      icon: Users,"
-      title: "Retail","
-      description: "Manage complex retail schedules with seasonal demands and part-time workers"
-    },
-    {
-
-      icon: Clock,"
-      title: "Healthcare","
-      description: "Ensure proper staffing for patient care with 24/7 scheduling requirements"
-    },
-    {
-
-      icon: Calendar,"
-      title: "Manufacturing","
-      description: "Optimize production schedules with shift rotations and skill requirements"
-    },
-    {
-
-      icon: Globe,"
-      title: "Hospitality","
-      description: "Handle dynamic scheduling needs for hotels, restaurants, and events"
-    },
-    {
-
-      icon: Settings,"
-      title: "Services","
-      description: "Manage appointment-based scheduling for professional services";
-    },;
+      icon: Shield};
+  ]},;
     {;
       icon: BarChart3,;"
       title: "Construction",;"
-      description: "Coordinate complex project schedules with multiple teams and locations";
-    };  ];
+      description: "Coordinate complex project schedules with multiple teams and locations"};  ];
 
   return()
     <>
       <SEO "
-        title = "Employee Scheduling SaaS - Zion Tech Group""
-        description="Professional employee scheduling platform with AI-powered automation, time tracking, and comprehensive workforce management tools.""
+        title = "Employee Scheduling SaaS - Zion Tech Group"
+        description="Professional employee scheduling platform with AI-powered automation, time tracking, and comprehensive workforce management tools."
         canonical="/services/employee-scheduling-saas"
-      />
+       />
 "      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}"
         <section className="relative py-20 overflow-hidden">"
@@ -248,13 +125,13 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
                 </p>"
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link"
-                    to="/request-quote""
+                    to="/request-quote"
                     className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
 
                     Start Free Trial
                   </Link>
                   <Link"
-                    to="/contact""
+                    to="/contact"
                     className="px-8 py-4 border-2 border-orange-500 text-orange-400 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300"
 
                     Schedule Demo
@@ -591,7 +468,7 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => ("
                       <li key={featureIndex} className="flex items-center space-x-3">"
-                        <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />"                        <span className="text-gray-300">{feature}</span>
+                        <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0"  />"                        <span className="text-gray-300">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -649,13 +526,13 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
               </p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link"
-                  to="/request-quote""
+                  to="/request-quote"
                   className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
 
                   Start Free Trial
                 </Link>
                 <Link"
-                  to="/contact""
+                  to="/contact"
                   className="px-8 py-4 border-2 border-orange-500 text-orange-400 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300"
 
                   Contact Sales
@@ -666,5 +543,4 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
         </section>;
       </div>;
     </>
-  );
-}}}}}}}'"`
+  )}}}}}}}'"`

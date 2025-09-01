@@ -1,27 +1,21 @@
-import React from 'react';'
+import React from 'react';
 import { motion } from 'framer-motion';
 export function GradientHeading({
 
-  children,'
-  className = '','
-  size = '4xl','
+  children,
+  className = '',
+  size = '4xl',
   gradient = 'zion',
   customColors}) {
 
   const sizeClasses = {
-'
-    sm: 'text-sm','
-    md: 'text-base','
-    lg: 'text-lg','
-    xl: 'text-xl','
-    '2xl': 'text-2xl','
-    '3xl': 'text-3xl','
-    '4xl': 'text-4xl','
-    '5xl': 'text-5xl','
-    '6xl': 'text-6xl','
-    '7xl': 'text-7xl'};
+
+    sm: 'text-sm',
+    md: 'text-base',
+    lg: 'text-lg',
+    xl: 'text-xl',2xl': 'text-2xl',3xl': 'text-3xl',4xl': 'text-4xl',5xl': 'text-5xl',6xl': 'text-6xl',7xl': 'text-7xl'};
   const gradientClasses = {
-'
+
     zion: 'bg-gradient-to-r from-zion-purple via-zion-cyan to-zion-blue bg-clip-text text-transparent',
     cyber:'
       'bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent',
@@ -37,7 +31,7 @@ export function GradientHeading({
     <motion.h1
       className={baseClasses}
       initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}'
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
     >
       {children}

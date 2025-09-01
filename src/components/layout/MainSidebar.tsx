@@ -1,5 +1,3 @@
-import React, { useState } from 'react';'
-import { Link, useLocation } from 'react-router-dom';
 import {
   Menu, 
   X, 
@@ -56,267 +54,254 @@ interface SidebarItem {
   description?: string;
 
 export function MainSidebar() {
-  const [isOpen, setIsOpen] = useState(false);'
-  const [expandedSections, setExpandedSections] = useState<string[]>(['services']);
-  const location = useLocation();
-
-  const toggleSection = (section: string) => {
-
-    setExpandedSections(prev => 
-      prev.includes(section) 
-        ? prev.filter(s => s !== section)
-        : [...prev, section]
-    );
-  };
+  const [isOpen, setIsOpen] = useState(false);
+  const [expandedSections, setExpandedSections] = useState<string[]>(['services'])};
   const navigation: SidebarItem[] = [
     {
-'
+
       title: 'Main',
-      items[;'
-        { name: 'Home', href: '/', icon: Home },'
-        { name: 'About', href: '/about', icon: Building },'
-        { name: 'Services', href: '/services', icon: Briefcase },'
-        { name: 'Solutions', href: '/solutions', icon: Target },'
-        { name: 'AI Solutions', href: '/ai-solutions', icon: Brain },'
-        { name: 'Case Studies', href: '/case-studies', icon: FileText },'
-        { name: 'Research', href: '/research-development', icon: TestTube },'
-        { name: 'Events', href: '/events', icon: Video },'
-        { name: 'News', href: '/news', icon: Newspaper },'
-        { name: 'Contact', href: '/contact', icon: Mail },'
+      items[;
+        { name: 'Home', href: '/', icon: Home },
+        { name: 'About', href: '/about', icon: Building },
+        { name: 'Services', href: '/services', icon: Briefcase },
+        { name: 'Solutions', href: '/solutions', icon: Target },
+        { name: 'AI Solutions', href: '/ai-solutions', icon: Brain },
+        { name: 'Case Studies', href: '/case-studies', icon: FileText },
+        { name: 'Research', href: '/research-development', icon: TestTube },
+        { name: 'Events', href: '/events', icon: Video },
+        { name: 'News', href: '/news', icon: Newspaper },
+        { name: 'Contact', href: '/contact', icon: Mail },
         { name: 'Blog', href: '/blog', icon: FileText },
       ]
     },;
     {
-'
-      name: 'Core Services','
+
+      name: 'Core Services',
       href: '#',
       icon: Target,
       children: [
         {
-'
-          name: 'Cloud & DevOps','
+
+          name: 'Cloud & DevOps',
           href: '/services/cloud-devops',
-          icon: Cloud,'
+          icon: Cloud,
           description: 'Infrastructure & Automation'
         },
         {
-'
-          name: 'Digital Twin','
+
+          name: 'Digital Twin',
           href: '/services/digital-twin',
-          icon: Globe,'
+          icon: Globe,
           description: 'Simulation & Monitoring'
         },
         {
-'
-          name: 'Data Analytics','
+
+          name: 'Data Analytics',
           href: '/services/data-analytics',
-          icon: BarChart3,'
+          icon: BarChart3,
           description: 'Business Intelligence'
         },
         {
-'
-          name: 'IT Infrastructure','
+
+          name: 'IT Infrastructure',
           href: '/services/it-infrastructure',
-          icon: Server,'
+          icon: Server,
           description: 'Hardware & Network'
         }
       ]
     },
     {
-'
-      name: 'AI Products','
+
+      name: 'AI Products',
       href: '#',
       icon: Brain,
       children: [
         {
-'
-          name: 'AI Sales Copilot','
+
+          name: 'AI Sales Copilot',
           href: '/services/ai-sales-copilot',
-          icon: Users,'
+          icon: Users,
           description: 'Sales Intelligence'
         },
         {
-'
-          name: 'AI Compliance Assistant','
+
+          name: 'AI Compliance Assistant',
           href: '/services/ai-compliance-assistant',
-          icon: Shield,'
+          icon: Shield,
           description: 'Regulatory Compliance'
         },
         {
-'
-          name: 'AI Auto Email Responder','
+
+          name: 'AI Auto Email Responder',
           href: '/services/ai-auto-email-responder',
-          icon: MessageCircle,'
+          icon: MessageCircle,
           description: 'Email Automation'
         },
         {
-'
-          name: 'LLM Content Studio','
+
+          name: 'LLM Content Studio',
           href: '/services/llm-content-studio',
-          icon: PenTool,'
+          icon: PenTool,
           description: 'Content Creation'
         }
       ]
     },
     {
-'
-      name: 'Emerging Tech','
+
+      name: 'Emerging Tech',
       href: '#',
       icon: Rocket,
       children: [
         {
-'
-          name: 'Quantum Computing','
+
+          name: 'Quantum Computing',
           href: '/services/quantum-computing',
-          icon: Atom,'
+          icon: Atom,
           description: 'Next-gen Computing'
         },
         {
-'
-          name: 'AI Cybersecurity','
+
+          name: 'AI Cybersecurity',
           href: '/services/ai-cybersecurity',
-          icon: Lock,'
+          icon: Lock,
           description: 'Intelligent Security'
         },
         {
-'
-          name: 'IoT Edge Computing','
+
+          name: 'IoT Edge Computing',
           href: '/services/iot-edge-computing',
-          icon: Smartphone,'
+          icon: Smartphone,
           description: 'Connected Ecosystems'
         },
         {
-'
-          name: 'AI Content Creation','
+
+          name: 'AI Content Creation',
           href: '/services/ai-content-creation',
-          icon: Video,'
+          icon: Video,
           description: 'Creative AI'
         }
       ]
     },
     {
-'
-      name: 'Business Solutions','
+
+      name: 'Business Solutions',
       href: '#',
       icon: Briefcase,
       children: [
         {
-'
-          name: 'Marketplace','
+
+          name: 'Marketplace',
           href: '/marketplace',
-          icon: ShoppingCart,'
+          icon: ShoppingCart,
           description: 'Product & Service Hub'
         },
         {
-'
-          name: 'Talent Solutions','
+
+          name: 'Talent Solutions',
           href: '/talent',
-          icon: Users,'
+          icon: Users,
           description: 'HR & Recruitment'
         },
         {
-'
-          name: 'Equipment Services','
+
+          name: 'Equipment Services',
           href: '/equipment',
-          icon: Server,'
+          icon: Server,
           description: 'Hardware Solutions'
         },
         {
-'
-          name: 'Request Quote','
+
+          name: 'Request Quote',
           href: '/request-quote',
-          icon: MessageCircle,'
+          icon: MessageCircle,
           description: 'Get Pricing'
         }
       ]
     },
     {
-'
-      name: 'Company','
+
+      name: 'Company',
       href: '#',
       icon: Info,
       children: [
         {
-'
-          name: 'About Us','
+
+          name: 'About Us',
           href: '/about',
-          icon: Info,'
+          icon: Info,
           description: 'Our Story'
         },
         {
-'
-          name: 'Team','
+
+          name: 'Team',
           href: '/team',
-          icon: Users,'
+          icon: Users,
           description: 'Meet Our Team'
         },
         {
-'
-          name: 'Careers','
+
+          name: 'Careers',
           href: '/careers',
-          icon: Briefcase,'
+          icon: Briefcase,
           description: 'Join Us'
         },
         {
-'
-          name: 'Partners','
+
+          name: 'Partners',
           href: '/partners',
-          icon: Users,'
+          icon: Users,
           description: 'Partnerships'
         }
       ]
     },
     {
-'
-      name: 'Resources','
+
+      name: 'Resources',
       href: '#',
       icon: BookOpen,
       children: [
         {
-'
-          name: 'Blog','
+
+          name: 'Blog',
           href: '/blog',
-          icon: FileText,'
+          icon: FileText,
           description: 'Latest Insights'
         },
         {
-'
-          name: 'FAQ','
+
+          name: 'FAQ',
           href: '/faq',
-          icon: HelpCircle,'
+          icon: HelpCircle,
           description: 'Common Questions'
         },
         {
-'
-          name: 'Help Center','
+
+          name: 'Help Center',
           href: '/help',
-          icon: MessageCircle,'
+          icon: MessageCircle,
           description: 'Support Resources'
         },
         {
-'
-          name: 'Documentation','
+
+          name: 'Documentation',
           href: '/docs',
-          icon: BookOpen,'
+          icon: BookOpen,
           description: 'Technical Docs'
         }
       ]
     },
     {
-'
-      name: 'Contact','
+
+      name: 'Contact',
       href: '/contact',
       icon: Phone
     }
   ];
 
-  const renderSidebarItem = (item: SidebarItem, level: number = 0) => {
-
-    const isActive = location.pathname === item.href;
-    const hasChildren = item.children && item.children.length > 0;
-    const isExpanded = expandedSections.includes(item.name.toLowerCase());
-    const isFeatured = item.featured;
-
+  
+    
+    
+    
     return()      <div key={item.name} className="mb-1">
         {hasChildren ? (
           <div>
@@ -333,13 +318,13 @@ export function MainSidebar() {
                 <item.icon className="w-4 h-4" />
                 <span>{item.name}</span>
                 {isFeatured && ("
-                  <Star className="w-3 h-3 text-yellow-400" />
+                  <Star className="w-3 h-3 text-yellow-400"  />
                 )}
               </div>
               {isExpanded ? ("
-                <ChevronDown className="w-4 h-4" />
+                <ChevronDown className="w-4 h-4"  />
               ) : ("
-                <ChevronRight className="w-4 h-4" />              )}
+                <ChevronRight className="w-4 h-4"  />              )}
             </button>
             
             {isExpanded && ("
@@ -364,7 +349,7 @@ export function MainSidebar() {
             <item.icon className="w-4 h-4" />
             <span>{item.name}</span>
             {isFeatured && ("
-              <Star className="w-3 h-3 text-yellow-400" />            )}
+              <Star className="w-3 h-3 text-yellow-400"  />            )}
           </Link>
         )}
       </div>
@@ -377,7 +362,7 @@ export function MainSidebar() {
         onClick={() => setIsOpen(!isOpen)}"
         className="lg:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
       >"
-        {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}      </button>
+        {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}      </button>
 
       {/* Sidebar */}`
       <div className={`
@@ -393,7 +378,7 @@ export function MainSidebar() {
               onClick={() => setIsOpen(false)}"
               className="lg:hidden p-1 rounded text-slate-400 hover:text-white hover:bg-slate-800"
             >"
-              <X className="w-5 h-5" />            </button>
+              <X className="w-5 h-5"  />            </button>
           </div>
 
           {/* Navigation */}"
@@ -405,15 +390,15 @@ export function MainSidebar() {
           <div className="p-4 border-t border-slate-700/50">"
             <div className="text-xs text-slate-400 space-y-2">"
               <div className="flex items-center space-x-2">"
-                <Phone className="w-3 h-3" />
+                <Phone className="w-3 h-3"  />
                 <span>+1 302 464 0950</span>
               </div>"
               <div className="flex items-center space-x-2">"
-                <Mail className="w-3 h-3" />
+                <Mail className="w-3 h-3"  />
                 <span>kleber@ziontechgroup.com</span>
               </div>"
               <div className="flex items-center space-x-2">"
-                <MapPin className="w-3 h-3" />                <span>Middletown DE 19709</span>
+                <MapPin className="w-3 h-3"  />                <span>Middletown DE 19709</span>
               </div>
             </div>
           </div>
@@ -434,6 +419,5 @@ export function MainSidebar() {
         </div>;
       </div>;
     </>
-  );
-}
+  )}
 '"`

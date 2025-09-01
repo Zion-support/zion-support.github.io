@@ -2,31 +2,31 @@ import SEO from '../SEO';
 const Mobile = () => {
   const mobileStats = [
     {
-'
-      stat: '73%','
-      label: 'Mobile Internet Usage','
+
+      stat: '73%',
+      label: 'Mobile Internet Usage',
       description: 'Of all internet traffic comes from mobile devices'},
     {
-'
-      stat: '85%','
-      label: 'User Preference','
+
+      stat: '85%',
+      label: 'User Preference',
       description: 'Of users prefer mobile-friendly websites'},
     {
-'
-      stat: '60%','
-      label: 'Mobile Search','
+
+      stat: '60%',
+      label: 'Mobile Search',
       description: 'Of searches are performed on mobile devices'},
     {
-'
-      stat: '40%','
-      label: 'Mobile Conversion','
+
+      stat: '40%',
+      label: 'Mobile Conversion',
       description: 'Higher conversion rates on mobile-optimized sites'},
   ];
   return()
     <>
       <SEO
-        title="Mobile-First Solutions - Zion Tech Group""
-        description="Experience mobile-first design and development with Zion Tech Group. From responsive websites to native mobile apps, we ensure optimal mobile experiences.""
+        title="Mobile-First Solutions - Zion Tech Group"
+        description="Experience mobile-first design and development with Zion Tech Group. From responsive websites to native mobile apps, we ensure optimal mobile experiences."
         canonical="/mobile"
       />
 "
@@ -38,7 +38,7 @@ const Mobile = () => {
               <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Mobile-First Solutions
               </h1>"
-              <p className="text-xl text-blue-100 max-w-4xl mx-auto">'
+              <p className="text-xl text-blue-100 max-w-4xl mx-auto">
                 In today's mobile-first world, we ensure your digital presence
                 is optimized for mobile devices. From responsive websites to
                 native mobile applications, we deliver exceptional mobile
@@ -178,13 +178,13 @@ const Mobile = () => {
                   </p>"
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <a"
-                      href="#""
+                      href="#"
                       className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-medium transition-colors duration-200 text-lg"
                     >
                       Download for iOS
                     </a>
                     <a"
-                      href="#""
+                      href="#"
                       className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-medium transition-colors duration-200 text-lg"
                     >
                       Download for Android
@@ -200,19 +200,19 @@ const Mobile = () => {
                 <h2 className="text-3xl font-semibold text-white mb-4">
                   Ready to Go Mobile?
                 </h2>"
-                <p className="text-blue-100 mb-6 text-lg">'
+                <p className="text-blue-100 mb-6 text-lg">
                   Let's discuss your mobile strategy and create solutions that
                   deliver exceptional experiences across all devices.
                 </p>"
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a"
-                    href="/mobile-launch""
+                    href="/mobile-launch"
                     className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-medium transition-colors duration-200 text-lg"
                   >
                     Start Mobile Development
                   </a>
                   <a"
-                    href="/contact""
+                    href="/contact"
                     className="border border-white/30 hover:bg-white/10 text-white px-8 py-4 rounded-lg font-medium transition-colors duration-200 text-lg"
                   >
                     Discuss Mobile Strategy

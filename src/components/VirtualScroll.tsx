@@ -1,23 +1,19 @@
-import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react.ts';'
-import { motion, AnimatePresence  } from 'framer-motion.ts';
 export function VirtualScroll<T>({
 
   items,
   height,
   itemHeight,
   renderItem,
-  overscan = 5,;'
+  overscan = 5,;
   className = '',;
-  onScroll;
-}: VirtualScrollProps < T>) {;
+  onScroll}: VirtualScrollProps < T>) {;
   const [scrollTop, setScrollTop] = useState (0) ;
-  const containerRef = useRef < HTMLDivElement> (null) ;
-
+  
   // Calculate visible range
-  const visibleRange = useMemo ( () => {;
-    const start = Math.floor (scrollTop / itemHeight) ;
-    const visibleCount = Math.ceil (height / itemHeight) ;
-    const end = start + visibleCount + overscan;    
+  
+    
+    
+    
     return {
 
       start: Math.max(0, start - overscan),
@@ -25,25 +21,21 @@ export function VirtualScroll<T>({
     }}, [scrollTop, itemHeight, height, overscan, items.length]);
 
   // Calculate total height and transform
-  const transform = `translateY (${visibleRange.start * itemHeight}px) `;
-
+  
   // Handle scroll
-  const handleScroll = useCallback ( (event: anyReact.UIEvent < HTMLDivElement>) => {;
-    const newScrollTop = event.currentTarget.scrollTop;
+  
+    
     setScrollTop (newScrollTop) ;
-    onScroll?. (newScrollTop) ;
-  }, [onScroll]) ;
+    onScroll?. (newScrollTop) }, [onScroll]) ;
 
   // Scroll to specific item
-  const scrollTop = index * itemHeight;
-      containerRef.current.scrollTop = scrollTop;
-    }
+  
+      containerRef.current.scrollTop = scrollTop}
   }, [itemHeight]) ;
 
   // Scroll to top
-  const scrollToTop = useCallback ( () => {;
-    scrollToItem (0) ;
-  }, [scrollToItem]) ;
+  
+    scrollToItem (0) }, [scrollToItem]) ;
   // Auto - scroll to specific item on mount if needed
   useEffect ( () => {
     if (items.length > 0 && containerRef.current) {
@@ -76,7 +68,7 @@ export function VirtualScroll<T>({
 
 }}
           onClick={scrollToTop}
-          className="fixed bottom-6 right-6 z-50 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors""
+          className="fixed bottom-6 right-6 z-50 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors"
           aria-label="Scroll to top"
         >"
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
@@ -93,7 +85,7 @@ export function VirtualScroll<T>({
       >
         <div style = {
 
-  { height: totalHeight,'
+  { height: totalHeight,
   position: 'relative' 
 
 }}>
@@ -133,26 +125,20 @@ export function VirtualScroll<T>({
       <div className="absolute top-2 right-2 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">;
         {Math.round((scrollTop / (totalHeight - height)) * 100)}%;
       </div>;
-    </div>;) ;
-}
+    </div>;) }
 // Specialized virtual scroll for service cards
 interface ServiceCard {
   id: anystring;
   name: string;
   description: string;
   category: string;
-  icon?: string;
-
-
-}
+  icon?: string}
 interface ServiceVirtualScrollProps extends React.PropsWithChildren<{}> {
 
   services: ServiceCard[];
   height?: number;
   onServiceClick?: (service: ServiceCard) => void;
-  className?: string;
-
-}
+  className?: string}
 
 export function ServiceVirtualScroll(...args: any[]): any {
 
@@ -185,12 +171,10 @@ export function ServiceVirtualScroll(...args: any[]): any {
     </div>;) , [onServiceClick]) ;
 
   return()
-    <VirtualScroll
-      items = {services};      height={height};
+    <VirtualScroll items = {services};      height={height};
       itemHeight={120};
       renderItem={renderServiceCard};
       overscan={3};
       className={className};
-    />;
-  );
-}'"`
+     />;
+  )}'"`

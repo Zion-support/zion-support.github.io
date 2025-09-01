@@ -1,6 +1,6 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
-import { Link } from 'react-router-dom';'
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Brain, Shield, Rocket, Users, ArrowRight, CheckCircle, Globe, Target } from 'lucide-react';
 export const EnhancedAbout = () => {
 import { motion } from 'framer - motion';
@@ -9,97 +9,97 @@ import { motion } from 'framer - motion';
     const compValues = [
         {
 
-            icon: Brain,'
-            title: 'Innovation First','
-            description: 'We push the boundaries of what\'s possible with cutting-edge technology','
+            icon: Brain,
+            title: 'Innovation First',
+            description: 'We push the boundaries of what\'s possible with cutting-edge technology',
             color: 'zion-cyan'
         },
         {
 
-            icon: Shield,'
-            title: 'Trust & Security','
-            description: 'Building secure, reliable solutions that protect our clients\' data','
+            icon: Shield,
+            title: 'Trust & Security',
+            description: 'Building secure, reliable solutions that protect our clients\' data',
             color: 'zion-purple'
         },
         {
 
-            icon: Users,'
-            title: 'Client Partnership','
-            description: 'Long-term relationships built on trust, transparency, and results','
+            icon: Users,
+            title: 'Client Partnership',
+            description: 'Long-term relationships built on trust, transparency, and results',
             color: 'zion-cyan'
         },
         {
 
-            icon: Rocket,'
-            title: 'Excellence','
-            description: 'Delivering exceptional quality in every project we undertake','
+            icon: Rocket,
+            title: 'Excellence',
+            description: 'Delivering exceptional quality in every project we undertake',
             color: 'zion-purple'
 
     ];
     const teamMembers = [
         {
-'
-            name: 'Kleber','
-            role: 'CEO & Founder','
-            expertise['AI/ML', 'Cloud Architecture', 'Digital Transformation'],;'
+
+            name: 'Kleber',
+            role: 'CEO & Founder',
+            expertise['AI/ML',Cloud Architecture',Digital Transformation'],;
             avatar: '👨‍💼'
         },
         {
-'
-            name: 'AI Team','
-            role: 'Machine Learning Engineers','
-            expertise['Deep Learning', 'NLP', 'Computer Vision'],;'
+
+            name: 'AI Team',
+            role: 'Machine Learning Engineers',
+            expertise['Deep Learning',NLP',Computer Vision'],;
             avatar: '🤖'
         },
         {
-'
-            name: 'DevOps Team','
-            role: 'Cloud & Infrastructure','
-            expertise['AWS/Azure', 'Kubernetes', 'CI/CD'],;'
+
+            name: 'DevOps Team',
+            role: 'Cloud & Infrastructure',
+            expertise['AWS/Azure',Kubernetes',CI/CD'],;
             avatar: '☁️'
         },
         {
-'
-            name: 'Security Team','
-            role: 'Cybersecurity Experts','
-            expertise['Threat Detection', 'Compliance', 'Penetration Testing'],;'
+
+            name: 'Security Team',
+            role: 'Cybersecurity Experts',
+            expertise['Threat Detection',Compliance',Penetration Testing'],;
             avatar: '🔒'
 
     ];
     const milestones = [
         {
-'
-            year: '2020','
-            title: 'Comp Founded','
-            description: 'Zion Tech Group established with a vision for AI-driven innovation','
+
+            year: '2020',
+            title: 'Comp Founded',
+            description: 'Zion Tech Group established with a vision for AI-driven innovation',
             achievement: 'First AI solution deployed'
         },
         {
-'
-            year: '2021','
-            title: 'AI Breakthrough','
-            description: 'Developed proprietary machine learning algorithms','
+
+            year: '2021',
+            title: 'AI Breakthrough',
+            description: 'Developed proprietary machine learning algorithms',
             achievement: '10+ enterprise clients onboarded'
         },
         {
-'
-            year: '2022','
-            title: 'Cloud Expansion','
-            description: 'Launched comprehensive cloud and DevOps services','
+
+            year: '2022',
+            title: 'Cloud Expansion',
+            description: 'Launched comprehensive cloud and DevOps services',
             achievement: '50+ successful cloud migrations'
         },
         {
-'
-            year: '2023','
-            title: 'Global Reach','
-            description: 'Expanded services to international markets','
+
+            year: '2023',
+            title: 'Global Reach',
+            description: 'Expanded services to international markets',
             achievement: '100+ projects completed'
         },
         {
-'
-            year: '2024','
-            title: 'Industry Leader','
-            description: 'Recognized as a top technology solutions provider','
+
+            year: '2024',
+            title: 'Industry Leader',
+            description: 'Recognized as a top technology solutions provider',
             achievement: '95% client satisfaction rate'
 
     ];
@@ -177,7 +177,7 @@ import { motion } from 'framer - motion';
       {/* Hero Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">;"
         <motion.div className="max-w-7xl mx-auto text-center" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>"
-          <motion.h1 className="text-4xl md:text-6xl font-bold mb-6" variants={itemVariants}>'
+          <motion.h1 className="text-4xl md:text-6xl font-bold mb-6" variants={itemVariants}>
             About{' '}"
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
               Zion Tech Group
@@ -353,7 +353,7 @@ import { motion } from 'framer - motion';
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Work with Us?
           </h2>"
-          <p className="text-xl text-gray-300 mb-8">'
+          <p className="text-xl text-gray-300 mb-8">
             Let's discuss how our expertise can transform your business
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"

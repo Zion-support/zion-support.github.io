@@ -22,41 +22,23 @@ const CONFIG = {
   appUrl: 'https://ziontechgroup.com',
   checkInterval: 5 * 60 * 1000, // 5 minutes
   maxRetries: 3,
-  logDir: path.join(__dirname, '../reports'),
+  logDir: path.join(__dirname,../reports'),
   errorPatterns: {
     // JavaScript errors
     js: {
-      'Cannot read property': 'null-check-fix',
-      'is not a function': 'function-check-fix',
-      'Unexpected token': 'syntax-fix',
-      'ReferenceError': 'reference-fix',
-      'TypeError': 'type-fix'
+      'Cannot read property': 'null-check-fix',is not a function': 'function-check-fix',Unexpected token': 'syntax-fix',ReferenceError': 'reference-fix',TypeError': 'type-fix'
     },
     // CSS errors
     css: {
-      'Failed to load resource': 'resource-fix',
-      '404': 'missing-resource-fix',
-      'CORS': 'cors-fix'
+      'Failed to load resource': 'resource-fix',404': 'missing-resource-fix',CORS': 'cors-fix'
     },
     // Network errors
     network: {
-      'net::ERR_': 'network-fix',
-      'timeout': 'timeout-fix',
-      'connection refused': 'connection-fix'
+      'net::ERR_': 'network-fix',timeout': 'timeout-fix',connection refused': 'connection-fix'
 
   },
   fixStrategies: {
-    'null-check-fix': 'Add null/undefined checks',
-    'function-check-fix': 'Verify function existence',
-    'syntax-fix': 'Fix JavaScript syntax errors',
-    'reference-fix': 'Fix variable/function references',
-    'type-fix': 'Add type checking',
-    'resource-fix': 'Fix resource loading issues',
-    'missing-resource-fix': 'Add missing resources',
-    'cors-fix': 'Fix CORS configuration',
-    'network-fix': 'Fix network connectivity',
-    'timeout-fix': 'Increase timeout values',
-    'connection-fix': 'Fix connection issues'
+    'null-check-fix': 'Add null/undefined checks',function-check-fix': 'Verify function existence',syntax-fix': 'Fix JavaScript syntax errors',reference-fix': 'Fix variable/function references',type-fix': 'Add type checking',resource-fix': 'Fix resource loading issues',missing-resource-fix': 'Add missing resources',cors-fix': 'Fix CORS configuration',network-fix': 'Fix network connectivity',timeout-fix': 'Increase timeout values',connection-fix': 'Fix connection issues'
 
 };
 ;
@@ -85,13 +67,7 @@ class BrowserErrorMonitor {
       this.browser = await puppeteer.launch({
         headless: true,
         args: [
-          '--no-sandbox',
-          '--disable-setuid-sandbox',
-          '--disable-dev-shm-usage',
-          '--disable-accelerated-2d-canvas',
-          '--no-first-run',
-          '--no-zygote',
-          '--disable-gpu'
+          '--no-sandbox',--disable-setuid-sandbox',--disable-dev-shm-usage',--disable-accelerated-2d-canvas',--no-first-run',--no-zygote',--disable-gpu'
         ]
       });
 
@@ -197,8 +173,8 @@ class BrowserErrorMonitor {
     await this.attemptAutoFix(responseError);
 
   assessErrorSeverity(message) {
-    const criticalKeywords = ['fatal', 'critical', 'uncaught', 'unhandled'];
-    const warningKeywords = ['warning', 'deprecated', 'experimental'];
+    const criticalKeywords = ['fatal',critical',uncaught',unhandled'];
+    const warningKeywords = ['warning',deprecated',experimental'];
     
     if (criticalKeywords.some(keyword => message.toLowerCase().includes(keyword))) {
       return 'critical';
@@ -446,7 +422,7 @@ class BrowserErrorMonitor {
 
       };
       
-      const reportPath = path.join(CONFIG.logDir, 'browser-error-report.json');
+      const reportPath = path.join(CONFIG.logDir,browser-error-report.json');
       await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
       
       // console.log(`📄 Report generated: ${reportPath}`);
@@ -518,7 +494,7 @@ process.on('uncaughtException', async (error) => {
 });
 
 process.on('unhandledRejection', async (reason, promise) => {
-  console.error('❌ Unhandled Rejection at:', promise, 'reason:', reason);
+  console.error('❌ Unhandled Rejection at:', promise,reason:', reason);
   await monitor.stop();
   process.exit(1);
 });

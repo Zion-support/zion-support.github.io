@@ -1,6 +1,6 @@
-import { Button } from '@/components/ui/button';'
-import { Link } from 'react-router-dom';'
-import { useState, useEffect } from 'react';'
+import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 
@@ -13,7 +13,7 @@ import { Link, useNavigate } from 'react-router-dom';
     useEffect ( () => {
         // Simulate loading cart data
         const timer = setTimeout(() => {
-            setCartLoading(false);'
+            setCartLoading(false);
                 // // // // // // // // console.error('Failed to update cart', err);
             }
         }
@@ -34,12 +34,12 @@ import { Link, useNavigate } from 'react-router-dom';
         dispatch(removeItemAction(id));
     };
     const handleCheckout = () => {
-'
+
         router.push('/checkout');
     };
     const applyCode = async () => {
         try {
-'
+
             const res = await apiClient.post('/coupons/validate', {
 
                 code,
@@ -62,7 +62,7 @@ import { Link, useNavigate } from 'react-router-dom';
     if (showEmpty) {
 "
         return (<div className="container py-10 text-center">"
-        <img loading="lazy" src="/images/empty-cart.svg" alt="Empty cart" className="mx-auto mb-4 w-48 h-36"/>'
+        <img loading="lazy" src="/images/empty-cart.svg" alt="Empty cart" className="mx-auto mb-4 w-48 h-36"/>
         <p>{t('cart.empty')}</p>"
         <Button asChild className="mt-4">"
           <Link href="/marketplace">Browse Marketplace</Link>
@@ -97,7 +97,7 @@ import { Link, useNavigate } from 'react-router-dom';
         <span>Subtotal</span>
         <span>${subtotal.toFixed(2)}</span>
       </div>'"
-      <Button className="mt-4 w-full" onClick={() => user ? navigate('/checkout') : navigate('/login?next=/checkout')}>'
+      <Button className="mt-4 w-full" onClick={() => user ? navigate('/checkout') : navigate('/login?next=/checkout')}>
         {user ? 'Checkout' : 'Login to Checkout'}
       </Button>
     </div>) ;
@@ -127,7 +127,7 @@ import { Link, useNavigate } from 'react-router-dom';
                 </div>"
                 <p className="text-gray-600 mb-4">Your cart is empty</p>
                 <Link "
-                    to="/services" "
+                    to="/services"
                     className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                 >
                     Browse Services
@@ -141,7 +141,7 @@ import { Link, useNavigate } from 'react-router-dom';
             <p className="text-gray-600">Cart functionality coming soon...</p>"
             <div className="mt-6">
                 <Link "
-                    to="/services" "
+                    to="/services"
                     className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                 >
                     Continue Shopping

@@ -1,6 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
 import { 
   Zap, 
   TrendingDown, 
@@ -24,97 +21,17 @@ import {
 } from 'lucide-react';
 
 export default function AIEnergyOptimizationPlatform() {
-  const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  };
-
-  const features = [
-    "AI-powered energy consumption analysis",
-    "Real-time monitoring and alerts",
-    "Predictive maintenance scheduling",
-    "Smart grid integration",
-    "Renewable energy optimization",
-    "Cost forecasting and budgeting",
-    "Carbon footprint tracking",
-    "Mobile app for remote monitoring",
-    "API integration with existing systems",
-    "Advanced analytics dashboard"
-  ];
-
-  const benefits = [
-    "Reduce energy costs by 25-40%",
-    "Improve operational efficiency by 30%",
-    "Extend equipment lifespan by 20%",
-    "Achieve sustainability goals faster",
-    "Real-time visibility into energy usage",
-    "Automated optimization recommendations"
-  ];
-
-  const useCases = [
-    "Manufacturing facilities",
-    "Commercial buildings",
-    "Data centers",
-    "Retail chains",
-    "Healthcare facilities",
-    "Educational institutions",
-    "Government buildings",
-    "Industrial plants"
-  ];
-
-  const pricing = [
-    {
-      plan: "Starter",
-      price: "$2,999",
-      period: "month",
-      description: "Perfect for small to medium facilities",
-      features: [
-        "Up to 10 energy meters",
-        "Basic AI analytics",
-        "Mobile app access",
-        "Email alerts",
-        "Standard support"
-      ]
-    },
-    {
-      plan: "Professional",
-      price: "$5,999",
-      period: "month",
-      description: "Ideal for growing businesses",
-      features: [
-        "Up to 50 energy meters",
-        "Advanced AI optimization",
-        "Predictive maintenance",
-        "API access",
-        "Priority support",
-        "Custom integrations"
-      ]
-    },
-    {
-      plan: "Enterprise",
-      price: "$12,999",
-      period: "month",
-      description: "For large-scale operations",
-      features: [
-        "Unlimited energy meters",
-        "Full AI suite",
-        "Custom AI models",
-        "Dedicated support team",
-        "On-site consultation",
-        "White-label options"
-      ]
-    }
-  ];
-
+  
+  
+  
+  
+  
   return (
     <>
-      <SEO 
-        title="AI Energy Optimization Platform - Zion Tech Group"
+      <SEO title="AI Energy Optimization Platform - Zion Tech Group"
         description="Transform your energy management with AI-powered optimization. Reduce costs by 25-40%, improve efficiency, and achieve sustainability goals with our intelligent energy platform."
         canonical="/services/ai-energy-optimization-platform"
-      />
+       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
@@ -129,7 +46,7 @@ export default function AIEnergyOptimizationPlatform() {
             >
               <div className="flex justify-center mb-6">
                 <div className="p-3 bg-green-500/20 rounded-full">
-                  <Zap className="h-12 w-12 text-green-400" />
+                  <Zap className="h-12 w-12 text-green-400"  />
                 </div>
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -146,7 +63,7 @@ export default function AIEnergyOptimizationPlatform() {
                   className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center justify-center gap-2"
                 >
                   Start Free Trial
-                  <ArrowRight className="h-5 w-5" />
+                  <ArrowRight className="h-5 w-5"  />
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
@@ -189,7 +106,7 @@ export default function AIEnergyOptimizationPlatform() {
                 >
                   <div className="flex items-center gap-3 mb-4">
                     <div className="p-2 bg-green-500/20 rounded-lg">
-                      <CheckCircle className="h-5 w-5 text-green-400" />
+                      <CheckCircle className="h-5 w-5 text-green-400"  />
                     </div>
                     <h3 className="text-lg font-semibold text-white">{feature}</h3>
                   </div>
@@ -227,7 +144,7 @@ export default function AIEnergyOptimizationPlatform() {
                   className="text-center"
                 >
                   <div className="p-4 bg-green-500/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                    <TrendingDown className="h-8 w-8 text-green-400" />
+                    <TrendingDown className="h-8 w-8 text-green-400"  />
                   </div>
                   <p className="text-lg text-white font-medium">{benefit}</p>
                 </motion.div>
@@ -276,7 +193,7 @@ export default function AIEnergyOptimizationPlatform() {
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center gap-3">
-                        <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0" />
+                        <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0"  />
                         <span className="text-slate-300">{feature}</span>
                       </li>
                     ))}
@@ -327,7 +244,7 @@ export default function AIEnergyOptimizationPlatform() {
                   className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 text-center hover:border-green-500/50 transition-colors"
                 >
                   <div className="p-3 bg-green-500/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                    <Leaf className="h-8 w-8 text-green-400" />
+                    <Leaf className="h-8 w-8 text-green-400"  />
                   </div>
                   <h3 className="text-lg font-semibold text-white">{useCase}</h3>
                 </motion.div>
@@ -362,7 +279,7 @@ export default function AIEnergyOptimizationPlatform() {
                 className="text-center"
               >
                 <div className="p-4 bg-blue-500/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <Phone className="h-8 w-8 text-blue-400" />
+                  <Phone className="h-8 w-8 text-blue-400"  />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
                 <p className="text-slate-300">{contactInfo.phone}</p>
@@ -375,7 +292,7 @@ export default function AIEnergyOptimizationPlatform() {
                 className="text-center"
               >
                 <div className="p-4 bg-green-500/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <Mail className="h-8 w-8 text-green-400" />
+                  <Mail className="h-8 w-8 text-green-400"  />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
                 <p className="text-slate-300">{contactInfo.email}</p>
@@ -388,7 +305,7 @@ export default function AIEnergyOptimizationPlatform() {
                 className="text-center"
               >
                 <div className="p-4 bg-purple-500/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <MapPin className="h-8 w-8 text-purple-400" />
+                  <MapPin className="h-8 w-8 text-purple-400"  />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
                 <p className="text-slate-300">{contactInfo.address}</p>
@@ -407,12 +324,11 @@ export default function AIEnergyOptimizationPlatform() {
                 className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center justify-center gap-2 mx-auto"
               >
                 Schedule a Consultation
-                <ArrowRight className="h-5 w-5" />
+                <ArrowRight className="h-5 w-5"  />
               </motion.button>
             </motion.div>
           </div>
         </section>
       </div>
     </>
-  );
-}
+  )}

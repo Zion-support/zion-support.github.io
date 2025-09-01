@@ -34,8 +34,7 @@ pricing: {
   useCases: string[];
   compliance: string[];
   supportLevel: string;
-  accuracy: string;
-}
+  accuracy: string}
 
 // Zion Tech Group Contact Information;
 const zionContact = {
@@ -46,8 +45,7 @@ const zionContact = {
   ;
   ;
   ;"
-  address: "364 E Main St STE 1008 Middletown DE 19709";
-};
+  address: "364 E Main St STE 1008 Middletown DE 19709"};
 
 // Innovative AI Services 2030
 export const innovativeAIServices2030: InnovativeAIService[] = [
@@ -527,4 +525,4 @@ export const innovativeAIServices2030: InnovativeAIService[] = [
     trending: true};
 ];
 
-export default innovativeAIServices2030;}}"
+export default innovativeAIServices2030}}"

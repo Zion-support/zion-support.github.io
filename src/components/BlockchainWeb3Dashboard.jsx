@@ -1,39 +1,39 @@
-import { useState, useCallback } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
+import { useState, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Wallet, Smartphone, Coins, Image, TrendingUp, BarChart3, Plus, Send, Download, Loader2 } from 'lucide-react';
 import { useBlockchainWeb3 } from "../hooks/useBlockchainWeb3";"
-import { useAnalytics } from "../hooks/useAnalytics";'
+import { useAnalytics } from "../hooks/useAnalytics";
 export const BlockchainWeb3Dashboard = ({ className = '' }) => {
 
     const { trackEvent } = useAnalytics({
 
         enableTracking: true,
         enableUserBehaviorTracking: true
-    });'
+    });
     const [activeTab, setActiveTab] = useState('overview');
     const [showMintNFT, setShowMintNFT] = useState(false);
     const [showSendTransaction, setShowSendTransaction] = useState(false);
     const { wallet, contracts, nfts, defiPositions, transactions, metrics, isConnecting, isProcessing, connectWallet, disconnectWallet, switchNetwork, addContract, mintNFT, sendTransaction, createDeFiPosition } = useBlockchainWeb3();
     const [nftForm, setNftForm] = useState({
-'
-        name: '','
-        description: '','
+
+        name: '',
+        description: '',
         image: ''
     });
     const [transactionForm, setTransactionForm] = useState({
-'
-        to: '','
-        value: '','
+
+        to: '',
+        value: '',
         data: ''
     }) ;
     const handleConnectWallet = useCallback (async () => {
         try {
-            await connectWallet();'
+            await connectWallet();
             // // // // // // // // console.error('Failed to connect wallet:', error);
-        }'
-            trackEvent('blockchain', 'dashboard', 'wallet_connected')}
+        }
+            trackEvent('blockchain',dashboard',wallet_connected')}
         catch (error) {
-'
+
             // console.error('Failed to connect wallet:', error)}
     }, [connectWallet, trackEvent]);
     const handleMintNFT = useCallback(async () => {
@@ -52,15 +52,15 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
 
 `
 }`
-                };'
-                await mintNFT(contracts[1]?.address || '', metadata);'
+                };
+                await mintNFT(contracts[1]?.address || '', metadata);
                 setNftForm({ name: '', description: '', image: '' });
-                setShowMintNFT(false);'
+                setShowMintNFT(false);
                 // // // // // // // // console.error('Failed to mint NFT:', error);
-            }'
-                trackEvent('blockchain', 'dashboard', 'nft_minted')}
+            }
+                trackEvent('blockchain',dashboard',nft_minted')}
             catch (error) {
-'
+
                 // console.error('Failed to mint NFT:', error)}
         }
     }, [nftForm, wallet, contracts, mintNFT, trackEvent]);
@@ -68,24 +68,24 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
         if (transactionForm.to.trim() && transactionForm.value && wallet) {
 
             try {
-                await sendTransaction(transactionForm.to, transactionForm.value, transactionForm.data || null);'
+                await sendTransaction(transactionForm.to, transactionForm.value, transactionForm.data || null);
                 setTransactionForm({ to: '', value: '', data: '' });
-                setShowSendTransaction(false);'
+                setShowSendTransaction(false);
                 // // // // // // // // console.error('Failed to send transaction:', error);
-            }'
-                trackEvent('blockchain', 'dashboard', 'transaction_sent')}
+            }
+                trackEvent('blockchain',dashboard',transaction_sent')}
             catch (error) {
-'
+
                 // console.error('Failed to send transaction:', error)}
         }
     }, [transactionForm, wallet, sendTransaction, trackEvent]) ;
     const getStatusColor = (status) => {
 
         switch (status) {
-'
-            case 'confirmed': return 'text-green-600 bg-green-100';'
-            case 'pending': return 'text-yellow-600 bg-yellow-100';'
-            case 'failed': return 'text-red-600 bg-red-100';'
+
+            case 'confirmed': return 'text-green-600 bg-green-100';
+            case 'pending': return 'text-yellow-600 bg-yellow-100';
+            case 'failed': return 'text-red-600 bg-red-100';
             default: return 'text-gray-600 bg-gray-100'}
     };`
     return (<div className={`bg-white dark:bg-gray-900 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 ${className}`}>
@@ -93,10 +93,9 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
       <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">"
         <div className="flex items-center space-x-3">"
           <div className="p-2 bg-blue-100 dark:bg-blue-900 rounded-lg">
-                abi: [],'
-                functions: ['function1', 'function2'],'
-                events: ['Event1','
-  'Event2']
+                abi: [],
+                functions: ['function1',function2'],
+                events: ['Event1',Event2']
 
 
 "
@@ -236,12 +235,12 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                 <button onClick = {
 
   () => createDeFiPosition({
-'
-                type: 'staking','
-                protocol: 'Zion Protocol','
-                asset: 'ZION','
+
+                type: 'staking',
+                protocol: 'Zion Protocol',
+                asset: 'ZION',
                 amount: '1000',
-                apy: 12.5,'
+                apy: 12.5,
   rewards: '125'
 
 
@@ -474,7 +473,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
               </div>
 "
               <div className="flex space-x-3 mt-6">"
-                <button onClick={handleMintNFT} disabled={!nftForm.name.trim() || isProcessing} className="flex-1 px-4 py-2 text-white bg-purple-600 rounded-lg hover:bg-purple-700 disabled:opacity-50">'
+                <button onClick={handleMintNFT} disabled={!nftForm.name.trim() || isProcessing} className="flex-1 px-4 py-2 text-white bg-purple-600 rounded-lg hover:bg-purple-700 disabled:opacity-50">
                   {isProcessing ? 'Minting...' : 'Mint NFT'}
                 </button>
 "
@@ -568,7 +567,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
               </div>
 "
               <div className="flex space-x-3 mt-6">"
-                <button onClick={handleSendTransaction} disabled={!transactionForm.to.trim() || !transactionForm.value || isProcessing} className="flex-1 px-4 py-2 text-white bg-green-600 rounded-lg hover:bg-green-700 disabled:opacity-50">'
+                <button onClick={handleSendTransaction} disabled={!transactionForm.to.trim() || !transactionForm.value || isProcessing} className="flex-1 px-4 py-2 text-white bg-green-600 rounded-lg hover:bg-green-700 disabled:opacity-50">
                   {isProcessing ? 'Sending...' : 'Send Transaction'}
                 </button>
 "

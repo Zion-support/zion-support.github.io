@@ -1,42 +1,42 @@
-import React from 'react';'
+import React from 'react';
 import { Shield, Lock, CheckCircle, AlertTriangle } from 'lucide-react';
 export function SecurityHeaders({ className }) {
 
   const securityFeatures = [
     {
 
-      icon: Shield,'
-      title: 'SOC 2 Type II Certified','
-      description: 'Enterprise-grade security compliance','
-      status: 'verified','
+      icon: Shield,
+      title: 'SOC 2 Type II Certified',
+      description: 'Enterprise-grade security compliance',
+      status: 'verified',
       color: 'text-zion-cyan'},
     {
 
-      icon: Lock,'
-      title: 'End-to-End Encryption','
-      description: '256-bit AES encryption for all data','
-      status: 'verified','
+      icon: Lock,
+      title: 'End-to-End Encryption',
+      description: '256-bit AES encryption for all data',
+      status: 'verified',
       color: 'text-zion-purple'},
     {
 
-      icon: CheckCircle,'
-      title: 'GDPR & CCPA Compliant','
-      description: 'Full data protection compliance','
-      status: 'verified','
+      icon: CheckCircle,
+      title: 'GDPR & CCPA Compliant',
+      description: 'Full data protection compliance',
+      status: 'verified',
       color: 'text-zion-cyan'},
     {
 
-      icon: Shield,'
-      title: 'Zero-Knowledge Architecture','
-      description: 'We cannot access your encrypted data','
-      status: 'verified','
+      icon: Shield,
+      title: 'Zero-Knowledge Architecture',
+      description: 'We cannot access your encrypted data',
+      status: 'verified',
       color: 'text-zion-purple'},
   ];
   const complianceBadges = ['
-    { name: 'SOC 2', status: 'Certified', year: '2024', icon: CheckCircle },'
-    { name: 'ISO 27001', status: 'Certified', year: '2024', icon: CheckCircle },'
-    { name: 'GDPR', status: 'Compliant', year: '2024', icon: CheckCircle },'
-    { name: 'CCPA', status: 'Compliant', year: '2024', icon: CheckCircle },'
+    { name: 'SOC 2', status: 'Certified', year: '2024', icon: CheckCircle },
+    { name: 'ISO 27001', status: 'Certified', year: '2024', icon: CheckCircle },
+    { name: 'GDPR', status: 'Compliant', year: '2024', icon: CheckCircle },
+    { name: 'CCPA', status: 'Compliant', year: '2024', icon: CheckCircle },
     { name: 'HIPAA', status: 'Ready', year: '2024', icon: AlertTriangle },
   ];
   return()
@@ -97,7 +97,7 @@ export function SecurityHeaders({ className }) {
               >
                 <div`
                   className={`w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3 ${
-'
+
                     badge.status === 'Certified' || badge.status === 'Compliant''
                       ? 'bg-zion-cyan/20''
                       : 'bg-yellow-500/20'`
@@ -105,7 +105,7 @@ export function SecurityHeaders({ className }) {
                 >
                   <badge.icon`
                     className={`w-6 h-6 ${
-'
+
                       badge.status === 'Certified' ||'
                       badge.status === 'Compliant''
                         ? 'text-zion-cyan''
@@ -116,7 +116,7 @@ export function SecurityHeaders({ className }) {
                 <h4 className="font-semibold text-white mb-1">{badge.name}</h4>
                 <div`
                   className={`text-sm font-medium mb-1 ${
-'
+
                     badge.status === 'Certified' || badge.status === 'Compliant''
                       ? 'text-zion-cyan''
                       : 'text-yellow-500'`

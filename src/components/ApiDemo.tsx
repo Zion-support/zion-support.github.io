@@ -1,7 +1,51 @@
-import React, { useState, useEffect } from 'react.ts';'
-import { api, ApiResponse  } from '@/services/api';
+<<<<<<< HEAD
+
+interface User {
+  id: number;
+  name: string;
+  email: string;
+  createdAt?: string;
+
+const ApiDemo: React.FC = (): JSX.Element => {;
+  const [users, setUsers] = useState<any>([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<any>(null);
+const [newUser, setNewUser] = useState({ name: '', email: ''});
+  const [healthStatus, setHealthStatus] = useState<any>('Checking...');
+
+  // Check API health on component mount
+  useEffect ( () => {
+    checkHealth () ;
+    fetchUsers () }, []) ;
+
+  
+    try {;
+      
+      setHealthStatus (`✅ API Healthy - ${response.data?.environment} mode`) } catch (err) {
+
+      setHealthStatus('❌ API Unhealthy')};
+
+  
+    setLoading (true) ;
+    setError (null) ;
+
+    try {
+      
+      if (response.success && response.data) {
+
+        setUsers(response.data)} catch (err) {
+
+      setError(err instanceof Error ? err.message : 'Failed to fetch users')} finally {
+
+      setLoading(false)};
+
+  
+    e.preventDefault () ;
+
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     if (!newUser.name.trim() || !newUser.email.trim()) {
-'
+
       setError('Name and email are required');
       return;
 
@@ -9,20 +53,15 @@ import { api, ApiResponse  } from '@/services/api';
     setError (null) ;
 
     try {
-      const response = await api.createUser (newUser) ;
+      
       if (response.success && response.data) {
 
-        setUsers(prev => [...prev, response.data!]);'
-        setNewUser({ name: '', email: '' });
+        setUsers(prev => [...prev, response.data!]);
+        setNewUser({ name: '', email: '' })} catch (err) {
 
-    } catch (err) {
-'
-      setError(err instanceof Error ? err.message : 'Failed to create user');
-    } finally {
+      setError(err instanceof Error ? err.message : 'Failed to create user')} finally {
 
-      setLoading(false);
-
-  };
+      setLoading(false)};
   return()
     <div className = "max-w-4xl mx-auto p-6 space-y-6">"
       <div className="bg-white rounded-lg shadow-md p-6">"
@@ -42,7 +81,7 @@ import { api, ApiResponse  } from '@/services/api';
           <form onSubmit={handleCreateUser} className="space-y-4">"
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <input"
-                type="text""
+                type="text"
                 placeholder="Name"
                 value={newUser.name}
                 onChange = {
@@ -60,7 +99,7 @@ import { api, ApiResponse  } from '@/services/api';
                 required
               />
               <input"
-                type="email""
+                type="email"
                 placeholder="Email"
                 value={newUser.email}
                 onChange = {
@@ -82,7 +121,7 @@ import { api, ApiResponse  } from '@/services/api';
               type="submit"
               disabled={loading}"
               className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
-'
+
               {loading ? 'Creating...' : 'Create User'}
             </button>
           </form>
@@ -103,7 +142,7 @@ import { api, ApiResponse  } from '@/services/api';
               onClick={fetchUsers}
               disabled={loading}"
               className="px-3 py-1 text-sm bg-gray-600 text-white rounded-md hover:bg-gray-700 disabled:opacity-50"
-'
+
               {loading ? 'Loading...' : 'Refresh'}
             </button>
           </div>
@@ -146,7 +185,6 @@ import { api, ApiResponse  } from '@/services/api';
           </div>;
         </div>;
       </div>;
-    </div>;) ;
-};
+    </div>;) };
 
-export default ApiDemo;}}}}}}}'"`
+export default ApiDemo}}}}}}}'"`

@@ -1,27 +1,31 @@
-import React from 'react';'
-import { motion } from 'framer-motion';
+<<<<<<< HEAD
+
+interface EnhancedLoadingSpinnerProps {
+
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  text?: string;
+  showProgress?: boolean;
+  progress?: number;
+  variant?: 'default' | 'futuristic' | 'minimal';
+
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 export function EnhancedLoadingSpinner({
-'
-  size = 'md','
+
+  size = 'md',
   text = 'Loading...',
   showProgress = false,
-  progress = 0,'
+  progress = 0,
   variant = 'futuristic'}: EnhancedLoadingSpinnerProps) {
 
-  const sizeClasses = {
-'
-    sm: 'w-8 h-8','
-    md: 'w-16 h-16','
-    lg: 'w-32 h-32','
-    xl: 'w-48 h-48'};
+  
+  
+<<<<<<< HEAD
 
-  const textSizes = {
-'
-    sm: 'text-xs','
-    md: 'text-sm','
-    lg: 'text-lg','
-    xl: 'text-xl'};
+  if (variant === 'minimal') {
+=======
 '  if (variant === 'minimal') {
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     return()
       <div className="flex items-center justify-center">
@@ -34,9 +38,13 @@ export function EnhancedLoadingSpinner({
           </span>
         )}
       </div>
-    );
-  }
+    )}
+<<<<<<< HEAD
+
+  if (variant === 'default') {
+=======
 '  if (variant === 'default') {
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     return ("
       <div className="flex flex-col items-center justify-center space-y-4">
@@ -71,7 +79,7 @@ export function EnhancedLoadingSpinner({
         />
         <motion.div`
           className={`absolute top-0 left-0 ${sizeClasses[size]} border-4 border-cyan-400 border-t-transparent rounded-full`}
-          animate={{ rotate: 360 }}'
+          animate={{ rotate: 360 }}
           transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
         />
 
@@ -117,7 +125,7 @@ export function EnhancedLoadingSpinner({
           <motion.div"
             className="bg-gradient-to-r from-cyan-400 to-blue-500 h-3 rounded-full relative overflow-hidden"
             initial={{ width: 0 }}`
-            animate={{ width: `${progress}%` }}'
+            animate={{ width: `${progress}%` }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
             {/* Shimmer effect */}

@@ -7,8 +7,8 @@ const { execSync } = require('child_process');
 class DependencyMonitor {
   constructor() {
     this.projectRoot = process.cwd();
-    this.logFile = path.join(this.projectRoot, 'logs/pm2/dependency-monitor.log');
-    this.reportFile = path.join(this.projectRoot, 'logs/pm2/dependency-report.json');
+    this.logFile = path.join(this.projectRoot,logs/pm2/dependency-monitor.log');
+    this.reportFile = path.join(this.projectRoot,logs/pm2/dependency-report.json');
     this.startTime = Date.now();
 
   log(message) {
@@ -88,12 +88,12 @@ class DependencyMonitor {
 
   async checkPackageLock() {
     try {
-      const packageLockPath = path.join(this.projectRoot, 'package-lock.json');
+      const packageLockPath = path.join(this.projectRoot,package-lock.json');
 
       if (!fs.existsSync(packageLockPath)) {
         return { exists: false, message: 'No package-lock.json found' };
 
-      const packageLock = JSON.parse(fs.readFileSync(packageLockPath, 'utf8'));
+      const packageLock = JSON.parse(fs.readFileSync(packageLockPath,utf8'));
       const lockfileVersion = packageLock.lockfileVersion;
 
       return {
@@ -121,7 +121,7 @@ class DependencyMonitor {
 
   async checkGitHooks() {
     try {
-      const hooksDir = path.join(this.projectRoot, '.git/hooks');
+      const hooksDir = path.join(this.projectRoot,.git/hooks');
 
       if (!fs.existsSync(hooksDir)) {
         return { exists: false, message: 'No git hooks directory found' };

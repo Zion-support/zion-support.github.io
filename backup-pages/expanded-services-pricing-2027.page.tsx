@@ -1,21 +1,21 @@
-import type { NextPage } from 'next';'
-import { Helmet } from 'react-helmet-async';'
+import type { NextPage } from 'next';
+import { Helmet } from 'react-helmet-async';
 import { useState, useMemo } from 'react';
 import { ALL_EXPANDED_SERVICES_PRICING } from "../data/expandedServicesPricing2027";
 
-const ExpandedServicesPricingGuide2027: NextPage = () => {;'
-  const [searchTerm, setSearchTerm] = useState('');'
-  const [selectedCategory, setSelectedCategory] = useState('all');'
+const ExpandedServicesPricingGuide2027: NextPage = () => {;
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedSubcategory, setSelectedSubcategory] = useState('all');
 
   // Get unique categories and subcategories'
   const cats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_PRICING.map(s => s.category)))];
     return cats;
   }, []);
-'
+
   const subcats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_PRICING.map(s => s.subcategory)))];
       return subcats;
-    }'
+    }
     const subcats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_PRICING.filter(s => s.category === selectedCategory).map(s => s.subcategory)))];
     return subcats}, [selectedCategory]);
 
@@ -30,11 +30,11 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {;'
       
       return matchesSearch && matchesCategory && matchesSubcategory})}, [searchTerm, selectedCategory, selectedSubcategory]);
 
-  const resetFilters = () => {;'
-    setSearchTerm('');'
-    setSelectedCategory('all');'
+  const resetFilters = () => {;
+    setSearchTerm('');
+    setSelectedCategory('all');
     setSelectedSubcategory('all')};
-'
+
       default: return 'bg-gray-600'}
   };
 
@@ -85,7 +85,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {;'
         <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-8">"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
             <input"
-              type="text""
+              type="text"
               placeholder="Search services..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)};"
@@ -95,13 +95,13 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {;'
             <select;
               value={selectedCategory};
               onChange={(e) => {;
-                setSelectedCategory(e.target.value);'
+                setSelectedCategory(e.target.value);
                 setSelectedSubcategory('all');
               }}"
               className = "px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400"
             >
               {categories.map(cat  => ("
-                <option key={cat} value={cat} className="bg-gray-800 text-white">'
+                <option key={cat} value={cat} className="bg-gray-800 text-white">
                   {cat === 'all' ? 'All Categories' : cat}
                 </option>
               ))}
@@ -113,7 +113,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {;'
               className="px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: outline-none focus:ring-2 focus:ring-blue-400"
             >
               {subcategories.map(subcat  => ("
-                <option key={subcat} value={subcat} className="bg-gray-800 text-white">'
+                <option key={subcat} value={subcat} className="bg-gray-800 text-white">
                   {subcat === 'all' ? 'All Subcategories' : subcat}
                 </option>
               ))}
@@ -217,8 +217,8 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {;'
                   <div className="space-y-3">
                     <div>"
                       <span className="text-white/70">Competitors:</span>"
-                      <div className="text-white mt-1">'
-                        {service.marketComparison.competitors.join(', ')}
+                      <div className="text-white mt-1">
+                        {service.marketComparison.competitors.join(',)}
                       </div>
                     </div>
                     <div>"
@@ -259,14 +259,14 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {;'
                     </div>
                     <div>"
                       <span className="text-white/70">Cost Savings:</span>"
-                      <div className="text-white mt-1">'
-                        {service.roiAnalysis.costSavings.slice(0, 2).join(', ')}
+                      <div className="text-white mt-1">
+                        {service.roiAnalysis.costSavings.slice(0, 2).join(',)}
                       </div>
                     </div>
                     <div>"
                       <span className="text-white/70">Revenue Impact:</span>"
-                      <div className="text-white mt-1">'
-                        {service.roiAnalysis.revenueImpact.slice(0, 2).join(', ')}
+                      <div className="text-white mt-1">
+                        {service.roiAnalysis.revenueImpact.slice(0, 2).join(',)}
                       </div>
                     </div>
                   </div>
@@ -297,8 +297,8 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {;'
 "
                 <div className="mt-4">"
                   <span className="text-white/70 text-sm">Customization Options:</span>"
-                  <div className="text-white mt-1">'
-                    {service.implementation.customizationOptions.join(', ')}
+                  <div className="text-white mt-1">
+                    {service.implementation.customizationOptions.join(',)}
                   </div>
                 </div>
               </div>
@@ -318,13 +318,13 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {;'
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="/contact""
+                href="/contact"
                 className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors"
 
                 Get Custom Quote
               </a>
               <a"
-                href="/expanded-services-2027""
+                href="/expanded-services-2027"
                 className="px-8 py-3 bg-white/20 hover:bg-white/30 text-white rounded-lg font-semibold transition-colors"
 
                 View All Services

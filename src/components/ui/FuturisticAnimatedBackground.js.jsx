@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react';'
-import { motion } from 'framer-motion';'
+import React, { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
 export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity = 'medium', className = '' }) => {
 
     const canvasRef = useRef(null);
@@ -8,7 +8,7 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
     useEffect(() => {
         const canvas = canvasRef.current;
         if (!canvas)
-            return;'
+            return;
         const ctx = canvas.getContext('2d');
         if (!ctx)
             return;
@@ -16,7 +16,7 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
         const resizeCanvas = () => {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight};
-        resizeCanvas();'
+        resizeCanvas();
         window.addEventListener('resize', resizeCanvas);
         // Particle system
         class Particle {
@@ -64,7 +64,7 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
                 ctx.globalAlpha = this.alpha * (this.life / this.maxLife);
                 ctx.fillStyle = this.color;
                 ctx.shadowColor = this.color;
-                ctx.shadowBlur = this.size * 2;'
+                ctx.shadowBlur = this.size * 2;
                 if (variant === 'matrix') {
 
                     // Matrix-style particles
@@ -79,11 +79,11 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
         }
         function getParticleColor() {
             const colors = {
-'
-  cyberpunk['#00ffff', '#ff00ff', '#ffff00', '#ff0080', '#00ff80'],;'
-                quantum['#4facfe', '#00f2fe', '#43e97b', '#38f9d7', '#fa709a'],;'
-                neon['#ff006e', '#8338ec', '#3a86ff', '#06ffa5', '#ffbe0b'],;'
-                matrix['#00ff41', '#00ff00', '#39ff14', '#7fff00',;'
+
+  cyberpunk['#00ffff',#ff00ff',#ffff00',#ff0080',#00ff80'],;
+                quantum['#4facfe',#00f2fe',#43e97b',#38f9d7',#fa709a'],;
+                neon['#ff006e',#8338ec',#3a86ff',#06ffa5',#ffbe0b'],;
+                matrix['#00ff41',#00ff00',#39ff14',#7fff00',;
   '#bfff00']
             
 
@@ -182,7 +182,7 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
 
                 const scanLineY = (Date.now() * 0.1) % canvas.height;'`
                 ctx.strokeStyle = `rgba(255, 0, 110, ${intensity === 'low' ? 0.3 : intensity === 'medium' ? 0.5 : 0.7})`;
-                ctx.lineWidth = 3;'
+                ctx.lineWidth = 3;
                 ctx.shadowColor = '#ff006e';
                 ctx.shadowBlur = 20;
                 ctx.beginPath();
@@ -193,7 +193,7 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
         }
         animate();
         return () => {
-'
+
             window.removeEventListener('resize', resizeCanvas);
             if (animationRef.current) {
 
@@ -203,15 +203,15 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
       <canvas ref={canvasRef} className="w-full h-full" style = {
 
   {
-'
+
             background: variant === 'matrix''
                 ? 'linear-gradient(0deg, #000000 0%, #001a00 50%, #000000 100%)''
                 : variant === 'cyberpunk''
                     ? 'linear-gradient(135deg, #000000 0%, #001122 50%, #000000 100%)''
                     : variant === 'quantum''
                         ? 'linear-gradient(45deg, #000428 0%, #004e92 50%, #000428 100%)''
-                        : 'linear-gradient(180deg, #000000 0%, #1a0033 50%,'
-  #000000 100%)';
+                        : 'linear-gradient(180deg, #000000 0%, #1a0033 50%,
+  #000000 100%);
         
 
 }}/>

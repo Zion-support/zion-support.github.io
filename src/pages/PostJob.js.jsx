@@ -4,10 +4,10 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardHeader,'
-  CardTitle} from '@/components/ui/card';'
-import { SEO } from '@/components/SEO';'
-import { useAuth } from '@/hooks/useAuth';'
+  CardHeader,
+  CardTitle} from '@/components/ui/card';
+import { SEO } from '@/components/SEO';
+import { useAuth } from '@/hooks/useAuth';
 import { useIsMobile } from '@/hooks/use-mobile';
 export default function PostJob() {
   const { isAuthenticated, isLoading } = useAuth();
@@ -23,7 +23,7 @@ export default function PostJob() {
   return()
     <>
       <SEO"
-        title="Post a Job | Zion AI Marketplace""
+        title="Post a Job | Zion AI Marketplace"
         description="Post a job to find the perfect AI talent for your project."
       />
 

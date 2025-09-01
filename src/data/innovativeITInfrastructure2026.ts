@@ -5,8 +5,7 @@ export interface ServiceContact {
   phone: string;
   email: string;
   website: string;
-  address: string;
-}
+  address: string}
 
 export interface ITInfrastructureService2026 {
   id: number;
@@ -34,8 +33,7 @@ export interface ITInfrastructureService2026 {
   growthRate: string;
   useCases: string[];
   technologies: string[];
-  compliance: string[];
-}
+  compliance: string[]}
 
 // Zion Tech Group Contact Information
 const zionContact: ServiceContact = {

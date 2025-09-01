@@ -2,7 +2,7 @@ import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSq
 import { Link } from 'react - router - dom';
 import { useNavigate } from 'react - router - dom';
 import React, { useState, useEffect } from "react";
-import { Link } from 'react-router-dom';'
+import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';"
 import { format } from "date-fns";"
 import { useAuth } from "@/hooks/useAuth";"
@@ -166,7 +166,7 @@ function ProjectDetailsContent() {
           <CardContent className="flex flex-col items-center justify-center py-10">"
             <AlertCircle className="h-10 w-10 text-muted-foreground mb-4"/>"
             <h2 className="text-xl font-bold mb-2">Project Not Found</h2>"
-            <p className="text-muted-foreground mb-4">'
+            <p className="text-muted-foreground mb-4">
               The project you're looking for doesn't exist or you don't have access to it.
             </p>"
             <Button onClick={() => router("/dashboard")}>"

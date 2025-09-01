@@ -1,13 +1,57 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
-import { Link } from 'react-router-dom';  ];
+<<<<<<< HEAD
+import {
+
+  Brain,
+  Zap,
+  Shield,
+  TrendingUp,
+  Users,
+  Globe,
+  ArrowRight,
+  CheckCircle,
+  Play,
+  BarChart3,
+  Cpu,
+  Eye,
+  MessageSquare,
+  Database,
+  Network,
+  Rocket,
+  Target,
+  Award,
+  Clock,
+  Star,
+  Heart'
+} from 'lucide-react';
+
+
+
+      rating: 4.8,;
+      reviews: 32,;
+      customers: 67};
+  ]},;
+    {;
+      title: 'AI-Driven Marketing',;
+      description: 'Personalized campaigns and customer insights',;
+      benefits: ['Higher Conversion',Better Targeting',ROI Optimization']};
+  ];
+
+  
+      company: 'HealthTech Solutions',;
+      industry: 'Healthcare',;
+      challenge: 'Patient data analysis',;
+      solution: 'NLP for medical records',;
+      results: ['80% faster diagnosis',Improved accuracy',Better patient outcomes']};
+  ];
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
 const AIServicesPage: React.FC = () => {
   return()
     <>
       <SEO"
-        title="AI Services - Zion Tech Group""
-        description="Comprehensive AI services including machine learning, natural language processing, and intelligent automation solutions.""
+        title="AI Services - Zion Tech Group"
+        description="Comprehensive AI services including machine learning, natural language processing, and intelligent automation solutions."
         keywords="AI services, machine learning, natural language processing, intelligent automation"
       />
 "
@@ -79,7 +123,7 @@ const AIServicesPage: React.FC = () => {
                   <ul className="space-y-2">
                     {solution.benefits.map((benefit, idx) => ("
                       <li key={idx} className="flex items-center text-sm text-gray-300">"
-                        <CheckCircle className="w-4 h-4 text-purple-400 mr-2" />                        {benefit}
+                        <CheckCircle className="w-4 h-4 text-purple-400 mr-2"  />                        {benefit}
                       </li>) ) }
                   </ul>
                 </motion.div>;) ) }
@@ -134,7 +178,7 @@ const AIServicesPage: React.FC = () => {
                       <ul className="text-gray-300 text-sm space-y-1">
                         {study.results.map((result, idx) => ("
                           <li key={idx} className="flex items-center">"
-                            <CheckCircle className="w-3 h-3 text-purple-400 mr-2" />                            {result}
+                            <CheckCircle className="w-3 h-3 text-purple-400 mr-2"  />                            {result}
                           </li>) ) }
                       </ul>
                     </div>
@@ -151,13 +195,13 @@ const AIServicesPage: React.FC = () => {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
 
                 Get Started Today
               </Link>
               <Link"
-                to="/services""
+                to="/services"
                 className="px-8 py-4 border-2 border-purple-400 text-purple-400 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
               >
                 View All Services;
@@ -167,7 +211,6 @@ const AIServicesPage: React.FC = () => {
         </div>;
       </div>;
     </>
-  );
-};
+  )};
 
-export default AIServicesPage;}}}}'"
+export default AIServicesPage}}}}'"

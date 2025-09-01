@@ -1,76 +1,136 @@
-import React, { useState } from 'react';'
-import { motion } from 'framer-motion';        'Email support'
+<<<<<<< HEAD
+import {
+
+  Brain,
+  TrendingUp,
+  Users,
+  Zap,
+  Shield,
+  Globe,
+  Database,
+  Cloud,
+  Lock,
+  Rocket,
+  CheckCircle,
+  ArrowRight,
+  PieChart,
+  LineChart,
+  Activity,
+  Target,
+  Lightbulb,
+  Eye,
+  Search,
+  Filter,
+  Download,
+  Share2,
+  Phone,
+  Mail,
+  MapPin,
+  BarChart3,
+  MessageCircle,
+  Calendar,
+  AlertTriangle,
+  Star'
+} from 'lucide-react';
+;
+const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
+
+  
+    },;
+    {;
+      icon: Zap,;
+      title: 'Automated Alerts',;
+      description: 'Intelligent notification system that alerts your team to at-risk customers and opportunities before they become critical.'};
+  ];
+
+  
+    {;
+      title: 'Integration Hub',;
+      description: 'Seamless integration with your existing CRM, support, and analytics tools',;
+      icon: Database,;
+      benefits: ['API-first design',Real-time sync',Custom connectors',Data validation']};
+  ];
+
+  
+    {;
+      industry: 'Healthcare',;
+      description: 'Predict patient outcomes, optimize care plans, and improve treatment adherence',;
+      icon: Heart,;
+      metrics: ['Patient Outcomes',Treatment Adherence',Care Plan Success',Resource Optimization']};
+  ]},;
+    {;
+      icon: Zap,;
+      title: 'Optimize Resource Allocation',;
+      description: 'Focus your team\'s efforts on high-impact activities and customers who need attention most.'};
+  ];
+
+  
+        'Up to 1,000 customers',Basic prediction models',Email alerts',Standard integrations',Email support'
+      ],;
+=======
       ],;'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       cta: 'Start Free Trial',
       popular: false
     },
     {
-'
-      name: 'Professional','
-      price: '$799','
-      period: '/month','
+
+      name: 'Professional',
+      price: '$799',
+      period: '/month',
       description: 'Ideal for established businesses',
-      features[;'
-        'Up to 10,000 customers','
-        'Advanced AI models','
-        'Real-time dashboards','
-        'Custom integrations','
-        'Priority support','
-        'Advanced analytics'
-      ],;'
+      features[;
+        'Up to 10,000 customers',Advanced AI models',Real-time dashboards',Custom integrations',Priority support',Advanced analytics'
+      ],;
       cta: 'Start Free Trial',
       popular: true
     },
     {
-'
-      name: 'Enterprise','
-      price: '$1,999','
-      period: '/month','
+
+      name: 'Enterprise',
+      price: '$1,999',
+      period: '/month',
       description: 'For large-scale operations',
-      features[;'
-        'Unlimited customers','
-        'Custom AI models','
-        'White-label solution','
-        'Dedicated support',;'
-        'Custom development',;'
+      features[;
+        'Unlimited customers',Custom AI models',White-label solution',Dedicated support',;
+        'Custom development',;
         'Advanced security';
-      ],;'
+      ],;
       cta: 'Contact Sales',;
-      popular: false;
-    };
+      popular: false};
+  ]},;
+    {
+
+      title: 'E-commerce',
+      description: 'Customer lifetime value prediction, personalized recommendations, and retention strategies',
+      metrics['Increase CLV by 35%',Reduce cart abandonment by 20%',Boost repeat purchases']},;
+    {
+
+      title: 'Financial Services',
+      description: 'Risk assessment, product adoption prediction, and customer satisfaction monitoring',
+      metrics['Reduce risk by 30%',Increase product adoption by 45%',Improve satisfaction scores']};
   ];
 
-  const useCases = [
-    {
-'
-      title: 'SaaS Companies','
-      description: 'Predict churn, identify expansion opportunities, and optimize customer success operations','
-      metrics['Reduce churn by 25%', 'Increase expansion revenue by 40%', 'Improve NPS scores'];
-    },;
-    {
-'
-      title: 'E-commerce','
-      description: 'Customer lifetime value prediction, personalized recommendations, and retention strategies','
-      metrics['Increase CLV by 35%', 'Reduce cart abandonment by 20%', 'Boost repeat purchases'];
-    },;
-    {
-'
-      title: 'Financial Services','
-      description: 'Risk assessment, product adoption prediction, and customer satisfaction monitoring','
-      metrics['Reduce risk by 30%', 'Increase product adoption by 45%', 'Improve satisfaction scores'];
-    };
-  ];
-
-  const integrations = ['
+  
+    'Google Analytics',Mixpanel',Amplitude',Segment',Zapier',Webhooks';
+=======
     'Salesforce', 'HubSpot', 'Intercom', 'Zendesk', 'Slack', 'Microsoft Teams',;'    'Google Analytics', 'Mixpanel', 'Amplitude', 'Segment', 'Zapier', 'Webhooks';
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO "
+<<<<<<< HEAD
+        title="AI Customer Success Prediction Platform | Zion Tech Group"
+        description="Predict customer churn, identify upsell opportunities, and optimize customer success with our AI-powered prediction platform. 95%+ accuracy in customer behavior forecasting."
+        keywords="AI customer success, churn prediction, customer analytics, predictive analytics, customer retention, upsell optimization"
+       />
+=======
         title="AI Customer Success Prediction Platform | Zion Tech Group""
         description="Predict customer churn, identify upsell opportunities, and optimize customer success with our AI-powered prediction platform. 95%+ accuracy in customer behavior forecasting.""        keywords="AI customer success, churn prediction, customer analytics, predictive analytics, customer retention, upsell optimization"
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative pt-32 pb-20 overflow-hidden">"
@@ -165,7 +225,7 @@ import { motion } from 'framer-motion';        'Email support'
               className="text-center p-6"
             >
               <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="w-8 h-8 text-white" />
+                <TrendingUp className="w-8 h-8 text-white"  />
               </div>
               <h3 className="text-2xl font-bold text-white mb-2">25% Churn Reduction</h3>
               <p className="text-slate-300">Identify at-risk customers before they leave and take proactive action</p>
@@ -178,7 +238,7 @@ import { motion } from 'framer-motion';        'Email support'
               className="text-center p-6"
             >
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Target className="w-8 h-8 text-white" />
+                <Target className="w-8 h-8 text-white"  />
               </div>
               <h3 className="text-2xl font-bold text-white mb-2">40% Revenue Growth</h3>
               <p className="text-slate-300">Uncover expansion opportunities and increase customer lifetime value</p>
@@ -191,7 +251,7 @@ import { motion } from 'framer-motion';        'Email support'
               className="text-center p-6"
             >
               <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-white" />
+                <Users className="w-8 h-8 text-white"  />
               </div>
               <h3 className="text-2xl font-bold text-white mb-2">95% Prediction Accuracy</h3>
               <p className="text-slate-300">Advanced AI algorithms provide reliable insights for better decision-making</p>
@@ -349,7 +409,7 @@ import { motion } from 'framer-motion';        'Email support'
                 <div className="space-y-2">
                   {capability.benefits.map((benefit, benefitIndex) => ("
                     <div key={benefitIndex} className="flex items-center text-sm text-gray-400">"
-                      <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />                      {benefit}
+                      <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0"  />                      {benefit}
                     </div>
                   ))}
                 </ul>
@@ -457,7 +517,7 @@ import { motion } from 'framer-motion';        'Email support'
                 <div className="space-y-2">
                   {useCase.metrics.map((metric, metricIndex) => ("
                     <div key={metricIndex} className="flex items-center text-sm text-gray-400">"
-                      <Target className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />                      {metric}
+                      <Target className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0"  />                      {metric}
                     </div>
                   ))}
                 </div>
@@ -657,7 +717,7 @@ import { motion } from 'framer-motion';        'Email support'
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center text-gray-300">"
-                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />                      {feature}
+                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0"  />                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -717,27 +777,27 @@ import { motion } from 'framer-motion';        'Email support'
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
               {
-'
-                step: '01','
-                title: 'Assessment','
+
+                step: '01',
+                title: 'Assessment',
                 description: 'Evaluate your current customer success processes and data infrastructure'
               },
               {
-'
-                step: '02','
-                title: 'Integration','
+
+                step: '02',
+                title: 'Integration',
                 description: 'Connect your existing systems and configure data pipelines'
               },
               {
-'
-                step: '03','
-                title: 'Training','
+
+                step: '03',
+                title: 'Training',
                 description: 'Train your team on the platform and best practices'
               },
               {
-'
-                step: '04','
-                title: 'Launch','
+
+                step: '04',
+                title: 'Launch',
                 description: 'Go live with monitoring and ongoing optimization support'
 
             ].map(phase: unknown, index: unknown (;
@@ -827,27 +887,27 @@ import { motion } from 'framer-motion';        'Email support'
             <div className="flex flex-wrap justify-center gap-4">"
               <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 hover:scale-105">
                 Start Free Trial"
-                <ArrowRight className="ml-2 w-5 h-5" />              </a>
+                <ArrowRight className="ml-2 w-5 h-5"  />              </a>
               <a "
-                href="tel:+13024640950" "
+                href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all duration-200 border border-slate-600"
               >"
-                <Phone className="w-5 h-5 mr-2" />
+                <Phone className="w-5 h-5 mr-2"  />
                 Call Us
               </a>
             </div>
             "
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-slate-400">"
               <div className="flex items-center">"
-                <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
+                <CheckCircle className="w-5 h-5 text-green-500 mr-2"  />
                 <span>14-day free trial</span>
               </div>"
               <div className="flex items-center">"
-                <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
+                <CheckCircle className="w-5 h-5 text-green-500 mr-2"  />
                 <span>No credit card required</span>
               </div>"
               <div className="flex items-center">"
-                <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
+                <CheckCircle className="w-5 h-5 text-green-500 mr-2"  />
                 <span>Cancel anytime</span>              </div>
             </div>
           </motion.div>
@@ -860,7 +920,7 @@ import { motion } from 'framer-motion';        'Email support'
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div>"
               <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4">"
-                <Phone className="w-6 h-6 text-white" />
+                <Phone className="w-6 h-6 text-white"  />
               </div>"
               <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>"              <a href="tel:+13024640950" className="text-purple-400 hover:text-purple-300 transition-colors">
                 +1 302 464 0950
@@ -869,7 +929,7 @@ import { motion } from 'framer-motion';        'Email support'
             </div>
             <div>"
               <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4">"
-                <Mail className="w-6 h-6 text-white" />
+                <Mail className="w-6 h-6 text-white"  />
               </div>"
               <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>"              <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 transition-colors">
                 kleber@ziontechgroup.com
@@ -878,7 +938,7 @@ import { motion } from 'framer-motion';        'Email support'
             </div>
             <div>"
               <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mx-auto mb-4">"
-                <MapPin className="w-6 h-6 text-white" />
+                <MapPin className="w-6 h-6 text-white"  />
               </div>"
               <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>"              <p className="text-slate-300">
                 364 E Main St STE 1008<br />
@@ -890,6 +950,5 @@ import { motion } from 'framer-motion';        'Email support'
         </div>;
       </section>;
     </div>;
-  );
-}
+  )}
 '"`

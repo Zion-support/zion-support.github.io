@@ -1,22 +1,22 @@
-import { useState, useEffect } from 'react';'
-import { JobsList } from '@/components/jobs/JobsList';'
-import { Button } from '@/components/ui/button';'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';'
-import { Link } from 'react-router-dom';'
-import { SEO } from '@/components/SEO';'
-import { BriefcaseIcon, PlusCircle, Kanban } from 'lucide-react';'
-import { ProtectedRoute } from '@/components/ProtectedRoute';'
-import { SuggestedTalents } from '@/components/jobs/SuggestedTalents';'
-import { useJobs } from '@/hooks/useJobs';'
-import { ClientOnboardingSteps } from '@/components/onboarding/ClientOnboardingSteps';'
-import { ActiveProjectsCard } from '@/components/projects/ActiveProjectsCard';'
-import { UpcomingInterviewsCard } from '@/components/interviews/UpcomingInterviewsCard';'
+import { useState, useEffect } from 'react';
+import { JobsList } from '@/components/jobs/JobsList';
+import { Button } from '@/components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Link } from 'react-router-dom';
+import { SEO } from '@/components/SEO';
+import { BriefcaseIcon, PlusCircle, Kanban } from 'lucide-react';
+import { ProtectedRoute } from '@/components/ProtectedRoute';
+import { SuggestedTalents } from '@/components/jobs/SuggestedTalents';
+import { useJobs } from '@/hooks/useJobs';
+import { ClientOnboardingSteps } from '@/components/onboarding/ClientOnboardingSteps';
+import { ActiveProjectsCard } from '@/components/projects/ActiveProjectsCard';
+import { UpcomingInterviewsCard } from '@/components/interviews/UpcomingInterviewsCard';
 import { useIsMobile } from '@/hooks/use-mobile';
 function ClientDashboardContent() {
-'
+
   const [activeTab, setActiveTab] = useState('all');
   const { jobs, isLoading } = useJobs();
-  const [selectedJobId, setSelectedJobId] = useState(null);'
+  const [selectedJobId, setSelectedJobId] = useState(null);
   const [selectedJobTitle, setSelectedJobTitle] = useState('');
   const isMobile = useIsMobile();
   // Set the first job as selected when jobs are loaded (if )
@@ -35,7 +35,7 @@ function ClientDashboardContent() {
   return()
     <>
       <SEO
-        title="Client Dashboard | Zion AI Marketplace""
+        title="Client Dashboard | Zion AI Marketplace"
         description="Manage your jobs and talent requests in the Zion AI Marketplace."
       />
 "
@@ -60,7 +60,7 @@ function ClientDashboardContent() {
               <Link to="/hiring-tracker">"
                 <Kanban className="h-4 w-4 mr-2" /> Hiring Pipeline
               </Link>
-            </Button>'
+            </Button>
             <Button asChild className={isMobile ? 'w-full justify-center' : ''}>"
               <Link to="/post-job">"
                 <PlusCircle className="h-4 w-4 mr-2" /> Post New Job

@@ -1,11 +1,11 @@
-import React, { useState } from 'react';'
-import { Link } from 'react-router-dom';'
-import { motion } from 'framer-motion';'
-// import { ultimateInnovativeServices2026 } from '../data/2026-ultimate-innovative-services';'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+// import { ultimateInnovativeServices2026 } from '../data/2026-ultimate-innovative-services';
 // import { enterpriseITInfrastructureServices2026 } from '../data/2026-enterprise-it-infrastructure-services';
 const ComprehensivePricing2026 = () => {
-'
-  const [selectedCategory, setSelectedCategory] = useState('all');'
+
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const [billingCycle, setBillingCycle] = useState('monthly');
   // Combine all services
   const allServices = [
@@ -13,55 +13,38 @@ const ComprehensivePricing2026 = () => {
     ...enterpriseITInfrastructureServices2026,
   ];
   const categories = ['
-    'all','
-    'AI & Business Solutions','
-    'IT Infrastructure','
-    'Cybersecurity','
-    'Cloud & DevOps','
-    'Specialized Industry',
+    'all',AI & Business Solutions',IT Infrastructure',Cybersecurity',Cloud & DevOps',Specialized Industry',
   ];
   const getCategoryServices = category => {
 
     switch (category) {
-'
+
       case 'AI & Business Solutions':
         return allServices.filter(service =>
           ['
-            'Business Intelligence','
-            'Marketing Automation','
-            'Customer Service','
-            'Workflow Automation',
+            'Business Intelligence',Marketing Automation',Customer Service',Workflow Automation',
           ].includes(service.category)
-        );'
+        );
       case 'IT Infrastructure':
         return allServices.filter(service =>
           ['
-            'Data Center Management','
-            'Storage Management','
-            'Virtualization','
-            'IT Asset Management',
+            'Data Center Management',Storage Management',Virtualization',IT Asset Management',
           ].includes(service.category)
-        );'
+        );
       case 'Cybersecurity':
-        return allServices.filter(service =>'
-          ['Cybersecurity', 'Network Security'].includes(service.category)
-        );'
+        return allServices.filter(service =>
+          ['Cybersecurity',Network Security'].includes(service.category)
+        );
       case 'Cloud & DevOps':
-        return allServices.filter(service =>'
-          ['Cloud Infrastructure', 'DevOps', 'Performance Monitoring'].includes()
+        return allServices.filter(service =>
+          ['Cloud Infrastructure',DevOps',Performance Monitoring'].includes()
             service.category
           )
-        );'
+        );
       case 'Specialized Industry':
         return allServices.filter(service =>
           ['
-            'Supply Chain Management','
-            'Financial Technology','
-            'Healthcare Technology','
-            'Legal Technology','
-            'Blockchain Technology','
-            'Internet of Things','
-            'Quantum Computing',
+            'Supply Chain Management',Financial Technology',Healthcare Technology',Legal Technology',Blockchain Technology',Internet of Things',Quantum Computing',
           ].includes(service.category)
         );
       default:
@@ -70,8 +53,8 @@ const ComprehensivePricing2026 = () => {
   };
   const filteredServices = getCategoryServices(selectedCategory);
   const getAnnualPrice = monthlyPrice => {
-'
-    const price = parseInt(monthlyPrice.replace(/[^0-9]/g, ''));
+
+    const price = parseInt(monthlyPrice.replace(/[^0-9]/g,));
     const annualPrice = price * 12 * 0.8; // 20% discount for annual
     return `$${annualPrice.toLocaleString()}`;
   };
@@ -93,7 +76,7 @@ const ComprehensivePricing2026 = () => {
       opacity: 1,
       transition: {
 
-        duration: 0.5,'
+        duration: 0.5,
         ease: 'easeOut'}}};
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
@@ -107,7 +90,7 @@ const ComprehensivePricing2026 = () => {
             transition={{ duration: 0.8 }}
           >
             Comprehensive"
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">'
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
               {' '}
               Pricing 2026
             </span>
@@ -175,10 +158,10 @@ const ComprehensivePricing2026 = () => {
                 <strong>Address:</strong> 364 E Main St STE 1008 Middletown DE
                 19709
               </div>
-              <div>'
+              <div>
                 <strong>Website:</strong>{' '}
                 <a"
-                  href="https://ziontechgroup.com""
+                  href="https://ziontechgroup.com"
                   className="text-cyan-400 hover:text-cyan-300 underline"
                 >
                   ziontechgroup.com
@@ -203,7 +186,7 @@ const ComprehensivePricing2026 = () => {
                     ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg''
                     : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'`
                 }`}
-              >'
+              >
                 {category === 'all' ? 'All Services' : category}
               </button>
             ))}
@@ -217,7 +200,7 @@ const ComprehensivePricing2026 = () => {
           <motion.div"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             animate="visible"
           >
             {filteredServices.map((service, index) => (
@@ -225,7 +208,7 @@ const ComprehensivePricing2026 = () => {
                 key={service.id}
                 variants={itemVariants}"
                 className="group"
-                whileHover={{ scale: 1.02, y: -5 }}'
+                whileHover={{ scale: 1.02, y: -5 }}
                 transition={{ type: 'spring', stiffness: 300 }}
               >"
                 <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/25 h-full">
@@ -249,14 +232,14 @@ const ComprehensivePricing2026 = () => {
 
                   {/* Pricing */}"
                   <div className="mb-4">"
-                    <div className="text-3xl font-bold text-cyan-400">'
+                    <div className="text-3xl font-bold text-cyan-400">
                       {billingCycle === 'monthly'
                         ? service.price
                         : getAnnualPrice(service.price)}
                     </div>"
-                    <div className="text-gray-400">'
+                    <div className="text-gray-400">
                       {billingCycle === 'monthly' ? service.period : '/year'}
-                    </div>'
+                    </div>
                     {billingCycle === 'annual' && ("
                       <div className="text-sm text-green-400 mt-1">
                         Save 20% with annual billing
@@ -317,7 +300,7 @@ const ComprehensivePricing2026 = () => {
 
                   {/* Trial Info */}"
                   <div className="mb-4 text-center p-2 bg-blue-500/10 border border-blue-500/20 rounded-lg">"
-                    <span className="text-xs text-blue-400">'
+                    <span className="text-xs text-blue-400">
                       {service.trialDays}-day free trial • Setup in{' '}
                       {service.setupTime}
                     </span>
@@ -327,14 +310,14 @@ const ComprehensivePricing2026 = () => {
                   <div className="flex gap-2">
                     <a
                       href={service.link}"
-                      target="_blank""
-                      rel="noopener noreferrer""
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white text-sm font-semibold py-2 px-4 rounded-lg transition-all duration-300 text-center"
                     >
                       Learn More
                     </a>
                     <Link"
-                      to="/contact""
+                      to="/contact"
                       className="flex-1 bg-white/10 hover:bg-white/20 text-white text-sm font-semibold py-2 px-4 rounded-lg border border-white/30 hover:border-cyan-400/50 transition-all duration-300 text-center"
                     >
                       Get Quote
@@ -373,7 +356,7 @@ const ComprehensivePricing2026 = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >"
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">'
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Enterprise{' '}"
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
                 Solutions
@@ -444,7 +427,7 @@ const ComprehensivePricing2026 = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >"
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">'
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to{' '}"
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
                 Get Started
@@ -462,7 +445,7 @@ const ComprehensivePricing2026 = () => {
                 whileTap={{ scale: 0.95 }}
               >
                 <Link"
-                  to="/contact""
+                  to="/contact"
                   className="inline-flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold text-lg py-4 px-8 rounded-xl shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 border border-cyan-500/30 hover:border-cyan-500/60"
                 >"
                   <span className="text-xl">🚀</span>
@@ -475,7 +458,7 @@ const ComprehensivePricing2026 = () => {
                 whileTap={{ scale: 0.95 }}
               >
                 <a"
-                  href="tel:+13024640950""
+                  href="tel:+13024640950"
                   className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md text-white font-semibold text-lg py-4 px-8 rounded-xl border border-white/30 hover:border-cyan-400/50 hover:bg-white/20 transition-all duration-300 shadow-lg"
                 >"
                   <span className="text-xl">📞</span>

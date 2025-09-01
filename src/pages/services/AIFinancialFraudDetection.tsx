@@ -1,6 +1,63 @@
-import React from 'react.ts';'
-import { SEO  } from '@/components/SEO';'
-import { motion  } from 'framer-motion.ts';      popular: false
+<<<<<<< HEAD
+import { Shield, 
+  Brain, 
+  BarChart3, 
+  AlertTriangle, 
+  Clock, 
+  BarChart3, 
+  CheckCircle,
+  Play,
+  Star,
+  Award,
+  DollarSign,
+  Target,
+  Zap,
+  Brain,
+  Globe,
+  Rocket,
+  Eye,
+  Cpu'
+ } from 'lucide-react';
+;
+const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
+
+  
+    },;
+    {;
+      icon: Target,;"
+      title: "Adaptive Learning",;"
+      description: "Self-improving AI models that continuously learn from new fraud patterns and adapt to evolving threats in real-time."};
+  ];
+
+  const benefits = [;"
+    "Reduce fraud losses by 85-95%",;"
+    "Improve detection accuracy by 40%",;"
+    "Reduce false positives by 60%",;"
+    "Save $100K+ annually on fraud prevention",;"
+    "Comply with PCI DSS, SOC 2, and GDPR requirements";
+  ];
+
+  const useCases = [;"
+    "Credit Card Fraud",;"
+    "Banking & Financial Services",;"
+    "E-commerce & Retail",;"
+    "Insurance Claims",;"
+    "Healthcare Billing",;"
+    "Cryptocurrency Transactions";
+  ];
+
+  const integrations = [;"
+    "Stripe, PayPal, Square",;"
+    "Visa, Mastercard, American Express",;"
+    "Banking APIs (Plaid, Yodlee)",;"
+    "QuickBooks, Xero, NetSuite",;"
+    "Salesforce, HubSpot, Pipedrive";
+  ];
+
+  
+      popular: false
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     },
     {
 "
@@ -22,10 +79,18 @@ import { motion  } from 'framer-motion.ts';      popular: false
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       <SEO "
+<<<<<<< HEAD
+        title="AI Financial Fraud Detection Platform - Zion Tech Group"
+        description="Protect your business with AI-powered fraud detection. Detect and prevent financial fraud with 99.2% accuracy, reduce losses by 85-95%, and ensure compliance."
+        keywords="fraud detection, AI security, financial fraud prevention, machine learning security, transaction monitoring, fraud analytics"
+        canonical="https://ziontechgroup.com/services/ai-financial-fraud-detection"
+       />
+=======
         title="AI Financial Fraud Detection Platform - Zion Tech Group""
         description="Protect your business with AI-powered fraud detection. Detect and prevent financial fraud with 99.2% accuracy, reduce losses by 85-95%, and ensure compliance.""
         keywords="fraud detection, AI security, financial fraud prevention, machine learning security, transaction monitoring, fraud analytics""        canonical="https://ziontechgroup.com/services/ai-financial-fraud-detection"
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
@@ -58,7 +123,7 @@ import { motion  } from 'framer-motion.ts';      popular: false
             className="mb-8"
 "
             <div className="inline-flex items-center px-4 py-2 bg-red-500/20 border border-red-500/30 rounded-full text-red-400 text-sm font-medium mb-6">"
-              <Shield className="w-4 h-4 mr-2" />              Fraud Prevention Platform
+              <Shield className="w-4 h-4 mr-2"  />              Fraud Prevention Platform
             </div>"
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent">
               AI Financial Fraud Detection
@@ -68,15 +133,15 @@ import { motion  } from 'framer-motion.ts';      popular: false
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">"
               <div className="flex items-center text-cyan-400 font-semibold">"
-                <Star className="w-5 h-5 mr-2 fill-current" />
+                <Star className="w-5 h-5 mr-2 fill-current"  />
                 4.9/5 Rating
               </div>"
               <div className="flex items-center text-green-400 font-semibold">"
-                <TrendingUp className="w-5 h-5 mr-2" />
+                <TrendingUp className="w-5 h-5 mr-2"  />
                 99.2% Accuracy
               </div>"
               <div className="flex items-center text-blue-400 font-semibold">"
-                <Clock className="w-5 h-5 mr-2" />                Real-time Detection
+                <Clock className="w-5 h-5 mr-2"  />                Real-time Detection
               </div>
             </div>
           </motion.div>
@@ -253,7 +318,7 @@ import { motion  } from 'framer-motion.ts';      popular: false
                 className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 text-center"
 "
                 <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">"
-                  <CheckCircle className="w-6 h-6 text-white" />
+                  <CheckCircle className="w-6 h-6 text-white"  />
                 </div>"                <p className="text-slate-300 font-medium">{benefit}</p>
               </motion.div>;
             ))}
@@ -340,7 +405,7 @@ import { motion  } from 'framer-motion.ts';      popular: false
                 className="bg-slate-800 p-6 rounded-xl border border-slate-700 text-center hover:border-purple-500 transition-colors"
 "
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">"
-                  <Target className="w-6 h-6 text-white" />
+                  <Target className="w-6 h-6 text-white"  />
                 </div>"                <p className="text-slate-300 font-medium">{useCase}</p>
               </motion.div>;
             ))}
@@ -544,7 +609,7 @@ import { motion  } from 'framer-motion.ts';      popular: false
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, idx) => ("
                     <li key={idx} className="flex items-center text-slate-300">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />                      {feature}
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -600,13 +665,13 @@ import { motion  } from 'framer-motion.ts';      popular: false
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="/contact""
+                href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-white text-red-600 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
 
                 Start Free Trial"
-                <ArrowRight className="w-5 h-5 ml-2" />              </a>
+                <ArrowRight className="w-5 h-5 ml-2"  />              </a>
               <a"
-                href="/contact""
+                href="/contact"
                 className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-all duration-300"
 
                 Schedule Demo
@@ -623,17 +688,17 @@ import { motion  } from 'framer-motion.ts';      popular: false
             <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>"
             <div className="grid md:grid-cols-3 gap-6 text-slate-300">
               <div>"
-                <DollarSign className="w-6 h-6 text-cyan-400 mx-auto mb-2" />"
+                <DollarSign className="w-6 h-6 text-cyan-400 mx-auto mb-2"  />"
                 <p className="font-semibold">Starting at $799/month</p>"
                 <p className="text-sm">No setup fees, cancel time</p>
               </div>
               <div>"
-                <Clock className="w-6 h-6 text-green-400 mx-auto mb-2" />"
+                <Clock className="w-6 h-6 text-green-400 mx-auto mb-2"  />"
                 <p className="font-semibold">Setup in 24 hours</p>"
                 <p className="text-sm">Quick integration with your systems</p>
               </div>
               <div>"
-                <Shield className="w-6 h-6 text-blue-400 mx-auto mb-2" />"
+                <Shield className="w-6 h-6 text-blue-400 mx-auto mb-2"  />"
                 <p className="font-semibold">Enterprise Security</p>"                <p className="text-sm">PCI DSS, SOC 2, GDPR compliant</p>
               </div>
             </div>"
@@ -651,4 +716,4 @@ import { motion  } from 'framer-motion.ts';      popular: false
     </div>;
   )};
 
-export default AIFinancialFraudDetection;}}}'"`
+export default AIFinancialFraudDetection}}}'"`

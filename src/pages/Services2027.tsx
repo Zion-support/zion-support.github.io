@@ -1,27 +1,83 @@
-import React, { useState, useMemo } from 'react.ts';'
-import { Link  } from 'react-router-dom.ts';'
-import { motion  } from 'framer-motion.ts';
+<<<<<<< HEAD
+import { Search, 
+
+
+  ArrowRight, 
+  DollarSign, 
+  ExternalLink, 
+  Workflow, 
+  MessageSquare, 
+  Globe, 
+  Brain, 
+  Shield, 
+  Cloud, 
+  Cpu, 
+  Zap, 
+  Rocket, 
+  Heart, 
+  Lock, 
+  Users, 
+  BarChart3,
+  Target,
+  TrendingUp,
+  Award,
+  Star,
+  CheckCircle,
+  Clock,
+  Phone,
+  Mail,
+  MapPin,
+  Filter,
+  SortAsc,
+  Eye,
+  Code,
+  Database,
+  Network,
+  Smartphone,
+  Leaf,
+  Gamepad2,
+  Coins,
+  Satellite,
+  Activity,
+  FileText,
+  MessageCircle,
+  BarChart,
+  Users2,
+  Settings,
+  Palette,
+  Atom,
+  Sparkles,
+  Bot,
+  Workflow as WorkflowIcon,
+  Globe2,
+  Wifi,
+  ShieldCheck,
+  Server,
+  Chip'
+ } from 'lucide-react.ts';
+
+// Mock data for 2027 services;
+
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 const Services2027: React.FC = (): JSX.Element => {
-'
-  const [query, setQuery] = useState('');'
-  const [selectedCategory, setSelectedCategory] = useState('all');'
+
+  const [query, setQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('innovation');
   
-  const categories = ['
-    { id: any'all', name: 'All Services', icon: Workflow, count: SERVICES_2027.length },;'
-    { id: 'AI & Automation', name: 'AI & Automation', icon: Bot, count: SERVICES_2027.filter(s  => s.category === 'AI & Automation').length },'
-    { id: any'Quantum AI', name: 'Quantum AI', icon: Atom, count: SERVICES_2027.filter(s  => s.category === 'Quantum AI').length },;'
-    { id: any'Cybersecurity', name: 'Cybersecurity', icon: Shield, count: SERVICES_2027.filter(s  => s.category === 'Cybersecurity').length },;'
-    { id: any'Edge Computing', name: 'Edge Computing', icon: Cpu, count: SERVICES_2027.filter(s  => s.category === 'Edge Computing').length },;'
-    { id: any'Digital Twin', name: 'Digital Twin', icon: Eye, count: SERVICES_2027.filter(s  => s.category === 'Digital Twin').length },;'
-    { id: any'Sustainability', name: 'Sustainability', icon: Leaf, count: SERVICES_2027.filter(s  => s.category === 'Sustainability').length },;'
-    { id: any'Metaverse', name: 'Metaverse', icon: Gamepad2, count: SERVICES_2027.filter(s  => s.category === 'Metaverse').length },;'
-    { id: any'IoT', name: 'IoT', icon: Network, count: SERVICES_2027.filter(s  => s.category === 'IoT').length }
+  
+    { id: 'AI & Automation', name: 'AI & Automation', icon: Bot, count: SERVICES_2027.filter(s  => s.category === 'AI & Automation').length },
+    { id: anyQuantum AI', name: 'Quantum AI', icon: Atom, count: SERVICES_2027.filter(s  => s.category === 'Quantum AI').length },;
+    { id: anyCybersecurity', name: 'Cybersecurity', icon: Shield, count: SERVICES_2027.filter(s  => s.category === 'Cybersecurity').length },;
+    { id: anyEdge Computing', name: 'Edge Computing', icon: Cpu, count: SERVICES_2027.filter(s  => s.category === 'Edge Computing').length },;
+    { id: anyDigital Twin', name: 'Digital Twin', icon: Eye, count: SERVICES_2027.filter(s  => s.category === 'Digital Twin').length },;
+    { id: anySustainability', name: 'Sustainability', icon: Leaf, count: SERVICES_2027.filter(s  => s.category === 'Sustainability').length },;
+    { id: anyMetaverse', name: 'Metaverse', icon: Gamepad2, count: SERVICES_2027.filter(s  => s.category === 'Metaverse').length },;
+    { id: anyIoT', name: 'IoT', icon: Network, count: SERVICES_2027.filter(s  => s.category === 'IoT').length }
   ];
 
-  const filteredAndSorted = useMemo ( () => {
-    let filtered = SERVICES_2027;
-    
+  
     // Filter by search query
     if (query.trim()) {
 
@@ -34,38 +90,42 @@ const Services2027: React.FC = (): JSX.Element => {
     // Filter by category'
     if (selectedCategory !== 'all') {
 
-      filtered = filtered.filter(s => s.category === selectedCategory);
-    }    
+      filtered = filtered.filter(s => s.category === selectedCategory)}    
     // Sort services
     switch (sortBy) {
-'
+
       case 'price':
-        return filtered.sort((a, b) => a.price - b.price);'
+        return filtered.sort((a, b) => a.price - b.price);
       case 'innovation':
         return filtered.sort((a, b) => {
-'
-          const innovationLevels = { 'Revolutionary': 3, 'Cutting-Edge': 2, 'Advanced': 1 };
-          return (innovationLevels[b.innovationLevel as keyof typeof innovationLevels] || 0) - (innovationLevels[a.innovationLevel as keyof typeof innovationLevels] || 0);
-        });'
+
+          
+          return (innovationLevels[b.innovationLevel as keyof typeof innovationLevels] || 0) - (innovationLevels[a.innovationLevel as keyof typeof innovationLevels] || 0)});
       case 'roi':
         return filtered.sort((a, b) => {
-'
-          const aROI = parseInt(a.roi.split('-')[0]);'
-          const bROI = parseInt(b.roi.split('-')[0]);
-          return bROI - aROI;
-        }) ;      default:
+
+          
+          
+          return bROI - aROI}) ;      default:
         return filtered}
   }, [query, selectedCategory, sortBy]);
-'
-  const featuredServices = SERVICES_2027.filter(s => s.innovationLevel === 'Revolutionary').slice(0, 3);
 
+  
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO "
+<<<<<<< HEAD
+        title="2027 Services - Zion Tech Group"
+        description="Discover our revolutionary 2027 services including AI Autonomous Platforms, Quantum AI, Next-Gen Cybersecurity, and Metaverse Development. Leading the future of technology."
+        keywords="2027 services, AI autonomous, quantum AI, cybersecurity, metaverse, edge computing, digital twin"
+        canonicalUrl="https://ziontechgroup.com/services2027"
+       />
+=======
         title="2027 Services - Zion Tech Group" "
         description="Discover our revolutionary 2027 services including AI Autonomous Platforms, Quantum AI, Next-Gen Cybersecurity, and Metaverse Development. Leading the future of technology." "
         keywords="2027 services, AI autonomous, quantum AI, cybersecurity, metaverse, edge computing, digital twin""        canonicalUrl="https://ziontechgroup.com/services2027"
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       
       {/* Hero Section */}"
       <section className="relative pt-32 pb-20 overflow-hidden">"
@@ -77,7 +137,7 @@ const Services2027: React.FC = (): JSX.Element => {
             transition={{ duration: 0.6 }}
           >"
             <div className="flex items-center justify-center space-x-2 mb-4">"
-              <Sparkles className="w-8 h-8 text-purple-400" />"              <span className="text-purple-400 font-semibold text-lg">2027</span>
+              <Sparkles className="w-8 h-8 text-purple-400"  />"              <span className="text-purple-400 font-semibold text-lg">2027</span>
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
               Future-Ready Services
@@ -88,13 +148,13 @@ const Services2027: React.FC = (): JSX.Element => {
             </p>"
             <div className="flex flex-wrap justify-center gap-4">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 Get Started Today
               </Link>
               <Link"
-                to="/services""
+                to="/services"
                 className="px-8 py-4 border border-purple-400/30 text-purple-400 hover:bg-purple-400/10 font-semibold rounded-lg transition-all duration-300"
               >
                 View All Services
@@ -112,9 +172,14 @@ const Services2027: React.FC = (): JSX.Element => {
               {/* Search */}"
               <div className="flex-1">"
                 <div className="relative">"
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
                   <input"
+<<<<<<< HEAD
+                    type="text"
+                    placeholder="Search 2027 services..."
+=======
                     type="text""                    placeholder="Search 2027 services..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}"
                     className="w-full pl-10 pr-4 py-3 bg-white/5 border border-purple-400/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-400/50 focus:border-purple-400/50"
@@ -189,7 +254,7 @@ const Services2027: React.FC = (): JSX.Element => {
                 <div className="space-y-3 mb-6">
                   {service.features.slice(0, 3).map((feature, idx) => ("
                     <div key={idx} className="flex items-center space-x-2">"
-                      <CheckCircle className="w-4 h-4 text-purple-400" />"                      <span className="text-sm text-gray-300">{feature}</span>
+                      <CheckCircle className="w-4 h-4 text-purple-400"  />"                      <span className="text-sm text-gray-300">{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -206,11 +271,11 @@ const Services2027: React.FC = (): JSX.Element => {
                 </div>
 
                 <Link'`
-                  to={`/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`}"
+                  to={`/services/${service.title.toLowerCase().replace(/\s+/g,-')}`}"
                   className="w-full flex items-center justify-center space-x-2 px-4 py-3 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold rounded-lg transition-all duration-300 group-hover:scale-105"
                 >
                   <span>Learn More</span>"
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />                </Link>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300"  />                </Link>
               </motion.div>) ) }
           </div>
         </div>
@@ -229,7 +294,7 @@ const Services2027: React.FC = (): JSX.Element => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Complete 2027 Service Portfolio
             </h2>"
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">'
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Explore our comprehensive range of future-ready services designed to meet tomorrow's challenges.
             </p>
           </motion.div>
@@ -259,11 +324,11 @@ const Services2027: React.FC = (): JSX.Element => {
                 </div>
 
                 <Link'`
-                  to={`/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`}"
+                  to={`/services/${service.title.toLowerCase().replace(/\s+/g,-')}`}"
                   className="flex items-center justify-center space-x-2 px-3 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 hover:from-purple-500/30 hover:to-pink-500/30 text-purple-400 font-medium rounded-lg transition-all duration-300 text-sm"
                 >
                   <span>View Details</span>"
-                  <ArrowRight className="w-3 h-3" />                </Link>
+                  <ArrowRight className="w-3 h-3"  />                </Link>
               </motion.div>) ) }
           </div>
         </div>
@@ -288,13 +353,13 @@ const Services2027: React.FC = (): JSX.Element => {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105"
               >
                 Schedule a Demo
               </Link>
               <Link"
-                to="/pricing""
+                to="/pricing"
                 className="px-8 py-4 border border-purple-400/30 text-purple-400 hover:bg-purple-400/10 font-semibold rounded-lg transition-all duration-300"
               >
                 View Pricing
@@ -303,6 +368,5 @@ const Services2027: React.FC = (): JSX.Element => {
           </motion.div>
         </div>
       </section>
-    </div>) ;
-};
+    </div>) };
 export default Services2027;'"`

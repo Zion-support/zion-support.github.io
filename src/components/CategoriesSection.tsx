@@ -1,93 +1,16 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
-import { motion } from 'framer-motion';'
-import { Briefcase, HardDrive, Lightbulb, Users, Brain, ArrowRight } from 'lucide-react';
 
-const categories = [
-  {
 
-    title: "AI Services","
-    description: "Cutting-edge AI solutions, chatbots, and machine learning","
-    icon: "🤖","
-    link: "/ai-services","
-    color: "from-purple-500 to-indigo-600"},
-  {
-"
-    title: "Micro SAAS","
-    description: "Cloud-based software solutions for modern businesses","
-    icon: "☁️","
-    link: "/micro-saas","
-    color: "from-cyan-500 to-blue-600"},
-  {
-"
-    title: "IT Services","
-    description: "Infrastructure, security, and technical consulting","
-    icon: "⚡","
-    link: "/all-services","
-    color: "from-amber-500 to-orange-600"},
-  {
-"
-    title: "Digital Transformation","
-    description: "Business modernization and digital strategy","
-    icon: "📈","
-    link: "/all-services","
-    color: "from-emerald-500 to-green-600"},
-];
 ;
-const specialServices = [
-  {
-"
-    title: "IT Onsite Services","
-    link: "/it-onsite-services"
-  },
-  {
-"
-    title: "Comprehensive Services","
-    link: "/comprehensive-services"
-  },
-  {
-"
-    title: "Services Comparison","
-    link: "/services-comparison"
-  }
-];
 
 interface CategoriesSectionProps {
   // Add your props here
 
 
-  showTitle?: boolean;
-
-}
+  showTitle?: boolean}
 ;
-const containerVariants = {
 
-  hidden: { opacity: 0 },
-  visible: {
-
-    opacity: 1,
-    transition: {
-
-      staggerChildren: 0.1,
-      delayChildren: 0.2
-    }
-  }
-};
 ;
-const itemVariants = {
 
-  hidden: { y: 20, opacity: 0 },
-  visible: {
-
-    y: 0,
-    opacity: 1,
-    transition: {
-
-      duration: 0.5,"
-      ease: "easeOut"
-    }
-  }
-};
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
 
   return ("
@@ -96,7 +19,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
       <div className="absolute inset-0 opacity-5">"
         <div className="absolute inset-0" style={{
 
-          backgroundImage: `radial-gradient(circle at 25% 25%, #8ab1f3 2px, transparent 2px)`,'
+          backgroundImage: `radial-gradient(circle at 25% 25%, #8ab1f3 2px, transparent 2px)`,
           backgroundSize: '50px 50px'
         }}></div>
       </div>
@@ -121,7 +44,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         <motion.div "
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
           variants={containerVariants}"
-          initial="hidden""
+          initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
@@ -167,11 +90,11 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         </motion.div>
         >
           <Link"
-            to="/services""
+            to="/services"
             className="group inline-flex items-center gap-3 text-zion-cyan border-b-2 border-zion-cyan hover:border-zion-cyan-light transition-colors text-lg font-medium py-2"
 
             View All Services"
-            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />        
+            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"  />        
         <motion.div "
           className="mt-12 flex justify-center"
           initial={{ opacity: 0, y: 20 }}
@@ -180,7 +103,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           transition={{ duration: 0.6, delay: 0.6 }}
         >
           <Link "
-            to="/categories" "
+            to="/categories"
             className="text-cyan-400 border-b border-cyan-400 hover:border-cyan-300 transition-colors flex items-center gap-2"
           >
             View All Categories"
@@ -189,5 +112,4 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         </motion.div>
       </div>
     </section>;
-  );
-}}}}}}}}}}'"`
+  )}}}}}}}}}}'"`

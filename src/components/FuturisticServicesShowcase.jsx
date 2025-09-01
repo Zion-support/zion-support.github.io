@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ADVANCED_MICRO_SERVICES } from '../data/advancedMicroServices';
 const ServiceCard = ({ service, index, isVisible }) => {
 
@@ -40,7 +40,7 @@ const ServiceCard = ({ service, index, isVisible }) => {
                 transition={{
 
                   duration: 3 + Math.random() * 2,
-                  repeat: Infinity,'
+                  repeat: Infinity,
                   ease: 'easeInOut'}}
                 style={{
 `
@@ -188,8 +188,8 @@ const ServiceCard = ({ service, index, isVisible }) => {
   );
 };
 export const FuturisticServicesShowcase = () => {
-'
-  const [selectedCategory, setSelectedCategory] = useState('all');'
+
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [visibleServices, setVisibleServices] = useState(new Set());
   const categories = ['
@@ -253,7 +253,7 @@ export const FuturisticServicesShowcase = () => {
             {/* Search Bar */}"
             <div className="relative w-full max-w-md">
               <input"
-                type="text""
+                type="text"
                 placeholder="Search services..."
                 value={searchTerm}
                 onChange={e => setSearchTerm(e.target.value)}"
@@ -276,7 +276,7 @@ export const FuturisticServicesShowcase = () => {
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg shadow-cyan-500/30''
                       : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/20'`
                   }`}
-                >'
+                >
                   {category === 'all' ? 'All Services' : category}
                 </button>
               ))}

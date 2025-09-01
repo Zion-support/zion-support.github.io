@@ -1,6 +1,3 @@
-import React from 'react.ts';'
-import { SEO } from '../../components/SEO';'
-import { motion } from 'framer-motion.ts';
 import {
 
   Globe,
@@ -11,90 +8,18 @@ import {
   Users,
   CheckCircle,
   Lightbulb,
-  Database,'
+  Database,
   Cloud} from 'lucide-react.ts';
 
 export default function GreenIT(...args: any[]): any {
 
-  const features = [
-    {
-
-      icon: Leaf,'
-      title: 'Sustainable Infrastructure',
-      description:'
-        'Eco-friendly IT infrastructure solutions that reduce carbon footprint while maintaining performance.'},
-    {
-
-      icon: Zap,'
-      title: 'Energy Optimization',
-      description:'
-        'AI-powered energy management systems that optimize power consumption across your IT infrastructure.'},
-    {
-
-      icon: Cloud,'
-      title: 'Green Cloud Solutions',
-      description:'
-        'Carbon-neutral cloud computing options with renewable energy-powered data centers.'},
-    {
-
-      icon: Database,'
-      title: 'Efficient Data Management',
-      description:'
-        'Smart data storage and processing solutions that minimize energy consumption and waste.'},
-    {
-
-      icon: Shield,'
-      title: 'Environmental Compliance',
-      description:'
-        'Built-in compliance monitoring for environmental regulations and sustainability standards.'},
-    {
-
-      icon: TrendingUp,'
-      title: 'Performance Monitoring',
-      description:'
-        'Real-time tracking of environmental impact and sustainability metrics for continuous improvement.'},
-  ];
-
-  const benefits = ['
-    'Reduce carbon footprint by up to 70%','
-    'Lower energy costs by 40-60%','
-    'Meet sustainability compliance requirements','
-    'Enhance brand reputation and ESG scores','
-    'Future-proof your IT infrastructure','
-    'Contribute to global climate goals',
-  ];
-
-  const solutions = [
-    {
-'
-      title: 'Green Data Centers',
-      description:'
-        'Energy-efficient data center design with renewable energy integration and advanced cooling systems.',
-      icon: Database},
-    {
-'
-      title: 'Sustainable Cloud Migration',
-      description:'
-        'Migrate to eco-friendly cloud platforms with carbon-neutral computing options.',
-      icon: Cloud},
-    {
-'
-      title: 'Energy Management Systems',
-      description:'
-        'AI-powered monitoring and optimization of IT infrastructure energy consumption.',
-      icon: Zap},
-    {
-'
-      title: 'Circular IT Practices',
-      description:'
-        'Implement recycling, refurbishment, and responsible disposal of IT equipment.',
-      icon: Leaf},
-  ];
-
+  
+  
+  
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
-        title="Green IT Solutions - Zion Tech Group""
+        title="Green IT Solutions - Zion Tech Group"
         description="Transform your IT infrastructure with sustainable, eco-friendly solutions. Reduce carbon footprint, lower energy costs, and meet sustainability goals."
       />
 
@@ -108,7 +33,7 @@ export default function GreenIT(...args: any[]): any {
             className="text-center max-w-4xl mx-auto"
           >"
             <div className="inline-flex items-center px-4 py-2 bg-green-500/20 border border-green-400/30 rounded-full text-green-300 text-sm font-medium mb-6">"
-              <Globe className="w-4 h-4 mr-2" />              Sustainable Technology
+              <Globe className="w-4 h-4 mr-2"  />              Sustainable Technology
             </div>"
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Green IT Solutions
@@ -239,7 +164,7 @@ export default function GreenIT(...args: any[]): any {
               <div className="grid grid-cols-1 gap-4">
                 {benefits.map((benefit, index) => ("
                   <div key={index} className="flex items-center space-x-3">"
-                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />"                    <span className="text-slate-300">{benefit}</span>
+                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0"  />"                    <span className="text-slate-300">{benefit}</span>
                   </div>
                 ))}
               </div>
@@ -254,7 +179,7 @@ export default function GreenIT(...args: any[]): any {
               <div className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-2xl p-8 border border-green-400/30">"
                 <div className="text-center">"
                   <div className="w-20 h-20 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">"
-                    <Lightbulb className="w-10 h-10 text-white" />
+                    <Lightbulb className="w-10 h-10 text-white"  />
                   </div>"
                   <h3 className="text-2xl font-bold text-white mb-4">
                     Go Green Today
@@ -300,6 +225,5 @@ export default function GreenIT(...args: any[]): any {
         </div>
       </section>
     </div>
-  );
-}
+  )}
 '"

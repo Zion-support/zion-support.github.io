@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { useEffect } from 'react';
 import { useAuth } from "@/hooks/useAuth";"
 import { Button } from "@/components/ui/button";"
@@ -47,7 +47,7 @@ import { toast } from "sonner";
           <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">"
             <div className="flex flex-col md:flex-row gap-6">"
               <div className="md:w-1/3">"
-                <div className="w-32 h-32 rounded-full bg-zion-purple flex items-center justify-center text-3xl font-bold text-white mb-4 mx-auto md:mx-0">'
+                <div className="w-32 h-32 rounded-full bg-zion-purple flex items-center justify-center text-3xl font-bold text-white mb-4 mx-auto md:mx-0">
                   {user.displayName ? user.displayName.split(' ').map(name => name[0]).join('') : user.email?.charAt(0)}
                 </div>
               </div>"

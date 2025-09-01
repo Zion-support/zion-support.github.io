@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Link } from 'react-router-dom';
 import {
 
@@ -10,90 +10,67 @@ import {
   Activity,
   ArrowRight,
   CheckCircle,
-  Star,'
+  Star,
   TrendingUp} from 'lucide-react';
 export default function HealthcareSolutions() {
   const solutions = [
     {
 
-      icon: Heart,'
+      icon: Heart,
       title: 'Patient Care AI',
       description:'
         'AI-powered patient monitoring and personalized care recommendations',
       features: ['
-        'Real-time Monitoring','
-        'Predictive Analytics','
-        'Personalized Treatment Plans','
-        'Remote Patient Care',
+        'Real-time Monitoring',Predictive Analytics',Personalized Treatment Plans',Remote Patient Care',
       ]},
     {
 
-      icon: Stethoscope,'
-      title: 'Diagnostic Assistance','
+      icon: Stethoscope,
+      title: 'Diagnostic Assistance',
       description: 'Advanced AI diagnostics and medical imaging analysis',
       features: ['
-        'Medical Image Analysis','
-        'Symptom Assessment','
-        'Disease Prediction','
-        'Treatment Recommendations',
+        'Medical Image Analysis',Symptom Assessment',Disease Prediction',Treatment Recommendations',
       ]},
     {
 
-      icon: Shield,'
-      title: 'Healthcare Security','
+      icon: Shield,
+      title: 'Healthcare Security',
       description: 'HIPAA-compliant security and data protection solutions',
       features: ['
-        'Data Encryption','
-        'Access Control','
-        'Audit Trails','
-        'Compliance Monitoring',
+        'Data Encryption',Access Control',Audit Trails',Compliance Monitoring',
       ]},
     {
 
-      icon: Database,'
-      title: 'Health Data Management','
+      icon: Database,
+      title: 'Health Data Management',
       description: 'Secure and efficient healthcare data infrastructure',
       features: ['
-        'Electronic Health Records','
-        'Data Interoperability','
-        'Analytics Platform','
-        'Cloud Storage',
+        'Electronic Health Records',Data Interoperability',Analytics Platform',Cloud Storage',
       ]},
     {
 
-      icon: Brain,'
-      title: 'Clinical Decision Support','
+      icon: Brain,
+      title: 'Clinical Decision Support',
       description: 'AI-powered clinical decision support systems',
       features: ['
-        'Evidence-based Guidelines','
-        'Risk Assessment','
-        'Drug Interaction Checking','
-        'Clinical Pathways',
+        'Evidence-based Guidelines',Risk Assessment',Drug Interaction Checking',Clinical Pathways',
       ]},
     {
 
-      icon: Activity,'
-      title: 'Operational Efficiency','
+      icon: Activity,
+      title: 'Operational Efficiency',
       description: 'Streamlined healthcare operations and resource management',
       features: ['
-        'Resource Optimization','
-        'Workflow Automation','
-        'Performance Analytics','
-        'Cost Management',
+        'Resource Optimization',Workflow Automation',Performance Analytics',Cost Management',
       ]},
   ];
   const benefits = ['
-    'Improved patient outcomes and care quality','
-    'Reduced medical errors and diagnostic time','
-    'Enhanced operational efficiency and cost savings','
-    'Better patient engagement and satisfaction','
-    'Streamlined administrative processes','
-    'Enhanced data security and compliance',
+    'Improved patient outcomes and care quality',Reduced medical errors and diagnostic time',Enhanced operational efficiency and cost savings',Better patient engagement and satisfaction',Streamlined administrative processes',Enhanced data security and compliance',
   ];
   const caseStudies = [
     {
-'
-      organization: 'Regional Medical Center','
+
+      organization: 'Regional Medical Center',
       specialty: 'Cardiology',
       challenge:'
         'High patient readmission rates and inefficient care coordination',
@@ -102,10 +79,10 @@ export default function HealthcareSolutions() {
       results:'
         '25% reduction in readmissions, 40% improvement in care coordination'},
     {
-'
-      organization: 'Urban Hospital Network','
-      specialty: 'Emergency Medicine','
-      challenge: 'Long wait times and resource allocation inefficiencies','
+
+      organization: 'Urban Hospital Network',
+      specialty: 'Emergency Medicine',
+      challenge: 'Long wait times and resource allocation inefficiencies',
       solution: 'AI-driven triage system and resource optimization platform',
       results:'
         '30% reduction in wait times, 35% improvement in resource utilization'},
@@ -125,13 +102,13 @@ export default function HealthcareSolutions() {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105"
               >
                 Get Healthcare Quote
               </Link>
               <Link"
-                to="/services/ai-autonomous-systems""
+                to="/services/ai-autonomous-systems"
                 className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20 transition-all duration-300"
               >
                 Explore AI Solutions
@@ -268,7 +245,7 @@ export default function HealthcareSolutions() {
                   </div>
                 </div>
                 <Link"
-                  to="/case-studies""
+                  to="/case-studies"
                   className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
                 >
                   Read Full Case Study"
@@ -286,19 +263,19 @@ export default function HealthcareSolutions() {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Healthcare?
           </h2>"
-          <p className="text-xl text-gray-300 mb-8">'
+          <p className="text-xl text-gray-300 mb-8">
             Let's discuss how our healthcare solutions can improve patient
             outcomes and operational efficiency
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link"
-              to="/contact""
+              to="/contact"
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105"
             >
               Schedule Consultation
             </Link>
             <Link"
-              to="/services-overview""
+              to="/services-overview"
               className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20 transition-all duration-300"
             >
               View All Services

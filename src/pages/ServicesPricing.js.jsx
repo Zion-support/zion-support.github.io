@@ -1,9 +1,9 @@
-import React, { useState } from 'react';'
-import { Button } from '@/components/ui/button';'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';'
-import { Badge } from '@/components/ui/badge';'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';'
-import { Check, X, Zap, Shield, TrendingUp, Globe, BarChart3, Users, Phone, Mail, MapPin, ExternalLink, DollarSign, Clock, CheckCircle, ArrowRight } from 'lucide-react';'
+import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Check, X, Zap, Shield, TrendingUp, Globe, BarChart3, Users, Phone, Mail, MapPin, ExternalLink, DollarSign, Clock, CheckCircle, ArrowRight } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 const pricingTiers = [
     {
@@ -161,7 +161,7 @@ const benefits = [
     }
 ];
 export default function ServicesPricing() {
-'
+
     const [selectedTier, setSelectedTier] = useState('professional');"
     return (<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">"
       <SEO title="Micro SAAS Services Pricing - Zion Tech Group" description="Transparent pricing for our comprehensive micro SAAS services. Choose from Starter, Professional, or Enterprise tiers to match your business needs and budget." keywords="micro SAAS pricing, service costs, AI services pricing, IT solutions pricing" url="https://ziontechgroup.com/services-pricing"/>
@@ -227,7 +227,7 @@ export default function ServicesPricing() {
             </p>
           </div>
 "
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">'
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingTiers.map((tier, index) => (<Card key={index} className={`relative bg-zion-blue-dark border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300 ${tier.popular ? 'ring-2 ring-zion-purple scale-105' : ''}`}>"
                 {tier.popular && (<div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
                     <Badge className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white px-4 py-2">

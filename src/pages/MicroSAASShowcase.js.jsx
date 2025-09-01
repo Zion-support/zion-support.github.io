@@ -1,13 +1,13 @@
-import React from 'react';'
-import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';'
+import React from 'react';
+import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
 import { Button } from '@/components/ui/button';
 import {
 
   Card,
   CardContent,
   CardDescription,
-  CardHeader,'
-  CardTitle} from '@/components/ui/card';'
+  CardHeader,
+  CardTitle} from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import {
 
@@ -24,9 +24,9 @@ import {
   Shield,
   Smartphone,
   Settings,
-  PieChart,'
-  FileText} from 'lucide-react';'
-import Target from 'lucide-react/dist/esm/icons/target';'
+  PieChart,
+  FileText} from 'lucide-react';
+import Target from 'lucide-react/dist/esm/icons/target';
 import { Link } from 'react-router-dom';
 const microSAASServices = COMPREHENSIVE_SERVICES.filter('
   service => service.category === 'Micro SAAS'
@@ -51,7 +51,7 @@ export default function MicroSAASShowcase() {
           <div className="flex flex-wrap justify-center gap-4">"
             <Link to="/contact">
               <Button"
-                size="lg""
+                size="lg"
                 className="bg-white hover:bg-gray-100 text-zion-blue font-bold"
               >"
                 <Zap className="w-4 h-4 mr-2" />
@@ -60,8 +60,8 @@ export default function MicroSAASShowcase() {
             </Link>"
             <Link to="/request-quote">
               <Button"
-                size="lg""
-                variant="outline""
+                size="lg"
+                variant="outline"
                 className="border-white text-white hover:bg-white/10"
               >"
                 <Target className="w-4 h-4 mr-2" />
@@ -160,7 +160,7 @@ export default function MicroSAASShowcase() {
                       {service.tags.slice(0, 4).map((tag, index) => (
                         <Badge
                           key={index}"
-                          variant="secondary""
+                          variant="secondary"
                           className="text-xs bg-zion-cyan-light text-zion-blue"
                         >
                           {tag}
@@ -177,7 +177,7 @@ export default function MicroSAASShowcase() {
                       <span>({service.reviewCount})</span>
                     </div>"
                     <div className="flex items-center gap-1">"
-                      <Clock className="w-4 h-4" />'
+                      <Clock className="w-4 h-4" />
                       <span>{service.availability || '2-4 weeks'}</span>
                     </div>
                   </div>
@@ -190,7 +190,7 @@ export default function MicroSAASShowcase() {
                     </h4>"
                     <div className="flex flex-wrap gap-2">
                       <Badge"
-                        variant="secondary""
+                        variant="secondary"
                         className="text-xs bg-zion-cyan-light text-zion-blue"
                       >
                         {service.category}
@@ -205,14 +205,14 @@ export default function MicroSAASShowcase() {
                     </div>"
                     <div className="flex flex-col gap-2">
                       <a"
-                        href="tel:+13024640950""
+                        href="tel:+13024640950"
                         className="flex items-center justify-center gap-2 text-zion-cyan hover:text-zion-cyan-dark transition-colors font-medium"
                       >"
                         <Phone className="w-4 h-4" />
                         +1 302 464 0950
                       </a>
                       <a"
-                        href="mailto:kleber@ziontechgroup.com""
+                        href="mailto:kleber@ziontechgroup.com"
                         className="flex items-center justify-center gap-2 text-zion-cyan hover:text-zion-cyan-dark transition-colors font-medium"
                       >"
                         <Mail className="w-4 h-4" />
@@ -220,7 +220,7 @@ export default function MicroSAASShowcase() {
                       </a>
                     </div>
                     <Link"
-                      to="/contact""
+                      to="/contact"
                       className="inline-flex items-center gap-2 text-sm text-zion-purple hover:text-zion-purple-dark transition-colors font-medium"
                     >"
                       Get Demo <ArrowRight className="w-4 h-4" />
@@ -461,7 +461,7 @@ export default function MicroSAASShowcase() {
           <div className="flex flex-wrap justify-center gap-4">"
             <Link to="/contact">
               <Button"
-                size="lg""
+                size="lg"
                 className="bg-white hover:bg-gray-100 text-zion-blue font-bold"
               >"
                 <Cloud className="w-4 h-4 mr-2" />
@@ -470,8 +470,8 @@ export default function MicroSAASShowcase() {
             </Link>"
             <Link to="/request-quote">
               <Button"
-                size="lg""
-                variant="outline""
+                size="lg"
+                variant="outline"
                 className="border-white text-white hover:bg-white/10"
               >"
                 <Target className="w-4 h-4 mr-2" />
@@ -498,9 +498,9 @@ export default function MicroSAASShowcase() {
             <div className="flex items-center gap-2">"
               <Globe className="w-5 h-5 text-zion-cyan" />
               <a"
-                href="https://ziontechgroup.com""
-                target="_blank""
-                rel="noopener noreferrer""
+                href="https://ziontechgroup.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:text-zion-cyan transition-colors"
               >
                 ziontechgroup.com

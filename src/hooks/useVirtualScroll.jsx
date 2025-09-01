@@ -1,4 +1,4 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 export const useVirtualScroll = (items, options) => {
 
@@ -64,13 +64,13 @@ export const useVirtualScroll = (items, options) => {
     // Scroll to specific index
     const scrollTop;
         switch (align) {
-'
+
             case 'start':
                 scrollTop = index * itemHeight;
-                break;'
+                break;
             case 'center':
                 scrollTop = (index * itemHeight) - (containerHeight / 2) + (itemHeight / 2);
-                break;'
+                break;
             case 'end':
                 scrollTop = (index * itemHeight) - containerHeight + itemHeight;
                 break;
@@ -81,7 +81,7 @@ export const useVirtualScroll = (items, options) => {
 
             containerRef.current.scrollTo({
 
-                top: scrollTop,'
+                top: scrollTop,
                 behavior: 'smooth'
             })}
         else {
@@ -90,12 +90,12 @@ export const useVirtualScroll = (items, options) => {
         setState(prev => ({ ...prev, scrollTop }))}, [itemHeight, containerHeight, items.length, state.totalHeight, enableSmoothScrolling]);
     // Scroll to top
     const scrollToTop = useCallback(() => {
-'
-        scrollToIndex(0, 'start')}, [scrollToIndex]);
+
+        scrollToIndex(0,start')}, [scrollToIndex]);
     // Scroll to bottom
     const scrollToBottom = useCallback(() => {
-'
-        scrollToIndex(items.length - 1, 'end')}, [scrollToIndex, items.length]);
+
+        scrollToIndex(items.length - 1,end')}, [scrollToIndex, items.length]);
     // Get current scroll position
     const getScrollTop = useCallback(() => {
         return containerRef.current?.scrollTop || 0}, []);
@@ -125,10 +125,10 @@ export const useVirtualScroll = (items, options) => {
                 });
                 window.dispatchEvent(event)}
         };
-        const container = containerRef.current;'
+        const container = containerRef.current;
         container.addEventListener('scroll', handleScrollEnd);
         return () => {
-'
+
             container.removeEventListener('scroll', handleScrollEnd)}}, [enableInfiniteScroll, threshold]);
     // Cleanup on unmount
     useEffect(() => {
@@ -146,9 +146,9 @@ export const useVirtualScroll = (items, options) => {
   ref: containerRef,
         style: {
 
-            height: containerHeight,'
-            overflow: 'auto','
-            position: 'relative','
+            height: containerHeight,
+            overflow: 'auto',
+            position: 'relative',
   willChange: state.isScrolling ? 'scroll-position' : 'auto'
         
 
@@ -165,7 +165,7 @@ export const useVirtualScroll = (items, options) => {
 
   style: {
 
-            height: state.totalHeight,'
+            height: state.totalHeight,
             position: 'relative',
   transform: `translateY(${virtualScrollParams.offsetY
 

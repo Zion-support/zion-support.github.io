@@ -1,12 +1,12 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import {
 
+<<<<<<< HEAD
   Activity,
   Zap,
   TrendingUp,
   AlertTriangle,
-  CheckCircle,  Clock,
-  BarChart3,'
+  CheckCircle,
+  Clock,
+  BarChart3,
   Settings} from 'lucide-react';
 
 interface PerformanceMetrics {
@@ -17,8 +17,7 @@ interface PerformanceMetrics {
   cumulativeLayoutShift: number;
   firstInputDelay: number;
   timeToInteractive: number;
-  speedIndex: number;
-}
+  speedIndex: number}
 
 interface ResourceMetrics {
   totalResources: number;
@@ -26,16 +25,16 @@ interface ResourceMetrics {
   images: number;
   scripts: number;
   stylesheets: number;
-  fonts: number;
-}
+  fonts: number}
 
 interface OptimizationSuggestion {
   id: string;
   title: string;
-  description: string;'
-  impact: 'high' | 'medium' | 'low';'
+  description: string;
+  impact: 'high' | 'medium' | 'low';
   category: 'images' | 'javascript' | 'css' | 'fonts' | 'caching' | 'server';
   implemented: boolean;
+
 const PerformanceOptimizer: React.FC = () => {
   const [metrics, setMetrics] = useState < PerformanceMetrics> ({
     fcp: 0,
@@ -48,51 +47,51 @@ const PerformanceOptimizer: React.FC = () => {
 
   const [suggestions, setSuggestions] = useState < OptimizationSuggestion[]> ([
     {
-'
-      id: 'image-optimization','
-      title: 'Optimize Images','
-      description: 'Convert images to WebP format and implement lazy loading','
-      impact: 'high','
+
+      id: 'image-optimization',
+      title: 'Optimize Images',
+      description: 'Convert images to WebP format and implement lazy loading',
+      impact: 'high',
       category: 'images',
       implemented: false},
     {
-'
-      id: 'code-splitting','
-      title: 'Implement Code Splitting','
-      description: 'Split JavaScript bundles to reduce initial load time','
-      impact: 'high','
+
+      id: 'code-splitting',
+      title: 'Implement Code Splitting',
+      description: 'Split JavaScript bundles to reduce initial load time',
+      impact: 'high',
       category: 'javascript',
       implemented: false},
     {
-'
-      id: 'css-optimization','
-      title: 'Optimize CSS Delivery','
-      description: 'Inline critical CSS and defer non-critical styles','
-      impact: 'medium','
+
+      id: 'css-optimization',
+      title: 'Optimize CSS Delivery',
+      description: 'Inline critical CSS and defer non-critical styles',
+      impact: 'medium',
       category: 'css',
       implemented: false},
     {
-'
-      id: 'font-optimization','
-      title: 'Optimize Font Loading','
-      description: 'Use font-display: swap and preload critical fonts','
-      impact: 'medium','
+
+      id: 'font-optimization',
+      title: 'Optimize Font Loading',
+      description: 'Use font-display: swap and preload critical fonts',
+      impact: 'medium',
       category: 'fonts',
       implemented: false},
     {
-'
-      id: 'caching','
-      title: 'Implement Caching Strategy','
-      description: 'Set up proper cache headers for static assets','
-      impact: 'high','
+
+      id: 'caching',
+      title: 'Implement Caching Strategy',
+      description: 'Set up proper cache headers for static assets',
+      impact: 'high',
       category: 'caching',
       implemented: false},
     {
-'
-      id: 'server-optimization','
-      title: 'Server Response Optimization','
-      description: 'Optimize server response time and enable compression','
-      impact: 'medium','
+
+      id: 'server-optimization',
+      title: 'Server Response Optimization',
+      description: 'Optimize server response time and enable compression',
+      impact: 'medium',
       category: 'server',
       implemented: false},
   ]);
@@ -101,30 +100,15 @@ const PerformanceOptimizer: React.FC = () => {
   const [history, setHistory] = useState < PerformanceMetrics[]> ([]) ;
 
   // Simulate performance monitoring
-  const measurePerformance = useCallback ( () => {
-    const newMetrics: PerformanceMetrics = {
-
-      fcp: Math.random() * 2000 + 500, // 500-2500ms
-      lcp: Math.random() * 3000 + 1000, // 1000-4000ms
-      fid: Math.random() * 100 + 10, // 10-110ms
-      cls: Math.random() * 0.1, // 0-0.1
-      ttfb: Math.random() * 500 + 100, // 100-600ms
-      score: 0};
+  
     // Calculate performance score
     calculatePerformanceScore(initialMetrics, resourceMetrics);
 
     // Continuous monitoring
     intervalRef.current = setInterval(() => {
-      updateResourceMetrics();
-    }, 5000);
-  }, []);
+      updateResourceMetrics()}, 5000)}, [])}, []);
 
-  const updateMetrics = useCallback((newMetrics: Partial<PerformanceMetrics>) => {
-    setMetrics(prev => prev ? { ...prev, ...newMetrics } : null);
-  }, []);
-
-  const updateResourceMetrics = useCallback(() => {
-    const resources = performance.getEntriesByType('resource');
+  
     const newResourceMetrics: ResourceMetrics = {
       totalResources: resources.length,
       totalSize: resources.reduce((acc, resource) => acc + (resource as any).transferSize || 0, 0),
@@ -133,11 +117,9 @@ const PerformanceOptimizer: React.FC = () => {
       stylesheets: resources.filter(r => r.initiatorType === 'link').length,
       fonts: resources.filter(r => r.initiatorType === 'font').length
     };
-    setResourceMetrics(newResourceMetrics);
-  }, []);
+    setResourceMetrics(newResourceMetrics)}, []);
 
-  const calculatePerformanceScore = useCallback((metrics: PerformanceMetrics, resources: ResourceMetrics) => {
-    let score = 100;
+  
     if (newMetrics.fcp > 1800) score -= 20;
     if (newMetrics.lcp > 2500) score -= 25;
     if (newMetrics.fid > 100) score -= 20;
@@ -146,57 +128,38 @@ const PerformanceOptimizer: React.FC = () => {
 
     newMetrics.score = Math.max (0, score) ;
     setMetrics (newMetrics) ;
-    setHistory (prev => [...prev.slice (-9) , newMetrics]) ;
-  }, []) ;
+    setHistory (prev => [...prev.slice (-9) , newMetrics]) }, []) ;
+
   useEffect ( () => {
     if (isMonitoring) {
 
-      const interval = setInterval(measurePerformance, 5000);
-      return () => clearInterval(interval);
-    }
+      
+      return () => clearInterval(interval)}
 
-  const getScoreColor = (score: number) => {
-'
-    if (score >= 90) return 'text-green-500';'
-    if (score >= 70) return 'text-yellow-500';'
-    return 'text-red-500';
-  };
+  
+    if (score >= 70) return 'text-yellow-500';
+    return 'text-red-500'};
 
-  const getScoreIcon = (score: number) => {
-
-    if (score >= 90) return <CheckCircle className="w-5 h-5 text-green-500" />;
+  
     if (score >= 70)"
-      return <AlertTriangle className="w-5 h-5 text-yellow-500" />;"
-    return <AlertTriangle className="w-5 h-5 text-red-500" />;
-  };
+      return <AlertTriangle className="w-5 h-5 text-yellow-500"  />;"
+    return <AlertTriangle className="w-5 h-5 text-red-500"  />};
 
-  const getMetricStatus = (
-    value: number,
-    threshold: number,
-    lowerIsBetter = true;
+  
   ) => {
 
-    const isGood = lowerIsBetter ? value <= threshold : value >= threshold;'
-    return isGood ? 'text-green-500' : 'text-red-500';
-  };
-
-  const toggleSuggestion = (id: string) => {
-
-    setSuggestions(prev =>
-      prev.map(suggestion =>
-        suggestion.id === id
-          ? { ...suggestion, implemented: !suggestion.implemented }
-          : suggestion) ) ;
-  };
+    
+    return isGood ? 'text-green-500' : 'text-red-500'}};
 
   return ("
     <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">"
       <div className="flex items-center justify-between mb-6">"
         <div className="flex items-center gap-3">"
-          <Activity className="w-6 h-6 text-zion-cyan" />"
+          <Activity className="w-6 h-6 text-zion-cyan"  />"
           <h2 className="text-xl font-bold text-white">
             Performance Optimizer
-          </h2>        </div>
+          </h2>
+        </div>
         <button
           onClick={() => setIsMonitoring(!isMonitoring)}
           className={`px-4 py-2 rounded-lg font-medium transition-colors ${
@@ -205,7 +168,7 @@ const PerformanceOptimizer: React.FC = () => {
               ? 'bg-red-500 hover:bg-red-600 text-white''
               : 'bg-zion-cyan hover:bg-zion-cyan-dark text-white'`
           }`}
-        >'
+        >
           {isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'}
         </button>
       </div>
@@ -231,13 +194,14 @@ const PerformanceOptimizer: React.FC = () => {
 "
         <div className="bg-white/5 rounded-lg p-4">"
           <div className="flex items-center gap-2 mb-4">"
-            <TrendingUp className="w-5 h-5 text-zion-cyan" />"
+            <TrendingUp className="w-5 h-5 text-zion-cyan"  />"
             <h3 className="text-lg font-semibold text-white">
               Real-time Metrics
             </h3>
           </div>"
           <div className="space-y-2 text-sm">"
-            <div className="flex justify-between">"              <span className="text-gray-300">FCP:</span>
+            <div className="flex justify-between">"
+              <span className="text-gray-300">FCP:</span>
               <span className={getMetricStatus(metrics.fcp, 1800)}>
                 {Math.round(metrics.fcp)}ms
               </span>
@@ -267,11 +231,12 @@ const PerformanceOptimizer: React.FC = () => {
       {/* Optimization Suggestions */}"
       <div className="mb-6">"
         <div className="flex items-center gap-2 mb-4">"
-          <Zap className="w-5 h-5 text-zion-cyan" />"
+          <Zap className="w-5 h-5 text-zion-cyan"  />"
           <h3 className="text-lg font-semibold text-white">
             Optimization Suggestions
           </h3>
-        </div>"        <div className="space-y-3">
+        </div>"
+        <div className="space-y-3">
           {suggestions.map(suggestion => (
             <div
               key={suggestion.id}`
@@ -290,7 +255,7 @@ const PerformanceOptimizer: React.FC = () => {
                     </h4>
                     <span`
                       className={`px-2 py-1 rounded text-xs font-medium ${
-'
+
                         suggestion.impact === 'high''
                           ? 'bg-red-500/20 text-red-300''
                           : suggestion.impact === 'medium''
@@ -318,7 +283,7 @@ const PerformanceOptimizer: React.FC = () => {
                       ? 'bg-green-500 hover:bg-green-600 text-white''
                       : 'bg-zion-cyan hover:bg-zion-cyan-dark text-white'`
                   }`}
-                >'
+                >
                   {suggestion.implemented ? 'Implemented' : 'Implement'}
                 </button>
               </div>
@@ -353,6 +318,13 @@ const PerformanceOptimizer: React.FC = () => {
           </div>
         </div>) }
     </div>) ;
+=======
+const PerformanceOptimizer: React.FC<{ enabled?: boolean }> = ({ enabled = true }) => {
+  if (!enabled) return null;
+  return (
+    <div className="hidden" aria-hidden="true" />
+  );
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 };
+
 export default PerformanceOptimizer;
-'"`

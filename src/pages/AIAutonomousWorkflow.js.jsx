@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousWorkflow = () => {
   return()
@@ -6,15 +6,15 @@ const AIAutonomousWorkflow = () => {
       <Helmet>
         <title>AI Autonomous Workflow Platform | Zion Tech Group</title>
         <meta
-          name="description""
+          name="description"
           content="Revolutionary AI autonomous workflow platform that automates business processes, optimizes workflows, and provides intelligent workflow management with advanced AI capabilities."
         />
         <meta"
-          name="keywords""
+          name="keywords"
           content="AI workflow, autonomous workflow, workflow automation, business process automation, AI workflow management"
         />
         <link"
-          rel="canonical""
+          rel="canonical"
           href="https://ziontechgroup.com/ai-autonomous-workflow"
         />
       </Helmet>
@@ -202,14 +202,7 @@ const AIAutonomousWorkflow = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Business Processes','
-                'Customer Service','
-                'HR Workflows','
-                'Finance Processes','
-                'Sales Operations','
-                'Marketing Campaigns','
-                'Project Management','
-                'Quality Assurance',
+                'Business Processes',Customer Service',HR Workflows',Finance Processes',Sales Operations',Marketing Campaigns',Project Management',Quality Assurance',
               ].map(type => (
                 <div
                   key={type}"

@@ -1,10 +1,3 @@
-import React, { useState } from 'react.ts';'
-import { motion, AnimatePresence  } from 'framer-motion.ts';'
-import { Star, Eye, Heart, ArrowRight, Clock, Users, TrendingUp, Award, Filter, Search, MapPin, Calendar  } from 'lucide-react';'
-import { Link  } from 'react-router-dom.ts';'
-import React from 'react';'
-import { motion } from 'framer-motion';'
-import { Link } from 'react-router-dom';
 
 const featuredListings = [
   {
@@ -25,8 +18,7 @@ const featuredListings = [
     location: "Remote",
     featured: true,"
     technologies["React", "Node.js", "MongoDB", "AI/ML", "AWS"],;"
-    highlights["AI Recommendations", "Real-time Analytics", "Mobile Responsive", "SEO Optimized"];
-  },;  {
+    highlights["AI Recommendations", "Real-time Analytics", "Mobile Responsive", "SEO Optimized"]},;  {
 
     id: 2,"
     title: "Mobile Banking Application","
@@ -44,8 +36,7 @@ const featuredListings = [
     location: "Hybrid",
     featured: true,"
     technologies["React Native", "Node.js", "PostgreSQL", "Biometrics", "Security"],;"
-    highlights["Biometric Auth", "Real-time Transactions", "Security Compliance", "Cross-platform"];
-  },;  {
+    highlights["Biometric Auth", "Real-time Transactions", "Security Compliance", "Cross-platform"]},;  {
 
     id: 3,"
     title: "Blockchain Supply Chain Platform","
@@ -55,10 +46,8 @@ const featuredListings = [
     image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400",
     rating: 4.7,"
     technologies["AWS", "Docker", "Kubernetes", "Jenkins", "Prometheus"],;"
-    highlights["Zero Downtime", "Auto-scaling", "Monitoring", "Security"];
-  }
-    reviews: 234;
-  },;  {
+    highlights["Zero Downtime", "Auto-scaling", "Monitoring", "Security"]}
+    reviews: 234},;  {
 
     id: 4,"
     title: "IoT Edge Computing Platform",;"
@@ -189,7 +178,7 @@ export function FeaturedListingsSection() {
 }}
         >
           <Link "
-            to="/services""
+            to="/services"
             className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 hover:scale-105"
           >
             View All Services"
@@ -197,6 +186,5 @@ export function FeaturedListingsSection() {
           </Link>;
         </motion.div>;
       </div>;
-    </section>;) ;
-}
+    </section>;) }
 '"

@@ -1332,8 +1332,7 @@ export const MORE_ENHANCED_SERVICES: ProductListing[] = [
     createdAt: "2025-02-01T08:00:00.000Z",;
     rating: 4.7,;
     reviewCount: 28,;"
-    link: "https://ziontechgroup.com/services/pdf-render-api";
-  };];
+    link: "https://ziontechgroup.com/services/pdf-render-api"};];
 ;
 export const ALL_ENHANCED_SERVICES: ProductListing[] = [
   ...ENHANCED_SERVICES,
@@ -1341,39 +1340,22 @@ export const ALL_ENHANCED_SERVICES: ProductListing[] = [
 ];
 
 // Service categories for filtering
-export const ENHANCED_SERVICE_CATEGORIES = ['
-  { label: 'AI & Machine Learning', value: 'ai-ml' },'
-  { label: 'Cloud & Infrastructure', value: 'cloud-infrastructure' },'
-  { label: 'Cybersecurity', value: 'cybersecurity' },'
-  { label: 'Data & Analytics', value: 'data-analytics' },'
-  { label: 'Business Intelligence', value: 'business-intelligence' },'
-  { label: 'Development & DevOps', value: 'development-devops' },'
-  { label: 'Digital Transformation', value: 'digital-transformation' },'
-  { label: 'Healthcare Technology', value: 'healthcare-tech' },;'
-  { label: 'Financial Technology', value: 'fintech' },;'
-  { label: 'Blockchain', value: 'blockchain' },;'
-  { label: 'Quantum Computing', value: 'quantum-computing' },;'
-  { label: 'Edge Computing', value: 'edge-computing' },;'
-  { label: 'Emerging Technology', value: 'emerging-tech' },;'
+export 
+  { label: 'Financial Technology', value: 'fintech' },;
+  { label: 'Blockchain', value: 'blockchain' },;
+  { label: 'Quantum Computing', value: 'quantum-computing' },;
+  { label: 'Edge Computing', value: 'edge-computing' },;
+  { label: 'Emerging Technology', value: 'emerging-tech' },;
   { label: 'AI Automation', value: 'ai-automation' };
 ];
 
 // Pricing tiers for different service levels;
-export const SERVICE_PRICING_TIERS = {
-"
-  basic: { range: "$500 - $2,000","
-  description: "Essential services for small businesses and startups" 
-
+export 
 ;
-;
-;
-
-
 },;"
   professional: { range: "$2,000 - $8,000", description: "Advanced solutions for growing companies and mid-market" },;"
   enterprise: { range: "$8,000 - $25,000", description: "Custom enterprise solutions with dedicated support" },;"
-  premium: { range: "$25,000 - $50,000+", description: "Specialized industry solutions and cutting-edge technology" };
-};
+  premium: { range: "$25,000 - $50,000+", description: "Specialized industry solutions and cutting-edge technology" }};
 
 // Contact information;
 export const CONTACT_INFO = {
@@ -1385,6 +1367,5 @@ export const CONTACT_INFO = {
   ;
   ;
   ;"
-  domain: "ziontechgroup.com";
-};
+  domain: "ziontechgroup.com"};
 '"

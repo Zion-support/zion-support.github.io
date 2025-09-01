@@ -1,6 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
 import { 
   Shield, 
   AlertTriangle, 
@@ -26,97 +23,17 @@ import {
 } from 'lucide-react';
 
 export default function AISupplyChainRiskManagement() {
-  const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  };
-
-  const features = [
-    "Real-time supply chain monitoring",
-    "AI-powered risk prediction and scoring",
-    "Multi-tier supplier risk assessment",
-    "Geopolitical risk analysis",
-    "Weather and natural disaster alerts",
-    "Financial health monitoring",
-    "Compliance and regulatory tracking",
-    "Automated risk mitigation recommendations",
-    "Supply chain mapping and visualization",
-    "Performance analytics and reporting"
-  ];
-
-  const benefits = [
-    "Reduce supply chain disruptions by 60%",
-    "Improve supplier performance by 40%",
-    "Cut operational costs by 25%",
-    "Enhance compliance and risk mitigation",
-    "Real-time visibility across supply chain",
-    "Proactive risk management strategies"
-  ];
-
-  const useCases = [
-    "Manufacturing companies",
-    "Retail and e-commerce",
-    "Healthcare and pharmaceuticals",
-    "Automotive industry",
-    "Food and beverage",
-    "Electronics and technology",
-    "Logistics and transportation",
-    "Energy and utilities"
-  ];
-
-  const pricing = [
-    {
-      plan: "Essential",
-      price: "$3,999",
-      period: "month",
-      description: "Perfect for small to medium businesses",
-      features: [
-        "Up to 100 suppliers",
-        "Basic risk monitoring",
-        "Email alerts",
-        "Standard reporting",
-        "Email support"
-      ]
-    },
-    {
-      plan: "Professional",
-      price: "$7,999",
-      period: "month",
-      description: "Ideal for growing enterprises",
-      features: [
-        "Up to 500 suppliers",
-        "Advanced AI risk scoring",
-        "Real-time monitoring",
-        "Custom dashboards",
-        "Priority support",
-        "API access"
-      ]
-    },
-    {
-      plan: "Enterprise",
-      price: "$15,999",
-      period: "month",
-      description: "For large-scale operations",
-      features: [
-        "Unlimited suppliers",
-        "Full AI suite",
-        "Custom risk models",
-        "Dedicated support team",
-        "On-site consultation",
-        "White-label options"
-      ]
-    }
-  ];
-
+  
+  
+  
+  
+  
   return (
     <>
-      <SEO 
-        title="AI Supply Chain Risk Management - Zion Tech Group"
+      <SEO title="AI Supply Chain Risk Management - Zion Tech Group"
         description="Protect your supply chain with AI-powered risk management. Monitor suppliers, predict disruptions, and mitigate risks in real-time with our intelligent platform."
         canonical="/services/ai-supply-chain-risk-management"
-      />
+       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
@@ -131,7 +48,7 @@ export default function AISupplyChainRiskManagement() {
             >
               <div className="flex justify-center mb-6">
                 <div className="p-3 bg-blue-500/20 rounded-full">
-                  <Shield className="h-12 w-12 text-blue-400" />
+                  <Shield className="h-12 w-12 text-blue-400"  />
                 </div>
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -148,7 +65,7 @@ export default function AISupplyChainRiskManagement() {
                   className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center justify-center gap-2"
                 >
                   Start Free Trial
-                  <ArrowRight className="h-5 w-5" />
+                  <ArrowRight className="h-5 w-5"  />
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
@@ -191,7 +108,7 @@ export default function AISupplyChainRiskManagement() {
                 >
                   <div className="flex items-center gap-3 mb-4">
                     <div className="p-2 bg-blue-500/20 rounded-lg">
-                      <CheckCircle className="h-5 w-5 text-blue-400" />
+                      <CheckCircle className="h-5 w-5 text-blue-400"  />
                     </div>
                     <h3 className="text-lg font-semibold text-white">{feature}</h3>
                   </div>
@@ -229,7 +146,7 @@ export default function AISupplyChainRiskManagement() {
                   className="text-center"
                 >
                   <div className="p-4 bg-blue-500/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                    <TrendingUp className="h-8 w-8 text-blue-400" />
+                    <TrendingUp className="h-8 w-8 text-blue-400"  />
                   </div>
                   <p className="text-lg text-white font-medium">{benefit}</p>
                 </motion.div>
@@ -278,7 +195,7 @@ export default function AISupplyChainRiskManagement() {
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center gap-3">
-                        <CheckCircle className="h-5 w-5 text-blue-400 flex-shrink-0" />
+                        <CheckCircle className="h-5 w-5 text-blue-400 flex-shrink-0"  />
                         <span className="text-slate-300">{feature}</span>
                       </li>
                     ))}
@@ -329,11 +246,11 @@ export default function AISupplyChainRiskManagement() {
                   className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 text-center hover:border-blue-500/50 transition-colors"
                 >
                   <div className="p-3 bg-blue-500/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                    {index === 0 && <Factory className="h-8 w-8 text-blue-400" />}
-                    {index === 1 && <Truck className="h-8 w-8 text-blue-400" />}
-                    {index === 2 && <Warehouse className="h-8 w-8 text-blue-400" />}
-                    {index === 3 && <Ship className="h-8 w-8 text-blue-400" />}
-                    {index > 3 && <Globe className="h-8 w-8 text-blue-400" />}
+                    {index === 0 && <Factory className="h-8 w-8 text-blue-400"  />}
+                    {index === 1 && <Truck className="h-8 w-8 text-blue-400"  />}
+                    {index === 2 && <Warehouse className="h-8 w-8 text-blue-400"  />}
+                    {index === 3 && <Ship className="h-8 w-8 text-blue-400"  />}
+                    {index > 3 && <Globe className="h-8 w-8 text-blue-400"  />}
                   </div>
                   <h3 className="text-lg font-semibold text-white">{useCase}</h3>
                 </motion.div>
@@ -368,7 +285,7 @@ export default function AISupplyChainRiskManagement() {
                 className="text-center"
               >
                 <div className="p-4 bg-blue-500/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <Phone className="h-8 w-8 text-blue-400" />
+                  <Phone className="h-8 w-8 text-blue-400"  />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
                 <p className="text-slate-300">{contactInfo.phone}</p>
@@ -381,7 +298,7 @@ export default function AISupplyChainRiskManagement() {
                 className="text-center"
               >
                 <div className="p-4 bg-blue-500/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <Mail className="h-8 w-8 text-blue-400" />
+                  <Mail className="h-8 w-8 text-blue-400"  />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
                 <p className="text-slate-300">{contactInfo.email}</p>
@@ -394,7 +311,7 @@ export default function AISupplyChainRiskManagement() {
                 className="text-center"
               >
                 <div className="p-4 bg-blue-500/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                  <MapPin className="h-8 w-8 text-blue-400" />
+                  <MapPin className="h-8 w-8 text-blue-400"  />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
                 <p className="text-slate-300">{contactInfo.address}</p>
@@ -413,12 +330,11 @@ export default function AISupplyChainRiskManagement() {
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center justify-center gap-2 mx-auto"
               >
                 Schedule a Consultation
-                <ArrowRight className="h-5 w-5" />
+                <ArrowRight className="h-5 w-5"  />
               </motion.button>
             </motion.div>
           </div>
         </section>
       </div>
     </>
-  );
-}
+  )}

@@ -1,6 +1,73 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
-import { Link } from 'react-router-dom';];
+<<<<<<< HEAD
+import {
+
+  Brain,
+  Shield,
+  Cloud,
+  Zap,
+  Globe,
+  Rocket,
+  Cpu,
+  Database,
+  Lock,
+  Network,
+  Code,
+  Server'
+} from 'lucide-react';
+
+      features['Emerging Tech',Prototype Development',Technology Consulting',Innovation Strategy'],
+      color: 'from-indigo-500 to-purple-500'};
+  ];
+const techSolutions = [
+  {
+
+    icon: "🤖","
+    title: "AI & Machine Learning","
+    description: "Intelligent automation, predictive analytics, and cognitive computing solutions","
+    benefits: ["Increase efficiency by 300%", "Reduce costs by 40%", "24/7 operation"],"
+    color: "from-purple-500 to-pink-500"
+  },
+  {
+"
+    icon: "☁️","
+    title: "Cloud Infrastructure","
+    description: "Scalable, secure, and high-performance cloud solutions for modern businesses","
+    benefits: ["99.9% uptime guarantee", "Global scalability", "Advanced security"],"
+    color: "from-blue-500 to-cyan-500"
+  },
+  {
+"
+    icon: "🔒","
+    title: "Cybersecurity","
+    description: "Comprehensive security solutions protecting your digital assets and data","
+    benefits: ["Real-time threat detection", "Compliance ready", "Zero-trust architecture"],"
+    color: "from-red-500 to-orange-500"
+  },
+  {
+"
+    icon: "📱","
+    title: "Mobile Solutions","
+    description: "Cross-platform mobile applications and responsive web solutions","
+    benefits: ["Native performance", "Cross-platform", "Offline capability"],"
+    color: "from-green-500 to-emerald-500"
+  },
+  {
+"
+    icon: "🌐","
+    title: "Web Development","
+    description: "Modern, responsive web applications and e-commerce solutions","
+    benefits: ["SEO optimized", "Fast loading", "Mobile-first design"],"
+    color: "from-indigo-500 to-purple-500"
+  },
+  {;"
+    icon: "📊",;"
+    title: "Data Analytics",;"
+    description: "Business intelligence and data-driven insights for strategic decision making",;"
+    benefits: ["Real-time dashboards", "Predictive analytics", "Custom reporting"],;"
+    color: "from-yellow-500 to-orange-500"};
+];
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
 export function TechSolutionsSection() {
   return ("
@@ -96,11 +163,11 @@ export function TechSolutionsSection() {
                 </ul>
 
                 <Link"
-                  to="/services""
+                  to="/services"
                   className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors duration-200 group-hover:translate-x-1"
 
                   Learn More"
-                  <Rocket className="ml-2 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />                </Link>
+                  <Rocket className="ml-2 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1"  />                </Link>
               </motion.div>) }) }
         </div>
 
@@ -130,24 +197,24 @@ export function TechSolutionsSection() {
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
               Ready to Transform Your Business?
             </h3>"
-            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">'
+            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
               Let's discuss how our technology solutions can help you achieve
               your business goals and stay ahead of the competition.
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
 
                 Get Started"
-                <Rocket className="ml-2 h-5 w-5" />
+                <Rocket className="ml-2 h-5 w-5"  />
               </Link>
               <Link"
-                to="/services""
+                to="/services"
                 className="inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50 transition-colors duration-200"
 
                 View All Services"
-                <Code className="ml-2 h-5 w-5" />              </Link>
+                <Code className="ml-2 h-5 w-5"  />              </Link>
             </div>
           </div>
         </motion.div>;
@@ -159,8 +226,7 @@ export default TechSolutionsSection;"
           </div>;
         </motion.div>;
       </div>;
-    </section>;) ;
-}
+    </section>;) }
 export default TechSolutionsSection;
 export default TechSolutionsSection;
 '"`

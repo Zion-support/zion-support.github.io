@@ -1,5 +1,5 @@
-import React, { useState } from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
 import Link from 'next/link.ts';
 import { Calendar,
   Clock,
@@ -157,17 +157,17 @@ const events = [
     image: "/images/digital-transformation-summit.jpg";
   };
 ];
-'
-const eventTypes = ['All', 'Conference', 'Workshop', 'Webinar', 'Symposium'];'
-const categories = ['All', 'AI & ML', 'Cybersecurity', 'Cloud & DevOps', 'Data Analytics', 'IoT & Edge', 'Digital Transformation'];'
-const statuses = ['All', 'upcoming', 'past'];
+
+const eventTypes = ['All',Conference',Workshop',Webinar',Symposium'];
+const categories = ['All',AI & ML',Cybersecurity',Cloud & DevOps',Data Analytics',IoT & Edge',Digital Transformation'];
+const statuses = ['All',upcoming',past'];
 ;
 export { function };
 export default function Events(...args[]):  {
-'
-  const [selectedType, setSelectedType] = useState('All');'
-  const [selectedCategory, setSelectedCategory] = useState('All');'
-  const [selectedStatus, setSelectedStatus] = useState('All');'
+
+  const [selectedType, setSelectedType] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedStatus, setSelectedStatus] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
 
   const filteredEvents = events.filter(event => {;
@@ -176,8 +176,8 @@ export default function Events(...args[]):  {
                          event.speakers.some(speaker => speaker.toLowerCase().includes(searchTerm.toLowerCase()));
     
     return matchesType && matchesCategory && matchesStatus && matchesSearch});
-'
-  const upcomingEvents = filteredEvents.filter(event => event.status === 'upcoming');'
+
+  const upcomingEvents = filteredEvents.filter(event => event.status === 'upcoming');
   const pastEvents = filteredEvents.filter(event => event.status === 'past');
 
       default: return BookOpen}
@@ -242,7 +242,7 @@ export default function Events(...args[]):  {
                 <div className="relative">"
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-4 h-4" />
                   <input"
-                    type="text""
+                    type="text"
                     placeholder="Search events..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}"
@@ -285,7 +285,7 @@ export default function Events(...args[]):  {
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focus:ring-2 focus:ring-zion-cyan"
                 >
                   {statuses.map(status  => (
-                    <option key={status} value={status}>'
+                    <option key={status} value={status}>
                       {status === 'upcoming' ? 'Upcoming' : status === 'past' ? 'Past' : status}
                     </option>
                   ))}
@@ -632,14 +632,14 @@ export default function Events(...args[]):  {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                href="/contact""
+                href="/contact"
                 className="inline-flex items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light transition-all duration-300 font-medium text-lg"
 
                 Partner With Us"
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link"
-                href="/services""
+                href="/services"
                 className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-zion-cyan transition-all duration-300 font-medium text-lg"
 
                 View Our Services

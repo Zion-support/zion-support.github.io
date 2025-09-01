@@ -1,11 +1,58 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';  ];
+<<<<<<< HEAD
+import {
+
+  Users,
+  Award,
+  Star,
+  Target,
+  TrendingUp,
+  Globe,
+  Zap,
+  Shield,
+  Brain,
+  Rocket,
+  Building,
+  Heart,
+  Crown,
+  Sparkles,
+  ArrowRight,
+  Linkedin,
+  Mail,
+  Phone,
+  MapPin'
+} from 'lucide-react';
+
+  
+      bio: 'Leading researcher in artificial intelligence and machine learning. Drives innovation in our AI solutions and maintains our position at the cutting edge of technology.',;
+      expertise: ['Machine Learning',Deep Learning',AI Ethics',Research & Development'],;
+      linkedin: 'https://linkedin.com/in/emilywatson',;
+      email: 'emily@ziontechgroup.com',;
+      phone: '+1 302 464 0953'};
+  ]},;
+    {;
+      icon: Globe,;
+      title: 'Global Impact',;
+      description: 'We believe technology should make the world better for everyone, everywhere.'};
+  ]},;
+    {;
+      metric: '25+',;
+      label: 'Industry Awards',;
+      description: 'Recognition for innovation and excellence in technology'};
+  ];
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
+<<<<<<< HEAD
+        title="Leadership - Zion Tech Group"
+        description="Meet the visionary leaders driving innovation at Zion Tech Group. Our experienced team is committed to transforming businesses through cutting-edge AI and technology solutions."
+       />
+=======
         title="Leadership - Zion Tech Group""        description="Meet the visionary leaders driving innovation at Zion Tech Group. Our experienced team is committed to transforming businesses through cutting-edge AI and technology solutions."
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="pt-20 pb-16 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20">"
@@ -68,23 +115,23 @@ import { Link } from 'react-router-dom';  ];
                     <div className="flex items-center space-x-4">
                       <a
                         href={leader.linkedin}"
-                        target="_blank""
-                        rel="noopener noreferrer""
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="flex items-center space-x-2 text-slate-300 hover:text-cyan-400 transition-colors"
 "
-                        <Linkedin className="w-5 h-5" />                        <span>LinkedIn</span>
+                        <Linkedin className="w-5 h-5"  />                        <span>LinkedIn</span>
                       </a>
                       <a
                         href={`mailto:${leader.email}`}"
                         className="flex items-center space-x-2 text-slate-300 hover:text-cyan-400 transition-colors"
 "
-                        <Mail className="w-5 h-5" />                        <span>Email</span>
+                        <Mail className="w-5 h-5"  />                        <span>Email</span>
                       </a>
                       <a`
                         href={`tel:${leader.phone}`}"
                         className="flex items-center space-x-2 text-slate-300 hover:text-cyan-400 transition-colors"
 "
-                        <Phone className="w-5 h-5" />                        <span>Call</span>
+                        <Phone className="w-5 h-5"  />                        <span>Call</span>
                       </a>
                     </div>;
                   </div>
@@ -151,19 +198,19 @@ import { Link } from 'react-router-dom';  ];
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
               Join Our Mission
             </h2>"
-            <p className="text-xl text-slate-300 mb-8 leading-relaxed">'
+            <p className="text-xl text-slate-300 mb-8 leading-relaxed">
               We're building a team of passionate innovators who believe in the power of technology'
               to transform businesses and improve lives. If you share our vision, we'd love to hear from you.
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/careers""
+                to="/careers"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/20"
 
                 View Open Positions"
-                <ArrowRight className="ml-2 w-5 h-5" />              </Link>
+                <ArrowRight className="ml-2 w-5 h-5"  />              </Link>
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
 
                 Get in Touch
@@ -187,7 +234,7 @@ import { Link } from 'react-router-dom';  ];
             <div className="grid md:grid-cols-3 gap-8">"
               <div className="text-center">"
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">"
-                  <MapPin className="w-8 h-8 text-cyan-400" />
+                  <MapPin className="w-8 h-8 text-cyan-400"  />
                 </div>"
                 <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>"                <p className="text-slate-300 text-sm">
                   364 E Main St STE 1008<br />
@@ -197,7 +244,7 @@ import { Link } from 'react-router-dom';  ];
 "
               <div className="text-center">"
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">"
-                  <Phone className="w-8 h-8 text-cyan-400" />
+                  <Phone className="w-8 h-8 text-cyan-400"  />
                 </div>"
                 <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>"                <p className="text-slate-300 text-sm">
                   +1 302 464 0950<br />
@@ -207,10 +254,16 @@ import { Link } from 'react-router-dom';  ];
 "
               <div className="text-center">"
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">"
-                  <Mail className="w-8 h-8 text-cyan-400" />
+                  <Mail className="w-8 h-8 text-cyan-400"  />
                 </div>"
+<<<<<<< HEAD
+                <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>"
+                <p className="text-slate-300 text-sm">
+                  kleber@ziontechgroup.com<br />
+=======
                 <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>"                <p className="text-slate-300 text-sm">
                   kleber@ziontechgroup.com<br />'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   We'll respond within 24 hours
                 </p>;
               </div>;
@@ -219,5 +272,4 @@ import { Link } from 'react-router-dom';  ];
         </div>;
       </section>;
     </div>;
-  );
-}}}}}'"`
+  )}}}}}'"`

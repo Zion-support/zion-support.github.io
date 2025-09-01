@@ -1,4 +1,3 @@
-import React from 'react.ts';
 ;const DeveloperAPITester: React.FC = (): JSX.Element => {
 
   return()
@@ -54,9 +53,9 @@ import React from 'react.ts';
               <ul className="list-disc ml-6 space-y-2 text-cyan-300">
                 <li>
                   <a"
-                    className="hover:underline""
-                    href="https://www.openapis.org/""
-                    target="_blank""
+                    className="hover:underline"
+                    href="https://www.openapis.org/"
+                    target="_blank"
                     rel="noreferrer"
                   >
                     OpenAPI Initiative
@@ -64,9 +63,9 @@ import React from 'react.ts';
                 </li>
                 <li>
                   <a"
-                    className="hover:underline""
-                    href="https://insomnia.rest/plugins""
-                    target="_blank""
+                    className="hover:underline"
+                    href="https://insomnia.rest/plugins"
+                    target="_blank"
                     rel="noreferrer"
                   >
                     Insomnia Plugins
@@ -74,9 +73,9 @@ import React from 'react.ts';
                 </li>
                 <li>
                   <a"
-                    className="hover:underline""
-                    href="https://github.com/postmanlabs/newman""
-                    target="_blank""
+                    className="hover:underline"
+                    href="https://github.com/postmanlabs/newman"
+                    target="_blank"
                     rel="noreferrer"
                   >
                     Newman CLI
@@ -90,7 +89,7 @@ import React from 'react.ts';
             <div className="rounded-2xl border border-sky-400/20 bg-slate-900/60 p-6">"
               <h3 className="text-xl font-semibold">Start Testing</h3>
               <a"
-                href="/contact""
+                href="/contact"
                 className="mt-4 inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-sky-400 to-purple-400 text-white hover:from-sky-500 hover:to-purple-500"
               >
                 Contact Sales
@@ -100,7 +99,6 @@ import React from 'react.ts';
         </section>
       </div>
     </div>
-  );
-};
+  )};
 export default DeveloperAPITester;
 '"

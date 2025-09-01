@@ -1,96 +1,98 @@
-import React from 'react';'
-import { motion } from 'framer-motion';      stats: { services: 10, avgROI: '500%', innovation: 'Revolutionary' }
+<<<<<<< HEAD
+import {
+
+  Rocket,
+  Brain,
+  Zap,
+  Globe,
+  Shield,
+  Cpu,
+  Database,
+  Network,
+  Lock,
+  TrendingUp,
+  Users,
+  ArrowRight,
+  Star,
+  Clock,
+  DollarSign,
+  Target,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink,
+  Lightbulb,
+  Code,
+  Cloud,
+  Server,
+  Smartphone,
+  Monitor,
+  Wifi,
+  Key,
+  BarChart3,
+  Globe2,
+  ShieldCheck'
+ } from 'lucide-react';
+
+const InnovativeServicesHub: React.FC = (): JSX.Element => {
+
+  
+      stats: { services: 10, avgROI: '500%', innovation: 'Revolutionary' }
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     },
     {
-'
-      id: 'advanced-2026','
-      title: 'Advanced Innovative Services 2026','
+
+      id: 'advanced-2026',
+      title: 'Advanced Innovative Services 2026',
       description: 'Cutting-edge futuristic technologies including brain-computer interfaces and space mining',
-      icon: Brain,'
-      color: 'from-purple-600 to-pink-600','
-      route: '/advanced-services-2026','
-      features['Brain-Computer Interfaces', 'Space Mining', 'Synthetic Biology', 'Fusion Energy'],;'
+      icon: Brain,
+      color: 'from-purple-600 to-pink-600',
+      route: '/advanced-services-2026',
+      features['Brain-Computer Interfaces',Space Mining',Synthetic Biology',Fusion Energy'],;
       stats: { services: 10, avgROI: '1000%', innovation: 'Futuristic' }
     },
     {
-'
-      id: 'core-it','
-      title: 'Core IT & Infrastructure','
+
+      id: 'core-it',
+      title: 'Core IT & Infrastructure',
       description: 'Enterprise-grade IT solutions and infrastructure services for modern businesses',
-      icon: Server,'
-      color: 'from-green-600 to-teal-600','
-      route: '/services','
-      features['Cloud Services', 'Cybersecurity', 'IT Infrastructure', 'Digital Transformation'],;'
+      icon: Server,
+      color: 'from-green-600 to-teal-600',
+      route: '/services',
+      features['Cloud Services',Cybersecurity',IT Infrastructure',Digital Transformation'],;
       stats: { services: 15, avgROI: '300%', innovation: 'Enterprise' }
     },
     {
-'
-      id: 'green-tech','
-      title: 'Green Technology Solutions','
+
+      id: 'green-tech',
+      title: 'Green Technology Solutions',
       description: 'Sustainable and eco-friendly technology solutions for a better future',
-      icon: Globe};'
-      color: 'from-emerald-600 to-green-600',;'
-      route: '/green-it',;'
-      features: ['Renewable Energy', 'Carbon Reduction', 'Sustainable Computing', 'Green AI'],;'
-      stats: { services: 8, avgROI: '400%', innovation: 'Sustainable' };
-    };
+      icon: Globe};
+      color: 'from-emerald-600 to-green-600',;
+      route: '/green-it',;
+      features: ['Renewable Energy',Carbon Reduction',Sustainable Computing',Green AI'],;
+      stats: { services: 8, avgROI: '400%', innovation: 'Sustainable' }};
   ];
 
-  const featuredServices = [
-    {
-'
-      title: 'Quantum AI Neural Networks','
-      description: 'Revolutionary AI powered by quantum computing principles','
-      category: 'AI & Quantum','
-      price: '$50,000','
-      roi: '800%','
-      delivery: '6 months'
-    },
-    {
-'
-      title: 'Brain-Computer Interface Platform','
-      description: 'Direct neural interface for human-computer interaction','
-      category: 'Neurotech','
-      price: '$100,000','
-      roi: '1200%','
-      delivery: '12 months'
-    },
-    {
-'
-      title: 'Autonomous Space Mining System',;'
-      description: 'AI-powered space exploration and resource extraction',;'
-      category: 'Space Tech',;'
-      price: '$500,000',;'
-      roi: '2000%',;'
-      delivery: '18 months';
-    };
+  
+      description: 'AI-powered space exploration and resource extraction',;
+      category: 'Space Tech',;
+      price: '$500,000',;
+      roi: '2000%',;
+      delivery: '18 months'};
   ];
 
-  const containerVariants = {
-
-    hidden: { opacity: 0 },;
+  
     visible: {
       opacity: 1,;
       transition: {
-        staggerChildren: 0.1;
-      };
-    };
-  };
+        staggerChildren: 0.1}}};
 
-  const itemVariants = {
-
-  hidden: { y: 20,
-  opacity: 0 
-
-},
-    visible: {
-      y: 0,;
+  
       opacity: 1,;
       transition: {
-        duration: 0.5;
-      };
-    };
-  };
+        duration: 0.5}}};
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -231,7 +233,7 @@ import { motion } from 'framer-motion';      stats: { services: 10, avgROI: '500
       <motion.div"
         className="container mx-auto px-4 py-16"
         variants={containerVariants}"
-        initial="hidden""
+        initial="hidden"
         animate="visible"
 "
         <div className="text-center mb-16">"
@@ -245,7 +247,7 @@ import { motion } from 'framer-motion';      stats: { services: 10, avgROI: '500
 ;"
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
           {serviceCategories.map((category) => {;
-            const IconComponent = category.icon;
+            
             return()              <motion.div
                 key = {category.id}"
                 className="group bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20"
@@ -259,7 +261,7 @@ import { motion } from 'framer-motion';      stats: { services: 10, avgROI: '500
               >"
                 <div className="flex items-start gap-4 mb-6">
                   <div className={`p-4 rounded-xl bg-gradient-to-r ${category.color}`}>"
-                    <IconComponent className="w-8 h-8 text-white" />
+                    <IconComponent className="w-8 h-8 text-white"  />
                   </div>"
                   <div className="flex-1">"                    <h3 className="text-2xl font-bold text-white group-hover:text-blue-300 transition-colors mb-2">
                       {category.title}
@@ -303,10 +305,9 @@ import { motion } from 'framer-motion';      stats: { services: 10, avgROI: '500
                   className="inline-flex items-center gap-2 w-full justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 group-hover:gap-3"
                 >;
                   Explore {category.title};"
-                  <ArrowRight className="w-5 h-5" />;
+                  <ArrowRight className="w-5 h-5"  />;
                 </a>;
-              </motion.div>;) ;
-          }) }        </div>
+              </motion.div>;) }) }        </div>
       </motion.div>
 
       {/* Featured Services */}
@@ -356,7 +357,7 @@ import { motion } from 'framer-motion';      stats: { services: 10, avgROI: '500
 }}
             >"
               <div className="flex items-center gap-2 mb-3">"
-                <Star className="w-5 h-5 text-yellow-400 fill-current" />"                <span className="text-sm text-yellow-400 font-medium">Featured</span>
+                <Star className="w-5 h-5 text-yellow-400 fill-current"  />"                <span className="text-sm text-yellow-400 font-medium">Featured</span>
               </div>
 "
               <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>"
@@ -394,19 +395,13 @@ import { motion } from 'framer-motion';      stats: { services: 10, avgROI: '500
         initial = {
 
   { opacity: 0,
-  y: 50 ;
-
-}}        animate = {
+  y: 50 }}        animate = {
 
   { opacity: 1,
-  y: 0 ;
-
-}}        transition = {
+  y: 0 }}        transition = {
 
   { duration: 0.8,
-  delay: 1.6 ;
-
-}}
+  delay: 1.6 }}
       >"
         <div className="container mx-auto px-4 py-20">"
           <div className="text-center mb-12">"            <h2 className="text-4xl font-bold text-white mb-4">
@@ -420,7 +415,7 @@ import { motion } from 'framer-motion';      stats: { services: 10, avgROI: '500
 "
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">"
             <div className="text-center p-6 bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50">"
-              <Phone className="w-12 h-12 text-blue-400 mx-auto mb-4" />"
+              <Phone className="w-12 h-12 text-blue-400 mx-auto mb-4"  />"
               <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>"
               <p className="text-slate-300 mb-3">Speak directly with our experts</p>"              <a href="tel:+13024640950" className="text-blue-400 hover:text-blue-300 font-medium">
                 +1 (302) 464-0950
@@ -428,7 +423,7 @@ import { motion } from 'framer-motion';      stats: { services: 10, avgROI: '500
             </div>
 "
             <div className="text-center p-6 bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50">"
-              <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" />"
+              <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4"  />"
               <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>"
               <p className="text-slate-300 mb-3">Send us a detailed message</p>"              <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 font-medium">
                 kleber@ziontechgroup.com
@@ -436,7 +431,7 @@ import { motion } from 'framer-motion';      stats: { services: 10, avgROI: '500
             </div>
 "
             <div className="text-center p-6 bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50">"
-              <MapPin className="w-12 h-12 text-green-400 mx-auto mb-4" />"
+              <MapPin className="w-12 h-12 text-green-400 mx-auto mb-4"  />"
               <h3 className="text-xl font-bold text-white mb-2">Visit Us</h3>"
               <p className="text-slate-300 mb-3">Come see our innovation center</p>"              <p className="text-green-400 font-medium">
                 364 E Main St STE 1008<br />
@@ -447,17 +442,16 @@ import { motion } from 'framer-motion';      stats: { services: 10, avgROI: '500
 "
           <div className="text-center mt-12">
             <a"
-              href="https://ziontechgroup.com""
-              target="_blank""
-              rel="noopener noreferrer""
+              href="https://ziontechgroup.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/25"
 
               Visit Our Website"
-              <ExternalLink className="w-5 h-5" />            </a>;
+              <ExternalLink className="w-5 h-5"  />            </a>;
           </div>;
         </div>;
       </motion.div>;
-    </div>;) ;
-};
+    </div>;) };
 
-export default InnovativeServicesHub;}}}}}}}'"`
+export default InnovativeServicesHub}}}}}}}'"`

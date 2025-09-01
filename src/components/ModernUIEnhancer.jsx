@@ -1,10 +1,10 @@
-import React, { useEffect, useState, useRef } from 'react';'
+import React, { useEffect, useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = true, enableScrollEffects = true, enableThemeToggle = true, enableResponsiveDesign = true}) => {
 
-    const [isVisible, setIsVisible] = useState(false);'
+    const [isVisible, setIsVisible] = useState(false);
     const [currentTheme, setCurrentTheme] = useState('auto');
-    const [showScrollToTop, setShowScrollToTop] = useState(false);'
+    const [showScrollToTop, setShowScrollToTop] = useState(false);
     const [deviceType, setDeviceType] = useState('desktop');
     const scrollToTopRef = useRef(null);
     // Detect device type
@@ -12,17 +12,17 @@ import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet expo
         const updateDeviceType = () => {
             const width = window.innerWidth;
             if (width < 768) {
-'
+
                 setDeviceType('mobile')}
             else if (width < 1024) {
-'
+
                 setDeviceType('tablet')}
             else {
-'
+
                 setDeviceType('desktop')}
         };
-        updateDeviceType();'
-        window.addEventListener('resize', updateDeviceType);'
+        updateDeviceType();
+        window.addEventListener('resize', updateDeviceType);
         return () => window.removeEventListener('resize', updateDeviceType)}, []);
     // Scroll effects
     useEffect ( () => {
@@ -31,10 +31,10 @@ import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet expo
             const scrollTop = window.pageYOffset;
             setShowScrollToTop (scrollTop > 300) ;
             // Parallax effect for background elements
-            const scrolled = window.pageYOffset;'
+            const scrolled = window.pageYOffset;
             const parallaxElements = document.querySelectorAll('[data-parallax]');
             parallaxElements.forEach((element) => {
-'
+
                 const speed = parseFloat(element.getAttribute('data-parallax') || '0.5');
                 const yPos = -(scrolled * speed);
                 element.style.transform = `translateY(${yPos}px)`});
@@ -45,31 +45,31 @@ import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet expo
                 const rect = element.getBoundingClientRect();
                 const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
                 if (isVisible) {
-'
+
                     element.classList.add('fade-in-visible')}
-            })};'
-        window.addEventListener('scroll', handleScroll);'
+            })};
+        window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll)}, [enableScrollEffects]);
     // Theme management
     useEffect(() => {
-'
+
         const savedTheme = localStorage.getItem('theme') || 'auto';
         setCurrentTheme(savedTheme);
         applyTheme(savedTheme)}, []);
     const applyTheme = (theme) => {
 
-        const root = document.documentElement;'
+        const root = document.documentElement;
         if (theme === 'auto') {
-'
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;'
+
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)).matches;
             root.classList.toggle('dark', prefersDark)}
         else {
-'
+
             root.classList.toggle('dark', theme === 'dark');
-'
+
         localStorage.setItem('theme', theme);
-    };'
-    const themes = ['light', 'dark', 'auto'];
+    };
+    const themes = ['light',dark',auto'];
         const currentIndex = themes.indexOf (currentTheme) ;
         const nextTheme = themes[ (currentIndex + 1) % themes.length];
         setCurrentTheme (nextTheme) ;
@@ -77,12 +77,12 @@ import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet expo
     const scrollToTop = () => {
         window.scrollTo({
 
-            top: 0,'
+            top: 0,
             behavior: 'smooth'})};
     // Add CSS animations to the document
     useEffect(() => {
         if (!enableAnimations)
-            return;'
+            return;
         const style = document.createElement('style');`
         style.textContent = `
       .fade-in {
@@ -229,13 +229,13 @@ import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet expo
 
                 if (entry.isIntersecting) {
 
-                    const element = entry.target;'
+                    const element = entry.target;
                     const animationType = element.getAttribute('data-animation');
                     if (animationType) {
 `
                         element.classList.add(`${animationType}-visible`)}
                 }
-            })}, observerOptions);'
+            })}, observerOptions);
         const animatedElements = document.querySelectorAll('[data-animation]');
         animatedElements.forEach((element) => {
 
@@ -511,5 +511,4 @@ import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet expo
   {
 
                     x: Math.random() * window.innerWidth,
-                    y: Math.random() * window.innerHeight,
-'"`
+                    y: Math.random() * window.innerHeight,"`

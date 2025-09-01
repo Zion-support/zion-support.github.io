@@ -1,11 +1,75 @@
-import React from 'react';'
-import { motion } from 'framer-motion';  ];
+<<<<<<< HEAD
+import {
+
+  Leaf,
+  Zap,
+  Shield,
+  Globe,
+  TrendingUp,
+  Settings,
+  Database,
+  Cloud,
+  Lock,
+  Users,
+  Rocket,
+  CheckCircle,
+  ArrowRight,
+  Sun,
+  Wind,
+  Battery,
+  Recycle,
+  Tree,
+  Lightbulb,
+  Gauge,
+  Target,
+  Award,
+  BarChart3'
+} from 'lucide-react';
+;
+export { function };
+export default function GreenIT(...args: unknown[]): unknown {
+  
+    },;
+    {;
+      icon: Recycle,;
+      title: 'Circular IT Economy',;
+      description: 'Implement IT asset lifecycle management with recycling and refurbishment programs.'};
+  ];
+
+  
+    {;
+      title: 'Green Software Development',;
+      description: 'Develop energy-efficient software applications and optimize existing systems',;
+      icon: Code,;
+      benefits: ['Reduced computational overhead',Lower energy consumption',Improved performance']};
+  ];
+
+  
+    {;
+      industry: 'Manufacturing',;
+      description: 'Smart manufacturing with energy-efficient automation and monitoring',;
+      icon: Factory,;
+      metrics: ['Production Efficiency',Energy Consumption',Environmental Compliance']};
+  ]},;
+    {;
+      icon: Award,;
+      title: 'Brand Reputation',;
+      description: 'Enhance brand image through commitment to sustainability'};
+  ];
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
+<<<<<<< HEAD
+        title="Green IT Services - Zion Tech Group"
+        description="Transform your IT infrastructure with sustainable, energy-efficient solutions. Reduce carbon footprint, lower costs, and meet environmental compliance standards."
+      />
+=======
         title="Green IT Services - Zion Tech Group""        description="Transform your IT infrastructure with sustainable, energy-efficient solutions. Reduce carbon footprint, lower costs, and meet environmental compliance standards."
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
@@ -38,7 +102,7 @@ import { motion } from 'framer-motion';  ];
             className="text-center"
 "
             <div className="inline-flex items-center px-4 py-2 bg-green-400/20 text-green-400 rounded-full text-sm font-medium mb-6">"
-              <Leaf className="w-4 h-4 mr-2" />              Sustainable Technology
+              <Leaf className="w-4 h-4 mr-2"  />              Sustainable Technology
             </div>"
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Green IT"
@@ -169,21 +233,21 @@ import { motion } from 'framer-motion';  ];
               </p>"
               <div className="space-y-4">"
                 <div className="flex items-start space-x-3">"
-                  <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
+                  <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"  />
                   <div>"
                     <h3 className="text-white font-semibold">Energy Efficiency</h3>"
                     <p className="text-gray-300 text-sm">Optimize power consumption and reduce energy waste</p>
                   </div>
                 </div>"
                 <div className="flex items-start space-x-3">"
-                  <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
+                  <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"  />
                   <div>"
                     <h3 className="text-white font-semibold">Sustainable Materials</h3>"
                     <p className="text-gray-300 text-sm">Use eco-friendly materials and reduce toxic substances</p>
                   </div>
                 </div>"
                 <div className="flex items-start space-x-3">"
-                  <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
+                  <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"  />
                   <div>"
                     <h3 className="text-white font-semibold">Waste Reduction</h3>"                    <p className="text-gray-300 text-sm">Minimize electronic waste through proper lifecycle management</p>
                   </div>
@@ -222,13 +286,13 @@ import { motion } from 'framer-motion';  ];
                   <h3 className="text-xl font-semibold text-white">Sustainability Dashboard</h3>"
                   <div className="flex space-x-2">"
                     <button className="p-2 bg-green-500/20 text-green-400 rounded-lg">"
-                      <Leaf className="w-4 h-4" />
+                      <Leaf className="w-4 h-4"  />
                     </button>"
                     <button className="p-2 bg-blue-500/20 text-blue-400 rounded-lg">"
-                      <Gauge className="w-4 h-4" />
+                      <Gauge className="w-4 h-4"  />
                     </button>"
                     <button className="p-2 bg-yellow-500/20 text-yellow-400 rounded-lg">"
-                      <Sun className="w-4 h-4" />                    </button>
+                      <Sun className="w-4 h-4"  />                    </button>
                   </div>
                 </div>"
                 <div className="space-y-4">"
@@ -426,7 +490,7 @@ import { motion } from 'framer-motion';  ];
                 <div className="space-y-2">
                   {solution.benefits.map((benefit, benefitIndex) => ("
                     <div key={benefitIndex} className="flex items-center text-sm text-gray-400">"
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />                      {benefit}
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0"  />                      {benefit}
                     </div>
                   ))}
                 </div>
@@ -523,7 +587,7 @@ import { motion } from 'framer-motion';  ];
                 <div className="space-y-2">
                   {useCase.metrics.map((metric, metricIndex) => ("
                     <div key={metricIndex} className="flex items-center text-sm text-gray-400">"
-                      <Target className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />                      {metric}
+                      <Target className="w-4 h-4 text-green-400 mr-2 flex-shrink-0"  />                      {metric}
                     </div>
                   ))}
                 </div>
@@ -661,27 +725,27 @@ import { motion } from 'framer-motion';  ];
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
               {
-'
-                step: '01','
-                title: 'Assessment','
+
+                step: '01',
+                title: 'Assessment',
                 description: 'Evaluate current IT infrastructure and identify sustainability opportunities'
               },
               {
-'
-                step: '02','
-                title: 'Strategy','
+
+                step: '02',
+                title: 'Strategy',
                 description: 'Develop comprehensive Green IT strategy and implementation roadmap'
               },
               {
-'
-                step: '03','
-                title: 'Implementation','
+
+                step: '03',
+                title: 'Implementation',
                 description: 'Deploy sustainable solutions and optimize existing systems'
               },
               {
-'
-                step: '04','
-                title: 'Optimization','
+
+                step: '04',
+                title: 'Optimization',
                 description: 'Monitor performance and continuously improve sustainability metrics'
 
             ].map(phase: unknown, index: unknown (;
@@ -780,5 +844,4 @@ import { motion } from 'framer-motion';  ];
         </div>;
       </section>;
     </div>;
-  );
-}}}}}}}'"
+  )}}}}}}}'"

@@ -8,35 +8,35 @@ export default function Careers(...args[]):  {
 
 	const openPositions = [
 		{
-'
-			title: 'Senior AI Engineer','
-			department: 'AI & Machine Learning','
-			location: 'Remote / San Francisco','
-			type: 'Full-time','
+
+			title: 'Senior AI Engineer',
+			department: 'AI & Machine Learning',
+			location: 'Remote / San Francisco',
+			type: 'Full-time',
 			description: 'Build next-generation autonomous AI systems and multi-agent workflows.'
 		},
 		{
-'
-			title: 'Cloud Infrastructure Engineer','
-			department: 'Cloud & DevOps','
-			location: 'Remote / New York','
-			type: 'Full-time','
+
+			title: 'Cloud Infrastructure Engineer',
+			department: 'Cloud & DevOps',
+			location: 'Remote / New York',
+			type: 'Full-time',
 			description: 'Design and implement scalable cloud architectures for enterprise clients.'
 		},
 		{
-'
-			title: 'Cybersecurity Specialist','
-			department: 'Security','
-			location: 'Remote / Austin','
-			type: 'Full-time','
+
+			title: 'Cybersecurity Specialist',
+			department: 'Security',
+			location: 'Remote / Austin',
+			type: 'Full-time',
 			description: 'Develop advanced security solutions and compliance frameworks.'
 		},
 		{
-'
-			title: 'Frontend Developer','
-			department: 'Engineering','
-			location: 'Remote','
-			type: 'Full-time','
+
+			title: 'Frontend Developer',
+			department: 'Engineering',
+			location: 'Remote',
+			type: 'Full-time',
 			description: 'Create intuitive user interfaces for our AI-powered platforms.'
 
 	]
@@ -50,7 +50,7 @@ export default function Careers(...args[]):  {
 						<h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
 							Join Our Team
 						</h1>"
-						<p className="mt-6 text-lg leading-8 text-gray-600">'
+						<p className="mt-6 text-lg leading-8 text-gray-600">
 							Help us build the future of business technology. We're looking for passionate innovators who want to make a real impact.
 						</p>
 					</div>
@@ -62,7 +62,7 @@ export default function Careers(...args[]):  {
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">"
 					<div className="mx-auto max-w-2xl text-center mb-16">"
 						<h2 className="text-3xl font-bold tracking-tight text-gray-900">Why Work With Us?</h2>"
-						<p className="mt-6 text-lg text-gray-600">'
+						<p className="mt-6 text-lg text-gray-600">
 							Join a team that's redefining what's possible in business technology
 						</p>
 					</div>"
@@ -189,7 +189,7 @@ export default function Careers(...args[]):  {
 								</div>"
 								<p className="text-gray-600 mb-4">{position.description}</p>
 								<Link"
-									to="/contact""
+									to="/contact"
 									className="inline-flex items-center text-blue-600 hover:text-blue-500 font-medium"
 "
 									Apply Now <ArrowRight className="ml-2 h-4 w-4" />
@@ -205,18 +205,18 @@ export default function Careers(...args[]):  {
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">"
 					<div className="mx-auto max-w-2xl text-center">'"
 						<h2 className="text-3xl font-bold tracking-tight text-white">Don't See the Right Role?</h2>"
-						<p className="mt-6 text-lg text-blue-100">'
+						<p className="mt-6 text-lg text-blue-100">
 							We're always looking for talented individuals. Send us your resume and let's discuss how you can contribute to our mission.
 						</p>"
 						<div className="mt-10 flex items-center justify-center gap-x-6">
 							<Link"
-								to="/contact""
+								to="/contact"
 								className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
 
 								Send Resume
 							</Link>
 							<a"
-								href="mailto:careers@ziontechgroup.com""
+								href="mailto:careers@ziontechgroup.com"
 								className="text-sm font-semibold leading-6 text-white hover:text-blue-100"
 
 								careers@ziontechgroup.com

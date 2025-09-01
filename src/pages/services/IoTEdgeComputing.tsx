@@ -1,6 +1,3 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
-import { Link } from 'react-router-dom';
 import {
 
   Cpu,
@@ -15,92 +12,25 @@ import {
   FileText,
   Network,
   Server,
-  Router,'
-  Satellite} from 'lucide-react';'
-import { SEO } from '@/components/SEO';
+  Router,
+  Satellite} from 'lucide-react';
 ;
 export { function };
 export default function IoTEdgeComputing(...args: unknown[]): unknown {
-  const features = [
-    {
-
-      icon: Cpu,'
-      title: 'Edge Processing',
-      description:'
-        'Real-time data processing at the edge for instant decision making'},
-    {
-
-      icon: Network,'
-      title: 'IoT Connectivity',
-      description:'
-        'Seamless integration of IoT devices and sensors across networks'},
-    {
-
-      icon: Zap,'
-      title: 'Low Latency',
-      description:'
-        'Ultra-fast response times for critical applications and real-time analytics'},
-    {
-
-      icon: Globe,'
-      title: 'Global Reach','
-      description: 'Distributed edge computing infrastructure worldwide'},
-  ];
-
-  const services = [
-    {
-'
-      title: 'Edge Computing Infrastructure',
-      description:'
-        'Deploy and manage edge computing nodes for optimal performance and reliability',
-      icon: Server,'
-      features: ['Edge node deployment', 'Load balancing', 'Failover systems']},
-    {
-'
-      title: 'IoT Device Management',
-      description:'
-        'Centralized management and monitoring of IoT devices and sensors',
-      icon: Smartphone,
-      features: ['
-        'Device provisioning','
-        'Remote monitoring','
-        'Firmware updates',
-      ]},
-    {
-'
-      title: 'Real-time Analytics','
-      description: 'Process and analyze data streams in real-time at the edge',
-      icon: BarChart3,
-      features: ['
-        'Stream processing','
-        'Real-time dashboards','
-        'Predictive analytics',
-      ]},
-    {
-'
-      title: 'Edge Security',
-      description:'
-        'Comprehensive security for edge computing and IoT deployments',
-      icon: Shield,'
-      features: ['Edge firewall', 'Device authentication', 'Data encryption']},
-  ];
-
-  const technologies = ['
-    'Edge Computing Platforms','
-    'IoT Protocols (MQTT, CoAP, HTTP)','
-    '5G Network Integration','
-    'Edge AI & Machine Learning','
-    'Container Orchestration','
-    'Edge Database Systems','
-    'Real-time Streaming','
-    'Edge Security Frameworks',
-  ];
-
+  
+  
+  
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       <SEO"
+<<<<<<< HEAD
+        title="IoT Edge Computing Services - Zion Tech Group"
+        description="Revolutionary IoT and edge computing solutions for real-time processing, low-latency applications, and connected ecosystems."
+      />
+=======
         title="IoT Edge Computing Services - Zion Tech Group""        description="Revolutionary IoT and edge computing solutions for real-time processing, low-latency applications, and connected ecosystems."
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20">"
@@ -118,7 +48,7 @@ export default function IoTEdgeComputing(...args: unknown[]): unknown {
             className="text-center max-w-4xl mx-auto"
           >"
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-400/30 rounded-full text-green-300 text-sm font-medium mb-6">"
-              <Cpu className="w-4 h-4 mr-2" />              IoT Edge Computing
+              <Cpu className="w-4 h-4 mr-2"  />              IoT Edge Computing
             </div>
 "
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -136,13 +66,13 @@ export default function IoTEdgeComputing(...args: unknown[]): unknown {
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20"
               >
                 Get Started"
-                <ArrowRight className="w-5 h-5 ml-2" />              </Link>
+                <ArrowRight className="w-5 h-5 ml-2"  />              </Link>
               <Link"
-                to="/services""
+                to="/services"
                 className="inline-flex items-center px-8 py-4 border border-green-400/30 text-green-400 font-semibold rounded-lg hover:bg-green-400/10 transition-all duration-200"
               >
                 Schedule Demo
@@ -235,7 +165,7 @@ export default function IoTEdgeComputing(...args: unknown[]): unknown {
                       key={featureIndex}"
                       className="flex items-center text-slate-300"
                     >"
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />                      {feature}
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0"  />                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -272,7 +202,7 @@ export default function IoTEdgeComputing(...args: unknown[]): unknown {
                 transition={{ duration: 0.6, delay: index * 0.1 }}"
                 className="flex items-center p-4 bg-slate-800/50 border border-slate-700/50 rounded-lg hover:border-green-400/30 transition-all duration-200"
               >"
-                <Cpu className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"                <span className="text-white text-sm">{tech}</span>
+                <Cpu className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />"                <span className="text-white text-sm">{tech}</span>
               </motion.div>
             ))}
           </div>
@@ -297,13 +227,13 @@ export default function IoTEdgeComputing(...args: unknown[]): unknown {
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20"
               >
                 Start Your IoT Journey"
-                <ArrowRight className="w-5 h-5 ml-2" />              </Link>
+                <ArrowRight className="w-5 h-5 ml-2"  />              </Link>
               <Link"
-                to="/services""
+                to="/services"
                 className="inline-flex items-center px-8 py-4 border border-green-400/30 text-green-400 font-semibold rounded-lg hover:bg-green-400/10 transition-all duration-200"
               >
                 Contact Our Team
@@ -313,6 +243,5 @@ export default function IoTEdgeComputing(...args: unknown[]): unknown {
         </div>
       </section>
     </div>
-  );
-}
+  )}
 '"

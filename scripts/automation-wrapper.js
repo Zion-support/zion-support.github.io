@@ -32,27 +32,27 @@ function runCommand(command, description) {
 }
 
 function runLinting() {
-  return runCommand('npm run lint', 'ESLint code quality check');
+  return runCommand('npm run lint',ESLint code quality check');
 }
 
 function runTypeCheck() {
-  return runCommand('npm run type-check', 'TypeScript type checking');
+  return runCommand('npm run type-check',TypeScript type checking');
 }
 
 function runBuild() {
-  return runCommand('npm run build', 'Project build');
+  return runCommand('npm run build',Project build');
 }
 
 function runSecurityAudit() {
-  return runCommand('npm audit --audit-level moderate', 'Security audit');
+  return runCommand('npm audit --audit-level moderate',Security audit');
 }
 
 function runDependencyCheck() {
-  return runCommand('npm outdated', 'Dependency outdated check');
+  return runCommand('npm outdated',Dependency outdated check');
 }
 
 function runDependencyUpdate() {
-  return runCommand('npm update', 'Dependency update');
+  return runCommand('npm update',Dependency update');
 }
 
 function runPerformanceCheck() {
@@ -81,7 +81,7 @@ function runQualityChecks() {
 function runSitemapGeneration() {
   try {
     if (fs.existsSync('scripts/generate-sitemap.js')) {
-      return runCommand('node scripts/generate-sitemap.js', 'Sitemap generation');
+      return runCommand('node scripts/generate-sitemap.js',Sitemap generation');
     } else {
       log('⚠️ Sitemap generation script not found');
       return 'Sitemap generation skipped';

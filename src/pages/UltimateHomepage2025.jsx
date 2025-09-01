@@ -1,8 +1,8 @@
 import { Brain, Zap, Shield, Users, TrendingUp, Globe, Rocket, CheckCircle, ArrowRight, Phone, Mail, MapPin, ChevronRight, Clock, BarChart3, Cpu, ShieldCheck, Building2 } from 'lucide - react';
 import { Link } from 'react - router - dom';
 import React, { useState, useEffect } from 'react';
-import SEO from "@/components/SEO";'
-import { Link } from 'react-router-dom';'
+import SEO from "@/components/SEO";
+import { Link } from 'react-router-dom';
 import { Brain, Zap, Shield, Users, TrendingUp, Globe, Rocket, CheckCircle, ArrowRight, Phone, Mail, MapPin, ChevronRight, Clock, BarChart3, Cpu, ShieldCheck, Building2 } from 'lucide-react';"
 import ultimateInnovativeServices2025 from "../../data/2025-ultimate-innovative-services-expansion";
 export default function UltimateHomepage2025() {
@@ -16,47 +16,47 @@ export default function UltimateHomepage2025() {
     const featuredServices = ultimateInnovativeServices2025.filter(service => service.popular).slice(0, 6);
     const allServices = ultimateInnovativeServices2025.slice(0, 9);
     const stats = ['
-        { number: '10+', label: 'Revolutionary Services', icon: Rocket },'
-        { number: '500+', label: 'Happy Customers', icon: Users },'
-        { number: '99.9%', label: 'Uptime Guarantee', icon: ShieldCheck },'
+        { number: '10+', label: 'Revolutionary Services', icon: Rocket },
+        { number: '500+', label: 'Happy Customers', icon: Users },
+        { number: '99.9%', label: 'Uptime Guarantee', icon: ShieldCheck },
         { number: '24/7', label: 'Expert Support', icon: Clock }
     ];
     const benefits = [
         {
 
-            icon: Brain,'
-            title: 'AI-Powered Intelligence','
-            description: 'Advanced artificial intelligence that learns, adapts, and optimizes your business processes automatically.','
+            icon: Brain,
+            title: 'AI-Powered Intelligence',
+            description: 'Advanced artificial intelligence that learns, adapts, and optimizes your business processes automatically.',
             color: 'from-blue-500 to-cyan-500'
         },
         {
 
-            icon: Shield,'
-            title: 'Quantum-Secure Protection','
-            description: 'Unbreakable security with quantum-resistant encryption and AI-powered threat detection.','
+            icon: Shield,
+            title: 'Quantum-Secure Protection',
+            description: 'Unbreakable security with quantum-resistant encryption and AI-powered threat detection.',
             color: 'from-green-500 to-emerald-500'
         },
         {
 
-            icon: Zap,'
-            title: 'Autonomous Operations','
-            description: 'Self-managing systems that run your business operations with minimal human intervention.','
+            icon: Zap,
+            title: 'Autonomous Operations',
+            description: 'Self-managing systems that run your business operations with minimal human intervention.',
             color: 'from-purple-500 to-indigo-500'
         },
         {
 
-            icon: BarChart3,'
-            title: 'Predictive Analytics','
-            description: 'Forecast trends, identify opportunities, and make data-driven decisions with confidence.','
+            icon: BarChart3,
+            title: 'Predictive Analytics',
+            description: 'Forecast trends, identify opportunities, and make data-driven decisions with confidence.',
             color: 'from-orange-500 to-red-500'
 
     ];
     const industries = ['
-        { name: 'Financial Services', icon: TrendingUp, color: 'from-emerald-500 to-teal-500' },'
-        { name: 'Healthcare', icon: Users, color: 'from-red-500 to-pink-500' },'
-        { name: 'Manufacturing', icon: Building2, color: 'from-blue-500 to-cyan-500' },'
-        { name: 'Retail & E-commerce', icon: Globe, color: 'from-yellow-500 to-orange-500' },'
-        { name: 'Technology', icon: Cpu, color: 'from-purple-500 to-indigo-500' },'
+        { name: 'Financial Services', icon: TrendingUp, color: 'from-emerald-500 to-teal-500' },
+        { name: 'Healthcare', icon: Users, color: 'from-red-500 to-pink-500' },
+        { name: 'Manufacturing', icon: Building2, color: 'from-blue-500 to-cyan-500' },
+        { name: 'Retail & E-commerce', icon: Globe, color: 'from-yellow-500 to-orange-500' },
+        { name: 'Technology', icon: Cpu, color: 'from-purple-500 to-indigo-500' },
         { name: 'Government', icon: Shield, color: 'from-gray-500 to-blue-500' }
     ];"
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
@@ -66,7 +66,7 @@ export default function UltimateHomepage2025() {
       <div className="relative overflow-hidden">"
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>"
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">"
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">'
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>"
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">"
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">

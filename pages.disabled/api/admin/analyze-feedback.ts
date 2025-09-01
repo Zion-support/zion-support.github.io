@@ -51,7 +51,7 @@ If feature area is missing, infer it. Be terse, actionable, and avoid duplicates
       ]
     } as any);
 
-    const text = completion.choices?.[0]?.message?.content || '{}';
+    const text = completion.choices?.[0]?.message?.content || '{};
     const result = JSON.parse(text) as AnalysisResult;
     res.status(200).json(result);
   } catch (e: unknown) {

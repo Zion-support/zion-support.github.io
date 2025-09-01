@@ -1,13 +1,11 @@
-import React from 'react.ts';
 import {
 
   Zap,
   CheckCircle,
   CreditCard,
   ExternalLink,
-  Mail,'
-  Phone} from 'lucide-react.ts';'
-import { Link } from 'react-router-dom.ts';
+  Mail,
+  Phone} from 'lucide-react.ts';
 
 export default function CheckoutPerformanceOptimizer(...args: any[]): any {
 
@@ -15,7 +13,7 @@ export default function CheckoutPerformanceOptimizer(...args: any[]): any {
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">"
       <section className="mx-auto max-w-7xl px-6 py-20 lg:py-28">"
         <h1 className="text-3xl sm:text-5xl font-bold flex items-center gap-3">"
-          <CreditCard className="w-8 h-8 text-cyan-400" /> Checkout Performance
+          <CreditCard className="w-8 h-8 text-cyan-400"  /> Checkout Performance
           Optimizer
         </h1>"
         <p className="mt-4 text-slate-300">
@@ -25,20 +23,20 @@ export default function CheckoutPerformanceOptimizer(...args: any[]): any {
         <div className="mt-8 grid gap-4 sm: anygrid-cols-2">
           {[
             {
-'
-              title: 'RUM & Session Replay','
+
+              title: 'RUM & Session Replay',
               desc: 'Find slow steps and rage clicks across funnels.'},
             {
-'
-              title: 'Experimentation','
+
+              title: 'Experimentation',
               desc: 'One‑click A/B templates for forms, shipping, and offers.'},
             {
-'
-              title: 'Payment resilience','
+
+              title: 'Payment resilience',
               desc: 'Smart retries, 3DS prompts, and dunning flows.'},
             {
-'
-              title: 'Analytics & alerts','
+
+              title: 'Analytics & alerts',
               desc: 'Error budgets, drop‑off heatmaps and Slack alerts.'},
           ].map(f => (
             <div
@@ -46,46 +44,45 @@ export default function CheckoutPerformanceOptimizer(...args: any[]): any {
               className="rounded-xl border border-white/10 bg-white/5 p-5"
             >"
               <div className="flex items-center gap-2 text-cyan-300 font-semibold">"
-                <CheckCircle className="w-4 h-4" /> {f.title}
+                <CheckCircle className="w-4 h-4"  /> {f.title}
               </div>"              <div className="mt-1 text-sm text-slate-300">{f.desc}</div>
             </div>
           ))}
         </div>"
-        <div className="mt-8 text-sm text-slate-300">'
+        <div className="mt-8 text-sm text-slate-300">
           Typical pricing:{' '}"
           <span className="font-semibold text-cyan-300">$99–$399/mo</span>.
         </div>"
         <div className="mt-4 flex gap-4 text-sm">
           <a"
-            className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200""
-            href="https://www.optimizely.com/pricing/""
-            target="_blank""
+            className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200"
+            href="https://www.optimizely.com/pricing/"
+            target="_blank"
             rel="noreferrer"
-          >"            Optimizely pricing <ExternalLink className="w-3 h-3" />
+          >"            Optimizely pricing <ExternalLink className="w-3 h-3"  />
           </a>
         </div>"
         <div className="mt-10 flex flex-wrap gap-3">
           <Link"
-            to="/contact""
+            to="/contact"
             className="rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-2 text-sm font-semibold hover:from-cyan-400 hover:to-blue-500"
           >
             Request audit
           </Link>
           <a"
-            href="mailto:kleber@ziontechgroup.com""
+            href="mailto:kleber@ziontechgroup.com"
             className="rounded-lg border border-cyan-400/40 px-4 py-2 text-sm font-semibold text-cyan-300 hover:bg-white/5 inline-flex items-center gap-2"
           >"
-            <Mail className="w-4 h-4" /> kleber@ziontechgroup.com
+            <Mail className="w-4 h-4"  /> kleber@ziontechgroup.com
           </a>
           <a"
-            href="tel:+13024640950""
+            href="tel:+13024640950"
             className="rounded-lg border border-cyan-400/40 px-4 py-2 text-sm font-semibold text-cyan-300 hover:bg-white/5 inline-flex items-center gap-2"
           >"
-            <Phone className="w-4 h-4" /> +1 302 464 0950
+            <Phone className="w-4 h-4"  /> +1 302 464 0950
           </a>
         </div>
       </section>
     </div>
-  );
-}
+  )}
 '"

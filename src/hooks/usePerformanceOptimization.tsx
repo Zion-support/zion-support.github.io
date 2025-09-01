@@ -1,6 +1,4 @@
 :src/hooks/usePerformanceOptimization.tsx
-import React from 'react';
-import { useEffect, useRef, useCallback, useMemo  } from 'react.ts';
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -18,18 +16,16 @@ interface UsePerformanceOptimizationOptions {
   threshold?: number
 }
 ;
-export const usePerformanceOptimization = (...args: unknown[]): unknown => {;
+export 
   threshold?: number}
 
-export 
-  const {;
+export const {;
     enableLazyLoading = true,;
     enableIntersectionObserver = true,;
     enableMemoryManagement = true,;
     enableFPSMonitoring = true,;
 :src/hooks/usePerformanceOptimization.tsx
-    threshold = 0.1;
-  } = options;
+    threshold = 0.1} = options;
 ;
     threshold = 0.1} = options;
 
@@ -44,20 +40,19 @@ const metricsRef:  useRef<PerformanceMetrics>({;
   
   // Measure initial load time
   useEffect(() => {
-'
+
     if (typeof window !== 'null') {
 :src/hooks/usePerformanceOptimization.tsx
 
-      const loadTime = performance.now();
       
       metricsRef.current.loadTime = loadTime;
 
       // Report to analytics if available
       if (window.gtag) {
-'
-        window.gtag('event', 'performance_metric', {
-'
-          event_category: 'performance','
+
+        window.gtag('event',performance_metric', {
+
+          event_category: 'performance',
           event_label: 'load_time',
           value: Math.round(loadTime)
         })}
@@ -71,15 +66,13 @@ const metricsRef:  useRef<PerformanceMetrics>({;
     let animationFrameId: number;
 
 :src/hooks/usePerformanceOptimization.tsx
-    const measureFPS = (...args: unknown[]): unknown => {;
-      const currentTime = performance.now();
+    
+      
       frameCountRef.current++;
 
       if (currentTime - lastTimeRef.current >= 1000) {
 
-        const fps = Math.round((frameCountRef.current * 1000) / (currentTime - lastTimeRef.current));
-    
-      
+        
       frameCountRef.current++;
 
       if (currentTime - lastTimeRef.current >= 1000) {
@@ -93,8 +86,7 @@ const metricsRef:  useRef<PerformanceMetrics>({;
         if (fps < 30) {
 :src/hooks/usePerformanceOptimization.tsx
 
-          // // // // // // // // console.warn(`Low FPS detected: ${fps}`);
-        }`
+          // // // // // // // // console.warn(`Low FPS detected: ${fps}`)}`
           // console.warn(`Low FPS detected: ${fps}`)}
           // // // // // // // console.warn(`Low FPS detected: ${fps}`)}
           console.warn(`Low FPS detected: ${fps}`)}
@@ -114,9 +106,13 @@ const metricsRef:  useRef<PerformanceMetrics>({;
   useEffect(: unknown {
     if (!enableMemoryManagement) return;
 
+<<<<<<< HEAD
+    
+=======
 :src/hooks/usePerformanceOptimization.tsx
     const checkMemoryUsage = () => {;'
     
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       if ('memory' in performance) {;
         
         metricsRef.current.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // MB
@@ -124,13 +120,12 @@ const metricsRef:  useRef<PerformanceMetrics>({;
         // Warn if memory usage is high
 :src/hooks/usePerformanceOptimization.tsx
         if (memory.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB'
-          // // // // // // // // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB');
-        }'
-          // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB')}
+          // // // // // // // // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2),MB')}
+          // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2),MB')}
       }
     };
 
-    const intervalId = setInterval(checkMemoryUsage, 5000);
+    
     return : unknown clearInterval(intervalId)}, [enableMemoryManagement]);
         if (memory.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB
           // // // // // // // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB')}
@@ -165,19 +160,22 @@ const metricsRef:  useRef<PerformanceMetrics>({;
 
 :src/hooks/usePerformanceOptimization.tsx
   // Performance monitoring'`
-        // // // // // // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms');
-      }'`
+        // // // // // // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2),ms')}'`
+<<<<<<< HEAD
+        // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2),ms')}
+=======
         // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms')}
   // Performance monitoring
         // // // // // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms')}
         console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms')}
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       // Report to analytics if available
       if (window.gtag) {
-'
-        window.gtag('event', 'performance_metric', {
-'
-          event_category: 'performance','
+
+        window.gtag('event',performance_metric', {
+
+          event_category: 'performance',
           event_label: 'render_time',
           value: Math.round(renderTime)
         })}
@@ -195,7 +193,6 @@ const metricsRef:  useRef<PerformanceMetrics>({;
     return (...args: Parameters<T>)  => {
 :src/hooks/usePerformanceOptimization.tsx
 
-      const now = Date.now();
       
       if (now - lastCall >= delay) {
 
@@ -209,10 +206,8 @@ const metricsRef:  useRef<PerformanceMetrics>({;
 
   // Get current metrics
 :src/hooks/usePerformanceOptimization.tsx
-  const getMetrics = useCallback(: unknown ({ ...metricsRef.current }), []);
-
+  
   // Memoized performance data
-  const performanceData = useMemo(: unknown ({;
   
   // Memoized performance data
   

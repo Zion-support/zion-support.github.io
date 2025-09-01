@@ -1,20 +1,20 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
-import { motion } from 'framer-motion';'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { Home, Search, ArrowRight, AlertTriangle } from 'lucide-react';
 const NotFound = () => {
     const popularPages = ['
-        { path: '/', label: 'Home', description: 'Main landing page' },'
-        { path: '/services', label: 'Services', description: 'All our services' },'
-        { path: '/about', label: 'About Us', description: 'Learn about Zion Tech Group' },'
-        { path: '/contact', label: 'Contact', description: 'Get in touch with us' },'
-        { path: '/blog', label: 'Blog', description: 'Latest insights and news' },'
+        { path: '/', label: 'Home', description: 'Main landing page' },
+        { path: '/services', label: 'Services', description: 'All our services' },
+        { path: '/about', label: 'About Us', description: 'Learn about Zion Tech Group' },
+        { path: '/contact', label: 'Contact', description: 'Get in touch with us' },
+        { path: '/blog', label: 'Blog', description: 'Latest insights and news' },
         { path: '/careers', label: 'Careers', description: 'Join our team' }
     ];
     const servicePages = ['
-        { path: '/services/ai', label: 'AI Services', description: 'Artificial Intelligence solutions' },'
-        { path: '/services/cloud', label: 'Cloud Services', description: 'Cloud infrastructure and DevOps' },'
-        { path: '/services/cybersecurity', label: 'Cybersecurity', description: 'Security and protection' },'
+        { path: '/services/ai', label: 'AI Services', description: 'Artificial Intelligence solutions' },
+        { path: '/services/cloud', label: 'Cloud Services', description: 'Cloud infrastructure and DevOps' },
+        { path: '/services/cybersecurity', label: 'Cybersecurity', description: 'Security and protection' },
         { path: '/services/infrastructure', label: 'IT Infrastructure', description: 'Enterprise IT solutions' }
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-4">"
@@ -53,7 +53,7 @@ const NotFound = () => {
         <h2 className="text-3xl md:text-4xl font-semibold text-white mb-4">
           Page Not Found
         </h2>"
-        <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">'
+        <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
           The page you're looking for doesn't exist or has been moved. 
           Let us help you find what you need.
         </p>
@@ -139,11 +139,11 @@ const NotFound = () => {
         </motion.div>
 
         {/* Help Text */}"
-        <motion.p className="text-gray-400 mt-8 text-sm" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.1 }}>'
+        <motion.p className="text-gray-400 mt-8 text-sm" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.1 }}>
           Can't find what you're looking for?{' '}"
           <a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300 underline">
             Email us'
-          </a>{' '}'
+          </a>{' '}
           or call us at{' '}"
           <a href="tel:+13024640950" className="text-blue-400 hover:text-blue-300 underline">
             +1 302 464 0950

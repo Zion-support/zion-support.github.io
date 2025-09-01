@@ -1,4 +1,3 @@
-import React from 'react';
 export interface EmergingTechService {
   id: string;
   title: string;
@@ -32,8 +31,7 @@ contactInfo: {
     uptime: string;
     security: string[]};
   competitors?: string[];
-  marketSize?: string;
-}
+  marketSize?: string}
 ;export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
   // Quantum Computing Solutions
   {
@@ -376,4 +374,4 @@ contactInfo: {
   }
 ];
 
-export default EMERGING_TECH_SERVICES_2025;}}}}}}}}}}}"
+export default EMERGING_TECH_SERVICES_2025}}}}}}}}}}}"

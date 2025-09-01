@@ -7,11 +7,7 @@ const DYNAMIC_CACHE = 'zion-dynamic-v1.0.0';
 
 // Files to cache immediately
 const STATIC_FILES = [
-  '/',
-  '/offline',
-  '/manifest.json',
-  '/favicon.ico',
-  '/apple-touch-icon.png'
+  '/',/offline',/manifest.json',/favicon.ico',/apple-touch-icon.png'
 ];
 
 // API endpoints to cache (commented out for now)

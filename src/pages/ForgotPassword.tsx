@@ -1,95 +1,111 @@
-import React, { useState } from 'react.ts';'
-import { Link  } from 'react-router-dom.ts';'
-import { motion  } from 'framer-motion.ts';              <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
+<<<<<<< HEAD
+import { Mail, 
+
+
+  ArrowLeft, 
+  CheckCircle, 
+  AlertCircle, 
+  Shield, 
+  Lock, 
+  Zap,
+  Brain,
+  Cloud,
+  Rocket,
+  ArrowRight,
+  RefreshCw'
+ } from 'lucide-react';
+
+      return}
+
+    setIsLoading(true);
+    setError('');
+
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 2000));
+
+      setSuccess('Verification code sent to your email!');
+      setStep('verification')} catch (err) {
+
+      setError('Failed to send verification code. Please try again.')} finally {
+
+      setIsLoading(false)}
+  };
+
+      return}
+
+    setIsLoading(true);
+    setError('');
+
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1500));
+
+      setSuccess('Code verified! Please set your new password.');
+      setStep('reset')} catch (err) {
+
+      setError('Invalid verification code. Please try again.')} finally {
+
+      setIsLoading(false)}
+  };
+
+      return}
+    if (newPassword !== confirmPassword) {
+
+      setError('Passwords do not match');
+      return}
+
+    setIsLoading(true);
+    setError('');
+
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 2000));
+
+      setSuccess('Password reset successfully! Redirecting to login...');
+      setTimeout(() => {
+
+        window.location.href = '/login'}, 2000)} catch (err) {
+
+      setError('Failed to reset password. Please try again.')} finally {;
+      setIsLoading(false)}};
+
+      description: 'Enhanced security with verification codes'},;
+    {;
+      icon: <RefreshCw className="w-6 h-6"  />,;
+      title: 'Secure Reset Process',;
+      description: 'Time-limited verification codes for safety'};
+  ]},;
+    {;"
+      icon: <Rocket className="w-6 h-6"  />,;
+      title: 'Digital Transformation',;
+      description: 'Transform your business with modern technology'};
+  ];
+
+  
+            <>"
+              <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
               Sending Code...
             </>
           ) : (
             <>
               Send Verification Code;"
-              <ArrowRight className="w-5 h-5" />;
+              <ArrowRight className="w-5 h-5"  />;
             </>          )};
         </button>;
       </form>;
     </motion.div>;) ;
 
-  const renderVerificationStep = () => (<motion.div
-      initial = {
-
-  { opacity: 0,
-  y: 20 
-
-}}
-      animate = {
-
-  { opacity: 1,
-  y: 0 
-
-}}
-      transition={{ duration: 0.6 }}
-"
-      <div className="text-center mb-8">"
-        <div className="w-20 h-20 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-6">"
-          <Mail className="w-10 h-10 text-white" />
-        </div>"
-        <h1 className="text-3xl font-bold text-white mb-4">
-          Check Your Email
-        </h1>"
-        <p className="text-slate-300 text-lg">'"
-          We've sent a 6-digit verification code to <span className="text-cyan-400 font-medium">{email}</span>
-        </p>
-      </div>
-"
-      <form onSubmit={handleVerificationSubmit} className="space-y-6">
-        <div>"
-          <label className="block text-white font-medium mb-2">
-            Verification Code
-          </label>
-          <input"
-            type="text"
-            value={verificationCode}
-            onChange = {
-'
-  (e) => setVerificationCode(e.target.value.replace(/\D/g, '').slice(0,
-  6))
-
-
-
-
-
-
-}"
-            className="w-full text-center text-2xl font-mono py-4 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent tracking-widest""
-            placeholder="000000"
-            maxLength={6}
-            required
-          />"
-          <p className="text-slate-400 text-sm mt-2 text-center">
-            Enter the 6-digit code from your email
-          </p>
-        </div>
-"
-        <div className="flex gap-3">
-          <button"
-            type="button"'
-            onClick={() => setStep('email')}"
-            className="flex-1 py-3 bg-slate-700 text-white font-medium rounded-lg hover:bg-slate-600 transition-all duration-300 flex items-center justify-center gap-3"
-"
-            <ArrowLeft className="w-5 h-5" />
-            Back
-          </button>
-          <button"
-            type="submit"
-            disabled={isLoading}"
-            className="flex-1 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
-
-            {isLoading ? (;
+  
               <>"                <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
                 Verifying...
               </>
             ) : (
               <>
                 Verify Code"
-                <ArrowRight className="w-5 h-5" />              </>
+                <ArrowRight className="w-5 h-5"  />              </>
             )}
           </button>
         </div>;
@@ -99,118 +115,14 @@ import { motion  } from 'framer-motion.ts';              <div className="animate
             type="button"
             onClick={handleEmailSubmit}"
             className="text-cyan-400 hover:text-cyan-300 text-sm transition-colors duration-200";
-          >;'
+          >;
             Didn't receive the code? Resend;
           </button>;
         </div>;
       </form>;
     </motion.div>;) ;
 
-  const renderResetStep = () => (<motion.div
-      initial = {
-
-  { opacity: 0,
-  y: 20 
-
-}}
-      animate = {
-
-  { opacity: 1,
-  y: 0 
-
-}}
-      transition={{ duration: 0.6 }}
-"
-      <div className="text-center mb-8">"
-        <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6">"
-          <CheckCircle className="w-10 h-10 text-white" />
-        </div>"
-        <h1 className="text-3xl font-bold text-white mb-4">
-          Set New Password
-        </h1>"
-        <p className="text-slate-300 text-lg">
-          Create a strong, secure password for your account
-        </p>
-      </div>
-"
-      <form onSubmit={handlePasswordReset} className="space-y-6">
-        <div>"
-          <label className="block text-white font-medium mb-2">
-            New Password
-          </label>"
-          <div className="relative">"
-            <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
-            <input'
-              type={showPassword ? 'text' : 'password'}
-              value={newPassword}
-              onChange={(e) => setNewPassword(e.target.value)}"
-              className="w-full pl-10 pr-12 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent""
-              placeholder="Enter new password"
-              required
-            />
-            <button"
-              type="button"
-              onClick={() => setShowPassword(!showPassword)}"
-              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-white transition-colors duration-200"
-'
-              {showPassword ? 'Hide' : 'Show'}
-            </button>
-          </div>
-          {newPassword && ("
-            <div className="mt-2">"
-              <div className="flex gap-1 mb-1">
-                {[1, 2, 3, 4].map((level) => (
-                  <div
-                    key={level}
-                    className = {
-
-  `h-1 flex-1 rounded-full transition-all duration-300 ${
-
-                      level <= passwordStrength.score'
-                        ? passwordStrength.color.replace('text-','
-  'bg-')'
-                        : 'bg-slate-600/30'
-                    
-
-
-
-
-
-`
-}`}
-                  />
-                ))}
-              </div>`
-              <p className={`text-xs ${passwordStrength.color}`}>
-                {passwordStrength.label}
-              </p>
-            </div>) }
-        </div>
-
-        <div>"
-          <label className="block text-white font-medium mb-2">
-            Confirm New Password
-          </label>"
-          <div className="relative">"
-            <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
-            <input'
-              type={showConfirmPassword ? 'text' : 'password'}
-              value={confirmPassword}
-              onChange={(e) => setConfirmPassword(e.target.value)}"
-              className="w-full pl-10 pr-12 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent""
-              placeholder="Confirm new password"
-              required
-            />
-            <button"
-              type="button"
-              onClick={() => setShowConfirmPassword(!showConfirmPassword)}"
-              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-white transition-colors duration-200"
-'
-              {showConfirmPassword ? 'Hide' : 'Show'}
-            </button>
-          </div>
-        </div>;
-
+  
         <button"          type="submit"
           disabled={isLoading}"
           className="w-full py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-medium rounded-lg hover:from-green-600 hover:to-emerald-700 transition-all duration-300 shadow-lg shadow-green-500/25 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
@@ -223,7 +135,7 @@ import { motion  } from 'framer-motion.ts';              <div className="animate
           ) : (
             <>
               Reset Password;"
-              <ArrowRight className="w-5 h-5" />;
+              <ArrowRight className="w-5 h-5"  />;
             </>          )};
         </button>;
       </form>;
@@ -252,7 +164,7 @@ import { motion  } from 'framer-motion.ts';              <div className="animate
             className="mb-8"
 "
             <Link to="/login" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-200">"
-              <ArrowLeft className="w-5 h-5" />              Back to Login
+              <ArrowLeft className="w-5 h-5"  />              Back to Login
             </Link>
           </motion.div>
 
@@ -277,7 +189,7 @@ import { motion  } from 'framer-motion.ts';              <div className="animate
 }}"
               className="mb-6 p-4 bg-red-500/20 border border-red-500/30 rounded-lg flex items-center gap-3 text-red-400"
 "
-              <AlertCircle className="w-5 h-5" />              {error}
+              <AlertCircle className="w-5 h-5"  />              {error}
             </motion.div>) }
 
           {success && (<motion.div
@@ -300,13 +212,13 @@ import { motion  } from 'framer-motion.ts';              <div className="animate
 }}"
               className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg flex items-center gap-3 text-green-400"
 "
-              <CheckCircle className="w-5 h-5" />              {success}
+              <CheckCircle className="w-5 h-5"  />              {success}
             </motion.div>) }
 
           {/* Form Container */}"
-          <div className="bg-white/5 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">'
-            {step === 'email' && renderEmailStep()}'
-            {step === 'verification' && renderVerificationStep()}'
+          <div className="bg-white/5 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">
+            {step === 'email' && renderEmailStep()}
+            {step === 'verification' && renderVerificationStep()}
             {step === 'reset' && renderResetStep()}
           </div>
 
@@ -411,13 +323,13 @@ import { motion  } from 'framer-motion.ts';              <div className="animate
 "
               <div className="flex justify-center gap-4 mb-6">"
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center">"
-                  <Brain className="w-8 h-8 text-white" />
+                  <Brain className="w-8 h-8 text-white"  />
                 </div>"
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center">"
-                  <Cloud className="w-8 h-8 text-white" />
+                  <Cloud className="w-8 h-8 text-white"  />
                 </div>"
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center">"
-                  <Rocket className="w-8 h-8 text-white" />                </div>
+                  <Rocket className="w-8 h-8 text-white"  />                </div>
               </div>
             </motion.div>
 
@@ -545,7 +457,7 @@ import { motion  } from 'framer-motion.ts';              <div className="animate
               className="p-6 bg-white/10 border border-slate-600/30 rounded-xl backdrop-blur-md"
 "
               <div className="flex items-center gap-3 mb-3">"
-                <Shield className="w-6 h-6 text-cyan-400" />"                <h3 className="text-lg font-semibold text-white">
+                <Shield className="w-6 h-6 text-cyan-400"  />"                <h3 className="text-lg font-semibold text-white">
                   Your Security is Our Priority
                 </h3>
               </div>"
@@ -556,7 +468,6 @@ import { motion  } from 'framer-motion.ts';              <div className="animate
           </div>;
         </div>;
       </div>;
-    </div>;) ;
-};
+    </div>;) };
 
-export default ForgotPassword;}}}}}}}}}}'"`
+export default ForgotPassword}}}}}}}}}}'"`

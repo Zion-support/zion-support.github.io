@@ -1,5 +1,3 @@
-import React from 'react.ts';'
-import { motion } from 'framer-motion.ts';
 import {
 
   DollarSign,
@@ -21,59 +19,13 @@ import {
   Share2,
   TrendingUp,
   Zap,
-  Shield,'
+  Shield,
   Calculator} from 'lucide-react.ts';
 
 const AIAutonomousFinance: React.FC = (): JSX.Element => {
 
-  const features = [
-    {
-
-      icon: Brain,'
-      title: 'AI-Powered Financial Management',
-      description:'
-        'Advanced machine learning for autonomous financial planning and optimization'},
-    {
-
-      icon: DollarSign,'
-      title: 'Budget Optimization',
-      description:'
-        'Intelligent budget planning and expense optimization with AI-driven insights'},
-    {
-
-      icon: Target,'
-      title: 'Investment Management',
-      description:'
-        'AI-powered investment strategies and portfolio optimization'},
-    {
-
-      icon: BarChart3,'
-      title: 'Financial Analytics',
-      description:'
-        'Real-time analytics and insights into financial performance and trends'},
-    {
-
-      icon: Calculator,'
-      title: 'Risk Assessment',
-      description:'
-        'AI-driven financial risk assessment and mitigation strategies'},
-    {
-
-      icon: TrendingUp,'
-      title: 'Revenue Optimization',
-      description:'
-        'Continuous optimization of financial processes and revenue generation'},
-  ];
-
-  const benefits = ['
-    'Improve financial efficiency by 60%','
-    'Reduce financial risks by 70%','
-    'Optimize investments by 80%','
-    'Automate financial processes','
-    '24/7 autonomous operation','
-    'Real-time financial insights',
-  ];
-
+  
+  
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}"
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">"
@@ -84,12 +36,12 @@ const AIAutonomousFinance: React.FC = (): JSX.Element => {
             transition={{ duration: 0.8 }}
           >"
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 text-yellow-400 text-sm font-medium mb-6">"
-              <DollarSign className="w-4 h-4 mr-2" />              AI-Powered Autonomous Finance
+              <DollarSign className="w-4 h-4 mr-2"  />              AI-Powered Autonomous Finance
             </div>
 "
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Transform Your Finance with"
-              <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
                 {' '}
                 AI Intelligence
               </span>
@@ -187,7 +139,7 @@ const AIAutonomousFinance: React.FC = (): JSX.Element => {
               <div className="space-y-4">
                 {benefits.map((benefit, index) => ("
                   <div key={index} className="flex items-center space-x-3">"
-                    <CheckCircle className="w-5 h-5 text-yellow-400 flex-shrink-0" />"                    <span className="text-gray-300">{benefit}</span>
+                    <CheckCircle className="w-5 h-5 text-yellow-400 flex-shrink-0"  />"                    <span className="text-gray-300">{benefit}</span>
                   </div>
                 ))}
               </div>

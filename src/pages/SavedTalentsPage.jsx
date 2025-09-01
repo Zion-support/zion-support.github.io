@@ -1,9 +1,9 @@
-import { useState, useEffect } from 'react';'
-import SEO from '@/components/SEO';'
-import { TalentCard } from '@/components/talent/TalentCard';'
-import { useAuth } from '@/hooks/useAuth';'
-import { supabase } from '@/integrations/supabase/client';'
-import { toast } from '@/components/ui/use-toast';'
+import { useState, useEffect } from 'react';
+import SEO from '@/components/SEO';
+import { TalentCard } from '@/components/talent/TalentCard';
+import { useAuth } from '@/hooks/useAuth';
+import { supabase } from '@/integrations/supabase/client';
+import { toast } from '@/components/ui/use-toast';
 import { useNavigate } from 'react-router-dom';
 export default function SavedTalentsPage() {
   const { user } = useAuth();
@@ -42,7 +42,7 @@ export default function SavedTalentsPage() {
               is_verified
             )`
           `
-          )'
+          )
           .eq('user_id', user.id);
         if (error) {
 
@@ -58,9 +58,9 @@ export default function SavedTalentsPage() {
 "
         // // // // // // // // console.error("Error fetching saved talents:", error);
         toast({
-'
-          title: 'Error','
-          description: 'Failed to load saved talents. Please try again later.','
+
+          title: 'Error',
+          description: 'Failed to load saved talents. Please try again later.',
           variant: 'destructive'});
       } finally {
 
@@ -77,7 +77,7 @@ export default function SavedTalentsPage() {
 "
     // // // // // // // // console.log("Request to hire:", talent);
     toast({
-'
+
       title: 'Hire Request Sent',`
       description: `A hire request has been sent to ${talent.full_name}.`});
   };
@@ -97,8 +97,8 @@ export default function SavedTalentsPage() {
         // Remove from saved talents
         const { error } = await supabase'
           .from('saved_talents')
-          .delete()'
-          .eq('user_id', user.id)'
+          .delete()
+          .eq('user_id', user.id)
           .eq('talent_id', talentId);
         if (error) {
 
@@ -108,8 +108,8 @@ export default function SavedTalentsPage() {
           prevTalents.filter(talent => talent.id !== talentId)
         );
         toast({
-'
-          title: 'Talent Removed','
+
+          title: 'Talent Removed',
           description: 'Talent removed from saved list.'});
       } else {
 
@@ -123,18 +123,18 @@ export default function SavedTalentsPage() {
         }
         // Fetch the updated talent profile and add it to the list
         const { data: talentData, error: talentError } = await supabase'
-          .from('talent_profiles')'
-          .select('*')'
+          .from('talent_profiles')
+          .select('*')
           .eq('id', talentId)
           .single();
         if (talentError) {
 "
           // // // // // // // // console.error("Error fetching talent profile:", talentError);
           toast({
-'
+
             title: 'Error',
             description:'
-              'Failed to update saved talents. Please try again later.','
+              'Failed to update saved talents. Please try again later.',
             variant: 'destructive'});
           return;
         }
@@ -142,8 +142,8 @@ export default function SavedTalentsPage() {
 
           setSavedTalents(prevTalents => [...prevTalents, talentData]);
           toast({
-'
-            title: 'Talent Saved','
+
+            title: 'Talent Saved',
             description: 'Talent saved to your list.'});
         }
       }
@@ -151,22 +151,22 @@ export default function SavedTalentsPage() {
 "
       // // // // // // // // console.error("Error toggling saved talent:", error);
       toast({
-'
-        title: 'Error','
-        description: 'Failed to update saved talents. Please try again later.','
+
+        title: 'Error',
+        description: 'Failed to update saved talents. Please try again later.',
         variant: 'destructive'});
     }
   };
   return()
     <>
       <SEO"
-        title="Saved Talents | Zion AI Marketplace""
+        title="Saved Talents | Zion AI Marketplace"
         description="View and manage your saved talents in the Zion AI Marketplace"
       />
 "
       <div className="container mx-auto px-4 py-8">"
         <h1 className="text-3xl font-bold mb-4">Saved Talents</h1>"
-        <p className="text-muted-foreground">'
+        <p className="text-muted-foreground">
           Here are the talents you've saved for future reference.
         </p>
 

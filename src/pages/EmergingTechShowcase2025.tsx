@@ -1,18 +1,63 @@
-import React, { useState, useEffect } from 'react.ts';'
-import { motion, AnimatePresence  } from 'framer-motion.ts';    ? EMERGING_TECH_SERVICES_2025;
+<<<<<<< HEAD
+import { Brain, 
+
+
+  Cpu, 
+  Atom, 
+  Zap, 
+  Rocket, 
+  Eye, 
+  Globe, 
+  Car, 
+  Dna, 
+  Microscope, 
+  Bot,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Users,
+  Target,
+  Award,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink,
+  ChevronLeft,
+  ChevronRight,
+  Play,
+  Pause,
+  RotateCcw'
+} from 'lucide-react';
+
+const EmergingTechShowcase2025: React.FC = () => {;
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedService, setSelectedService] = useState<string | null>(null);
+  const [autoPlay, setAutoPlay] = useState(true);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  
+    { id: 'Digital Twins', name: 'Digital Twins', icon: Eye, color: 'from-cyan-500 to-blue-600' },;
+    { id: 'Metaverse Infrastructure', name: 'Metaverse', icon: Globe, color: 'from-pink-500 to-rose-600' },;
+    { id: 'Autonomous Systems', name: 'Autonomous', icon: Car, color: 'from-gray-500 to-slate-600' },;
+    { id: 'Biocomputing', name: 'Biocomputing', icon: Cpu, color: 'from-lime-500 to-green-600' },;
+    { id: 'Nanotechnology', name: 'Nanotechnology', icon: Microscope, color: 'from-amber-500 to-yellow-600' },;
+    { id: 'Advanced Robotics', name: 'Robotics', icon: Bot, color: 'from-slate-500 to-gray-600' };
+  ];
+
+    
+    ? EMERGING_TECH_SERVICES_2025;
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     : EMERGING_TECH_SERVICES_2025.filter (service => service.category === selectedCategory) ;
 
   useEffect ( () => {
     if (autoPlay) {
 
-      const interval = setInterval(() => {;
-        setCurrentSlide((prev) => (prev + 1) % filteredServices.length);
-      }, 5000);
-      return () => clearInterval(interval);
+      
+        setCurrentSlide((prev) => (prev + 1) % filteredServices.length)}, 5000);
+      return () => clearInterval(interval)}, [autoPlay, filteredServices.length]) ;
 
-  }, [autoPlay, filteredServices.length]) ;
-
-  const getCategoryIcon = (category: string) => {;
+  
     const categoryData = categories.find (cat => cat.id === category) ;    return categoryData ? categoryData.icon : Globe};
 
           "
@@ -63,11 +108,11 @@ import { motion, AnimatePresence  } from 'framer-motion.ts';    ? EMERGING_TECH_
 "
                 <div className="space-y-3 mb-6">"
                   <div className="flex items-center gap-2 text-sm text-gray-400">"
-                    <TrendingUp className="w-4 h-4" />
+                    <TrendingUp className="w-4 h-4"  />
                     <span>{service.marketSize}</span>
                   </div>"
                   <div className="flex items-center gap-2 text-sm text-gray-400">"
-                    <Users className="w-4 h-4" />                    <span>{service.targetAudience}</span>
+                    <Users className="w-4 h-4"  />                    <span>{service.targetAudience}</span>
                   </div>
                 </div>
 
@@ -94,7 +139,7 @@ import { motion, AnimatePresence  } from 'framer-motion.ts';    ? EMERGING_TECH_
           <div className="grid md:grid-cols-3 gap-8 mb-8">"
             <div className="flex flex-col items-center gap-3">"
               <div className="p-4 bg-white/10 rounded-full">"
-                <Phone className="w-6 h-6 text-blue-400" />              </div>
+                <Phone className="w-6 h-6 text-blue-400"  />              </div>
               <div>"
                 <h3 className="font-semibold text-white mb-1">Phone</h3>"
                 <p className="text-gray-300">+1 302 464 0950</p>
@@ -103,7 +148,7 @@ import { motion, AnimatePresence  } from 'framer-motion.ts';    ? EMERGING_TECH_
 "
             <div className="flex flex-col items-center gap-3">"
               <div className="p-4 bg-white/10 rounded-full">"
-                <Mail className="w-6 h-6 text-purple-400" />              </div>
+                <Mail className="w-6 h-6 text-purple-400"  />              </div>
               <div>"
                 <h3 className="font-semibold text-white mb-1">Email</h3>"
                 <p className="text-gray-300">kleber@ziontechgroup.com</p>
@@ -112,7 +157,7 @@ import { motion, AnimatePresence  } from 'framer-motion.ts';    ? EMERGING_TECH_
 "
             <div className="flex flex-col items-center gap-3">"
               <div className="p-4 bg-white/10 rounded-full">"
-                <MapPin className="w-6 h-6 text-green-400" />              </div>
+                <MapPin className="w-6 h-6 text-green-400"  />              </div>
               <div>"
                 <h3 className="font-semibold text-white mb-1">Address</h3>"
                 <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
@@ -158,8 +203,6 @@ import { motion, AnimatePresence  } from 'framer-motion.ts';    ? EMERGING_TECH_
   opacity: 0 
 
 ;
-;
-
 }};"
               className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto";
               onClick={(e) => e.stopPropagation()};
@@ -184,7 +227,7 @@ import { motion, AnimatePresence  } from 'framer-motion.ts';    ? EMERGING_TECH_
                         onClick={() => setSelectedService(null)}"
                         className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-all"
 "
-                        <ChevronLeft className="w-6 h-6 text-white" />                      </button>
+                        <ChevronLeft className="w-6 h-6 text-white"  />                      </button>
                     </div>
 "
                     <h2 className="text-3xl font-bold text-white mb-4">{service.title}</h2>"
@@ -249,11 +292,10 @@ import { motion, AnimatePresence  } from 'framer-motion.ts';    ? EMERGING_TECH_
                         Close;
                       </motion.button>;
                     </div>;
-                  </div>;) ;
-              }) () }            </motion.div>
+                  </div>;) }) () }            </motion.div>
           </motion.div>) }
       </AnimatePresence>
     </div>
   )};
 
-export default EmergingTechShowcase2025;}}'"`
+export default EmergingTechShowcase2025}}'"`

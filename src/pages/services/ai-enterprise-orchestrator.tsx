@@ -1,7 +1,3 @@
-import React from 'react.ts';'
-import { Helmet  } from 'react-helmet-async.ts';'
-import { Brain, Zap, Settings, Users, TrendingUp, Shield, Globe, ArrowRight, CheckCircle, Play, Download, Mail  } from 'lucide-react';'
-import { Link  } from 'react-router-dom.ts';
 ;
 export { function };export default function AIEnterpriseOrchestrator(...args: []):  {
 
@@ -20,7 +16,7 @@ export { function };export default function AIEnterpriseOrchestrator(...args: []
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
             <div className="text-center">"
               <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-8">"
-                <Brain className="w-4 h-4 mr-2" />                AI-Powered Enterprise Orchestration
+                <Brain className="w-4 h-4 mr-2"  />                AI-Powered Enterprise Orchestration
               </div>
 "
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -35,14 +31,14 @@ export { function };export default function AIEnterpriseOrchestrator(...args: []
 "
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link"
-                  to="/contact""
+                  to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl"
 
                   Get Started"
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  <ArrowRight className="ml-2 w-5 h-5"  />
                 </Link>"
                 <button className="inline-flex items-center px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-200">"
-                  <Play className="mr-2 w-5 h-5" />                  Watch Demo
+                  <Play className="mr-2 w-5 h-5"  />                  Watch Demo
                 </button>
               </div>
             </div>
@@ -189,7 +185,7 @@ export { function };export default function AIEnterpriseOrchestrator(...args: []
                     "Scale operations without proportional cost increases"
                   ].map((benefit, index) => ("
                     <div key={index} className="flex items-start space-x-3">"
-                      <CheckCircle className="w-6 h-6 text-cyan-400 mt-0.5 flex-shrink-0" />"                      <span className="text-slate-300">{benefit}</span>
+                      <CheckCircle className="w-6 h-6 text-cyan-400 mt-0.5 flex-shrink-0"  />"                      <span className="text-slate-300">{benefit}</span>
                     </div>
                   ))}
                 </div>
@@ -226,13 +222,13 @@ export { function };export default function AIEnterpriseOrchestrator(...args: []
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
 
                 Schedule a Consultation"
-                <ArrowRight className="ml-2 w-5 h-5" />              </Link>
+                <ArrowRight className="ml-2 w-5 h-5"  />              </Link>
               <Link"
-                to="/services""
+                to="/services"
                 className="inline-flex items-center px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-200"
               >
                 Explore All Services;
@@ -242,5 +238,4 @@ export { function };export default function AIEnterpriseOrchestrator(...args: []
         </section>;
       </div>;
     </>
-  );
-}}}}'"
+  )}}}}'"

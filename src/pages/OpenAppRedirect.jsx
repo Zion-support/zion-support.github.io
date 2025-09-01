@@ -10,7 +10,7 @@ const OpenAppRedirect = () => {
     const [status, setStatus] = useState ('redirecting') ;
     useEffect ( () => {
         const attemptAppOpen = async () => {
-            const isAndroid = /Android/.test(navigator.userAgent);'
+            const isAndroid = /Android/.test(navigator.userAgent);
             // App scheme URLs (these would be your actual app's URL schemes)"
             const androidAppUrl = "market://details?id=app.zion.marketplace";"
             const iosAppUrl = "https://apps.apple.com/app/zion-ai-marketplace/id0000000000";"
@@ -18,10 +18,10 @@ const OpenAppRedirect = () => {
             let timeout;
             // Try to open the app
             if (isAndroid || isiOS) {
-'
+
                 // Set a timeout to redirect to app store if the app doesn't open
                 timeout = window.setTimeout(() => {
-'
+
                     setStatus('timeout');
                     if (isAndroid) {
 

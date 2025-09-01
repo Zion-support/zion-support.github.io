@@ -1,15 +1,32 @@
-import React, { useState } from 'react';
-export default EnhancedZionTechServices2025;}
-import { ENHANCED_ZION_TECH_SERVICES_2025, getEnhancedServiceCategories, getEnhancedServicesByCategory } from "../data / enhancedZionTechServices2025";      case 'price':;
+export default EnhancedZionTechServices2025}
+<<<<<<< HEAD
+
+
+const EnhancedZionTechServices2025: React.FC = () => {;
+  const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const [searchTerm, setSearchTerm] = useState<string>('');
+  const [sortBy, setSortBy] = useState<string>('name');
+
+  
+  
+    
+                         service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
+                         service.tags.some (tag => tag.toLowerCase () .includes (searchTerm.toLowerCase () ) ) ;
+    return matchesCategory && matchesSearch}) ;
+
+  
+    switch (sortBy) {;
+      case 'price':;
+        return a.price - b.price;
+=======
         return a.price - b.price;'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       case 'rating':;
-        return b.rating - a.rating;'
+        return b.rating - a.rating;
       case 'aiScore':;
         return b.aiScore - a.aiScore;
       default:;
-        return a.title.localeCompare (b.title) ;
-
-  }) ;
+        return a.title.localeCompare (b.title) }) ;
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}"
@@ -81,7 +98,7 @@ import { ENHANCED_ZION_TECH_SERVICES_2025, getEnhancedServiceCategories, getEnha
         <div className="flex flex-col lg:flex-row gap-6 mb-12">"
           <div className="flex-1">
             <input"
-              type="text""
+              type="text"
               placeholder="Search services..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}"
@@ -194,8 +211,8 @@ import { ENHANCED_ZION_TECH_SERVICES_2025, getEnhancedServiceCategories, getEnha
               <div className="space-y-3">
                 <a
                   href={service.link}"
-                  target="_blank""
-                  rel="noopener noreferrer""
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block w-full text-center px-4 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 font-semibold"
 
                   Learn More
@@ -265,7 +282,6 @@ import { ENHANCED_ZION_TECH_SERVICES_2025, getEnhancedServiceCategories, getEnha
           </div>;
         </div>;
       </div>;
-    </div>;) ;
-};
+    </div>;) };
 
-export default EnhancedZionTechServices2025;}'"`
+export default EnhancedZionTechServices2025}'"`

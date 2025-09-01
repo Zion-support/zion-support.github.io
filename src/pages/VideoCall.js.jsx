@@ -1,8 +1,8 @@
-import { useState } from 'react';'
-import { useParams, useNavigate } from 'react-router-dom';'
-import { SEO } from '@/components/SEO';'
-import { VideoCallRoom } from '@/components/video/VideoCallRoom';'
-import { Button } from '@/components/ui/button';'
+import { useState } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import { SEO } from '@/components/SEO';
+import { VideoCallRoom } from '@/components/video/VideoCallRoom';
+import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
 export default function VideoCall() {
   // useParams is typed as `` in this environment due to missing type
@@ -13,8 +13,8 @@ export default function VideoCall() {
   const [hasJoined, setHasJoined] = useState(false);
   const [participants, setParticipants] = useState([
     {
-'
-      id: 'user-1','
+
+      id: 'user-1',
       name: 'You',
       isVideoEnabled: true,
       isMuted: false},
@@ -24,16 +24,16 @@ export default function VideoCall() {
     // Simulate connection delay
     setTimeout(() => {
       setHasJoined(true);
-      setIsJoining(false);'
+      setIsJoining(false);
       toast.success('Call joined', {
 `
         description: `You have joined meeting room ${roomId}`});
     }, 1500);
   };
   const handleLeaveCall = () => {
-    setHasJoined(false);'
+    setHasJoined(false);
     toast.info('Call ended', {
-'
+
       description: 'You have left the meeting'});
     // Navigate back after a short delay
     setTimeout(() => {
@@ -45,14 +45,14 @@ export default function VideoCall() {
     const mockUsers = ['
       { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },
       {
-'
-        id: 'user-3','
+
+        id: 'user-3',
         name: 'Taylor Kim',
         isVideoEnabled: false,
         isMuted: true},
       {
-'
-        id: 'user-4','
+
+        id: 'user-4',
         name: 'Jordan Smith',
         isVideoEnabled: true,
         isMuted: false,
@@ -82,9 +82,9 @@ export default function VideoCall() {
             <Button
               onClick={handleJoinCall}
               disabled={isJoining}"
-              size="lg""
+              size="lg"
               className="bg-zion-purple hover:bg-zion-purple-light"
-            >'
+            >
               {isJoining ? 'Connecting...' : 'Join Call'}
             </Button>
           </div>

@@ -1,16 +1,11 @@
-import { render, screen } from '@testing - library / react';
-import React from 'react';
-import VirtualScroll from './VirtualScroll';
 
 
 describe ('VirtualScroll', () => {
   it ('renders without crashing', () => {
-    render (<VirtualScroll />) ;
-    expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () ;
-  }) ;
+    render (<VirtualScroll  />) ;
+    expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
 
   it ('displays expected content', () => {
-    render (<VirtualScroll />) ;
+    render (<VirtualScroll  />) ;
     // Add specific test assertions based on component content
-  }) ;
-}) ;
+  }) }) ;

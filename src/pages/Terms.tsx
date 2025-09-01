@@ -1,6 +1,3 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
-import { SEO } from '../components/SEO';
 import {
 
   Shield,
@@ -18,119 +15,22 @@ import {
   Zap,
   Rocket,
   Brain,
-  Cpu,'
+  Cpu,
   FileText} from 'lucide-react';
 
 const Terms: React.FC = () => {
-'
-  const lastUpdated = 'December 15, 2024';
 
-  const termsSections = [
-    {
-'
-      title: 'Acceptance of Terms',
-      content:'
-        "By accessing and using Zion Tech Group's services, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.",
-      icon: CheckCircle},
-    {
-'
-      title: 'Service Description',
-      content:'
-        'Zion Tech Group provides AI-powered technology solutions, cloud services, cybersecurity, digital transformation, and IT consulting services. We reserve the right to modify or discontinue services at any time.',
-      icon: Shield},
-    {
-'
-      title: 'User Responsibilities',
-      content:'
-        'Users are responsible for providing accurate information, maintaining the security of their accounts, and complying with all applicable laws and regulations when using our services.',
-      icon: Users},
-    {
-'
-      title: 'Intellectual Property',
-      content:'
-        'All content, software, and materials provided by Zion Tech Group are protected by intellectual property rights. Users may not copy, modify, or distribute our proprietary materials without permission.',
-      icon: Lock},
-    {
-'
-      title: 'Privacy and Data Protection',
-      content:'
-        'Your privacy is important to us. Our collection and use of personal information is governed by our Privacy Policy, which is incorporated into these Terms of Service.',
-      icon: Shield},
-    {
-'
-      title: 'Limitation of Liability',
-      content:'
-        'Zion Tech Group shall not be liable for any indirect, incidental, special, or consequential damages arising from the use of our services, including but not limited to data loss or business interruption.',
-      icon: AlertTriangle},
-  ];
-
-  const prohibitedActivities = ['
-    'Attempting to gain unauthorized access to our systems','
-    'Using our services for illegal or harmful purposes','
-    'Interfering with the operation of our services','
-    'Attempting to reverse engineer our software','
-    'Sharing account credentials with unauthorized users','
-    'Violating any applicable laws or regulations',
-  ];
-
-  const terminationConditions = ['
-    'Violation of these Terms of Service','
-    'Non-payment of service fees','
-    'Engagement in prohibited activities','
-    'Breach of security or privacy policies','
-    'Failure to comply with legal requirements','
-    'Mutual agreement to terminate services',
-  ];
-
-  const userObligations = [
-    {
-'
-      obligation: 'Compliance',
-      description:'
-        'Comply with all applicable laws and regulations when using our services.'},
-    {
-'
-      obligation: 'Acceptable Use',
-      description:'
-        'Use our services only for lawful purposes and in accordance with these terms.'},
-    {
-'
-      obligation: 'Content Standards',
-      description:'
-        'Ensure all content submitted through our services meets our content standards.'},
-    {
-'
-      obligation: 'Security',
-      description:'
-        'Maintain the security of your account credentials and report any suspicious activity.'},
-  ];
-
-  const contactInfo = [
-    {
-
-      icon: Mail,'
-      label: 'Email','
-      value: 'legal@ziontechgroup.com','
-      href: 'mailto:legal@ziontechgroup.com'},
-    {
-
-      icon: Phone,'
-      label: 'Phone','
-      value: '+1 (302) 464-0950','
-      href: 'tel:+13024640950'},
-    {
-
-      icon: MapPin,'
-      label: 'Address','
-      value: '364 E Main St STE 1008, Middletown DE 19709','
-      href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709'},
-  ];
-
+  
+  
+  
+  
+  
+  
   return()
     <>
       <SEO"
         title="Terms of Service - Zion Tech Group"'"
-        description="Read Zion Tech Group's Terms of Service to understand the rules and guidelines for using our AI-powered technology solutions and services.""
+        description="Read Zion Tech Group's Terms of Service to understand the rules and guidelines for using our AI-powered technology solutions and services."
         keywords="terms of service, Zion Tech Group, legal terms, service agreement, user responsibilities"
       />"      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
         {/* Header */}"
@@ -143,7 +43,7 @@ const Terms: React.FC = () => {
             >"
               <div className="flex items-center justify-center space-x-3 mb-6">"
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center">"
-                  <FileText className="w-8 h-8 text-white" />                </div>
+                  <FileText className="w-8 h-8 text-white"  />                </div>
               </div>"
               <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
                 Terms of Service
@@ -230,7 +130,7 @@ const Terms: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {prohibitedActivities.map((activity, index) => ("
                     <div key={index} className="flex items-start gap-3">"
-                      <AlertTriangle className="w-5 h-5 text-red-400 mt-0.5 flex-shrink-0" />"                      <span className="text-gray-300 text-sm">{activity}</span>
+                      <AlertTriangle className="w-5 h-5 text-red-400 mt-0.5 flex-shrink-0"  />"                      <span className="text-gray-300 text-sm">{activity}</span>
                     </div>
                   ))}
                 </div>
@@ -252,7 +152,7 @@ const Terms: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {terminationConditions.map((condition, index) => ("
                     <div key={index} className="flex items-start gap-3">"
-                      <AlertTriangle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" />"                      <span className="text-gray-300 text-sm">{condition}</span>
+                      <AlertTriangle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0"  />"                      <span className="text-gray-300 text-sm">{condition}</span>
                     </div>
                   ))}
                 </div>
@@ -296,7 +196,6 @@ const Terms: React.FC = () => {
           </div>
         </section>
       </div>
-    </>) ;
-};
+    </>) };
 export default Terms;
 '"

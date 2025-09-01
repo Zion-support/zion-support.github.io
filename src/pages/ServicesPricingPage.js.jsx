@@ -1,13 +1,13 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import {
 
   Card,
   CardContent,
   CardDescription,
-  CardHeader,'
-  CardTitle} from '@/components/ui/card';'
+  CardHeader,
+  CardTitle} from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import {
 
@@ -20,13 +20,13 @@ import {
   Star,
   Users,
   Shield,
-  Zap,'
+  Zap,
   Building} from 'lucide-react';
 import {
 
   COMPREHENSIVE_SERVICES,
-  PRICING_TIERS,'
-  SERVICE_CATEGORIES} from '@/data/comprehensiveServices';'
+  PRICING_TIERS,
+  SERVICE_CATEGORIES} from '@/data/comprehensiveServices';
 import { SEO } from '@/components/SEO';
 export default function ServicesPricingPage() {
   // Group services by category for pricing table
@@ -44,9 +44,9 @@ export default function ServicesPricingPage() {
   return()
     <div className="min-h-screen bg-zion-blue-dark">
       <SEO"
-        title="Services Pricing - Zion Tech Group""
-        description="Transparent pricing for our comprehensive micro SAAS, IT, and AI services. Competitive rates with flexible tiers for businesses of all sizes.""
-        keywords="pricing, micro SAAS pricing, IT services pricing, AI services pricing, Zion Tech Group""
+        title="Services Pricing - Zion Tech Group"
+        description="Transparent pricing for our comprehensive micro SAAS, IT, and AI services. Competitive rates with flexible tiers for businesses of all sizes."
+        keywords="pricing, micro SAAS pricing, IT services pricing, AI services pricing, Zion Tech Group"
         url="https://ziontechgroup.com/services-pricing"
       />
 
@@ -64,7 +64,7 @@ export default function ServicesPricingPage() {
           <div className="flex flex-wrap justify-center gap-4">"
             <Link to="/contact">
               <Button"
-                size="lg""
+                size="lg"
                 className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light"
               >"
                 <Phone className="w-5 h-5 mr-2" />
@@ -73,8 +73,8 @@ export default function ServicesPricingPage() {
             </Link>"
             <Link to="/comprehensive-services">
               <Button"
-                size="lg""
-                variant="outline""
+                size="lg"
+                variant="outline"
                 className="border-white text-white hover:bg-white/10"
               >"
                 <Building className="w-5 h-5 mr-2" />
@@ -104,7 +104,7 @@ export default function ServicesPricingPage() {
             <div className="flex items-center gap-2">"
               <Globe className="w-5 h-5 text-zion-cyan" />
               <a"
-                href="https://ziontechgroup.com""
+                href="https://ziontechgroup.com"
                 className="hover:text-zion-cyan transition-colors"
               >
                 ziontechgroup.com
@@ -129,7 +129,7 @@ export default function ServicesPricingPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {Object.entries(PRICING_TIERS).map(([tierName, tier], index) => (
               <Card
-                key={tierName}'
+                key={tierName}
                 className={`bg-zion-blue border-zion-blue-light ${index === 1 ? 'ring-2 ring-zion-cyan scale-105' : ''}`}
               >"
                 <CardHeader className="text-center pb-6">"
@@ -211,7 +211,7 @@ export default function ServicesPricingPage() {
                           {service.title}
                         </h4>
                         <Badge"
-                          variant="outline""
+                          variant="outline"
                           className="border-zion-cyan text-zion-cyan text-xs"
                         >
                           {service.pricingTier}
@@ -260,25 +260,25 @@ export default function ServicesPricingPage() {
             {[
               {
 "
-                icon: <Zap className="w-8 h-8" />,'
+                icon: <Zap className="w-8 h-8" />,
                 title: 'Competitive Pricing',
                 description:'
                   'Market-leading rates without compromising on quality or features'},
               {
 "
-                icon: <Shield className="w-8 h-8" />,'
+                icon: <Shield className="w-8 h-8" />,
                 title: 'No Hidden Fees',
                 description:'
                   'Transparent pricing with clear breakdowns of all costs'},
               {
 "
-                icon: <Users className="w-8 h-8" />,'
+                icon: <Users className="w-8 h-8" />,
                 title: 'Flexible Plans',
                 description:'
                   'Customizable solutions that grow with your business needs'},
               {
 "
-                icon: <Building className="w-8 h-8" />,'
+                icon: <Building className="w-8 h-8" />,
                 title: 'Proven ROI',
                 description:'
                   'Measurable business outcomes and return on investment'},
@@ -314,15 +314,15 @@ export default function ServicesPricingPage() {
           </p>"
           <div className="flex flex-wrap justify-center gap-4">
             <Button"
-              size="lg""
+              size="lg"
               className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light"
             >"
               <Phone className="w-5 h-5 mr-2" />
               Get Custom Quote
             </Button>
             <Button"
-              size="lg""
-              variant="outline""
+              size="lg"
+              variant="outline"
               className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
             >"
               <Mail className="w-5 h-5 mr-2" />

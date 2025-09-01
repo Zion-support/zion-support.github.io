@@ -1,5 +1,3 @@
-import React from 'react';'
-import { motion } from 'framer-motion';
 import {
   Brain, 
   TrendingUp, 
@@ -32,140 +30,26 @@ import {
   DollarSign as DollarIcon,
   BarChart,
   PieChart as PieChartIcon'
-} from 'lucide-react';'
-import { SEO } from '../../components/SEO';
+} from 'lucide-react';
 ;
 export { function };
 export default function AIFinancialTrading(...args: unknown[]): unknown {
-  const features = [
-    {
-
-      icon: Brain,
-      title: "AI Trading Algorithms","
-      description: "Advanced machine learning algorithms that adapt to market conditions in real-time"
-    },
-    {
-
-      icon: TrendingUp,"
-      title: "Predictive Analytics","
-      description: "Forecast market movements with high accuracy using historical data and AI models"
-    },
-    {
-
-      icon: Shield,"
-      title: "Risk Management","
-      description: "Intelligent risk assessment and automated stop-loss mechanisms"
-    },
-    {
-
-      icon: Zap,"
-      title: "High-Frequency Trading","
-      description: "Ultra-fast execution with microsecond precision for optimal trade timing"
-    }
-  ];
-
-  const tradingStrategies = [
-    {
-"
-      name: "Momentum Trading","
-      description: "AI-powered momentum detection and trend following strategies","
-      successRate: "87.3%","
-      avgReturn: "12.5%",
-      icon: TrendingUp
-    },
-    {
-"
-      name: "Arbitrage Trading","
-      description: "Real-time price difference detection across multiple exchanges","
-      successRate: "94.1%","
-      avgReturn: "8.2%",
-      icon: DollarSign
-    },
-    {
-"
-      name: "Mean Reversion","
-      description: "Statistical analysis for price correction opportunities","
-      successRate: "82.7%","
-      avgReturn: "15.8%",
-      icon: BarChart
-    },
-    {
-"
-      name: "Sentiment Analysis","
-      description: "Social media and news sentiment-driven trading decisions","
-      successRate: "79.5%","
-      avgReturn: "18.3%",
-      icon: BrainCircuit
-    }
-  ];
-
-  const benefits = ["
-    "Increase trading profits by up to 300%","
-    "Reduce trading risks by 65%","
-    "24/7 automated trading operations","
-    "Real-time market analysis and alerts","
-    "Multi-asset portfolio management","
-    "Advanced backtesting and optimization"
-  ];
-
-  const pricing = [
-    {
-"
-      name: "Starter","
-      price: "$4,500","
-      period: "/month",
-      features: ["
-        "Up to $100K portfolio","
-        "5 trading strategies","
-        "Basic risk management","
-        "Email support","
-        "Standard reporting"
-      ]
-    },
-    {
-"
-      name: "Professional","
-      price: "$9,500","
-      period: "/month",
-      features: ["
-        "Up to $1M portfolio","
-        "15 trading strategies","
-        "Advanced risk management","
-        "Priority support","
-        "Custom strategies","
-        "API access"
-      ]
-    },
-    {
-"
-      name: "Enterprise","
-      price: "$25,000","
-      period: "/month",
-      features: ["
-        "Unlimited portfolio size","
-        "Custom AI models","
-        "White-label solution","
-        "24/7 dedicated support","
-        "On-premise deployment","
-        "Custom development"
-      ]
-    }
-  ];
-
-  const supportedAssets = ["
-    "Stocks & ETFs","
-    "Cryptocurrencies","
-    "Forex Pairs","
-    "Commodities","
-    "Options & Futures","
-    "Bonds & Fixed Income"
-  ];
-
+  
+  
+  
+  
+  
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
+<<<<<<< HEAD
+        title="AI Financial Trading Platform - Zion Tech Group"
+        description="Revolutionary AI-powered financial trading platform with advanced algorithms, predictive analytics, and automated risk management."
+       />
+=======
         title="AI Financial Trading Platform - Zion Tech Group""        description="Revolutionary AI-powered financial trading platform with advanced algorithms, predictive analytics, and automated risk management."
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
@@ -177,7 +61,7 @@ export default function AIFinancialTrading(...args: unknown[]): unknown {
             transition={{ duration: 0.8 }}
           >"
             <div className="flex items-center justify-center mb-6">"
-              <TrendingUp className="w-12 h-12 text-green-400 mr-3" />"              <h1 className="text-4xl md:text-6xl font-bold text-white">
+              <TrendingUp className="w-12 h-12 text-green-400 mr-3"  />"              <h1 className="text-4xl md:text-6xl font-bold text-white">
                 AI Financial Trading Platform
               </h1>
             </div>"
@@ -322,7 +206,7 @@ export default function AIFinancialTrading(...args: unknown[]): unknown {
                 transition={{ duration: 0.8, delay: index * 0.1 }}"
                 className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50 text-center hover:border-green-400/50 transition-all duration-300"
               >"
-                <DollarIcon className="w-12 h-12 text-green-400 mx-auto mb-4" />"                <span className="text-white font-semibold text-lg">{asset}</span>
+                <DollarIcon className="w-12 h-12 text-green-400 mx-auto mb-4"  />"                <span className="text-white font-semibold text-lg">{asset}</span>
               </motion.div>
             ))}
           </div>
@@ -355,7 +239,7 @@ export default function AIFinancialTrading(...args: unknown[]): unknown {
                 transition={{ duration: 0.8, delay: index * 0.1 }}"
                 className="flex items-start space-x-3"
               >"
-                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />"                <span className="text-gray-300 text-lg">{benefit}</span>
+                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"  />"                <span className="text-gray-300 text-lg">{benefit}</span>
               </motion.div>
             ))}
           </div>
@@ -412,7 +296,7 @@ export default function AIFinancialTrading(...args: unknown[]): unknown {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"                      <span className="text-gray-300">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />"                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -470,5 +354,4 @@ export default function AIFinancialTrading(...args: unknown[]): unknown {
         </div>
       </section>
     </div>
-  );
-}}'"`
+  )}}'"`

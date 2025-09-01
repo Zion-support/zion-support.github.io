@@ -4,7 +4,7 @@ export function Checkbox({
   checked,
   onChange,
   label,
-  disabled = false,'
+  disabled = false,
   className = ''}) {
 
   return()

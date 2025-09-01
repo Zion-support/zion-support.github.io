@@ -1,5 +1,43 @@
-import React, { useState } from 'react';'
-import { motion } from 'framer-motion';            ))}
+<<<<<<< HEAD
+import {
+
+  Link,
+  Coins,
+  Shield,
+  Zap,
+  Database,
+  Globe,
+  TrendingUp,
+  CheckCircle,
+  ArrowRight,
+  Lock,
+  Network,
+  Wallet,
+  BarChart3,
+  Star,
+  Award,
+  Target,
+  Rocket,
+  Crown,
+  Sparkles,
+  ChevronRight,
+  Users,
+  Clock,
+  Check'
+ } from 'lucide-react';
+
+        "Network monitoring";
+      ],;
+      icon: Globe,;"
+      category: "Interoperability",;"
+      badge: "Advanced",;"
+      image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"};
+  ];
+
+  
+            ))}
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
           </div>
         </div>
       </section>
@@ -10,7 +48,7 @@ import { motion } from 'framer-motion';            ))}
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Build the Future?
           </h2>"
-          <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">'
+          <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
             Let's discuss how blockchain technology can transform your business.
             Our experts are ready to help you navigate the blockchain landscape.
           </p>
@@ -25,8 +63,6 @@ import { motion } from 'framer-motion';            ))}
           </div>;
         </div>;
       </section>;
-    </div>;) ;
-};
+    </div>;) };
 
-export default BlockchainServicesPage;
-}}}'"
+export default BlockchainServicesPage}}}'"

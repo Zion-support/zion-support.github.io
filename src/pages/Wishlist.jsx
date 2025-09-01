@@ -1,14 +1,14 @@
-import React, { useEffect } from 'react';'
-import { useFavorites } from '@/hooks/useFavorites';'
-import { MARKETPLACE_LISTINGS } from '@/data/marketplaceData';'
-import { TALENT_PROFILES } from '@/data/talentData';'
-import { ProductListingCard } from '@/components/ProductListingCard';'
-import { TalentCard } from '@/components/talent/TalentCard';'
-import { Button } from '@/components/ui/button';'
-import { useCart } from '@/context/CartContext';'
-import { useAuth } from '@/hooks/useAuth';'
-import { getCartKey } from '@/utils/cartUtils';'
-import { useNavigate } from 'react-router-dom';'
+import React, { useEffect } from 'react';
+import { useFavorites } from '@/hooks/useFavorites';
+import { MARKETPLACE_LISTINGS } from '@/data/marketplaceData';
+import { TALENT_PROFILES } from '@/data/talentData';
+import { ProductListingCard } from '@/components/ProductListingCard';
+import { TalentCard } from '@/components/talent/TalentCard';
+import { Button } from '@/components/ui/button';
+import { useCart } from '@/context/CartContext';
+import { useAuth } from '@/hooks/useAuth';
+import { getCartKey } from '@/utils/cartUtils';
+import { useNavigate } from 'react-router-dom';
 import { safeStorage } from '@/utils/safeStorage';
 
 export default function WishlistPage() {
@@ -23,7 +23,7 @@ export default function WishlistPage() {
       const parsedFavorites = JSON.parse(storedFavorites);
       setFavorites(parsedFavorites);
     } catch (error) {
-'
+
       // console.error('Error parsing favorites:', error);
       setFavorites([]);
     }
@@ -40,16 +40,16 @@ export default function WishlistPage() {
     const cart = stored ? JSON.parse(stored) : [];
     cart.push({
 
-      id: item.id,'
+      id: item.id,
       name: item.title || 'Item',
       price: item.price || 0,
       quantity: 1});
-    safeStorage.setItem(getCartKey(user?.id), JSON.stringify(cart));'
+    safeStorage.setItem(getCartKey(user?.id), JSON.stringify(cart));
     dispatch({ type: 'SET_ITEMS', payload: cart });
   };
 
   const addToCart = item => {
-'
+
     const cart = JSON.parse(localStorage.getItem('cart') || '[]');
     const existingItem = cart.find(cartItem => cartItem.id === item.id);
 
@@ -60,7 +60,7 @@ export default function WishlistPage() {
 
       cart.push({ ...item, quantity: 1 });
     }
-'
+
     localStorage.setItem('cart', JSON.stringify(cart));
     // You could add a toast notification here'
     alert('Item added to cart!');
@@ -127,7 +127,7 @@ export default function WishlistPage() {
                       className="w-full h-full object-cover"
                     />
                   ) : ("
-                    <div className="text-slate-400 text-4xl">'
+                    <div className="text-slate-400 text-4xl">
                       {item.type === 'talent' ? '👤' : '📦'}
                     </div>
                   )}
@@ -155,7 +155,7 @@ export default function WishlistPage() {
                   <div className="space-y-2 mb-4">
                     {item.price && ("
                       <div className="text-lg font-bold text-cyan-600">
-                        ${item.price}'
+                        ${item.price}
                         {item.priceType === 'hourly' && ("
                           <span className="text-sm text-slate-500">/hr</span>
                         )}
@@ -195,7 +195,7 @@ export default function WishlistPage() {
                       <ShoppingCart className="w-4 h-4" />
                       Add to Cart
                     </button>
-'
+
                     {item.type === 'talent' && ("
                       <button className="px-4 py-2 border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 rounded-lg text-sm font-medium hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors flex items-center gap-2">"
                         <MessageCircle className="w-4 h-4" />

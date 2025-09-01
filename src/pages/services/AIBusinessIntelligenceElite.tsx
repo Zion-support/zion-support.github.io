@@ -1,5 +1,3 @@
-import React from 'react.ts';'
-import { motion } from 'framer-motion.ts';
 import {
 
   Brain,
@@ -20,118 +18,14 @@ import {
   ArrowRight,
   Phone,
   Mail,
-  MapPin,'
+  MapPin,
   ExternalLink} from 'lucide-react.ts';
 
 const AIBusinessIntelligenceElite: React.FC = (): JSX.Element => {
 
-  const features = [
-    {
-
-      icon: Brain,'
-      title: 'Advanced AI Analytics Engine',
-      description:'
-        'Powered by GPT-4 and Claude 3.5 Sonnet for intelligent data interpretation and insights generation'},
-    {
-
-      icon: BarChart3,'
-      title: 'Real-time Business Intelligence',
-      description:'
-        'Live dashboards with predictive analytics and trend forecasting capabilities'},
-    {
-
-      icon: Shield,'
-      title: 'Enterprise-Grade Security',
-      description:'
-        'SOC 2 Type II compliant with end-to-end encryption and role-based access control'},
-    {
-
-      icon: Zap,'
-      title: 'Automated Reporting',
-      description:'
-        'AI-generated executive summaries and automated KPI tracking'},
-    {
-
-      icon: Users,'
-      title: 'Multi-User Collaboration',
-      description:'
-        'Team-based analytics with real-time collaboration and sharing capabilities'},
-    {
-
-      icon: Globe,'
-      title: 'Global Data Integration',
-      description:'
-        'Connect to 500+ data sources including CRM, ERP, databases, and cloud platforms'},
-  ];
-
-  const pricing = [
-    {
-'
-      name: 'Starter','
-      price: '$2,500','
-      period: '/month','
-      description: 'Perfect for small businesses and startups',
-      features: ['
-        'Up to 10 data sources','
-        'Basic AI analytics','
-        'Standard reporting','
-        'Email support','
-        '5 user licenses',
-      ]},
-    {
-'
-      name: 'Professional','
-      price: '$5,000','
-      period: '/month','
-      description: 'Ideal for growing businesses and teams',
-      features: ['
-        'Up to 50 data sources','
-        'Advanced AI analytics','
-        'Custom dashboards','
-        'Priority support','
-        '25 user licenses','
-        'API access',
-      ],
-      popular: true},
-    {
-'
-      name: 'Enterprise','
-      price: '$12,000','
-      period: '/month','
-      description: 'For large organizations with complex needs',
-      features: ['
-        'Unlimited data sources','
-        'Full AI suite','
-        'Custom development','
-        '24/7 dedicated support','
-        'Unlimited users','
-        'White-label options',
-      ]},
-  ];
-
-  const useCases = [
-    {
-'
-      title: 'Financial Analytics',
-      description:'
-        'Real-time financial reporting, budget tracking, and cash flow analysis with AI-powered forecasting'},
-    {
-'
-      title: 'Sales Intelligence',
-      description:'
-        'Sales performance tracking, lead scoring, and revenue optimization using machine learning'},
-    {
-'
-      title: 'Customer Analytics',
-      description:'
-        'Customer behavior analysis, segmentation, and lifetime value prediction'},
-    {
-'
-      title: 'Operational Efficiency',
-      description:'
-        'Process optimization, resource allocation, and performance monitoring'},
-  ];
-
+  
+  
+  
   return()    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
@@ -143,7 +37,7 @@ const AIBusinessIntelligenceElite: React.FC = (): JSX.Element => {
           >"
             <div className="flex justify-center mb-6">"
               <div className="p-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full">"
-                <Brain className="h-12 w-12 text-white" />              </div>
+                <Brain className="h-12 w-12 text-white"  />              </div>
             </div>"
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI Business Intelligence Elite
@@ -156,16 +50,16 @@ const AIBusinessIntelligenceElite: React.FC = (): JSX.Element => {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="https://ziontechgroup.com/contact""
+                href="https://ziontechgroup.com/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
               >
                 Get Started Today"
-                <ArrowRight className="ml-2 h-5 w-5" />              </a>
+                <ArrowRight className="ml-2 h-5 w-5"  />              </a>
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 bg-zion-slate text-white font-semibold rounded-lg hover:bg-zion-slate-light transition-all duration-300"
               >"
-                <Phone className="mr-2 h-5 w-5" />                Call Now
+                <Phone className="mr-2 h-5 w-5"  />                Call Now
               </a>
             </div>
           </motion.div>
@@ -277,13 +171,13 @@ const AIBusinessIntelligenceElite: React.FC = (): JSX.Element => {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center">"
-                      <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />"                      <span className="text-white">{feature}</span>
+                      <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0"  />"                      <span className="text-white">{feature}</span>
                     </li>
                   ))}
                 </ul>
 
                 <a"
-                  href="https://ziontechgroup.com/contact""
+                  href="https://ziontechgroup.com/contact"
                   className="w-full inline-flex justify-center items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
                 >
                   Get Started
@@ -356,10 +250,10 @@ const AIBusinessIntelligenceElite: React.FC = (): JSX.Element => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">"
             <div className="text-center">"
               <div className="p-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full w-fit mx-auto mb-4">"
-                <Phone className="h-8 w-8 text-white" />
+                <Phone className="h-8 w-8 text-white"  />
               </div>"              <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="text-zion-slate-light hover:text-white transition-colors duration-300"
               >
                 +1 (302) 464-0950
@@ -368,13 +262,18 @@ const AIBusinessIntelligenceElite: React.FC = (): JSX.Element => {
 "
             <div className="text-center">"
               <div className="p-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full w-fit mx-auto mb-4">"
-                <Mail className="h-8 w-8 text-white" />
+                <Mail className="h-8 w-8 text-white"  />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-2">
                 Email Us
               </h3>
               <a"
+<<<<<<< HEAD
+                href="mailto:kleber@ziontechgroup.com"
+                className="text-zion-slate-light hover:text-white transition-colors duration-300"
+=======
                 href="mailto:kleber@ziontechgroup.com""                className="text-zion-slate-light hover:text-white transition-colors duration-300"
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
               >
                 kleber@ziontechgroup.com
               </a>
@@ -382,7 +281,7 @@ const AIBusinessIntelligenceElite: React.FC = (): JSX.Element => {
 "
             <div className="text-center">"
               <div className="p-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full w-fit mx-auto mb-4">"
-                <MapPin className="h-8 w-8 text-white" />
+                <MapPin className="h-8 w-8 text-white"  />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-2">
                 Visit Us
@@ -396,11 +295,11 @@ const AIBusinessIntelligenceElite: React.FC = (): JSX.Element => {
 "
           <div className="text-center">
             <a"
-              href="https://ziontechgroup.com/contact""
+              href="https://ziontechgroup.com/contact"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
             >
               Schedule a Demo"
-              <ArrowRight className="ml-2 h-5 w-5" />            </a>
+              <ArrowRight className="ml-2 h-5 w-5"  />            </a>
           </div>
         </div>
       </section>
@@ -413,19 +312,19 @@ const AIBusinessIntelligenceElite: React.FC = (): JSX.Element => {
           </p>"
           <div className="flex justify-center space-x-6">
             <a"
-              href="https://ziontechgroup.com""
+              href="https://ziontechgroup.com"
               className="text-zion-slate-light hover:text-white transition-colors duration-300"
             >
               Visit Website"
-              <ExternalLink className="inline ml-1 h-4 w-4" />            </a>
+              <ExternalLink className="inline ml-1 h-4 w-4"  />            </a>
             <a"
-              href="https://ziontechgroup.com/privacy""
+              href="https://ziontechgroup.com/privacy"
               className="text-zion-slate-light hover:text-white transition-colors duration-300"
             >
               Privacy Policy
             </a>
             <a"
-              href="https://ziontechgroup.com/terms""
+              href="https://ziontechgroup.com/terms"
               className="text-zion-slate-light hover:text-white transition-colors duration-300"
             >
               Terms of Service

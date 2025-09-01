@@ -1,95 +1,95 @@
-import React, { useState, useMemo } from 'react';'
-import { motion } from 'framer-motion';'
+import React, { useState, useMemo } from 'react';
+import { motion } from 'framer-motion';
 import { Check, X, Star, TrendingUp, Zap, Shield, Clock, DollarSign, BarChart3, Target, Users, Globe, Mail, Phone } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";"
 import { Button } from "./ui/button";"
 import { Badge } from "./ui/badge";"
-import { Input } from "./ui/input";'
-const COMPLEXITY_LEVELS = ['Basic', 'Intermediate', 'Advanced', 'Enterprise'];'
-const PRICE_RANGES = ['Under $10K', '$10K-$50K', '$50K-$100K', '$100K+'];
+import { Input } from "./ui/input";
+const COMPLEXITY_LEVELS = ['Basic',Intermediate',Advanced',Enterprise'];
+const PRICE_RANGES = ['Under $10K',$10K-$50K',$50K-$100K',$100K+'];
 export const AdvancedServiceComparison = () => {
     const [selectedServices, setSelectedServices] = useState([]);
     const [filters, setFilters] = useState({
-'
-        category: 'all','
-        complexity: 'all','
-        priceRange: 'all','
+
+        category: 'all',
+        complexity: 'all',
+        priceRange: 'all',
         technology: 'all'
-    });'
-    const [searchTerm, setSearchTerm] = useState('');'
+    });
+    const [searchTerm, setSearchTerm] = useState('');
     const [viewMode, setViewMode] = useState('grid');
     // Mock data - in real app this would come from props or API
     const mockServices = [
         {
-'
-            id: 'ai-crm-basic','
-            name: 'AI CRM Basic','
-            category: 'ai','
-            price: '$5,000/month','
-            duration: '3-6 months','
-            features['Basic AI insights', 'Customer segmentation', 'Email automation'],;'
-            benefits['Improved customer retention', 'Automated workflows', 'Basic analytics'],;'
-            technology['AI/ML', 'CRM', 'Automation'],;'
-            targetAudience['Small Business', 'Startups'],;
-            rating: 4.2,'
-            complexity: 'Basic','
-            popularity: 'Medium','
-            contactInfo: '+1 302 464 0950','
-            email: 'kleber@ziontechgroup.com','
+
+            id: 'ai-crm-basic',
+            name: 'AI CRM Basic',
+            category: 'ai',
+            price: '$5,000/month',
+            duration: '3-6 months',
+            features['Basic AI insights',Customer segmentation',Email automation'],;
+            benefits['Improved customer retention',Automated workflows',Basic analytics'],;
+            technology['AI/ML',CRM',Automation'],;
+            targetAudience['Small Business',Startups'],;
+            rating: 4.2,
+            complexity: 'Basic',
+            popularity: 'Medium',
+            contactInfo: '+1 302 464 0950',
+            email: 'kleber@ziontechgroup.com',
             link: 'https://ziontechgroup.com/services/ai-crm-basic'
         },
         {
-'
-            id: 'ai-crm-enterprise','
-            name: 'AI CRM Enterprise','
-            category: 'ai','
-            price: '$25,000/month','
-            duration: '12-18 months','
-            features['Advanced AI insights', 'Predictive analytics', 'Multi-channel integration', 'Custom AI models'],;'
-            benefits['Predictive customer behavior', 'Advanced automation', 'Enterprise scalability'],;'
-            technology['AI/ML', 'Big Data', 'Predictive Analytics', 'Enterprise Integration'],;'
-            targetAudience['Enterprise', 'Large Corporations'],;
-            rating: 4.8,'
-            complexity: 'Enterprise','
-            popularity: 'High','
-            contactInfo: '+1 302 464 0950','
-            email: 'kleber@ziontechgroup.com','
+
+            id: 'ai-crm-enterprise',
+            name: 'AI CRM Enterprise',
+            category: 'ai',
+            price: '$25,000/month',
+            duration: '12-18 months',
+            features['Advanced AI insights',Predictive analytics',Multi-channel integration',Custom AI models'],;
+            benefits['Predictive customer behavior',Advanced automation',Enterprise scalability'],;
+            technology['AI/ML',Big Data',Predictive Analytics',Enterprise Integration'],;
+            targetAudience['Enterprise',Large Corporations'],;
+            rating: 4.8,
+            complexity: 'Enterprise',
+            popularity: 'High',
+            contactInfo: '+1 302 464 0950',
+            email: 'kleber@ziontechgroup.com',
             link: 'https://ziontechgroup.com/services/ai-crm-enterprise'
         },
         {
-'
-            id: 'quantum-basic','
-            name: 'Quantum Computing Basic','
-            category: 'quantum','
-            price: '$50,000/month','
-            duration: '6-12 months','
-            features['Basic quantum algorithms', 'Cloud access', 'Documentation'],;'
-            benefits['Quantum computing access', 'Algorithm development', 'Research capabilities'],;'
-            technology['Quantum Computing', 'Cloud Platform', 'Basic Algorithms'],;'
-            targetAudience['Research Institutions', 'Universities'],;
-            rating: 4.5,'
-            complexity: 'Intermediate','
-            popularity: 'Medium','
-            contactInfo: '+1 302 464 0950','
-            email: 'kleber@ziontechgroup.com','
+
+            id: 'quantum-basic',
+            name: 'Quantum Computing Basic',
+            category: 'quantum',
+            price: '$50,000/month',
+            duration: '6-12 months',
+            features['Basic quantum algorithms',Cloud access',Documentation'],;
+            benefits['Quantum computing access',Algorithm development',Research capabilities'],;
+            technology['Quantum Computing',Cloud Platform',Basic Algorithms'],;
+            targetAudience['Research Institutions',Universities'],;
+            rating: 4.5,
+            complexity: 'Intermediate',
+            popularity: 'Medium',
+            contactInfo: '+1 302 464 0950',
+            email: 'kleber@ziontechgroup.com',
             link: 'https://ziontechgroup.com/services/quantum-basic'
         },
         {
-'
-            id: 'quantum-enterprise','
-            name: 'Quantum Computing Enterprise','
-            category: 'quantum','
-            price: '$200,000/month','
-            duration: '18-24 months','
-            features['Custom quantum algorithms', 'Dedicated processors', '24/7 support', 'Custom development'],;'
-            benefits['Competitive advantage', 'Custom solutions', 'Priority access', 'Expert support'],;'
-            technology['Quantum Computing', 'Custom Algorithms', 'Dedicated Hardware', 'Advanced Support'],;'
-            targetAudience['Large Corporations', 'Government', 'Financial Services'],;
-            rating: 4.9,'
-            complexity: 'Enterprise','
-            popularity: 'Trending','
-            contactInfo: '+1 302 464 0950','
-            email: 'kleber@ziontechgroup.com','
+
+            id: 'quantum-enterprise',
+            name: 'Quantum Computing Enterprise',
+            category: 'quantum',
+            price: '$200,000/month',
+            duration: '18-24 months',
+            features['Custom quantum algorithms',Dedicated processors',24/7 support',Custom development'],;
+            benefits['Competitive advantage',Custom solutions',Priority access',Expert support'],;
+            technology['Quantum Computing',Custom Algorithms',Dedicated Hardware',Advanced Support'],;
+            targetAudience['Large Corporations',Government',Financial Services'],;
+            rating: 4.9,
+            complexity: 'Enterprise',
+            popularity: 'Trending',
+            contactInfo: '+1 302 464 0950',
+            email: 'kleber@ziontechgroup.com',
             link: 'https://ziontechgroup.com/services/quantum-enterprise'
         }
     ];
@@ -106,11 +106,11 @@ export const AdvancedServiceComparison = () => {
     const getComplexityColor = (complexity) => {
 
         switch (complexity) {
-'
-            case 'Basic': return 'bg-green-100 text-green-800';'
-            case 'Intermediate': return 'bg-blue-100 text-blue-800';'
-            case 'Advanced': return 'bg-orange-100 text-orange-800';'
-            case 'Enterprise': return 'bg-purple-100 text-purple-800';'
+
+            case 'Basic': return 'bg-green-100 text-green-800';
+            case 'Intermediate': return 'bg-blue-100 text-blue-800';
+            case 'Advanced': return 'bg-orange-100 text-orange-800';
+            case 'Enterprise': return 'bg-purple-100 text-purple-800';
             default: return 'bg-gray-100 text-gray-800'}
     };
     const getPopularityIcon = (popularity) => {
@@ -258,7 +258,7 @@ export const AdvancedServiceComparison = () => {
   { opacity: 1,
   y: 0 
 
-}} transition={{ delay: 0.1 * index }}>'
+}} transition={{ delay: 0.1 * index }}>
             <Card className={`h-full transition-all duration-300 hover:shadow-xl ${selectedServices.includes(service.id) ? 'ring-2 ring-zion-cyan' : ''}`}>"
               <CardHeader className="pb-4">"
                 <div className="flex items-start justify-between mb-2">"
@@ -326,8 +326,7 @@ export const AdvancedServiceComparison = () => {
                   <div className="pt-2">"
                     <Button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark" onClick = {
 
-  () => window.open(service.link,'
-  '_blank')
+  () => window.open(service.link,_blank')
 
 }>
                       Learn More
@@ -368,7 +367,7 @@ export const AdvancedServiceComparison = () => {
               <div className="text-zion-slate-light">Highest Rating</div>
             </div>"
             <div className="text-center p-4 bg-zion-green/10 rounded-lg">"
-              <div className="text-2xl font-bold text-zion-green">'
+              <div className="text-2xl font-bold text-zion-green">
                 {filteredServices.filter(s => selectedServices.includes(s.id)).filter(s => s.complexity === 'Enterprise').length}
               </div>"
               <div className="text-zion-slate-light">Enterprise Solutions</div>
@@ -377,9 +376,8 @@ export const AdvancedServiceComparison = () => {
           "
           <div className="mt-6 text-center">"
             <Button className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark" onClick = {
-'
-  () => window.open('mailto:kleber@ziontechgroup.com?subject=Service Comparison Inquiry','
-  '_blank')
+
+  () => window.open('mailto:kleber@ziontechgroup.com?subject=Service Comparison Inquiry',_blank')
 
 }>"
               <Mail className="w-4 h-4 mr-2"/>
@@ -408,18 +406,16 @@ export const AdvancedServiceComparison = () => {
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick = {
-'
-  () => window.open('mailto:kleber@ziontechgroup.com','
-  '_blank')
+
+  () => window.open('mailto:kleber@ziontechgroup.com',_blank')
 
 }>"
               <Mail className="w-4 h-4 mr-2"/>
               Get Started
             </Button>"
             <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick = {
-'
-  () => window.open('tel:+13024640950','
-  '_blank')
+
+  () => window.open('tel:+13024640950',_blank')
 
 }>"
               <Phone className="w-4 h-4 mr-2"/>

@@ -1,7 +1,87 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
-import { Link } from 'react-router-dom';      link: "/",;
+<<<<<<< HEAD
+import {
+
+  Smartphone,
+  Download,
+  Zap,
+  Shield,
+  Cloud,
+  Users,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Globe,
+  Lock,
+  Wifi,
+  Battery,
+  Settings,
+  Bell,
+  Search,
+  Home,
+  User,
+  BarChart3,
+  MessageCircle,
+  ShoppingCart,
+  Calendar,
+  FileText,
+  Heart,
+  Bookmark,
+  Share2,
+  Play,
+  Pause,
+  SkipBack,
+  SkipForward,
+  Volume2,
+  Maximize2,
+  RotateCcw,
+  Wifi as WifiIcon,
+  Battery as BatteryIcon,
+  Signal'
+} from 'lucide-react';
+
+const MobileLaunch: React.FC = () => {
+  
+    {;"
+      title: "Smart Notifications",;"
+      description: "Intelligent alerts that adapt to your preferences and schedule",;
+      icon: Bell,;"
+      color: "from-orange-400 to-red-500"};
+  ];
+
+  
+    {;"
+      name: "Services",;"
+      description: "Access to all Zion Tech Group services and solutions",;
+      icon: Settings,;"
+      features: ["Service catalog", "Quick setup", "Support access"]};
+  ];
+
+  const downloadOptions = [
+    {
+"
+      platform: "iOS App Store","
+      icon: "🍎","
+      description: "Download for iPhone and iPad","
+      link: "#",
+      featured: true
+    },
+    {
+"
+      platform: "Google Play Store","
+      icon: "🤖","
+      description: "Download for Android devices","
+      link: "#",
+      featured: true
+    },
+    {;"
+      platform: "Web App",;"
+      icon: "🌐",;"
+      description: "Access via browser",;"
+      link: "/",;
       featured: false};
+=======
+      featured: false};
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   const systemRequirements = [;"
@@ -14,9 +94,16 @@ import { Link } from 'react-router-dom';      link: "/",;
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
+<<<<<<< HEAD
+        title="Mobile App - Zion Tech Group"
+        description="Take Zion Tech Group with you on the go! Download our mobile app for iOS and Android to access AI services, analytics, and business solutions anywhere."
+        keywords="mobile app, iOS app, Android app, Zion Tech Group mobile, business app"
+       />
+=======
         title="Mobile App - Zion Tech Group""
         description="Take Zion Tech Group with you on the go! Download our mobile app for iOS and Android to access AI services, analytics, and business solutions anywhere.""        keywords="mobile app, iOS app, Android app, Zion Tech Group mobile, business app"
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
@@ -40,7 +127,7 @@ import { Link } from 'react-router-dom';      link: "/",;
 "
               <div className="flex items-center mb-6">"
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mr-4">"
-                  <Smartphone className="w-8 h-8 text-white" />
+                  <Smartphone className="w-8 h-8 text-white"  />
                 </div>"                <h1 className="text-4xl font-bold text-white">Mobile App</h1>
               </div>
 "
@@ -58,18 +145,18 @@ import { Link } from 'react-router-dom';      link: "/",;
 "
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link"
-                  to="#download""
+                  to="#download"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/25"
 "
-                  <Download className="mr-2 w-5 h-5" />
+                  <Download className="mr-2 w-5 h-5"  />
                   Download Now
                 </Link>
                 <Link"
-                  to="/contact""
+                  to="/contact"
                   className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
 
                   Learn More"
-                  <ArrowRight className="ml-2 w-5 h-5" />                </Link>
+                  <ArrowRight className="ml-2 w-5 h-5"  />                </Link>
               </div>
             </motion.div>
 
@@ -107,9 +194,9 @@ import { Link } from 'react-router-dom';      link: "/",;
                   <div className="flex justify-between items-center px-6 py-2 text-white text-sm">
                     <span>9:41</span>"
                     <div className="flex items-center space-x-1">"
-                      <Signal className="w-4 h-4" />"
-                      <WifiIcon className="w-4 h-4" />"
-                      <BatteryIcon className="w-4 h-4" />
+                      <Signal className="w-4 h-4"  />"
+                      <WifiIcon className="w-4 h-4"  />"
+                      <BatteryIcon className="w-4 h-4"  />
                     </div>
                   </div>
 
@@ -117,7 +204,7 @@ import { Link } from 'react-router-dom';      link: "/",;
                   <div className="p-6">"
                     <div className="text-center mb-6">"
                       <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-3">"
-                        <Zap className="w-8 h-8 text-white" />
+                        <Zap className="w-8 h-8 text-white"  />
                       </div>"
                       <h3 className="text-white font-bold text-lg">Zion Tech</h3>"                      <p className="text-cyan-300 text-sm">AI-Powered Business</p>
                     </div>
@@ -129,15 +216,15 @@ import { Link } from 'react-router-dom';      link: "/",;
                         <span className="text-white text-xs">Analytics</span>
                       </div>"
                       <div className="bg-white/10 rounded-lg p-3 text-center">"
-                        <MessageCircle className="w-6 h-6 text-cyan-400 mx-auto mb-2" />"
+                        <MessageCircle className="w-6 h-6 text-cyan-400 mx-auto mb-2"  />"
                         <span className="text-white text-xs">AI Chat</span>
                       </div>"
                       <div className="bg-white/10 rounded-lg p-3 text-center">"
-                        <Settings className="w-6 h-6 text-cyan-400 mx-auto mb-2" />"
+                        <Settings className="w-6 h-6 text-cyan-400 mx-auto mb-2"  />"
                         <span className="text-white text-xs">Services</span>
                       </div>"
                       <div className="bg-white/10 rounded-lg p-3 text-center">"
-                        <User className="w-6 h-6 text-cyan-400 mx-auto mb-2" />"                        <span className="text-white text-xs">Profile</span>
+                        <User className="w-6 h-6 text-cyan-400 mx-auto mb-2"  />"                        <span className="text-white text-xs">Profile</span>
                       </div>
                     </div>
                   </div>
@@ -146,7 +233,7 @@ import { Link } from 'react-router-dom';      link: "/",;
 
               {/* Floating Elements */}"
               <div className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center animate-bounce">"
-                <Star className="w-4 h-4 text-yellow-900" />
+                <Star className="w-4 h-4 text-yellow-900"  />
               </div>"              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-cyan-400 rounded-full animate-pulse"></div>
             </motion.div>
           </div>;
@@ -175,7 +262,7 @@ import { Link } from 'react-router-dom';      link: "/",;
             <h2 className="text-4xl font-bold text-white mb-6">"
               Powerful <span className="text-cyan-400">Mobile Features</span>
             </h2>"
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">'
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               Experience the full power of Zion Tech Group's services in the palm of your hand
               with our feature - rich mobile application.
             </p>
@@ -288,7 +375,7 @@ import { Link } from 'react-router-dom';      link: "/",;
                 <div className="space-y-3">
                   {screen.features.map((feature, featureIndex) => ("
                     <div key={featureIndex} className="flex items-center text-slate-400">"
-                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />                      {feature}
+                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0"  />                      {feature}
                     </div>) ) }
                 </div>
               </motion.div>;) ) }
@@ -318,7 +405,7 @@ import { Link } from 'react-router-dom';      link: "/",;
             <h2 className="text-4xl font-bold text-white mb-6">"
               Download <span className="text-cyan-400">Now</span>
             </h2>"
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">'
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               Get started with Zion Tech Group's mobile app today. Available on all major platforms.
             </p>
           </motion.div>
@@ -351,13 +438,13 @@ import { Link } from 'react-router-dom';      link: "/",;
 
 }}`
                 className={`bg-slate-800/50 border rounded-xl p-8 text-center hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 ${
-'
+
                   option.featured ? 'border-cyan-400/30 bg-gradient-to-br from-cyan-400/5 to-blue-500/5' : 'border-slate-700/50'`
                 }`}
 
                 {option.featured && (;"
                   <div className="flex items-center justify-center mb-4">"
-                    <Star className="w-5 h-5 text-yellow-400 mr-2" />"                    <span className="text-yellow-400 text-sm font-semibold">Recommended</span>
+                    <Star className="w-5 h-5 text-yellow-400 mr-2"  />"                    <span className="text-yellow-400 text-sm font-semibold">Recommended</span>
                   </div>
                 )}
 "
@@ -365,12 +452,11 @@ import { Link } from 'react-router-dom';      link: "/",;
                 <h3 className="text-2xl font-bold text-white mb-3">{option.platform}</h3>"
                 <p className="text-slate-300 mb-6">{option.description}</p>
 
-                <Link
-                  to={option.link}"
+                <Link to={option.link}"
                   className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105"
 
                   Download"
-                  <Download className="ml-2 w-4 h-4" />                </Link>;
+                  <Download className="ml-2 w-4 h-4"  />                </Link>;
               </motion.div>) ) }
           </div>
         </div>
@@ -461,30 +547,29 @@ import { Link } from 'react-router-dom';      link: "/",;
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Go Mobile?
             </h2>"
-            <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">'
+            <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
               Download our mobile app today and take Zion Tech Group's powerful solutions
               with you wherever you go.
             </p>
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="#download""
+                to="#download"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/25"
 "
-                <Download className="mr-2 w-5 h-5" />
+                <Download className="mr-2 w-5 h-5"  />
                 Download App
               </Link>
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
 
                 Get Support"
-                <ArrowRight className="ml-2 w-5 h-5" />;              </Link>;
+                <ArrowRight className="ml-2 w-5 h-5"  />;              </Link>;
             </div>;
           </motion.div>;
         </div>;
       </section>;
-    </div>;) ;
-};
+    </div>;) };
 
-export default MobileLaunch;}}}}'"`
+export default MobileLaunch}}}}'"`

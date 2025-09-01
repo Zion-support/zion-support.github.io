@@ -7,91 +7,91 @@ export default function Blog(...args[]):  {
 
   const blogPosts = [
     {
-'
-      id: 'ai-automation-trends-2025','
-      title: 'AI Automation Trends That Will Dominate 2025','
-      excerpt: 'Discover the top AI automation trends that will reshape business operations and drive innovation across industries.','
-      author: 'Zion Tech Team','
-      date: '2025-01-15','
-      readTime: '8 min read','
-      category: 'AI & Automation','
-      tags['AI', 'Automation', 'Trends', '2025'],
-      featured: true,'
+
+      id: 'ai-automation-trends-2025',
+      title: 'AI Automation Trends That Will Dominate 2025',
+      excerpt: 'Discover the top AI automation trends that will reshape business operations and drive innovation across industries.',
+      author: 'Zion Tech Team',
+      date: '2025-01-15',
+      readTime: '8 min read',
+      category: 'AI & Automation',
+      tags['AI',Automation',Trends',2025'],
+      featured: true,
       image: '/blog/ai-automation-trends.jpg'
     },
     {
-'
-      id: 'cloud-native-security','
-      title: 'Building Secure Cloud-Native Applications','
-      excerpt: 'Learn the essential security practices for developing and deploying cloud-native applications in today\'s threat landscape.','
-      author: 'Security Team','
-      date: '2025-01-10','
-      readTime: '12 min read','
-      category: 'Cybersecurity','
-      tags['Cloud', 'Security', 'DevOps', 'Best Practices'],
-      featured: false,'
+
+      id: 'cloud-native-security',
+      title: 'Building Secure Cloud-Native Applications',
+      excerpt: 'Learn the essential security practices for developing and deploying cloud-native applications in today\'s threat landscape.',
+      author: 'Security Team',
+      date: '2025-01-10',
+      readTime: '12 min read',
+      category: 'Cybersecurity',
+      tags['Cloud',Security',DevOps',Best Practices'],
+      featured: false,
       image: '/blog/cloud-security.jpg'
     },
     {
-'
-      id: 'quantum-computing-future','
-      title: 'The Future of Quantum Computing in Enterprise','
-      excerpt: 'Explore how quantum computing will revolutionize enterprise applications and what businesses need to prepare for.','
-      author: 'Innovation Lab','
-      date: '2025-01-08','
-      readTime: '10 min read','
-      category: 'Emerging Tech','
-      tags['Quantum', 'Computing', 'Enterprise', 'Future'],
-      featured: false,'
+
+      id: 'quantum-computing-future',
+      title: 'The Future of Quantum Computing in Enterprise',
+      excerpt: 'Explore how quantum computing will revolutionize enterprise applications and what businesses need to prepare for.',
+      author: 'Innovation Lab',
+      date: '2025-01-08',
+      readTime: '10 min read',
+      category: 'Emerging Tech',
+      tags['Quantum',Computing',Enterprise',Future'],
+      featured: false,
       image: '/blog/quantum-computing.jpg'
     },
     {
-'
-      id: 'devops-automation-best-practices','
-      title: 'DevOps Automation: Best Practices for 2025','
-      excerpt: 'Master the essential DevOps automation practices that will streamline your development and deployment processes.','
-      author: 'DevOps Team','
-      date: '2025-01-05','
-      readTime: '15 min read','
-      category: 'DevOps','
-      tags['DevOps', 'Automation', 'CI/CD', 'Best Practices'],
-      featured: false,'
+
+      id: 'devops-automation-best-practices',
+      title: 'DevOps Automation: Best Practices for 2025',
+      excerpt: 'Master the essential DevOps automation practices that will streamline your development and deployment processes.',
+      author: 'DevOps Team',
+      date: '2025-01-05',
+      readTime: '15 min read',
+      category: 'DevOps',
+      tags['DevOps',Automation',CI/CD',Best Practices'],
+      featured: false,
       image: '/blog/devops-automation.jpg'
     },
     {
-'
-      id: 'ai-ethics-governance','
-      title: 'AI Ethics and Governance: A Business Imperative','
-      excerpt: 'Understand why AI ethics and governance are critical for business success and how to implement them effectively.','
-      author: 'AI Ethics Team','
-      date: '2025-01-03','
-      readTime: '11 min read','
-      category: 'AI & Ethics','
-      tags['AI Ethics', 'Governance', 'Compliance', 'Business'],
-      featured: false,'
+
+      id: 'ai-ethics-governance',
+      title: 'AI Ethics and Governance: A Business Imperative',
+      excerpt: 'Understand why AI ethics and governance are critical for business success and how to implement them effectively.',
+      author: 'AI Ethics Team',
+      date: '2025-01-03',
+      readTime: '11 min read',
+      category: 'AI & Ethics',
+      tags['AI Ethics',Governance',Compliance',Business'],
+      featured: false,
       image: '/blog/ai-ethics.jpg'
     },
     {
-'
-      id: 'cybersecurity-threat-landscape','
-      title: '2025 Cybersecurity Threat Landscape Analysis','
-      excerpt: 'Stay ahead of emerging cyber threats with our comprehensive analysis of the 2025 threat landscape.','
-      author: 'Cybersecurity Team','
-      date: '2024-12-28','
-      readTime: '14 min read','
-      category: 'Cybersecurity','
-      tags['Cybersecurity', 'Threats', 'Analysis', '2025'],
-      featured: false,'
+
+      id: 'cybersecurity-threat-landscape',
+      title: '2025 Cybersecurity Threat Landscape Analysis',
+      excerpt: 'Stay ahead of emerging cyber threats with our comprehensive analysis of the 2025 threat landscape.',
+      author: 'Cybersecurity Team',
+      date: '2024-12-28',
+      readTime: '14 min read',
+      category: 'Cybersecurity',
+      tags['Cybersecurity',Threats',Analysis',2025'],
+      featured: false,
       image: '/blog/cyber-threats.jpg'
 
   ]
 
   const categories = ['
-    { name: 'All', count: blogPosts.length },'
-    { name: 'AI & Automation', count: 2 },'
-    { name: 'Cybersecurity', count: 2 },'
-    { name: 'Cloud & DevOps', count: 2 },'
-    { name: 'Emerging Tech', count: 1 },'
+    { name: 'All', count: blogPosts.length },
+    { name: 'AI & Automation', count: 2 },
+    { name: 'Cybersecurity', count: 2 },
+    { name: 'Cloud & DevOps', count: 2 },
+    { name: 'Emerging Tech', count: 1 },
     { name: 'AI & Ethics', count: 1 }
   ]
 
@@ -101,7 +101,7 @@ export default function Blog(...args[]):  {
       <section className="relative overflow-hidden py-20 sm:py-32">"
         <div className="mx-auto max-w-7xl px-6 lg:px-8">"
           <div className="mx-auto max-w-2xl text-center">"
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">'
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
               Insights &{' '}"
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 Industry Knowledge
@@ -139,11 +139,11 @@ export default function Blog(...args[]):  {
                       {post.author}
                     </div>"
                     <div className="flex items-center gap-2">"
-                      <Calendar className="h-4 w-4" />'
+                      <Calendar className="h-4 w-4" />
                       {new Date(post.date).toLocaleDateString('en-US', {
-'
-                        year: 'numeric','
-                        month: 'long','
+
+                        year: 'numeric',
+                        month: 'long',
                         day: 'numeric'
                       })}
                     </div>"
@@ -208,10 +208,10 @@ export default function Blog(...args[]):  {
                       {post.author}
                     </div>"
                     <div className="flex items-center gap-1">"
-                      <Calendar className="h-3 w-3" />'
+                      <Calendar className="h-3 w-3" />
                       {new Date(post.date).toLocaleDateString('en-US', {
-'
-                        month: 'short','
+
+                        month: 'short',
                         day: 'numeric'
                       })}
                     </div>
@@ -251,8 +251,8 @@ export default function Blog(...args[]):  {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
               <input"
-                type="email""
-                placeholder="Enter your email""
+                type="email"
+                placeholder="Enter your email"
                 className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />"
               <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-200">

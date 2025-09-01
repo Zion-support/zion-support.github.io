@@ -1,4 +1,4 @@
-import React, { useState } from 'react';'
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
 
@@ -11,14 +11,14 @@ import {
   Star,
   Phone,
   Mail,
-  MapPin,'
-  ExternalLink} from 'lucide-react';'
-import { SEOHead } from '../components/SEOHead';'
-import { INNOVATIVE_NEW_SERVICES_2025 } from '../data/innovativeNewServices2025';'
+  MapPin,
+  ExternalLink} from 'lucide-react';
+import { SEOHead } from '../components/SEOHead';
+import { INNOVATIVE_NEW_SERVICES_2025 } from '../data/innovativeNewServices2025';
 import { SPECIALIZED_IT_SERVICES_2025 } from '../data/specializedITServices2025';
 const InnovativeNewServices2025 = () => {
-'
-  const [selectedCategory, setSelectedCategory] = useState('all');'
+
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
   const allServices = [
     ...INNOVATIVE_NEW_SERVICES_2025,
@@ -29,9 +29,9 @@ const InnovativeNewServices2025 = () => {
     ...Array.from(new Set(allServices.map(service => service.category))),
   ];
   const priceRanges = ['
-    { value: 'all', label: 'All Prices' },'
-    { value: '0-2000', label: 'Under $2,000/month' },'
-    { value: '2000-5000', label: '$2,000 - $5,000/month' },'
+    { value: 'all', label: 'All Prices' },
+    { value: '0-2000', label: 'Under $2,000/month' },
+    { value: '2000-5000', label: '$2,000 - $5,000/month' },
     { value: '5000+', label: '$5,000+/month' },
   ];
   const filteredServices = allServices.filter(service => {
@@ -52,13 +52,13 @@ const InnovativeNewServices2025 = () => {
   const getCategoryIcon = category => {
 
     switch (category) {
-'
+
       case 'AI & Analytics':
-        return Brain;'
+        return Brain;
       case 'AI & Development':
-        return Cpu;'
+        return Cpu;
       case 'Network Infrastructure':
-        return Globe;'
+        return Globe;
       case 'Edge Computing':
         return Cloud;
       default:
@@ -68,13 +68,13 @@ const InnovativeNewServices2025 = () => {
   const getCategoryColor = category => {
 
     switch (category) {
-'
+
       case 'AI & Analytics':'
-        return 'from-purple-500 to-pink-600';'
+        return 'from-purple-500 to-pink-600';
       case 'AI & Development':'
-        return 'from-blue-500 to-cyan-600';'
+        return 'from-blue-500 to-cyan-600';
       case 'Network Infrastructure':'
-        return 'from-green-500 to-emerald-600';'
+        return 'from-green-500 to-emerald-600';
       case 'Edge Computing':'
         return 'from-orange-500 to-red-600';
       default:'
@@ -84,10 +84,10 @@ const InnovativeNewServices2025 = () => {
   return()
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white">
       <SEOHead"
-        title="Innovative New Services 2025 - Zion Tech Group""
-        description="Discover our cutting-edge AI solutions, 5G infrastructure, edge computing, and autonomous systems. Transform your business with next-generation technology.""
-        keywords="AI solutions 2025, 5G enterprise, edge computing, autonomous systems, quantum technology, Zion Tech Group""
-        type="website""
+        title="Innovative New Services 2025 - Zion Tech Group"
+        description="Discover our cutting-edge AI solutions, 5G infrastructure, edge computing, and autonomous systems. Transform your business with next-generation technology."
+        keywords="AI solutions 2025, 5G enterprise, edge computing, autonomous systems, quantum technology, Zion Tech Group"
+        type="website"
         url="https://ziontechgroup.com/innovative-new-services-2025"
       />
 
@@ -104,13 +104,13 @@ const InnovativeNewServices2025 = () => {
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link"
-              to="/contact""
+              to="/contact"
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
             >
               Get Started Today
             </Link>
             <Link"
-              to="/services""
+              to="/services"
               className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
             >
               View All Services
@@ -138,8 +138,8 @@ const InnovativeNewServices2025 = () => {
               </div>
             </div>
             <Link"
-              to="https://ziontechgroup.com""
-              target="_blank""
+              to="https://ziontechgroup.com"
+              target="_blank"
               className="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
             >
               <span>Visit Our Website</span>"
@@ -161,7 +161,7 @@ const InnovativeNewServices2025 = () => {
                 className="bg-gray-800 border border-gray-600 rounded-lg px-4 py-2 text-white focus:border-cyan-500 focus:outline-none"
               >
                 {categories.map(category => (
-                  <option key={category} value={category}>'
+                  <option key={category} value={category}>
                     {category === 'all' ? 'All Categories' : category}
                   </option>
                 ))}
@@ -326,8 +326,8 @@ const InnovativeNewServices2025 = () => {
               </p>
               <button
                 onClick={() => {
-'
-                  setSelectedCategory('all');'
+
+                  setSelectedCategory('all');
                   setSelectedPriceRange('all');
                 }}"
                 className="px-6 py-3 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors"
@@ -351,13 +351,13 @@ const InnovativeNewServices2025 = () => {
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link"
-              to="/contact""
+              to="/contact"
               className="px-8 py-4 bg-white text-cyan-600 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
             >
               Start Your Journey
             </Link>
             <Link"
-              to="/services""
+              to="/services"
               className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300"
             >
               Explore All Services

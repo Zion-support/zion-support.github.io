@@ -1,8 +1,8 @@
-import React from 'react';'
-import { Button } from '@/components/ui/button';'
-import { Card } from '@/components/ui/card';'
-import { MapPin, Clock, CheckCircle2 } from 'lucide-react';'
-import { FavoriteButton } from '@/components/FavoriteButton';'
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
+import { MapPin, Clock, CheckCircle2 } from 'lucide-react';
+import { FavoriteButton } from '@/components/FavoriteButton';
 import { useNavigate } from 'react-router-dom';
 
 const TalentCardComponent = ({
@@ -64,7 +64,7 @@ const TalentCardComponent = ({
                   className="w-full h-full object-cover"
                 />
               ) : ("
-                <div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">'
+                <div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">
                   {talent.full_name?.charAt(0) || 'T'}
                 </div>
               )}
@@ -84,7 +84,7 @@ const TalentCardComponent = ({
               </h3>
               <FavoriteButton
                 itemId={talent.id}"
-                itemType="talent""
+                itemType="talent"
                 className="-mt-1"
               />
             </div>"
@@ -149,15 +149,15 @@ const TalentCardComponent = ({
               <>
                 <Button
                   onClick={handleMessage}"
-                  variant="outline""
-                  size="sm""
+                  variant="outline"
+                  size="sm"
                   className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white"
                 >
                   Message
                 </Button>
                 <Button
                   onClick={handleBook}"
-                  size="sm""
+                  size="sm"
                   className="bg-zion-cyan hover:bg-zion-cyan-dark text-white"
                 >
                   Book
@@ -166,7 +166,7 @@ const TalentCardComponent = ({
             ) : (
               <Button'
                 onClick={() => navigate('/login')}"
-                size="sm""
+                size="sm"
                 className="bg-zion-cyan hover:bg-zion-cyan-dark text-white"
               >
                 Sign In to Book

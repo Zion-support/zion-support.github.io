@@ -1,5 +1,24 @@
-import React from 'react';'
-import { motion } from 'framer-motion';    <div className="min-h-screen bg-zion-slate-dark">
+<<<<<<< HEAD
+import {
+
+  Server,
+  Shield,
+  Cloud,
+  Database,
+  Network,
+  Lock,
+  Zap,
+  Globe,
+  Cpu,
+  HardDrive,
+  Check} from 'lucide-react';
+
+
+  
+  return ("
+    <div className="min-h-screen bg-zion-slate-dark">
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       {/* Hero Section */}"
       <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark">"
         <div className="container mx-auto px-4 text-center">
@@ -10,7 +29,7 @@ import { motion } from 'framer-motion';    <div className="min-h-screen bg-zion-
             className="max-w-4xl mx-auto"
           >"
             <div className="w-24 h-24 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-8">"
-              <Server className="w-12 h-12 text-white" />
+              <Server className="w-12 h-12 text-white"  />
             </div>"            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               IT Infrastructure"
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">
@@ -113,7 +132,7 @@ import { motion } from 'framer-motion';    <div className="min-h-screen bg-zion-
                   className="flex items-center gap-4 p-4 bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-lg"
                 >"
                   <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center flex-shrink-0">"
-                    <Check className="w-4 h-4 text-white" />
+                    <Check className="w-4 h-4 text-white"  />
                   </div>"                  <span className="text-white font-medium">{benefit}</span>
                 </motion.div>
               ))}
@@ -151,8 +170,7 @@ import { motion } from 'framer-motion';    <div className="min-h-screen bg-zion-
         </div>
       </section>
     </div>
-  );
-};
+  )};
 ;
 export { ITInfrastructure };export default ITInfrastructure;
 '"

@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousSoftwareEngineer = () => {
   return()
@@ -6,15 +6,15 @@ const AIAutonomousSoftwareEngineer = () => {
       <Helmet>
         <title>AI Autonomous Software Engineer | Zion Tech Group</title>
         <meta
-          name="description""
+          name="description"
           content="Revolutionary AI autonomous software engineer that writes code, debugs programs, and develops software solutions with advanced AI capabilities and human-like programming skills."
         />
         <meta"
-          name="keywords""
+          name="keywords"
           content="AI software engineer, autonomous programming, AI coding, software development, AI development, autonomous coding"
         />
         <link"
-          rel="canonical""
+          rel="canonical"
           href="https://ziontechgroup.com/ai-autonomous-software-engineer"
         />
       </Helmet>
@@ -196,14 +196,7 @@ const AIAutonomousSoftwareEngineer = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Python','
-                'JavaScript','
-                'Java','
-                'C++','
-                'C#','
-                'Go','
-                'Rust','
-                'TypeScript',
+                'Python',JavaScript',Java',C++',C#',Go',Rust',TypeScript',
               ].map(language => (
                 <div
                   key={language}"

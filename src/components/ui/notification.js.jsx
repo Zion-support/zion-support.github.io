@@ -1,4 +1,4 @@
-import React, { useState, createContext, useContext, useCallback } from 'react';'
+import React, { useState, createContext, useContext, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
 
@@ -6,8 +6,8 @@ import {
   CheckCircle,
   AlertTriangle,
   Info,
-  AlertCircle,'
-  Bell} from 'lucide-react';'
+  AlertCircle,
+  Bell} from 'lucide-react';
 import { Button } from './button';
 // Context
 const NotificationContext = createContext(null);
@@ -25,7 +25,7 @@ export function useNotifications() {
 export function NotificationProvider({
 
   children,
-  maxNotifications = 5,'
+  maxNotifications = 5,
   position = 'top-right'}) {
 
   const [notifications, setNotifications] = useState([]);
@@ -80,17 +80,17 @@ function NotificationContainer({ position }) {
   const getPositionClasses = pos => {
 
     switch (pos) {
-'
+
       case 'top-right':'
-        return 'top-4 right-4';'
+        return 'top-4 right-4';
       case 'top-left':'
-        return 'top-4 left-4';'
+        return 'top-4 left-4';
       case 'bottom-right':'
-        return 'bottom-4 right-4';'
+        return 'bottom-4 right-4';
       case 'bottom-left':'
-        return 'bottom-4 left-4';'
+        return 'bottom-4 left-4';
       case 'top-center':'
-        return 'top-4 left-1/2 transform -translate-x-1/2';'
+        return 'top-4 left-1/2 transform -translate-x-1/2';
       case 'bottom-center':'
         return 'bottom-4 left-1/2 transform -translate-x-1/2';
       default:'
@@ -112,7 +112,7 @@ function NotificationContainer({ position }) {
             </span>
           </div>
           <Button"
-            size="sm""
+            size="sm"
             variant="ghost"
             onClick={clearAll}"
             className="text-zinc-400 hover:text-zion-cyan text-xs"
@@ -142,13 +142,13 @@ function NotificationItem({ notification }) {
   const getIcon = type => {
 
     switch (type) {
-'
+
       case 'success':"
-        return <CheckCircle className="w-5 h-5 text-green-400" />;'
+        return <CheckCircle className="w-5 h-5 text-green-400" />;
       case 'error':"
-        return <AlertCircle className="w-5 h-5 text-red-400" />;'
+        return <AlertCircle className="w-5 h-5 text-red-400" />;
       case 'warning':"
-        return <AlertTriangle className="w-5 h-5 text-yellow-400" />;'
+        return <AlertTriangle className="w-5 h-5 text-yellow-400" />;
       case 'info':"
         return <Info className="w-5 h-5 text-blue-400" />;
       default:"
@@ -158,13 +158,13 @@ function NotificationItem({ notification }) {
   const getTypeClasses = type => {
 
     switch (type) {
-'
+
       case 'success':'
-        return 'border-green-500/30 bg-green-500/10';'
+        return 'border-green-500/30 bg-green-500/10';
       case 'error':'
-        return 'border-red-500/30 bg-red-500/10';'
+        return 'border-red-500/30 bg-red-500/10';
       case 'warning':'
-        return 'border-yellow-500/30 bg-yellow-500/10';'
+        return 'border-yellow-500/30 bg-yellow-500/10';
       case 'info':'
         return 'border-blue-500/30 bg-blue-500/10';
       default:'
@@ -174,13 +174,13 @@ function NotificationItem({ notification }) {
   const getProgressColor = type => {
 
     switch (type) {
-'
+
       case 'success':'
-        return 'bg-green-400';'
+        return 'bg-green-400';
       case 'error':'
-        return 'bg-red-400';'
+        return 'bg-red-400';
       case 'warning':'
-        return 'bg-yellow-400';'
+        return 'bg-yellow-400';
       case 'info':'
         return 'bg-blue-400';
       default:'
@@ -194,7 +194,7 @@ function NotificationItem({ notification }) {
       animate={{ opacity: 1, x: 0, scale: 1 }}
       exit={{ opacity: 0, x: 300, scale: 0.8 }}
       transition={{
-'
+
         type: 'spring',
         stiffness: 500,
         damping: 30,
@@ -204,12 +204,12 @@ function NotificationItem({ notification }) {
       {/* Progress Bar */}
       {notification.duration && notification.duration > 0 && (
         <motion.div`
-          className={`absolute top-0 left-0 h-1 ${getProgressColor(notification.type)}`}'
-          initial={{ width: '100%' }}'
+          className={`absolute top-0 left-0 h-1 ${getProgressColor(notification.type)}`}
+          initial={{ width: '100%' }}
           animate={{ width: '0%' }}
           transition={{
 
-            duration: notification.duration / 1000,'
+            duration: notification.duration / 1000,
             ease: 'linear'}}
         />
       )}
@@ -233,7 +233,7 @@ function NotificationItem({ notification }) {
           {notification.action && ("
             <div className="mt-3">
               <Button"
-                size="sm""
+                size="sm"
                 variant="ghost"
                 onClick={notification.action.onClick}"
                 className="text-zion-cyan hover:text-zion-cyan-light hover:bg-zion-cyan/10 text-xs"
@@ -264,7 +264,7 @@ function NotificationItem({ notification }) {
 }
 // Convenience functions for quick notifications
 export function showInfo(title, message, options) {
-'
+
   return { type: 'info', title, message, ...options };
 }
 '"`

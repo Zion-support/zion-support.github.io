@@ -325,7 +325,6 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
 // Pricing Analysis and Insights
 export 
 ;
-;
 },;
   categoryPricing: COMPREHENSIVE_PRICING_GUIDE_2030.reduce((acc, service) => {;
     if (!acc[service.category]) {;
@@ -357,8 +356,7 @@ export
   ;
   ;
   "SLA guarantees";
-  ];
-};
+  ]};
 
 // Contact Information for Pricing Inquiries
 export 
@@ -366,5 +364,4 @@ export
   ;
   ;
   ;
-  responseTime: "Within 24 hours for pricing inquiries";
-};
+  responseTime: "Within 24 hours for pricing inquiries"};

@@ -1,7 +1,13 @@
-import { RecommendedRole  } from '@/types';'
-import { Card, CardContent, CardHeader, CardTitle, CardDescription  } from '@/components/ui/card';'
-import { Badge  } from '@/components/ui/badge';
-import { TalentCardPreview  } from "./TalentCardPreview";'
-import { Users, DollarSign, Clock, Briefcase  } from 'lucide-react'; // Added Briefcase    </Card>;
+<<<<<<< HEAD
+
+interface RoleCardProps extends React.PropsWithChildren<{}> {
+
+  role: RecommendedRole;
+  onInviteTalent: (talentId: string, roleTitle: string)  => void}
+
+export 
+    </Card>;
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   )};
 '"`

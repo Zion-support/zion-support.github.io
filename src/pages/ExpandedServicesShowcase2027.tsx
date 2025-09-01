@@ -1,5 +1,65 @@
-import React, { useState, useEffect } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_2027,
+<<<<<<< HEAD
+import {
+
+  Search,
+  Filter,
+  Grid3X3,
+  List,
+  ChevronDown,
+  ChevronUp,
+  Star,
+  Users,
+  Globe,
+  Lock,
+  Code,
+  BarChart3,
+  Target,
+  Rocket,
+  Lightbulb,
+  Award,
+  Clock,
+  DollarSign,
+  TrendingUp,
+  Eye,
+  Handshake,
+  Building,
+  ShieldCheck,
+  Network2,
+  Smartphone as Mobile,
+  Server as Infrastructure,
+  Monitor as Analytics,
+  Zap as Lightning,
+  Users2,
+  Award as Trophy,
+  Clock as Time,
+  DollarSign as Money,
+  TrendingUp as Growth,
+  Eye as Vision,
+  Handshake as Partnership,
+  Building as Enterprise,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink,
+  CheckCircle,
+  ArrowRight,
+  Shield,
+  Brain,
+  Cloud,
+  Database,
+  Smartphone,
+  Server,
+  Monitor,
+  Cpu,
+  Network,
+  Smartphone as IoT,
+  Server as Edge,
+  Monitor as Healthcare,
+  Cpu as FinTech'
+
+  ALL_EXPANDED_SERVICES_2027,
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   EXPANDED_SERVICE_CATEGORIES,
   getExpandedServicesByCategory,
   searchExpandedServices,
@@ -11,21 +71,19 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
 
         return Rocket}
   };
-'
+
         return 'from-gray-500 to-slate-600'}
   };
-'
-  const formatPrice = (pricing: ExpandedService2027['pricing']) => {;'
-    if (pricing.model === 'Transaction Fees + Governance') {;'
+
+  
+    if (pricing.model === 'Transaction Fees + Governance') {;
       return 'Free + Transaction Fees';
 
-    return `$${pricing.basePrice.toLocaleString () }/month`;
-  };
+    return `$${pricing.basePrice.toLocaleString () }/month`};
 
-  const renderServiceCard = (service: ExpandedService2027) => {;
-    const CategoryIcon = getCategoryIcon (service.category) ;
-    const categoryColor = getCategoryColor (service.category) ;
-
+  
+    
+    
     return()      <motion.div
         key = {service.id}
         initial = {
@@ -47,14 +105,14 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
         <div className={`bg-gradient-to-r ${categoryColor} p-6 text-white`}>"
           <div className="flex items-center justify-between mb-4">"
             <div className="flex items-center space-x-3">"
-              <CategoryIcon className="w-8 h-8" />
+              <CategoryIcon className="w-8 h-8"  />
               <div>"
                 <h3 className="text-xl font-bold">{service.name}</h3>"
                 <p className="text-sm opacity-90">{service.category}</p>
               </div>
             </div>"
             <div className="flex items-center space-x-2">"
-              <Star className="w-5 h-5 fill-current" />"
+              <Star className="w-5 h-5 fill-current"  />"
               <span className="font-semibold">{service.rating}</span>"              <span className="text-sm opacity-90">({service.reviews})</span>
             </div>
           </div>"
@@ -91,7 +149,7 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
             <div className="space-y-1">
               {service.features.slice(0, 3).map((feature, index) => ("
                 <div key={index} className="flex items-center space-x-2">"
-                  <CheckCircle className="w-4 h-4 text-green-500" />"                  <span className="text-sm text-gray-600 dark:text-gray-300">{feature}</span>
+                  <CheckCircle className="w-4 h-4 text-green-500"  />"                  <span className="text-sm text-gray-600 dark:text-gray-300">{feature}</span>
                 </div>
               ))}
               {service.features.length > 3 && (
@@ -115,7 +173,7 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
 }}
                 animate = {
 
-  { opacity: 1,'
+  { opacity: 1,
   height: 'auto' 
 
 }}
@@ -135,7 +193,7 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
                 <div className="space-y-1">
                   {service.features.slice(3).map((feature, index) => ("
                     <div key={index} className="flex items-center space-x-2">"
-                      <CheckCircle className="w-4 h-4 text-green-500" />"                      <span className="text-sm text-gray-600 dark:text-gray-300">{feature}</span>
+                      <CheckCircle className="w-4 h-4 text-green-500"  />"                      <span className="text-sm text-gray-600 dark:text-gray-300">{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -187,10 +245,10 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
           <div className="border-t border-gray-200 dark:border-slate-700 pt-4">;"
             <div className="flex items-center justify-between mb-3">"
               <div className="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400">"
-                <Phone className="w-4 h-4" />                <span>{service.contactInfo.phone}</span>
+                <Phone className="w-4 h-4"  />                <span>{service.contactInfo.phone}</span>
               </div>`
               <span className={`px-2 py-1 rounded-full text-xs font-semibold ${
-'
+
                 service.status === 'active' ? 'bg-green-100 text-green-800' :'
                 service.status === 'beta' ? 'bg-yellow-100 text-yellow-800' :'
                 'bg-gray-100 text-gray-800'`
@@ -204,26 +262,24 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
                 href={`mailto:${service.contactInfo.email}`}"
                 className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2"
 "
-                <Mail className="w-4 h-4" />                <span>Contact</span>
+                <Mail className="w-4 h-4"  />                <span>Contact</span>
               </a>
               <a
                 href={service.contactInfo.website}"
-                target="_blank""
-                rel="noopener noreferrer""
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex-1 bg-gray-100 hover:bg-gray-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-gray-700 dark:text-gray-300 text-center py-2 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2"
 "
-                <ExternalLink className="w-4 h-4" />                <span>Learn More</span>
+                <ExternalLink className="w-4 h-4"  />                <span>Learn More</span>
               </a>;
             </div>;
           </div>;
         </div>;
-      </motion.div>;) ;
-  };
+      </motion.div>;) };
 
-  const renderServiceList = (service: ExpandedService2027) => {;
-    const CategoryIcon = getCategoryIcon (service.category) ;
-    const categoryColor = getCategoryColor (service.category) ;
-
+  
+    
+    
     return()      <motion.div
         key = {service.id}
         initial = {
@@ -244,7 +300,7 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
         <div className="flex items-start space-x-4">
           {/* Icon and Category */}`
           <div className={`bg-gradient-to-r ${categoryColor} p-3 rounded-lg text-white flex-shrink-0`}>"
-            <CategoryIcon className="w-6 h-6" />          </div>
+            <CategoryIcon className="w-6 h-6"  />          </div>
 
           {/* Content */}"
           <div className="flex-1 min-w-0">"
@@ -254,7 +310,7 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
                 <p className="text-sm text-gray-500 dark:text-gray-400">{service.category} • {service.subcategory}</p>
               </div>"
               <div className="flex items-center space-x-2">"
-                <Star className="w-4 h-4 text-yellow-500 fill-current" />"
+                <Star className="w-4 h-4 text-yellow-500 fill-current"  />"
                 <span className="text-sm font-semibold">{service.rating}</span>"                <span className="text-xs text-gray-500">({service.reviews})</span>
               </div>
             </div>
@@ -280,7 +336,7 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
               <div>"
                 <p className="text-gray-500 dark:text-gray-400">Status</p>`
                 <span className={`px-2 py-1 rounded-full text-xs font-semibold ${
-'
+
                   service.status === 'active' ? 'bg-green-100 text-green-800' :'
                   service.status === 'beta' ? 'bg-yellow-100 text-yellow-800' :'
                   'bg-gray-100 text-gray-800'`
@@ -296,27 +352,33 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
                 href={`mailto:${service.contactInfo.email}`}"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors duration-200 flex items-center space-x-2"
 "
-                <Mail className="w-4 h-4" />                <span>Contact Sales</span>
+                <Mail className="w-4 h-4"  />                <span>Contact Sales</span>
               </a>
               <a
                 href={service.contactInfo.website}"
-                target="_blank""
-                rel="noopener noreferrer""
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-gray-100 hover:bg-gray-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-lg transition-colors duration-200 flex items-center space-x-2"
 "
-                <ExternalLink className="w-4 h-4" />                <span>Learn More</span>
+                <ExternalLink className="w-4 h-4"  />                <span>Learn More</span>
               </a>;
             </div>;
           </div>;
         </div>;
-      </motion.div>;) ;
-  };
+      </motion.div>;) };
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
       <SEO"
+<<<<<<< HEAD
+        title="Expanded Innovative Services 2027 - Zion Tech Group"
+        description="Discover our comprehensive portfolio of advanced micro SAAS, IT infrastructure, and AI services. From quantum cybersecurity to healthcare AI, explore cutting-edge solutions."
+        keywords="micro SAAS, IT services, AI services, cybersecurity, data analytics, cloud DevOps, IoT, fintech, healthcare technology"
+      />
+=======
         title="Expanded Innovative Services 2027 - Zion Tech Group""
         description="Discover our comprehensive portfolio of advanced micro SAAS, IT infrastructure, and AI services. From quantum cybersecurity to healthcare AI, explore cutting-edge solutions.""        keywords="micro SAAS, IT services, AI services, cybersecurity, data analytics, cloud DevOps, IoT, fintech, healthcare technology"
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <div className="relative overflow-hidden">"
@@ -402,21 +464,21 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
 "
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">"
                 <div className="flex items-center space-x-3">"
-                  <Phone className="w-5 h-5 text-blue-600" />
+                  <Phone className="w-5 h-5 text-blue-600"  />
                   <div>"
                     <p className="text-sm text-gray-500 dark:text-gray-400">Phone</p>"
                     <p className="font-semibold text-gray-900 dark:text-white">+1 302 464 0950</p>
                   </div>
                 </div>"
                 <div className="flex items-center space-x-3">"
-                  <Mail className="w-5 h-5 text-blue-600" />
+                  <Mail className="w-5 h-5 text-blue-600"  />
                   <div>"
                     <p className="text-sm text-gray-500 dark:text-gray-400">Email</p>"
                     <p className="font-semibold text-gray-900 dark:text-white">kleber@ziontechgroup.com</p>
                   </div>
                 </div>"
                 <div className="flex items-center space-x-3">"
-                  <MapPin className="w-5 h-5 text-blue-600" />
+                  <MapPin className="w-5 h-5 text-blue-600"  />
                   <div>"
                     <p className="text-sm text-gray-500 dark:text-gray-400">Address</p>"
                     <p className="font-semibold text-gray-900 dark:text-white">364 E Main St STE 1008</p>"                    <p className="font-semibold text-gray-900 dark:text-white">Middletown DE 19709</p>
@@ -436,9 +498,14 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
             {/* Search */}"
             <div className="flex-1 max-w-md">"
               <div className="relative">"
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
                 <input"
+<<<<<<< HEAD
+                  type="text"
+                  placeholder="Search services..."
+=======
                   type="text""                  placeholder="Search services..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}"
                   className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
@@ -463,7 +530,7 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
                 <button'
                   onClick={() => setViewMode('grid')}`
                   className={`p-2 rounded-md transition-colors duration-200 ${
-'
+
                     viewMode === 'grid''
                       ? 'bg-white dark:bg-slate-600 text-gray-900 dark:text-white shadow-sm''
                       : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'`
@@ -474,13 +541,13 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
                 <button'
                   onClick={() => setViewMode('list')}`
                   className={`p-2 rounded-md transition-colors duration-200 ${
-'
+
                     viewMode === 'list''
                       ? 'bg-white dark:bg-slate-600 text-gray-900 dark:text-white shadow-sm''
                       : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'`
                   }`}
 "
-                  <List className="w-5 h-5" />                </button>
+                  <List className="w-5 h-5"  />                </button>
               </div>
             </div>
           </div>
@@ -496,14 +563,14 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
         {/* Services Grid/List */}
         {filteredServices.length > 0 ? ('
           <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
-            {filteredServices.map((service) =>'
+            {filteredServices.map((service) =>
               viewMode === 'grid' ? renderServiceCard(service) : renderServiceList(service)
             )}
           </div>
         ) : ("
           <div className="text-center py-16">"
             <div className="text-gray-400 dark:text-gray-500 mb-4">"
-              <Search className="w-16 h-16 mx-auto" />
+              <Search className="w-16 h-16 mx-auto"  />
             </div>"
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">No services found</h3>"            <p className="text-gray-600 dark:text-gray-300">
               Try adjusting your search criteria or category filter
@@ -523,21 +590,20 @@ import { motion, AnimatePresence } from 'framer-motion';  ALL_EXPANDED_SERVICES_
           </p>"
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
             <a"
-              href="mailto:kleber@ziontechgroup.com""
+              href="mailto:kleber@ziontechgroup.com"
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center space-x-2"
 "
-              <Mail className="w-5 h-5" />              <span>Get Started</span>
+              <Mail className="w-5 h-5"  />              <span>Get Started</span>
             </a>
             <a"
-              href="tel:+13024640950""
+              href="tel:+13024640950"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200 flex items-center space-x-2"
 "
-              <Phone className="w-5 h-5" />              <span>Call Now</span>
+              <Phone className="w-5 h-5"  />              <span>Call Now</span>
             </a>;
           </div>;
         </div>;
       </div>;
-    </div>;) ;
-};
+    </div>;) };
 
-export default ExpandedServicesShowcase2027;}}}}}'"`
+export default ExpandedServicesShowcase2027}}}}}'"`

@@ -1,4 +1,3 @@
-import React from 'react';
 const TermsOfService = () => {
   return()
     <div className="max-w-4xl mx-auto space-y-8"><div className="text-center">"
@@ -67,7 +66,7 @@ const TermsOfService = () => {
 
         <section>"
           <h2 className="text-2xl font-semibold text-white mb-4">6. Accuracy of Materials</h2>"
-          <p className="text-gray-300 leading-relaxed">'
+          <p className="text-gray-300 leading-relaxed">
             The materials appearing on Zion Tech Group's website could include technical, typographical, or photographic errors. Zion Tech Group does not warrant that  of the materials on its website are accurate, complete or current. Zion Tech Group may make changes to the materials contained on its website at  time without notice.
           </p>
         </section>

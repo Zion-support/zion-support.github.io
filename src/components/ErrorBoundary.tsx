@@ -1,13 +1,29 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
 export default ErrorBoundary;
 import {
+<<<<<<< HEAD
+
+
+  AlertTriangle,
+  RefreshCw,
+  Home,
+  Mail,
+  Bug,
+  Shield,
+  ArrowLeft} from 'lucide-react';
+
+interface Props {
+
+  children: ReactNode;
+  fallback?: ReactNode}
+
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 interface State {
 
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
-  showDetails: boolean;
-}
+  showDetails: boolean}
 
   errorId: string;
   showDetails: boolean;
@@ -21,10 +37,9 @@ class ErrorBoundary extends Component<Props, State> {
       hasError: false,
       error: null,
       errorInfo: null,
-'
+
       errorId: '',
-      showDetails: false};
-  }
+      showDetails: false}}
   static getDerivedStateFromError(error: Error): Partial<State> {
 
     return {
@@ -32,8 +47,7 @@ class ErrorBoundary extends Component<Props, State> {
       hasError: true,
       error,
 
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`};
-  }
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}}
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
 
     this.setState({
@@ -42,18 +56,15 @@ class ErrorBoundary extends Component<Props, State> {
 
     // Log error to console in development'
     if (process.env.NODE_ENV === 'development') {
-'
-      // console.error('Error caught by boundary:', error, errorInfo);
-    }
+
+      // console.error('Error caught by boundary:', error, errorInfo)}
 
     // Call custom error handler if provided
     if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
+      this.props.onError(error, errorInfo)}
 
     // Log to external error reporting service (e.g., Sentry)
-    this.logErrorToService(error, errorInfo);
-  }
+    this.logErrorToService(error, errorInfo)}
 
   private logErrorToService(error: Error, errorInfo: ErrorInfo) {
     try {
@@ -65,11 +76,9 @@ class ErrorBoundary extends Component<Props, State> {
               componentStack: errorInfo.componentStack
             }
           }
-        });
-      }
+        })}
     } catch (logError) {
-      console.error('Failed to log error to service:', logError);
-    }
+      console.error('Failed to log error to service:', logError)}
   }
   handleRetry = () => {
     this.setState({
@@ -77,57 +86,37 @@ class ErrorBoundary extends Component<Props, State> {
       hasError: false,
       error: null,
       errorInfo: null,
-'
+
       errorId: '',
-      showDetails: false});
-  };
+      showDetails: false})};
 
   handleGoHome = () => {
-'
-    window.location.href = '/';
-  };
+
+    window.location.href = '/'};
   handleReportError = : unknown {
     const { error, errorInfo, errorId } = this.state;
-    const errorReport = {
-
-      errorId,
-      message: error?.message,
-      stack: error?.stack,
-      componentStack: errorInfo?.componentStack,
-      url: window.location.href,
-      userAgent: navigator.userAgent,
-      timestamp: new Date().toISOString()};
-
+    
     // In production, send to your error reporting service'
     // console.log('Error Report:', errorReport);
 
     // For now, just copy to clipboard
-    navigator.clipboard.writeText(JSON.stringify(errorReport, null, 2));'
-    alert('Error report copied to clipboard. Please send this to support.');
-  };
+    navigator.clipboard.writeText(JSON.stringify(errorReport, null, 2));
+    alert('Error report copied to clipboard. Please send this to support.')};
 
   private copyErrorToClipboard = () => {
     if (this.state.error && this.state.errorInfo) {
-      const errorText = `
-Error: ${this.state.error.message}
-Stack: ${this.state.error.stack}
-Component Stack: ${this.state.errorInfo.componentStack}
-      `.trim();
-
+      
       navigator.clipboard.writeText(errorText).then(() => {
         // Show success message
-        alert('Error details copied to clipboard');
-      }).catch(() => {
+        alert('Error details copied to clipboard')}).catch(() => {
         // Fallback for older browsers
-        const textArea = document.createElement('textarea');
+        
         textArea.value = errorText;
         document.body.appendChild(textArea);
         textArea.select();
         document.execCommand('copy');
         document.body.removeChild(textArea);
-        alert('Error details copied to clipboard');
-      });
-    }
+        alert('Error details copied to clipboard')})}
   };
   render () {
     if (this.state.hasError) {
@@ -141,11 +130,11 @@ Component Stack: ${this.state.errorInfo.componentStack}
               {/* Error Icon */}"
               <div className="text-center mb-6">"
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-red-500/20 rounded-full mb-4">"
-                  <AlertTriangle className="w-8 h-8 text-red-400" />
+                  <AlertTriangle className="w-8 h-8 text-red-400"  />
                 </div>"                <h1 className="text-2xl font-bold text-white mb-2">
                   Oops! Something went wrong
                 </h1>"
-                <p className="text-gray-300">'
+                <p className="text-gray-300">
                   We've encountered an unexpected error. Our team has been
                   notified.
                 </p>
@@ -162,8 +151,8 @@ Component Stack: ${this.state.errorInfo.componentStack}
                   </code>
                 </div>"
                 <div className="text-sm text-gray-400">
-                  <p>'
-                    <strong>Message:</strong>{' '}'
+                  <p>
+                    <strong>Message:</strong>{' '}
                     {error?.message || 'Unknown error'}
                   </p>
                   <p>
@@ -179,21 +168,21 @@ Component Stack: ${this.state.errorInfo.componentStack}
                   onClick={this.handleRetry}"
                   className="flex items-center justify-center gap-2 px-4 py-3 bg-zion-cyan hover:bg-zion-cyan-dark text-white rounded-lg font-medium transition-colors"
                 >"
-                  <RefreshCw className="w-4 h-4" />                  Try Again
+                  <RefreshCw className="w-4 h-4"  />                  Try Again
                 </button>
 
                 <button
                   onClick={this.handleGoHome}"
                   className="flex items-center justify-center gap-2 px-4 py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg font-medium transition-colors"
                 >"
-                  <Home className="w-4 h-4" />                  Go Home
+                  <Home className="w-4 h-4"  />                  Go Home
                 </button>
 
                 <button
                   onClick={this.handleReportError}"
                   className="flex items-center justify-center gap-2 px-4 py-3 bg-white/10 hover:bg-white/20 text-white rounded-lg font-medium transition-colors"
                 >"
-                  <Mail className="w-4 h-4" />                  Report Error
+                  <Mail className="w-4 h-4"  />                  Report Error
                 </button>
               </div>
 
@@ -203,7 +192,12 @@ Component Stack: ${this.state.errorInfo.componentStack}
                   onClick={this.toggleDetails}"
                   className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors"
                 >"
-                  <Bug className="w-4 h-4" />'                  {showDetails ? 'Hide' : 'Show'} Technical Details
+<<<<<<< HEAD
+                  <Bug className="w-4 h-4"  />
+                  {showDetails ? 'Hide' : 'Show'} Technical Details
+=======
+                  <Bug className="w-4 h-4"  />'                  {showDetails ? 'Hide' : 'Show'} Technical Details
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                 </button>
               </div>
 
@@ -236,7 +230,7 @@ Component Stack: ${this.state.errorInfo.componentStack}
               {/* Help Section */}"
               <div className="mt-6 p-4 bg-blue-500/10 border border-blue-500/20 rounded-lg">"
                 <div className="flex items-start gap-3">"
-                  <Shield className="w-5 h-5 text-blue-400 mt-0.5" />
+                  <Shield className="w-5 h-5 text-blue-400 mt-0.5"  />
                   <div>"                    <h4 className="text-sm font-medium text-blue-300 mb-1">
                       Need Help?
                     </h4>"
@@ -251,8 +245,7 @@ Component Stack: ${this.state.errorInfo.componentStack}
             </div>
           </div>
         </div>
-      );
-    }
+      )}
     return this.props.children}
 }
 

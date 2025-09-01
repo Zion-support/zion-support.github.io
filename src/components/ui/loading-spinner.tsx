@@ -1,36 +1,42 @@
-import React from 'react';'
-import { motion } from 'framer-motion';  ;
-  ;
-  ;
-  ;'
-  xl: 'w-32 h-32';
+<<<<<<< HEAD
+
+interface LoadingSpinnerProps {
+
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  color?: 'primary' | 'secondary' | 'white' | 'cyan';
+  text?: string;
+  showText?: boolean;
+  className?: string;
 ;
 
-
-
-
-
-
-
+  ;
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+  ;
+  ;
+  ;
+  xl: 'w-32 h-32';
 };
 ;
-const colorClasses = {
+
+  ;
+=======
 '
   primary: 'border-cyan-400','
   secondary: 'border-blue-400','
   white: 'border-white',;  ;
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
-  ;'
-  cyan: 'border-cyan-400';
-};
+  ;
+  cyan: 'border-cyan-400'};
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-'
-  size = 'md','
-  color = 'primary','
+
+  size = 'md',
+  color = 'primary',
   text = 'Loading...',
-  showText = true,'
+  showText = true,
   className = ''
 }) => {
 
@@ -61,7 +67,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 }}
         />
 
-        {/* Center dot for larger sizes */}'
+        {/* Center dot for larger sizes */}
         {size === 'xl' && ("
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">"
             <div className="w-8 h-8 bg-cyan-400 rounded-full animate-pulse"></div>
@@ -90,8 +96,8 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 
 // Optimized spinner for inline use'
 export const InlineSpinner: React.FC<{ size?: 'sm' | 'md'; className?: string }> = ({
-'
-  size = 'sm','
+
+  size = 'sm',
   className = ''
 }) => ("`
   <div className={`inline-flex items-center ${className}`} role="status" aria-label="Loading">
@@ -108,7 +114,6 @@ export const InlineSpinner: React.FC<{ size?: 'sm' | 'md'; className?: string }>
       
 
 ;
-;
 }};
     />;"
     <span className="sr-only">Loading</span>;
@@ -120,10 +125,15 @@ export const FullScreenLoader: React.FC<{
 
   text?: string;
   showLogo?: boolean;
-  className?: string;
-}> = ({
+  className?: string}> = ({
+<<<<<<< HEAD
+
+  text = 'Loading amazing experiences...',
+  showLogo = true,
+=======
 '  text = 'Loading amazing experiences...',
   showLogo = true,'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   className = ''
 }) => (`
   <div className={`fixed inset-0 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center z-50 ${className}`}>"
@@ -138,7 +148,7 @@ export const FullScreenLoader: React.FC<{
         </div>;
       )};
       ;"
-      <LoadingSpinner size="lg" color="cyan" text={text} />;    </div>;
+      <LoadingSpinner size="lg" color="cyan" text={text}  />;    </div>;
   </div>;
 );
 
@@ -146,16 +156,19 @@ export const FullScreenLoader: React.FC<{
 export const SkeletonLoader: React.FC<{
 
   className?: string;
-  lines?: number;
-}> = ({
+  lines?: number}> = ({
+<<<<<<< HEAD
+
+  className = '',
+=======
 '  className = '',
-  lines = 3;
-}) => (`
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+  lines = 3}) => (`
   <div className={`animate-pulse ${className}`}>
     {Array.from({ length: lines }).map(_: unknown, index: unknown (
       <div
         key={index};`
-        className={`h-4 bg-gray-300 rounded mb-2 ${;'
+        className={`h-4 bg-gray-300 rounded mb-2 ${;
           index === lines - 1 ? 'w-3/4' : 'w-full';`
         }`};      />;
     ))};

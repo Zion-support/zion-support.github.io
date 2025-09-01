@@ -19,7 +19,7 @@ export function CartItem({ item, onRemove, onUpdateQuantity }) {
         type="number"
         min={1}
         value={item.quantity}
-        onChange={e =>'
+        onChange={e =>
           onUpdateQuantity?.(item.id, parseInt(e.target.value || '1', 10))
         }"
         className="w-16 bg-transparent border border-input rounded p-1 text-center"

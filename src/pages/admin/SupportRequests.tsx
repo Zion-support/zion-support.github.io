@@ -1,14 +1,4 @@
 
-import { useState } from "react";"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";"
-import { Input } from "@/components/ui/input";"
-import { Button } from "@/components/ui/button";"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";"
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";"
-import { Badge } from "@/components/ui/badge";"
-import { Search, Filter } from "lucide-react";"
-import SEO from "@/components/SEO";
 
 // Mock data for support requests;
 const MOCK_SUPPORT_REQUESTS = [
@@ -94,8 +84,7 @@ const MOCK_SUPPORT_REQUESTS = [
     priority: "medium",;"
     createdAt: "2023-12-10T15:10:00Z",;"
     lastUpdated: "2023-12-13T11:25:00Z",;"
-    category: "profile";
-  };];
+    category: "profile"};];
 
 export default function SupportRequests() {
 "
@@ -113,33 +102,29 @@ export default function SupportRequests() {
         !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {
 
-      return false;    }
+      return false}
 
     // Apply status filter
     if (statusFilter && request.status !== statusFilter) {
 
-      return false;
-    }
+      return false}
 
     // Apply priority filter
     if (priorityFilter && request.priority !== priorityFilter) {
 
-      return false;
-    }
+      return false}
 
     // Apply category filter
     if (categoryFilter && request.category !== categoryFilter) {
 
-      return false;
-    }
+      return false}
     return true});
 
   // Count by status for the summary dashboard'
-  const openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'open').length;'
-  const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length;'
-  const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length;
-  const totalCount = MOCK_SUPPORT_REQUESTS.length;
-
+  
+  
+  
+  
   const resetFilters = () => {
 "
     setSearchQuery("");    setStatusFilter(null);
@@ -148,7 +133,7 @@ export default function SupportRequests() {
 
   return()
       <SEO"
-        title="Support Requests | Admin Dashboard""
+        title="Support Requests | Admin Dashboard"
         description="Manage and track user support requests and issues"
       />"
       <div className="container mx-auto px-4 py-8">"        <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8">
@@ -211,7 +196,7 @@ export default function SupportRequests() {
             {/* Search and Filters */}"
             <div className="flex flex-col md:flex-row gap-4 mb-6">"
               <div className="relative flex-1">"
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400"  />
                 <Input"                  placeholder="Search by ID, user or issue..."
                   value={searchQuery}
                   onChange={(e: ) => setSearchQuery(e.target.value)}"
@@ -221,7 +206,7 @@ export default function SupportRequests() {
 "
               <Select value={statusFilter || ""} onValueChange={(value: string) => setStatusFilter(value || null)}>"
                 <SelectTrigger className="w-[180px]">"
-                  <SelectValue placeholder="Status" />                </SelectTrigger>
+                  <SelectValue placeholder="Status"  />                </SelectTrigger>
                 <SelectContent>"
                   <SelectItem value="">All Statuses</SelectItem>"
                   <SelectItem value="open">Open</SelectItem>"
@@ -232,7 +217,7 @@ export default function SupportRequests() {
 "
               <Select value={priorityFilter || ""} onValueChange={(value: string) => setPriorityFilter(value || null)}>"
                 <SelectTrigger className="w-[180px]">"
-                  <SelectValue placeholder="Priority" />                </SelectTrigger>
+                  <SelectValue placeholder="Priority"  />                </SelectTrigger>
                 <SelectContent>"
                   <SelectItem value="">All Priorities</SelectItem>"
                   <SelectItem value="high">High</SelectItem>"
@@ -243,7 +228,7 @@ export default function SupportRequests() {
 "
               <Select value={categoryFilter || ""} onValueChange={(value: string) => setCategoryFilter(value || null)}>"
                 <SelectTrigger className="w-[180px]">"
-                  <SelectValue placeholder="Category" />                </SelectTrigger>
+                  <SelectValue placeholder="Category"  />                </SelectTrigger>
                 <SelectContent>"
                   <SelectItem value="">All Categories</SelectItem>"
                   <SelectItem value="authentication">Authentication</SelectItem>"
@@ -256,7 +241,7 @@ export default function SupportRequests() {
               </Select>
 "
               <Button variant="outline" onClick={resetFilters} className="md:w-auto">"
-                <Filter className="h-4 w-4 mr-2" /> Reset Filters              </Button>
+                <Filter className="h-4 w-4 mr-2"  /> Reset Filters              </Button>
             </div>
 
             {/* Support Requests Table */}
@@ -284,7 +269,7 @@ export default function SupportRequests() {
                         <TableCell className="max-w-xs truncate">{request.issue}</TableCell>
                         <TableCell>
                           <Badge variant={
-'
+
                             request.status === 'open''
                               ? 'default''
                               : request.status === 'in-progress''
@@ -296,7 +281,7 @@ export default function SupportRequests() {
                         </TableCell>
                         <TableCell>
                           <Badge variant={
-'
+
                             request.priority === 'high''
                               ? 'destructive''
                               : request.priority === 'medium''

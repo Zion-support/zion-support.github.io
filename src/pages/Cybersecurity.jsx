@@ -1,6 +1,6 @@
 import { Shield, Lock, Eye, Users, Database, Network, Zap, Target, CheckCircle, BarChart3 } from 'lucide - react';
 import React from 'react';
-import SEO from "@/components/SEO";'
+import SEO from "@/components/SEO";
 import { Shield, Lock, Eye, Users, Database, Network, Zap, Target, CheckCircle, BarChart3 } from 'lucide-react';
 const Cybersecurity = () => {
     const securityFeatures = [
@@ -207,7 +207,7 @@ const Cybersecurity = () => {
           <h2 className="text-4xl font-bold text-white mb-4">
             Ready to Secure Your Digital Future?
           </h2>"
-          <p className="text-xl text-red-100 mb-8 max-w-3xl mx-auto">'
+          <p className="text-xl text-red-100 mb-8 max-w-3xl mx-auto">
             Don't wait for a security breach. Protect your organization with our comprehensive
             cybersecurity solutions today.
           </p>"

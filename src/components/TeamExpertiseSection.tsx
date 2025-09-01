@@ -1,5 +1,39 @@
-import React from 'react';'
-import { motion } from 'framer-motion';  "Mobile & Web Development";
+<<<<<<< HEAD
+import {
+
+  Award,
+  Users,
+  Brain,
+  Shield,
+  Cloud,
+  Zap,
+  Star,
+  CheckCircle,
+  Globe,
+  Rocket'
+} from 'lucide-react';
+
+      projects: '50+'};
+  ];
+
+  {;"
+    icon: "🚀",;"
+    title: "Successful Projects",;"
+    description: "Successfully delivered complex technology solutions for Fortune 500 companies",;"
+    count: "500+"};
+];
+
+const coreExpertise = ["
+  "Artificial Intelligence & Machine Learning","
+  "Quantum Computing & Algorithms",;"
+  "Blockchain & Web3 Technologies",;"
+  "Cloud Infrastructure & DevOps",;"
+  "Cybersecurity & Compliance",;"
+  "Data Science & Analytics",;"
+  "IoT & Edge Computing",;"
+  "Mobile & Web Development";
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 ];
 
 export function TeamExpertiseSection() {
@@ -53,12 +87,12 @@ export function TeamExpertiseSection() {
           className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"
         >;
           {stats.map ( (stat, index) => {;
-            const IconComponent = stat.icon;
+            
             return ("
               <div key = {stat.label} className="text-center">"
                 <div className="flex justify-center mb-4">"
                   <div className="p-3 bg-blue-100 rounded-full">"
-                    <IconComponent className="h-8 w-8 text-blue-600" />                  </div>
+                    <IconComponent className="h-8 w-8 text-blue-600"  />                  </div>
                 </div>"
                 <div className="text-3xl font-bold text-gray-900 mb-2">
                   {stat.value}
@@ -125,11 +159,11 @@ export function TeamExpertiseSection() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
                 Schedule Consultation"
-                <Rocket className="ml-2 h-5 w-5" />
+                <Rocket className="ml-2 h-5 w-5"  />
               </button>"
               <button className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-white hover:text-blue-600 rounded-lg font-medium transition-colors duration-200">
                 View Team Profiles"
-                <Users className="ml-2 h-5 w-5" />              </button>
+                <Users className="ml-2 h-5 w-5"  />              </button>
             </div>
           </div>
         </motion.div>
@@ -141,8 +175,7 @@ export default TeamExpertiseSection;"
           </div>;
         </motion.div>;
       </div>;
-    </section>;) ;
-}
+    </section>;) }
 export default TeamExpertiseSection;
 export default TeamExpertiseSection;
 '"

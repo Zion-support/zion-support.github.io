@@ -3,14 +3,12 @@ interface User {
 
   id: string;
   email: string;
-  name: string;'
+  name: string;
   role: 'user' | 'admin' | 'moderator';
   userType?: string;
   displayName?: string;
 :src/hooks/useAuth.tsx
-  avatarUrl?: string;
-
-}
+  avatarUrl?: string}
   avatarUrl?: string}
 
 interface AuthState {
@@ -33,11 +31,6 @@ export function useAuth(...args: unknown[]): unknown {
   useEffect(: unknown {
     // Check if user is logged in (e.g., check localStorage, cookies, etc.)
 :src/hooks/useAuth.tsx
-    const checkAuth = () => {
-'
-      const storedUser = localStorage.getItem('zion_user');'
-      const token = localStorage.getItem('authToken');
-
     
       
       if (storedUser && token) {
@@ -49,9 +42,8 @@ export function useAuth(...args: unknown[]): unknown {
             user,
             isAuthenticated: true,
 :src/hooks/useAuth.tsx
-            isLoading: false});
-        } catch (error) {
-'
+            isLoading: false})} catch (error) {
+
           // console.error('Error parsing stored user:', error);
             isLoading: false,
           })} catch (error) {
@@ -61,8 +53,7 @@ export function useAuth(...args: unknown[]): unknown {
             user: null,
             isAuthenticated: false,
 :src/hooks/useAuth.tsx
-            isLoading: false});
-        }
+            isLoading: false})}
             isLoading: false,
           })}
       } else {
@@ -72,23 +63,12 @@ export function useAuth(...args: unknown[]): unknown {
           user: null,
           isAuthenticated: false,
 :src/hooks/useAuth.tsx
-          isLoading: false});
-      }
+          isLoading: false})}
     };
 
-    checkAuth();
-  }, []);
+    checkAuth()}, []);
 
-  const login = async (email: string, password: string) => {
-
-    // In a real app, you would make an API call to your backend
-    const mockUser: User = {
-'
-      id: '1',
-      email,'
-      name: 'John Doe','
-      role: 'user','
-      userType: 'creator'};
+  
           isLoading: false,
         })}
     };
@@ -103,35 +83,18 @@ export function useAuth(...args: unknown[]): unknown {
       isLoading: false});
 
     // Store user data in localStorage'
-    localStorage.setItem('zion_user', JSON.stringify(mockUser));'
-    localStorage.setItem('authToken', 'mock-jwt-token');
+    localStorage.setItem('zion_user', JSON.stringify(mockUser));
+    localStorage.setItem('authToken',mock-jwt-token');
 
 :src/hooks/useAuth.tsx
-    return { success: true, user: mockUser };
-  };
+    return { success: true, user: mockUser }};
 
-  const logout = (...args: unknown[]): unknown => {
-    setAuthState({
-
-      user: null,
-      isAuthenticated: false,
-      isLoading: false});
-
+  
     // Clear localStorage'
-    localStorage.removeItem('zion_user');'
-    localStorage.removeItem('authToken');
-  };
+    localStorage.removeItem('zion_user');
+    localStorage.removeItem('authToken')};
 
-  const register = async (email: string, password: string, name: string) => {
-
-    // In a real app, you would make an API call to your backend
-    const mockUser: User = {
-
-      id: Date.now().toString(),
-      email,
-      name,'
-      role: 'user','
-      userType: 'creator'};
+  
     return { success: true, user: mockUser }};
 
   
@@ -147,17 +110,12 @@ export function useAuth(...args: unknown[]): unknown {
       isLoading: false});
 
     // Store user data in localStorage'
-    localStorage.setItem('zion_user', JSON.stringify(mockUser));'
-    localStorage.setItem('authToken', 'mock-jwt-token');
+    localStorage.setItem('zion_user', JSON.stringify(mockUser));
+    localStorage.setItem('authToken',mock-jwt-token');
 
     return { success: true, user: mockUser }};
 
 :src/hooks/useAuth.tsx
-  const updateProfile = (updates: Partial<User>) => {
-
-    if (authState.user) {
-
-      const updatedUser = { ...authState.user, ...updates };
   
       setAuthState(prev => ({
 
@@ -166,8 +124,7 @@ export function useAuth(...args: unknown[]): unknown {
         user: updatedUser}));
 
       // Update localStorage'
-      localStorage.setItem('zion_user', JSON.stringify(updatedUser));
-    }
+      localStorage.setItem('zion_user', JSON.stringify(updatedUser))}
       // Update localStorage
       localStorage.setItem('zion_user', JSON.stringify(updatedUser))}
   };
@@ -179,8 +136,10 @@ export function useAuth(...args: unknown[]): unknown {
     logout,
     register,
 :src/hooks/useAuth.tsx
-    updateProfile};
-}
+    updateProfile}}
+<<<<<<< HEAD
+=======
 '
     updateProfile,
   }}
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954

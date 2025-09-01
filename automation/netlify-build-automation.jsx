@@ -252,8 +252,7 @@ class NetlifyBuildAutomation {
       };
 
       const response = await this.makeNetlifyRequest(
-        `/sites/${this.config.netlifySiteId}/builds`,
-        'POST',
+        `/sites/${this.config.netlifySiteId}/builds`,POST',
         buildData
       );
 
@@ -312,7 +311,7 @@ class NetlifyBuildAutomation {
         const timeoutCauses = this.analyzeTimeoutCauses(logs);
 
         if (timeoutCauses.length > 0) {
-          this.log(`Timeout causes identified: ${timeoutCauses.join(', ')}`);
+          this.log(`Timeout causes identified: ${timeoutCauses.join(',)}`);
 
           // Apply fixes based on causes
           await this.applyTimeoutFixes(timeoutCauses);
@@ -435,9 +434,7 @@ class NetlifyBuildAutomation {
         path: endpoint,
         method: method,
         headers: {
-          Authorization: `Bearer ${this.config.netlifyToken}`,
-          'Content-Type': 'application/json',
-          'User-Agent': 'Zion-App-Build-Automation/1.0',
+          Authorization: `Bearer ${this.config.netlifyToken}`,Content-Type': 'application/json',User-Agent': 'Zion-App-Build-Automation/1.0',
         },
       };
 
@@ -656,7 +653,7 @@ class NetlifyBuildAutomation {
 
   async cancelBuild(buildId) {
     try {
-      await this.makeNetlifyRequest(`/builds/${buildId}/cancel`, 'POST');
+      await this.makeNetlifyRequest(`/builds/${buildId}/cancel`,POST');
       this.log(`Build ${buildId} cancelled`);
     } catch (error) {
       this.error(`Failed to cancel build ${buildId}`, error);
@@ -669,7 +666,7 @@ class NetlifyBuildAutomation {
 
     try {
       // Update package.json build scripts with memory limits
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+      const packageJson = JSON.parse(fs.readFileSync('package.json',utf8'));
 
       if (packageJson.scripts && packageJson.scripts.build) {
         packageJson.scripts.build = `NODE_OPTIONS="--max-old-space-size=4096" ${packageJson.scripts.build}`;
@@ -774,8 +771,7 @@ class NetlifyBuildAutomation {
   async updateNetlifyBuildSettings(settings) {
     try {
       await this.makeNetlifyRequest(
-        `/sites/${this.config.netlifySiteId}/build_settings`,
-        'PUT',
+        `/sites/${this.config.netlifySiteId}/build_settings`,PUT',
         settings
       );
 
@@ -791,13 +787,12 @@ class NetlifyBuildAutomation {
     try {
       // Update Next.js configuration
       if (fs.existsSync('next.config.js')) {
-        let config = fs.readFileSync('next.config.js', 'utf8');
+        let config = fs.readFileSync('next.config.js',utf8');
 
         // Add performance optimizations
         if (!config.includes('swcMinify')) {
           config = config.replace(
-            'module.exports = {',
-            'module.exports = {\n  swcMinify: true,'
+            'module.exports = {',module.exports = {\n  swcMinify: true,
           );
         }
 
@@ -805,7 +800,7 @@ class NetlifyBuildAutomation {
       }
 
       // Add optimized build script
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+      const packageJson = JSON.parse(fs.readFileSync('package.json',utf8'));
       if (packageJson.scripts) {
         packageJson.scripts['build:optimized'] =
           'NODE_OPTIONS="--max-old-space-size=4096" npm run build';
@@ -822,7 +817,7 @@ class NetlifyBuildAutomation {
 
     try {
       // Check package.json
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+      const packageJson = JSON.parse(fs.readFileSync('package.json',utf8'));
 
       if (!packageJson.scripts || !packageJson.scripts.build) {
         this.error('Build script not found in package.json');
@@ -942,13 +937,12 @@ class NetlifyBuildAutomation {
     try {
       // Update Next.js configuration for better performance
       if (fs.existsSync('next.config.js')) {
-        let config = fs.readFileSync('next.config.js', 'utf8');
+        let config = fs.readFileSync('next.config.js',utf8');
 
         // Add performance optimizations
         if (!config.includes('experimental')) {
           config = config.replace(
-            'module.exports = {',
-            'module.exports = {\n  experimental: {\n    optimizeCss: true,\n    optimizePackageImports: true\n  },'
+            'module.exports = {',module.exports = {\n  experimental: {\n    optimizeCss: true,\n    optimizePackageImports: true\n  },
           );
         }
 
@@ -956,7 +950,7 @@ class NetlifyBuildAutomation {
       }
 
       // Update package.json with optimized scripts
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+      const packageJson = JSON.parse(fs.readFileSync('package.json',utf8'));
       if (packageJson.scripts) {
         packageJson.scripts['build:fast'] =
           'NODE_OPTIONS="--max-old-space-size=4096" npm run build';
@@ -1115,7 +1109,7 @@ class NetlifyBuildAutomation {
       this.log(`Retrying deployment ${deploymentId}...`);
 
       // Retry deployment via API
-      await this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`, 'POST');
+      await this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`,POST');
 
       this.log('Deployment retry triggered');
     } catch (error) {

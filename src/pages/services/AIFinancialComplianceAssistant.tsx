@@ -1,71 +1,65 @@
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';  ;
+<<<<<<< HEAD
+import { Shield, 
+  FileText, 
+  TrendingUp, 
+  Users, 
+  Database, 
+  BarChart3, 
+  Zap,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  DollarSign,
+  Target,
+  Globe,
+  Lock,
+  Search,
+  Calendar,
+  MessageSquare,
+  Bell,
+  Phone,
+  Mail,
+  MapPin,
+  Scale,
+  AlertTriangle,
+  BookOpen,
+  CreditCard,
+  Building,
+  Eye,
+  Clock,
+  Award,
+  Gauge,
+  PieChart'
+} from 'lucide-react';
+;
+export { function };
+export default function AIFinancialComplianceAssistant(...args[]): {
   ;
-  ;'
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+  ;
+  ;
   website: 'https://ziontechgroup.com';
-  ;
-
-
-
-
-
-
-};
-
-  const features = [
-    {
-
-      icon: Shield,'
-      title: 'Automated Compliance Monitoring','
-      description: '24/7 monitoring of financial transactions and regulatory requirements with real-time alerts'
-    },
-    {
-
-      icon: FileText,'
-      title: 'AI-Powered Document Analysis','
-      description: 'Automatically analyze financial documents, contracts, and reports for compliance issues'
-    },
-    {
-
-      icon: TrendingUp,'
-      title: 'Predictive Risk Assessment','
-      description: 'Identify potential compliance risks before they become violations using advanced AI algorithms'
-    },
-    {
-
-      icon: Users,'
-      title: 'Multi-Stakeholder Collaboration','
-      description: 'Enable seamless collaboration between compliance officers, auditors, and management teams'
-    },
-    {
-
-      icon: Database,'
-      title: 'Centralized Compliance Hub','
-      description: 'Single source of truth for all compliance-related data, policies, and procedures';
-    },;
+  }},;
     {;
-      icon: BarChart3,;'
-      title: 'Advanced Analytics & Reporting',;'
-      description: 'Comprehensive dashboards and automated reporting for regulatory submissions';
-    };
+      icon: BarChart3,;
+      title: 'Advanced Analytics & Reporting',;
+      description: 'Comprehensive dashboards and automated reporting for regulatory submissions'};
   ];
 
-  const benefits = [;'
-    'Reduce compliance violations by 85%',;'
-    'Cut compliance costs by 60%',;'
-    'Improve audit efficiency by 70%',;'
-    'Ensure 99.9% regulatory accuracy',;'
-    'Streamline reporting processes',;'
+  
+    'Reduce compliance violations by 85%',;
+    'Cut compliance costs by 60%',;
+    'Improve audit efficiency by 70%',;
+    'Ensure 99.9% regulatory accuracy',;
+    'Streamline reporting processes',;
     'Enhance risk management capabilities';
   ];
 
-  const pricingPlans = [
-    {
-'
-      name: 'Starter','
-      price: '$499','
-      period: '/month','
-      description: 'Perfect for small financial institutions',
+  
+        'Up to 1,000 transactions/month',Basic compliance monitoring',Standard regulatory updates',Email support',Basic reporting',Up to 5 user licenses',Core compliance frameworks'
+      ],;
+=======
       features[;'
         'Up to 1,000 transactions/month','
         'Basic compliance monitoring','
@@ -74,123 +68,66 @@ import { motion  } from 'framer-motion.ts';  ;
         'Basic reporting','
         'Up to 5 user licenses','        'Core compliance frameworks'
       ],;'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       cta: 'Start Free Trial',
       popular: false
     },
     {
-'
-      name: 'Professional','
-      price: '$999','
-      period: '/month','
+
+      name: 'Professional',
+      price: '$999',
+      period: '/month',
       description: 'Ideal for growing financial organizations',
-      features[;'
-        'Up to 10,000 transactions/month','
-        'Advanced AI compliance monitoring','
-        'Real-time regulatory updates','
-        'Priority support','
-        'Custom reporting','
-        'Up to 25 user licenses','
-        'Advanced compliance frameworks','
-        'API integrations','
-        'Custom workflows','
-        'Advanced analytics'
-      ],;'
+      features[;
+        'Up to 10,000 transactions/month',Advanced AI compliance monitoring',Real-time regulatory updates',Priority support',Custom reporting',Up to 25 user licenses',Advanced compliance frameworks',API integrations',Custom workflows',Advanced analytics'
+      ],;
       cta: 'Start Free Trial',
       popular: true
     },
     {
-'
-      name: 'Enterprise','
-      price: '$2,499','
-      period: '/month','
+
+      name: 'Enterprise',
+      price: '$2,499',
+      period: '/month',
       description: 'For large financial institutions with complex needs',
-      features[;'
-        'Unlimited transactions','
-        'Premium AI compliance monitoring','
-        '24/7 dedicated support','
-        'Custom dashboards','
-        'Unlimited user licenses','
-        'All compliance frameworks','
-        'Enterprise integrations','
-        'Advanced AI models','
-        'On-premise deployment option','
-        'Dedicated compliance consultant',;'
-        'Custom training programs',;'
+      features[;
+        'Unlimited transactions',Premium AI compliance monitoring',24/7 dedicated support',Custom dashboards',Unlimited user licenses',All compliance frameworks',Enterprise integrations',Advanced AI models',On-premise deployment option',Dedicated compliance consultant',;
+        'Custom training programs',;
         'White-label solutions';
-      ],;'
+      ],;
       cta: 'Contact Sales',;
-      popular: false;
-    };
-  ];
-
-  const complianceFrameworks = [
-    {
-'
-      title: 'SOX Compliance','
-      description: 'Sarbanes-Oxley Act compliance with automated controls testing and reporting',
-      icon: Building
-    },
-    {
-'
-      title: 'GDPR & Privacy','
-      description: 'Data protection compliance with automated privacy impact assessments',
-      icon: Eye
-    },
-    {
-'
-      title: 'PCI DSS','
-      description: 'Payment card industry compliance with automated security assessments',
-      icon: CreditCard
-    },
-    {
-'
-      title: 'AML/KYC','
-      description: 'Anti-money laundering and know-your-customer compliance automation',
-      icon: Shield
-    },
-    {
-'
-      title: 'Basel III','
-      description: 'Banking regulation compliance with automated risk calculations',
-      icon: Scale;
-    },;
-    {;'
-      title: 'IFRS/GAAP',;'
+      popular: false};
+  ]},;
+    {;
+      title: 'IFRS/GAAP',;
       description: 'Accounting standards compliance with automated financial reporting',;
-      icon: BookOpen;
-    };
-  ];
-
-  const useCases = [
-    {
-'
-      title: 'Banks & Credit Unions','
-      description: 'Comprehensive compliance for financial institutions of all sizes',
-      icon: Building
-    },
-    {
-'
-      title: 'Investment Firms','
-      description: 'SEC and FINRA compliance with automated reporting',
-      icon: TrendingUp
-    },
-    {
-'
-      title: 'Insurance Companies','
-      description: 'State and federal insurance regulation compliance',
-      icon: Shield;
-    },;
+      icon: BookOpen};
+  ]},;
+<<<<<<< HEAD
+    {;
+      title: 'Fintech Startups',;
+      description: 'Rapid compliance scaling for growing financial technology companies',;
+      icon: Zap};
+=======
     {;'
       title: 'Fintech Startups',;'      description: 'Rapid compliance scaling for growing financial technology companies',;
       icon: Zap};
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <SEO "
+<<<<<<< HEAD
+        title="AI Financial Compliance Assistant | Zion Tech Group"
+        description="Revolutionize your financial compliance with AI-powered automation. Monitor regulations, detect risks, and ensure 99.9% compliance accuracy."
+        keywords="AI financial compliance, regulatory compliance, SOX compliance, GDPR compliance, PCI DSS, AML KYC, financial regulations"
+       />
+=======
         title="AI Financial Compliance Assistant | Zion Tech Group""
         description="Revolutionize your financial compliance with AI-powered automation. Monitor regulations, detect risks, and ensure 99.9% compliance accuracy.""        keywords="AI financial compliance, regulatory compliance, SOX compliance, GDPR compliance, PCI DSS, AML KYC, financial regulations"
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
@@ -221,7 +158,7 @@ import { motion  } from 'framer-motion.ts';  ;
             transition={{ duration: 0.8 }}
 "
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100/10 border border-blue-200/20 text-blue-200 text-sm font-medium mb-6">"
-              <Shield className="w-4 h-4 mr-2" />              AI-Powered Financial Compliance
+              <Shield className="w-4 h-4 mr-2"  />              AI-Powered Financial Compliance
             </div>
 "
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -504,7 +441,7 @@ import { motion  } from 'framer-motion.ts';  ;
                 viewport={{ once: true }}"
                 className="flex items-start space-x-3"
 "
-                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />"                <span className="text-slate-300 text-lg">{benefit}</span>
+                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"  />"                <span className="text-slate-300 text-lg">{benefit}</span>
               </motion.div>;
             ))}
           </div>
@@ -703,7 +640,7 @@ import { motion  } from 'framer-motion.ts';  ;
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-start space-x-3">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />"                      <span className="text-slate-300">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0"  />"                      <span className="text-slate-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -812,17 +749,17 @@ import { motion  } from 'framer-motion.ts';  ;
 "
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">"
               <div className="flex flex-col items-center">"
-                <Phone className="w-8 h-8 text-blue-400 mb-3" />"
+                <Phone className="w-8 h-8 text-blue-400 mb-3"  />"
                 <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>"
                 <p className="text-slate-300">{contactInfo.phone}</p>
               </div>"
               <div className="flex flex-col items-center">"
-                <Mail className="w-8 h-8 text-blue-400 mb-3" />"
+                <Mail className="w-8 h-8 text-blue-400 mb-3"  />"
                 <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>"
                 <p className="text-slate-300">{contactInfo.email}</p>
               </div>"
               <div className="flex flex-col items-center">"
-                <MapPin className="w-8 h-8 text-blue-400 mb-3" />"
+                <MapPin className="w-8 h-8 text-blue-400 mb-3"  />"
                 <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>"                <p className="text-slate-300">{contactInfo.address}</p>
               </div>
             </div>
@@ -832,11 +769,10 @@ import { motion  } from 'framer-motion.ts';  ;
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
 
               Get in Touch"
-              <ArrowRight className="w-5 h-5 ml-2" />            </a>;
+              <ArrowRight className="w-5 h-5 ml-2"  />            </a>;
           </motion.div>;
         </div>;
       </section>;
     </div>;
-  );
-}
+  )}
 '"`

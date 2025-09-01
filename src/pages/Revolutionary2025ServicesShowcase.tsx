@@ -1,13 +1,15 @@
-import React, { useState, useEffect } from 'react';'
-import { motion } from 'framer-motion';// Combine all services
+<<<<<<< HEAD
+import {
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
 const Revolutionary2025ServicesShowcase: React.FC = () => {;
-  const [services, setServices] = useState<any[]>(ALL_SERVICES);'
-  const [searchTerm, setSearchTerm] = useState('');'
-  const [selectedCategory, setSelectedCategory] = useState('all');'
-  const [selectedPriceRange, setSelectedPriceRange] = useState('all');'
-  const [selectedROI, setSelectedROI] = useState('all');'
-  const [sortBy, setSortBy] = useState('title');'
+  const [services, setServices] = useState<any[]>(ALL_SERVICES);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
+  const [selectedROI, setSelectedROI] = useState('all');
+  const [sortBy, setSortBy] = useState('title');
   const [viewMode, setViewMode] = useState<any>('grid');
   const [selectedServices, setSelectedServices] = useState<any>([]);
   // Filter services based on search and filters
@@ -20,21 +22,38 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.category.toLowerCase().includes(searchTerm.toLowerCase());
       );
+<<<<<<< HEAD
+    }
+    if (selectedCategory !== 'all') {
+=======
     }'    if (selectedCategory !== 'all') {
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
-      filtered = filtered.filter(service => service.category === selectedCategory)};'
-    if (selectedPriceRange !== 'all') {;'
+      filtered = filtered.filter(service => service.category === selectedCategory)};
+    if (selectedPriceRange !== 'all') {;
       const [min, max] = selectedPriceRange.split('-').map(Number);
+<<<<<<< HEAD
+      filtered = filtered.filter(service => {;
+        
+        if (max) {
+=======
       filtered = filtered.filter(service => {;'
         const price = parseInt(service.price.replace(/[^0-9]/g, ''));        if (max) {
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
           return price >= min && price <= max}
-        return price >= min})}'
+        return price >= min})}
     if (selectedROI !== 'all') {
-'
+
       const [min, max] = selectedROI.split('-').map(Number);
+<<<<<<< HEAD
+      filtered = filtered.filter(service => {;
+        
+        if (max) {
+=======
       filtered = filtered.filter(service => {;'
         const roi = parseInt(service.roi.match(/\d+/)?.[0] || '0');        if (max) {
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
           return roi >= min && roi <= max}
         return roi >= min}) }
@@ -42,27 +61,18 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
     filtered.sort((a, b) => {
 
       switch (sortBy) {
-'
+
         case 'price':'
-          return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, ''));'
+          return parseInt(a.price.replace(/[^0-9]/g,)) - parseInt(b.price.replace(/[^0-9]/g,));
         case 'rating':
-          return b.rating - a.rating;'
+          return b.rating - a.rating;
         case 'customers':
           return b.customers - a.customers;
         default:
           return a.name.localeCompare(b.name)}
     });
-    setServices(filtered)}, [searchTerm, selectedCategory, selectedPriceRange, selectedROI, sortBy]);
-  const categories = Array.from(new Set(ALL_SERVICES.map(service => service.category)));
-  const handleServiceSelect = (serviceId: string) => {
-
-    setSelectedServices(prev =>
-      prev.includes(serviceId)
-        ? prev.filter(id => id !== serviceId)
-        : [...prev, serviceId]
-    );
-  };
-  const selectedServicesData = ALL_SERVICES.filter(service => selectedServices.includes(service.id));
+    setServices(filtered)}, [searchTerm, selectedCategory, selectedPriceRange, selectedROI, sortBy])};
+  
   return ("    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}"
       <section className="pt-24 pb-20">"
@@ -92,9 +102,14 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
             {/* Search */}"
             <div className="relative flex-1 max-w-md">"
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
               <input"
+<<<<<<< HEAD
+                type="text"
+                placeholder="Search services..."
+=======
                 type="text""                placeholder="Search services..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}"
                 className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
@@ -148,27 +163,27 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               <button'
                 onClick={() => setViewMode('grid')}
                 className={`p-3 rounded-lg transition-colors ${
-'
+
                   viewMode === 'grid''
                     ? 'bg-cyan-500 text-white''
                     : 'bg-slate-800 text-gray-400 hover:text-white'`
                 }`}
 "
-                <Grid className="w-5 h-5" />              </button>
+                <Grid className="w-5 h-5"  />              </button>
               <button'
                 onClick={() => setViewMode('list')}`
                 className={`p-3 rounded-lg transition-colors ${
-'
+
                   viewMode === 'list''
                     ? 'bg-cyan-500 text-white''
                     : 'bg-slate-800 text-gray-400 hover:text-white'`
                 }`}
 "
-                <List className="w-5 h-5" />              </button>
+                <List className="w-5 h-5"  />              </button>
               <button'
                 onClick={() => setViewMode('comparison')}`
                 className={`p-3 rounded-lg transition-colors ${
-'
+
                   viewMode === 'comparison''
                     ? 'bg-cyan-500 text-white''
                     : 'bg-slate-800 text-gray-400 hover:text-white'`
@@ -226,7 +241,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               viewport={{ once: true }}
 "
               <div className="flex items-center mb-4">"
-                <Brain className="w-8 h-8 text-blue-400 mr-3" />"                <h3 className="text-xl font-semibold text-white">Business Size</h3>
+                <Brain className="w-8 h-8 text-blue-400 mr-3"  />"                <h3 className="text-xl font-semibold text-white">Business Size</h3>
               </div>"
               <p className="text-gray-300 mb-4">Select your comp size to get tailored recommendations</p>"
               <select className="w-full px-4 py-2 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-blue-500">
@@ -259,7 +274,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               viewport={{ once: true }}
 "
               <div className="flex items-center mb-4">"
-                <Target className="w-8 h-8 text-purple-400 mr-3" />"                <h3 className="text-xl font-semibold text-white">Industry Focus</h3>
+                <Target className="w-8 h-8 text-purple-400 mr-3"  />"                <h3 className="text-xl font-semibold text-white">Industry Focus</h3>
               </div>"
               <p className="text-gray-300 mb-4">Choose your industry for specialized solutions</p>"
               <select className="w-full px-4 py-2 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-purple-500">
@@ -294,7 +309,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               viewport={{ once: true }}
 "
               <div className="flex items-center mb-4">"
-                <TrendingUp className="w-8 h-8 text-green-400 mr-3" />"                <h3 className="text-xl font-semibold text-white">Priority Goals</h3>
+                <TrendingUp className="w-8 h-8 text-green-400 mr-3"  />"                <h3 className="text-xl font-semibold text-white">Priority Goals</h3>
               </div>"
               <p className="text-gray-300 mb-4">What are your main business objectives?</p>"
               <select className="w-full px-4 py-2 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-green-500">
@@ -359,21 +374,21 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               viewport={{ once: true }}
 "
               <div className="flex items-center mb-4">"
-                <Network className="w-8 h-8 text-violet-400 mr-3" />"
+                <Network className="w-8 h-8 text-violet-400 mr-3"  />"
                 <h3 className="text-xl font-semibold text-white">AI Autonomous</h3>
               </div>"
               <p className="text-gray-300 mb-4">Self-driving business operations with intelligent decision-making</p>"
               <div className="space-y-2 text-sm text-gray-300">"
                 <div className="flex items-center">"
-                  <CheckCircle className="w-4 h-4 text-violet-400 mr-2" />
+                  <CheckCircle className="w-4 h-4 text-violet-400 mr-2"  />
                   Business Process Automation
                 </div>"
                 <div className="flex items-center">"
-                  <CheckCircle className="w-4 h-4 text-violet-400 mr-2" />
+                  <CheckCircle className="w-4 h-4 text-violet-400 mr-2"  />
                   Intelligent Resource Management
                 </div>"
                 <div className="flex items-center">"
-                  <CheckCircle className="w-4 h-4 text-violet-400 mr-2" />                  Predictive Analytics
+                  <CheckCircle className="w-4 h-4 text-violet-400 mr-2"  />                  Predictive Analytics
                 </div>
               </div>
             </motion.div>
@@ -400,21 +415,21 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               viewport={{ once: true }}
 "
               <div className="flex items-center mb-4">"
-                <Atom className="w-8 h-8 text-blue-400 mr-3" />"
+                <Atom className="w-8 h-8 text-blue-400 mr-3"  />"
                 <h3 className="text-xl font-semibold text-white">Quantum Enhanced</h3>
               </div>"
               <p className="text-gray-300 mb-4">Quantum computing power for complex problem solving</p>"
               <div className="space-y-2 text-sm text-gray-300">"
                 <div className="flex items-center">"
-                  <CheckCircle className="w-4 h-4 text-blue-400 mr-2" />
+                  <CheckCircle className="w-4 h-4 text-blue-400 mr-2"  />
                   Quantum Cryptography
                 </div>"
                 <div className="flex items-center">"
-                  <CheckCircle className="w-4 h-4 text-blue-400 mr-2" />
+                  <CheckCircle className="w-4 h-4 text-blue-400 mr-2"  />
                   Neural Network Optimization
                 </div>"
                 <div className="flex items-center">"
-                  <CheckCircle className="w-4 h-4 text-blue-400 mr-2" />                  Financial Modeling
+                  <CheckCircle className="w-4 h-4 text-blue-400 mr-2"  />                  Financial Modeling
                 </div>
               </div>
             </motion.div>
@@ -441,21 +456,21 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               viewport={{ once: true }}
 "
               <div className="flex items-center mb-4">"
-                <Shield className="w-8 h-8 text-green-400 mr-3" />"
+                <Shield className="w-8 h-8 text-green-400 mr-3"  />"
                 <h3 className="text-xl font-semibold text-white">Cybersecurity</h3>
               </div>"
               <p className="text-gray-300 mb-4">Advanced threat detection and zero-trust security</p>"
               <div className="space-y-2 text-sm text-gray-300">"
                 <div className="flex items-center">"
-                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2"  />
                   AI-Powered Threat Detection
                 </div>"
                 <div className="flex items-center">"
-                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2"  />
                   Zero-Trust Architecture
                 </div>"
                 <div className="flex items-center">"
-                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />                  Compliance Automation
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2"  />                  Compliance Automation
                 </div>
               </div>
             </motion.div>
@@ -570,7 +585,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Explore our cutting-edge solutions designed to transform your business operations
             </p>
-          </div>'
+          </div>
           {viewMode === 'grid' && ("
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index)  => (
@@ -606,7 +621,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
                       <span className="text-gray-400">{service.period}</span>
                     </div>"
                     <div className="flex items-center gap-2 text-sm text-gray-400">"
-                      <Star className="w-4 h-4 text-yellow-400 fill-current" />                      <span>{service.rating}</span>
+                      <Star className="w-4 h-4 text-yellow-400 fill-current"  />                      <span>{service.rating}</span>
                       <span>•</span>
                       <span>{service.reviews} reviews</span>
                       <span>•</span>
@@ -616,7 +631,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
                   <div className="space-y-2 mb-6">
                     {service.features.slice(0, 3).map((feature, idx) => ("
                       <div key={idx} className="flex items-center text-gray-400">"
-                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />                        {feature}
+                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2"  />                        {feature}
                       </div>
                     ))}
                   </div>"
@@ -624,16 +639,16 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
                     <span className="text-sm text-gray-400">{service.category}</span>
                     <a
                       href={service.link}"
-                      target="_blank""
-                      rel="noopener noreferrer""
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors font-semibold"
 "
-                      Learn More <ArrowRight className="w-4 h-4 ml-1" />                    </a>
+                      Learn More <ArrowRight className="w-4 h-4 ml-1"  />                    </a>
                   </div>;
                 </motion.div>;
               ))}
             </div>
-          )}'
+          )}
           {viewMode === 'list' && ("
             <div className="space-y-6">
               {services.map((service, index) => (
@@ -673,7 +688,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
                         <div>"
                           <span className="text-sm text-gray-400">Rating</span>"
                           <div className="flex items-center gap-1">"
-                            <Star className="w-4 h-4 text-yellow-400 fill-current" />"
+                            <Star className="w-4 h-4 text-yellow-400 fill-current"  />"
                             <span className="text-white">{service.rating}</span>"                            <span className="text-gray-400">({service.reviews})</span>
                           </div>
                         </div>
@@ -691,18 +706,18 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
                         </div>
                         <a
                           href={service.link}"
-                          target="_blank""
-                          rel="noopener noreferrer""
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors font-semibold"
 "
-                          Learn More <ArrowRight className="w-4 h-4 ml-1" />                        </a>
+                          Learn More <ArrowRight className="w-4 h-4 ml-1"  />                        </a>
                       </div>
                     </div>
                   </div>;
                 </motion.div>;
               ))}
             </div>
-          )}'
+          )}
           {viewMode === 'comparison' && ("
             <div className="space-y-8">"
               <div className="text-center mb-8">"
@@ -737,7 +752,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
                         {selectedServicesData.map(service => ("
                           <td key={service.id} className="p-4 text-white">"
                             <div className="flex items-center gap-1">"
-                              <Star className="w-4 h-4 text-yellow-400 fill-current" />                              {service.rating}
+                              <Star className="w-4 h-4 text-yellow-400 fill-current"  />                              {service.rating}
                             </div>
                           </td>
                         ))}
@@ -767,7 +782,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
                             <ul className="space-y-1">
                               {service.features.slice(0, 5).map((feature, idx) => ("
                                 <li key={idx} className="text-sm flex items-center">"
-                                  <CheckCircle className="w-3 h-3 text-cyan-400 mr-2" />                                  {feature}
+                                  <CheckCircle className="w-3 h-3 text-cyan-400 mr-2"  />                                  {feature}
                                 </li>) ) }
                             </ul>
                           </td>) ) }
@@ -820,19 +835,19 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               <p className="text-gray-300 mb-6">per month</p>"
               <ul className="space-y-3 mb-8 text-left">"
                 <li className="flex items-center text-gray-300">"
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3"  />
                   Basic AI Integration
                 </li>"
                 <li className="flex items-center text-gray-300">"
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3"  />
                   Standard Support
                 </li>"
                 <li className="flex items-center text-gray-300">"
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3"  />
                   Core Features
                 </li>"
                 <li className="flex items-center text-gray-300">"
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />                  Monthly Updates
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3"  />                  Monthly Updates
                 </li>
               </ul>"
               <button className="w-full px-6 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors">
@@ -869,23 +884,23 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               <p className="text-gray-300 mb-6">per month</p>"
               <ul className="space-y-3 mb-8 text-left">"
                 <li className="flex items-center text-gray-300">"
-                  <CheckCircle className="w-5 h-5 text-blue-400 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-blue-400 mr-3"  />
                   Advanced AI Features
                 </li>"
                 <li className="flex items-center text-gray-300">"
-                  <CheckCircle className="w-5 h-5 text-blue-400 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-blue-400 mr-3"  />
                   Priority Support
                 </li>"
                 <li className="flex items-center text-gray-300">"
-                  <CheckCircle className="w-5 h-5 text-blue-400 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-blue-400 mr-3"  />
                   Custom Integrations
                 </li>"
                 <li className="flex items-center text-gray-300">"
-                  <CheckCircle className="w-5 h-5 text-blue-400 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-blue-400 mr-3"  />
                   Weekly Updates
                 </li>"
                 <li className="flex items-center text-gray-300">"
-                  <CheckCircle className="w-5 h-5 text-blue-400 mr-3" />                  Dedicated Account Manager
+                  <CheckCircle className="w-5 h-5 text-blue-400 mr-3"  />                  Dedicated Account Manager
                 </li>
               </ul>"
               <button className="w-full px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors">
@@ -919,27 +934,27 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               <p className="text-gray-300 mb-6">per month</p>"
               <ul className="space-y-3 mb-8 text-left">"
                 <li className="flex items-center text-gray-300">"
-                  <CheckCircle className="w-5 h-5 text-purple-400 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-purple-400 mr-3"  />
                   Full AI Suite
                 </li>"
                 <li className="flex items-center text-gray-300">"
-                  <CheckCircle className="w-5 h-5 text-purple-400 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-purple-400 mr-3"  />
                   24/7 Premium Support
                 </li>"
                 <li className="flex items-center text-gray-300">"
-                  <CheckCircle className="w-5 h-5 text-purple-400 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-purple-400 mr-3"  />
                   Custom Development
                 </li>"
                 <li className="flex items-center text-gray-300">"
-                  <CheckCircle className="w-5 h-5 text-purple-400 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-purple-400 mr-3"  />
                   Daily Updates
                 </li>"
                 <li className="flex items-center text-gray-300">"
-                  <CheckCircle className="w-5 h-5 text-purple-400 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-purple-400 mr-3"  />
                   White-label Solutions
                 </li>"
                 <li className="flex items-center text-gray-300">"
-                  <CheckCircle className="w-5 h-5 text-purple-400 mr-3" />                  SLA Guarantee
+                  <CheckCircle className="w-5 h-5 text-purple-400 mr-3"  />                  SLA Guarantee
                 </li>
               </ul>"
               <button className="w-full px-6 py-3 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transition-colors">
@@ -951,19 +966,19 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             <p className="text-gray-400 mb-4">All plans include:</p>"
             <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-300">"
               <span className="flex items-center">"
-                <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                <CheckCircle className="w-4 h-4 text-green-400 mr-2"  />
                 Free Setup & Migration
               </span>"
               <span className="flex items-center">"
-                <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                <CheckCircle className="w-4 h-4 text-green-400 mr-2"  />
                 45-Day Money-Back Guarantee
               </span>"
               <span className="flex items-center">"
-                <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                <CheckCircle className="w-4 h-4 text-green-400 mr-2"  />
                 No Hidden Fees
               </span>"
               <span className="flex items-center">"
-                <CheckCircle className="w-4 h-4 text-green-400 mr-2" />                Flexible Billing
+                <CheckCircle className="w-4 h-4 text-green-400 mr-2"  />                Flexible Billing
               </span>
             </div>
           </div>
@@ -1620,7 +1635,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
                 Explore All Services
               </button>
               <a"
-                href="mailto:kleber@ziontechgroup.com?subject=Revolutionary 2025 Services Consultation""
+                href="mailto:kleber@ziontechgroup.com?subject=Revolutionary 2025 Services Consultation"
                 className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
 
                 Get Free Consultation
@@ -1817,7 +1832,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               viewport={{ once: true }}
 "
               <div className="bg-gradient-to-r from-blue-600/20 to-cyan-700/20 p-6 rounded-xl border border-blue-500/30 group-hover:border-blue-400 transition-all duration-300">"
-                <Brain className="w-12 h-12 text-blue-400 mx-auto mb-4" />"
+                <Brain className="w-12 h-12 text-blue-400 mx-auto mb-4"  />"
                 <h3 className="text-lg font-semibold text-white mb-2">AI/ML</h3>"                <p className="text-gray-300 text-sm">Advanced Neural Networks, Deep Learning, NLP</p>
               </div>
             </motion.div>
@@ -1844,7 +1859,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               viewport={{ once: true }}
 "
               <div className="bg-gradient-to-r from-purple-600/20 to-indigo-700/20 p-6 rounded-xl border border-purple-500/30 group-hover:border-purple-400 transition-all duration-300">"
-                <Atom className="w-12 h-12 text-purple-400 mx-auto mb-4" />"
+                <Atom className="w-12 h-12 text-purple-400 mx-auto mb-4"  />"
                 <h3 className="text-lg font-semibold text-white mb-2">Quantum Computing</h3>"                <p className="text-gray-300 text-sm">Quantum Algorithms, Superposition, Entanglement</p>
               </div>
             </motion.div>
@@ -1871,7 +1886,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               viewport={{ once: true }}
 "
               <div className="bg-gradient-to-r from-green-600/20 to-emerald-700/20 p-6 rounded-xl border border-green-500/30 group-hover:border-green-400 transition-all duration-300">"
-                <Zap className="w-12 h-12 text-green-400 mx-auto mb-4" />"
+                <Zap className="w-12 h-12 text-green-400 mx-auto mb-4"  />"
                 <h3 className="text-lg font-semibold text-white mb-2">Autonomous Systems</h3>"                <p className="text-gray-300 text-sm">Self-Driving Operations, Auto-Scaling, ML-Ops</p>
               </div>
             </motion.div>
@@ -1898,7 +1913,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               viewport={{ once: true }}
 "
               <div className="bg-gradient-to-r from-red-600/20 to-pink-700/20 p-6 rounded-xl border border-red-500/30 group-hover:border-red-400 transition-all duration-300">"
-                <Shield className="w-12 h-12 text-red-400 mx-auto mb-4" />"
+                <Shield className="w-12 h-12 text-red-400 mx-auto mb-4"  />"
                 <h3 className="text-lg font-semibold text-white mb-2">Cybersecurity</h3>"                <p className="text-gray-300 text-sm">Zero-Trust, AI-Powered Threat Detection</p>
               </div>
             </motion.div>
@@ -2057,7 +2072,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 "
               <div className="flex items-center justify-center mb-4">
                 {[...Array(5)].map((_, i) => ("
-                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />                ))}
+                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current"  />                ))}
               </div>"
               <p className="text-gray-300 mb-6 italic">'"
                 "The AI Autonomous Business Operations Platform has revolutionized our entire operation. We've seen an 800% ROI within just 12 months."
@@ -2091,7 +2106,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 "
               <div className="flex items-center justify-center mb-4">
                 {[...Array(5)].map((_, i) => ("
-                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />                ))}
+                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current"  />                ))}
               </div>"
               <p className="text-gray-300 mb-6 italic">'"
                 "The Quantum-Enhanced Cybersecurity Suite provides unmatched protection. It's like having a security team that never sleeps."
@@ -2125,7 +2140,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 "
               <div className="flex items-center justify-center mb-4">
                 {[...Array(5)].map((_, i) => ("
-                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />                ))}
+                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current"  />                ))}
               </div>"
               <p className="text-gray-300 mb-6 italic">"
                 "AI Autonomous DevOps Platform has reduced our deployment time by 90% and eliminated human errors completely."
@@ -2149,31 +2164,31 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
           </p>"
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12">"
             <div className="flex flex-col items-center">"
-              <Phone className="w-8 h-8 text-cyan-400 mb-4" />"
+              <Phone className="w-8 h-8 text-cyan-400 mb-4"  />"
               <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>"
               <p className="text-gray-300">+1 302 464 0950</p>
             </div>"
             <div className="flex flex-col items-center">"
-              <Mail className="w-8 h-8 text-cyan-400 mb-4" />"
+              <Mail className="w-8 h-8 text-cyan-400 mb-4"  />"
               <h3 className="text-lg font-semibold text-white mb-2">Email</h3>"
               <p className="text-gray-300">kleber@ziontechgroup.com</p>
             </div>"
             <div className="flex flex-col items-center">"
-              <MapPin className="w-8 h-8 text-cyan-400 mb-4" />"
+              <MapPin className="w-8 h-8 text-cyan-400 mb-4"  />"
               <h3 className="text-lg font-semibold text-white mb-2">Address</h3>"              <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
             </div>
           </div>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a"
-              href="mailto:kleber@ziontechgroup.com""
+              href="mailto:kleber@ziontechgroup.com"
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
 
               Get Started
             </a>
             <a"
-              href="https://ziontechgroup.com""
-              target="_blank""
-              rel="noopener noreferrer""
+              href="https://ziontechgroup.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
 
               Visit Website
@@ -2181,8 +2196,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
           </div>;
         </div>;
       </section>;
-    </div>;) ;
-};
+    </div>;) };
 // Grid and List icons for the view mode toggle
 const Grid = ({ className }: { className?: string }) => (;"
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">;"
@@ -2194,4 +2208,4 @@ const List = ({ className }: { className?: string }) => (;"
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" />;
   </svg>;
 );
-export default Revolutionary2025ServicesShowcase;}}}}}}}}'"`
+export default Revolutionary2025ServicesShowcase}}}}}}}}'"`

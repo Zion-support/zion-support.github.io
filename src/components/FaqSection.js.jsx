@@ -28,7 +28,7 @@ export function FaqSection() {
             <h3 className="text-xl font-semibold text-white mb-3">
               How can I get started with your services?
             </h3>"
-            <p className="text-zion-slate-light">'
+            <p className="text-zion-slate-light">
               Contact us through our website or call us directly. We'll schedule
               a consultation to understand your needs and provide a customized
               solution.

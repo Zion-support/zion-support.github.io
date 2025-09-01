@@ -95,8 +95,7 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
       integrations["Salesforce", "HubSpot", "QuickBooks", "Google Analytics", "Shopify"],;
       apiEndpoints: 150,"
       uptime: "99.9%","
-      security["SOC 2", "GDPR", "HIPAA", "End-to-end encryption"];
-    },;"
+      security["SOC 2", "GDPR", "HIPAA", "End-to-end encryption"]},;"
     competitors["Tableau", "Power BI", "Looker", "Qlik"],;"    marketSize: "$29.9 billion by 2025"
   },
   // AI-Powered Autonomous DevOps Platform
@@ -161,8 +160,7 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
       integrations["AWS", "Azure", "GCP", "GitHub", "Jenkins", "Slack"],;
       apiEndpoints: 200,"
       uptime: "99.99%","
-      security["SOC 2", "ISO 27001", "Zero-trust architecture", "Encryption at rest"];
-    },;"
+      security["SOC 2", "ISO 27001", "Zero-trust architecture", "Encryption at rest"]},;"
     competitors["DataDog", "New Relic", "Splunk", "PagerDuty"],;"    marketSize: "$8.2 billion by 2025"
   },
   // Quantum-Safe Cybersecurity Suite
@@ -227,8 +225,7 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
       integrations["PKI systems", "Identity management", "SIEM platforms", "Compliance tools"],;
       apiEndpoints: 200,"
       uptime: "99.99%","
-      security["Quantum-resistant", "SOC 2", "ISO 27001", "FIPS 140-2", "Zero-trust"];
-    },;"
+      security["Quantum-resistant", "SOC 2", "ISO 27001", "FIPS 140-2", "Zero-trust"]},;"
     competitors["ISARA", "PQShield", "Crypta Labs", "Quantum Xchange"],;"    marketSize: "$2.8 billion by 2025"
   },
   // AI-Powered Healthcare Diagnostics Platform
@@ -293,8 +290,7 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
       integrations["PACS systems", "EHR platforms", "Lab systems", "Telemedicine platforms"],;
       apiEndpoints: 300,"
       uptime: "99.9%","
-      security["HIPAA", "SOC 2", "GDPR", "Data encryption", "Audit logging"];
-    },;"
+      security["HIPAA", "SOC 2", "GDPR", "Data encryption", "Audit logging"]},;"
     competitors["Butterfly Network", "Zebra Medical", "Aidoc", "Enlitic"],;"    marketSize: "$45.2 billion by 2025"
   },
   // Edge AI Computing Platform
@@ -359,10 +355,8 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
       integrations["IoT platforms", "Cloud AI services", "Edge devices", "Data centers"],;
       apiEndpoints: 400,"
       uptime: "99.9%","
-      security["Edge security", "Data encryption", "Secure boot", "Device authentication"];
-    },;"
+      security["Edge security", "Data encryption", "Secure boot", "Device authentication"]},;"
     competitors["AWS Greengrass", "Azure IoT Edge", "Google Edge TPU", "Intel OpenVINO"],;"
     marketSize: "$12.3 billion by 2025"
 
-];
-}}"
+]}}"

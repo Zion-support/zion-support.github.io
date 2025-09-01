@@ -1,5 +1,3 @@
-import React from 'react.ts';'
-import { motion } from 'framer-motion.ts';
 import {
 
   Network,
@@ -23,59 +21,13 @@ import {
   TrendingUp,
   Zap,
   Shield,
-  Users,'
+  Users,
   GitBranch} from 'lucide-react.ts';
 
 const AIAutonomousEcosystemManager: React.FC = (): JSX.Element => {
 
-  const features = [
-    {
-
-      icon: Brain,'
-      title: 'AI-Powered Ecosystem Management',
-      description:'
-        'Advanced machine learning for autonomous ecosystem orchestration and optimization'},
-    {
-
-      icon: Network,'
-      title: 'Ecosystem Mapping',
-      description:'
-        'Comprehensive mapping and visualization of business ecosystem relationships'},
-    {
-
-      icon: Target,'
-      title: 'Relationship Optimization',
-      description:'
-        'Intelligent optimization of ecosystem partnerships and collaborations'},
-    {
-
-      icon: BarChart3,'
-      title: 'Ecosystem Analytics',
-      description:'
-        'Real-time analytics and insights into ecosystem performance and health'},
-    {
-
-      icon: GitBranch,'
-      title: 'Integration Management',
-      description:'
-        'AI-driven management of ecosystem integrations and connections'},
-    {
-
-      icon: TrendingUp,'
-      title: 'Growth Monitoring',
-      description:'
-        'Continuous monitoring and optimization of ecosystem growth and expansion'},
-  ];
-
-  const benefits = ['
-    'Improve ecosystem efficiency by 50%','
-    'Optimize partnerships by 60%','
-    'Enhance collaboration by 70%','
-    'Automate ecosystem management','
-    '24/7 autonomous operation','
-    'Real-time ecosystem insights',
-  ];
-
+  
+  
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}"
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">"
@@ -86,12 +38,12 @@ const AIAutonomousEcosystemManager: React.FC = (): JSX.Element => {
             transition={{ duration: 0.8 }}
           >"
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 text-emerald-400 text-sm font-medium mb-6">"
-              <Network className="w-4 h-4 mr-2" />              AI-Powered Autonomous Ecosystem Manager
+              <Network className="w-4 h-4 mr-2"  />              AI-Powered Autonomous Ecosystem Manager
             </div>
 "
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Transform Your Business Ecosystem with"
-              <span className="bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent">
                 {' '}
                 AI Intelligence
               </span>
@@ -189,7 +141,7 @@ const AIAutonomousEcosystemManager: React.FC = (): JSX.Element => {
               <div className="space-y-4">
                 {benefits.map((benefit, index) => ("
                   <div key={index} className="flex items-center space-x-3">"
-                    <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0" />"                    <span className="text-gray-300">{benefit}</span>
+                    <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0"  />"                    <span className="text-gray-300">{benefit}</span>
                   </div>
                 ))}
               </div>

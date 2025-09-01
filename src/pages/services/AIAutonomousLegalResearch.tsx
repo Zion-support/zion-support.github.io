@@ -1,5 +1,3 @@
-import React from 'react.ts';'
-import { motion } from 'framer-motion.ts';
 import {
 
   BookOpen,
@@ -23,58 +21,13 @@ import {
   TrendingUp,
   Zap,
   Shield,
-  Users,'
+  Users,
   Scale} from 'lucide-react.ts';
 
 const AIAutonomousLegalResearch: React.FC = (): JSX.Element => {
 
-  const features = [
-    {
-
-      icon: Brain,'
-      title: 'AI-Powered Legal Research',
-      description:'
-        'Advanced machine learning for autonomous legal research and case analysis'},
-    {
-
-      icon: BookOpen,'
-      title: 'Case Law Analysis',
-      description:'
-        'Comprehensive analysis of case law with AI-driven insights and precedents'},
-    {
-
-      icon: Target,'
-      title: 'Legal Document Review',
-      description:'
-        'Automated review and analysis of legal documents and contracts'},
-    {
-
-      icon: BarChart3,'
-      title: 'Legal Analytics',
-      description:'
-        'Data-driven legal insights and predictive analytics for case outcomes'},
-    {
-
-      icon: Scale,'
-      title: 'Compliance Monitoring',
-      description:'
-        'Continuous monitoring of legal compliance and regulatory changes'},
-    {
-
-      icon: Shield,'
-      title: 'Legal Risk Assessment','
-      description: 'AI-powered risk assessment and mitigation strategies'},
-  ];
-
-  const benefits = ['
-    'Reduce research time by 75%','
-    'Improve case analysis by 80%','
-    'Enhance legal accuracy by 90%','
-    'Automate document review','
-    '24/7 autonomous operation','
-    'Real-time legal updates',
-  ];
-
+  
+  
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}"
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">"
@@ -85,12 +38,12 @@ const AIAutonomousLegalResearch: React.FC = (): JSX.Element => {
             transition={{ duration: 0.8 }}
           >"
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-500/30 text-purple-400 text-sm font-medium mb-6">"
-              <BookOpen className="w-4 h-4 mr-2" />              AI-Powered Autonomous Legal Research
+              <BookOpen className="w-4 h-4 mr-2"  />              AI-Powered Autonomous Legal Research
             </div>
 "
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Revolutionize Legal Research with"
-              <span className="bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent">
                 {' '}
                 AI Intelligence
               </span>
@@ -188,7 +141,7 @@ const AIAutonomousLegalResearch: React.FC = (): JSX.Element => {
               <div className="space-y-4">
                 {benefits.map((benefit, index) => ("
                   <div key={index} className="flex items-center space-x-3">"
-                    <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0" />"                    <span className="text-gray-300">{benefit}</span>
+                    <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0"  />"                    <span className="text-gray-300">{benefit}</span>
                   </div>
                 ))}
               </div>

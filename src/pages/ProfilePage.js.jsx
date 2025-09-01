@@ -1,10 +1,10 @@
-import { useState, useEffect } from 'react';'
-import { useParams } from 'react-router-dom';'
-import { supabase } from '@/integrations/supabase/client';'
-import { toast } from '@/components/ui/use-toast';'
-import { SEO } from '@/components/SEO';'
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';'
-import { Badge } from '@/components/ui/badge';'
+import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { supabase } from '@/integrations/supabase/client';
+import { toast } from '@/components/ui/use-toast';
+import { SEO } from '@/components/SEO';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Badge } from '@/components/ui/badge';
 import { HireNowCTA } from '@/components/profile/HireNowCTA';
 import {
 
@@ -13,7 +13,7 @@ import {
   Link as LinkIcon,
   Github,
   Twitter,
-  Linkedin,'
+  Linkedin,
   CheckCircle2} from 'lucide-react';
 export default function ProfilePage() {
   // useParams may be untyped in this environment, so avoid passing a
@@ -28,8 +28,8 @@ export default function ProfilePage() {
       setIsError(false);
       try {
         const { data, error } = await supabase'
-          .from('talent_profiles')'
-          .select('*')'
+          .from('talent_profiles')
+          .select('*')
           .eq('id', profileId)
           .single();
         if (error) {
@@ -41,9 +41,9 @@ export default function ProfilePage() {
         // console.error("Error fetching profile:", error);
         setIsError(true);
         toast({
-'
-          title: 'Error','
-          description: 'Failed to load profile. Please try again later.','
+
+          title: 'Error',
+          description: 'Failed to load profile. Please try again later.',
           variant: 'destructive'});
       } finally {
 
@@ -76,7 +76,7 @@ export default function ProfilePage() {
       <SEO
         title={`${profileData.full_name} | Talent Profile`}
         description={
-'
+
           profileData.bio || 'View the profile of this talented individual.'
         }
       />
@@ -159,7 +159,7 @@ export default function ProfilePage() {
             {/* Bio Section */}"
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">"
               <h2 className="text-xl font-bold text-white mb-3">About Me</h2>"
-              <p className="text-zion-slate-light">'
+              <p className="text-zion-slate-light">
                 {profileData.bio || 'No bio provided.'}
               </p>
             </div>
@@ -174,8 +174,8 @@ export default function ProfilePage() {
                     <a
                       key={index}
                       href={link}"
-                      target="_blank""
-                      rel="noopener noreferrer""
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex items-center text-zion-cyan hover:text-white transition-colors"
                     >"
                       <LinkIcon className="h-4 w-4 mr-2" />
@@ -193,7 +193,7 @@ export default function ProfilePage() {
             {/* Experience Section */}"
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">"
               <h2 className="text-xl font-bold text-white mb-3">Experience</h2>"
-              <p className="text-zion-slate-light">'
+              <p className="text-zion-slate-light">
                 {profileData.experience || 'No experience provided.'}
               </p>
             </div>
@@ -205,8 +205,8 @@ export default function ProfilePage() {
                 {profileData.github_link && (
                   <a
                     href={profileData.github_link}"
-                    target="_blank""
-                    rel="noopener noreferrer""
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-zion-cyan hover:text-white transition-colors"
                   >"
                     <Github className="h-6 w-6" />
@@ -215,8 +215,8 @@ export default function ProfilePage() {
                 {profileData.twitter_link && (
                   <a
                     href={profileData.twitter_link}"
-                    target="_blank""
-                    rel="noopener noreferrer""
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-zion-cyan hover:text-white transition-colors"
                   >"
                     <Twitter className="h-6 w-6" />
@@ -225,8 +225,8 @@ export default function ProfilePage() {
                 {profileData.linkedin_link && (
                   <a
                     href={profileData.linkedin_link}"
-                    target="_blank""
-                    rel="noopener noreferrer""
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-zion-cyan hover:text-white transition-colors"
                   >"
                     <Linkedin className="h-6 w-6" />
@@ -240,9 +240,9 @@ export default function ProfilePage() {
           <div className="col-span-12 lg:col-span-4 space-y-6">
             <HireNowCTA
               talentProfile={{
-'
-                id: profileData?.id || '','
-                full_name: profileData?.full_name || '','
+
+                id: profileData?.id || '',
+                full_name: profileData?.full_name || '',
                 professional_title: profileData?.professional_title || '',
                 hourly_rate: profileData?.hourly_rate || 0}}
             />

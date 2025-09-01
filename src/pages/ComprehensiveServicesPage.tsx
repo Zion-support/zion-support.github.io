@@ -1,6 +1,3 @@
-import React, { useState } from 'react.ts';'
-import { Link } from 'react-router-dom.ts';'
-import { motion } from 'framer-motion.ts';
 import {
 
   Brain,  Shield,
@@ -33,103 +30,51 @@ import {
   Filter,
   DollarSign,
   Clock,
-  Award,'
-  TrendingDown} from 'lucide-react.ts';'
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';'
-import { COMPREHENSIVE_PRICING_GUIDE_2025 } from '../data/comprehensivePricingGuide2025';
+  Award,
+  TrendingDown} from 'lucide-react.ts';
 export function ComprehensiveServicesPage(...args: any[]): any {
-'
-  const [searchTerm, setSearchTerm] = useState('');'
-  const [selectedCategory, setSelectedCategory] = useState('all');'
+
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const [priceRange, setPriceRange] = useState('all');
 
-  const categories = ['
-    { id: 'all', name: 'All Categories', icon: Globe },'
-    { id: 'AI & Analytics', name: 'AI & Analytics', icon: Brain },'
-    { id: 'Quantum Computing', name: 'Quantum Computing', icon: Atom },'
-    { id: 'Cybersecurity', name: 'Cybersecurity', icon: Shield },'
-    { id: 'IoT & Edge Computing', name: 'IoT & Edge Computing', icon: Cpu },'
-    { id: 'Blockchain & Web3', name: 'Blockchain & Web3', icon: Code },'
-    { id: 'Marketing & Sales', name: 'Marketing & Sales', icon: TrendingUp },'
-    { id: 'Cloud & DevOps', name: 'Cloud & DevOps', icon: Cloud },'
-    { id: 'Customer Service', name: 'Customer Service', icon: Users },
-    {
-'
-      id: 'Compliance & Governance','
-      name: 'Compliance & Governance',
-      icon: Lock},
-  ];
-
-  const priceRanges = ['
-    { id: 'all', name: 'All Prices', range: 'All' },'
-    { id: 'low', name: 'Under $1,000', range: '< $1,000' },'
-    { id: 'medium', name: '$1,000 - $3,000', range: '$1,000 - $3,000' },'
-    { id: 'high', name: 'Over $3,000', range: '> $3,000' },
-  ];
-
-  const filteredServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter()
-    service => {
-
-      const matchesSearch =
-        service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.category.toLowerCase().includes(searchTerm.toLowerCase());
-
-      const matchesCategory ='
-        selectedCategory === 'all' || service.category === selectedCategory;
-
-      let matchesPrice = true;'
+  
+  
+  
+      
+      let matchesPrice = true;
       if (priceRange === 'low') {
 
-        matchesPrice = service.price < 1000;'
-      } else if (priceRange === 'medium') {
+        matchesPrice = service.price < 1000} else if (priceRange === 'medium') {
 
-        matchesPrice = service.price >= 1000 && service.price <= 3000;'
-      } else if (priceRange === 'high') {
+        matchesPrice = service.price >= 1000 && service.price <= 3000} else if (priceRange === 'high') {
 
-        matchesPrice = service.price > 3000;
-      }
+        matchesPrice = service.price > 3000}
 
-      return matchesSearch && matchesCategory && matchesPrice;
-    }
+      return matchesSearch && matchesCategory && matchesPrice}
   );
 
-  const getCategoryIcon = (category: anystring) => {
+  
+    return categoryData ? categoryData.icon : Globe};
 
-    const categoryData = categories.find(cat => cat.id === category);
-    return categoryData ? categoryData.icon : Globe;
-  };
+  
+    if (price <= 3000) return 'medium';
+    return 'high'};
 
-  const getPriceRange = (price: anynumber) => {
-'
-    if (price < 1000) return 'low';'
-    if (price <= 3000) return 'medium';'
-    return 'high';
-  };
-
-  const getPriceColor = (price: anynumber) => {
-
-    const range = getPriceRange(price);
+  
     switch (range) {
-'
+
       case 'low':'
-        return 'text-green-400';'
+        return 'text-green-400';
       case 'medium':'
-        return 'text-yellow-400';'
+        return 'text-yellow-400';
       case 'high':'
         return 'text-red-400';
       default:'
-        return 'text-gray-400';
-    }
+        return 'text-gray-400'}
   };
 
-  const stats = ['
-    { number: '10+', label: 'Service Categories', icon: Target },'
-    { number: '100+', label: 'Features Available', icon: CheckCircle },'
-    { number: '24/7', label: 'Support Available', icon: Users },'
-    { number: '99.9%', label: 'Uptime Guarantee', icon: Award },
-  ];
-
+  
   return()
     <div className="min-h-screen py-8">"      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Page Header */}"
@@ -180,9 +125,14 @@ export function ComprehensiveServicesPage(...args: any[]): any {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {/* Search */}"
               <div className="relative">"
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"  />
                 <input"
+<<<<<<< HEAD
+                  type="text"
+                  placeholder="Search services..."
+=======
                   type="text""                  placeholder="Search services..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   value={searchTerm}
                   onChange={e => setSearchTerm(e.target.value)}"
                   className="w-full pl-10 pr-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
@@ -228,7 +178,7 @@ export function ComprehensiveServicesPage(...args: any[]): any {
             <h2 className="text-3xl font-bold text-white">
               Available Services
             </h2>"
-            <div className="text-gray-400">'
+            <div className="text-gray-400">
               {filteredServices.length} of{' '}
               {INNOVATIVE_MICRO_SAAS_SERVICES_2025.length} services
             </div>
@@ -247,7 +197,7 @@ export function ComprehensiveServicesPage(...args: any[]): any {
                 <div className="flex items-center space-x-4 mb-6">"
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     {React.createElement(getCategoryIcon(service.category), {
-'
+
                       className: 'w-8 h-8 text-white'})}
                   </div>"
                   <div className="flex-1">"
@@ -281,7 +231,7 @@ export function ComprehensiveServicesPage(...args: any[]): any {
                     <span className="text-gray-400 text-sm">/month</span>
                   </div>"
                   <div className="flex items-center space-x-2 text-sm text-gray-400">"
-                    <DollarSign className="w-4 h-4" />                    <span>Market: {service.marketPrice}</span>
+                    <DollarSign className="w-4 h-4"  />                    <span>Market: {service.marketPrice}</span>
                   </div>
                 </div>
 
@@ -292,7 +242,7 @@ export function ComprehensiveServicesPage(...args: any[]): any {
                       key={featureIndex}"
                       className="flex items-center space-x-2 text-sm text-gray-300"
                     >"
-                      <CheckCircle className="w-4 h-4 text-cyan-400" />                      <span>{feature}</span>
+                      <CheckCircle className="w-4 h-4 text-cyan-400"  />                      <span>{feature}</span>
                     </div>
                   ))}
                   {service.features.length > 3 && ("
@@ -352,7 +302,7 @@ export function ComprehensiveServicesPage(...args: any[]): any {
                     Learn More
                   </Link>
                   <Link"
-                    to="/contact""
+                    to="/contact"
                     className="block w-full text-center bg-transparent text-cyan-400 px-4 py-3 rounded-lg font-semibold border border-cyan-400 hover:bg-cyan-400 hover:text-white transition-all duration-200"
                   >
                     Get Started
@@ -381,13 +331,13 @@ export function ComprehensiveServicesPage(...args: any[]): any {
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-cyan-600 rounded-lg hover:bg-gray-100 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
               >
                 <span>Get Started Today</span>"
-                <ArrowRight className="w-5 h-5" />              </Link>
+                <ArrowRight className="w-5 h-5"  />              </Link>
               <Link"
-                to="/request-quote""
+                to="/request-quote"
                 className="inline-flex items-center space-x-2 px-8 py-4 bg-transparent text-white rounded-lg hover:bg-white/10 transition-all duration-200 font-semibold text-lg border-2 border-white"
               >
                 <span > Request a Quote</span>
@@ -397,21 +347,20 @@ export function ComprehensiveServicesPage(...args: any[]): any {
             {/* Contact Info */}"
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-cyan-100">"
               <div className="flex items-center justify-center space-x-3">"
-                <Phone className="w-5 h-5" />
+                <Phone className="w-5 h-5"  />
                 <span>+1 302 464 0950</span>
               </div>"
               <div className="flex items-center justify-center space-x-3">"
-                <Mail className="w-5 h-5" />
+                <Mail className="w-5 h-5"  />
                 <span>kleber@ziontechgroup.com</span>
               </div>"
               <div className="flex items-center justify-center space-x-3">"
-                <MapPin className="w-5 h-5" />                <span>364 E Main St STE 1008 Middletown DE 19709</span>
+                <MapPin className="w-5 h-5"  />                <span>364 E Main St STE 1008 Middletown DE 19709</span>
               </div>
             </div>
           </motion.div>
         </div>
       </div>
-    </div>) ;
-}
+    </div>) }
 export default ComprehensiveServicesPage;
 '"`

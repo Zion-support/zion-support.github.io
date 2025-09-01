@@ -1,13 +1,13 @@
-import React, { useState } from 'react';'
-import { EXPANDED_SERVICES, SERVICE_CATEGORIES } from '@/data/expandedServices';'
+import React, { useState } from 'react';
+import { EXPANDED_SERVICES, SERVICE_CATEGORIES } from '@/data/expandedServices';
 import { Button } from '@/components/ui/button';
 import {
 
   Card,
   CardContent,
   CardDescription,
-  CardHeader,'
-  CardTitle} from '@/components/ui/card';'
+  CardHeader,
+  CardTitle} from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import {
 
@@ -21,11 +21,11 @@ import {
   Globe,
   Clock,
   DollarSign,
-  Users,'
-  Award} from 'lucide-react';'
+  Users,
+  Award} from 'lucide-react';
 import SEO from '@/components/SEO';
 export default function PricingGuidePage() {
-'
+
   const [selectedCategory, setSelectedCategory] = useState('all');
   const filteredServices ='
     selectedCategory === 'all'
@@ -50,20 +50,20 @@ export default function PricingGuidePage() {
   };
   const getServiceTier = price => {
 
-    if (price < 2000)'
+    if (price < 2000)
       return { tier: 'Starter', color: 'bg-green-100 text-green-800' };
-    if (price < 5000)'
+    if (price < 5000)
       return { tier: 'Professional', color: 'bg-blue-100 text-blue-800' };
-    if (price < 10000)'
-      return { tier: 'Enterprise', color: 'bg-purple-100 text-purple-800' };'
+    if (price < 10000)
+      return { tier: 'Enterprise', color: 'bg-purple-100 text-purple-800' };
     return { tier: 'Premium', color: 'bg-orange-100 text-orange-800' };
   };
   return()
     <div className="min-h-screen bg-background">
       <SEO"
-        title="Service Pricing Guide - Zion Tech Group""
-        description="Complete pricing guide for all our IT and AI services. Compare prices, features, and choose the perfect solution for your business needs.""
-        keywords="service pricing, IT services cost, AI development pricing, cybersecurity pricing, cloud migration cost""
+        title="Service Pricing Guide - Zion Tech Group"
+        description="Complete pricing guide for all our IT and AI services. Compare prices, features, and choose the perfect solution for your business needs."
+        keywords="service pricing, IT services cost, AI development pricing, cybersecurity pricing, cloud migration cost"
         canonical="https://ziontechgroup.com/pricing"
       />
 
@@ -143,10 +143,10 @@ export default function PricingGuidePage() {
         <div className="container mx-auto px-4">"
           <div className="flex flex-wrap justify-center gap-4">
             <Button'
-              variant={selectedCategory === 'all' ? 'default' : 'outline'}'
+              variant={selectedCategory === 'all' ? 'default' : 'outline'}
               onClick={() => setSelectedCategory('all')}
               className={
-'
+
                 selectedCategory === 'all''
                   ? 'bg-zion-cyan text-white''
                   : 'border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10'
@@ -161,7 +161,7 @@ export default function PricingGuidePage() {
                 <Button
                   key={category.id}
                   variant={
-'
+
                     selectedCategory === category.name ? 'default' : 'outline'
                   }
                   onClick={() => setSelectedCategory(category.name)}
@@ -183,13 +183,13 @@ export default function PricingGuidePage() {
       {/* Services Grid */}"
       <div className="container mx-auto px-4 py-12">"
         <div className="mb-8">"
-          <h2 className="text-3xl font-bold text-gray-900 mb-2">'
+          <h2 className="text-3xl font-bold text-gray-900 mb-2">
             {selectedCategory === 'all''
               ? 'All Services''`
               : `${selectedCategory} Services`}{' '}
             ({filteredServices.length})
           </h2>"
-          <p className="text-gray-600">'
+          <p className="text-gray-600">
             {selectedCategory === 'all''
               ? 'Complete overview of all available services with transparent pricing'`
               : `Specialized ${selectedCategory.toLowerCase()} solutions for your business needs`}
@@ -260,9 +260,9 @@ export default function PricingGuidePage() {
                   <CardDescription"
                     className="text-gray-600 mb-4 overflow-hidden text-ellipsis"
                     style={{
-'
+
                       display: '-webkit-box',
-                      WebkitLineClamp: 3,'
+                      WebkitLineClamp: 3,
                       WebkitBoxOrient: 'vertical'}}
                   >
                     {service.description}
@@ -299,7 +299,7 @@ export default function PricingGuidePage() {
                       Get Quote
                     </Button>
                     <Button"
-                      variant="outline""
+                      variant="outline"
                       className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
                     >
                       Details
@@ -450,15 +450,15 @@ export default function PricingGuidePage() {
 "
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button"
-              size="lg""
+              size="lg"
               className="bg-zion-cyan hover:bg-zion-cyan-dark text-white"
             >"
               <Mail className="w-5 h-5 mr-2" />
               Request Custom Quote
             </Button>
             <Button"
-              size="lg""
-              variant="outline""
+              size="lg"
+              variant="outline"
               className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
             >"
               <Phone className="w-5 h-5 mr-2" />

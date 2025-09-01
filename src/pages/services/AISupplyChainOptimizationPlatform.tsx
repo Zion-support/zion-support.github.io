@@ -1,85 +1,11 @@
-import React from 'react.ts';'
-import { SEO   } from '../../components/SEO';'
-import { GradientHeading   } from '../../components/ui/GradientHeading';'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle   } from '../../components/ui/card';'
-import { Badge   } from '../../components/ui/badge';'
-import { Button   } from '../../components/ui/button';'
-import { CheckCircle, Truck, Globe, TrendingUp, Zap, Shield, Users, Clock, BarChart3   } from 'lucide-react.ts';
 ;
 const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
 
-  const features = [
-    {
-
-      icon: <Truck className="h-6 w-6 text-blue-500" />,"
-      title: "Smart Logistics","
-      description: "AI-powered route optimization and real-time tracking for maximum efficiency"
-    },
-    {
-"
-      icon: <Globe className="h-6 w-6 text-green-500" />,"
-      title: "Global Supply Chain","
-      description: "Manage complex international supply chains with intelligent risk assessment"
-    },
-    {
-"
-      icon: <TrendingUp className="h-6 w-6 text-purple-500" />,"
-      title: "Predictive Analytics","
-      description: "Forecast demand, optimize inventory, and prevent supply chain disruptions"
-    },
-    {
-"
-      icon: <Zap className="h-6 w-6 text-yellow-500" />,"
-      title: "Real-time Monitoring","
-      description: "Track shipments, inventory levels, and supplier performance in real-time"
-    },
-    {
-"
-      icon: <Shield className="h-6 w-6 text-red-500" />,"
-      title: "Risk Management","
-      description: "Identify and mitigate supply chain risks with AI-powered insights"
-    },
-    {
-"
-      icon: <BarChart3 className="h-6 w-6 text-cyan-500" />,"
-      title: "Performance Analytics","
-      description: "Comprehensive reporting and analytics for continuous improvement";
+  
     };
   ];
 
-  const optimizationModules = [
-    {
-      icon: Activity,
-      title: "Demand Forecasting",
-      description: "AI-powered demand prediction using historical data, market trends, and external factors"
-    },
-    {
-      icon: LineChart,
-      title: "Inventory Optimization",
-      description: "Smart inventory management that balances stock levels with demand and reduces carrying costs"
-    },
-    {
-      icon: PieChart,
-      title: "Supplier Performance Analytics",
-      description: "Comprehensive evaluation of supplier performance with predictive scoring and recommendations"
-    },
-    {
-      icon: MapPin,
-      title: "Network Optimization",
-      description: "Optimize warehouse locations, distribution centers, and transportation routes for maximum efficiency"
-    },
-    {
-      icon: BarChart3,
-      title: "Cost Optimization",
-      description: "Identify cost-saving opportunities across transportation, warehousing, and procurement operations"
-    },
-    {
-      icon: Target,
-      title: "Sustainability Optimization",
-      description: "Optimize supply chain operations for environmental impact and sustainability goals"
-    }
-  ];
-
+  
   const pricingPlans = [
     {
 "
@@ -131,60 +57,21 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
         "Custom integrations","
         "White-label solutions"
       ],;
-      popular: false;
-    };
-  ];
-
-  const benefits = [
-    {
-"
-      metric: "35%","
-      description: "Reduction in logistics costs through route optimization"
-    },
-    {
-"
-      metric: "50%","
-      description: "Improvement in delivery times and customer satisfaction"
-    },
-    {
-"
-      metric: "40%","
-      description: "Reduction in inventory carrying costs"
-    },
-    {
-"
-      metric: "90%","
-      description: "Faster response to supply chain disruptions";
-    };
-  ];
-
-  const useCases = [
-    {
-"
-      title: "E-commerce Fulfillment","
-      description: "Optimize warehouse operations and last-mile delivery for online retailers"
-    },
-    {
-"
-      title: "Manufacturing","
-      description: "Streamline raw material procurement and production scheduling"
-    },
-    {
-"
-      title: "Retail Distribution","
-      description: "Optimize store replenishment and cross-docking operations"
-    },
-    {
-"
-      title: "Healthcare Supply Chain","
-      description: "Ensure critical medical supplies reach their destination on time";
-    };  ];
+      popular: false};
+  ]};
+  ]};  ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
+<<<<<<< HEAD
+        title="AI-Powered Supply Chain Optimization Platform - Zion Tech Group"
+        description="Revolutionize your supply chain with AI-powered optimization. Reduce costs, improve efficiency, and enhance customer satisfaction with intelligent logistics management."
+       />
+=======
         title="AI-Powered Supply Chain Optimization Platform - Zion Tech Group""        description="Revolutionize your supply chain with AI-powered optimization. Reduce costs, improve efficiency, and enhance customer satisfaction with intelligent logistics management."
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       
       {/* Hero Section */}"
       <div className="relative overflow-hidden">"
@@ -296,7 +183,7 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
                 <ul className="space-y-3 mb-6">
                   {tier.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center gap-2">"
-                      <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />"                      <span className="text-gray-300">{feature}</span>
+                      <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0"  />"                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>"
@@ -333,17 +220,17 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
           <h3 className="text-2xl font-bold text-white mb-6">Need Help Getting Started?</h3>"
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
             <div className="text-center">"
-              <Clock className="h-12 w-12 text-zion-cyan mx-auto mb-4" />"
+              <Clock className="h-12 w-12 text-zion-cyan mx-auto mb-4"  />"
               <h4 className="text-white font-semibold mb-2">24/7 Support</h4>"
               <p className="text-gray-300">Round-the-clock assistance for all your needs</p>
             </div>"
             <div className="text-center">"
-              <Users className="h-12 w-12 text-zion-cyan mx-auto mb-4" />"
+              <Users className="h-12 w-12 text-zion-cyan mx-auto mb-4"  />"
               <h4 className="text-white font-semibold mb-2">Expert Consultation</h4>"
               <p className="text-gray-300">Get personalized guidance from our supply chain experts</p>
             </div>"
             <div className="text-center">"
-              <Globe className="h-12 w-12 text-zion-cyan mx-auto mb-4" />"
+              <Globe className="h-12 w-12 text-zion-cyan mx-auto mb-4"  />"
               <h4 className="text-white font-semibold mb-2">Global Reach</h4>"              <p className="text-gray-300">Serving businesses worldwide with local expertise</p>
             </div>
           </div>"

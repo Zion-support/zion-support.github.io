@@ -1,6 +1,6 @@
-import { useState } from 'react';'
-import { useParams, useNavigate } from 'react-router-dom';'
-import { SEO } from '@/components/SEO';'
+import { useState } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import {
 
@@ -12,7 +12,7 @@ import {
   MicOff,
   Monitor,
   Users,
-  Settings,'
+  Settings,
   MessageCircle} from 'lucide-react';
 
 export default function VideoCall() {
@@ -25,8 +25,8 @@ export default function VideoCall() {
   const [isScreenSharing, setIsScreenSharing] = useState(false);
   const [participants, setParticipants] = useState([
     {
-'
-      id: 'user-1','
+
+      id: 'user-1',
       name: 'You',
       isVideoEnabled: true,
       isMuted: false,
@@ -66,22 +66,22 @@ export default function VideoCall() {
     // This is just for demo purposes - in a real app, this would be handled by the video call service
     const mockUsers = [
       {
-'
-        id: 'user-2','
+
+        id: 'user-2',
         name: 'Alex Chen',
         isVideoEnabled: true,
         isMuted: false,
         isScreenSharing: false},
       {
-'
-        id: 'user-3','
+
+        id: 'user-3',
         name: 'Taylor Kim',
         isVideoEnabled: false,
         isMuted: true,
         isScreenSharing: false},
       {
-'
-        id: 'user-4','
+
+        id: 'user-4',
         name: 'Jordan Smith',
         isVideoEnabled: true,
         isMuted: false,
@@ -111,9 +111,9 @@ export default function VideoCall() {
             <Button
               onClick={handleJoinCall}
               disabled={isJoining}"
-              size="lg""
+              size="lg"
               className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
-            >'
+            >
               {isJoining ? 'Connecting...' : 'Join Call'}
             </Button>
           </div>
@@ -142,7 +142,7 @@ export default function VideoCall() {
                         {participant.isScreenSharing && ("
                           <Monitor className="w-4 h-4 text-blue-400" />
                         )}
-                      </div>'
+                      </div>
                       {participant.id === 'user-1' && ("
                         <div className="text-xs text-gray-400">(You)</div>
                       )}
@@ -154,9 +154,9 @@ export default function VideoCall() {
               {/* Call Controls */}"
               <div className="flex items-center justify-center gap-4">
                 <Button
-                  onClick={toggleMute}'
+                  onClick={toggleMute}
                   variant={isMuted ? 'destructive' : 'outline'}"
-                  size="lg""
+                  size="lg"
                   className="rounded-full w-14 h-14"
                 >
                   {isMuted ? ("
@@ -167,9 +167,9 @@ export default function VideoCall() {
                 </Button>
 
                 <Button
-                  onClick={toggleVideo}'
+                  onClick={toggleVideo}
                   variant={!isVideoEnabled ? 'destructive' : 'outline'}"
-                  size="lg""
+                  size="lg"
                   className="rounded-full w-14 h-14"
                 >
                   {isVideoEnabled ? ("
@@ -180,9 +180,9 @@ export default function VideoCall() {
                 </Button>
 
                 <Button
-                  onClick={toggleScreenShare}'
+                  onClick={toggleScreenShare}
                   variant={isScreenSharing ? 'default' : 'outline'}"
-                  size="lg""
+                  size="lg"
                   className="rounded-full w-14 h-14"
                 >"
                   <Monitor className="w-6 h-6" />
@@ -190,8 +190,8 @@ export default function VideoCall() {
 
                 <Button
                   onClick={handleLeaveCall}"
-                  variant="destructive""
-                  size="lg""
+                  variant="destructive"
+                  size="lg"
                   className="rounded-full w-14 h-14"
                 >"
                   <PhoneOff className="w-6 h-6" />
@@ -201,24 +201,24 @@ export default function VideoCall() {
               {/* Additional Controls */}"
               <div className="flex items-center justify-center gap-4 mt-4">
                 <Button"
-                  variant="ghost""
-                  size="sm""
+                  variant="ghost"
+                  size="sm"
                   className="text-gray-400 hover:text-white"
                 >"
                   <MessageCircle className="w-4 h-4 mr-2" />
                   Chat
                 </Button>
                 <Button"
-                  variant="ghost""
-                  size="sm""
+                  variant="ghost"
+                  size="sm"
                   className="text-gray-400 hover:text-white"
                 >"
                   <Users className="w-4 h-4 mr-2" />
                   Participants
                 </Button>
                 <Button"
-                  variant="ghost""
-                  size="sm""
+                  variant="ghost"
+                  size="sm"
                   className="text-gray-400 hover:text-white"
                 >"
                   <Settings className="w-4 h-4 mr-2" />

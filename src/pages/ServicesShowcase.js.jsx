@@ -1,6 +1,6 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
-import { motion } from 'framer-motion';'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { Brain, Cloud, Shield, Rocket, Target } from 'lucide-react';
 const ServicesShowcase = () => {
     const services = [

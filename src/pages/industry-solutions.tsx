@@ -1,5 +1,3 @@
-import React from 'react.ts';'
-import { motion } from 'framer-motion.ts';
 import {
 
   Building,
@@ -11,119 +9,13 @@ import {
   Star,
   Brain,
   Cloud,
-  Shield,'
-  TrendingUp} from 'lucide-react.ts';'
-import { Link } from 'react-router-dom.ts';
+  Shield,
+  TrendingUp} from 'lucide-react.ts';
 
 const IndustrySolutions: React.FC = (): JSX.Element => {
 
-  const industries = [
-    {
-'
-      title: 'Healthcare',
-      description:'
-        'AI-powered healthcare solutions for improved patient care and operational efficiency.',
-      icon: Heart,'
-      path: '/solutions/healthcare',
-      solutions: ['
-        'AI Healthcare Analytics','
-        'Predictive Diagnostics','
-        'Patient Care Optimization','
-        'Compliance Management',
-      ]},
-    {
-'
-      title: 'Manufacturing',
-      description:'
-        'Smart manufacturing solutions with IoT, AI, and automation technologies.',
-      icon: Factory,'
-      path: '/manufacturing-solutions',
-      solutions: ['
-        'Smart Factory Automation','
-        'Predictive Maintenance','
-        'Quality Control','
-        'Supply Chain Optimization',
-      ]},
-    {
-'
-      title: 'Financial Services',
-      description:'
-        'Advanced financial technology solutions for risk management and operational efficiency.',
-      icon: DollarSign,'
-      path: '/financial-solutions',
-      solutions: ['
-        'AI Financial Analytics','
-        'Risk Management','
-        'Trading Algorithms','
-        'Compliance Automation',
-      ]},
-    {
-'
-      title: 'Automotive',
-      description:'
-        'Connected vehicle solutions and automotive technology innovations.',
-      icon: Car,'
-      path: '/automotive-solutions',
-      solutions: ['
-        'Connected Vehicles','
-        'Predictive Maintenance','
-        'Fleet Management','
-        'Safety Systems',
-      ]},
-    {
-'
-      title: 'Energy & Utilities',
-      description:'
-        'Smart grid and energy management solutions for sustainability and efficiency.',
-      icon: Zap,'
-      path: '/energy-solutions',
-      solutions: ['
-        'Smart Grid Management','
-        'Energy Optimization','
-        'Predictive Maintenance','
-        'Sustainability Analytics',
-      ]},
-    {
-'
-      title: 'Retail & E-commerce',
-      description:'
-        'Digital transformation solutions for modern retail and e-commerce operations.',
-      icon: Globe,'
-      path: '/retail-solutions',
-      solutions: ['
-        'Customer Analytics','
-        'Inventory Management','
-        'Personalization','
-        'Supply Chain Optimization',
-      ]},
-  ];
-
-  const benefits = [
-    {
-'
-      title: 'Industry Expertise',
-      description:'
-        'Deep understanding of industry-specific challenges and requirements',
-      icon: Brain},
-    {
-'
-      title: 'Customized Solutions',
-      description:'
-        'Tailored technology solutions for your specific industry needs',
-      icon: Building},
-    {
-'
-      title: 'Proven Results',
-      description:'
-        'Track record of successful implementations across industries',
-      icon: Star},
-    {
-'
-      title: 'Future-Ready','
-      description: 'Scalable solutions that grow with your business',
-      icon: TrendingUp},
-  ];
-
+  
+  
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Header */}"
       <div className="relative overflow-hidden">"
@@ -138,7 +30,7 @@ const IndustrySolutions: React.FC = (): JSX.Element => {
           >"
             <div className="flex justify-center mb-6">"
               <div className="w-20 h-20 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center">"
-                <Building className="w-10 h-10 text-white" />              </div>
+                <Building className="w-10 h-10 text-white"  />              </div>
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Industry Solutions
@@ -240,7 +132,7 @@ const IndustrySolutions: React.FC = (): JSX.Element => {
                       key={idx}"
                       className="text-sm text-gray-400 flex items-center space-x-2"
                     >"
-                      <Star className="w-3 h-3 text-cyan-400" />                      <span>{solution}</span>
+                      <Star className="w-3 h-3 text-cyan-400"  />                      <span>{solution}</span>
                     </li>) ) }
                 </ul>
               </div>
@@ -250,7 +142,7 @@ const IndustrySolutions: React.FC = (): JSX.Element => {
                 className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-200 group"
               >"
                 <span className="font-medium">Learn More</span>"
-                <TrendingUp className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />              </Link>
+                <TrendingUp className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200"  />              </Link>
             </motion.div>) ) }
         </div>
       </div>
@@ -266,19 +158,19 @@ const IndustrySolutions: React.FC = (): JSX.Element => {
           <h2 className="text-3xl font-bold text-white mb-4">
             Ready to Transform Your Industry?
           </h2>"
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">'
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Let's discuss how our industry-specific solutions can address your
             unique challenges and drive growth.
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link"
-              to="/contact""
+              to="/contact"
               className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:scale-105"
             >
               Get Started
             </Link>
             <Link"
-              to="/services""
+              to="/services"
               className="px-8 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-200"
             >
               View All Services
@@ -286,7 +178,6 @@ const IndustrySolutions: React.FC = (): JSX.Element => {
           </div>
         </motion.div>
       </div>
-    </div>) ;
-};
+    </div>) };
 export default IndustrySolutions;
 '"

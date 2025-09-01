@@ -62,8 +62,8 @@ export default function Signup() {
             const { res, data: resData } = await register(data.displayName, data.email, data.password);
             // Handle duplicate email error from API
             if (res.status === 409 && resData?.code === 'EMAIL_EXISTS') {
-'
-                form.setError('email', { message: resData.message });'
+
+                form.setError('email', { message: resData.message });
                 toast.error('Email already registered – please login.');
                 return;
             }
@@ -114,12 +114,12 @@ export default function Signup() {
 
                             email: data.email,
                             mergeFields: { FNAME: data.displayName }
-                        });'
-                        await mailchimpService.sendWelcomeEmail(data.email, 'NEW10');
+                        });
+                        await mailchimpService.sendWelcomeEmail(data.email,NEW10');
                     }
                     catch (err) {
-'
-                        // console.error('Mailchimp subscription failed', err);'
+
+                        // console.error('Mailchimp subscription failed', err);
                         // Non-critical error, don't block user flow
                     }
                 }
@@ -152,7 +152,7 @@ export default function Signup() {
         if (isAuthenticated && user?.profileComplete) {
 "
             return <Navigate to="/"/>;
-        }'
+        }
         // Redirect to onboarding if user is authenticated but hasn't completed profile
         if (isAuthenticated && !user?.profileComplete) {
 "

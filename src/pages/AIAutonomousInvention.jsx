@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousInvention = () => {
   return()
@@ -6,15 +6,15 @@ const AIAutonomousInvention = () => {
       <Helmet>
         <title>AI Autonomous Invention Platform | Zion Tech Group</title>
         <meta
-          name="description""
+          name="description"
           content="Revolutionary AI autonomous invention platform that continuously creates new technologies, develops solutions, and generates patents with advanced AI capabilities and autonomous operation."
         />
         <meta"
-          name="keywords""
+          name="keywords"
           content="AI invention, autonomous invention, technology creation, solution development, autonomous operations, AI invention platform"
         />
         <link"
-          rel="canonical""
+          rel="canonical"
           href="https://ziontechgroup.com/ai-autonomous-invention"
         />
       </Helmet>
@@ -181,14 +181,7 @@ const AIAutonomousInvention = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Technology Invention','
-                'Product Invention','
-                'Process Invention','
-                'Method Invention','
-                'System Invention','
-                'Device Invention','
-                'Algorithm Invention','
-                'Application Invention',
+                'Technology Invention',Product Invention',Process Invention',Method Invention',System Invention',Device Invention',Algorithm Invention',Application Invention',
               ].map(type => (
                 <div
                   key={type}"

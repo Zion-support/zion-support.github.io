@@ -1,6 +1,99 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
-import { Link } from 'react-router-dom';    <div className="min-h-screen bg-gray-900 text-white">
+<<<<<<< HEAD
+import {
+
+  Brain,
+  Zap,
+  Shield,
+  Users,
+  BarChart3,
+  Rocket,
+  CheckCircle,
+  Star,
+  ArrowRight,
+  Globe,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  TrendingUp,
+  Target,
+  Heart,
+  Eye,
+  Activity,
+  Code,
+  Server,
+  Network,
+  Phone,
+  Mail,
+  MapPin,
+  DollarSign,
+  Clock,
+  Award,
+  Lightbulb,
+  Sparkles,
+  Atom,
+  AlertTriangle,
+  Bug,
+  Search,
+  Filter,
+  Sort,
+  Download,
+  Upload,
+  Share,
+  Copy,
+  Edit,
+  Trash,
+  Save,
+  Plus,
+  Minus,
+  X,
+  Check,
+  Info,
+  Key,
+  Fingerprint,
+  Monitor,
+  Wifi,
+  Bluetooth,
+  Satellite,
+  Telescope,
+  Microscope,
+  Flask,
+  Pill,
+  Stethoscope,
+  Calculator,
+  BookOpen,
+  GraduationCap,
+  CreditCard,
+  ShoppingCart,
+  Truck,
+  Warehouse,
+  Factory,
+  Building2,
+  Home,
+  Store,
+  Bank,
+  Insurance,
+  Law,
+  Gavel,
+  FileText,
+  Calendar,
+  Timer,
+  Stopwatch,
+  Thermometer,
+  Compass,
+  Map,
+  Navigation} from 'lucide-react';
+
+export function AICybersecurityPlatform() {
+  
+  
+  
+  
+  
+  return()
+    <div className="min-h-screen bg-gray-900 text-white">
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       {/* Hero Section */}"
       <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto">
@@ -11,7 +104,7 @@ import { Link } from 'react-router-dom';    <div className="min-h-screen bg-gray
             className="text-center"
           >"
             <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-6">"
-              <Sparkles className="w-4 h-4 mr-2" />              AI-Powered Cybersecurity
+              <Sparkles className="w-4 h-4 mr-2"  />              AI-Powered Cybersecurity
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
               AI Cybersecurity Platform
@@ -23,13 +116,13 @@ import { Link } from 'react-router-dom';    <div className="min-h-screen bg-gray
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 Start Protecting Today"
-                <ArrowRight className="ml-2 w-5 h-5" />              </Link>
+                <ArrowRight className="ml-2 w-5 h-5"  />              </Link>
               <Link"
-                to="/pricing""
+                to="/pricing"
                 className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
               >
                 View Pricing
@@ -99,7 +192,7 @@ import { Link } from 'react-router-dom';    <div className="min-h-screen bg-gray
                       key={idx}"
                       className="flex items-center text-sm text-gray-300"
                     >"
-                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />                      {benefit}
+                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0"  />                      {benefit}
                     </li>
                   ))}
                 </ul>
@@ -151,7 +244,7 @@ import { Link } from 'react-router-dom';    <div className="min-h-screen bg-gray
                           key={idx}"
                           className="flex items-center text-sm text-gray-300"
                         >"
-                          <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />                          {benefit}
+                          <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0"  />                          {benefit}
                         </li>
                       ))}
                     </ul>
@@ -191,7 +284,7 @@ import { Link } from 'react-router-dom';    <div className="min-h-screen bg-gray
                 className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-lg p-4 text-center hover:border-cyan-500/50 transition-all duration-300"
               >"
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-3">"
-                  <Check className="w-6 h-6 text-white" />
+                  <Check className="w-6 h-6 text-white"  />
                 </div>"                <h3 className="font-semibold text-cyan-400">{framework}</h3>
               </motion.div>
             ))}
@@ -251,7 +344,7 @@ import { Link } from 'react-router-dom';    <div className="min-h-screen bg-gray
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, idx) => ("
                     <li key={idx} className="flex items-center text-gray-300">"
-                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />                      {feature}
+                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0"  />                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -290,13 +383,13 @@ import { Link } from 'react-router-dom';    <div className="min-h-screen bg-gray
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 Start Your Free Trial"
-                <ArrowRight className="ml-2 w-5 h-5" />              </Link>
+                <ArrowRight className="ml-2 w-5 h-5"  />              </Link>
               <Link"
-                to="/pricing""
+                to="/pricing"
                 className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
               >
                 View Full Pricing
@@ -317,17 +410,17 @@ import { Link } from 'react-router-dom';    <div className="min-h-screen bg-gray
             <h2 className="text-3xl font-bold mb-8">Get in Touch</h2>"
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
               <div className="flex flex-col items-center">"
-                <Phone className="w-8 h-8 text-cyan-400 mb-4" />"
+                <Phone className="w-8 h-8 text-cyan-400 mb-4"  />"
                 <h3 className="font-semibold mb-2">Phone</h3>"
                 <p className="text-gray-400">+1 302 464 0950</p>
               </div>"
               <div className="flex flex-col items-center">"
-                <Mail className="w-8 h-8 text-cyan-400 mb-4" />"
+                <Mail className="w-8 h-8 text-cyan-400 mb-4"  />"
                 <h3 className="font-semibold mb-2">Email</h3>"
                 <p className="text-gray-400">kleber@ziontechgroup.com</p>
               </div>"
               <div className="flex flex-col items-center">"
-                <MapPin className="w-8 h-8 text-cyan-400 mb-4" />"
+                <MapPin className="w-8 h-8 text-cyan-400 mb-4"  />"
                 <h3 className="font-semibold mb-2">Address</h3>"
                 <p className="text-gray-400">
                   364 E Main St STE 1008
@@ -339,6 +432,5 @@ import { Link } from 'react-router-dom';    <div className="min-h-screen bg-gray
         </div>
       </section>
     </div>
-  );
-}
+  )}
 '"`

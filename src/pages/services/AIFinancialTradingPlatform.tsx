@@ -1,6 +1,85 @@
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
-import { SEO  } from '@/components/SEO';        "Email support"
+<<<<<<< HEAD
+import { Brain, 
+  TrendingUp, 
+  DollarSign, 
+  BarChart3, 
+  Shield, 
+  Zap, 
+  Brain, 
+  Target, 
+  Clock, 
+  CheckCircle, 
+  AlertTriangle,
+  Activity,
+  PieChart,
+  LineChart,
+  UserCheck,
+  Heart,
+  Star,
+  Award,
+  Globe,
+  Smartphone,
+  Database,
+  Cloud,
+  Server,
+  Lock,
+  Eye,
+  AlertTriangle'
+ } from 'lucide-react';
+;
+export { function };
+export default function AIFinancialTradingPlatform(...args[]):  {
+
+  const features = [
+    "AI-powered market analysis and prediction","
+    "Real-time algorithmic trading execution","
+    "Risk management and portfolio optimization","
+    "Multi-asset class trading (stocks, forex, crypto)","
+    "Advanced technical and fundamental analysis","
+    "Automated trading strategies and backtesting",;"
+    "Real-time market data and news feeds",;"
+    "Portfolio performance tracking and analytics",;"
+    "Compliance and regulatory monitoring",;"
+    "Custom trading algorithm development",;"
+    "High-frequency trading capabilities",;"
+    "Secure and encrypted trading infrastructure";
+  ];
+
+  const benefits = [;"
+    "Increase trading returns by 25-40%",;"
+    "Reduce trading risks by 30-50%",;"
+    "24/7 automated trading operations",;"
+    "Eliminate emotional trading decisions",;"
+    "Access to institutional-grade tools";
+  ];
+
+  const useCases = ["
+    "Individual retail traders","
+    "Professional day traders",;"
+    "Hedge funds and asset managers",;"
+    "Institutional investors",;"
+    "Cryptocurrency traders",;"
+    "Forex trading professionals",;"
+    "Options and derivatives traders",;"
+    "Quantitative trading firms";
+  ];
+
+  const pricingPlans = [
+    {
+"
+      name: "Starter","
+      price: "$199","
+      period: "/month","
+      description: "Perfect for individual traders and beginners",
+      features[;"
+        "AI market analysis (5 strategies)","
+        "Basic algorithmic trading","
+        "Real-time market data","
+        "Portfolio tracking","
+        "Basic risk management","
+        "Email support"
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ],;"
       cta: "Start Free Trial",
       popular: false
@@ -45,8 +124,14 @@ import { SEO  } from '@/components/SEO';        "Email support"
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
+<<<<<<< HEAD
+        title="AI Financial Trading Platform - Zion Tech Group"
+        description="Revolutionize your trading with AI-powered market analysis, algorithmic trading, and risk management. Increase returns and reduce risks."
+       />
+=======
         title="AI Financial Trading Platform - Zion Tech Group""        description="Revolutionize your trading with AI-powered market analysis, algorithmic trading, and risk management. Increase returns and reduce risks."
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
@@ -77,7 +162,7 @@ import { SEO  } from '@/components/SEO';        "Email support"
             transition={{ duration: 0.8 }}
 "
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-600 to-emerald-600 text-white text-sm font-medium mb-6">"
-              <Brain className="w-4 h-4 mr-2" />              AI-Powered Trading
+              <Brain className="w-4 h-4 mr-2"  />              AI-Powered Trading
             </div>"
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI Financial"
@@ -186,7 +271,7 @@ import { SEO  } from '@/components/SEO';        "Email support"
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500 transition-all duration-300"
 "
                 <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-emerald-600 rounded-lg flex items-center justify-center mb-4">"
-                  <CheckCircle className="w-6 h-6 text-white" />
+                  <CheckCircle className="w-6 h-6 text-white"  />
                 </div>"                <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
               </motion.div>;
             ))}
@@ -271,7 +356,7 @@ import { SEO  } from '@/components/SEO';        "Email support"
                 className="text-center"
 "
                 <div className="w-20 h-20 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">"
-                  <TrendingUp className="w-10 h-10 text-white" />
+                  <TrendingUp className="w-10 h-10 text-white"  />
                 </div>"                <p className="text-lg text-white font-medium">{benefit}</p>
               </motion.div>;
             ))}
@@ -356,7 +441,7 @@ import { SEO  } from '@/components/SEO';        "Email support"
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-green-500 transition-all duration-300"
 "
                 <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-lg flex items-center justify-center mx-auto mb-4">"
-                  <Target className="w-8 h-8 text-white" />
+                  <Target className="w-8 h-8 text-white"  />
                 </div>"                <h3 className="text-lg font-semibold text-white">{useCase}</h3>
               </motion.div>;
             ))}
@@ -465,7 +550,7 @@ import { SEO  } from '@/components/SEO';        "Email support"
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-start">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />"                      <span className="text-gray-300">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0"  />"                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -559,6 +644,5 @@ import { SEO  } from '@/components/SEO';        "Email support"
         </div>;
       </section>;
     </div>;
-  );
-}
+  )}
 '"`

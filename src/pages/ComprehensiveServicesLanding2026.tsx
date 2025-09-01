@@ -1,6 +1,3 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { 
   Brain, 
   Shield, 
@@ -41,33 +38,15 @@ import {
   Building,
   Clock
 } from 'lucide-react';
-import { ADVANCED_INNOVATIVE_SERVICES_2026 } from '../data/advancedInnovativeServices2026';
 
 export default function ComprehensiveServicesLanding2026() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
 
-  const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  };
-
-  const categories = ['All', ...Array.from(new Set(ADVANCED_INNOVATIVE_SERVICES_2026.map(service => service.category)))];
-
-  const filteredServices = ADVANCED_INNOVATIVE_SERVICES_2026
-    .filter(service => 
-      (selectedCategory === 'All' || service.category === selectedCategory) &&
-      (service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-       service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())))
-    );
-
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case 'AI & Cybersecurity':
-        return Shield;
+  
+  
+  
+  
       case 'AI & Financial Services':
         return TrendingUp;
       case 'AI & Healthcare':
@@ -89,14 +68,10 @@ export default function ComprehensiveServicesLanding2026() {
       case 'AI & Education':
         return BookOpen;
       default:
-        return Brain;
-    }
+        return Brain}
   };
 
-  const getCategoryColor = (category: string) => {
-    switch (category) {
-      case 'AI & Cybersecurity':
-        return 'from-red-600 to-orange-600';
+  
       case 'AI & Financial Services':
         return 'from-green-600 to-emerald-600';
       case 'AI & Healthcare':
@@ -118,19 +93,11 @@ export default function ComprehensiveServicesLanding2026() {
       case 'AI & Education':
         return 'from-cyan-600 to-blue-600';
       default:
-        return 'from-gray-600 to-slate-600';
-    }
+        return 'from-gray-600 to-slate-600'}
   };
 
-  const featuredServices = ADVANCED_INNOVATIVE_SERVICES_2026.slice(0, 6);
-
-  const stats = [
-    { label: 'Services Available', value: ADVANCED_INNOVATIVE_SERVICES_2026.length, icon: Rocket },
-    { label: 'Average ROI', value: '350%', icon: TrendingUp },
-    { label: 'Delivery Time', value: '8-12 weeks', icon: Clock },
-    { label: 'Support Level', value: 'Enterprise', icon: Users }
-  ];
-
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -169,15 +136,15 @@ export default function ComprehensiveServicesLanding2026() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <div className="flex items-center space-x-2 text-white">
-                <Phone className="w-5 h-5" />
+                <Phone className="w-5 h-5"  />
                 <span>{contactInfo.phone}</span>
               </div>
               <div className="flex items-center space-x-2 text-white">
-                <Mail className="w-5 h-5" />
+                <Mail className="w-5 h-5"  />
                 <span>{contactInfo.email}</span>
               </div>
               <div className="flex items-center space-x-2 text-white">
-                <MapPin className="w-5 h-5" />
+                <MapPin className="w-5 h-5"  />
                 <span>{contactInfo.address}</span>
               </div>
             </div>
@@ -193,7 +160,7 @@ export default function ComprehensiveServicesLanding2026() {
               {/* Search */}
               <div className="flex-1 w-full">
                 <div className="relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
                   <input
                     type="text"
                     placeholder="Search services, features, or tags..."
@@ -207,7 +174,7 @@ export default function ComprehensiveServicesLanding2026() {
               {/* Category Filter */}
               <div className="flex flex-wrap gap-2">
                 {categories.map((category) => {
-                  const Icon = getCategoryIcon(category);
+                  
                   return (
                     <button
                       key={category}
@@ -218,11 +185,10 @@ export default function ComprehensiveServicesLanding2026() {
                           : 'bg-white/10 border-white/20 text-gray-300 hover:bg-white/20'
                       }`}
                     >
-                      <Icon className="w-4 h-4" />
+                      <Icon className="w-4 h-4"  />
                       <span>{category}</span>
                     </button>
-                  );
-                })}
+                  )})}
               </div>
             </div>
           </div>
@@ -284,7 +250,7 @@ export default function ComprehensiveServicesLanding2026() {
                     <ul className="space-y-1">
                       {service.features.slice(0, 3).map((feature, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
+                          <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0"  />
                           {feature}
                         </li>
                       ))}
@@ -309,7 +275,7 @@ export default function ComprehensiveServicesLanding2026() {
                     className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold rounded-lg transition-all duration-300 group-hover:shadow-lg group-hover:shadow-purple-500/25"
                   >
                     Get Started
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"  />
                   </a>
                 </div>
               </motion.div>
@@ -322,7 +288,7 @@ export default function ComprehensiveServicesLanding2026() {
               className="inline-flex items-center px-8 py-4 bg-white/10 border border-white/30 text-white font-semibold rounded-xl hover:bg-white/20 transition-all duration-200"
             >
               View All Services
-              <ArrowRight className="w-4 h-4 ml-2" />
+              <ArrowRight className="w-4 h-4 ml-2"  />
             </Link>
           </div>
         </div>
@@ -347,9 +313,8 @@ export default function ComprehensiveServicesLanding2026() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {categories.slice(1).map((category, index) => {
-              const Icon = getCategoryIcon(category);
-              const categoryServices = ADVANCED_INNOVATIVE_SERVICES_2026.filter(s => s.category === category);
-              const avgPrice = Math.round(categoryServices.reduce((sum, s) => sum + s.price, 0) / categoryServices.length);
+              
+              
               
               return (
                 <motion.div
@@ -375,7 +340,7 @@ export default function ComprehensiveServicesLanding2026() {
                     <div className="space-y-2 mb-6">
                       {categoryServices.slice(0, 3).map((service, idx) => (
                         <div key={idx} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-purple-400 mr-2" />
+                          <CheckCircle className="w-4 h-4 text-purple-400 mr-2"  />
                           <span>{service.title}</span>
                         </div>
                       ))}
@@ -386,12 +351,11 @@ export default function ComprehensiveServicesLanding2026() {
                       className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold transition-colors"
                     >
                       Explore {category}
-                      <ArrowRight className="w-4 h-4 ml-2" />
+                      <ArrowRight className="w-4 h-4 ml-2"  />
                     </Link>
                   </div>
                 </motion.div>
-              );
-            })}
+              )})}
           </div>
         </div>
       </section>
@@ -475,33 +439,33 @@ export default function ComprehensiveServicesLanding2026() {
                 href={`mailto:${contactInfo.email}?subject=Business Transformation Consultation`}
                 className="bg-white text-purple-600 py-4 px-8 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-200 flex items-center space-x-2"
               >
-                <Mail className="w-5 h-5" />
+                <Mail className="w-5 h-5"  />
                 <span>Get Started</span>
               </a>
               <a
                 href={`tel:${contactInfo.phone}`}
                 className="bg-white/20 text-white py-4 px-8 rounded-xl font-semibold hover:bg-white/30 transition-all duration-200 flex items-center space-x-2"
               >
-                <Phone className="w-5 h-5" />
+                <Phone className="w-5 h-5"  />
                 <span>Call Now</span>
               </a>
             </div>
             
             <div className="space-y-4">
               <div className="flex items-center justify-center space-x-3">
-                <Phone className="w-5 h-5 text-purple-200" />
+                <Phone className="w-5 h-5 text-purple-200"  />
                 <span className="text-purple-100">{contactInfo.phone}</span>
               </div>
               <div className="flex items-center justify-center space-x-3">
-                <Mail className="w-5 h-5 text-purple-200" />
+                <Mail className="w-5 h-5 text-purple-200"  />
                 <span className="text-purple-100">{contactInfo.email}</span>
               </div>
               <div className="flex items-center justify-center space-x-3">
-                <MapPin className="w-5 h-5 text-purple-200" />
+                <MapPin className="w-5 h-5 text-purple-200"  />
                 <span className="text-purple-100">{contactInfo.address}</span>
               </div>
               <div className="flex items-center justify-center space-x-3">
-                <Globe className="w-5 h-5 text-purple-200" />
+                <Globe className="w-5 h-5 text-purple-200"  />
                 <a href={contactInfo.website} className="text-purple-100 hover:text-white underline">
                   {contactInfo.website}
                 </a>
@@ -511,5 +475,4 @@ export default function ComprehensiveServicesLanding2026() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

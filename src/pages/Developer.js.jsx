@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const Developer = () => {
   return()
@@ -24,7 +24,7 @@ const Developer = () => {
           </div>
 "
           <div className="bg-white rounded-lg shadow-lg p-8">"
-            <p className="text-gray-600 text-center">'
+            <p className="text-gray-600 text-center">
               Developer portal coming soon. We're building comprehensive
               development resources.
             </p>

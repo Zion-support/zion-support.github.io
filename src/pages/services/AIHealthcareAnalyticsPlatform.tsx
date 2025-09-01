@@ -1,5 +1,3 @@
-import React from 'react';'
-import { motion } from 'framer-motion';
 import {
   Heart, 
   Activity, 
@@ -132,177 +130,15 @@ import {
   CloudSnow10,
   CloudSleet10'
 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
 
 export default function AIHealthcareAnalyticsPlatform() {
-  const features = [
-    {
-
-      icon: Brain,'
-      title: 'AI-Powered Patient Analytics','
-      description: 'Advanced machine learning algorithms analyze patient data for predictive insights'
-    },
-    {
-
-      icon: Heart,'
-      title: 'Clinical Decision Support','
-      description: 'AI-driven recommendations for treatment plans and medication management'
-    },
-    {
-
-      icon: Activity,'
-      title: 'Real-time Health Monitoring','
-      description: 'Continuous monitoring of patient vitals and health indicators'
-    },
-    {
-
-      icon: TrendingUp,'
-      title: 'Predictive Health Analytics','
-      description: 'Forecast patient outcomes and identify at-risk populations'
-    },
-    {
-
-      icon: Shield,'
-      title: 'HIPAA-Compliant Security','
-      description: 'Enterprise-grade security with full HIPAA compliance and data encryption'
-    },
-    {
-
-      icon: BarChart4,'
-      title: 'Population Health Insights','
-      description: 'Comprehensive analytics for population health management and public health'
-    }
-  ];
-
-  const benefits = ['
-    'Improve patient outcomes by 35%','
-    'Reduce readmission rates by 40%','
-    'Lower healthcare costs by 25-30%','
-    'Enhance clinical decision-making by 50%','
-    'Streamline administrative processes by 60%','
-    'Ensure 99.9% HIPAA compliance'
-  ];
-
-  const useCases = [
-    {
-'
-      industry: 'Hospitals & Health Systems','
-      description: 'Optimize patient care, reduce readmissions, and improve operational efficiency'
-    },
-    {
-'
-      industry: 'Primary Care Practices','
-      description: 'Enhance preventive care, manage chronic conditions, and improve patient engagement'
-    },
-    {
-'
-      industry: 'Specialty Clinics','
-      description: 'Streamline specialty care workflows and improve treatment outcomes'
-    },
-    {
-'
-      industry: 'Health Insurance','
-      description: 'Risk assessment, fraud detection, and population health management'
-    }
-  ];
-
-  const pricingPlans = [
-    {
-'
-      plan: 'Starter','
-      price: '$2,800/month',
-      features: ['
-        'Up to 50 providers','
-        'Basic AI analytics','
-        'Patient monitoring','
-        'Clinical decision support','
-        'Basic reporting','
-        'Email support'
-      ]
-    },
-    {
-'
-      plan: 'Professional','
-      price: '$5,500/month',
-      features: ['
-        'Up to 200 providers','
-        'Advanced AI analytics','
-        'Population health insights','
-        'Custom workflows','
-        'Advanced reporting','
-        'Priority support','
-        'API access'
-      ]
-    },
-    {
-'
-      plan: 'Enterprise','
-      price: '$12,000/month',
-      features: ['
-        'Unlimited providers','
-        'Full AI capabilities','
-        'Custom integrations','
-        'White-label options','
-        'Dedicated health manager','
-        '24/7 phone support','
-        'Custom training'
-      ]
-    }
-  ];
-
-  const integrations = ['
-    'Epic EHR','
-    'Cerner','
-    'Allscripts','
-    'Meditech','
-    'Athenahealth','
-    'Practice Fusion','
-    'eClinicalWorks','
-    'NextGen','
-    'Greenway Health','
-    'DrChrono','
-    'Kareo','
-    'Webhook APIs'
-  ];
-
-  const keyMetrics = [
-    {
-'
-      metric: '35%','
-      label: 'Patient Outcome Improvement'
-    },
-    {
-'
-      metric: '40%','
-      label: 'Readmission Rate Reduction'
-    },
-    {
-'
-      metric: '30%','
-      label: 'Cost Reduction'
-    },
-    {
-'
-      metric: '50%','
-      label: 'Decision Enhancement'
-    }
-  ];
-
-  const complianceStandards = ['
-    'HIPAA','
-    'HITECH','
-    'SOC 2 Type II','
-    'ISO 27001','
-    'HITRUST','
-    'GDPR','
-    'CCPA','
-    'FDA 21 CFR Part 11','
-    'ONC Health IT','
-    'Meaningful Use','
-    'MIPS','
-    'APMs'
-  ];
-
+  
+  
+  
+  
+  
+  
+  
   return()    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
@@ -314,11 +150,11 @@ export default function AIHealthcareAnalyticsPlatform() {
             className="text-center"
           >"
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-pink-500 to-red-600 text-white text-sm font-medium mb-6">"
-              <Sparkles className="w-4 h-4 mr-2" />              AI-Powered Healthcare Analytics Platform
+              <Sparkles className="w-4 h-4 mr-2"  />              AI-Powered Healthcare Analytics Platform
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Transform Healthcare with"
-              <span className="bg-gradient-to-r from-pink-400 to-red-400 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-pink-400 to-red-400 bg-clip-text text-transparent">
                 {' '}AI Intelligence
               </span>
             </h1>"
@@ -332,14 +168,14 @@ export default function AIHealthcareAnalyticsPlatform() {
                 whileTap={{ scale: 0.95 }}"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-red-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-red-700 transition-all duration-200"
               >"
-                <Play className="w-5 h-5 mr-2" />                Watch Demo
+                <Play className="w-5 h-5 mr-2"  />                Watch Demo
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200"
               >"
-                <Settings className="w-5 h-5 mr-2" />                Start Free Trial
+                <Settings className="w-5 h-5 mr-2"  />                Start Free Trial
               </motion.button>
             </div>
           </motion.div>
@@ -427,7 +263,7 @@ export default function AIHealthcareAnalyticsPlatform() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}"
                 className="flex items-start space-x-3"
               >"
-                <CheckCircle className="w-6 h-6 text-pink-400 mt-1 flex-shrink-0" />"                <span className="text-zion-slate-light text-lg">{benefit}</span>
+                <CheckCircle className="w-6 h-6 text-pink-400 mt-1 flex-shrink-0"  />"                <span className="text-zion-slate-light text-lg">{benefit}</span>
               </motion.div>
             ))}
           </div>
@@ -542,7 +378,7 @@ export default function AIHealthcareAnalyticsPlatform() {
                 <ul className="space-y-3 mb-6">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center space-x-3">"
-                      <CheckCircle className="w-5 h-5 text-pink-400 flex-shrink-0" />"                      <span className="text-zion-slate-light">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-pink-400 flex-shrink-0"  />"                      <span className="text-zion-slate-light">{feature}</span>
                     </li>
                   ))}
                 </ul>"
@@ -606,14 +442,14 @@ export default function AIHealthcareAnalyticsPlatform() {
                 whileTap={{ scale: 0.95 }}"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-red-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-red-700 transition-all duration-200"
               >"
-                <ArrowRight className="w-5 h-5 mr-2" />                Start Free Trial
+                <ArrowRight className="w-5 h-5 mr-2"  />                Start Free Trial
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200"
               >"
-                <MessageSquare className="w-5 h-5 mr-2" />                Schedule Demo
+                <MessageSquare className="w-5 h-5 mr-2"  />                Schedule Demo
               </motion.button>
             </div>
           </div>
@@ -635,29 +471,29 @@ export default function AIHealthcareAnalyticsPlatform() {
             </p>"
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">"
               <div className="flex items-center justify-center space-x-3">"
-                <Phone className="w-6 h-6 text-pink-400" />"
+                <Phone className="w-6 h-6 text-pink-400"  />"
                 <span className="text-zion-slate-light">+1 302 464 0950</span>
               </div>"
               <div className="flex items-center justify-center space-x-3">"
-                <Mail className="w-6 h-6 text-pink-400" />"
+                <Mail className="w-6 h-6 text-pink-400"  />"
                 <span className="text-zion-slate-light">kleber@ziontechgroup.com</span>
               </div>"
               <div className="flex items-center justify-center space-x-3">"
-                <MapPin className="w-6 h-6 text-pink-400" />"                <span className="text-zion-slate-light">364 E Main St STE 1008<br />Middletown DE 19709</span>
+                <MapPin className="w-6 h-6 text-pink-400"  />"                <span className="text-zion-slate-light">364 E Main St STE 1008<br />Middletown DE 19709</span>
               </div>
             </div>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="https://ziontechgroup.com/contact""
+                href="https://ziontechgroup.com/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-red-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-red-700 transition-all duration-200"
               >"
-                <ArrowRight className="w-5 h-5 mr-2" />                Contact Us
+                <ArrowRight className="w-5 h-5 mr-2"  />                Contact Us
               </a>
               <a"
-                href="https://ziontechgroup.com""
+                href="https://ziontechgroup.com"
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200"
               >"
-                <Globe className="w-5 h-5 mr-2" />                Visit Website
+                <Globe className="w-5 h-5 mr-2"  />                Visit Website
               </a>
             </div>
           </motion.div>
@@ -666,4 +502,4 @@ export default function AIHealthcareAnalyticsPlatform() {
     </div>
   )};
 
-export default AIHealthcareAnalyticsPlatform;}}}}}'"`
+export default AIHealthcareAnalyticsPlatform}}}}}'"`

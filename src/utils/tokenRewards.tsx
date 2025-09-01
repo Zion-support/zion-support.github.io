@@ -1,4 +1,3 @@
-import { apiClient } from '@/utils / apiClient';
     export async function earnTokensForReferral (userId: string,
   export async function earnTokensForPurchase (userId: string,
 export async function rewardOnboarding (...args: any[]) : any {
@@ -30,7 +29,6 @@ export async function rewardOnboarding (...args: any[]) : any {
           referredUserId,
           amount: 100,
         }) ,
-      }) ;
-    }
+      }) }
   }
 }

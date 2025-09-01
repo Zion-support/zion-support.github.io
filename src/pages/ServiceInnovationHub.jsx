@@ -1,5 +1,5 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
+import React from 'react';
+import { motion } from 'framer-motion';
 import { Lightbulb, Rocket, Brain, ArrowRight, Atom, Satellite, Dna, Leaf, Cpu, Shield } from 'lucide-react';
 import AdvancedServiceInnovationHub from "../components/AdvancedServiceInnovationHub";"
 import { Button } from "../components/ui/button";"
@@ -9,80 +9,80 @@ const ServiceInnovationHub = () => {
     const innovationAreas = [
         {
 "
-            icon: <Atom className="w-8 h-8 text-zion-cyan"/>,'
-            title: 'Quantum Technology','
-            description: 'Revolutionary quantum computing, cryptography, and quantum internet solutions','
-            trends['Quantum Supremacy', 'Quantum Internet', 'Quantum Materials'],;'
+            icon: <Atom className="w-8 h-8 text-zion-cyan"/>,
+            title: 'Quantum Technology',
+            description: 'Revolutionary quantum computing, cryptography, and quantum internet solutions',
+            trends['Quantum Supremacy',Quantum Internet',Quantum Materials'],;
             investment: '$150B+'
         },
         {
 "
-            icon: <Brain className="w-8 h-8 text-zion-purple"/>,'
-            title: 'Artificial Intelligence','
-            description: 'Advanced AI consciousness, governance, and neural network optimization','
-            trends['AI Consciousness', 'AI Governance', 'Neural Optimization'],;'
+            icon: <Brain className="w-8 h-8 text-zion-purple"/>,
+            title: 'Artificial Intelligence',
+            description: 'Advanced AI consciousness, governance, and neural network optimization',
+            trends['AI Consciousness',AI Governance',Neural Optimization'],;
             investment: '$300B+'
         },
         {
 "
-            icon: <Satellite className="w-8 h-8 text-zion-blue"/>,'
-            title: 'Space Technology','
-            description: 'Space mining, propulsion, habitats, and debris cleanup systems','
-            trends['Space Mining', 'Space Propulsion', 'Space Habitats'],;'
+            icon: <Satellite className="w-8 h-8 text-zion-blue"/>,
+            title: 'Space Technology',
+            description: 'Space mining, propulsion, habitats, and debris cleanup systems',
+            trends['Space Mining',Space Propulsion',Space Habitats'],;
             investment: '$200B+'
         },
         {
 "
-            icon: <Dna className="w-8 h-8 text-zion-green"/>,'
-            title: 'Biotech AI','
-            description: 'Synthetic biology, brain-computer interfaces, and AI-powered drug discovery','
-            trends['Synthetic Biology', 'Brain-Computer Interfaces', 'AI Drug Discovery'],;'
+            icon: <Dna className="w-8 h-8 text-zion-green"/>,
+            title: 'Biotech AI',
+            description: 'Synthetic biology, brain-computer interfaces, and AI-powered drug discovery',
+            trends['Synthetic Biology',Brain-Computer Interfaces',AI Drug Discovery'],;
             investment: '$100B+'
         },
         {
 "
-            icon: <Leaf className="w-8 h-8 text-zion-emerald"/>,'
-            title: 'Green Technology','
-            description: 'Fusion energy, climate engineering, and sustainable technology solutions','
-            trends['Fusion Energy', 'Climate Engineering', 'Sustainable Tech'],;'
+            icon: <Leaf className="w-8 h-8 text-zion-emerald"/>,
+            title: 'Green Technology',
+            description: 'Fusion energy, climate engineering, and sustainable technology solutions',
+            trends['Fusion Energy',Climate Engineering',Sustainable Tech'],;
             investment: '$500B+'
         },
         {
 "
-            icon: <Cpu className="w-8 h-8 text-zion-orange"/>,'
-            title: 'Advanced Computing','
-            description: 'Neuromorphic computing, edge AI, and model compression technologies','
-            trends['Neuromorphic Computing', 'Edge AI', 'Model Compression'],;'
+            icon: <Cpu className="w-8 h-8 text-zion-orange"/>,
+            title: 'Advanced Computing',
+            description: 'Neuromorphic computing, edge AI, and model compression technologies',
+            trends['Neuromorphic Computing',Edge AI',Model Compression'],;
             investment: '$80B+'
 
     ];
     const keyInsights = [
         {
-'
-            title: 'Quantum Revolution','
-            description: 'Quantum computing will transform industries from finance to pharmaceuticals within the next decade','
-            impact: 'High','
+
+            title: 'Quantum Revolution',
+            description: 'Quantum computing will transform industries from finance to pharmaceuticals within the next decade',
+            impact: 'High',
             timeline: '2025-2035'
         },
         {
-'
-            title: 'AI Consciousness','
-            description: 'The development of self-aware AI systems will create new ethical and technological paradigms','
-            impact: 'High','
+
+            title: 'AI Consciousness',
+            description: 'The development of self-aware AI systems will create new ethical and technological paradigms',
+            impact: 'High',
             timeline: '2030-2040'
         },
         {
-'
-            title: 'Space Economy','
-            description: 'Space mining and colonization will create trillion-dollar economic opportunities','
-            impact: 'High','
+
+            title: 'Space Economy',
+            description: 'Space mining and colonization will create trillion-dollar economic opportunities',
+            impact: 'High',
             timeline: '2030-2060'
         },
         {
-'
-            title: 'Synthetic Biology','
-            description: 'Custom organisms and bio-manufacturing will revolutionize industrial processes','
-            impact: 'High','
+
+            title: 'Synthetic Biology',
+            description: 'Custom organisms and bio-manufacturing will revolutionize industrial processes',
+            impact: 'High',
             timeline: '2025-2035'
 
     ];"
@@ -125,9 +125,8 @@ const ServiceInnovationHub = () => {
                 <ArrowRight className="w-5 h-5 ml-2"/>
               </Button>"
               <Button className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4" onClick = {
-'
-  () => window.open('mailto:kleber@ziontechgroup.com?subject=Innovation Strategy Consultation','
-  '_blank')
+
+  () => window.open('mailto:kleber@ziontechgroup.com?subject=Innovation Strategy Consultation',_blank')
 
 
 
@@ -367,9 +366,8 @@ const ServiceInnovationHub = () => {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Button className="bg-white text-zion-purple hover:bg-zion-slate-light text-lg px-8 py-4" onClick = {
-'
-  () => window.open('mailto:kleber@ziontechgroup.com?subject=Innovation Leadership Consultation','
-  '_blank')
+
+  () => window.open('mailto:kleber@ziontechgroup.com?subject=Innovation Leadership Consultation',_blank')
 
 
 
@@ -381,9 +379,8 @@ const ServiceInnovationHub = () => {
                 Lead Innovation
               </Button>"
               <Button className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4" onClick = {
-'
-  () => window.open('tel:+13024640950','
-  '_blank')
+
+  () => window.open('tel:+13024640950',_blank')
 
 
 

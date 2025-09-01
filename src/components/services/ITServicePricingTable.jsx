@@ -1,74 +1,47 @@
 import React, { useState } from 'react';
 import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable = () => {
-'
+
   const [billingCycle, setBillingCycle] = useState('monthly');
 
   const plans = [
     {
-'
-      name: 'Basic Support','
-      description: 'Essential IT support for small businesses','
+
+      name: 'Basic Support',
+      description: 'Essential IT support for small businesses',
       price: billingCycle === 'monthly' ? 299 : 2990,
-      features[;'
-        '24/7 Help Desk Support','
-        'Remote Troubleshooting','
-        'Basic Network Monitoring','
-        'Email Support','
-        'Monthly Reports','
-        'Up to 25 Users'
+      features[;
+        '24/7 Help Desk Support',Remote Troubleshooting',Basic Network Monitoring',Email Support',Monthly Reports',Up to 25 Users'
       ],;
-      notIncluded[;'
-        'On-site Visits','
-        'Hardware Installation','
-        'Advanced Security','
-        'Priority Support'
+      notIncluded[;
+        'On-site Visits',Hardware Installation',Advanced Security',Priority Support'
       ],;
       popular: false,
       icon: Users
     },
     {
-'
-      name: 'Professional Support','
-      description: 'Comprehensive IT support with on-site capabilities','
+
+      name: 'Professional Support',
+      description: 'Comprehensive IT support with on-site capabilities',
       price: billingCycle === 'monthly' ? 599 : 5990,
-      features[;'
-        'Everything in Basic','
-        'On-site Support (2 visits/month)','
-        'Hardware Installation','
-        'Network Security Monitoring','
-        'Phone & Email Support','
-        'Weekly Reports','
-        'Up to 100 Users','
-        'Emergency Response (4hr)'
+      features[;
+        'Everything in Basic',On-site Support (2 visits/month),Hardware Installation',Network Security Monitoring',Phone & Email Support',Weekly Reports',Up to 100 Users',Emergency Response (4hr)
       ],;
-      notIncluded[;'
-        'Unlimited On-site Visits','
-        'Dedicated Technician','
-        'Advanced Analytics'
+      notIncluded[;
+        'Unlimited On-site Visits',Dedicated Technician',Advanced Analytics'
       ],;
       popular: true,
       icon: Shield
     },
     {
-'
-      name: 'Enterprise Support','
-      description: 'Full-service IT support for large organizations','
+
+      name: 'Enterprise Support',
+      description: 'Full-service IT support for large organizations',
       price: billingCycle === 'monthly' ? 1299 : 12990,
-      features[;'
-        'Everything in Professional','
-        'Unlimited On-site Support','
-        'Dedicated IT Technician','
-        'Advanced Security Suite','
-        'Real-time Monitoring','
-        'Daily Reports','
-        'Unlimited Users','
-        'Emergency Response (2hr)','
-        'Strategic IT Planning','
-        'Compliance Support'
+      features[;
+        'Everything in Professional',Unlimited On-site Support',Dedicated IT Technician',Advanced Security Suite',Real-time Monitoring',Daily Reports',Unlimited Users',Emergency Response (2hr),Strategic IT Planning',Compliance Support'
       ],;
-      notIncluded[;'
-        'Custom Development','
-        'Hardware Procurement'
+      notIncluded[;
+        'Custom Development',Hardware Procurement'
       ],;
       popular: false,
       icon: Star
@@ -77,28 +50,28 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
 
   const additionalServices = [
     {
-'
+
       name: 'Hardware Installation',
-      price: 150,'
+      price: 150,
       description: 'Per device installation and setup'
     },
     {
-'
+
       name: 'Network Assessment',
-      price: 500,'
+      price: 500,
       description: 'Comprehensive network security review'
     },
     {
-'
+
       name: 'Data Recovery',
-      price: 300,'
+      price: 300,
       description: 'Emergency data recovery services'
     },
     {
-'
+
       name: 'Training Sessions',
-      price: 200,'
-      description: 'Staff IT training (per session)'
+      price: 200,
+      description: 'Staff IT training (per session)
 
   ];
 
@@ -115,7 +88,7 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
           </p>
 
           {/* Billing Toggle */}"
-          <div className="flex items-center justify-center mt-8">'
+          <div className="flex items-center justify-center mt-8">
             <span className={`text-lg font-medium ${billingCycle === 'monthly' ? 'text-gray-900' : 'text-gray-500'}`}>
               Monthly
             </span>
@@ -125,7 +98,7 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
 
               <span`
                 className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-'
+
                   billingCycle === 'yearly' ? 'translate-x-6' : 'translate-x-1'`
                 }`}
               />
@@ -171,7 +144,7 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
                 <div className="mb-8">"
                   <div className="flex items-baseline">"
                     <span className="text-5xl font-bold text-gray-900">${plan.price}</span>"
-                    <span className="text-gray-500 ml-2">'
+                    <span className="text-gray-500 ml-2">
                       /{billingCycle === 'monthly' ? 'month' : 'year'}
                     </span>
                   </div>
@@ -246,7 +219,7 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
               </p>
             </div>"
             <div className="bg-white rounded-xl p-6 shadow-lg">"
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">'
+              <h4 className="text-lg font-semibold text-gray-900 mb-2">
                 What's included in emergency response?
               </h4>"
               <p className="text-gray-600">
@@ -275,13 +248,13 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="#contact""
+                href="#contact"
                 className="px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
 
                 Get Custom Quote
               </a>
               <a"
-                href="#demo""
+                href="#demo"
                 className="px-8 py-3 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
 
                 Schedule Demo

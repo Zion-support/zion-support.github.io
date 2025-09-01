@@ -1,7 +1,7 @@
-import { Button } from '@/components/ui/button';'
-import Link from 'next/link';'
-import { useState, useEffect } from 'react';'
-import Skeleton from '@/components/ui/skeleton';'
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import { useState, useEffect } from 'react';
+import Skeleton from '@/components/ui/skeleton';
 import { useAuth } from '@/hooks/useAuth';
 export default function CartPage() {
     const navigate = useNavigate();
@@ -16,7 +16,7 @@ export default function CartPage() {
             setItems(reduxItems);
             setCartLoading(false)}
         else {
-'
+
             const stored = safeStorage.getItem('zion_cart');
             if (stored) {
 
@@ -38,14 +38,14 @@ export default function CartPage() {
         if (user) {
 
             try {
-'
+
                 await fetch('/api/cart', {
-'
-                    method: 'PATCH','
+
+                    method: 'PATCH',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ id, quantity: qty })})}
             catch (err) {
-'
+
                 // console.error('Failed to update cart', err)}
         }
         setCartLoading(false)}, [reduxItems];
@@ -61,11 +61,11 @@ export default function CartPage() {
 
         dispatch(removeItemAction(id))};
     const handleCheckout = () => {
-'
+
         router.push('/checkout')};
     const applyCode = async () => {
         try {
-'
+
             const res = await apiClient.post('/coupons/validate', {
 
                 code,
@@ -85,7 +85,7 @@ export default function CartPage() {
     if (showEmpty) {
 "
         return (<div className="container py-10 text-center">"
-        <img loading="lazy" src="/images/empty-cart.svg" alt="Empty cart" className="mx-auto mb-4 w-48 h-36"/>'
+        <img loading="lazy" src="/images/empty-cart.svg" alt="Empty cart" className="mx-auto mb-4 w-48 h-36"/>
         <p>{t('cart.empty')}</p>"
         <Button asChild className="mt-4">"
           <Link href="/marketplace">Browse Marketplace</Link>
@@ -102,7 +102,7 @@ export default function CartPage() {
             </div>"
             <div className="flex items-center gap-2">"
               <input type="number" min={1} value={item.quantity} onChange = {
-'
+
   e => updateQuantity(item.id, parseInt(e.target.value || '1',
   10))
 "
@@ -123,7 +123,7 @@ export default function CartPage() {
         <span>Subtotal</span>
         <span>${subtotal.toFixed(2)}</span>
       </div>'"
-      <Button className="mt-4 w-full" onClick={() => user ? router('/checkout') : router('/login?next=/checkout')}>'
+      <Button className="mt-4 w-full" onClick={() => user ? router('/checkout') : router('/login?next=/checkout')}>
         {user ? 'Checkout' : 'Login to Checkout'}
       </Button>
     </div>)}

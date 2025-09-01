@@ -48,7 +48,7 @@ import { motion } from 'framer - motion';
 
         if (topIssues.length > 0) {
 `
-            summary += `Top issues to address: ${topIssues.slice(0, 3).join(', ')}.`;
+            summary += `Top issues to address: ${topIssues.slice(0, 3).join(',)}.`;
 
         return summary;
 
@@ -62,8 +62,8 @@ import { motion } from 'framer - motion';
     clearCache () {
         this.analyzedPages.clear () ;
     }
-}'
-import React, { useState, useEffect } from 'react';'
+}
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 const ContentQualityAnalyzer = ({ content, onAnalysisComplete }) => {
@@ -93,15 +93,15 @@ const ContentQualityAnalyzer = ({ content, onAnalysisComplete }) => {
       
       // Generate suggestions based on analysis
       if (wordCount < 300) {
-'
+
         analysisResult.suggestions.push('Consider adding more content for better SEO');
       }
       if (analysisResult.averageWordsPerSentence > 25) {
-'
+
         analysisResult.suggestions.push('Break down long sentences for better readability');
       }
       if (paragraphCount < 3) {
-'
+
         analysisResult.suggestions.push('Add more paragraphs to improve content structure');
       }
       
@@ -121,7 +121,7 @@ const ContentQualityAnalyzer = ({ content, onAnalysisComplete }) => {
         onClick={analyzeContent}
         disabled={isAnalyzing}"
         className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 disabled:opacity-50"
-      >'
+      >
         {isAnalyzing ? 'Analyzing...' : 'Analyze Content Quality'}
       </button>
       

@@ -1,5 +1,82 @@
-import React, { useState } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
+import {
+
+  Star,
+  Quote,
+  ChevronLeft,
+  ChevronRight,
+  Play,
+  Pause,
+  Users,
+  Award,
+  TrendingUp'
+} from 'lucide-react';
+
+const testimonials = [
+  {
+
+    id: 1,
+    name: "Sarah Johnson","
+    position: "CTO, TechCorp Solutions","
+    company: "TechCorp Solutions","
+    avatar: "👩‍💼",
+    rating: 5,"
+    content: "Zion Tech Group transformed our entire IT infrastructure. Their AI-powered solutions reduced our operational costs by 40% and improved system reliability to 99.9%. The team's expertise in quantum computing and blockchain integration is unmatched.","
+    category: "AI & Infrastructure","
+    results: ["40% cost reduction", "99.9% uptime", "3x faster deployment"]
+  },
+  {
+
+    id: 2,"
+    name: "Michael Chen","
+    position: "VP Engineering, FinTech Pro","
+    company: "FinTech Pro","
+    avatar: "👨‍💻",
+    rating: 5,"
+    content: "The quantum neural network platform they built for us revolutionized our trading algorithms. We're seeing 25% better prediction accuracy and processing speeds that are 10x faster than traditional systems. Game-changing technology.","
+    category: "Quantum Computing","
+    results: ["25% better accuracy", "10x faster processing", "Real-time analytics"]
+  },
+  {
+
+    id: 3,"
+    name: "Dr. Emily Rodriguez","
+    position: "Research Director, BioTech Innovations","
+    company: "BioTech Innovations","
+    avatar: "👩‍🔬",
+    rating: 5,"
+    content: "Their AI-powered research assistant has accelerated our drug discovery process by 60%. The platform's ability to analyze complex biological data and generate insights has been invaluable to our breakthrough research.","
+    category: "AI Research","
+    results: ["60% faster discovery", "Advanced analytics", "Breakthrough insights"]
+  },
+  {
+
+    id: 4,"
+    name: "David Thompson","
+    position: "Operations Manager, Manufacturing Plus","
+    company: "Manufacturing Plus","
+    avatar: "👨‍🏭",
+    rating: 5,"
+    content: "The autonomous business operations platform streamlined our entire manufacturing process. We've seen a 35% increase in efficiency and 50% reduction in downtime. The IoT integration and real-time monitoring are exceptional.","
+    category: "Manufacturing IoT","
+    results: ["35% efficiency gain", "50% less downtime", "Real-time monitoring"]
+  },
+  {
+
+    id: 5,"
+    name: "Lisa Wang","
+    position: "Security Director, SecureNet","
+    company: "SecureNet",;"
+    avatar: "👩‍💻",;
+    rating: 5,;'"
+    content: "Their zero-trust security architecture and SOC 2 compliance automation have made our security posture bulletproof. We've achieved 100% compliance with all industry standards and zero security incidents.",;"
+    category: "Cybersecurity",;"
+    results: ["100% compliance", "Zero incidents", "Automated security"]};
+];
+"
+
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 export function InteractiveTestimonials() {
 "
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -8,17 +85,14 @@ export function InteractiveTestimonials() {
   const filteredTestimonials = selectedCategory === "All" ;    ? testimonials ;
     : testimonials.filter (t => t.category === selectedCategory) ;
 
-  const currentTestimonial = filteredTestimonials[selectedTestimonial];
-
-  const nextTestimonial = () => {;
+  
+  
     setSelectedTestimonial ( (prev) => ;
-      prev === filteredTestimonials.length - 1 ? 0 : prev + 1;) ;
-  };
+      prev === filteredTestimonials.length - 1 ? 0 : prev + 1;) };
 
-  const prevTestimonial = () => {;
+  
     setSelectedTestimonial ( (prev) => ;
-      prev === 0 ? filteredTestimonials.length - 1 : prev - 1;) ;
-  };
+      prev === 0 ? filteredTestimonials.length - 1 : prev - 1;) };
   return ("
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <div className="max-w-7xl mx-auto px-6">
@@ -42,7 +116,7 @@ export function InteractiveTestimonials() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Client Success Stories
           </h2>"
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">'
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Real stories from real clients. Discover how we've transformed businesses
             across industries with our innovative technology solutions.
           </p>
@@ -59,8 +133,7 @@ export function InteractiveTestimonials() {
           {categories.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category}
               onClick={ () => {
                 setSelectedCategory (category) ;
-                setSelectedTestimonial (0) ;
-              }}              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                setSelectedTestimonial (0) }}              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
 
                 selectedCategory === category'
                   ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/25''
@@ -77,7 +150,7 @@ export function InteractiveTestimonials() {
                 <div className="text-6xl mb-4">{currentTestimonial.avatar}</div>"
                 <div className="flex justify-center mb-4">
                   {[...Array(currentTestimonial.rating)].map((_, i) => ("
-                    <Star key={i} className="h-6 w-6 text-yellow-400 fill-current" />                  ))}
+                    <Star key={i} className="h-6 w-6 text-yellow-400 fill-current"  />                  ))}
                 </div>"
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">
                   {currentTestimonial.name}
@@ -86,17 +159,17 @@ export function InteractiveTestimonials() {
                 <p className="text-blue-600 font-semibold">{currentTestimonial.comp}</p>"
                 <div className="flex items-center justify-center gap-4 mt-3 text-sm text-gray-500">"
                   <span className="flex items-center">"
-                    <Users className="h-4 w-4 mr-1" />
+                    <Users className="h-4 w-4 mr-1"  />
                     {currentTestimonial.industry}
                   </span>"
                   <span className="flex items-center">"
-                    <TrendingUp className="h-4 w-4 mr-1" />                    {currentTestimonial.projectDuration}
+                    <TrendingUp className="h-4 w-4 mr-1"  />                    {currentTestimonial.projectDuration}
                   </span>
                 </div>
               </div>
 "
               <blockquote className="text-center mb-8">"
-                <Quote className="h-12 w-12 text-blue-200 mx-auto mb-4" />"
+                <Quote className="h-12 w-12 text-blue-200 mx-auto mb-4"  />"
                 <p className="text-xl text-gray-700 italic leading-relaxed">"                  "{currentTestimonial.quote}"
                 </p>
               </blockquote>
@@ -107,8 +180,8 @@ export function InteractiveTestimonials() {
                     <div className="text-2xl font-bold text-blue-600 mb-1">
                       {value}
                     </div>"
-                    <div className="text-sm text-gray-600 capitalize">'
-                      {key.replace(/([A-Z])/g, ' $1').trim()}
+                    <div className="text-sm text-gray-600 capitalize">
+                      {key.replace(/([A-Z])/g, $1').trim()}
                     </div>
                   </div>) ) }
               </div>
@@ -120,12 +193,12 @@ export function InteractiveTestimonials() {
             onClick={previousTestimonial}"
             className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-200"
           >"
-            <ChevronLeft className="h-6 w-6 text-gray-600" />          </button>
+            <ChevronLeft className="h-6 w-6 text-gray-600"  />          </button>
           <button
             onClick={nextTestimonial}"
             className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-200"
           >"
-            <ChevronRight className="h-6 w-6 text-gray-600" />          </button>
+            <ChevronRight className="h-6 w-6 text-gray-600"  />          </button>
         </div>
 
         {/* Testimonial Indicators */}"
@@ -136,7 +209,7 @@ export function InteractiveTestimonials() {
                 key={index}
                 onClick={() => goToTestimonial(index)}`
                 className={`w-3 h-3 rounded-full transition-all duration-200 ${
-'
+
                   index === currentIndex ? 'bg-blue-600 w-8' : 'bg-gray-300'`
                 }`}
               />) ) }
@@ -151,12 +224,12 @@ export function InteractiveTestimonials() {
           >
             {isPlaying ? (
               <>"
-                <Pause className="h-4 w-4 mr-2" />
+                <Pause className="h-4 w-4 mr-2"  />
                 Pause
               </>
             ) : (
               <>"
-                <Play className="h-4 w-4 mr-2" />                Play
+                <Play className="h-4 w-4 mr-2"  />                Play
               </>) }
           </button>
         </div>
@@ -193,18 +266,18 @@ export function InteractiveTestimonials() {
             <h3 className="text-2xl font-bold mb-4">
               Ready to Join Our Success Stories?
             </h3>"
-            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">'
+            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
               Let's discuss how we can transform your business with innovative
               technology solutions tailored to your specific needs.
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
                 Start Your Project"
-                <Award className="ml-2 h-5 w-5" />
+                <Award className="ml-2 h-5 w-5"  />
               </button>"
               <button className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-white hover:text-blue-600 rounded-lg font-medium transition-colors duration-200">
                 Schedule Consultation"
-                <Users className="ml-2 h-5 w-5" />              </button>
+                <Users className="ml-2 h-5 w-5"  />              </button>
             </div>
           </div>
         </motion.div>
@@ -216,8 +289,7 @@ export default InteractiveTestimonials;"
           </div>;
         </motion.div>;
       </div>;
-    </section>;) ;
-}
+    </section>;) }
 export default InteractiveTestimonials;
 export default InteractiveTestimonials;
 '"`

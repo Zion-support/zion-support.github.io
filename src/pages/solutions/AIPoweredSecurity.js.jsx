@@ -9,116 +9,93 @@ import {
   Lightbulb,
   Lock,
   Eye,
-  AlertTriangle,'
+  AlertTriangle,
   Cloud} from 'lucide-react';
 const AIPoweredSecurity = () => {
   const securitySolutions = [
     {
-'
-      title: 'Network Security','
+
+      title: 'Network Security',
       description: 'AI-powered network monitoring and threat prevention',
       icon: Shield,
       capabilities: ['
-        'Intrusion detection','
-        'Traffic analysis','
-        'DDoS protection','
-        'Firewall management',
+        'Intrusion detection',Traffic analysis',DDoS protection',Firewall management',
       ]},
     {
-'
-      title: 'Endpoint Security','
+
+      title: 'Endpoint Security',
       description: 'Comprehensive protection for all devices and endpoints',
       icon: Cpu,
       capabilities: ['
-        'Malware detection','
-        'Device control','
-        'Data protection','
-        'Threat response',
+        'Malware detection',Device control',Data protection',Threat response',
       ]},
     {
-'
-      title: 'Cloud Security','
+
+      title: 'Cloud Security',
       description: 'Secure cloud infrastructure and application protection',
       icon: Cloud,
       capabilities: ['
-        'Cloud monitoring','
-        'API security','
-        'Data encryption','
-        'Compliance management',
+        'Cloud monitoring',API security',Data encryption',Compliance management',
       ]},
     {
-'
-      title: 'Data Security','
+
+      title: 'Data Security',
       description: 'Protection of sensitive data and information assets',
       icon: Database,
       capabilities: ['
-        'Data classification','
-        'Encryption','
-        'Access control','
-        'Audit trails',
+        'Data classification',Encryption',Access control',Audit trails',
       ]},
     {
-'
-      title: 'Identity Management','
+
+      title: 'Identity Management',
       description: 'Secure user identity and access management',
       icon: Users,
       capabilities: ['
-        'User provisioning','
-        'Role management','
-        'Single sign-on','
-        'Identity verification',
+        'User provisioning',Role management',Single sign-on',Identity verification',
       ]},
     {
-'
-      title: 'Incident Response','
+
+      title: 'Incident Response',
       description: 'Automated incident detection and response',
       icon: AlertTriangle,
       capabilities: ['
-        'Threat hunting','
-        'Automated response','
-        'Forensic analysis','
-        'Recovery planning',
+        'Threat hunting',Automated response',Forensic analysis',Recovery planning',
       ]},
   ];
   const benefits = ['
-    'Proactive threat detection and prevention','
-    'Reduced false positives and alert fatigue','
-    'Faster incident response and resolution','
-    'Continuous learning and adaptation','
-    'Comprehensive security coverage','
-    'Cost-effective security operations',
+    'Proactive threat detection and prevention',Reduced false positives and alert fatigue',Faster incident response and resolution',Continuous learning and adaptation',Comprehensive security coverage',Cost-effective security operations',
   ];
   const implementation = [
     {
-'
-      phase: 'Security Assessment','
-      description: 'Evaluate current security posture and identify gaps','
+
+      phase: 'Security Assessment',
+      description: 'Evaluate current security posture and identify gaps',
       duration: '2-4 weeks'},
     {
-'
+
       phase: 'AI Integration',
       description:'
-        'Integrate AI capabilities into existing security infrastructure','
+        'Integrate AI capabilities into existing security infrastructure',
       duration: '6-10 weeks'},
     {
-'
-      phase: 'Training & Tuning','
-      description: 'Train AI models and optimize security parameters','
+
+      phase: 'Training & Tuning',
+      description: 'Train AI models and optimize security parameters',
       duration: '4-8 weeks'},
     {
-'
-      phase: 'Deployment','
-      description: 'Deploy AI-powered security across the organization','
+
+      phase: 'Deployment',
+      description: 'Deploy AI-powered security across the organization',
       duration: '4-6 weeks'},
     {
-'
-      phase: 'Testing & Validation','
-      description: 'Validate security effectiveness and performance','
+
+      phase: 'Testing & Validation',
+      description: 'Validate security effectiveness and performance',
       duration: '2-4 weeks'},
     {
-'
-      phase: 'Monitoring & Optimization','
-      description: 'Continuous monitoring and system optimization','
+
+      phase: 'Monitoring & Optimization',
+      description: 'Continuous monitoring and system optimization',
       duration: 'Ongoing'},
   ];
   return()
@@ -133,7 +110,7 @@ const AIPoweredSecurity = () => {
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI Powered"
-              <span className="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
                 {' '}
                 Security
               </span>
@@ -144,13 +121,13 @@ const AIPoweredSecurity = () => {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="#features""
+                href="#features"
                 className="px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 text-white font-semibold rounded-lg hover:from-red-700 hover:to-orange-700 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 Explore Features
               </a>
               <a"
-                href="/contact""
+                href="/contact"
                 className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
               >
                 Get Started
@@ -328,13 +305,13 @@ const AIPoweredSecurity = () => {
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a"
-              href="/contact""
+              href="/contact"
               className="px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 text-white font-semibold rounded-lg hover:from-red-700 hover:to-orange-700 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               Secure Your Business
             </a>
             <a"
-              href="/solutions""
+              href="/solutions"
               className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
             >
               View All Solutions

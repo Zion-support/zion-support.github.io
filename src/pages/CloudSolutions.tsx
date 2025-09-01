@@ -1,5 +1,69 @@
-import React from 'react';'
-import { motion } from 'framer-motion';    visible: {
+<<<<<<< HEAD
+import {
+
+  Cloud,
+  Server,
+  Database,
+  Shield,
+  Zap,
+  Globe,
+  Lock,
+  BarChart3,
+  ArrowRight,
+  CheckCircle,
+  Play,
+  Code,
+  Settings,
+  Users'
+ } from 'lucide-react';
+
+export default function CloudSolutions(...args[]):  {
+
+  
+    },;
+    {
+
+      icon: Database,"
+      title: "Database Management","
+      description: "Optimize and manage your databases in the cloud for maximum performance","
+      features["Performance Tuning", "Backup & Recovery", "Scaling & Optimization", "Security Hardening"]},;
+    {
+
+      icon: Shield,"
+      title: "Cloud Security","
+      description: "Comprehensive security solutions to protect your cloud infrastructure","
+      features["Identity & Access Management", "Data Encryption", "Threat Detection", "Compliance Management"]},;
+    {
+"
+      features["CI/CD Pipelines", "Infrastructure as Code", "Monitoring & Alerting", "Auto-scaling"]};
+      icon: Zap,;"
+      title: "DevOps Automation",;"
+      description: "Streamline your development and deployment processes with automation",;"
+      features: ["CI/CD Pipelines", "Infrastructure as Code", "Monitoring & Alerting", "Auto-scaling"]};
+  ]},;
+    {;
+      icon: Users,;"
+      title: "24/7 Support",;"
+      description: "Round-the-clock expert support for your cloud infrastructure needs"};
+  ];
+
+  const technologies = [;"
+    { name: "AWS", logo: "AWS", description: "Amazon Web Services" },;"
+    { name: "Azure", logo: "Azure", description: "Microsoft Azure" },;"
+    { name: "GCP", logo: "GCP", description: "Google Cloud Platform" },;"
+    { name: "Kubernetes", logo: "K8s", description: "Container Orchestration" },;"
+    { name: "Docker", logo: "Docker", description: "Containerization" },;"
+    { name: "Terraform", logo: "TF", description: "Infrastructure as Code" };
+  ];
+
+  
+    visible: {
+      opacity: 1,;
+      transition: {
+        staggerChildren: 0.1}}}},;
+    visible: {
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       opacity: 1,;
       y: 0,;
       transition: { duration: 0.6 }}};
@@ -29,7 +93,7 @@ import { motion } from 'framer-motion';    visible: {
 }}
             transition={{ duration: 0.8 }}
 "
-            <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">'
+            <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
               Cloud Solutions for the{' '}"
               <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
                 Digital Age
@@ -67,13 +131,13 @@ import { motion } from 'framer-motion';    visible: {
                 whileTap={{ scale: 0.95 }}
 
                 Get Started"
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />              </motion.button>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform"  />              </motion.button>
               <motion.button"
                 className="px-10 py-5 border-2 border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-3"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
 "
-                <Play className="w-5 h-5" />                Watch Demo
+                <Play className="w-5 h-5"  />                Watch Demo
               </motion.button>
             </motion.div>
           </motion.div>
@@ -112,7 +176,7 @@ import { motion } from 'framer-motion';    visible: {
           <motion.div"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
 
@@ -138,7 +202,7 @@ import { motion } from 'framer-motion';    visible: {
                 <ul className="space-y-3">
                   {service.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center gap-3 text-zion-slate-light text-sm">"
-                      <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />                      {feature}
+                      <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0"  />                      {feature}
                     </li>) ) }
                 </ul>
               </motion.div>) ) }
@@ -178,7 +242,7 @@ import { motion } from 'framer-motion';    visible: {
           <motion.div"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
 
@@ -231,7 +295,7 @@ import { motion } from 'framer-motion';    visible: {
           <motion.div"
             className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8"
             variants={containerVariants}"
-            initial="hidden""
+            initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
 
@@ -289,6 +353,5 @@ import { motion } from 'framer-motion';    visible: {
           </motion.div>;
         </div>;
       </section>;
-    </div>;) ;
-}
+    </div>;) }
 '"

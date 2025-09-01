@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { motion } from 'framer-motion';
 import { FuturisticServicesShowcase } from "../components/FuturisticServicesShowcase";
 const AdvancedServices = () => {
@@ -298,7 +298,7 @@ const AdvancedServices = () => {
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>"
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">'
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Let's discuss how our advanced micro SAAS solutions can revolutionize your operations and drive unprecedented growth.
             </p>"
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">"

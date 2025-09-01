@@ -9,12 +9,7 @@ const DYNAMIC_CACHE = 'zion-dynamic-v1.0.0';
 
 // Files to cache immediately;
 const STATIC_FILES = [
-  '/',
-
-  '/static/js/main.js',
-  '/static/css/main.css',
-  '/favicon.ico',
-  '/manifest.json'
+  '/',/static/js/main.js',/static/css/main.css',/favicon.ico',/manifest.json'
 
 ];
 
@@ -73,6 +68,10 @@ self.addEventListener('install', (event) => {
   );
 
   self.skipWaiting();
+<<<<<<< HEAD
+=======
+  '/about',/contact',/offline',/manifest.json',/favicon.ico',/icons/icon-192x192.png',/icons/icon-512x512.png'
+=======
   '/about',
   '/contact',
   '/offline',
@@ -80,13 +79,12 @@ self.addEventListener('install', (event) => {
   '/favicon.ico',
   '/icons/icon-192x192.png',
   '/icons/icon-512x512.png'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 ];
 
 // API routes to cache;
 const API_ROUTES = [
-  '/api/health',
-  '/api/analytics/performance',
-  '/api/analytics/error'
+  '/api/health',/api/analytics/performance',/api/analytics/error'
 ];
 
 // Install event - cache static files

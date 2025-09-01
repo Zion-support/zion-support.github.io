@@ -1,62 +1,28 @@
-import React, { useState } from 'react';'
-import { Link } from 'react-router-dom';'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { allEnhancedServices } from '../data/enhanced-2025-comprehensive-services';
 const ComprehensiveServicesOverview2025 = () => {
-  const [selectedService, setSelectedService] = useState(null);'
+  const [selectedService, setSelectedService] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState('all');
   const categories = ['
-    'all','
-    'AI & Business Intelligence','
-    'Cybersecurity & Quantum Computing','
-    'DevOps & Infrastructure','
-    'Blockchain & Supply Chain','
-    'Healthcare & AI','
-    'Quantum Computing & AI','
-    'FinTech & AI','
-    'IoT & Edge Computing','
-    'Legal Tech & AI','
-    'Marketing & AI','
-    'Energy & Sustainability','
-    'Logistics & Transportation',
+    'all',AI & Business Intelligence',Cybersecurity & Quantum Computing',DevOps & Infrastructure',Blockchain & Supply Chain',Healthcare & AI',Quantum Computing & AI',FinTech & AI',IoT & Edge Computing',Legal Tech & AI',Marketing & AI',Energy & Sustainability',Logistics & Transportation',
   ];
   const filteredServices = allEnhancedServices.filter()
-    service =>'
+    service =>
       selectedCategory === 'all' || service.category === selectedCategory
   );
   const getCategoryIcon = category => {
 
     const icons = {
-'
-      'AI & Business Intelligence': '🧠','
-      'Cybersecurity & Quantum Computing': '🔒','
-      'DevOps & Infrastructure': '⚙️','
-      'Blockchain & Supply Chain': '⛓️','
-      'Healthcare & AI': '🏥','
-      'Quantum Computing & AI': '🔮','
-      'FinTech & AI': '💰','
-      'IoT & Edge Computing': '🌐','
-      'Legal Tech & AI': '⚖️','
-      'Marketing & AI': '📢','
-      'Energy & Sustainability': '⚡','
-      'Logistics & Transportation': '🚚'};'
+
+      'AI & Business Intelligence': '🧠',Cybersecurity & Quantum Computing': '🔒',DevOps & Infrastructure': '⚙️',Blockchain & Supply Chain': '⛓️',Healthcare & AI': '🏥',Quantum Computing & AI': '🔮',FinTech & AI': '💰',IoT & Edge Computing': '🌐',Legal Tech & AI': '⚖️',Marketing & AI': '📢',Energy & Sustainability': '⚡',Logistics & Transportation': '🚚'};
     return icons[category] || '🚀';
   };
   const getCategoryColor = category => {
 
     const colors = {
-'
-      'AI & Business Intelligence': 'from-blue-500 to-cyan-500','
-      'Cybersecurity & Quantum Computing': 'from-red-500 to-pink-500','
-      'DevOps & Infrastructure': 'from-green-500 to-emerald-500','
-      'Blockchain & Supply Chain': 'from-purple-500 to-indigo-500','
-      'Healthcare & AI': 'from-teal-500 to-cyan-500','
-      'Quantum Computing & AI': 'from-violet-500 to-purple-500','
-      'FinTech & AI': 'from-yellow-500 to-orange-500','
-      'IoT & Edge Computing': 'from-indigo-500 to-blue-500','
-      'Legal Tech & AI': 'from-gray-500 to-slate-500','
-      'Marketing & AI': 'from-pink-500 to-rose-500','
-      'Energy & Sustainability': 'from-green-500 to-teal-500','
-      'Logistics & Transportation': 'from-orange-500 to-red-500'};'
+
+      'AI & Business Intelligence': 'from-blue-500 to-cyan-500',Cybersecurity & Quantum Computing': 'from-red-500 to-pink-500',DevOps & Infrastructure': 'from-green-500 to-emerald-500',Blockchain & Supply Chain': 'from-purple-500 to-indigo-500',Healthcare & AI': 'from-teal-500 to-cyan-500',Quantum Computing & AI': 'from-violet-500 to-purple-500',FinTech & AI': 'from-yellow-500 to-orange-500',IoT & Edge Computing': 'from-indigo-500 to-blue-500',Legal Tech & AI': 'from-gray-500 to-slate-500',Marketing & AI': 'from-pink-500 to-rose-500',Energy & Sustainability': 'from-green-500 to-teal-500',Logistics & Transportation': 'from-orange-500 to-red-500'};
     return colors[category] || 'from-gray-500 to-slate-500';
   };
   return()
@@ -66,7 +32,7 @@ const ComprehensiveServicesOverview2025 = () => {
         <div className="max-w-7xl mx-auto text-center">"
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Comprehensive Services"
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">'
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
               {' '}
               Overview 2025
             </span>
@@ -81,19 +47,19 @@ const ComprehensiveServicesOverview2025 = () => {
           {/* Navigation */}"
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <Link"
-              to="/comprehensive-services-2025""
+              to="/comprehensive-services-2025"
               className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-semibold py-2 px-6 rounded-lg transition-all duration-300"
             >
               Landing Page
             </Link>
             <Link"
-              to="/enhanced-services-2025""
+              to="/enhanced-services-2025"
               className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold py-2 px-6 rounded-lg transition-all duration-300"
             >
               Services Showcase
             </Link>
             <a"
-              href="tel:+13024640950""
+              href="tel:+13024640950"
               className="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-lg transition-all duration-300"
             >
               Call Now
@@ -124,7 +90,7 @@ const ComprehensiveServicesOverview2025 = () => {
                   <div className="text-2xl mb-1">
                     {getCategoryIcon(category)}
                   </div>"
-                  <div className="text-xs">'
+                  <div className="text-xs">
                     {category === 'all' ? 'All Categories' : category}
                   </div>
                 </button>
@@ -530,8 +496,8 @@ const ComprehensiveServicesOverview2025 = () => {
                             <div className="space-y-2">
                               <a
                                 href={service.website}"
-                                target="_blank""
-                                rel="noopener noreferrer""
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="block bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg transition-colors duration-300"
                               >
                                 Visit Website
@@ -567,13 +533,13 @@ const ComprehensiveServicesOverview2025 = () => {
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a"
-              href="tel:+13024640950""
+              href="tel:+13024640950"
               className="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300"
             >
               Call Now: +1 302 464 0950
             </a>
             <a"
-              href="mailto:kleber@ziontechgroup.com""
+              href="mailto:kleber@ziontechgroup.com"
               className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300"
             >
               Email: kleber@ziontechgroup.com

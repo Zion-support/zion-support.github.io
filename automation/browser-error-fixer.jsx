@@ -18,7 +18,7 @@ const { execSync } = require('child_process');
 ;
 class BrowserErrorFixer {
   constructor() {
-    this.projectRoot = path.resolve(__dirname, '..');
+    this.projectRoot = path.resolve(__dirname,..');
     this.fixesApplied = [];
     this.backupsCreated = [];
     this.fixPatterns = {
@@ -31,8 +31,7 @@ class BrowserErrorFixer {
             fix: (match, filePath) => this.fixUnexpectedToken(match[1], filePath)
           }
         ]
-      },
-      'Cannot read property': {
+      },Cannot read property': {
         type: 'null-check',
         patterns: [
           {
@@ -40,8 +39,7 @@ class BrowserErrorFixer {
             fix: (match, filePath) => this.fixNullPropertyAccess(match[1], filePath)
           }
         ]
-      },
-      'is not a function': {
+      },is not a function': {
         type: 'function-check',
         patterns: [
           {
@@ -49,8 +47,7 @@ class BrowserErrorFixer {
             fix: (match, filePath) => this.fixFunctionCall(match[1], filePath)
           }
         ]
-      },
-      'ReferenceError': {
+      },ReferenceError': {
         type: 'reference',
         patterns: [
           {
@@ -58,8 +55,7 @@ class BrowserErrorFixer {
             fix: (match, filePath) => this.fixReferenceError(match[1], filePath)
           }
         ]
-      },
-      'TypeError': {
+      },TypeError': {
         type: 'type',
         patterns: [
           {
@@ -102,7 +98,7 @@ class BrowserErrorFixer {
       for (const filePath of sourceFiles) {
         // console.log(`📁 Analyzing file: ${path.relative(this.projectRoot, filePath)}`);
         
-        const fileContent = await fs.readFile(filePath, 'utf8');
+        const fileContent = await fs.readFile(filePath,utf8');
         const fixes = await this.applyFixesToFile(strategy, fileContent, filePath);
         
         if (fixes.length > 0) {
@@ -124,11 +120,11 @@ class BrowserErrorFixer {
 
   async findRelevantSourceFiles(error) {
     const sourceFiles = [];
-    const extensions = ['.js', '.jsx', '.ts', '.tsx'];
+    const extensions = ['.js',.jsx',.ts',.tsx'];
     
     try {
       // Search for source files in common directories
-      const searchDirs = ['src', 'components', 'pages', 'utils', 'hooks'];
+      const searchDirs = ['src',components',pages',utils',hooks'];
       
       for (const dir of searchDirs) {
         const dirPath = path.join(this.projectRoot, dir);
@@ -188,7 +184,7 @@ class BrowserErrorFixer {
     const fixes = [];
     
     for (const pattern of strategy.patterns) {
-      const matches = fileContent.match(new RegExp(pattern.regex, 'g'));
+      const matches = fileContent.match(new RegExp(pattern.regex,g'));
       if (matches) {
         for (const match of matches) {
           const fix = await pattern.fix(match, filePath);
@@ -223,7 +219,7 @@ class BrowserErrorFixer {
         const fix = fixes[i];
         modifiedContent = this.applySingleFix(modifiedContent, fix);
 
-      await fs.writeFile(filePath, modifiedContent, 'utf8');
+      await fs.writeFile(filePath, modifiedContent,utf8');
       // console.log(`✅ Applied ${fixes.length} fixes to ${path.relative(this.projectRoot, filePath)}`);
     } catch (error) {
       console.error(`❌ Failed to apply fixes to ${filePath}:`, error);
@@ -246,12 +242,8 @@ class BrowserErrorFixer {
   // Fix implementations
   async fixUnexpectedToken(token, filePath) {
     const commonFixes = {
-      '(': ')',
-      '[': ']',
-      '{': '}',
-      '"': '"',
-      "'": "'",
-      '`': '`'
+      '(': '),[': ']',{': '},"': '"',
+      "'": "'",`': '`'
     };
     
     if (commonFixes[token]) {
@@ -267,7 +259,7 @@ class BrowserErrorFixer {
   async fixNullPropertyAccess(property, filePath) {
     return {
       type: 'replace',
-      search: new RegExp(`\\.${property}\\b`, 'g'),
+      search: new RegExp(`\\.${property}\\b`,g'),
       replace: `?.${property}`,
       description: `Added optional chaining for property ${property}`
     };
@@ -275,7 +267,7 @@ class BrowserErrorFixer {
   async fixFunctionCall(functionName, filePath) {
     return {
       type: 'replace',
-      search: new RegExp(`\\b${functionName}\\s*\\(`, 'g'),
+      search: new RegExp(`\\b${functionName}\\s*\\(`,g'),
       replace: `(typeof ${functionName} === 'function' ? ${functionName}(`,
       description: `Added function existence check for ${functionName}`
     };
@@ -316,7 +308,7 @@ class BrowserErrorFixer {
         backupsCreated: this.backupsCreated
       };
       
-      const reportPath = path.join(this.projectRoot, 'reports', 'auto-fix-report.json');
+      const reportPath = path.join(this.projectRoot,reports',auto-fix-report.json');
       await fs.mkdir(path.dirname(reportPath), { recursive: true });
       await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
       

@@ -1,6 +1,25 @@
-import React, { useState } from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
-import { ultimateZionServices2025  } from '../data/ultimate-zion-services-2025';    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
+<<<<<<< HEAD
+
+const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;
+  const [selectedCategory, setSelectedCategory] = useState('all');
+
+  
+      icon: '🖥️', ;
+      color: 'from-gray-600 to-slate-600',;
+      description: 'Advanced infrastructure and DevOps solutions',;
+      marketSize: '$25.2 billion by 2027',;
+      growthRate: '150% annually'};
+  ];
+
+  
+    if (categoryId === 'all') return ultimateZionServices2025;
+    return ultimateZionServices2025.filter (service => service.category === categoryId) };
+
+  
+  return()
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       {/* Hero Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto text-center">
@@ -135,7 +154,7 @@ import { ultimateZionServices2025  } from '../data/ultimate-zion-services-2025';
               <div className="text-center">"
                 <div className="text-purple-400 font-semibold text-lg mb-2">🌐 Website</div>"
                 <div className="text-gray-300">"
-                  <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" "
+                  <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer"
                      className="text-blue-400 hover:text-blue-300 transition-colors">
                     ziontechgroup.com
                   </a>
@@ -189,7 +208,7 @@ import { ultimateZionServices2025  } from '../data/ultimate-zion-services-2025';
         </div>
       </section>;
 ;
-      {/* Category Overview */};'
+      {/* Category Overview */};
       {selectedCategory !== 'all' && (;"
         <section className="py-12 px-4 sm:px-6 lg:px-8">;"
           <div className="max-w-7xl mx-auto">;
@@ -233,8 +252,7 @@ import { ultimateZionServices2025  } from '../data/ultimate-zion-services-2025';
                       </div>;
                     </div>;
                   </div>;
-                </motion.div>;) ;
-            }) () }          </div>
+                </motion.div>;) }) () }          </div>
         </section>) }
 
       {/* Services Grid */}"
@@ -274,7 +292,7 @@ import { ultimateZionServices2025  } from '../data/ultimate-zion-services-2025';
                 }
               }
             }} "
-            initial="hidden" "
+            initial="hidden"
             whileInView="visible" 
             viewport={{ once: anytrue }}
           >
@@ -306,8 +324,8 @@ import { ultimateZionServices2025  } from '../data/ultimate-zion-services-2025';
                   <div className="inline-block px-3 py-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-xs font-semibold mb-2">
                     {service.innovationLevel}
                   </div>"
-                  <p className="text-sm text-purple-400 font-medium">'
-                    {service.category.replace('-', ' ').toUpperCase()}
+                  <p className="text-sm text-purple-400 font-medium">
+                    {service.category.replace('-',).toUpperCase()}
                   </p>
                 </div>
 
@@ -461,6 +479,5 @@ import { ultimateZionServices2025  } from '../data/ultimate-zion-services-2025';
           </motion.div>;
         </div>;
       </section>;
-    </div>;) ;
-};
+    </div>;) };
 export default UltimateZionServicesMarketing;'"`

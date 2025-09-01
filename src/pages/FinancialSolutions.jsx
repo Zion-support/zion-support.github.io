@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { DollarSign, Shield, BarChart3, ArrowRight, CheckCircle, Brain, Database, Zap, Lock export default function FinancialSolutions() {
     const solutions = [
@@ -206,7 +206,7 @@ import { DollarSign, Shield, BarChart3, ArrowRight, CheckCircle, Brain, Database
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Financial Operations?
           </h2>"
-          <p className="text-xl text-gray-300 mb-8">'
+          <p className="text-xl text-gray-300 mb-8">
             Join the future of finance with Zion Tech Group's AI-powered solutions
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"

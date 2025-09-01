@@ -1,8 +1,16 @@
-import { TalentProfile  } from '@/types';'
-import { Card, CardContent, CardHeader, CardTitle, CardDescription  } from '@/components/ui/card';'
-import { Button  } from '@/components/ui/button';'
-import { Badge  } from '@/components/ui/badge';'
-import { Avatar, AvatarFallback, AvatarImage  } from '@/components/ui/avatar';'
-import { DollarSign, Briefcase, User  } from 'lucide-react';    </Card>;
+<<<<<<< HEAD
+
+interface TalentCardPreviewProps extends React.PropsWithChildren<{}> {
+
+  talent: TalentProfile;
+  onInvite: talentId: string, role: string void; // role is passed for context
+  roleTitle: string; // To specify which role the invite is for
+
+}
+
+export 
+    </Card>;
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   )};
 '"`

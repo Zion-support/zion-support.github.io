@@ -1,5 +1,5 @@
 import React from 'react';
-import SEO from "@/components/SEO";'
+import SEO from "@/components/SEO";
 import { Brain, Shield, Database, TrendingUp } from 'lucide-react';
 const AIServices = () => {
     const aiServices = [
@@ -310,9 +310,9 @@ const AIServices = () => {
     return ("
         <div className="min-h-screen bg-background">
             <SEO "
-                title="AI Services - Zion Tech Group" "
-                description="Transform your business with cutting-edge AI services including machine learning, data analytics, and AI strategy." "
-                keywords="AI services, machine learning, artificial intelligence, data analytics, AI strategy, AI ethics" "
+                title="AI Services - Zion Tech Group"
+                description="Transform your business with cutting-edge AI services including machine learning, data analytics, and AI strategy."
+                keywords="AI services, machine learning, artificial intelligence, data analytics, AI strategy, AI ethics"
                 canonical="https://ziontechgroup.com/services/ai-services"
             />
 
@@ -432,7 +432,7 @@ const AIServices = () => {
                                         <span className="text-3xl font-bold text-pink-600">'`
                                             {service.price === 0 ? 'Free' : `${service.currency}${service.price}`}
                                         </span>"
-                                        <span className="text-gray-500">'
+                                        <span className="text-gray-500">
                                             {service.price === 0 ? '' : service.price < 1000 ? '/hour' : '/project'}
                                         </span>
                                     </div>

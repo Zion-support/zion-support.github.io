@@ -1,12 +1,12 @@
-import React from 'react';'
-import { Header } from '@/components/Header';'
-import { Footer } from '@/components/Footer';'
-import { CompDashboard } from '@/components/enterprise/workspace/CompDashboard';'
-import { useAuth } from '@/hooks/useAuth';'
-import { Navigate, useParams } from 'react-router-dom';'
-import { SEO } from '@/components/SEO';'
-import { ProtectedRoute } from '@/components/ProtectedRoute';'
-import { useCompWorkspace } from '@/hooks/useCompWorkspace';'
+import React from 'react';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { CompDashboard } from '@/components/enterprise/workspace/CompDashboard';
+import { useAuth } from '@/hooks/useAuth';
+import { Navigate, useParams } from 'react-router-dom';
+import { SEO } from '@/components/SEO';
+import { ProtectedRoute } from '@/components/ProtectedRoute';
+import { useCompWorkspace } from '@/hooks/useCompWorkspace';
 import { useWhitelabel } from '@/context/WhitelabelContext';
 export default function CompWorkspace() {
   const { compSlug } = useParams();
@@ -24,14 +24,14 @@ export default function CompWorkspace() {
   if (error || !comp) {
 "
     return <Navigate to="/" />;
-  }'
+  }
   // In white-label mode, use the tenant's theme instead of the comp's theme
   const effectiveTheme = isWhitelabel;
     ? {
 
-        primaryColor: tenant?.primary_color || company.theme?.primaryColor,'
-        backgroundColor: company.theme?.backgroundColor || 'var(--background)','
-        textColor: company.theme?.textColor || 'var(--foreground)'}
+        primaryColor: tenant?.primary_color || company.theme?.primaryColor,
+        backgroundColor: company.theme?.backgroundColor || 'var(--background),
+        textColor: company.theme?.textColor || 'var(--foreground)}
     : company.theme;
   // Check if user has access to this comp workspace
   const hasAccess = true; // For demo purposes, always grant access
@@ -54,7 +54,7 @@ export default function CompWorkspace() {
         style={{
 
           backgroundColor:'
-            effectiveTheme?.backgroundColor || 'var(--background)'}}
+            effectiveTheme?.backgroundColor || 'var(--background)}}
       >
         <CompDashboard company={comp} />
       </main>

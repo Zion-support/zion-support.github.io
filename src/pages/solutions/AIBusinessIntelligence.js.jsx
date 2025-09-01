@@ -9,47 +9,42 @@ import {
   Lightbulb,
   BarChart3,
   PieChart,
-  Activity,'
+  Activity,
   Search} from 'lucide-react';
 const AIBusinessIntelligence = () => {
   const benefits = ['
-    'Data-driven decision making across all business areas','
-    'Real-time insights and instant access to critical information','
-    'Automated reporting and reduced manual analysis time','
-    'Predictive capabilities for proactive business planning','
-    'Improved operational efficiency and cost optimization','
-    'Enhanced customer understanding and engagement',
+    'Data-driven decision making across all business areas',Real-time insights and instant access to critical information',Automated reporting and reduced manual analysis time',Predictive capabilities for proactive business planning',Improved operational efficiency and cost optimization',Enhanced customer understanding and engagement',
   ];
   const implementation = [
     {
-'
-      phase: 'Data Assessment','
-      description: 'Evaluate current data sources and quality','
+
+      phase: 'Data Assessment',
+      description: 'Evaluate current data sources and quality',
       duration: '2-3 weeks'},
     {
-'
-      phase: 'BI Strategy','
-      description: 'Define business intelligence goals and requirements','
+
+      phase: 'BI Strategy',
+      description: 'Define business intelligence goals and requirements',
       duration: '3-4 weeks'},
     {
-'
-      phase: 'Data Integration','
-      description: 'Connect and integrate data sources','
+
+      phase: 'Data Integration',
+      description: 'Connect and integrate data sources',
       duration: '6-10 weeks'},
     {
-'
-      phase: 'AI Model Development','
-      description: 'Build and train AI models for analytics','
+
+      phase: 'AI Model Development',
+      description: 'Build and train AI models for analytics',
       duration: '8-12 weeks'},
     {
-'
-      phase: 'Dashboard Development','
-      description: 'Create interactive dashboards and reports','
+
+      phase: 'Dashboard Development',
+      description: 'Create interactive dashboards and reports',
       duration: '6-8 weeks'},
     {
-'
-      phase: 'Deployment & Training','
-      description: 'Deploy system and train users','
+
+      phase: 'Deployment & Training',
+      description: 'Deploy system and train users',
       duration: '2-4 weeks'},
   ];
   return()
@@ -64,7 +59,7 @@ const AIBusinessIntelligence = () => {
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI"
-              <span className="bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent">
                 {' '}
                 Business Intelligence
               </span>
@@ -75,13 +70,13 @@ const AIBusinessIntelligence = () => {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="#features""
+                href="#features"
                 className="px-8 py-4 bg-gradient-to-r from-violet-600 to-purple-600 text-white font-semibold rounded-lg hover:from-violet-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 Explore Features
               </a>
               <a"
-                href="/contact""
+                href="/contact"
                 className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
               >
                 Get Started
@@ -259,13 +254,13 @@ const AIBusinessIntelligence = () => {
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a"
-              href="/contact""
+              href="/contact"
               className="px-8 py-4 bg-gradient-to-r from-violet-600 to-purple-600 text-white font-semibold rounded-lg hover:from-violet-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               Start Your Journey
             </a>
             <a"
-              href="/solutions""
+              href="/solutions"
               className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
             >
               View All Solutions

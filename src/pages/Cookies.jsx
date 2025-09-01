@@ -1,13 +1,13 @@
-import React from 'react';'
+import React from 'react';
 import { SEO } from '../components/SEO';
 
 export default function Cookies() {
   return()
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-20">
       <SEO"
-        title="Cookie Policy | Zion Tech Group""
-        description="Learn about how Zion Tech Group uses cookies to improve your browsing experience and provide personalized content.""
-        keywords="cookie policy, privacy, data collection, website cookies""
+        title="Cookie Policy | Zion Tech Group"
+        description="Learn about how Zion Tech Group uses cookies to improve your browsing experience and provide personalized content."
+        keywords="cookie policy, privacy, data collection, website cookies"
         canonical="https://ziontechgroup.com/cookies"
       />"
       <main className="min-h-screen pt-20">"
@@ -17,12 +17,12 @@ export default function Cookies() {
               Cookie Policy
             </h1>"
             <div className="bg-slate-800 rounded-lg p-8 border border-slate-700">"
-              <p className="text-gray-300 mb-6">'
-                Last updated:{' '}'
+              <p className="text-gray-300 mb-6">
+                Last updated:{' '}
                 {new Date().toLocaleDateString('en-US', {
-'
-                  year: 'numeric','
-                  month: 'long','
+
+                  year: 'numeric',
+                  month: 'long',
                   day: 'numeric'})}
               </p>"
               <div className="space-y-8">
@@ -148,14 +148,14 @@ export default function Cookies() {
                     If you have any questions about our use of cookies or would'
                     like to update your preferences, please contact us at{' '}
                     <a"
-                      href="mailto:kleber@ziontechgroup.com""
+                      href="mailto:kleber@ziontechgroup.com"
                       className="text-blue-400 hover:text-blue-300"
                     >
                       kleber@ziontechgroup.com'
-                    </a>{' '}'
+                    </a>{' '}
                     or call us at{' '}
                     <a"
-                      href="tel:+13024640950""
+                      href="tel:+13024640950"
                       className="text-blue-400 hover:text-blue-300"
                     >
                       +1 (302) 464-0950

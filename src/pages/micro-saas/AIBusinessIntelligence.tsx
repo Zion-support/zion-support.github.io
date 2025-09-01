@@ -1,58 +1,24 @@
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
-import { Brain, BarChart3, Zap, Eye, ArrowRight, Shield, Cloud, Database, Cpu, Users, TrendingUp, Target  } from 'lucide-react';
 ;
 export { function };
 export default function AIBusinessIntelligence(...args[]):  {
 
-  const features = [
-    {
-
-      icon: Brain,'
-      title: 'AI-Powered Insights','
-      description: 'Intelligent analysis and predictive modeling'
-    },
-    {
-
-      icon: BarChart3,'
-      title: 'Real-time Analytics','
-      description: 'Live data visualization and reporting'
-    },
-    {
-
-      icon: Zap,'
-      title: 'Automated Intelligence','
-      description: 'Smart automation of business processes';
+  
     },;
     {;
-      icon: Eye,;'
-      title: 'Predictive Analytics',;'
-      description: 'Forecast trends and identify opportunities';
-    };
-  ];
-
-  const capabilities = [
-    {
-'
-      title: 'Business Intelligence Dashboard','
-      description: 'Comprehensive view of all business metrics and KPIs',
-      icon: BarChart3
-    },
-    {
-'
-      title: 'Predictive Modeling','
-      description: 'AI algorithms to forecast business outcomes',
-      icon: TrendingUp
-    },
-    {
-'
-      title: 'Natural Language Query','
-      description: 'Ask questions in plain English and get instant answers',
-      icon: Database;
-    },;
+      icon: Eye,;
+      title: 'Predictive Analytics',;
+      description: 'Forecast trends and identify opportunities'};
+  ]},;
+<<<<<<< HEAD
+    {;
+      title: 'Automated Reporting',;
+      description: 'Generate reports automatically with AI insights',;
+      icon: Target};
+=======
     {;'
       title: 'Automated Reporting',;'      description: 'Generate reports automatically with AI insights',;
       icon: Target};
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return()
@@ -88,7 +54,7 @@ export default function AIBusinessIntelligence(...args[]):  {
             className="text-center max-w-4xl mx-auto"
 "
             <div className="inline-flex items-center space-x-2 bg-violet-500/10 border border-violet-500/20 rounded-full px-4 py-2 mb-6">"
-              <Brain className="w-5 h-5 text-violet-400" />"              <span className="text-violet-400 font-medium">AI Business Intelligence</span>
+              <Brain className="w-5 h-5 text-violet-400"  />"              <span className="text-violet-400 font-medium">AI Business Intelligence</span>
             </div>
 "
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -104,7 +70,7 @@ export default function AIBusinessIntelligence(...args[]):  {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="btn-futuristic px-8 py-4 text-lg">
                 Start Free Trial"
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2"  />
               </button>"              <button className="btn-outline px-8 py-4 text-lg">
                 Watch Demo
               </button>
@@ -376,15 +342,15 @@ export default function AIBusinessIntelligence(...args[]):  {
               <div className="text-4xl font-bold text-zion-cyan mb-6">$29<span className="text-lg text-zion-slate-light">/month</span></div>"
               <ul className="space-y-3 mb-8">"
                 <li className="flex items-center text-zion-slate-light">"
-                  <CheckCircle className="w-5 h-5 text-zion-cyan mr-3" />
+                  <CheckCircle className="w-5 h-5 text-zion-cyan mr-3"  />
                   Up to 5 users
                 </li>"
                 <li className="flex items-center text-zion-slate-light">"
-                  <CheckCircle className="w-5 h-5 text-zion-cyan mr-3" />
+                  <CheckCircle className="w-5 h-5 text-zion-cyan mr-3"  />
                   Basic AI insights
                 </li>"
                 <li className="flex items-center text-zion-slate-light">"
-                  <CheckCircle className="w-5 h-5 text-zion-cyan mr-3" />                  Standard reports
+                  <CheckCircle className="w-5 h-5 text-zion-cyan mr-3"  />                  Standard reports
                 </li>
               </ul>"
               <button className="w-full btn-outline py-3">Get Started</button>
@@ -435,19 +401,19 @@ export default function AIBusinessIntelligence(...args[]):  {
               <div className="text-4xl font-bold text-white mb-6">$79<span className="text-lg text-violet-200">/month</span></div>"
               <ul className="space-y-3 mb-8">"
                 <li className="flex items-center text-violet-100">"
-                  <CheckCircle className="w-5 h-5 text-white mr-3" />
+                  <CheckCircle className="w-5 h-5 text-white mr-3"  />
                   Up to 25 users
                 </li>"
                 <li className="flex items-center text-violet-100">"
-                  <CheckCircle className="w-5 h-5 text-white mr-3" />
+                  <CheckCircle className="w-5 h-5 text-white mr-3"  />
                   Advanced AI analytics
                 </li>"
                 <li className="flex items-center text-violet-100">"
-                  <CheckCircle className="w-5 h-5 text-white mr-3" />
+                  <CheckCircle className="w-5 h-5 text-white mr-3"  />
                   Custom dashboards
                 </li>"
                 <li className="flex items-center text-violet-100">"
-                  <CheckCircle className="w-5 h-5 text-white mr-3" />                  Priority support
+                  <CheckCircle className="w-5 h-5 text-white mr-3"  />                  Priority support
                 </li>
               </ul>"
               <button className="w-full bg-white text-violet-600 py-3 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-300">
@@ -468,14 +434,7 @@ export default function AIBusinessIntelligence(...args[]):  {
               transition = {
 
   { duration: 0.6,
-  delay: 0.3 ;
-
-
-
-
-
-
-}}
+  delay: 0.3 }}
               viewport={{ once: true }}"
               className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
 "
@@ -483,19 +442,19 @@ export default function AIBusinessIntelligence(...args[]):  {
               <div className="text-4xl font-bold text-zion-cyan mb-6">Custom</div>"
               <ul className="space-y-3 mb-8">"
                 <li className="flex items-center text-zion-slate-light">"
-                  <CheckCircle className="w-5 h-5 text-zion-cyan mr-3" />
+                  <CheckCircle className="w-5 h-5 text-zion-cyan mr-3"  />
                   Unlimited users
                 </li>"
                 <li className="flex items-center text-zion-slate-light">"
-                  <CheckCircle className="w-5 h-5 text-zion-cyan mr-3" />
+                  <CheckCircle className="w-5 h-5 text-zion-cyan mr-3"  />
                   Custom AI models
                 </li>"
                 <li className="flex items-center text-zion-slate-light">"
-                  <CheckCircle className="w-5 h-5 text-zion-cyan mr-3" />
+                  <CheckCircle className="w-5 h-5 text-zion-cyan mr-3"  />
                   White-label solution
                 </li>"
                 <li className="flex items-center text-zion-slate-light">"
-                  <CheckCircle className="w-5 h-5 text-zion-cyan mr-3" />                  Dedicated support
+                  <CheckCircle className="w-5 h-5 text-zion-cyan mr-3"  />                  Dedicated support
                 </li>
               </ul>"
               <button className="w-full btn-outline py-3">Contact Sales</button>
@@ -562,5 +521,4 @@ const CheckCircle = ({ className }: { className?: string }) => (;"
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">;"
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />;
   </svg>;
-);
-}}}}'"
+)}}}}'"

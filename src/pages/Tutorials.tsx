@@ -1,5 +1,3 @@
-import React, { useState } from 'react';'
-import { Link } from 'react-router-dom';
 import {
 
   Search,
@@ -28,139 +26,32 @@ import {
   Settings,
   Rocket,
   Heart,
-  Download,'
+  Download,
   Share2} from 'lucide-react';
 
-const Tutorials = () => {
-  const tutorialCategories = [
-    {
-'
-      title: 'Beginner','
-      description: 'Perfect for those new to AI and technology','
-      color: 'from-green-500 to-emerald-500','
-      count: '12'},
-    {
-'
-      title: 'Intermediate','
-      description: 'For users with some experience','
-      color: 'from-yellow-500 to-orange-500','
-      count: '18'},
-    {
-'
-      title: 'Advanced','
-      description: 'Complex topics for experienced users','
-      color: 'from-red-500 to-pink-500','
-      count: '8'},
-    {
-'
-      title: 'Expert','
-      description: 'Cutting-edge research and techniques','
-      color: 'from-purple-500 to-indigo-500','
-      count: '5'},
-  ];
 
-  const featuredTutorials = [
-    {
-'
-      title: 'AI Autonomous Research Assistant Implementation',
-      description:'
-        'Learn to implement and configure AI Autonomous Research Assistant systems for enterprise research and intelligence gathering.','
-      category: 'Advanced','
-      duration: '75 min','
-      instructor: 'Dr. Sarah Chen',
-      rating: 4.9,'
-      students: '1.2k','
-      thumbnail: '/images/tutorials/ai-autonomous-research.jpg'},
-    {
-'
-      title: 'AI Supply Chain Optimization Setup',
-      description:'
-        'Master the implementation of AI-powered supply chain optimization solutions for cost reduction and efficiency improvement.','
-      category: 'Expert','
-      duration: '90 min','
-      instructor: 'Michael Rodriguez',
-      rating: 4.8,'
-      students: '856','
-      thumbnail: '/images/tutorials/ai-supply-chain.jpg'},
-    {
-'
-      title: 'Building Your First AI Chatbot',
-      description:'
-        'Learn to create a conversational AI chatbot using our platform. This comprehensive tutorial covers everything from data preparation to deployment.','
-      category: 'Beginner','
-      duration: '45 min','
-      instructor: 'Dr. Sarah Chen',
-      rating: 4.8,'
-      students: '2.3k','
-      thumbnail: '/images/tutorials/ai-chatbot.jpg'},
-    {
-'
-      title: 'Quantum Neural Network Implementation',
-      description:'
-        'Dive deep into quantum computing and implement neural networks that leverage quantum properties for enhanced performance.','
-      category: 'Advanced','
-      duration: '90 min','
-      instructor: 'Michael Rodriguez',
-      rating: 4.9,'
-      students: '856','
-      thumbnail: '/images/tutorials/quantum-neural.jpg'},
-    {
-'
-      title: 'Cybersecurity Best Practices',
-      description:'
-        'Master essential cybersecurity concepts and implement robust security measures to protect your applications and data.','
-      category: 'Intermediate','
-      duration: '60 min','
-      instructor: 'James Wilson',
-      rating: 4.7,'
-      students: '1.5k','
-      thumbnail: '/images/tutorials/cybersecurity.jpg'},
-    {
-'
-      title: 'AI Model Optimization',
-      description:'
-        'Learn advanced techniques to optimize your AI models for better performance, faster inference, and reduced resource consumption.','
-      category: 'Expert','
-      duration: '75 min','
-      instructor: 'Dr. Emily Watson',
-      rating: 4.6,'
-      students: '623','
-      thumbnail: '/images/tutorials/ai-optimization.jpg'},
-  ];
-'
-  const [searchTerm, setSearchTerm] = useState('');'
-  const [selectedCategory, setSelectedCategory] = useState('all');'
+  
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('popular');
 
-  const filteredTutorials = featuredTutorials.filter(tutorial => {
+  
+    
+    return matchesSearch && matchesCategory}) ;
 
-    const matchesSearch =
-      tutorial.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      tutorial.description.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory ='
-      selectedCategory === 'all' ||
-      tutorial.category.toLowerCase() === selectedCategory.toLowerCase();
-    return matchesSearch && matchesCategory;
-  }) ;
-
-  const sortedTutorials = [...filteredTutorials].sort((a, b) => {
-    switch (sortBy) {
-'
-      case 'rating':
-        return b.rating - a.rating;'
+  
       case 'duration':
-        return parseInt(a.duration) - parseInt(b.duration);'
+        return parseInt(a.duration) - parseInt(b.duration);
       case 'students':
         return ('
-          parseInt(b.students.replace('k', '000')) -'
-          parseInt(a.students.replace('k', '000'))
+          parseInt(b.students.replace('k',000')) -'
+          parseInt(a.students.replace('k',000'))
         );
       default:
         return ('
-          parseInt(b.students.replace('k', '000')) -'
-          parseInt(a.students.replace('k', '000'))
-        );
-    }
+          parseInt(b.students.replace('k',000')) -'
+          parseInt(a.students.replace('k',000'))
+        )}
   }) ;
 
   return()
@@ -188,9 +79,14 @@ const Tutorials = () => {
             {/* Search */}"
             <div className="flex-1">"
               <div className="relative">"
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5"  />
                 <input"
+<<<<<<< HEAD
+                  type="text"
+                  placeholder="Search tutorials..."
+=======
                   type="text""                  placeholder="Search tutorials..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   value={searchTerm}
                   onChange={e => setSearchTerm(e.target.value)}"
                   className="w-full pl-10 pr-4 py-3 border border-slate-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-700 text-slate-900 dark:text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
@@ -259,11 +155,11 @@ const Tutorials = () => {
               {/* Thumbnail */}"
               <div className="relative h-48 bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-700 dark:to-slate-600">"
                 <div className="absolute inset-0 flex items-center justify-center">"
-                  <Play className="w-16 h-16 text-slate-400" />
+                  <Play className="w-16 h-16 text-slate-400"  />
                 </div>"                <div className="absolute top-3 right-3">
                   <span`
                     className={`px-2 py-1 text-xs font-medium rounded-full ${
-'
+
                       tutorial.category === 'Beginner''
                         ? 'bg-green-100 text-green-800''
                         : tutorial.category === 'Intermediate''
@@ -290,11 +186,11 @@ const Tutorials = () => {
                 {/* Meta */}"
                 <div className="flex items-center justify-between text-sm text-slate-500 dark:text-slate-400 mb-4">"
                   <div className="flex items-center gap-2">"
-                    <Clock className="w-4 h-4" />
+                    <Clock className="w-4 h-4"  />
                     <span>{tutorial.duration}</span>
                   </div>"
                   <div className="flex items-center gap-2">"
-                    <Users className="w-4 h-4" />                    <span>{tutorial.students}</span>
+                    <Users className="w-4 h-4"  />                    <span>{tutorial.students}</span>
                   </div>
                 </div>
 
@@ -305,7 +201,7 @@ const Tutorials = () => {
                       <span className="text-white text-xs font-medium">
                         {tutorial.instructor'
                           .split(' ')
-                          .map(n => n[0])'
+                          .map(n => n[0])
                           .join('')}
                       </span>
                     </div>"
@@ -314,7 +210,7 @@ const Tutorials = () => {
                     </span>
                   </div>"
                   <div className="flex items-center gap-1">"
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" />"
+                    <Star className="w-4 h-4 text-yellow-400 fill-current"  />"
                     <span className="text-sm font-medium">
                       {tutorial.rating}
                     </span>
@@ -324,11 +220,11 @@ const Tutorials = () => {
                 {/* Actions */}"
                 <div className="flex items-center gap-3">"
                   <button className="flex-1 bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-2 rounded-lg font-medium transition-colors flex items-center justify-center gap-2">"
-                    <Play className="w-4 h-4" />
+                    <Play className="w-4 h-4"  />
                     Start Learning
                   </button>"
                   <button className="p-2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors">"
-                    <Heart className="w-5 h-5" />
+                    <Heart className="w-5 h-5"  />
                   </button>"
                   <button className="p-2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors">"                    <Share2 className="w-5 h-5" />
                   </button>
@@ -348,26 +244,24 @@ const Tutorials = () => {
         {/* Empty State */}
         {sortedTutorials.length === 0 && ("
           <div className="text-center py-16">"
-            <BookOpen className="w-16 h-16 text-slate-400 mx-auto mb-4" />"            <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">
+            <BookOpen className="w-16 h-16 text-slate-400 mx-auto mb-4"  />"            <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">
               No tutorials found
             </h3>"
-            <p className="text-slate-600 dark:text-slate-400 mb-6">'
+            <p className="text-slate-600 dark:text-slate-400 mb-6">
               Try adjusting your search terms or filters to find what you're
               looking for.
             </p>
             <button
               onClick={() => {
-'
-                setSearchTerm('');'
-                setSelectedCategory('all');'
-                setSortBy('popular');
-              }}"              className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
+
+                setSearchTerm('');
+                setSelectedCategory('all');
+                setSortBy('popular')}}"              className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
             >
               Clear Filters
             </button>
           </div>) }
       </div>
-    </div>) ;
-};
+    </div>) };
 export default Tutorials;
 '"`

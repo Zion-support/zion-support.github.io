@@ -1,7 +1,12 @@
-import React, { useState } from 'react.ts';'
-import { SEO   } from '../components/SEO';'
-import { motion   } from 'framer-motion.ts';'
-import { Link   } from 'react-router-dom.ts';        {
+<<<<<<< HEAD
+
+const PricingComparison: React.FC = (): JSX.Element => {;
+  const [selectedPlan, setSelectedPlan] = useState('monthly');
+
+  
+        {
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 "
           name: "AI Code Review & Security","
           description: "Advanced vulnerability detection with AI-powered analysis",
@@ -348,17 +353,17 @@ import { Link   } from 'react-router-dom.ts';        {
       ]};
   ];
 
-  const calculateSavings = (monthlyPrice: anynumber, yearlyPrice: number) => {;
-    const monthlyTotal = monthlyPrice * 12;
-    const yearlyTotal = yearlyPrice * 12;
+  
+    
+    
     const savingsPercent = Math.round ( (savings / monthlyTotal) * 100) ;    return { savings, savingsPercent }};
 
   return()
     <>
       <SEO"
-        title = "Pricing Comparison | Zion Tech Group - Transparent Service Pricing""
-        description="Compare pricing for all our AI-powered micro SAAS, cloud infrastructure, data analytics, and security services. Find the perfect plan for your business needs.""
-        keywords="Zion Tech Group pricing, AI services pricing, cloud services pricing, data analytics pricing, cybersecurity pricing, micro SAAS pricing, business solutions pricing""
+        title = "Pricing Comparison | Zion Tech Group - Transparent Service Pricing"
+        description="Compare pricing for all our AI-powered micro SAAS, cloud infrastructure, data analytics, and security services. Find the perfect plan for your business needs."
+        keywords="Zion Tech Group pricing, AI services pricing, cloud services pricing, data analytics pricing, cybersecurity pricing, micro SAAS pricing, business solutions pricing"
         canonical="https://ziontechgroup.com/pricing"
       />
       "      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -389,7 +394,7 @@ import { Link   } from 'react-router-dom.ts';        {
               </p>
               
               {/* Billing Toggle */}"
-              <div className="flex items-center justify-center gap-4 mb-8">'
+              <div className="flex items-center justify-center gap-4 mb-8">
                 <span className={`text-lg ${selectedPlan === 'monthly' ? 'text-white' : 'text-gray-400'}`}>
                   Monthly
                 </span>
@@ -484,7 +489,7 @@ import { Link   } from 'react-router-dom.ts';        {
 "
                       <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8">;
                         {service.plans.map((plan, planIndex)   => {;
-                          const savings = calculateSavings(plan.price.monthly, plan.price.yearly);
+                          
                           return()                            <motion.div
                               key = {plan.name}
                               initial = {
@@ -524,11 +529,11 @@ import { Link   } from 'react-router-dom.ts';        {
                               <div className="text-center mb-8">"
                                 <h4 className="text-xl font-semibold text-white mb-4">{plan.name}</h4>"
                                 <div className="mb-2">"
-                                  <span className="text-4xl font-bold text-white">'
+                                  <span className="text-4xl font-bold text-white">
                                     ${selectedPlan === 'monthly' ? plan.price.monthly : plan.price.yearly}
                                   </span>'"
                                   <span className="text-gray-300">/{selectedPlan === 'monthly' ? 'month' : 'month'}</span>
-                                </div>'
+                                </div>
                                 {selectedPlan === 'yearly' && ("
                                   <div className="text-sm text-green-400">
                                     Save ${savings.savings} ({savings.savingsPercent}%) annually
@@ -558,8 +563,7 @@ import { Link   } from 'react-router-dom.ts';        {
                                 <Link
                                   to = {
 `
-  `/services/${service.name.toLowerCase().replace(/\s+/g,'
-  '-')
+  `/services/${service.name.toLowerCase().replace(/\s+/g,-')
 `
 }`}"
                                   className="block w-full py-2 px-6 rounded-lg text-center text-gray-300 hover:text-white transition-colors duration-300"
@@ -626,13 +630,13 @@ import { Link   } from 'react-router-dom.ts';        {
                 </p>"
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link"
-                    to="/contact""
+                    to="/contact"
                     className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300"
                   >
                     Contact Sales
                   </Link>
                   <Link"
-                    to="/all-services""
+                    to="/all-services"
                     className="border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300"
                   >
                     View All Services

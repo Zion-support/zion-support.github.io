@@ -1,6 +1,6 @@
 import React from 'react';
 export const ChatMessage = ({ message }) => {
-'
+
   const isUser = message.sender === 'user';
   return ('
     <div className={`flex ${isUser ? 'justify-end' : 'justify-start'} mb-4`}>

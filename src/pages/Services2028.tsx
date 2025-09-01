@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from 'react.ts';'
-import { motion, AnimatePresence } from 'framer-motion.ts';
 import {
 
   Search,
@@ -40,29 +38,45 @@ import {
   Clock,
   ArrowRight,
   ChevronDown,
+<<<<<<< HEAD
+  CheckCircle,
+  ExternalLink} from 'lucide-react.ts';
+
+export default function Services2028(...args: any[]): any {
+
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
+  const [sortBy, setSortBy] = useState('featured');
+
+  // Combine all services
+  
+  // Get unique categories
+  
+  // Filter services based on search and filters
+  
+    
+    
+    return matchesSearch && matchesCategory && matchesPrice}) ;
+
+  // Sort services
+  
+      case 'price-high':
+        return b.price - a.price;
+=======
   CheckCircle,'
   ExternalLink} from 'lucide-react.ts';'
-import { SEO } from '@/components/SEO';'
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2028 } from '../data/innovativeMicroSaasServices2028';'
-import { COMPREHENSIVE_IT_SERVICES_2028 } from '../data/comprehensiveITServices2028';'
-import { COMPREHENSIVE_PRICING_2028 } from '../data/comprehensivePricingGuide2028';      case 'price-high':
         return b.price - a.price;'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       case 'rating':
-        return b.rating - a.rating;'
+        return b.rating - a.rating;
       case 'name':
         return a.title.localeCompare (b.title) ;
       default:
-        return b.featured ? 1 : -1;
-    }
+        return b.featured ? 1 : -1}
   }) ;
 
-  const contactInfo = {
-'
-    phone: '+1 302 464 0950','
-    email: 'kleber@ziontechgroup.com','
-    website: 'https://ziontechgroup.com','
-    address: '364 E Main St STE 1008 Middletown DE 19709'};
-
+  
   return()    <div className="min-h-screen bg-cyber-black">
       {/* Futuristic Background */}"
       <div className="futuristic-bg">
@@ -93,9 +107,16 @@ import { COMPREHENSIVE_PRICING_2028 } from '../data/comprehensivePricingGuide202
       </div>
 
       <SEO"
+<<<<<<< HEAD
+        title="2028 Services - Zion Tech Group | Revolutionary AI & IT Solutions"
+        description="Discover our comprehensive 2028 services including AI Business Intelligence, Quantum Computing, Blockchain & Web3, Edge Computing, and enterprise IT solutions. Transform your business with cutting-edge technology."
+        keywords="2028 services, AI business intelligence, quantum computing, blockchain, web3, edge computing, IT services, Zion Tech Group"
+      />
+=======
         title="2028 Services - Zion Tech Group | Revolutionary AI & IT Solutions""
         description="Discover our comprehensive 2028 services including AI Business Intelligence, Quantum Computing, Blockchain & Web3, Edge Computing, and enterprise IT solutions. Transform your business with cutting-edge technology.""        keywords="2028 services, AI business intelligence, quantum computing, blockchain, web3, edge computing, IT services, Zion Tech Group"
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative pt-32 pb-20 overflow-hidden">"
@@ -116,26 +137,26 @@ import { COMPREHENSIVE_PRICING_2028 } from '../data/comprehensivePricingGuide202
             </p>"
             <div className="flex flex-wrap justify-center gap-4 mb-8">"
               <div className="flex items-center space-x-2 text-neon-green">"
-                <CheckCircle className="w-5 h-5" />
+                <CheckCircle className="w-5 h-5"  />
                 <span>Cutting-edge Technology</span>
               </div>"
               <div className="flex items-center space-x-2 text-neon-blue">"
-                <CheckCircle className="w-5 h-5" />
+                <CheckCircle className="w-5 h-5"  />
                 <span>Enterprise Grade</span>
               </div>"
               <div className="flex items-center space-x-2 text-neon-purple">"
-                <CheckCircle className="w-5 h-5" />                <span>24/7 Support</span>
+                <CheckCircle className="w-5 h-5"  />                <span>24/7 Support</span>
               </div>
             </div>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="#services""
+                href="#services"
                 className="btn-futuristic btn-primary text-lg px-8 py-4"
               >
                 Explore Services
               </a>
               <a"
-                href="/contact""
+                href="/contact"
                 className="btn-futuristic btn-secondary text-lg px-8 py-4"
               >
                 Get Free Quote
@@ -153,9 +174,14 @@ import { COMPREHENSIVE_PRICING_2028 } from '../data/comprehensivePricingGuide202
               {/* Search */}"
               <div className="lg:col-span-2">"
                 <div className="relative">"
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-neon-cyan" />
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-neon-cyan"  />
                   <input"
+<<<<<<< HEAD
+                    type="text"
+                    placeholder="Search services..."
+=======
                     type="text""                    placeholder="Search services..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     value={searchQuery}
                     onChange={e => setSearchQuery(e.target.value)}"
                     className="w-full pl-10 pr-4 py-3 bg-cyber-black/70 border border-neon-cyan/30 rounded-lg text-white placeholder-neon-cyan/50 focus:border-neon-cyan focus:outline-none focus:ring-2 focus:ring-neon-cyan/20 transition-all duration-300"
@@ -171,7 +197,7 @@ import { COMPREHENSIVE_PRICING_2028 } from '../data/comprehensivePricingGuide202
                   className="w-full px-4 py-3 bg-cyber-black/70 border border-neon-blue/30 rounded-lg text-white focus: anyborder-neon-blue focus:outline-none focus:ring-2 focus:ring-neon-blue/20 transition-all duration-300"
                 >
                   {categories.map(category => (
-                    <option key={category} value={category}>'
+                    <option key={category} value={category}>
                       {category === 'all' ? 'All Categories' : category}
                     </option>) ) }
                 </select>
@@ -239,14 +265,14 @@ import { COMPREHENSIVE_PRICING_2028 } from '../data/comprehensivePricingGuide202
                     }`}
                   >
                     {service.featured ? ("
-                      <Star className="w-6 h-6 text-cyber-black" />
+                      <Star className="w-6 h-6 text-cyber-black"  />
                     ) : ("
                       <service.icon className="w-6 h-6 text-neon-purple" />
                     )}
                   </div>
                   {service.featured && ("
                     <div className="flex items-center space-x-1 text-neon-yellow">"
-                      <Sparkles className="w-4 h-4" />"                      <span className="text-xs font-semibold">FEATURED</span>
+                      <Sparkles className="w-4 h-4"  />"                      <span className="text-xs font-semibold">FEATURED</span>
                     </div>
                   )}
                 </div>
@@ -279,7 +305,7 @@ import { COMPREHENSIVE_PRICING_2028 } from '../data/comprehensivePricingGuide202
                       <span className="text-white font-semibold">
                         {service.rating}
                       </span>"
-                      <Star className="w-4 h-4 text-neon-yellow fill-current" />"
+                      <Star className="w-4 h-4 text-neon-yellow fill-current"  />"
                       <span className="text-neon-cyan/70 text-sm">
                         ({service.reviews})
                       </span>                    </div>
@@ -297,7 +323,7 @@ import { COMPREHENSIVE_PRICING_2028 } from '../data/comprehensivePricingGuide202
                         key={idx}"
                         className="flex items-center space-x-2 text-sm"
                       >"
-                        <CheckCircle className="w-4 h-4 text-neon-green flex-shrink-0" />"                        <span className="text-white/80">{feature}</span>
+                        <CheckCircle className="w-4 h-4 text-neon-green flex-shrink-0"  />"                        <span className="text-white/80">{feature}</span>
                       </div>
                     ))}
                     {service.features.length > 3 && ("
@@ -316,7 +342,7 @@ import { COMPREHENSIVE_PRICING_2028 } from '../data/comprehensivePricingGuide202
                     Learn More
                   </a>
                   <a"
-                    href="/contact""
+                    href="/contact"
                     className="btn-futuristic btn-secondary w-full text-center"
                   >
                     Get Quote
@@ -358,7 +384,7 @@ import { COMPREHENSIVE_PRICING_2028 } from '../data/comprehensivePricingGuide202
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 max-w-4xl mx-auto">"
               <div className="text-center">"
                 <div className="w-16 h-16 bg-gradient-to-br from-neon-cyan to-neon-blue rounded-full flex items-center justify-center mx-auto mb-4">"
-                  <MessageCircle className="w-8 h-8 text-cyber-black" />
+                  <MessageCircle className="w-8 h-8 text-cyber-black"  />
                 </div>"
                 <h3 className="text-xl font-bold text-white mb-2">
                   Contact Sales
@@ -368,7 +394,7 @@ import { COMPREHENSIVE_PRICING_2028 } from '../data/comprehensivePricingGuide202
 "
               <div className="text-center">"
                 <div className="w-16 h-16 bg-gradient-to-br from-neon-purple to-neon-pink rounded-full flex items-center justify-center mx-auto mb-4">"
-                  <DollarSign className="w-8 h-8 text-cyber-black" />
+                  <DollarSign className="w-8 h-8 text-cyber-black"  />
                 </div>"
                 <h3 className="text-xl font-bold text-white mb-2">Get Quote</h3>"
                 <p className="text-neon-cyan/70">
@@ -378,7 +404,7 @@ import { COMPREHENSIVE_PRICING_2028 } from '../data/comprehensivePricingGuide202
 "
               <div className="text-center">"
                 <div className="w-16 h-16 bg-gradient-to-br from-neon-green to-neon-cyan rounded-full flex items-center justify-center mx-auto mb-4">"
-                  <HelpCircle className="w-8 h-8 text-cyber-black" />
+                  <HelpCircle className="w-8 h-8 text-cyber-black"  />
                 </div>"
                 <h3 className="text-xl font-bold text-white mb-2">
                   24/7 Support
@@ -403,12 +429,12 @@ import { COMPREHENSIVE_PRICING_2028 } from '../data/comprehensivePricingGuide202
 "
             <div className="text-neon-cyan/70">"
               <p className="mb-2">{contactInfo.address}</p>
-              <p>'
+              <p>
                 Visit us at{' '}
                 <a
                   href={contactInfo.website}"
-                  className="text-neon-cyan hover:text-neon-blue transition-colors duration-300""
-                  target="_blank""
+                  className="text-neon-cyan hover:text-neon-blue transition-colors duration-300"
+                  target="_blank"
                   rel="noopener noreferrer"
                 >
                   {contactInfo.website}
@@ -419,6 +445,5 @@ import { COMPREHENSIVE_PRICING_2028 } from '../data/comprehensivePricingGuide202
         </div>
       </section>
     </div>
-  );
-}
+  )}
 '"`

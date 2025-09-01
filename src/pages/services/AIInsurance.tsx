@@ -1,60 +1,42 @@
-import React from 'react';
 import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Lock, FileText, BarChart3 export default function AIInsurance() {
-  const features = [
-    'AI-powered risk assessment and underwriting automation','
-    'Intelligent claims processing and fraud detection',;'
-    'Automated policy management and customer service',;'
-    'Predictive analytics for risk modeling and pricing',;'
-    'Real-time customer behavior analysis and risk scoring',;'
-    'Smart document processing and compliance monitoring',;'
-    'Integration with major insurance management systems',;'
+  
+    'Automated policy management and customer service',;
+    'Predictive analytics for risk modeling and pricing',;
+    'Real-time customer behavior analysis and risk scoring',;
+    'Smart document processing and compliance monitoring',;
+    'Integration with major insurance management systems',;
     'Custom AI models for insurance-specific insights';
+  ]},;
+    { ;
+      name: 'Large Insurer', ;
+      price: '$3,999/mo', ;
+      details: ['Unlimited policies',Custom AI models',Full system integration',24/7 dedicated support'] },;
   ];
 
-  const tiers = [
-    {
-'
-      name: 'Small Insurer','
-      price: '$499/mo','
-      details: ['Up to 10,000 policies', 'Basic AI features', 'Standard reports', 'Email support']
-    },
-    {
-'
-      name: 'Medium Insurer', '
-      price: '$1,299/mo', '
-      details: ['Up to 100,000 policies', 'Advanced AI features', 'Custom reports', 'Priority support'] ;
-    },;
-    { ;'
-      name: 'Large Insurer', ;'
-      price: '$3,999/mo', ;'
-      details: ['Unlimited policies', 'Custom AI models', 'Full system integration', '24/7 dedicated support'] ;
-    },;
-  ];
-
-  const useCases = [;'
-    'Automated underwriting and risk assessment',;'
-    'Claims processing and fraud detection',;'
-    'Customer service and policy management',;'
-    'Risk modeling and pricing optimization',;'
-    'Compliance monitoring and reporting',;'
+  
+    'Automated underwriting and risk assessment',;
+    'Claims processing and fraud detection',;
+    'Customer service and policy management',;
+    'Risk modeling and pricing optimization',;
+    'Compliance monitoring and reporting',;
     'Customer retention and cross-selling';
   ];
 
-  const benefits = [;'
-    'Reduce claims processing time by 60-80%',;'
-    'Improve fraud detection accuracy by 40-60%',;'
-    'Cut operational costs by 25-40%',;'
-    'Optimize pricing for maximum profitability',;'
-    'Enhance customer experience and satisfaction',;'
+  
+    'Reduce claims processing time by 60-80%',;
+    'Improve fraud detection accuracy by 40-60%',;
+    'Cut operational costs by 25-40%',;
+    'Optimize pricing for maximum profitability',;
+    'Enhance customer experience and satisfaction',;
     'Scale insurance operations efficiently';
   ];
 
-  const industries = [;'
-    'Property & Casualty Insurance',;'
-    'Life & Health Insurance',;'
-    'Auto Insurance',;'
-    'Commercial Insurance',;'
-    'Reinsurance',;'
+  
+    'Property & Casualty Insurance',;
+    'Life & Health Insurance',;
+    'Auto Insurance',;
+    'Commercial Insurance',;
+    'Reinsurance',;
     'Insurance Brokers';
   ];
 
@@ -63,7 +45,7 @@ import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
       <section className="bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 py-20 text-center">"
         <div className="max-w-5xl mx-auto px-6">"
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">"
-            <Shield className="w-4 h-4 mr-2" /> AI-Powered Insurance Intelligence
+            <Shield className="w-4 h-4 mr-2"  /> AI-Powered Insurance Intelligence
           </div>"
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">AI Insurance Platform</h1>"          <p className="text-indigo-100 text-xl">Transform your insurance business with AI-powered tools that enhance risk assessment, automate claims processing, and optimize customer experience.</p>
         </div>
@@ -76,7 +58,7 @@ import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
             <ul className="space-y-3">
               {features.map((f) => ("
                 <li key={f} className="flex items-start">"
-                  <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />"                  <span className="text-gray-700">{f}</span>
+                  <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"  />"                  <span className="text-gray-700">{f}</span>
                 </li>
               ))}
             </ul>"
@@ -99,18 +81,18 @@ import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
             </div>"
             <div className="mt-6 flex flex-wrap gap-3">"
               <a href="/pricing" className="px-5 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors inline-flex items-center">"
-                View Full Pricing <ArrowRight className="w-4 h-4 ml-2" />
+                View Full Pricing <ArrowRight className="w-4 h-4 ml-2"  />
               </a>"
               <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="px-5 py-3 border border-gray-300 rounded-lg hover:border-blue-400 transition-colors inline-flex items-center">"
-                Learn More <ExternalLink className="w-4 h-4 ml-2" />              </a>
+                Learn More <ExternalLink className="w-4 h-4 ml-2"  />              </a>
             </div>
           </div>
         </div>
 "
-        <div className="mt-12 grid md:grid-cols-3 gap-6">'
-          {['60-80% faster processing', '40-60% fraud detection', '25-40% cost reduction'].map((t) => ("
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          {['60-80% faster processing',40-60% fraud detection',25-40% cost reduction'].map((t) => ("
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">"
-              <Brain className="w-6 h-6 text-blue-600 mb-3" />"              <div className="text-gray-900 font-semibold">{t}</div>
+              <Brain className="w-6 h-6 text-blue-600 mb-3"  />"              <div className="text-gray-900 font-semibold">{t}</div>
             </div>
           ))}
         </div>
@@ -120,7 +102,7 @@ import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
           <div className="grid md:grid-cols-2 gap-6">
             {useCases.map((useCase) => ("
               <div key={useCase} className="flex items-center p-4 bg-white rounded-lg border border-gray-200">"
-                <Target className="w-5 h-5 text-blue-600 mr-3" />"                <span className="text-gray-700">{useCase}</span>
+                <Target className="w-5 h-5 text-blue-600 mr-3"  />"                <span className="text-gray-700">{useCase}</span>
               </div>
             ))}
           </div>
@@ -131,7 +113,7 @@ import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit) => ("
               <div key={benefit} className="flex items-start p-4 bg-white rounded-lg border border-blue-200">"
-                <Zap className="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />"                <span className="text-gray-700">{benefit}</span>
+                <Zap className="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0"  />"                <span className="text-gray-700">{benefit}</span>
               </div>
             ))}
           </div>
@@ -142,7 +124,7 @@ import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {industries.map((industry) => ("
               <div key={industry} className="flex items-center p-4 bg-gray-50 rounded-lg border border-gray-200">"
-                <FileText className="w-5 h-5 text-blue-600 mr-3" />"                <span className="text-gray-700">{industry}</span>
+                <FileText className="w-5 h-5 text-blue-600 mr-3"  />"                <span className="text-gray-700">{industry}</span>
               </div>
             ))}
           </div>
@@ -152,10 +134,10 @@ import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
           <div className="text-sm text-gray-600 mb-2">Ready to transform your insurance business with AI?</div>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             <a href="tel:+13024640950" className="inline-flex items-center px-5 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">"
-              <Phone className="w-4 h-4 mr-2"/> +1 302 464 0950
+              <Phone className="w-4 h-4 mr-2" /> +1 302 464 0950
             </a>"
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors">"
-              <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com            </a>
+              <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
           </div>;"
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
@@ -163,5 +145,4 @@ import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
         </div>;
       </section>;
     </div>;
-  );
-}}'"
+  )}}'"

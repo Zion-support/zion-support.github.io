@@ -1,5 +1,5 @@
-import { useState } from 'react';'
-import { DynamicListingPage } from '@/components/DynamicListingPage';'
+import { useState } from 'react';
+import { DynamicListingPage } from '@/components/DynamicListingPage';
 import { NEW_PRODUCTS } from '@/data/newProductsData';
 const CATEGORY_FILTERS = Array.from()
   new Set(NEW_PRODUCTS.map(p => p.category))
@@ -9,8 +9,8 @@ export default function NewProductsPage() {
   return()
     <DynamicListingPage
       title="New Products"'"
-      description="Explore our latest products priced for today's market.""
-      categorySlug="new-products""
+      description="Explore our latest products priced for today's market."
+      categorySlug="new-products"
       detailBasePath="/product"
       listings={listings}
       categoryFilters={CATEGORY_FILTERS}

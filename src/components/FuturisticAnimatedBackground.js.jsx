@@ -1,15 +1,15 @@
 import React, { useEffect, useRef } from 'react';
 export const FuturisticAnimatedBackground = ({
-'
-  className = '','
-  intensity = 'medium','
+
+  className = '',
+  intensity = 'medium',
   colorScheme = 'multi'}) => {
 
   const canvasRef = useRef(null);
   const animationRef = useRef();
   useEffect(() => {
     const canvas = canvasRef.current;
-    if (!canvas) return;'
+    if (!canvas) return;
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
     // Set canvas size
@@ -17,7 +17,7 @@ export const FuturisticAnimatedBackground = ({
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
-    resizeCanvas();'
+    resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
     // Particle system
     const particles = [];
@@ -46,7 +46,7 @@ export const FuturisticAnimatedBackground = ({
     // Animation loop
     const animate = () => {
       // Clear canvas with fade effect'
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.1);
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       // Draw grid
       ctx.strokeStyle = `rgba(0, 255, 255, ${gridOpacity})`;
@@ -94,7 +94,7 @@ export const FuturisticAnimatedBackground = ({
         const alpha = (particle.life / particle.maxLife) * particle.opacity;`
         ctx.fillStyle = `${particle.color}${Math.floor(alpha * 255)
           .toString(16)'`
-          .padStart(2, '0')}`;
+          .padStart(2,0')}`;
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.fill();
@@ -111,9 +111,9 @@ export const FuturisticAnimatedBackground = ({
           0,`
           `${particle.color}${Math.floor(alpha * 100)
             .toString(16)'`
-            .padStart(2, '0')}`
-        );'
-        gradient.addColorStop(1, 'transparent');
+            .padStart(2,0')}`
+        );
+        gradient.addColorStop(1,transparent');
         ctx.fillStyle = gradient;
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size * 3, 0, Math.PI * 2);
@@ -151,8 +151,8 @@ export const FuturisticAnimatedBackground = ({
         // Orb glow
         const gradient = ctx.createRadialGradient(x, y, 0, x, y, size * 2);`
         gradient.addColorStop(0, `rgba(0, 255, 255, ${alpha})`);`
-        gradient.addColorStop(0.5, `rgba(0, 255, 255, ${alpha * 0.5})`);'
-        gradient.addColorStop(1, 'transparent');
+        gradient.addColorStop(0.5, `rgba(0, 255, 255, ${alpha * 0.5})`);
+        gradient.addColorStop(1,transparent');
         ctx.fillStyle = gradient;
         ctx.beginPath();
         ctx.arc(x, y, size * 2, 0, Math.PI * 2);
@@ -164,10 +164,10 @@ export const FuturisticAnimatedBackground = ({
         ctx.fill();
       }
       // Draw scanning line effect
-      const scanGradient = ctx.createLinearGradient(0, scanY - 2, 0, scanY + 2);'
-      scanGradient.addColorStop(0, 'transparent');'
-      scanGradient.addColorStop(0.5, 'rgba(0, 255, 255, 0.3)');'
-      scanGradient.addColorStop(1, 'transparent');
+      const scanGradient = ctx.createLinearGradient(0, scanY - 2, 0, scanY + 2);
+      scanGradient.addColorStop(0,transparent');
+      scanGradient.addColorStop(0.5,rgba(0, 255, 255, 0.3));
+      scanGradient.addColorStop(1,transparent');
       ctx.fillStyle = scanGradient;
       ctx.fillRect(0, scanY - 2, canvas.width, 4);
       animationRef.current = requestAnimationFrame(animate);
@@ -177,7 +177,7 @@ export const FuturisticAnimatedBackground = ({
       if (animationRef.current) {
 
         cancelAnimationFrame(animationRef.current);
-      }'
+      }
       window.removeEventListener('resize', resizeCanvas);
     };
   }, [intensity, colorScheme]);

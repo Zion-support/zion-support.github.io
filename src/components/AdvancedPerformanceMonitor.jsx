@@ -14,116 +14,112 @@ import {
   Minimize2,
   RefreshCw,
   AlertTriangle,
-  CheckCircle,'
+  CheckCircle,
   Download} from 'lucide-react';
 
 const mockSystemMetrics = [
   {
-'
-    id: '1','
+
+    id: '1',
     name: 'CPU Usage',
-    value: 78.5,'
+    value: 78.5,
     unit: '%',
-    threshold: 85,'
-    status: 'warning','
+    threshold: 85,
+    status: 'warning',
     trend: 'up',
-    change: 5.2,'
-    category: 'Processor','
+    change: 5.2,
+    category: 'Processor',
     lastUpdated: '2024-01-15T10:00:00.000Z'},
   {
-'
-    id: '2','
+
+    id: '2',
     name: 'Memory Usage',
-    value: 65.3,'
+    value: 65.3,
     unit: '%',
-    threshold: 80,'
-    status: 'normal','
+    threshold: 80,
+    status: 'normal',
     trend: 'stable',
-    change: 0.8,'
-    category: 'Memory','
+    change: 0.8,
+    category: 'Memory',
     lastUpdated: '2024-01-15T10:00:00.000Z'},
   {
-'
-    id: '3','
+
+    id: '3',
     name: 'Disk I/O',
-    value: 1250,'
+    value: 1250,
     unit: 'MB/s',
-    threshold: 1500,'
-    status: 'normal','
+    threshold: 1500,
+    status: 'normal',
     trend: 'down',
-    change: -2.1,'
-    category: 'Storage','
+    change: -2.1,
+    category: 'Storage',
     lastUpdated: '2024-01-15T10:00:00.000Z'},
   {
-'
-    id: '4','
+
+    id: '4',
     name: 'Network Latency',
-    value: 45,'
+    value: 45,
     unit: 'ms',
-    threshold: 50,'
-    status: 'normal','
+    threshold: 50,
+    status: 'normal',
     trend: 'stable',
-    change: 0.5,'
-    category: 'Network','
+    change: 0.5,
+    category: 'Network',
     lastUpdated: '2024-01-15T10:00:00.000Z'},
   {
-'
-    id: '5','
+
+    id: '5',
     name: 'Database Connections',
-    value: 89,'
+    value: 89,
     unit: 'connections',
-    threshold: 100,'
-    status: 'warning','
+    threshold: 100,
+    status: 'warning',
     trend: 'up',
-    change: 8.7,'
-    category: 'Database','
+    change: 8.7,
+    category: 'Database',
     lastUpdated: '2024-01-15T10:00:00.000Z'},
   {
-'
-    id: '6','
+
+    id: '6',
     name: 'Response Time',
-    value: 180,'
+    value: 180,
     unit: 'ms',
-    threshold: 200,'
-    status: 'normal','
+    threshold: 200,
+    status: 'normal',
     trend: 'down',
-    change: -3.2,'
-    category: 'Performance','
+    change: -3.2,
+    category: 'Performance',
     lastUpdated: '2024-01-15T10:00:00.000Z'},
 ];
 
 const mockPerformanceAlerts = [
   {
-'
-    id: '1','
-    type: 'performance','
-    severity: 'medium','
+
+    id: '1',
+    type: 'performance',
+    severity: 'medium',
     title: 'High CPU Usage Detected',
     description:'
-      'CPU usage has exceeded 75% for the last 10 minutes, indicating potential performance degradation.','
-    timestamp: '2024-01-15T10:00:00.000Z','
-    affected: ['Web Server 1', 'Application Server 2'],
+      'CPU usage has exceeded 75% for the last 10 minutes, indicating potential performance degradation.',
+    timestamp: '2024-01-15T10:00:00.000Z',
+    affected: ['Web Server 1',Application Server 2'],
     recommendations: ['
-      'Scale horizontally','
-      'Optimize database queries','
-      'Review background processes',
-    ],'
+      'Scale horizontally',Optimize database queries',Review background processes',
+    ],
     status: 'active'},
   {
-'
-    id: '2','
-    type: 'scalability','
-    severity: 'high','
+
+    id: '2',
+    type: 'scalability',
+    severity: 'high',
     title: 'Database Connection Pool Near Capacity',
     description:'
-      'Database connection pool is at 89% capacity, approaching the maximum limit.','
-    timestamp: '2024-01-15T09:45:00.000Z','
-    affected: ['Database Cluster', 'Application Servers'],
+      'Database connection pool is at 89% capacity, approaching the maximum limit.',
+    timestamp: '2024-01-15T09:45:00.000Z',
+    affected: ['Database Cluster',Application Servers'],
     recommendations: ['
-      'Increase connection pool size','
-      'Implement connection pooling','
-      'Monitor query performance',
-    ],'
+      'Increase connection pool size',Implement connection pooling',Monitor query performance',
+    ],
     status: 'active'},
 ];
 
@@ -136,7 +132,7 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {
   const [isRefreshing, setIsRefreshing] = useState(false);
   const [showAlerts, setShowAlerts] = useState(true);
   const [performanceScore, setPerformanceScore] = useState(87);
-  const [trendData, setTrendData] = useState([]);'
+  const [trendData, setTrendData] = useState([]);
   const [systemHealth, setSystemHealth] = useState('good');
   const [optimizationSuggestions, setOptimizationSuggestions] = useState([]);
 
@@ -162,11 +158,11 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {
   const getStatusColor = status => {
 
     switch (status) {
-'
+
       case 'critical':'
-        return 'text-red-500';'
+        return 'text-red-500';
       case 'warning':'
-        return 'text-yellow-500';'
+        return 'text-yellow-500';
       case 'normal':'
         return 'text-green-500';
       default:'
@@ -177,11 +173,11 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {
   const getStatusIcon = status => {
 
     switch (status) {
-'
+
       case 'critical':
-        return <AlertTriangle className="w-4 h-4 text-red-500" />;'
+        return <AlertTriangle className="w-4 h-4 text-red-500" />;
       case 'warning':"
-        return <AlertTriangle className="w-4 h-4 text-yellow-500" />;'
+        return <AlertTriangle className="w-4 h-4 text-yellow-500" />;
       case 'normal':"
         return <CheckCircle className="w-4 h-4 text-green-500" />;
       default:"
@@ -192,13 +188,13 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {
   const getTrendIcon = trend => {
 
     switch (trend) {
-'
+
       case 'up':"
-        return <TrendingUp className="w-4 h-4 text-red-500" />;'
+        return <TrendingUp className="w-4 h-4 text-red-500" />;
       case 'down':
         return ("
           <TrendingUp className="w-4 h-4 text-green-500 transform rotate-180" />
-        );'
+        );
       case 'stable':"
         return <BarChart3 className="w-4 h-4 text-blue-500" />;
       default:"
@@ -225,7 +221,7 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {
     <div
       ref={containerRef}
       className={`fixed bottom-4 right-4 z-50 bg-white dark:bg-zion-slate-dark rounded-lg shadow-2xl border border-zion-slate-light/20 transition-all duration-300 ${
-'
+
         isExpanded ? 'w-96 h-96' : 'w-80 h-64'`
       }`}
     >
@@ -238,7 +234,7 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {
           </h3>
           <div`
             className={`w-2 h-2 rounded-full ${
-'
+
               systemHealth === 'good''
                 ? 'bg-green-500''
                 : systemHealth === 'warning''
@@ -316,10 +312,10 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {
                 {getTrendIcon(metric.trend)}
                 <span
                   className={
-'
+
                     metric.change >= 0 ? 'text-red-500' : 'text-green-500'
                   }
-                >'
+                >
                   {metric.change >= 0 ? '+' : ''}
                   {metric.change}%
                 </span>
@@ -337,7 +333,7 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {
               <div
                 key={alert.id}`
                 className={`p-3 rounded-lg border-l-4 ${
-'
+
                   alert.severity === 'high''
                     ? 'border-red-500 bg-red-50 dark:bg-red-900/20''
                     : alert.severity === 'medium''
@@ -356,7 +352,7 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {
                   </div>
                   <span`
                     className={`text-xs px-2 py-1 rounded-full ${
-'
+
                       alert.severity === 'high''
                         ? 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200''
                         : alert.severity === 'medium''

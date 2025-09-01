@@ -9,34 +9,32 @@ import {
   User,
   Sparkles,
   X,
-  Minimize2,'
+  Minimize2,
   Maximize2} from 'lucide-react';
 const mockAIResponses = ['
-  "I'd be happy to help you with that! Let me provide you with some information about our AI development services.",'"
-  "That's a great question! Our cloud infrastructure solutions are designed to scale with your business needs.",'"
-  "Based on your requirements, I'd recommend starting with our cybersecurity assessment package.",'
-  'We have extensive experience in that area. Let me connect you with one of our specialists.','
-  'I can help you understand our pricing structure and find the best solution for your budget.',
+  "I'd be happy to help you with that! Let me provide you with some information about our AI development services.","
+  "That's a great question! Our cloud infrastructure solutions are designed to scale with your business needs.","
+  "Based on your requirements, I'd recommend starting with our cybersecurity assessment package.",We have extensive experience in that area. Let me connect you with one of our specialists.',I can help you understand our pricing structure and find the best solution for your budget.',
 ];
 export function AIChatAssistant() {
   const [isOpen, setIsOpen] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
   const [messages, setMessages] = useState([
     {
-'
-      id: '1','
+
+      id: '1',
       type: 'assistant',
       content:'"
         "Hello! I'm Zion AI, your personal technology consultant. How can I help you today?",
       timestamp: new Date()},
-  ]);'
+  ]);
   const [inputValue, setInputValue] = useState('');
   const [isListening, setIsListening] = useState(false);
   const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef(null);
   const inputRef = useRef(null);
   const scrollToBottom = () => {
-'
+
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
   useEffect(() => {
@@ -46,11 +44,11 @@ export function AIChatAssistant() {
     if (!inputValue.trim()) return;
     const userMessage = {
 
-      id: Date.now().toString(),'
+      id: Date.now().toString(),
       type: 'user',
       content: inputValue,
       timestamp: new Date()};
-    setMessages(prev => [...prev, userMessage]);'
+    setMessages(prev => [...prev, userMessage]);
     setInputValue('');
     setIsTyping(true);
     // Simulate AI response
@@ -60,7 +58,7 @@ export function AIChatAssistant() {
           mockAIResponses[Math.floor(Math.random() * mockAIResponses.length)];
         const aiMessage = {
 
-          id: (Date.now() + 1).toString(),'
+          id: (Date.now() + 1).toString(),
           type: 'assistant',
           content: randomResponse,
           timestamp: new Date()};
@@ -87,7 +85,7 @@ export function AIChatAssistant() {
     }
   };
   const handleKeyPress = e => {
-'
+
     if (e.key === 'Enter' && !e.shiftKey) {
 
       e.preventDefault();
@@ -109,7 +107,7 @@ export function AIChatAssistant() {
     return()
       <button
         onClick={toggleChat}"
-        className="fixed bottom-4 right-4 p-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 group""
+        className="fixed bottom-4 right-4 p-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 group"
         title="Chat with Zion AI"
       >"
         <MessageCircle className="w-6 h-6" />"
@@ -169,9 +167,9 @@ export function AIChatAssistant() {
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
         {messages.map(message => (
           <div
-            key={message.id}'
+            key={message.id}
             className={`flex gap-3 ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
-          >'
+          >
             {message.type === 'assistant' && ("
               <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center flex-shrink-0">"
                 <Bot className="w-4 h-4 text-white" />
@@ -180,7 +178,7 @@ export function AIChatAssistant() {
 
             <div`
               className={`max-w-[80%] p-3 rounded-lg ${
-'
+
                 message.type === 'user''
                   ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white''
                   : 'bg-zion-slate-light/10 text-zion-slate border border-zion-slate-light/20'`
@@ -189,12 +187,12 @@ export function AIChatAssistant() {
               <p className="text-sm">{message.content}</p>"
               <span className="text-xs opacity-70 mt-2 block">
                 {message.timestamp.toLocaleTimeString([], {
-'
-                  hour: '2-digit','
+
+                  hour: '2-digit',
                   minute: '2-digit'})}
               </span>
             </div>
-'
+
             {message.type === 'user' && ("
               <div className="w-8 h-8 bg-gradient-to-r from-zion-slate to-zion-slate-light rounded-full flex items-center justify-center flex-shrink-0">"
                 <User className="w-4 h-4 text-white" />
@@ -238,7 +236,7 @@ export function AIChatAssistant() {
               value={inputValue}
               onChange={e => setInputValue(e.target.value)}
               onKeyPress={handleKeyPress}"
-              placeholder="Type your message...""
+              placeholder="Type your message..."
               className="w-full px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-zion-slate focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
             />
             {inputValue && (
@@ -258,7 +256,7 @@ export function AIChatAssistant() {
               isListening'
                 ? 'bg-red-500 text-white animate-pulse''
                 : 'bg-zion-slate-light/20 text-zion-slate hover:bg-zion-cyan hover:text-white'`
-            }`}'
+            }`}
             title={isListening ? 'Listening...' : 'Voice Input'}
           >
             {isListening ? ("
@@ -271,7 +269,7 @@ export function AIChatAssistant() {
           <button
             onClick={handleSendMessage}
             disabled={!inputValue.trim()}"
-            className="p-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg hover:from-zion-cyan-light hover:to-zion-purple-light transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed""
+            className="p-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg hover:from-zion-cyan-light hover:to-zion-purple-light transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
             title="Send Message"
           >"
             <Send className="w-4 h-4" />

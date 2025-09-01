@@ -1,15 +1,15 @@
-import React, { useState } from 'react';'
-import { useParams, useNavigate } from 'react-router-dom';'
-import { Button } from '@/components/ui/button';'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';'
-import { Badge } from '@/components/ui/badge';'
-import { Calendar, Clock, DollarSign, Briefcase } from '@/components/icons';'
-import { formatDistanceToNow } from 'date-fns';'
-import { toast } from 'sonner';'
-import { useAuth } from '@/hooks/useAuth';'
-import useJobDetails from '@/hooks/useJobDetails';'
-import { ApplyToJobModal } from '@/components/messaging/job-application';'
-import SEO from '@/components/SEO';'
+import React, { useState } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Calendar, Clock, DollarSign, Briefcase } from '@/components/icons';
+import { formatDistanceToNow } from 'date-fns';
+import { toast } from 'sonner';
+import { useAuth } from '@/hooks/useAuth';
+import useJobDetails from '@/hooks/useJobDetails';
+import { ApplyToJobModal } from '@/components/messaging/job-application';
+import SEO from '@/components/SEO';
 import { useWhitelabel } from '@/context/WhitelabelContext';
 export default function JobDetails() {
     // Cast to specify the expected route param type since useParams may be untyped
@@ -30,7 +30,7 @@ export default function JobDetails() {
 "
         <div className="container mx-auto px-4 py-16 text-center">"
           <h1 className="text-2xl font-bold mb-4">Job Not Found</h1>'"
-          <p className="mb-8">The job you're looking for doesn't exist or has been removed.</p>'
+          <p className="mb-8">The job you're looking for doesn't exist or has been removed.</p>
           <Button onClick={() => router('/jobs')}>View All Jobs</Button>
         </div>
         
@@ -38,7 +38,7 @@ export default function JobDetails() {
     const handleApply = () => {
         if (!isAuthenticated) {
 "
-            toast.error("Please log in to apply for this job");'
+            toast.error("Please log in to apply for this job");
             router('/login?redirect=' + encodeURIComponent(`/jobs/${jobId}`));
             return;
         }"
@@ -163,5 +163,4 @@ export default function JobDetails() {
                 title: job.title,
                 description: job.description,"
                 comp_name: job.comp_name || "Comp",
-                budget: job.budget,
-'"`
+                budget: job.budget,"`

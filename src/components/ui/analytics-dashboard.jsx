@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';'
+import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
 
@@ -8,14 +8,14 @@ import {
   RefreshCw,
   BarChart3,
   Eye,
-  EyeOff,'
-  Target} from 'lucide-react';'
+  EyeOff,
+  Target} from 'lucide-react';
 import { Button } from './button';
 export function AnalyticsDashboard({
 
   enabled = true,
   isExpanded = false,
-  onMetricClick,'
+  onMetricClick,
   className = ''}) {
 
   const [showTargets, setShowTargets] = useState(true);
@@ -90,7 +90,7 @@ export function AnalyticsDashboard({
 "
         <div className="flex items-center gap-2">
           <Button"
-            size="sm""
+            size="sm"
             variant="ghost"
             onClick={() => setShowTargets(!showTargets)}"
             className="text-zinc-400 hover:text-white p-2"
@@ -102,7 +102,7 @@ export function AnalyticsDashboard({
             )}
           </Button>
           <Button"
-            size="sm""
+            size="sm"
             variant="outline"
             onClick={refreshData}
             disabled={isLoading}"
@@ -113,8 +113,8 @@ export function AnalyticsDashboard({
             />
           </Button>
           <Button"
-            size="sm""
-            variant="outline""
+            size="sm"
+            variant="outline"
             className="border-zion-blue-light/30 text-zinc-300 hover:text-white"
           >"
             <Download className="w-4 h-4" />
@@ -127,7 +127,7 @@ export function AnalyticsDashboard({
         {/* Total Users */}
         <motion.div"
           className="bg-zion-blue/20 border border-zion-blue-light/30 rounded-lg p-4 cursor-pointer hover:border-zion-cyan/50 transition-all duration-300"
-          whileHover={{ scale: 1.02 }}'
+          whileHover={{ scale: 1.02 }}
           onClick={() => handleMetricClick('totalUsers')}
         >"
           <div className="flex items-center justify-between mb-3">"
@@ -164,7 +164,7 @@ export function AnalyticsDashboard({
         {/* Active Users */}
         <motion.div"
           className="bg-zion-blue/20 border border-zion-blue-light/30 rounded-lg p-4 cursor-pointer hover:border-zion-cyan/50 transition-all duration-300"
-          whileHover={{ scale: 1.02 }}'
+          whileHover={{ scale: 1.02 }}
           onClick={() => handleMetricClick('activeUsers')}
         >"
           <div className="flex items-center justify-between mb-3">"
@@ -201,7 +201,7 @@ export function AnalyticsDashboard({
         {/* Revenue */}
         <motion.div"
           className="bg-zion-blue/20 border border-zion-blue-light/30 rounded-lg p-4 cursor-pointer hover:border-zion-cyan/50 transition-all duration-300"
-          whileHover={{ scale: 1.02 }}'
+          whileHover={{ scale: 1.02 }}
           onClick={() => handleMetricClick('revenue')}
         >"
           <div className="flex items-center justify-between mb-3">"
@@ -238,7 +238,7 @@ export function AnalyticsDashboard({
         {/* Growth Rate */}
         <motion.div"
           className="bg-zion-blue/20 border border-zion-blue-light/30 rounded-lg p-4 cursor-pointer hover:border-zion-cyan/50 transition-all duration-300"
-          whileHover={{ scale: 1.02 }}'
+          whileHover={{ scale: 1.02 }}
           onClick={() => handleMetricClick('growth')}
         >"
           <div className="flex items-center justify-between mb-3">"
@@ -276,7 +276,7 @@ export function AnalyticsDashboard({
         {selectedMetric && (
           <motion.div"
             className="bg-zion-blue/10 border border-zion-blue-light/20 rounded-lg p-4"
-            initial={{ opacity: 0, height: 0 }}'
+            initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}

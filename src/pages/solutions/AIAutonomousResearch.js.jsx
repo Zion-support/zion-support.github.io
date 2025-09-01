@@ -198,7 +198,7 @@ import { Brain, Zap, Target, Shield, Users, Globe, Cpu, Lightbulb, BarChart3 con
               <div className="text-center">"
                 <Lightbulb className="w-24 h-24 text-purple-400 mx-auto mb-4"/>"
                 <h3 className="text-2xl font-bold text-white mb-2">Research Innovation</h3>"
-                <p className="text-gray-300 mb-6">'
+                <p className="text-gray-300 mb-6">
                   We're at the forefront of AI autonomous research technology,
                   enabling organizations to discover with unprecedented speed.
                 </p>"
@@ -219,7 +219,7 @@ import { Brain, Zap, Target, Shield, Users, Globe, Cpu, Lightbulb, BarChart3 con
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Accelerate Your Research?
           </h2>"
-          <p className="text-xl text-gray-300 mb-8">'
+          <p className="text-xl text-gray-300 mb-8">
             Let's discuss how AI autonomous research solutions can transform your
             research capabilities and accelerate discoveries.
           </p>"

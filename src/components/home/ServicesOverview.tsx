@@ -1,7 +1,54 @@
-import React from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
-import { Link  } from 'react-router-dom.ts';'
-import { ArrowRight, CheckCircle, Sparkles  } from 'lucide-react';            <span className="text-zion-cyan text-sm font-medium">Innovation First</span>
+<<<<<<< HEAD
+
+interface Service {
+  category: string;
+icon: React.ComponentType<{ className?: string
+}>;
+  color: string;
+  items: string[];
+  description?: string}
+
+interface ServicesOverviewProps extends React.PropsWithChildren<{}> {
+
+  services: Service[]}
+
+const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
+
+  return()
+    <section className = "py-20 bg-gradient-to-b from-zion-slate-dark/30 via-zion-slate-dark/20 to-zion-slate-dark/30" role="region" aria-labelledby="services-heading">"
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div"
+          className="text-center mb-16"
+          initial = {
+
+  { opacity: 0,
+  y: 30 
+
+
+
+
+
+
+}}
+          whileInView = {
+
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+"
+          <div className="inline-flex items-center mb-4 px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full">"
+            <Sparkles className="w-4 h-4 text-zion-cyan mr-2"  />"
+            <span className="text-zion-cyan text-sm font-medium">Innovation First</span>
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
           </div>
 "
           <h2 id="services-heading" className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">"
@@ -125,18 +172,18 @@ import { ArrowRight, CheckCircle, Sparkles  } from 'lucide-react';            <s
 }}
                     viewport={{ once: true }}
 "
-                    <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" aria-hidden="true" />"                    <span className="text-sm">{item}</span>
+                    <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" aria-hidden="true"  />"                    <span className="text-sm">{item}</span>
                   </motion.li>;
                 ))}
               </ul>
 
               <Link'`
-                to={`/services/${service.category.toLowerCase().replace(/\s+/g, '-')}`}"
+                to={`/services/${service.category.toLowerCase().replace(/\s+/g,-')}`}"
                 className="relative inline-flex items-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover:from-zion-blue hover:to-zion-purple transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/30 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:ring-offset-2 focus:ring-offset-zion-slate-dark"`
                 aria-label={`Learn more about ${service.category} services`}
 
                 Explore {service.category}"
-                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" aria-hidden="true" />              </Link>;
+                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" aria-hidden="true"  />              </Link>;
 
               {/* Hover indicator */}"
               <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-zion-cyan to-zion-blue group-hover:w-full transition-all duration-700" />;
@@ -147,4 +194,4 @@ import { ArrowRight, CheckCircle, Sparkles  } from 'lucide-react';            <s
     </section>;
   )};
 
-export default ServicesOverview;}}}'"`
+export default ServicesOverview}}}'"`

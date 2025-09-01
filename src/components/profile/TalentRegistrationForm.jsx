@@ -142,7 +142,7 @@ export function TalentRegistrationForm() {
                 if (Array.isArray(categorySkills)) {
 
                     categorySkills.forEach(skill => {
-'
+
                         if (typeof skill === 'string' && skill && !skillTags.includes(skill)) {
 
                             newSkills.push(skill)}
@@ -157,19 +157,19 @@ export function TalentRegistrationForm() {
     const getCategoryColor = (category) => {
 
         switch (category) {
-'
-            case 'programming': return 'bg-blue-500/20 hover:bg-blue-500/30 text-blue-500';'
-            case 'devops': return 'bg-green-500/20 hover:bg-green-500/30 text-green-500';'
-            case 'platforms': return 'bg-amber-500/20 hover:bg-amber-500/30 text-amber-500';'
-            case 'softSkills': return 'bg-purple-500/20 hover:bg-purple-500/30 text-purple-500';'
-            case 'other': return 'bg-gray-500/20 hover:bg-gray-500/30 text-gray-500';'
+
+            case 'programming': return 'bg-blue-500/20 hover:bg-blue-500/30 text-blue-500';
+            case 'devops': return 'bg-green-500/20 hover:bg-green-500/30 text-green-500';
+            case 'platforms': return 'bg-amber-500/20 hover:bg-amber-500/30 text-amber-500';
+            case 'softSkills': return 'bg-purple-500/20 hover:bg-purple-500/30 text-purple-500';
+            case 'other': return 'bg-gray-500/20 hover:bg-gray-500/30 text-gray-500';
             default: return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple'}
     };
     // Send notification email
     const sendEnhancementNotification = async (userId, email) => {
 
         try {
-'
+
             await supabase.functions.invoke('send-email', {
 
                 body: {
@@ -178,8 +178,8 @@ export function TalentRegistrationForm() {
                     subject: "Your Zion Talent Profile Has Been Enhanced",
                     html: `"
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">"
-            <h2 style="color: #6D28D9;">Profile Enhancement Complete</h2>'
-            <p>Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p>'
+            <h2 style="color: #6D28D9;">Profile Enhancement Complete</h2>
+            <p>Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p>
             <p>We've added a professional summary and categorized your skills to help you stand out.</p>
             <p>You can review and edit these enhancements in your profile dashboard.</p>"
             <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee;">"
@@ -217,7 +217,7 @@ export function TalentRegistrationForm() {
             if (values.enhancedProfile && !generatedContent) {
 
                 try {
-'
+
                     const { data: aiData } = await supabase.functions.invoke('talent-profile-enhancer', {
 
                         body: {
@@ -237,14 +237,14 @@ export function TalentRegistrationForm() {
                         finalSummary = aiData.summary;
                         // Safely merge AI suggested skills with user-provided skills
                         const categorizedSkills = aiData.categorizedSkills;
-                        const aiSkills = [];'
+                        const aiSkills = [];
                         // Extract skills from each category and ensure they're strings
                         Object.values(categorizedSkills).forEach(categorySkills => {
 
                             if (Array.isArray(categorySkills)) {
 
                                 categorySkills.forEach(skill => {
-'
+
                                     if (typeof skill === 'string' && skill) {
 
                                         aiSkills.push(skill)}

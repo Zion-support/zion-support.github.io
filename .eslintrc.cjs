@@ -17,8 +17,9 @@ module.exports = {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: 12,
+    ecmaVersion: 2022,
     sourceType: 'module',
+    project: './tsconfig.json',
   },
   plugins: ['react', '@typescript-eslint', 'jsx-a11y'],
   rules: {
@@ -34,4 +35,5 @@ module.exports = {
       version: 'detect',
     },
   },
+  ignorePatterns: ['dist/', 'build/', 'node_modules/', '*.config.js', '*.config.ts'],
 };

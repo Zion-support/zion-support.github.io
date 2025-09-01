@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousAudit = () => {
   return()
@@ -6,15 +6,15 @@ const AIAutonomousAudit = () => {
       <Helmet>
         <title>AI Autonomous Audit Platform | Zion Tech Group</title>
         <meta
-          name="description""
+          name="description"
           content="Revolutionary AI autonomous audit platform that continuously conducts audits, examines systems, and ensures compliance with advanced AI capabilities and autonomous operation."
         />
         <meta"
-          name="keywords""
+          name="keywords"
           content="AI audit, autonomous audit, audit conduction, system examination, autonomous operations, AI audit platform"
         />
         <link"
-          rel="canonical""
+          rel="canonical"
           href="https://ziontechgroup.com/ai-autonomous-audit"
         />
       </Helmet>
@@ -181,14 +181,7 @@ const AIAutonomousAudit = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Financial Audit','
-                'Compliance Audit','
-                'Security Audit','
-                'Performance Audit','
-                'Quality Audit','
-                'Process Audit','
-                'System Audit','
-                'Risk Audit',
+                'Financial Audit',Compliance Audit',Security Audit',Performance Audit',Quality Audit',Process Audit',System Audit',Risk Audit',
               ].map(type => (
                 <div
                   key={type}"

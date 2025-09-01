@@ -1,6 +1,6 @@
 
-import React from 'react';'
-import Head from 'next/head';'
+import React from 'react';
+import Head from 'next/head';
 import { motion } from 'framer-motion';
 
 
@@ -16,7 +16,7 @@ export default function About(...args[]):  {
 						<h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
 							About Zion Tech Group
 						</h1>"
-						<p className="mt-6 text-lg leading-8 text-gray-600">'
+						<p className="mt-6 text-lg leading-8 text-gray-600">
 							We're a team of innovators, engineers, and strategists building the future of business technology.
 						</p>
 					</div>
@@ -91,7 +91,7 @@ export default function About(...args[]):  {
 								<Users className="h-8 w-8 text-green-600" />
 							</div>"
 							<h3 className="text-xl font-semibold text-gray-900 mb-4">Customer Success</h3>"
-							<p className="text-gray-600">'
+							<p className="text-gray-600">
 								Your success is our success. We're committed to delivering measurable business outcomes.
 							</p>
 						</div>"
@@ -176,7 +176,7 @@ export default function About(...args[]):  {
 								Get in Touch
 							</Link>
 							<Link"
-								to="/services""
+								to="/services"
 								className="text-sm font-semibold leading-6 text-white hover:text-blue-100"
 
 "
@@ -334,13 +334,13 @@ export default function About(...args[]):  {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="mailto:kleber@ziontechgroup.com""
+                href="mailto:kleber@ziontechgroup.com"
                 className="bg-white text-blue-600 font-bold py-4 px-8 rounded-full text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
               >
                 Get in Touch
               </a>
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="bg-transparent border-2 border-white text-white font-bold py-4 px-8 rounded-full text-lg hover:bg-white hover:text-blue-600 transition-all duration-300"
               >
                 Call Us

@@ -14,14 +14,14 @@ export const logErrorToProduction = (message, error) => {
 };
 
 export const logInfoToProduction = (message, data) => {
-'
+
   if (process.env.NODE_ENV === 'development') {
 
     // console.log(message, data);  }
 };
 
 export const logWarningToProduction = (message, data) => {
-'
+
   if (process.env.NODE_ENV === 'development') {
 
     // console.warn(message, data);  }
@@ -32,4 +32,3 @@ export default {
   logErrorToProduction,
   logInfoToProduction,
   logWarningToProduction};
-'

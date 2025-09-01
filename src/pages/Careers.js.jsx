@@ -140,7 +140,7 @@ export default function Careers() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
             <div>"
               <h2 className="text-3xl font-bold text-white mb-6">Why Work at Zion?</h2>"
-              <p className="text-zion-slate-light text-lg mb-6">'
+              <p className="text-zion-slate-light text-lg mb-6">
                 At Zion, we're not just building a marketplace; we're creating a new paradigm for how AI and 
                 technology are accessed, shared, and implemented globally.
               </p>"
@@ -149,8 +149,8 @@ export default function Careers() {
                 talented individuals with meaningful opportunities. We value innovation, collaboration, and 
                 impact in everything we do.
               </p>"
-              <p className="text-zion-slate-light text-lg">'
-                If you're excited about shaping the future of AI and technology while working in a dynamic, '
+              <p className="text-zion-slate-light text-lg">
+                If you're excited about shaping the future of AI and technology while working in a dynamic,
                 remote-first environment with a mission-driven team, we'd love to meet you.
               </p>
             </div>"
@@ -208,7 +208,7 @@ export default function Careers() {
           "
           <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">'"
             <h2 className="text-3xl font-bold text-white mb-6">Don't see the right position?</h2>"
-            <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">'
+            <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
               We're always looking for talented individuals who are passionate about AI and technology. '
               Send us your resume and let's start a conversation.
             </p>"

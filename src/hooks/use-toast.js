@@ -13,7 +13,7 @@ export const toast = ({ title, description, variant = 'default' }) => {
 ;
 export const useToast = () => {
   const [toasts, setToasts] = useState([]);
-'
+
   const toast = useCallback(({ title, description, variant = 'default' }) => {
 
     const id = Date.now();

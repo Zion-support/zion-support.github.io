@@ -1,20 +1,61 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
+import {
+
+  Bell,
+  X,
+  CheckCircle,
+  AlertTriangle,
+  Info,
+  XCircle,
+  Settings,
+  Volume2,
+  VolumeX,
+  Clock,
+  Star,
+  Archive,
+  Trash2,
+  Filter,
+  Search,
+  MoreVertical,
+  Eye,
+  EyeOff,
+  Zap,
+  Shield,
+  Globe} from 'lucide-react';
+
+  id: string;
+  title: string;
+  message: string;
+  type: 'success' | 'error' | 'warning' | 'info' | 'system';
+  priority: 'low' | 'medium' | 'high' | 'critical';
+  category: 'user' | 'system' | 'security' | 'performance' | 'update';
+  timestamp: Date;
+  read: boolean;
+  archived: boolean;
+  actions?: NotificationAction[];
+  metadata?: Record < string, any>;
+  expiresAt?: Date;
+
   label: string;
-  action: () => void;'
+  action: () => void;
   variant?: 'primary' | 'secondary' | 'danger';
-  icon?: React.ComponentType < any>;
-}
+  icon?: React.ComponentType < any>}
+
 interface SmartNotificationSystemProps {
   // Add your props here
 
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
+type SmartNotificationSystemProps = {
   enabled?: boolean;
+<<<<<<< HEAD
   maxNotifications?: number;
   autoDismiss?: boolean;
   autoDismissDelay?: number;
   soundEnabled?: boolean;
   onNotificationAction?: notification: Notification, action: string void;
+
 export function SmartNotificationSystem({
 
   enabled = true,
@@ -26,8 +67,8 @@ export function SmartNotificationSystem({
 
   const [notifications, setNotifications] = useState<Notification[]>([]);
   const [isOpen, setIsOpen] = useState(false);
-  const [showSettings, setShowSettings] = useState(false);'
-  const [filter, setFilter] = useState<'all' | 'unread' | 'important'>('all');'
+  const [showSettings, setShowSettings] = useState(false);
+  const [filter, setFilter] = useState<'all' | 'unread' | 'important'>('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [settings, setSettings] = useState({
 
@@ -39,52 +80,35 @@ export function SmartNotificationSystem({
     grouping: true,
     priority: true});
 
-  const audioRef = useRef < HTMLAudioElement | null> (null) ;
-  const notificationCount = notifications.filter (n => !n.read) .length;
+  
+  
   // Initialize audio for notification sounds
   useEffect ( () => {
     if (settings.sound) {
-'
+
       audioRef.current = new Audio('/notification-sound.mp3');
-      audioRef.current.volume = 0.3;
-    }
+      audioRef.current.volume = 0.3}
   }, [settings.sound]) ;
 
   // Add notification
-  const addNotification = useCallback()
-    ('
-      notification: Omit<Notification, 'id' | 'timestamp' | 'read' | 'archived'>
-    ) => {
-
-      const newNotification: Notification = {
-
-        ...notification,
-        id: `notification-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
-        timestamp: new Date(),
-        read: false,
-        archived: false};
-
+  
       setNotifications(prev => {
 
-        const updated = [newNotification, ...prev];
-        return updated.slice(0, maxNotifications);
-      });
+        
+        return updated.slice(0, maxNotifications)});
 
       // Play sound if enabled
       if (settings.sound && audioRef.current) {
 
         audioRef.current.play().catch(() => {
           // Ignore audio play errors
-        });
-      }
+        })}
 
       // Auto-dismiss if enabled'
       if (settings.autoDismiss && notification.priority !== 'critical') {
 
         setTimeout(() => {
-          dismissNotification(newNotification.id);
-        }, settings.autoDismissDelay);
-      }
+          dismissNotification(newNotification.id)}, settings.autoDismissDelay)}
 
       // Show desktop notification if enabled
       if()
@@ -95,51 +119,36 @@ export function SmartNotificationSystem({
 
         new Notification(notification.title, {
 
-          body: notification.message,'
+          body: notification.message,
           icon: '/favicon.ico',
-          tag: notification.id,'
-          requireInteraction: notification.priority === 'critical'});
-      }
+          tag: notification.id,
+          requireInteraction: notification.priority === 'critical'})}
     },
     [maxNotifications, settings, autoDismissDelay]
   );
 
   // Dismiss notification
-  const dismissNotification = useCallback((id: string) => {
-
-    setNotifications(prev => prev.filter(n => n.id !== id));
+  
   }, []);
 
   // Mark as read
-  const markAsRead = useCallback((id: string) => {
-
-    setNotifications(prev =>
-      prev.map(n => (n.id === id ? { ...n, read: true } : n))
-    );
+  
   }, []);
 
   // Archive notification
-  const archiveNotification = useCallback((id: string) => {
-
-    setNotifications(prev =>
-      prev.map(n => (n.id === id ? { ...n, archived: true } : n))
-    );
+  
   }, []);
 
   // Mark all as read
-  const markAllAsRead = useCallback ( () => {
-    setNotifications (prev => prev.map (n => ({ ...n, read: true }) ) ) ;
+  
   }, []) ;
 
   // Clear all notifications
-  const clearAllNotifications = useCallback ( () => {
-    setNotifications ([]) ;
+  
   }, []) ;
 
   // Filter notifications
-  const filteredNotifications = notifications.filter(notification => {
-'
-    if (filter === 'unread' && notification.read) return false;
+  
     if ('
       filter === 'important' &&'
       notification.priority !== 'high' &&'
@@ -152,107 +161,76 @@ export function SmartNotificationSystem({
       !notification.message.toLowerCase().includes(searchTerm.toLowerCase())
     )
       return false;
-    return !notification.archived;
-  });
+    return !notification.archived});
 
   // Get notification icon'
-  const getNotificationIcon = (type: Notification['type']) => {
-
-    switch (type) {
-'
-      case 'success':
-        return CheckCircle;'
+  
       case 'error':
-        return XCircle;'
+        return XCircle;
       case 'warning':
-        return AlertTriangle;'
+        return AlertTriangle;
       case 'info':
-        return Info;'
+        return Info;
       case 'system':
         return Zap;
       default:
-        return Info;
-    }
+        return Info}
   };
 
   // Get priority color'
-  const getPriorityColor = (priority: Notification['priority']) => {
-
-    switch (priority) {
-'
-      case 'critical':'
-        return 'text-red-600 bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800';'
+  
       case 'high':'
-        return 'text-orange-600 bg-orange-50 dark:bg-orange-900/20 border-orange-200 dark:border-orange-800';'
+        return 'text-orange-600 bg-orange-50 dark:bg-orange-900/20 border-orange-200 dark:border-orange-800';
       case 'medium':'
-        return 'text-yellow-600 bg-yellow-50 dark:bg-yellow-900/20 border-yellow-200 dark:border-yellow-800';'
+        return 'text-yellow-600 bg-yellow-50 dark:bg-yellow-900/20 border-yellow-200 dark:border-yellow-800';
       case 'low':'
         return 'text-blue-600 bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800';
       default:'
-        return 'text-gray-600 bg-gray-50 dark:bg-gray-900/20 border-gray-200 dark:border-gray-800';
-    }
+        return 'text-gray-600 bg-gray-50 dark:bg-gray-900/20 border-gray-200 dark:border-gray-800'}
   };
 
   // Get category icon'
-  const getCategoryIcon = (category: Notification['category']) => {
-
-    switch (category) {
-'
-      case 'user':
-        return Eye;'
+  
       case 'system':
-        return Zap;'
+        return Zap;
       case 'security':
-        return Shield;'
+        return Shield;
       case 'performance':
-        return Zap;'
+        return Zap;
       case 'update':
         return Globe;
       default:
-        return Info;
-    }
+        return Info}
   };
 
   // Request notification permission
-  const requestNotificationPermission = useCallback(async () => {
-'
-    if ('Notification' in window && Notification.permission === 'default') {
-
-      const permission = await Notification.requestPermission();'
+  
       if (permission === 'granted') {
 
-        setSettings(prev => ({ ...prev, desktop: true }));
-      }    }
+        setSettings(prev => ({ ...prev, desktop: true }))}
+    }
   }, []) ;
 
   // Handle notification action
-  const handleNotificationAction = useCallback()
-    (notification: Notification, action: NotificationAction) => {
-
-      action.action();
+  
       markAsRead(notification.id);
 
       if (onNotificationAction) {
 
-        onNotificationAction(notification, action.label);
-      }
+        onNotificationAction(notification, action.label)}
     },
     [markAsRead, onNotificationAction]
   );
 
   // Group notifications by category
-  const groupedNotifications = settings.grouping
-    ? filteredNotifications.reduce()
-        (groups, notification) => {
-
-          const category = notification.category;
+  
           if (!groups[category]) groups[category] = [];
           groups[category].push(notification);
-          return groups;
-        },
+          return groups},
         {} as Record<string, Notification[]>
       )
     : { All: filteredNotifications };
+
   if (!enabled) return null;
 
   return()
@@ -265,12 +243,13 @@ export function SmartNotificationSystem({
         whileTap={{ scale: 0.95 }}"
         aria-label="Open notifications"
       >"
-        <Bell className="w-6 h-6" />        {notificationCount > 0 && (
+        <Bell className="w-6 h-6"  />
+        {notificationCount > 0 && (
           <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}"
             className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center font-medium"
-          >'
+          >
             {notificationCount > 99 ? '99+' : notificationCount}
           </motion.div>) }
       </motion.button>
@@ -292,8 +271,9 @@ export function SmartNotificationSystem({
               {/* Header */}"
               <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">"
                 <div className="flex items-center space-x-3">"
-                  <Bell className="w-6 h-6 text-blue-600" />
-                  <div>"                    <h2 className="text-xl font-bold text-gray-900 dark:text-white">
+                  <Bell className="w-6 h-6 text-blue-600"  />
+                  <div>"
+                    <h2 className="text-xl font-bold text-gray-900 dark:text-white">
                       Notifications
                     </h2>"
                     <p className="text-sm text-gray-600 dark:text-gray-400">
@@ -306,12 +286,14 @@ export function SmartNotificationSystem({
                     onClick={() => setShowSettings(!showSettings)}"
                     className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
                   >"
-                    <Settings className="w-5 h-5" />                  </button>
+                    <Settings className="w-5 h-5"  />
+                  </button>
                   <button
                     onClick={() => setIsOpen(false)}"
                     className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
                   >"
-                    <X className="w-5 h-5" />                  </button>
+                    <X className="w-5 h-5"  />
+                  </button>
                 </div>
               </div>
 
@@ -319,7 +301,7 @@ export function SmartNotificationSystem({
               <AnimatePresence>
                 {showSettings && (
                   <motion.div
-                    initial={{ height: 0, opacity: 0 }}'
+                    initial={{ height: 0, opacity: 0 }}
                     animate={{ height: 'auto', opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}"
                     className="border-b border-gray-200 dark:border-gray-700 overflow-hidden"
@@ -399,8 +381,8 @@ export function SmartNotificationSystem({
               {/* Controls */}"
               <div className="p-4 border-b border-gray-200 dark:border-gray-700">"
                 <div className="flex items-center justify-between mb-3">"
-                  <div className="flex space-x-1">'
-                    {(['all', 'unread', 'important'] as const).map()
+                  <div className="flex space-x-1">
+                    {(['all',unread',important'] as const).map()
                       filterType => (
                         <button
                           key={filterType}
@@ -434,9 +416,10 @@ export function SmartNotificationSystem({
                   </div>
                 </div>"
                 <div className="relative">"
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"  />
                   <input"
-                    type="text""                    placeholder="Search notifications..."
+                    type="text"
+                    placeholder="Search notifications..."
                     value={searchTerm}
                     onChange={e => setSearchTerm(e.target.value)}"
                     className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -456,7 +439,7 @@ export function SmartNotificationSystem({
                         <div className="px-4 py-2 bg-gray-50 dark:bg-gray-800">"
                           <div className="flex items-center space-x-2">
                             {getCategoryIcon('
-                              category as Notification['category']'
+                              category as Notification['category']
                             )({ className: 'w-4 h-4' })}"
                             <span className="text-sm font-medium text-gray-700 dark:text-gray-300 capitalize">
                               {category}
@@ -486,7 +469,7 @@ export function SmartNotificationSystem({
                                 className={`p-2 rounded-lg ${getPriorityColor(notification.priority)}`}
                               >
                                 {getNotificationIcon(notification.type)({
-'
+
                                   className: 'w-5 h-5'})}
                               </div>"
                               <div className="flex-1 min-w-0">"
@@ -497,7 +480,8 @@ export function SmartNotificationSystem({
 
                                         !notification.read'
                                           ? 'text-gray-900 dark:text-white''
-                                          : 'text-gray-700 dark:text-gray-300'`                                      }`}
+                                          : 'text-gray-700 dark:text-gray-300'`
+                                      }`}
                                     >
                                       {notification.title}
                                     </h4>"
@@ -506,7 +490,7 @@ export function SmartNotificationSystem({
                                     </p>"
                                     <div className="flex items-center space-x-4 mt-2 text-xs text-gray-500 dark:text-gray-400">"
                                       <span className="flex items-center space-x-1">"
-                                        <Clock className="w-3 h-3" />
+                                        <Clock className="w-3 h-3"  />
                                         <span>
                                           {notification.timestamp.toLocaleTimeString()}
                                         </span>
@@ -524,29 +508,29 @@ export function SmartNotificationSystem({
                                         onClick={() =>
                                           markAsRead(notification.id)
                                         }"
-                                        className="p-1 hover:bg-gray-200 dark:hover:bg-gray-700 rounded transition-colors""
+                                        className="p-1 hover:bg-gray-200 dark:hover:bg-gray-700 rounded transition-colors"
                                         title="Mark as read"
                                       >"
-                                        <Eye className="w-4 h-4" />
+                                        <Eye className="w-4 h-4"  />
                                       </button>
                                     )}
                                     <button
                                       onClick={() =>
                                         archiveNotification(notification.id)
                                       }"
-                                      className="p-1 hover:bg-gray-200 dark:hover:bg-gray-700 rounded transition-colors""
+                                      className="p-1 hover:bg-gray-200 dark:hover:bg-gray-700 rounded transition-colors"
                                       title="Archive"
                                     >"
-                                      <Archive className="w-4 h-4" />
+                                      <Archive className="w-4 h-4"  />
                                     </button>
                                     <button
                                       onClick={() =>
                                         dismissNotification(notification.id)
                                       }"
-                                      className="p-1 hover:bg-gray-200 dark:hover:bg-gray-700 rounded transition-colors""
+                                      className="p-1 hover:bg-gray-200 dark:hover:bg-gray-700 rounded transition-colors"
                                       title="Dismiss"
                                     >"
-                                      <X className="w-4 h-4" />
+                                      <X className="w-4 h-4"  />
                                     </button>
                                   </div>
                                 </div>
@@ -566,7 +550,7 @@ export function SmartNotificationSystem({
                                               )
                                             }`
                                             className={`px-3 py-1 text-xs rounded-lg transition-colors ${
-'
+
                                               action.variant === 'primary''
                                                 ? 'bg-blue-600 text-white hover:bg-blue-700''
                                                 : action.variant === 'danger''
@@ -594,23 +578,25 @@ export function SmartNotificationSystem({
 
                 {filteredNotifications.length === 0 && ("
                   <div className="p-8 text-center text-gray-500 dark:text-gray-400">"
-                    <Bell className="w-12 h-12 mx-auto mb-3 opacity-50" />
-                    <p>No notifications to display</p>'"                    <p className="text-sm">You're all caught up!</p>
+                    <Bell className="w-12 h-12 mx-auto mb-3 opacity-50"  />
+                    <p>No notifications to display</p>'"
+                    <p className="text-sm">You're all caught up!</p>
                   </div>
                 )}
               </div>
             </motion.div>
           </motion.div>) }
       </AnimatePresence>
-    </>) ;
-}
+    </>) }
 
 // Export the addNotification function for external use
-export const addNotification = ('
-  notification: Omit<Notification, 'id' | 'timestamp' | 'read' | 'archived'>
-) => {
-
-  // This will be implemented by the component instance'
-  // console.warn('addNotification called before component initialization');
+export 
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 };
-'"`
+
+const SmartNotificationSystem: React.FC<SmartNotificationSystemProps> = ({ enabled = true }) => {
+  if (!enabled) return null;
+  return <div className="hidden" aria-hidden="true" />};
+
+export default SmartNotificationSystem;

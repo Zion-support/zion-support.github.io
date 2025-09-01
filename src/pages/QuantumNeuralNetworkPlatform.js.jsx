@@ -1,65 +1,60 @@
-import React from 'react';'
+import React from 'react';
 import { Brain, Zap, Shield, TrendingUp, ArrowRight } from 'lucide-react';
 const QuantumNeuralNetworkPlatform = () => {
   const features = [
     {
 
-      icon: Brain,'
+      icon: Brain,
       title: 'Quantum Neural Networks',
       description:'
         'Advanced neural network architectures leveraging quantum computing principles for unprecedented processing power.'},
     {
 
-      icon: Zap,'
+      icon: Zap,
       title: 'Real-time Processing',
       description:'
         'Lightning-fast data processing and analysis with quantum-enhanced algorithms and parallel computing.'},
     {
 
-      icon: Target,'
+      icon: Target,
       title: 'Precision Optimization',
       description:'
         'Quantum-inspired optimization algorithms that find optimal solutions in complex, multi-dimensional spaces.'},
     {
 
-      icon: Shield,'
+      icon: Shield,
       title: 'Quantum Security',
       description:'
         'Next-generation encryption and security protocols based on quantum mechanics principles.'},
   ];
   const useCases = [
     {
-'
+
       title: 'Financial Modeling',
       description:'
         'Advanced risk assessment, portfolio optimization, and market prediction using quantum neural networks.',
       icon: TrendingUp},
     {
-'
+
       title: 'Drug Discovery',
       description:'
         'Accelerated molecular simulation and drug candidate screening for pharmaceutical research.',
       icon: Globe},
     {
-'
+
       title: 'Climate Modeling',
       description:'
         'Complex climate pattern analysis and prediction with quantum-enhanced computational power.',
       icon: Globe},
     {
-'
+
       title: 'AI Training',
       description:'
         'Faster and more efficient training of large language models and neural networks.',
       icon: Brain},
   ];
   const benefits = ['
-    'Exponential speedup in complex computations','
-    'Enhanced accuracy in pattern recognition','
-    'Scalable architecture for growing datasets','
-    'Energy-efficient quantum-inspired algorithms','
-    'Seamless integration with existing AI systems','
-    'Real-time decision making capabilities',
+    'Exponential speedup in complex computations',Enhanced accuracy in pattern recognition',Scalable architecture for growing datasets',Energy-efficient quantum-inspired algorithms',Seamless integration with existing AI systems',Real-time decision making capabilities',
   ];
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -73,7 +68,7 @@ const QuantumNeuralNetworkPlatform = () => {
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Quantum Neural Network"
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">'
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
                 {' '}
                 Platform
               </span>
@@ -85,7 +80,7 @@ const QuantumNeuralNetworkPlatform = () => {
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
               >
                 Get Started"
@@ -258,14 +253,14 @@ const QuantumNeuralNetworkPlatform = () => {
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link"
-              to="/contact""
+              to="/contact"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
             >
               Schedule a Demo"
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <Link"
-              to="/pricing""
+              to="/pricing"
               className="inline-flex items-center px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
             >
               View Pricing
@@ -299,7 +294,7 @@ const QuantumNeuralNetworkPlatform = () => {
                 Comprehensive guides and API documentation for developers.
               </p>
               <Link"
-                to="/docs""
+                to="/docs"
                 className="text-blue-400 hover:text-blue-300 transition-colors duration-300"
               >
                 Read Docs →
@@ -317,7 +312,7 @@ const QuantumNeuralNetworkPlatform = () => {
                 Download our SDK and development tools to get started.
               </p>
               <Link"
-                to="/downloads""
+                to="/downloads"
                 className="text-blue-400 hover:text-blue-300 transition-colors duration-300"
               >
                 Download →
@@ -333,7 +328,7 @@ const QuantumNeuralNetworkPlatform = () => {
                 Get help from our quantum computing experts and support team.
               </p>
               <Link"
-                to="/contact""
+                to="/contact"
                 className="text-blue-400 hover:text-blue-300 transition-colors duration-300"
               >
                 Contact Support →

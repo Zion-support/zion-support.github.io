@@ -1,6 +1,3 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { 
   Brain, 
   Cloud, 
@@ -42,173 +39,9 @@ import {
 } from 'lucide-react';
 
 export default function InnovativeMicroSAASServices2025() {
-  const microSAASServices = [
-    {
-      category: 'AI-Powered Business Solutions',
-      icon: Brain,
-      color: 'from-purple-600 to-indigo-600',
-      services: [
-        { 
-          name: 'AI Business Intelligence Platform', 
-          href: '/services/ai-business-intelligence-platform', 
-          description: 'Advanced analytics and ML-powered insights',
-          price: '$2,500',
-          roi: '400%',
-          features: ['Real-time analytics', 'Predictive modeling', 'Custom dashboards', 'API integration']
-        },
-        { 
-          name: 'AI Content Marketing Automation', 
-          href: '/services/ai-content-marketing-automation', 
-          description: 'Automated content creation and optimization',
-          price: '$1,800',
-          roi: '350%',
-          features: ['Content generation', 'SEO optimization', 'Social media automation', 'Performance tracking']
-        },
-        { 
-          name: 'AI Project Management Platform', 
-          href: '/services/ai-project-management-platform', 
-          description: 'Intelligent project planning and execution',
-          price: '$2,200',
-          roi: '380%',
-          features: ['AI task prioritization', 'Resource optimization', 'Risk assessment', 'Progress tracking']
-        }
-      ]
-    },
-    {
-      category: 'AI Healthcare & Life Sciences',
-      icon: Heart,
-      color: 'from-red-600 to-pink-600',
-      services: [
-        { 
-          name: 'AI Healthcare Analytics Platform', 
-          href: '/services/ai-healthcare-analytics-platform', 
-          description: 'Medical AI and predictive diagnostics',
-          price: '$3,500',
-          roi: '450%',
-          features: ['Patient data analysis', 'Disease prediction', 'Treatment optimization', 'HIPAA compliance']
-        },
-        { 
-          name: 'AI Healthcare Predictive Analytics', 
-          href: '/services/ai-healthcare-predictive-analytics', 
-          description: 'Advanced healthcare forecasting and insights',
-          price: '$4,200',
-          roi: '500%',
-          features: ['Population health analytics', 'Risk stratification', 'Clinical decision support', 'Real-time monitoring']
-        }
-      ]
-    },
-    {
-      category: 'AI Financial Services',
-      icon: DollarSign,
-      color: 'from-green-600 to-emerald-600',
-      services: [
-        { 
-          name: 'AI Financial Trading Platform', 
-          href: '/services/ai-financial-trading-platform', 
-          description: 'Algorithmic trading and risk management',
-          price: '$5,000',
-          roi: '600%',
-          features: ['Algorithmic trading', 'Risk assessment', 'Portfolio optimization', 'Market analysis']
-        },
-        { 
-          name: 'AI Financial Trading Risk Management', 
-          href: '/services/ai-financial-trading-risk-management', 
-          description: 'Advanced financial risk assessment and mitigation',
-          price: '$4,800',
-          roi: '550%',
-          features: ['Real-time risk monitoring', 'Stress testing', 'Compliance reporting', 'Alert systems']
-        }
-      ]
-    },
-    {
-      category: 'AI Legal & Compliance',
-      icon: Shield,
-      color: 'from-blue-600 to-cyan-600',
-      services: [
-        { 
-          name: 'AI Legal Research Platform', 
-          href: '/services/ai-legal-research-platform', 
-          description: 'Legal document analysis and research',
-          price: '$2,800',
-          roi: '420%',
-          features: ['Document analysis', 'Case law research', 'Legal insights', 'Compliance tracking']
-        },
-        { 
-          name: 'AI Legal Document Automation', 
-          href: '/services/ai-legal-document-automation', 
-          description: 'Automated legal document generation and review',
-          price: '$3,200',
-          roi: '480%',
-          features: ['Document generation', 'Contract review', 'Legal templates', 'Version control']
-        }
-      ]
-    },
-    {
-      category: 'AI HR & Talent Management',
-      icon: Users,
-      color: 'from-orange-600 to-red-600',
-      services: [
-        { 
-          name: 'AI HR Platform', 
-          href: '/services/ai-hr-platform', 
-          description: 'Intelligent human resources management',
-          price: '$2,600',
-          roi: '400%',
-          features: ['Recruitment automation', 'Performance analytics', 'Employee engagement', 'Talent development']
-        },
-        { 
-          name: 'AI Customer Success Platform', 
-          href: '/services/ai-customer-success-platform', 
-          description: 'AI-powered customer experience optimization',
-          price: '$2,400',
-          roi: '380%',
-          features: ['Customer insights', 'Success tracking', 'Automated outreach', 'Churn prevention']
-        }
-      ]
-    },
-    {
-      category: 'AI Supply Chain & Operations',
-      icon: Network,
-      color: 'from-teal-600 to-green-600',
-      services: [
-        { 
-          name: 'AI Supply Chain Optimization', 
-          href: '/services/ai-supply-chain-optimization', 
-          description: 'Intelligent supply chain management',
-          price: '$3,800',
-          roi: '520%',
-          features: ['Demand forecasting', 'Inventory optimization', 'Route planning', 'Supplier management']
-        },
-        { 
-          name: 'AI Workflow Orchestrator', 
-          href: '/services/ai-workflow-orchestrator', 
-          description: 'Intelligent process automation and optimization',
-          price: '$3,000',
-          roi: '450%',
-          features: ['Process automation', 'Workflow optimization', 'Integration management', 'Performance analytics']
-        }
-      ]
-    }
-  ];
-
-  const benefits = [
-    { icon: CheckCircle, title: 'Rapid Deployment', description: 'Deploy in 2-8 weeks vs. traditional 6-18 months' },
-    { icon: DollarSign, title: 'Proven ROI', description: 'Average 400% return on investment within 12 months' },
-    { icon: Shield, title: 'Enterprise Security', description: 'SOC 2 compliant with advanced security features' },
-    { icon: Users, title: 'Dedicated Support', description: '24/7 technical support and success management' },
-    { icon: Zap, title: 'Scalable Architecture', description: 'Grows with your business needs' },
-    { icon: Rocket, title: 'Innovation First', description: 'Cutting-edge AI and emerging technologies' }
-  ];
-
-  const industries = [
-    { name: 'Healthcare', icon: Heart, description: 'AI-powered diagnostics and patient care' },
-    { name: 'Financial Services', icon: DollarSign, description: 'Intelligent trading and risk management' },
-    { name: 'Legal Services', icon: Shield, description: 'Document automation and legal research' },
-    { name: 'Manufacturing', icon: Factory, description: 'Smart manufacturing and supply chain' },
-    { name: 'Retail & E-commerce', icon: ShoppingCart, description: 'Customer experience optimization' },
-    { name: 'Government', icon: Building, description: 'Digital transformation and compliance' }
-  ];
-
+  
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-black text-white">
       {/* Hero Section */}
@@ -233,7 +66,7 @@ export default function InnovativeMicroSAASServices2025() {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25"
               >
                 Get Your Custom Quote
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5"  />
               </Link>
               <Link
                 to="/schedule-demo"
@@ -300,7 +133,7 @@ export default function InnovativeMicroSAASServices2025() {
                         <ul className="space-y-1">
                           {service.features.map((feature, idx) => (
                             <li key={idx} className="flex items-center text-sm text-gray-400">
-                              <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
+                              <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0"  />
                               {feature}
                             </li>
                           ))}
@@ -317,7 +150,7 @@ export default function InnovativeMicroSAASServices2025() {
                           className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white text-sm font-medium rounded-lg transition-all duration-300"
                         >
                           Learn More
-                          <ArrowRight className="ml-2 w-4 h-4" />
+                          <ArrowRight className="ml-2 w-4 h-4"  />
                         </Link>
                       </div>
                     </div>
@@ -424,7 +257,7 @@ export default function InnovativeMicroSAASServices2025() {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25"
               >
                 Get Started Today
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5"  />
               </Link>
               <Link
                 to="/contact"
@@ -437,5 +270,4 @@ export default function InnovativeMicroSAASServices2025() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

@@ -12,7 +12,7 @@ import { cn } from "@/lib/utils";"
 const getNotificationIcon = (type, className = "h-5 w-5") => {
 
     switch (type) {
-'
+
         case 'message':
             return <MessageCircle className = {
 
@@ -24,7 +24,7 @@ const getNotificationIcon = (type, className = "h-5 w-5") => {
 
 
 
-}/>;'
+}/>;
         case 'quote_request':
             return <Briefcase className = {
 
@@ -36,7 +36,7 @@ const getNotificationIcon = (type, className = "h-5 w-5") => {
 
 
 
-}/>;'
+}/>;
         case 'booking_confirmation':
             return <CheckCircle className = {
 
@@ -48,7 +48,7 @@ const getNotificationIcon = (type, className = "h-5 w-5") => {
 
 
 
-}/>;'
+}/>;
         case 'hire_request':
             return <UserCheck className = {
 
@@ -60,7 +60,7 @@ const getNotificationIcon = (type, className = "h-5 w-5") => {
 
 
 
-}/>;'
+}/>;
         case 'onboarding':
             return <Settings className = {
 
@@ -72,7 +72,7 @@ const getNotificationIcon = (type, className = "h-5 w-5") => {
 
 
 
-}/>;'
+}/>;
         case 'system':
             return <AlertCircle className = {
 
@@ -102,17 +102,17 @@ const getNotificationIcon = (type, className = "h-5 w-5") => {
 const getNotificationTypeBadge = (type) => {
 
     switch (type) {
-'
+
         case 'message':"
-            return <Badge className="bg-blue-500">Message</Badge>;'
+            return <Badge className="bg-blue-500">Message</Badge>;
         case 'quote_request':"
-            return <Badge className="bg-purple-500">Quote Request</Badge>;'
+            return <Badge className="bg-purple-500">Quote Request</Badge>;
         case 'booking_confirmation':"
-            return <Badge className="bg-green-500">Booking</Badge>;'
+            return <Badge className="bg-green-500">Booking</Badge>;
         case 'hire_request':"
-            return <Badge className="bg-zion-purple">Hire Request</Badge>;'
+            return <Badge className="bg-zion-purple">Hire Request</Badge>;
         case 'onboarding':"
-            return <Badge className="bg-zion-cyan">Onboarding</Badge>;'
+            return <Badge className="bg-zion-cyan">Onboarding</Badge>;
         case 'system':"
             return <Badge className="bg-yellow-500">System</Badge>;
         default:"

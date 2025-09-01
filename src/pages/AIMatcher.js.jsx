@@ -1,6 +1,6 @@
-import React, { useState } from 'react';'
-import { Link } from 'react-router-dom';'
-import { motion } from 'framer-motion';'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { Brain, Target, Zap, TrendingUp, Users, Cloud, CheckCircle, ArrowRight } from 'lucide-react';
 const AIMatcher = () => {
     const [currentStep, setCurrentStep] = useState (1) ;
@@ -8,127 +8,104 @@ const AIMatcher = () => {
     const [recommendations, setRecommendations] = useState ([]) ;
     const questions = [
         {
-'
-            id: 'industry','
+
+            id: 'industry',
             question: 'What industry are you in?',
-            options[;'
-                'Technology & Software','
-                'Healthcare & Life Sciences','
-                'Financial Services','
-                'Manufacturing & Industrial','
-                'Retail & E-commerce','
-                'Education & Training','
-                'Government & Public Sector','
-                'Other'
+            options[;
+                'Technology & Software',Healthcare & Life Sciences',Financial Services',Manufacturing & Industrial',Retail & E-commerce',Education & Training',Government & Public Sector',Other'
             ]
         },;
         {
-'
-            id: 'comp_size','
+
+            id: 'comp_size',
             question: 'What is your comp size?',
-            options[;'
-                'Startup (1-50 employees)','
-                'Small Business (51-200 employees)','
-                'Medium Business (201-1000 employees)','
-                'Enterprise (1000+ employees)'
+            options[;
+                'Startup (1-50 employees),Small Business (51-200 employees),Medium Business (201-1000 employees),Enterprise (1000+ employees)
             ]
         },;
         {
-'
-            id: 'ai_goals','
+
+            id: 'ai_goals',
             question: 'What are your primary AI goals?',
-            options[;'
-                'Automate repetitive tasks','
-                'Improve customer experience','
-                'Enhance decision making','
-                'Optimize operations','
-                'Increase revenue','
-                'Reduce costs','
-                'Innovate products/services'
+            options[;
+                'Automate repetitive tasks',Improve customer experience',Enhance decision making',Optimize operations',Increase revenue',Reduce costs',Innovate products/services'
             ]
         },;
         {
-'
-            id: 'budget','
+
+            id: 'budget',
             question: 'What is your budget range for AI implementation?',
-            options[;'
-                'Under $10,000','
-                '$10,000 - $50,000','
-                '$50,000 - $200,000','
-                '$200,000 - $1,000,000','
-                'Over $1,000,000'
+            options[;
+                'Under $10,000',$10,000 - $50,000',$50,000 - $200,000',$200,000 - $1,000,000',Over $1,000,000'
             ]
         },;
         {
-'
-            id: 'timeline','
+
+            id: 'timeline',
             question: 'What is your implementation timeline?',
-            options[;'
-                'Immediate (0-3 months)','
-                'Short-term (3-6 months)','
-                'Medium-term (6-12 months)','
-                'Long-term (1+ years)'
+            options[;
+                'Immediate (0-3 months),Short-term (3-6 months),Medium-term (6-12 months),Long-term (1+ years)
             ]
         }
     ];
     const aiSolutions = [
         {
-'
-            name: 'AI Business Intelligence','
-            description: 'Advanced analytics and business intelligence powered by artificial intelligence','
-            category: 'Analytics & Insights','
-            bestFor['Data-driven decision making', 'Performance tracking', 'Market analysis'],;'
-            features['Predictive Analytics', 'Real-time Dashboards', 'Custom Reports'],;'
+
+            name: 'AI Business Intelligence',
+            description: 'Advanced analytics and business intelligence powered by artificial intelligence',
+            category: 'Analytics & Insights',
+            bestFor['Data-driven decision making',Performance tracking',Market analysis'],;
+            features['Predictive Analytics',Real-time Dashboards',Custom Reports'],;
             href: '/services/ai-business-intelligence',
             icon: TrendingUp
         },
         {
-'
-            name: 'AI Marketing Automation','
-            description: 'Intelligent marketing automation with AI-driven optimization','
-            category: 'Marketing & Sales','
-            bestFor['Customer acquisition', 'Campaign optimization', 'Lead generation'],;'
-            features['Campaign Automation', 'Customer Segmentation', 'ROI Optimization'],;'
+
+            name: 'AI Marketing Automation',
+            description: 'Intelligent marketing automation with AI-driven optimization',
+            category: 'Marketing & Sales',
+            bestFor['Customer acquisition',Campaign optimization',Lead generation'],;
+            features['Campaign Automation',Customer Segmentation',ROI Optimization'],;
             href: '/services/ai-marketing-automation',
             icon: Target
         },
         {
-'
-            name: 'AI Workflow Automation','
-            description: 'Streamline business processes with intelligent automation','
-            category: 'Process Automation','
-            bestFor['Operational efficiency', 'Error reduction', 'Cost savings'],;'
-            features['Process Optimization', 'Workflow Design', 'Integration'],;'
+
+            name: 'AI Workflow Automation',
+            description: 'Streamline business processes with intelligent automation',
+            category: 'Process Automation',
+            bestFor['Operational efficiency',Error reduction',Cost savings'],;
+            features['Process Optimization',Workflow Design',Integration'],;
             href: '/services/ai-workflow-automation',
             icon: Zap
         },
         {
-'
-            name: 'AI-Powered IT Asset Management','
-            description: 'Intelligent IT asset lifecycle management','
-            category: 'IT Management','
-            bestFor['Asset optimization', 'Cost management', 'Compliance'],;'
-            features['Asset Tracking', 'Predictive Maintenance', 'Cost Analytics'],;'
+
+            name: 'AI-Powered IT Asset Management',
+            description: 'Intelligent IT asset lifecycle management',
+            category: 'IT Management',
+            bestFor['Asset optimization',Cost management',Compliance'],;
+            features['Asset Tracking',Predictive Maintenance',Cost Analytics'],;
             href: '/ai-powered-it-asset-management',
             icon: Cloud
         },
         {
-'
-            name: 'Autonomous Business Operations','
-            description: 'AI-driven business process automation platform','
-            category: 'Business Operations','
-            bestFor['End-to-end automation', 'Scalability', 'Innovation'],;'
-            features['Process Automation', 'Decision Support', 'Performance Analytics'],;'
+
+            name: 'Autonomous Business Operations',
+            description: 'AI-driven business process automation platform',
+            category: 'Business Operations',
+            bestFor['End-to-end automation',Scalability',Innovation'],;
+            features['Process Automation',Decision Support',Performance Analytics'],;
             href: '/autonomous-business-operations-platform',
             icon: Brain
         },
         {
-'
-            name: 'AI Customer Service Automation','
-            description: 'Intelligent customer service and support automation','
-            category: 'Customer Experience','
-            bestFor['24/7 support', 'Response time improvement', 'Customer satisfaction'],;'
-            features['Chatbot Integration', 'Ticket Routing', 'Knowledge Management'],;'
+
+            name: 'AI Customer Service Automation',
+            description: 'Intelligent customer service and support automation',
+            category: 'Customer Experience',
+            bestFor['24/7 support',Response time improvement',Customer satisfaction'],;
+            features['Chatbot Integration',Ticket Routing',Knowledge Management'],;
             href: '/services/ai-customer-service-automation',
             icon: Users
         }
@@ -146,21 +123,21 @@ const AIMatcher = () => {
         let filteredSolutions = aiSolutions;
         // Filter based on industry'
         if (industry === 'Healthcare & Life Sciences') {
-'
-            filteredSolutions = filteredSolutions.filter(s => s.name.includes('Healthcare') || s.category === 'Analytics & Insights')}'
+
+            filteredSolutions = filteredSolutions.filter(s => s.name.includes('Healthcare') || s.category === 'Analytics & Insights')}
         else if (industry === 'Financial Services') {
-'
+
             filteredSolutions = filteredSolutions.filter(s => s.name.includes('Financial') || s.category === 'Analytics & Insights')}
         // Filter based on comp size'
-        if (compSize === 'Startup (1-50 employees)') {
-'
+        if (compSize === 'Startup (1-50 employees)) {
+
             filteredSolutions = filteredSolutions.filter(s => s.name.includes('Micro') || s.name.includes('Workflow'))}
         // Filter based on goals'
         if (goals === 'Automate repetitive tasks') {
-'
-            filteredSolutions = filteredSolutions.filter(s => s.category === 'Process Automation')}'
+
+            filteredSolutions = filteredSolutions.filter(s => s.category === 'Process Automation')}
         else if (goals === 'Improve customer experience') {
-'
+
             filteredSolutions = filteredSolutions.filter(s => s.category === 'Customer Experience')}
         setRecommendations(filteredSolutions.slice(0, 3));
         setCurrentStep(questions.length + 1)};
@@ -259,9 +236,9 @@ const AIMatcher = () => {
                 Previous
               </button>
               `
-              <button onClick={handleNext} disabled={!answers[questions[currentStep - 1].id]} className={`px-6 py-2 rounded-lg transition-all duration-200 ${!answers[questions[currentStep - 1].id]'
+              <button onClick={handleNext} disabled={!answers[questions[currentStep - 1].id]} className={`px-6 py-2 rounded-lg transition-all duration-200 ${!answers[questions[currentStep - 1].id]
                 ? 'bg-slate-600 text-slate-400 cursor-not-allowed''`
-                : 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-700 hover:to-cyan-700'}`}>'
+                : 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-700 hover:to-cyan-700'}`}>
                 {currentStep === questions.length ? 'Get Recommendations' : 'Next'}
               </button>
             </div>

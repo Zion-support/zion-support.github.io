@@ -1,5 +1,5 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { CogIcon } from '@heroicons/react/24/outline';
 const $page = () => {
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">"
@@ -300,7 +300,7 @@ export default function Pricing() {
               <CardTitle className="text-3xl text-white mb-4">
                 Ready to Transform Your Business?
               </CardTitle>"
-              <CardDescription className="text-lg text-zion-cyan/80">'
+              <CardDescription className="text-lg text-zion-cyan/80">
                 Join thousands of businesses already using Zion's AI-powered solutions to accelerate growth, 
                 improve efficiency, and stay ahead of the competition.
               </CardDescription>
@@ -366,7 +366,7 @@ export default function Pricing() {
               </CardHeader>
               <CardContent>"
                 <p className="text-zion-cyan/80">
-                  Yes! You can upgrade or downgrade your plan at  time. Changes take effect immediately, '
+                  Yes! You can upgrade or downgrade your plan at  time. Changes take effect immediately,
                   and we'll prorate  billing adjustments.
                 </p>
               </CardContent>

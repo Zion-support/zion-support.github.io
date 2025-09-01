@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousForensics = () => {
   return()
@@ -6,15 +6,15 @@ const AIAutonomousForensics = () => {
       <Helmet>
         <title>AI Autonomous Forensics Platform | Zion Tech Group</title>
         <meta
-          name="description""
+          name="description"
           content="Revolutionary AI autonomous forensics platform that continuously investigates incidents, analyzes evidence, and provides forensic insights with advanced AI capabilities and autonomous operation."
         />
         <meta"
-          name="keywords""
+          name="keywords"
           content="AI forensics, autonomous forensics, incident investigation, evidence analysis, autonomous operations, AI forensics platform"
         />
         <link"
-          rel="canonical""
+          rel="canonical"
           href="https://ziontechgroup.com/ai-autonomous-forensics"
         />
       </Helmet>
@@ -183,14 +183,7 @@ const AIAutonomousForensics = () => {
             </h2>"
             <div className="grid md:grid-cols-4 gap-6">
               {['
-                'Digital Forensics','
-                'Computer Forensics','
-                'Network Forensics','
-                'Mobile Forensics','
-                'Memory Forensics','
-                'File Forensics','
-                'Database Forensics','
-                'Cloud Forensics',
+                'Digital Forensics',Computer Forensics',Network Forensics',Mobile Forensics',Memory Forensics',File Forensics',Database Forensics',Cloud Forensics',
               ].map(type => (
                 <div
                   key={type}"

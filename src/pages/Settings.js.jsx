@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const Settings = () => {
   return()
@@ -6,7 +6,7 @@ const Settings = () => {
       <Helmet>
         <title>Settings - Zion Tech Group</title>
         <meta
-          name="description""
+          name="description"
           content="Configure your Zion Tech Group account settings. Customize notifications, security, and preferences."
         />
       </Helmet>
@@ -22,7 +22,7 @@ const Settings = () => {
           </div>
 "
           <div className="bg-white rounded-lg shadow-lg p-8">"
-            <p className="text-gray-600 text-center">'
+            <p className="text-gray-600 text-center">
               Settings page coming soon. We're building comprehensive account
               configuration options.
             </p>

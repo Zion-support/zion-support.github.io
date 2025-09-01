@@ -1,133 +1,154 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
-import { motion } from 'framer-motion';      downloadUrl: 'https://ziontechgroup.com/resources/cybersecurity-ai-webinar.mp4'
+<<<<<<< HEAD
+import {
+
+  BookOpen,
+  FileText,
+  Video,
+  HelpCircle,
+  Search,
+  Filter,
+  ArrowRight,
+  Star,
+  Sparkles,
+  Brain,
+  Cloud,
+  Shield,
+  Database,
+  Globe,
+  Cpu,
+  Zap,
+  Rocket,
+  Heart,
+  Scale,
+  PenTool,
+  TrendingUp,
+  Lock,
+  Server,
+  Smartphone,
+  Atom,
+  Leaf,
+  Building,
+  Car,
+  Factory,
+  City,
+  CheckCircle,
+  Play,
+  Pause,
+  Stop'
+ } from 'lucide-react';
+
+const Resources: React.FC = (): JSX.Element => {;
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('');
+
+  
+    { id: 'support', name: 'Support', count: 10, icon: HelpCircle };
+  ];
+
+  
+      featured: false,
+      fileSize: '450 MB',
+      fileType: 'MP4',
+      downloadUrl: 'https://ziontechgroup.com/resources/cybersecurity-ai-webinar.mp4'
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     },
     {
 
-      id: 4,'
-      title: 'Blockchain Implementation: Enterprise Case Study','
-      description: 'Real-world implementation of blockchain technology in supply chain management.','
-      category: 'case-studies','
-      type: 'Case Study','
-      author: 'Blockchain Team','
-      date: '2025-01-05','
+      id: 4,
+      title: 'Blockchain Implementation: Enterprise Case Study',
+      description: 'Real-world implementation of blockchain technology in supply chain management.',
+      category: 'case-studies',
+      type: 'Case Study',
+      author: 'Blockchain Team',
+      date: '2025-01-05',
       readTime: '10 min read',
       downloads: 1560,
-      rating: 4.6,'
-      image: '/resources/blockchain-supply-chain.jpg','
-      tags['Blockchain', 'Supply Chain', 'Enterprise', 'Implementation'],;
-      featured: false,'
-      fileSize: '2.1 MB','
-      fileType: 'PDF','
+      rating: 4.6,
+      image: '/resources/blockchain-supply-chain.jpg',
+      tags['Blockchain',Supply Chain',Enterprise',Implementation'],;
+      featured: false,
+      fileSize: '2.1 MB',
+      fileType: 'PDF',
       downloadUrl: 'https://ziontechgroup.com/resources/blockchain-supply-chain.pdf'
     },
     {
 
-      id: 5,'
-      title: 'IoT Edge Computing: Architecture & Best Practices','
-      description: 'Technical deep-dive into IoT edge computing architecture and implementation best practices.','
-      category: 'white-papers','
-      type: 'White Paper','
-      author: 'Dr. Emily Watson','
-      date: '2024-12-28','
+      id: 5,
+      title: 'IoT Edge Computing: Architecture & Best Practices',
+      description: 'Technical deep-dive into IoT edge computing architecture and implementation best practices.',
+      category: 'white-papers',
+      type: 'White Paper',
+      author: 'Dr. Emily Watson',
+      date: '2024-12-28',
       readTime: '20 min read',
       downloads: 2100,
-      rating: 4.8,'
-      image: '/resources/iot-edge-computing.jpg','
-      tags['IoT', 'Edge Computing', 'Architecture', 'Best Practices'],;
-      featured: false,'
-      fileSize: '3.2 MB','
-      fileType: 'PDF','
+      rating: 4.8,
+      image: '/resources/iot-edge-computing.jpg',
+      tags['IoT',Edge Computing',Architecture',Best Practices'],;
+      featured: false,
+      fileSize: '3.2 MB',
+      fileType: 'PDF',
       downloadUrl: 'https://ziontechgroup.com/resources/iot-edge-computing.pdf'
     },
     {
 
-      id: 6,'
-      title: 'AI Consciousness Research: Breakthrough Findings','
-      description: 'Latest research findings on AI consciousness simulation and its implications.','
-      category: 'white-papers','
-      type: 'Research Paper','
-      author: 'Dr. James Kim','
-      date: '2024-12-25','
+      id: 6,
+      title: 'AI Consciousness Research: Breakthrough Findings',
+      description: 'Latest research findings on AI consciousness simulation and its implications.',
+      category: 'white-papers',
+      type: 'Research Paper',
+      author: 'Dr. James Kim',
+      date: '2024-12-25',
       readTime: '25 min read',
       downloads: 3200,
-      rating: 4.9,'
-      image: '/resources/ai-consciousness-research.jpg','
-      tags['AI Consciousness', 'Research', 'Breakthrough', 'Simulation'],;
+      rating: 4.9,
+      image: '/resources/ai-consciousness-research.jpg',
+      tags['AI Consciousness',Research',Breakthrough',Simulation'],;
       featured: false,
       items: ['
-        { title: 'Getting Started FAQ', type: 'FAQ', readTime: '5 min', featured: false },'
-        { title: 'Common Issues & Solutions', type: 'Troubleshooting', readTime: '8 min', featured: false },'
-        { title: 'Support Contact Information', type: 'Contact', readTime: '2 min', featured: false },'
+        { title: 'Getting Started FAQ', type: 'FAQ', readTime: '5 min', featured: false },
+        { title: 'Common Issues & Solutions', type: 'Troubleshooting', readTime: '8 min', featured: false },
+        { title: 'Support Contact Information', type: 'Contact', readTime: '2 min', featured: false },
         { title: 'Training Resources', type: 'Training', readTime: '10 min', featured: false }
       ]
     },
     {
-'
-      id: 'pricing-guide-2025','
+
+      id: 'pricing-guide-2025',
       title: 'Pricing Guide 2025',
-      icon: DollarSign,'
-      description: 'Complete pricing information','
+      icon: DollarSign,
+      description: 'Complete pricing information',
       color: 'from-emerald-500 to-green-500',
       featured: true,
       items: ['
-        { title: 'Service Pricing Overview', type: 'Pricing', readTime: '10 min', featured: true },'
-        { title: 'Custom Quote Calculator', type: 'Tool', readTime: '5 min', featured: true },;'
-        { title: 'Enterprise Pricing', type: 'Pricing', readTime: '8 min', featured: false },;'
+        { title: 'Service Pricing Overview', type: 'Pricing', readTime: '10 min', featured: true },
+        { title: 'Custom Quote Calculator', type: 'Tool', readTime: '5 min', featured: true },;
+        { title: 'Enterprise Pricing', type: 'Pricing', readTime: '8 min', featured: false },;
         { title: 'ROI Analysis Guide', type: 'Analysis', readTime: '12 min', featured: false };
       ]};
   ];
 
-  const featuredResources = [
-    {
-'
-      id: 'api-docs','
-      title: 'API Reference',
-      icon: GitBranch,'
-      description: 'Comprehensive API documentation','
-      color: 'from-purple-500 to-indigo-500','
-      href: '/api-docs'
-    },
-    {
-'
-      id: 'developers','
-      title: 'Developer Portal',
-      icon: GitCommit,'
-      description: 'Developer tools and resources','
-      color: 'from-blue-500 to-cyan-500','
-      href: '/developers'
-    },
-    {
-'
-      id: 'training','
-      title: 'Training & Certification',
-      icon: Award,'
-      description: 'Professional development programs','
-      color: 'from-green-500 to-emerald-500','
-      href: '/training'
-    },
-    {
-'
-      id: 'community',;'
+  
       title: 'Community Forum',;
-      icon: Users,;'
-      description: 'Connect with peers and experts',;'
-      color: 'from-orange-500 to-red-500',;'
-      href: '/community';
-    };
+      icon: Users,;
+      description: 'Connect with peers and experts',;
+      color: 'from-orange-500 to-red-500',;
+      href: '/community'};
   ];
 
-  const contactInfo = {
+  
+  ;
+=======
 '
   phone: '+1 302 464 0950','
     email: 'kleber@ziontechgroup.com',;  ;
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
-  ;'
+  ;
   address: '364 E Main St STE 1008 Middletown DE 19709';
-  ;
-
-};
+  };
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}"
@@ -158,17 +179,17 @@ import { motion } from 'framer-motion';      downloadUrl: 'https://ziontechgroup
             </p>"
             <div className="flex flex-wrap justify-center gap-4">
               <Link"
-                to="/blog""
+                to="/blog"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
               >
-                <HelpCircle size={20} />
+                <HelpCircle size={20}  />
                 Get Help
               </Link>
               <Link"
-                to="/contact""
+                to="/contact"
                 className="px-8 py-4 border border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/10 font-semibold rounded-xl transition-all duration-300"
               >
-                <FileText size={20} />
+                <FileText size={20}  />
                 View Docs
               </Link>
             </div>
@@ -216,7 +237,7 @@ import { motion } from 'framer-motion';      downloadUrl: 'https://ziontechgroup
                   </p>"
                   <div className="flex items-center justify-between">`
                     <span className={`px-2 py-1 text-xs font-medium rounded-full ${
-'
+
                       resource.badge === 'Essential' ? 'bg-blue-500/20 text-blue-400' :'
                       resource.badge === 'Popular' ? 'bg-green-500/20 text-green-400' :'
                       resource.badge === 'Featured' ? 'bg-purple-500/20 text-purple-400' :'
@@ -224,7 +245,7 @@ import { motion } from 'framer-motion';      downloadUrl: 'https://ziontechgroup
                     }`}>
                       {resource.badge}
                     </span>"
-                    <ExternalLink className="w-4 h-4 text-cyan-500 group-hover:text-cyan-400 transition-colors" />                  </div>
+                    <ExternalLink className="w-4 h-4 text-cyan-500 group-hover:text-cyan-400 transition-colors"  />                  </div>
                 </Link>;
               </motion.div>) ) }
           </div>
@@ -255,7 +276,7 @@ import { motion } from 'framer-motion';      downloadUrl: 'https://ziontechgroup
 "
             <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">;
               {featuredResources.map((resource, index)  => {;
-                const ResourceIcon = getResourceIcon(resource.type);
+                
                 return()                  <motion.article
                     key = {resource.id}
                     initial = {
@@ -281,7 +302,7 @@ import { motion } from 'framer-motion';      downloadUrl: 'https://ziontechgroup
                     <div className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20">
                       {/* Resource Image Placeholder */}"
                       <div className="h-48 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 flex items-center justify-center relative">"
-                        <ResourceIcon className="w-16 h-16 text-zion-cyan" />"
+                        <ResourceIcon className="w-16 h-16 text-zion-cyan"  />"
                         <div className="absolute top-4 right-4">"                          <span className="px-3 py-1 bg-zion-cyan text-white text-xs rounded-full font-semibold">
                             Featured
                           </span>
@@ -291,15 +312,15 @@ import { motion } from 'framer-motion';      downloadUrl: 'https://ziontechgroup
                       <div className="p-6">"
                         <div className="flex items-center space-x-4 text-sm text-zion-slate-light mb-4">"
                           <span className="flex items-center">"
-                            <Calendar className="w-4 h-4 mr-2" />
+                            <Calendar className="w-4 h-4 mr-2"  />
                             {formatDate(resource.date)}
                           </span>"
                           <span className="flex items-center">"
-                            <Clock className="w-4 h-4 mr-2" />
+                            <Clock className="w-4 h-4 mr-2"  />
                             {resource.readTime || resource.duration}
                           </span>"
                           <span className="flex items-center">"
-                            <Download className="w-4 h-4 mr-2" />                            {resource.downloads?.toLocaleString() || resource.views?.toLocaleString()}
+                            <Download className="w-4 h-4 mr-2"  />                            {resource.downloads?.toLocaleString() || resource.views?.toLocaleString()}
                           </span>
                         </div>
 "
@@ -410,7 +431,7 @@ import { motion } from 'framer-motion';      downloadUrl: 'https://ziontechgroup
                             {item.readTime || item.duration}
                           </span>
                           {item.featured && ("
-                            <Star className="w-3 h-3 text-yellow-400 ml-1 inline" />                          )}
+                            <Star className="w-3 h-3 text-yellow-400 ml-1 inline"  />                          )}
                         </div>
                       </div>
 "
@@ -430,7 +451,7 @@ import { motion } from 'framer-motion';      downloadUrl: 'https://ziontechgroup
                           >
                             {tag}
                           </span>"
-                          <ExternalLink className="w-3 h-3 text-cyan-500/50 group-hover:text-cyan-400 transition-colors" />                        </div>;
+                          <ExternalLink className="w-3 h-3 text-cyan-500/50 group-hover:text-cyan-400 transition-colors"  />                        </div>;
                       </div>;
                     </div>
                   </div>
@@ -518,7 +539,7 @@ import { motion } from 'framer-motion';      downloadUrl: 'https://ziontechgroup
                   <span className="text-xs text-gray-500">
                     {category.items.length} resources
                   </span>"
-                  <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 transition-colors" />                </div>
+                  <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 transition-colors"  />                </div>
               </motion.div>) ) }
           </div>
         </div>
@@ -595,7 +616,7 @@ import { motion } from 'framer-motion';      downloadUrl: 'https://ziontechgroup
                   className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium text-sm"
                 >
                   Access Resource"
-                  <ExternalLink className="w-4 h-4" />                </Link>
+                  <ExternalLink className="w-4 h-4"  />                </Link>
               </motion.div>
             ))}
           </div>
@@ -626,7 +647,7 @@ import { motion } from 'framer-motion';      downloadUrl: 'https://ziontechgroup
               <h2 className="text-4xl font-bold text-white mb-6">
                 Need More Resources?
               </h2>"
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">'
+              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
                 Can't find what you're looking for? Our team is here to help you access 
                 the right resources and support for your needs.
               </p>
@@ -635,7 +656,7 @@ import { motion } from 'framer-motion';      downloadUrl: 'https://ziontechgroup
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">"
                 <div className="text-center">"
                   <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4">"
-                    <Phone className="w-6 h-6 text-white" />
+                    <Phone className="w-6 h-6 text-white"  />
                   </div>"
                   <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>"`                  <a href={`tel:${contactInfo.phone}`} className="text-cyan-400 hover:text-cyan-300 transition-colors">
                     {contactInfo.phone}
@@ -644,7 +665,7 @@ import { motion } from 'framer-motion';      downloadUrl: 'https://ziontechgroup
                 "
                 <div className="text-center">"
                   <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4">"
-                    <Mail className="w-6 h-6 text-white" />
+                    <Mail className="w-6 h-6 text-white"  />
                   </div>"
                   <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>"`                  <a href={`mailto:${contactInfo.email}`} className="text-cyan-400 hover:text-cyan-300 transition-colors">
                     {contactInfo.email}
@@ -653,7 +674,7 @@ import { motion } from 'framer-motion';      downloadUrl: 'https://ziontechgroup
                 "
                 <div className="text-center">"
                   <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-500 rounded-lg flex items-center justify-center mx-auto mb-4">"
-                    <MapPin className="w-6 h-6 text-white" />
+                    <MapPin className="w-6 h-6 text-white"  />
                   </div>"
                   <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>"                  <p className="text-slate-300 text-sm">
                     {contactInfo.address}
@@ -663,28 +684,27 @@ import { motion } from 'framer-motion';      downloadUrl: 'https://ziontechgroup
               "
               <div className="flex flex-wrap justify-center gap-4">
                 <Link"
-                  to="/contact""
+                  to="/contact"
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
                 >
                   Get Support
                 </Link>
                 <Link"
-                  to="/request-quote""
+                  to="/request-quote"
                   className="px-8 py-4 border border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/10 font-semibold rounded-xl transition-all duration-300"
                 >
                   Request Custom Resources
                 </Link>
                 <Link"
-                  to="/demo""
+                  to="/demo"
                   className="px-8 py-4 border border-purple-400/50 text-purple-400 hover:bg-purple-400/10 font-semibold rounded-xl transition-all duration-300"
                 >"
-                  <Play className="w-5 h-5 inline mr-2" />                  Schedule Demo
+                  <Play className="w-5 h-5 inline mr-2"  />                  Schedule Demo
                 </Link>
               </div>
             </div>;
           </motion.div>;
         </div>;
       </section>;
-    </div>;) ;
-}
+    </div>;) }
 '"`

@@ -1,21 +1,21 @@
-import Link from 'next/link';'
-import { Heart } from 'lucide-react';'
-import { useWishlist } from '@/hooks/useWishlist';'
+import Link from 'next/link';
+import { Heart } from 'lucide-react';
+import { useWishlist } from '@/hooks/useWishlist';
 import { Button } from '@/components/ui/button';
 import {
 
   Tooltip,
   TooltipContent,
-  TooltipProvider,'
-  TooltipTrigger} from '@/components/ui/tooltip';'
-import { useDispatch } from 'react-redux';'
-import { addItem } from '@/store/cartSlice';'
-import Image from 'next/image';'
-import React, { useState } from 'react';'
-import { useAuth } from '@/context/auth/AuthProvider';'
-import { useRouter } from 'next/router';'
-import { useMediaQuery } from 'usehooks-ts';'
-import { useEnqueueSnackbar } from '@/context/SnackbarContext';'
+  TooltipProvider,
+  TooltipTrigger} from '@/components/ui/tooltip';
+import { useDispatch } from 'react-redux';
+import { addItem } from '@/store/cartSlice';
+import Image from 'next/image';
+import React, { useState } from 'react';
+import { useAuth } from '@/context/auth/AuthProvider';
+import { useRouter } from 'next/router';
+import { useMediaQuery } from 'usehooks-ts';
+import { useEnqueueSnackbar } from '@/context/SnackbarContext';
 import { captureException } from '@/utils/sentry';
 export default function ProductCard({ product, onBuy, buyDisabled = false }) {
 
@@ -39,7 +39,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
     );
     return()
       <div
-        className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center""
+        className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center"
         data-testid="product-card-error"
       >"
         <p className="text-destructive text-sm">
@@ -75,16 +75,16 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
         product: product.id,
         imageUrl});
     }
-  };'
+  };
   const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw';
   return()
     <div"
-      className="relative border rounded-lg bg-card p-4""
+      className="relative border rounded-lg bg-card p-4"
       data-testid="product-card"
     >
       <button"
         className="absolute top-2 right-2 p-1 rounded-full bg-background/70"
-        onClick={() => toggle(product.id)}'
+        onClick={() => toggle(product.id)}
         aria-label={active ? 'Remove from favorites' : 'Add to favorites'}
       >
         <Heart"
@@ -138,9 +138,9 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
                     e.stopPropagation();
                     onBuy();
                   }}"
-                  size="sm""
-                  variant="outline""
-                  className="flex-1""
+                  size="sm"
+                  variant="outline"
+                  className="flex-1"
                   data-testid="buy-now-button"
                   disabled={!isAuthenticated || buyDisabled}
                 >

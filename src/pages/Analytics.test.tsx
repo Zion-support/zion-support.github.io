@@ -1,16 +1,11 @@
-import { render, screen } from '@testing - library / react';
-import React from 'react';
-import Analytics from './Analytics';
 
 
 describe ('Analytics', () => {
   it ('renders without crashing', () => {
-    render (<Analytics />) ;
-    expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () ;
-  }) ;
+    render (<Analytics  />) ;
+    expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
 
   it ('displays expected content', () => {
-    render (<Analytics />) ;
+    render (<Analytics  />) ;
     // Add specific test assertions based on component content
-  }) ;
-}) ;
+  }) }) ;

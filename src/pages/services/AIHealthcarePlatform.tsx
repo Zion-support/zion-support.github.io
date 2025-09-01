@@ -1,6 +1,3 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { 
   Heart, 
   Brain, 
@@ -28,63 +25,10 @@ import {
 } from 'lucide-react';
 
 export default function AIHealthcarePlatform() {
-  const features = [
-    { icon: Brain, title: 'AI-Powered Diagnostics', description: 'Advanced machine learning algorithms for accurate disease detection and diagnosis' },
-    { icon: Database, title: 'Patient Data Analytics', description: 'Comprehensive analysis of patient data for personalized treatment plans' },
-    { icon: Shield, title: 'HIPAA Compliance', description: 'Full compliance with healthcare data protection regulations' },
-    { icon: Users, title: 'Clinical Decision Support', description: 'AI-assisted clinical decision making for healthcare professionals' },
-    { icon: Activity, title: 'Real-time Monitoring', description: 'Continuous patient monitoring with predictive alerts' },
-    { icon: TrendingUp, title: 'Predictive Analytics', description: 'Forecast health outcomes and identify risk factors early' }
-  ];
-
-  const benefits = [
-    { icon: CheckCircle, title: 'Improved Accuracy', description: '95%+ accuracy in diagnostic predictions' },
-    { icon: Clock, title: 'Faster Diagnosis', description: 'Reduce diagnosis time by 60-80%' },
-    { icon: DollarSign, title: 'Cost Reduction', description: 'Lower healthcare costs by 25-40%' },
-    { icon: Users, title: 'Better Outcomes', description: 'Improve patient outcomes by 30-50%' },
-    { icon: Shield, title: 'Enhanced Security', description: 'Enterprise-grade security and compliance' },
-    { icon: Zap, title: 'Scalable Solution', description: 'Grows with your healthcare organization' }
-  ];
-
-  const useCases = [
-    { title: 'Early Disease Detection', description: 'Identify diseases at early stages for better treatment outcomes' },
-    { title: 'Personalized Medicine', description: 'Tailor treatment plans based on individual patient data' },
-    { title: 'Population Health Management', description: 'Monitor and manage health across patient populations' },
-    { title: 'Clinical Research', description: 'Accelerate medical research with AI-powered insights' },
-    { title: 'Remote Patient Monitoring', description: 'Monitor patients remotely for continuous care' },
-    { title: 'Drug Discovery', description: 'Accelerate pharmaceutical research and development' }
-  ];
-
-  const pricing = [
-    {
-      plan: 'Starter',
-      price: '$2,500',
-      period: 'monthly',
-      description: 'Perfect for small clinics and practices',
-      features: ['Up to 1,000 patients', 'Basic AI diagnostics', 'Standard support', 'HIPAA compliance'],
-      cta: 'Get Started',
-      popular: false
-    },
-    {
-      plan: 'Professional',
-      price: '$5,000',
-      period: 'monthly',
-      description: 'Ideal for medium-sized healthcare organizations',
-      features: ['Up to 10,000 patients', 'Advanced AI diagnostics', 'Priority support', 'Custom integrations', 'Analytics dashboard'],
-      cta: 'Get Started',
-      popular: true
-    },
-    {
-      plan: 'Enterprise',
-      price: 'Custom',
-      period: 'monthly',
-      description: 'For large healthcare systems and hospitals',
-      features: ['Unlimited patients', 'Full AI suite', '24/7 dedicated support', 'Custom development', 'White-label options'],
-      cta: 'Contact Sales',
-      popular: false
-    }
-  ];
-
+  
+  
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-black text-white">
       {/* Hero Section */}
@@ -97,7 +41,7 @@ export default function AIHealthcarePlatform() {
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center px-4 py-2 bg-red-500/20 border border-red-400/30 rounded-full text-red-400 text-sm font-medium mb-6">
-              <Heart className="w-4 h-4 mr-2" />
+              <Heart className="w-4 h-4 mr-2"  />
               AI Healthcare Platform
             </div>
             <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-red-400 via-pink-500 to-purple-600 bg-clip-text text-transparent mb-6">
@@ -113,7 +57,7 @@ export default function AIHealthcarePlatform() {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-red-500/25"
               >
                 Get Your Custom Quote
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5"  />
               </Link>
               <Link
                 to="/schedule-demo"
@@ -270,7 +214,7 @@ export default function AIHealthcarePlatform() {
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-red-500 to-pink-600 text-white text-sm font-semibold rounded-full">
-                      <Star className="w-4 h-4 mr-2" />
+                      <Star className="w-4 h-4 mr-2"  />
                       Most Popular
                     </span>
                   </div>
@@ -286,7 +230,7 @@ export default function AIHealthcarePlatform() {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-red-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-red-400 mr-3 flex-shrink-0"  />
                       {feature}
                     </li>
                   ))}
@@ -301,7 +245,7 @@ export default function AIHealthcarePlatform() {
                   }`}
                 >
                   {plan.cta}
-                  <ArrowRight className="ml-2 w-4 h-4" />
+                  <ArrowRight className="ml-2 w-4 h-4"  />
                 </Link>
               </motion.div>
             ))}
@@ -331,7 +275,7 @@ export default function AIHealthcarePlatform() {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-red-500/25"
               >
                 Get Started Today
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5"  />
               </Link>
               <Link
                 to="/contact"
@@ -344,5 +288,4 @@ export default function AIHealthcarePlatform() {
         </div>
       </section>
     </div>
-  );
-}
+  )}

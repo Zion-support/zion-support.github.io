@@ -32,15 +32,14 @@ login: email: string, password: string Promise<any>;
   loginWithWeb3: : unknown Promise<any>
 }
 ;
-const AuthContext = createContext<AuthContextType | null>(null);
+
 ;
-export const useAuth = (...args: unknown[]): unknown => {;
-  const context = useContext(AuthContext);
-  if (context = == null) {;'
+export 
+  
+  if (context = == null) {;
     throw new Error('useAuth must be used within an AuthProvider');
 
-  return context;
-};
+  return context};
 ;
 export { AuthContext };
-export type { User, AuthTokens, AuthContextType };}}}}'
+export type { User, AuthTokens, AuthContextType }}}}}

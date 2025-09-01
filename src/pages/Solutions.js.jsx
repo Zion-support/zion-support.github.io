@@ -8,7 +8,7 @@ const Solutions = () => {
       <Helmet>
         <title>Custom Solutions - Zion Tech Group</title>
         <meta
-          name="description""
+          name="description"
           content="Custom technology solutions tailored to your business needs. Zion Tech Group delivers innovative solutions that drive results."
         />
       </Helmet>
@@ -26,7 +26,7 @@ const Solutions = () => {
           </div>
 "
           <div className="bg-white rounded-lg shadow-lg p-8">"
-            <p className="text-gray-600 text-center">'
+            <p className="text-gray-600 text-center">
               Custom solutions page coming soon. We're building comprehensive
               solution offerings.
             </p>

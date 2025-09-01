@@ -38,10 +38,7 @@ export const addToCart = (cart, newItem) => {
                                     if (!item || typeof item !== 'object') return false;
 
                                     const requiredFields = [
-                                      'id',
-                                      'name',
-                                      'price',
-                                      'quantity',
+                                      'id',name',price',quantity',
                                     ];
                                     return requiredFields.every (field =>
                                         itemObject.prototype.hasOwnProperty.call (field) &&

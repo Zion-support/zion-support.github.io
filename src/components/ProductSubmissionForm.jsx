@@ -105,7 +105,7 @@ export function ProductSubmissionForm() {
                 price: parseFloat(values.price),
                 category: values.category,"
                 currency: "USD", // Default currency
-                tags: values.tags ? values.tags.split (',') .map (tag => tag.trim () ) [],;
+                tags: values.tags ? values.tags.split (',) .map (tag => tag.trim () ) [],;
                 author: {
 "
                     name: user.displayName || "Anonymous Creator",
@@ -113,7 +113,7 @@ export function ProductSubmissionForm() {
                 createdAt: new Date().toISOString()};
             const { data: productRecord, error: productError } = await supabase'
                 .from('product_listings')
-                .insert([productData])'
+                .insert([productData])
                 .select('id')
                 .single();
             if (productError) {
@@ -139,7 +139,7 @@ export function ProductSubmissionForm() {
                     .update({
 
                     images[publicUrlData.publicUrl];
-                });'
+                });
                     .eq('id', productRecord.id);
                 if (updateError) {
 
@@ -160,7 +160,7 @@ export function ProductSubmissionForm() {
                     .getPublicUrl(videoPath);
                 const { error: updateError } = await supabase'
                     .from('product_listings')
-                    .update({ video_url: publicUrlData.publicUrl })'
+                    .update({ video_url: publicUrlData.publicUrl })
                     .eq('id', productRecord.id);
                 if (updateError) {
 
@@ -181,7 +181,7 @@ export function ProductSubmissionForm() {
                     .getPublicUrl(modelPath);
                 const { error: updateError } = await supabase'
                     .from('product_listings')
-                    .update({ model_url: publicUrlData.publicUrl })'
+                    .update({ model_url: publicUrlData.publicUrl })
                     .eq('id', productRecord.id);
                 if (updateError) {
 
@@ -234,7 +234,7 @@ export function ProductSubmissionForm() {
                   <FormControl>"
                     <Textarea placeholder="Describe your product in detail..." className="min-h-32" {...field}/>
                   </FormControl>
-                  <FormDescription>'
+                  <FormDescription>
                     Provide a detailed description of what you're offering
                   </FormDescription>
                   <FormMessage />

@@ -1,5 +1,3 @@
-import React from 'react.ts';'
-import { motion } from 'framer-motion.ts';
 import {
 
   Brain,
@@ -21,114 +19,11 @@ import {
   Activity,
   TrendingUp,
   Target,
-  Zap,'
+  Zap,
   Globe} from 'lucide-react.ts';
 
-const InnovativeServicesOverview2025 = () => {
-  const serviceCategories = [
-    {
-'
-      id: 'ai-customer-success','
-      title: 'AI Customer Success Platform',
-      icon: Users,'
-      color: 'from-blue-500 to-purple-600',
-      description:'
-        'Transform customer success with AI-powered insights and automation','
-      price: 'From $1,200/month',
-      features: ['
-        'AI-powered insights','
-        'Predictive analytics','
-        'Automated workflows',
-      ],'
-      path: '/services/ai-customer-success-platform',
-      benefits: ['
-        'Reduce churn by 40%','
-        'Increase CLV by 35%','
-        'Automate 70% of tasks',
-      ]},
-    {
-'
-      id: 'ai-supply-chain','
-      title: 'AI Supply Chain Optimization',
-      icon: Truck,'
-      color: 'from-green-500 to-blue-600','
-      description: 'Revolutionize supply chain operations with AI intelligence','
-      price: 'From $1,800/month','
-      features: ['Demand forecasting', 'Route optimization', 'Risk management'],'
-      path: '/services/ai-supply-chain-optimization',
-      benefits: ['
-        'Reduce costs by 35%','
-        'Improve delivery by 40%','
-        'Minimize disruptions',
-      ]},
-    {
-'
-      id: 'ai-financial-compliance','
-      title: 'AI Financial Compliance Platform',
-      icon: Shield,'
-      color: 'from-purple-500 to-indigo-600',
-      description:'
-        'Automate financial compliance with AI-powered risk assessment','
-      price: 'From $2,200/month',
-      features: ['
-        'AI risk assessment','
-        'Automated monitoring','
-        'Real-time alerts',
-      ],'
-      path: '/services/ai-financial-compliance-platform',
-      benefits: ['
-        'Reduce costs by 60%','
-        'Improve accuracy by 95%','
-        '24/7 monitoring',
-      ]},
-    {
-'
-      id: 'ai-healthcare-analytics','
-      title: 'AI Healthcare Analytics Platform',
-      icon: Heart,'
-      color: 'from-pink-500 to-red-600','
-      description: 'Transform healthcare with AI-powered patient analytics','
-      price: 'From $2,800/month',
-      features: ['
-        'Patient analytics','
-        'Clinical decision support','
-        'HIPAA compliance',
-      ],'
-      path: '/services/ai-healthcare-analytics-platform',
-      benefits: ['
-        'Improve outcomes by 35%','
-        'Reduce readmissions by 40%','
-        'Lower costs by 30%',
-      ]},
-  ];
 
-  const additionalServices = [
-    {
-'
-      name: 'AI-Powered SEO Platform','
-      description: 'Advanced SEO optimization with machine learning','
-      price: '$1,500/month','
-      path: '/services/ai-powered-seo'},
-    {
-'
-      name: 'AI Interview Assessment','
-      description: 'Intelligent candidate evaluation and screening','
-      price: '$800/month','
-      path: '/services/interview-assessment-ai'},
-    {
-'
-      name: 'Zero Trust Network Access','
-      description: 'Enterprise-grade security with zero trust principles','
-      price: '$2,000/month','
-      path: '/services/zero-trust-network-access'},
-    {
-'
-      name: 'AI Workflow Orchestrator','
-      description: 'Intelligent business process automation','
-      price: '$1,800/month','
-      path: '/services/ai-workflow-orchestrator'},
-  ];
-
+  
   return()    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
@@ -140,11 +35,11 @@ const InnovativeServicesOverview2025 = () => {
             className="text-center"
           >"
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm font-medium mb-6">"
-              <Sparkles className="w-4 h-4 mr-2" />              Innovative Services 2025
+              <Sparkles className="w-4 h-4 mr-2"  />              Innovative Services 2025
             </div>"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Cutting-Edge AI Solutions for"
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">'
+              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 {' '}
                 Modern Businesses
               </span>
@@ -160,14 +55,14 @@ const InnovativeServicesOverview2025 = () => {
                 whileTap={{ scale: 0.95 }}"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200"
               >"
-                <ArrowRight className="w-5 h-5 mr-2" />                Explore Services
+                <ArrowRight className="w-5 h-5 mr-2"  />                Explore Services
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200"
               >"
-                <Phone className="w-5 h-5 mr-2" />                Contact Sales
+                <Phone className="w-5 h-5 mr-2"  />                Contact Sales
               </motion.button>
             </div>
           </motion.div>
@@ -229,7 +124,7 @@ const InnovativeServicesOverview2025 = () => {
                         key={featureIndex}"
                         className="flex items-center space-x-2"
                       >"
-                        <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />"                        <span className="text-zion-slate-light">{feature}</span>
+                        <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0"  />"                        <span className="text-zion-slate-light">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -245,7 +140,7 @@ const InnovativeServicesOverview2025 = () => {
                         key={benefitIndex}"
                         className="flex items-center space-x-2"
                       >"
-                        <TrendingUp className="w-4 h-4 text-blue-400 flex-shrink-0" />"                        <span className="text-zion-slate-light">{benefit}</span>
+                        <TrendingUp className="w-4 h-4 text-blue-400 flex-shrink-0"  />"                        <span className="text-zion-slate-light">{benefit}</span>
                       </li>
                     ))}
                   </ul>
@@ -255,7 +150,7 @@ const InnovativeServicesOverview2025 = () => {
                   href={service.path}"
                   className="inline-flex items-center w-full justify-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200"
                 >"
-                  <ArrowRight className="w-5 h-5 mr-2" />                  Learn More
+                  <ArrowRight className="w-5 h-5 mr-2"  />                  Learn More
                 </a>
               </motion.div>) ) }
           </div>
@@ -319,21 +214,21 @@ const InnovativeServicesOverview2025 = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>"
-            <p className="text-xl text-zion-slate-light mb-8">'
+            <p className="text-xl text-zion-slate-light mb-8">
               Let's discuss how our AI services can drive your business forward
             </p>"
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">"
               <div className="flex items-center justify-center space-x-3">"
-                <Phone className="w-6 h-6 text-blue-400" />"                <span className="text-zion-slate-light">+1 302 464 0950</span>
+                <Phone className="w-6 h-6 text-blue-400"  />"                <span className="text-zion-slate-light">+1 302 464 0950</span>
               </div>"
               <div className="flex items-center justify-center space-x-3">"
-                <Mail className="w-6 h-6 text-blue-400" />"
+                <Mail className="w-6 h-6 text-blue-400"  />"
                 <span className="text-zion-slate-light">
                   kleber@ziontechgroup.com
                 </span>
               </div>"
               <div className="flex items-center justify-center space-x-3">"
-                <MapPin className="w-6 h-6 text-blue-400" />"
+                <MapPin className="w-6 h-6 text-blue-400"  />"
                 <span className="text-zion-slate-light">
                   364 E Main St STE 1008
                   <br />
@@ -342,22 +237,21 @@ const InnovativeServicesOverview2025 = () => {
               </div>
             </div>"            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
-                href="https://ziontechgroup.com/contact""
+                href="https://ziontechgroup.com/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200"
               >"
-                <ArrowRight className="w-5 h-5 mr-2" />                Contact Us
+                <ArrowRight className="w-5 h-5 mr-2"  />                Contact Us
               </a>
               <a"
-                href="https://ziontechgroup.com""
+                href="https://ziontechgroup.com"
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200"
               >"
-                <Globe className="w-5 h-5 mr-2" />                Visit Website
+                <Globe className="w-5 h-5 mr-2"  />                Visit Website
               </a>
             </div>
           </motion.div>
         </div>
       </section>
-    </div>) ;
-};
+    </div>) };
 export default InnovativeServicesOverview2025;
 '"`

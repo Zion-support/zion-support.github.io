@@ -5,10 +5,10 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardHeader,'
-  CardTitle} from '../components/ui/card';'
-import { Button } from '../components/ui/button';'
-import { Badge } from '../components/ui/badge';'
+  CardHeader,
+  CardTitle} from '../components/ui/card';
+import { Button } from '../components/ui/button';
+import { Badge } from '../components/ui/badge';
 import { Link } from 'react-router-dom';
 import {
 
@@ -22,30 +22,30 @@ import {
   ArrowRight,
   Zap as Cpu,
   Cloud,
-  Smartphone,'
-  TrendingUp as Activity} from 'lucide-react';'
+  Smartphone,
+  TrendingUp as Activity} from 'lucide-react';
 import { TrustedBySection } from '../components/TrustedBySection.js.jsx';
 const iotUseCases = [
   {
-'
+
     title: 'Smart Manufacturing',
     description:'
       'Monitor production lines, predict maintenance needs, and optimize manufacturing processes',
     icon: <Cpu className="h-6 w-6" />},
   {
-'
+
     title: 'Smart Cities',
     description:'
       'Manage traffic, utilities, and public services with connected IoT infrastructure',"
     icon: <Globe className="h-6 w-6" />},
   {
-'
+
     title: 'Connected Healthcare',
     description:'
       'Remote patient monitoring, medical device management, and healthcare analytics',"
     icon: <Activity className="h-6 w-6" />},
   {
-'
+
     title: 'Smart Agriculture',
     description:'
       'Precision farming, environmental monitoring, and automated irrigation systems',"
@@ -172,14 +172,14 @@ export default function IoTServicesPage() {
                 <CardHeader className="pb-3">"
                   <div className="flex justify-between items-start mb-2">
                     <Badge"
-                      variant="secondary""
+                      variant="secondary"
                       className="bg-zion-purple/20 text-zion-purple"
                     >
                       {service.category}
                     </Badge>
                     {service.badge && (
                       <Badge"
-                        variant="outline""
+                        variant="outline"
                         className="border-zion-cyan text-zion-cyan"
                       >
                         {service.badge}

@@ -22,7 +22,7 @@ export function useWallet(...args: unknown[]): unknown {
       if (!window.ethereum) {
         throw new Error('No EIP-1193 wallet found. Please install MetaMask or a compatible wallet.');
       }
-      const provider = new ethers.providers.Web3Provider(window.ethereum, 'any');
+      const provider = new ethers.providers.Web3Provider(window.ethereum,any');
       await provider.send('eth_requestAccounts', []);
       const signer = provider.getSigner();
       const account = await signer.getAddress();

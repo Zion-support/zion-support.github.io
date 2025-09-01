@@ -1,49 +1,49 @@
-import * as React from 'react';'
-import { RefreshCw, Wifi, Server, ShoppingCart, Users, Wrench, Lightbulb } from 'lucide-react';'
-import { Button } from '@/components/ui/button';'
-import Link from 'next/link';'
+import * as React from 'react';
+import { RefreshCw, Wifi, Server, ShoppingCart, Users, Wrench, Lightbulb } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 const defaultContent = {
 
   products: {
 
-        icon: <ShoppingCart className="w-16 h-16 text-gray-500"/>,'
-        title: 'No Products Available','
+        icon: <ShoppingCart className="w-16 h-16 text-gray-500"/>,
+        title: 'No Products Available',
         description: 'We\'re loading our marketplace products. If this persists, there might be a connection issue. Try refreshing the page or check back soon for exciting new offerings!'},
     categories: {
 "
-        icon: <Lightbulb className="w-16 h-16 text-gray-500"/>,'
-        title: 'No Categories Found','
+        icon: <Lightbulb className="w-16 h-16 text-gray-500"/>,
+        title: 'No Categories Found',
         description: 'Categories are being organized. Please try refreshing the page or come back later.'},
     talent: {
 "
-        icon: <Users className="w-16 h-16 text-gray-500"/>,'
-        title: 'No Talent Profiles','
+        icon: <Users className="w-16 h-16 text-gray-500"/>,
+        title: 'No Talent Profiles',
         description: 'No talent profiles match your criteria. Try adjusting your filters or search terms.'},
     equipment: {
 "
-        icon: <Wrench className="w-16 h-16 text-gray-500"/>,'
-        title: 'No Equipment Available','
+        icon: <Wrench className="w-16 h-16 text-gray-500"/>,
+        title: 'No Equipment Available',
         description: 'Equipment listings are being updated. Please check back soon for the latest hardware offerings.'},
     search: {
 "
-        icon: <ShoppingCart className="w-16 h-16 text-gray-500"/>,'
-        title: 'No Results Found','
+        icon: <ShoppingCart className="w-16 h-16 text-gray-500"/>,
+        title: 'No Results Found',
         description: 'Try adjusting your search terms or browse our categories to discover what we have available.'},
     error: {
 "
-        icon: <Server className="w-16 h-16 text-red-400"/>,'
-        title: 'Unable to Load Data','
+        icon: <Server className="w-16 h-16 text-red-400"/>,
+        title: 'Unable to Load Data',
         description: 'We\'re experiencing technical difficulties. Our team has been notified and is working on a fix.'},
     network: {
 "
-        icon: <Wifi className="w-16 h-16 text-orange-400"/>,'
-        title: 'Connection Issue','
+        icon: <Wifi className="w-16 h-16 text-orange-400"/>,
+        title: 'Connection Issue',
         description: 'Please check your internet connection and try again. If the problem persists, our servers might be temporarily unavailable.'},
     loading: {
 "
-        icon: <RefreshCw className="w-16 h-16 text-blue-400 animate-spin"/>,'
-        title: 'Loading...','
+        icon: <RefreshCw className="w-16 h-16 text-blue-400 animate-spin"/>,
+        title: 'Loading...',
         description: 'We\'re fetching the latest data for you. This should only take a moment.'}};
 export function EmptyState({ type, title, description, action, icon }) {
 
@@ -73,10 +73,10 @@ export function EmptyState({ type, title, description, action, icon }) {
         </div>)}
       '"
       {type === 'network' && (<div className="mt-4 text-sm text-gray-500 dark:text-gray-400">
-          <p>'
+          <p>
             {t('general.check_status_page')}"
             {" "}"
-            <Link href="https://status.zion.ai" className="underline">'
+            <Link href="https://status.zion.ai" className="underline">
               {t('general.status_page')}
             </Link>
             .
@@ -91,7 +91,7 @@ export function ProductsEmptyState({ onRetry, onAddProduct, isAuthenticated = fa
 
     const action = onAddProduct;
         ? {
-'
+
             label: isAuthenticated ? 'Add Product' : 'Login to Add Product',
             onClick: onAddProduct
         }
@@ -105,7 +105,7 @@ export function ProductsEmptyState({ onRetry, onAddProduct, isAuthenticated = fa
 export function CategoriesEmptyState({ onRetry }) {
 "
     return (<EmptyState type="categories" action = {
-'
+
   onRetry ? { label: 'Refresh Categories',
   onClick: onRetry 
 
@@ -113,7 +113,7 @@ export function CategoriesEmptyState({ onRetry }) {
 export function TalentEmptyState({ onRetry }) {
 "
     return (<EmptyState type="talent" action = {
-'
+
   onRetry ? { label: 'Reset Filters',
   onClick: onRetry 
 
@@ -121,7 +121,7 @@ export function TalentEmptyState({ onRetry }) {
 export function EquipmentEmptyState({ onRetry }) {
 "
     return (<EmptyState type="equipment" action = {
-'
+
   onRetry ? { label: 'Refresh Listings',
   onClick: onRetry 
 
@@ -129,7 +129,7 @@ export function EquipmentEmptyState({ onRetry }) {
 export function ServerErrorState({ onRetry }) {
 "
     return (<EmptyState type="error" action = {
-'
+
   onRetry ? { label: 'Retry',
   onClick: onRetry 
 

@@ -1,6 +1,3 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
 import { 
   Truck, 
   Route, 
@@ -43,176 +40,19 @@ import {
   ShoppingCart,
   Snowflake
 } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 const AILogisticsOptimization: React.FC = () => {
-  const features = [
-    {
-      title: 'AI Route Optimization',
-      description: 'Advanced algorithms optimize delivery routes in real-time, reducing fuel costs and delivery times by up to 30%',
-      icon: Route,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      title: 'Predictive Demand Forecasting',
-      description: 'Machine learning models predict demand patterns, enabling proactive inventory management and resource allocation',
-      icon: Brain,
-      color: 'from-purple-500 to-indigo-500'
-    },
-    {
-      title: 'Real-time Fleet Management',
-      description: 'Live tracking and monitoring of vehicles with AI-powered performance analytics and maintenance predictions',
-      icon: Truck,
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      title: 'Smart Warehouse Automation',
-      description: 'AI-driven warehouse optimization with automated picking, packing, and inventory management systems',
-      icon: Package,
-      color: 'from-orange-500 to-red-500'
-    },
-    {
-      title: 'Supply Chain Intelligence',
-      description: 'End-to-end visibility across the supply chain with AI-powered risk assessment and disruption prediction',
-      icon: Network,
-      color: 'from-indigo-500 to-purple-500'
-    },
-    {
-      title: 'Cost Optimization Engine',
-      description: 'Intelligent cost analysis and optimization recommendations for maximum efficiency and profitability',
-      icon: Calculator,
-      color: 'from-red-500 to-pink-500'
-    }
-  ];
-
-  const pricingPlans = [
-    {
-      name: 'Starter',
-      price: 299,
-      period: 'month',
-      description: 'Perfect for small logistics operations and startups',
-      features: [
-        'Up to 50 vehicles tracked',
-        'Basic route optimization',
-        'Real-time GPS tracking',
-        'Email support',
-        'Mobile app access',
-        'Basic reporting dashboard',
-        'Up to 1,000 shipments/month'
-      ],
-      color: 'from-blue-500 to-cyan-500',
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: 799,
-      period: 'month',
-      description: 'Ideal for growing logistics companies and mid-size operations',
-      features: [
-        'Up to 200 vehicles tracked',
-        'Advanced AI route optimization',
-        'Predictive analytics',
-        'Priority support',
-        'API access',
-        'Advanced reporting suite',
-        'Custom integrations',
-        'Up to 10,000 shipments/month',
-        'Real-time alerts',
-        'Performance analytics'
-      ],
-      color: 'from-purple-500 to-pink-500',
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: 1999,
-      period: 'month',
-      description: 'Comprehensive solution for large logistics corporations and global operations',
-      features: [
-        'Unlimited vehicles tracked',
-        'Custom AI model training',
-        'White-label solutions',
-        'Dedicated account manager',
-        'Custom integrations',
-        'Advanced analytics platform',
-        'Multi-location support',
-        'Unlimited shipments',
-        'Onsite training',
-        'Custom SLA agreements'
-      ],
-      color: 'from-amber-500 to-orange-500',
-      popular: false
-    }
-  ];
-
-  const useCases = [
-    {
-      title: 'E-commerce Logistics',
-      description: 'Optimize last-mile delivery and warehouse operations for online retail businesses',
-      icon: Package,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      title: 'Manufacturing Supply Chain',
-      description: 'Streamline production logistics and optimize supplier networks for manufacturing companies',
-      icon: Building,
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      title: 'Retail Distribution',
-      description: 'Efficient store replenishment and multi-location inventory management',
-      icon: ShoppingCart,
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      title: 'Cold Chain Logistics',
-      description: 'Specialized temperature-controlled logistics for pharmaceuticals and food industries',
-      icon: Snowflake,
-      color: 'from-indigo-500 to-purple-500'
-    }
-  ];
-
-  const benefits = [
-    {
-      title: '30% Cost Reduction',
-      description: 'Significant savings on fuel, maintenance, and operational costs',
-      icon: DollarSign,
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      title: '50% Faster Delivery',
-      description: 'Optimized routes and real-time adjustments for faster service',
-      icon: Zap,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      title: '99.9% Uptime',
-      description: 'Reliable platform with enterprise-grade infrastructure and support',
-      icon: Shield,
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      title: '24/7 Monitoring',
-      description: 'Round-the-clock visibility and control over your logistics operations',
-      icon: Monitor,
-      color: 'from-orange-500 to-red-500'
-    }
-  ];
-
-  const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  };
-
+  
+  
+  
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      <SEO 
-        title="AI Logistics Optimization Platform | Zion Tech Group"
+      <SEO title="AI Logistics Optimization Platform | Zion Tech Group"
         description="Revolutionize your logistics operations with AI-powered route optimization, predictive analytics, and real-time fleet management. Reduce costs by 30% and improve delivery efficiency."
         keywords="AI logistics optimization, route optimization, fleet management, supply chain AI, logistics automation, predictive analytics"
-      />
+       />
       
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">
@@ -407,7 +247,7 @@ const AILogisticsOptimization: React.FC = () => {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"  />
                       <span className="text-gray-700">{feature}</span>
                     </li>
                   ))}
@@ -467,17 +307,17 @@ const AILogisticsOptimization: React.FC = () => {
           <div className="bg-white rounded-xl p-8 shadow-lg">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
-                <Phone className="w-8 h-8 text-blue-600 mx-auto mb-4" />
+                <Phone className="w-8 h-8 text-blue-600 mx-auto mb-4"  />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Phone</h3>
                 <p className="text-gray-600">{contactInfo.phone}</p>
               </div>
               <div className="text-center">
-                <Mail className="w-8 h-8 text-blue-600 mx-auto mb-4" />
+                <Mail className="w-8 h-8 text-blue-600 mx-auto mb-4"  />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Email</h3>
                 <p className="text-gray-600">{contactInfo.email}</p>
               </div>
               <div className="text-center">
-                <MapPin className="w-8 h-8 text-blue-600 mx-auto mb-4" />
+                <MapPin className="w-8 h-8 text-blue-600 mx-auto mb-4"  />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Address</h3>
                 <p className="text-gray-600">{contactInfo.address}</p>
               </div>
@@ -486,7 +326,6 @@ const AILogisticsOptimization: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default AILogisticsOptimization;

@@ -17,19 +17,19 @@ export const loginUser = createAsyncThunk('
               user: {
 
                 id: 1,
-                email: credentials.email,'
-                name: 'John Doe','
-                role: 'user'},'
+                email: credentials.email,
+                name: 'John Doe',
+                role: 'user'},
               token: 'mock-jwt-token'});
           } else {
-'
+
             reject(new Error('Invalid credentials'));
           }
         }, 1000);
       });
 
       // Store token in localStorage'
-      localStorage.setItem('token', response.token);'
+      localStorage.setItem('token', response.token);
       localStorage.setItem('user', JSON.stringify(response.user));
 
       return response;
@@ -57,18 +57,18 @@ export const signupUser = createAsyncThunk('
 
                 id: Date.now(),
                 email: userData.email,
-                name: userData.name,'
-                role: 'user'},'
+                name: userData.name,
+                role: 'user'},
               token: 'mock-jwt-token'});
           } else {
-'
+
             reject(new Error('Invalid user data'));
           }
         }, 1000);
       });
 
       // Store token in localStorage'
-      localStorage.setItem('token', response.token);'
+      localStorage.setItem('token', response.token);
       localStorage.setItem('user', JSON.stringify(response.user));
 
       return response;
@@ -91,7 +91,7 @@ export const logoutUser = createAsyncThunk('
       });
 
       // Clear localStorage'
-      localStorage.removeItem('token');'
+      localStorage.removeItem('token');
       localStorage.removeItem('user');
 
       return null;
@@ -107,8 +107,8 @@ export const checkAuthStatus = createAsyncThunk('
   async (_, { rejectWithValue }) => {
 
     try {
-'
-      const token = localStorage.getItem('token');'
+
+      const token = localStorage.getItem('token');
       const user = localStorage.getItem('user');
 
       if (token && user) {
@@ -118,7 +118,7 @@ export const checkAuthStatus = createAsyncThunk('
           user: JSON.parse(user),
           token: token};
       } else {
-'
+
         throw new Error('No auth data found');
       }
     } catch (error) {
@@ -136,7 +136,7 @@ const initialState = {
   error: null};
 
 const authSlice = createSlice({
-'
+
   name: 'auth',
   initialState,
   reducers: {
@@ -251,4 +251,3 @@ export const selectIsLoading = state => state.auth.isLoading;
 export const selectError = state => state.auth.error;
 
 export default authSlice.reducer;
-'

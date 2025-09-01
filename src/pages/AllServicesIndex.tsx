@@ -1,15 +1,167 @@
-import React, { useState } from 'react.ts';'
-import { SEO   } from '../components/SEO';'
-import { motion   } from 'framer-motion.ts';'
-import { Link   } from 'react-router-dom.ts';
+<<<<<<< HEAD
+
+const AllServicesIndex: React.FC = (): JSX.Element => {;
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+
+  
+      benefits['Reduce security incidents by 60%',Faster code review process']},;
+    {
+
+      id: 'ai-customer-experience-analytics',
+      title: 'AI Customer Experience Analytics',
+      description: 'Transform customer insights into actionable intelligence',
+      category: 'AI-Powered Micro SAAS',
+      pricing: '$299 - $1,999/month',
+      url: '/services/ai-customer-experience-analytics',
+      icon: '📊',
+      features['Real-time sentiment analysis',Customer journey tracking',Predictive analytics'],;
+      benefits['Increase satisfaction by 35%',Reduce churn by 25%']},;
+    {
+
+      id: 'ai-devops-automation-platform',
+      title: 'AI DevOps Automation Platform',
+      description: 'Revolutionize DevOps workflow with AI-powered automation',
+      category: 'AI-Powered Micro SAAS',
+      pricing: '$199 - $1,499/month',
+      url: '/services/ai-devops-automation-platform',
+      icon: '🚀',
+      features['AI pipeline optimization',Intelligent deployment',GitOps workflows'],;
+      benefits['Reduce deployment time by 80%',Decrease failures by 90%']},;
+    {
+
+      id: 'ai-iot-edge-computing-platform',
+      title: 'AI IoT Edge Computing Platform',
+      description: 'Revolutionize IoT with AI-powered edge computing',
+      category: 'AI-Powered Micro SAAS',
+      pricing: '$299 - $2,499/month',
+      url: '/services/ai-iot-edge-computing-platform',
+      icon: '🌐',
+      features['Sub-millisecond processing',Edge AI intelligence',Distributed computing'],;
+      benefits['Reduce latency by 90%',Lower bandwidth costs by 70%']},;
+    
+    // Cloud & Infrastructure Services
+    {
+
+      id: 'cloud-devops',
+      title: 'Cloud DevOps',
+      description: 'Streamlined cloud deployment and management',
+      category: 'Cloud & Infrastructure',
+      pricing: 'Custom pricing',
+      url: '/services/cloud-devops',
+      icon: '☁️',
+      features['Multi-cloud deployment',Infrastructure as Code',Automated scaling'],;
+      benefits['Faster deployments',Cost optimization']},;
+    {
+
+      id: 'it-infrastructure',
+      title: 'IT Infrastructure',
+      description: 'Enterprise-grade infrastructure solutions',
+      category: 'Cloud & Infrastructure',
+      pricing: 'Custom pricing',
+      url: '/services/it-infrastructure',
+      icon: '🏗️',
+      features['Network design',Server management',Storage solutions'],;
+      benefits['Reliable infrastructure',Scalable solutions']},;
+    {
+
+      id: 'digital-twin',
+      title: 'Digital Twin',
+      description: 'Virtual representation of physical systems',
+      category: 'Cloud & Infrastructure',
+      pricing: 'Custom pricing',
+      url: '/services/digital-twin',
+      icon: '🔄',
+      features['Real-time monitoring',Predictive maintenance',Simulation modeling'],;
+      benefits['Improved efficiency',Reduced downtime']},;
+    
+    // Data & Analytics Services
+    {
+
+      id: 'data-analytics',
+      title: 'Data Analytics',
+      description: 'Comprehensive data analysis and visualization',
+      category: 'Data & Analytics',
+      pricing: 'Custom pricing',
+      url: '/services/data-analytics',
+      icon: '📈',
+      features['Data visualization',Statistical analysis',Trend identification'],;
+      benefits['Better insights',Data-driven decisions']},;
+    {
+
+      id: 'ai-business-intelligence',
+      title: 'AI Business Intelligence',
+      description: 'AI-powered business insights and reporting',
+      category: 'Data & Analytics',
+      pricing: 'Custom pricing',
+      url: '/services/ai-business-intelligence',
+      icon: '🧠',
+      features['Predictive analytics',Natural language queries',Automated insights'],;
+      benefits['Faster insights',Predictive capabilities']},;
+    {
+
+      id: 'iot-edge',
+      title: 'IoT Edge Computing',
+      description: 'Real-time edge data processing',
+      category: 'Data & Analytics',
+      pricing: 'Custom pricing',
+      url: '/services/iot-edge',
+      icon: '⚡',
+      features['Edge processing',Real-time analytics',Data filtering'],;
+      benefits['Low latency',Real-time decisions']},;
+    
+    // Security & Compliance Services
+    {
+
+      id: 'zero-trust-network-architecture',
+      title: 'Zero Trust Network Architecture',
+      description: 'Modern security framework for enterprise',
+      category: 'Security & Compliance',
+      pricing: 'Custom pricing',
+      url: '/services/zero-trust-network-architecture',
+      icon: '🛡️',
+      features['Identity verification',Micro-segmentation',Continuous monitoring'],;
+      benefits['Enhanced security',Compliance ready']},;
+    {
+
+      id: 'ai-cybersecurity-suite',
+      title: 'AI Cybersecurity Suite',
+      description: 'Comprehensive security solutions',
+      category: 'Security & Compliance',
+      pricing: 'Custom pricing',
+      url: '/services/ai-cybersecurity-suite',
+      icon: '🔐',
+      features['Threat detection',Vulnerability assessment',Incident response'],;
+      benefits['Proactive security',Faster response']},;
+    {
+
+      id: 'ai-compliance-assistant',
+      title: 'AI Compliance Assistant',
+      description: 'AI-powered compliance management',
+      category: 'Security & Compliance',
+      pricing: 'Custom pricing',
+      url: '/services/ai-compliance-assistant',
+      icon: '📋',
+      features['Regulatory monitoring',Compliance reporting',Risk assessment'],;
+      benefits['Automated compliance',Reduced risk']};
+  ];
+
+  
+  
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
+    
+    return matchesSearch && matchesCategory}) ;
+
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   return()
     <>
-      <SEO
-        title = "All Services Index | Zion Tech Group - Complete Service Directory""
-        description="Browse our complete portfolio of AI-powered micro SAAS, cloud infrastructure, data analytics, and security services. Find the perfect solution for your business needs.""
-        keywords="Zion Tech Group services, AI services, cloud services, data analytics, cybersecurity, micro SAAS, business solutions, service directory""
+      <SEO title = "All Services Index | Zion Tech Group - Complete Service Directory"
+        description="Browse our complete portfolio of AI-powered micro SAAS, cloud infrastructure, data analytics, and security services. Find the perfect solution for your business needs."
+        keywords="Zion Tech Group services, AI services, cloud services, data analytics, cybersecurity, micro SAAS, business solutions, service directory"
         canonical="https://ziontechgroup.com/all-services"
-      />
+       />
       "      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}"
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
@@ -42,7 +194,7 @@ import { Link   } from 'react-router-dom.ts';
                 <div className="flex flex-col lg:flex-row gap-4">"
                   <div className="flex-1">
                     <input"
-                      type="text""
+                      type="text"
                       placeholder="Search services..."
                       value={searchTerm}
                       onChange={(e) => setSearchTerm(e.target.value)}"
@@ -56,7 +208,7 @@ import { Link   } from 'react-router-dom.ts';
                       className="w-full px-6 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     >
                       {categories.map(category   => ("
-                        <option key={category} value={category} className="bg-gray-800 text-white">'
+                        <option key={category} value={category} className="bg-gray-800 text-white">
                           {category === 'all' ? 'All Categories' : category}
                         </option>) ) }
                     </select>
@@ -79,7 +231,7 @@ import { Link   } from 'react-router-dom.ts';
                           ? 'bg-blue-600 text-white''
                           : 'bg-white/10 text-gray-300 hover:bg-white/20'`
                       }`}
-                    >'
+                    >
                       {category === 'all' ? 'All' : category}
                     </button>) ) }
                 </div>
@@ -103,8 +255,8 @@ import { Link   } from 'react-router-dom.ts';
                   Try adjusting your search terms or category filter
                 </p>
                 <button;
-                  onClick={() => {;'
-                    setSearchTerm('');'
+                  onClick={() => {;
+                    setSearchTerm('');
                     setSelectedCategory('all')}}"
                   className = "bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300"
                 >
@@ -186,7 +338,7 @@ import { Link   } from 'react-router-dom.ts';
                         View Service
                       </Link>
                       <Link"
-                        to="/contact""
+                        to="/contact"
                         className="flex-1 border-2 border-white text-white font-semibold py-3 px-6 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 text-center"
                       >
                         Contact Sales

@@ -1,5 +1,52 @@
-import React, { useState } from 'react';'
-import { motion } from 'framer-motion';        "Gap analysis"
+<<<<<<< HEAD
+import {
+
+  Rocket,
+  Zap,
+  Shield,
+  Users,
+  TrendingUp,
+  Globe,
+  CheckCircle,
+  Star,
+  ArrowRight,
+  Cpu,
+  Database,
+  Cloud,
+  Target,
+  Award,
+  Lightbulb,
+  Crown,
+  Sparkles,
+  ChevronRight,
+  Clock,
+  Check,
+  BarChart3,
+  Lock,
+  Eye,
+  Heart'
+ } from 'lucide-react'};
+      description: "Enterprise-grade security and regulatory compliance for digital transformation initiatives.",;
+      icon: Shield,;"
+      features: ["Security Architecture", "Compliance Frameworks", "Risk Management", "Security Audits"],;"
+      color: "from-yellow-500 to-orange-500"};
+  ];
+
+  const transformationPhases = [
+    {
+"
+      phase: "01","
+      title: "Discovery & Assessment","
+      description: "Evaluate current state, identify opportunities, and assess digital maturity","
+      duration: "2-4 weeks",
+      activities[;"
+        "Current state analysis","
+        "Digital maturity assessment","
+        "Stakeholder interviews","
+        "Technology audit","
+        "Gap analysis"
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ]
     },;
     {
@@ -86,10 +133,10 @@ import { motion } from 'framer-motion';        "Gap analysis"
         <div className="container mx-auto px-4 text-center relative z-10">"
           <div className="flex justify-center mb-8">"
             <div className="w-24 h-24 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center">"
-              <Rocket className="w-12 h-12 text-white" />            </div>
+              <Rocket className="w-12 h-12 text-white"  />            </div>
           </div>
 "
-          <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">'
+          <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
             Digital{' '}"
             <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
               Transformation
@@ -203,7 +250,7 @@ import { motion } from 'framer-motion';        "Gap analysis"
                 <div className="space-y-3">
                   {service.features.map((feature, featureIndex) => ("
                     <div key={featureIndex} className="flex items-center gap-3">"
-                      <Check className="w-4 h-4 text-zion-cyan flex-shrink-0" />"                      <span className="text-zion-slate-light text-sm">{feature}</span>
+                      <Check className="w-4 h-4 text-zion-cyan flex-shrink-0"  />"                      <span className="text-zion-slate-light text-sm">{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -254,7 +301,7 @@ import { motion } from 'framer-motion';        "Gap analysis"
 
 }}`
                   className={`relative bg-zion-blue-dark/50 backdrop-blur-sm border rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer ${
-'
+
                     selectedPhase === index ? 'border-zion-cyan' : 'border-zion-cyan/20'`
                   }`}
                   onClick={ () => setSelectedPhase (index) }
@@ -271,7 +318,7 @@ import { motion } from 'framer-motion';        "Gap analysis"
                     <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">{phase.description}</p>
 "
                     <div className="flex items-center gap-2 text-zion-cyan text-sm mb-4">"
-                      <Clock className="w-4 h-4" />                      {phase.duration}
+                      <Clock className="w-4 h-4"  />                      {phase.duration}
                     </div>
 
                     {/* Activities */}
@@ -284,7 +331,7 @@ import { motion } from 'framer-motion';        "Gap analysis"
 }}
                         animate = {
 
-  { opacity: 1,'
+  { opacity: 1,
   height: 'auto' 
 
 }}
@@ -294,7 +341,7 @@ import { motion } from 'framer-motion';        "Gap analysis"
                         <div className="text-sm font-medium text-zion-slate-light mb-2">Key Activities: any</div>
                         {phase.activities.map((activity, activityIndex)  => ("
                           <div key={activityIndex} className="flex items-center gap-2 text-zion-slate-light text-xs">"
-                            <Check className="w-3 h-3 text-zion-cyan" />                            {activity}
+                            <Check className="w-3 h-3 text-zion-cyan"  />                            {activity}
                           </div>) ) }
                       </motion.div>) }
                   </div>
@@ -347,7 +394,7 @@ import { motion } from 'framer-motion';        "Gap analysis"
 "
                 <div className="flex items-center gap-1 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => ("
-                    <Star key={i} className="w-5 h-5 text-zion-cyan fill-current" />                  ))}
+                    <Star key={i} className="w-5 h-5 text-zion-cyan fill-current"  />                  ))}
                 </div>
 "
                 <p className="text-zion-slate-light mb-6 leading-relaxed">"{testimonial.content}"</p>
@@ -367,7 +414,7 @@ import { motion } from 'framer-motion';        "Gap analysis"
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>"
-          <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">'
+          <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
             Let's discuss how digital transformation can revolutionize your operations,
             enhance customer experiences, and drive sustainable growth.
           </p>
@@ -382,7 +429,6 @@ import { motion } from 'framer-motion';        "Gap analysis"
           </div>;
         </div>;
       </section>;
-    </div>;) ;
-};
+    </div>;) };
 
-export default DigitalTransformation;}}}}'"`
+export default DigitalTransformation}}}}'"`

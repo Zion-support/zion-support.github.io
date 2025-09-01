@@ -1,5 +1,5 @@
-import React from 'react';'
-import { cuttingEdgeInnovations2025 } from '../data/2025-cutting-edge-innovations';'
+import React from 'react';
+import { cuttingEdgeInnovations2025 } from '../data/2025-cutting-edge-innovations';
 import { specializedIndustrySolutions2025 } from '../data/2025-specialized-industry-solutions';
 const InnovationServicesMarketing = () => {
   const allServices = [
@@ -13,25 +13,25 @@ const InnovationServicesMarketing = () => {
     new Set(specializedIndustrySolutions2025.map(service => service.industry))
   );
   const formatPrice = (price, model) => {
-'
+
     if (model === 'percentage of revenue') {
 
-      return `${price}% of revenue`;'
+      return `${price}% of revenue`;
     } else if (model === 'per device per day') {
 `
-      return `$${price.toFixed(2)}/device/day`;'
+      return `$${price.toFixed(2)}/device/day`;
     } else if (model === 'per kWh managed') {
 `
-      return `$${price.toFixed(3)}/kWh`;'
+      return `$${price.toFixed(3)}/kWh`;
     } else if (model === 'per acre') {
 `
-      return `$${price.toFixed(2)}/acre/month`;'
+      return `$${price.toFixed(2)}/acre/month`;
     } else if (model === 'per inference') {
 `
-      return `$${price.toFixed(3)}/inference`;'
+      return `$${price.toFixed(3)}/inference`;
     } else if (model === 'monthly per student') {
 `
-      return `$${price}/student/month`;'
+      return `$${price}/student/month`;
     } else if (model === 'monthly per attorney') {
 `
       return `$${price}/attorney/month`;
@@ -84,13 +84,13 @@ const InnovationServicesMarketing = () => {
               <div className="text-center">"
                 <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg"
-                    className="w-8 h-8 text-white""
-                    fill="none""
-                    stroke="currentColor""
+                    className="w-8 h-8 text-white"
+                    fill="none"
+                    stroke="currentColor"
                     viewBox="0 0 24 24"
                   >
                     <path"
-                      strokeLinecap="round""
+                      strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth={2}"
                       d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
@@ -104,13 +104,13 @@ const InnovationServicesMarketing = () => {
               <div className="text-center">"
                 <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg"
-                    className="w-8 h-8 text-white""
-                    fill="none""
-                    stroke="currentColor""
+                    className="w-8 h-8 text-white"
+                    fill="none"
+                    stroke="currentColor"
                     viewBox="0 0 24 24"
                   >
                     <path"
-                      strokeLinecap="round""
+                      strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth={2}"
                       d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
@@ -126,19 +126,19 @@ const InnovationServicesMarketing = () => {
               <div className="text-center">"
                 <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg"
-                    className="w-8 h-8 text-white""
-                    fill="none""
-                    stroke="currentColor""
+                    className="w-8 h-8 text-white"
+                    fill="none"
+                    stroke="currentColor"
                     viewBox="0 0 24 24"
                   >
                     <path"
-                      strokeLinecap="round""
+                      strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth={2}"
                       d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
                     />
                     <path"
-                      strokeLinecap="round""
+                      strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth={2}"
                       d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
@@ -196,13 +196,13 @@ const InnovationServicesMarketing = () => {
                         className="flex items-center text-gray-300 text-sm"
                       >
                         <svg"
-                          className="w-4 h-4 text-green-400 mr-2 flex-shrink-0""
-                          fill="none""
-                          stroke="currentColor""
+                          className="w-4 h-4 text-green-400 mr-2 flex-shrink-0"
+                          fill="none"
+                          stroke="currentColor"
                           viewBox="0 0 24 24"
                         >
                           <path"
-                            strokeLinecap="round""
+                            strokeLinecap="round"
                             strokeLinejoin="round"
                             strokeWidth={2}"
                             d="M5 13l4 4L19 7"
@@ -260,13 +260,13 @@ const InnovationServicesMarketing = () => {
                         className="flex items-center text-gray-300 text-sm"
                       >
                         <svg"
-                          className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0""
-                          fill="none""
-                          stroke="currentColor""
+                          className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0"
+                          fill="none"
+                          stroke="currentColor"
                           viewBox="0 0 24 24"
                         >
                           <path"
-                            strokeLinecap="round""
+                            strokeLinecap="round"
                             strokeLinejoin="round"
                             strokeWidth={2}"
                             d="M13 10V3L4 14h7v7l9-11h-7z"
@@ -300,7 +300,7 @@ const InnovationServicesMarketing = () => {
                     </h3>"
                     <p className="text-blue-400 font-medium">
                       {service.category}
-                    </p>'
+                    </p>
                     {'industry' in service && ("
                       <p className="text-green-400 text-sm">
                         {service.industry}
@@ -333,13 +333,13 @@ const InnovationServicesMarketing = () => {
                           className="flex items-start text-gray-300 text-sm"
                         >
                           <svg"
-                            className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0""
-                            fill="none""
-                            stroke="currentColor""
+                            className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0"
+                            fill="none"
+                            stroke="currentColor"
                             viewBox="0 0 24 24"
                           >
                             <path"
-                              strokeLinecap="round""
+                              strokeLinecap="round"
                               strokeLinejoin="round"
                               strokeWidth={2}"
                               d="M5 13l4 4L19 7"
@@ -359,13 +359,13 @@ const InnovationServicesMarketing = () => {
                           className="flex items-start text-gray-300 text-sm"
                         >
                           <svg"
-                            className="w-4 h-4 text-blue-400 mr-2 mt-0.5 flex-shrink-0""
-                            fill="none""
-                            stroke="currentColor""
+                            className="w-4 h-4 text-blue-400 mr-2 mt-0.5 flex-shrink-0"
+                            fill="none"
+                            stroke="currentColor"
                             viewBox="0 0 24 24"
                           >
                             <path"
-                              strokeLinecap="round""
+                              strokeLinecap="round"
                               strokeLinejoin="round"
                               strokeWidth={2}"
                               d="M13 10V3L4 14h7v7l9-11h-7z"
@@ -478,13 +478,13 @@ const InnovationServicesMarketing = () => {
             </p>"
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <a"
-                href="mailto:kleber@ziontechgroup.com?subject=Innovation Services Consultation""
+                href="mailto:kleber@ziontechgroup.com?subject=Innovation Services Consultation"
                 className="px-10 py-5 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-200 text-xl"
               >
                 Schedule a Consultation
               </a>
               <a"
-                href="tel:+13024640950""
+                href="tel:+13024640950"
                 className="px-10 py-5 bg-slate-700/50 border border-white/20 text-white font-bold rounded-lg hover:bg-slate-700/70 transition-all duration-200 text-xl"
               >
                 Call Now: +1 302 464 0950

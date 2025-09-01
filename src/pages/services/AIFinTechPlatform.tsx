@@ -1,8 +1,3 @@
-import React from 'react.ts';'
-import { SEO } from '../../components/SEO';'
-import { Button } from '../../components/ui/Button';'
-import { Card } from '../../components/ui/Card';'
-import { Badge } from '../../components/ui/Badge';
 import {
 
   CheckCircle,
@@ -20,8 +15,30 @@ import {
   Target,
   Users,
   Database,
+<<<<<<< HEAD
+  Lock,
+  PieChart} from 'lucide-react.ts';
+
+const AIFinTechPlatform: React.FC = (): JSX.Element => {
+
+  return()
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO"
+        title="AI FinTech Platform - Zion Tech Group"
+        description="Revolutionary AI-powered financial technology platform that provides intelligent banking, fraud detection, and financial analytics with 99.9% accuracy and real-time processing."
+      />
+
+      {/* Hero Section */}"
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
+        <div className="max-w-7xl mx-auto text-center">"
+          <div className="mb-8">"
+            <Badge variant="secondary" className="mb-4">"
+              <Brain className="w-4 h-4 mr-2"  />
+              AI-Powered FinTech
+=======
   Lock,'
   PieChart} from 'lucide-react.ts';              AI-Powered FinTech
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
             </Badge>"
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-emerald-400 via-teal-500 to-cyan-400 bg-clip-text text-transparent">
               AI FinTech Platform
@@ -35,14 +52,14 @@ import {
 "
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button"
-              size="lg""
+              size="lg"
               className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700"
             >
               Start Free Trial
             </Button>
             <Button"
-              size="lg""
-              variant="outline""
+              size="lg"
+              variant="outline"
               className="border-white text-white hover:bg-white hover:text-slate-900"
             >
               Schedule Demo
@@ -61,7 +78,7 @@ import {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
             <Card className="bg-slate-800/50 border-slate-700 p-6 text-center">"
               <div className="w-16 h-16 bg-emerald-600/20 rounded-full flex items-center justify-center mx-auto mb-4">"
-                <Shield className="w-8 h-8 text-emerald-400" />
+                <Shield className="w-8 h-8 text-emerald-400"  />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-3">
                 99.9% Fraud Detection
@@ -74,7 +91,7 @@ import {
 "
             <Card className="bg-slate-800/50 border-slate-700 p-6 text-center">"
               <div className="w-16 h-16 bg-teal-600/20 rounded-full flex items-center justify-center mx-auto mb-4">"
-                <Zap className="w-8 h-8 text-teal-400" />
+                <Zap className="w-8 h-8 text-teal-400"  />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-3">
                 Real-time Processing
@@ -87,7 +104,7 @@ import {
 "
             <Card className="bg-slate-800/50 border-slate-700 p-6 text-center">"
               <div className="w-16 h-16 bg-cyan-600/20 rounded-full flex items-center justify-center mx-auto mb-4">"
-                <TrendingUp className="w-8 h-8 text-cyan-400" />
+                <TrendingUp className="w-8 h-8 text-cyan-400"  />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-3">
                 50% Cost Reduction
@@ -100,7 +117,7 @@ import {
 "
             <Card className="bg-slate-800/50 border-slate-700 p-6 text-center">"
               <div className="w-16 h-16 bg-blue-600/20 rounded-full flex items-center justify-center mx-auto mb-4">"
-                <DollarSign className="w-8 h-8 text-blue-400" />
+                <DollarSign className="w-8 h-8 text-blue-400"  />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-3">
                 300% ROI
@@ -123,7 +140,7 @@ import {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">"
             <div className="space-y-6">"
               <div className="flex items-start space-x-4">"
-                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
+                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"  />
                 <div>"
                   <h3 className="text-lg font-semibold text-white mb-2">
                     AI Fraud Detection
@@ -136,7 +153,7 @@ import {
               </div>
 "
               <div className="flex items-start space-x-4">"
-                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
+                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"  />
                 <div>"
                   <h3 className="text-lg font-semibold text-white mb-2">
                     Intelligent Risk Assessment
@@ -149,7 +166,7 @@ import {
               </div>
 "
               <div className="flex items-start space-x-4">"
-                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
+                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"  />
                 <div>"
                   <h3 className="text-lg font-semibold text-white mb-2">
                     Automated Compliance
@@ -162,7 +179,7 @@ import {
               </div>
 "
               <div className="flex items-start space-x-4">"
-                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
+                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"  />
                 <div>"
                   <h3 className="text-lg font-semibold text-white mb-2">
                     Predictive Analytics
@@ -176,7 +193,7 @@ import {
 "
             <div className="space-y-6">"
               <div className="flex items-start space-x-4">"
-                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
+                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"  />
                 <div>"
                   <h3 className="text-lg font-semibold text-white mb-2">
                     Smart Banking
@@ -189,7 +206,7 @@ import {
               </div>
 "
               <div className="flex items-start space-x-4">"
-                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
+                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"  />
                 <div>"
                   <h3 className="text-lg font-semibold text-white mb-2">
                     Blockchain Integration
@@ -202,7 +219,7 @@ import {
               </div>
 "
               <div className="flex items-start space-x-4">"
-                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
+                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"  />
                 <div>"
                   <h3 className="text-lg font-semibold text-white mb-2">
                     Real-time Reporting
@@ -215,7 +232,7 @@ import {
               </div>
 "
               <div className="flex items-start space-x-4">"
-                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
+                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"  />
                 <div>"
                   <h3 className="text-lg font-semibold text-white mb-2">
                     Multi-Currency Support
@@ -240,7 +257,7 @@ import {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
             <Card className="bg-slate-800/50 border-slate-700 p-6">"
               <div className="w-12 h-12 bg-emerald-600/20 rounded-lg flex items-center justify-center mb-4">"
-                <CreditCard className="w-6 h-6 text-emerald-400" />
+                <CreditCard className="w-6 h-6 text-emerald-400"  />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-3">
                 Digital Banking
@@ -253,7 +270,7 @@ import {
 "
             <Card className="bg-slate-800/50 border-slate-700 p-6">"
               <div className="w-12 h-12 bg-teal-600/20 rounded-lg flex items-center justify-center mb-4">"
-                <Shield className="w-6 h-6 text-teal-400" />
+                <Shield className="w-6 h-6 text-teal-400"  />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-3">
                 Fraud Prevention
@@ -277,7 +294,7 @@ import {
 "
             <Card className="bg-slate-800/50 border-slate-700 p-6">"
               <div className="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center mb-4">"
-                <Users className="w-6 h-6 text-blue-400" />
+                <Users className="w-6 h-6 text-blue-400"  />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-3">
                 Lending & Credit
@@ -289,7 +306,7 @@ import {
 "
             <Card className="bg-slate-800/50 border-slate-700 p-6">"
               <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center mb-4">"
-                <Globe className="w-6 h-6 text-purple-400" />
+                <Globe className="w-6 h-6 text-purple-400"  />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-3">
                 Cross-Border Payments
@@ -302,7 +319,7 @@ import {
 "
             <Card className="bg-slate-800/50 border-slate-700 p-6">"
               <div className="w-12 h-12 bg-orange-600/20 rounded-lg flex items-center justify-center mb-4">"
-                <PieChart className="w-6 h-6 text-orange-400" />
+                <PieChart className="w-6 h-6 text-orange-400"  />
               </div>"
               <h3 className="text-xl font-semibold text-white mb-3">
                 Wealth Management
@@ -335,19 +352,19 @@ import {
               </div>"
               <ul className="space-y-3 mb-8 text-left">"
                 <li className="flex items-center text-gray-300">"
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3"  />
                   Up to 10,000 transactions/month
                 </li>"
                 <li className="flex items-center text-gray-300">"
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3"  />
                   Basic AI fraud detection
                 </li>"
                 <li className="flex items-center text-gray-300">"
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3"  />
                   Standard reporting
                 </li>"
                 <li className="flex items-center text-gray-300">"
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />                  Email support
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3"  />                  Email support
                 </li>
               </ul>"
               <Button className="w-full bg-emerald-600 hover:bg-emerald-700">
@@ -358,7 +375,7 @@ import {
             <Card className="bg-gradient-to-br from-emerald-600 to-teal-600 p-8 text-center relative transform scale-105">"
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                 <Badge"
-                  variant="secondary""
+                  variant="secondary"
                   className="bg-white text-emerald-600"
                 >
                   Most Popular
@@ -371,23 +388,23 @@ import {
               </div>"
               <ul className="space-y-3 mb-8 text-left">"
                 <li className="flex items-center text-white">"
-                  <CheckCircle className="w-5 h-5 text-white mr-3" />
+                  <CheckCircle className="w-5 h-5 text-white mr-3"  />
                   Up to 100,000 transactions/month
                 </li>"
                 <li className="flex items-center text-white">"
-                  <CheckCircle className="w-5 h-5 text-white mr-3" />
+                  <CheckCircle className="w-5 h-5 text-white mr-3"  />
                   Advanced AI features
                 </li>"
                 <li className="flex items-center text-white">"
-                  <CheckCircle className="w-5 h-5 text-white mr-3" />
+                  <CheckCircle className="w-5 h-5 text-white mr-3"  />
                   Custom dashboards
                 </li>"
                 <li className="flex items-center text-white">"
-                  <CheckCircle className="w-5 h-5 text-white mr-3" />
+                  <CheckCircle className="w-5 h-5 text-white mr-3"  />
                   Priority support
                 </li>"
                 <li className="flex items-center text-white">"
-                  <CheckCircle className="w-5 h-5 text-white mr-3" />                  API access
+                  <CheckCircle className="w-5 h-5 text-white mr-3"  />                  API access
                 </li>
               </ul>"
               <Button className="w-full bg-white text-emerald-600 hover:bg-gray-100">
@@ -406,23 +423,23 @@ import {
               </div>"
               <ul className="space-y-3 mb-8 text-left">"
                 <li className="flex items-center text-gray-300">"
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3"  />
                   Unlimited transactions
                 </li>"
                 <li className="flex items-center text-gray-300">"
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3"  />
                   Full AI capabilities
                 </li>"
                 <li className="flex items-center text-gray-300">"
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3"  />
                   Custom integrations
                 </li>"
                 <li className="flex items-center text-gray-300">"
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3"  />
                   24/7 dedicated support
                 </li>"
                 <li className="flex items-center text-gray-300">"
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />                  White-label options
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3"  />                  White-label options
                 </li>
               </ul>"
               <Button className="w-full bg-teal-600 hover:bg-teal-700">
@@ -478,35 +495,35 @@ import {
 "
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">"
             <div className="flex items-center justify-center space-x-3 text-gray-300">"
-              <Phone className="w-5 h-5 text-emerald-400" />
+              <Phone className="w-5 h-5 text-emerald-400"  />
               <span>+1 302 464 0950</span>
             </div>"
             <div className="flex items-center justify-center space-x-3 text-gray-300">"
-              <Mail className="w-5 h-5 text-emerald-400" />
+              <Mail className="w-5 h-5 text-emerald-400"  />
               <span>kleber@ziontechgroup.com</span>
             </div>"
             <div className="flex items-center justify-center space-x-3 text-gray-300">"
-              <Globe className="w-5 h-5 text-emerald-400" />              <span>ziontechgroup.com</span>
+              <Globe className="w-5 h-5 text-emerald-400"  />              <span>ziontechgroup.com</span>
             </div>
           </div>
 "
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button"
-              size="lg""
+              size="lg"
               className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700"
             >
               Start Free Trial
             </Button>
             <Button"
-              size="lg""
-              variant="outline""
+              size="lg"
+              variant="outline"
               className="border-white text-white hover:bg-white hover:text-slate-900"
             >
               Schedule Demo
             </Button>
             <Button"
-              size="lg""
-              variant="outline""
+              size="lg"
+              variant="outline"
               className="border-white text-white hover:bg-white hover:text-slate-900"
             >
               Download FinTech Report

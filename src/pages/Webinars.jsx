@@ -1,60 +1,60 @@
-import React from 'react';'
+import React from 'react';
 import { Link } from 'react-router-dom';
 
   const webinars = [
     {
-'
+
       title: 'AI-Powered Business Transformation',
       description:'
-        'Learn how artificial intelligence is revolutionizing business operations and creating new opportunities for growth and efficiency.','
-      category: 'AI & Business','
-      date: 'March 15, 2025','
-      duration: '60 minutes','
+        'Learn how artificial intelligence is revolutionizing business operations and creating new opportunities for growth and efficiency.',
+      category: 'AI & Business',
+      date: 'March 15, 2025',
+      duration: '60 minutes',
       speaker: 'Dr. Sarah Chen'},
     {
-'
+
       title: 'Cybersecurity in the Digital Age',
       description:'
-        "Explore the latest cybersecurity threats and best practices for protecting your organization's digital assets.",'
-      category: 'Security','
-      date: 'March 22, 2025','
-      duration: '45 minutes','
+        "Explore the latest cybersecurity threats and best practices for protecting your organization's digital assets.",
+      category: 'Security',
+      date: 'March 22, 2025',
+      duration: '45 minutes',
       speaker: 'Michael Rodriguez'},
     {
-'
+
       title: 'Cloud Migration Strategies',
       description:'
-        'Discover proven strategies for migrating your infrastructure to the cloud while minimizing downtime and risk.','
-      category: 'Cloud & DevOps','
-      date: 'March 29, 2025','
-      duration: '75 minutes','
+        'Discover proven strategies for migrating your infrastructure to the cloud while minimizing downtime and risk.',
+      category: 'Cloud & DevOps',
+      date: 'March 29, 2025',
+      duration: '75 minutes',
       speaker: 'Jennifer Kim'},
     {
-'
+
       title: 'Data Analytics for Decision Making',
       description:'
-        'Learn how to leverage data analytics to make informed business decisions and drive strategic growth.','
-      category: 'Analytics','
-      date: 'April 5, 2025','
-      duration: '60 minutes','
+        'Learn how to leverage data analytics to make informed business decisions and drive strategic growth.',
+      category: 'Analytics',
+      date: 'April 5, 2025',
+      duration: '60 minutes',
       speaker: 'David Thompson'},
     {
-'
+
       title: 'Digital Transformation Roadmap',
       description:'
-        'Get a comprehensive roadmap for digital transformation that aligns with your business goals and objectives.','
-      category: 'Strategy','
-      date: 'April 12, 2025','
-      duration: '90 minutes','
+        'Get a comprehensive roadmap for digital transformation that aligns with your business goals and objectives.',
+      category: 'Strategy',
+      date: 'April 12, 2025',
+      duration: '90 minutes',
       speaker: 'Lisa Wang'},
     {
-'
+
       title: 'Emerging Technologies in 2025',
       description:'
-        'Stay ahead of the curve with insights into the most promising emerging technologies and their business applications.','
-      category: 'Innovation','
-      date: 'April 19, 2025','
-      duration: '60 minutes','
+        'Stay ahead of the curve with insights into the most promising emerging technologies and their business applications.',
+      category: 'Innovation',
+      date: 'April 19, 2025',
+      duration: '60 minutes',
       speaker: 'Dr. Robert Johnson'},
   ];
 
@@ -65,7 +65,7 @@ import { Link } from 'react-router-dom';
           <div className="text-center mb-16">"
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Expert"
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">'
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
                 {' '}
                 Webinars
               </span>
@@ -95,13 +95,13 @@ import { Link } from 'react-router-dom';
                 <div className="space-y-2 mb-4">"
                   <p className="text-gray-400 text-sm flex items-center">
                     <svg"
-                      className="w-4 h-4 mr-2""
-                      fill="none""
-                      stroke="currentColor""
+                      className="w-4 h-4 mr-2"
+                      fill="none"
+                      stroke="currentColor"
                       viewBox="0 0 24 24"
                     >
                       <path"
-                        strokeLinecap="round""
+                        strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth={2}"
                         d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
@@ -111,13 +111,13 @@ import { Link } from 'react-router-dom';
                   </p>"
                   <p className="text-gray-400 text-sm flex items-center">
                     <svg"
-                      className="w-4 h-4 mr-2""
-                      fill="none""
-                      stroke="currentColor""
+                      className="w-4 h-4 mr-2"
+                      fill="none"
+                      stroke="currentColor"
                       viewBox="0 0 24 24"
                     >
                       <path"
-                        strokeLinecap="round""
+                        strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth={2}"
                         d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
@@ -127,13 +127,13 @@ import { Link } from 'react-router-dom';
                   </p>"
                   <p className="text-gray-400 text-sm flex items-center">
                     <svg"
-                      className="w-4 h-4 mr-2""
-                      fill="none""
-                      stroke="currentColor""
+                      className="w-4 h-4 mr-2"
+                      fill="none"
+                      stroke="currentColor"
                       viewBox="0 0 24 24"
                     >
                       <path"
-                        strokeLinecap="round""
+                        strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth={2}"
                         d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
@@ -144,18 +144,18 @@ import { Link } from 'react-router-dom';
                 </div>
 
                 <Link"
-                  to="/contact""
+                  to="/contact"
                   className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300"
                 >
                   Register Now
                   <svg"
-                    className="ml-2 h-4 w-4""
-                    fill="none""
-                    stroke="currentColor""
+                    className="ml-2 h-4 w-4"
+                    fill="none"
+                    stroke="currentColor"
                     viewBox="0 0 24 24"
                   >
                     <path"
-                      strokeLinecap="round""
+                      strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth={2}"
                       d="M9 5l7 7-7 7"
@@ -173,7 +173,7 @@ import { Link } from 'react-router-dom';
                 learn from industry experts and technology leaders.
               </p>
               <Link"
-                to="/contact""
+                to="/contact"
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
               >
                 Subscribe to Webinars

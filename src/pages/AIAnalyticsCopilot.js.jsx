@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import {
 
@@ -8,7 +8,7 @@ import {
   ArrowRight,
   CheckCircle,
   Zap,
-  Shield,'
+  Shield,
   Database} from 'lucide-react';
 const AIAnalyticsCopilot = () => {
   return()
@@ -16,11 +16,11 @@ const AIAnalyticsCopilot = () => {
       <Helmet>
         <title>AI Analytics Copilot - Zion Tech Group</title>
         <meta
-          name="description""
+          name="description"
           content="Intelligent analytics copilot that transforms raw data into actionable insights with AI-powered analysis and visualization."
         />
         <meta"
-          name="keywords""
+          name="keywords"
           content="AI analytics, data insights, business intelligence, analytics copilot, data visualization"
         />
       </Helmet>
@@ -69,37 +69,37 @@ const AIAnalyticsCopilot = () => {
               {[
                 {
 
-                  icon: Brain,'
+                  icon: Brain,
                   title: 'Natural Language Queries',
                   description:'
                     'Ask questions about your data in plain English and get instant, accurate answers'},
                 {
 
-                  icon: TrendingUp,'
+                  icon: TrendingUp,
                   title: 'Predictive Analytics',
                   description:'
                     'Forecast trends and identify opportunities with advanced machine learning models'},
                 {
 
-                  icon: Database,'
+                  icon: Database,
                   title: 'Multi-Source Integration',
                   description:'
                     'Connect and analyze data from multiple sources with seamless data harmonization'},
                 {
 
-                  icon: Shield,'
+                  icon: Shield,
                   title: 'Data Security',
                   description:'
                     'Enterprise-grade security with encryption, access controls, and compliance features'},
                 {
 
-                  icon: Zap,'
+                  icon: Zap,
                   title: 'Real-time Insights',
                   description:'
                     'Get instant insights with real-time data processing and automated anomaly detection'},
                 {
 
-                  icon: CheckCircle,'
+                  icon: CheckCircle,
                   title: 'Automated Reporting',
                   description:'
                     'Generate comprehensive reports and dashboards automatically based on your requirements'},
@@ -137,22 +137,22 @@ const AIAnalyticsCopilot = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
-'
+
                   title: '10x Faster Analysis',
                   description:'
                     'Reduce analysis time from days to minutes with automated insights'},
                 {
-'
+
                   title: '95% Accuracy',
                   description:'
                     'Achieve high accuracy in predictions and pattern recognition'},
                 {
-'
+
                   title: '24/7 Monitoring',
                   description:'
                     'Continuous monitoring and alerting for critical business metrics'},
                 {
-'
+
                   title: 'Cost Reduction',
                   description:'
                     'Reduce analytics costs by up to 60% with automated processes'},

@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react';'
-import { motion, AnimatePresence, useScroll } from 'framer-motion';'
+import React, { useState, useRef, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence, useScroll } from 'framer-motion';
 import { Calendar, Clock, CheckCircle, Circle, ArrowRight, Play, Pause, RotateCcw, ZoomIn, ZoomOut, Share2, Download, Star, Award, Users, TrendingUp, Zap, Shield, Globe, Rocket, Filter, X } from 'lucide-react';
 import { Button } from "./button";"
 import { Badge } from "./badge";"
@@ -16,7 +16,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
         category[],;
         priority[],;
         progress: 0
-    });'
+    });
     const [viewMode, setViewMode] = useState('timeline');
     const [zoomLevel, setZoomLevel] = useState(1);
     const timelineRef = useRef(null);
@@ -57,13 +57,13 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
     const getStatusIcon = (status) => {
 
         switch (status) {
-'
+
             case 'completed':'
-                return { icon: CheckCircle, color: 'text-green-400', bgColor: 'bg-green-400/20' };'
+                return { icon: CheckCircle, color: 'text-green-400', bgColor: 'bg-green-400/20' };
             case 'in-progress':'
-                return { icon: Clock, color: 'text-yellow-400', bgColor: 'bg-yellow-400/20' };'
+                return { icon: Clock, color: 'text-yellow-400', bgColor: 'bg-yellow-400/20' };
             case 'upcoming':'
-                return { icon: Circle, color: 'text-zinc-400', bgColor: 'bg-zinc-400/20' };'
+                return { icon: Circle, color: 'text-zinc-400', bgColor: 'bg-zinc-400/20' };
             case 'milestone':'
                 return { icon: Star, color: 'text-purple-400', bgColor: 'bg-purple-400/20' };
             default:'
@@ -73,13 +73,13 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
     const getPriorityColor = (priority) => {
 
         switch (priority) {
-'
+
             case 'critical':'
-                return 'border-red-500/50 bg-red-500/10';'
+                return 'border-red-500/50 bg-red-500/10';
             case 'high':'
-                return 'border-orange-500/50 bg-orange-500/10';'
+                return 'border-orange-500/50 bg-orange-500/10';
             case 'medium':'
-                return 'border-yellow-500/50 bg-yellow-500/10';'
+                return 'border-yellow-500/50 bg-yellow-500/10';
             case 'low':'
                 return 'border-green-500/50 bg-green-500/10';
             default:'
@@ -89,11 +89,5 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
     const getCategoryIcon = (category) => {
 
         const iconMap = {
-'
-  'AI & ML': Zap,'
-            'Cybersecurity': Shield,'
-            'Cloud': Globe,'
-            'Development': Rocket,'
-            'Research': TrendingUp,'
-            'Team': Users,
-'"
+
+  'AI & ML': Zap,Cybersecurity': Shield,Cloud': Globe,Development': Rocket,Research': TrendingUp,Team': Users,"

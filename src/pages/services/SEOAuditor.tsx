@@ -1,19 +1,39 @@
-import React from 'react.ts';'
-import { SEO } from '../../components/SEO';
 import {
 
   Shield,
   BarChart3,
   Search,
   Zap,
+<<<<<<< HEAD
+  CheckCircle2,
+  Link as LinkIcon} from 'lucide-react.ts';
+
+export default function SEOAuditor(...args: any[]): any {
+
+  
+  
+  return()
+    <div className="min-h-screen bg-futuristic">
+      <SEO"
+        title="AI SEO Auditor - Zion Tech Group"
+        description="AI-powered SEO auditing with CWV, schema, accessibility, and backlink insights plus auto-fix templates."
+        canonical="https://ziontechgroup.com/services/ai-seo-auditor"
+      />
+"
+      <section className="relative pt-28 pb-16">"
+        <div className="container-responsive">"
+          <h1 className="heading-responsive text-gradient">AI SEO Auditor</h1>"
+          <p className="text-responsive text-zion-blue-light/80 max-w-2xl mt-4">
+=======
   CheckCircle2,'
   Link as LinkIcon} from 'lucide-react.ts';          <p className="text-responsive text-zion-blue-light/80 max-w-2xl mt-4">
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
             Ship faster with AI-driven audits, clear priorities, and one-click
             fixes.
           </p>"
           <div className="mt-8 flex gap-4">
             <a"
-              href="https://ziontechgroup.com/contact""
+              href="https://ziontechgroup.com/contact"
               className="btn-futuristic"
             >
               Request Demo
@@ -62,6 +82,5 @@ import {
         </div>
       </section>
     </div>
-  );
-}
+  )}
 '"

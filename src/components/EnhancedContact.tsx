@@ -1,64 +1,102 @@
-import React, { useState } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';    const newErrors: ContactFormErrors = {};
+<<<<<<< HEAD
+import {
+
+  Mail,
+  Phone,
+  MapPin,
+  Send,
+  CheckCircle,
+  AlertCircle,
+  CheckCircle,
+  Clock,
+  MessageSquare,
+  Building,
+  Globe'
+ } from 'lucide-react';
+
+interface ContactFormData {
+  name: string;
+  email: string;
+  phone: string;
+  comp: string;
+  service: string;
+  message: string
+}
+
+interface ContactFormErrors {
+  [key: string]: string}
+
+export function EnhancedContact(...args[]):  {
+
+  const [formData, setFormData] = useState<any>({
+
+    name: '',;
+    email: '',;
+    phone: '',;
+    comp: '',;
+    service: 'general',;
+    message: ''
+  }) ;
+
+  const [errors, setErrors] = useState<any> ({}) ;
+  const [isSubmitting, setIsSubmitting] = useState (false) ;
+  const [isSubmitted, setIsSubmitted] = useState (false) ;
+
+  
+    { value: 'cloud-infrastructure', label: 'Cloud Infrastructure' },;
+    { value: 'cybersecurity', label: 'Cybersecurity' },;
+    { value: 'digital-transformation', label: 'Digital Transformation' },;
+    { value: 'consulting', label: 'IT Consulting' },;
+    { value: 'quantum-computing', label: 'Quantum Computing' },;
+    { value: 'green-it', label: 'Green IT Solutions' };
+  ];
+
+  
+    const newErrors: ContactFormErrors = {};
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     if (!formData.name.trim()) {
-'
+
       newErrors.name = 'Name is required'}
 
     if (!formData.email.trim()) {
-'
+
       newErrors.email = 'Email is required'} else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-'
+
       newErrors.email = 'Please enter a valid email address'}
 
     if (!formData.message.trim()) {
-'
+
       newErrors.message = 'Message is required'} else if (formData.message.length < 10) {
-'
+
       newErrors.message = 'Message must be at least 10 characters long'};
 ;
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0};
-'
-      // // // // // // // // console.error('Error submitting form:', error);
-    } finally {
+
+      // // // // // // // // console.error('Error submitting form:', error)} finally {
 
       setIsSubmitting(false);
+<<<<<<< HEAD
+    }
+      })} catch (error) {
+
+=======
     }      })} catch (error) {
 '
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       // console.error('Error submitting form:', error)} finally {
 
       setIsSubmitting(false)}
   };
 
-  const contactInfo = [
-    {
-
-      icon: Mail,'
-      title: 'Email','
-      value: 'kleber@ziontechgroup.com','
-      description: 'Get in touch via email'
-    },
-    {
-
-      icon: Phone,'
-      title: 'Phone','
-      value: '+1 (302) 464-0950','
-      description: 'Call us directly'
-    },
-    {
-
-      icon: MapPin,'
-      title: 'Address','
-      value: '364 E Main St STE 1008, Middletown, DE 19709','
-      description: 'Visit our office'
-    },;
+  
     {;
-      icon: Clock,;'
-      title: 'Business Hours',;'
-      value: 'Mon-Fri: 9AM-6PM EST',;'
-      description: 'Available during these hours';
-    };  ];
+      icon: Clock,;
+      title: 'Business Hours',;
+      value: 'Mon-Fri: 9AM-6PM EST',;
+      description: 'Available during these hours'};  ];
 
   if (isSubmitted) {
 
@@ -95,7 +133,7 @@ import { motion, AnimatePresence } from 'framer-motion';    const newErrors: Con
 }}"
             className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6"
           >"
-            <CheckCircle className="w-10 h-10 text-white" />          </motion.div>
+            <CheckCircle className="w-10 h-10 text-white"  />          </motion.div>
 
           <motion.h2
             initial = {
@@ -131,7 +169,7 @@ import { motion, AnimatePresence } from 'framer-motion';    const newErrors: Con
 }}
             transition={{ delay: 0.4 }}"
             className="text-zion-slate-light mb-8"
-          >'
+          >
             Thank you for reaching out to us. We'll get back to you within 24 hours.
           </motion.p>
 
@@ -155,8 +193,7 @@ import { motion, AnimatePresence } from 'framer-motion';    const newErrors: Con
             Send Another Message;
           </motion.button>;
         </div>;
-      </motion.div>;) ;
-  }
+      </motion.div>;) }
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light py-20">"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -184,7 +221,7 @@ import { motion, AnimatePresence } from 'framer-motion';    const newErrors: Con
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Get in Touch
           </h1>"
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">'
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
             Ready to transform your business? Let's discuss how our AI-powered solutions
             can help you achieve your goals.
           </p>
@@ -304,11 +341,11 @@ import { motion, AnimatePresence } from 'framer-motion';    const newErrors: Con
                   Full Name *
                 </label>
                 <input"
-                  type="text""
+                  type="text"
                   id="name"
                   value={formData.name}
                   onChange = {
-'
+
   (e) => handleInputChange('name',
   e.target.value)
 
@@ -326,7 +363,7 @@ import { motion, AnimatePresence } from 'framer-motion';    const newErrors: Con
                   } text-white placeholder-zion-slate-light`}"
                   placeholder="Enter your full name"
                 />
-                <AnimatePresence>'
+                <AnimatePresence>
                   {errors['name'] && (
                     <motion.p
                       initial = {
@@ -354,7 +391,12 @@ import { motion, AnimatePresence } from 'framer-motion';    const newErrors: Con
 }}"
                       className="text-red-400 text-sm mt-1 flex items-center"
                     >"
-                      <AlertCircle className="w-4 h-4 mr-1" />'                      {errors['name']}
+<<<<<<< HEAD
+                      <AlertCircle className="w-4 h-4 mr-1"  />
+                      {errors['name']}
+=======
+                      <AlertCircle className="w-4 h-4 mr-1"  />'                      {errors['name']}
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     </motion.p>) }
                 </AnimatePresence>
               </div>
@@ -365,11 +407,11 @@ import { motion, AnimatePresence } from 'framer-motion';    const newErrors: Con
                   Email Address *
                 </label>
                 <input"
-                  type="email""
+                  type="email"
                   id="email"
                   value={formData.email}
                   onChange = {
-'
+
   (e) => handleInputChange('email',
   e.target.value)
 
@@ -387,7 +429,7 @@ import { motion, AnimatePresence } from 'framer-motion';    const newErrors: Con
                   } text-white placeholder-zion-slate-light`}"
                   placeholder="Enter your email address"
                 />
-                <AnimatePresence>'
+                <AnimatePresence>
                   {errors['email'] && (
                     <motion.p
                       initial = {
@@ -415,7 +457,12 @@ import { motion, AnimatePresence } from 'framer-motion';    const newErrors: Con
 }}"
                       className="text-red-400 text-sm mt-1 flex items-center"
                     >"
-                      <AlertCircle className="w-4 h-4 mr-1" />'                      {errors['email']}
+<<<<<<< HEAD
+                      <AlertCircle className="w-4 h-4 mr-1"  />
+                      {errors['email']}
+=======
+                      <AlertCircle className="w-4 h-4 mr-1"  />'                      {errors['email']}
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     </motion.p>) }
                 </AnimatePresence>
               </div>
@@ -427,11 +474,11 @@ import { motion, AnimatePresence } from 'framer-motion';    const newErrors: Con
                     Phone Number
                   </label>
                   <input"
-                    type="tel""
+                    type="tel"
                     id="phone"
                     value={formData.phone}
                     onChange = {
-'
+
   (e) => handleInputChange('phone',
   e.target.value)
 
@@ -441,7 +488,7 @@ import { motion, AnimatePresence } from 'framer-motion';    const newErrors: Con
 
 
 }"
-                    className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white placeholder-zion-slate-light""
+                    className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white placeholder-zion-slate-light"
                     placeholder="Enter your phone number"
                   />
                 </div>
@@ -449,11 +496,11 @@ import { motion, AnimatePresence } from 'framer-motion';    const newErrors: Con
                   <label htmlFor="comp" className="block text-sm font-medium text-white mb-2">
                     Comp </label>
                   <input"
-                    type="text""
+                    type="text"
                     id="company"
                     value={formData.company}
                     onChange = {
-'
+
   (e) => handleInputChange('company',
   e.target.value)
 
@@ -463,7 +510,7 @@ import { motion, AnimatePresence } from 'framer-motion';    const newErrors: Con
 
 
 }"
-                    className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white placeholder-zion-slate-light""
+                    className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white placeholder-zion-slate-light"
                     placeholder="Enter your comp name"
                   />
                 </div>
@@ -478,7 +525,7 @@ import { motion, AnimatePresence } from 'framer-motion';    const newErrors: Con
                   id="service"
                   value={formData.service}
                   onChange = {
-'
+
   (e) => handleInputChange('service',
   e.target.value)
 
@@ -506,7 +553,7 @@ import { motion, AnimatePresence } from 'framer-motion';    const newErrors: Con
                   rows={4}
                   value={formData.message}
                   onChange = {
-'
+
   (e) => handleInputChange('message',
   e.target.value)
 
@@ -524,7 +571,7 @@ import { motion, AnimatePresence } from 'framer-motion';    const newErrors: Con
                   } text-white placeholder-zion-slate-light`}"
                   placeholder="Tell us about your project or inquiry..."
                 />
-                <AnimatePresence>'
+                <AnimatePresence>
                   {errors['message'] && (
                     <motion.p
                       initial = {
@@ -552,7 +599,12 @@ import { motion, AnimatePresence } from 'framer-motion';    const newErrors: Con
 }}"
                       className="text-red-400 text-sm mt-1 flex items-center"
                     >"
-                      <AlertCircle className="w-4 h-4 mr-1" />'                      {errors['message']}
+<<<<<<< HEAD
+                      <AlertCircle className="w-4 h-4 mr-1"  />
+                      {errors['message']}
+=======
+                      <AlertCircle className="w-4 h-4 mr-1"  />'                      {errors['message']}
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     </motion.p>) }
                 </AnimatePresence>
               </div>
@@ -572,7 +624,7 @@ import { motion, AnimatePresence } from 'framer-motion';    const newErrors: Con
                   </>
                 ) : (
                   <>"
-                    <Send className="w-5 h-5" />                    <span>Send Message</span>
+                    <Send className="w-5 h-5"  />                    <span>Send Message</span>
                   </>
                 )}
               </motion.button>
@@ -580,6 +632,5 @@ import { motion, AnimatePresence } from 'framer-motion';    const newErrors: Con
           </motion.div>;
         </div>;
       </div>;
-    </div>;) ;
-}
+    </div>;) }
 '"`

@@ -1,72 +1,46 @@
-import React from 'react';'
-import SEO from '../../components/SEO';'
-import { motion } from 'framer-motion';
 import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, Network, Code, Key, Target, CheckCircle, Clock, TrendingUp const AICybersecurity: React.FC = () => {
-  const features = [
-    {
-
-      icon: Brain,'
-      title: 'AI-Powered Threat Detection','
-      description: 'Advanced machine learning algorithms detect threats in real-time'
-    },
-    {
-
-      icon: Shield,'
-      title: 'Zero-Day Attack Prevention','
-      description: 'Identify and block unknown threats before they can cause damage'
-    },
-    {
-
-      icon: Lock,'
-      title: 'Intelligent Access Control','
-      description: 'AI-driven authentication and authorization systems';
+  
     },;
     {;
-      icon: Eye,;'
-      title: 'Behavioral Analytics',;'
-      description: 'Monitor and analyze user behavior for suspicious activity';
-    };
+      icon: Eye,;
+      title: 'Behavioral Analytics',;
+      description: 'Monitor and analyze user behavior for suspicious activity'};
+  ]},;
+    {;
+      title: 'Security Automation',;
+      description: 'Automate security operations and responses',;
+      icon: '⚡'};
   ];
 
-  const useCases = [
-    {
-'
-      title: 'Threat Intelligence','
-      description: 'Real-time threat intelligence and analysis','
-      icon: '🔍'
-    },
-    {
-'
-      title: 'Incident Response','
-      description: 'Automated incident detection and response','
-      icon: '🚨'
-    },
-    {
-'
-      title: 'Vulnerability Assessment','
-      description: 'AI-powered vulnerability scanning and assessment','
-      icon: '🛡️';
-    },;
-    {;'
-      title: 'Security Automation',;'
-      description: 'Automate security operations and responses',;'
-      icon: '⚡';
-    };
-  ];
-
+<<<<<<< HEAD
+  
+    'Real-time threat detection and response',;
+    'Reduced false positives with AI accuracy',;
+    '24/7 automated security monitoring',;
+    'Predictive threat intelligence',;
+    'Cost-effective security operations',;
+    'Compliance and regulatory support';
+=======
   const benefits = [;'
     'Real-time threat detection and response',;'
     'Reduced false positives with AI accuracy',;'
     '24/7 automated security monitoring',;'
     'Predictive threat intelligence',;'
     'Cost-effective security operations',;'    'Compliance and regulatory support';
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
+<<<<<<< HEAD
+        title="AI Cybersecurity Services - Zion Tech Group"
+        description="Advanced AI-powered cybersecurity solutions for threat detection, prevention, and response. Protect your business with intelligent security systems."
+       />
+=======
         title="AI Cybersecurity Services - Zion Tech Group""        description="Advanced AI-powered cybersecurity solutions for threat detection, prevention, and response. Protect your business with intelligent security systems."
        />
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="pt-20 pb-16 px-4">"
@@ -98,7 +72,7 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
             className="text-center"
 "
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-full border border-red-400/30 mb-6">"
-              <Shield className="w-5 h-5 text-red-400 mr-2" />"              <span className="text-red-300 font-medium">AI Cybersecurity</span>
+              <Shield className="w-5 h-5 text-red-400 mr-2"  />"              <span className="text-red-300 font-medium">AI Cybersecurity</span>
             </div>
 "
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -299,7 +273,7 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
                 <ul className="space-y-2">
                   {service.items.map((item, itemIndex) => (
                     <li key={itemIndex} className="text-gray-400 text-sm flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
+                      <CheckCircle className="w-4 h-4 text-green-400"  />
                       {item}
                     </li>
                   ))}
@@ -378,7 +352,7 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => ("
                   <li key={index} className="flex items-center space-x-3">"
-                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />"                    <span className="text-gray-300">{benefit}</span>
+                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0"  />"                    <span className="text-gray-300">{benefit}</span>
                   </li>
                 ))}
               </ul>
@@ -411,7 +385,7 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
               className="bg-gradient-to-br from-red-500/20 to-orange-500/20 border border-red-400/30 rounded-xl p-8"
 "
               <h3 className="text-2xl font-semibold text-white mb-6">Get Protected Today</h3>"
-              <p className="text-gray-300 mb-6">'
+              <p className="text-gray-300 mb-6">
                 Don't wait for a security breach. Our AI cybersecurity experts can assess your current
                 security posture and implement advanced protection measures.
               </p>"
@@ -471,4 +445,4 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
     </div>;
   )};
 
-export default AICybersecurity;}}}'"
+export default AICybersecurity}}}'"

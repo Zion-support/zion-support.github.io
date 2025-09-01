@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import {
 
@@ -8,7 +8,7 @@ import {
   ArrowRight,
   CheckCircle,
   Zap,
-  AlertTriangle,'
+  AlertTriangle,
   Users} from 'lucide-react';
 const AdvancedCybersecuritySuite = () => {
   return()
@@ -16,11 +16,11 @@ const AdvancedCybersecuritySuite = () => {
       <Helmet>
         <title>Advanced Cybersecurity Suite - Zion Tech Group</title>
         <meta
-          name="description""
+          name="description"
           content="Comprehensive cybersecurity solutions with advanced threat detection, prevention, and response capabilities."
         />
         <meta"
-          name="keywords""
+          name="keywords"
           content="cybersecurity, threat detection, security suite, enterprise security, cyber defense"
         />
       </Helmet>
@@ -39,7 +39,7 @@ const AdvancedCybersecuritySuite = () => {
               </div>"
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 Defend Against"
-                <span className="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent block">'
+                <span className="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent block">
                   Tomorrow's Threats
                 </span>
               </h1>"
@@ -69,37 +69,37 @@ const AdvancedCybersecuritySuite = () => {
               {[
                 {
 
-                  icon: Eye,'
+                  icon: Eye,
                   title: 'Advanced Threat Detection',
                   description:'
                     'AI-powered threat intelligence that identifies and responds to zero-day attacks and advanced persistent threats'},
                 {
 
-                  icon: Lock,'
+                  icon: Lock,
                   title: 'Multi-Factor Authentication',
                   description:'
                     'Enterprise-grade authentication with biometric, token-based, and behavioral analysis security layers'},
                 {
 
-                  icon: AlertTriangle,'
+                  icon: AlertTriangle,
                   title: 'Real-time Monitoring',
                   description:'
                     '24/7 security operations center with automated incident response and threat hunting capabilities'},
                 {
 
-                  icon: Shield,'
+                  icon: Shield,
                   title: 'Endpoint Protection',
                   description:'
                     'Comprehensive endpoint security with anti-malware, device control, and application whitelisting'},
                 {
 
-                  icon: Zap,'
+                  icon: Zap,
                   title: 'Automated Response',
                   description:'
                     'Instant threat mitigation with automated quarantine, isolation, and remediation workflows'},
                 {
 
-                  icon: Users,'
+                  icon: Users,
                   title: 'User Behavior Analytics',
                   description:'
                     'Machine learning-based analysis to detect insider threats and compromised accounts'},
@@ -137,24 +137,24 @@ const AdvancedCybersecuritySuite = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
-'
-                  metric: '99.99%','
-                  title: 'Threat Detection','
+
+                  metric: '99.99%',
+                  title: 'Threat Detection',
                   description: 'Accuracy in identifying malicious activities'},
                 {
-'
-                  metric: '<5s','
-                  title: 'Response Time','
+
+                  metric: '<5s',
+                  title: 'Response Time',
                   description: 'Average time to threat containment'},
                 {
-'
-                  metric: 'Zero','
-                  title: 'Successful Breaches','
+
+                  metric: 'Zero',
+                  title: 'Successful Breaches',
                   description: 'Client environments with our full suite'},
                 {
-'
-                  metric: '24/7','
-                  title: 'Monitoring','
+
+                  metric: '24/7',
+                  title: 'Monitoring',
                   description: 'Continuous security operations coverage'},
               ].map((metric, index) => ("
                 <div key={index} className="text-center">"
@@ -188,14 +188,7 @@ const AdvancedCybersecuritySuite = () => {
 "
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {['
-                'SOC 2 Type II','
-                'ISO 27001','
-                'GDPR Compliant','
-                'HIPAA Ready','
-                'PCI DSS','
-                'NIST Framework','
-                'FISMA Compliant','
-                'FedRAMP Ready',
+                'SOC 2 Type II',ISO 27001',GDPR Compliant',HIPAA Ready',PCI DSS',NIST Framework',FISMA Compliant',FedRAMP Ready',
               ].map((cert, index) => (
                 <div
                   key={index}"

@@ -1,71 +1,80 @@
-import React, { useState, useMemo } from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
-import { Helmet  } from 'react-helmet-async.ts';
+<<<<<<< HEAD
+import { Search, 
+
+
+    Filter, 
+    TrendingUp, 
+    Shield, 
+    Zap, 
+    Globe, 
+    Users, 
+    BarChart3,
+    DollarSign,
+    Heart,
+    GraduationCap,
+    Target,
+    Settings,
+    Package,
+    CheckCircle,
+    Star,
+    ArrowRight,
+    Phone,
+    Mail,
+    MapPin,
+    ExternalLink,
+    Crown,
+    Sparkles'
+ } from 'lucide-react.ts';
+
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
-'
-    const [searchTerm, setSearchTerm] = useState('');'
+
+    const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState<any>('all');
     const [selectedService, setSelectedService] = useState<any>(null);
 
-    const categories = ['
-        { id: any'all', name: 'All Services', icon: Globe, count: comprehensivePricingGuide2025.length },;'
-        { id: 'Fintech', name: 'Financial Tech', icon: DollarSign, count: comprehensivePricingGuide2025.filter(s  => s.category === 'Fintech').length },'
-        { id: any'Healthtech', name: 'Healthcare Tech', icon: Heart, count: comprehensivePricingGuide2025.filter(s  => s.category === 'Healthtech').length },;'
-        { id: any'Edutech', name: 'Education Tech', icon: GraduationCap, count: comprehensivePricingGuide2025.filter(s  => s.category === 'Edutech').length },;'
-        { id: any'Martech', name: 'Marketing Tech', icon: Target, count: comprehensivePricingGuide2025.filter(s  => s.category === 'Martech').length },;'
-        { id: any'Micro SaaS', name: 'Micro SaaS', icon: Settings, count: comprehensivePricingGuide2025.filter(s  => s.category === 'Micro SaaS').length },;'
-        { id: any'AI Services', name: 'AI Services', icon: Zap, count: comprehensivePricingGuide2025.filter(s  => s.category === 'AI Services').length },;'
-        { id: any'IT Services', name: 'IT Services', icon: Shield, count: comprehensivePricingGuide2025.filter(s  => s.category === 'IT Services').length }
+    
+        { id: 'Fintech', name: 'Financial Tech', icon: DollarSign, count: comprehensivePricingGuide2025.filter(s  => s.category === 'Fintech').length },
+        { id: anyHealthtech', name: 'Healthcare Tech', icon: Heart, count: comprehensivePricingGuide2025.filter(s  => s.category === 'Healthtech').length },;
+        { id: anyEdutech', name: 'Education Tech', icon: GraduationCap, count: comprehensivePricingGuide2025.filter(s  => s.category === 'Edutech').length },;
+        { id: anyMartech', name: 'Marketing Tech', icon: Target, count: comprehensivePricingGuide2025.filter(s  => s.category === 'Martech').length },;
+        { id: anyMicro SaaS', name: 'Micro SaaS', icon: Settings, count: comprehensivePricingGuide2025.filter(s  => s.category === 'Micro SaaS').length },;
+        { id: anyAI Services', name: 'AI Services', icon: Zap, count: comprehensivePricingGuide2025.filter(s  => s.category === 'AI Services').length },;
+        { id: anyIT Services', name: 'IT Services', icon: Shield, count: comprehensivePricingGuide2025.filter(s  => s.category === 'IT Services').length }
     ];
 
-    const filteredServices = useMemo ( () => {
-        let filtered = comprehensivePricingGuide2025;
+    
         if (searchTerm) {
 
             filtered = filtered.filter(service =>
                 service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 service.category.toLowerCase().includes(searchTerm.toLowerCase())
-            );
-        }
-'
+            )}
+
         if (selectedCategory !== 'all') {
 
-            filtered = filtered.filter(service => service.category === selectedCategory);
-        }
+            filtered = filtered.filter(service => service.category === selectedCategory)}
 
-        return filtered;
-    }, [searchTerm, selectedCategory]) ;
+        return filtered}, [searchTerm, selectedCategory]) ;
 
-    const getCategoryColor = (category: anystring)  => {
-
-        const colors: { [key: string]: string } = {
-'
-            'Fintech': 'from-green-500 to-emerald-600','
-            'Healthtech': 'from-red-500 to-pink-600','
-            'Edutech': 'from-purple-500 to-violet-600','
-            'Martech': 'from-pink-500 to-rose-600','
-            'Micro SaaS': 'from-blue-500 to-indigo-600','
-            'AI Services': 'from-cyan-500 to-blue-600','
-            'IT Services': 'from-slate-500 to-gray-600'
-        };'
-        return colors[category] || 'from-gray-500 to-gray-600';
-    };
+    
+        return colors[category] || 'from-gray-500 to-gray-600'};
 
     const getCategoryIcon = (category: anystring)  => {
 
         const icons: { [key: string]: React.ReactNode } = {
-'
-            'Fintech': <DollarSign className="w-5 h-5" />,'"
-            'Healthtech': <Heart className="w-5 h-5" />,'"
-            'Edutech': <GraduationCap className="w-5 h-5" />,'"
-            'Martech': <Target className="w-5 h-5" />,'"
-            'Micro SaaS': <Settings className="w-5 h-5" />,'"
-            'AI Services': <Zap className="w-5 h-5" />,'"
-            'IT Services': <Shield className="w-5 h-5" />
+
+            'Fintech': <DollarSign className="w-5 h-5"  />,"
+            'Healthtech': <Heart className="w-5 h-5"  />,"
+            'Edutech': <GraduationCap className="w-5 h-5"  />,"
+            'Martech': <Target className="w-5 h-5"  />,"
+            'Micro SaaS': <Settings className="w-5 h-5"  />,"
+            'AI Services': <Zap className="w-5 h-5"  />,"
+            'IT Services': <Shield className="w-5 h-5"  />
         };"
-        return icons[category] || <Globe className="w-5 h-5" />;
-    };
+        return icons[category] || <Globe className="w-5 h-5"  />};
     return ("
         <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
             <Helmet>
@@ -92,15 +101,15 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
                         </p>"
                         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">"
                             <div className="flex items-center space-x-2 text-white">"
-                                <CheckCircle className="w-5 h-5 text-green-400" />
+                                <CheckCircle className="w-5 h-5 text-green-400"  />
                                 <span>Transparent Pricing</span>
                             </div>"
                             <div className="flex items-center space-x-2 text-white">"
-                                <Star className="w-5 h-5 text-yellow-400" />
+                                <Star className="w-5 h-5 text-yellow-400"  />
                                 <span>Multiple Tiers</span>
                             </div>"
                             <div className="flex items-center space-x-2 text-white">"
-                                <Zap className="w-5 h-5 text-blue-400" />                                <span>Flexible Plans</span>
+                                <Zap className="w-5 h-5 text-blue-400"  />                                <span>Flexible Plans</span>
                             </div>
                         </div>
                     </motion.div>
@@ -113,25 +122,25 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
                     <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">"
                         <div className="flex items-center space-x-6">"
                             <div className="flex items-center space-x-2 text-gray-600">"
-                                <Phone className="w-4 h-4" />
+                                <Phone className="w-4 h-4"  />
                                 <span>+1 302 464 0950</span>
                             </div>"
                             <div className="flex items-center space-x-2 text-gray-600">"
-                                <Mail className="w-4 h-4" />
+                                <Mail className="w-4 h-4"  />
                                 <span>kleber@ziontechgroup.com</span>
                             </div>"
                             <div className="flex items-center space-x-2 text-gray-600">"
-                                <MapPin className="w-4 h-4" />                                <span>364 E Main St STE 1008, Middletown DE 19709</span>
+                                <MapPin className="w-4 h-4"  />                                <span>364 E Main St STE 1008, Middletown DE 19709</span>
                             </div>
                         </div>
                         <a"
-                            href="https://ziontechgroup.com""
-                            target="_blank""
-                            rel="noopener noreferrer""
+                            href="https://ziontechgroup.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-medium"
                         >
                             <span>Visit Our Website</span>"
-                            <ExternalLink className="w-4 h-4" />                        </a>
+                            <ExternalLink className="w-4 h-4"  />                        </a>
                     </div>
                 </div>
             </section>
@@ -143,9 +152,14 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
                         {/* Search */}"
                         <div className="flex-1">"
                             <div className="relative">"
-                                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
                                 <input"
+<<<<<<< HEAD
+                                    type="text"
+                                    placeholder="Search services..."
+=======
                                     type="text""                                    placeholder="Search services..."
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                                     value={searchTerm}
                                     onChange={(e) => setSearchTerm(e.target.value)}"
                                     className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -173,7 +187,7 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
                 <div className="max-w-7xl mx-auto">
                     {filteredServices.length === 0 ? ("
                         <div className="text-center py-12">"
-                            <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />"
+                            <Search className="w-16 h-16 text-gray-400 mx-auto mb-4"  />"
                             <h3 className="text-xl font-semibold text-gray-600 mb-2">No services found</h3>"                            <p className="text-gray-500">Try adjusting your search or filter criteria</p>
                         </div>
                     ) : ("
@@ -204,11 +218,11 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
                                         <p className="text-blue-100 text-lg mb-4">{service.description}</p>"
                                         <div className="flex flex-wrap gap-4">"
                                             <div className="flex items-center space-x-2">"
-                                                <TrendingUp className="w-4 h-4" />"
+                                                <TrendingUp className="w-4 h-4"  />"
                                                 <span className="text-sm">ROI: {service.roi}</span>
                                             </div>"
                                             <div className="flex items-center space-x-2">"
-                                                <Users className="w-4 h-4" />"                                                <span className="text-sm">Market: {service.marketPosition}</span>
+                                                <Users className="w-4 h-4"  />"                                                <span className="text-sm">Market: {service.marketPosition}</span>
                                             </div>
                                         </div>
                                     </div>
@@ -230,7 +244,7 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
                                                     {tier.popular && ("
                                                         <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">"
                                                             <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium flex items-center space-x-1">"
-                                                                <Crown className="w-4 h-4" />                                                                <span>Most Popular</span>
+                                                                <Crown className="w-4 h-4"  />                                                                <span>Most Popular</span>
                                                             </span>
                                                         </div>
                                                     )}
@@ -239,7 +253,7 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
                                                         <h5 className="text-xl font-bold text-gray-800 mb-2">{tier.name}</h5>"
                                                         <div className="mb-2">"
                                                             <span className="text-3xl font-bold text-gray-800">{tier.price}</span>"
-                                                            <span className="text-gray-600 ml-2">'
+                                                            <span className="text-gray-600 ml-2">
                                                                 /{tier.billing === 'monthly' ? 'month' : tier.billing === 'yearly' ? 'year' : 'setup'}
                                                             </span>
                                                         </div>
@@ -251,7 +265,7 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
                                                     <ul className="space-y-3 mb-6">
                                                         {tier.features.map((feature, featureIndex) => ("
                                                             <li key={featureIndex} className="flex items-start space-x-3">"
-                                                                <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />"                                                                <span className="text-gray-700">{feature}</span>
+                                                                <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5"  />"                                                                <span className="text-gray-700">{feature}</span>
                                                             </li>
                                                         ))}
                                                     </ul>
@@ -261,7 +275,7 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
                                                         className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-3 px-4 rounded-lg font-medium hover:from-blue-700 hover:to-indigo-700 transition-all duration-200 flex items-center justify-center space-x-2"
                                                     >
                                                         <span>Get Started</span>"
-                                                        <ArrowRight className="w-4 h-4" />                                                    </button>
+                                                        <ArrowRight className="w-4 h-4"  />                                                    </button>
                                                 </div>) ) }
                                         </div>
 
@@ -269,23 +283,23 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
                                         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
                                             <div>"
                                                 <h5 className="text-lg font-semibold text-gray-800 mb-4 flex items-center space-x-2">"
-                                                    <Sparkles className="w-5 h-5 text-blue-600" />                                                    <span>Key Features</span>
+                                                    <Sparkles className="w-5 h-5 text-blue-600"  />                                                    <span>Key Features</span>
                                                 </h5>"
                                                 <ul className="space-y-2">
                                                     {service.features.slice(0, 6).map((feature, idx) => ("
                                                         <li key={idx} className="flex items-center space-x-2 text-gray-600">"
-                                                            <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />                                                            <span>{feature}</span>
+                                                            <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0"  />                                                            <span>{feature}</span>
                                                         </li>) ) }
                                                 </ul>
                                             </div>
                                             <div>"
                                                 <h5 className="text-lg font-semibold text-gray-800 mb-4 flex items-center space-x-2">"
-                                                    <TrendingUp className="w-5 h-5 text-green-600" />                                                    <span>Key Benefits</span>
+                                                    <TrendingUp className="w-5 h-5 text-green-600"  />                                                    <span>Key Benefits</span>
                                                 </h5>"
                                                 <ul className="space-y-2">
                                                     {service.benefits.map((benefit, idx) => ("
                                                         <li key={idx} className="flex items-center space-x-2 text-gray-600">"
-                                                            <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />                                                            <span>{benefit}</span>
+                                                            <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0"  />                                                            <span>{benefit}</span>
                                                         </li>) ) }
                                                 </ul>
                                             </div>
@@ -318,16 +332,16 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
                     </p>"
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <a"
-                            href="tel:+13024640950""
+                            href="tel:+13024640950"
                             className="inline-flex items-center space-x-2 bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
                         >"
-                            <Phone className="w-5 h-5" />                            <span>Call +1 302 464 0950</span>
+                            <Phone className="w-5 h-5"  />                            <span>Call +1 302 464 0950</span>
                         </a>
                         <a"
-                            href="mailto:kleber@ziontechgroup.com""
+                            href="mailto:kleber@ziontechgroup.com"
                             className="inline-flex items-center space-x-2 bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition-colors"
                         >"
-                            <Mail className="w-5 h-5" />                            <span>Email Us</span>
+                            <Mail className="w-5 h-5"  />                            <span>Email Us</span>
                         </a>
                     </div>
                 </div>
@@ -370,6 +384,5 @@ const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {
                     </div>
                 </div>
             </footer>
-        </div>) ;
-};
+        </div>) };
 export default ComprehensivePricingShowcase2025;'"`

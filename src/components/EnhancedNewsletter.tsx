@@ -1,32 +1,51 @@
-import React, { useState } from 'react.ts';'
-import { motion  } from 'framer-motion.ts';'
-import { Mail, CheckCircle, AlertCircle, Send, Zap, Shield, Gift  } from 'lucide-react';  { value: 'quarterly', label: 'Quarterly', description: 'Quarterly strategic updates' };
+<<<<<<< HEAD
+
+interface NewsletterFormData {
+  email: string;
+  firstName: string;
+  interests: string[];
+  frequency: 'weekly' | 'monthly' | 'quarterly'}
+
+
+  { id: 'ai-solutions', label: 'AI Solutions', icon: Zap },;
+  { id: 'cloud-services', label: 'Cloud Services', icon: Shield },;
+  { id: 'cybersecurity', label: 'Cybersecurity', icon: Shield },;
+  { id: 'digital-transformation', label: 'Digital Transformation', icon: Zap },;
+  { id: 'it-consulting', label: 'IT Consulting', icon: Gift },;
+  { id: 'industry-insights', label: 'Industry Insights', icon: Zap };
+];
+
+
+  { value: 'weekly', label: 'Weekly', description: 'Stay updated with latest trends' },;
+  { value: 'monthly', label: 'Monthly', description: 'Monthly digest of insights' },;
+  { value: 'quarterly', label: 'Quarterly', description: 'Quarterly strategic updates' };
+=======
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 ];
 
   '
   const [status, setStatus] = useState<any>('idle');
   const [errors, setErrors] = useState<Partial<NewsletterFormData>>({});
 
-  const validateForm = () : boolean => {;
+  
     const newErrors: Partial < NewsletterFormData> = {};
     if (!formData.email) {
-'
+
       newErrors.email = 'Email is required'} else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-'
+
       newErrors.email = 'Please enter a valid email address'}
 
     if (!formData.firstName) {
-'
+
       newErrors.firstName = 'First name is required'}
 
-    if (formData.interests.length = == 0) {;'
-      newErrors.interests = 'Please select at least one interest';
-    }
+    if (formData.interests.length = == 0) {;
+      newErrors.interests = 'Please select at least one interest'}
     setErrors (newErrors) ;
     return Object.keys (newErrors) .length === 0};
 
       return}
-'
+
     setStatus('loading');
 
     try {
@@ -35,7 +54,7 @@ import { Mail, CheckCircle, AlertCircle, Send, Zap, Shield, Gift  } from 'lucide
 
       // Here you would typically send the data to your newsletter service'
       // // // // // // // // console.log('Newsletter subscription:', formData);
-'
+
       // console.log('Newsletter subscription: ', formData);
       '
       setStatus('success');
@@ -43,32 +62,44 @@ import { Mail, CheckCircle, AlertCircle, Send, Zap, Shield, Gift  } from 'lucide
       // Reset form after successful submission
       setTimeout(() => {
         setFormData({
-'
-          email: '','
+
+          email: '',
           firstName: '',
-          interests[],;'
+          interests[],;
           frequency: 'monthly'
-        });'
+        });
       // // // // // // // // console.error('Newsletter subscription error:', error);
+<<<<<<< HEAD
+    }
+        setStatus('idle')}, 3000)} catch (error) {
+
+      setStatus('error');
+=======
     }'        setStatus('idle')}, 3000)} catch (error) {
 '
       setStatus('error');'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       // console.error('Newsletter subscription error:', error)}
   };
 
-      setErrors (prev => ({ ...prev, interests: null }) ) ;
-    }
+      setErrors (prev => ({ ...prev, interests: null }) ) }
   };
 
-  const handleInputChange = useCallback ( (field: keyof NewsletterFormData, value: string | string[]) => {;
+  
     setFormData (prev => ({ ...prev, [field]: value }) ) ;
 
     // Clear error when user starts typing
     if (errors[field]) {
 
       setErrors(prev => ({ ...prev, [field]: null }));
+<<<<<<< HEAD
+    }
+  };
+
+=======
     }  };
 '
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   if (status = == 'success') {
 
     return()
@@ -87,18 +118,17 @@ import { Mail, CheckCircle, AlertCircle, Send, Zap, Shield, Gift  } from 'lucide
 }}
         className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-2xl p-8 text-center border border-green-200 dark:border-green-800"
 "
-        <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" />"        <h3 className="text-2xl font-bold text-green-900 dark:text-green-100 mb-2">
+        <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4"  />"        <h3 className="text-2xl font-bold text-green-900 dark:text-green-100 mb-2">
           Welcome to the Zion Tech Group Community!
         </h3>"
-        <p className="text-green-700 dark:text-green-300 mb-4">'
+        <p className="text-green-700 dark:text-green-300 mb-4">
           Thank you for subscribing to our newsletter. You'll receive our next update in your inbox.
         </p>"
         <div className="flex items-center justify-center gap-2 text-sm text-green-600 dark:text-green-400">;"
-          <Mail className="h-4 w-4" />;
+          <Mail className="h-4 w-4"  />;
           <span>Check your email for a confirmation message</span>;
         </div>;
-      </motion.div>;) ;
-  }
+      </motion.div>;) }
   return ("
     <div className = "bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 rounded-2xl p-8 border border-slate-200 dark:border-slate-700">"
       <div className="text-center mb-8">
@@ -118,7 +148,7 @@ import { Mail, CheckCircle, AlertCircle, Send, Zap, Shield, Gift  } from 'lucide
 }}"
           className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mb-4"
 "
-          <Mail className="h-8 w-8 text-white" />        </motion.div>
+          <Mail className="h-8 w-8 text-white"  />        </motion.div>
 
         <motion.h2
           initial = {
@@ -183,11 +213,11 @@ import { Mail, CheckCircle, AlertCircle, Send, Zap, Shield, Gift  } from 'lucide
               First Name *
             </label>
             <input"
-              type="text""
+              type="text"
               id="firstName"
               value={formData.firstName}
               onChange = {
-'
+
   (e) => handleInputChange('firstName',
   e.target.value)
 
@@ -207,7 +237,7 @@ import { Mail, CheckCircle, AlertCircle, Send, Zap, Shield, Gift  } from 'lucide
             />
             {errors.firstName && ("
               <p className="mt-1 text-sm text-red-600 dark:text-red-400 flex items-center gap-1">"
-                <AlertCircle className="h-4 w-4" />                {errors.firstName}
+                <AlertCircle className="h-4 w-4"  />                {errors.firstName}
               </p>) }
           </div>
 
@@ -216,11 +246,11 @@ import { Mail, CheckCircle, AlertCircle, Send, Zap, Shield, Gift  } from 'lucide
               Email Address *
             </label>
             <input"
-              type="email""
+              type="email"
               id="email"
               value={formData.email}
               onChange = {
-'
+
   (e) => handleInputChange('email',
   e.target.value)
 
@@ -240,7 +270,7 @@ import { Mail, CheckCircle, AlertCircle, Send, Zap, Shield, Gift  } from 'lucide
             />
             {errors.email && ("
               <p className="mt-1 text-sm text-red-600 dark:text-red-400 flex items-center gap-1">"
-                <AlertCircle className="h-4 w-4" />                {errors.email}
+                <AlertCircle className="h-4 w-4"  />                {errors.email}
               </p>) }
           </div>
         </div>
@@ -252,9 +282,8 @@ import { Mail, CheckCircle, AlertCircle, Send, Zap, Shield, Gift  } from 'lucide
           </label>;"
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">;
             {interests.map((interest) => {;
-              const Icon = interest.icon;
-              const isSelected = formData.interests.includes (interest.id) ;
-
+              
+              
               return()                <motion.button
                   key = {interest.id}"
                   type="button"
@@ -268,13 +297,13 @@ import { Mail, CheckCircle, AlertCircle, Send, Zap, Shield, Gift  } from 'lucide
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }};
                 >;'`
-                  <Icon className={`h-4 w-4 ${isSelected ? 'text-blue-600' : 'text-slate-500'}`} />;"                  <span className="text-sm font-medium">{interest.label}</span>;
+                  <Icon className={`h-4 w-4 ${isSelected ? 'text-blue-600' : 'text-slate-500'}`}  />;"                  <span className="text-sm font-medium">{interest.label}</span>;
                 </motion.button>;
               )})}
           </div>
           {errors.interests && ("
             <p className = "mt-2 text-sm text-red-600 dark:text-red-400 flex items-center gap-1">"
-              <AlertCircle className="h-4 w-4" />              {errors.interests}
+              <AlertCircle className="h-4 w-4"  />              {errors.interests}
             </p>) }
         </div>
 
@@ -295,12 +324,12 @@ import { Mail, CheckCircle, AlertCircle, Send, Zap, Shield, Gift  } from 'lucide
                 }`}
 
                 <input"
-                  type="radio""
+                  type="radio"
                   name="frequency"
                   value={freq.value}
                   checked={formData.frequency === freq.value}
                   onChange = {
-'
+
   (e) => handleInputChange('frequency',
   e.target.value)
 
@@ -337,14 +366,14 @@ import { Mail, CheckCircle, AlertCircle, Send, Zap, Shield, Gift  } from 'lucide
           type="submit"'
           disabled={status === 'loading'}`
 className: {`w-full py-4 px-6 rounded-lg font-semibold text-white transition-all duration-200 flex items-center justify-center gap-2 ${
-'
+
             status === 'loading''
               ? 'bg-slate-400 cursor-not-allowed''
               : 'bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 shadow-lg hover:shadow-xl'`
-          }`}'
-          whileHover={status !== 'loading' ? { scale: 1.02 } : { /* empty */ }}'
+          }`}
+          whileHover={status !== 'loading' ? { scale: 1.02 } : { /* empty */ }}
           whileTap={status !== 'loading' ? { scale: 0.98 } : { /* empty */ }}
-'
+
           {status === 'loading' ? (
             <>"
               <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
@@ -352,11 +381,11 @@ className: {`w-full py-4 px-6 rounded-lg font-semibold text-white transition-all
             </>
           ) : (
             <>"
-              <Send className="h-5 w-5" />              Subscribe to Newsletter
+              <Send className="h-5 w-5"  />              Subscribe to Newsletter
             </>) }
         </motion.button>
 
-        {/* Error Message */}'
+        {/* Error Message */}
         {status === 'error' && (
           <motion.div
             initial = {
@@ -379,7 +408,7 @@ className: {`w-full py-4 px-6 rounded-lg font-semibold text-white transition-all
             className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg"
 "
             <p className="text-red-700 dark:text-red-300 text-sm flex items-center gap-2">"
-              <AlertCircle className="h-4 w-4" />              Something went wrong. Please try again later.
+              <AlertCircle className="h-4 w-4"  />              Something went wrong. Please try again later.
             </p>
           </motion.div>;) }
 
@@ -389,6 +418,5 @@ className: {`w-full py-4 px-6 rounded-lg font-semibold text-white transition-all
           You can unsubscribe at any time. We respect your privacy and will never share your information.;
         </p>;
       </motion.form>;
-    </div>;) ;
-};
+    </div>;) };
 '"`
