@@ -1,4 +1,11 @@
 import React, { useState, Suspense } from 'react';
+import Image from 'next/image'; // Import next/image
+import { OptimizedImage } from '@/components/ui/OptimizedImage';
+import {
+  Dialog,
+  DialogContent,
+  DialogTrigger,
+} from '@/components/ui/dialog';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 
@@ -44,8 +51,20 @@ export function ProductGallery({ images, videoUrl, modelUrl }: ProductGalleryPro
 
       {videoUrl && (
         <TabsContent value="video" className="pt-4">
-          <AspectRatio ratio={16 / 9}>
-            <Suspense fallback={<img src={poster} alt="video" className="w-full h-full object-cover" />}>
+          <AspectRatio ratio={16 / 9} className="relative bg-black"> {/* Added relative and bg for fallback */}
+            <Suspense
+              fallback={
+                poster ? (
+                  <Image
+                    src={poster}
+                    alt="Video preview"
+                    fill
+                    style={{ objectFit: "cover" }}
+                    priority={false}
+                  />
+                ) : <div className="w-full h-full bg-muted animate-pulse" />
+              }
+            >
               <ReactPlayer url={videoUrl} width="100%" height="100%" controls />
             </Suspense>
           </AspectRatio>
@@ -54,13 +73,44 @@ export function ProductGallery({ images, videoUrl, modelUrl }: ProductGalleryPro
 
       {modelUrl && (
         <TabsContent value="model" className="pt-4">
-          <AspectRatio ratio={16 / 9}>
-            <Suspense fallback={<img src={poster} alt="model" className="w-full h-full object-cover" />}>
+          <AspectRatio ratio={16 / 9} className="relative bg-black"> {/* Added relative and bg for fallback */}
+            <Suspense
+              fallback={
+                poster ? (
+                  <Image
+                    src={poster}
+                    alt="3D model preview"
+                    fill
+                    style={{ objectFit: "cover" }}
+                    priority={false}
+                  />
+                ) : <div className="w-full h-full bg-muted animate-pulse" />
+              }
+            >
               <ModelViewer src={modelUrl} alt="3d model" camera-controls style={{ width: '100%', height: '100%' }} />
             </Suspense>
           </AspectRatio>
         </TabsContent>
       )}
     </Tabs>
+    {images.length > 0 && (
+      <DialogContent className="max-w-3xl p-0">
+        {/* For zoomed view, ensure parent has defined dimensions if using fill */}
+        <div
+          className={`w-full h-full overflow-auto ${zoomed ? 'cursor-zoom-out' : 'cursor-zoom-in'} relative`} // Added relative for Image fill
+          onClick={() => setZoomed(!zoomed)}
+          style={{ height: '80vh' }} // Example height, adjust as needed for modal
+        >
+          <Image
+            src={images[selected] || images[0] || ""}
+            alt="Zoomed view"
+            fill
+            style={{ objectFit: "contain", transform: zoomed ? 'scale(1.5)' : 'scale(1)' }} // Apply transform via style
+            className={`transition-transform duration-300`} // Smooth transition
+          />
+        </div>
+      </DialogContent>
+    )}
+    </Dialog>
   );
 }

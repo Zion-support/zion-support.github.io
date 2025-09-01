@@ -1,4 +1,5 @@
-import React from 'react';
+import Image from "next/image"; // Import Image
+
 export function InteractiveMap() {
   const locations = [{ name: 'New York', subdomain: 'ny.zionapp.com', top: '40%', left: '35%' },
     {
@@ -9,16 +10,17 @@ export function InteractiveMap() {
       left: '50%'},
     { name: 'Tokyo', subdomain: 'tokyo.zionapp.com', top: '45%', left: '80%' },
   ];
-  return ()
-    <section className="py-12 bg-background text-foreground" id="map">"
-      <div className="container mx-auto px-4 space-y-6 text-center">"
-        <h2 className="text-3xl font-bold">Zion Multiverse Map</h2>"
-        <div className="relative max-w-3xl mx-auto">
-          <img"
-            loading="lazy"
+  return (
+    <section className="py-12 bg-background text-foreground" id="map">
+      <div className="container mx-auto px-4 space-y-6 text-center">
+        <h2 className="text-3xl font-bold">Zion Multiverse Map</h2>
+        <div className="relative max-w-3xl mx-auto aspect-[2/1]"> {/* Added aspect ratio for Image with fill */}
+          <Image
             src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.png"
             alt="World map"
-            className="w-full h-auto"
+            fill
+            style={{ objectFit: "contain" }}
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 768px, 1024px" // Example sizes
           />
           {locations.map(loc => (
             <a

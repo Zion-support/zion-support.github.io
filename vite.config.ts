@@ -46,8 +46,7 @@ export default defineConfig({
     }
   },
   server: {
-    hmr: {
-      clientPort: 443
-    }
-  }
-})
+    port: 5174,
+    // allowedHosts: ['devserver-preview--ziontechgroup.netlify.app'],
+  },
+});

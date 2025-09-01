@@ -1,4 +1,7 @@
-import React, { Component, ReactNode, ErrorInfo } from "react";
+import React, { Component, ReactNode } from 'react';
+// import { Button } from './ui/button'; // Unused
+// import { AlertTriangle } from 'lucide-react'; // Unused
+import { logError } from '@/utils/productionLogger'; // Or your preferred logger
 
 interface ErrorBoundaryProps {
   fallback: ReactNode;
@@ -28,9 +31,8 @@ export class ErrorBoundary extends Component<Props, State> {
     return { hasError: true };
   }
 
-  componentDidCatch(error: Error, info: ErrorInfo) {
-    console.log("ErrorBoundary.tsx: ComponentDidCatch triggered");
-    console.error('Uncaught error:', error, info);
+  componentDidCatch(error: Error, errorInfo: any) {
+    logError('ErrorBoundary caught an error:', { data: { error, errorInfo } });
   }
 
   render() {

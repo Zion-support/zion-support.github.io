@@ -9,21 +9,23 @@ import { useNavigate } from 'react-router-dom';
 import { useCart } from '@/context/CartContext';
 
 export default function WishlistPage() {
-  const { favorites, loading } = useFavorites();
-  const { user } = useAuth();
-  const navigate = useNavigate();
-  const { dispatch } = useCart();
+  const { favorites, loading, toggleFavorite } = useFavorites();
+  const { user, isLoading: isAuthLoading } = useAuth(); // Added isAuthLoading
+  const router = useRouter(); // Changed from navigate
+  const { items, dispatch } = useCart(); // Moved useCart hook up
 
   if (!user) {
     navigate('/login');
     return null;
   }
 
-  const addToCart = async (item: { id: string; title?: string; price?: number }) => {
-    const res = await fetch('/api/cart/add', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
+  // const { items, dispatch } = useCart(); // Original position
+
+  const addToCart = (item: { id: string; title?: string; price?: number }) => {
+    if (items.some(i => i.id === item.id)) return;
+    dispatch({
+      type: 'ADD_ITEM',
+      payload: {
         id: item.id,
         title: item.title || 'Item', // Changed name to title
         price: item.price || 0

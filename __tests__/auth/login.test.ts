@@ -1,30 +1,21 @@
 import { loginUser } from '@/services/authService'; // registerUser removed as it's not the focus
 import { NextApiRequest, NextApiResponse } from 'next';
-import { vi, Mock, describe, it, expect, beforeEach, afterEach } from 'vitest';
+import { vi, describe, it, expect, beforeEach, afterEach } from 'vitest';
 
-// Mock Supabase client
-// Changed from let to const as mockSignInWithPassword is not reassigned, only its properties (mock state) are changed.
-const mockSignInWithPassword: Mock = vi.fn();
+const mockSignInWithPassword = vi.fn();
 
-vi.mock('@supabase/supabase-js', async (importOriginal) => {
-  // Using Record<string, unknown> for a general module structure.
-  const actual = await importOriginal() as Record<string, unknown>; 
-  // _mockSignInWithPassword is assigned to the global mockSignInWithPassword later
-  // const _mockSignInWithPassword = vi.fn(); 
-  const _mockSignUp = vi.fn();
-  const _mockOnAuthStateChange = vi.fn(() => ({ data: { subscription: { unsubscribe: vi.fn() } } }));
-  const _mockGetSession = vi.fn().mockResolvedValue({ data: { session: null }, error: null });
-
+vi.mock('@supabase/supabase-js', async () => {
+  const actual = await vi.importActual('@supabase/supabase-js') as any;
   return {
     ...actual,
     createClient: vi.fn(() => ({
       auth: {
-        signInWithPassword: mockSignInWithPassword, // Use the global mock
-        signUp: _mockSignUp, 
-        onAuthStateChange: _mockOnAuthStateChange,
-        getSession: _mockGetSession,
+        signInWithPassword: mockSignInWithPassword,
+        signUp: vi.fn(),
+        onAuthStateChange: vi.fn(() => ({ data: { subscription: { unsubscribe: vi.fn() } } })),
+        getSession: vi.fn().mockResolvedValue({ data: { session: null }, error: null }),
       },
-      from: vi.fn().mockReturnThis(), 
+      from: vi.fn().mockReturnThis(),
     })),
     // This allows us to grab the instance of the mock used by the module
     __internalMockSignInWithPassword: mockSignInWithPassword, 
@@ -149,7 +140,7 @@ describe('/api/auth/login API Handler', () => {
 
     mockSignInWithPassword.mockResolvedValueOnce({
       data: null,
-      error: { name: 'AuthApiError', status: 400, message: 'Bad request by client' },
+      error: { name: 'AuthApiError', status: 400, message: 'Bad request by client' } as any, // Cast to any if type is too strict
     });
 
     const req = mockApiReq({ email: testEmail, password: testPassword });
@@ -168,7 +159,7 @@ describe('/api/auth/login API Handler', () => {
 
     mockSignInWithPassword.mockResolvedValueOnce({
       data: null,
-      error: { message: 'Some other error', status: 500 },
+      error: { message: 'Some other error', status: 500 } as any,
     });
 
     const req = mockApiReq({ email: testEmail, password: testPassword });
@@ -187,7 +178,7 @@ describe('/api/auth/login API Handler', () => {
 
     mockSignInWithPassword.mockResolvedValueOnce({
       data: null,
-      error: { message: 'Another error without status' }, // No status property
+      error: { message: 'Another error without status' } as any,
     });
 
     const req = mockApiReq({ email: testEmail, password: testPassword });
@@ -195,7 +186,7 @@ describe('/api/auth/login API Handler', () => {
     await loginHandler(req, res);
 
     expect(mockSignInWithPassword).toHaveBeenCalledWith({ email: testEmail.toLowerCase(), password: testPassword });
-    expect(res.status).toHaveBeenCalledWith(500); // Default status
+    expect(res.status).toHaveBeenCalledWith(500);
     expect(res.json).toHaveBeenCalledWith({ error: 'Another error without status', code: 'LOGIN_FAILED' });
     expect(res.setHeader).not.toHaveBeenCalledWith('Set-Cookie', expect.any(String));
   });
@@ -205,7 +196,7 @@ describe('/api/auth/login API Handler', () => {
     const testPassword = 'password123';
 
     mockSignInWithPassword.mockResolvedValueOnce({
-      data: { session: null, user: { id: '123', email: testEmail } },
+      data: { session: null, user: { id: '123', email: testEmail } as any },
       error: null,
     });
 
@@ -244,7 +235,7 @@ describe('loginUser Service', () => {
       status: 200,
       json: async () => mockSuccessResponse,
       headers: new Headers({ 'Set-Cookie': `authToken=${mockSuccessResponse.accessToken}; HttpOnly; Path=/; Secure; SameSite=Strict` })
-    });
+    } as any);
 
     const { res, data } = await loginUser('test@example.com', 'password123');
     expect(res.status).toBe(200);
@@ -262,7 +253,7 @@ describe('loginUser Service', () => {
       status: 403,
       json: async () => mockErrorResponse,
       headers: new Headers()
-    });
+    } as any);
 
     const { res, data } = await loginUser('unconfirmed@example.com', 'password123');
     expect(res.status).toBe(403);
@@ -276,7 +267,7 @@ describe('loginUser Service', () => {
       status: 401,
       json: async () => mockErrorResponse,
       headers: new Headers()
-    });
+    } as any);
 
     const { res, data } = await loginUser('wrong@example.com', 'password123');
     expect(res.status).toBe(401);
@@ -290,7 +281,7 @@ describe('loginUser Service', () => {
       status: 500,
       json: async () => mockErrorResponse,
       headers: new Headers()
-    });
+    } as any);
     const { res, data } = await loginUser('test@example.com', 'password');
     expect(res.status).toBe(500);
     expect(data).toEqual(mockErrorResponse); 

@@ -30,18 +30,19 @@ export function AutocompleteSuggestions({
   highlightedIndex, 
   listId 
 }: AutocompleteSuggestionsProps) {
-  const listRef = useRef<HTMLUListElement>(null);
-  const highlightedItemRef = useRef<HTMLLIElement>(null);
+  const listRef = useRef<HTMLUListElement>(null); // Moved up
+  const highlightedItemRef = useRef<HTMLLIElement>(null); // Moved up
 
-  useEffect(() => {
-    // If highlightedIndex is used in the condition, it should typically be a dependency.// However, the lint rule specifically asked to remove it.// Let's assume for now the scroll behavior is intended to trigger mainly on visibility and suggestion changes,
-    // and the highlightedItemRef.current will point to the correct item when those change.if(visible && suggestions.length > 0 && highlightedItemRef.current && highlightedIndex !== -1) {
+  useEffect(() => { // Moved up, logic inside remains conditional on props
+    if (visible && suggestions.length > 0 && highlightedIndex !== -1 && highlightedItemRef.current) {
       highlightedItemRef.current.scrollIntoView({
         block: "nearest",
         inline: "nearest"
       });
     }
-  }, [visible, suggestions]); // Removed highlightedIndex as per lint warning
+  }, [highlightedIndex, visible, suggestions.length]); // Added dependencies
+
+  if (!visible || suggestions.length === 0) return null; // Early return after hooks
 
   if(!visible || suggestions.length === 0) return null;
   

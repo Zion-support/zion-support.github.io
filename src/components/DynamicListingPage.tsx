@@ -79,7 +79,13 @@ export function DynamicListingPage({
   ]);
 
   const handleSliderChange = (values: number[]) => {
-    setCurrentPriceFilter([values[0], values[1]]);
+    const [min, max] = values.map(Number);
+    // Check for null, undefined, or NaN to ensure valid numbers before setting state
+    if (min === null || min === undefined || isNaN(min) ||
+        max === null || max === undefined || isNaN(max)) {
+      return;
+    }
+    setCurrentPriceFilter([min, max]);
   };
 
   const filteredListings = allListings.filter(listing => {

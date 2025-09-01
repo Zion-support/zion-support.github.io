@@ -8,15 +8,19 @@ import Custom404 from '../404';
 import type { ProductListing } from '@/types/listings';
 
 const ServicePage: React.FC = () => {
-  const params = useParams();
-  const slug = params.slug as string;
-  const service = React.useMemo(
-    () => SERVICES.find((s) => slugify(s.title) === slug) || null,
-    [slug]
-  );
-  if (!service) {
+  const router = useRouter();
+  const { slug } = router.query as { slug?: string };
+
+  // Moved useMemo call before any early returns
+  const service = React.useMemo(() => {
+    if (!slug) return null; // Handle undefined slug inside useMemo
+    return SERVICES.find((s) => slugify(s.title) === slug) || null;
+  }, [slug]);
+
+  if (!slug || !service) { // Combined checks
     return <Custom404 />;
   }
+
   const serviceLd = {
     "@context": "https://schema.org",
     "@type": "Service",

@@ -1,10 +1,8 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-import {
-  logInfo as serverLogInfo,
-  logWarn as serverLogWarn,
-  logError as serverLogError,
-  logDebug as serverLogDebug
-} from '@/utils/productionLogger'; // Renamed to avoid conflict with client-side logger variable if any
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+import * as Sentry from '@sentry/nextjs';
+import { logWarn, logError } from '@/utils/productionLogger'; // Import loggers
 
 interface LogEntry {
   level: 'debug' | 'info' | 'warn' | 'error';
@@ -38,10 +36,30 @@ export default async function handler(
       return res.status(400).json({ error: 'Invalid request body. Expected entries array.' });
     }
 
-    // Validate entries
-    for (const entry of entries) {
-      if (!entry.level || !entry.message || !entry.timestamp) {
-        return res.status(400).json({ error: 'Invalid log entry format' });
+    // 2. Forward errors/warnings to Sentry if configured
+    if (process.env.NEXT_PUBLIC_SENTRY_DSN) {
+      entries.forEach((entry) => {
+        if (entry.level === 'error' || entry.level === 'warn') {
+          Sentry.captureMessage(entry.message, {
+            level: entry.level,
+            extra: entry,
+          });
+        }
+      });
+    }
+
+    // 3. Optional: Forward to external webhook if configured via env
+    if (process.env.NEXT_PUBLIC_AUTOFIX_WEBHOOK_URL) {
+      try {
+        const doFetch = typeof fetch !== 'undefined' ? fetch : (await import('node-fetch')).default as unknown as typeof fetch;
+        await doFetch(process.env.NEXT_PUBLIC_AUTOFIX_WEBHOOK_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ entries }),
+        });
+      } catch (err) {
+        // swallow – do not break client logging on webhook failure
+         logWarn('Failed to forward logs to webhook:', { data: err });
       }
     }
 
@@ -102,10 +120,9 @@ export default async function handler(
     });
 
   } catch (error) {
-    console.error('Error processing logs:', error);
-    return res.status(500).json({ 
-      error: 'Internal server error',
-      message: 'Failed to process log entries',
-    });
+    // Log server-side failure
+    logError('Error in /api/logs:', { data: error });
+    Sentry.captureException(error);
+    return res.status(500).json({ message: 'Internal Server Error' });
   }
 } 

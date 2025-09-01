@@ -1,33 +1,31 @@
-import NextAuth from "next-auth";
+import NextAuth, { type NextAuthOptions, User as NextAuthUser, Session as NextAuthSession } from "next-auth";
+import { JWT as NextAuthJWT } from "next-auth/jwt";
 import GoogleProvider from "next-auth/providers/google";
 import FacebookProvider from "next-auth/providers/facebook";
 import CredentialsProvider from "next-auth/providers/credentials";
-import type { NextAuthOptions } from "next-auth";
-import { createClient } from '@supabase/supabase-js'; // Import Supabase
+import { withErrorLogging } from '@/utils/withErrorLogging';
+import { supabase } from '@/utils/supabase/client'; // Use centralized client
 import { verifyMessage } from 'ethers'; // Assuming ethers v6+
+import { logInfo, logWarn, logError } from '@/utils/productionLogger';
+import { NextApiRequest, NextApiResponse } from "next";
 
-// Initialize Supabase client (ensure these ENV vars are set)
-let supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL as string;
-// IMPORTANT: Use the SERVICE_ROLE_KEY for admin operations like user lookup if necessary,
-// but for signInWithPassword, anon key might be sufficient if RLS allows.
-// For robust auth provider, service role key might be needed for full control.
-// Here, we're verifying credentials, so signInWithPassword should be fine with anon key if it's public.
-// However, if creating users or more complex checks, service key is safer.
-// Let's assume public URL and anon key are fine for signIn, as it's a client-facing action.
-// If this [...nextauth].ts is ONLY for server-side session management after Supabase auth,
-// then Supabase client might not even be needed here if Supabase JWT is used as next-auth session token.
-// But typical CredentialsProvider does its own validation.
-let supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY as string;
-
-// Temporary workaround for build if .env.local has invalid placeholders
-if (supabaseUrl === 'your_supabase_url_here/' || supabaseUrl === 'your_supabase_url_here' || !supabaseUrl) {
-  supabaseUrl = 'http://localhost:54321'; // A valid placeholder URL
+// Define custom types by extending NextAuth's default types
+interface ExtendedUser extends NextAuthUser {
+  id: string; // Ensure id is always part of the user object model
+  walletAddress?: string;
 }
-if (supabaseAnonKey === 'your_supabase_anon_key_here' || !supabaseAnonKey) {
-  supabaseAnonKey = 'test_anon_key'; // A valid placeholder key
-}
-const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
+interface ExtendedJWT extends NextAuthJWT {
+  id?: string;
+  walletAddress?: string;
+  // accessToken is often added to JWT in examples, so include it if used
+  accessToken?: string;
+}
+
+interface ExtendedSession extends NextAuthSession {
+  user?: ExtendedUser;
+  // accessToken?: string; // If you plan to expose it to the client session
+}
 
 // WalletConnect isn't natively supported by next-auth. We'll mock a basic credentials
 // provider that handles an address signature check. In a real app you'd verify
@@ -218,27 +216,33 @@ export const authOptions: NextAuthOptions = {
     strategy: "jwt", // Using JWT for sessions
   },
   callbacks: {
-    async jwt({ token, user, account }) {
+    async jwt({ token, user, account }): Promise<ExtendedJWT> {
+      const extendedToken = token as ExtendedJWT;
+      const extendedUser = user as ExtendedUser | undefined; // user can be undefined
+
       // Persist the OAuth access_token or user.id to the token right after signin
-      if (account && user) {
-        token.accessToken = account.access_token; // For OAuth
-        token.id = user.id; // For all users
-        if ((user as any).walletAddress) { // For wallet users
-            token.walletAddress = (user as any).walletAddress;
+      if (account && extendedUser) {
+        extendedToken.accessToken = account.access_token; // For OAuth
+        extendedToken.id = extendedUser.id; // For all users
+        if (extendedUser.walletAddress) { // For wallet users
+            extendedToken.walletAddress = extendedUser.walletAddress;
         }
       }
-      return token;
+      return extendedToken;
     },
-    async session({ session, token }) {
+    async session({ session, token }): Promise<ExtendedSession> {
+      const extendedSession = session as ExtendedSession;
+      const extendedToken = token as ExtendedJWT;
+
       // Send properties to the client, like an access_token and user id from the token
-      if (session.user) {
-         (session.user as any).id = token.id as string;
-        if (token.walletAddress) {
-                 (session.user as any).walletAddress = token.walletAddress as string;
+      if (extendedSession.user && extendedToken.id) {
+        extendedSession.user.id = extendedToken.id;
+        if (extendedToken.walletAddress) {
+          extendedSession.user.walletAddress = extendedToken.walletAddress;
         }
       }
-      // session.accessToken = token.accessToken; // If using OAuth and need token client-side
-      return session;
+      // extendedSession.accessToken = extendedToken.accessToken; // If using OAuth and need token client-side
+      return extendedSession;
     },
   },
   pages: {
@@ -250,4 +254,11 @@ export const authOptions: NextAuthOptions = {
 };
 
 const handler = NextAuth(authOptions);
-export { handler as GET, handler as POST };
+
+// Explicitly type the handler for compatibility with withErrorLogging
+const nextAuthHandler: (req: NextApiRequest, res: NextApiResponse) => Promise<void> =
+  (req, res) => handler(req, res);
+
+const wrappedHandler = withErrorLogging(nextAuthHandler);
+export { wrappedHandler as GET, wrappedHandler as POST };
+export default wrappedHandler;

@@ -2,6 +2,21 @@ import { useState, useEffect } from 'react';
 export default function Page() {
 ;
   
+  // Load logs on mount and when pagination changes
+  useEffect(() => {
+    fetchApiLogs(pageSize, currentPage * pageSize);
+  }, [pageSize, currentPage, fetchApiLogs]); // Added fetchApiLogs
+  
+  const handleRefresh = () => {
+    fetchApiLogs(pageSize, currentPage * pageSize);
+  };
+  
+  // Helper to format the timestamp
+  const formatTimestamp = (timestamp: string) => {
+    return format(new Date(timestamp), 'yyyy-MM-dd HH:mm:ss');
+  };
+  
+  // Helper to get badge color based on status code
   const getStatusBadge = (statusCode: number) => {
     if(statusCode >= 200 && statusCode < 300) {
       return <Badge className="bg-green-700">Success</Badge>;

@@ -36,21 +36,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(200).json({ message: 'If your email address exists in our system, you will receive a password reset link.' });
     }
 
-    const resetToken = crypto.randomBytes(32).toString('hex');
-    const passwordResetToken = crypto
-      .createHash('sha256')
-      .update(resetToken)
-      .digest('hex');
-
-    const passwordResetExpires = new Date(Date.now() + 3600000); // 1 hour from now
-
-    // Ensure these field names (resetToken, resetTokenExpiry) match your Prisma User schema.
-    await prisma.user.update({
-      where: { id: user.id },
-      data: {
-        resetToken: passwordResetToken,      // Or the equivalent field in your schema
-        resetTokenExpiry: passwordResetExpires, // Or the equivalent field in your schema
-      },
+    // const ticketData = await createTicketResponse.json(); // ticketData is unused
+    await createTicketResponse.json(); // Consume the JSON body
+    logInfo('Password reset ticket created successfully for:', { data: email });
+    
+    // Always return the same message for security (don't reveal if user exists)
+    return res.status(200).json({
+      message: 'If your email address is registered, you will receive a password reset link shortly.',
+      success: true
     });
 
     await sendResetEmail(user.email, resetToken);
