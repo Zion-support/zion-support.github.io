@@ -1,8 +1,20 @@
-export default function Home() {
+import type { NextPage } from 'next';
+import Head from 'next/head';
+
+const Index: NextPage = () => {
   return (
-    <div className="space-y-4">
-      <h1 className="text-2xl font-semibold">Zion AI Marketplace</h1>
-      <p className="opacity-80">Welcome. Use the support widget at bottom-right or visit the Help Center.</p>
+    <div>
+      <Head>
+        <title>Index - Zion Tech Solutions</title>
+        <meta name="description" content="Index page" />
+      </Head>
+      
+      <main>
+        <h1>Index</h1>
+        <p>This page is under construction.</p>
+      </main>
     </div>
   );
-}
+};
+
+export default Index;
