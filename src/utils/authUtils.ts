@@ -1,40 +1,46 @@
-export 
-      sessionStorage.removeItem('auth')}
+export function cleanupAuthState(): void {
+  try {
+    sessionStorage.removeItem('auth');
+    localStorage.removeItem('auth');
   } catch (error) {
+    // console.error('Error cleaning up auth state:', error);
+  }
+}
 
-    // console.error('Error cleaning up auth state:', error)}
-};
-
-export 
-      return !!auth}
-    return false} catch (error) {
-
+export function isAuthenticated(): boolean {
+  try {
+    const auth = sessionStorage.getItem('auth') || localStorage.getItem('auth');
+    return !!auth;
+  } catch (error) {
     // console.error('Error checking authentication status:', error);
-    return false}
-};
+    return false;
+  }
+}
 
-export 
-      if (auth) {
-
-        
-        return parsed.token || null}
+export function getAuthToken(): string | null {
+  try {
+    const auth = sessionStorage.getItem('auth') || localStorage.getItem('auth');
+    if (auth) {
+      const parsed = JSON.parse(auth);
+      return parsed.token || null;
     }
-    return null} catch (error) {
-
+    return null;
+  } catch (error) {
     // console.error('Error getting auth token:', error);
+    return null;
+  }
+}
 
-      return null}
-  };
-
-export 
-      if (auth) {
-
-        
-        return parsed.user || null}
+export function getUserData(): any | null {
+  try {
+    const auth = sessionStorage.getItem('auth') || localStorage.getItem('auth');
+    if (auth) {
+      const parsed = JSON.parse(auth);
+      return parsed.user || null;
     }
-    return null} catch (error) {
-
+    return null;
+  } catch (error) {
     // console.error('Error getting user data:', error);
-
-    return null}
-};
+    return null;
+  }
+}
