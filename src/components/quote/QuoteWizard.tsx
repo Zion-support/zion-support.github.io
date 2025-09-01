@@ -50,9 +50,9 @@ export function QuoteWizard() {
           <div className="text-center text-red-500">Service temporarily unavailable</div>
         )}
 
-        {data && (
+        {services.length > 0 && (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {data.map((item) => (
+            {services.map((item) => (
               <Card
                 data-testid={`service-card-${item.id}`}
                 key={item.id}
