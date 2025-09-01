@@ -23,7 +23,64 @@ Important variables include:
 
 ## Running Tests
 
-Run the automated tests using npm:
+⚠️ **IMPORTANT**: This project uses **Supabase for authentication** and **Netlify for environment variable management**. Proper configuration is essential for the application to function correctly.
+
+### Authentication Setup
+
+The application uses Supabase for all authentication functionality:
+- User registration and login
+- Email verification and password reset
+- Social authentication (Google, Facebook, GitHub, Microsoft, Twitter)
+- Session management and profile handling
+
+### Required Environment Variables
+
+A comprehensive list of environment variables can be found in the `.env.example` file. For local development, create a `.env.local` file and populate it with the necessary values based on `.env.example`. For production deployment (e.g., on Netlify), these variables must be configured in your hosting provider's UI.
+
+**Key variables include:**
+
+-   **Supabase Configuration:**
+    -   `NEXT_PUBLIC_SUPABASE_URL`
+    -   `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+    -   `SUPABASE_SERVICE_ROLE_KEY` (for server-side operations)
+-   **NextAuth.js Configuration:**
+    -   `NEXTAUTH_SECRET` (a randomly generated string for signing tokens)
+    -   `NEXTAUTH_URL` (the canonical URL of your application)
+-   **OAuth Provider Credentials:**
+    -   `GOOGLE_CLIENT_ID` & `GOOGLE_CLIENT_SECRET`
+    -   `FACEBOOK_CLIENT_ID` & `FACEBOOK_CLIENT_SECRET`
+    -   `GITHUB_CLIENT_ID` & `GITHUB_CLIENT_SECRET`
+    -   `MICROSOFT_CLIENT_ID` & `MICROSOFT_CLIENT_SECRET` (and potentially `MICROSOFT_TENANT_ID`)
+    -   Other provider credentials as needed.
+-   **Internal Authentication Service:**
+    -   `INTERNAL_AUTH_SERVICE_URL` (if used for specific flows like registration)
+
+Ensure all variables marked as required in `.env.example` or in specific documentation (like `docs/SUPABASE_AUTHENTICATION_SETUP.md`) are correctly set.
+
+### 📚 Detailed Setup Guides
+
+- **[Supabase Authentication Setup](docs/SUPABASE_AUTHENTICATION_SETUP.md)** - Complete guide for configuring Supabase authentication
+- **[Netlify Deployment Guide](docs/NETLIFY_DEPLOYMENT_GUIDE.md)** - Step-by-step Netlify deployment with environment variables
+- **[Optional Two-Factor Authentication](TWO_FACTOR_AUTHENTICATION_SUMMARY.md)** - Overview of enabling 2FA in the IPO portal
+- **[Logging Guidelines](docs/LOGGING_GUIDELINES.md)** - Usage instructions for the project logger
+- **Collect Logs** - `npm run logs:collect` bundles recent logs under `logs/archive/`
+- **Analyze Logs** - `npm run logs:summary` scans collected logs and reports missing translation keys
+- **CSV Log Summary** - `npm run logs:summary:csv` outputs a CSV report of error counts per log file
+- **Health Check** - `npm run logs:health` prints a quick system status report
+- **Automated Alerts** - `npm run logs:alerts` enables real-time log monitoring and sends alerts to the configured webhook
+- **Missing Key Log** - Any translation keys not found at runtime are appended to `logs/missing-keys.log`
+- **Bug Logging** - Run `python3 main_app.py` to generate sample bug logs in `logs/bug/bug_log.json`. Use `python3 bug_logger.py --summary` to view a summary of logged issues.
+
+### CDN for Static Assets
+
+To improve performance, the application can serve static assets from a CDN.
+Set `NEXT_PUBLIC_CDN_URL` to your CDN domain (e.g., `https://cdn.yourdomain.com`).
+When this variable is provided in production builds, Next.js will prefix asset
+URLs so they are loaded from the CDN.
+
+### Quick Setup Verification
+
+After setting up environment variables, verify your configuration:
 
 ```bash
 npm run test:all
