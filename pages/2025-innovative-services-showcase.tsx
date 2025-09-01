@@ -7,11 +7,13 @@ import {
   Heart, Truck, GraduationCap, Building, Globe, Zap, Lock, Eye, Cloud, ShoppingCart
 } from 'lucide-react';
 
-// Import our latest innovative services
-import { advancedAIAutomationServices } from '../data/advanced-ai-automation-services';
-import { nextGenITInfrastructureServices } from '../data/next-gen-it-infrastructure-services';
-import { innovativeMicroSaasSolutions2025 } from '../data/innovative-micro-saas-solutions-2025';
-import { specializedIndustrySolutions } from '../data/specialized-industry-solutions';
+// Import all service data
+import { revolutionary2045AdvancedRealMicroSaas } from '../data/revolutionary-2045-advanced-real-micro-saas';
+import { revolutionary2045AdvancedITServices } from '../data/revolutionary-2045-advanced-it-services';
+import { revolutionary2045AdvancedAIServices } from '../data/revolutionary-2045-advanced-ai-services';
+import { innovative2025AIAutonomousServices } from '../data/2025-innovative-ai-autonomous-services';
+import { innovativeITInfrastructureServices2025 } from '../data/2025-innovative-it-infrastructure-services';
+import { innovativeMicroSaasServices2025 } from '../data/2025-innovative-micro-saas-services';
 
 const InnovativeServicesShowcase2025: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -19,30 +21,24 @@ const InnovativeServicesShowcase2025: React.FC = () => {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
   const allServices = [
-    ...advancedAIAutomationServices,
-    ...nextGenITInfrastructureServices,
-    ...innovativeMicroSaasSolutions2025,
-    ...specializedIndustrySolutions
+    ...revolutionary2045AdvancedRealMicroSaas,
+    ...revolutionary2045AdvancedITServices,
+    ...revolutionary2045AdvancedAIServices,
+    ...innovative2025AIAutonomousServices,
+    ...innovativeITInfrastructureServices2025,
+    ...innovativeMicroSaasServices2025
   ];
 
   const categories = [
-    { id: 'all', name: 'All Services', icon: <Grid className="w-5 h-5" />, count: allServices.length },
-    { id: 'AI & Automation', name: 'AI & Automation', icon: <Brain className="w-5 h-5" />, count: allServices.filter(s => s.category === 'AI & Automation').length },
-    { id: 'Infrastructure & Edge', name: 'Infrastructure', icon: <Globe className="w-5 h-5" />, count: allServices.filter(s => s.category === 'Infrastructure & Edge').length },
-    { id: 'Security & Compliance', name: 'Security', icon: <Shield className="w-5 h-5" />, count: allServices.filter(s => s.category === 'Security & Compliance').length },
-    { id: 'Monitoring & Observability', name: 'Monitoring', icon: <Eye className="w-5 h-5" />, count: allServices.filter(s => s.category === 'Monitoring & Observability').length },
-    { id: 'Data & Analytics', name: 'Data & Analytics', icon: <TrendingUp className="w-5 h-5" />, count: allServices.filter(s => s.category === 'Data & Analytics').length },
-    { id: 'Cloud & Governance', name: 'Cloud & Governance', icon: <Cloud className="w-5 h-5" />, count: allServices.filter(s => s.category === 'Cloud & Governance').length },
-    { id: 'Virtual Events & Communication', name: 'Virtual Events', icon: <Users className="w-5 h-5" />, count: allServices.filter(s => s.category === 'Virtual Events & Communication').length },
-    { id: 'Fashion & Retail', name: 'Fashion & Retail', icon: <Palette className="w-5 h-5" />, count: allServices.filter(s => s.category === 'Fashion & Retail').length },
-    { id: 'Smart Home & Energy', name: 'Smart Home', icon: <Zap className="w-5 h-5" />, count: allServices.filter(s => s.category === 'Smart Home & Energy').length },
-    { id: 'Legal & Compliance', name: 'Legal & Compliance', icon: <Lock className="w-5 h-5" />, count: allServices.filter(s => s.category === 'Legal & Compliance').length },
-    { id: 'Training & Education', name: 'Training & Education', icon: <GraduationCap className="w-5 h-5" />, count: allServices.filter(s => s.category === 'Training & Education').length },
-    { id: 'Healthcare & Medical', name: 'Healthcare', icon: <Heart className="w-5 h-5" />, count: allServices.filter(s => s.category === 'Healthcare & Medical').length },
-    { id: 'Financial Services', name: 'Financial Services', icon: <Target className="w-5 h-5" />, count: allServices.filter(s => s.category === 'Financial Services').length },
-    { id: 'Manufacturing & Industrial', name: 'Manufacturing', icon: <Building className="w-5 h-5" />, count: allServices.filter(s => s.category === 'Manufacturing & Industrial').length },
-    { id: 'Retail & E-commerce', name: 'Retail & E-commerce', icon: <ShoppingCart className="w-5 h-5" />, count: allServices.filter(s => s.category === 'Retail & E-commerce').length },
-    { id: 'Logistics & Supply Chain', name: 'Logistics', icon: <Truck className="w-5 h-5" />, count: allServices.filter(s => s.category === 'Logistics & Supply Chain').length }
+    { id: 'all', name: 'All Services', icon: Sparkles, color: 'from-purple-500 to-pink-500', count: allServices.length },
+    { id: 'ai-autonomous', name: 'AI & Autonomous', icon: Brain, color: 'from-cyan-500 to-blue-500', count: [...revolutionary2045AdvancedAIServices, ...innovative2025AIAutonomousServices].length },
+    { id: 'quantum', name: 'Quantum Technology', icon: Atom, color: 'from-blue-500 to-indigo-500', count: allServices.filter(s => s.category.includes('Quantum')).length },
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-500', count: allServices.filter(s => s.category.includes('Security')).length },
+    { id: 'micro-saas', name: 'Micro SAAS', icon: Target, color: 'from-emerald-500 to-teal-500',     count: [...revolutionary2045AdvancedRealMicroSaas, ...innovativeMicroSaasServices2025].length },
+    { id: 'it-infrastructure', name: 'IT Infrastructure', icon: Server, color: 'from-yellow-500 to-orange-500', count: [...revolutionary2045AdvancedITServices, ...innovativeITInfrastructureServices2025].length },
+    { id: 'edge-computing', name: 'Edge Computing', icon: Network, color: 'from-indigo-500 to-purple-500', count: allServices.filter(s => s.category.includes('Edge')).length },
+    { id: 'devops', name: 'DevOps & Automation', icon: Code, color: 'from-orange-500 to-red-500', count: allServices.filter(s => s.category.includes('DevOps')).length },
+    { id: 'data-analytics', name: 'Data & Analytics', icon: BarChart3, color: 'from-teal-500 to-cyan-500', count: allServices.filter(s => s.category.includes('Data')).length }
   ];
 
   const filteredServices = allServices.filter(service => {
