@@ -125,10 +125,8 @@
     "vaul": "^0.9.0",
     "web3modal": "^1.9.12",
     "yup": "^1.2.0",
-    "zod": "^3.22.4"
-  },
-  "optionalDependencies": {
-    "@elastic/elasticsearch": "^8.12.0"
+    "zod": "^3.25.55",
+    "next-plugin-transpile-modules": "^2.0.0"
   },
   "devDependencies": {
     "@playwright/test": "^1.41.2",
