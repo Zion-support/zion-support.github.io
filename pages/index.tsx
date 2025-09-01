@@ -13,10 +13,10 @@ const HomePage = memo(function HomePage() {
   return (
     <div>
       <Head>
-        <title>Zion Tech Group — Autonomous Innovation Hub & AI-Powered Cloud Platform</title>
-        <meta name="description" content="Leading-edge autonomous technology platform with 227+ automations, AI-powered cloud systems, comprehensive redundancy infrastructure, and 2960+ pages of content. Experience the future of autonomous innovation." />
-        <meta property="og:title" content="Zion Tech Group — Autonomous Innovation Hub & AI-Powered Cloud Platform" />
-        <meta property="og:description" content="Leading-edge autonomous technology platform with 227+ automations, AI-powered cloud systems, comprehensive redundancy infrastructure, and 2960+ pages of content." />
+        <title>Zion Tech Group — World&apos;s Most Advanced Autonomous Innovation Hub & AI-Powered Cloud Platform</title>
+        <meta name="description" content="Experience the future of autonomous technology with 227+ intelligent automations, AI-powered cloud systems, comprehensive redundancy infrastructure, and zero-downtime operations. The most advanced autonomous platform ever built." />
+        <meta property="og:title" content="Zion Tech Group — World&apos;s Most Advanced Autonomous Innovation Hub & AI-Powered Cloud Platform" />
+        <meta property="og:description" content="Experience the future of autonomous technology with 227+ intelligent automations, AI-powered cloud systems, comprehensive redundancy infrastructure, and zero-downtime operations." />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="keywords" content="autonomous automation, AI-powered development, cloud-native solutions, redundancy systems, GitHub Actions automation, PM2 process management, Netlify functions, intelligent orchestration" />
       </Head>
@@ -28,11 +28,8 @@ const HomePage = memo(function HomePage() {
             <h1 className="text-6xl font-extrabold mb-8 bg-gradient-to-r from-cyan-400 via-fuchsia-400 to-blue-400 bg-clip-text text-transparent">
               Zion Tech Group
             </h1>
-            <p className="text-3xl text-white/90 max-w-5xl mx-auto mb-8">
-              The World's Most Advanced Autonomous Innovation Hub
-            </p>
-            <p className="text-xl text-white/80 max-w-4xl mx-auto mb-8">
-              Experience the future of technology with 227+ autonomous systems, AI-powered cloud infrastructure, and self-healing platforms that never sleep.
+            <p className="text-2xl text-white/90 max-w-4xl mx-auto mb-8">
+              The world&apos;s most advanced autonomous innovation hub delivering cutting-edge technology solutions, intelligent automation systems, and the future of cloud-native AI infrastructure.
             </p>
             <div className="flex flex-wrap justify-center gap-6 mb-12">
               <div className="bg-white/10 backdrop-blur-xl rounded-xl px-6 py-3 border border-white/20">
@@ -1572,6 +1569,4 @@ const HomePage = memo(function HomePage() {
       </div>
     </>
   );
-});
-
-export default HomePage;
+}
