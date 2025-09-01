@@ -171,6 +171,7 @@
   name = "docs-search-index-runner"
   schedule = "53 */6 * * *"
 
+# Resolved merge: keep both redirect-healer and redirect-manager, plus a11y-audit-runner
 [[scheduled.functions]]
   name = "redirect-healer"
   schedule = "*/15 * * * *"
@@ -292,7 +293,10 @@ schedule = "*/2 * * * *" # every 2 minutes
   name = "branch-cleanup-runner"
   schedule = "0 3 * * *" # daily at 03:00 UTC
 
-# New: Revenue ideas orchestrator
 [[scheduled.functions]]
-  name = "revenue-agents-runner"
-  schedule = "*/30 * * * *"
+  name = "meta-tags-audit-runner"
+  schedule = "13 */4 * * *"
+
+[[scheduled.functions]]
+  name = "orphan-pages-report-runner"
+  schedule = "29 */6 * * *"
