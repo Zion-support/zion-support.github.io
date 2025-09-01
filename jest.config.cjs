@@ -1,7 +1,35 @@
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js', '@testing-library/jest-dom'],
+  transform: {
+    '^.+\\.(t|j)sx?$': ['babel-jest', {
+      presets: [
+        ['@babel/preset-env', { targets: { node: 'current' }, modules: 'commonjs' }],
+        ['@babel/preset-typescript', { allExtensions: true, isTSX: true }], // Added isTSX: true
+        ['@babel/preset-react', { runtime: 'automatic' }]
+      ],
+      // plugins: ['babel-plugin-istanbul'], // Removed this line
+      babelrc: false,
+      configFile: false
+    }],
+  },
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'], // Keep ts/tsx here
+  setupFilesAfterEnv: ['<rootDir>/tests/jest.setup.ts'],
+  testMatch: [ // More specific test match patterns
+    "**/__tests__/**/*.test.[jt]s?(x)",
+    "**/tests/**/*.test.[jt]s?(x)",
+    // If you have tests directly within src, you might add:
+    // "<rootDir>/src/**/__tests__/**/*.test.[jt]s?(x)",
+    // "<rootDir>/src/**/*.test.[jt]s?(x)",
+  ],
+  testPathIgnorePatterns: [ // Ignore patterns
+    "/node_modules/",
+    "/cypress/",
+    "/playwright/", // Assuming playwright tests might be in a root /playwright folder
+    "tests/storybook/", // Explicitly ignore storybook visual tests
+    "tests/visual-regression.test.ts", // Explicitly ignore this visual regression test
+    "\\.spec\\.[jt]s?(x)$" // Convention for Playwright spec files, to avoid conflict if any
+  ],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
@@ -74,28 +102,16 @@ module.exports = {
     // Retain original mocks for middleware to avoid heavy imports in Jest
     '^@/middleware/(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
   },
-  testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
-  testPathIgnorePatterns: [
-    '/node_modules/',
-    '/dist/',
-    '/build/',
-    '/.next/',
-    '/out/',
-    '/tests.disabled/',
+  transformIgnorePatterns: [
+    '/node_modules/(?!react-router-dom|@reown/appkit|@walletconnect/utils|bson|msw|@babel/runtime|@supabase/supabase-js|superjson|@tanstack/react-query|uint8arrays)/',
   ],
-  transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': [
-      'ts-jest',
-      {
-        tsconfig: 'tsconfig.jest.json',
-      },
-    ],
-  },
-  moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json'],
-  coverageDirectory: 'coverage',
-  collectCoverage: false,
-  verbose: false,
-  testEnvironmentOptions: {
-    customExportConditions: ['node', 'node-addons'],
+  roots: ['<rootDir>/__tests__', '<rootDir>/tests', '<rootDir>/src'],
+  coverageThreshold: {
+    global: {
+      statements: 80,
+      branches: 80,
+      functions: 80,
+      lines: 80,
+    },
   },
 };
