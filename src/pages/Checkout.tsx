@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { useForm } from 'react-hook-form';
 import { safeStorage } from '@/utils/safeStorage';
 import { Button } from '@/components/ui/button';
 import { useNavigate, useSearchParams } from 'react-router-dom';
@@ -13,7 +15,7 @@ interface CartItem {
 
 export default function Checkout() {
   const navigate = useNavigate();
-  const [searchParams] = useSearchParams();
+  const { t } = useTranslation();
   const [items, setItems] = useState<CartItem[]>([]);
 
   useEffect(() => {
@@ -67,23 +69,67 @@ export default function Checkout() {
   const total = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
 
   return (
-    <div className="min-h-screen bg-zion-blue p-6">
-      <div className="max-w-xl mx-auto bg-zion-blue-dark rounded-lg p-6 text-white space-y-6">
-        <h1 className="text-2xl font-bold">Checkout</h1>
-        <ul className="space-y-2">
-          {items.map(item => (
-            <li key={item.id} className="flex justify-between">
-              <span>{item.name} x {item.quantity}</span>
-              <span>${(item.price * item.quantity).toFixed(2)}</span>
-            </li>
-          ))}
-        </ul>
-        <div className="flex justify-between font-semibold">
-          <span>Total</span>
-          <span>${total.toFixed(2)}</span>
-        </div>
-        <Button className="w-full" onClick={handleCheckout}>Buy Now</Button>
-        <Button variant="outline" className="w-full" onClick={() => navigate(-1)}>Back</Button>
+    <div className="container max-w-2xl py-10">
+      <h1 className="text-3xl font-bold mb-6">{t('checkout.title')}</h1>
+      <div className="grid gap-6">
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+            <FormField name="name" control={form.control} render={({ field }) => (
+              <FormItem>
+                <FormLabel>{t('checkout.name')}</FormLabel>
+                <FormControl>
+                  <Input {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )} />
+            <FormField name="email" control={form.control} render={({ field }) => (
+              <FormItem>
+                <FormLabel>{t('checkout.email')}</FormLabel>
+                <FormControl>
+                  <Input type="email" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )} />
+            <FormField name="address" control={form.control} render={({ field }) => (
+              <FormItem>
+                <FormLabel>{t('checkout.address')}</FormLabel>
+                <FormControl>
+                  <Input {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )} />
+            <FormField name="city" control={form.control} render={({ field }) => (
+              <FormItem>
+                <FormLabel>{t('checkout.city')}</FormLabel>
+                <FormControl>
+                  <Input {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )} />
+            <FormField name="country" control={form.control} render={({ field }) => (
+              <FormItem>
+                <FormLabel>{t('checkout.country')}</FormLabel>
+                <FormControl>
+                  <Input {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )} />
+            <div className="border-t pt-4">
+              <div className="flex justify-between font-semibold mb-4">
+                <span>{t('checkout.subtotal')}</span>
+                <span>${subtotal.toFixed(2)}</span>
+              </div>
+              <Button className="w-full" type="submit">
+                {t('checkout.pay')}
+              </Button>
+            </div>
+          </form>
+        </Form>
       </div>
 
       <Dialog open={showGuest} onOpenChange={setShowGuest}>
