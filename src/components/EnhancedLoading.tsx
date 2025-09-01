@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react.ts';
 import { motion, AnimatePresence               } from 'framer-motion.ts';
 import { Loader2,
@@ -19,103 +20,122 @@ interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
   fullScreen?: boolean}
 
 export function LoadingSpinner(...args: any[]): any {
+=======
+import React from 'react';
+import { motion } from 'framer-motion';
+
+interface EnhancedLoadingProps {
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  variant?: 'spinner' | 'dots' | 'pulse' | 'wave';
+  text?: string;
+  className?: string;
+}
+
+export const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({
+  size = 'md',
+  variant = 'spinner',
+  text = 'Loading...',
+  className = ''
+}) => {
+>>>>>>> 10d85f3b3670bc7145df6b26a320a41cd8913f2f
   const sizeClasses = {
-  sm: 'w-8 h-8',
-    md: 'w-16 h-16',;
-  ;
-  ;
-  ;
-  ;
-  lg: 'w-32 h-32';
-  ;
-  const containerClasses = fullScreen
-    ? 'fixed inset-0 flex items-center justify-center bg-zion-slate-dark/95 backdrop-blur-sm z-50'
-    : 'flex items-center justify-center p-8';
-  return (
-    <div className = {containerClasses}>
-      <div className="text-center">
-        {/* Animated Logo */}
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12',
+    xl: 'w-16 h-16'
+  };
+
+  const renderSpinner = () => (
+    <motion.div
+      className={`${sizeClasses[size]} border-2 border-gray-300 border-t-blue-600 rounded-full`}
+      animate={{ rotate: 360 }}
+      transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+    />
+  );
+
+  const renderDots = () => (
+    <div className="flex space-x-1">
+      {[0, 1, 2].map((i) => (
         <motion.div
-          className="relative mx-auto mb-4"
+          key={i}
+          className={`${size === 'sm' ? 'w-1.5 h-1.5' : size === 'md' ? 'w-2 h-2' : size === 'lg' ? 'w-3 h-3' : 'w-4 h-4'} bg-blue-600 rounded-full`}
           animate={{
-            rotate: 360,
-            scale: [1, 1.1, 1]
+            y: [0, -10, 0],
+            scale: [1, 1.2, 1]
           }}
           transition={{
-            rotate: { duration: 2, repeat: Infinity, ease: "linear" },
-            scale: { duration: 2, repeat: Infinity, ease: "easeInOut" }
+            duration: 0.6,
+            repeat: Infinity,
+            delay: i * 0.2
           }}
-          <div className={`${sizeClasses[size]} bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl flex items-center justify-center relative overflow-hidden`}>
-            <motion.div
-              className="absolute inset-0 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue"
-              animate = {
-  {
-                background: [
-                  'linear-gradient(45deg, #0ea5e9, #8b5cf6, #0ea5e9)',
-                  'linear-gradient(45deg, #8b5cf6, #0ea5e9, #8b5cf6)',
-                  'linear-gradient(45deg, #0ea5e9, #8b5cf6,
-  #0ea5e9)'
-                ]
-}}
-              transition = {
-  { duration: 3,
-  repeat: Infinity 
-}}
-            />
-            <span className="text-2xl font-bold text-white relative z-10">Z</span>
-          </div>
-          {/* Glow Effect */}
-          <motion.div
-            className="absolute inset-0 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl blur-lg opacity-50"
-            animate = {
-  { opacity: [0.3, 0.6,
-  0.3] 
-}}
-            transition = {
-  { duration: 2,
-  repeat: Infinity 
-}}
-          />
-        </motion.div>
-        {/* Loading Text */}
+        />
+      ))}
+    </div>
+  );
+
+  const renderPulse = () => (
+    <motion.div
+      className={`${sizeClasses[size]} bg-blue-600 rounded-full`}
+      animate={{
+        scale: [1, 1.2, 1],
+        opacity: [1, 0.7, 1]
+      }}
+      transition={{
+        duration: 1.5,
+        repeat: Infinity,
+        ease: "easeInOut"
+      }}
+    />
+  );
+
+  const renderWave = () => (
+    <div className="flex space-x-1">
+      {[0, 1, 2, 3, 4].map((i) => (
         <motion.div
-          className="text-zion-cyan font-medium"
-          animate = {
-  { opacity: [0.5, 1,
-  0.5] 
-}}
-          transition = {
-  { duration: 1.5,
-  repeat: Infinity 
-}}
+          key={i}
+          className={`${size === 'sm' ? 'w-1 h-3' : size === 'md' ? 'w-1.5 h-4' : size === 'lg' ? 'w-2 h-6' : 'w-3 h-8'} bg-blue-600 rounded-full`}
+          animate={{
+            height: [size === 'sm' ? 12 : size === 'md' ? 16 : size === 'lg' ? 24 : 32, size === 'sm' ? 6 : size === 'md' ? 8 : size === 'lg' ? 12 : 16, size === 'sm' ? 12 : size === 'md' ? 16 : size === 'lg' ? 24 : 32]
+          }}
+          transition={{
+            duration: 0.6,
+            repeat: Infinity,
+            delay: i * 0.1
+          }}
+        />
+      ))}
+    </div>
+  );
+
+  const renderLoader = () => {
+    switch (variant) {
+      case 'dots':
+        return renderDots();
+      case 'pulse':
+        return renderPulse();
+      case 'wave':
+        return renderWave();
+      default:
+        return renderSpinner();
+    }
+  };
+
+  return (
+    <div className={`flex flex-col items-center justify-center space-y-4 ${className}`}>
+      {renderLoader()}
+      {text && (
+        <motion.p
+          className="text-gray-600 dark:text-gray-400 text-sm font-medium"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3 }}
         >
           {text}
-        </motion.div>
-        {/* Loading Dots */}
-        <div className="flex justify-center mt-3 space-x-1">
-          {[0, 1, 2].map((index) => (
-            <motion.div
-              key={index}
-              className="w-2 h-2 bg-zion-cyan rounded-full"
-              animate = {
-  {
-                scale: [1, 1.5, 1],
-                opacity: [0.5, 1,
-  0.5]
-}}
-              transition = {
-  {
-                duration: 1.5,
-                repeat: Infinity,
-  delay: index * 0.2
-;
-}};
-            />;
-          ))};
-        </div>;
-      </div>;
-    </div>;
+        </motion.p>
+      )}
+    </div>
   );
+<<<<<<< HEAD
 
 }
 interface PageLoaderProps extends React.PropsWithChildren<{}> {
@@ -260,3 +280,32 @@ export function SkeletonLoader(...args[]: any):  {
     </div>;
   );
 }
+=======
+};
+
+export const FullScreenLoading: React.FC<{ text?: string }> = ({ text = 'Loading...' }) => (
+  <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900">
+    <EnhancedLoading size="xl" variant="spinner" text={text} />
+  </div>
+);
+
+export const InlineLoading: React.FC<{ text?: string; size?: 'sm' | 'md' | 'lg' }> = ({ 
+  text = 'Loading...', 
+  size = 'md' 
+}) => (
+  <div className="flex items-center space-x-2">
+    <EnhancedLoading size={size} variant="dots" />
+    <span className="text-sm text-gray-600 dark:text-gray-400">{text}</span>
+  </div>
+);
+
+export const ButtonLoading: React.FC<{ text?: string; size?: 'sm' | 'md' }> = ({ 
+  text = 'Loading...', 
+  size = 'sm' 
+}) => (
+  <div className="flex items-center space-x-2">
+    <EnhancedLoading size={size} variant="spinner" />
+    <span>{text}</span>
+  </div>
+);
+>>>>>>> 10d85f3b3670bc7145df6b26a320a41cd8913f2f

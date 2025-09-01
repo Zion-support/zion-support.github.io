@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "Zion Tech Group - Innovative AI & IT Solutions",
   "short_name": "Zion Tech",
   "description": "Leading provider of AI-powered solutions, quantum computing, edge computing, and comprehensive IT services. Transform your business with cutting-edge technology.",
@@ -9,6 +10,17 @@
   "orientation": "portrait-primary",
   "scope": "/",
   "lang": "en-US",
+=======
+  "name": "Zion Tech Group - Future Technology Solutions",
+  "short_name": "Zion Tech",
+  "description": "Pioneering the future of technology with AI-powered solutions that transform businesses and empower innovation.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0ea5e9",
+  "orientation": "portrait-primary",
+  "lang": "en",
+>>>>>>> 10d85f3b3670bc7145df6b26a320a41cd8913f2f
   "categories": ["business", "productivity", "technology"],
   "icons": [
     {
@@ -31,6 +43,7 @@
   ],
   "shortcuts": [
     {
+<<<<<<< HEAD
       "name": "AI Services",
       "short_name": "AI",
       "description": "Explore our AI-powered solutions",
@@ -39,13 +52,27 @@
         {
           "src": "/favicon.ico",
           "sizes": "96x96"
+=======
+      "name": "Services",
+      "short_name": "Services",
+      "description": "View our technology services",
+      "url": "/services",
+      "icons": [
+        {
+          "src": "/logo192.png",
+          "sizes": "192x192"
+>>>>>>> 10d85f3b3670bc7145df6b26a320a41cd8913f2f
         }
       ]
     },
     {
+<<<<<<< HEAD
       "name": "Contact Us",
+=======
+      "name": "Contact",
+>>>>>>> 10d85f3b3670bc7145df6b26a320a41cd8913f2f
       "short_name": "Contact",
-      "description": "Get in touch with our team",
+      "description": "Get in touch with us",
       "url": "/contact",
       "icons": [
         {
@@ -66,6 +93,7 @@
         }
       ]
     }
+<<<<<<< HEAD
   ],
   "screenshots": [
     {
@@ -95,5 +123,7 @@
       "protocol": "web+zion",
       "url": "/?protocol=%s"
     }
+=======
+>>>>>>> 10d85f3b3670bc7145df6b26a320a41cd8913f2f
   ]
 }

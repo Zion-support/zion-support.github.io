@@ -1,14 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  PenTool, 
-  TrendingUp, 
-  Target, 
   Users, 
+  Brain, 
+  Target, 
+  BarChart3, 
   Zap, 
   ArrowRight,
-  Brain,
-  BarChart3,
   Clock,
   Star,
   Lightbulb,
@@ -18,90 +16,92 @@ import {
   PieChart,
   Monitor,
   FileText,
-  Share2
+  Share2,
+  Video,
+  Mic
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-export default function AIContentMarketingSuite() {
+export default function InterviewAssessment() {
   const features = [
     {
-      icon: PenTool,
-      title: "AI Content Generation",
-      description: "Create high-quality, engaging content automatically using advanced language models and AI algorithms."
+      icon: Brain,
+      title: "AI-Powered Assessment",
+      description: "Advanced AI algorithms evaluate candidate responses and provide objective scoring."
     },
     {
-      icon: TrendingUp,
-      title: "Content Optimization",
-      description: "Optimize your content for maximum engagement, SEO performance, and conversion rates."
+      icon: Video,
+      title: "Video Interview Analysis",
+      description: "Analyze facial expressions, tone, and body language for comprehensive candidate evaluation."
     },
     {
       icon: Target,
-      title: "Audience Targeting",
-      description: "Identify and target your ideal audience with personalized content strategies and messaging."
+      title: "Customizable Assessments",
+      description: "Create role-specific assessments tailored to your organization's needs and requirements."
     },
     {
-      icon: Users,
-      title: "Multi-Channel Distribution",
-      description: "Distribute your content across multiple channels and platforms for maximum reach and impact."
+      icon: BarChart3,
+      title: "Performance Analytics",
+      description: "Get detailed insights into candidate performance with comprehensive analytics and reporting."
     },
     {
       icon: Zap,
-      title: "Automated Workflows",
-      description: "Streamline your content creation and distribution processes with intelligent automation."
+      title: "Automated Screening",
+      description: "Streamline your hiring process with automated candidate screening and ranking."
     },
     {
-      icon: Brain,
-      title: "Performance Analytics",
-      description: "Track content performance and get insights to continuously improve your marketing strategies."
+      icon: Users,
+      title: "Bias-Free Evaluation",
+      description: "Ensure fair and objective candidate evaluation with AI-powered assessment tools."
     }
   ];
 
   const benefits = [
     {
       icon: Target,
-      title: "Increased Engagement",
-      description: "Boost audience engagement and interaction with AI-optimized content that resonates with your target market."
+      title: "Better Hiring Decisions",
+      description: "Make more informed hiring decisions with objective, data-driven candidate assessments."
     },
     {
       icon: Lightbulb,
-      title: "Better ROI",
-      description: "Improve your marketing ROI with data-driven content strategies and automated optimization."
+      title: "Reduced Bias",
+      description: "Eliminate unconscious bias in hiring with AI-powered objective evaluation."
     },
     {
       icon: Clock,
-      title: "Time Savings",
-      description: "Save time on content creation and management while maintaining high quality and consistency."
+      title: "Faster Hiring",
+      description: "Accelerate your hiring process with automated screening and assessment."
     },
     {
       icon: Star,
-      title: "Scalable Growth",
-      description: "Scale your content marketing efforts efficiently without sacrificing quality or personalization."
+      title: "Improved Quality",
+      description: "Hire higher-quality candidates with comprehensive assessment and evaluation."
     }
   ];
 
-  const contentTypes = [
+  const assessmentTypes = [
     {
-      title: "Blog Posts & Articles",
-      description: "Create engaging blog content that drives traffic and establishes thought leadership."
+      title: "Technical Skills",
+      description: "Evaluate coding abilities, problem-solving skills, and technical knowledge."
     },
     {
-      title: "Social Media Content",
-      description: "Generate platform-specific content for all major social media channels."
+      title: "Soft Skills",
+      description: "Assess communication, teamwork, leadership, and interpersonal skills."
     },
     {
-      title: "Email Marketing",
-      description: "Create personalized email campaigns that drive engagement and conversions."
+      title: "Cultural Fit",
+      description: "Evaluate alignment with company values and organizational culture."
     },
     {
-      title: "Video Content",
-      description: "Generate video scripts and descriptions for multimedia marketing campaigns."
+      title: "Role-Specific",
+      description: "Custom assessments designed for specific job roles and requirements."
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-pink-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-indigo-50">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-pink-600 to-purple-700 text-white">
+      <section className="relative overflow-hidden bg-gradient-to-r from-indigo-600 to-purple-700 text-white">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div
@@ -112,26 +112,26 @@ export default function AIContentMarketingSuite() {
           >
             <div className="flex justify-center mb-6">
               <div className="p-3 bg-white/20 rounded-full">
-                <PenTool className="h-8 w-8 text-white" />
+                <Users className="h-8 w-8 text-white" />
               </div>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              AI Content Marketing Suite
+              AI Interview Assessment
             </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-pink-100">
-              Transform your content marketing with AI-powered creation, optimization, and distribution.
+            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-indigo-100">
+              Transform your hiring process with AI-powered interview assessment and candidate evaluation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-white text-pink-600 font-semibold rounded-lg hover:bg-pink-50 transition-colors"
+                className="inline-flex items-center px-8 py-4 bg-white text-indigo-600 font-semibold rounded-lg hover:bg-indigo-50 transition-colors"
               >
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 to="/services"
-                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-pink-600 transition-colors"
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-indigo-600 transition-colors"
               >
                 View All Services
               </Link>
@@ -151,10 +151,10 @@ export default function AIContentMarketingSuite() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Powerful Content Marketing Features
+              Advanced Assessment Features
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our AI-powered platform provides comprehensive content marketing capabilities to drive engagement and growth.
+              Our AI-powered platform provides comprehensive interview assessment capabilities to improve your hiring process.
             </p>
           </motion.div>
 
@@ -168,8 +168,8 @@ export default function AIContentMarketingSuite() {
                 viewport={{ once: true }}
                 className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
               >
-                <div className="flex items-center justify-center w-16 h-16 bg-pink-100 rounded-lg mb-6">
-                  <feature.icon className="h-8 w-8 text-pink-600" />
+                <div className="flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-lg mb-6">
+                  <feature.icon className="h-8 w-8 text-indigo-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   {feature.title}
@@ -194,10 +194,10 @@ export default function AIContentMarketingSuite() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Our AI Content Marketing Suite?
+              Why Choose Our AI Interview Assessment?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Experience the benefits of AI-powered content marketing that drives real engagement and results.
+              Experience the benefits of AI-powered assessment that improves hiring quality and efficiency.
             </p>
           </motion.div>
 
@@ -212,8 +212,8 @@ export default function AIContentMarketingSuite() {
                 className="flex items-start space-x-4"
               >
                 <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center w-12 h-12 bg-pink-100 rounded-lg">
-                    <benefit.icon className="h-6 w-6 text-pink-600" />
+                  <div className="flex items-center justify-center w-12 h-12 bg-indigo-100 rounded-lg">
+                    <benefit.icon className="h-6 w-6 text-indigo-600" />
                   </div>
                 </div>
                 <div>
@@ -230,7 +230,7 @@ export default function AIContentMarketingSuite() {
         </div>
       </section>
 
-      {/* Content Types Section */}
+      {/* Assessment Types Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -241,15 +241,15 @@ export default function AIContentMarketingSuite() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Comprehensive Content Types
+              Comprehensive Assessment Types
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our platform supports all major content types to meet your marketing needs.
+              Our platform supports various assessment types to meet your hiring needs.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {contentTypes.map((contentType, index) => (
+            {assessmentTypes.map((assessmentType, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -259,10 +259,10 @@ export default function AIContentMarketingSuite() {
                 className="bg-gray-50 p-8 rounded-xl border border-gray-200"
               >
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  {contentType.title}
+                  {assessmentType.title}
                 </h3>
                 <p className="text-gray-600">
-                  {contentType.description}
+                  {assessmentType.description}
                 </p>
               </motion.div>
             ))}
@@ -271,7 +271,7 @@ export default function AIContentMarketingSuite() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-pink-600 to-purple-700 text-white">
+      <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-700 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -280,22 +280,22 @@ export default function AIContentMarketingSuite() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Transform Your Content Marketing?
+              Ready to Transform Your Hiring Process?
             </h2>
-            <p className="text-xl mb-8 text-pink-100 max-w-3xl mx-auto">
-              Join marketers who are already leveraging AI to create engaging content that drives results.
+            <p className="text-xl mb-8 text-indigo-100 max-w-3xl mx-auto">
+              Join companies that are already leveraging AI to make better hiring decisions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-white text-pink-600 font-semibold rounded-lg hover:bg-pink-50 transition-colors"
+                className="inline-flex items-center px-8 py-4 bg-white text-indigo-600 font-semibold rounded-lg hover:bg-indigo-50 transition-colors"
               >
                 Get Started Today
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 to="/services"
-                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-pink-600 transition-colors"
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-indigo-600 transition-colors"
               >
                 Explore All Services
               </Link>

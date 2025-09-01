@@ -1,107 +1,105 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  PenTool, 
+  Search, 
   TrendingUp, 
   Target, 
-  Users, 
+  BarChart3, 
   Zap, 
   ArrowRight,
   Brain,
-  BarChart3,
+  Globe,
   Clock,
   Star,
   Lightbulb,
   CheckCircle,
   Eye,
-  Globe,
+  Users,
   PieChart,
-  Monitor,
-  FileText,
-  Share2
+  Monitor
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-export default function AIContentMarketingSuite() {
+export default function AISEO() {
   const features = [
     {
-      icon: PenTool,
-      title: "AI Content Generation",
-      description: "Create high-quality, engaging content automatically using advanced language models and AI algorithms."
+      icon: Search,
+      title: "AI-Powered Keyword Research",
+      description: "Discover high-value keywords and search opportunities using advanced machine learning algorithms."
     },
     {
       icon: TrendingUp,
       title: "Content Optimization",
-      description: "Optimize your content for maximum engagement, SEO performance, and conversion rates."
+      description: "Optimize your content for search engines with AI-driven recommendations and insights."
     },
     {
       icon: Target,
-      title: "Audience Targeting",
-      description: "Identify and target your ideal audience with personalized content strategies and messaging."
+      title: "Technical SEO Analysis",
+      description: "Identify and fix technical SEO issues that impact your search rankings and performance."
     },
     {
-      icon: Users,
-      title: "Multi-Channel Distribution",
-      description: "Distribute your content across multiple channels and platforms for maximum reach and impact."
+      icon: BarChart3,
+      title: "Performance Tracking",
+      description: "Monitor your SEO performance with comprehensive analytics and reporting dashboards."
     },
     {
       icon: Zap,
-      title: "Automated Workflows",
-      description: "Streamline your content creation and distribution processes with intelligent automation."
+      title: "Automated Audits",
+      description: "Get regular SEO audits that identify opportunities for improvement and optimization."
     },
     {
       icon: Brain,
-      title: "Performance Analytics",
-      description: "Track content performance and get insights to continuously improve your marketing strategies."
+      title: "Competitive Intelligence",
+      description: "Analyze your competitors' SEO strategies and identify opportunities to outperform them."
     }
   ];
 
   const benefits = [
     {
       icon: Target,
-      title: "Increased Engagement",
-      description: "Boost audience engagement and interaction with AI-optimized content that resonates with your target market."
+      title: "Higher Search Rankings",
+      description: "Improve your search engine rankings and visibility with AI-optimized SEO strategies."
     },
     {
       icon: Lightbulb,
-      title: "Better ROI",
-      description: "Improve your marketing ROI with data-driven content strategies and automated optimization."
+      title: "Increased Organic Traffic",
+      description: "Drive more qualified organic traffic to your website through better search visibility."
     },
     {
       icon: Clock,
-      title: "Time Savings",
-      description: "Save time on content creation and management while maintaining high quality and consistency."
+      title: "Faster Results",
+      description: "See SEO improvements faster with AI-powered optimization and continuous monitoring."
     },
     {
       icon: Star,
-      title: "Scalable Growth",
-      description: "Scale your content marketing efforts efficiently without sacrificing quality or personalization."
+      title: "Better User Experience",
+      description: "Improve your website's user experience while optimizing for search engines."
     }
   ];
 
-  const contentTypes = [
+  const seoAreas = [
     {
-      title: "Blog Posts & Articles",
-      description: "Create engaging blog content that drives traffic and establishes thought leadership."
+      title: "On-Page SEO",
+      description: "Optimize individual pages for search engines with content, meta tags, and structure improvements."
     },
     {
-      title: "Social Media Content",
-      description: "Generate platform-specific content for all major social media channels."
+      title: "Technical SEO",
+      description: "Ensure your website meets technical requirements for search engine crawling and indexing."
     },
     {
-      title: "Email Marketing",
-      description: "Create personalized email campaigns that drive engagement and conversions."
+      title: "Content SEO",
+      description: "Create and optimize content that ranks well and provides value to your target audience."
     },
     {
-      title: "Video Content",
-      description: "Generate video scripts and descriptions for multimedia marketing campaigns."
+      title: "Local SEO",
+      description: "Improve your visibility in local search results and Google My Business listings."
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-pink-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-orange-50">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-pink-600 to-purple-700 text-white">
+      <section className="relative overflow-hidden bg-gradient-to-r from-orange-600 to-red-700 text-white">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div
@@ -112,26 +110,26 @@ export default function AIContentMarketingSuite() {
           >
             <div className="flex justify-center mb-6">
               <div className="p-3 bg-white/20 rounded-full">
-                <PenTool className="h-8 w-8 text-white" />
+                <Search className="h-8 w-8 text-white" />
               </div>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              AI Content Marketing Suite
+              AI SEO Services
             </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-pink-100">
-              Transform your content marketing with AI-powered creation, optimization, and distribution.
+            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-orange-100">
+              Boost your search rankings and drive organic traffic with our AI-powered SEO optimization platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-white text-pink-600 font-semibold rounded-lg hover:bg-pink-50 transition-colors"
+                className="inline-flex items-center px-8 py-4 bg-white text-orange-600 font-semibold rounded-lg hover:bg-orange-50 transition-colors"
               >
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 to="/services"
-                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-pink-600 transition-colors"
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-orange-600 transition-colors"
               >
                 View All Services
               </Link>
@@ -151,10 +149,10 @@ export default function AIContentMarketingSuite() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Powerful Content Marketing Features
+              Comprehensive SEO Features
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our AI-powered platform provides comprehensive content marketing capabilities to drive engagement and growth.
+              Our AI-powered platform provides end-to-end SEO optimization and management capabilities.
             </p>
           </motion.div>
 
@@ -168,8 +166,8 @@ export default function AIContentMarketingSuite() {
                 viewport={{ once: true }}
                 className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
               >
-                <div className="flex items-center justify-center w-16 h-16 bg-pink-100 rounded-lg mb-6">
-                  <feature.icon className="h-8 w-8 text-pink-600" />
+                <div className="flex items-center justify-center w-16 h-16 bg-orange-100 rounded-lg mb-6">
+                  <feature.icon className="h-8 w-8 text-orange-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   {feature.title}
@@ -194,10 +192,10 @@ export default function AIContentMarketingSuite() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Our AI Content Marketing Suite?
+              Why Choose Our AI SEO Services?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Experience the benefits of AI-powered content marketing that drives real engagement and results.
+              Experience the benefits of AI-powered SEO optimization that drives real results.
             </p>
           </motion.div>
 
@@ -212,8 +210,8 @@ export default function AIContentMarketingSuite() {
                 className="flex items-start space-x-4"
               >
                 <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center w-12 h-12 bg-pink-100 rounded-lg">
-                    <benefit.icon className="h-6 w-6 text-pink-600" />
+                  <div className="flex items-center justify-center w-12 h-12 bg-orange-100 rounded-lg">
+                    <benefit.icon className="h-6 w-6 text-orange-600" />
                   </div>
                 </div>
                 <div>
@@ -230,7 +228,7 @@ export default function AIContentMarketingSuite() {
         </div>
       </section>
 
-      {/* Content Types Section */}
+      {/* SEO Areas Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -241,15 +239,15 @@ export default function AIContentMarketingSuite() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Comprehensive Content Types
+              Comprehensive SEO Coverage
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our platform supports all major content types to meet your marketing needs.
+              Our platform covers all aspects of search engine optimization to maximize your results.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {contentTypes.map((contentType, index) => (
+            {seoAreas.map((area, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -259,10 +257,10 @@ export default function AIContentMarketingSuite() {
                 className="bg-gray-50 p-8 rounded-xl border border-gray-200"
               >
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  {contentType.title}
+                  {area.title}
                 </h3>
                 <p className="text-gray-600">
-                  {contentType.description}
+                  {area.description}
                 </p>
               </motion.div>
             ))}
@@ -271,7 +269,7 @@ export default function AIContentMarketingSuite() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-pink-600 to-purple-700 text-white">
+      <section className="py-20 bg-gradient-to-r from-orange-600 to-red-700 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -280,22 +278,22 @@ export default function AIContentMarketingSuite() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Transform Your Content Marketing?
+              Ready to Boost Your Search Rankings?
             </h2>
-            <p className="text-xl mb-8 text-pink-100 max-w-3xl mx-auto">
-              Join marketers who are already leveraging AI to create engaging content that drives results.
+            <p className="text-xl mb-8 text-orange-100 max-w-3xl mx-auto">
+              Join businesses that are already leveraging AI-powered SEO to dominate search results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-white text-pink-600 font-semibold rounded-lg hover:bg-pink-50 transition-colors"
+                className="inline-flex items-center px-8 py-4 bg-white text-orange-600 font-semibold rounded-lg hover:bg-orange-50 transition-colors"
               >
                 Get Started Today
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 to="/services"
-                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-pink-600 transition-colors"
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-orange-600 transition-colors"
               >
                 Explore All Services
               </Link>
