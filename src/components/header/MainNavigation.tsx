@@ -166,6 +166,21 @@ export function MainNavigation({ className = '' }) {
                         AI Healthcare Analytics
                       </Link>
                     </li>
+                    <li>
+                      <Link to="/services/ai-content-intelligence-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                        AI Content Intelligence
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-customer-experience-analytics" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                        AI Customer Experience
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-financial-risk-management" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                        AI Financial Risk Management
+                      </Link>
+                    </li>
                   </ul>
                 </div>
               </div>

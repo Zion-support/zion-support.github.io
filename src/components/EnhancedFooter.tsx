@@ -15,6 +15,9 @@ export function EnhancedFooter() {
         { name: 'AI Project Management Platform', href: '/services/ai-powered-project-management-platform', icon: Workflow, featured: true },
         { name: 'AI Financial Analytics Platform', href: '/services/ai-financial-analytics-platform', icon: BarChart3, featured: true },
         { name: 'AI Healthcare Analytics Platform', href: '/services/ai-healthcare-analytics-platform', icon: Heart, featured: true },
+        { name: 'AI Content Intelligence Platform', href: '/services/ai-content-intelligence-platform', icon: Brain, featured: true },
+        { name: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics', icon: Users, featured: true },
+        { name: 'AI Financial Risk Management', href: '/services/ai-financial-risk-management', icon: Shield, featured: true },
         { name: '2025 Services Showcase', href: '/innovative-services-showcase-2025', icon: Sparkles, featured: true },
         { name: '2029 Cutting-Edge Services', href: '/zion-cutting-edge-services-2029', icon: Sparkles, featured: true },
         { name: 'AI-Powered Micro SAAS', href: '/zion-cutting-edge-services-2029', icon: Brain, featured: true }

@@ -116,6 +116,9 @@ const QuantumAITradingPlatform = lazy(() => import('./pages/services/Quantum-AI-
 const AIPoweredProjectManagementPlatform = lazy(() => import('./pages/services/AI-Powered-Project-Management-Platform'));
 const AIFinancialAnalyticsPlatform = lazy(() => import('./pages/services/AI-Financial-Analytics-Platform'));
 const AIHealthcareAnalyticsPlatform = lazy(() => import('./pages/services/AI-Healthcare-Analytics-Platform'));
+const AIContentIntelligencePlatform = lazy(() => import('./pages/services/AI-Content-Intelligence-Platform'));
+const AICustomerExperienceAnalytics = lazy(() => import('./pages/services/AI-Customer-Experience-Analytics'));
+const AIFinancialRiskManagement = lazy(() => import('./pages/services/AI-Financial-Risk-Management'));
 
 // Sitemap-aligned pages
 const AiSolutions = lazy(() => import('./pages/AiSolutions'));
@@ -473,6 +476,9 @@ function App() {
                   <Route path="/services/ai-powered-project-management-platform" element={<AIPoweredProjectManagementPlatform />} />
                   <Route path="/services/ai-financial-analytics-platform" element={<AIFinancialAnalyticsPlatform />} />
                   <Route path="/services/ai-healthcare-analytics-platform" element={<AIHealthcareAnalyticsPlatform />} />
+                  <Route path="/services/ai-content-intelligence-platform" element={<AIContentIntelligencePlatform />} />
+                  <Route path="/services/ai-customer-experience-analytics" element={<AICustomerExperienceAnalytics />} />
+                  <Route path="/services/ai-financial-risk-management" element={<AIFinancialRiskManagement />} />
 
                   {/* 404 Page */}
                   <Route
