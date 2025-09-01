@@ -297,18 +297,19 @@ module.exports = {
     // Automated Build & Lint fixer
     {
       name: 'auto-fix-and-build',
-      script: './scripts/automation/smart-dependency-intelligence.cjs',
+      script: './scripts/auto-fix-and-build.sh',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
+        PATH: '/home/ubuntu/.nvm/versions/node/v22.16.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
       },
       cron_restart: '0 */6 * * *', // Every 6 hours
-      log_file: './logs/smart-dependency-intelligence.log',
-      error_file: './logs/smart-dependency-intelligence-error.log',
-      out_file: './logs/smart-dependency-intelligence-out.log'
+      log_file: './logs/auto-fix-and-build.log',
+      error_file: './logs/auto-fix-and-build-error.log',
+      out_file: './logs/auto-fix-and-build-out.log'
     },
 
     // Predictive Issue Detection - Anticipates and prevents issues
@@ -382,8 +383,7 @@ module.exports = {
     // Watcher to rebuild on changes
     {
       name: 'dev-watch-build',
-      script: 'bash',
-      args: '-lc "npm run build"',
+      script: './scripts/dev-watch-build.sh',
       instances: 1,
       watch: ['src', 'public', 'vite.config.ts'],
       ignore_watch: ['dist', 'node_modules', 'logs'],
