@@ -45,6 +45,8 @@ export default function TranslationManager() {
             } else {
 `
               acc[`${pre}${key}`] = obj[key];
+            } else if (typeof obj[key] === 'object' && Object.keys(obj[key]).length === 0){ // Handle empty objects specifically if needed
+               acc[`${pre}${key}`] = {}; // Or some placeholder like ""
             }
             return acc;
           }, {});

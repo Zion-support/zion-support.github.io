@@ -10,6 +10,7 @@ import { TALENT_PROFILES } from '@/data/talentData';
 main
 import type { TalentProfile } from '@/types/talent';
 import TalentDetails from '@/components/talent/TalentDetails';
+import { Skeleton } from '@/components/ui/skeleton';
 import NotFound from '@/components/NotFound';
 import { ErrorBoundary } from '@/components/ErrorBoundary';
 
@@ -74,6 +75,16 @@ main
 
   if (!profile) {
     return <NotFound />;
+  }
+
+  // This part should only be reached if talentData is successfully fetched.
+  if (!talentData) {
+     // This case should ideally be covered by loading, error, or the NotFound above.
+     // If we reach here, it means loading is false, no error, but no talentData.
+     // This could happen if id was invalid, fetchTalent ran, set loading false, but didn't set error (e.g. 404 redirect logic)
+     // and then the component re-renders before redirect completes.
+     // The skeleton loader for !id also helps prevent premature NotFound.
+    return <NotFound />; // Fallback, though the above conditions should catch most scenarios
   }
 
   return (
