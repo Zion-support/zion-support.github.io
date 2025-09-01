@@ -356,6 +356,7 @@ declare module 'next/router' {
      * property without pulling in the real Next.js type definitions.
      */
     isFallback?: boolean
+main
   }
   export function useRouter(): NextRouter
 }
