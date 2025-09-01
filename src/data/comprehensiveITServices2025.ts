@@ -1,556 +1,452 @@
-export interface ComprehensiveITService {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  subcategory: string;
-  price: number;
-  currency: string;
-  pricingModel: string;
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
-  tags: string[];
-  estimatedDelivery: string;
-  supportLevel: string;
-  marketPrice: string;
-  roi: string;
-  innovationLevel: string;
-  contactInfo: {
-    phone: string;
-    email: string;
-    website: string;
-  };
-  technicalSpecs?: {
-    technology: string[];
-    integrations: string[];
-    apiEndpoints: number;
-    uptime: string;
-    security: string[];
-  };
-  competitors?: string[];
-  marketSize?: string;
-}
-
-export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
-  // Cloud Infrastructure & Migration
+export const COMPREHENSIVE_IT_SERVICES_2025 = [
   {
-    id: "cloud-infrastructure-migration",
-    title: "Cloud Infrastructure & Migration Services",
-    description: "Comprehensive cloud migration and infrastructure services that help businesses modernize their IT infrastructure, reduce costs, and improve scalability and performance.",
-    category: "Cloud Services",
-    subcategory: "Infrastructure & Migration",
-    price: 4999,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'cloud-infrastructure-management',
+    name: 'Cloud Infrastructure Management Suite',
+    category: 'IT Infrastructure',
+    subcategory: 'Cloud Services',
+    description: 'Comprehensive cloud infrastructure management platform providing multi-cloud orchestration, cost optimization, security monitoring, and automated scaling across AWS, Azure, and Google Cloud.',
+    pricing: 'Enterprise',
+    price: 199,
+    pricingModel: 'monthly',
     features: [
-      "Cloud strategy consulting",
-      "Infrastructure assessment",
-      "Migration planning and execution",
-      "Multi-cloud management",
-      "Cost optimization",
-      "Performance monitoring",
-      "Security implementation",
-      "Disaster recovery",
-      "24/7 support",
-      "Compliance management"
+      'Multi-cloud infrastructure orchestration',
+      'Automated resource provisioning and scaling',
+      'Cost optimization and budget alerts',
+      'Security compliance monitoring',
+      'Disaster recovery and backup automation',
+      'Performance monitoring and analytics',
+      'Infrastructure as Code (IaC) templates',
+      'CI/CD pipeline integration',
+      'Resource tagging and governance',
+      '24/7 monitoring and alerting'
     ],
     benefits: [
-      "Reduce infrastructure costs by 30-50%",
-      "Improve scalability and flexibility",
-      "Enhance security and compliance",
-      "Reduce maintenance overhead",
-      "Enable remote work capabilities"
-    ],
-    useCases: [
-      "Legacy system modernization",
-      "Data center consolidation",
-      "Application migration",
-      "Disaster recovery setup",
-      "Hybrid cloud implementation"
+      'Reduce cloud costs by 30-50%',
+      'Improve infrastructure reliability by 99.9%',
+      'Automate 80% of routine operations',
+      'Enhance security posture and compliance',
+      'Accelerate deployment times by 70%',
+      'Optimize resource utilization across clouds'
     ],
     targetAudience: [
-      "Large enterprises",
-      "Mid-size companies",
-      "Government agencies",
-      "Healthcare organizations",
-      "Financial institutions"
+      'Enterprise IT departments',
+      'DevOps teams',
+      'SaaS companies',
+      'Financial services',
+      'Healthcare organizations',
+      'Government agencies'
     ],
-    tags: ["Cloud Computing", "Migration", "Infrastructure", "AWS", "Azure", "Google Cloud"],
-    estimatedDelivery: "12-20 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$4,999 - $15,000/month",
-    roi: "300-500%",
-    innovationLevel: "Advanced",
+    tags: ['Cloud Computing', 'Infrastructure', 'DevOps', 'Automation', 'Cost Optimization'],
     contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/services/cloud-infrastructure-management',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
     },
-    technicalSpecs: {
-      technology: ["AWS", "Azure", "Google Cloud", "Kubernetes", "Docker", "Terraform"],
-      integrations: ["VMware", "Hyper-V", "On-premise systems", "Database systems", "Storage solutions"],
-      apiEndpoints: 500,
-      uptime: "99.9%",
-      security: ["SOC 2", "ISO 27001", "FedRAMP", "End-to-end encryption"]
-    },
-    competitors: ["Accenture", "Deloitte", "IBM", "Infosys", "Wipro"],
-    marketSize: "$832.1 billion by 2028"
+    marketPrice: '$199/month (Industry average: $399/month)',
+    competitors: ['CloudHealth', 'Turbonomic', 'Flexera', 'Cloudability'],
+    roi: '400% ROI within 8 months',
+    setupTime: '2-4 weeks',
+    integrations: ['AWS', 'Azure', 'GCP', 'Kubernetes', 'Terraform', 'Ansible', 'Jenkins', 'GitLab'],
+    freeTier: false,
+    trialPeriod: '30 days',
+    aiScore: 91,
+    useCases: [
+      'Multi-cloud cost optimization',
+      'Automated infrastructure scaling',
+      'Compliance monitoring and reporting',
+      'Disaster recovery orchestration',
+      'DevOps pipeline automation',
+      'Resource governance and tagging'
+    ],
+    compliance: ['SOC 2', 'ISO 27001', 'GDPR', 'HIPAA', 'FedRAMP'],
+    scalability: 'Manage thousands of cloud resources',
+    support: '24/7 enterprise support with cloud architects'
   },
-
-  // DevOps & CI/CD Automation
   {
-    id: "devops-cicd-automation",
-    title: "DevOps & CI/CD Automation Services",
-    description: "Comprehensive DevOps services that streamline software development, automate deployment pipelines, and improve collaboration between development and operations teams.",
-    category: "DevOps",
-    subcategory: "Automation",
-    price: 3499,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'cybersecurity-operations-center',
+    name: 'Cybersecurity Operations Center (SOC)',
+    category: 'IT Security',
+    subcategory: 'Security Operations',
+    description: 'Comprehensive cybersecurity operations platform providing 24/7 threat monitoring, incident response, vulnerability management, and security analytics with AI-powered threat detection.',
+    pricing: 'Enterprise',
+    price: 449,
+    pricingModel: 'monthly',
     features: [
-      "CI/CD pipeline setup",
-      "Infrastructure as Code",
-      "Automated testing",
-      "Deployment automation",
-      "Monitoring and alerting",
-      "Performance optimization",
-      "Security scanning",
-      "Compliance automation",
-      "Team training",
-      "24/7 support"
+      '24/7 security monitoring and alerting',
+      'AI-powered threat detection and analysis',
+      'Incident response and forensics',
+      'Vulnerability assessment and management',
+      'Security information and event management (SIEM)',
+      'Threat intelligence integration',
+      'Compliance reporting and auditing',
+      'Penetration testing and red team exercises',
+      'Security awareness training',
+      'Endpoint detection and response (EDR)'
     ],
     benefits: [
-      "Reduce deployment time by 80%",
-      "Improve code quality",
-      "Reduce human errors",
-      "Enable faster releases",
-      "Improve team productivity"
-    ],
-    useCases: [
-      "Software development teams",
-      "Digital transformation",
-      "Microservices architecture",
-      "Cloud-native applications",
-      "Legacy system modernization"
+      'Reduce security incidents by 85%',
+      'Faster threat detection and response',
+      'Comprehensive compliance coverage',
+      'Reduced security operational costs',
+      'Enhanced threat visibility and intelligence',
+      'Proactive security posture management'
     ],
     targetAudience: [
-      "Software companies",
-      "IT departments",
-      "Development teams",
-      "Startups",
-      "Enterprises"
+      'Enterprise corporations',
+      'Financial institutions',
+      'Healthcare systems',
+      'Government agencies',
+      'Critical infrastructure',
+      'Technology companies'
     ],
-    tags: ["DevOps", "CI/CD", "Automation", "Kubernetes", "Docker", "Jenkins"],
-    estimatedDelivery: "8-12 weeks",
-    supportLevel: "premium",
-    marketPrice: "$3,499 - $8,999/month",
-    roi: "400-600%",
-    innovationLevel: "Advanced",
+    tags: ['Cybersecurity', 'SOC', 'Threat Detection', 'Incident Response', 'Compliance'],
     contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/services/cybersecurity-operations-center',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
     },
-    technicalSpecs: {
-      technology: ["Jenkins", "GitLab CI", "GitHub Actions", "Kubernetes", "Docker", "Terraform"],
-      integrations: ["GitHub", "GitLab", "Jira", "Slack", "AWS", "Azure"],
-      apiEndpoints: 400,
-      uptime: "99.9%",
-      security: ["SOC 2", "Code scanning", "Vulnerability assessment"]
-    },
-    competitors: ["GitLab", "GitHub", "Atlassian", "CircleCI", "Travis CI"],
-    marketSize: "$25.2 billion by 2027"
+    marketPrice: '$449/month (Industry average: $899/month)',
+    competitors: ['CrowdStrike', 'SentinelOne', 'Splunk', 'IBM QRadar'],
+    roi: '500% ROI within 12 months',
+    setupTime: '4-8 weeks',
+    integrations: ['SIEM tools', 'Endpoint protection', 'Firewalls', 'Active Directory', 'Cloud security'],
+    freeTier: false,
+    trialPeriod: '30 days',
+    aiScore: 96,
+    useCases: [
+      'Continuous security monitoring',
+      'Incident response and forensics',
+      'Compliance management',
+      'Threat hunting and analysis',
+      'Security awareness training',
+      'Vulnerability management'
+    ],
+    compliance: ['SOC 2', 'ISO 27001', 'NIST', 'PCI DSS', 'HIPAA'],
+    scalability: 'Monitor enterprise-scale environments',
+    support: '24/7 security operations center'
   },
-
-  // Data Engineering & Analytics
   {
-    id: "data-engineering-analytics",
-    title: "Data Engineering & Analytics Services",
-    description: "Comprehensive data engineering services that help businesses build robust data pipelines, implement analytics solutions, and derive actionable insights from their data.",
-    category: "Data Services",
-    subcategory: "Engineering & Analytics",
-    price: 3999,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'enterprise-backup-recovery',
+    name: 'Enterprise Backup & Recovery Solution',
+    category: 'IT Infrastructure',
+    subcategory: 'Data Protection',
+    description: 'Advanced enterprise backup and disaster recovery platform providing automated data protection, rapid recovery, and business continuity across hybrid cloud environments.',
+    pricing: 'Enterprise',
+    price: 149,
+    pricingModel: 'monthly',
     features: [
-      "Data pipeline development",
-      "Data warehouse design",
-      "ETL/ELT processes",
-      "Real-time analytics",
-      "Business intelligence",
-      "Data governance",
-      "Data quality management",
-      "Machine learning pipelines",
-      "Performance optimization",
-      "Compliance and security"
+      'Automated backup scheduling and management',
+      'Instant recovery and rollback capabilities',
+      'Cross-platform data protection',
+      'Cloud and on-premise backup options',
+      'Deduplication and compression',
+      'Encryption at rest and in transit',
+      'Compliance and retention management',
+      'Disaster recovery orchestration',
+      'Continuous data protection (CDP)',
+      'Central management and monitoring'
     ],
     benefits: [
-      "Improve data quality by 60%",
-      "Reduce data processing time by 70%",
-      "Enable data-driven decisions",
-      "Improve operational efficiency",
-      "Reduce compliance risks"
-    ],
-    useCases: [
-      "Business intelligence",
-      "Customer analytics",
-      "Operational analytics",
-      "Predictive analytics",
-      "Regulatory reporting"
+      'Reduce backup storage costs by 60%',
+      'Achieve RTO/RPO objectives under 1 hour',
+      'Ensure 99.9% data availability',
+      'Automate 95% of backup operations',
+      'Comply with data retention regulations',
+      'Minimize business disruption from outages'
     ],
     targetAudience: [
-      "Data teams",
-      "Business analysts",
-      "IT departments",
-      "Executives",
-      "Data scientists"
+      'Enterprise IT departments',
+      'Healthcare organizations',
+      'Financial services',
+      'Government agencies',
+      'Educational institutions',
+      'Manufacturing companies'
     ],
-    tags: ["Data Engineering", "Analytics", "ETL", "Data Warehouse", "Business Intelligence"],
-    estimatedDelivery: "10-16 weeks",
-    supportLevel: "premium",
-    marketPrice: "$3,999 - $9,999/month",
-    roi: "350-550%",
-    innovationLevel: "Advanced",
+    tags: ['Backup', 'Disaster Recovery', 'Data Protection', 'Business Continuity', 'Compliance'],
     contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/services/enterprise-backup-recovery',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
     },
-    technicalSpecs: {
-      technology: ["Apache Spark", "Apache Kafka", "Snowflake", "Databricks", "Python", "SQL"],
-      integrations: ["Salesforce", "HubSpot", "ERP systems", "CRM systems", "Cloud platforms"],
-      apiEndpoints: 600,
-      uptime: "99.9%",
-      security: ["SOC 2", "GDPR", "Data encryption", "Access controls"]
-    },
-    competitors: ["Databricks", "Snowflake", "Palantir", "Tableau", "Power BI"],
-    marketSize: "$103.2 billion by 2028"
+    marketPrice: '$149/month (Industry average: $299/month)',
+    competitors: ['Veeam', 'Commvault', 'Acronis', 'Rubrik'],
+    roi: '350% ROI within 6 months',
+    setupTime: '1-3 weeks',
+    integrations: ['VMware', 'Hyper-V', 'AWS', 'Azure', 'Office 365', 'Database systems'],
+    freeTier: false,
+    trialPeriod: '30 days',
+    aiScore: 89,
+    useCases: [
+      'Enterprise data backup',
+      'Disaster recovery planning',
+      'Database backup and recovery',
+      'Virtual machine protection',
+      'Cloud data protection',
+      'Compliance data archiving'
+    ],
+    compliance: ['SOC 2', 'GDPR', 'HIPAA', 'SOX', 'ISO 27001'],
+    scalability: 'Protect petabytes of data',
+    support: '24/7 support with backup specialists'
   },
-
-  // Cybersecurity & Compliance
   {
-    id: "cybersecurity-compliance",
-    title: "Cybersecurity & Compliance Services",
-    description: "Comprehensive cybersecurity services that protect businesses from cyber threats, ensure compliance with regulations, and implement security best practices.",
-    category: "Cybersecurity",
-    subcategory: "Protection & Compliance",
-    price: 4499,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'network-infrastructure-optimization',
+    name: 'Network Infrastructure Optimization Platform',
+    category: 'IT Infrastructure',
+    subcategory: 'Network Management',
+    description: 'Comprehensive network management and optimization platform providing real-time monitoring, performance analysis, and automated optimization for enterprise networks.',
+    pricing: 'Enterprise',
+    price: 249,
+    pricingModel: 'monthly',
     features: [
-      "Security assessment",
-      "Penetration testing",
-      "Vulnerability management",
-      "Incident response",
-      "Security monitoring",
-      "Compliance management",
-      "Security training",
-      "Policy development",
-      "Risk assessment",
-      "24/7 SOC support"
+      'Real-time network monitoring and analysis',
+      'Automated network optimization and tuning',
+      'Bandwidth management and QoS',
+      'Network topology discovery and mapping',
+      'Performance bottleneck identification',
+      'Security monitoring and threat detection',
+      'Configuration management and compliance',
+      'Predictive failure analysis',
+      'Multi-vendor device support',
+      'Custom alerting and reporting'
     ],
     benefits: [
-      "Reduce security incidents by 80%",
-      "Ensure regulatory compliance",
-      "Protect sensitive data",
-      "Improve security posture",
-      "Reduce compliance risks"
-    ],
-    useCases: [
-      "Enterprise security",
-      "Compliance management",
-      "Incident response",
-      "Security training",
-      "Risk management"
+      'Improve network performance by 40%',
+      'Reduce network downtime by 80%',
+      'Optimize bandwidth utilization',
+      'Proactive issue identification and resolution',
+      'Enhanced network security monitoring',
+      'Simplified network management'
     ],
     targetAudience: [
-      "Large enterprises",
-      "Financial institutions",
-      "Healthcare organizations",
-      "Government agencies",
-      "Educational institutions"
+      'Enterprise IT departments',
+      'Telecommunications companies',
+      'Data centers',
+      'Educational institutions',
+      'Healthcare networks',
+      'Government agencies'
     ],
-    tags: ["Cybersecurity", "Compliance", "Security", "Risk Management", "Incident Response"],
-    estimatedDelivery: "12-16 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$4,499 - $12,000/month",
-    roi: "400-700%",
-    innovationLevel: "Advanced",
+    tags: ['Network Management', 'Performance Optimization', 'Monitoring', 'Infrastructure', 'Security'],
     contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/services/network-infrastructure-optimization',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
     },
-    technicalSpecs: {
-      technology: ["SIEM", "EDR", "Firewalls", "IDS/IPS", "Vulnerability scanners", "Security tools"],
-      integrations: ["Active Directory", "Cloud platforms", "Network devices", "Security tools"],
-      apiEndpoints: 700,
-      uptime: "99.99%",
-      security: ["SOC 2", "ISO 27001", "NIST", "End-to-end encryption"]
-    },
-    competitors: ["CrowdStrike", "SentinelOne", "Palo Alto Networks", "Cisco", "Fortinet"],
-    marketSize: "$376.3 billion by 2029"
+    marketPrice: '$249/month (Industry average: $499/month)',
+    competitors: ['SolarWinds', 'PRTG', 'ManageEngine', 'Nagios'],
+    roi: '400% ROI within 9 months',
+    setupTime: '2-4 weeks',
+    integrations: ['Cisco', 'Juniper', 'HP', 'Dell', 'SNMP', 'Syslog', 'APIs'],
+    freeTier: false,
+    trialPeriod: '30 days',
+    aiScore: 88,
+    useCases: [
+      'Network performance monitoring',
+      'Bandwidth optimization',
+      'Network security monitoring',
+      'Configuration management',
+      'Capacity planning',
+      'Troubleshooting and diagnostics'
+    ],
+    compliance: ['SOC 2', 'ISO 27001', 'NIST', 'Industry standards'],
+    scalability: 'Monitor thousands of network devices',
+    support: 'Business hours support with network engineers'
   },
-
-  // Digital Transformation Consulting
   {
-    id: "digital-transformation-consulting",
-    title: "Digital Transformation Consulting Services",
-    description: "Strategic consulting services that help businesses navigate digital transformation, implement new technologies, and adapt to the digital economy.",
-    category: "Consulting",
-    subcategory: "Digital Transformation",
-    price: 5999,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'it-service-management-platform',
+    name: 'IT Service Management Platform',
+    category: 'IT Operations',
+    subcategory: 'Service Management',
+    description: 'Comprehensive ITSM platform providing incident management, change control, asset management, and service desk capabilities with ITIL best practices integration.',
+    pricing: 'Subscription',
+    price: 89,
+    pricingModel: 'monthly',
     features: [
-      "Digital strategy development",
-      "Technology assessment",
-      "Change management",
-      "Process optimization",
-      "Technology implementation",
-      "Training and adoption",
-      "Performance measurement",
-      "Continuous improvement",
-      "Executive coaching",
-      "Project management"
+      'Incident and problem management',
+      'Change and release management',
+      'Service catalog and request management',
+      'Asset and configuration management',
+      'Knowledge base and self-service portal',
+      'SLA monitoring and reporting',
+      'Workflow automation and approvals',
+      'Multi-channel support (email, chat, phone)',
+      'Mobile app for technicians',
+      'Integration with monitoring tools'
     ],
     benefits: [
-      "Improve operational efficiency by 40%",
-      "Reduce costs by 25-35%",
-      "Improve customer experience",
-      "Enable innovation",
-      "Increase competitive advantage"
-    ],
-    useCases: [
-      "Business process optimization",
-      "Technology modernization",
-      "Customer experience improvement",
-      "Operational efficiency",
-      "Innovation enablement"
+      'Reduce incident resolution time by 50%',
+      'Improve first-call resolution rates',
+      'Enhance service quality and customer satisfaction',
+      'Streamline IT operations and workflows',
+      'Better visibility into IT services',
+      'Compliance with ITIL best practices'
     ],
     targetAudience: [
-      "C-level executives",
-      "Business leaders",
-      "IT leaders",
-      "Operations managers",
-      "Change managers"
+      'IT service desks',
+      'Managed service providers',
+      'Enterprise IT departments',
+      'Government agencies',
+      'Educational institutions',
+      'Healthcare IT teams'
     ],
-    tags: ["Digital Transformation", "Consulting", "Strategy", "Change Management", "Innovation"],
-    estimatedDelivery: "16-24 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$5,999 - $18,000/month",
-    roi: "500-800%",
-    innovationLevel: "Advanced",
+    tags: ['ITSM', 'Service Desk', 'ITIL', 'Workflow', 'Automation'],
     contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/services/it-service-management',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
     },
-    technicalSpecs: {
-      technology: ["Business process tools", "Project management", "Analytics platforms", "Collaboration tools"],
-      integrations: ["ERP systems", "CRM systems", "Business intelligence", "Collaboration platforms"],
-      apiEndpoints: 200,
-      uptime: "99.9%",
-      security: ["Data privacy", "Access controls", "Audit trails"]
-    },
-    competitors: ["McKinsey", "BCG", "Bain", "Deloitte", "Accenture"],
-    marketSize: "$1.3 trillion by 2028"
+    marketPrice: '$89/month (Industry average: $179/month)',
+    competitors: ['ServiceNow', 'Jira Service Management', 'Freshservice', 'ManageEngine'],
+    roi: '300% ROI within 8 months',
+    setupTime: '1-2 weeks',
+    integrations: ['Active Directory', 'Email systems', 'Monitoring tools', 'Chat platforms'],
+    freeTier: true,
+    trialPeriod: '30 days',
+    aiScore: 85,
+    useCases: [
+      'IT helpdesk operations',
+      'Incident and problem resolution',
+      'Change management processes',
+      'Asset lifecycle management',
+      'Service request fulfillment',
+      'Knowledge management'
+    ],
+    compliance: ['ITIL', 'ISO 20000', 'SOC 2', 'GDPR'],
+    scalability: 'Support thousands of users',
+    support: 'Business hours support with ITSM experts'
   },
-
-  // API Development & Integration
   {
-    id: "api-development-integration",
-    title: "API Development & Integration Services",
-    description: "Comprehensive API development and integration services that enable businesses to connect systems, share data, and create seamless digital experiences.",
-    category: "Integration",
-    subcategory: "API Development",
-    price: 2499,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'devops-automation-platform',
+    name: 'DevOps Automation Platform',
+    category: 'IT Operations',
+    subcategory: 'DevOps',
+    description: 'Comprehensive DevOps automation platform providing CI/CD pipelines, infrastructure as code, monitoring, and collaboration tools for modern software development teams.',
+    pricing: 'Subscription',
+    price: 129,
+    pricingModel: 'monthly',
     features: [
-      "API design and development",
-      "System integration",
-      "API management",
-      "Documentation",
-      "Testing and validation",
-      "Performance optimization",
-      "Security implementation",
-      "Monitoring and analytics",
-      "Version management",
-      "Developer support"
+      'Continuous integration and deployment',
+      'Infrastructure as Code (IaC) automation',
+      'Container orchestration and management',
+      'Automated testing and quality gates',
+      'Application and infrastructure monitoring',
+      'Configuration management',
+      'Security scanning and compliance',
+      'Collaboration and team management',
+      'Multi-cloud deployment support',
+      'Performance optimization and scaling'
     ],
     benefits: [
-      "Improve system connectivity by 90%",
-      "Reduce integration time by 70%",
-      "Enable real-time data sharing",
-      "Improve customer experience",
-      "Reduce development costs"
-    ],
-    useCases: [
-      "System integration",
-      "Third-party integrations",
-      "Mobile app development",
-      "Web application development",
-      "Data sharing"
+      'Accelerate deployment frequency by 10x',
+      'Reduce deployment failures by 90%',
+      'Improve software quality and reliability',
+      'Enhance team collaboration and productivity',
+      'Faster time-to-market for applications',
+      'Reduced operational overhead'
     ],
     targetAudience: [
-      "Development teams",
-      "IT departments",
-      "Product teams",
-      "Startups",
-      "Enterprises"
+      'Software development teams',
+      'DevOps engineers',
+      'SaaS companies',
+      'Technology startups',
+      'Enterprise development',
+      'Digital agencies'
     ],
-    tags: ["API Development", "Integration", "Web Services", "REST", "GraphQL"],
-    estimatedDelivery: "6-10 weeks",
-    supportLevel: "premium",
-    marketPrice: "$2,499 - $6,999/month",
-    roi: "300-500%",
-    innovationLevel: "Advanced",
+    tags: ['DevOps', 'CI/CD', 'Automation', 'Infrastructure', 'Containers'],
     contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/services/devops-automation-platform',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
     },
-    technicalSpecs: {
-      technology: ["Node.js", "Python", "Java", "PostgreSQL", "Redis", "Docker"],
-      integrations: ["REST APIs", "GraphQL", "SOAP", "Webhooks", "Message queues"],
-      apiEndpoints: 800,
-      uptime: "99.9%",
-      security: ["OAuth 2.0", "API keys", "Rate limiting", "Input validation"]
-    },
-    competitors: ["MuleSoft", "Apigee", "Kong", "Postman", "Swagger"],
-    marketSize: "$13.7 billion by 2027"
+    marketPrice: '$129/month (Industry average: $259/month)',
+    competitors: ['GitLab', 'Jenkins', 'Azure DevOps', 'CircleCI'],
+    roi: '450% ROI within 6 months',
+    setupTime: '1-3 weeks',
+    integrations: ['Git repositories', 'Docker', 'Kubernetes', 'AWS', 'Azure', 'Slack', 'Jira'],
+    freeTier: true,
+    trialPeriod: '30 days',
+    aiScore: 92,
+    useCases: [
+      'Automated software deployment',
+      'Infrastructure provisioning',
+      'Container management',
+      'Quality assurance automation',
+      'Release management',
+      'Environment provisioning'
+    ],
+    compliance: ['SOC 2', 'ISO 27001', 'Security best practices'],
+    scalability: 'Support enterprise-scale deployments',
+    support: '24/7 chat support with DevOps experts'
   },
-
-  // Mobile App Development
   {
-    id: "mobile-app-development",
-    title: "Mobile App Development Services",
-    description: "Comprehensive mobile app development services that create engaging, high-performance mobile applications for iOS and Android platforms.",
-    category: "Mobile Development",
-    subcategory: "App Development",
-    price: 2999,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'enterprise-monitoring-observability',
+    name: 'Enterprise Monitoring & Observability Suite',
+    category: 'IT Operations',
+    subcategory: 'Monitoring & Analytics',
+    description: 'Comprehensive monitoring and observability platform providing full-stack visibility, performance analytics, and intelligent alerting for modern IT environments.',
+    pricing: 'Enterprise',
+    price: 179,
+    pricingModel: 'monthly',
     features: [
-      "Native iOS development",
-      "Native Android development",
-      "Cross-platform development",
-      "UI/UX design",
-      "App testing and QA",
-      "Performance optimization",
-      "Security implementation",
-      "App store submission",
-      "Maintenance and updates",
-      "Analytics integration"
+      'Full-stack application monitoring',
+      'Infrastructure and network monitoring',
+      'Log aggregation and analysis',
+      'Distributed tracing and profiling',
+      'Custom metrics and dashboards',
+      'AI-powered anomaly detection',
+      'Intelligent alerting and escalation',
+      'Performance optimization insights',
+      'Service dependency mapping',
+      'Real-time analytics and reporting'
     ],
     benefits: [
-      "Improve customer engagement by 60%",
-      "Increase mobile conversions by 40%",
-      "Enhance brand presence",
-      "Improve customer experience",
-      "Enable mobile-first strategies"
-    ],
-    useCases: [
-      "Customer-facing apps",
-      "Internal business apps",
-      "E-commerce apps",
-      "Social media apps",
-      "Utility apps"
+      'Reduce mean time to resolution by 70%',
+      'Improve application performance by 40%',
+      'Prevent 95% of performance issues',
+      'Enhanced visibility across IT stack',
+      'Proactive issue identification',
+      'Data-driven optimization decisions'
     ],
     targetAudience: [
-      "Businesses",
-      "Startups",
-      "Enterprises",
-      "Marketing teams",
-      "Product teams"
+      'DevOps teams',
+      'Site reliability engineers',
+      'IT operations teams',
+      'Application developers',
+      'System administrators',
+      'Cloud architects'
     ],
-    tags: ["Mobile Development", "iOS", "Android", "React Native", "Flutter"],
-    estimatedDelivery: "8-16 weeks",
-    supportLevel: "premium",
-    marketPrice: "$2,999 - $8,999/month",
-    roi: "350-600%",
-    innovationLevel: "Advanced",
+    tags: ['Monitoring', 'Observability', 'Analytics', 'Performance', 'DevOps'],
     contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/services/enterprise-monitoring-observability',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
     },
-    technicalSpecs: {
-      technology: ["Swift", "Kotlin", "React Native", "Flutter", "Node.js", "Firebase"],
-      integrations: ["Payment gateways", "Social media", "Analytics", "Push notifications", "Cloud services"],
-      apiEndpoints: 300,
-      uptime: "99.9%",
-      security: ["App security", "Data encryption", "Secure communications"]
-    },
-    competitors: ["Appinventiv", "Fueled", "Dom & Tom", "Rightpoint", "Mobisoft"],
-    marketSize: "$935.2 billion by 2027"
-  },
-
-  // Web Application Development
-  {
-    id: "web-application-development",
-    title: "Web Application Development Services",
-    description: "Comprehensive web application development services that create modern, scalable, and secure web applications using cutting-edge technologies.",
-    category: "Web Development",
-    subcategory: "Application Development",
-    price: 2499,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Frontend development",
-      "Backend development",
-      "Database design",
-      "API development",
-      "UI/UX design",
-      "Testing and QA",
-      "Performance optimization",
-      "Security implementation",
-      "Deployment and hosting",
-      "Maintenance and support"
-    ],
-    benefits: [
-      "Improve online presence by 80%",
-      "Increase customer engagement by 50%",
-      "Enable digital business",
-      "Improve operational efficiency",
-      "Reduce operational costs"
-    ],
+    marketPrice: '$179/month (Industry average: $359/month)',
+    competitors: ['Datadog', 'New Relic', 'Dynatrace', 'AppDynamics'],
+    roi: '400% ROI within 7 months',
+    setupTime: '2-4 weeks',
+    integrations: ['APM tools', 'Cloud platforms', 'Containers', 'Databases', 'Web servers'],
+    freeTier: false,
+    trialPeriod: '30 days',
+    aiScore: 94,
     useCases: [
-      "E-commerce websites",
-      "Business applications",
-      "Customer portals",
-      "Content management systems",
-      "Web applications"
+      'Application performance monitoring',
+      'Infrastructure health monitoring',
+      'Log analysis and troubleshooting',
+      'Capacity planning and optimization',
+      'SLA monitoring and reporting',
+      'Root cause analysis'
     ],
-    targetAudience: [
-      "Businesses",
-      "Startups",
-      "Enterprises",
-      "Marketing teams",
-      "Product teams"
-    ],
-    tags: ["Web Development", "React", "Node.js", "Python", "PostgreSQL", "AWS"],
-    estimatedDelivery: "8-14 weeks",
-    supportLevel: "premium",
-    marketPrice: "$2,499 - $6,999/month",
-    roi: "300-500%",
-    innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technicalSpecs: {
-      technology: ["React", "Vue.js", "Node.js", "Python", "PostgreSQL", "Redis"],
-      integrations: ["Payment gateways", "Analytics", "CRM systems", "Marketing tools", "Cloud services"],
-      apiEndpoints: 400,
-      uptime: "99.9%",
-      security: ["HTTPS", "Input validation", "SQL injection protection", "XSS protection"]
-    },
-    competitors: ["Toptal", "Upwork", "Fiverr", "Freelancer", "Guru"],
-    marketSize: "$89.6 billion by 2027"
+    compliance: ['SOC 2', 'GDPR', 'HIPAA', 'ISO 27001'],
+    scalability: 'Monitor millions of metrics per second',
+    support: '24/7 technical support with monitoring experts'
   }
 ];
+
+export default COMPREHENSIVE_IT_SERVICES_2025;

@@ -34,10 +34,7 @@ const Training = lazy(() => import('./pages/Training').then(module => ({ default
 const Helpdesk = lazy(() => import('./pages/Helpdesk').then(module => ({ default: module.default })));
 const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ default: module.PricingPage })));
 
-// Service Pages - Updated to use backup-pages location
-const AIThreatIntelligence = lazy(() => import('./backup-pages/src-pages/services/ai-threat-intelligence-platform').then(module => ({ default: module.AIThreatIntelligencePlatform })));
-const BlockchainSupplyChain = lazy(() => import('./backup-pages/src-pages/services/blockchain-supply-chain-platform').then(module => ({ default: module.BlockchainSupplyChainPlatform })));
-const AdvancedServicesShowcase = lazy(() => import('./backup-pages/src-pages/AdvancedServicesShowcase2028').then(module => ({ default: module.AdvancedServicesShowcase2028 })));
+// Service Pages - Will be added later as needed
 
 // Loading component
 const PageLoader = () => (
@@ -64,9 +61,7 @@ function App() {
                 <Route path="/" element={<HomePage />} />
                 <Route path="/services" element={<ServicesPage />} />
                 <Route path="/services/*" element={<ServicesPage />} />
-                <Route path="/services/ai-threat-intelligence" element={<AIThreatIntelligence />} />
-                <Route path="/services/blockchain-supply-chain" element={<BlockchainSupplyChain />} />
-                <Route path="/advanced-services-2028" element={<AdvancedServicesShowcase />} />
+
                 <Route path="/comprehensive-services" element={<ComprehensiveServicesPage />} />
                 <Route path="/comprehensive-services-2026" element={<ComprehensiveServicesShowcase2026 />} />
                 <Route path="/comprehensive-marketing-2026" element={<ComprehensiveMarketingPage2026 />} />

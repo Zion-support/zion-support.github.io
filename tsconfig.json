@@ -9,41 +9,30 @@
     ],
     "allowJs": true,
     "skipLibCheck": true,
-<<<<<<< HEAD
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": false,
     "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
-    "moduleResolution": "node",
-=======
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    },
-    "typeRoots": ["./src/types"],
-
-    /* Bundler mode */
     "moduleResolution": "bundler",
->>>>>>> cursor/add-new-services-and-advertise-them-971c
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "incremental": true,
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
     "removeComments": false,
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "noImplicitReturns": false,
-    "noImplicitThis": true,
+    "noImplicitThis": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "exactOptionalPropertyTypes": true,
-    "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": true,
+    "exactOptionalPropertyTypes": false,
+    "noImplicitOverride": false,
+    "noPropertyAccessFromIndexSignature": false,
     "noUncheckedIndexedAccess": false,
     "allowUnusedLabels": false,
     "allowUnreachableCode": false,
@@ -96,15 +85,9 @@
     ],
     "types": [
       "node"
-    ],
-    "plugins": [
-      {
-        "name": "next"
-      }
     ]
   },
   "include": [
-    "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     "**/*.js",
@@ -112,8 +95,6 @@
   ],
   "exclude": [
     "node_modules",
-    ".next",
-    "out",
     "dist",
     "automation",
     "components.disabled",

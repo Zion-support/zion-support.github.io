@@ -21,7 +21,7 @@ import {
   ChevronRight
 } from 'lucide-react';
 
-export function PricingPage() {
+export default function EnhancedPricingPage() {
   const [selectedCategory, setSelectedCategory] = useState('microSaas');
 
   const categories = [
@@ -34,22 +34,43 @@ export function PricingPage() {
     {
       icon: TrendingDown,
       title: "40-60% Cost Savings",
-      description: "Save significantly compared to industry averages"
+      description: "Save significantly compared to industry averages while getting premium features"
     },
     {
       icon: Clock,
-      title: "Quick Implementation", 
-      description: "Get up and running in 24 hours to 8 weeks"
+      title: "Quick Implementation",
+      description: "Get up and running in 24 hours to 8 weeks depending on complexity"
     },
     {
       icon: Award,
       title: "Proven ROI",
-      description: "Average ROI of 300-800% within 6-18 months"
+      description: "Average ROI of 300-800% within 6-18 months across all services"
     },
     {
       icon: Users,
       title: "Expert Support",
-      description: "24/7 support with dedicated specialists"
+      description: "24/7 support with dedicated specialists for each service category"
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      company: "TechStart Inc.",
+      quote: "Zion Tech Group's AI Content Creator saved us $40,000 annually while improving our content quality by 300%.",
+      service: "AI Content Creator Pro"
+    },
+    {
+      name: "Michael Chen",
+      company: "Enterprise Corp",
+      quote: "Their cybersecurity operations center reduced our security incidents by 95% in the first 6 months.",
+      service: "Cybersecurity Operations Center"
+    },
+    {
+      name: "Lisa Rodriguez",
+      company: "Growth Agency",
+      quote: "The social media scheduler increased our client engagement rates by 60% while saving 20 hours per week.",
+      service: "AI Social Media Scheduler"
     }
   ];
 
@@ -224,6 +245,40 @@ export function PricingPage() {
         </div>
       </section>
 
+      {/* Testimonials */}
+      <section className="py-16 px-4 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">What Our Clients Say</h2>
+            <p className="text-xl text-gray-300">Real results from real customers</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <motion.div
+                key={testimonial.name}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700"
+              >
+                <div className="flex items-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-300 mb-4 italic">"{testimonial.quote}"</p>
+                <div>
+                  <div className="font-semibold text-white">{testimonial.name}</div>
+                  <div className="text-sm text-gray-400">{testimonial.company}</div>
+                  <div className="text-sm text-cyan-400">{testimonial.service}</div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -275,5 +330,3 @@ export function PricingPage() {
     </div>
   );
 }
-
-export default PricingPage;

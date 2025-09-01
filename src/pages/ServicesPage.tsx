@@ -7,6 +7,10 @@ import { INNOVATIVE_AI_SERVICES_2025 } from '@/data/innovativeAIServices2025';
 import { CYBERSECURITY_SERVICES_2025 } from '@/data/cybersecurityServices2025';
 import { BLOCKCHAIN_WEB3_SERVICES_2025 } from '@/data/blockchainWeb3Services2025';
 import { IOT_EDGE_SERVICES_2025 } from '@/data/iotEdgeServices2025';
+import { INNOVATIVE_REAL_MICRO_SAAS_SERVICES_2025 } from '@/data/innovativeRealMicroSaasServices2025';
+import { ADVANCED_AI_SERVICES_2025 } from '@/data/advancedAIServices2025';
+import { COMPREHENSIVE_IT_SERVICES_2025 } from '@/data/comprehensiveITServices2025';
+import { ENTERPRISE_SOLUTIONS_2025 } from '@/data/enterpriseSolutions2025';
 import { SEO } from '@/components/SEO';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -133,6 +137,10 @@ export default React.memo(function ServicesPage() {
 
   // Filter and sort services
   const allServices = [
+    ...INNOVATIVE_REAL_MICRO_SAAS_SERVICES_2025,
+    ...ADVANCED_AI_SERVICES_2025,
+    ...COMPREHENSIVE_IT_SERVICES_2025,
+    ...ENTERPRISE_SOLUTIONS_2025,
     ...INNOVATIVE_MICRO_SAAS_SERVICES_2025,
     ...ADDITIONAL_INNOVATIVE_SERVICES_2025,
     ...ADVANCED_ENTERPRISE_SOLUTIONS_2025,
