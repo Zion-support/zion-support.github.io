@@ -20,6 +20,7 @@ import {
 } from "@/components/ui/form";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Link, useNavigate } from "react-router-dom";
+import { LoadingOverlay } from "@/components/LoadingOverlay";
 
 );
 
@@ -43,12 +44,18 @@ export function LoginForm() {
 
     try {
       setIsSubmitting(true);
-      const res = await auth.login(data.email, data.password);
-      if (res.status === 200) {
-        navigate('/dashboard');
-      } else if (res.status >= 400 && res.status < 500) {
-        toast.error(res.data?.error || 'Invalid credentials');
+      const { res, data: resData } = await loginUser(data.email, data.password);
+      if (!res.ok) {
+        toast.error(resData?.error || "Invalid credentials");
+        return;
       }
+      toast.success("Logged in successfully");
+      if (resData?.token) {
+        document.cookie = `token=${resData.token}; path=/`;
+      }
+      navigate("/");
+    } catch (err) {
+      toast.error("Unable to login. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
@@ -149,6 +156,7 @@ export function LoginForm() {
           {isLoading || isSubmitting ? "Logging in..." : "Login"}
         </Button>
       </form>
+      <LoadingOverlay visible={isLoading || isSubmitting} />
     </Form>
   );
 }
