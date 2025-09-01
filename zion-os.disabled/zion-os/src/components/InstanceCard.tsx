@@ -107,8 +107,7 @@ export function InstanceCard({ instance }: InstanceCardProps) {
       <div className="mt-4 pt-4 border-t border-white/10">
         <div className="flex items-center justify-between text-xs text-gray-400">
           <span>Click to {isExpanded ? 'collapse' : 'expand'}</span>
-<<<<<<< HEAD
-          <svg
+<svg
             className={`w-4 h-4 transition-transform ${isExpanded ? 'rotate-180' : ''}`}
             fill="none"
             stroke="currentColor"
@@ -118,19 +117,5 @@ export function InstanceCard({ instance }: InstanceCardProps) {
           </svg>
         </div>
       </div>
-    </div>
-=======
-          <svg 
-            className={`w-4 h-4 transition-transform ${isExpanded ? 'rotate-180' : ''}`} 
-            fill="none" 
-            stroke="currentColor" 
-            viewBox="0 0 24 24";
-          >;
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />;
-          </svg>;
-        </div>;
-      </div>;
-    </div>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  );
+    </div>);
 }}}}

@@ -36,13 +36,7 @@ export interface Revolutionary2026HealthcareBiotechService {
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-  reviews: number;
-
-=======
-  reviews: number}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-export const revolutionary2026HealthcareBiotechServices: Revolutionary2026HealthcareBiotechService[] = [
+reviews: number;export const revolutionary2026HealthcareBiotechServices: Revolutionary2026HealthcareBiotechService[] = [
   // AI Drug Discovery Platform
   {
     id: 'ai-drug-discovery-platform',

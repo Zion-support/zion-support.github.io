@@ -21,8 +21,7 @@ class AutomationDashboard {
       );
       // // // // // // // console.error('❌ Failed to get PM2 status:', error.message);
       return [];
-=======
-      return this.processes} catch (error) {
+return this.processes} catch (error) {
       console.error('❌ Failed to get PM2 status:', error.message);
       return []}
   }
@@ -98,8 +97,7 @@ class AutomationDashboard {
     // Display recent logs
     // // // console.log('📝 Recent Activity:');
     // // // console.log('─'.repeat(50));
-=======
-    // // // // // // // console.log('');
+// // // // // // // console.log('');
     // Display recommendations
     if (health.recommendations.length > 0) {
       // // // // // // // console.log('💡 Recommendations:');
@@ -132,8 +130,7 @@ class AutomationDashboard {
     // // // // // // // console.log('  pm2 monit - Open PM2 monitoring interface');
     // // // // // // // console.log('  Ctrl+C - Exit dashboard');
   }
-=======
-          console.log(`🔴 ${log}`)} else if (log.includes('WARN') || log.includes('warn')) {
+console.log(`🔴 ${log}`)} else if (log.includes('WARN') || log.includes('warn')) {
           console.log(`🟡 ${log}`)} else {
           console.log(`ℹ️  ${log}`)}
       })} catch (error) {
@@ -188,8 +185,7 @@ class AutomationDashboard {
         averageCPU: this.processes.reduce((sum, p) => sum + p.monit.cpu, 0) / this.processes.length,
         totalRestarts: this.processes.reduce((sum, p) => sum + p.pm2_env.restart_time, 0)
     };
-=======
-      console.log('✅ No failed processes to restart');
+console.log('✅ No failed processes to restart');
       return}
     failedProcesses.forEach(proc => {
       try {
@@ -219,8 +215,7 @@ async function main() {
   } catch (error) {
     // // // // // // // console.error('❌ Dashboard failed:', error);
     process.exit(1);
-=======
-    console.log('✅ Performance report saved');
+console.log('✅ Performance report saved');
     process.exit(0)});
   try {
     await dashboard.startMonitoring()} catch (error) {

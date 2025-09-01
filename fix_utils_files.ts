@@ -116,23 +116,11 @@ function fixUtilsFile(...args: unknown[]): unknown {
     content = content.replace(/au,\s*t,\s*h/g, "auth");
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, "utf8");
-<<<<<<< HEAD
-<<<<<<< HEAD
-      // // // console.log(`Fixed: ${filePath}`);
-=======
-      // // // // // // // console.log(`Fixed: ${filePath}`);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-      return true;
+// // // console.log(`Fixed: ${filePath}`);return true;
 
     return false;
   } catch (error) {
-<<<<<<< HEAD
-    // // // console.error(`Error processing ${filePath}:`, error.message);
-=======
-    // // // // // // // console.error(`Error processing ${filePath}:`, error.message);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-    return false;
-
+// // // console.error(`Error processing ${filePath}:`, error.message);return false;
 
 async function fixAllUtilsFiles(...args: unknown[]): unknown {
   const files = await glob("utils/**/*.{ts,tsx}", {
@@ -142,34 +130,16 @@ async function fixAllUtilsFiles(...args: unknown[]): unknown {
   for (const file of files) {
     if (fixUtilsFile(file)) {
       fixedCount++;
-<<<<<<< HEAD
-
-
-  // // // console.log(`Fixed ${fixedCount} utils files.`);
-
-=======
-    }
-  }
-  // // // // // // // console.log(`Fixed ${fixedCount} utils files.`);
-}
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-=======
-      console.log(`Fixed: ${filePath}`);
+// // // console.log(`Fixed ${fixedCount} utils files.`);console.log(`Fixed: ${filePath}`);
       return true}
     return false} catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false}
 }
-<<<<<<< HEAD
-async function fixedCount = 0;
-=======
-async function fixedCount = 0;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-  for (const file of files) {
+async function fixedCount = 0;for (const file of files) {
     if (fixUtilsFile(file)) {
       fixedCount++}
   }
   console.log(`Fixed ${fixedCount} utils files.`)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 fixAllUtilsFiles();
 }}}}}}}}}

@@ -11,8 +11,7 @@ class LintErrorFixer {
     this.logFile = path.join(__dirname, 'logs', 'lint-error-fixer.log');
     // // // // // // // // console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
-=======
-    this.ensureLogDirectory()}
+this.ensureLogDirectory()}
   ensureLogDirectory() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
@@ -153,8 +152,7 @@ switch (command) {
     if (filePath) {
       // // // // // // // // console.log('Usage: node lint-error-fixer.js file <filepath>');
     }
-=======
-      fixer.fixFile(filePath)} else {
+fixer.fixFile(filePath)} else {
       console.log('Usage: node lint-error-fixer.js file <filepath>')}
     break;
   case 'all':
@@ -164,6 +162,5 @@ switch (command) {
     // // // // // // // // console.log('Usage: node lint-error-fixer.js [file <filepath>|all]');
     process.exit(1);
 }}}}}}}}}}}}}}}}}}}}}}}}}}
-=======
-    console.log('Usage: node lint-error-fixer.js [file <filepath>|all]');
+console.log('Usage: node lint-error-fixer.js [file <filepath>|all]');
     process.exit(1)}

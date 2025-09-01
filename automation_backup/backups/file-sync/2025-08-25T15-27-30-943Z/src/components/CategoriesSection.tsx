@@ -47,19 +47,14 @@ const categories = [;
     stats: '100+ Innovations';
   },;
   {;
-<<<<<<< HEAD
-<<<<<<< HEAD;
+;
     title: 'AI Hiring Platform',;
     description: 'AI-powered recruitment and talent acquisition tools',;
     icon: <ZapIcon className='w-10 h-10'                                                                                                                                                                              />,;
     link: '/zion-hire-ai',;
     color: 'from-zion-purple to-zion-purple-dark',;
     featured: true;
-;
-=======;
-=======
->>>>>>> cursor/website-audit-content-update-and-deployment-efec
-    title: 'AI Hiring Platform',;
+;title: 'AI Hiring Platform',;
     description: 'AI-powered recruitment and talent acquisition tools',;
     icon: <ZapIcon className='w-10 h-10'                                                                                                                                                                              />,;
     link: '/zion-hire-ai',;
@@ -85,8 +80,7 @@ const specialServices = [;
     link: '/cloud-solutions',;
     icon: <Globe className='w-5 h-5'                                                                                                                                                                              />,;
     description: 'Scalable cloud infrastructure';
-<<<<<<< HEAD
-<<<<<<< HEAD;
+;
   },;
   {;
     title: 'Security Services',;
@@ -114,11 +108,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
       opacity: 1,;
       y: 0,;
       transition: { duration: 0.6, ease: 'easeOut' };
-;
-=======;
-=======
->>>>>>> cursor/website-audit-content-update-and-deployment-efec
-  },;
+;},;
   {;
     title: 'Security Services',;
     link: '/security-services',;
@@ -375,20 +365,13 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             className='inline-flex items-center gap-2 text-zion-cyan border-b-2 border-zion-cyan hover:border-zion-cyan-dark transition-colors text-lg font-semibold group';
 ;
             Explore All Categories;
-<<<<<<< HEAD
-<<<<<<< HEAD;
+;
             <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform'                                                                                                                                                                              />;
           </Link>;
         </motion.div>;
       </div>;
     </section>;
-  )};
-=======;
-            <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform'                                                                                                                                                                              />;
-=======
-            <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform'              />;
->>>>>>> cursor/website-audit-content-update-and-deployment-efec
-          </Link>;
+  )};</Link>;
         </motion.div>;
       </div>;
     </section>;

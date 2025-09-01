@@ -40,8 +40,7 @@ const specialServices = [
     link: "/it-onsite-services"
   },
   {
-<<<<<<< HEAD
-    title: "Comprehensive Services",
+title: "Comprehensive Services",
     link: "/comprehensive-services"
   },
   {
@@ -58,54 +57,17 @@ const containerVariants = {
     opacity: 1,
     transition: {
       staggerChildren: 0.1,
-      delayChildren: 0.2
-
-
-=======
-    title: "Comprehensive Services",;
-    link: "/comprehensive-services";
-  },;
-  {;
-    title: "Services Comparison",;
-    link: "/services-comparison";
-  };
-];
-interface CategoriesSectionProps {
-  showTitle?: boolean}
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {;
-    opacity: 1,;
-    transition: {;
-      staggerChildren: 0.1,;
-      delayChildren: 0.2;
-    };
-  };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-};
+      delayChildren: 0.2};
 const itemVariants = {
   hidden: { y: 20,
   opacity: 0 
 },
   visible: {
-<<<<<<< HEAD
-    y: 0,
+y: 0,
     opacity: 1,
     transition: {
       duration: 0.5,
-      ease: "easeOut"
-
-
-=======
-    y: 0,;
-    opacity: 1,;
-    transition: {;
-      duration: 0.5,;
-      ease: "easeOut";
-    };
-  };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-};
+      ease: "easeOut"};
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
   return (
     <section className="py-20 bg-zion-blue relative overflow-hidden">
@@ -164,17 +126,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
   y: 0 
 }}
           viewport={{ once: true }}
-<<<<<<< HEAD
-          transition={{ duration: 0.6, delay: 0.4 }}
-
-=======
-          transition = {
-  { duration: 0.6,
-  delay: 0.4 
-}}
-        >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-          <h3 className="text-center text-xl font-bold text-white mb-6">Featured Services</h3>
+transition={{ duration: 0.6, delay: 0.4 }}<h3 className="text-center text-xl font-bold text-white mb-6">Featured Services</h3>
           <div className="flex flex-wrap justify-center gap-4">
             {specialServices.map((service) => (
               <motion.div
@@ -202,39 +154,14 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
   y: 0 
 }}
           viewport={{ once: true }}
-<<<<<<< HEAD
-          transition={{ duration: 0.6, delay: 0.6 }}
+transition={{ duration: 0.6, delay: 0.6 }}
 
           <Link
-            href="/categories"
-=======
-          transition = {
-  { duration: 0.6,
-  delay: 0.6 
-}}
-        >
-          <Link 
-            href="/categories" 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-            className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors"
+            href="/categories"className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors"
             View All Categories
-<<<<<<< HEAD
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+<ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
           </Link>
         </motion.div>
       </div>
     </section>
   )};
-=======;
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />;
-          </Link>;
-        </motion.div>;
-      </div>;
-    </section>;
-  );
-<<<<<<< HEAD
-</div></div></div>}}}}}}}}
-=======
-}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

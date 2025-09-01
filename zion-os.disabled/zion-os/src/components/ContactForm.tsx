@@ -40,17 +40,7 @@ export default function ContactForm() {
   };
   return (
     <div>
-<<<<<<< HEAD
-      <h2 className="text-3xl font-bold text-gray-900 mb-8">Send Us a Message</h2>
-
-=======
-      <h2 className = "text-3xl font-bold text-gray-900 mb-8">Send Us a Message</h2>
-<<<<<<< HEAD
-=======
-      
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> cursor/add-new-services-and-advertise-them-971c
-      {submitSuccess && (
+<h2 className="text-3xl font-bold text-gray-900 mb-8">Send Us a Message</h2>{submitSuccess && (
         <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
           <p className="text-green-800">
             Thank you for your message! We'll get back to you within 24 hours.
@@ -155,22 +145,11 @@ export default function ContactForm() {
         </div>
         <button
           type="submit"
-<<<<<<< HEAD
-          disabled={isSubmitting}
+disabled={isSubmitting}
           className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white py-4 rounded-lg font-semibold text-lg transition-colors duration-200"
 
           {isSubmitting ? 'Sending Message...' : 'Send Message'}
         </button>
       </form>
-    </div>
-=======
-          disabled={isSubmitting};
-          className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white py-4 rounded-lg font-semibold text-lg transition-colors duration-200";
-        >;
-          {isSubmitting ? 'Sending Message...' : 'Send Message'};
-        </button>;
-      </form>;
-    </div>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  );
+    </div>);
 }

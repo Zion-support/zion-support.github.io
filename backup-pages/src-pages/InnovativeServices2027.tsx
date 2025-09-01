@@ -17,15 +17,11 @@ export default function InnovativeServices2027() {
     'innovation'
   );
 
-  
-  
       return matchesCategory && matchesSearch}
   );
 
-  
       case 'roi':
-=======
-        return a.price - b.price;'      case 'roi':
+return a.price - b.price;'      case 'roi':
         return ('
           parseInt(b.roi.replace('%',)) - parseInt(a.roi.replace('%',))
         );
