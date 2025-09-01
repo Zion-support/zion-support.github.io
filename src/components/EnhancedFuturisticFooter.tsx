@@ -124,127 +124,31 @@ import { motion } from 'framer - motion';
       title: 'Comprehensive Services 2026',
       featured: true,
       links: [
-        { name: 'All Services & Pricing', href: '/comprehensive-services-showcase-2026', featured: true },
-        { name: 'Pricing Guide 2026', href: '/comprehensive-pricing-guide-2026', featured: true },
-        { name: 'Micro SaaS Solutions', href: '/services/micro-saas', featured: true },
-        { name: 'AI Solutions', href: '/services/ai-business-intelligence', featured: true },
-        { name: 'IT Infrastructure', href: '/services/it-infrastructure', featured: true },
-        { name: 'Cloud DevOps', href: '/services/cloud-devops', featured: true },
-        { name: 'Data Analytics', href: '/services/data-analytics', featured: true },
-        { name: 'Digital Twin Platform', href: '/services/digital-twin', featured: true },
-        { name: 'Quantum Computing', href: '/services/quantum-computing', featured: true },
-        { name: 'Blockchain Solutions', href: '/services#blockchain', featured: true },
-        { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', featured: true }
-      ]
-    },
-    {
-      title: 'Innovative Micro SAAS 2026',
-      featured: true,
-      links: [
-        { name: 'AI Customer Success Platform', href: '/services/ai-customer-success', featured: true },
-        { name: 'AI Sales Intelligence', href: '/services/ai-sales-intelligence', featured: true },
-        { name: 'AI HR & Talent Management', href: '/services/ai-hr-talent', featured: true },
-        { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', featured: true },
-        { name: 'AI Project Management', href: '/services/ai-project-management', featured: true },
-        { name: 'AI Financial Planning', href: '/services/ai-financial-planning', featured: true },
-        { name: 'AI Learning Platform', href: '/services/ai-learning-development', featured: true },
-        { name: 'AI Supply Chain Risk', href: '/services/ai-supply-chain-risk', featured: true },
-        { name: 'AI Compliance Management', href: '/services/ai-compliance-management', featured: true },
-        { name: 'AI Innovation Platform', href: '/services/ai-innovation-management', featured: true }
-      ]
-    },
-    {
-      title: 'AI Services 2026',
-      featured: true,
-      links: [
-        { name: 'Autonomous Business Operations', href: '/services/ai-autonomous-business', featured: true },
-        { name: 'Neural Interface Platform', href: '/services/ai-neural-interface', featured: true },
-        { name: 'Quantum Machine Learning', href: '/services/ai-quantum-ml', featured: true },
-        { name: 'Synthetic Biology AI', href: '/services/ai-synthetic-biology', featured: true },
-        { name: 'Space Technology AI', href: '/services/ai-space-technology', featured: true },
-        { name: 'Climate Intelligence AI', href: '/services/ai-climate-intelligence', featured: true },
-        { name: 'Autonomous Vehicles AI', href: '/services/ai-autonomous-vehicles', featured: true },
-        { name: 'Digital Twin & Metaverse', href: '/services/ai-digital-twin-metaverse', featured: true },
-        { name: 'Blockchain & Web3 AI', href: '/services/ai-blockchain-web3', featured: true },
-        { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform', featured: true }
-      ]
-    },
-    {
-      title: 'IT Infrastructure 2026',
-      featured: true,
-      links: [
-        { name: 'Cloud Infrastructure Optimization', href: '/services/ai-cloud-optimization', featured: true },
-        { name: 'Edge Computing & 5G', href: '/services/edge-computing-5g', featured: true },
-        { name: 'Data Center Management', href: '/services/ai-data-center-management', featured: true },
-        { name: 'Zero-Trust Security', href: '/services/zero-trust-security', featured: true },
-        { name: 'DevOps & CI/CD Automation', href: '/services/ai-devops-automation', featured: true },
-        { name: 'Multi-Cloud Management', href: '/services/hybrid-multi-cloud', featured: true },
-        { name: 'Network Performance AI', href: '/services/ai-network-performance', featured: true },
-        { name: 'Green IT & Sustainability', href: '/services/green-it-sustainability', featured: true },
-        { name: 'Disaster Recovery AI', href: '/services/ai-disaster-recovery', featured: true },
-        { name: 'IT Asset Management AI', href: '/services/ai-it-asset-management', featured: true }
-      ]
-    },
-    {
-      title: 'Revolutionary 2030 Services',
-      featured: true,
-      links: [
-        { name: 'Revolutionary Services 2030', href: '/revolutionary-services-2030', featured: true },
-        { name: 'Quantum AI Trading Platform', href: '/services#quantum-ai-trading', featured: true },
-        { name: 'Neural Interface Platform', href: '/services#neural-interface', featured: true },
-        { name: 'Space Technology Solutions', href: '/services#space-technology', featured: true },
-        { name: 'Synthetic Biology Platform', href: '/services#synthetic-biology', featured: true },
-        { name: 'Climate Intelligence Platform', href: '/services#climate-intelligence', featured: true },
-        { name: 'Autonomous Systems Platform', href: '/services#autonomous-systems', featured: true },
-        { name: 'Digital Twin Metaverse', href: '/services#digital-twin-metaverse', featured: true },
-        { name: 'Blockchain Web3 Platform', href: '/services#blockchain-web3', featured: true },
-        { name: 'Advanced AI Solutions', href: '/services#advanced-ai', featured: true }
-      ]
-    },
-    {
-      title: 'AI & Analytics Services',
-      featured: true,
-      links: [
-        { name: 'AI Enterprise Orchestrator', href: '/services/ai-enterprise-orchestrator' },
-        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
+        { name: 'AI Predictive Analytics Platform', href: '/services/ai-predictive-analytics-platform' },
+        { name: 'AI Customer Experience Platform', href: '/services/ai-customer-experience-platform' },
+        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization' },
+        { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation' },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
-        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' },
-        { name: 'AI Project Management Platform', href: '/services/ai-project-management-platform' },
-        { name: 'AI Content Generation Platform', href: '/services/ai-content-generation-platform' },
-        { name: 'AI Legal Research Platform', href: '/services/ai-legal-research-platform' },
-        { name: 'AI Education Platform', href: '/services/ai-education-platform' },
-        { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation' },
-        { name: 'AI Autonomous Business Operations', href: '/services/ai-autonomous-business-operations' }
+        { name: 'AI Content Studio Pro', href: '/services/ai-content-studio' }
       ]
     },
     {
-      title: 'Cybersecurity & Compliance',
-      featured: false,
+      title: 'Cybersecurity & Emerging Tech',
+      icon: Shield,
+      color: 'from-red-600 to-orange-600',
       links: [
         { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite' },
-        { name: 'AI Cybersecurity Threat Detection', href: '/services/ai-cybersecurity-threat-detection' },
-        { name: 'AI Cybersecurity Threat Intelligence', href: '/services/ai-cybersecurity-threat-intelligence' },
-        { name: 'Zero Trust Network Architecture', href: '/services/zero-trust-network-architecture' },
-        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' },
-        { name: 'SOC2 Compliance Tracker', href: '/services/soc2-compliance-tracker' },
-        { name: 'GDPR Cookie Compliance', href: '/services/gdpr-cookie-compliance' }
+        { name: 'Smart Contract Risk Scanner', href: '/services/smart-contract-risk-scanner' },
+        { name: 'Quantum Computing Solutions', href: '/services/quantum-computing-solutions' },
+        { name: 'Blockchain Enterprise Solutions', href: '/services/blockchain-enterprise-solutions' },
+        { name: 'Edge Computing Platform', href: '/services/edge-computing-platform' },
+        { name: 'Space Tech Solutions', href: '/services/space-tech' }
       ]
     },
     {
-      title: 'Financial & Trading Services',
-      featured: false,
-      links: [
-        { name: 'AI Financial Fraud Detection', href: '/services/ai-financial-fraud-detection' },
-        { name: 'AI Financial Trading Platform', href: '/services/ai-financial-trading-platform' },
-        { name: 'FinOps Advisor', href: '/services/finops-advisor' },
-        { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer' },
-        { name: 'AI Lead Scoring', href: '/services/ai-lead-scoring' },
-        { name: 'SaaS Churn Predictor', href: '/services/saas-churn-predictor' }
-      ]
-    },
-    {
-      title: 'Healthcare & Life Sciences',
-      featured: false,
+      title: 'IT Infrastructure & Cloud',
+      icon: Cloud,
+      color: 'from-blue-600 to-cyan-600',
       links: [
         { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics' },
         { name: 'AI Healthcare Analytics Platform', href: '/services/ai-healthcare-analytics-platform' },
