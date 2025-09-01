@@ -623,9 +623,9 @@ export default function HomePage({ latestUpdates }: HomeProps) {
                   <li>• GitHub Actions Redundancy</li>
                   <li>• Netlify Functions Redundancy</li>
                 </ul>
-                <Link href="/privacy" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
-                  View Security & Privacy →
-                </Link>
+                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/SECURITY.md" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                  View Security Guide →
+                </a>
               </div>
 
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
@@ -637,9 +637,9 @@ export default function HomePage({ latestUpdates }: HomeProps) {
                   <li>• Security testing</li>
                   <li>• Continuous validation</li>
                 </ul>
-                <Link href="/resources" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
-                  Explore Resources →
-                </Link>
+                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/TESTING.md" target="_blank" rel="noopener noreferrer" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                  View Testing Guide →
+                </a>
               </div>
 
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
@@ -652,9 +652,9 @@ export default function HomePage({ latestUpdates }: HomeProps) {
                   <li>• Predictive maintenance</li>
                   <li>• Automated QA</li>
                 </ul>
-                <Link href="/reports" className="text-green-400 hover:text-green-300 text-sm font-semibold">
-                  View Reports →
-                </Link>
+                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/PERFORMANCE.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                  View Performance Guide →
+                </a>
               </div>
             </div>
           </section>
@@ -672,7 +672,7 @@ export default function HomePage({ latestUpdates }: HomeProps) {
                   <li>• Health monitoring</li>
                   <li>• Self-healing infrastructure</li>
                 </ul>
-                <Link href="/services" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/ULTIMATE_REDUNDANCY_AUTOMATION_README.md" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
                   Learn More →
                 </a>
               </div>
@@ -686,7 +686,7 @@ export default function HomePage({ latestUpdates }: HomeProps) {
                   <li>• Error prevention</li>
                   <li>• Predictive analytics</li>
                 </ul>
-                <Link href="/about" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/README_COMPREHENSIVE_REDUNDANCY.md" target="_blank" rel="noopener noreferrer" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
                   Learn More →
                 </a>
               </div>
@@ -700,7 +700,7 @@ export default function HomePage({ latestUpdates }: HomeProps) {
                   <li>• Performance monitoring</li>
                   <li>• Cluster management</li>
                 </ul>
-                <Link href="/case-studies" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/README_COMPLETE_PM2_REDUNDANCY.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 text-sm font-semibold">
                   Learn More →
                 </a>
               </div>
