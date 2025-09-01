@@ -114,7 +114,6 @@ export default function Page() {
       toast({
         title: "Success!",
         description: "Your referral code has been generated",
-        variant: "success",
       });
 
       await fetchReferralCode(); 
@@ -144,7 +143,6 @@ export default function Page() {
       toast({
         title: "Copied!",
         description: "Referral link copied to clipboard",
-        variant: "success",
       });
     } else {
       toast({
