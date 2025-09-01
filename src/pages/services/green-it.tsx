@@ -3,7 +3,7 @@ import { SEO  } from '../../components/SEO';
 import { motion  } from 'framer-motion.ts';
 import { Globe, Leaf, Zap, Shield, TrendingUp, Users, CheckCircle, Lightbulb, Database, Cloud  } from 'lucide-react.ts';
 
-export default function GreenIT(...args: any[]): any {
+export default function GreenIT(...args: unknown[]): unknown {
   const features = [
     {
       icon: Leaf,
@@ -127,7 +127,7 @@ export default function GreenIT(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md: unknowngrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)  => (
               <motion.div
                 key={index}
@@ -165,7 +165,7 @@ export default function GreenIT(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anygrid-cols-2 gap-8">
+          <div className="grid md: unknowngrid-cols-2 gap-8">
             {solutions.map((solution, index)  => (
               <motion.div
                 key={index}

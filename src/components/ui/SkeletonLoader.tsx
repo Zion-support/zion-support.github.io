@@ -11,7 +11,7 @@ interface SkeletonProps extends React.PropsWithChildren<{}> {
 
 }
 
-export function Skeleton(...args: any[]): any {
+export function Skeleton(...args: unknown[]): unknown {
   const baseClasses = 'bg-gray-300 dark:bg-gray-700';
   
   const variantClasses = {
@@ -46,10 +46,10 @@ export function Skeleton(...args: any[]): any {
 }
 
 // Predefined skeleton components for common use cases
-export function SkeletonText(...args: any[]): any {
+export function SkeletonText(...args: unknown[]): unknown {
   return (
     <div className={cn('space-y-2', className)}>
-      {Array.from({ length: anylines }).map((_, i)  => (
+      {Array.from({ length: unknownlines }).map((_, i)  => (
         <Skeleton
           key={i}
           variant="text"
@@ -61,7 +61,7 @@ export function SkeletonText(...args: any[]): any {
   );
 }
 
-export function SkeletonCard(...args: any[]): any {
+export function SkeletonCard(...args: unknown[]): unknown {
   return (
     <div className={cn('p-6 space-y-4', className)}>
       <div className="flex items-center space-x-4">
@@ -80,20 +80,20 @@ export function SkeletonCard(...args: any[]): any {
   );
 }
 
-export function SkeletonTable(...args: any[]): any {
+export function SkeletonTable(...args: unknown[]): unknown {
   return (
     <div className={cn('space-y-3', className)}>
       {/* Header */}
       <div className="flex space-x-4">
-        {Array.from({ length: anycolumns }).map((_, i)  => (
+        {Array.from({ length: unknowncolumns }).map((_, i)  => (
           <Skeleton key={i} variant="text" width={120} height={20} />
         ))}
       </div>
       
       {/* Rows */}
-      {Array.from({ length: anyrows }).map((_, rowIndex)  => (
+      {Array.from({ length: unknownrows }).map((_, rowIndex)  => (
         <div key={rowIndex} className="flex space-x-4">
-          {Array.from({ length: anycolumns }).map((_, colIndex)  => (
+          {Array.from({ length: unknowncolumns }).map((_, colIndex)  => (
             <Skeleton
               key={colIndex}
               variant="text"
@@ -107,14 +107,14 @@ export function SkeletonTable(...args: any[]): any {
   );
 }
 
-export function SkeletonGrid(...args: any[]): any {
+export function SkeletonGrid(...args: unknown[]): unknown {
   return (
     <div className={cn(
       'grid gap-6',
       columns === 1 && 'grid-cols-1',
       columns === 2 && 'grid-cols-1 md:grid-cols-2',
       columns === 3 && 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3',
-      columns === 4 && 'grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4',
+      columns === 4 && 'grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-4',
       className
     )}>
       {Array.from({ length: items }).map((_, i)  => (
@@ -124,7 +124,7 @@ export function SkeletonGrid(...args: any[]): any {
   );
 }
 
-export function SkeletonHero(...args: any[]): any {
+export function SkeletonHero(...args: unknown[]): unknown {
   return (
     <div className={cn('space-y-8', className)}>
       {/* Title */}

@@ -47,7 +47,7 @@ import { DollarSign,
   Banknote
  } from 'lucide-react.ts';
 
-export default function AIFinancialPlanning(...args: any[]): any {
+export default function AIFinancialPlanning(...args: unknown[]): unknown {
   const features = [
     {
       icon: Brain,
@@ -338,7 +338,7 @@ export default function AIFinancialPlanning(...args: any[]): any {
       {/* Key Metrics Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md: unknowngrid-cols-4 gap-8">
             {keyMetrics.map((metric, index)  => (
               <motion.div
                 key={metric.metric}
@@ -426,7 +426,7 @@ export default function AIFinancialPlanning(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)  => (
               <motion.div
                 key={feature.title}
@@ -524,7 +524,7 @@ export default function AIFinancialPlanning(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-4 gap-8">
             {planningAreas.map((category, index)  => (
               <motion.div
                 key={category.category}
@@ -614,7 +614,7 @@ export default function AIFinancialPlanning(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index)  => (
               <motion.div
                 key={benefit.title}
@@ -712,7 +712,7 @@ export default function AIFinancialPlanning(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: unknowngrid-cols-3 gap-8">
             {pricingPlans.map((plan, index)  => (
               <motion.div
                 key={plan.name}
@@ -828,7 +828,7 @@ export default function AIFinancialPlanning(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-8">
             {useCases.map((useCase, index)  => (
               <motion.div
                 key={useCase.industry}
@@ -926,7 +926,7 @@ export default function AIFinancialPlanning(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-8">
             {integrations.map((integration, index)  => (
               <motion.div
                 key={integration.name}

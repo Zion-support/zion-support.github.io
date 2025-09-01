@@ -12,7 +12,7 @@ import { FileText,
   Eye
  } from 'lucide-react';
 
-export function BlogPage(...args: any[]): any {
+export function BlogPage(...args: unknown[]): unknown {
   const blogPosts = [
     {
       id: 1,
@@ -126,7 +126,7 @@ export function BlogPage(...args: any[]): any {
             {/* Category Filter */}
             <div className="flex items-center space-x-2">
               <Filter className="w-5 h-5 text-gray-400" />
-              <select className="px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
+              <select className="px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus: unknownoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
                 {categories.map((category)  => (
                   <option key={category} value={category}>{category}</option>
                 ))}
@@ -136,7 +136,7 @@ export function BlogPage(...args: any[]): any {
         </div>
 
         {/* Blog Posts Grid */}
-        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-8">
           {blogPosts.map((post, index)  => (
             <motion.article
               key={post.id}

@@ -489,7 +489,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
                 <h3 className="text-2xl font-bold text-white mb-4">{useCase.title}</h3>
                 <p className="text-slate-300 mb-6 leading-relaxed">{useCase.description}</p>
                 <div className="space-y-3">
-                  <h4 className="text-white font-semibold">Key Results: any</h4>
+                  <h4 className="text-white font-semibold">Key Results: unknown</h4>
                   {useCase.metrics.map((metric, idx)  => (
                     <div key={idx} className="flex items-center space-x-2 text-sm">
                       <Star className="w-4 h-4 text-yellow-400 flex-shrink-0" />

@@ -97,7 +97,7 @@ export default function RevolutionaryServices2030() {
   });
 
 // Service Card Component
-const ServiceCard = ({ service, type }: { service: any; type: 'microSaas' | 'itService' | 'aiService' }) => {
+const ServiceCard = ({ service, type }: { service: unknown; type: 'microSaas' | 'itService' | 'aiService' }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const getIcon = (category: string) => {

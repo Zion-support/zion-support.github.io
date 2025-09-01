@@ -83,7 +83,7 @@ interface Service {
   name: string;
   description: string;
   category: string;
-  icon: any;
+  icon: unknown;
   features: string[];
   pricing: {
     starter: string;

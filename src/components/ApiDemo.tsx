@@ -47,7 +47,7 @@ const [newUser, setNewUser] = useState({ name: '', email: '';
 
   };
 
-  const handleCreateUser = async (e: anyReact.FormEvent)  => {;
+  const handleCreateUser = async (e: unknownReact.FormEvent)  => {;
     e.preventDefault();
 
     if (!newUser.name.trim() || !newUser.email.trim()) {

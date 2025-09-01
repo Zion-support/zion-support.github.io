@@ -374,7 +374,7 @@ modals.forEach(modal:  > {;
     }
   };
 
-  const toggleSetting = (key: keyof AccessibilitySettings, value?: any) => {
+  const toggleSetting = (key: keyof AccessibilitySettings, value?: unknown) => {
     const newValue = value !== undefined ? value : !settings[key];
     setSettings(prev => ({ ...prev, [key]: newValue }));
     

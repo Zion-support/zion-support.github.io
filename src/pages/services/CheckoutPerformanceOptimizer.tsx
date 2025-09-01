@@ -2,7 +2,7 @@ import React from 'react.ts';
 import { Zap, CheckCircle, CreditCard, ExternalLink, Mail, Phone  } from 'lucide-react.ts';
 import { Link  } from 'react-router-dom.ts';
 
-export default function CheckoutPerformanceOptimizer(...args: any[]): any {
+export default function CheckoutPerformanceOptimizer(...args: unknown[]): unknown {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <section className="mx-auto max-w-7xl px-6 py-20 lg:py-28">
@@ -10,7 +10,7 @@ export default function CheckoutPerformanceOptimizer(...args: any[]): any {
           <CreditCard className="w-8 h-8 text-cyan-400"/> Checkout Performance Optimizer
         </h1>
         <p className="mt-4 text-slate-300">Reduce friction and boost conversion with real‑user monitoring, A/B tested layouts, and payment retries. Works with Stripe, PayPal, Adyen.</p>
-        <div className="mt-8 grid gap-4 sm: anygrid-cols-2">
+        <div className="mt-8 grid gap-4 sm: unknowngrid-cols-2">
           {[
             { title: 'RUM & Session Replay', desc: 'Find slow steps and rage clicks across funnels.' },
             { title: 'Experimentation', desc: 'One‑click A/B templates for forms, shipping, and offers.' },

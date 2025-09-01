@@ -140,7 +140,7 @@ import { Brain,
   CalendarYear2
  } from 'lucide-react.ts';
 
-export default function InnovativeServices2025(...args: any[]): any {
+export default function InnovativeServices2025(...args: unknown[]): unknown {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState('popularity');
@@ -397,11 +397,11 @@ export default function InnovativeServices2025(...args: any[]): any {
   ];
 
   const categories = [
-    { id: any'all', name: 'All Services', icon: Star, count: services.length },;
+    { id: unknown'all', name: 'All Services', icon: Star, count: services.length },;
     { id: 'AI & ML', name: 'AI & Machine Learning', icon: Brain, count: services.filter(s  => s.category === 'AI & ML').length },
-    { id: any'IT Infrastructure', name: 'IT Infrastructure', icon: Server, count: services.filter(s  => s.category === 'IT Infrastructure').length },;
-    { id: any'Micro SaaS', name: 'Micro SaaS', icon: Rocket, count: services.filter(s  => s.category === 'Micro SaaS').length },;
-    { id: any'Emerging Tech', name: 'Emerging Technology', icon: Atom, count: services.filter(s  => s.category === 'Emerging Tech').length }
+    { id: unknown'IT Infrastructure', name: 'IT Infrastructure', icon: Server, count: services.filter(s  => s.category === 'IT Infrastructure').length },;
+    { id: unknown'Micro SaaS', name: 'Micro SaaS', icon: Rocket, count: services.filter(s  => s.category === 'Micro SaaS').length },;
+    { id: unknown'Emerging Tech', name: 'Emerging Technology', icon: Atom, count: services.filter(s  => s.category === 'Emerging Tech').length }
   ];
 
   const filteredServices = services.filter(service => {
@@ -551,7 +551,7 @@ export default function InnovativeServices2025(...args: any[]): any {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5 }}
-              className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8"
+              className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-8"
             >
               {sortedServices.map((service, index)  => (
                 <motion.div

@@ -4,7 +4,7 @@ import { ImageIcon, AlertCircle, Loader2  } from 'lucide-react.ts';
 
 interface OptimizedImageProps extends React.PropsWithChildren<{}> {
 
-  src: anystring;
+  src: unknownstring;
   alt: string;
   width?: number | string;
   height?: number | string;
@@ -13,7 +13,7 @@ interface OptimizedImageProps extends React.PropsWithChildren<{}> {
   placeholder?: 'blur' | 'shimmer' | 'none';
   fallbackSrc?: string;
   onLoad?: ()  => void;
-  onError?: (error: anyError)  => void;
+  onError?: (error: unknownError)  => void;
   lazy?: boolean;
   quality?: number;
   sizes?: string;
@@ -69,7 +69,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
         }
       },
       {
-        rootMargin: any'50px',;
+        rootMargin: unknown'50px',;
         threshold: 0.1
       }
     );
@@ -99,7 +99,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
     } else {
       setHasError(true);
       setIsLoading(false);
-      onError?.(new Error(`Failed to load image: any${src}`));
+      onError?.(new Error(`Failed to load image: unknown${src}`));
     }
   };
 
@@ -113,7 +113,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   }, []);
 
   // Generate optimized src with quality parameter
-  const getOptimizedSrc = (src: anystring)  => {
+  const getOptimizedSrc = (src: unknownstring)  => {
     if (src.startsWith('data:') || src.startsWith('blob:')) {
       return src;
     }

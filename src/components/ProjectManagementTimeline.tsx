@@ -192,7 +192,7 @@ showFilters:  true,;
     setFilteredProjects(sampleProjects)}, []);
 
   // Filter projects
-  useEffect(()  => {
+  useEffect(() => {
     let filtered = projects;
 
     if (selectedStatus !== 'all') {

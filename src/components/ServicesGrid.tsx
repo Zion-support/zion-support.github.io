@@ -20,9 +20,9 @@ interface ServicesGridProps extends React.PropsWithChildren<{}> {
 
 }
 
-export function ServicesGrid(...args: any[]): any {
+export function ServicesGrid(...args: unknown[]): unknown {
   return (
-    <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+    <div className="grid grid-cols-1 md: unknowngrid-cols-2 gap-8">
       {services.map((service, index)  => (
         <motion.div
           key={service.title}

@@ -38,7 +38,7 @@ import {
 interface HelpSection {
   id: string;
   title: string;
-  icon: any;
+  icon: unknown;
   description: string;
   articles: Array<{
     title: string;

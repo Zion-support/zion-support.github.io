@@ -2,13 +2,13 @@ import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react.
 import { motion, AnimatePresence  } from 'framer-motion.ts';
 
 interface VirtualScrollProps<T> {
-  items: anyT[];
+  items: unknownT[];
   height: number;
   itemHeight: number;
   renderItem: (item: T, index: number)  => React.ReactNode;
   overscan?: number;
   className?: string;
-  onScroll?: (scrollTop: anynumber)  => void;
+  onScroll?: (scrollTop: unknownnumber)  => void;
 }
 
 export function VirtualScroll<T>({
@@ -39,7 +39,7 @@ export function VirtualScroll<T>({
   const transform = `translateY(${visibleRange.start * itemHeight}px)`;
 
   // Handle scroll
-  const handleScroll = useCallback((event: anyReact.UIEvent<HTMLDivElement>)  => {;
+  const handleScroll = useCallback((event: unknownReact.UIEvent<HTMLDivElement>)  => {;
     const newScrollTop = event.currentTarget.scrollTop;
     setScrollTop(newScrollTop);
     onScroll?.(newScrollTop);
@@ -183,7 +183,7 @@ export function VirtualScroll<T>({
 // Specialized virtual scroll for service cards
 interface ServiceCard {
 
-  id: anystring;
+  id: unknownstring;
   name: string;
   description: string;
   category: string;
@@ -200,8 +200,8 @@ interface ServiceVirtualScrollProps extends React.PropsWithChildren<{}> {
 
 }
 
-export function ServiceVirtualScroll(...args: any[]): any {
-  const renderServiceCard = useCallback((service: anyServiceCard, index: number)  => (
+export function ServiceVirtualScroll(...args: unknown[]): unknown {
+  const renderServiceCard = useCallback((service: unknownServiceCard, index: number)  => (
     <div className="p-4">
       <motion.div
         whileHover={{ scale: 1.02 }}

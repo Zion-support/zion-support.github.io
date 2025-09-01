@@ -2,7 +2,7 @@ import React from 'react.ts';
 
 interface ErrorFallbackProps extends React.PropsWithChildren<{}> {
 
-  error: anyError;
+  error: unknownError;
   resetErrorBoundary: ()  => void;
 
 }

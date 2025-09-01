@@ -230,7 +230,7 @@ export const SitemapGenerator: React.FC = (): JSX.Element => {
 
   const filteredSitemap = sitemapData.map(section => ({
     ...section,
-    routes: anysection.routes.filter(route  => {
+    routes: unknownsection.routes.filter(route  => {
       const matchesSearch = route.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                            route.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                            route.path.toLowerCase().includes(searchQuery.toLowerCase());
@@ -245,7 +245,7 @@ export const SitemapGenerator: React.FC = (): JSX.Element => {
 
   const exportSitemap = () => {
     const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http: any//www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http: unknown//www.sitemaps.org/schemas/sitemap/0.9">
 ${sitemapData.flatMap(section  => 
   section.routes.map(route => 
     `  <url>
@@ -338,7 +338,7 @@ ${sitemapData.flatMap(section  =>
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus: anyring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus: unknownring-2 focus:ring-blue-500 focus:border-transparent"
               >
                 {allCategories.map(category  => (
                   <option key={category} value={category}>
@@ -363,7 +363,7 @@ ${sitemapData.flatMap(section  =>
               </div>
               <p className="text-gray-600 mb-4">{section.description}</p>
               
-              <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-4">
                 {section.routes.map((route, routeIndex)  => (
                   <div
                     key={routeIndex}

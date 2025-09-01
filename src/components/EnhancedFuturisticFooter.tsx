@@ -255,7 +255,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
   ];
 
   // Create missing pages for broken links
-  const createMissingPage = (name: anystring, href: string)  => {
+  const createMissingPage = (name: unknownstring, href: string)  => {
     // For now, we'll create placeholder pages for missing routes
     // These will be created as separate components
     return (

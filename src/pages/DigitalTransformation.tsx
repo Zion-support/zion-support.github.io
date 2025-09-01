@@ -369,7 +369,7 @@ import {
                         transition={{ duration: 0.3 }}
                         className="space-y-2"
                       >
-                        <div className="text-sm font-medium text-zion-slate-light mb-2">Key Activities: any</div>
+                        <div className="text-sm font-medium text-zion-slate-light mb-2">Key Activities: unknown</div>
                         {phase.activities.map((activity, activityIndex)  => (
                           <div key={activityIndex} className="flex items-center gap-2 text-zion-slate-light text-xs">
                             <Check className="w-3 h-3 text-zion-cyan" />

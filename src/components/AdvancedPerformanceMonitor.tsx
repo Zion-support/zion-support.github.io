@@ -127,7 +127,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
       // Layout Shift
       const clsObserver = new PerformanceObserver((list) => {
         let clsValue = 0;
-        list.getEntries().forEach((entry: any) => {
+        list.getEntries().forEach((entry: unknown) => {
           if (!entry.hadRecentInput) {
             clsValue += entry.value;
           }

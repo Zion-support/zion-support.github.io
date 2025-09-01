@@ -254,7 +254,7 @@ interface CommunityCategory {
   id: string;
   name: string;
   description: string;
-  icon: any;
+  icon: unknown;
   color: string;
   postCount: number;
   topics: string[];

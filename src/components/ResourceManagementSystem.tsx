@@ -177,7 +177,7 @@ showStats:  true,;
     setFilteredResources(sampleResources)}, []);
 
   // Filter resources
-  useEffect(()  => {
+  useEffect(() => {
     let filtered = resources;
 
     if (selectedType !== 'all') {

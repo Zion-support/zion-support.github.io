@@ -13,7 +13,7 @@ const CustomerSupportChatbot: React.FC = (): JSX.Element => {
           tickets. Escalation rules and CRM/Helpdesk logging included.
         </p>
 
-        <div className="mt-10 grid gap-6 sm: anygrid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-6 sm: unknowngrid-cols-2 lg:grid-cols-3">
           {[
             'RAG answers with vector search and citations',
             'Zendesk, Freshdesk, Intercom integrations',

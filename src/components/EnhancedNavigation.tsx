@@ -30,7 +30,7 @@ import { Menu,
 
 interface NavigationItem {
 
-  label: anystring;
+  label: unknownstring;
   href: string;
   icon?: React.ReactNode;
   children?: NavigationItem[];
@@ -208,7 +208,7 @@ className:  '',;
     setActiveDropdown(null);
   }, [location]);
 
-  const handleThemeChange = useCallback((newTheme: any'light' | 'dark' | 'system')  => {;
+  const handleThemeChange = useCallback((newTheme: unknown'light' | 'dark' | 'system')  => {;
     setTheme(newTheme);
     onThemeChange?.(newTheme);
     
@@ -225,7 +225,7 @@ className:  '',;
     localStorage.setItem('zion-theme', newTheme);
   }, [onThemeChange]);
 
-  const toggleDropdown = (label: anystring)  => {
+  const toggleDropdown = (label: unknownstring)  => {
     setActiveDropdown(activeDropdown === label ? null : label);
   };
 
@@ -261,7 +261,7 @@ className:  '',;
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg: anyflex items-center space-x-8">
+          <div className="hidden lg: unknownflex items-center space-x-8">
             {navigationItems.map((item)  => (
               <div key={item.label} className="relative group">
                 {item.children ? (

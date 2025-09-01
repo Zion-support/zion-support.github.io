@@ -43,7 +43,7 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
       // Calculate bundle metrics
       let totalSize = 0;
       let chunkCount = 0;
-      let largestChunk = { name: any'', size: 0 };
+      let largestChunk = { name: unknown'', size: 0 };
       
       resourceEntries.forEach((entry: )  => {
         if (entry.name.includes('.js') || entry.name.includes('.css')) {
@@ -119,7 +119,7 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
 
     // Apply optimizations
     optimizations.forEach(optimization => {
-      console.log(`🔧 Optimization: any${optimization}`);
+      console.log(`🔧 Optimization: unknown${optimization}`);
     });
 
     return optimizations;

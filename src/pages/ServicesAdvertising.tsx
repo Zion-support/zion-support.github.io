@@ -2,7 +2,7 @@ import React from 'react.ts';
 import { SEO  } from '@/components/SEO';
 import { ArrowRight, CheckCircle, ExternalLink  } from 'lucide-react.ts';
 
-const anchor = (url: anystring, label?: string)  => (
+const anchor = (url: unknownstring, label?: string)  => (
   <a className="text-cyan-400 underline" href={url} target="_blank" rel="noopener noreferrer">
     {label ?? new URL(url).host + (url.includes('/pricing') ? '/pricing' : '')}
   </a>
@@ -104,7 +104,7 @@ const ServicesAdvertising: React.FC = (): JSX.Element => {
       </section>
 
       <section className="pb-12">
-        <div className="container mx-auto px-4 grid grid-cols-1 md: anygrid-cols-3 gap-6 max-w-6xl">
+        <div className="container mx-auto px-4 grid grid-cols-1 md: unknowngrid-cols-3 gap-6 max-w-6xl">
           {benefits.map((b)  => (
             <div key={b} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
               <div className="flex items-start gap-3">
@@ -119,7 +119,7 @@ const ServicesAdvertising: React.FC = (): JSX.Element => {
       <section className="pb-16">
         <div className="container mx-auto px-4 max-w-7xl">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Spotlight: New Expert Services</h2>
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-4 gap-6">
             {spotlight.map((h)  => (
               <div key={h.title} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
                 <h3 className="text-white font-semibold mb-2">{h.title}</h3>

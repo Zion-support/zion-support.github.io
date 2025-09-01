@@ -1,316 +1,300 @@
 #!/usr/bin/env node
 
-const { execSync } = require('child_process');
+const { execSync, spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+const glob = require('glob');
 
-console.log('🔧 Starting comprehensive error fixer automation...');
+class ComprehensiveErrorFixer {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.reportFile = path.join(this.projectRoot, 'comprehensive-error-fixer-report.json');
+    this.fixesApplied = [];
+    this.errorsFound = [];
+  }
 
-// Get automation interval from environment variable (default: 30 minutes)
-const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 1800000; // 30 minutes
+  log(message, type = 'info') {
+    const timestamp = new Date().toISOString();
+    console.log(`[${timestamp}] [${type.toUpperCase()}] ${message}`);
+  }
 
-async function runComprehensiveErrorFixer() {
-  try {
-    console.log(`🔧 Running comprehensive error fixer at ${new Date().toISOString()}`);
-    
-    let fixesApplied = 0;
-    
-    // 1. Fix TypeScript syntax errors
-    console.log('🔧 Fixing TypeScript syntax errors...');
-    fixesApplied += await fixTypeScriptErrors();
-    
-    // 2. Fix JSX syntax errors
-    console.log('🔧 Fixing JSX syntax errors...');
-    fixesApplied += await fixJSXErrors();
-    
-    // 3. Fix linting errors
-    console.log('🔧 Fixing linting errors...');
-    fixesApplied += await fixLintingErrors();
-    
-    // 4. Fix unused imports and variables
-    console.log('🔧 Fixing unused imports and variables...');
-    fixesApplied += await fixUnusedImports();
-    
-    // 5. Fix console statements
-    console.log('🔧 Fixing console statements...');
-    fixesApplied += await fixConsoleStatements();
-    
-    // 6. Run auto-fix
-    console.log('🔧 Running auto-fix...');
+  async runCommand(command, options = {}) {
     try {
-      execSync('npm run lint -- --fix', { stdio: 'pipe' });
-      console.log('✅ Auto-fix completed');
+      const result = execSync(command, {
+        cwd: this.projectRoot,
+        encoding: 'utf8',
+        stdio: options.silent ? 'pipe' : 'inherit',
+        ...options
+      });
+      return { success: true, output: result };
     } catch (error) {
-      console.log('⚠️  Auto-fix had issues but continuing...');
+      return { success: false, output: error.message, code: error.status };
     }
+  }
+
+  async fixESLintConfig() {
+    this.log('Fixing ESLint configuration...');
     
-    // Generate comprehensive error fixer report
-    console.log('📊 Generating comprehensive error fixer report...');
+    // Fix .eslintrc.js to use proper module syntax
+    const eslintrcPath = path.join(this.projectRoot, '.eslintrc.js');
+    if (fs.existsSync(eslintrcPath)) {
+      const content = fs.readFileSync(eslintrcPath, 'utf8');
+      if (content.includes('module.exports')) {
+        // Convert to ES module syntax
+        const newContent = content.replace('module.exports =', 'export default');
+        fs.writeFileSync(eslintrcPath, newContent);
+        this.fixesApplied.push('Fixed ESLint config module syntax');
+        this.log('Fixed ESLint config module syntax', 'success');
+      }
+    }
+
+    // Ensure eslint.config.js is properly configured
+    const eslintConfigPath = path.join(this.projectRoot, 'eslint.config.js');
+    if (fs.existsSync(eslintConfigPath)) {
+      const content = fs.readFileSync(eslintConfigPath, 'utf8');
+      if (!content.includes('export default')) {
+        // Fix the config
+        const fixedConfig = `import js from '@eslint/js';
+import globals from 'globals';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
+import tseslint from '@typescript-eslint/eslint-plugin';
+import tsparser from '@typescript-eslint/parser';
+
+export default [
+  js.configs.recommended,
+  {
+    files: ['**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      ecmaVersion: 2021,
+      sourceType: 'module',
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        React: 'readonly',
+        process: 'readonly',
+        console: 'readonly',
+        module: 'readonly',
+        exports: 'readonly',
+        require: 'readonly',
+        __dirname: 'readonly',
+        setTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearTimeout: 'readonly',
+        clearInterval: 'readonly',
+        jest: 'readonly',
+        describe: 'readonly',
+        it: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
+        vi: 'readonly',
+      },
+      parser: tsparser,
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+        project: './tsconfig.json',
+      },
+    },
+    plugins: {
+      react,
+      'react-hooks': reactHooks,
+      'react-refresh': reactRefresh,
+      '@typescript-eslint': tseslint,
+    },
+    rules: {
+      'react/jsx-uses-react': 'error',
+      'react/jsx-uses-vars': 'error',
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
+      'react-refresh/only-export-components': 'warn',
+      '@typescript-eslint/no-unused-vars': 'error',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/explicit-function-return-type': 'off',
+      '@typescript-eslint/explicit-module-boundary-types': 'off',
+      'no-console': 'warn',
+      'no-debugger': 'error',
+      'prefer-const': 'error',
+      'no-var': 'error',
+    },
+  },
+  {
+    files: ['**/*.{ts,tsx}'],
+    languageOptions: {
+      parser: tsparser,
+      parserOptions: {
+        project: './tsconfig.json',
+      },
+    },
+    rules: {
+      '@typescript-eslint/no-unused-vars': 'error',
+      '@typescript-eslint/no-explicit-any': 'warn',
+    },
+  },
+];`;
+        fs.writeFileSync(eslintConfigPath, fixedConfig);
+        this.fixesApplied.push('Fixed ESLint config structure');
+        this.log('Fixed ESLint config structure', 'success');
+      }
+    }
+  }
+
+  async fixTypeScriptErrors() {
+    this.log('Fixing TypeScript errors...');
+    
+    // Run type check to get errors
+    const typeCheckResult = await this.runCommand('npx tsc --noEmit', { silent: true });
+    if (!typeCheckResult.success) {
+      this.errorsFound.push('TypeScript compilation errors detected');
+      
+      // Fix common TypeScript issues
+      await this.fixCommonTypeScriptIssues();
+    }
+  }
+
+  async fixCommonTypeScriptIssues() {
+    // Fix missing React imports
+    const tsxFiles = glob.sync('src/**/*.{tsx,jsx}', { cwd: this.projectRoot });
+    
+    for (const file of tsxFiles) {
+      const filePath = path.join(this.projectRoot, file);
+      const content = fs.readFileSync(filePath, 'utf8');
+      
+      // Fix missing React import
+      if (content.includes('React') && !content.includes("import React") && !content.includes("import * as React")) {
+        const newContent = "import React from 'react';\n" + content;
+        fs.writeFileSync(filePath, newContent);
+        this.fixesApplied.push(`Added React import to ${file}`);
+      }
+      
+      // Fix any types
+      if (content.includes(': any')) {
+        const newContent = content.replace(/: any/g, ': unknown');
+        fs.writeFileSync(filePath, newContent);
+        this.fixesApplied.push(`Replaced 'any' types with 'unknown' in ${file}`);
+      }
+    }
+  }
+
+  async fixESLintErrors() {
+    this.log('Fixing ESLint errors...');
+    
+    // Try to run ESLint with auto-fix
+    const eslintResult = await this.runCommand('npx eslint --fix src/**/*.{js,jsx,ts,tsx}', { silent: true });
+    if (eslintResult.success) {
+      this.fixesApplied.push('Applied ESLint auto-fixes');
+      this.log('Applied ESLint auto-fixes', 'success');
+    } else {
+      this.errorsFound.push('ESLint errors detected');
+    }
+  }
+
+  async fixImportErrors() {
+    this.log('Fixing import errors...');
+    
+    const files = glob.sync('src/**/*.{js,jsx,ts,tsx}', { cwd: this.projectRoot });
+    
+    for (const file of files) {
+      const filePath = path.join(this.projectRoot, file);
+      const content = fs.readFileSync(filePath, 'utf8');
+      
+      // Fix relative imports
+      const importRegex = /import\s+.*\s+from\s+['"]([^'"]+)['"]/g;
+      let match;
+      let modified = false;
+      let newContent = content;
+      
+      while ((match = importRegex.exec(content)) !== null) {
+        const importPath = match[1];
+        if (importPath.startsWith('./') || importPath.startsWith('../')) {
+          // Check if file exists
+          const resolvedPath = path.resolve(path.dirname(filePath), importPath);
+          if (!fs.existsSync(resolvedPath) && !fs.existsSync(resolvedPath + '.js') && !fs.existsSync(resolvedPath + '.ts') && !fs.existsSync(resolvedPath + '.jsx') && !fs.existsSync(resolvedPath + '.tsx')) {
+            // Try to find the correct extension
+            const possibleExtensions = ['.js', '.ts', '.jsx', '.tsx'];
+            for (const ext of possibleExtensions) {
+              if (fs.existsSync(resolvedPath + ext)) {
+                newContent = newContent.replace(match[0], match[0].replace(importPath, importPath + ext));
+                modified = true;
+                break;
+              }
+            }
+          }
+        }
+      }
+      
+      if (modified) {
+        fs.writeFileSync(filePath, newContent);
+        this.fixesApplied.push(`Fixed import paths in ${file}`);
+      }
+    }
+  }
+
+  async fixPackageJson() {
+    this.log('Checking package.json configuration...');
+    
+    const packageJsonPath = path.join(this.projectRoot, 'package.json');
+    if (fs.existsSync(packageJsonPath)) {
+      const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+      
+      // Ensure type is set to module
+      if (!packageJson.type || packageJson.type !== 'module') {
+        packageJson.type = 'module';
+        fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
+        this.fixesApplied.push('Set package.json type to module');
+        this.log('Set package.json type to module', 'success');
+      }
+    }
+  }
+
+  async generateReport() {
     const report = {
       timestamp: new Date().toISOString(),
-      fixesApplied: fixesApplied,
-      summary: 'Comprehensive error fixer completed',
-      status: 'completed'
+      fixesApplied: this.fixesApplied,
+      errorsFound: this.errorsFound,
+      summary: {
+        totalFixes: this.fixesApplied.length,
+        totalErrors: this.errorsFound.length,
+        success: this.errorsFound.length === 0
+      }
     };
     
-    const reportPath = path.join(process.cwd(), 'comprehensive-error-fixer-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    console.log(`✅ Comprehensive error fixer report saved to ${reportPath}`);
+    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+    this.log(`Report generated: ${this.reportFile}`);
+  }
+
+  async run() {
+    this.log('Starting comprehensive error fixing...');
     
-    console.log(`✅ Comprehensive error fixer completed successfully. Applied ${fixesApplied} fixes.`);
-    
-  } catch (error) {
-    console.error('❌ Comprehensive error fixer failed:', error.message);
-  }
-}
-
-async function fixTypeScriptErrors() {
-  let fixes = 0;
-  
-  // Fix common TypeScript syntax errors
-  const filesToFix = [
-    'src/components/MobileExperienceEnhancer.tsx',
-    'src/components/ModernUIEnhancer.tsx',
-    'src/components/NotificationSystem.tsx',
-    'src/context/auth/AuthContext.tsx',
-    'src/context/auth/profileMapper.ts',
-    'src/context/auth/useAuthEventHandlers.ts'
-  ];
-  
-  for (const filePath of filesToFix) {
-    if (fs.existsSync(filePath)) {
-      try {
-        let content = fs.readFileSync(filePath, 'utf8');
-        let originalContent = content;
-        
-        // Fix 'any' type annotations
-        content = content.replace(/:\s*any'/g, ': string');
-        content = content.replace(/:\s*any/g, ': any');
-        
-        // Fix missing semicolons and colons
-        content = content.replace(/\(\s*\)\s*=>\s*{/g, '() => {');
-        content = content.replace(/:\s*{\s*;/g, ': {');
-        
-        // Fix property signatures
-        content = content.replace(/action\?\s*:\s*{\s*;/g, 'action?: {');
-        content = content.replace(/logout:\s*any\(\)\s*=>\s*Promise<any>;/g, 'logout: () => Promise<any>;');
-        
-        if (content !== originalContent) {
-          fs.writeFileSync(filePath, content);
-          fixes++;
-          console.log(`  ✅ Fixed TypeScript errors in ${filePath}`);
-        }
-      } catch (error) {
-        console.log(`  ⚠️  Could not fix ${filePath}: ${error.message}`);
+    try {
+      await this.fixESLintConfig();
+      await this.fixPackageJson();
+      await this.fixImportErrors();
+      await this.fixTypeScriptErrors();
+      await this.fixESLintErrors();
+      
+      await this.generateReport();
+      
+      this.log(`Error fixing completed. Applied ${this.fixesApplied.length} fixes.`);
+      
+      if (this.errorsFound.length > 0) {
+        this.log(`Remaining errors: ${this.errorsFound.length}`, 'warn');
+        this.errorsFound.forEach(error => this.log(`- ${error}`, 'warn'));
       }
+      
+    } catch (error) {
+      this.log(`Error during fixing process: ${error.message}`, 'error');
+      throw error;
     }
   }
-  
-  return fixes;
 }
 
-async function fixJSXErrors() {
-  let fixes = 0;
-  
-  // Fix common JSX syntax errors
-  const filesToFix = [
-    'src/components/ScrollToTop.jsx',
-    'src/components/home/ServicesShowcase.jsx',
-    'src/layout/PrimaryNav.jsx',
-    'src/legal/TermsOfService.tsx'
-  ];
-  
-  for (const filePath of filesToFix) {
-    if (fs.existsSync(filePath)) {
-      try {
-        let content = fs.readFileSync(filePath, 'utf8');
-        let originalContent = content;
-        
-        // Fix JSX closing tags
-        content = content.replace(/<\/>div>/g, '</div>');
-        content = content.replace(/<\/>header>/g, '</header>');
-        content = content.replace(/<\/>;/g, '</>');
-        
-        // Fix JSX expressions
-        content = content.replace(/<div\s+className="max-w-4xl mx-auto space-y-8">\s*<div/g, '<div className="max-w-4xl mx-auto space-y-8"><div');
-        
-        if (content !== originalContent) {
-          fs.writeFileSync(filePath, content);
-          fixes++;
-          console.log(`  ✅ Fixed JSX errors in ${filePath}`);
-        }
-      } catch (error) {
-        console.log(`  ⚠️  Could not fix ${filePath}: ${error.message}`);
-      }
-    }
-  }
-  
-  return fixes;
+// Run the fixer
+if (require.main === module) {
+  const fixer = new ComprehensiveErrorFixer();
+  fixer.run().catch(console.error);
 }
 
-async function fixLintingErrors() {
-  let fixes = 0;
-  
-  // Fix common linting errors
-  const filesToFix = [
-    'src/utils/passwordStrength.js',
-    'src/utils/cartUtils.js',
-    'src/utils/contentOptimizer.jsx',
-    'src/utils/seoOptimizer.jsx'
-  ];
-  
-  for (const filePath of filesToFix) {
-    if (fs.existsSync(filePath)) {
-      try {
-        let content = fs.readFileSync(filePath, 'utf8');
-        let originalContent = content;
-        
-        // Fix unnecessary escape characters
-        content = content.replace(/\\\[/g, '[');
-        content = content.replace(/\\\//g, '/');
-        
-        // Fix prototype access
-        content = content.replace(/\.hasOwnProperty\(/g, 'Object.prototype.hasOwnProperty.call(');
-        
-        // Fix parsing errors
-        content = content.replace(/const\s+[^=]+=\s*[^;]+;/g, (match) => {
-          if (match.includes('=') && !match.includes(';')) {
-            return match + ';';
-          }
-          return match;
-        });
-        
-        if (content !== originalContent) {
-          fs.writeFileSync(filePath, content);
-          fixes++;
-          console.log(`  ✅ Fixed linting errors in ${filePath}`);
-        }
-      } catch (error) {
-        console.log(`  ⚠️  Could not fix ${filePath}: ${error.message}`);
-      }
-    }
-  }
-  
-  return fixes;
-}
-
-async function fixUnusedImports() {
-  let fixes = 0;
-  
-  // Remove unused React imports and other unused imports
-  const filesToFix = [
-    'src/components/wallet/OnChainExport.jsx',
-    'src/components/wallet/RedeemTokensCard.jsx',
-    'src/components/wallet/TokenDisplay.jsx',
-    'src/context/CartContext.jsx',
-    'src/context/LanguageContext.jsx'
-  ];
-  
-  for (const filePath of filesToFix) {
-    if (fs.existsSync(filePath)) {
-      try {
-        let content = fs.readFileSync(filePath, 'utf8');
-        let originalContent = content;
-        
-        // Remove unused React import
-        if (content.includes("import React from 'react'") && !content.includes('React.')) {
-          content = content.replace("import React from 'react';\n", '');
-        }
-        
-        // Remove other unused imports
-        const unusedImports = [
-          'Card', 'CardContent', 'CardDescription', 'CardHeader', 'CardTitle',
-          'Button', 'Wallet', 'Info', 'Check', 'ArrowUpRight', 'Tooltip',
-          'TooltipContent', 'TooltipProvider', 'TooltipTrigger', 'Gift',
-          'ArrowRight', 'ExternalLink', 'Dialog', 'DialogContent',
-          'DialogDescription', 'DialogHeader', 'DialogTitle', 'DialogTrigger',
-          'BadgeDollarSign', 'Skeleton'
-        ];
-        
-        unusedImports.forEach(importName => {
-          const regex = new RegExp(`import\\s+{[^}]*\\b${importName}\\b[^}]*}\\s+from\\s+['"][^'"]+['"];?\\n?`, 'g');
-          content = content.replace(regex, '');
-        });
-        
-        if (content !== originalContent) {
-          fs.writeFileSync(filePath, content);
-          fixes++;
-          console.log(`  ✅ Fixed unused imports in ${filePath}`);
-        }
-      } catch (error) {
-        console.log(`  ⚠️  Could not fix ${filePath}: ${error.message}`);
-      }
-    }
-  }
-  
-  return fixes;
-}
-
-async function fixConsoleStatements() {
-  let fixes = 0;
-  
-  // Replace console statements with proper logging
-  const filesToFix = [
-    'src/hooks/useAICodeGeneration.jsx',
-    'src/hooks/usePerformance.jsx',
-    'src/utils/productionLogger.js',
-    'src/utils/safeStorage.js'
-  ];
-  
-  for (const filePath of filesToFix) {
-    if (fs.existsSync(filePath)) {
-      try {
-        let content = fs.readFileSync(filePath, 'utf8');
-        let originalContent = content;
-        
-        // Replace console statements with proper logging
-        content = content.replace(/console\.log\(/g, '// console.log(');
-        content = content.replace(/console\.error\(/g, '// console.error(');
-        content = content.replace(/console\.warn\(/g, '// console.warn(');
-        content = content.replace(/console\.info\(/g, '// console.info(');
-        
-        if (content !== originalContent) {
-          fs.writeFileSync(filePath, content);
-          fixes++;
-          console.log(`  ✅ Fixed console statements in ${filePath}`);
-        }
-      } catch (error) {
-        console.log(`  ⚠️  Could not fix ${filePath}: ${error.message}`);
-      }
-    }
-  }
-  
-  return fixes;
-}
-
-// Main continuous loop
-async function runContinuous() {
-  console.log(`🚀 Starting comprehensive error fixer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
-  
-  // Run initial error fixer
-  await runComprehensiveErrorFixer();
-  
-  // Set up continuous execution
-  setInterval(async () => {
-    await runComprehensiveErrorFixer();
-  }, AUTOMATION_INTERVAL);
-  
-  console.log(`✅ Comprehensive error fixer running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
-}
-
-// Handle graceful shutdown
-process.on('SIGINT', () => {
-  console.log('🛑 Received SIGINT, shutting down gracefully...');
-  process.exit(0);
-});
-
-process.on('SIGTERM', () => {
-  console.log('🛑 Received SIGTERM, shutting down gracefully...');
-  process.exit(0);
-});
-
-// Start the comprehensive error fixer
-runContinuous().catch(error => {
-  console.error('❌ Failed to start comprehensive error fixer:', error);
-  process.exit(1);
-});
+module.exports = ComprehensiveErrorFixer;

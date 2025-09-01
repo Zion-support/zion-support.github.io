@@ -51,7 +51,7 @@ import { Eye,
   Ship
  } from 'lucide-react.ts';
 
-export default function DigitalTwin(...args: any[]): any {
+export default function DigitalTwin(...args: unknown[]): unknown {
   const features = [
     {
       icon: Eye,
@@ -179,7 +179,7 @@ export default function DigitalTwin(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)  => (
               <motion.div
                 key={index}
@@ -218,7 +218,7 @@ export default function DigitalTwin(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg: unknowngrid-cols-2 gap-8">
             {applications.map((application, index)  => (
               <motion.div
                 key={index}
@@ -267,7 +267,7 @@ export default function DigitalTwin(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md: anygrid-cols-5 gap-6">
+          <div className="grid grid-cols-2 md: unknowngrid-cols-5 gap-6">
             {technologies.map((tech, index)  => (
               <motion.div
                 key={index}

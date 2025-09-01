@@ -167,7 +167,7 @@ export default function BlogPost() {
   };
 
   const getCategoryIcon = (category: string) => {
-    const categoryIcons: { [key: string]: any } = {
+    const categoryIcons: { [key: string]: unknown } = {
       ai: Brain,
       quantum: Cpu,
       security: Shield,

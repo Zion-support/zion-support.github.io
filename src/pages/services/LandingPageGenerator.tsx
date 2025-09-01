@@ -13,7 +13,7 @@ const LandingPageGenerator: React.FC = (): JSX.Element => {
           analytics, and deployment to your stack.
         </p>
 
-        <div className="mt-10 grid gap-6 sm: anygrid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-6 sm: unknowngrid-cols-2 lg:grid-cols-3">
           {[
             'On-brand copy and image generation',
             'SEO-ready metadata and schema',

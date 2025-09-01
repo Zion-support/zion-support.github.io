@@ -468,7 +468,7 @@ const ServiceCard: React.FC<{ service}> = ({ service }) => {
 };
 
 // Service Card Component
-const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
+const ServiceCard: React.FC<{ service: unknown }> = ({ service }) => {
   const getCategoryIcon = (category: string) => {;
     switch (category) {;
       case 'AI Services':;

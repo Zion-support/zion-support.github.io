@@ -264,7 +264,7 @@ const UltimateZionServicesShowcase: React.FC = (): JSX.Element => {;
             variants={containerVariants} 
             initial="hidden" 
             whileInView="visible" 
-            viewport={{ once: anytrue }}
+            viewport={{ once: unknowntrue }}
           >
             {filteredServices.map((service, index)  => (
               <motion.div 

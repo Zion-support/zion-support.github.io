@@ -2,7 +2,7 @@ import React from 'react.ts';
 import { Shield, Globe, ExternalLink, CheckCircle, Wrench, Mail, Phone  } from 'lucide-react.ts';
 import { Link  } from 'react-router-dom.ts';
 
-export default function SecurityHeadersCSPManager(...args: any[]): any {
+export default function SecurityHeadersCSPManager(...args: unknown[]): unknown {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <section className="mx-auto max-w-7xl px-6 py-20 lg:py-28">
@@ -13,7 +13,7 @@ export default function SecurityHeadersCSPManager(...args: any[]): any {
           <p className="mt-4 text-slate-300">
             Centralize HSTS, CSP, Referrer-Policy, Permissions-Policy and Subresource Integrity management across domains with rollout checks and reporting.
           </p>
-          <div className="mt-8 grid gap-4 sm: anygrid-cols-2">
+          <div className="mt-8 grid gap-4 sm: unknowngrid-cols-2">
             {[
               { title: 'Policy templates', desc: 'Prebuilt strict, balanced and relaxed CSP profiles.' },
               { title: 'Per-app overrides', desc: 'Granular exceptions with expiry and approvals.' },

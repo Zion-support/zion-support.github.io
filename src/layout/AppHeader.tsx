@@ -396,7 +396,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
     { name: 'Community', href: '/community', description: 'User community', icon: Users }
   ];
 
-  const handleNavClick = (nav: any) => {
+  const handleNavClick = (nav: unknown) => {
     if (nav.hasDropdown) {
       setActiveNav(nav);
       // Close other dropdowns

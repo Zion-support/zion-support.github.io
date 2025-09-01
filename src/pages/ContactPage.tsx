@@ -18,7 +18,7 @@ import { Phone,
   Instagram
  } from 'lucide-react.ts';
 
-export function ContactPage(...args: any[]): any {
+export function ContactPage(...args: unknown[]): unknown {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -32,14 +32,14 @@ export function ContactPage(...args: any[]): any {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleInputChange = (e: anyReact.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>)  => {
+  const handleInputChange = (e: unknownReact.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>)  => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
 
-  const handleSubmit = async (e: anyReact.FormEvent)  => {
+  const handleSubmit = async (e: unknownReact.FormEvent)  => {
     e.preventDefault();
     setIsSubmitting(true);
     
@@ -186,7 +186,7 @@ export function ContactPage(...args: any[]): any {
         </div>
 
         {/* Contact Methods */}
-        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {contactMethods.map((method, index)  => (
             <motion.div
               key={method.title}

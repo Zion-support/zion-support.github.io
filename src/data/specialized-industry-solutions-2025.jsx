@@ -1,3 +1,4 @@
+import React from 'react';
 export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
     // 1. Healthcare AI Diagnostic Platform
     {

@@ -1,3 +1,4 @@
+import React from 'react';
 export const ADVANCED_MICRO_SERVICES = [
     // AI-Powered Business Intelligence
     {
