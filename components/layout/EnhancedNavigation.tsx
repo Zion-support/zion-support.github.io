@@ -42,6 +42,9 @@ const EnhancedNavigation: React.FC = () => {
                 onMouseEnter={() => setServicesOpen(true)}
                 onMouseLeave={() => setServicesOpen(false)}
               >
+                <Link href="/services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 font-semibold border-b border-gray-100">
+                  All Services
+                </Link>
                 <Link href="/services/ai-development" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                   AI Development
                 </Link>
@@ -59,9 +62,6 @@ const EnhancedNavigation: React.FC = () => {
                 </Link>
                 <Link href="/services/iot-platforms" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                   IoT Platforms
-                </Link>
-                <Link href="/services/cybersecurity" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  Cybersecurity
                 </Link>
               </div>
             </div>
@@ -145,6 +145,9 @@ const EnhancedNavigation: React.FC = () => {
               <div className="py-2">
                 <div className="text-gray-600 font-semibold mb-2">Services</div>
                 <div className="pl-4 space-y-2">
+                  <Link href="/services" className="block py-1 text-gray-500 hover:text-blue-600 font-semibold">
+                    All Services
+                  </Link>
                   <Link href="/services/ai-development" className="block py-1 text-gray-500 hover:text-blue-600">
                     AI Development
                   </Link>
@@ -162,9 +165,6 @@ const EnhancedNavigation: React.FC = () => {
                   </Link>
                   <Link href="/services/iot-platforms" className="block py-1 text-gray-500 hover:text-blue-600">
                     IoT Platforms
-                  </Link>
-                  <Link href="/services/cybersecurity" className="block py-1 text-gray-500 hover:text-blue-600">
-                    Cybersecurity
                   </Link>
                 </div>
               </div>

@@ -41,6 +41,11 @@ const EnhancedFooter: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
               <li>
+                <Link href="/services" className="text-gray-300 hover:text-white transition-colors font-semibold">
+                  All Services
+                </Link>
+              </li>
+              <li>
                 <Link href="/services/ai-development" className="text-gray-300 hover:text-white transition-colors">
                   AI Development
                 </Link>
@@ -68,11 +73,6 @@ const EnhancedFooter: React.FC = () => {
               <li>
                 <Link href="/services/iot-platforms" className="text-gray-300 hover:text-white transition-colors">
                   IoT Platforms
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/cybersecurity" className="text-gray-300 hover:text-white transition-colors">
-                  Cybersecurity
                 </Link>
               </li>
             </ul>

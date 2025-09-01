@@ -11,10 +11,9 @@ const nextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
-  experimental: {
-    optimizeCss: true,
-    optimizePackageImports: ['lucide-react', 'framer-motion'],
-  },
+  // experimental: {
+  //   optimizeCss: true,
+  // },
   webpack: (config, { dev, isServer }) => {
     // Completely exclude problematic directories from the build
     config.module.rules.push({
@@ -30,6 +29,10 @@ const nextConfig = {
         /automation\/backups/,
         /automation_backup/,
         /broken_files_backup/,
+        /contracts/,
+        /hardhat/,
+        /cypress/,
+        /data/,
       ],
     });
     

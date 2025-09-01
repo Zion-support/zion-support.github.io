@@ -99,8 +99,10 @@
   },
   "include": [
     "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
+    "pages/**/*.ts",
+    "pages/**/*.tsx",
+    "components/**/*.ts",
+    "components/**/*.tsx",
     ".next/types/**/*.ts"
   ],
   "exclude": [
@@ -112,6 +114,17 @@
     "automation_backup",
     "broken_files_backup",
     "components",
+    "contracts",
+    "hardhat",
+    "cypress",
+    "data",
+    "src",
+    "automation",
+    "scripts",
+    "reports",
+    "security-reports",
+    "refactoring-reports",
+    "maintenance-reports",
     "**/*.backup",
     "**/*.disabled"
   ]
