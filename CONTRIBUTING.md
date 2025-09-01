@@ -51,7 +51,7 @@ We follow these coding standards:
 1. Clone the repository:
    ```bash
    git clone https://github.com/Zion-Holdings/zion.app.git
-   cd zion.app
+   cd zion-app
    ```
 
 2. Install dependencies:
