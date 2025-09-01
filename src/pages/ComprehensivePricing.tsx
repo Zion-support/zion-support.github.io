@@ -187,7 +187,7 @@ export default function ComprehensivePricing() {
               className="flex-1 px-4 py-3 rounded-lg border border-zion-slate-light bg-white text-zion-slate-dark focus:outline-none focus:ring-2 focus:ring-zion-cyan"
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-
+            >
               <option value="all">All Categories</option>
               {categories.map(category => (
                 <option key={category} value={category}>{category}</option>
