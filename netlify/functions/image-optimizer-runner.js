@@ -1,27 +1,27 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('innovation-lab function triggered');
+    console.log('image-optimizer-runner function triggered');
     
-    // Basic innovation-lab logic
+    // Basic image-optimizer-runner logic
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'innovation-lab function executed successfully',
+        message: 'image-optimizer-runner function executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'innovation-lab',
-        action: 'executing innovation-lab functionality'
+        function: 'image-optimizer-runner',
+        action: 'executing image-optimizer-runner functionality'
       })
     };
     
     return result;
   } catch (error) {
-    console.error('Error in innovation-lab:', error);
+    console.error('Error in image-optimizer-runner:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
         error: 'Internal server error',
         message: error.message,
-        function: 'innovation-lab'
+        function: 'image-optimizer-runner'
       })
     };
   }

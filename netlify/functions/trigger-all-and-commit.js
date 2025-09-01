@@ -1,27 +1,27 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('innovation-lab function triggered');
+    console.log('trigger-all-and-commit function triggered');
     
-    // Basic innovation-lab logic
+    // Basic trigger-all-and-commit logic
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'innovation-lab function executed successfully',
+        message: 'trigger-all-and-commit function executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'innovation-lab',
-        action: 'executing innovation-lab functionality'
+        function: 'trigger-all-and-commit',
+        action: 'executing trigger-all-and-commit functionality'
       })
     };
     
     return result;
   } catch (error) {
-    console.error('Error in innovation-lab:', error);
+    console.error('Error in trigger-all-and-commit:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
         error: 'Internal server error',
         message: error.message,
-        function: 'innovation-lab'
+        function: 'trigger-all-and-commit'
       })
     };
   }

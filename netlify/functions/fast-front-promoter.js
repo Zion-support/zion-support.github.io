@@ -1,27 +1,27 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('innovation-lab function triggered');
+    console.log('fast-front-promoter function triggered');
     
-    // Basic innovation-lab logic
+    // Basic fast-front-promoter logic
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'innovation-lab function executed successfully',
+        message: 'fast-front-promoter function executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'innovation-lab',
-        action: 'executing innovation-lab functionality'
+        function: 'fast-front-promoter',
+        action: 'executing fast-front-promoter functionality'
       })
     };
     
     return result;
   } catch (error) {
-    console.error('Error in innovation-lab:', error);
+    console.error('Error in fast-front-promoter:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
         error: 'Internal server error',
         message: error.message,
-        function: 'innovation-lab'
+        function: 'fast-front-promoter'
       })
     };
   }

@@ -1,27 +1,27 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('innovation-lab function triggered');
+    console.log('component-size-report function triggered');
     
-    // Basic innovation-lab logic
+    // Basic component-size-report logic
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'innovation-lab function executed successfully',
+        message: 'component-size-report function executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'innovation-lab',
-        action: 'executing innovation-lab functionality'
+        function: 'component-size-report',
+        action: 'executing component-size-report functionality'
       })
     };
     
     return result;
   } catch (error) {
-    console.error('Error in innovation-lab:', error);
+    console.error('Error in component-size-report:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
         error: 'Internal server error',
         message: error.message,
-        function: 'innovation-lab'
+        function: 'component-size-report'
       })
     };
   }

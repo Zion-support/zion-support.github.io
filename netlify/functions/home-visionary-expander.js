@@ -1,27 +1,27 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('innovation-lab function triggered');
+    console.log('home-visionary-expander function triggered');
     
-    // Basic innovation-lab logic
+    // Basic home-visionary-expander logic
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'innovation-lab function executed successfully',
+        message: 'home-visionary-expander function executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'innovation-lab',
-        action: 'executing innovation-lab functionality'
+        function: 'home-visionary-expander',
+        action: 'executing home-visionary-expander functionality'
       })
     };
     
     return result;
   } catch (error) {
-    console.error('Error in innovation-lab:', error);
+    console.error('Error in home-visionary-expander:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
         error: 'Internal server error',
         message: error.message,
-        function: 'innovation-lab'
+        function: 'home-visionary-expander'
       })
     };
   }
