@@ -273,10 +273,19 @@ schedule = "0 */2 * * *" # every 2 hours
   name = "branch-cleanup-runner"
   schedule = "0 3 * * *" # daily at 03:00 UTC
 
+# New useful autonomous runners
 [[scheduled.functions]]
-  name = "internal-link-graph-runner"
-  schedule = "*/15 * * * *" # every 15 minutes
+  name = "a11y-audit-runner"
+  schedule = "0 * * * *" # hourly
 
 [[scheduled.functions]]
-  name = "unused-images-runner"
-  schedule = "*/20 * * * *" # every 20 minutes
+  name = "alt-text-suggester-runner"
+  schedule = "0 */2 * * *" # every 2 hours
+
+[[scheduled.functions]]
+  name = "docs-gap-finder-runner"
+  schedule = "*/30 * * * *" # every 30 minutes
+
+[[scheduled.functions]]
+  name = "code-churn-heatmap-runner"
+  schedule = "0 3 * * *" # daily at 03:00 UTC

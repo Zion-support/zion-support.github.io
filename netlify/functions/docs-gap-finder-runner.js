@@ -8,7 +8,7 @@ function runNode(relPath, args = []) {
 }
 
 exports.config = {
-  schedule: '0 * * * *', // hourly
+  schedule: '*/30 * * * *', // every 30 minutes
 };
 
 exports.handler = async () => {
@@ -22,7 +22,7 @@ exports.handler = async () => {
     return status;
   }
 
-  logStep('a11y:audit', () => runNode('automation/a11y-audit.cjs'));
+  logStep('docs:gaps', () => runNode('automation/docs-gap-finder.cjs'));
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
 
   return { statusCode: 200, body: logs.join('\n') };
