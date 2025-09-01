@@ -520,6 +520,28 @@ export default function HomePage() {
             </div>
           </section>
 
+          {/* Featured Guides & Popular Content */}
+          <section className="mx-auto max-w-7xl px-6 pb-16">
+            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">🧭 Featured Guides & Popular Content</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <Link href="/README.md" className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300">
+                <h3 className="text-xl font-bold text-cyan-400 mb-2">Getting Started</h3>
+                <p className="text-white/80 text-sm mb-3">Overview, quickstart, and core concepts.</p>
+                <span className="text-cyan-300 text-sm font-semibold">Open Guide →</span>
+              </Link>
+              <Link href="/API.md" className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 hover:border-fuchsia-400/30 transition-all duration-300">
+                <h3 className="text-xl font-bold text-fuchsia-400 mb-2">API Reference</h3>
+                <p className="text-white/80 text-sm mb-3">Endpoints, schemas, and integration notes.</p>
+                <span className="text-fuchsia-300 text-sm font-semibold">View API →</span>
+              </Link>
+              <Link href="/DEPLOYMENT.md" className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 hover:border-green-400/30 transition-all duration-300">
+                <h3 className="text-xl font-bold text-green-400 mb-2">Deployment Playbook</h3>
+                <p className="text-white/80 text-sm mb-3">Production-ready patterns and automation.</p>
+                <span className="text-green-300 text-sm font-semibold">Deploy Now →</span>
+              </Link>
+            </div>
+          </section>
+
           {/* Revolutionary Platform Advantages */}
           <section className="mx-auto max-w-7xl px-6 pb-16">
             <div className="text-center mb-12">
@@ -4940,120 +4962,10 @@ export default function HomePage() {
                 <div className="mt-4 inline-flex items-center gap-1 text-xs text-green-300/90 font-semibold">Read Full Update <span aria-hidden>→</span></div>
               </Link>
             </div>
-            
-            {/* View All Updates Link */}
-            <div className="text-center mt-8">
-              <Link href="/reports/updates" className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white font-semibold transition-all duration-300 hover:border-cyan-400/50">
-                View All Autonomous Updates <span aria-hidden>→</span>
+            <div className="mt-6 text-center">
+              <Link href="/reports/updates" className="inline-block px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white font-semibold transition-all duration-300 hover:border-cyan-400/50">
+                View All Updates
               </Link>
-            </div>
-          </section>
-
-          {/* System Status & Reports */}
-          <section className="mx-auto max-w-7xl px-6 pb-16">
-            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">📊 System Status & Performance Reports</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              
-              {/* Performance Reports */}
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-blue-400 mb-4 text-center">📈 Performance Analytics</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• <Link href="/performance-weekly-report.md" className="text-blue-400 hover:text-blue-300">Weekly Performance Report</Link></li>
-                  <li>• <Link href="/lighthouse-live-report.md" className="text-blue-400 hover:text-blue-300">Lighthouse Live Report</Link></li>
-                  <li>• <Link href="/lighthouse-budgets-report.md" className="text-blue-400 hover:text-blue-300">Performance Budgets</Link></li>
-                  <li>• <Link href="/app-monitoring-report.md" className="text-blue-400 hover:text-blue-300">App Monitoring Status</Link></li>
-                </ul>
-                <div className="text-center">
-                  <div className="text-green-400 text-sm font-semibold mb-2">Status: Optimized</div>
-                  <Link href="/PERFORMANCE.md" className="text-blue-400 hover:text-blue-300 text-sm font-semibold">
-                    View Performance Guide →
-                  </Link>
-                </div>
-              </div>
-
-              {/* Automation Reports */}
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-fuchsia-400 mb-4 text-center">🤖 Automation Status</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• <Link href="/ai-content-autonomy-report.md" className="text-fuchsia-400 hover:text-fuchsia-300">AI Content Autonomy</Link></li>
-                  <li>• <Link href="/ai-content-factory-report.md" className="text-fuchsia-400 hover:text-fuchsia-300">Content Factory Status</Link></li>
-                  <li>• <Link href="/ai-research-scout-report.md" className="text-fuchsia-400 hover:text-fuchsia-300">AI Research Scout</Link></li>
-                  <li>• <Link href="/ai-trends-radar-report.md" className="text-fuchsia-400 hover:text-fuchsia-300">Trends Radar</Link></li>
-                </ul>
-                <div className="text-center">
-                  <div className="text-green-400 text-sm font-semibold mb-2">Status: Learning</div>
-                  <Link href="/automation" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
-                    View Automation Systems →
-                  </Link>
-                </div>
-              </div>
-
-              {/* System Health Reports */}
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
-                <h3 className="text-xl font-bold text-green-400 mb-4 text-center">🏥 System Health</h3>
-                <ul className="text-white/80 text-sm space-y-2 mb-4">
-                  <li>• <Link href="/workflow-health-report.md" className="text-green-400 hover:text-green-300">Workflow Health</Link></li>
-                  <li>• <Link href="/ci-lint-types-build-report.md" className="text-green-400 hover:text-green-300">CI/CD Health</Link></li>
-                  <li>• <Link href="/dependencies-report.md" className="text-green-400 hover:text-green-300">Dependencies Status</Link></li>
-                  <li>• <Link href="/continuous-deployment-report.md" className="text-green-400 hover:text-green-300">Deployment Status</Link></li>
-                </ul>
-                <div className="text-center">
-                  <div className="text-green-400 text-sm font-semibold mb-2">Status: Healthy</div>
-                  <Link href="/README.md" className="text-green-400 hover:text-green-300 text-sm font-semibold">
-                    View System Overview →
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* System Status & Health Monitoring */}
-          <section className="mx-auto max-w-7xl px-6 pb-16">
-            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">📊 System Status & Health Monitoring</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-gradient-to-br from-green-400/20 to-emerald-500/20 backdrop-blur-xl rounded-xl p-6 border border-green-400/30 text-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-emerald-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <span className="text-xl">✅</span>
-                </div>
-                <h3 className="text-lg font-semibold text-green-400 mb-2">Build System</h3>
-                <p className="text-white/70 text-sm">Healthy & Optimized</p>
-                <Link href="/ci-lint-types-build-report.md" className="text-green-400 hover:text-green-300 text-xs font-semibold block mt-2">
-                  View Report →
-                </Link>
-              </div>
-              
-              <div className="bg-gradient-to-br from-blue-400/20 to-indigo-500/20 backdrop-blur-xl rounded-xl p-6 border border-blue-400/30 text-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <span className="text-xl">🚀</span>
-                </div>
-                <h3 className="text-lg font-semibold text-blue-400 mb-2">Deployment</h3>
-                <p className="text-white/70 text-sm">Continuous & Automated</p>
-                <Link href="/continuous-deployment-report.md" className="text-blue-400 hover:text-blue-300 text-xs font-semibold block mt-2">
-                  View Report →
-                </Link>
-              </div>
-              
-              <div className="bg-gradient-to-br from-purple-400/20 to-pink-500/20 backdrop-blur-xl rounded-xl p-6 border border-purple-400/30 text-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <span className="text-xl">🤖</span>
-                </div>
-                <h3 className="text-lg font-semibold text-purple-400 mb-2">AI Automation</h3>
-                <p className="text-white/70 text-sm">227+ Agents Active</p>
-                <Link href="/ai-content-autonomy-report.md" className="text-purple-400 hover:text-purple-300 text-xs font-semibold block mt-2">
-                  View Report →
-                </Link>
-              </div>
-              
-              <div className="bg-gradient-to-br from-yellow-400/20 to-orange-500/20 backdrop-blur-xl rounded-xl p-6 border border-yellow-400/30 text-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <span className="text-xl">📈</span>
-                </div>
-                <h3 className="text-lg font-semibold text-yellow-400 mb-2">Performance</h3>
-                <p className="text-white/70 text-sm">Optimized & Monitored</p>
-                <Link href="/performance-weekly-report.md" className="text-yellow-400 hover:text-yellow-300 text-xs font-semibold block mt-2">
-                  View Report →
-                </Link>
-              </div>
             </div>
           </section>
 
