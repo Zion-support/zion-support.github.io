@@ -226,12 +226,10 @@ export default function HomePage() {
               { title: 'README Advertiser', desc: 'Refresh README and docs indexes every 6h.', href: '/.netlify/functions/readme-advertiser' },
               { title: 'Features/Capabilities/Benefits Advertiser (2m)', desc: 'Continuously advertises new features with deep links on the front pages.', href: '/.netlify/functions/features-capabilities-benefits-advertiser' },
               { title: 'Hyper Front Index Accelerator (1m)', desc: 'Ultra-fast front index futurizer and directory builder.', href: '/.netlify/functions/hyper-front-index-accelerator' },
-              { title: 'Repo Knowledge Graph', desc: 'Builds a repository knowledge graph and publishes artifacts.', href: '/.netlify/functions/repo-knowledge-graph' },
-              { title: 'Dead Code Scanner', desc: 'Identifies unused code and proposes cleanups.', href: '/.netlify/functions/dead-code-scanner' },
-              { title: 'External Link Checker', desc: 'Finds and fixes broken outbound links.', href: '/.netlify/functions/external-link-checker' },
-              { title: 'Image Optimizer', desc: 'Optimizes media assets for faster pages.', href: '/.netlify/functions/image-optimizer' },
-              { title: 'Newsroom Publisher', desc: 'Generates newsroom updates and deep links.', href: '/.netlify/functions/newsroom-publisher' },
-              { title: 'AI Changelog Updater', desc: 'Refreshes AI-authored changelog and docs indexes.', href: '/.netlify/functions/ai-changelog-updater' },
+              { title: 'Innovation Scout (3m)', desc: 'Researches AI trends, curates content, updates newsroom, and syncs.', href: '/.netlify/functions/innovation-scout' },
+              { title: 'Content & UX Curator (7m)', desc: 'Regenerates OG images, docs indexes, and homepage/front promos.', href: '/.netlify/functions/content-ux-curator' },
+              { title: 'Security & Integrity Runner (15m)', desc: 'Security audit, external link and image integrity, auto sitemap.', href: '/.netlify/functions/security-and-integrity-runner' },
+              { title: 'Autonomous Cloud Maximizer (2m)', desc: 'High-frequency orchestrator that chains innovation + integrity.', href: '/.netlify/functions/autonomous-cloud-maximizer' },
             ].map((tool) => (
               <a key={tool.title} href={tool.href} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
