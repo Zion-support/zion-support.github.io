@@ -1,6 +1,6 @@
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import Link from 'next/link.ts';
+import React, { useState } from 'react';
+import { motion  } from 'framer-motion';
+import Link from 'next/link';
 import { FlaskConical,
   Brain,
   Shield,
@@ -47,7 +47,7 @@ const researchAreas = [
     icon: Brain,
     description: 'Advancing the frontiers of AI through innovative research in neural networks, natural language processing, and computer vision.',
     color: 'from-purple-500 to-indigo-600',
-    focus[
+    focus: [
       'Deep Learning Architectures',
       'Natural Language Processing',
       'Computer Vision & Image Recognition',
@@ -65,7 +65,7 @@ const researchAreas = [
     icon: Atom,
     description: 'Exploring quantum computing applications and developing quantum-resistant cryptographic solutions.',
     color: 'from-blue-500 to-cyan-600',
-    focus[
+    focus: [
       'Quantum Algorithms',
       'Quantum Cryptography',
       'Quantum Machine Learning',
@@ -83,7 +83,7 @@ const researchAreas = [
     icon: Shield,
     description: 'Developing next-generation security solutions to protect against evolving cyber threats.',
     color: 'from-red-500 to-pink-600',
-    focus[
+    focus: [
       'Threat Intelligence',
       'Zero-Trust Security',
       'Privacy-Preserving Technologies',
@@ -101,7 +101,7 @@ const researchAreas = [
     icon: Zap,
     description: 'Researching distributed computing paradigms and intelligent edge systems for real-time processing.',
     color: 'from-yellow-500 to-orange-600',
-    focus[
+    focus: [
       'Edge AI & Machine Learning',
       '5G & 6G Networks',
       'IoT Security & Privacy',
@@ -119,7 +119,7 @@ const researchAreas = [
     icon: TrendingUp,
     description: 'Advancing data analytics methodologies and developing tools for extracting meaningful insights from complex datasets.',
     color: 'from-green-500 to-emerald-600',
-    focus[
+    focus: [
       'Big Data Processing',
       'Predictive Analytics',
       'Data Visualization',
@@ -137,18 +137,18 @@ const researchAreas = [
     icon: Cloud,
     description: 'Researching cloud computing architectures and developing scalable, resilient cloud solutions.',
     color: 'from-indigo-500 to-purple-600',
-    focus[
+    focus: [
       'Microservices Architecture',
       'Container Orchestration',
       'Serverless Computing',
       'Multi-cloud Strategies',
-      'Cloud Security',;
-      'DevOps Automation';
-    ],;
-    publications: 20,;
-    patents: 10,;
-    projects: 16;
-  };
+      'Cloud Security',
+      'DevOps Automation'
+    ],
+    publications: 20,
+    patents: 10,
+    projects: 16
+  }
 ];
 
 const researchProjects = [

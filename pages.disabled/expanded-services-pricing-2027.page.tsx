@@ -3,39 +3,40 @@ import { Helmet } from 'react-helmet-async';
 import { useState, useMemo } from 'react';
 import { ALL_EXPANDED_SERVICES_PRICING } from "../data/expandedServicesPricing2027";
 
-const ExpandedServicesPricingGuide2027: NextPage = () => {;
+const ExpandedServicesPricingGuide2027: NextPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedSubcategory, setSelectedSubcategory] = useState('all');
 
   // Get unique categories and subcategories
   const cats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_PRICING.map(s => s.category)))];
-    return cats;
-  }, []);
-
-  const subcats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_PRICING.map(s => s.subcategory)))];
-      return subcats;
-    }
-    const subcats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_PRICING.filter(s => s.category === selectedCategory).map(s => s.subcategory)))];
-    return subcats}, [selectedCategory]);
+  const subcats = ['all', ...Array.from(new Set(
+    (selectedCategory === 'all'
+      ? ALL_EXPANDED_SERVICES_PRICING
+      : ALL_EXPANDED_SERVICES_PRICING.filter(s => s.category === selectedCategory)
+    ).map(s => s.subcategory)
+  ))];
 
   // Filter services based on search and filters
-  const filteredServices = useMemo(() => {;
-    return ALL_EXPANDED_SERVICES_PRICING.filter(service => {;
-      const matchesSearch = service.serviceName.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                           service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                           service.subcategory.toLowerCase().includes(searchTerm.toLowerCase());
-      
+  const filteredServices = useMemo(() => {
+    return ALL_EXPANDED_SERVICES_PRICING.filter(service => {
+      const term = searchTerm.toLowerCase();
+      const matchesSearch =
+        service.serviceName.toLowerCase().includes(term) ||
+        service.category.toLowerCase().includes(term) ||
+        service.subcategory.toLowerCase().includes(term);
+
+      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
       const matchesSubcategory = selectedSubcategory === 'all' || service.subcategory === selectedSubcategory;
       
-      return matchesSearch && matchesCategory && matchesSubcategory})}, [searchTerm, selectedCategory, selectedSubcategory]);
+      return matchesSearch && matchesCategory && matchesSubcategory;
+    });
+  }, [searchTerm, selectedCategory, selectedSubcategory]);
 
-  const resetFilters = () => {;
+  const resetFilters = () => {
     setSearchTerm('');
     setSelectedCategory('all');
-    setSelectedSubcategory('all')};
-
-      default: return 'bg-gray-600'}
+    setSelectedSubcategory('all');
   };
 
   return (

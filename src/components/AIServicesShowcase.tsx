@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
+import React from 'react';
+import Link from 'next/link';
 
 export const AIServicesShowcase = () => {
   return (
@@ -19,7 +19,7 @@ export const AIServicesShowcase = () => {
             <div className="text-4xl mb-4">🤖</div>
             <h3 className="text-xl font-semibold text-white mb-3">AI Analytics</h3>
             <p className="text-gray-300 mb-4">Advanced analytics powered by machine learning algorithms</p>
-            <Link to="/services/ai-analytics" className="text-cyan-400 hover:text-cyan-300">
+            <Link href="/services/ai-analytics" className="text-cyan-400 hover:text-cyan-300">
               Learn More →
             </Link>
           </div>
@@ -28,7 +28,7 @@ export const AIServicesShowcase = () => {
             <div className="text-4xl mb-4">🔍</div>
             <h3 className="text-xl font-semibold text-white mb-3">Predictive Insights</h3>
             <p className="text-gray-300 mb-4">Forecast trends and make data-driven decisions</p>
-            <Link to="/services/predictive-analytics" className="text-cyan-400 hover:text-cyan-300">
+            <Link href="/services/predictive-analytics" className="text-cyan-400 hover:text-cyan-300">
               Learn More →
             </Link>
           </div>
@@ -37,13 +37,13 @@ export const AIServicesShowcase = () => {
             <div className="text-4xl mb-4">⚡</div>
             <h3 className="text-xl font-semibold text-white mb-3">Automation</h3>
             <p className="text-gray-300 mb-4">Streamline operations with intelligent automation</p>
-            <Link to="/services/automation" className="text-cyan-400 hover:text-cyan-300">
+            <Link href="/services/automation" className="text-cyan-400 hover:text-cyan-300">
               Learn More →
-            </Link>;
-          </div>;
-        </div>;
-      </div>;
-    </section>;
+            </Link>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 

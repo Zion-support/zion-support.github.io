@@ -1,6 +1,6 @@
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import Link from 'next/link.ts';
+import React, { useState } from 'react';
+import { motion  } from 'framer-motion';
+import Link from 'next/link';
 import { Calendar,
   Clock,
   MapPin,
@@ -34,10 +34,10 @@ const events = [
     status: "upcoming",
     category: "AI & ML",
     description: "Join industry leaders for a comprehensive exploration of AI and machine learning innovations, featuring keynote speakers, workshops, and networking opportunities.",
-    speakers["Dr. Sarah Chen", "Prof. Michael Rodriguez", "AI Expert Lisa Wang"],
+    speakers: ["Dr. Sarah Chen", "Prof. Michael Rodriguez", "AI Expert Lisa Wang"],
     attendees: 500,
     price: "$299",
-    highlights[
+    highlights: [
       "Keynote presentations from AI pioneers",
       "Hands-on workshops with real datasets",
       "Networking with industry professionals",
@@ -55,10 +55,10 @@ const events = [
     status: "upcoming",
     category: "Cybersecurity",
     description: "Learn essential cybersecurity practices for modern businesses, including threat detection, incident response, and compliance requirements.",
-    speakers["Security Expert John Smith", "Compliance Officer Maria Garcia"],
+    speakers: ["Security Expert John Smith", "Compliance Officer Maria Garcia"],
     attendees: 150,
     price: "Free",
-    highlights[
+    highlights: [
       "Threat detection strategies",
       "Incident response protocols",
       "Compliance best practices",
@@ -76,10 +76,10 @@ const events = [
     status: "upcoming",
     category: "Cloud & DevOps",
     description: "Explore the latest trends in cloud computing, containerization, and DevOps practices with hands-on demonstrations and expert insights.",
-    speakers["Cloud Architect David Lee", "DevOps Engineer Sarah Johnson"],
+    speakers: ["Cloud Architect David Lee", "DevOps Engineer Sarah Johnson"],
     attendees: 300,
     price: "$199",
-    highlights[
+    highlights: [
       "Cloud migration strategies",
       "Container orchestration",
       "CI/CD pipeline optimization",
@@ -97,10 +97,10 @@ const events = [
     status: "upcoming",
     category: "Data Analytics",
     description: "Discover how data analytics can transform your business decisions with real-world case studies and practical implementation strategies.",
-    speakers["Data Scientist Emily Chen", "BI Consultant Robert Wilson"],
+    speakers: ["Data Scientist Emily Chen", "BI Consultant Robert Wilson"],
     attendees: 200,
     price: "Free",
-    highlights[
+    highlights: [
       "Data visualization techniques",
       "Predictive analytics models",
       "Business intelligence tools",
@@ -118,10 +118,10 @@ const events = [
     status: "past",
     category: "IoT & Edge",
     description: "Explore the future of IoT and edge computing with industry experts, featuring case studies and emerging technology trends.",
-    speakers["IoT Specialist Dr. James Brown", "Edge Computing Expert Lisa Chen"],
+    speakers: ["IoT Specialist Dr. James Brown", "Edge Computing Expert Lisa Chen"],
     attendees: 180,
     price: "$149",
-    highlights[
+    highlights: [
       "IoT architecture design",
       "Edge computing optimization",
       "Security considerations",
@@ -139,17 +139,17 @@ const events = [
     status: "past",
     category: "Digital Transformation",
     description: "Learn from successful digital transformation stories and discover strategies to modernize your business operations and customer experience.",
-    speakers["Digital Strategist Mark Davis", "Transformation Expert Anna Rodriguez"],
+    speakers: ["Digital Strategist Mark Davis", "Transformation Expert Anna Rodriguez"],
     attendees: 400,
     price: "$249",
-    highlights[
-      "Transformation roadmaps",;
-      "Change management strategies",;
-      "Technology selection",;
-      "Success metrics";
-    ],;
-    image: "/images/digital-transformation-summit.jpg";
-  };
+    highlights: [
+      "Transformation roadmaps",
+      "Change management strategies",
+      "Technology selection",
+      "Success metrics"
+    ],
+    image: "/images/digital-transformation-summit.jpg"
+  }
 ];
 
 const eventTypes = ['All', 'Conference', 'Workshop', 'Webinar', 'Symposium'];

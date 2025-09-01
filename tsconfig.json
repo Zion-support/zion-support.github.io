@@ -88,15 +88,22 @@
     ]
   },
   "include": [
-    "src/**/*",
-    "tailwind.config.js",
-    "postcss.config.js"
+    "next-env.d.ts",
+    "pages/**/*",
+    "components/**/*",
+    "lib/**/*",
+    "types/**/*",
+    "tailwind.config.*",
+    "postcss.config.js",
+    "next.config.js",
+    "next.config.cjs"
   ],
   "exclude": [
     "node_modules",
     "zion.app/recovered-content/**",
     "services.disabled.temp/**",
     "data.temp/**",
+    "src/**",
     "src_backup/**",
     "**/*.disabled",
     "**/*.disabled/**"

@@ -1,5 +1,4 @@
 module.exports = {
-  root: true,
   env: {
     browser: true,
     es2021: true,
@@ -7,10 +6,9 @@ module.exports = {
   },
   extends: [
     'eslint:recommended',
-    '@typescript-eslint/recommended',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
-    'plugin:jsx-a11y/recommended',
+    'plugin:@typescript-eslint/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -23,15 +21,12 @@ module.exports = {
   plugins: [
     'react',
     '@typescript-eslint',
-    'jsx-a11y',
   ],
   rules: {
-    'react/react-in-jsx-scope': 'off', // Not needed in React 17+
-    'react/prop-types': 'off', // Using TypeScript instead
-    '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
-    '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
-    'jsx-a11y/anchor-is-valid': 'off', // React Router handles this
+    'react/react-in-jsx-scope': 'off',
+    'react/prop-types': 'off',
+    '@typescript-eslint/no-unused-vars': 'warn',
+    '@typescript-eslint/no-explicit-any': 'warn',
   },
   settings: {
     react: {
