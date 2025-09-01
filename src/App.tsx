@@ -1,5 +1,6 @@
 import React, { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { ErrorBoundary } from './components/ErrorBoundary';
 import './App.css';
 import { ThemeProvider } from "./components/ThemeProvider";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
@@ -67,7 +68,8 @@ const App = () => {
   return (
     <WhitelabelProvider>
       <ThemeProvider defaultTheme="dark">
-        <React.Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
+        <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
+          <ErrorBoundary>
           <Routes>
             {baseRoutes.map(({ path, element }) => (
               <Route key={path} path={path} element={element} />
@@ -84,7 +86,8 @@ const App = () => {
             <Route path="/developers/*" element={<DeveloperRoutes />} />
             <Route path="*" element={<ErrorRoutes />} />
           </Routes>
-        </React.Suspense>
+          </ErrorBoundary>
+        </Suspense>
         <Toaster />
         <SonnerToaster position="top-right" />
       </ThemeProvider>

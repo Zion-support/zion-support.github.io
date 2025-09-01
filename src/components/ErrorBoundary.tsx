@@ -1,5 +1,4 @@
-import React, { Component, ReactNode } from 'react';
-import { toast } from 'react-hot-toast';
+import { Component, ReactNode, ErrorInfo } from 'react';
 
 interface Props {
   children: ReactNode;
@@ -9,22 +8,21 @@ interface State {
   hasError: boolean;
 }
 
-export default class ErrorBoundary extends Component<Props, State> {
+export class ErrorBoundary extends Component<Props, State> {
   state: State = { hasError: false };
 
-  static getDerivedStateFromError(): State {
+  static getDerivedStateFromError() {
     return { hasError: true };
   }
 
-  componentDidCatch(error: Error) {
-    toast.error(error.message || 'An unexpected error occurred');
+  componentDidCatch(error: Error, info: ErrorInfo) {
+    console.error('Uncaught error:', error, info);
   }
 
   render() {
     if (this.state.hasError) {
-      return null;
+      return <div className="p-4 text-center">Something went wrong.</div>;
     }
-
     return this.props.children;
   }
 }
