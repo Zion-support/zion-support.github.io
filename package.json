@@ -18,7 +18,16 @@
     "npm": ">=10.0.0"
   },
   "scripts": {
-    "devnet:start": "NODE_OPTIONS=--openssl-legacy-provider NODE_ENV=development DEVNET=1 PORT=3001 next dev -p 3001",
+    "pm2:start": "pm2 start ecosystem.config.cjs --update-env",
+    "pm2:stop": "pm2 stop ecosystem.config.cjs || true",
+    "pm2:restart": "pm2 restart ecosystem.config.cjs || pm2 start ecosystem.config.cjs --update-env",
+    "pm2:status": "pm2 status",
+    "pm2:logs": "pm2 logs --lines 200",
+    "functions:run": "node scripts/run-netlify-functions-locally.cjs",
+    "functions:run:execute": "node scripts/run-netlify-functions-locally.cjs --execute",
+    "front:advertise": "node automation/front-index-advertiser.cjs",
+    "automation:semantic-map": "node automation/semantic-code-map.cjs",
+    "automation:perf-budget": "node automation/perf-budget-guardian.cjs",
     "deps:maintain": "node automation/dependency-update-orchestrator.cjs",
     "feedback:analyze": "node scripts/analyze-feedback.js",
     "deps:cron:start": "bash automation/dependency-maintenance-cron.sh",
