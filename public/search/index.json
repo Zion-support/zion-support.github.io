@@ -135,11 +135,6 @@
     "h1": "AI Guardrails Suite"
   },
   {
-    "route": "/ai-powered-it-asset-management",
-    "title": "AI-Powered IT Asset Management - Zion Tech Group",
-    "h1": ""
-  },
-  {
     "route": "/ai-seo-suite",
     "title": "AI-Powered SEO Suite | Zion Tech Group - Advanced SEO Tools & Analytics",
     "h1": "AI-Powered SEO Suite"
@@ -208,11 +203,6 @@
     "route": "/automation-insights",
     "title": "Automation Insights | Zion Tech Group - AI Automation Expertise",
     "h1": "Automation Insights"
-  },
-  {
-    "route": "/autonomous-business-operations-platform",
-    "title": "Autonomous Business Operations Platform - Zion Tech Group",
-    "h1": ""
   },
   {
     "route": "/autonomous-vehicle-ai-platform",
@@ -585,11 +575,6 @@
     "h1": ""
   },
   {
-    "route": "/quantum-neural-network-platform",
-    "title": "Quantum Neural Network Platform - Zion Tech Group",
-    "h1": ""
-  },
-  {
     "route": "/quantum-secure-cloud-infrastructure",
     "title": "",
     "h1": "Quantum-Secure Cloud Infrastructure 2045"
@@ -666,7 +651,7 @@
   },
   {
     "route": "/services",
-    "title": "Revolutionary 2029 Technology Services | Zion Tech Group",
+    "title": "Revolutionary 2025 Technology Services | Zion Tech Group",
     "h1": ""
   },
   {
