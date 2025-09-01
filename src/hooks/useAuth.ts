@@ -1,7 +1,16 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 
 interface User {
   id: string;
+=======
+import { useState, useEffect, useCallback } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { loginUser, signupUser, logoutUser, checkAuthStatus, selectUser, selectIsAuthenticated, selectIsLoading } from '@/store/authSlice';
+
+interface User {
+  id: number;
+>>>>>>> cursor/add-new-services-and-advertise-them-650b
   email: string;
   name: string;
   role: 'user' | 'admin' | 'moderator';
@@ -17,6 +26,7 @@ interface AuthState {
 }
 
 export function useAuth() {
+<<<<<<< HEAD
   const [authState, setAuthState] = useState<AuthState>({
     user: null,
     isAuthenticated: false,
@@ -109,15 +119,72 @@ export function useAuth() {
 
     return mockUser;
   };
+=======
+  const dispatch = useDispatch();
+  const user = useSelector(selectUser);
+  const isAuthenticated = useSelector(selectIsAuthenticated);
+  const isLoading = useSelector(selectIsLoading);
+
+  const login = useCallback(async (credentials: { email: string; password: string }) => {
+    try {
+      const result = await dispatch(loginUser(credentials)).unwrap();
+      return { success: true, user: result.user };
+    } catch (error) {
+      return { success: false, error: error as string };
+    }
+  }, [dispatch]);
+
+  const signup = useCallback(async (userData: { email: string; password: string; name: string }) => {
+    try {
+      const result = await dispatch(signupUser(userData)).unwrap();
+      return { success: true, user: result.user };
+    } catch (error) {
+      return { success: false, error: error as string };
+    }
+  }, [dispatch]);
+
+  const logout = useCallback(async () => {
+    try {
+      await dispatch(logoutUser()).unwrap();
+      return { success: true };
+    } catch (error) {
+      return { success: false, error: error as string };
+    }
+  }, [dispatch]);
+
+  const checkAuth = useCallback(async () => {
+    try {
+      await dispatch(checkAuthStatus()).unwrap();
+      return { success: true };
+    } catch (error) {
+      return { success: false, error: error as string };
+    }
+  }, [dispatch]);
+
+  // Check authentication status on mount
+  useEffect(() => {
+    checkAuth();
+  }, [checkAuth]);
+>>>>>>> cursor/add-new-services-and-advertise-them-650b
 
   return {
-    user: authState.user,
-    loading: authState.isLoading,
+    user,
+    isAuthenticated,
+    isLoading,
     login,
+    signup,
     logout,
+<<<<<<< HEAD
     register,
     isAuthenticated: authState.isAuthenticated,
     isLoading: authState.isLoading,
     isAdmin: authState.user?.role === 'admin'
   };
 }
+=======
+    checkAuth
+  };
+}
+
+export default useAuth;
+>>>>>>> cursor/add-new-services-and-advertise-them-650b

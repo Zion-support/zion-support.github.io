@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-advertise-them-650b
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { cn } from "@/lib/utils";
@@ -32,10 +35,17 @@ import {
   Network,
   Wifi,
   Activity,
+<<<<<<< HEAD
   Search,
   Settings,
   Palette,
   Zap as ZapIcon,
+=======
+  Eye,
+  Search,
+  Settings,
+  Palette,
+>>>>>>> cursor/add-new-services-and-advertise-them-650b
   Phone,
   Mail,
   MapPin,
@@ -50,7 +60,10 @@ import {
   Star,
   Users2,
   Cog,
+<<<<<<< HEAD
   Palette as PaletteIcon,
+=======
+>>>>>>> cursor/add-new-services-and-advertise-them-650b
   Menu,
   X,
   ArrowRight,
@@ -63,6 +76,7 @@ import {
   Scale,
   Home,
   BookOpen,
+<<<<<<< HEAD
   Microscope,
   Flask,
   TestTube,
@@ -134,6 +148,12 @@ export function MainNavigation(...args[]: any):  {
   cn("hidden md:flex items-center space-x-6",
   className)
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+=======
+  Calendar,
+  PenTool,
+  Briefcase
+} from 'lucide-react';
+>>>>>>> cursor/add-new-services-and-advertise-them-650b
 
 interface MainNavigationProps {
   className?: string;
@@ -144,6 +164,7 @@ export function MainNavigation({ className }: MainNavigationProps) {
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isCompanyOpen, setIsCompanyOpen] = useState(false);
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
+<<<<<<< HEAD
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -896,10 +917,243 @@ export function MainNavigation({ className }: MainNavigationProps) {
                   Contact
                 </Link>
               </div>
+=======
+
+  return (
+    <nav className={cn("hidden lg:flex items-center space-x-8", className)}>
+      {/* Home */}
+      <NavLink 
+        to="/" 
+        className={({ isActive }) => 
+          cn("text-sm font-medium transition-colors hover:text-primary px-3 py-2 rounded-md", 
+            isActive ? "text-zion-cyan bg-zion-cyan/10" : "text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5"
+          )
+        }
+      >
+        <Home className="w-4 h-4 inline mr-2" />
+        Home
+      </NavLink>
+      
+      {/* Services Dropdown */}
+      <div className="relative group">
+        <button 
+          onMouseEnter={() => setIsServicesOpen(true)} 
+          onMouseLeave={() => setIsServicesOpen(false)} 
+          className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground hover:text-zion-cyan"
+        >
+          <Zap className="w-4 h-4" />
+          <span>Services</span>
+          <ChevronDown className="w-3 h-3" />
+        </button>
+        
+        {isServicesOpen && (
+          <div className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark border border-zion-purple/20 rounded-lg shadow-xl z-50">
+            <div className="p-4 grid grid-cols-2 gap-4">
+              {/* AI & Automation */}
+              <div>
+                <h3 className="text-zion-cyan font-semibold text-sm mb-3 flex items-center">
+                  <Brain className="w-4 h-4 mr-2" />
+                  AI & Automation
+                </h3>
+                <div className="space-y-2">
+                  <Link to="/services/ai-business-intelligence-dashboard" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">
+                    AI Business Intelligence
+                  </Link>
+                  <Link to="/services/ai-customer-support-automation" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">
+                    AI Customer Support
+                  </Link>
+                  <Link to="/services/ai-marketing-automation-platform" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">
+                    AI Marketing Automation
+                  </Link>
+                  <Link to="/services/ai-workflow-orchestrator" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">
+                    AI Workflow Orchestrator
+                  </Link>
+                  <Link to="/services/ai-enterprise-intelligence-platform" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">
+                    AI Enterprise Intelligence
+                  </Link>
+                </div>
+              </div>
+              
+              {/* Cloud & Infrastructure */}
+              <div>
+                <h3 className="text-zion-cyan font-semibold text-sm mb-3 flex items-center">
+                  <Cloud className="w-4 h-4 mr-2" />
+                  Cloud & Infrastructure
+                </h3>
+                <div className="space-y-2">
+                  <Link to="/services/cloud-devops" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">
+                    Cloud & DevOps
+                  </Link>
+                  <Link to="/services/it-infrastructure-management" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">
+                    IT Infrastructure
+                  </Link>
+                  <Link to="/services/cybersecurity" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">
+                    Cybersecurity
+                  </Link>
+                  <Link to="/services/quantum-edge-computing-solutions" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">
+                    Quantum Edge Computing
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className="border-t border-zion-purple/20 p-4">
+              <Link to="/services" className="text-zion-cyan hover:text-zion-cyan/80 text-sm font-medium flex items-center">
+                View All Services
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
+>>>>>>> cursor/add-new-services-and-advertise-them-650b
             </div>
           </div>
         )}
       </div>
+<<<<<<< HEAD
     </>
+=======
+
+      {/* Solutions Dropdown */}
+      <div className="relative group">
+        <button 
+          onMouseEnter={() => setIsSolutionsOpen(true)} 
+          onMouseLeave={() => setIsSolutionsOpen(false)} 
+          className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground hover:text-zion-cyan"
+        >
+          <Target className="w-4 h-4" />
+          <span>Solutions</span>
+          <ChevronDown className="w-3 h-3" />
+        </button>
+        
+        {isSolutionsOpen && (
+          <div className="absolute top-full left-0 mt-2 w-64 bg-zion-slate-dark border border-zion-purple/20 rounded-lg shadow-xl z-50">
+            <div className="p-4 space-y-3">
+              <Link to="/solutions/healthcare" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                <Heart className="w-4 h-4 mr-2" />
+                Healthcare
+              </Link>
+              <Link to="/solutions/financial" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                <DollarSign className="w-4 h-4 mr-2" />
+                Financial Services
+              </Link>
+              <Link to="/solutions/manufacturing" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                <Building2 className="w-4 h-4 mr-2" />
+                Manufacturing
+              </Link>
+              <Link to="/solutions/retail" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                <ShoppingCart className="w-4 h-4 mr-2" />
+                Retail
+              </Link>
+            </div>
+            <div className="border-t border-zion-purple/20 p-4">
+              <Link to="/solutions" className="text-zion-cyan hover:text-zion-cyan/80 text-sm font-medium flex items-center">
+                View All Solutions
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* Company Dropdown */}
+      <div className="relative group">
+        <button 
+          onMouseEnter={() => setIsCompanyOpen(true)} 
+          onMouseLeave={() => setIsCompanyOpen(false)} 
+          className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground hover:text-zion-cyan"
+        >
+          <Building2 className="w-4 h-4" />
+          <span>Company</span>
+          <ChevronDown className="w-3 h-3" />
+        </button>
+        
+        {isCompanyOpen && (
+          <div className="absolute top-full left-0 mt-2 w-64 bg-zion-slate-dark border border-zion-purple/20 rounded-lg shadow-xl z-50">
+            <div className="p-4 space-y-3">
+              <Link to="/about" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">
+                About Us
+              </Link>
+              <Link to="/leadership" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">
+                Leadership
+              </Link>
+              <Link to="/careers" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">
+                Careers
+              </Link>
+              <Link to="/partners" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">
+                Partners
+              </Link>
+              <Link to="/news" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">
+                News
+              </Link>
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* Resources Dropdown */}
+      <div className="relative group">
+        <button 
+          onMouseEnter={() => setIsResourcesOpen(true)} 
+          onMouseLeave={() => setIsResourcesOpen(false)} 
+          className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground hover:text-zion-cyan"
+        >
+          <BookOpen className="w-4 h-4" />
+          <span>Resources</span>
+          <ChevronDown className="w-3 h-3" />
+        </button>
+        
+        {isResourcesOpen && (
+          <div className="absolute top-full left-0 mt-2 w-64 bg-zion-slate-dark border border-zion-purple/20 rounded-lg shadow-xl z-50">
+            <div className="p-4 space-y-3">
+              <Link to="/blog" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">
+                Blog
+              </Link>
+              <Link to="/docs" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">
+                Documentation
+              </Link>
+              <Link to="/white-papers" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">
+                White Papers
+              </Link>
+              <Link to="/webinars" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">
+                Webinars
+              </Link>
+              <Link to="/training" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">
+                Training
+              </Link>
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* Support */}
+      <Link to="/help" className="text-zion-slate-light hover:text-white transition-colors flex items-center">
+        <HelpCircle className="w-4 h-4 mr-1" />
+        Support
+      </Link>
+
+      {/* Pricing */}
+      <NavLink 
+        to="/pricing" 
+        className={({ isActive }) => 
+          cn("text-sm font-medium transition-colors hover:text-primary px-3 py-2 rounded-md", 
+            isActive ? "text-zion-cyan bg-zion-cyan/10" : "text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5"
+          )
+        }
+      >
+        <DollarSign className="w-4 h-4 inline mr-2" />
+        Pricing
+      </NavLink>
+
+      {/* Contact */}
+      <NavLink 
+        to="/contact" 
+        className={({ isActive }) => 
+          cn("text-sm font-medium transition-colors hover:text-primary px-3 py-2 rounded-md", 
+            isActive ? "text-zion-cyan bg-zion-cyan/10" : "text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5"
+          )
+        }
+      >
+        <MessageCircle className="w-4 h-4 inline mr-2" />
+        Contact
+      </NavLink>
+    </nav>
+>>>>>>> cursor/add-new-services-and-advertise-them-650b
   );
 }

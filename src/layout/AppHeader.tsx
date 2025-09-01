@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Star, TrendingUp, Award, Settings, Phone, Mail, MapPin, Building, Bot, Atom } from 'lucide-react';
@@ -15,6 +16,12 @@ import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Ro
 =======
 import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, Code, Truck, Building, ShoppingCart, BookOpen, MessageCircle, HelpCircle              } from 'lucide-react.ts';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight, PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+>>>>>>> cursor/add-new-services-and-advertise-them-650b
 import { ThemeToggle              } from '../components/ThemeToggle';
 import { ZionLoadingSpinner              } from '../components/ui/EnhancedLoadingSpinner';
 import { Sidebar              } from '../components/Sidebar';
@@ -45,11 +52,15 @@ export function AppHeader(...args: any[]): any {
   }, []);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const handleSearch = async (e: React.FormEvent) => {
 =======
 <<<<<<< HEAD
   const handleSearch = async (e: anyanyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)              => {
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+=======
+  const handleSearch = async (e: React.FormEvent) => {
+>>>>>>> cursor/add-new-services-and-advertise-them-650b
     e.preventDefault();
     if (searchQuery.trim()) {
       setIsSearching(true);

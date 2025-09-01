@@ -30,10 +30,24 @@ export const useToast = () => {
   const dismiss = useCallback((id) => {
     setToasts(prev => prev.filter(t => t.id !== id));
   }, []);
+<<<<<<< HEAD
+=======
+
+  const clearAll = useCallback(() => {
+    setToasts([]);
+  }, []);
+>>>>>>> cursor/add-new-services-and-advertise-them-650b
 
   return {
     toast,
     dismiss,
+    clearAll,
     toasts
   };
+<<<<<<< HEAD
 };
+=======
+};
+
+export default useToast;
+>>>>>>> cursor/add-new-services-and-advertise-them-650b

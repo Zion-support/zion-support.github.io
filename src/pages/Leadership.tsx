@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Linkedin, Twitter, Mail, Award, Users, TrendingUp, Globe, Lightbulb } from 'lucide-react';
@@ -12,27 +13,26 @@ import { Users,
   Star,
   Target,
   TrendingUp,
-  Globe,
-  Zap,
-  Shield,
-  Brain,
-  Rocket,
-  Building,
-  Heart,
-  Crown,
-  Sparkles,
-  ArrowRight,
-  Linkedin,
-  Mail,
-  Phone,
-  MapPin
-<<<<<<< HEAD
-import { SEO              } from '../components/SEO';
 =======
+import React from 'react';
+import { motion } from 'framer-motion';
+import { 
+  Users, 
+  Award, 
+  Linkedin, 
+  Twitter, 
+  Mail, 
+>>>>>>> cursor/add-new-services-and-advertise-them-650b
+  Globe,
+  Building2,
+  Brain,
+  Shield,
+  Cloud,
+  Target,
+  Rocket
 } from 'lucide-react';
-import SEO from '../components/SEO';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
+<<<<<<< HEAD
 export default function Leadership(...args: any[]): any {
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const leadershipTeam = [
@@ -115,10 +115,74 @@ export default function Leadership(...args: any[]): any {
     { icon: TrendingUp, label: "Growth Rate", value: "300%", description: "Year over year" },
     { icon: Globe, label: "Countries", value: "25+", description: "Global presence" },
     { icon: Award, label: "Awards", value: "50+", description: "Industry recognition" }
+=======
+export default function Leadership() {
+  const executives = [
+    {
+      name: 'Kleber Santos',
+      role: 'CEO & Founder',
+      bio: 'Visionary leader with 20+ years of experience in AI and enterprise technology. Former AI researcher at leading tech companies, Kleber has pioneered numerous breakthrough technologies in autonomous business operations.',
+      image: '/team/kleber.jpg',
+      linkedin: 'https://linkedin.com/in/klebersantos',
+      twitter: 'https://twitter.com/klebersantos',
+      email: 'kleber@ziontechgroup.com',
+      achievements: ['AI Innovation Award 2023', 'Forbes 30 Under 30', '500+ Projects Delivered']
+    },
+    {
+      name: 'Dr. Sarah Chen',
+      role: 'CTO & Chief AI Officer',
+      bio: 'Leading AI researcher with PhD in Machine Learning from MIT. Expert in quantum computing and neural networks, Sarah drives our technical innovation and AI strategy.',
+      image: '/team/sarah.jpg',
+      linkedin: 'https://linkedin.com/in/sarahchen',
+      twitter: 'https://twitter.com/sarahchen',
+      email: 'sarah@ziontechgroup.com',
+      achievements: ['MIT Technology Review Innovator', '100+ AI Patents', 'Quantum Computing Pioneer']
+    },
+    {
+      name: 'Michael Rodriguez',
+      role: 'Chief Operations Officer',
+      bio: 'Operations expert with deep experience in scaling technology companies. Michael ensures seamless delivery of our solutions and maintains our high service standards.',
+      image: '/team/michael.jpg',
+      linkedin: 'https://linkedin.com/in/michaelrodriguez',
+      twitter: 'https://twitter.com/michaelrodriguez',
+      email: 'michael@ziontechgroup.com',
+      achievements: ['Operations Excellence Award', '15+ Years Experience', 'Global Team Leadership']
+    },
+    {
+      name: 'Dr. Emily Watson',
+      role: 'Chief Research Officer',
+      bio: 'Leading researcher in emerging technologies with focus on quantum computing and edge AI. Emily drives our R&D initiatives and technology roadmap.',
+      image: '/team/emily.jpg',
+      linkedin: 'https://linkedin.com/in/emilywatson',
+      twitter: 'https://twitter.com/emilywatson',
+      email: 'emily@ziontechgroup.com',
+      achievements: ['Nobel Prize Nominee', '50+ Research Papers', 'Quantum AI Pioneer']
+    }
+  ];
+
+  const advisors = [
+    {
+      name: 'Dr. James Wilson',
+      role: 'Strategic Advisor',
+      bio: 'Former CTO of Fortune 500 companies with expertise in digital transformation and enterprise architecture.',
+      image: '/team/james.jpg',
+      linkedin: 'https://linkedin.com/in/jameswilson',
+      email: 'james@ziontechgroup.com'
+    },
+    {
+      name: 'Lisa Thompson',
+      role: 'Financial Advisor',
+      bio: 'Investment banking veteran with 25+ years experience in technology financing and strategic partnerships.',
+      image: '/team/lisa.jpg',
+      linkedin: 'https://linkedin.com/in/lisathompson',
+      email: 'lisa@ziontechgroup.com'
+    }
+>>>>>>> cursor/add-new-services-and-advertise-them-650b
   ];
 
   const values = [
     {
+<<<<<<< HEAD
       icon: Lightbulb,
       title: "Innovation First",
       description: "We push boundaries and explore uncharted territories in technology"
@@ -137,10 +201,31 @@ export default function Leadership(...args: any[]): any {
       icon: Globe,
       title: "Global Impact",
       description: "We create solutions that benefit humanity worldwide"
+=======
+      icon: Brain,
+      title: 'Innovation First',
+      description: 'We constantly push boundaries and explore new technologies to stay ahead of the curve.'
+    },
+    {
+      icon: Shield,
+      title: 'Integrity & Trust',
+      description: 'We build lasting relationships based on transparency, honesty, and ethical business practices.'
+    },
+    {
+      icon: Target,
+      title: 'Results Driven',
+      description: 'We measure success by the tangible impact our solutions have on our clients\' businesses.'
+    },
+    {
+      icon: Users,
+      title: 'Team Excellence',
+      description: 'We foster a culture of collaboration, continuous learning, and professional growth.'
+>>>>>>> cursor/add-new-services-and-advertise-them-650b
     }
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
@@ -163,6 +248,25 @@ export default function Leadership(...args: any[]): any {
               Meet the visionary leaders driving innovation and shaping the future of technology at Zion Tech Group
             </motion.p>
           </div>
+=======
+    <div className="min-h-screen bg-zion-slate-dark text-white">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-zion-cyan mb-6">
+              Leadership Team
+            </h1>
+            <p className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">
+              Meet the visionary leaders and brilliant minds driving innovation at Zion Tech Group. Our executive team combines decades of experience with cutting-edge expertise to shape the future of business technology.
+            </p>
+          </motion.div>
+>>>>>>> cursor/add-new-services-and-advertise-them-650b
         </div>
 
         {/* Background Elements */}
@@ -173,6 +277,7 @@ export default function Leadership(...args: any[]): any {
         </div>
       </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* Company Stats */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -194,80 +299,102 @@ export default function Leadership(...args: any[]): any {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+=======
+      {/* Executive Team */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-zion-cyan mb-6">
+>>>>>>> cursor/add-new-services-and-advertise-them-650b
               Executive Leadership
             </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Meet the experienced professionals who are driving innovation and growth at Zion Tech Group.
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Our C-suite executives bring together diverse expertise and shared vision to drive Zion Tech Group's mission forward.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-12">
-            {leadershipTeam.map((leader, index)              => (
-              <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8 hover:border-cyan-400/30 transition-all duration-200 hover:scale-105">
-                <div className="flex flex-col md:flex-row items-start space-y-6 md:space-y-0 md:space-x-6">
+          <div className="grid md:grid-cols-2 gap-12">
+            {executives.map((executive, index) => (
+              <motion.div
+                key={executive.name}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-zion-slate-darker rounded-2xl p-8 border border-zion-purple/20 hover:border-zion-cyan/40 transition-all duration-300"
+              >
+                <div className="flex flex-col md:flex-row gap-6">
+                  {/* Profile Image */}
                   <div className="flex-shrink-0">
-                    <img
-                      src={leader.image}
-                      alt={leader.name}
-                      className="w-32 h-32 rounded-2xl object-cover border-4 border-cyan-400/20"
-                    />
+                    <div className="w-32 h-32 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-full flex items-center justify-center border-2 border-zion-cyan/30">
+                      <Users className="w-16 h-16 text-zion-cyan" />
+                    </div>
                   </div>
+
+                  {/* Content */}
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-white mb-2">{leader.name}</h3>
-                    <p className="text-cyan-400 text-lg font-semibold mb-4">{leader.title}</p>
-                    <p className="text-slate-300 mb-6 leading-relaxed">{leader.bio}</p>
+                    <h3 className="text-2xl font-bold text-zion-cyan mb-2">{executive.name}</h3>
+                    <p className="text-lg text-zion-purple mb-4">{executive.role}</p>
+                    <p className="text-zion-slate-light mb-6 leading-relaxed">{executive.bio}</p>
 
+                    {/* Achievements */}
                     <div className="mb-6">
-                      <h4 className="text-white font-semibold mb-3">Areas of Expertise:</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {leader.expertise.map((skill, skillIndex) => (
-                          <span
-                            key={skillIndex}
-                            className="px-3 py-1 bg-cyan-400/10 text-cyan-400 text-sm rounded-full border border-cyan-400/20"
-
-                            {skill}
-                          </span>
+                      <h4 className="text-sm font-semibold text-zion-cyan mb-3 uppercase tracking-wide">Key Achievements</h4>
+                      <div className="space-y-2">
+                        {executive.achievements.map((achievement, idx) => (
+                          <div key={idx} className="flex items-center text-sm text-zion-slate-light">
+                            <Award className="w-4 h-4 text-zion-cyan mr-2" />
+                            {achievement}
+                          </div>
                         ))}
                       </div>
                     </div>
 
+                    {/* Social Links */}
                     <div className="flex items-center space-x-4">
                       <a
-                        href={leader.linkedin}
+                        href={executive.linkedin}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center space-x-2 text-slate-300 hover:text-cyan-400 transition-colors"
-
+                        className="text-zion-slate-light hover:text-zion-cyan transition-colors"
+                      >
                         <Linkedin className="w-5 h-5" />
-                        <span>LinkedIn</span>
                       </a>
                       <a
-                        href={`mailto:${leader.email}`}
-                        className="flex items-center space-x-2 text-slate-300 hover:text-cyan-400 transition-colors"
-
+                        href={executive.twitter}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-zion-slate-light hover:text-zion-cyan transition-colors"
+                      >
+                        <Twitter className="w-5 h-5" />
+                      </a>
+                      <a
+                        href={`mailto:${executive.email}`}
+                        className="text-zion-slate-light hover:text-zion-cyan transition-colors"
+                      >
                         <Mail className="w-5 h-5" />
-                        <span>Email</span>
-                      </a>
-                      <a
-                        href={`tel:${leader.phone}`}
-                        className="flex items-center space-x-2 text-slate-300 hover:text-cyan-400 transition-colors"
-
-                        <Phone className="w-5 h-5" />
-                        <span>Call</span>
                       </a>
                     </div>
                   </div>
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 </div>
+<<<<<<< HEAD
                 <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
                 <div className="text-lg font-semibold text-white mb-1">{stat.label}</div>
                 <div className="text-gray-400 text-sm">{stat.description}</div>
+=======
+>>>>>>> cursor/add-new-services-and-advertise-them-650b
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Leadership Team Grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -382,12 +509,67 @@ export default function Leadership(...args: any[]): any {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3>
                 <p className="text-gray-300 text-sm">{value.description}</p>
+=======
+      {/* Advisory Board */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-darker">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-zion-cyan mb-6">
+              Advisory Board
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Industry veterans and domain experts who provide strategic guidance and industry insights.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {advisors.map((advisor, index) => (
+              <motion.div
+                key={advisor.name}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-zion-slate-dark rounded-xl p-6 border border-zion-purple/20 hover:border-zion-cyan/40 transition-all duration-300"
+              >
+                <div className="flex items-center space-x-4 mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 rounded-full flex items-center justify-center">
+                    <Users className="w-8 h-8 text-zion-purple" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-zion-cyan">{advisor.name}</h3>
+                    <p className="text-zion-purple">{advisor.role}</p>
+                  </div>
+                </div>
+                <p className="text-zion-slate-light mb-4">{advisor.bio}</p>
+                <div className="flex items-center space-x-4">
+                  <a
+                    href={advisor.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-zion-slate-light hover:text-zion-cyan transition-colors"
+                  >
+                    <Linkedin className="w-5 h-5" />
+                  </a>
+                  <a
+                    href={`mailto:${advisor.email}`}
+                    className="text-zion-slate-light hover:text-zion-cyan transition-colors"
+                  >
+                    <Mail className="w-5 h-5" />
+                  </a>
+                </div>
+>>>>>>> cursor/add-new-services-and-advertise-them-650b
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* Join Our Team CTA */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -435,26 +617,148 @@ export default function Leadership(...args: any[]): any {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Our Achievements
+=======
+      {/* Leadership Values */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-zion-cyan mb-6">
+              Leadership Principles
+>>>>>>> cursor/add-new-services-and-advertise-them-650b
             </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Milestones that demonstrate our commitment to excellence and innovation.
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              The core values and principles that guide our leadership team in every decision and action.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {achievements.map((achievement, index)              => (
-              <div key={index} className="text-center p-6 rounded-xl bg-slate-800/50 border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-200 hover:scale-105">
-                <div className="text-4xl font-bold text-cyan-400 mb-2">{achievement.metric}</div>
-                <h3 className="text-lg font-semibold text-white mb-2">{achievement.label}</h3>
-                <p className="text-slate-300 text-sm">{achievement.description}</p>
-              </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {values.map((value, index) => (
+              <motion.div
+                key={value.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="text-center p-6 bg-zion-slate-darker rounded-xl border border-zion-purple/20 hover:border-zion-cyan/40 transition-all duration-300"
+              >
+                <div className="flex justify-center mb-4">
+                  <div className="p-3 bg-zion-cyan/20 rounded-full">
+                    <value.icon className="w-8 h-8 text-zion-cyan" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold text-zion-cyan mb-3">{value.title}</h3>
+                <p className="text-zion-slate-light">{value.description}</p>
+              </motion.div>
             ))}
           </div>
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         </div>
       </section>
+<<<<<<< HEAD
     </div>
   );
 };
 
 export default Leadership;
+=======
+
+      {/* Company Culture */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-darker">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-zion-cyan mb-6">
+                Our Leadership Culture
+              </h2>
+              <p className="text-lg text-zion-slate-light leading-relaxed mb-6">
+                At Zion Tech Group, we believe in servant leadership, empowering our teams, and fostering an environment where innovation thrives.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-zion-cyan rounded-full mt-2"></div>
+                  <p className="text-zion-slate-light">Transparent communication and open dialogue</p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-zion-cyan rounded-full mt-2"></div>
+                  <p className="text-zion-slate-light">Continuous learning and professional development</p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-zion-cyan rounded-full mt-2"></div>
+                  <p className="text-zion-slate-light">Data-driven decision making</p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-zion-cyan rounded-full mt-2"></div>
+                  <p className="text-zion-slate-light">Customer-centric approach to innovation</p>
+                </div>
+              </div>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative"
+            >
+              <div className="bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-2xl p-8 border border-zion-cyan/30">
+                <h3 className="text-2xl font-bold text-zion-cyan mb-4">Leadership Impact</h3>
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <span className="text-zion-slate-light">Team Satisfaction</span>
+                    <span className="text-zion-cyan font-bold">98%</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-zion-slate-light">Innovation Rate</span>
+                    <span className="text-zion-cyan font-bold">+40%</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-zion-slate-light">Client Retention</span>
+                    <span className="text-zion-cyan font-bold">95%</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-zion-slate-light">Growth Rate</span>
+                    <span className="text-zion-cyan font-bold">+300%</span>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-zion-cyan mb-6">
+              Join Our Leadership Team
+            </h2>
+            <p className="text-xl text-zion-slate-light mb-8">
+              We're always looking for exceptional leaders who share our vision and passion for innovation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-zion-cyan hover:bg-zion-cyan/80 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105">
+                View Open Positions
+              </button>
+              <button className="border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300">
+                Contact Our Team
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}
+>>>>>>> cursor/add-new-services-and-advertise-them-650b
