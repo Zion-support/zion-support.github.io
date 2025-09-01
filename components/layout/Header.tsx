@@ -20,7 +20,8 @@ export default function Header() {
     { name: 'Product', href: '#', hasDropdown: true },
     { name: 'Solutions', href: '/services', hasDropdown: true },
     { name: 'Resources', href: '/resources' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Company', href: '/about' },
+    { name: 'Pricing', href: '/pricing' },
   ];
 
   const productDropdown = [

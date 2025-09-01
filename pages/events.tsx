@@ -2,178 +2,8 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
-const Events: React.FC = () => {
-  const [activeFilter, setActiveFilter] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
-
-  const eventCategories = [
-    { id: 'all', name: 'All Events', count: 24 },
-    { id: 'webinars', name: 'Webinars', count: 8 },
-    { id: 'workshops', name: 'Workshops', count: 6 },
-    { id: 'conferences', name: 'Conferences', count: 4 },
-    { id: 'meetups', name: 'Meetups', count: 3 },
-    { id: 'training', name: 'Training Sessions', count: 3 },
-  ];
-
-  const upcomingEvents = [
-    {
-      id: 1,
-      title: 'AI Automation Workshop 2025',
-      category: 'workshops',
-      date: '2025-02-15',
-      time: '10:00 AM - 2:00 PM',
-      location: 'Virtual + San Francisco',
-      description: 'Learn the latest techniques in AI-powered business automation. Hands-on workshop covering machine learning, process optimization, and implementation strategies.',
-      speakers: ['Dr. Sarah Chen', 'Mike Rodriguez'],
-      capacity: 50,
-      registered: 42,
-      price: '$299',
-      featured: true,
-      image: '/api/placeholder/400/250',
-    },
-    {
-      id: 2,
-      title: 'Cloud Migration Summit',
-      category: 'conferences',
-      date: '2025-02-20',
-      time: '9:00 AM - 5:00 PM',
-      location: 'Austin Convention Center',
-      description: 'Join industry leaders for a comprehensive exploration of cloud migration strategies, best practices, and real-world case studies.',
-      speakers: ['Jenny Thompson', 'Alex Kim', 'Dr. Robert Wilson'],
-      capacity: 200,
-      registered: 156,
-      price: '$599',
-      featured: true,
-      image: '/api/placeholder/400/250',
-    },
-    {
-      id: 3,
-      title: 'DevOps Culture Transformation',
-      category: 'webinars',
-      date: '2025-02-25',
-      time: '1:00 PM - 3:00 PM',
-      location: 'Virtual',
-      description: 'Discover how to build and sustain a successful DevOps culture that drives innovation, collaboration, and continuous improvement.',
-      speakers: ['DevOps Team Lead'],
-      capacity: 100,
-      registered: 78,
-      price: 'Free',
-      featured: false,
-      image: '/api/placeholder/400/250',
-    },
-    {
-      id: 4,
-      title: 'Security Best Practices Workshop',
-      category: 'training',
-      date: '2025-03-01',
-      time: '10:00 AM - 4:00 PM',
-      location: 'New York Office',
-      description: 'Comprehensive security training covering threat detection, incident response, and security architecture best practices.',
-      speakers: ['Security Team'],
-      capacity: 30,
-      registered: 25,
-      price: '$199',
-      featured: false,
-      image: '/api/placeholder/400/250',
-    },
-    {
-      id: 5,
-      title: 'Data Analytics Meetup',
-      category: 'meetups',
-      date: '2025-03-05',
-      time: '6:00 PM - 8:00 PM',
-      location: 'Seattle Tech Hub',
-      description: 'Network with data professionals and learn about the latest trends in analytics, visualization, and data-driven decision making.',
-      speakers: ['Community Members'],
-      capacity: 50,
-      registered: 38,
-      price: 'Free',
-      featured: false,
-      image: '/api/placeholder/400/250',
-    },
-    {
-      id: 6,
-      title: 'Product Launch Event',
-      category: 'conferences',
-      date: '2025-03-10',
-      time: '11:00 AM - 3:00 PM',
-      location: 'Los Angeles Convention Center',
-      description: 'Be the first to see our revolutionary new product line. Live demonstrations, expert panels, and exclusive networking opportunities.',
-      speakers: ['Product Team', 'Industry Experts'],
-      capacity: 300,
-      registered: 267,
-      price: '$399',
-      featured: true,
-      image: '/api/placeholder/400/250',
-    },
-  ];
-
-  const pastEvents = [
-    {
-      id: 7,
-      title: 'Digital Transformation Conference 2024',
-      category: 'conferences',
-      date: '2024-12-15',
-      location: 'Chicago',
-      attendees: 180,
-      highlights: ['Keynote presentations', 'Panel discussions', 'Networking sessions'],
-      recordings: true,
-    },
-    {
-      id: 8,
-      title: 'Automation Workshop Series',
-      category: 'workshops',
-      date: '2024-11-20',
-      location: 'Virtual',
-      attendees: 45,
-      highlights: ['Hands-on training', 'Case studies', 'Q&A sessions'],
-      recordings: true,
-    },
-  ];
-
-  const getCategoryColor = (category: string) => {
-    const colors: { [key: string]: string } = {
-      webinars: 'bg-blue-100 text-blue-800',
-      workshops: 'bg-green-100 text-green-800',
-      conferences: 'bg-purple-100 text-purple-800',
-      meetups: 'bg-orange-100 text-orange-800',
-      training: 'bg-red-100 text-red-800',
-    };
-    return colors[category] || 'bg-gray-100 text-gray-800';
-  };
-
-  const getCategoryName = (category: string) => {
-    const names: { [key: string]: string } = {
-      webinars: 'Webinars',
-      workshops: 'Workshops',
-      conferences: 'Conferences',
-      meetups: 'Meetups',
-      training: 'Training Sessions',
-    };
-    return names[category] || category;
-  };
-
-  const filteredEvents = upcomingEvents.filter(event => {
-    const matchesCategory = activeFilter === 'all' || event.category === activeFilter;
-    const matchesSearch = event.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         event.description.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
-
-  const getRegistrationStatus = (event: any) => {
-    if (event.registered >= event.capacity) return 'full';
-    if (event.registered >= event.capacity * 0.8) return 'limited';
-    return 'available';
-  };
-
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'full': return 'bg-red-100 text-red-800';
-      case 'limited': return 'bg-yellow-100 text-yellow-800';
-      case 'available': return 'bg-green-100 text-green-800';
-      default: return 'bg-gray-100 text-gray-800';
-    }
-  };
+export default function EventsPage() {
+  const [activeFilter, setActiveFilter] = useState('All');
 
   const getStatusText = (status: string) => {
     switch (status) {
@@ -182,225 +12,246 @@ const Events: React.FC = () => {
       case 'available': return 'Available';
       default: return 'Unknown';
     }
-  };
+  ];
+
+  const eventTypes = ['All', 'Conference', 'Workshop', 'Webinar', 'Masterclass', 'Symposium', 'Hackathon', 'Forum'];
+
+  const filteredEvents = activeFilter === 'All' 
+    ? events 
+    : events.filter(event => event.type === activeFilter);
+
+  const renderEventCard = (event, index) => (
+    <div 
+      key={index} 
+      className={`bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300 ${
+        event.featured ? 'ring-2 ring-cyan-400/30' : ''
+      }`}
+    >
+      {event.featured && (
+        <div className="flex items-center gap-2 mb-3">
+          <span className="px-2 py-1 bg-cyan-400/20 text-cyan-400 text-xs rounded-full border border-cyan-400/30">
+            Featured
+          </span>
+        </div>
+      )}
+      
+      <div className="flex items-start justify-between mb-3">
+        <span className="px-3 py-1 bg-white/10 text-white/80 text-sm rounded-full">
+          {event.type}
+        </span>
+        <span className={`px-3 py-1 text-xs rounded-full ${
+          event.registration === 'Open' 
+            ? 'bg-green-400/20 text-green-400 border border-green-400/30'
+            : 'bg-yellow-400/20 text-yellow-400 border border-yellow-400/30'
+        }`}>
+          {event.registration}
+        </span>
+      </div>
+      
+      <h3 className="text-xl font-semibold text-white hover:text-cyan-400 transition-colors mb-3">
+        {event.title}
+      </h3>
+      
+      <p className="text-white/80 text-sm mb-4 line-clamp-3">
+        {event.description}
+      </p>
+      
+      <div className="space-y-2 mb-4 text-sm text-white/60">
+        <div className="flex items-center gap-2">
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+          <span>{event.date}</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span>{event.time}</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+          <span>{event.location}</span>
+        </div>
+      </div>
+      
+      <div className="mb-4">
+        <h4 className="font-semibold text-white mb-2 text-sm">Key Topics</h4>
+        <div className="flex flex-wrap gap-1">
+          {event.topics.slice(0, 3).map((topic, index) => (
+            <span key={index} className="px-2 py-1 bg-white/10 text-white/70 text-xs rounded-full">
+              {topic}
+            </span>
+          ))}
+          {event.topics.length > 3 && (
+            <span className="px-2 py-1 bg-white/10 text-white/70 text-xs rounded-full">
+              +{event.topics.length - 3} more
+            </span>
+          )}
+        </div>
+      </div>
+      
+      <div className="flex items-center justify-between mb-4 text-sm text-white/60">
+        <span>Capacity: {event.capacity}</span>
+        <span>{event.speakers.length} speakers</span>
+      </div>
+      
+      <Link 
+        href={`/events/${event.id}`}
+        className="inline-block w-full text-center px-4 py-2 bg-gradient-to-r from-cyan-400 to-blue-400 text-white font-medium rounded-lg hover:from-cyan-500 hover:to-blue-500 transition-all duration-300 text-sm"
+      >
+        {event.registration === 'Open' ? 'Register Now' : 'Learn More'}
+      </Link>
+    </div>
+  );
 
   return (
     <div className="min-h-screen bg-gray-50">
       <Head>
-        <title>Events - Zion App</title>
-        <meta name="description" content="Join our upcoming events, webinars, workshops, and conferences" />
-        <meta name="keywords" content="events, webinars, workshops, conferences, Zion App" />
+        <title>Events | Zion Tech Group - AI & Automation Conferences, Workshops & Webinars</title>
+        <meta name="description" content="Join our upcoming events, webinars, and workshops on AI automation. Learn from experts, network with professionals, and stay ahead of the automation curve." />
+        <meta property="og:title" content="Events | Zion Tech Group - AI & Automation Conferences, Workshops & Webinars" />
+        <meta property="og:description" content="Join our upcoming events, webinars, and workshops on AI automation." />
       </Head>
-
-      <div className="container mx-auto px-4 py-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              Events & Workshops
-            </h1>
-            <p className="text-xl text-gray-600">
-              Join us for insightful sessions, hands-on workshops, and networking opportunities
-            </p>
-          </div>
-
-          {/* Search and Filter */}
-          <div className="bg-white rounded-lg shadow-lg p-6 mb-8">
-            <div className="flex flex-col md:flex-row gap-4 mb-6">
-              <div className="flex-1">
-                <input
-                  type="text"
-                  placeholder="Search events..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-              </div>
-              <div className="flex gap-2">
-                <button className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-                  Search
-                </button>
-                <button 
-                  onClick={() => setSearchQuery('')}
-                  className="px-6 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
-                >
-                  Clear
-                </button>
-              </div>
-            </div>
-
-            <div className="flex flex-wrap gap-2">
-              {eventCategories.map((category) => (
+      
+      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
+        <main className="container mx-auto px-6 py-12">
+          <div className="max-w-7xl mx-auto">
+            <nav className="mb-8">
+              <Link href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                ← Back to Home
+              </Link>
+            </nav>
+            
+            <header className="text-center mb-16">
+              <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+                Upcoming Events
+              </h1>
+              <p className="text-xl text-white/80 max-w-3xl mx-auto">
+                Join industry leaders, researchers, and practitioners for exclusive insights into 
+                the future of AI automation and autonomous systems.
+              </p>
+            </header>
+            
+            {/* Event Type Filter */}
+            <div className="flex flex-wrap justify-center gap-4 mb-12">
+              {eventTypes.map((type) => (
                 <button
-                  key={category.id}
-                  onClick={() => setActiveFilter(category.id)}
-                  className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-                    activeFilter === category.id
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                  key={type}
+                  onClick={() => setActiveFilter(type)}
+                  className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
+                    activeFilter === type
+                      ? 'bg-gradient-to-r from-cyan-400 to-blue-400 text-white shadow-lg'
+                      : 'bg-white/10 text-white/80 hover:bg-white/20 hover:text-white'
                   }`}
                 >
-                  {category.name} ({category.count})
+                  {type}
                 </button>
               ))}
             </div>
-          </div>
-
-          {/* Featured Events */}
-          <div className="mb-12">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-6">Featured Events</h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {upcomingEvents.filter(event => event.featured).map((event) => (
-                <div key={event.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
-                  <div className="h-48 bg-gradient-to-br from-blue-400 to-purple-600 flex items-center justify-center">
-                    <span className="text-white text-lg font-medium">Featured Event</span>
+            
+            {/* Featured Events */}
+            <section className="mb-16">
+              <h2 className="text-3xl font-bold mb-8 text-center text-white">Featured Events</h2>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {events.filter(event => event.featured).map((event, index) => renderEventCard(event, index))}
+              </div>
+            </section>
+            
+            {/* All Events */}
+            <section>
+              <h2 className="text-3xl font-bold mb-8 text-center text-white">All Events</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {filteredEvents.filter(event => !event.featured).map((event, index) => renderEventCard(event, index))}
+              </div>
+            </section>
+            
+            {/* Event Categories Overview */}
+            <section className="mt-20">
+              <h2 className="text-3xl font-bold mb-8 text-center text-white">Event Categories</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="text-center p-6 bg-gradient-to-br from-cyan-400/10 to-blue-400/10 rounded-2xl border border-cyan-400/20">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
                   </div>
-                  <div className="p-6">
-                    <div className="flex items-center gap-2 mb-3">
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getCategoryColor(event.category)}`}>
-                        {getCategoryName(event.category)}
-                      </span>
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(getRegistrationStatus(event))}`}>
-                        {getStatusText(getRegistrationStatus(event))}
-                      </span>
-                    </div>
-                    <h3 className="text-xl font-semibold text-gray-800 mb-2">{event.title}</h3>
-                    <p className="text-gray-600 mb-4">{event.description}</p>
-                    <div className="space-y-2 text-sm text-gray-500 mb-4">
-                      <div className="flex items-center gap-2">
-                        <span>📅</span>
-                        <span>{new Date(event.date).toLocaleDateString()} • {event.time}</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <span>📍</span>
-                        <span>{event.location}</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <span>👥</span>
-                        <span>{event.registered}/{event.capacity} registered</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <span>💰</span>
-                        <span>{event.price}</span>
-                      </div>
-                    </div>
-                    <button className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors">
-                      Register Now
-                    </button>
-                  </div>
+                  <h3 className="text-lg font-semibold mb-2 text-white">Conferences</h3>
+                  <p className="text-white/80 text-sm">
+                    Multi-day events with industry leaders and networking opportunities
+                  </p>
                 </div>
-              ))}
-            </div>
-          </div>
-
-          {/* All Upcoming Events */}
-          <div className="mb-12">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-6">All Upcoming Events</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredEvents.map((event) => (
-                <div key={event.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-                  <div className="h-40 bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center">
-                    <span className="text-gray-600 text-sm">{getCategoryName(event.category)}</span>
+                
+                <div className="text-center p-6 bg-gradient-to-br from-purple-400/10 to-pink-400/10 rounded-2xl border border-purple-400/20">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                    </svg>
                   </div>
-                  <div className="p-4">
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getCategoryColor(event.category)}`}>
-                        {getCategoryName(event.category)}
-                      </span>
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(getRegistrationStatus(event))}`}>
-                        {getStatusText(getRegistrationStatus(event))}
-                      </span>
-                    </div>
-                    <h3 className="text-lg font-semibold text-gray-800 mb-2">{event.title}</h3>
-                    <p className="text-gray-600 text-sm mb-3 line-clamp-3">{event.description}</p>
-                    <div className="space-y-1 text-xs text-gray-500 mb-3">
-                      <div>📅 {new Date(event.date).toLocaleDateString()} • {event.time}</div>
-                      <div>📍 {event.location}</div>
-                      <div>👥 {event.registered}/{event.capacity} • 💰 {event.price}</div>
-                    </div>
-                    <button className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm">
-                      Register
-                    </button>
-                  </div>
+                  <h3 className="text-lg font-semibold mb-2 text-white">Workshops</h3>
+                  <p className="text-white/80 text-sm">
+                    Hands-on learning sessions with practical implementation guidance
+                  </p>
                 </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Past Events */}
-          <div className="mb-12">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-6">Past Events</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {pastEvents.map((event) => (
-                <div key={event.id} className="bg-white rounded-lg shadow-md p-6">
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${getCategoryColor(event.category)}`}>
-                      {getCategoryName(event.category)}
-                    </span>
-                    <span className="text-gray-500 text-sm">{new Date(event.date).toLocaleDateString()}</span>
+                
+                <div className="text-center p-6 bg-gradient-to-br from-green-400/10 to-emerald-400/10 rounded-2xl border border-green-400/20">
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                    </svg>
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-2">{event.title}</h3>
-                  <div className="text-sm text-gray-600 mb-3">
-                    <div>📍 {event.location}</div>
-                    <div>👥 {event.attendees} attendees</div>
-                  </div>
-                  <div className="mb-4">
-                    <h4 className="font-medium text-gray-800 mb-2">Highlights:</h4>
-                    <ul className="text-sm text-gray-600 space-y-1">
-                      {event.highlights.map((highlight, index) => (
-                        <li key={index} className="flex items-center gap-2">
-                          <span className="text-green-500">✓</span>
-                          {highlight}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  {event.recordings && (
-                    <button className="text-blue-600 hover:text-blue-700 text-sm font-medium">
-                      Watch Recording →
-                    </button>
-                  )}
+                  <h3 className="text-lg font-semibold mb-2 text-white">Webinars</h3>
+                  <p className="text-white/80 text-sm">
+                    Online sessions covering specific topics and industry insights
+                  </p>
                 </div>
-              ))}
-            </div>
+                
+                <div className="text-center p-6 bg-gradient-to-br from-yellow-400/10 to-orange-400/10 rounded-2xl border border-yellow-400/20">
+                  <div className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2 text-white">Hackathons</h3>
+                  <p className="text-white/80 text-sm">
+                    Intensive coding events for building innovative automation solutions
+                  </p>
+                </div>
+              </div>
+            </section>
+            
+            {/* Call to Action */}
+            <section className="mt-20 text-center">
+              <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">
+                <h2 className="text-3xl font-bold mb-4 text-white">
+                  Can't Find What You're Looking For?
+                </h2>
+                <p className="text-white/80 mb-6 max-w-2xl mx-auto">
+                  We're constantly adding new events and can also create custom events for your organization. 
+                  Let us know what you'd like to see!
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Link 
+                    href="/contact"
+                    className="inline-block px-8 py-4 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
+                  >
+                    Request Custom Event
+                  </Link>
+                  <Link 
+                    href="/resources"
+                    className="inline-block px-8 py-4 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300 border border-white/20"
+                  >
+                    Browse Resources
+                  </Link>
+                </div>
+              </div>
+            </section>
           </div>
-
-          {/* Newsletter Signup */}
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg shadow-lg p-8 text-center text-white">
-            <h2 className="text-2xl font-semibold mb-4">Stay Updated</h2>
-            <p className="text-blue-100 mb-6">
-              Get notified about upcoming events, early bird pricing, and exclusive content.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-2 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white"
-              />
-              <button className="px-6 py-2 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-medium">
-                Subscribe
-              </button>
-            </div>
-          </div>
-
-          {/* Call to Action */}
-          <div className="bg-white rounded-lg shadow-lg p-8 text-center mt-8">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">Host Your Own Event?</h2>
-            <p className="text-gray-600 mb-6">
-              We're always looking for partners and speakers. Let's collaborate on creating amazing experiences together.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/contact" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                Partner With Us
-              </Link>
-              <Link href="/speak" className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition-colors">
-                Become a Speaker
-              </Link>
-            </div>
-          </div>
-        </div>
+        </main>
       </div>
-    </div>
+    </>
   );
-};
-
-export default Events;
+}

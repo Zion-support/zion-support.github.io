@@ -7,9 +7,11 @@ import { slugify } from '@/lib/slugify';
 import Custom404 from '../404';
 import type { ProductListing } from '@/types/listings';
 
-const ServicePage: React.FC = () => {
-  const router = useRouter();
-  const { slug } = router.query as { slug?: string };
+import { real2029Q1Additions } from '../../data/real-2029-q1-additions';
+import { realMarketServices } from '../../data/real-market-services';
+import { real2029Q2Additions } from '../../data/real-2029-q2-additions';
+import { real2029Q3Additions } from '../../data/real-2029-q3-additions';
+import { real2029Q4Additions } from '../../data/real-2029-q4-additions';
 
   // Moved useMemo call before any early returns
   const service = React.useMemo(() => {
@@ -50,5 +52,42 @@ const ServicePage: React.FC = () => {
   );
 };
 
+function getAllServices(): Service[] {
+	return enhancedRealMicroSaasServices
+		.concat(extraServices as Service[], additionalEnhancedServices as Service[])
+		.concat(newlyAddedServices as unknown as Service[])
+		.concat(curatedMarketServices as Service[])
+		.concat(new2025Services as unknown as Service[])
+		.concat(marketValidatedServices as unknown as Service[])
+		.concat(moreRealServices2025 as unknown as Service[])
+		.concat(verified2025Additions as unknown as Service[])
+		.concat(realServicesQ12025 as unknown as Service[])
+		.concat(realEnterpriseServices2025 as unknown as Service[])
+		.concat(verifiedRealServices2025Batch2 as unknown as Service[])
+		.concat(realMarketAugmentations2025 as unknown as Service[])
+		.concat(additionalLiveServices2025 as unknown as Service[])
+		.concat(real2025Q2Additions as unknown as Service[])
+		.concat(augmentedServicesBatch3 as unknown as Service[])
+		.concat(realServicesQ22025 as unknown as Service[])
+		.concat(realServicesQ32025 as unknown as Service[])
+		.concat(realQ4Services2025 as unknown as Service[])
+		.concat(real2025Q4Additions as unknown as Service[])
+		.concat(real2025Q4AugmentedBatch as unknown as Service[])
+		.concat(realMarketServicesExtended as unknown as Service[])
+		.concat(real2026Q1Additions as unknown as Service[])
+		.concat(real2026Additions as unknown as Service[])
+		.concat(added2026Q2Services as unknown as Service[])
+		.concat(real2026Q3Additions as unknown as Service[])
+		.concat(real2026Q4Additions as unknown as Service[])
+		.concat(real2026Q4NewServices as unknown as Service[])
+		.concat(real2027Q1Additions as unknown as Service[])
+		.concat(real2027Q2Additions as unknown as Service[])
+		.concat(real2028ServiceExpansions as unknown as Service[])
+		.concat(real2029Q1Additions as unknown as Service[])
+		.concat(realMarketServices as unknown as Service[])
+		.concat(real2029Q2Additions as unknown as Service[])
+		.concat(real2029Q3Additions as unknown as Service[])
+		.concat(real2029Q4Additions as unknown as Service[]);
+}
 
 export default ServicePage;

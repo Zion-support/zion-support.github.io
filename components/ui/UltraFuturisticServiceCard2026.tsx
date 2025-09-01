@@ -1,5 +1,34 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
+import { 
+  Check, 
+  Star, 
+  ArrowRight, 
+  Zap, 
+  Brain, 
+  Atom, 
+  Rocket,
+  Shield,
+  Cpu,
+  Target,
+  TrendingUp,
+  Users,
+  Clock,
+  Award
+} from 'lucide-react';
+
+interface Service {
+  id: string;
+  name: string;
+  tagline: string;
+  description: string;
+  price: string;
+  period: string;
+  features: string[];
+  popular?: boolean;
+  category: string;
+  icon: string;
+}
 
 interface UltraFuturisticServiceCard2026Props {
   service: {
@@ -49,52 +78,66 @@ const UltraFuturisticServiceCard2026: React.FC<UltraFuturisticServiceCard2026Pro
   const [isHovered, setIsHovered] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
 
-  const variantConfigs = {
-    default: {
-      borderColor: 'border-cyan-400/30',
-      hoverBorderColor: 'border-cyan-400/60',
-      glowColor: 'shadow-cyan-400/20',
-      hoverGlowColor: 'shadow-cyan-400/40'
-    },
-    premium: {
-      borderColor: 'border-purple-400/30',
-      hoverBorderColor: 'border-purple-400/60',
-      glowColor: 'shadow-purple-400/20',
-      hoverGlowColor: 'shadow-purple-400/40'
-    },
-    enterprise: {
-      borderColor: 'border-emerald-400/30',
-      hoverBorderColor: 'border-emerald-400/60',
-      glowColor: 'shadow-emerald-400/20',
-      hoverGlowColor: 'shadow-emerald-400/40'
+  const getVariantStyles = () => {
+    switch (variant) {
+      case 'ai':
+        return {
+          gradient: 'from-cyan-500 to-blue-600',
+          border: 'border-cyan-400/30',
+          hoverBorder: 'hover:border-cyan-400/60',
+          iconBg: 'bg-gradient-to-br from-cyan-400 to-blue-500',
+          badgeBg: 'bg-gradient-to-r from-cyan-500 to-blue-600',
+          featureIcon: <Brain className="w-4 h-4 text-cyan-400" />
+        };
+      case 'quantum':
+        return {
+          gradient: 'from-purple-500 to-pink-600',
+          border: 'border-purple-400/30',
+          hoverBorder: 'hover:border-purple-400/60',
+          iconBg: 'bg-gradient-to-br from-purple-400 to-pink-500',
+          badgeBg: 'bg-gradient-to-r from-purple-500 to-pink-600',
+          featureIcon: <Atom className="w-4 h-4 text-purple-400" />
+        };
+      case 'automation':
+        return {
+          gradient: 'from-green-500 to-emerald-600',
+          border: 'border-green-400/30',
+          hoverBorder: 'hover:border-green-400/60',
+          iconBg: 'bg-gradient-to-br from-green-400 to-emerald-500',
+          badgeBg: 'bg-gradient-to-r from-green-500 to-emerald-600',
+          featureIcon: <Zap className="w-4 h-4 text-green-400" />
+        };
+      case 'space':
+        return {
+          gradient: 'from-blue-500 to-indigo-600',
+          border: 'border-blue-400/30',
+          hoverBorder: 'hover:border-blue-400/60',
+          iconBg: 'bg-gradient-to-br from-blue-400 to-indigo-500',
+          badgeBg: 'bg-gradient-to-r from-blue-500 to-indigo-600',
+          featureIcon: <Rocket className="w-4 h-4 text-blue-400" />
+        };
+      case 'enterprise':
+        return {
+          gradient: 'from-gray-500 to-slate-600',
+          border: 'border-gray-400/30',
+          hoverBorder: 'hover:border-gray-400/60',
+          iconBg: 'bg-gradient-to-br from-gray-400 to-slate-500',
+          badgeBg: 'bg-gradient-to-r from-gray-500 to-slate-600',
+          featureIcon: <Cpu className="w-4 h-4 text-gray-400" />
+        };
+      default:
+        return {
+          gradient: 'from-cyan-500 to-blue-600',
+          border: 'border-cyan-400/30',
+          hoverBorder: 'hover:border-cyan-400/60',
+          iconBg: 'bg-gradient-to-br from-cyan-400 to-blue-500',
+          badgeBg: 'bg-gradient-to-r from-cyan-500 to-blue-600',
+          featureIcon: <Target className="w-4 h-4 text-cyan-400" />
+        };
     }
   };
 
-  const themeConfigs = {
-    quantum: {
-      bgGradient: 'from-slate-900/80 via-cyan-900/20 to-slate-900/80',
-      accentColor: 'cyan',
-      particleColor: '#00ffff'
-    },
-    neon: {
-      bgGradient: 'from-slate-900/80 via-pink-900/20 to-slate-900/80',
-      accentColor: 'pink',
-      particleColor: '#ff0080'
-    },
-    holographic: {
-      bgGradient: 'from-slate-900/80 via-emerald-900/20 to-slate-900/80',
-      accentColor: 'emerald',
-      particleColor: '#4ecdc4'
-    },
-    cyberpunk: {
-      bgGradient: 'from-slate-900/80 via-orange-900/20 to-slate-900/80',
-      accentColor: 'orange',
-      particleColor: '#ff8000'
-    }
-  };
-
-  const config = variantConfigs[variant];
-  const themeConfig = themeConfigs[theme];
+  const styles = getVariantStyles();
 
   return (
     <motion.div
@@ -342,6 +385,11 @@ const UltraFuturisticServiceCard2026: React.FC<UltraFuturisticServiceCard2026Pro
             delay: 0.5
           }}
         />
+      </div>
+
+      {/* Category Badge */}
+      <div className={`absolute top-4 left-4 px-3 py-1 ${styles.badgeBg} text-white text-xs font-medium rounded-full opacity-80`}>
+        {service.category}
       </div>
     </motion.div>
   );

@@ -28,41 +28,128 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   skipToContent = false;
 }) => {
 
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(: unknown {
-    if (skipToContent && ref.current) {
-
-      ref.current.focus();
+  // Apply accessibility settings to the document
+  const applySettings = useCallback((newSettings: AccessibilitySettings) => {
+    const root = document.documentElement;
+    
+    // High contrast
+    if (newSettings.highContrast) {
+      root.classList.add('high-contrast');
+      root.style.setProperty('--text-primary', '#ffffff');
+      root.style.setProperty('--text-secondary', '#e5e7eb');
+      root.style.setProperty('--bg-primary', '#000000');
+      root.style.setProperty('--bg-secondary', '#1f2937');
+    } else {
+      root.classList.remove('high-contrast');
+      root.style.removeProperty('--text-primary');
+      root.style.removeProperty('--text-secondary');
+      root.style.removeProperty('--bg-primary');
+      root.style.removeProperty('--bg-secondary');
     }
-  }, [skipToContent]);
+    
+    // Large text
+    if (newSettings.largeText) {
+      root.style.fontSize = '18px';
+      root.style.lineHeight = '1.6';
+    } else {
+      root.style.fontSize = '';
+      root.style.lineHeight = '';
+    }
+    
+    // Reduced motion
+    if (newSettings.reducedMotion) {
+      root.style.setProperty('--reduced-motion', 'reduce');
+    } else {
+      root.style.removeProperty('--reduced-motion');
+    }
+    
+    // High saturation
+    if (newSettings.highSaturation) {
+      root.style.filter = 'saturate(1.5) contrast(1.2)';
+    } else {
+      root.style.filter = '';
+    }
+    
+    // Focus indicator
+    if (newSettings.focusIndicator) {
+      root.style.setProperty('--focus-ring', '2px solid #06b6d4');
+    } else {
+      root.style.removeProperty('--focus-ring');
+    }
+    
+    setSettings(newSettings);
+    
+    // Save to localStorage
+    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
+    
+    // Announce changes to screen readers
+    announceToScreenReader('Accessibility settings updated');
+  }, []);
 
-  const handleKeyDown = (event: React.KeyboardEvent) => {
+  // Load saved settings
+  useEffect(() => {
+    const saved = localStorage.getItem('accessibility-settings');
+    if (saved) {
+      try {
+        const parsed = JSON.parse(saved);
+        setSettings(parsed);
+        applySettings(parsed);
+      } catch (e) {
+        // console.log('Failed to parse saved accessibility settings');
+      }
+    }
+  }, [applySettings]);
 
-    // Handle common keyboard interactions
-    switch (event.key) {
+  // Focus management
+  const handleFocusChange = useCallback((e: globalThis.FocusEvent) => {
+    const target = e.target as HTMLElement;
+    if (target) {
+      setCurrentFocus(target);
+      announceToScreenReader(`Focused on ${target.textContent || target.tagName.toLowerCase()}`);
+    }
+  }, []);
 
-      case 'Enter':'
-      case ' ':'
-        if (role === 'button' || role === 'link') {
+  // Keyboard navigation enhancements
+  const handleKeyDown = useCallback(() => {
+    // Tab navigation detected
+  }, []);
 
-          event.preventDefault();
-          // Trigger click event'
-          const clickEvent = new MouseEvent('click', {
+  // Announce to screen reader
+  const announceToScreenReader = useCallback((message: string) => {
+    // setAnnouncements(prev => [...prev, message]); // This line was removed
+    
+    // Create live region for screen readers
+    if (!announcementRef.current) {
+      const liveRegion = document.createElement('div');
+      liveRegion.setAttribute('aria-live', 'polite');
+      liveRegion.setAttribute('aria-atomic', 'true');
+      liveRegion.className = 'sr-only';
+      document.body.appendChild(liveRegion);
+      announcementRef.current = liveRegion;
+    }
+    
+    if (announcementRef.current) {
+      announcementRef.current.textContent = message;
+    }
+    
+    // Remove announcement after a delay
+    setTimeout(() => {
+      // setAnnouncements(prev => prev.filter(a => a !== message)); // This line was removed
+    }, 5000);
+  }, []);
 
-            bubbles: true,
-            cancelable: true,
-            view: window
-          });
-          event.currentTarget.dispatchEvent(clickEvent);
-        }
-        break;
-      case 'Escape':
-        if (ariaExpanded !== undefined) {
-
-          // Close dropdown or modal
-          event.preventDefault();
-          // You can add custom close logic here
+  // Auto-optimize accessibility
+  useEffect(() => {
+    if (!autoOptimize) return;
+    
+    const checkAccessibility = () => {
+      const issues: string[] = [];
+      
+      // Check for missing alt text
+      const images = document.querySelectorAll('img');
+      images.forEach(img => {
+        if (!img.alt) {
+          issues.push(`Image missing alt text: ${img.src}`);
         }
         break;
       default:

@@ -412,20 +412,13 @@
     "master:stop-all": "node automation/master-automation-launcher.cjs stop-all",
     "master:health": "node automation/master-automation-launcher.cjs health",
     "master:status": "node automation/master-automation-launcher.cjs status",
-    "master:report": "node automation/master-automation-launcher.cjs report",
-    "health:full": "npm run health:monitor && npm run build:health-check && npm run build:validate && npm run security:scan",
-    "clean": "rm -rf .next out tsconfig.tsbuildinfo node_modules/.cache",
-    "clean:full": "npm run clean && rm -rf node_modules && npm install",
-    "analyze": "ANALYZE=true npm run build",
-    "performance": "npm run build && npm run build:monitor",
-    "monitor:all": "npm run build:monitor && npm run redundancy:pm2 && npm run redundancy:github && npm run redundancy:netlify",
-    "health:monitor": "node automation/project-health-monitor.cjs"
+    "master:report": "node automation/master-automation-launcher.cjs report"
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
-    "@magneticwatermelon/mcp-toolkit": "^2.0.1",
-    "@modelcontextprotocol/sdk": "^1.17.1",
+    "@magneticwatermelon/mcp-toolkit": "^1.1.4",
+    "@modelcontextprotocol/sdk": "^1.17.4",
     "@modelcontextprotocol/server-filesystem": "^2025.7.29",
     "@modelcontextprotocol/server-memory": "^2025.8.4",
     "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1",

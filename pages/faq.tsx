@@ -3,74 +3,123 @@ import Head from 'next/head';
 import Link from 'next/link';
 
 export default function FAQPage() {
-  const [openItems, setOpenItems] = useState<number[]>([]);
+  const [openCategory, setOpenCategory] = useState('general');
 
-  const toggleItem = (index: number) => {
-    setOpenItems(prev => 
-      prev.includes(index) 
-        ? prev.filter(i => i !== index)
-        : [...prev, index]
-    );
+  const faqData = {
+    general: [
+      {
+        question: 'What is Zion Tech Group and what do you specialize in?',
+        answer: 'Zion Tech Group is a leading technology company specializing in AI automation and autonomous systems. We develop cutting-edge solutions that enable organizations to operate more efficiently, intelligently, and autonomously. Our expertise spans across AI, machine learning, edge computing, IoT integration, and sustainable technology solutions.'
+      },
+      {
+        question: 'How long has Zion Tech Group been in business?',
+        answer: 'Zion Tech Group has been at the forefront of AI automation technology for over 8 years. We\'ve successfully delivered autonomous systems to hundreds of organizations across various industries, establishing ourselves as a trusted partner in digital transformation and AI implementation.'
+      },
+      {
+        question: 'What industries do you serve?',
+        answer: 'We serve a diverse range of industries including healthcare, manufacturing, financial services, retail, transportation, energy, and government. Our AI automation solutions are designed to be industry-agnostic and can be customized to meet the specific needs of any sector.'
+      },
+      {
+        question: 'Do you offer consulting services in addition to technology solutions?',
+        answer: 'Yes, we provide comprehensive consulting services including AI strategy development, implementation planning, change management, and ongoing optimization. Our team of experts works closely with clients to ensure successful adoption and maximum ROI from AI automation investments.'
+      }
+    ],
+    technology: [
+      {
+        question: 'What types of AI technologies do you work with?',
+        answer: 'We work with a comprehensive range of AI technologies including machine learning, deep learning, natural language processing, computer vision, reinforcement learning, and edge AI. Our solutions incorporate the latest advancements in AI research and are designed to be scalable, secure, and sustainable.'
+      },
+      {
+        question: 'How do you ensure the security of AI systems?',
+        answer: 'Security is built into every layer of our AI systems. We implement multi-layered security architectures including encryption, secure model deployment, threat detection, and regular security audits. Our systems comply with industry standards and regulatory requirements while maintaining the highest levels of data protection.'
+      },
+      {
+        question: 'Can your AI systems operate offline or in edge environments?',
+        answer: 'Absolutely. We specialize in edge AI solutions that can operate independently of cloud infrastructure. Our edge AI systems are designed to process data locally, reducing latency, improving privacy, and enabling autonomous operation even in environments with limited connectivity.'
+      },
+      {
+        question: 'How do you handle data privacy and compliance?',
+        answer: 'We implement comprehensive data privacy measures including data anonymization, differential privacy, and secure multi-party computation. Our systems are designed to comply with GDPR, HIPAA, SOX, and other relevant regulations while maintaining the highest standards of data protection and ethical AI practices.'
+      }
+    ],
+    implementation: [
+      {
+        question: 'How long does it typically take to implement AI automation?',
+        answer: 'Implementation timelines vary depending on the complexity and scope of the project. Simple automation projects can be completed in 4-8 weeks, while comprehensive enterprise transformations may take 6-18 months. We work with clients to establish realistic timelines and deliver value incrementally throughout the process.'
+      },
+      {
+        question: 'What kind of support do you provide during and after implementation?',
+        answer: 'We provide comprehensive support throughout the entire implementation process and beyond. This includes dedicated project management, technical support, user training, documentation, and ongoing optimization services. Our support team is available 24/7 for critical issues and we offer various support tiers to meet different needs.'
+      },
+      {
+        question: 'Do you provide training for our staff?',
+        answer: 'Yes, we offer comprehensive training programs for technical and non-technical staff. Our training covers system operation, maintenance, troubleshooting, and best practices for maximizing the value of AI automation. We also provide ongoing education as new features and capabilities are released.'
+      },
+      {
+        question: 'Can we integrate your solutions with our existing systems?',
+        answer: 'Absolutely. Our AI systems are designed with open architectures and standard APIs that enable seamless integration with existing enterprise systems. We have extensive experience integrating with ERP systems, CRM platforms, databases, and custom applications across various technology stacks.'
+      }
+    ],
+    sustainability: [
+      {
+        question: 'How do you address environmental concerns in AI systems?',
+        answer: 'We\'re committed to sustainable AI development. Our systems use energy-efficient algorithms, renewable energy-powered infrastructure, and optimization techniques that minimize environmental impact. We also help clients measure and reduce the carbon footprint of their AI operations through our sustainability tools and consulting services.'
+      },
+      {
+        question: 'What makes your AI systems "green"?',
+        answer: 'Our green AI systems incorporate several key features: energy-efficient model architectures, intelligent resource allocation, renewable energy integration, and carbon footprint monitoring. We\'ve developed proprietary techniques that achieve comparable performance to traditional AI systems while using significantly less computational power.'
+      },
+      {
+        question: 'Do you offer sustainability reporting and metrics?',
+        answer: 'Yes, we provide comprehensive sustainability reporting including carbon emissions tracking, energy efficiency metrics, and environmental impact assessments. Our clients can monitor the environmental performance of their AI systems in real-time and receive detailed reports for compliance and optimization purposes.'
+      }
+    ],
+    healthcare: [
+      {
+        question: 'How do you ensure HIPAA compliance in healthcare AI systems?',
+        answer: 'Our healthcare AI systems are built with HIPAA compliance as a foundational requirement. We implement end-to-end encryption, secure data transmission, access controls, audit logging, and regular security assessments. All our healthcare solutions undergo rigorous compliance testing and are regularly updated to meet evolving regulatory requirements.'
+      },
+      {
+        question: 'What types of healthcare applications do you support?',
+        answer: 'We support a wide range of healthcare applications including diagnostic imaging, patient monitoring, predictive analytics, administrative automation, and clinical decision support. Our systems are designed to enhance rather than replace human expertise, improving patient outcomes while reducing administrative burden on healthcare professionals.'
+      },
+      {
+        question: 'How do you handle patient data privacy?',
+        answer: 'Patient data privacy is paramount in all our healthcare solutions. We implement multiple layers of protection including data anonymization, secure multi-party computation, and zero-knowledge proofs. Our systems are designed to process sensitive health information while maintaining the highest standards of privacy and security.'
+      }
+    ],
+    pricing: [
+      {
+        question: 'What is your pricing model?',
+        answer: 'We offer flexible pricing models including subscription-based services, project-based pricing, and enterprise licensing. Pricing depends on the scope of services, system complexity, and support requirements. We work with each client to develop a pricing structure that aligns with their budget and business objectives.'
+      },
+      {
+        question: 'Do you offer free trials or proof-of-concept projects?',
+        answer: 'Yes, we offer free trials and proof-of-concept projects for qualified organizations. This allows potential clients to experience the value of our AI automation solutions firsthand before making a full commitment. We also provide detailed ROI analysis and case studies to help clients understand the business impact.'
+      },
+      {
+        question: 'What ongoing costs should we expect?',
+        answer: 'Ongoing costs typically include system maintenance, updates, support services, and any additional features or capacity. We provide transparent pricing for all ongoing services and work with clients to optimize costs while maintaining system performance and reliability.'
+      }
+    ]
   };
 
-  const faqs = [
-    {
-      question: "What is AI automation and how does it work?",
-      answer: "AI automation combines artificial intelligence with automated processes to create systems that can learn, adapt, and operate independently. Our platform uses machine learning algorithms to analyze data, make decisions, and execute actions without human intervention, while continuously improving through experience."
-    },
-    {
-      question: "How long does it take to implement AI automation?",
-      answer: "Implementation time varies based on complexity and scope. Simple automation workflows can be deployed in 2-4 weeks, while comprehensive enterprise solutions typically take 3-6 months. We use agile methodologies to deliver value incrementally, with the first benefits often visible within the first month."
-    },
-    {
-      question: "What industries do you serve?",
-      answer: "We serve a wide range of industries including manufacturing, healthcare, financial services, retail, transportation, energy, and more. Our AI automation platform is designed to be industry-agnostic, with customizable solutions that can be adapted to specific sector requirements and compliance needs."
-    },
-    {
-      question: "How do you ensure the security of AI systems?",
-      answer: "Security is built into every layer of our platform. We implement enterprise-grade encryption, role-based access control, comprehensive audit logging, and regular security assessments. Our systems comply with SOC 2, GDPR, and other relevant standards, with continuous monitoring and threat detection."
-    },
-    {
-      question: "Can AI automation replace human workers?",
-      answer: "Our approach focuses on augmenting human capabilities, not replacing them. AI automation handles repetitive, time-consuming tasks, allowing humans to focus on creative problem-solving, strategic thinking, and high-value activities. We design systems for human-AI collaboration that enhances productivity and job satisfaction."
-    },
-    {
-      question: "What kind of ROI can I expect from AI automation?",
-      answer: "ROI varies by use case, but our clients typically see 200-500% returns within the first year. Common benefits include 40-60% reduction in operational costs, 3-5x improvement in process efficiency, and significant time savings. We provide detailed ROI analysis during the planning phase."
-    },
-    {
-      question: "How do you handle data privacy and compliance?",
-      answer: "We implement privacy-by-design principles with data minimization, encryption, and user consent controls. Our platform supports compliance with GDPR, CCPA, HIPAA, and other regulations. We provide comprehensive data governance tools and can work with your existing compliance frameworks."
-    },
-    {
-      question: "What support and training do you provide?",
-      answer: "We provide comprehensive onboarding, training programs, and ongoing support. This includes user training, technical documentation, 24/7 support for critical systems, and regular platform updates. We also offer certification programs for your team to become self-sufficient."
-    },
-    {
-      question: "Can I integrate AI automation with my existing systems?",
-      answer: "Yes, our platform is designed for seamless integration with existing enterprise systems. We support standard protocols, provide pre-built connectors for common platforms, and can develop custom integrations. Our API-first approach ensures compatibility with your current technology stack."
-    },
-    {
-      question: "How do you ensure AI systems make ethical decisions?",
-      answer: "We implement comprehensive ethical AI frameworks including bias detection, explainable AI, and human oversight capabilities. Our systems are designed with transparency, fairness, and accountability in mind. We regularly audit for bias and provide clear explanations of decision-making processes."
-    },
-    {
-      question: "What happens if something goes wrong with the AI system?",
-      answer: "Our systems include multiple safety mechanisms: human override capabilities, automatic escalation protocols, comprehensive monitoring, and fail-safe modes. We provide 24/7 monitoring with immediate alerting and rapid response procedures to ensure business continuity."
-    },
-    {
-      question: "How do you stay current with AI technology advances?",
-      answer: "We maintain a dedicated research team and partnerships with leading AI institutions. Our platform is continuously updated with the latest advances in machine learning, natural language processing, and automation technology. We regularly evaluate emerging technologies and integrate them when they provide clear value."
-    }
+  const categories = [
+    { id: 'general', name: 'General Questions', icon: '🏢' },
+    { id: 'technology', name: 'Technology & AI', icon: '🤖' },
+    { id: 'implementation', name: 'Implementation & Support', icon: '🚀' },
+    { id: 'sustainability', name: 'Sustainability & Green AI', icon: '🌱' },
+    { id: 'healthcare', name: 'Healthcare Solutions', icon: '🏥' },
+    { id: 'pricing', name: 'Pricing & Business', icon: '💰' }
   ];
 
   return (
     <>
       <Head>
-        <title>FAQ | Zion Tech Group - AI Automation Questions & Answers</title>
-        <meta name="description" content="Find answers to frequently asked questions about AI automation, our services, and how we can help transform your business." />
+        <title>FAQ | Zion Tech Group - Frequently Asked Questions</title>
+        <meta name="description" content="Find answers to common questions about Zion Tech Group's AI automation solutions, implementation process, and services." />
         <meta property="og:title" content="FAQ | Zion Tech Group" />
-        <meta property="og:description" content="Find answers to frequently asked questions about AI automation and our services." />
+        <meta property="og:description" content="Find answers to common questions about Zion Tech Group's AI automation solutions." />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       
@@ -88,37 +137,48 @@ export default function FAQPage() {
                 Frequently Asked Questions
               </h1>
               <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                Find answers to common questions about AI automation, our services, and how we can help transform your business
+                Find answers to common questions about our AI automation solutions, 
+                implementation process, and services.
               </p>
             </header>
-
-            {/* FAQ Section */}
-            <section className="mb-16">
-              <div className="space-y-4">
-                {faqs.map((faq, index) => (
-                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-xl border border-white/20 overflow-hidden">
-                    <button
-                      onClick={() => toggleItem(index)}
-                      className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors duration-200"
-                    >
-                      <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
-                      <span className="text-cyan-400 text-xl transition-transform duration-200">
-                        {openItems.includes(index) ? '−' : '+'}
-                      </span>
-                    </button>
-                    {openItems.includes(index) && (
-                      <div className="px-6 pb-4">
-                        <p className="text-white/80 leading-relaxed">{faq.answer}</p>
-                      </div>
-                    )}
-                  </div>
+            
+            {/* Category Navigation */}
+            <div className="mb-12">
+              <div className="flex flex-wrap gap-4 justify-center">
+                {categories.map((category) => (
+                  <button
+                    key={category.id}
+                    onClick={() => setOpenCategory(category.id)}
+                    className={`flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                      openCategory === category.id
+                        ? 'bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white'
+                        : 'bg-white/10 text-white/80 hover:bg-white/20 hover:text-white'
+                    }`}
+                  >
+                    <span className="text-lg">{category.icon}</span>
+                    {category.name}
+                  </button>
                 ))}
               </div>
-            </section>
-
-            {/* Additional Help */}
-            <section className="mb-16">
-              <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20 text-center">
+            </div>
+            
+            {/* FAQ Content */}
+            <div className="space-y-6">
+              {faqData[openCategory as keyof typeof faqData]?.map((item, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
+                  <h3 className="text-xl font-bold mb-4 text-cyan-400">
+                    {item.question}
+                  </h3>
+                  <p className="text-white/90 leading-relaxed">
+                    {item.answer}
+                  </p>
+                </div>
+              ))}
+            </div>
+            
+            {/* Contact Section */}
+            <section className="mt-20 text-center">
+              <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">
                 <h2 className="text-2xl font-bold mb-4 text-white">Still Have Questions?</h2>
                 <p className="text-white/80 mb-6">
                   Can't find the answer you're looking for? Our team is here to help with any questions 
@@ -127,7 +187,7 @@ export default function FAQPage() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link 
                     href="/contact"
-                    className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
+                    className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
                   >
                     Contact Our Team
                   </Link>
@@ -140,10 +200,10 @@ export default function FAQPage() {
                 </div>
               </div>
             </section>
-
-            {/* Related Topics */}
-            <section>
-              <h2 className="text-2xl font-bold mb-8 text-center text-white">Related Topics</h2>
+            
+            {/* Related Pages */}
+            <section className="mt-16">
+              <h2 className="text-2xl font-bold mb-8 text-center text-white">Explore More</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <Link href="/platform" className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300 text-center group">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -166,7 +226,7 @@ export default function FAQPage() {
                     <span className="text-2xl">📊</span>
                   </div>
                   <h3 className="text-lg font-semibold text-green-400 mb-2">Case Studies</h3>
-                  <p className="text-white/80 text-sm">See real-world success stories</p>
+                  <p className="text-white/80 text-sm">See how we've helped other organizations succeed</p>
                 </Link>
               </div>
             </section>
