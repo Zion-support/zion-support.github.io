@@ -1,6 +1,6 @@
-import React, { useState, useCallback } from 'react';
-
-// Simple toast function for direct import'
+import React, { useState, useCallback } from 'react';''
+'''
+// Simple toast function for direct import''''
 export const toast = ({ title, description, variant = 'default' }) => {
 
   // In a real app, this would integrate with a toast library
@@ -12,8 +12,9 @@ export const toast = ({ title, description, variant = 'default' }) => {
 };
 ;
 export const useToast = () => {
-  const [toasts, setToasts] = useState([]);
-
+'
+  const [toasts, setToasts] = useState([]);''
+'''
   const toast = useCallback(({ title, description, variant = 'default' }) => {
 
     const id = Date.now();
@@ -42,7 +43,7 @@ export const useToast = () => {
 
     toast,
     dismiss,
-    dismissAll,
-    toasts};
-};
-'`
+    dismissAll,'`
+    toasts};'`'`
+};'`'`'`
+'`'`'`'`

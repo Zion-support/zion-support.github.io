@@ -8,12 +8,7 @@ const SidebarProvider({ children }) {
     return (<SidebarContext.Provider value = {
 
   { isSidebarOpen, setIsSidebarOpen,
-  toggleSidebar 
-
-
-
-
-
+  toggleSidebar
 
 }}>
       {children}
@@ -21,8 +16,11 @@ const SidebarProvider({ children }) {
 export function useSidebar() {
     const context = useContext(SidebarContext);
     if (context === null) {
-
+'
+''
+'''
         throw new Error('useSidebar must be used within a SidebarProvider');
 
-    return context;
-}
+    return context;'
+}''
+'''

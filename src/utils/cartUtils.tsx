@@ -8,6 +8,7 @@ export
 
   
   if (existingItem) {
+
     return cart.map (cartItem =>
       cartItem.id === item.id
         ? { ...cartItem, quantity: cartItem.quantity + item.quantity }
@@ -16,11 +17,14 @@ export
   return [...cart, item]};
 
   itemId: string) : CartItem[] => {
+
   return cart.filter (item => item.id !== itemId) };
 
   itemId: string,
   quantity: number) : CartItem[] => {
+
   if (quantity <= 0) {
+
     return removeFromCart (cart, itemId) }
 
   return cart.map (item => (item.id === itemId ? { ...item, quantity } : item) ) };
@@ -30,12 +34,15 @@ export
   return `cart_${userId}`};
 
   newItems: CartItem[]) : CartItem[] => {
-  
+
   newItems.forEach (newItem => {
-    
+
     if (existingIndex >= 0 && merged[existingIndex]) {
+
       merged[existingIndex].quantity += newItem.quantity} else {
+
       merged.push (newItem) }
   }) ;
-
-  return merged};
+'`
+  return merged};'`'`
+'`'`'`

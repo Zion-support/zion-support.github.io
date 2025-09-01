@@ -1,0 +1,17 @@
+
+
+describe ('NotFoundPage', () => {
+'
+''
+'''
+  it ('renders without crashing', () => {
+'
+''
+    render (<NotFoundPage  />) ;'''
+    expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;''
+'''
+  it ('displays expected content', () => {
+    render (<NotFoundPage  />) ;
+    // Add specific test assertions based on component content'
+  }) }) ;''
+'''

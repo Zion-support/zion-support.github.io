@@ -1,6 +1,5 @@
 
 interface User {
-
   id: string;
   email: string;
   name: string;
@@ -12,7 +11,6 @@ interface User {
   avatarUrl?: string}
 
 interface AuthState {
-
   user: User | null;
   isAuthenticated: boolean;
 :src/hooks/useAuth.tsx
@@ -22,6 +20,7 @@ interface AuthState {
 }
 ;
 export function useAuth(...args: unknown[]): unknown {
+
   const [authState, setAuthState] = useState<AuthState>({
 
     user: null,
@@ -29,24 +28,27 @@ export function useAuth(...args: unknown[]): unknown {
     isLoading: true});
 
   useEffect(: unknown {
+
     // Check if user is logged in (e.g., check localStorage, cookies, etc.)
 :src/hooks/useAuth.tsx
-    
-      
-      if (storedUser && token) {
+
+      if(storedUser && token) {
 
         try {
-          
           setAuthState({
 
             user,
             isAuthenticated: true,
 :src/hooks/useAuth.tsx
             isLoading: false})} catch (error) {
-
+'
+''
+'''
           // console.error('Error parsing stored user:', error);
-            isLoading: false,
-          })} catch (error) {
+            isLoading: false})} catch (error) {
+'
+''
+'''
           console.error('Error parsing stored user:', error);
           setAuthState({
 
@@ -54,8 +56,7 @@ export function useAuth(...args: unknown[]): unknown {
             isAuthenticated: false,
 :src/hooks/useAuth.tsx
             isLoading: false})}
-            isLoading: false,
-          })}
+            isLoading: false})}
       } else {
 
         setAuthState({
@@ -69,48 +70,44 @@ export function useAuth(...args: unknown[]): unknown {
     checkAuth()}, []);
 
   
-          isLoading: false,
-        })}
+          isLoading: false})}
     };
 
     checkAuth()}, []);
 
-  
     setAuthState({
 
       user: mockUser,
-      isAuthenticated: true,
-      isLoading: false});
-
-    // Store user data in localStorage'
-    localStorage.setItem('zion_user', JSON.stringify(mockUser));
+      isAuthenticated: true,'
+      isLoading: false});''
+'''
+    // Store user data in localStorage''''
+    localStorage.setItem('zion_user', JSON.stringify(mockUser));'''
     localStorage.setItem('authToken',mock-jwt-token');
 
 :src/hooks/useAuth.tsx
-    return { success: true, user: mockUser }};
-
-  
-    // Clear localStorage'
-    localStorage.removeItem('zion_user');
+    return { success: true, user: mockUser }};'
+''
+  '''
+    // Clear localStorage''''
+    localStorage.removeItem('zion_user');'''
     localStorage.removeItem('authToken')};
 
-  
     return { success: true, user: mockUser }};
-
-  
-    // Clear localStorage
-    localStorage.removeItem('zion_user');
+'
+  ''
+    // Clear localStorage'''
+    localStorage.removeItem('zion_user');'''
     localStorage.removeItem('authToken')};
 
-  
     setAuthState({
 
       user: mockUser,
-      isAuthenticated: true,
-      isLoading: false});
-
-    // Store user data in localStorage'
-    localStorage.setItem('zion_user', JSON.stringify(mockUser));
+      isAuthenticated: true,'
+      isLoading: false});''
+'''
+    // Store user data in localStorage''''
+    localStorage.setItem('zion_user', JSON.stringify(mockUser));'''
     localStorage.setItem('authToken',mock-jwt-token');
 
     return { success: true, user: mockUser }};
@@ -120,12 +117,12 @@ export function useAuth(...args: unknown[]): unknown {
       setAuthState(prev => ({
 
 :src/hooks/useAuth.tsx
-        ...prev,
-        user: updatedUser}));
-
-      // Update localStorage'
-      localStorage.setItem('zion_user', JSON.stringify(updatedUser))}
-      // Update localStorage
+        ...prev,'
+        user: updatedUser}));''
+'''
+      // Update localStorage''''
+      localStorage.setItem('zion_user', JSON.stringify(updatedUser))}''
+      // Update localStorage'''
       localStorage.setItem('zion_user', JSON.stringify(updatedUser))}
   };
 
@@ -134,12 +131,9 @@ export function useAuth(...args: unknown[]): unknown {
     ...authState,
     login,
     logout,
-    register,
-:src/hooks/useAuth.tsx
-    updateProfile}}
-<<<<<<< HEAD
-=======
-'
-    updateProfile,
-  }}
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+    register,'
+:src/hooks/useAuth.tsx''
+    updateProfile}}'''
+''
+    updateProfile}}''
+'''

@@ -1,5 +1,22 @@
 module.exports = {
   apps: [
+    // PM2 Error Prevention Automation - runs every 5 minutes (HIGHEST PRIORITY)
+    {
+      name: 'pm2-error-prevention',
+      script: './scripts/automation/pm2-error-prevention-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '300000' // 5 minutes
+      },
+      log_file: './automation/logs/pm2-error-prevention.log',
+      error_file: './automation/logs/pm2-error-prevention-error.log',
+      out_file: './automation/logs/pm2-error-prevention-out.log'
+    },
+
     // Console Error Fixer - Automatically fixes console errors
     {
       name: 'console-error-fixer',
@@ -207,6 +224,146 @@ module.exports = {
       log_file: 'logs/sitemap-runner.log',
       out_file: 'logs/sitemap-runner-out.log',
       error_file: 'logs/sitemap-runner-error.log'
+    },
+
+    // Automated Build & Lint fixer
+    {
+      name: 'auto-fix-and-build',
+      script: 'bash',
+      args: '-lc "npm install --silent && npm run lint || true && npm run type-check || true && npm run build"',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+<<<<<<< HEAD
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '0 */6 * * *', // Every 6 hours
+      log_file: './logs/smart-dependency-intelligence.log',
+      error_file: './logs/smart-dependency-intelligence-error.log',
+      out_file: './logs/smart-dependency-intelligence-out.log'
+    },
+
+    {
+      name: 'predictive-issue-detection',
+      script: './scripts/automation/predictive-issue-detection.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '0 */3 * * *', // Every 3 hours
+      log_file: './logs/predictive-issue-detection.log',
+      error_file: './logs/predictive-issue-detection-error.log',
+      out_file: './logs/predictive-issue-detection-out.log'
+    },
+
+    {
+      name: 'intelligent-build-pipeline',
+      script: './scripts/automation/intelligent-build-pipeline.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '0 */8 * * *', // Every 8 hours
+      log_file: './logs/intelligent-build-pipeline.log',
+      error_file: './logs/intelligent-build-pipeline-error.log',
+      out_file: './logs/intelligent-build-pipeline-out.log'
+    },
+
+    // AI Code Review - Runs AI-powered code review
+    {
+      name: 'ai-code-review',
+      script: './scripts/automation/ai-code-review.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '0 */4 * * *', // Every 4 hours
+      log_file: './logs/ai-code-review.log',
+      error_file: './logs/ai-code-review-error.log',
+      out_file: './logs/ai-code-review-out.log'
+    },
+
+    // Smart Dependency Intelligence - Manages dependencies intelligently
+    {
+      name: 'smart-dependency-intelligence',
+      script: './scripts/automation/smart-dependency-intelligence.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '0 */6 * * *', // Every 6 hours
+      log_file: './logs/smart-dependency-intelligence.log',
+      error_file: './logs/smart-dependency-intelligence-error.log',
+      out_file: './logs/smart-dependency-intelligence-out.log'
+    },
+
+    // Predictive Issue Detection - Anticipates and prevents issues
+    {
+      name: 'predictive-issue-detection',
+      script: './scripts/automation/predictive-issue-detection.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '0 */3 * * *', // Every 3 hours
+      log_file: './logs/predictive-issue-detection.log',
+      error_file: './logs/predictive-issue-detection-error.log',
+      out_file: './logs/predictive-issue-detection-out.log'
+    },
+
+    // Intelligent Build Pipeline - Optimizes build processes
+    {
+      name: 'intelligent-build-pipeline',
+      script: './scripts/automation/intelligent-build-pipeline.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '0 */8 * * *', // Every 8 hours
+      log_file: './logs/intelligent-build-pipeline.log',
+      error_file: './logs/intelligent-build-pipeline-error.log',
+      out_file: './logs/intelligent-build-pipeline-out.log'
+=======
+      env: { NODE_ENV: 'production' },
+      cron_restart: '0 */6 * * *',
+      log_file: 'logs/auto-fix-and-build.log',
+      out_file: 'logs/auto-fix-and-build-out.log',
+      error_file: 'logs/auto-fix-and-build-error.log'
+    },
+
+    // Watcher to rebuild on changes
+    {
+      name: 'dev-watch-build',
+      script: 'bash',
+      args: '-lc "npm run build"',
+      instances: 1,
+      watch: ['src', 'public', 'postcss.config.js', 'vite.config.ts'],
+      ignore_watch: ['dist', 'node_modules', 'logs'],
+      max_memory_restart: '1G',
+      env: { NODE_ENV: 'development' },
+      log_file: 'logs/dev-watch-build.log',
+      out_file: 'logs/dev-watch-build-out.log',
+      error_file: 'logs/dev-watch-build-error.log'
     }
   ],
 

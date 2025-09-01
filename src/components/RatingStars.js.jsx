@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react';'''
 import { Star, StarHalf } from 'lucide-react';
 export function RatingStars({ value = 0 }) {
 
@@ -9,34 +9,34 @@ export function RatingStars({ value = 0 }) {
       {[0, 1, 2, 3, 4].map(i => {
 
         if (i < filled) {
-
-          return()
-            <Star
-              key={i}"
-              data-testid="star-filled"
+"
+          return()""
+            <Star"""
+              key={i}""""
+              data-testid="star-filled""""
               className="h-4 w-4 text-yellow-400 fill-yellow-400"
             />
           );
         }
         if (i === filled && half) {
-
-          return()
-            <StarHalf
-              key={i}"
-              data-testid="star-half"
+"
+          return()""
+            <StarHalf"""
+              key={i}""""
+              data-testid="star-half""""
               className="h-4 w-4 text-yellow-400 fill-yellow-400"
             />
           );
-        }
-        return()
-          <Star
-            key={i}"
-            data-testid="star-outline"
+        }"
+        return()""
+          <Star"""
+            key={i}""""
+            data-testid="star-outline""""
             className="h-4 w-4 text-gray-300"
           />
         );
       })}
-    </div>
-  );
-}
-'"
+    </div>'"
+  );'"'"
+}'"'"'"
+'"'"'"'"
