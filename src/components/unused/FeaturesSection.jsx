@@ -105,11 +105,11 @@ export function FeaturesSection() {
 
         {/* Features Grid */}
         <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (<motion.div key={index} variants={itemVariants} className="group">
+          {features.map((((((((feature, index, index, index, index, index, index, index) => ({ ...((((((feature, index, index, index, index, index, index, key: index })) => ({ ...(((((feature, index, index, index, index, index, key: index })) => ({ ...((((feature, index, index, index, index, key: index })) => ({ ...(((feature, index, index, index, key: index })) => ({ ...((feature, index, index, key: index })) => ({ ...(feature, index, key: index })) => (<motion.div key={index} variants={itemVariants} className="group">
               <div className="bg-white rounded-2xl p-8 border border-zion-slate-light/20 hover:border-zion-cyan/30 transition-all duration-300 hover:shadow-xl hover:shadow-zion-cyan/10 hover:-translate-y-1">
                 {/* Icon */}
                 <div className={`w-16 h-16 bg-zion-slate-light/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-zion-cyan/10 transition-colors duration-300`}>
-                  <feature.icon className={`w-8 h-8 ${feature.color}`}/>
+                  <feature.icon className={`w-8 h-8 ${feature.color}`}      />
                 </div>
 
                 {/* Content */}

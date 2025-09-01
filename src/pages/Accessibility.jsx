@@ -21,7 +21,7 @@ export default function Accessibility () {
 
   const accessibilityFeatures = [
     {
-      icon: <Eye className="w - 8 h - 8" />,
+      icon: <Eye className="w - 8 h - 8"       />,
       title: 'Visual Accessibility',
       description:
         'Support for screen readers, high contrast modes, and text scaling',
@@ -35,7 +35,7 @@ export default function Accessibility () {
       ],
     },
     {
-      icon: <Ear className="w - 8 h - 8" />,
+      icon: <Ear className="w - 8 h - 8"       />,
       title: 'Auditory Accessibility',
       description:
         'Captions, transcripts, and audio alternatives for multimedia content',
@@ -48,7 +48,7 @@ export default function Accessibility () {
       ],
     },
     {
-      icon: <Hand className="w - 8 h - 8" />,
+      icon: <Hand className="w - 8 h - 8"       />,
       title: 'Motor Accessibility',
       description:
         'Keyboard navigation, voice control, and assistive technology support',
@@ -62,7 +62,7 @@ export default function Accessibility () {
       ],
     },
     {
-      icon: <Brain className="w - 8 h - 8" />,
+      icon: <Brain className="w - 8 h - 8"       />,
       title: 'Cognitive Accessibility',
       description:
         'Clear navigation, consistent design, and simplified interfaces',
@@ -83,27 +83,27 @@ export default function Accessibility () {
       description:
         'Web Content Accessibility Guidelines 2.1 Level AA compliance',
       status: 'Compliant',
-      icon: <CheckCircle className="w - 6 h - 6 text - green - 500" />,
+      icon: <CheckCircle className="w - 6 h - 6 text - green - 500"       />,
     },
     {
       name: 'Section 508',
       description:
         'Federal accessibility requirements for electronic and information technology',
       status: 'Compliant',
-      icon: <CheckCircle className="w - 6 h - 6 text - green - 500" />,
+      icon: <CheckCircle className="w - 6 h - 6 text - green - 500"       />,
     },
     {
       name: 'ADA Title III',
       description: 'Americans with Disabilities Act accessibility requirements',
       status: 'Compliant',
-      icon: <CheckCircle className="w - 6 h - 6 text - green - 500" />,
+      icon: <CheckCircle className="w - 6 h - 6 text - green - 500"       />,
     },
     {
       name: 'EN 301 549',
       description:
         'European accessibility requirements for ICT products and services',
       status: 'Compliant',
-      icon: <CheckCircle className="w - 6 h - 6 text - green - 500" />,
+      icon: <CheckCircle className="w - 6 h - 6 text - green - 500"       />,
     },
   ];
 
@@ -112,25 +112,25 @@ export default function Accessibility () {
       title: 'Accessibility Checker',
       description: 'Built - in tool to identify and fix accessibility issues',
       link: '/accessibility - checker',
-      icon: <CheckCircle className="w - 6 h - 6" />,
+      icon: <CheckCircle className="w - 6 h - 6"       />,
     },
     {
       title: 'High Contrast Mode',
       description: 'Toggle high contrast color schemes for better visibility',
       link: '/high - contrast',
-      icon: <Eye className="w - 6 h - 6" />,
+      icon: <Eye className="w - 6 h - 6"       />,
     },
     {
       title: 'Text Size Adjuster',
       description: 'Increase or decrease text size for better readability',
       link: '/text - size',
-      icon: <Info className="w - 6 h - 6" />,
+      icon: <Info className="w - 6 h - 6"       />,
     },
     {
       title: 'Keyboard Navigation Guide',
       description: 'Learn how to navigate using only your keyboard',
       link: '/keyboard - guide',
-      icon: <Hand className="w - 6 h - 6" />,
+      icon: <Hand className="w - 6 h - 6"       />,
     },
   ];
 
@@ -138,22 +138,22 @@ export default function Accessibility () {
     {
       name: 'Screen Readers',
       description: 'NVDA, JAWS, VoiceOver, TalkBack',
-      icon: <Eye className="w - 6 h - 6" />,
+      icon: <Eye className="w - 6 h - 6"       />,
     },
     {
       name: 'Voice Control',
       description: 'Dragon NaturallySpeaking, Voice Control',
-      icon: <Ear className="w - 6 h - 6" />,
+      icon: <Ear className="w - 6 h - 6"       />,
     },
     {
       name: 'Switch Devices',
       description: 'Head pointers, eye trackers, sip - and - puff',
-      icon: <Hand className="w - 6 h - 6" />,
+      icon: <Hand className="w - 6 h - 6"       />,
     },
     {
       name: 'Magnification Software',
       description: 'ZoomText, Magnifier, built - in OS tools',
-      icon: <Eye className="w - 6 h - 6" />,
+      icon: <Eye className="w - 6 h - 6"       />,
     },
   ];
 
@@ -179,7 +179,7 @@ export default function Accessibility () {
         <div className="container mx - auto px - 4 relative z - 10">
           <div className="text - center max - w-4xl mx - auto">
             <div className="inline - flex items - center px - 4 py - 2 bg - gradient - to - r from - blue - 500 / 20 to - green - 500 / 20 rounded - full border border - blue - 400 / 30 mb - 6">
-              <AccessibilityIcon className="w - 5 h - 5 text - blue - 400 mr - 2" />
+              <AccessibilityIcon className="w - 5 h - 5 text - blue - 400 mr - 2"       />
               <span className="text - blue - 300 font - medium">
                 Accessibility
               </span>
@@ -189,7 +189,7 @@ export default function Accessibility () {
               <span className="bg - gradient - to - r from - blue - 400 via - purple - 500 to - green - 600 bg - clip - text text - transparent">
                 Accessibility
               </span>
-              <br />
+              <br       />
               <span className="text - white">Statement</span>
             </h1>
 
@@ -234,7 +234,7 @@ export default function Accessibility () {
 
                 <ul className="space - y-3">
                   {feature.features.map ( (item, itemIndex) => (<li key={itemIndex} className="flex items - start">
-                      <CheckCircle className="w - 4 h - 4 text - green - 400 mr - 2 mt - 0.5 flex - shrink - 0" />
+                      <CheckCircle className="w - 4 h - 4 text - green - 400 mr - 2 mt - 0.5 flex - shrink - 0"       />
                       <span className="text - gray - 300 text - sm">
                         {item}
                       </span>
@@ -376,15 +376,15 @@ export default function Accessibility () {
 
                   <div className="space - y-4">
                     <div className="flex items - center">
-                      <Mail className="w - 5 h - 5 text - blue - 400 mr - 3" />
+                      <Mail className="w - 5 h - 5 text - blue - 400 mr - 3"       />
                       <span className="text - gray - 300">{contact.email}</span>
                     </div>
                     <div className="flex items - center">
-                      <Phone className="w - 5 h - 5 text - blue - 400 mr - 3" />
+                      <Phone className="w - 5 h - 5 text - blue - 400 mr - 3"       />
                       <span className="text - gray - 300">{contact.phone}</span>
                     </div>
                     <div className="flex items - center">
-                      <Info className="w - 5 h - 5 text - blue - 400 mr - 3" />
+                      <Info className="w - 5 h - 5 text - blue - 400 mr - 3"       />
                       <span className="text - gray - 300">
                         Response time: {contact.responseTime}
                       </span>

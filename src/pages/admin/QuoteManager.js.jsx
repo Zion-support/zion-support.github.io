@@ -52,7 +52,7 @@ export default function QuoteManager() {
     setDateRange({ from: null, to: null });
   };
   if (!isAdmin) {
-    return <Navigate to="/unauthorized" replace />;
+    return <Navigate to="/unauthorized" replace       />;
   }
   return (
     <ProtectedRoute adminOnly>
@@ -68,11 +68,11 @@ export default function QuoteManager() {
                   Manage and respond to all talent hire requests
                 </p>
               </div>
-              <ExportToCSV quotes={quotes} filename="zion-quote-requests" />
+              <ExportToCSV quotes={quotes} filename="zion-quote-requests"       />
             </div>
 
             {/* Status Summary Cards */}
-            <QuoteStatusCards statusCounts={statusCounts} />
+            <QuoteStatusCards statusCounts={statusCounts}       />
 
             {/* Filters */}
             <QuotesFilter
@@ -85,7 +85,7 @@ export default function QuoteManager() {
               dateRange={dateRange}
               setDateRange={setDateRange}
               onReset={handleResetFilters}
-            />
+                  />
 
             {/* Tabs for Active/Archived */}
             <Tabs defaultValue="active" className="mb-6">

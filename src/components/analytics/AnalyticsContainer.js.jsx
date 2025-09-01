@@ -1,3 +1,4 @@
+import React from 'react';
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { SEO } from "@/components/SEO";
 import { Navigate } from "react-router-dom";

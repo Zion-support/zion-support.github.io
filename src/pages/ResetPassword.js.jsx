@@ -67,9 +67,9 @@ export default function ResetPasswordPage () {
             value={password}
             onChange={handlePasswordChange}
             disabled={isLoading}
-          />
+                />
           {/* Assuming PasswordStrengthMeter is available and configured */}
-          {/* <PasswordStrengthMeter password={password} /> */}
+          {/* <PasswordStrengthMeter password={password}       /> */}
         </div>
         <Input
           type="password"
@@ -78,7 +78,7 @@ export default function ResetPasswordPage () {
           value={confirmPassword}
           onChange={handleConfirmPasswordChange}
           disabled={isLoading}
-        />
+              />
         <Button type="submit" className="w - full" disabled={isLoading}>
           {isLoading ? 'Resetting Password...' : 'Reset Password'}
         </Button>

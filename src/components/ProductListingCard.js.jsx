@@ -76,11 +76,11 @@ export function ProductListingCard ({
             alt={listing.title}
             className="w - full h - full object - cover"
             onError={handleImageError}
-          />
+                />
           {listing.featured && (<Badge className="absolute top - 2 right - 2 bg - primary text - primary - foreground border - none">
               Featured
             </Badge>) }
-          <FavoriteButton itemId={listing.id} itemType="product" />
+          <FavoriteButton itemId={listing.id} itemType="product"       />
         </div>
       </div>
 
@@ -97,7 +97,7 @@ export function ProductListingCard ({
             >
               {listing.category}
             </Badge>
-            {listing.rating && (<RatingStars value={listing.rating} count={listing.reviewCount} />) }
+            {listing.rating && (<RatingStars value={listing.rating} count={listing.reviewCount}       />) }
           </div>
 
           {/* Title & Description */}
@@ -125,7 +125,7 @@ export function ProductListingCard ({
         <div className="flex items - center justify - between mt - auto pt - 3 border - t border - primary / 10 sm:border - primary / 20">
           <div className="text - sm font - medium">
             {listing.price !== null ? (<div className="flex items - center text - primary">
-                <DollarSign className="h - 4 w - 4 mr - 1" />
+                <DollarSign className="h - 4 w - 4 mr - 1"       />
                 {formatPrice () }
               </div>) : (<span className="text - foreground / 80">{formatPrice () }</span>) }
           </div>

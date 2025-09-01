@@ -31,10 +31,10 @@ export function ProjectCard({ project, onEdit, onDelete }) {
             src={project.image_url}
             alt={project.title}
             className="w-full h-full object-cover"
-          />
+                />
         ) : (
           <div className="w-full h-full flex items-center justify-center bg-muted">
-            <FileText className="h-12 w-12 text-muted-foreground/50" />
+            <FileText className="h-12 w-12 text-muted-foreground/50"       />
           </div>
         )}
       </div>
@@ -51,7 +51,7 @@ export function ProjectCard({ project, onEdit, onDelete }) {
 
           {project.technologies && project.technologies.length > 0 && (
             <div className="flex flex-wrap gap-1 mt-2">
-              {project.technologies.map((tech, index) => (
+              {project.technologies.map((((((((tech, index, index, index, index, index, index, index) => ({ ...((((((tech, index, index, index, index, index, index, key: index })) => ({ ...(((((tech, index, index, index, index, index, key: index })) => ({ ...((((tech, index, index, index, index, key: index })) => ({ ...(((tech, index, index, index, key: index })) => ({ ...((tech, index, index, key: index })) => ({ ...(tech, index, key: index })) => (
                 <Badge key={index} variant="secondary" className="text-xs">
                   {tech}
                 </Badge>
@@ -72,7 +72,7 @@ export function ProjectCard({ project, onEdit, onDelete }) {
               title="GitHub"
             >
               <Button variant="ghost" size="icon" aria-label="GitHub link">
-                <Github className="h-4 w-4" />
+                <Github className="h-4 w-4"       />
               </Button>
             </a>
           )}
@@ -86,7 +86,7 @@ export function ProjectCard({ project, onEdit, onDelete }) {
               title="Live demo"
             >
               <Button variant="ghost" size="icon" aria-label="Live demo link">
-                <Link className="h-4 w-4" />
+                <Link className="h-4 w-4"       />
               </Button>
             </a>
           )}
@@ -99,7 +99,7 @@ export function ProjectCard({ project, onEdit, onDelete }) {
             onClick={() => onEdit(project)}
             aria-label="Edit project"
           >
-            <Edit className="h-4 w-4" />
+            <Edit className="h-4 w-4"       />
           </Button>
           <Button
             variant="ghost"
@@ -107,7 +107,7 @@ export function ProjectCard({ project, onEdit, onDelete }) {
             onClick={() => setDeleteDialogOpen(true)}
             aria-label="Delete project"
           >
-            <Trash2 className="h-4 w-4" />
+            <Trash2 className="h-4 w-4"       />
           </Button>
         </div>
       </CardFooter>

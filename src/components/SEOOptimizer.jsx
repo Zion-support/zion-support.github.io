@@ -213,7 +213,7 @@ import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download const SEOOp
     return (<div className="fixed bottom - 6 right - 24 z - 50">
       {/* Floating Action Button */}
       <button onClick={ () => setIsOpen (!isOpen) } className="bg - gradient - to - r from - purple - 600 to - pink - 600 hover:from - purple - 700 hover:to - pink - 700 text - white p - 3 rounded - full shadow - lg hover:shadow - xl transition - all duration - 300 transform hover:scale - 105" aria - label="Toggle SEO Optimizer">
-        <Search className="w - 6 h - 6"/>
+        <Search className="w - 6 h - 6"      />
       </button>
 
       {/* SEO Optimizer Panel */}
@@ -222,7 +222,7 @@ import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download const SEOOp
           <div className="bg - gradient - to - r from - purple - 600 to - pink - 600 text - white p - 4">
             <div className="flex items - center justify - between">
               <h3 className="text - lg font - semibold flex items - center gap - 2">
-                <TrendingUp className="w - 5 h - 5"/>
+                <TrendingUp className="w - 5 h - 5"      />
                 SEO Optimizer
               </h3>
               <button onClick={ () => setIsOpen (false) } className="text - white / 80 hover:text - white transition - colors">
@@ -250,13 +250,13 @@ import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download const SEOOp
           {/* Content */}
           <div className="p - 4 max - h-[500px] overflow - y-auto">
             {isAnalyzing ? (<div className="flex items - center justify - center py - 8">
-                <RefreshCw className="w - 6 h - 6 animate - spin text - purple - 600"/>
+                <RefreshCw className="w - 6 h - 6 animate - spin text - purple - 600"      />
                 <span className="ml - 2 text - gray - 600">Analyzing SEO...</span>
               </div>) : report ? (<div className="space - y-4">
                 {/* Top Issues */}
                 {report.topIssues.length > 0 && (<div className="bg - yellow - 50 dark:bg - yellow - 900 / 20 p - 4 rounded - lg">
                     <h4 className="font - medium text - yellow - 800 dark:text - yellow - 200 mb - 2 flex items - center gap - 2">
-                      <AlertTriangle className="w - 4 h - 4"/>
+                      <AlertTriangle className="w - 4 h - 4"      />
                       Top SEO Issues to Address
                     </h4>
                     <div className="space - y-1">
@@ -349,7 +349,7 @@ import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download const SEOOp
                             <h4 className="font - medium text - red - 600 dark:text - red - 400 mb - 2">SEO Issues Found</h4>
                             <div className="space - y-2">
                               {selectedPage.issues.map ( (issue, index) => (<div key={index} className="flex items - start gap - 2 text - sm text - red - 600 dark:text - red - 400">
-                                  <AlertTriangle className="w - 4 h - 4 mt - 0.5 flex - shrink - 0"/>
+                                  <AlertTriangle className="w - 4 h - 4 mt - 0.5 flex - shrink - 0"      />
                                   <span>{issue}</span>
                                 </div>) ) }
                             </div>
@@ -359,7 +359,7 @@ import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download const SEOOp
                             <h4 className="font - medium text - green - 600 dark:text - green - 400 mb - 2">SEO Recommendations</h4>
                             <div className="space - y-2">
                               {selectedPage.recommendations.map ( (rec, index) => (<div key={index} className="flex items - start gap - 2 text - sm text - green - 600 dark:text - green - 400">
-                                  <Zap className="w - 4 h - 4 mt - 0.5 flex - shrink - 0"/>
+                                  <Zap className="w - 4 h - 4 mt - 0.5 flex - shrink - 0"      />
                                   <span>{rec}</span>
                                 </div>) ) }
                             </div>
@@ -375,11 +375,11 @@ import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download const SEOOp
           {/* Footer Actions */}
           <div className="bg - gray - 50 dark:bg - gray - 800 p - 3 flex gap - 2">
             <button onClick={analyzeSEO} disabled={isAnalyzing} className="flex - 1 bg - purple - 600 hover:bg - purple - 700 disabled:bg - purple - 400 text - white px - 3 py - 2 rounded - md text - sm font - medium transition - colors flex items - center justify - center gap - 2">
-              <RefreshCw className={`w - 4 h - 4 ${isAnalyzing ? 'animate - spin' : ''}`}/>
+              <RefreshCw className={`w - 4 h - 4 ${isAnalyzing ? 'animate - spin' : ''}`}      />
               {isAnalyzing ? 'Analyzing...' : 'Analyze SEO'}
             </button>
             <button onClick={exportSEOReport} className="px - 3 py - 2 bg - pink - 600 hover:bg - pink - 700 text - white rounded - md transition - colors flex items - center gap - 2">
-              <Download className="w - 4 h - 4"/>
+              <Download className="w - 4 h - 4"      />
               Export
             </button>
           </div>

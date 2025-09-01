@@ -172,7 +172,7 @@ function ProjectDetailsContent () {
     return (<div className="container mx - auto py - 8">
         <Card>
           <CardContent className="flex flex - col items - center justify - center py - 10">
-            <AlertCircle className="h - 10 w - 10 text - muted - foreground mb - 4" />
+            <AlertCircle className="h - 10 w - 10 text - muted - foreground mb - 4"       />
             <h2 className="text - xl font - bold mb - 2">Project Not Found</h2>
             <p className="text - muted - foreground mb - 4">
               The project you're looking for doesn't exist or you don't have
@@ -196,7 +196,7 @@ function ProjectDetailsContent () {
       <SEO
         title={`Project: ${project.job?.title || 'Project Details'} | Zion AI Marketplace`}
         description="View and manage your project details and collaboration."
-      />
+            />
 
       <main className="container mx - auto px - 4 py - 8">
         <div className="mb - 6">
@@ -219,7 +219,7 @@ function ProjectDetailsContent () {
                   <AlertDialog>
                     <AlertDialogTrigger asChild>
                       <Button variant="default">
-                        <CheckCircle2 className="mr - 2 h - 4 w - 4" /> Accept Offer
+                        <CheckCircle2 className="mr - 2 h - 4 w - 4"       /> Accept Offer
                       </Button>
                     </AlertDialogTrigger>
                     <AlertDialogContent>
@@ -246,14 +246,14 @@ function ProjectDetailsContent () {
                     variant="outline"
                     onClick={ () => handleStatusChange ('changes_requested') }
                   >
-                    <MessageSquare className="mr - 2 h - 4 w - 4" /> Request Changes
+                    <MessageSquare className="mr - 2 h - 4 w - 4"       /> Request Changes
                   </Button>
                 </>) }
 
               { (isClient || isTalent) && project.status === 'in_progress' && (<AlertDialog>
                   <AlertDialogTrigger asChild>
                     <Button variant="default">
-                      <CheckCircle2 className="mr - 2 h - 4 w - 4" /> Mark as
+                      <CheckCircle2 className="mr - 2 h - 4 w - 4"       /> Mark as
                       Completed
                     </Button>
                   </AlertDialogTrigger>
@@ -279,13 +279,13 @@ function ProjectDetailsContent () {
 
               {isActiveProject && (<Button variant="default" asChild>
                   <Link href={`/project/${project.id}/milestones`}>
-                    <Layers className="mr - 2 h - 4 w - 4" /> Milestones
+                    <Layers className="mr - 2 h - 4 w - 4"       /> Milestones
                   </Link>
                 </Button>) }
 
               {isActiveProject && (<Button variant="outline" asChild>
                   <Link href={`/project/${project.id}/room`}>
-                    <Video className="mr - 2 h - 4 w - 4" /> Project Room
+                    <Video className="mr - 2 h - 4 w - 4"       /> Project Room
                   </Link>
                 </Button>) }
 
@@ -295,7 +295,7 @@ function ProjectDetailsContent () {
                     onClick={ () =>
                       router.push (`/messages?talentId=${project.talent_id}&clientId=${project.client_id}`) }
                   >
-                    <MessageSquare className="mr - 2 h - 4 w - 4" /> Message
+                    <MessageSquare className="mr - 2 h - 4 w - 4"       /> Message
                   </Button>) }
             </div>
           </div>
@@ -365,7 +365,7 @@ function ProjectDetailsContent () {
                   <CardContent>
                     <div className="space - y-4">
                       <div className="flex items - start gap - 3 p - 3 bg - muted / 30 rounded - md">
-                        <Calendar className="h - 5 w - 5 text - primary mt - 0.5" />
+                        <Calendar className="h - 5 w - 5 text - primary mt - 0.5"       />
                         <div>
                           <h3 className="font - semibold">Start Date</h3>
                           <p>{format (new Date (project.start_date) , 'PPP') }</p>
@@ -373,7 +373,7 @@ function ProjectDetailsContent () {
                       </div>
 
                       <div className="flex items - start gap - 3 p - 3 bg - muted / 30 rounded - md">
-                        <Clock className="h - 5 w - 5 text - primary mt - 0.5" />
+                        <Clock className="h - 5 w - 5 text - primary mt - 0.5"       />
                         <div>
                           <h3 className="font - semibold">Project Status</h3>
                           <div className="mt - 1">
@@ -396,7 +396,7 @@ function ProjectDetailsContent () {
                   <CardContent>
                     {project.agreement_url ? (<div className="flex items - center justify - between bg - muted / 30 p - 4 rounded - md">
                         <div className="flex items - center gap - 3">
-                          <FileText className="h - 5 w - 5 text - primary" />
+                          <FileText className="h - 5 w - 5 text - primary"       />
                           <div>
                             <h3 className="font - semibold">Project Agreement</h3>
                             <p className="text - sm text - muted - foreground">
@@ -414,7 +414,7 @@ function ProjectDetailsContent () {
                           </a>
                         </Button>
                       </div>) : (<div className="text - center py - 8">
-                        <FileText className="h - 10 w - 10 text - muted - foreground mx - auto mb - 2" />
+                        <FileText className="h - 10 w - 10 text - muted - foreground mx - auto mb - 2"       />
                         <h3 className="font - semibold">No Documents Yet</h3>
                         <p className="text - sm text - muted - foreground">
                           No documents have been uploaded to this project.
@@ -443,7 +443,7 @@ function ProjectDetailsContent () {
                                       loading="lazy"
                                       src={note.created_by_profile.avatar_url}
                                       alt={note.created_by_profile.display_name}
-                                    />) : (<User className="h - 4 w - 4" />) }
+                                          />) : (<User className="h - 4 w - 4"       />) }
                                 </Avatar>
                                 <span className="font - medium text - sm">
                                   {note.created_by_profile?.display_name ||
@@ -457,7 +457,7 @@ function ProjectDetailsContent () {
                                 {note.content}
                               </p>
                             </div>) ) ) : (<div className="text - center py - 8">
-                            <MessageSquare className="h - 8 w - 8 text - muted - foreground mx - auto mb - 2" />
+                            <MessageSquare className="h - 8 w - 8 text - muted - foreground mx - auto mb - 2"       />
                             <p className="text - muted - foreground">
                               No notes yet. Add the first note to this project.
                             </p>
@@ -484,7 +484,7 @@ function ProjectDetailsContent () {
               </TabsContent>
 
               <TabsContent value="reviews">
-                <ProjectReviewSection project={project} />
+                <ProjectReviewSection project={project}       />
               </TabsContent>
             </Tabs>
           </div>
@@ -502,7 +502,7 @@ function ProjectDetailsContent () {
                           loading="lazy"
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
-                        />) : (<User className="h - 6 w - 6" />) }
+                              />) : (<User className="h - 6 w - 6"       />) }
                     </Avatar>
                     <div>
                       <h3 className="font - semibold">
@@ -519,7 +519,7 @@ function ProjectDetailsContent () {
                           onClick={ () =>
                             router.push (`/messages?talentId=${project.talent_id}`) }
                         >
-                          <MessageSquare className="mr - 1 h - 3 w - 3" /> Message
+                          <MessageSquare className="mr - 1 h - 3 w - 3"       /> Message
                         </Button>) }
                     </div>
                   </div>
@@ -530,7 +530,7 @@ function ProjectDetailsContent () {
                           loading="lazy"
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
-                        />) : (<User className="h - 6 w - 6" />) }
+                              />) : (<User className="h - 6 w - 6"       />) }
                     </Avatar>
                     <div>
                       <h3 className="font - semibold">
@@ -546,7 +546,7 @@ function ProjectDetailsContent () {
                           onClick={ () =>
                             router.push (`/messages?clientId=${project.client_id}`) }
                         >
-                          <MessageSquare className="mr - 1 h - 3 w - 3" /> Message
+                          <MessageSquare className="mr - 1 h - 3 w - 3"       /> Message
                         </Button>) }
                     </div>
                   </div>
@@ -585,7 +585,7 @@ function ProjectDetailsContent () {
               {/* Conditional Footer Based on Status */}
               {project.status === 'changes_requested' && isClient && (<CardFooter className="flex - col items - start gap - 2 border - t pt - 6">
                   <p className="text - sm text - amber - 600 flex items - center gap - 1">
-                    <AlertCircle className="h - 4 w - 4" /> The talent has requested
+                    <AlertCircle className="h - 4 w - 4"       /> The talent has requested
                     changes to this offer.
                   </p>
                   <Button
@@ -594,7 +594,7 @@ function ProjectDetailsContent () {
                       router.push (`/messages?talentId=${project.talent_id}`) }
                     className="w - full"
                   >
-                    <MessageSquare className="mr - 2 h - 4 w - 4" /> Discuss Changes
+                    <MessageSquare className="mr - 2 h - 4 w - 4"       /> Discuss Changes
                   </Button>
                 </CardFooter>) }
 
@@ -606,14 +606,14 @@ function ProjectDetailsContent () {
 
               {project.status === 'completed' && (<CardFooter className="flex - col items - start gap - 2 border - t pt - 6">
                   <p className="text - sm text - green - 600 flex items - center gap - 1">
-                    <CheckCircle2 className="h - 4 w - 4" /> This project has been
+                    <CheckCircle2 className="h - 4 w - 4"       /> This project has been
                     completed.
                   </p>
                 </CardFooter>) }
 
               {project.status === 'canceled' && (<CardFooter className="flex - col items - start gap - 2 border - t pt - 6">
                   <p className="text - sm text - red - 600 flex items - center gap - 1">
-                    <XCircle className="h - 4 w - 4" /> This project has been
+                    <XCircle className="h - 4 w - 4"       /> This project has been
                     canceled.
                   </p>
                 </CardFooter>) }
@@ -624,6 +624,6 @@ function ProjectDetailsContent () {
     </>) ;
 }
   return (<ProtectedRoute>
-      <ProjectDetailsContent />
+      <ProjectDetailsContent       />
     </ProtectedRoute>) ;
 }

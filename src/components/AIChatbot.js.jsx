@@ -217,7 +217,7 @@ import { useAnalytics } from '../hooks / useAnalytics';
       animate={{ opacity: 1 }}
       className="flex items - center space - x-2 p - 3 bg - gray - 100 dark:bg - gray - 700 rounded - lg"
     >
-      <Bot className="w - 5 h - 5 text - blue - 500" />
+      <Bot className="w - 5 h - 5 text - blue - 500"       />
       <div className="flex space - x-1">
         <div
           className="w - 2 h - 2 bg - gray - 400 rounded - full animate - bounce"
@@ -259,7 +259,7 @@ import { useAnalytics } from '../hooks / useAnalytics';
         whileTap={{ scale: 0.9 }}
         aria - label="Open AI chatbot"
       >
-        <MessageCircle className="w - 6 h - 6" />
+        <MessageCircle className="w - 6 h - 6"       />
         {messages.length > 0 && (<div className="absolute - top - 1 -right - 1 w - 5 h - 5 bg - red - 500 text - white text - xs rounded - full flex items - center justify - center">
             {Math.min (messages.length, 9) }
           </div>) }
@@ -277,10 +277,10 @@ import { useAnalytics } from '../hooks / useAnalytics';
             <div className="bg - gradient - to - r from - blue - 500 to - purple - 500 p - 4 text - white">
               <div className="flex items - center justify - between">
                 <div className="flex items - center gap - 2">
-                  <Bot className="w - 5 h - 5" />
+                  <Bot className="w - 5 h - 5"       />
                   <span className="font - semibold">AI Assistant</span>
                   <div className="flex items - center gap - 1">
-                    <Sparkles className="w - 3 h - 3 text - yellow - 300" />
+                    <Sparkles className="w - 3 h - 3 text - yellow - 300"       />
                     <span className="text - xs">Powered by AI</span>
                   </div>
                 </div>
@@ -290,14 +290,14 @@ import { useAnalytics } from '../hooks / useAnalytics';
                     className="p - 1 hover:bg - white / 20 rounded transition - colors"
                     aria - label={isMinimized ? 'Maximize' : 'Minimize'}
                   >
-                    {isMinimized ? (<Maximize2 className="w - 4 h - 4" />) : (<Minimize2 className="w - 4 h - 4" />) }
+                    {isMinimized ? (<Maximize2 className="w - 4 h - 4"       />) : (<Minimize2 className="w - 4 h - 4"       />) }
                   </button>
                   <button
                     onClick={toggleChatbot}
                     className="p - 1 hover:bg - white / 20 rounded transition - colors"
                     aria - label="Close chatbot"
                   >
-                    <X className="w - 4 h - 4" />
+                    <X className="w - 4 h - 4"       />
                   </button>
                 </div>
               </div>
@@ -326,7 +326,7 @@ import { useAnalytics } from '../hooks / useAnalytics';
                               : 'bg - gray - 200 dark:bg - gray - 600 text - gray - 700 dark:text - gray - 300'
                           }`}
                         >
-                          {message.type === 'user' ? (<User className="w - 4 h - 4" />) : (<Bot className="w - 4 h - 4" />) }
+                          {message.type === 'user' ? (<User className="w - 4 h - 4"       />) : (<Bot className="w - 4 h - 4"       />) }
                         </div>
 
                         <div
@@ -355,16 +355,16 @@ import { useAnalytics } from '../hooks / useAnalytics';
                             message.metadata?.suggestions &&
                             enableSuggestions && (<MessageSuggestions
                                 suggestions={message.metadata.suggestions}
-                              />) }
+                                    />) }
                         </div>
                       </div>
                     </motion.div>) ) }
 
                   {/* Typing Indicator */}
-                  {isTyping && <TypingIndicator />}
+                  {isTyping && <TypingIndicator       />}
 
                   {/* Scroll anchor */}
-                  <div ref={messagesEndRef} />
+                  <div ref={messagesEndRef}       />
                 </div>
 
                 {/* Input Area */}
@@ -384,7 +384,7 @@ import { useAnalytics } from '../hooks / useAnalytics';
                       disabled={!inputValue.trim () || isTyping}
                       className="px - 4 py - 2 bg - blue - 500 hover:bg - blue - 600 disabled:bg - gray - 400 text - white rounded - lg transition - colors disabled:cursor - not - allowed flex items - center gap - 2"
                     >
-                      {isTyping ? (<Loader2 className="w - 4 h - 4 animate - spin" />) : (<Send className="w - 4 h - 4" />) }
+                      {isTyping ? (<Loader2 className="w - 4 h - 4 animate - spin"       />) : (<Send className="w - 4 h - 4"       />) }
                     </button>
                   </form>
 

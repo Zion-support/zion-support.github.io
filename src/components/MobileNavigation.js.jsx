@@ -118,7 +118,7 @@ const MobileNavigation = ({ isOpen, onToggle }) => {
     return (<AnimatePresence>
       {isOpen && (<>
           {/* Backdrop */}
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset - 0 bg - black / 50 backdrop - blur - sm z - 40" onClick={onToggle}/>
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset - 0 bg - black / 50 backdrop - blur - sm z - 40" onClick={onToggle}      />
 
           {/* Mobile Menu */}
           <motion.div ref={menuRef} variants={menuVariants} initial="closed" animate="open" exit="closed" className="fixed top - 0 right - 0 h - full w - 80 max - w-[85vw] bg - zion - blue - dark border - l border - zion - cyan / 30 z - 50 overflow - hidden">
@@ -131,14 +131,14 @@ const MobileNavigation = ({ isOpen, onToggle }) => {
                 <span className="text - white font - semibold">Zion Tech</span>
               </div>
               <button onClick={onToggle} className="p - 2 text - zion - slate - light hover:text - white transition - colors" aria - label="Close menu">
-                <X size={24}/>
+                <X size={24}      />
               </button>
             </div>
 
             {/* Search Bar */}
             <div className="p - 4 border - b border - zion - cyan / 20">
               <form onSubmit={handleSearch} className="relative">
-                <Search className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text - zion - slate - light" size={20}/>
+                <Search className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text - zion - slate - light" size={20}      />
                 <input type="text" placeholder="Search services..." value={searchQuery} onChange={ (e) => setSearchQuery (e.target.value) } className="w - full pl - 10 pr - 4 py - 3 bg - white / 10 border border - zion - cyan / 30 rounded - lg text - white placeholder - zion - slate - light focus:outline - none focus:border - zion - cyan focus:bg - white / 20 transition - all"/>
               </form>
             </div>
@@ -146,11 +146,11 @@ const MobileNavigation = ({ isOpen, onToggle }) => {
             {/* User Actions */}
             <div className="flex items - center gap - 2 p - 4 border - b border - zion - cyan / 20">
               <button className="flex - 1 flex items - center justify - center gap - 2 py - 2 px - 4 bg - zion - cyan / 20 border border - zion - cyan / 30 rounded - lg text - zion - cyan hover:bg - zion - cyan / 30 transition - colors">
-                <User size={20}/>
+                <User size={20}      />
                 <span > Sign In</span>
               </button>
               <button className="p - 2 text - zion - slate - light hover:text - white transition - colors" aria - label="Notifications">
-                <Bell size={20}/>
+                <Bell size={20}      />
               </button>
             </div>
 
@@ -161,7 +161,7 @@ const MobileNavigation = ({ isOpen, onToggle }) => {
                     {item.children ? (<div>
                         <button onClick={ () => toggleDropdown (item.label) } className="w - full flex items - center justify - between py - 3 px - 4 text - white hover:bg - white / 10 rounded - lg transition - colors">
                           <span>{item.label}</span>
-                          <ChevronDown size={20} className={`text - zion - slate - light transition - transform ${activeDropdown === item.label ? 'rotate - 180' : ''}`}/>
+                          <ChevronDown size={20} className={`text - zion - slate - light transition - transform ${activeDropdown === item.label ? 'rotate - 180' : ''}`}      />
                         </button>
                         <AnimatePresence>
                           {activeDropdown === item.label && (<motion.div variants={dropdownVariants} initial="closed" animate="open" exit="closed" className="overflow - hidden">

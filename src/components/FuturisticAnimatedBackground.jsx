@@ -135,5 +135,5 @@ export default FuturisticAnimatedBackground;
             if (animationRef.current) {
                 cancelAnimationFrame (animationRef.current) }
             window.removeEventListener ('resize', resizeCanvas) }}, [intensity, colorScheme]) ;
-    return (<canvas ref={canvasRef} className={`fixed inset - 0 pointer - events - none ${className}`} style={{ zIndex: -1 }}/>) };
+    return (<canvas ref={canvasRef} className={`fixed inset - 0 pointer - events - none ${className}`} style={{ zIndex: -1 }}      />) };
 }}}}}}}}}}}

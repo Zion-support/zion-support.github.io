@@ -106,7 +106,7 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
     return (<div className={`fixed bottom-4 right-4 z-40 ${className}`}>
       {/* Chat Toggle Button */}
       <motion.button onClick={() => setIsOpen(!isOpen)} className="p-3 bg-zion-purple hover:bg-zion-purple-dark text-white rounded-full shadow-lg transition-all duration-300" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} aria-label="AI Chat Assistant">
-        <MessageSquare className="w-6 h-6"/>
+        <MessageSquare className="w-6 h-6"      />
       </motion.button>
 
       {/* Chat Window */}
@@ -137,12 +137,12 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
               <div className="flex items-center justify-between p-4 border-b border-zion-blue-light/30 bg-zion-blue/20">
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">
-                    <Bot className="w-5 h-5 text-white"/>
+                    <Bot className="w-5 h-5 text-white"      />
                   </div>
                   <div>
                     <h3 className="text-white font-semibold">Zion AI Assistant</h3>
                     <div className="flex items-center gap-2">
-                      <div className={`w-2 h-2 rounded-full ${isTyping ? 'bg-zion-cyan animate-pulse' : 'bg-green-400'}`}/>
+                      <div className={`w-2 h-2 rounded-full ${isTyping ? 'bg-zion-cyan animate-pulse' : 'bg-green-400'}`}      />
                       <span className="text-zinc-400 text-xs">
                         {isTyping ? 'Typing...' : 'Online'}
                       </span>
@@ -152,13 +152,13 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
                 
                 <div className="flex items-center gap-1">
                   <Button size="sm" variant="ghost" onClick={() => setShowSettings(!showSettings)} className="text-zinc-400 hover:text-white p-2">
-                    <Settings className="w-4 h-4"/>
+                    <Settings className="w-4 h-4"      />
                   </Button>
                   <Button size="sm" variant="ghost" onClick={() => setIsMinimized(!isMinimized)} className="text-zinc-400 hover:text-white p-2">
-                    {isMinimized ? <Maximize2 className="w-4 h-4"/> : <Minimize2 className="w-4 h-4"/>}
+                    {isMinimized ? <Maximize2 className="w-4 h-4"      /> : <Minimize2 className="w-4 h-4"      />}
                   </Button>
                   <Button size="sm" variant="ghost" onClick={() => setIsOpen(false)} className="text-zinc-400 hover:text-white p-2">
-                    <X className="w-4 h-4"/>
+                    <X className="w-4 h-4"      />
                   </Button>
                 </div>
               </div>
@@ -182,7 +182,7 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
                       <div className="flex items-center justify-between">
                         <span className="text-zinc-300 text-sm">Voice Input</span>
                         <Button size="sm" variant="ghost" onClick={toggleVoiceInput} className={`p-2 ${isRecording ? 'text-zion-cyan' : 'text-zinc-400'}`}>
-                          {isRecording ? <Mic className="w-4 h-4"/> : <MicOff className="w-4 h-4"/>}
+                          {isRecording ? <Mic className="w-4 h-4"      /> : <MicOff className="w-4 h-4"      />}
                         </Button>
                       </div>
                       <div className="flex items-center justify-between">
@@ -197,7 +197,7 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
 
               {/* Messages */}
               {!isMinimized && (<div className="flex-1 overflow-y-auto p-4 space-y-4 max-h-[400px]">
-                  {messages.map((message) => (<motion.div key={message.id} className={`flex gap-3 ${message.type === 'user' ? 'justify-end' : 'justify-start'}`} initial = {
+                  {messages.map((((((((message, index, index, index, index, index, index) => ({ ...((((((message, index, index, index, index, index, key: index })) => ({ ...(((((message, index, index, index, index, key: index })) => ({ ...((((message, index, index, index, key: index })) => ({ ...(((message, index, index, key: index })) => ({ ...((message, index, key: index })) => ({ ...(message, key: index })) => (<motion.div key={message.id} className={`flex gap-3 ${message.type === 'user' ? 'justify-end' : 'justify-start'}`} initial = {
   { opacity: 0,
   y: 10 
 
@@ -207,7 +207,7 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
 
 }} transition={{ duration: 0.3 }}>
                       {message.type === 'assistant' && (<div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center flex-shrink-0">
-                          <Bot className="w-5 h-5 text-white"/>
+                          <Bot className="w-5 h-5 text-white"      />
                         </div>)}
                       
                       <div className={`max-w-[280px] ${message.type === 'user' ? 'order-2' : 'order-1'}`}>
@@ -221,13 +221,13 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
                         {message.metadata && (<div className="mt-2 space-y-2">
                             {/* Confidence score */}
                             {message.metadata.confidence && (<div className="flex items-center gap-2 text-xs text-zinc-400">
-                                <Brain className="w-3 h-3"/>
+                                <Brain className="w-3 h-3"      />
                                 <span>Confidence: {(message.metadata.confidence * 100).toFixed(0)}%</span>
                               </div>)}
                             
                             {/* Suggestions */}
                             {message.metadata.suggestions && (<div className="flex flex-wrap gap-1">
-                                {message.metadata.suggestions.map((suggestion, index) => (<button key={index} onClick={() => handleSuggestionClick(suggestion)} className="px-2 py-1 bg-zion-blue/30 hover:bg-zion-blue/50 border border-zion-blue-light/30 rounded text-xs text-zinc-300 hover:text-white transition-all duration-200">
+                                {message.metadata.suggestions.map((((((((suggestion, index, index, index, index, index, index, index) => ({ ...((((((suggestion, index, index, index, index, index, index, key: index })) => ({ ...(((((suggestion, index, index, index, index, index, key: index })) => ({ ...((((suggestion, index, index, index, index, key: index })) => ({ ...(((suggestion, index, index, index, key: index })) => ({ ...((suggestion, index, index, key: index })) => ({ ...(suggestion, index, key: index })) => (<button key={index} onClick={() => handleSuggestionClick(suggestion)} className="px-2 py-1 bg-zion-blue/30 hover:bg-zion-blue/50 border border-zion-blue-light/30 rounded text-xs text-zinc-300 hover:text-white transition-all duration-200">
                                     {suggestion}
                                   </button>))}
                               </div>)}
@@ -240,7 +240,7 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
                       </div>
                       
                       {message.type === 'user' && (<div className="w-8 h-8 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center flex-shrink-0">
-                          <User className="w-5 h-5 text-white"/>
+                          <User className="w-5 h-5 text-white"      />
                         </div>)}
                     </motion.div>))}
                   
@@ -255,28 +255,28 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
 
 }} transition={{ duration: 0.3 }}>
                       <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">
-                        <Bot className="w-5 h-5 text-white"/>
+                        <Bot className="w-5 h-5 text-white"      />
                       </div>
                       <div className="p-3 rounded-lg bg-zion-blue/20">
                         <div className="flex items-center gap-1">
-                          <div className="w-2 h-2 bg-zion-cyan rounded-full animate-bounce"/>
-                          <div className="w-2 h-2 bg-zion-cyan rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}/>
-                          <div className="w-2 h-2 bg-zion-cyan rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}/>
+                          <div className="w-2 h-2 bg-zion-cyan rounded-full animate-bounce"      />
+                          <div className="w-2 h-2 bg-zion-cyan rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}      />
+                          <div className="w-2 h-2 bg-zion-cyan rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}      />
                         </div>
                       </div>
                     </motion.div>)}
                   
-                  <div ref={messagesEndRef}/>
+                  <div ref={messagesEndRef}      />
                 </div>)}
 
               {/* Input Area */}
               {!isMinimized && (<div className="p-4 border-t border-zion-blue-light/30">
                   <div className="flex items-center gap-2">
                     <Button size="sm" variant="ghost" className="text-zinc-400 hover:text-white p-2">
-                      <Paperclip className="w-4 h-4"/>
+                      <Paperclip className="w-4 h-4"      />
                     </Button>
                     <Button size="sm" variant="ghost" className="text-zinc-400 hover:text-white p-2">
-                      <Smile className="w-4 h-4"/>
+                      <Smile className="w-4 h-4"      />
                     </Button>
                     
                     <div className="flex-1 relative">
@@ -284,22 +284,22 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
                         
                         {/* Voice input indicator */}
                         {isRecording && (<div className="absolute right-3 top-1/2 transform -translate-y-1/2">
-                            <div className="w-3 h-3 bg-red-400 rounded-full animate-pulse"/>
+                            <div className="w-3 h-3 bg-red-400 rounded-full animate-pulse"      />
                           </div>)}
                       </div>
                     
                     <Button size="sm" variant="ghost" onClick={toggleVoiceInput} className={`p-2 ${isRecording ? 'text-red-400' : 'text-zinc-400'} hover:text-white`}>
-                      {isRecording ? <Mic className="w-4 h-4"/> : <MicOff className="w-4 h-4"/>}
+                      {isRecording ? <Mic className="w-4 h-4"      /> : <MicOff className="w-4 h-4"      />}
                     </Button>
                     
                     <Button onClick={sendMessage} disabled={!inputValue.trim() || isTyping} className="bg-zion-cyan hover:bg-zion-cyan-light text-zion-blue-dark disabled:opacity-50">
-                      <Send className="w-4 h-4"/>
+                      <Send className="w-4 h-4"      />
                     </Button>
                   </div>
                   
                   {/* Quick actions */}
                   <div className="mt-3 flex flex-wrap gap-2">
-                    {['AI Services', 'Cloud Solutions', 'Cybersecurity', 'Get Started'].map((action) => (<button key={action} onClick={() => handleSuggestionClick(action)} className="px-3 py-1 bg-zion-blue/20 hover:bg-zion-blue/30 border border-zion-blue-light/30 rounded-full text-xs text-zinc-300 hover:text-white transition-all duration-200">
+                    {['AI Services', 'Cloud Solutions', 'Cybersecurity', 'Get Started'].map((((((((action, index, index, index, index, index, index) => ({ ...((((((action, index, index, index, index, index, key: index })) => ({ ...(((((action, index, index, index, index, key: index })) => ({ ...((((action, index, index, index, key: index })) => ({ ...(((action, index, index, key: index })) => ({ ...((action, index, key: index })) => ({ ...(action, key: index })) => (<button key={action} onClick={() => handleSuggestionClick(action)} className="px-3 py-1 bg-zion-blue/20 hover:bg-zion-blue/30 border border-zion-blue-light/30 rounded-full text-xs text-zinc-300 hover:text-white transition-all duration-200">
                         {action}
                       </button>))}
                   </div>

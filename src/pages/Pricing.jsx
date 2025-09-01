@@ -103,7 +103,7 @@ const Pricing = () => {
         description="Choose the perfect plan for your AI and technology needs. Flexible pricing options for individuals, teams, and enterprises."
         keywords="pricing, AI services, technology solutions, subscription plans, enterprise pricing"
         canonical="https://ziontechgroup.com / pricing"
-      />
+            />
 
       {/* Hero Section */}
       <section className="pt - 24 pb - 16 px - 4 sm:px - 6 lg:px - 8">

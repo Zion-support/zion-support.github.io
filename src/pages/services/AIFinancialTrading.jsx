@@ -192,7 +192,7 @@ export default function AIFinancialTrading() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-400 text-sm font-medium mb-6">
-            <TrendingUp className="w-4 h-4 mr-2" />
+            <TrendingUp className="w-4 h-4 mr-2"       />
             AI-Powered Financial Technology
           </div>
 
@@ -252,13 +252,13 @@ export default function AIFinancialTrading() {
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, idx) => (
+            {features.map((((((((feature, idx, index, index, index, index, index, index) => ({ ...((((((feature, idx, index, index, index, index, index, key: index })) => ({ ...(((((feature, idx, index, index, index, index, key: index })) => ({ ...((((feature, idx, index, index, index, key: index })) => ({ ...(((feature, idx, index, index, key: index })) => ({ ...((feature, idx, index, key: index })) => ({ ...(feature, idx, key: index })) => (
               <div
                 key={idx}
                 className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-white" />
+                  <feature.icon className="w-6 h-6 text-white"       />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">
                   {feature.title}
@@ -276,13 +276,13 @@ export default function AIFinancialTrading() {
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {tradingInstruments.map((instrument, idx) => (
+            {tradingInstruments.map((((((((instrument, idx, index, index, index, index, index, index) => ({ ...((((((instrument, idx, index, index, index, index, index, key: index })) => ({ ...(((((instrument, idx, index, index, index, index, key: index })) => ({ ...((((instrument, idx, index, index, index, key: index })) => ({ ...(((instrument, idx, index, index, key: index })) => ({ ...((instrument, idx, index, key: index })) => ({ ...(instrument, idx, key: index })) => (
               <div
                 key={idx}
                 className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
-                  <instrument.icon className="w-6 h-6 text-white" />
+                  <instrument.icon className="w-6 h-6 text-white"       />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">
                   {instrument.title}
@@ -300,7 +300,7 @@ export default function AIFinancialTrading() {
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, idx) => (
+            {pricingPlans.map((((((((plan, idx, index, index, index, index, index, index) => ({ ...((((((plan, idx, index, index, index, index, index, key: index })) => ({ ...(((((plan, idx, index, index, index, index, key: index })) => ({ ...((((plan, idx, index, index, index, key: index })) => ({ ...(((plan, idx, index, index, key: index })) => ({ ...((plan, idx, index, key: index })) => ({ ...(plan, idx, key: index })) => (
               <div
                 key={idx}
                 className={`relative bg-gray-800/50 backdrop-blur-sm border rounded-xl p-8 ${
@@ -329,12 +329,12 @@ export default function AIFinancialTrading() {
                 </div>
 
                 <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIdx) => (
+                  {plan.features.map((((((((feature, featureIdx, index, index, index, index, index, index) => ({ ...((((((feature, featureIdx, index, index, index, index, index, key: index })) => ({ ...(((((feature, featureIdx, index, index, index, index, key: index })) => ({ ...((((feature, featureIdx, index, index, index, key: index })) => ({ ...(((feature, featureIdx, index, index, key: index })) => ({ ...((feature, featureIdx, index, key: index })) => ({ ...(feature, featureIdx, key: index })) => (
                     <li
                       key={featureIdx}
                       className="flex items-center space-x-3"
                     >
-                      <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0"       />
                       <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
@@ -363,13 +363,13 @@ export default function AIFinancialTrading() {
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, idx) => (
+            {benefits.map((((((((benefit, idx, index, index, index, index, index, index) => ({ ...((((((benefit, idx, index, index, index, index, index, key: index })) => ({ ...(((((benefit, idx, index, index, index, index, key: index })) => ({ ...((((benefit, idx, index, index, index, key: index })) => ({ ...(((benefit, idx, index, index, key: index })) => ({ ...((benefit, idx, index, key: index })) => ({ ...(benefit, idx, key: index })) => (
               <div
                 key={idx}
                 className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
-                  <benefit.icon className="w-6 h-6 text-white" />
+                  <benefit.icon className="w-6 h-6 text-white"       />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">
                   {benefit.title}

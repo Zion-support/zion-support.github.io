@@ -30,7 +30,7 @@ export default function ForumCategories() {
   ];
   return (
     <div className="space-y-4">
-      {categories.map(category => (
+      {categories.map(((((((category => (
         <div
           key={category.id}
           className="bg-white/10 backdrop-blur-sm rounded-lg p-4"
@@ -45,7 +45,97 @@ export default function ForumCategories() {
               <span>
                 Last: {category.lastPost.title} by {category.lastPost.author}
               </span>
-            )}
+            , index, index, index, index, index, index) => ({ ...(((((category => (
+        <div
+          key={category.id}
+          className="bg-white/10 backdrop-blur-sm rounded-lg p-4"
+        >
+          <h3 className="text-lg font-semibold text-zion-cyan mb-2">
+            {category.name}
+          </h3>
+          <p className="text-zion-slate-light mb-2">{category.description}</p>
+          <div className="flex justify-between text-sm text-zion-slate-light">
+            <span>{category.postCount} posts</span>
+            {category.lastPost && (
+              <span>
+                Last: {category.lastPost.title} by {category.lastPost.author}
+              </span>
+            , index, index, index, index, index, key: index })) => ({ ...((((category => (
+        <div
+          key={category.id}
+          className="bg-white/10 backdrop-blur-sm rounded-lg p-4"
+        >
+          <h3 className="text-lg font-semibold text-zion-cyan mb-2">
+            {category.name}
+          </h3>
+          <p className="text-zion-slate-light mb-2">{category.description}</p>
+          <div className="flex justify-between text-sm text-zion-slate-light">
+            <span>{category.postCount} posts</span>
+            {category.lastPost && (
+              <span>
+                Last: {category.lastPost.title} by {category.lastPost.author}
+              </span>
+            , index, index, index, index, key: index })) => ({ ...(((category => (
+        <div
+          key={category.id}
+          className="bg-white/10 backdrop-blur-sm rounded-lg p-4"
+        >
+          <h3 className="text-lg font-semibold text-zion-cyan mb-2">
+            {category.name}
+          </h3>
+          <p className="text-zion-slate-light mb-2">{category.description}</p>
+          <div className="flex justify-between text-sm text-zion-slate-light">
+            <span>{category.postCount} posts</span>
+            {category.lastPost && (
+              <span>
+                Last: {category.lastPost.title} by {category.lastPost.author}
+              </span>
+            , index, index, index, key: index })) => ({ ...((category => (
+        <div
+          key={category.id}
+          className="bg-white/10 backdrop-blur-sm rounded-lg p-4"
+        >
+          <h3 className="text-lg font-semibold text-zion-cyan mb-2">
+            {category.name}
+          </h3>
+          <p className="text-zion-slate-light mb-2">{category.description}</p>
+          <div className="flex justify-between text-sm text-zion-slate-light">
+            <span>{category.postCount} posts</span>
+            {category.lastPost && (
+              <span>
+                Last: {category.lastPost.title} by {category.lastPost.author}
+              </span>
+            , index, index, key: index })) => ({ ...(category => (
+        <div
+          key={category.id}
+          className="bg-white/10 backdrop-blur-sm rounded-lg p-4"
+        >
+          <h3 className="text-lg font-semibold text-zion-cyan mb-2">
+            {category.name}
+          </h3>
+          <p className="text-zion-slate-light mb-2">{category.description}</p>
+          <div className="flex justify-between text-sm text-zion-slate-light">
+            <span>{category.postCount} posts</span>
+            {category.lastPost && (
+              <span>
+                Last: {category.lastPost.title} by {category.lastPost.author}
+              </span>
+            , index, key: index })) => ({ ...category => (
+        <div
+          key={category.id}
+          className="bg-white/10 backdrop-blur-sm rounded-lg p-4"
+        >
+          <h3 className="text-lg font-semibold text-zion-cyan mb-2">
+            {category.name}
+          </h3>
+          <p className="text-zion-slate-light mb-2">{category.description}</p>
+          <div className="flex justify-between text-sm text-zion-slate-light">
+            <span>{category.postCount} posts</span>
+            {category.lastPost && (
+              <span>
+                Last: {category.lastPost.title} by {category.lastPost.author}
+              </span>
+            , key: index }))}
           </div>
         </div>
       ))}

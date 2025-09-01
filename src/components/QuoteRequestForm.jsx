@@ -155,7 +155,7 @@ import { Textarea } from './ui / textarea';
   if (isSubmitted) {
     return (<Card className="max - w-2xl mx - auto">
         <CardContent className="p - 8 text - center">
-          <CheckCircle className="w - 16 h - 16 text - green - 500 mx - auto mb - 4" />
+          <CheckCircle className="w - 16 h - 16 text - green - 500 mx - auto mb - 4"       />
           <h2 className="text - 2xl font - bold text - gray - 900 mb - 2">
             Quote Request Submitted!
           </h2>
@@ -263,7 +263,7 @@ import { Textarea } from './ui / textarea';
                 <SelectTrigger
                   className={errors.serviceType ? 'border - red - 500' : ''}
                 >
-                  <SelectValue placeholder="Select a service" />
+                  <SelectValue placeholder="Select a service"       />
                 </SelectTrigger>
                 <SelectContent>
                   {serviceTypes.map (service => (<SelectItem key={service.value} value={service.value}>
@@ -285,7 +285,7 @@ import { Textarea } from './ui / textarea';
                 onValueChange={value => handleChange ('timeline', value) }
               >
                 <SelectTrigger>
-                  <SelectValue placeholder="Select timeline" />
+                  <SelectValue placeholder="Select timeline"       />
                 </SelectTrigger>
                 <SelectContent>
                   {timelineOptions.map (timeline => (<SelectItem key={timeline.value} value={timeline.value}>
@@ -306,7 +306,7 @@ import { Textarea } from './ui / textarea';
                 onValueChange={value => handleChange ('budget', value) }
               >
                 <SelectTrigger>
-                  <SelectValue placeholder="Select budget range" />
+                  <SelectValue placeholder="Select budget range"       />
                 </SelectTrigger>
                 <SelectContent>
                   {budgetRanges.map (budget => (<SelectItem key={budget.value} value={budget.value}>
@@ -325,7 +325,7 @@ import { Textarea } from './ui / textarea';
                 onValueChange={value => handleChange ('urgency', value) }
               >
                 <SelectTrigger>
-                  <SelectValue />
+                  <SelectValue       />
                 </SelectTrigger>
                 <SelectContent>
                   {urgencyLevels.map (urgency => (<SelectItem key={urgency.value} value={urgency.value}>
@@ -364,7 +364,7 @@ import { Textarea } from './ui / textarea';
                 onValueChange={value => handleChange ('contactMethod', value) }
               >
                 <SelectTrigger>
-                  <SelectValue />
+                  <SelectValue       />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="email">Email</SelectItem>
@@ -417,7 +417,7 @@ import { Textarea } from './ui / textarea';
               {isSubmitting ? (<>
                   <div className="animate - spin rounded - full h - 5 w - 5 border - b-2 border - white mr - 2"></div > Submitting...
                 </>) : (<>
-                  <Send className="w - 5 h - 5 mr - 2" />
+                  <Send className="w - 5 h - 5 mr - 2"       />
                   Submit Quote Request
                 </>) }
             </Button>

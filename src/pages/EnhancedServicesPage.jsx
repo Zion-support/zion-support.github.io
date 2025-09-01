@@ -101,7 +101,7 @@ import {
         description="Discover our comprehensive suite of AI services, IT solutions, and micro SAAS offerings. From AI automation to quantum computing readiness."
         keywords="AI services, IT solutions, micro SAAS, cybersecurity, cloud computing, data analytics, Zion Tech Group"
         canonical="https://ziontechgroup.com / enhanced - services"
-      />
+            />
 
       {/* Hero Section */}
       <div className="bg - gradient - to - r from - zion - blue to - zion - purple text - white py - 20">
@@ -166,7 +166,7 @@ import {
         <div className="container mx - auto px - 4">
           <div className="flex flex - col md:flex - row gap - 4">
             <div className="flex - 1 relative">
-              <Search className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text - zion - slate - light w - 5 h - 5" />
+              <Search className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text - zion - slate - light w - 5 h - 5"       />
               <Input
                 placeholder="Search services, technologies, or keywords..."
                 value={searchTerm}
@@ -179,7 +179,7 @@ import {
               onValueChange={setSelectedCategory}
             >
               <SelectTrigger className="w - full md:w - 48 bg - zion - blue - dark border - zion - blue - light text - white">
-                <SelectValue placeholder="All Categories" />
+                <SelectValue placeholder="All Categories"       />
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="all">All Categories</SelectItem>
@@ -193,7 +193,7 @@ import {
               onValueChange={setSelectedPriceRange}
             >
               <SelectTrigger className="w - full md:w - 48 bg - zion - blue - dark border - zion - blue - light text - white">
-                <SelectValue placeholder="All Prices" />
+                <SelectValue placeholder="All Prices"       />
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="all">All Prices</SelectItem>
@@ -252,7 +252,7 @@ import {
                 <CardContent className="space - y-4">
                   <div className="flex items - center justify - between">
                     <div className="flex items - center gap - 2">
-                      <Star className="w - 4 h - 4 text - yellow - 500 fill - current" />
+                      <Star className="w - 4 h - 4 text - yellow - 500 fill - current"       />
                       <span className="text - sm font - medium">
                         {service.rating}
                       </span>
@@ -277,11 +277,11 @@ import {
 
                   <div className="flex items - center justify - between text - sm text - zion - slate">
                     <div className="flex items - center gap - 1">
-                      <Globe className="w - 4 h - 4" />
+                      <Globe className="w - 4 h - 4"       />
                       {service.location}
                     </div>
                     <div className="flex items - center gap - 1">
-                      <TrendingUp className="w - 4 h - 4" />
+                      <TrendingUp className="w - 4 h - 4"       />
                       AI Score: {service.aiScore}
                     </div>
                   </div>
@@ -376,7 +376,7 @@ import {
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">
             <div className="text - center">
               <div className="w - 16 h - 16 bg - zion - purple rounded - full flex items - center justify - center mx - auto mb - 4">
-                <CheckCircle className="w - 8 h - 8 text - white" />
+                <CheckCircle className="w - 8 h - 8 text - white"       />
               </div>
               <h3 className="text - xl font - bold text - white mb - 2">
                 Proven Expertise
@@ -388,7 +388,7 @@ import {
             </div>
             <div className="text - center">
               <div className="w - 16 h - 16 bg - zion - cyan rounded - full flex items - center justify - center mx - auto mb - 4">
-                <Zap className="w - 8 h - 8 text - white" />
+                <Zap className="w - 8 h - 8 text - white"       />
               </div>
               <h3 className="text - xl font - bold text - white mb - 2">
                 Innovation First
@@ -400,7 +400,7 @@ import {
             </div>
             <div className="text - center">
               <div className="w - 16 h - 16 bg - zion - purple rounded - full flex items - center justify - center mx - auto mb - 4">
-                <Users className="w - 8 h - 8 text - white" />
+                <Users className="w - 8 h - 8 text - white"       />
               </div>
               <h3 className="text - xl font - bold text - white mb - 2">
                 Dedicated Support
@@ -412,7 +412,7 @@ import {
             </div>
             <div className="text - center">
               <div className="w - 16 h - 16 bg - zion - cyan rounded - full flex items - center justify - center mx - auto mb - 4">
-                <TrendingUp className="w - 8 h - 8 text - white" />
+                <TrendingUp className="w - 8 h - 8 text - white"       />
               </div>
               <h3 className="text - xl font - bold text - white mb - 2">ROI Focused</h3>
               <p className="text - zion - slate - light">
@@ -438,21 +438,21 @@ import {
 
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8 mb - 12">
               <div className="flex items - center justify - center gap - 3 text - zion - cyan">
-                <Phone className="w - 6 h - 6" />
+                <Phone className="w - 6 h - 6"       />
                 <div className="text - left">
                   <div className="font - semibold">Phone</div>
                   <div className="text - sm">{CONTACT_INFO.mobile}</div>
                 </div>
               </div>
               <div className="flex items - center justify - center gap - 3 text - zion - cyan">
-                <Mail className="w - 6 h - 6" />
+                <Mail className="w - 6 h - 6"       />
                 <div className="text - left">
                   <div className="font - semibold">Email</div>
                   <div className="text - sm">{CONTACT_INFO.email}</div>
                 </div>
               </div>
               <div className="flex items - center justify - center gap - 3 text - zion - cyan">
-                <MapPin className="w - 6 h - 6" />
+                <MapPin className="w - 6 h - 6"       />
                 <div className="text - left">
                   <div className="font - semibold">Address</div>
                   <div className="text - sm">{CONTACT_INFO.address}</div>
@@ -467,7 +467,7 @@ import {
                 onClick={ () =>
                   window.open (`tel:${CONTACT_INFO.mobile}`, '_self') }
               >
-                <Phone className="w - 5 h - 5 mr - 2" />
+                <Phone className="w - 5 h - 5 mr - 2"       />
                 Call Now
               </Button>
               <Button
@@ -477,7 +477,7 @@ import {
                 onClick={ () =>
                   window.open (`mailto:${CONTACT_INFO.email}`, '_self') }
               >
-                <Mail className="w - 5 h - 5 mr - 2" />
+                <Mail className="w - 5 h - 5 mr - 2"       />
                 Send Email
               </Button>
               <Button
@@ -486,7 +486,7 @@ import {
                 className="border - zion - cyan text - zion - cyan hover:bg - zion - cyan / 10"
                 onClick={ () => window.open (CONTACT_INFO.website, '_blank') }
               >
-                <ExternalLink className="w - 5 h - 5 mr - 2" />
+                <ExternalLink className="w - 5 h - 5 mr - 2"       />
                 Visit Website
               </Button>
             </div>

@@ -164,7 +164,7 @@ const testimonials = [
                 <div className="text - center">
                   {/* Quote icon */}
                   <div className="inline - flex items - center justify - center w - 16 h - 16 rounded - full bg - gradient - to - r from - zion - cyan to - zion - purple mb - 8 shadow - lg">
-                    <Quote className="w - 8 h - 8 text - white" />
+                    <Quote className="w - 8 h - 8 text - white"       />
                   </div>
 
                   {/* Rating */}
@@ -172,7 +172,7 @@ const testimonials = [
                     {[...Array (testimonials[currentIndex].rating) ].map ( (_, i) => (<Star
                           key={i}
                           className="w - 6 h - 6 text - yellow - 400 fill - current"
-                        />) ) }
+                              />) ) }
                   </div>
 
                   {/* Content */}
@@ -203,7 +203,7 @@ const testimonials = [
                     <span className="text - zion - cyan text - sm font - medium">
                       {testimonials[currentIndex].category}
                     </span>
-                    <ArrowRight className="w - 4 h - 4 text - zion - cyan" />
+                    <ArrowRight className="w - 4 h - 4 text - zion - cyan"       />
                     <span className="text - zion - slate - light text - sm">
                       {testimonials[currentIndex].project}
                     </span>
@@ -218,14 +218,14 @@ const testimonials = [
             className="absolute left - 4 top - 1/2 transform - translate - y-1 / 2 w - 12 h - 12 bg - zion - blue - dark / 80 hover:bg - zion - blue - dark border border - zion - blue - light / 30 hover:border - zion - cyan / 50 rounded - full flex items - center justify - center text - white transition - all duration - 300 hover:scale - 110 hover:shadow - lg hover:shadow - zion - cyan / 25 z - 10"
             onClick={ () => paginate (-1) }
           >
-            <ChevronLeft className="w - 6 h - 6" />
+            <ChevronLeft className="w - 6 h - 6"       />
           </button>
 
           <button
             className="absolute right - 4 top - 1/2 transform - translate - y-1 / 2 w - 12 h - 12 bg - zion - blue - dark / 80 hover:bg - zion - blue - dark border border - zion - blue - light / 30 hover:border - zion - cyan / 50 rounded - full flex items - center justify - center text - white transition - all duration - 300 hover:scale - 110 hover:shadow - lg hover:shadow - zion - cyan / 25 z - 10"
             onClick={ () => paginate (1) }
           >
-            <ChevronRight className="w - 6 h - 6" />
+            <ChevronRight className="w - 6 h - 6"       />
           </button>
         </div>
 

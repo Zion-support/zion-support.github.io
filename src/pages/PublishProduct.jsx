@@ -23,7 +23,7 @@ export default function PublishProduct () {
         title="Publish Your Product"
         description="Create and publish your product, service or digital asset on Zion marketplace. Reach our community of tech and AI professionals."
         keywords="publish product, sell online, digital marketplace, AI tools, tech services"
-      />
+            />
 
       <main className="flex - 1 p - 6 md:p - 10">
         <div className="max - w-4xl mx - auto">
@@ -36,7 +36,7 @@ export default function PublishProduct () {
           </p>
 
           <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 md:p - 8">
-            <ProductSubmissionForm />
+            <ProductSubmissionForm       />
           </div>
         </div>
       </main>

@@ -32,7 +32,7 @@ export default function Login () {
   // Render LoginContent if not authenticated and auth is not loading
   if (!isAuthenticated && !isLoading) {
     return (<ErrorBoundary FallbackComponent={LoginErrorFallback}>
-        <LoginContent />
+        <LoginContent       />
       </ErrorBoundary>) ;
   }
 

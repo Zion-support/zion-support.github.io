@@ -1,23 +1,23 @@
 import React, { memo } from 'react';
-export const PerformanceOptimizedLoader = memo < LoadingSpinnerProps> ( ({
+export const PerformanceOptimizedLoader = memo < LoadingSpinnerProps> ( ({;
 import { motion } from 'framer - motion';
-
-
-interface LoaderProps {
+;
+;
+interface LoaderProps {;
   size?: 'sm' | 'md' | 'lg';
   color?: 'primary' | 'secondary' | 'white';
   text?: string;
   fullScreen?: boolean;
   showLogo?: boolean;
-}
-  size = 'md',
-  color = 'primary',
-  text,
-  fullScreen = false,
-  showLogo = false
-}: LoaderProps) => {
-  const sizeClasses = {
-  sm: 'w - 6 h - 6',
+};
+  size = 'md',;
+  color = 'primary',;
+  text,;
+  fullScreen = false,;
+  showLogo = false;
+}: LoaderProps) => {;
+  const sizeClasses = {;
+  sm: 'w - 6 h - 6',;
     md: 'w - 12 h - 12',;
   ;
   ;
@@ -25,6 +25,6 @@ interface LoaderProps {
   ;
   lg: 'w - 16 h - 16';
   ;
-
+;
 };
-  const textSizes = {
+  const textSizes = {;

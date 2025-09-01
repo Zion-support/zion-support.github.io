@@ -130,11 +130,35 @@ export function ChatBotPanel() {
             // Send the conversation to the backend for logging
             // This would be implemented in a real system
             // // // // // // // console.log("Support escalation triggered", {
-                conversationHistory: messages.map(m => ({
+                conversationHistory: messages.map(((((((m => ({
                     content: m.content,
                     sender: m.sender,
                     timestamp: m.timestamp
-                }))
+                }, index, index, index, index, index, index) => ({ ...(((((m => ({
+                    content: m.content,
+                    sender: m.sender,
+                    timestamp: m.timestamp
+                }, index, index, index, index, index, key: index })) => ({ ...((((m => ({
+                    content: m.content,
+                    sender: m.sender,
+                    timestamp: m.timestamp
+                }, index, index, index, index, key: index })) => ({ ...(((m => ({
+                    content: m.content,
+                    sender: m.sender,
+                    timestamp: m.timestamp
+                }, index, index, index, key: index })) => ({ ...((m => ({
+                    content: m.content,
+                    sender: m.sender,
+                    timestamp: m.timestamp
+                }, index, index, key: index })) => ({ ...(m => ({
+                    content: m.content,
+                    sender: m.sender,
+                    timestamp: m.timestamp
+                }, index, key: index })) => ({ ...m => ({
+                    content: m.content,
+                    sender: m.sender,
+                    timestamp: m.timestamp
+                }, key: index })))
             // // // // // // // console.error("Failed to log support escalation:", error);
         }
     };
@@ -184,10 +208,10 @@ export function ChatBotPanel() {
     return (<div className="flex flex-col h-full">
       <ScrollArea className="flex-1 p-4" ref={scrollAreaRef}>
         <div className="flex flex-col gap-4">
-          {messages.map((message) => (<ChatMessage key={message.id} message={message.content} isUser={message.sender === "user"} timestamp={message.timestamp}/>))}
+          {messages.map((((((((message, index, index, index, index, index, index) => ({ ...((((((message, index, index, index, index, index, key: index })) => ({ ...(((((message, index, index, index, index, key: index })) => ({ ...((((message, index, index, index, key: index })) => ({ ...(((message, index, index, key: index })) => ({ ...((message, index, key: index })) => ({ ...(message, key: index })) => (<ChatMessage key={message.id} message={message.content} isUser={message.sender === "user"} timestamp={message.timestamp}      />))}
 
           {isLoading && (<div className="flex items-center justify-center py-2">
-              <Loader2 className="h-5 w-5 animate-spin text-zion-purple"/>
+              <Loader2 className="h-5 w-5 animate-spin text-zion-purple"      />
             </div>)}
         </div>
       </ScrollArea>
@@ -206,7 +230,7 @@ export function ChatBotPanel() {
             Suggested questions:
           </p>
           <div className="flex flex-wrap gap-2">
-            {QUICK_REPLIES.map((reply) => (<QuickReplyButton key={reply.id} text={reply.text} onClick={() => handleQuickReply(reply.text)}/>))}
+            {QUICK_REPLIES.map((((((((reply, index, index, index, index, index, index) => ({ ...((((((reply, index, index, index, index, index, key: index })) => ({ ...(((((reply, index, index, index, index, key: index })) => ({ ...((((reply, index, index, index, key: index })) => ({ ...(((reply, index, index, key: index })) => ({ ...((reply, index, key: index })) => ({ ...(reply, key: index })) => (<QuickReplyButton key={reply.id} text={reply.text} onClick={() => handleQuickReply(reply.text)}/>))}
           </div>
         </div>)}
 
@@ -262,7 +286,7 @@ export function ChatBotPanel() {
 
 }/>
           <Button type="submit" size="icon" disabled={isLoading || !inputValue.trim()} className="bg-zion-cyan hover:bg-zion-cyan/80 text-white">
-            <Send className="h-4 w-4"/>
+            <Send className="h-4 w-4"      />
           </Button>
         </form>
       </div>

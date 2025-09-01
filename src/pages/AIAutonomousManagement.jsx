@@ -10,15 +10,15 @@ const AIAutonomousManagement = () => {
         <meta
           name="description"
           content="Revolutionary AI autonomous management platform that continuously manages systems, oversees operations, and coordinates resources with advanced AI capabilities and autonomous operation."
-        />
+              />
         <meta
           name="keywords"
           content="AI management, autonomous management, system management, operation oversight, autonomous operations, AI management platform"
-        />
+              />
         <link
           rel="canonical"
           href="https://ziontechgroup.com / ai - autonomous - management"
-        />
+              />
       </Helmet>
 
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - blue - 900 to - slate - 900">

@@ -53,7 +53,7 @@ export default function ListingDetail () {
             <div className="lg:col - span - 2">
               <div className="bg - zion - blue - dark rounded - lg overflow - hidden border border - zion - blue - light">
                 <div className="aspect-[16 / 9] w - full relative">
-                  {listing.images && listing.images.length > 0 ? (<ImageWithRetry src={listing.images[selectedImageIndex]} alt={listing.title} className="w - full h - full object - cover" fallbackSrc="/placeholder.svg"/>) : (<div className="w - full h - full flex items - center justify - center bg - zion - blue - light / 20">
+                  {listing.images && listing.images.length > 0 ? (<ImageWithRetry src={listing.images[selectedImageIndex]} alt={listing.title} className="w - full h - full object - cover" fallbackSrc="/placeholder.svg"      />) : (<div className="w - full h - full flex items - center justify - center bg - zion - blue - light / 20">
                       <span className="text - zion - slate - light">No image available</span>
                     </div>) }
                 </div>
@@ -62,7 +62,7 @@ export default function ListingDetail () {
                     {listing.images.map ( (image, index) => (<div key={index} onClick={ () => setSelectedImageIndex (index) } className={
   cn ("w - 20 h - 20 flex - shrink - 0 cursor - pointer rounded overflow - hidden border - 2",
   index === selectedImageIndex ? "border - zion - purple" : "border - transparent") }>
-                        <ImageWithRetry src={image} alt={`${listing.title} - image ${index + 1}`} className="w - full h - full object - cover" fallbackSrc="/placeholder.svg"/>
+                        <ImageWithRetry src={image} alt={`${listing.title} - image ${index + 1}`} className="w - full h - full object - cover" fallbackSrc="/placeholder.svg"      />
                       </div>) ) }
                   </div>) }
               </div>
@@ -78,7 +78,7 @@ export default function ListingDetail () {
                   <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">
                     <div className="flex items - start gap - 3">
                       <div className="p - 2 rounded - full bg - zion - purple / 20">
-                        <Brain className="h - 5 w - 5 text - zion - purple"/>
+                        <Brain className="h - 5 w - 5 text - zion - purple"      />
                       </div>
                       <div>
                         <h4 className="font - medium text - white">Advanced AI</h4>
@@ -87,7 +87,7 @@ export default function ListingDetail () {
                     </div>
                     <div className="flex items - start gap - 3">
                       <div className="p - 2 rounded - full bg - zion - cyan / 20">
-                        <Shield className="h - 5 w - 5 text - zion - cyan"/>
+                        <Shield className="h - 5 w - 5 text - zion - cyan"      />
                       </div>
                       <div>
                         <h4 className="font - medium text - white">Enterprise Security</h4>
@@ -127,7 +127,7 @@ export default function ListingDetail () {
                     <div className="flex items - center">
                       {[...Array (5) ].map ( (_, i) => (<Star key={i} className={
   cn ("h - 5 w - 5",
-  i < Math.floor (listing.rating) ? "text - zion - cyan fill - zion - cyan" : "text - zion - slate - light") }/>) ) }
+  i < Math.floor (listing.rating) ? "text - zion - cyan fill - zion - cyan" : "text - zion - slate - light") }      />) ) }
                     </div>
                     <span className="text - sm text - zion - slate - light">
                       {listing.rating.toFixed (1) } ({listing.reviewCount} reviews) </span>

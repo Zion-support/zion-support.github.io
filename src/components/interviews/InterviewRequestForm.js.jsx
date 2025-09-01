@@ -138,7 +138,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
               src={talent.profile_picture_url || '/placeholder.svg'}
               alt={talent.full_name}
               className="h-full w-full object-cover"
-            />
+                  />
           </div>
           <div>
             <h3 className="text-lg font-medium text-white">
@@ -157,9 +157,9 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
             <FormItem>
               <FormLabel>Interview Title</FormLabel>
               <FormControl>
-                <Input placeholder="Brief title for the interview" {...field} />
+                <Input placeholder="Brief title for the interview" {...field}       />
               </FormControl>
-              <FormMessage />
+              <FormMessage       />
             </FormItem>
           )}
         />
@@ -186,7 +186,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                         ) : (
                           <span>Pick a date</span>
                         )}
-                        <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
+                        <CalendarIcon className="ml-auto h-4 w-4 opacity-50"       />
                       </Button>
                     </FormControl>
                   </PopoverTrigger>
@@ -203,7 +203,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                     />
                   </PopoverContent>
                 </Popover>
-                <FormMessage />
+                <FormMessage       />
               </FormItem>
             )}
           />
@@ -220,18 +220,42 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                 >
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="Select time" />
+                      <SelectValue placeholder="Select time"       />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent className="max-h-[300px]">
-                    {timeSlots.map(time => (
+                    {timeSlots.map(((((((time => (
                       <SelectItem key={time} value={time}>
                         {time}
                       </SelectItem>
-                    ))}
+                    , index, index, index, index, index, index) => ({ ...(((((time => (
+                      <SelectItem key={time} value={time}>
+                        {time}
+                      </SelectItem>
+                    , index, index, index, index, index, key: index })) => ({ ...((((time => (
+                      <SelectItem key={time} value={time}>
+                        {time}
+                      </SelectItem>
+                    , index, index, index, index, key: index })) => ({ ...(((time => (
+                      <SelectItem key={time} value={time}>
+                        {time}
+                      </SelectItem>
+                    , index, index, index, key: index })) => ({ ...((time => (
+                      <SelectItem key={time} value={time}>
+                        {time}
+                      </SelectItem>
+                    , index, index, key: index })) => ({ ...(time => (
+                      <SelectItem key={time} value={time}>
+                        {time}
+                      </SelectItem>
+                    , index, key: index })) => ({ ...time => (
+                      <SelectItem key={time} value={time}>
+                        {time}
+                      </SelectItem>
+                    , key: index })))}
                   </SelectContent>
                 </Select>
-                <FormMessage />
+                <FormMessage       />
               </FormItem>
             )}
           />
@@ -250,7 +274,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                 >
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="Select duration" />
+                      <SelectValue placeholder="Select duration"       />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
@@ -260,7 +284,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                     <SelectItem value="60">60 minutes</SelectItem>
                   </SelectContent>
                 </Select>
-                <FormMessage />
+                <FormMessage       />
               </FormItem>
             )}
           />
@@ -277,7 +301,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                 >
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="Select platform" />
+                      <SelectValue placeholder="Select platform"       />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
@@ -287,7 +311,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                     <SelectItem value="other">Other</SelectItem>
                   </SelectContent>
                 </Select>
-                <FormMessage />
+                <FormMessage       />
               </FormItem>
             )}
           />
@@ -304,9 +328,9 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                   <Input
                     placeholder={`Add your ${form.watch('platform')} link here`}
                     {...field}
-                  />
+                        />
                 </FormControl>
-                <FormMessage />
+                <FormMessage       />
               </FormItem>
             )}
           />
@@ -323,9 +347,9 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                   placeholder="Share what you'd like to discuss in this interview"
                   className="h-20"
                   {...field}
-                />
+                      />
               </FormControl>
-              <FormMessage />
+              <FormMessage       />
             </FormItem>
           )}
         />

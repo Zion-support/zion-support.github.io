@@ -154,7 +154,7 @@ import { useAnalytics } from "../hooks / useAnalytics";
         trackChatbotInteraction ('conversation_cleared') }, [trackChatbotInteraction]) ;
     // Get typing indicator
     const TypingIndicator = () => (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex items - center space - x-2 p - 3 bg - gray - 100 dark:bg - gray - 700 rounded - lg">
-      <Bot className="w - 5 h - 5 text - blue - 500"/>
+      <Bot className="w - 5 h - 5 text - blue - 500"      />
       <div className="flex space - x-1">
         <div className="w - 2 h - 2 bg - gray - 400 rounded - full animate - bounce" style={{ animationDelay: '0ms' }}></div>
         <div className="w - 2 h - 2 bg - gray - 400 rounded - full animate - bounce" style={{ animationDelay: '150ms' }}></div>
@@ -179,7 +179,7 @@ import { useAnalytics } from "../hooks / useAnalytics";
     return (<>
       {/* Chatbot Toggle Button */}
       <motion.button onClick={toggleChatbot} className="fixed bottom - 6 right - 6 z - 50 p - 4 bg - gradient - to - r from - blue - 500 to - purple - 500 hover:from - blue - 600 hover:to - purple - 600 text - white rounded - full shadow - lg hover:shadow - xl transition - all duration - 300 transform hover:scale - 110 focus:outline - none focus:ring - 4 focus:ring - blue - 300" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} aria - label="Open AI chatbot">
-        <MessageCircle className="w - 6 h - 6"/>
+        <MessageCircle className="w - 6 h - 6"      />
         {messages.length > 0 && (<div className="absolute - top - 1 -right - 1 w - 5 h - 5 bg - red - 500 text - white text - xs rounded - full flex items - center justify - center">
             {Math.min (messages.length, 9) }
           </div>) }
@@ -204,19 +204,19 @@ import { useAnalytics } from "../hooks / useAnalytics";
             <div className="bg - gradient - to - r from - blue - 500 to - purple - 500 p - 4 text - white">
               <div className="flex items - center justify - between">
                 <div className="flex items - center gap - 2">
-                  <Bot className="w - 5 h - 5"/>
+                  <Bot className="w - 5 h - 5"      />
                   <span className="font - semibold">AI Assistant</span>
                   <div className="flex items - center gap - 1">
-                    <Sparkles className="w - 3 h - 3 text - yellow - 300"/>
+                    <Sparkles className="w - 3 h - 3 text - yellow - 300"      />
                     <span className="text - xs">Powered by AI</span>
                   </div>
                 </div>
                 <div className="flex items - center gap - 2">
                   <button onClick={toggleMinimize} className="p - 1 hover:bg - white / 20 rounded transition - colors" aria - label={isMinimized ? 'Maximize' : 'Minimize'}>
-                    {isMinimized ? <Maximize2 className="w - 4 h - 4"/> : <Minimize2 className="w - 4 h - 4"/>}
+                    {isMinimized ? <Maximize2 className="w - 4 h - 4"      /> : <Minimize2 className="w - 4 h - 4"      />}
                   </button>
                   <button onClick={toggleChatbot} className="p - 1 hover:bg - white / 20 rounded transition - colors" aria - label="Close chatbot">
-                    <X className="w - 4 h - 4"/>
+                    <X className="w - 4 h - 4"      />
                   </button>
                 </div>
               </div>
@@ -239,7 +239,7 @@ import { useAnalytics } from "../hooks / useAnalytics";
                         <div className={`w - 8 h - 8 rounded - full flex items - center justify - center flex - shrink - 0 ${message.type === 'user'
                         ? 'bg - blue - 500 text - white'
                         : 'bg - gray - 200 dark:bg - gray - 600 text - gray - 700 dark:text - gray - 300'}`}>
-                          {message.type === 'user' ? <User className="w - 4 h - 4"/> : <Bot className="w - 4 h - 4"/>}
+                          {message.type === 'user' ? <User className="w - 4 h - 4"      /> : <Bot className="w - 4 h - 4"      />}
                         </div>
 
                         <div className={`rounded - lg p - 3 ${message.type === 'user'
@@ -254,16 +254,16 @@ import { useAnalytics } from "../hooks / useAnalytics";
                             </div>) }
 
                           {/* Suggestions */}
-                          {message.type === 'bot' && message.metadata?.suggestions && enableSuggestions && (<MessageSuggestions suggestions={message.metadata.suggestions}/>) }
+                          {message.type === 'bot' && message.metadata?.suggestions && enableSuggestions && (<MessageSuggestions suggestions={message.metadata.suggestions}      />) }
                         </div>
                       </div>
                     </motion.div>) ) }
 
                   {/* Typing Indicator */}
-                  {isTyping && <TypingIndicator />}
+                  {isTyping && <TypingIndicator       />}
 
                   {/* Scroll anchor */}
-                  <div ref={messagesEndRef}/>
+                  <div ref={messagesEndRef}      />
                 </div>
 
                 {/* Input Area */}
@@ -271,7 +271,7 @@ import { useAnalytics } from "../hooks / useAnalytics";
                   <form onSubmit={handleSubmit} className="flex gap - 2">
                     <input ref={inputRef} type="text" value={inputValue} onChange={ (e) => setInputValue (e.target.value) } placeholder="Type your message..." className="flex - 1 px - 3 py - 2 border border - gray - 300 dark:border - gray - 600 rounded - lg focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent bg - white dark:bg - gray - 700 text - gray - 900 dark:text - gray - 100" disabled={isTyping}/>
                     <button type="submit" disabled={!inputValue.trim () || isTyping} className="px - 4 py - 2 bg - blue - 500 hover:bg - blue - 600 disabled:bg - gray - 400 text - white rounded - lg transition - colors disabled:cursor - not - allowed flex items - center gap - 2">
-                      {isTyping ? (<Loader2 className="w - 4 h - 4 animate - spin"/>) : (<Send className="w - 4 h - 4"/>) }
+                      {isTyping ? (<Loader2 className="w - 4 h - 4 animate - spin"      />) : (<Send className="w - 4 h - 4"      />) }
                     </button>
                   </form>
 

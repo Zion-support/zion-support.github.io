@@ -86,7 +86,7 @@ function applySecurityHeaders() {
 
 // Export for use in other files
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { securityHeaders, applySecurityHeaders };
+  export default { securityHeaders, applySecurityHeaders };
 } else {
   window.securityHeaders = securityHeaders;
   window.applySecurityHeaders = applySecurityHeaders;

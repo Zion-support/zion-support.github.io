@@ -123,7 +123,7 @@ const updatePasswordSchema = z
 
               {success ? (<div className="text - center py - 8">
                   <div className="mx - auto flex items - center justify - center h - 12 w - 12 rounded - full bg - zion - purple / 20 mb - 4">
-                    <LockKeyhole className="h - 6 w - 6 text - zion - purple"/>
+                    <LockKeyhole className="h - 6 w - 6 text - zion - purple"      />
                   </div>
                   <h3 className="text - lg font - medium text - white">Password updated</h3>
                   <p className="mt - 2 text - sm text - zion - slate - light">
@@ -139,17 +139,17 @@ const updatePasswordSchema = z
                     <FormField control={form.control} name="password" render={ ({ field }) => (<FormItem>
                           <FormLabel className="text - zion - slate - light">New Password</FormLabel>
                           <FormControl>
-                            <Input type="password" placeholder="Enter password" aria - label="New password" aria - invalid={!!form.formState.errors.password} className="bg - zion - blue text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple" disabled={isLoading} {...field}/>
+                            <Input type="password" placeholder="Enter password" aria - label="New password" aria - invalid={!!form.formState.errors.password} className="bg - zion - blue text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple" disabled={isLoading} {...field}      />
                           </FormControl>
-                          <FormMessage className="text - red - 400"/>
+                          <FormMessage className="text - red - 400"      />
                         </FormItem>) }/>
 
                     <FormField control={form.control} name="confirmPassword" render={ ({ field }) => (<FormItem>
                           <FormLabel className="text - zion - slate - light">Confirm Password</FormLabel>
                           <FormControl>
-                            <Input type="password" placeholder="Enter password" aria - label="Confirm password" aria - invalid={!!form.formState.errors.confirmPassword} className="bg - zion - blue text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple" disabled={isLoading} {...field}/>
+                            <Input type="password" placeholder="Enter password" aria - label="Confirm password" aria - invalid={!!form.formState.errors.confirmPassword} className="bg - zion - blue text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple" disabled={isLoading} {...field}      />
                           </FormControl>
-                          <FormMessage className="text - red - 400"/>
+                          <FormMessage className="text - red - 400"      />
                         </FormItem>) }/>
 
                     <Button type="submit" className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white" disabled={isLoading || !accessToken}>

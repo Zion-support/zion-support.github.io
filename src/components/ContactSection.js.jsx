@@ -16,7 +16,7 @@ export function ContactSection () {
   } from 'lucide - react';
   const contactMethods = [
     {
-      icon: <Mail className="w - 6 h - 6" />,
+      icon: <Mail className="w - 6 h - 6"       />,
       title: 'Email Us',
       description: 'Get in touch via email for general inquiries',
       contact: 'hello@ziontechgroup.com',
@@ -24,7 +24,7 @@ export function ContactSection () {
       color: 'from - zion - cyan to - zion - blue',
     },
     {
-      icon: <Phone className="w - 6 h - 6" />,
+      icon: <Phone className="w - 6 h - 6"       />,
       title: 'Call Us',
       description: 'Speak directly with our team',
       contact: '+1 (302) 464 - 0950',
@@ -32,7 +32,7 @@ export function ContactSection () {
       color: 'from - zion - purple to - zion - cyan',
     },
     {
-      icon: <MessageSquare className="w - 6 h - 6" />,
+      icon: <MessageSquare className="w - 6 h - 6"       />,
       title: 'Live Chat',
       description: 'Chat with our support team in real - time',
       contact: 'Available 24 / 7',
@@ -45,39 +45,39 @@ export function ContactSection () {
       city: 'Wilmington, DE',
       country: 'United States',
       address: '1000 N Market St, Wilmington, DE 19801',
-      icon: <MapPin className="w - 5 h - 5" />,
+      icon: <MapPin className="w - 5 h - 5"       />,
     },
     {
       city: 'New York, NY',
       country: 'United States',
       address: '350 5th Ave, New York, NY 10118',
-      icon: <MapPin className="w - 5 h - 5" />,
+      icon: <MapPin className="w - 5 h - 5"       />,
     },
     {
       city: 'London, UK',
       country: 'United Kingdom',
       address: '1 Canary Wharf, London E14 5AB',
-      icon: <MapPin className="w - 5 h - 5" />,
+      icon: <MapPin className="w - 5 h - 5"       />,
     },
   ];
   const supportFeatures = [
     {
-      icon: <Clock className="w - 6 h - 6" />,
+      icon: <Clock className="w - 6 h - 6"       />,
       title: '24 / 7 Support',
       description: 'Round - the - clock technical support and monitoring',
     },
     {
-      icon: <Shield className="w - 6 h - 6" />,
+      icon: <Shield className="w - 6 h - 6"       />,
       title: 'Enterprise Security',
       description: 'Bank - level security for all communications',
     },
     {
-      icon: <Users className="w - 6 h - 6" />,
+      icon: <Users className="w - 6 h - 6"       />,
       title: 'Expert Team',
       description: 'Certified professionals ready to help',
     },
     {
-      icon: <Globe className="w - 6 h - 6" />,
+      icon: <Globe className="w - 6 h - 6"       />,
       title: 'Global Reach',
       description: 'Support available in multiple time zones',
     },

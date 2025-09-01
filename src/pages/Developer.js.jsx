@@ -10,7 +10,7 @@ const Developer = () => {
         <meta
           name="description"
           content="Access Zion Tech Group's developer portal for tools, SDKs, and integration resources."
-        />
+              />
       </Helmet>
 
       <div className="min - h-screen bg - gray - 50 py - 12">

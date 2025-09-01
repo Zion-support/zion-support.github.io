@@ -131,22 +131,22 @@ import { motion, useScroll, useTransform } from "framer - motion";
 
   const features = [
     {
-      icon: <Star className="w - 6 h - 6" />,
+      icon: <Star className="w - 6 h - 6"       />,
       text: "AI - Powered Solutions",
       color: "text - zion - cyan"
     },
     {
-      icon: <Zap className="w - 6 h - 6" />,
+      icon: <Zap className="w - 6 h - 6"       />,
       text: "24 / 7 Support",
       color: "text - zion - purple"
     },
     {
-      icon: <Shield className="w - 6 h - 6" />,
+      icon: <Shield className="w - 6 h - 6"       />,
       text: "Enterprise Security",
       color: "text - zion - cyan - light"
     },
     {
-      icon: <Users className="w - 6 h - 6" />,
+      icon: <Users className="w - 6 h - 6"       />,
       text: "Global Team",
       color: "text - zion - purple - light"
     }

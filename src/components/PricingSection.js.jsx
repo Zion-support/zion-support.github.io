@@ -10,7 +10,7 @@ const plans = [
         price: 99,
         period: "month",
         description: "Perfect for small businesses and startups",
-        icon: <Rocket className="w - 8 h - 8"/>,
+        icon: <Rocket className="w - 8 h - 8"      />,
         color: "from - zion - cyan to - zion - blue",
         bgColor: "from - zion - cyan / 20 to - zion - blue / 20",
         features[;
@@ -33,7 +33,7 @@ const plans = [
         price: 299,
         period: "month",
         description: "Ideal for growing companies and teams",
-        icon: <Building className="w - 8 h - 8"/>,
+        icon: <Building className="w - 8 h - 8"      />,
         color: "from - zion - purple to - zion - purple - dark",
         bgColor: "from - zion - purple / 20 to - zion - purple - dark / 20",
         features[;
@@ -57,7 +57,7 @@ const plans = [
         price: 999,
         period: "month",
         description: "For large organizations with complex needs",
-        icon: <Crown className="w - 8 h - 8"/>,
+        icon: <Crown className="w - 8 h - 8"      />,
         color: "from - zion - cyan - light to - zion - purple",
         bgColor: "from - zion - cyan - light / 20 to - zion - purple / 20",
         features[;
@@ -83,7 +83,7 @@ const addons = [
         price: 199,
         period: "month",
         description: "Custom AI model training and optimization",
-        icon: <Zap className="w - 6 h - 6"/>,
+        icon: <Zap className="w - 6 h - 6"      />,
         features["Custom model training", "Performance optimization", "Model monitoring"];
     },;
     {
@@ -91,7 +91,7 @@ const addons = [
         price: 99,
         period: "month",
         description: "24 / 7 dedicated support with guaranteed response times",
-        icon: <Shield className="w - 6 h - 6"/>,
+        icon: <Shield className="w - 6 h - 6"      />,
         features["24 / 7 phone support", "Guaranteed 2 - hour response", "Dedicated support team"];
     },;
     {
@@ -99,7 +99,7 @@ const addons = [
         price: 149,
         period: "month",
         description: "Comprehensive analytics and reporting suite",
-        icon: <Users className="w - 6 h - 6"/>,
+        icon: <Users className="w - 6 h - 6"      />,
         features["Custom dashboards", "Advanced reporting", "Data export options"];
     }
 ];
@@ -184,7 +184,7 @@ const addons = [
               {/* Popular badge */}
               {plan.popular && (<div className="absolute - top - 4 left - 1/2 transform - translate - x-1 / 2 z - 10">
                   <div className="bg - gradient - to - r from - zion - purple to - zion - cyan text - white px - 6 py - 2 rounded - full text - sm font - semibold shadow - lg">
-                    <Star className="w - 4 h - 4 inline mr - 2"/>
+                    <Star className="w - 4 h - 4 inline mr - 2"      />
                     Most Popular
                   </div>
                 </div>) }
@@ -211,14 +211,14 @@ const addons = [
                 <div className="space - y-4 mb - 8">
                   {plan.features.map ( (feature, idx) => (<div key={idx} className="flex items - center gap - 3">
                       <div className="w - 5 h - 5 rounded - full bg - zion - cyan flex items - center justify - center flex - shrink - 0">
-                        <Check className="w - 3 h - 3 text - white"/>
+                        <Check className="w - 3 h - 3 text - white"      />
                       </div>
                       <span className="text - zion - slate - light text - sm">{feature}</span>
                     </div>) ) }
                   
                   {plan.notIncluded.map ( (feature, idx) => (<div key={idx} className="flex items - center gap - 3 opacity - 50">
                       <div className="w - 5 h - 5 rounded - full bg - zion - slate - light / 30 flex items - center justify - center flex - shrink - 0">
-                        <X className="w - 3 h - 3 text - zion - slate - light"/>
+                        <X className="w - 3 h - 3 text - zion - slate - light"      />
                       </div>
                       <span className="text - zion - slate - light text - sm">{feature}</span>
                     </div>) ) }
@@ -229,7 +229,7 @@ const addons = [
                 ? 'bg - gradient - to - r from - zion - purple to - zion - cyan hover:from - zion - purple - light hover:to - zion - cyan - light text - white shadow - lg hover:shadow - zion - purple / 25'
                 : 'bg - zion - blue - light / 20 hover:bg - zion - blue - light / 30 text - zion - cyan border border - zion - cyan / 30 hover:border - zion - cyan / 50'}`} onClick={ () => setSelectedPlan (index) }>
                   {plan.cta}
-                  <ArrowRight className="w - 4 h - 4 inline ml - 2"/>
+                  <ArrowRight className="w - 4 h - 4 inline ml - 2"      />
                 </button>
               </div>
             </motion.div>) ) }

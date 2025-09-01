@@ -227,7 +227,7 @@ const InteractiveServiceShowcase = () => {
                       {/* Features */}
                       <div className="space - y-2 mb - 6">
                         {service.features.slice (0, 3) .map ( (feature, index) => (<div key={index} className="flex items - center gap - 2 text - zion - slate - light text - xs">
-                            <div className="w - 1.5 h - 1.5 bg - zion - cyan rounded - full"/>
+                            <div className="w - 1.5 h - 1.5 bg - zion - cyan rounded - full"      />
                             {feature}
                           </div>) ) }
                         {service.features.length > 3 && (<div className="text - zion - cyan / 60 text - xs">
@@ -242,7 +242,7 @@ const InteractiveServiceShowcase = () => {
                     </div>
 
                     {/* Hover Effect Overlay */}
-                    <div className="absolute inset - 0 bg - gradient - to - br from - zion - cyan / 5 to - zion - blue / 5 rounded - 3xl opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300"/>
+                    <div className="absolute inset - 0 bg - gradient - to - br from - zion - cyan / 5 to - zion - blue / 5 rounded - 3xl opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300"      />
                   </div>
                 </Link>
               </motion.div>) ) }

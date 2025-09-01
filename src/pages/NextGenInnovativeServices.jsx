@@ -124,14 +124,14 @@ import { NEXT_GEN_INNOVATIVE_SERVICES } from "../data / nextGenInnovativeService
             {/* Search */}
             <div className="flex - 1 max - w-md">
               <div className="relative">
-                <Search className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text - gray - 400 w - 5 h - 5"/>
+                <Search className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text - gray - 400 w - 5 h - 5"      />
                 <input type="text" placeholder="Search services..." value={searchTerm} onChange={ (e) => setSearchTerm (e.target.value) } className="w - full pl - 10 pr - 4 py - 3 bg - white / 10 border border - blue - 400 / 30 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 400 focus:border - transparent"/>
               </div>
             </div>
 
             {/* Category Filter */}
             <div className="flex items - center gap - 4">
-              <Filter className="text - blue - 400 w - 5 h - 5"/>
+              <Filter className="text - blue - 400 w - 5 h - 5"      />
               <select value={selectedCategory} onChange={ (e) => setSelectedCategory (e.target.value) } className="bg - white / 10 border border - blue - 400 / 30 rounded - lg px - 4 py - 3 text - white focus:outline - none focus:ring - 2 focus:ring - blue - 400">
                 {categories.map (category => (<option key={category} value={category} className="bg - gray - 800 text - white">
                     {category === 'all' ? 'All Categories' : category}
@@ -142,10 +142,10 @@ import { NEXT_GEN_INNOVATIVE_SERVICES } from "../data / nextGenInnovativeService
             {/* View Mode Toggle */}
             <div className="flex items - center gap - 2">
               <button onClick={ () => setViewMode ('grid') } className={`p - 2 rounded - lg transition - colors ${viewMode === 'grid' ? 'bg - blue - 400 text - white' : 'bg - white / 10 text - gray - 400'}`}>
-                <Grid className="w - 5 h - 5"/>
+                <Grid className="w - 5 h - 5"      />
               </button>
               <button onClick={ () => setViewMode ('list') } className={`p - 2 rounded - lg transition - colors ${viewMode === 'list' ? 'bg - blue - 400 text - white' : 'bg - white / 10 text - gray - 400'}`}>
-                <List className="w - 5 h - 5"/>
+                <List className="w - 5 h - 5"      />
               </button>
             </div>
           </div>
@@ -188,11 +188,11 @@ import { NEXT_GEN_INNOVATIVE_SERVICES } from "../data / nextGenInnovativeService
               {/* Quick Info */}
               <div className="grid grid - cols - 2 gap - 4 text - sm mb - 4">
                 <div className="flex items - center text - gray - 400">
-                  <Clock size={16} className="mr - 2"/>
+                  <Clock size={16} className="mr - 2"      />
                   {service.estimatedDelivery}
                 </div>
                 <div className="flex items - center text - gray - 400">
-                  <Users size={16} className="mr - 2"/>
+                  <Users size={16} className="mr - 2"      />
                   {service.targetAudience.length} audiences
                 </div>
               </div>
@@ -201,11 +201,11 @@ import { NEXT_GEN_INNOVATIVE_SERVICES } from "../data / nextGenInnovativeService
               <div className="pt - 4 border - t border - white / 20">
                 <div className="flex items - center justify - between text - sm">
                   <div className="flex items - center text - gray - 400">
-                    <Phone size={16} className="mr - 2"/>
+                    <Phone size={16} className="mr - 2"      />
                     {service.contactInfo.phone}
                   </div>
                   <a href={`mailto:${service.contactInfo.email}`} className="flex items - center text - blue - 400 hover:text - blue - 300 transition - colors">
-                    <Mail size={16} className="mr - 2"/>
+                    <Mail size={16} className="mr - 2"      />
                     Contact
                   </a>
                 </div>
@@ -310,7 +310,7 @@ import { NEXT_GEN_INNOVATIVE_SERVICES } from "../data / nextGenInnovativeService
               <div className="grid md:grid - cols - 2 gap - 8 mb - 8">
                 <div>
                   <h3 className="text - xl font - bold text - white mb - 4 flex items - center">
-                    <CheckCircle size={20} className="mr - 2 text - green - 400"/>
+                    <CheckCircle size={20} className="mr - 2 text - green - 400"      />
                     Key Features
                   </h3>
                   <ul className="space - y-2">
@@ -323,7 +323,7 @@ import { NEXT_GEN_INNOVATIVE_SERVICES } from "../data / nextGenInnovativeService
 
                 <div>
                   <h3 className="text - xl font - bold text - white mb - 4 flex items - center">
-                    <TrendingUp size={20} className="mr - 2 text - blue - 400"/>
+                    <TrendingUp size={20} className="mr - 2 text - blue - 400"      />
                     Benefits
                   </h3>
                   <ul className="space - y-2">
@@ -359,7 +359,7 @@ import { NEXT_GEN_INNOVATIVE_SERVICES } from "../data / nextGenInnovativeService
               {/* Competitive Advantage */}
               <div className="bg - white / 10 rounded - lg p - 6 mb - 8">
                 <h3 className="text - xl font - bold text - white mb - 4 flex items - center">
-                  <Award size={20} className="mr - 2 text - yellow - 400"/>
+                  <Award size={20} className="mr - 2 text - yellow - 400"      />
                   Competitive Advantage
                 </h3>
                 <p className="text - gray - 300 text - lg">{selectedService.competitiveAdvantage}</p>
@@ -368,15 +368,15 @@ import { NEXT_GEN_INNOVATIVE_SERVICES } from "../data / nextGenInnovativeService
               {/* CTA Buttons */}
               <div className="flex flex - col sm:flex - row gap - 4">
                 <a href={`mailto:${selectedService.contactInfo.email}?subject = Inquiry about ${selectedService.title}`} className="flex - 1 bg - gradient - to - r from - blue - 500 to - purple - 500 text - white px - 6 py - 3 rounded - lg text - center font - semibold hover:from - blue - 600 hover:to - purple - 600 transition - all duration - 300 flex items - center justify - center">
-                  <Mail size={20} className="mr - 2"/>
+                  <Mail size={20} className="mr - 2"      />
                   Get Quote
                 </a>
                 <a href={`tel:${selectedService.contactInfo.phone}`} className="flex - 1 bg - gray - 700 text - white px - 6 py - 3 rounded - lg text - center font - semibold hover:bg - gray - 600 transition - all duration - 300 flex items - center justify - center">
-                  <Phone size={20} className="mr - 2"/>
+                  <Phone size={20} className="mr - 2"      />
                   Call Now
                 </a>
                 {selectedService.demoUrl && (<a href={selectedService.demoUrl} target="_blank" rel="noopener noreferrer" className="flex - 1 border - 2 border - blue - 400 text - blue - 400 px - 6 py - 3 rounded - lg text - center font - semibold hover:bg - blue - 400 hover:text - white transition - all duration - 300 flex items - center justify - center">
-                    <ExternalLink size={20} className="mr - 2"/>
+                    <ExternalLink size={20} className="mr - 2"      />
                     View Demo
                   </a>) }
               </div>
@@ -409,15 +409,15 @@ import { NEXT_GEN_INNOVATIVE_SERVICES } from "../data / nextGenInnovativeService
             </p>
             <div className="flex flex - col sm:flex - row gap - 4 justify - center">
               <a href="tel:+13024640950" className="bg - gradient - to - r from - blue - 500 to - purple - 500 text - white px - 8 py - 4 rounded - lg text - lg font - semibold hover:from - blue - 600 hover:to - purple - 600 transition - all duration - 300 flex items - center justify - center">
-                <Phone size={24} className="mr - 2"/>
+                <Phone size={24} className="mr - 2"      />
                 Call + 1 302 464 0950
               </a>
               <a href="mailto:kleber@ziontechgroup.com" className="bg - gray - 700 text - white px - 8 py - 4 rounded - lg text - lg font - semibold hover:bg - gray - 600 transition - all duration - 300 flex items - center justify - center">
-                <Mail size={24} className="mr - 2"/>
+                <Mail size={24} className="mr - 2"      />
                 Email Us
               </a>
               <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="border - 2 border - blue - 400 text - blue - 400 px - 8 py - 4 rounded - lg text - lg font - semibold hover:bg - blue - 400 hover:text - white transition - all duration - 300 flex items - center justify - center">
-                <Globe size={24} className="mr - 2"/>
+                <Globe size={24} className="mr - 2"      />
                 Visit Website
               </a>
             </div>

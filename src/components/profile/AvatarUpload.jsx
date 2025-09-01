@@ -18,7 +18,7 @@ export function AvatarUpload({ value, onChange }) {
           src={url}
           alt="Avatar preview"
           className="h-20 w-20 rounded-full"
-        />
+              />
       )}
       {process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME &&
       process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME !==

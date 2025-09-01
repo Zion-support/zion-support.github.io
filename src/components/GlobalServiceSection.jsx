@@ -59,14 +59,14 @@ import { Globe, Clock, Users, Shield, Zap, CheckCircle export const GlobalServic
 
               <div className="flex items - center mb - 4">
                 <div className="p - 3 bg - blue - 600 / 20 rounded - lg mr - 4">
-                  <service.icon className="h - 8 w - 8 text - blue - 400" />
+                  <service.icon className="h - 8 w - 8 text - blue - 400"       />
                 </div>
                 <h3 className="text - xl font - semibold text - white">{service.title}</h3>
               </div>
               <p className="text - gray - 300 mb - 4">{service.description}</p>
               <ul className="space - y-2">
                 {service.features.map ( (feature, idx) => (<li key={idx} className="flex items - center text - sm text - gray - 300">
-                    <CheckCircle className="h - 4 w - 4 text - blue - 400 mr - 2 flex - shrink - 0" />
+                    <CheckCircle className="h - 4 w - 4 text - blue - 400 mr - 2 flex - shrink - 0"       />
                     {feature}
                   </li>) ) }
               </ul>

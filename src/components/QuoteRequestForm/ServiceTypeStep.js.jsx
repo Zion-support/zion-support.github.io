@@ -136,7 +136,7 @@ export function ServiceTypeStep({ formData, updateFormData }) {
           </h3>
 
           <div className="relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4"       />
             <Input
               placeholder={`Search ${formData.serviceType}...`}
               value={searchQuery}
@@ -152,15 +152,33 @@ export function ServiceTypeStep({ formData, updateFormData }) {
           <div className="grid grid-cols-1 gap-4 mt-4">
             {loading ? (
               <>
-                <Skeleton className="h-[120px] w-full" />
-                <Skeleton className="h-[120px] w-full" />
-                <Skeleton className="h-[120px] w-full" />
+                <Skeleton className="h-[120px] w-full"       />
+                <Skeleton className="h-[120px] w-full"       />
+                <Skeleton className="h-[120px] w-full"       />
               </>
             ) : filteredListings.length > 0 ? (
-              filteredListings.map(item => (
+              filteredListings.map(((((((item => (
                 <div
                   key={item.id}
-                  onClick={() => handleItemSelect(item)}
+                  onClick={(, index, index, index, index, index, index) => ({ ...(((((item => (
+                <div
+                  key={item.id}
+                  onClick={(, index, index, index, index, index, key: index })) => ({ ...((((item => (
+                <div
+                  key={item.id}
+                  onClick={(, index, index, index, index, key: index })) => ({ ...(((item => (
+                <div
+                  key={item.id}
+                  onClick={(, index, index, index, key: index })) => ({ ...((item => (
+                <div
+                  key={item.id}
+                  onClick={(, index, index, key: index })) => ({ ...(item => (
+                <div
+                  key={item.id}
+                  onClick={(, index, key: index })) => ({ ...item => (
+                <div
+                  key={item.id}
+                  onClick={(, key: index })) => handleItemSelect(item)}
                   className={`cursor-pointer transition-all ${formData.specificItem?.id === item.id ? 'ring-2 ring-zion-purple rounded-lg' : ''}`}
                 >
                   <ListingScoreCard
@@ -171,7 +189,7 @@ export function ServiceTypeStep({ formData, updateFormData }) {
                     reviewCount={Math.floor(Math.random() * 50) + 10}
                     image={item.image}
                     description="Sample listing description"
-                  />
+                        />
                 </div>
               ))
             ) : (

@@ -10,15 +10,15 @@ const AIAutonomousRecommendation = () => {
         <meta
           name="description"
           content="Revolutionary AI autonomous recommendation platform that continuously provides personalized recommendations, suggestions, and insights with advanced AI capabilities and autonomous operation."
-        />
+              />
         <meta
           name="keywords"
           content="AI recommendation, autonomous recommendation, personalized suggestions, recommendation engine, autonomous operations, AI recommendation platform"
-        />
+              />
         <link
           rel="canonical"
           href="https://ziontechgroup.com / ai - autonomous - recommendation"
-        />
+              />
       </Helmet>
 
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - rose - 900 to - slate - 900">

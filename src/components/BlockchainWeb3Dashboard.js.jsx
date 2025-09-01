@@ -73,7 +73,7 @@ import { useBlockchainWeb3 } from "../hooks / useBlockchainWeb3";
       <div className="flex items - center justify - between p - 4 border - b border - gray - 200 dark:border - gray - 700">
         <div className="flex items - center space - x-3">
           <div className="p - 2 bg - blue - 100 dark:bg - blue - 900 rounded - lg">
-            <Wallet className="w - 16 h - 16 text - gray - 400 mx - auto mb - 4"/>
+            <Wallet className="w - 16 h - 16 text - gray - 400 mx - auto mb - 4"      />
                   <h3 className="text - lg font - medium text - gray - 900 dark:text - white mb - 2">
                     Connect Your Wallet
                   </h3>
@@ -96,7 +96,7 @@ import { useBlockchainWeb3 } from "../hooks / useBlockchainWeb3";
                             {wallet.address}
                           </code>
                           <button onClick={ () => navigator.clipboard.writeText (wallet.address) } className="p - 2 text - gray - 500 hover:text - gray - 700 dark:text - gray - 400 dark:hover:text - gray - 200">
-                            <Download className="w - 4 h - 4"/>
+                            <Download className="w - 4 h - 4"      />
                           </button>
                         </div>
                       </div>
@@ -130,12 +130,12 @@ import { useBlockchainWeb3 } from "../hooks / useBlockchainWeb3";
                     <h3 className="text - lg font - semibold text - gray - 900 dark:text - white mb - 4">Quick Actions</h3>
                     <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">
                       <button onClick={ () => setShowSendTransaction (true) } className="flex items - center justify - center space - x-2 px - 4 py - 3 text - white bg - green - 600 rounded - lg hover:bg - green - 700">
-                        <Send className="w - 5 h - 5"/>
+                        <Send className="w - 5 h - 5"      />
                         <span > Send Transaction</span>
                       </button>
                       
                       <button onClick={ () => setShowMintNFT (true) } className="flex items - center justify - center space - x-2 px - 4 py - 3 text - white bg - purple - 600 rounded - lg hover:bg - purple - 700">
-                        <Plus className="w - 5 h - 5"/>
+                        <Plus className="w - 5 h - 5"      />
                         <span > Mint NFT</span>
                       </button>
                     </div>
@@ -168,7 +168,7 @@ import { useBlockchainWeb3 } from "../hooks / useBlockchainWeb3";
   'Event2']
 
 }) } className="px - 3 py - 2 text - sm font - medium text - white bg - blue - 600 rounded - lg hover:bg - blue - 700">;
-                  <Plus className="w - 4 h - 4 inline mr - 2"/>
+                  <Plus className="w - 4 h - 4 inline mr - 2"      />
                   Add Contract
                 </button>
               </div>
@@ -227,14 +227,14 @@ import { useBlockchainWeb3 } from "../hooks / useBlockchainWeb3";
               <div className="flex items - center justify - between">
                 <h3 className="text - lg font - semibold text - gray - 900 dark:text - white">NFT Collection</h3>
                 <button onClick={ () => setShowMintNFT (true) } className="px - 3 py - 2 text - sm font - medium text - white bg - purple - 600 rounded - lg hover:bg - purple - 700">
-                  <Plus className="w - 4 h - 4 inline mr - 2"/>
+                  <Plus className="w - 4 h - 4 inline mr - 2"      />
                   Mint NFT
                 </button>
               </div>
               
               <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 4">
                 {nfts.map ( (nft) => (<div key={nft.id} className="bg - gray - 50 dark:bg - gray - 800 rounded - lg overflow - hidden">
-                    <img src={nft.image} alt={nft.name} className="w - full h - 48 object - cover"/>
+                    <img src={nft.image} alt={nft.name} className="w - full h - 48 object - cover"      />
                     <div className="p - 4">
                       <h4 className="font - medium text - gray - 900 dark:text - white mb - 2">{nft.name}</h4>
                       <p className="text - sm text - gray - 600 dark:text - gray - 400 mb - 3">{nft.description}</p>
@@ -293,7 +293,7 @@ import { useBlockchainWeb3 } from "../hooks / useBlockchainWeb3";
   rewards: '125'
 
 }) } className="px - 3 py - 2 text - sm font - medium text - white bg - green - 600 rounded - lg hover:bg - green - 700">
-                  <Plus className="w - 4 h - 4 inline mr - 2"/>
+                  <Plus className="w - 4 h - 4 inline mr - 2"      />
                   Add Position
                 </button>
               </div>
@@ -357,7 +357,7 @@ import { useBlockchainWeb3 } from "../hooks / useBlockchainWeb3";
               <div className="flex items - center justify - between">
                 <h3 className="text - lg font - semibold text - gray - 900 dark:text - white">Transaction History</h3>
                 <button onClick={ () => setShowSendTransaction (true) } className="px - 3 py - 2 text - sm font - medium text - white bg - green - 600 rounded - lg hover:bg - green - 700">
-                  <Send className="w - 4 h - 4 inline mr - 2"/>
+                  <Send className="w - 4 h - 4 inline mr - 2"      />
                   Send Transaction
                 </button>
               </div>
@@ -367,7 +367,7 @@ import { useBlockchainWeb3 } from "../hooks / useBlockchainWeb3";
                     <div className="flex items - center justify - between mb - 3">
                       <div className="flex items - center space - x-3">
                         <div className={`p - 2 rounded - lg ${getStatusColor (tx.status) }`}>
-                          <Coins className="w - 4 h - 4"/>
+                          <Coins className="w - 4 h - 4"      />
                         </div>
                         <div>
                           <p className="font - medium text - gray - 900 dark:text - white">

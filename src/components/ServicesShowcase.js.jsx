@@ -63,24 +63,24 @@ const features = [
 ];
 const benefits = [
   {
-    icon: <Zap className="h - 6 w - 6" />,
+    icon: <Zap className="h - 6 w - 6"       />,
     title: 'Immediate Deployment',
     description:
       'All services are ready for immediate deployment with no setup delays',
   },
   {
-    icon: <Shield className="h - 6 w - 6" />,
+    icon: <Shield className="h - 6 w - 6"       />,
     title: 'Enterprise Security',
     description:
       'Bank - level security with SOC 2 compliance and 24 / 7 monitoring',
   },
   {
-    icon: <TrendingUp className="h - 6 w - 6" />,
+    icon: <TrendingUp className="h - 6 w - 6"       />,
     title: 'Proven ROI',
     description: 'Average 300% ROI within 6 months of implementation',
   },
   {
-    icon: <CheckCircle className="h - 6 w - 6" />,
+    icon: <CheckCircle className="h - 6 w - 6"       />,
     title: 'Quality Guaranteed',
     description: '30 - day money - back guarantee with free migration support',
   },
@@ -104,7 +104,7 @@ const benefits = [
                 size="lg"
                 className="bg - white text - zion - blue hover:bg - gray - 100"
               >
-                <Brain className="h - 5 w - 5 mr - 2" />
+                <Brain className="h - 5 w - 5 mr - 2"       />
                 Explore All Services
               </Button>
             </Link>
@@ -114,7 +114,7 @@ const benefits = [
                 variant="outline"
                 className="border - white text - white hover:bg - white hover:text - zion - blue"
               >
-                <Phone className="h - 5 w - 5 mr - 2" />
+                <Phone className="h - 5 w - 5 mr - 2"       />
                 Get Consultation
               </Button>
             </Link>
@@ -134,7 +134,7 @@ const benefits = [
                   <div
                     className={`mx - auto w - 16 h - 16 bg - gradient - to - br ${colorClass} rounded - full flex items - center justify - center mb - 4`}
                   >
-                    {IconComponent && (<IconComponent className="h - 8 w - 8 text - white" />) }
+                    {IconComponent && (<IconComponent className="h - 8 w - 8 text - white"       />) }
                   </div>
                   <CardTitle className="text - lg">{category.label}</CardTitle>
                 </CardHeader>
@@ -165,7 +165,7 @@ const benefits = [
                     src={service.images[0]}
                     alt={service.title}
                     className="w - full h - 48 object - cover rounded - t-lg"
-                  />
+                        />
                   <Badge className="absolute top - 4 right - 4 bg - zion - purple">
                     {service.category}
                   </Badge>
@@ -179,7 +179,7 @@ const benefits = [
                 <CardContent>
                   <div className="flex items - center justify - between mb - 4">
                     <div className="flex items - center">
-                      <Star className="h - 4 w - 4 text - yellow - 400 mr - 1" />
+                      <Star className="h - 4 w - 4 text - yellow - 400 mr - 1"       />
                       <span className="text - sm">{service.rating}</span>
                       <span className="text - zion - slate - light text - sm ml - 1"> ({service.reviewCount}) </span>
                     </div>
@@ -217,7 +217,7 @@ const benefits = [
           <div className="grid grid - cols - 2 md:grid - cols - 4 gap - 6">
             {features.map ( (feature, index) => (<div key={index} className="text - center">
                 <div className="w - 20 h - 20 bg - zion - purple / 20 rounded - full flex items - center justify - center mx - auto mb - 4">
-                  <CheckCircle className="h - 10 w - 10 text - zion - purple" />
+                  <CheckCircle className="h - 10 w - 10 text - zion - purple"       />
                 </div>
                 <p className="font - medium text - white text - sm">{feature}</p>
               </div>) ) }
@@ -266,28 +266,28 @@ const benefits = [
               </h4>
               <div className="space - y-4">
                 <div className="flex items - center">
-                  <Phone className="h - 5 w - 5 text - zion - purple mr - 3" />
+                  <Phone className="h - 5 w - 5 text - zion - purple mr - 3"       />
                   <div>
                     <p className="font - medium">Phone</p>
                     <p className="text - gray - 600">{CONTACT_INFO.mobile}</p>
                   </div>
                 </div>
                 <div className="flex items - center">
-                  <Mail className="h - 5 w - 5 text - zion - purple mr - 3" />
+                  <Mail className="h - 5 w - 5 text - zion - purple mr - 3"       />
                   <div>
                     <p className="font - medium">Email</p>
                     <p className="text - gray - 600">{CONTACT_INFO.email}</p>
                   </div>
                 </div>
                 <div className="flex items - center">
-                  <MapPin className="h - 5 w - 5 text - zion - purple mr - 3" />
+                  <MapPin className="h - 5 w - 5 text - zion - purple mr - 3"       />
                   <div>
                     <p className="font - medium">Address</p>
                     <p className="text - gray - 600">{CONTACT_INFO.address}</p>
                   </div>
                 </div>
                 <div className="flex items - center">
-                  <Globe className="h - 5 w - 5 text - zion - purple mr - 3" />
+                  <Globe className="h - 5 w - 5 text - zion - purple mr - 3"       />
                   <div>
                     <p className="font - medium">Website</p>
                     <a

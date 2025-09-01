@@ -585,7 +585,7 @@ const SERVICE_FILTERS = [
             setListings (prev => [...prev, generateRandomService (prev.length + 1) ]) }, 120000) ;
         return () => clearInterval (interval) }, []) ;
     return (<div className="min - h-screen bg - background">
-      <SEO title="IT & AI Services - Zion Tech Group" description="Find expert technology service providers for your business needs, from AI development to infrastructure management." keywords="IT services, AI services, technology consulting, Zion Tech Group" url="https://ziontechgroup.com / services"/>
+      <SEO title="IT & AI Services - Zion Tech Group" description="Find expert technology service providers for your business needs, from AI development to infrastructure management." keywords="IT services, AI services, technology consulting, Zion Tech Group" url="https://ziontechgroup.com / services"      />
       
       <div className="bg - zion - blue - dark py - 4 px - 4 md:px - 8 mb - 6 border - b border - zion - blue - light">
         <div className="container mx - auto flex flex - col md:flex - row items - center justify - between gap - 4">
@@ -593,7 +593,7 @@ const SERVICE_FILTERS = [
           <div className="flex flex - wrap gap - 2">
             <Link to="/comprehensive - services">
               <Button variant="outline" className="border - zion - purple text - zion - cyan hover:bg - zion - purple / 10">
-                <Globe className="h - 4 w - 4 mr - 2"/>
+                <Globe className="h - 4 w - 4 mr - 2"      />
                 View All Services
               </Button>
             </Link>

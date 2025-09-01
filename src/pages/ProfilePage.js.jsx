@@ -72,7 +72,7 @@ import {
         description={
           profileData.bio || 'View the profile of this talented individual.'
         }
-      />
+            />
 
       <div className="container mx - auto px - 4 py - 8">
         <div className="grid grid - cols - 12 gap - 6">
@@ -87,12 +87,12 @@ import {
                     {profileData.profile_picture_url ? (<AvatarImage
                         src={profileData.profile_picture_url}
                         alt={profileData.full_name}
-                      />) : (<AvatarFallback>
+                            />) : (<AvatarFallback>
                         {profileData.full_name?.charAt (0) }
                       </AvatarFallback>) }
                   </Avatar>
                   {profileData.is_verified && (<div className="absolute - bottom - 1 -right - 1 bg - zion - blue p - 0.5 rounded - full">
-                      <CheckCircle2 className="w - 5 h - 5 text - zion - cyan" />
+                      <CheckCircle2 className="w - 5 h - 5 text - zion - cyan"       />
                     </div>) }
                 </div>
 
@@ -113,11 +113,11 @@ import {
                   {/* Location & Availability */}
                   <div className="mt - 2 flex flex - wrap gap - 3 text - sm">
                     {profileData.location && (<div className="flex items - center text - zion - slate - light">
-                        <MapPin className="h - 4 w - 4 mr - 1" />
+                        <MapPin className="h - 4 w - 4 mr - 1"       />
                         <span>{profileData.location}</span>
                       </div>) }
                     {profileData.availability && (<div className="flex items - center text - zion - slate - light">
-                        <Clock className="h - 4 w - 4 mr - 1" />
+                        <Clock className="h - 4 w - 4 mr - 1"       />
                         <span>{profileData.availability}</span>
                       </div>) }
                   </div>
@@ -161,7 +161,7 @@ import {
                       rel="noopener noreferrer"
                       className="flex items - center text - zion - cyan hover:text - white transition - colors"
                     >
-                      <LinkIcon className="h - 4 w - 4 mr - 2" />
+                      <LinkIcon className="h - 4 w - 4 mr - 2"       />
                       {link}
                     </a>) ) ) : (<p className="text - zion - slate - light">
                     No portfolio links provided.
@@ -191,7 +191,7 @@ import {
                     rel="noopener noreferrer"
                     className="text - zion - cyan hover:text - white transition - colors"
                   >
-                    <Github className="h - 6 w - 6" />
+                    <Github className="h - 6 w - 6"       />
                   </a>) }
                 {profileData.twitter_link && (<a
                     href={profileData.twitter_link}
@@ -199,7 +199,7 @@ import {
                     rel="noopener noreferrer"
                     className="text - zion - cyan hover:text - white transition - colors"
                   >
-                    <Twitter className="h - 6 w - 6" />
+                    <Twitter className="h - 6 w - 6"       />
                   </a>) }
                 {profileData.linkedin_link && (<a
                     href={profileData.linkedin_link}
@@ -207,7 +207,7 @@ import {
                     rel="noopener noreferrer"
                     className="text - zion - cyan hover:text - white transition - colors"
                   >
-                    <Linkedin className="h - 6 w - 6" />
+                    <Linkedin className="h - 6 w - 6"       />
                   </a>) }
               </div>
             </div>
@@ -222,7 +222,7 @@ import {
                 professional_title: profileData?.professional_title || '',
                 hourly_rate: profileData?.hourly_rate || 0,
               }}
-            />
+                  />
             {/* Placeholder for other sidebar elements */}
           </div>
         </div>

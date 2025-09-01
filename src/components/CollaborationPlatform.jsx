@@ -54,7 +54,7 @@ import { Video, VideoOff, Mic, MicOff, Monitor, Users, MessageSquare, X, Maximiz
         setActiveChat (!activeChat) };
     if (!isOpen) {
         return (<button onClick={ () => setIsOpen (true) } className="fixed bottom - 4 right - 20 p - 3 bg - zion - purple hover:bg - zion - purple - light text - white rounded - full shadow - lg hover:shadow - xl transition - all duration - 300 z - 50" title="Start Collaboration Session">
-        <Users className="w - 5 h - 5"/>
+        <Users className="w - 5 h - 5"      />
       </button>) }
     if (isMinimized) {
         return (<div className="fixed bottom - 4 right - 20 z - 50">
@@ -63,7 +63,7 @@ import { Video, VideoOff, Mic, MicOff, Monitor, Users, MessageSquare, X, Maximiz
             <div className="w - 3 h - 3 bg - zion - emerald rounded - full animate - pulse"></div>
             <span className="text - sm text - zion - slate">Collaboration Active</span>
             <button onClick={ () => setIsMinimized (false) } className="text - zion - slate - light hover:text - zion - slate transition - colors">
-              <Maximize2 className="w - 4 h - 4"/>
+              <Maximize2 className="w - 4 h - 4"      />
             </button>
           </div>
         </div>
@@ -74,7 +74,7 @@ import { Video, VideoOff, Mic, MicOff, Monitor, Users, MessageSquare, X, Maximiz
         <div className="flex items - center gap - 3">
           <div className="w - 3 h - 3 bg - zion - emerald rounded - full animate - pulse"></div>
           <div className="flex items - center gap - 2">
-            <Users className="w - 5 h - 5 text - zion - purple"/>
+            <Users className="w - 5 h - 5 text - zion - purple"      />
             <span className="font - semibold text - zion - slate">Collaboration Session</span>
           </div>
           <div className="text - sm text - zion - slate - light">
@@ -88,13 +88,13 @@ import { Video, VideoOff, Mic, MicOff, Monitor, Users, MessageSquare, X, Maximiz
             <div className="w - 4 h - 4 rounded - full border - 2 border - current"></div>
           </button>
           <button onClick={ () => setIsFullscreen (!isFullscreen) } className="p - 2 text - zion - slate - light hover:text - zion - slate transition - colors" title={isFullscreen ? 'Exit Fullscreen' : 'Fullscreen'}>
-            {isFullscreen ? <Minimize2 className="w - 4 h - 4"/> : <Maximize2 className="w - 4 h - 4"/>}
+            {isFullscreen ? <Minimize2 className="w - 4 h - 4"      /> : <Maximize2 className="w - 4 h - 4"      />}
           </button>
           <button onClick={ () => setIsMinimized (true) } className="p - 2 text - zion - slate - light hover:text - zion - slate transition - colors" title="Minimize">
-            <Minimize2 className="w - 4 h - 4"/>
+            <Minimize2 className="w - 4 h - 4"      />
           </button>
           <button onClick={ () => setIsOpen (false) } className="p - 2 text - zion - slate - light hover:text - zion - slate transition - colors" title="Close">
-            <X className="w - 4 h - 4"/>
+            <X className="w - 4 h - 4"      />
           </button>
         </div>
       </div>
@@ -123,10 +123,10 @@ import { Video, VideoOff, Mic, MicOff, Monitor, Users, MessageSquare, X, Maximiz
                   {/* Status Indicators */}
                   <div className="absolute top - 2 right - 2 flex gap - 1">
                     {!participant.isAudioOn && (<div className="w - 6 h - 6 bg - red - 500 rounded - full flex items - center justify - center">
-                        <MicOff className="w - 3 h - 3 text - white"/>
+                        <MicOff className="w - 3 h - 3 text - white"      />
                       </div>) }
                     {participant.isScreenSharing && (<div className="w - 6 h - 6 bg - zion - cyan rounded - full flex items - center justify - center">
-                        <Monitor className="w - 3 h - 3 text - white"/>
+                        <Monitor className="w - 3 h - 3 text - white"      />
                       </div>) }
                   </div>
 
@@ -142,29 +142,29 @@ import { Video, VideoOff, Mic, MicOff, Monitor, Users, MessageSquare, X, Maximiz
               <button onClick={toggleVideo} className={`p - 3 rounded - full transition - all duration - 200 ${localUser.isVideoOn
             ? 'bg - zion - slate - light / 20 text - zion - slate hover:bg - zion - slate - light / 30'
             : 'bg - red - 500 text - white'}`} title={localUser.isVideoOn ? 'Turn Off Video' : 'Turn On Video'}>
-                {localUser.isVideoOn ? <Video className="w - 5 h - 5"/> : <VideoOff className="w - 5 h - 5"/>}
+                {localUser.isVideoOn ? <Video className="w - 5 h - 5"      /> : <VideoOff className="w - 5 h - 5"      />}
               </button>
 
               <button onClick={toggleAudio} className={`p - 3 rounded - full transition - all duration - 200 ${localUser.isAudioOn
             ? 'bg - zion - slate - light / 20 text - zion - slate hover:bg - zion - slate - light / 30'
             : 'bg - red - 500 text - white'}`} title={localUser.isAudioOn ? 'Mute' : 'Unmute'}>
-                {localUser.isAudioOn ? <Mic className="w - 5 h - 5"/> : <MicOff className="w - 5 h - 5"/>}
+                {localUser.isAudioOn ? <Mic className="w - 5 h - 5"      /> : <MicOff className="w - 5 h - 5"      />}
               </button>
 
               <button onClick={toggleScreenShare} className={`p - 3 rounded - full transition - all duration - 200 ${localUser.isScreenSharing
             ? 'bg - zion - cyan text - white'
             : 'bg - zion - slate - light / 20 text - zion - slate hover:bg - zion - slate - light / 30'}`} title={localUser.isScreenSharing ? 'Stop Sharing' : 'Share Screen'}>
-                <Monitor className="w - 5 h - 5"/>
+                <Monitor className="w - 5 h - 5"      />
               </button>
 
               <button onClick={toggleChat} className={`p - 3 rounded - full transition - all duration - 200 ${activeChat
             ? 'bg - zion - purple text - white'
             : 'bg - zion - slate - light / 20 text - zion - slate hover:bg - zion - slate - light / 30'}`} title="Toggle Chat">
-                <MessageSquare className="w - 5 h - 5"/>
+                <MessageSquare className="w - 5 h - 5"      />
               </button>
 
               <button onClick={ () => setIsOpen (false) } className="p - 3 bg - red - 500 hover:bg - red - 600 text - white rounded - full transition - all duration - 200" title="Leave Meeting">
-                <PhoneOff className="w - 5 h - 5"/>
+                <PhoneOff className="w - 5 h - 5"      />
               </button>
             </div>
           </div>

@@ -38,7 +38,7 @@ const AIServices = () => {
         description="Transform your business with cutting-edge AI services including machine learning, data analytics, and AI strategy."
         keywords="AI services, machine learning, artificial intelligence, data analytics, AI strategy, AI ethics"
         canonical="https://ziontechgroup.com/services/ai-services"
-      />
+            />
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-pink-900 via-pink-800 to-rose-900 text-white py-20">
@@ -92,7 +92,7 @@ const AIServices = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+            {features.map((((((((feature, index, index, index, index, index, index, index) => ({ ...((((((feature, index, index, index, index, index, index, key: index })) => ({ ...(((((feature, index, index, index, index, index, key: index })) => ({ ...((((feature, index, index, index, index, key: index })) => ({ ...(((feature, index, index, index, key: index })) => ({ ...((feature, index, index, key: index })) => ({ ...(feature, index, key: index })) => (
               <motion.div
                 key={feature.title}
                 className="text-center p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-all duration-300"
@@ -102,7 +102,7 @@ const AIServices = () => {
                 viewport={{ once: true }}
               >
                 <div className="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="w-8 h-8 text-pink-600" />
+                  <feature.icon className="w-8 h-8 text-pink-600"       />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   {feature.title}
@@ -129,7 +129,7 @@ const AIServices = () => {
             </div>
 
             <div className="space-y-6">
-              {benefits.map((benefit, index) => (
+              {benefits.map((((((((benefit, index, index, index, index, index, index, index) => ({ ...((((((benefit, index, index, index, index, index, index, key: index })) => ({ ...(((((benefit, index, index, index, index, index, key: index })) => ({ ...((((benefit, index, index, index, index, key: index })) => ({ ...(((benefit, index, index, index, key: index })) => ({ ...((benefit, index, index, key: index })) => ({ ...(benefit, index, key: index })) => (
                 <motion.div
                   key={index}
                   className="flex items-center p-4 bg-white rounded-lg shadow-sm"
@@ -139,7 +139,7 @@ const AIServices = () => {
                   viewport={{ once: true }}
                 >
                   <div className="w-8 h-8 bg-pink-100 rounded-full flex items-center justify-center mr-4">
-                    <TrendingUp className="w-4 h-4 text-pink-600" />
+                    <TrendingUp className="w-4 h-4 text-pink-600"       />
                   </div>
                   <span className="text-lg text-gray-700">{benefit}</span>
                 </motion.div>

@@ -13,15 +13,15 @@ const AIAutonomousApplicationSecurity = () => {
         <meta
           name="description"
           content="Revolutionary AI autonomous application security platform that continuously secures applications, detects vulnerabilities, and protects software with advanced AI capabilities and autonomous operation."
-        />
+              />
         <meta
           name="keywords"
           content="AI application security, autonomous application security, application protection, vulnerability detection, autonomous operations, AI application security platform"
-        />
+              />
         <link
           rel="canonical"
           href="https://ziontechgroup.com / ai - autonomous - application - security"
-        />
+              />
       </Helmet>
 
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - green - 900 to - slate - 900">

@@ -14,6 +14,6 @@ export function Separator({
       aria-orientation={orientation}
       className={`${baseClasses} bg-gray-300 ${className}`}
       {...props}
-    />
+          />
   );
 }

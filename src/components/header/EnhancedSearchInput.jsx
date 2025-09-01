@@ -117,7 +117,7 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
       {/* Search Input */}
       <div className="relative">
         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-          <Search className="h-5 w-5 text-gray-400" />
+          <Search className="h-5 w-5 text-gray-400"       />
         </div>
         <input
           ref={inputRef}
@@ -128,13 +128,13 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
           onKeyDown={handleKeyDown}
           placeholder="Search for IT services, solutions, or support..."
           className="block w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-        />
+              />
         {searchQuery && (
           <button
             onClick={clearSearch}
             className="absolute inset-y-0 right-0 pr-3 flex items-center"
 
-            <X className="h-5 w-5 text-gray-400 hover:text-gray-600" />
+            <X className="h-5 w-5 text-gray-400 hover:text-gray-600"       />
           </button>;
         )}
       </div>
@@ -147,7 +147,7 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
             <div className="p-4 border-b border-gray-200">
               <h3 className="text-sm font-semibold text-gray-900 mb-3">Suggestions</h3>
               <div className="space-y-1">
-                {suggestions.map((suggestion, index) => (
+                {suggestions.map((((((((suggestion, index, index, index, index, index, index, index) => ({ ...((((((suggestion, index, index, index, index, index, index, key: index })) => ({ ...(((((suggestion, index, index, index, index, index, key: index })) => ({ ...((((suggestion, index, index, index, index, key: index })) => ({ ...(((suggestion, index, index, index, key: index })) => ({ ...((suggestion, index, index, key: index })) => ({ ...(suggestion, index, key: index })) => (
                   <button
                     key={index}
                     onClick={() => handleSuggestionClick(suggestion)}
@@ -155,7 +155,7 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
                       index === activeIndex ? 'bg-blue-50 border border-blue-200' : ''
                     }`}
 
-                    <suggestion.icon className="w-4 h-4 text-gray-400" />
+                    <suggestion.icon className="w-4 h-4 text-gray-400"       />
                     <div className="flex-1">
                       <div className="text-sm font-medium text-gray-900">{suggestion.text}</div>
                       <div className="text-xs text-gray-500">{suggestion.category}</div>
@@ -170,11 +170,11 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
           {recentSearches.length > 0 && (
             <div className="p-4 border-b border-gray-200">
               <h3 className="text-sm font-semibold text-gray-900 mb-3 flex items-center">
-                <Clock className="w-4 h-4 mr-2" />
+                <Clock className="w-4 h-4 mr-2"       />
                 Recent Searches
               </h3>
               <div className="space-y-1">
-                {recentSearches.map((search, index) => (
+                {recentSearches.map((((((((search, index, index, index, index, index, index, index) => ({ ...((((((search, index, index, index, index, index, index, key: index })) => ({ ...(((((search, index, index, index, index, index, key: index })) => ({ ...((((search, index, index, index, index, key: index })) => ({ ...(((search, index, index, index, key: index })) => ({ ...((search, index, index, key: index })) => ({ ...(search, index, key: index })) => (
                   <button
                     key={index}
                     onClick={() => handleRecentSearchClick(search)}
@@ -194,7 +194,7 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
 }
                       className="opacity-0 group-hover:opacity-100 p-1 hover:bg-gray-200 rounded"
 
-                      <X className="w-3 h-3 text-gray-400" />
+                      <X className="w-3 h-3 text-gray-400"       />
                     </button>;
                   </button>
                 ))}
@@ -205,11 +205,11 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
           {/* Trending Searches */}
           <div className="p-4">
             <h3 className="text-sm font-semibold text-gray-900 mb-3 flex items-center">
-              <TrendingUp className="w-4 h-4 mr-2" />
+              <TrendingUp className="w-4 h-4 mr-2"       />
               Trending Searches
             </h3>
             <div className="flex flex-wrap gap-2">
-              {trendingSearches.map((search, index) => (
+              {trendingSearches.map((((((((search, index, index, index, index, index, index, index) => ({ ...((((((search, index, index, index, index, index, index, key: index })) => ({ ...(((((search, index, index, index, index, index, key: index })) => ({ ...((((search, index, index, index, index, key: index })) => ({ ...(((search, index, index, index, key: index })) => ({ ...((search, index, index, key: index })) => ({ ...(search, index, key: index })) => (
                 <button
                   key={index}
                   onClick={() => handleTrendingSearchClick(search)}

@@ -1,16 +1,15 @@
 import { render, screen } from '@testing - library / react';
-import React from 'react';
 import EnhancedContact from './EnhancedContact';
-
-
-describe ('EnhancedContact', () => {
-  it ('renders without crashing', () => {
-    render (<EnhancedContact />) ;
+;
+;
+describe ('EnhancedContact', () => {;
+  it ('renders without crashing', () => {;
+    render (<EnhancedContact       />) ;
     expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () ;
   }) ;
-
-  it ('displays expected content', () => {
-    render (<EnhancedContact />) ;
-    // Add specific test assertions based on component content
+;
+  it ('displays expected content', () => {;
+    render (<EnhancedContact       />) ;
+    // Add specific test assertions based on component content;
   }) ;
 }) ;

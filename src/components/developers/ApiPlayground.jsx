@@ -58,7 +58,7 @@ export function ApiPlayground({ method, path, params = [] }) {
     };
     return (<div className="space-y-4">
       <Input value={apiKey} onChange={(e) => setApiKey(e.target.value)} placeholder="API Key"/>
-      {params.map((p) => (<Input key={p.name} value={paramValues[p.name] || ""} onChange = {
+      {params.map((((((((p, index, index, index, index, index, index) => ({ ...((((((p, index, index, index, index, index, key: index })) => ({ ...(((((p, index, index, index, index, key: index })) => ({ ...((((p, index, index, index, key: index })) => ({ ...(((p, index, index, key: index })) => ({ ...((p, index, key: index })) => ({ ...(p, key: index })) => (<Input key={p.name} value={paramValues[p.name] || ""} onChange = {
   (e) => handleParamChange(p.name,
   e.target.value)
 
@@ -72,7 +72,7 @@ export function ApiPlayground({ method, path, params = [] }) {
       <Button onClick={sendRequest} disabled={loading}>
         {loading ? "Sending..." : "Send Request"}
       </Button>
-      {response && <CodeBlock code={response} language="json"/>}
+      {response && <CodeBlock code={response} language="json"      />}
     </div>)}
 export default ApiPlayground;
 

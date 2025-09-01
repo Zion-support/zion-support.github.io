@@ -62,7 +62,7 @@ const EnhancedHero = () => {
     return (<div className="relative w - full h - screen overflow - hidden">
       {/* Background Video / Image Placeholder */}
       <div className="absolute inset - 0 bg - gradient - to - br from - gray - 900 via - blue - 900 to - purple - 900">
-        <div className="absolute inset - 0 bg - black / 50"/>
+        <div className="absolute inset - 0 bg - black / 50"      />
       </div>
 
       {/* Hero Content */}
@@ -189,12 +189,12 @@ const EnhancedHero = () => {
         <div className="flex items - center space - x-4">
           {/* Play / Pause Button */}
           <button onClick={togglePlayPause} className="p - 3 bg - white / 10 backdrop - blur - sm rounded - full hover:bg - white / 20 transition - colors duration - 300" aria - label={isPlaying ? "Pause slideshow" : "Play slideshow"}>
-            {isPlaying ? <Pause className="w - 5 h - 5 text - white"/> : <Play className="w - 5 h - 5 text - white"/>}
+            {isPlaying ? <Pause className="w - 5 h - 5 text - white"      /> : <Play className="w - 5 h - 5 text - white"      />}
           </button>
 
           {/* Mute Button */}
           <button onClick={toggleMute} className="p - 3 bg - white / 10 backdrop - blur - sm rounded - full hover:bg - white / 20 transition - colors duration - 300" aria - label={isMuted ? "Unmute" : "Mute"}>
-            {isMuted ? <VolumeX className="w - 5 h - 5 text - white"/> : <Volume2 className="w - 5 h - 5 text - white"/>}
+            {isMuted ? <VolumeX className="w - 5 h - 5 text - white"      /> : <Volume2 className="w - 5 h - 5 text - white"      />}
           </button>
 
           {/* Auto - play Toggle */}
@@ -217,11 +217,11 @@ const EnhancedHero = () => {
 
       {/* Navigation Arrows */}
       <button onClick={prevSlide} className="absolute left - 4 top - 1/2 transform - translate - y-1 / 2 z - 20 p - 3 bg - white / 10 backdrop - blur - sm rounded - full hover:bg - white / 20 transition - colors duration - 300" aria - label="Previous slide">
-        <ChevronLeft className="w - 6 h - 6 text - white"/>
+        <ChevronLeft className="w - 6 h - 6 text - white"      />
       </button>
 
       <button onClick={nextSlide} className="absolute right - 4 top - 1/2 transform - translate - y-1 / 2 z - 20 p - 3 bg - white / 10 backdrop - blur - sm rounded - full hover:bg - white / 20 transition - colors duration - 300" aria - label="Next slide">
-        <ChevronRight className="w - 6 h - 6 text - white"/>
+        <ChevronRight className="w - 6 h - 6 text - white"      />
       </button>
 
       {/* Keyboard Navigation Instructions */}

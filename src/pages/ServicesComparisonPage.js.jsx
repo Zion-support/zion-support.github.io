@@ -82,7 +82,7 @@ const SERVICE_COMPARISONS = [
 ];
     const [selectedCategory, setSelectedCategory] = useState ("AI & Automation") ;
     return (<div className="min - h-screen bg - background">
-      <SEO title="Services Comparison & Pricing - Zion Tech Group" description="Compare our AI and IT services, features, and pricing plans. Choose the perfect solution for your business needs and budget." keywords="service comparison, pricing plans, AI services, IT consulting, cybersecurity, cloud services" canonical="https://ziontechgroup.com / services - comparison"/>
+      <SEO title="Services Comparison & Pricing - Zion Tech Group" description="Compare our AI and IT services, features, and pricing plans. Choose the perfect solution for your business needs and budget." keywords="service comparison, pricing plans, AI services, IT consulting, cybersecurity, cloud services" canonical="https://ziontechgroup.com / services - comparison"      />
 
       {/* Hero Section */}
       <section className="py - 20 bg - gradient - to - br from - zion - blue via - zion - blue - dark to - zion - purple">
@@ -98,15 +98,15 @@ const SERVICE_COMPARISONS = [
           {/* Contact Information */}
           <div className="flex flex - wrap justify - center gap - 6 mb - 8">
             <div className="flex items - center gap - 2 text - zion - cyan">
-              <Phone className="w - 5 h - 5"/>
+              <Phone className="w - 5 h - 5"      />
               <span>+1 302 464 0950</span>
             </div>
             <div className="flex items - center gap - 2 text - zion - cyan">
-              <Mail className="w - 5 h - 5"/>
+              <Mail className="w - 5 h - 5"      />
               <span > kleber@ziontechgroup.com</span>
             </div>
             <div className="flex items - center gap - 2 text - zion - cyan">
-              <MapPin className="w - 5 h - 5"/>
+              <MapPin className="w - 5 h - 5"      />
               <span > 364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
           </div>
@@ -135,7 +135,7 @@ const SERVICE_COMPARISONS = [
                 <CardContent>
                   <ul className="space - y-3">
                     {tier.features.map ( (feature, featureIndex) => (<li key={featureIndex} className="flex items - center gap - 2">
-                        <CheckCircle className="w - 5 h - 5 text - zion - cyan"/>
+                        <CheckCircle className="w - 5 h - 5 text - zion - cyan"      />
                         <span>{feature}</span>
                       </li>) ) }
                   </ul>
@@ -181,7 +181,7 @@ const SERVICE_COMPARISONS = [
                             <div className="text - 3xl font - bold text - zion - cyan mb - 4">{service.starter.price}</div>
                             <ul className="space - y-3 text - left">
                               {service.starter.features.map ( (feature, featureIndex) => (<li key={featureIndex} className="flex items - center gap - 2">
-                                  <CheckCircle className="w - 4 h - 4 text - green - 500"/>
+                                  <CheckCircle className="w - 4 h - 4 text - green - 500"      />
                                   <span className="text - sm text - zion - slate">{feature}</span>
                                 </li>) ) }
                             </ul>
@@ -197,7 +197,7 @@ const SERVICE_COMPARISONS = [
                             <div className="text - 3xl font - bold text - zion - cyan mb - 4">{service.professional.price}</div>
                             <ul className="space - y-3 text - left">
                               {service.professional.features.map ( (feature, featureIndex) => (<li key={featureIndex} className="flex items - center gap - 2">
-                                  <CheckCircle className="w - 4 h - 4 text - green - 500"/>
+                                  <CheckCircle className="w - 4 h - 4 text - green - 500"      />
                                   <span className="text - sm text - zion - slate">{feature}</span>
                                 </li>) ) }
                             </ul>
@@ -212,7 +212,7 @@ const SERVICE_COMPARISONS = [
                             <div className="text - 3xl font - bold text - zion - cyan mb - 4">{service.enterprise.price}</div>
                             <ul className="space - y-3 text - left">
                               {service.enterprise.features.map ( (feature, featureIndex) => (<li key={featureIndex} className="flex items - center gap - 2">
-                                  <CheckCircle className="w - 4 h - 4 text - green - 500"/>
+                                  <CheckCircle className="w - 4 h - 4 text - green - 500"      />
                                   <span className="text - sm text - zion - slate">{feature}</span>
                                 </li>) ) }
                             </ul>
@@ -242,7 +242,7 @@ const SERVICE_COMPARISONS = [
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">
             <div className="text - center">
               <div className="w - 16 h - 16 bg - zion - cyan rounded - full flex items - center justify - center mx - auto mb - 4">
-                <Brain className="w - 8 h - 8 text - zion - blue"/>
+                <Brain className="w - 8 h - 8 text - zion - blue"      />
               </div>
               <h3 className="text - xl font - semibold text - white mb - 2">AI Expertise</h3>
               <p className="text - zion - slate - light">Cutting - edge AI solutions with proven results</p>
@@ -250,7 +250,7 @@ const SERVICE_COMPARISONS = [
             
             <div className="text - center">
               <div className="w - 16 h - 16 bg - zion - cyan rounded - full flex items - center justify - center mx - auto mb - 4">
-                <Shield className="w - 8 h - 8 text - zion - blue"/>
+                <Shield className="w - 8 h - 8 text - zion - blue"      />
               </div>
               <h3 className="text - xl font - semibold text - white mb - 2">Enterprise Security</h3>
               <p className="text - zion - slate - light">Bank - level security and compliance standards</p>
@@ -258,7 +258,7 @@ const SERVICE_COMPARISONS = [
             
             <div className="text - center">
               <div className="w - 16 h - 16 bg - zion - cyan rounded - full flex items - center justify - center mx - auto mb - 4">
-                <Users className="w - 8 h - 8 text - zion - blue"/>
+                <Users className="w - 8 h - 8 text - zion - blue"      />
               </div>
               <h3 className="text - xl font - semibold text - white mb - 2">Expert Team</h3>
               <p className="text - zion - slate - light">Certified professionals with industry experience</p>
@@ -266,7 +266,7 @@ const SERVICE_COMPARISONS = [
             
             <div className="text - center">
               <div className="w - 16 h - 16 bg - zion - cyan rounded - full flex items - center justify - center mx - auto mb - 4">
-                <TrendingUp className="w - 8 h - 8 text - zion - blue"/>
+                <TrendingUp className="w - 8 h - 8 text - zion - blue"      />
               </div>
               <h3 className="text - xl font - semibold text - white mb - 2">Proven Results</h3>
               <p className="text - zion - slate - light">Track record of successful implementations</p>
@@ -285,11 +285,11 @@ const SERVICE_COMPARISONS = [
           
           <div className="flex flex - wrap justify - center gap - 4 mb - 8">
             <Button size="lg" className="bg - zion - cyan hover:bg - zion - cyan - dark text - zion - blue font - semibold">
-              <Phone className="w - 5 h - 5 mr - 2"/>
+              <Phone className="w - 5 h - 5 mr - 2"      />
               Call + 1 302 464 0950
             </Button>
             <Button size="lg" variant="outline" className="border - zion - cyan text - zion - cyan hover:bg - zion - cyan hover:text - zion - blue">
-              <Mail className="w - 5 h - 5 mr - 2"/>
+              <Mail className="w - 5 h - 5 mr - 2"      />
               Email kleber@ziontechgroup.com
             </Button>
           </div>

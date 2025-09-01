@@ -1,73 +1,73 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-
-interface User {
+;
+interface User {;
   id: string;
   email: string;
   name: string;
   avatar?: string;
-}
-
-interface AuthState {
+};
+;
+interface AuthState {;
   isLoggedIn: boolean;
   isAuthenticated: boolean;
   isLoading: boolean;
   user: User | null;
   token: string | null;
-
+;
   error: string | null;
-}
-
-const initialState: AuthState = {
-  isLoggedIn: false,
-  isAuthenticated: false,
-  isLoading: false,
-  user: null,
-  token: null,
-  error: null,
 };
-
-const authSlice = createSlice({
-  name: 'auth',
-  initialState,
-  reducers: {
-    setLoggedIn: (state, action: PayloadAction<boolean>) => {
+;
+const initialState: AuthState = {;
+  isLoggedIn: false,;
+  isAuthenticated: false,;
+  isLoading: false,;
+  user: null,;
+  token: null,;
+  error: null,;
+};
+;
+const authSlice = createSlice({;
+  name: 'auth',;
+  initialState,;
+  reducers: {;
+    setLoggedIn: (state, action: PayloadAction<boolean>) => {;
       state.isLoggedIn = action.payload;
-    },
-    setUser: (state, action: PayloadAction<User>) => {
+    },;
+    setUser: (state, action: PayloadAction<User>) => {;
       state.user = action.payload;
       state.isAuthenticated = true;
       state.error = null;
-    },
-    setToken: (state, action: PayloadAction<string>) => {
+    },;
+    setToken: (state, action: PayloadAction<string>) => {;
       state.token = action.payload;
-    },
-    logout: state => {
+    },;
+    logout: state => {;
       state.isLoggedIn = false;
       state.user = null;
       state.isAuthenticated = false;
       state.token = null;
       state.error = null;
-    },
-    setLoading: (state, action: PayloadAction<boolean>) => {
+    },;
+    setLoading: (state, action: PayloadAction<boolean>) => {;
       state.isLoading = action.payload;
-    },
-    setError: (state, action: PayloadAction<string>) => {
+    },;
+    setError: (state, action: PayloadAction<string>) => {;
       state.error = action.payload;
-    },
-    clearError: state => {
+    },;
+    clearError: state => {;
       state.error = null;
-    },
-  },
+    },;
+  },;
 });
-
-export const {
-  setLoggedIn,
-  setUser,
-  setToken,
-  logout,
-  setLoading,
-  setError,
-  clearError,
+;
+export const {;
+  setLoggedIn,;
+  setUser,;
+  setToken,;
+  logout,;
+  setLoading,;
+  setError,;
+  clearError,;
 } = authSlice.actions;
-
+;
 export default authSlice.reducer;

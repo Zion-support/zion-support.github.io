@@ -140,7 +140,7 @@ import { motion } from 'framer - motion';
         transition={{ duration: 0.5 }}
       >
         <div className="text - center max - w-md mx - auto px - 4">
-          <CheckCircle className="h - 24 w - 24 text - green - 400 mx - auto mb - 6" />
+          <CheckCircle className="h - 24 w - 24 text - green - 400 mx - auto mb - 6"       />
           <h1 className="text - 3xl font - bold text - white mb - 4">Thank You!</h1>
           <p className="text - xl text - gray - 300 mb - 6">
             Your message has been sent successfully. We'll get back to you
@@ -207,7 +207,7 @@ import { motion } from 'framer - motion';
               >
                 <div className="bg - white / 10 backdrop - blur - lg rounded - xl p - 6 border border - white / 20 hover:border - white / 40 transition - all duration - 300 h - full">
                   <div className="text - 4xl mb - 4 flex justify - center">
-                    <method.icon className="h - 16 w - 16 text - zion - cyan group - hover:scale - 110 transition - transform duration - 300" />
+                    <method.icon className="h - 16 w - 16 text - zion - cyan group - hover:scale - 110 transition - transform duration - 300"       />
                   </div>
                   <h3 className="text - xl font - semibold text - white mb - 3 text - center">
                     {method.title}
@@ -265,8 +265,8 @@ import { motion } from 'framer - motion';
                   value={formData.name}
                   onChange={handleInputChange}
                   className="bg - white / 20 border - white / 30 text - white placeholder - gray - 400 focus:border - zion - cyan focus:ring - zion - cyan"
-                />
-                <input type="hidden" name="name" value={formData.name} />
+                      />
+                <input type="hidden" name="name" value={formData.name}       />
               </motion.div>
 
               <motion.div variants={itemVariants}>
@@ -282,8 +282,8 @@ import { motion } from 'framer - motion';
                   value={formData.email}
                   onChange={handleInputChange}
                   className="bg - white / 20 border - white / 30 text - white placeholder - gray - 400 focus:border - zion - cyan focus:ring - zion - cyan"
-                />
-                <input type="hidden" name="email" value={formData.email} />
+                      />
+                <input type="hidden" name="email" value={formData.email}       />
               </motion.div>
             </div>
 
@@ -301,8 +301,8 @@ import { motion } from 'framer - motion';
                   value={formData.comp}
                   onChange={handleInputChange}
                   className="bg - white / 20 border - white / 30 text - white placeholder - gray - 400 focus:border - zion - cyan focus:ring - zion - cyan"
-                />
-                <input type="hidden" name="comp" value={formData.comp} />
+                      />
+                <input type="hidden" name="comp" value={formData.comp}       />
               </motion.div>
 
               <motion.div variants={itemVariants}>
@@ -318,8 +318,8 @@ import { motion } from 'framer - motion';
                   value={formData.phone}
                   onChange={handleInputChange}
                   className="bg - white / 20 border - white / 30 text - white placeholder - gray - 400 focus:border - zion - cyan focus:ring - zion - cyan"
-                />
-                <input type="hidden" name="phone" value={formData.phone} />
+                      />
+                <input type="hidden" name="phone" value={formData.phone}       />
               </motion.div>
             </div>
 
@@ -361,8 +361,8 @@ import { motion } from 'framer - motion';
                 value={formData.message}
                 onChange={handleInputChange}
                 className="bg - white / 20 border - white / 30 text - white placeholder - gray - 400 focus:border - zion - cyan focus:ring - zion - cyan resize - none"
-              />
-              <input type="hidden" name="message" value={formData.message} />
+                    />
+              <input type="hidden" name="message" value={formData.message}       />
             </motion.div>
 
             <motion.div className="text - center" variants={itemVariants}>
@@ -374,7 +374,7 @@ import { motion } from 'framer - motion';
                 {isSubmitting ? (<>
                     <div className="animate - spin rounded - full h - 5 w - 5 border - b-2 border - white mr - 2"></div > Sending...
                   </>) : (<>
-                    <Send className="h - 5 w - 5 mr - 2" />
+                    <Send className="h - 5 w - 5 mr - 2"       />
                     Send Message
                   </>) }
               </Button>
@@ -411,7 +411,7 @@ import { motion } from 'framer - motion';
             viewport={{ once: true }}
           >
             <motion.div className="text - center" variants={itemVariants}>
-              <Building className="h - 16 w - 16 text - zion - cyan mx - auto mb - 4" />
+              <Building className="h - 16 w - 16 text - zion - cyan mx - auto mb - 4"       />
               <h3 className="text - xl font - semibold text - white mb - 2">
                 Enterprise Solutions
               </h3>
@@ -421,7 +421,7 @@ import { motion } from 'framer - motion';
             </motion.div>
 
             <motion.div className="text - center" variants={itemVariants}>
-              <Users className="h - 16 w - 16 text - zion - cyan mx - auto mb - 4" />
+              <Users className="h - 16 w - 16 text - zion - cyan mx - auto mb - 4"       />
               <h3 className="text - xl font - semibold text - white mb - 2">
                 Expert Team
               </h3>
@@ -431,7 +431,7 @@ import { motion } from 'framer - motion';
             </motion.div>
 
             <motion.div className="text - center" variants={itemVariants}>
-              <Globe className="h - 16 w - 16 text - zion - cyan mx - auto mb - 4" />
+              <Globe className="h - 16 w - 16 text - zion - cyan mx - auto mb - 4"       />
               <h3 className="text - xl font - semibold text - white mb - 2">
                 Global Reach
               </h3>

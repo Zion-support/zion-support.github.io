@@ -5,7 +5,7 @@ import { Brain, Zap, Shield, Globe, Rocket, Star, ArrowRight, CheckCircle const 
         id: 'ai-automation',
         name: 'AI & Automation',
         description: 'Revolutionary AI platforms with consciousness and emotional intelligence',
-        icon: <Brain className="w-8 h-8"/>,
+        icon: <Brain className="w-8 h-8"      />,
         color: 'from-purple-500 to-pink-500',
         price: '$199/month',
         features['AI Code Review', 'Testing Automation', 'DevOps Intelligence', 'Security Automation'],;
@@ -15,7 +15,7 @@ import { Brain, Zap, Shield, Globe, Rocket, Star, ArrowRight, CheckCircle const 
         id: 'micro-saas',
         name: 'Micro SaaS Solutions',
         description: 'Scalable, focused software solutions for specific business needs',
-        icon: <Zap className="w-8 h-8"/>,
+        icon: <Zap className="w-8 h-8"      />,
         color: 'from-cyan-500 to-blue-500',
         price: '$99/month',
         features['Custom Development', 'API Integration', 'Cloud Deployment', '24/7 Support'];
@@ -24,7 +24,7 @@ import { Brain, Zap, Shield, Globe, Rocket, Star, ArrowRight, CheckCircle const 
         id: 'cloud-infrastructure',
         name: 'Cloud & Infrastructure',
         description: 'Robust cloud solutions for scalability and reliability',
-        icon: <Globe className="w-8 h-8"/>,
+        icon: <Globe className="w-8 h-8"      />,
         color: 'from-green-500 to-emerald-500',
         price: '$299/month',
         features['AWS/Azure/GCP', 'Container Orchestration', 'Serverless Architecture', 'Disaster Recovery'];
@@ -33,7 +33,7 @@ import { Brain, Zap, Shield, Globe, Rocket, Star, ArrowRight, CheckCircle const 
         id: 'cybersecurity',
         name: 'Cybersecurity',
         description: 'Advanced security solutions to protect your digital assets',
-        icon: <Shield className="w-8 h-8"/>,
+        icon: <Shield className="w-8 h-8"      />,
         color: 'from-red-500 to-pink-500',
         price: '$399/month',
         features['Threat Detection', 'Penetration Testing', 'Compliance Auditing', 'Incident Response'];
@@ -42,7 +42,7 @@ import { Brain, Zap, Shield, Globe, Rocket, Star, ArrowRight, CheckCircle const 
         id: 'quantum-computing',
         name: 'Quantum Computing',
         description: 'Next-generation quantum solutions for complex problems',
-        icon: <Rocket className="w-8 h-8"/>,
+        icon: <Rocket className="w-8 h-8"      />,
         color: 'from-indigo-500 to-purple-500',
         price: '$599/month',
         features['Quantum Algorithms', 'Optimization Problems', 'Cryptography', 'Research Support'];
@@ -51,7 +51,7 @@ import { Brain, Zap, Shield, Globe, Rocket, Star, ArrowRight, CheckCircle const 
         id: 'blockchain-web3',
         name: 'Blockchain & Web3',
         description: 'Decentralized solutions for the future of the internet',
-        icon: <Star className="w-8 h-8"/>,
+        icon: <Star className="w-8 h-8"      />,
         color: 'from-yellow-500 to-orange-500',
         price: '$249/month',
         features['Smart Contracts', 'DeFi Platforms', 'NFT Marketplaces', 'DAO Governance'];
@@ -61,13 +61,13 @@ export default function FuturisticServicesShowcase() {
     const [hoveredService, setHoveredService] = useState(null);
     const [selectedCategory, setSelectedCategory] = useState('all');
     const categories = [
-        { id: 'all', name: 'All Services', icon: <Star className="w-4 h-4"/> },
-        { id: 'ai-automation', name: 'AI & Automation', icon: <Brain className="w-4 h-4"/> },
-        { id: 'micro-saas', name: 'Micro SaaS', icon: <Zap className="w-4 h-4"/> },
-        { id: 'cloud-infrastructure', name: 'Cloud & Infrastructure', icon: <Globe className="w-4 h-4"/> },
-        { id: 'cybersecurity', name: 'Cybersecurity', icon: <Shield className="w-4 h-4"/> },
-        { id: 'quantum-computing', name: 'Quantum Computing', icon: <Rocket className="w-4 h-4"/> },
-        { id: 'blockchain-web3', name: 'Blockchain & Web3', icon: <Star className="w-4 h-4"/> }
+        { id: 'all', name: 'All Services', icon: <Star className="w-4 h-4"      /> },
+        { id: 'ai-automation', name: 'AI & Automation', icon: <Brain className="w-4 h-4"      /> },
+        { id: 'micro-saas', name: 'Micro SaaS', icon: <Zap className="w-4 h-4"      /> },
+        { id: 'cloud-infrastructure', name: 'Cloud & Infrastructure', icon: <Globe className="w-4 h-4"      /> },
+        { id: 'cybersecurity', name: 'Cybersecurity', icon: <Shield className="w-4 h-4"      /> },
+        { id: 'quantum-computing', name: 'Quantum Computing', icon: <Rocket className="w-4 h-4"      /> },
+        { id: 'blockchain-web3', name: 'Blockchain & Web3', icon: <Star className="w-4 h-4"      /> }
     ];
     const filteredServices = selectedCategory === 'all'
         ? services
@@ -75,9 +75,9 @@ export default function FuturisticServicesShowcase() {
     return (<section className="py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent"/>
-        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent"/>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(6,182,212,0.1)_1px,transparent_0)] bg-[size:50px_50px]"/>
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent"      />
+        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent"      />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(6,182,212,0.1)_1px,transparent_0)] bg-[size:50px_50px]"      />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -144,7 +144,7 @@ export default function FuturisticServicesShowcase() {
 
 
 }} className="flex flex-wrap justify-center gap-3 mb-12">
-          {categories.map((category) => (<button key={category.id} onClick={() => setSelectedCategory(category.id)} className={`flex items-center space-x-2 px-4 py-2 rounded-lg font-medium transition-all duration-300 ${selectedCategory === category.id
+          {categories.map((((((((category, index, index, index, index, index, index) => ({ ...((((((category, index, index, index, index, index, key: index })) => ({ ...(((((category, index, index, index, index, key: index })) => ({ ...((((category, index, index, index, key: index })) => ({ ...(((category, index, index, key: index })) => ({ ...((category, index, key: index })) => ({ ...(category, key: index })) => (<button key={category.id} onClick={() => setSelectedCategory(category.id)} className={`flex items-center space-x-2 px-4 py-2 rounded-lg font-medium transition-all duration-300 ${selectedCategory === category.id
                 ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/25'
                 : 'bg-white/5 border border-cyan-500/20 text-gray-300 hover:bg-cyan-500/10 hover:border-cyan-500/40'}`}>
               {category.icon}
@@ -155,7 +155,7 @@ export default function FuturisticServicesShowcase() {
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <AnimatePresence mode="wait">
-            {filteredServices.map((service, index) => (<motion.div key={service.id} initial = {
+            {filteredServices.map((((((((service, index, index, index, index, index, index, index) => ({ ...((((((service, index, index, index, index, index, index, key: index })) => ({ ...(((((service, index, index, index, index, index, key: index })) => ({ ...((((service, index, index, index, index, key: index })) => ({ ...(((service, index, index, index, key: index })) => ({ ...((service, index, index, key: index })) => ({ ...(service, index, key: index })) => (<motion.div key={service.id} initial = {
   { opacity: 0, y: 30,
   scale: 0.9 
 
@@ -223,8 +223,8 @@ export default function FuturisticServicesShowcase() {
 
                   {/* Features */}
                   <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-gray-300 text-sm">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0"/>
+                    {service.features.map((((((((feature, featureIndex, index, index, index, index, index, index) => ({ ...((((((feature, featureIndex, index, index, index, index, index, key: index })) => ({ ...(((((feature, featureIndex, index, index, index, index, key: index })) => ({ ...((((feature, featureIndex, index, index, index, key: index })) => ({ ...(((feature, featureIndex, index, index, key: index })) => ({ ...((feature, featureIndex, index, key: index })) => ({ ...(feature, featureIndex, key: index })) => (<li key={featureIndex} className="flex items-center text-gray-300 text-sm">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0"      />
                         {feature}
                       </li>))}
                   </ul>
@@ -232,11 +232,11 @@ export default function FuturisticServicesShowcase() {
                   {/* CTA Button */}
                   <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white py-3 px-4 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center group">
                     <span>Learn More</span>
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300"/>
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300"      />
                   </button>
 
                   {/* Hover Effects */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
+                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"      />
                 </div>
 
                 {/* Floating Elements */}
@@ -269,7 +269,7 @@ export default function FuturisticServicesShowcase() {
 
 
 
-}} className="absolute -top-2 -right-2 w-4 h-4 bg-cyan-400 rounded-full animate-ping"/>
+}} className="absolute -top-2 -right-2 w-4 h-4 bg-cyan-400 rounded-full animate-ping"      />
                       <motion.div initial = {
   { opacity: 0,
   scale: 0 
@@ -297,7 +297,7 @@ export default function FuturisticServicesShowcase() {
 
 
 
-}} className="absolute -bottom-2 -left-2 w-3 h-3 bg-blue-400 rounded-full animate-pulse"/>
+}} className="absolute -bottom-2 -left-2 w-3 h-3 bg-blue-400 rounded-full animate-pulse"      />
                     </>)}
                 </AnimatePresence>
               </motion.div>))}

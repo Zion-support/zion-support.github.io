@@ -273,7 +273,7 @@ const Sustainability = () => {
               >
                 <div className="flex items - center gap - 4 mb - 4">
                   <div className="w - 12 h - 12 bg - gradient - to - br from - green - 500 to - emerald - 500 rounded - xl flex items - center justify - center text - white">
-                    <solution.icon className="w - 6 h - 6" />
+                    <solution.icon className="w - 6 h - 6"       />
                   </div>
                   <div>
                     <h3 className="text - xl font - semibold text - white">
@@ -296,7 +296,7 @@ const Sustainability = () => {
                         key={idx}
                         className="text - sm text - gray - 300 flex items - center"
                       >
-                        <CheckCircle className="w - 4 h - 4 text - green - 400 mr - 2" />
+                        <CheckCircle className="w - 4 h - 4 text - green - 400 mr - 2"       />
                         {feature}
                       </li>) ) }
                   </ul>
@@ -371,7 +371,7 @@ const Sustainability = () => {
                   {[...Array (5) ].map ( (_, i) => (<Star
                       key={i}
                       className="w - 4 h - 4 text - yellow - 400 fill - current"
-                    />) ) }
+                          />) ) }
                   <span className="text - gray - 300 text - sm ml - 2">5.0 Rating</span>
                 </div>
               </motion.div>) ) }

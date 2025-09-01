@@ -1,16 +1,15 @@
 import { render, screen } from '@testing - library / react';
-import React from 'react';
 import EnhancedHeader from './EnhancedHeader';
-
-
-describe ('EnhancedHeader', () => {
-  it ('renders without crashing', () => {
-    render (<EnhancedHeader />) ;
+;
+;
+describe ('EnhancedHeader', () => {;
+  it ('renders without crashing', () => {;
+    render (<EnhancedHeader       />) ;
     expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () ;
   }) ;
-
-  it ('displays expected content', () => {
-    render (<EnhancedHeader />) ;
-    // Add specific test assertions based on component content
+;
+  it ('displays expected content', () => {;
+    render (<EnhancedHeader       />) ;
+    // Add specific test assertions based on component content;
   }) ;
 }) ;

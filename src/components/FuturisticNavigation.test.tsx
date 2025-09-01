@@ -1,16 +1,15 @@
 import { render, screen } from '@testing - library / react';
-import React from 'react';
 import FuturisticNavigation from './FuturisticNavigation';
-
-
-describe ('FuturisticNavigation', () => {
-  it ('renders without crashing', () => {
-    render (<FuturisticNavigation />) ;
+;
+;
+describe ('FuturisticNavigation', () => {;
+  it ('renders without crashing', () => {;
+    render (<FuturisticNavigation       />) ;
     expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () ;
   }) ;
-
-  it ('displays expected content', () => {
-    render (<FuturisticNavigation />) ;
-    // Add specific test assertions based on component content
+;
+  it ('displays expected content', () => {;
+    render (<FuturisticNavigation       />) ;
+    // Add specific test assertions based on component content;
   }) ;
 }) ;

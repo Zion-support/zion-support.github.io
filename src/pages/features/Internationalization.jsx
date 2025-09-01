@@ -21,13 +21,13 @@ export default function Internationalization() {
         description="Reach a global audience with multi-language support across the Zion platform."
         keywords="i18n, multi-language marketplace, localized listings"
         canonical="https://app.ziontechgroup.com/features/internationalization"
-      />
+            />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
-      <Header />
+      <Header       />
       <main className="bg-background text-white py-12">
         <div className="container mx-auto px-4 md:px-6">
           <GradientHeading className="mb-4 text-center">
@@ -42,7 +42,7 @@ export default function Internationalization() {
             src="https://placehold.co/800x400"
             alt="Screenshot of language options"
             className="rounded-lg shadow-xl mx-auto mb-12"
-          />
+                />
           <h2 className="text-2xl font-bold mb-4">Benefits &amp; Use Cases</h2>
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
             <li>Publish product and service pages in your native language.</li>
@@ -77,7 +77,7 @@ export default function Internationalization() {
           </div>
         </div>
       </main>
-      <Footer />
+      <Footer       />
     </>
   );
 }

@@ -24,7 +24,7 @@ export function MicroSaasServicesSection() {
 
       {/* Service Icon */}
       <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-        <Zap className="w-8 h-8 text-white" />
+        <Zap className="w-8 h-8 text-white"       />
       </div>
 
       {/* Service Info */}
@@ -39,12 +39,12 @@ export function MicroSaasServicesSection() {
         {/* AI Score and Rating */}
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <Zap className="w-4 h-4 text-zion-cyan" />
+            <Zap className="w-4 h-4 text-zion-cyan"       />
             <span className="text-sm text-zion-slate-light">AI Score:</span>
             <span className="text-zion-cyan font-bold">{service.aiScore}%</span>
           </div>
           <div className="flex items-center space-x-1">
-            <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+            <Star className="w-4 h-4 fill-yellow-400 text-yellow-400"       />
             <span className="text-sm text-white">{service.rating}</span>
           </div>
         </div>
@@ -68,9 +68,9 @@ export function MicroSaasServicesSection() {
 
         {/* Key Benefits */}
         <div className="space-y-2">
-          {service.benefits.slice(0, 2).map((benefit, index) => (
+          {service.benefits.slice(0, 2).map((((((((benefit, index, index, index, index, index, index, index) => ({ ...((((((benefit, index, index, index, index, index, index, key: index })) => ({ ...(((((benefit, index, index, index, index, index, key: index })) => ({ ...((((benefit, index, index, index, index, key: index })) => ({ ...(((benefit, index, index, index, key: index })) => ({ ...((benefit, index, index, key: index })) => ({ ...(benefit, index, key: index })) => (
             <div key={index} className="flex items-start space-x-2">
-              <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
+              <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0"       />
               <span className="text-xs text-zion-slate-light">{benefit}</span>
             </div>
           ))}
@@ -83,7 +83,7 @@ export function MicroSaasServicesSection() {
         >
           <Link to={service.website} target="_blank" rel="noopener noreferrer">
             Learn More
-            <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+            <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300"       />
           </Link>
         </Button>
       </div>
@@ -92,13 +92,13 @@ export function MicroSaasServicesSection() {
   return (
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark relative overflow-hidden">
       {/* Animated background pattern */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30" />
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30"       />
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 border border-zion-purple/30 rounded-full px-6 py-2 mb-6">
-            <Zap className="w-5 h-5 text-zion-cyan" />
+            <Zap className="w-5 h-5 text-zion-cyan"       />
             <span className="text-zion-cyan font-medium">
               Featured Services
             </span>
@@ -115,37 +115,49 @@ export function MicroSaasServicesSection() {
 
         {/* Featured Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {featuredServices.map(service => (
-            <ServiceCard key={service.id} service={service} />
-          ))}
+          {featuredServices.map(((((((service => (
+            <ServiceCard key={service.id} service={service}       />
+          , index, index, index, index, index, index) => ({ ...(((((service => (
+            <ServiceCard key={service.id} service={service}       />
+          , index, index, index, index, index, key: index })) => ({ ...((((service => (
+            <ServiceCard key={service.id} service={service}       />
+          , index, index, index, index, key: index })) => ({ ...(((service => (
+            <ServiceCard key={service.id} service={service}       />
+          , index, index, index, key: index })) => ({ ...((service => (
+            <ServiceCard key={service.id} service={service}       />
+          , index, index, key: index })) => ({ ...(service => (
+            <ServiceCard key={service.id} service={service}       />
+          , index, key: index })) => ({ ...service => (
+            <ServiceCard key={service.id} service={service}       />
+          , key: index })))}
         </div>
 
         {/* Stats Section */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
           <div className="text-center">
             <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
-              <TrendingUp className="w-8 h-8 text-white" />
+              <TrendingUp className="w-8 h-8 text-white"       />
             </div>
             <div className="text-3xl font-bold text-white mb-2">15+</div>
             <div className="text-zion-slate-light">AI Services</div>
           </div>
           <div className="text-center">
             <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
-              <Shield className="w-8 h-8 text-white" />
+              <Shield className="w-8 h-8 text-white"       />
             </div>
             <div className="text-3xl font-bold text-white mb-2">8+</div>
             <div className="text-zion-slate-light">IT Solutions</div>
           </div>
           <div className="text-center">
             <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
-              <Code className="w-8 h-8 text-white" />
+              <Code className="w-8 h-8 text-white"       />
             </div>
             <div className="text-3xl font-bold text-white mb-2">12+</div>
             <div className="text-zion-slate-light">Business Tools</div>
           </div>
           <div className="text-center">
             <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
-              <Users className="w-8 h-8 text-white" />
+              <Users className="w-8 h-8 text-white"       />
             </div>
             <div className="text-3xl font-bold text-white mb-2">500+</div>
             <div className="text-zion-slate-light">Happy Clients</div>
@@ -171,7 +183,7 @@ export function MicroSaasServicesSection() {
               >
                 <Link to="/micro-saas-services">
                   View All Services
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  <ArrowRight className="w-5 h-5 ml-2"       />
                 </Link>
               </Button>
               <Button

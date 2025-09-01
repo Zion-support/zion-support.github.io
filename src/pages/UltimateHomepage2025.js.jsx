@@ -98,7 +98,7 @@ import ultimateInnovativeServices2025 from '../../data / 2025 - ultimate - innov
         title="Zion Tech Group - Revolutionary AI & Quantum Solutions 2025"
         description="Transform your business with our revolutionary AI - powered, quantum - secure, and autonomous business solutions. Leading the future of technology."
         keywords="AI services, quantum computing, autonomous systems, cybersecurity, business automation, Zion Tech Group, innovative solutions"
-      />
+            />
 
       {/* Hero Section */}
       <div className="relative overflow - hidden">
@@ -112,11 +112,11 @@ import ultimateInnovativeServices2025 from '../../data / 2025 - ultimate - innov
                 <span className="bg - gradient - to - r from - blue - 400 to - purple - 400 bg - clip - text text - transparent">
                   Revolutionary
                 </span>
-                <br />
+                <br       />
                 <span className="bg - gradient - to - r from - purple - 400 to - pink - 400 bg - clip - text text - transparent">
                   AI & Quantum
                 </span>
-                <br />
+                <br       />
                 <span className="text - white">Solutions</span>
               </h1>
               <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 leading - relaxed">
@@ -129,28 +129,28 @@ import ultimateInnovativeServices2025 from '../../data / 2025 - ultimate - innov
                   to="/ultimate - services - showcase - 2025"
                   className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - purple - 600 text - white font - semibold rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all duration - 300 transform hover:scale - 105"
                 >
-                  <Rocket className="w - 5 h - 5 mr - 2" />
+                  <Rocket className="w - 5 h - 5 mr - 2"       />
                   Explore Services
                 </Link>
                 <a
                   href="tel:+13024640950"
                   className="inline - flex items - center px - 8 py - 4 border - 2 border - blue - 400 text - blue - 400 font - semibold rounded - lg hover:bg - blue - 400 hover:text - white transition - all duration - 300"
                 >
-                  <Phone className="w - 5 h - 5 mr - 2" />
+                  <Phone className="w - 5 h - 5 mr - 2"       />
                   Call Now
                 </a>
               </div>
               <div className="flex items - center space - x-6 text - sm text - gray - 400">
                 <div className="flex items - center space - x-2">
-                  <CheckCircle className="w - 4 h - 4 text - green - 400" />
+                  <CheckCircle className="w - 4 h - 4 text - green - 400"       />
                   <span > AI - Powered</span>
                 </div>
                 <div className="flex items - center space - x-2">
-                  <CheckCircle className="w - 4 h - 4 text - green - 400" />
+                  <CheckCircle className="w - 4 h - 4 text - green - 400"       />
                   <span > Quantum - Secure</span>
                 </div>
                 <div className="flex items - center space - x-2">
-                  <CheckCircle className="w - 4 h - 4 text - green - 400" />
+                  <CheckCircle className="w - 4 h - 4 text - green - 400"       />
                   <span > Autonomous</span>
                 </div>
               </div>
@@ -218,7 +218,7 @@ import ultimateInnovativeServices2025 from '../../data / 2025 - ultimate - innov
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 6">
           <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6 text - center">
             <div className="flex items - center justify - center space - x-3">
-              <Phone className="w - 5 h - 5 text - blue - 400" />
+              <Phone className="w - 5 h - 5 text - blue - 400"       />
               <div>
                 <p className="text - sm text - gray - 300">Phone</p>
                 <a
@@ -230,7 +230,7 @@ import ultimateInnovativeServices2025 from '../../data / 2025 - ultimate - innov
               </div>
             </div>
             <div className="flex items - center justify - center space - x-3">
-              <Mail className="w - 5 h - 5 text - purple - 400" />
+              <Mail className="w - 5 h - 5 text - purple - 400"       />
               <div>
                 <p className="text - sm text - gray - 300">Email</p>
                 <a
@@ -242,7 +242,7 @@ import ultimateInnovativeServices2025 from '../../data / 2025 - ultimate - innov
               </div>
             </div>
             <div className="flex items - center justify - center space - x-3">
-              <MapPin className="w - 5 h - 5 text - pink - 400" />
+              <MapPin className="w - 5 h - 5 text - pink - 400"       />
               <div>
                 <p className="text - sm text - gray - 300">Address</p>
                 <p className="text - pink - 400 font - semibold">
@@ -262,7 +262,7 @@ import ultimateInnovativeServices2025 from '../../data / 2025 - ultimate - innov
               <div
                 className={`inline - flex p - 4 rounded - xl bg - gradient - to - br ${stat.icon === Rocket ? 'from - blue - 500 to - purple - 500' : stat.icon === Users ? 'from - green - 500 to - emerald - 500' : stat.icon === ShieldCheck ? 'from - purple - 500 to - indigo - 500' : 'from - orange - 500 to - red - 500'} mb - 4`}
               >
-                <stat.icon className="w - 8 h - 8 text - white" />
+                <stat.icon className="w - 8 h - 8 text - white"       />
               </div>
               <div className="text - 3xl md:text - 4xl font - bold text - white mb - 2">
                 {stat.number}
@@ -289,7 +289,7 @@ import ultimateInnovativeServices2025 from '../../data / 2025 - ultimate - innov
               <div
                 className={`inline - flex p - 4 rounded - xl bg - gradient - to - br ${benefit.color} mb - 6 group - hover:scale - 110 transition - transform duration - 300`}
               >
-                <benefit.icon className="w - 8 h - 8 text - white" />
+                <benefit.icon className="w - 8 h - 8 text - white"       />
               </div>
               <h3 className="text - xl font - bold text - white mb - 4">
                 {benefit.title}
@@ -341,7 +341,7 @@ import ultimateInnovativeServices2025 from '../../data / 2025 - ultimate - innov
                 <h4 className="text - white font - semibold mb - 3">Key Features</h4>
                 <ul className="space - y-2">
                   {service.features.slice (0, 3) .map ( (feature, index) => (<li key={index} className="flex items - start space - x-2">
-                      <Check className="w - 4 h - 4 text - green - 400 mt - 0.5 flex - shrink - 0" />
+                      <Check className="w - 4 h - 4 text - green - 400 mt - 0.5 flex - shrink - 0"       />
                       <span className="text - sm text - gray - 300">{feature}</span>
                     </li>) ) }
                 </ul>
@@ -380,7 +380,7 @@ import ultimateInnovativeServices2025 from '../../data / 2025 - ultimate - innov
               <div
                 className={`inline - flex p - 4 rounded - xl bg - gradient - to - br ${industry.color} mb - 4 group - hover:scale - 110 transition - transform duration - 300`}
               >
-                <industry.icon className="w - 8 h - 8 text - white" />
+                <industry.icon className="w - 8 h - 8 text - white"       />
               </div>
               <h3 className="text - white font - semibold group - hover:text - blue - 400 transition - colors">
                 {industry.name}
@@ -429,7 +429,7 @@ import ultimateInnovativeServices2025 from '../../data / 2025 - ultimate - innov
                   to={`/ultimate - services - showcase - 2025`}
                   className="text - blue - 400 hover:text - blue - 300 transition - colors"
                 >
-                  <ChevronRight className="w - 4 h - 4" />
+                  <ChevronRight className="w - 4 h - 4"       />
                 </Link>
               </div>
             </div>) ) }
@@ -439,7 +439,7 @@ import ultimateInnovativeServices2025 from '../../data / 2025 - ultimate - innov
             to="/ultimate - services - showcase - 2025"
             className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - purple - 600 text - white font - semibold rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all duration - 300 transform hover:scale - 105"
           >
-            <Rocket className="w - 5 h - 5 mr - 2" />
+            <Rocket className="w - 5 h - 5 mr - 2"       />
             Explore All Services
           </Link>
         </div>
@@ -463,14 +463,14 @@ import ultimateInnovativeServices2025 from '../../data / 2025 - ultimate - innov
                 to="/contact"
                 className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - purple - 600 text - white font - semibold rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all duration - 300 transform hover:scale - 105"
               >
-                <Rocket className="w - 5 h - 5 mr - 2" />
+                <Rocket className="w - 5 h - 5 mr - 2"       />
                 Get Started Today
               </Link>
               <a
                 href="tel:+13024640950"
                 className="inline - flex items - center px - 8 py - 4 border - 2 border - blue - 400 text - blue - 400 font - semibold rounded - lg hover:bg - blue - 400 hover:text - white transition - all duration - 300"
               >
-                <Phone className="w - 5 h - 5 mr - 2" />
+                <Phone className="w - 5 h - 5 mr - 2"       />
                 Speak with an Expert
               </a>
             </div>

@@ -279,7 +279,7 @@ const ITInfrastructure = () => {
             >
               <div className="flex items - center mb - 4">
                 <div className="w - 12 h - 12 bg - cyan - 500 / 20 rounded - lg flex items - center justify - center mr - 4">
-                  <solution.icon className="w - 6 h - 6 text - cyan - 400" />
+                  <solution.icon className="w - 6 h - 6 text - cyan - 400"       />
                 </div>
                 <h3 className="text - xl font - semibold">{solution.title}</h3>
               </div>
@@ -288,11 +288,11 @@ const ITInfrastructure = () => {
 
               <div className="space - y-2 mb - 4">
                 <div className="flex items - center text - sm text - gray - 400">
-                  <CheckCircle className="w - 4 h - 4 text - cyan - 400 mr - 2" />
+                  <CheckCircle className="w - 4 h - 4 text - cyan - 400 mr - 2"       />
                   {solution.price}
                 </div>
                 <div className="flex items - center text - sm text - gray - 400">
-                  <Clock className="w - 4 h - 4 text - cyan - 400 mr - 2" />
+                  <Clock className="w - 4 h - 4 text - cyan - 400 mr - 2"       />
                   {solution.timeline}
                 </div>
               </div>
@@ -341,7 +341,7 @@ const ITInfrastructure = () => {
                 onClick={closeModal}
                 className="text - gray - 400 hover:text - white transition - colors"
               >
-                <X className="w - 6 h - 6" />
+                <X className="w - 6 h - 6"       />
               </button>
             </div>
 
@@ -352,7 +352,7 @@ const ITInfrastructure = () => {
                 <h3 className="font - semibold mb - 3 text - cyan - 400">Features</h3>
                 <ul className="space - y-2">
                   {selectedSolution.features.map ( (feature, index) => (<li key={index} className="flex items - center text - gray - 300">
-                      <CheckCircle className="w - 4 h - 4 text - cyan - 400 mr - 2" />
+                      <CheckCircle className="w - 4 h - 4 text - cyan - 400 mr - 2"       />
                       {feature}
                     </li>) ) }
                 </ul>
@@ -364,7 +364,7 @@ const ITInfrastructure = () => {
                 </h3>
                 <ul className="space - y-2">
                   {selectedSolution.technologies.map ( (tech, index) => (<li key={index} className="flex items - center text - gray - 300">
-                      <Code className="w - 4 h - 4 text - cyan - 400 mr - 2" />
+                      <Code className="w - 4 h - 4 text - cyan - 400 mr - 2"       />
                       {tech}
                     </li>) ) }
                 </ul>

@@ -21,8 +21,8 @@ export default function RequestQuote () {
         description="Get customized quotes for AI services, IT solutions, talent hiring, and equipment. Fast, reliable, and tailored to your needs."
         keywords="request quote, AI services, IT solutions, talent hiring, equipment quotes"
         canonical="https://ziontechgroup.com / request - quote"
-      />
-      <Header />
+            />
+      <Header       />
 
       <main className="min - h-screen bg - zion - blue pt - 24 pb - 20">
         <div className="container mx - auto px - 4 sm:px - 6 lg:px - 8">
@@ -42,7 +42,7 @@ export default function RequestQuote () {
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6 mb - 16">
             <Card className="bg - zion - blue - dark border - zion - purple / 20 text - white">
               <CardHeader className="text - center">
-                <Zap className="h - 12 w - 12 text - zion - cyan mx - auto mb - 4" />
+                <Zap className="h - 12 w - 12 text - zion - cyan mx - auto mb - 4"       />
                 <CardTitle className="text - lg">Fast Response</CardTitle>
               </CardHeader>
               <CardContent className="text - center">
@@ -54,7 +54,7 @@ export default function RequestQuote () {
 
             <Card className="bg - zion - blue - dark border - zion - purple / 20 text - white">
               <CardHeader className="text - center">
-                <CheckCircle className="h - 12 w - 12 text - zion - cyan mx - auto mb - 4" />
+                <CheckCircle className="h - 12 w - 12 text - zion - cyan mx - auto mb - 4"       />
                 <CardTitle className="text - lg">Customized</CardTitle>
               </CardHeader>
               <CardContent className="text - center">
@@ -66,7 +66,7 @@ export default function RequestQuote () {
 
             <Card className="bg - zion - blue - dark border - zion - purple / 20 text - white">
               <CardHeader className="text - center">
-                <Users className="h - 12 w - 12 text - zion - cyan mx - auto mb - 4" />
+                <Users className="h - 12 w - 12 text - zion - cyan mx - auto mb - 4"       />
                 <CardTitle className="text - lg">Expert Team</CardTitle>
               </CardHeader>
               <CardContent className="text - center">
@@ -78,7 +78,7 @@ export default function RequestQuote () {
 
             <Card className="bg - zion - blue - dark border - zion - purple / 20 text - white">
               <CardHeader className="text - center">
-                <Clock className="h - 12 w - 12 text - zion - cyan mx - auto mb - 4" />
+                <Clock className="h - 12 w - 12 text - zion - cyan mx - auto mb - 4"       />
                 <CardTitle className="text - lg">No Obligation</CardTitle>
               </CardHeader>
               <CardContent className="text - center">
@@ -185,7 +185,7 @@ export default function RequestQuote () {
               </p>
             </div>
 
-            <QuoteRequestForm />
+            <QuoteRequestForm       />
           </div>
 
           {/* Additional Information */}
@@ -215,6 +215,6 @@ export default function RequestQuote () {
         </div>
       </main>
 
-      <Footer />
+      <Footer       />
     </div>) ;
 }

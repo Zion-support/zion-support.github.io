@@ -191,14 +191,14 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
   #000000 100%)';
         
 
-}}/>
+}}      />
       
       {/* Overlay effects */}
       <div className="absolute inset-0 pointer-events-none">
-        {variant === 'cyberpunk' && (<div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent animate-pulse"/>)}
-        {variant === 'quantum' && (<div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-purple-500/10"/>)}
-        {variant === 'neon' && (<div className="absolute inset-0 bg-gradient-to-t from-pink-500/5 via-transparent to-yellow-500/5"/>)}
-        {variant === 'matrix' && (<div className="absolute inset-0 bg-gradient-to-b from-green-500/10 via-transparent to-transparent"/>)}
+        {variant === 'cyberpunk' && (<div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent animate-pulse"      />)}
+        {variant === 'quantum' && (<div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-purple-500/10"      />)}
+        {variant === 'neon' && (<div className="absolute inset-0 bg-gradient-to-t from-pink-500/5 via-transparent to-yellow-500/5"      />)}
+        {variant === 'matrix' && (<div className="absolute inset-0 bg-gradient-to-b from-green-500/10 via-transparent to-transparent"      />)}
       </div>
 
       {/* Floating geometric shapes */}
@@ -218,7 +218,7 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
   ease: "linear"
         
 
-}}/>
+}}      />
         <motion.div className="absolute top-40 right-32 w-24 h-24 border border-pink-400/30 rounded-full" animate = {
   {
             y[0, -20, 0],;
@@ -233,7 +233,7 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
   ease: "easeInOut"
         
 
-}}/>
+}}      />
         <motion.div className="absolute bottom-32 left-1/3 w-20 h-20 border border-yellow-400/30 transform rotate-45" animate = {
   {
             rotate[0, 180, 360],;
@@ -248,7 +248,7 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
   ease: "linear"
         
 
-}}/>
+}}      />
       </div>
     </div>)};
 export default FuturisticAnimatedBackground;

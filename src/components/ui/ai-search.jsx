@@ -190,19 +190,19 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
       {/* Search Input */}
       <div className="relative">
         <div className="relative">
-          <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zinc-400"/>
+          <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zinc-400"      />
           <input ref={inputRef} type="text" value={query} onChange={(e) => handleSearchInput(e.target.value)} onKeyDown={handleKeyDown} placeholder={placeholder} className="w-full pl-12 pr-20 py-3 bg-zion-blue-dark/60 border border-zion-blue-light/30 rounded-xl text-white placeholder-zinc-400 focus:outline-none focus:border-zion-cyan/50 focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-200"/>
 
           {/* Voice Input Button */}
           <button onClick={toggleVoiceInput} className={`absolute right-16 top-1/2 transform -translate-y-1/2 p-2 rounded-lg transition-all duration-200 ${isVoiceActive
             ? 'bg-red-500/20 text-red-400'
             : 'text-zinc-400 hover:text-zinc-300 hover:bg-zion-blue/20'}`}>
-            {isVoiceActive ? (<Mic className="w-4 h-4 animate-pulse"/>) : (<MicOff className="w-4 h-4"/>)}
+            {isVoiceActive ? (<Mic className="w-4 h-4 animate-pulse"      />) : (<MicOff className="w-4 h-4"      />)}
           </button>
 
           {/* Search Button */}
           <Button onClick={handleSearch} disabled={!query.trim() || isSearching} className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-zion-cyan hover:bg-zion-cyan-light text-zion-blue-dark disabled:opacity-50" size="sm">
-            {isSearching ? (<div className="w-4 h-4 border-2 border-zion-blue-dark border-t-transparent rounded-full animate-spin"/>) : (<Search className="w-4 h-4"/>)}
+            {isSearching ? (<div className="w-4 h-4 border-2 border-zion-blue-dark border-t-transparent rounded-full animate-spin"      />) : (<Search className="w-4 h-4"      />)}
           </Button>
         </div>
 
@@ -239,7 +239,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                 setResults([]);
                 setSuggestions([]);
                 setIsOpen(false)}} className="absolute right-24 top-1/2 transform -translate-y-1/2 p-1 text-zinc-400 hover:text-white hover:bg-zion-blue/20 rounded-lg transition-all duration-200">
-            <X className="w-4 h-4"/>
+            <X className="w-4 h-4"      />
           </motion.button>)}
       </div>
 
@@ -286,7 +286,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
             <div className="flex items-center justify-between p-4 border-b border-zion-blue-light/30">
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">
-                  <Sparkles className="w-5 h-5 text-white"/>
+                  <Sparkles className="w-5 h-5 text-white"      />
                 </div>
                 <div>
                   <h3 className="text-white font-semibold">AI-Powered Search</h3>
@@ -296,10 +296,10 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
 
               <div className="flex items-center gap-2">
                 <Button size="sm" variant="ghost" onClick={() => setShowFilters(!showFilters)} className="text-zinc-400 hover:text-white p-2">
-                  <Filter className="w-4 h-4"/>
+                  <Filter className="w-4 h-4"      />
                 </Button>
                 <Button size="sm" variant="ghost" onClick={shareResults} className="text-zinc-400 hover:text-white p-2">
-                  <Share2 className="w-4 h-4"/>
+                  <Share2 className="w-4 h-4"      />
                 </Button>
               </div>
             </div>
@@ -415,11 +415,11 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
               {/* Search History */}
               {searchHistory.length > 0 && !query && (<div className="p-4 border-b border-zion-blue-light/30">
                   <h4 className="text-zinc-300 text-sm font-medium mb-3 flex items-center gap-2">
-                    <History className="w-4 h-4"/>
+                    <History className="w-4 h-4"      />
                     Recent Searches
                   </h4>
                   <div className="space-y-2">
-                    {searchHistory.map((search, index) => (<button key={index} onClick = {
+                    {searchHistory.map((((((((search, index, index, index, index, index, index, index) => ({ ...((((((search, index, index, index, index, index, index, key: index })) => ({ ...(((((search, index, index, index, index, index, key: index })) => ({ ...((((search, index, index, index, index, key: index })) => ({ ...(((search, index, index, index, key: index })) => ({ ...((search, index, index, key: index })) => ({ ...(search, index, key: index })) => (<button key={index} onClick = {
   () => {
                         setQuery(search);
                         performSearch(search,
@@ -438,11 +438,11 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
               {/* AI Suggestions */}
               {suggestions.length > 0 && (<div className="p-4 border-b border-zion-blue-light/30">
                   <h4 className="text-zinc-300 text-sm font-medium mb-3 flex items-center gap-2">
-                    <Zap className="w-4 h-4 text-zion-cyan"/>
+                    <Zap className="w-4 h-4 text-zion-cyan"      />
                     AI Suggestions
                   </h4>
                   <div className="space-y-2">
-                    {suggestions.map((suggestion, index) => (<button key={index} onClick = {
+                    {suggestions.map((((((((suggestion, index, index, index, index, index, index, index) => ({ ...((((((suggestion, index, index, index, index, index, index, key: index })) => ({ ...(((((suggestion, index, index, index, index, index, key: index })) => ({ ...((((suggestion, index, index, index, index, key: index })) => ({ ...(((suggestion, index, index, index, key: index })) => ({ ...((suggestion, index, index, key: index })) => ({ ...(suggestion, index, key: index })) => (<button key={index} onClick = {
   () => {
                         setQuery(suggestion);
                         performSearch(suggestion,
@@ -454,7 +454,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
 
 }} className="w-full text-left p-2 rounded-lg hover:bg-zion-blue/20 transition-colors duration-200 text-zinc-300 hover:text-white flex items-center justify-between group">
                         <span>{suggestion}</span>
-                        <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-200"/>
+                        <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-200"      />
                       </button>))}
                   </div>
                 </div>)}
@@ -462,11 +462,11 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
               {/* Search Results */}
               {results.length > 0 && (<div className="p-4">
                   <h4 className="text-zinc-300 text-sm font-medium mb-3 flex items-center gap-2">
-                    <TrendingUp className="w-4 h-4 text-green-400"/>
+                    <TrendingUp className="w-4 h-4 text-green-400"      />
                     Search Results ({results.length})
                   </h4>
                   <div className="space-y-3">
-                    {results.map((result) => (<motion.div key={result.id} className="p-3 rounded-lg hover:bg-zion-blue/20 border border-transparent hover:border-zion-blue-light/30 transition-all duration-200 cursor-pointer group" whileHover={{ scale: 1.02 }} onClick={() => handleResultClick(result)}>
+                    {results.map((((((((result, index, index, index, index, index, index) => ({ ...((((((result, index, index, index, index, index, key: index })) => ({ ...(((((result, index, index, index, index, key: index })) => ({ ...((((result, index, index, index, key: index })) => ({ ...(((result, index, index, key: index })) => ({ ...((result, index, key: index })) => ({ ...(result, key: index })) => (<motion.div key={result.id} className="p-3 rounded-lg hover:bg-zion-blue/20 border border-transparent hover:border-zion-blue-light/30 transition-all duration-200 cursor-pointer group" whileHover={{ scale: 1.02 }} onClick={() => handleResultClick(result)}>
                         <div className="flex items-start justify-between mb-2">
                           <div className="flex-1">
                             <h5 className="text-white font-medium group-hover:text-zion-cyan transition-colors duration-200">
@@ -489,7 +489,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                         <div className="flex items-center justify-between text-xs text-zinc-500">
                           <div className="flex items-center gap-3">
                             <span className="flex items-center gap-1">
-                              <Star className="w-3 h-3 fill-yellow-400 text-yellow-400"/>
+                              <Star className="w-3 h-3 fill-yellow-400 text-yellow-400"      />
                               {result.rating}
                             </span>
                             <span>({result.reviews} reviews)</span>
@@ -505,7 +505,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
 
               {/* No Results */}
               {query && results.length === 0 && !isSearching && (<div className="p-8 text-center">
-                  <Search className="w-12 h-12 text-zinc-500 mx-auto mb-3"/>
+                  <Search className="w-12 h-12 text-zinc-500 mx-auto mb-3"      />
                   <h4 className="text-zinc-300 font-medium mb-2">No results found</h4>
                   <p className="text-zinc-500 text-sm">
                     Try adjusting your search terms or filters
@@ -517,12 +517,12 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
             <div className="p-4 border-t border-zion-blue-light/30 bg-zion-blue/10">
               <div className="flex items-center justify-between">
                 <Button size="sm" variant="outline" onClick={() => saveSearch(query)} className="border-zion-blue-light/30 text-zinc-300 hover:text-white">
-                  <Bookmark className="w-4 h-4 mr-2"/>
+                  <Bookmark className="w-4 h-4 mr-2"      />
                   Save Search
                 </Button>
 
                 <Button size="sm" variant="outline" onClick={() => setShowFilters(!showFilters)} className="border-zion-blue-light/30 text-zinc-300 hover:text-white">
-                  <Settings className="w-4 h-4 mr-2"/>
+                  <Settings className="w-4 h-4 mr-2"      />
                   Advanced Filters
                 </Button>
               </div>

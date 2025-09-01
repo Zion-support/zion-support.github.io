@@ -1,16 +1,15 @@
 import { render, screen } from '@testing - library / react';
-import React from 'react';
 import EnhancedServiceShowcase from './EnhancedServiceShowcase';
-
-
-describe ('EnhancedServiceShowcase', () => {
-  it ('renders without crashing', () => {
-    render (<EnhancedServiceShowcase />) ;
+;
+;
+describe ('EnhancedServiceShowcase', () => {;
+  it ('renders without crashing', () => {;
+    render (<EnhancedServiceShowcase       />) ;
     expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () ;
   }) ;
-
-  it ('displays expected content', () => {
-    render (<EnhancedServiceShowcase />) ;
-    // Add specific test assertions based on component content
+;
+  it ('displays expected content', () => {;
+    render (<EnhancedServiceShowcase       />) ;
+    // Add specific test assertions based on component content;
   }) ;
 }) ;

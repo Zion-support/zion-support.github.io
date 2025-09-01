@@ -17,7 +17,7 @@ export default function Services () {
         description="Explore our micro SaaS products, enterprise IT services, and AI solutions with transparent pricing, clear features, and easy ways to get started."
         canonical="/services"
         url="https://ziontechgroup.com / services"
-      />
+            />
 
       <main className="min - h-screen bg - zion - blue pt - 24 pb - 20">
         <div className="container mx - auto px - 4 sm:px - 6 lg:px - 8">
@@ -76,7 +76,7 @@ export default function Services () {
                           className="inline - flex items - center gap - 2 bg - gradient - to - r from - zion - cyan to - zion - blue text - white font - medium py - 2 px - 4 rounded - lg border border - zion - cyan / 40 hover:shadow - lg hover:shadow - zion - cyan / 20"
                         >
                           <span>{item.ctaLabel}</span>
-                          {item.external && (<ExternalLink className="w - 4 h - 4" />) }
+                          {item.external && (<ExternalLink className="w - 4 h - 4"       />) }
                         </Link>
                         <span className="text - zion - slate - light text - sm">
                           Category: {item.category}
@@ -94,19 +94,19 @@ export default function Services () {
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6">
               <div className="bg - zion - blue - dark border border - zion - blue - light rounded - 2xl p - 6">
                 <div className="flex items - center gap - 3 text - white">
-                  <Phone className="w - 5 h - 5" />
+                  <Phone className="w - 5 h - 5"       />
                   <span>{contact.mobile}</span>
                 </div>
               </div>
               <div className="bg - zion - blue - dark border border - zion - blue - light rounded - 2xl p - 6">
                 <div className="flex items - center gap - 3 text - white">
-                  <Mail className="w - 5 h - 5" />
+                  <Mail className="w - 5 h - 5"       />
                   <span>{contact.email}</span>
                 </div>
               </div>
               <div className="bg - zion - blue - dark border border - zion - blue - light rounded - 2xl p - 6">
                 <div className="flex items - center gap - 3 text - white">
-                  <MapPin className="w - 5 h - 5" />
+                  <MapPin className="w - 5 h - 5"       />
                   <span>{contact.address}</span>
                 </div>
               </div>

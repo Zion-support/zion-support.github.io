@@ -24,7 +24,7 @@ const EnhancedLoading = ({ variant = 'spinner', size = 'md', text, className = '
                 repeat: Infinity,
   delay: i * 0.1
 
-}}/>) ) }
+}}      />) ) }
     </div>) ;
     const renderVariant = () => {
         switch (variant) {

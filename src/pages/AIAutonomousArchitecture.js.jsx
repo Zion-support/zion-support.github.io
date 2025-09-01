@@ -10,15 +10,15 @@ const AIAutonomousArchitecture = () => {
         <meta
           name="description"
           content="Revolutionary AI autonomous architecture platform that continuously designs systems, creates blueprints, and plans structures with advanced AI capabilities and autonomous operation."
-        />
+              />
         <meta
           name="keywords"
           content="AI architecture, autonomous architecture, system design, blueprint creation, autonomous operations, AI architecture platform"
-        />
+              />
         <link
           rel="canonical"
           href="https://ziontechgroup.com / ai - autonomous - architecture"
-        />
+              />
       </Helmet>
 
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">

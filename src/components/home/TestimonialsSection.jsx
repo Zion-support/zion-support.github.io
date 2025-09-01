@@ -42,7 +42,7 @@ export function TestimonialsSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (<div key={index} className="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+          {testimonials.map((((((((testimonial, index, index, index, index, index, index, index) => ({ ...((((((testimonial, index, index, index, index, index, index, key: index })) => ({ ...(((((testimonial, index, index, index, index, index, key: index })) => ({ ...((((testimonial, index, index, index, index, key: index })) => ({ ...(((testimonial, index, index, index, key: index })) => ({ ...((testimonial, index, index, key: index })) => ({ ...(testimonial, index, key: index })) => (<div key={index} className="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:shadow-lg transition-shadow duration-300">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-2xl mr-4">
                   {testimonial.avatar}

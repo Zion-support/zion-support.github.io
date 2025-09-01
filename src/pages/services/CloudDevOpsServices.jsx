@@ -146,9 +146,9 @@ const CloudDevOpsServices = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {cloudServices.map((service, index) => (<div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-slate-100">
+            {cloudServices.map((((((((service, index, index, index, index, index, index, index) => ({ ...((((((service, index, index, index, index, index, index, key: index })) => ({ ...(((((service, index, index, index, index, index, key: index })) => ({ ...((((service, index, index, index, index, key: index })) => ({ ...(((service, index, index, index, key: index })) => ({ ...((service, index, index, key: index })) => ({ ...(service, index, key: index })) => (<div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-slate-100">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6">
-                  <service.icon className="w-8 h-8 text-white"/>
+                  <service.icon className="w-8 h-8 text-white"      />
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">
                   {service.title}
@@ -157,14 +157,14 @@ const CloudDevOpsServices = () => {
                   {service.description}
                 </p>
                 <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-slate-600">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"/>
+                  {service.features.map((((((((feature, featureIndex, index, index, index, index, index, index) => ({ ...((((((feature, featureIndex, index, index, index, index, index, key: index })) => ({ ...(((((feature, featureIndex, index, index, index, index, key: index })) => ({ ...((((feature, featureIndex, index, index, index, key: index })) => ({ ...(((feature, featureIndex, index, index, key: index })) => ({ ...((feature, featureIndex, index, key: index })) => ({ ...(feature, featureIndex, key: index })) => (<li key={featureIndex} className="flex items-center text-sm text-slate-600">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"      />
                       {feature}
                     </li>))}
                 </ul>
                 <Link to="/contact" className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold transition-colors duration-200">
                   Learn More
-                  <ArrowRight className="w-4 h-4 ml-2"/>
+                  <ArrowRight className="w-4 h-4 ml-2"      />
                 </Link>
               </div>))}
           </div>
@@ -185,7 +185,7 @@ const CloudDevOpsServices = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {cloudPlatforms.map((platform, index) => (<div key={index} className="bg-slate-50 rounded-2xl p-8 border border-slate-200">
+            {cloudPlatforms.map((((((((platform, index, index, index, index, index, index, index) => ({ ...((((((platform, index, index, index, index, index, index, key: index })) => ({ ...(((((platform, index, index, index, index, index, key: index })) => ({ ...((((platform, index, index, index, index, key: index })) => ({ ...(((platform, index, index, index, key: index })) => ({ ...((platform, index, index, key: index })) => ({ ...(platform, index, key: index })) => (<div key={index} className="bg-slate-50 rounded-2xl p-8 border border-slate-200">
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">
                   {platform.name}
                 </h3>
@@ -193,8 +193,8 @@ const CloudDevOpsServices = () => {
                   {platform.description}
                 </p>
                 <ul className="space-y-2">
-                  {platform.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-slate-600">
-                      <CheckCircle className="w-4 h-4 text-blue-500 mr-2 flex-shrink-0"/>
+                  {platform.features.map((((((((feature, featureIndex, index, index, index, index, index, index) => ({ ...((((((feature, featureIndex, index, index, index, index, index, key: index })) => ({ ...(((((feature, featureIndex, index, index, index, index, key: index })) => ({ ...((((feature, featureIndex, index, index, index, key: index })) => ({ ...(((feature, featureIndex, index, index, key: index })) => ({ ...((feature, featureIndex, index, key: index })) => ({ ...(feature, featureIndex, key: index })) => (<li key={featureIndex} className="flex items-center text-sm text-slate-600">
+                      <CheckCircle className="w-4 h-4 text-blue-500 mr-2 flex-shrink-0"      />
                       {feature}
                     </li>))}
                 </ul>
@@ -216,9 +216,9 @@ const CloudDevOpsServices = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (<div key={index} className="text-center">
+            {benefits.map((((((((benefit, index, index, index, index, index, index, index) => ({ ...((((((benefit, index, index, index, index, index, index, key: index })) => ({ ...(((((benefit, index, index, index, index, index, key: index })) => ({ ...((((benefit, index, index, index, index, key: index })) => ({ ...(((benefit, index, index, index, key: index })) => ({ ...((benefit, index, index, key: index })) => ({ ...(benefit, index, key: index })) => (<div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="w-8 h-8 text-white"/>
+                  <CheckCircle className="w-8 h-8 text-white"      />
                 </div>
                 <p className="text-lg text-slate-700">{benefit}</p>
               </div>))}
@@ -239,7 +239,7 @@ const CloudDevOpsServices = () => {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {technologies.map((tech, index) => (<div key={index} className="bg-slate-50 rounded-xl p-6 text-center shadow-md hover:shadow-lg transition-all duration-300">
+            {technologies.map((((((((tech, index, index, index, index, index, index, index) => ({ ...((((((tech, index, index, index, index, index, index, key: index })) => ({ ...(((((tech, index, index, index, index, index, key: index })) => ({ ...((((tech, index, index, index, index, key: index })) => ({ ...(((tech, index, index, index, key: index })) => ({ ...((tech, index, index, key: index })) => ({ ...(tech, index, key: index })) => (<div key={index} className="bg-slate-50 rounded-xl p-6 text-center shadow-md hover:shadow-lg transition-all duration-300">
                 <p className="text-slate-700 font-semibold">{tech}</p>
               </div>))}
           </div>

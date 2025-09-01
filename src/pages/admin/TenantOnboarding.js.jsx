@@ -41,7 +41,7 @@ export default function TenantOnboarding() {
   // Check if user has admin role
   const isAdmin = user?.role === 'admin';
   if (!isAdmin) {
-    return <Navigate to="/unauthorized" />;
+    return <Navigate to="/unauthorized"       />;
   }
   const handleInputChange = e => {
     const { name, value } = e.target;
@@ -111,7 +111,7 @@ export default function TenantOnboarding() {
       <SEO
         title="Tenant Onboarding - Zion AI Marketplace"
         description="Onboard a new white-label tenant to the Zion AI Marketplace platform."
-      />
+            />
 
       <main className="flex-1 container max-w-4xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col space-y-6">
@@ -155,7 +155,7 @@ export default function TenantOnboarding() {
                         onChange={handleInputChange}
                         placeholder="Acme Corporation"
                         required
-                      />
+                            />
                     </div>
 
                     <div className="space-y-2">
@@ -168,7 +168,7 @@ export default function TenantOnboarding() {
                         }
                       >
                         <SelectTrigger>
-                          <SelectValue placeholder="Select industry" />
+                          <SelectValue placeholder="Select industry"       />
                         </SelectTrigger>
                         <SelectContent>
                           <SelectItem value="technology">Technology</SelectItem>
@@ -197,7 +197,7 @@ export default function TenantOnboarding() {
                         }
                       >
                         <SelectTrigger>
-                          <SelectValue placeholder="Select comp size" />
+                          <SelectValue placeholder="Select comp size"       />
                         </SelectTrigger>
                         <SelectContent>
                           <SelectItem value="1-10">1-10 employees</SelectItem>
@@ -226,7 +226,7 @@ export default function TenantOnboarding() {
                         value={formData.logo_url}
                         onChange={handleInputChange}
                         placeholder="https://example.com/logo.png"
-                      />
+                            />
                       <p className="text-xs text-muted-foreground">
                         Enter a direct URL to your logo image (SVG or PNG with
                         transparent background recommended)
@@ -243,13 +243,13 @@ export default function TenantOnboarding() {
                           value={formData.primary_color}
                           onChange={handleInputChange}
                           className="w-12 p-1 h-10"
-                        />
+                              />
                         <Input
                           name="primary_color"
                           value={formData.primary_color}
                           onChange={handleInputChange}
                           placeholder="#9b87f5"
-                        />
+                              />
                       </div>
                     </div>
 
@@ -263,7 +263,7 @@ export default function TenantOnboarding() {
                         }
                       >
                         <SelectTrigger>
-                          <SelectValue placeholder="Select theme" />
+                          <SelectValue placeholder="Select theme"       />
                         </SelectTrigger>
                         <SelectContent>
                           <SelectItem value="light">Light</SelectItem>
@@ -309,7 +309,7 @@ export default function TenantOnboarding() {
                               : 'comp'
                           }
                           className="rounded-r-none"
-                        />
+                              />
                         <div className="bg-muted px-3 py-2 border border-l-0 border-input rounded-r-md text-muted-foreground">
                           .ziontechmarketplace.com
                         </div>
@@ -329,7 +329,7 @@ export default function TenantOnboarding() {
                         value={formData.custom_domain}
                         onChange={handleInputChange}
                         placeholder="hire.yourcompany.com"
-                      />
+                            />
                       <p className="text-xs text-muted-foreground">
                         If you want to use your own domain, enter it here.
                         You'll need to configure DNS records.

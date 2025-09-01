@@ -10,7 +10,7 @@ const Resources = () => {
         <meta
           name="description"
           content="Access valuable resources, tools, and insights from Zion Tech Group. Download whitepapers, guides, and more."
-        />
+              />
       </Helmet>
 
       <div className="min - h-screen bg - gray - 50 py - 12">

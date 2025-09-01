@@ -36,7 +36,7 @@ import { Loader2 export function LoadingFallback({ message = "Loading...", size 
 
 
 }}>
-        <Loader2 className={`${sizeClasses[size]} text-zion-cyan`}/>
+        <Loader2 className={`${sizeClasses[size]} text-zion-cyan`}      />
       </motion.div>
 
       <motion.p className={`${textSizes[size]} text-zion-slate-light font-medium`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }}>
@@ -46,7 +46,7 @@ import { Loader2 export function LoadingFallback({ message = "Loading...", size 
       {/* Animated dots */}
       <motion.div className="flex space-x-1">
         {[0, 1,
-  2].map((index) => (<motion.div key={index
+  2].map((((((((index, index, index, index, index, index, index) => ({ ...((((((index, index, index, index, index, index, key: index })) => ({ ...(((((index, index, index, index, index, key: index })) => ({ ...((((index, index, index, index, key: index })) => ({ ...(((index, index, index, key: index })) => ({ ...((index, index, key: index })) => ({ ...(index, key: index })) => (<motion.div key={index
 
 } className="w-2 h-2 bg-zion-cyan rounded-full" animate = {
   {
@@ -72,13 +72,13 @@ import { Loader2 export function LoadingFallback({ message = "Loading...", size 
 
 
 
-}}/>))}
+}}      />))}
       </motion.div>
     </div>)}
 export function PageLoadingFallback() {
     return (<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple flex items-center justify-center">
       <div className="text-center">
-        <LoadingFallback message="Loading Zion Tech Group..." size="lg"/>
+        <LoadingFallback message="Loading Zion Tech Group..." size="lg"      />
         <motion.div className="mt-8 text-zion-slate-light text-sm" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1 }}>
           Connecting to the future of tech...
         </motion.div>

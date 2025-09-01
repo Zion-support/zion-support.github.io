@@ -40,11 +40,11 @@ export default function CompWorkspace () {
       <SEO
         title={`${company.name} Workspace - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
         description={`${company.name}'s dedicated workspace ${isWhitelabel ? `on ${brandName}` : 'on Zion AI Marketplace'}. Collaborate with your team to find top talent.`}
-      />
+            />
       <Header
         customLogo={isWhitelabel ? tenant?.logo_url : company.logoUrl}
         customTheme={effectiveTheme}
-      />
+            />
       <main
         className="min - h-screen"
         style={{
@@ -52,8 +52,8 @@ export default function CompWorkspace () {
             effectiveTheme?.backgroundColor || 'var (--background) ',
         }}
       >
-        <CompDashboard company={comp} />
+        <CompDashboard company={comp}       />
       </main>
-      <Footer />
+      <Footer       />
     </ProtectedRoute>) ;
 }

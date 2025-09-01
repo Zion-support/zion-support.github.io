@@ -82,7 +82,7 @@ const InnovativeServicesOverview = () => {
           <div className="flex flex - col sm:flex - row gap - 6 justify - center mb - 12">
             <a href="mailto:kleber@ziontechgroup.com" className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - cyan - 600 text - white font - semibold rounded - xl hover:from - blue - 700 hover:to - cyan - 700 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl shadow - lg">
               Get Started Today < svg className="ml - 2 w - 5 h - 5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l - 5 5m5 - 5H6"/>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l - 5 5m5 - 5H6"      />
               </svg>
             </a>
             <a href="tel:+13024640950" className="inline - flex items - center px - 8 py - 4 border - 2 border - white / 30 text - white font - semibold rounded - xl hover:bg - white / 10 hover:border - white / 50 transition - all duration - 300 transform hover:scale - 105">
@@ -316,7 +316,7 @@ const InnovativeServicesOverview = () => {
           <div className="flex flex - col sm:flex - row gap - 6 justify - center">
             <a href="mailto:kleber@ziontechgroup.com" className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - cyan - 600 text - white font - semibold rounded - xl hover:from - blue - 700 hover:to - cyan - 700 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl shadow - lg">
               Start Your Journey < svg className="ml - 2 w - 5 h - 5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l - 5 5m5 - 5H6"/>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l - 5 5m5 - 5H6"      />
               </svg>
             </a>
             <a href="tel:+13024640950" className="inline - flex items - center px - 8 py - 4 border - 2 border - white / 30 text - white font - semibold rounded - xl hover:bg - white / 10 hover:border - white / 50 transition - all duration - 300 transform hover:scale - 105">

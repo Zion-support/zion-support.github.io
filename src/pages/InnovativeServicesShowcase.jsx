@@ -37,10 +37,10 @@ const InnovativeServicesShowcase = () => {
         return INNOVATIVE_SERVICE_SUBCATEGORIES_2025[category] || []};
     const getCategoryIcon = (category) => {
         const categoryIcons = {
-  'AI & Analytics': <Brain className="h - 5 w - 5"/>,
-            'Emerging Technology': <Rocket className="h - 5 w - 5"/>,
-            'Blockchain & Web3': <Cube className="h - 5 w - 5"/>,
-            'IoT & Edge Computing': <Network className="h - 5 w - 5"/>,
-            'Cybersecurity': <Shield className="h - 5 w - 5"/>,
-            'Metaverse & VR / AR': <Eye className="h - 5 w - 5"/>,
-            'Green Technology': <Leaf className="h - 5 w - 5"/>,
+  'AI & Analytics': <Brain className="h - 5 w - 5"      />,
+            'Emerging Technology': <Rocket className="h - 5 w - 5"      />,
+            'Blockchain & Web3': <Cube className="h - 5 w - 5"      />,
+            'IoT & Edge Computing': <Network className="h - 5 w - 5"      />,
+            'Cybersecurity': <Shield className="h - 5 w - 5"      />,
+            'Metaverse & VR / AR': <Eye className="h - 5 w - 5"      />,
+            'Green Technology': <Leaf className="h - 5 w - 5"      />,

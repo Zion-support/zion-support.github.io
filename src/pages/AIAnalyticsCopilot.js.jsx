@@ -19,11 +19,11 @@ const AIAnalyticsCopilot = () => {
         <meta
           name="description"
           content="Intelligent analytics copilot that transforms raw data into actionable insights with AI - powered analysis and visualization."
-        />
+              />
         <meta
           name="keywords"
           content="AI analytics, data insights, business intelligence, analytics copilot, data visualization"
-        />
+              />
       </Helmet>
 
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900">
@@ -33,7 +33,7 @@ const AIAnalyticsCopilot = () => {
           <div className="max - w-7xl mx - auto relative z - 10">
             <div className="text - center mb - 16">
               <div className="inline - flex items - center gap - 2 bg - blue - 500 / 20 rounded - full px - 6 py - 3 mb - 6">
-                <BarChart3 className="w - 5 h - 5 text - blue - 400" />
+                <BarChart3 className="w - 5 h - 5 text - blue - 400"       />
                 <span className="text - blue - 300 font - medium">
                   AI Analytics Copilot
                 </span>
@@ -108,7 +108,7 @@ const AIAnalyticsCopilot = () => {
                   key={index}
                   className="bg - white / 5 backdrop - blur - lg rounded - 2xl p - 8 border border - white / 10 hover:border - blue - 500 / 50 transition - colors"
                 >
-                  <feature.icon className="w - 12 h - 12 text - blue - 400 mb - 6" />
+                  <feature.icon className="w - 12 h - 12 text - blue - 400 mb - 6"       />
                   <h3 className="text - xl font - semibold text - white mb - 4">
                     {feature.title}
                   </h3>

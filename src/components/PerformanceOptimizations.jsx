@@ -104,7 +104,7 @@ const VirtualList = ({ items, itemHeight = 60, containerHeight = 400 }) => {
             Add Item
           </button>
         </div>
-        <MemoizedDataGrid data={data} onItemClick={handleItemClick}/>
+        <MemoizedDataGrid data={data} onItemClick={handleItemClick}      />
       </div>
 
       {/* Virtual Scrolling */}
@@ -127,9 +127,9 @@ const VirtualList = ({ items, itemHeight = 60, containerHeight = 400 }) => {
           {showExpensive ? 'Hide' : 'Show'} Expensive Component
         </button>
 
-        {showExpensive && (<Suspense fallback={<LoadingSpinner />}>
+        {showExpensive && (<Suspense fallback={<LoadingSpinner       />}>
             <div className="mt - 4 p - 4 bg - zion - slate / 10 rounded - lg">
-              <LazyExpensiveComponent />
+              <LazyExpensiveComponent       />
             </div>
           </Suspense>) }
       </div>

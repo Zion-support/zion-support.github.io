@@ -11,11 +11,35 @@ function cartReducer(state, action) {
       const existing = state.items.find(i => i.id === action.payload.id);
       let items;
       if (existing) {
-        items = state.items.map(i =>
+        items = state.items.map(((((((i =>
           i.id === action.payload.id
             ? { ...i, quantity: i.quantity + action.payload.quantity }
             : i
-        );
+        , index, index, index, index, index, index) => ({ ...(((((i =>
+          i.id === action.payload.id
+            ? { ...i, quantity: i.quantity + action.payload.quantity }
+            : i
+        , index, index, index, index, index, key: index })) => ({ ...((((i =>
+          i.id === action.payload.id
+            ? { ...i, quantity: i.quantity + action.payload.quantity }
+            : i
+        , index, index, index, index, key: index })) => ({ ...(((i =>
+          i.id === action.payload.id
+            ? { ...i, quantity: i.quantity + action.payload.quantity }
+            : i
+        , index, index, index, key: index })) => ({ ...((i =>
+          i.id === action.payload.id
+            ? { ...i, quantity: i.quantity + action.payload.quantity }
+            : i
+        , index, index, key: index })) => ({ ...(i =>
+          i.id === action.payload.id
+            ? { ...i, quantity: i.quantity + action.payload.quantity }
+            : i
+        , index, key: index })) => ({ ...i =>
+          i.id === action.payload.id
+            ? { ...i, quantity: i.quantity + action.payload.quantity }
+            : i
+        , key: index }));
       } else {
         items = [...state.items, action.payload];
       }
@@ -27,9 +51,21 @@ function cartReducer(state, action) {
 
     case 'UPDATE_QUANTITY': {
       const { id, quantity } = action.payload;
-      const items = state.items.map(i =>
+      const items = state.items.map(((((((i =>
         i.id === id ? { ...i, quantity } : i
-      );
+      , index, index, index, index, index, index) => ({ ...(((((i =>
+        i.id === id ? { ...i, quantity } : i
+      , index, index, index, index, index, key: index })) => ({ ...((((i =>
+        i.id === id ? { ...i, quantity } : i
+      , index, index, index, index, key: index })) => ({ ...(((i =>
+        i.id === id ? { ...i, quantity } : i
+      , index, index, index, key: index })) => ({ ...((i =>
+        i.id === id ? { ...i, quantity } : i
+      , index, index, key: index })) => ({ ...(i =>
+        i.id === id ? { ...i, quantity } : i
+      , index, key: index })) => ({ ...i =>
+        i.id === id ? { ...i, quantity } : i
+      , key: index }));
       return { items };
     }
 

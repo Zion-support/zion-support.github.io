@@ -10,15 +10,15 @@ const AIAutonomousPlanning = () => {
         <meta
           name="description"
           content="Revolutionary AI autonomous planning platform that continuously creates strategies, plans actions, and optimizes decision - making with advanced AI capabilities and autonomous operation."
-        />
+              />
         <meta
           name="keywords"
           content="AI planning, autonomous planning, strategic planning, decision optimization, autonomous operations, AI planning platform"
-        />
+              />
         <link
           rel="canonical"
           href="https://ziontechgroup.com / ai - autonomous - planning"
-        />
+              />
       </Helmet>
 
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - orange - 900 to - slate - 900">

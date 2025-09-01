@@ -101,11 +101,11 @@ export function TestimonialsSection() {
 
         {/* Testimonials Grid */}
         <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {testimonials.map((testimonial, index) => (<motion.div key={index} variants={itemVariants} className="group">
+          {testimonials.map((((((((testimonial, index, index, index, index, index, index, index) => ({ ...((((((testimonial, index, index, index, index, index, index, key: index })) => ({ ...(((((testimonial, index, index, index, index, index, key: index })) => ({ ...((((testimonial, index, index, index, index, key: index })) => ({ ...(((testimonial, index, index, index, key: index })) => ({ ...((testimonial, index, index, key: index })) => ({ ...(testimonial, index, key: index })) => (<motion.div key={index} variants={itemVariants} className="group">
               <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:border-zion-cyan/30 transition-all duration-300 hover:scale-105">
                 {/* Rating */}
                 <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (<StarIcon key={i} className="w-5 h-5 text-yellow-400"/>))}
+                  {[...Array(testimonial.rating)].map((((((((_, i, index, index, index, index, index, index) => ({ ...((((((_, i, index, index, index, index, index, key: index })) => ({ ...(((((_, i, index, index, index, index, key: index })) => ({ ...((((_, i, index, index, index, key: index })) => ({ ...(((_, i, index, index, key: index })) => ({ ...((_, i, index, key: index })) => ({ ...(_, i, key: index })) => (<StarIcon key={i} className="w-5 h-5 text-yellow-400"      />))}
                 </div>
 
                 {/* Content */}

@@ -10,7 +10,7 @@ const OpenApp = () => {
         <meta
           name="description"
           content="Open Zion Tech Group applications. Access our web and mobile apps for seamless service delivery."
-        />
+              />
       </Helmet>
 
       <div className="min - h-screen bg - gray - 50 py - 12">

@@ -163,7 +163,7 @@ const categories = ['All', 'Conversational AI', 'Computer Vision', 'Data Analyti
 
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <div className="inline - flex items - center gap - 2 bg - gradient - to - r from - purple - 500 / 20 to - cyan - 500 / 20 px - 4 py - 2 rounded - full border border - purple - 500 / 30 mb - 6">
-            <Zap className="w - 5 h - 5 text - purple - 400"/>
+            <Zap className="w - 5 h - 5 text - purple - 400"      />
             <span className="text - purple - 300 font - medium">Latest AI Services</span>
           </div>
           
@@ -225,12 +225,12 @@ const categories = ['All', 'Conversational AI', 'Computer Vision', 'Data Analyti
 
 }
             }} className="relative bg - white / 5 backdrop - blur - sm border border - white / 10 rounded - 2xl p - 6 overflow - hidden group">
-                <div className={`absolute inset - 0 bg - gradient - to - br ${service.color} opacity - 10 group - hover:opacity - 20 transition - opacity duration - 300`}/>
+                <div className={`absolute inset - 0 bg - gradient - to - br ${service.color} opacity - 10 group - hover:opacity - 20 transition - opacity duration - 300`}      />
                 <div className="relative z - 10">
                   <div className="flex items - start justify - between mb - 4">
                     <div className="flex items - center gap - 3">
                       <div className="w - 12 h - 12 rounded - xl bg - white / 10 flex items - center justify - center">
-                        <service.icon className="w - 6 h - 6 text - white"/>
+                        <service.icon className="w - 6 h - 6 text - white"      />
                       </div>
                       <div>
                         <h3 className="text - xl font - bold text - white">{service.name}</h3>

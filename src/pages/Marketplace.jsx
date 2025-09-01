@@ -110,7 +110,7 @@ export default function Marketplace () {
                 view === 'grid' ? 'text - blue - 400' : 'text - gray - 400'
               }
             >
-              <Grid3X3 className="h - 4 w - 4" />
+              <Grid3X3 className="h - 4 w - 4"       />
             </Button>
             <Button
               variant="ghost"
@@ -120,7 +120,7 @@ export default function Marketplace () {
                 view === 'list' ? 'text - blue - 400' : 'text - gray - 400'
               }
             >
-              <ListFilter className="h - 4 w - 4" />
+              <ListFilter className="h - 4 w - 4"       />
             </Button>
           </div>
         </div>
@@ -138,7 +138,7 @@ export default function Marketplace () {
 
         {/* Display marketplace listings */}
         {isLoading ? (<div className="flex justify - center py - 20">
-            <Loader2 className="h - 8 w - 8 animate - spin text - blue - 500" />
+            <Loader2 className="h - 8 w - 8 animate - spin text - blue - 500"       />
           </div>) : (<div
             className={
               view === 'grid'

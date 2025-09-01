@@ -19,7 +19,7 @@ import { motion, AnimatePresence } from 'framer - motion';
 
 const steps = [
   {
-    icon: <Search className="w - 8 h - 8" />,
+    icon: <Search className="w - 8 h - 8"       />,
     title: 'Discover',
     description:
       'Browse our comprehensive catalog of 100 + micro SAAS services and solutions',
@@ -35,7 +35,7 @@ const steps = [
     success: '95% match rate',
   },
   {
-    icon: <Users className="w - 8 h - 8" />,
+    icon: <Users className="w - 8 h - 8"       />,
     title: 'Connect',
     description:
       'Get matched with the perfect service or solution for your business needs',
@@ -51,7 +51,7 @@ const steps = [
     success: '98% satisfaction',
   },
   {
-    icon: <FileText className="w - 8 h - 8" />,
+    icon: <FileText className="w - 8 h - 8"       />,
     title: 'Plan',
     description:
       'Collaborate on requirements, timeline, and implementation strategy',
@@ -67,7 +67,7 @@ const steps = [
     success: '90% on - time delivery',
   },
   {
-    icon: <Rocket className="w - 8 h - 8" />,
+    icon: <Rocket className="w - 8 h - 8"       />,
     title: 'Execute',
     description:
       'Watch your vision come to life with our expert implementation',
@@ -83,7 +83,7 @@ const steps = [
     success: '99% quality score',
   },
   {
-    icon: <CheckCircle className="w - 8 h - 8" />,
+    icon: <CheckCircle className="w - 8 h - 8"       />,
     title: 'Deliver',
     description:
       'Receive your completed solution with ongoing support and maintenance',
@@ -102,22 +102,22 @@ const steps = [
 
 const stats = [
   {
-    icon: <Clock className="w - 6 h - 6" />,
+    icon: <Clock className="w - 6 h - 6"       />,
     value: '3x Faster',
     label: 'Implementation',
   },
   {
-    icon: <Target className="w - 6 h - 6" />,
+    icon: <Target className="w - 6 h - 6"       />,
     value: '99.9%',
     label: 'Success Rate',
   },
   {
-    icon: <TrendingUp className="w - 6 h - 6" />,
+    icon: <TrendingUp className="w - 6 h - 6"       />,
     value: '50%',
     label: 'Cost Reduction',
   },
   {
-    icon: <Award className="w - 6 h - 6" />,
+    icon: <Award className="w - 6 h - 6"       />,
     value: '1000+',
     label: 'Services Delivered',
   },
@@ -185,7 +185,7 @@ const stats = [
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <Rocket className="h - 5 w - 5 text - zion - cyan" />
+            <Rocket className="h - 5 w - 5 text - zion - cyan"       />
             <span className="text - zion - cyan text - sm font - medium">
               How It Works
             </span>
@@ -273,7 +273,7 @@ const stats = [
                               key={idx}
                               className="flex items - center gap - 2 text - zion - slate - light text - xs"
                             >
-                              <Zap className="h - 3 w - 3 text - zion - cyan flex - shrink - 0" />
+                              <Zap className="h - 3 w - 3 text - zion - cyan flex - shrink - 0"       />
                               {detail}
                             </li>) ) }
                         </ul>
@@ -357,11 +357,11 @@ const stats = [
               </p>
               <div className="flex flex - col sm:flex - row gap - 4 justify - center">
                 <button className="inline - flex items - center gap - 3 bg - gradient - to - r from - zion - cyan to - zion - purple hover:from - zion - cyan - dark hover:to - zion - purple - dark text - white px - 8 py - 3 rounded - xl font - semibold transition - all duration - 300 transform hover:scale - 105 hover:shadow - lg hover:shadow - zion - cyan / 25">
-                  <Shield className="w - 5 h - 5" />
+                  <Shield className="w - 5 h - 5"       />
                   Get Started Today
                 </button>
                 <button className="inline - flex items - center gap - 3 border - 2 border - zion - cyan text - zion - cyan hover:bg - zion - cyan hover:text - white px - 8 py - 3 rounded - xl font - semibold transition - all duration - 300">
-                  <Users className="w - 5 h - 5" />
+                  <Users className="w - 5 h - 5"       />
                   Schedule Demo
                 </button>
               </div>

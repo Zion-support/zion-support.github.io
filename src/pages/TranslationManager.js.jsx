@@ -185,7 +185,7 @@ export default function TranslationManager () {
       <SEO
         title={t ('translation.manager_title') }
         description={t ('translation.manager_description') }
-      />
+            />
 
       <main className={`container mx - auto px-${isMobile ? '4' : '6'} py - 8`}>
         <Card>
@@ -199,7 +199,7 @@ export default function TranslationManager () {
               {/* Search and filter */}
               <div className="flex flex - col sm:flex - row gap - 4">
                 <div className="relative flex - 1">
-                  <Search className="absolute left - 2.5 top - 2.5 h - 4 w - 4 text - muted - foreground" />
+                  <Search className="absolute left - 2.5 top - 2.5 h - 4 w - 4 text - muted - foreground"       />
                   <Input
                     type="search"
                     placeholder={t ('translation.search_placeholder') }
@@ -280,10 +280,10 @@ export default function TranslationManager () {
                                 disabled={isSaving}
                               >
                                 {isSaving ? (<>
-                                    <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />
+                                    <Loader2 className="mr - 2 h - 4 w - 4 animate - spin"       />
                                     {t ('general.saving') }
                                   </>) : (<>
-                                    <Check className="mr - 2 h - 4 w - 4" />
+                                    <Check className="mr - 2 h - 4 w - 4"       />
                                     {t ('general.save') }
                                   </>) }
                               </Button>
@@ -300,7 +300,7 @@ export default function TranslationManager () {
                                 onClick={ () => handleTranslateKey (key) }
                                 disabled={isTranslating}
                               >
-                                {isTranslating ? (<Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />) : (<Globe className="mr - 2 h - 4 w - 4" />) }
+                                {isTranslating ? (<Loader2 className="mr - 2 h - 4 w - 4 animate - spin"       />) : (<Globe className="mr - 2 h - 4 w - 4"       />) }
                                 {t ('translation.auto_translate') }
                               </Button>
                             </div>
@@ -322,7 +322,7 @@ export default function TranslationManager () {
                                   </span>
                                 </div>) ) }
                               {getMissingLanguages (key) .length > 0 && (<div className="flex items - center gap - 2 text - sm text - zion - purple">
-                                  <AlertTriangle className="h - 4 w - 4" />
+                                  <AlertTriangle className="h - 4 w - 4"       />
                                   {t ('translation.missing_languages', {
                                     count: getMissingLanguages (key) .length,
                                   }) }

@@ -191,7 +191,7 @@ export function AdvancedPerformanceMonitor ({ enabled = true }) {
       case 'up':
         return < TrendingUp className="w - 4 h - 4 text - red - 500" />;
       case 'down':
-        return (<TrendingUp className="w - 4 h - 4 text - green - 500 transform rotate - 180" />) ;
+        return (<TrendingUp className="w - 4 h - 4 text - green - 500 transform rotate - 180"       />) ;
       case 'stable':
         return < BarChart3 className="w - 4 h - 4 text - blue - 500" />;
       default:
@@ -207,7 +207,7 @@ export function AdvancedPerformanceMonitor ({ enabled = true }) {
           onClick={ () => setIsMinimized (false) }
           className="bg - zion - blue text - white p - 3 rounded - full shadow - lg hover:bg - zion - blue / 80 transition - all duration - 300"
         >
-          <Maximize2 className="w - 5 h - 5" />
+          <Maximize2 className="w - 5 h - 5"       />
         </button>
       </div>) ;
   }
@@ -221,7 +221,7 @@ export function AdvancedPerformanceMonitor ({ enabled = true }) {
       {/* Header */}
       <div className="flex items - center justify - between p - 4 border - b border - zion - slate - light / 20">
         <div className="flex items - center space - x-2">
-          <Activity className="w - 5 h - 5 text - zion - cyan" />
+          <Activity className="w - 5 h - 5 text - zion - cyan"       />
           <h3 className="font - semibold text - zion - slate - dark dark:text - white">
             Performance Monitor
           </h3>
@@ -233,7 +233,7 @@ export function AdvancedPerformanceMonitor ({ enabled = true }) {
                   ? 'bg - yellow - 500'
                   : 'bg - red - 500'
             }`}
-          />
+                />
         </div>
         <div className="flex items - center space - x-2">
           <button
@@ -242,7 +242,7 @@ export function AdvancedPerformanceMonitor ({ enabled = true }) {
           >
             <AlertTriangle
               className={`w - 4 h - 4 ${showAlerts ? 'text - yellow - 500' : 'text - gray - 400'}`}
-            />
+                  />
           </button>
           <button
             onClick={refreshMetrics}
@@ -251,19 +251,19 @@ export function AdvancedPerformanceMonitor ({ enabled = true }) {
           >
             <RefreshCw
               className={`w - 4 h - 4 ${isRefreshing ? 'animate - spin' : ''}`}
-            />
+                  />
           </button>
           <button
             onClick={ () => setIsExpanded (!isExpanded) }
             className="p - 1 hover:bg - zion - slate - light / 20 rounded transition - colors"
           >
-            {isExpanded ? (<Minimize2 className="w - 4 h - 4" />) : (<Maximize2 className="w - 4 h - 4" />) }
+            {isExpanded ? (<Minimize2 className="w - 4 h - 4"       />) : (<Maximize2 className="w - 4 h - 4"       />) }
           </button>
           <button
             onClick={ () => setIsMinimized (true) }
             className="p - 1 hover:bg - zion - slate - light / 20 rounded transition - colors"
           >
-            <X className="w - 4 h - 4" />
+            <X className="w - 4 h - 4"       />
           </button>
         </div>
       </div>

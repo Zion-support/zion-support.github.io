@@ -40,7 +40,7 @@ import { Button } from '../ui / button';
             <Card className="bg - zion - blue border - zion - blue - light">
               <CardHeader>
                 <CardTitle className="text - white flex items - center gap - 2">
-                  <Phone className="h - 5 w - 5 text - zion - cyan" />
+                  <Phone className="h - 5 w - 5 text - zion - cyan"       />
                   Contact Details
                 </CardTitle>
                 <CardDescription className="text - zion - slate - light">
@@ -50,7 +50,7 @@ import { Button } from '../ui / button';
               <CardContent className="space - y-4">
                 <div className="flex items - center gap - 3">
                   <div className="w - 10 h - 10 bg - zion - purple / 20 rounded - full flex items - center justify - center">
-                    <Phone className="h - 5 w - 5 text - zion - purple" />
+                    <Phone className="h - 5 w - 5 text - zion - purple"       />
                   </div>
                   <div>
                     <p className="text - white font - medium">Phone</p>
@@ -60,7 +60,7 @@ import { Button } from '../ui / button';
 
                 <div className="flex items - center gap - 3">
                   <div className="w - 10 h - 10 bg - zion - purple / 20 rounded - full flex items - center justify - center">
-                    <Mail className="h - 5 w - 5 text - zion - purple" />
+                    <Mail className="h - 5 w - 5 text - zion - purple"       />
                   </div>
                   <div>
                     <p className="text - white font - medium">Email</p>
@@ -70,7 +70,7 @@ import { Button } from '../ui / button';
 
                 <div className="flex items - center gap - 3">
                   <div className="w - 10 h - 10 bg - zion - purple / 20 rounded - full flex items - center justify - center">
-                    <MapPin className="h - 5 w - 5 text - zion - purple" />
+                    <MapPin className="h - 5 w - 5 text - zion - purple"       />
                   </div>
                   <div>
                     <p className="text - white font - medium">Address</p>
@@ -83,7 +83,7 @@ import { Button } from '../ui / button';
 
                 <div className="flex items - center gap - 3">
                   <div className="w - 10 h - 10 bg - zion - purple / 20 rounded - full flex items - center justify - center">
-                    <Globe className="h - 5 w - 5 text - zion - purple" />
+                    <Globe className="h - 5 w - 5 text - zion - purple"       />
                   </div>
                   <div>
                     <p className="text - white font - medium">Website</p>
@@ -103,7 +103,7 @@ import { Button } from '../ui / button';
             <Card className="bg - zion - blue border - zion - blue - light">
               <CardHeader>
                 <CardTitle className="text - white flex items - center gap - 2">
-                  <Clock className="h - 5 w - 5 text - zion - cyan" />
+                  <Clock className="h - 5 w - 5 text - zion - cyan"       />
                   Business Hours
                 </CardTitle>
                 <CardDescription className="text - zion - slate - light">
@@ -151,7 +151,7 @@ import { Button } from '../ui / button';
             <Card className="bg - zion - blue border - zion - blue - light">
               <CardHeader>
                 <CardTitle className="text - white flex items - center gap - 2">
-                  <MessageSquare className="h - 5 w - 5 text - zion - cyan" />
+                  <MessageSquare className="h - 5 w - 5 text - zion - cyan"       />
                   Quick Actions
                 </CardTitle>
                 <CardDescription className="text - zion - slate - light">
@@ -188,7 +188,7 @@ import { Button } from '../ui / button';
                     Need immediate assistance?
                   </p>
                   <div className="flex items - center gap - 2">
-                    <Phone className="h - 4 w - 4 text - zion - cyan" />
+                    <Phone className="h - 4 w - 4 text - zion - cyan"       />
                     <span className="text - zion - cyan font - medium">
                       Call us now: +1 302 464 0950
                     </span>
@@ -200,7 +200,7 @@ import { Button } from '../ui / button';
             <Card className="bg - zion - blue border - zion - blue - light">
               <CardHeader>
                 <CardTitle className="text - white flex items - center gap - 2">
-                  <Star className="h - 5 w - 5 text - zion - cyan" />
+                  <Star className="h - 5 w - 5 text - zion - cyan"       />
                   Why Choose Zion Tech Group?
                 </CardTitle>
                 <CardDescription className="text - zion - slate - light">

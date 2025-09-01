@@ -1,344 +1,344 @@
 import React, { useState, useEffect, useCallback } from 'react';
 export default PerformanceOptimizer;
-import {
-
-
-  Activity,
-  Zap,
-  TrendingUp,
-  AlertTriangle,
-  CheckCircle,
-  Clock,
-  BarChart3,
-  Settings,
+import {;
+;
+;
+  Activity,;
+  Zap,;
+  TrendingUp,;
+  AlertTriangle,;
+  CheckCircle,;
+  Clock,;
+  BarChart3,;
+  Settings,;
 } from 'lucide - react';
-
-interface PerformanceMetrics {
-  fcp: number; // First Contentful Paint
-  lcp: number; // Largest Contentful Paint
-  fid: number; // First Input Delay
-  cls: number; // Cumulative Layout Shift
-  ttfb: number; // Time to First Byte
-  score: number; // Overall performance score
-}
-
-interface OptimizationSuggestion {
+;
+interface PerformanceMetrics {;
+  fcp: number; // First Contentful Paint;
+  lcp: number; // Largest Contentful Paint;
+  fid: number; // First Input Delay;
+  cls: number; // Cumulative Layout Shift;
+  ttfb: number; // Time to First Byte;
+  score: number; // Overall performance score;
+};
+;
+interface OptimizationSuggestion {;
   id: string;
   title: string;
   description: string;
   impact: 'high' | 'medium' | 'low';
   category: 'images' | 'javascript' | 'css' | 'fonts' | 'caching' | 'server';
   implemented: boolean;
-}
-
-const PerformanceOptimizer: React.FC = () => {
-  const [metrics, setMetrics] = useState < PerformanceMetrics> ({
-    fcp: 0,
-    lcp: 0,
-    fid: 0,
-    cls: 0,
-
-    ttfb: 0,
-    score: 0,
+};
+;
+const PerformanceOptimizer: React.FC = () => {;
+  const [metrics, setMetrics] = useState < PerformanceMetrics> ({;
+    fcp: 0,;
+    lcp: 0,;
+    fid: 0,;
+    cls: 0,;
+;
+    ttfb: 0,;
+    score: 0,;
   }) ;
-
-  const [suggestions, setSuggestions] = useState < OptimizationSuggestion[]> ([
-    {
-      id: 'image - optimization',
-      title: 'Optimize Images',
-      description: 'Convert images to WebP format and implement lazy loading',
-      impact: 'high',
-      category: 'images',
-      implemented: false,
-    },
-    {
-      id: 'code - splitting',
-      title: 'Implement Code Splitting',
-      description: 'Split JavaScript bundles to reduce initial load time',
-      impact: 'high',
-      category: 'javascript',
-      implemented: false,
-    },
-    {
-      id: 'css - optimization',
-      title: 'Optimize CSS Delivery',
-      description: 'Inline critical CSS and defer non - critical styles',
-      impact: 'medium',
-      category: 'css',
-      implemented: false,
-    },
-    {
-      id: 'font - optimization',
-      title: 'Optimize Font Loading',
-      description: 'Use font - display: swap and preload critical fonts',
-      impact: 'medium',
-      category: 'fonts',
-      implemented: false,
-    },
-    {
-      id: 'caching',
-      title: 'Implement Caching Strategy',
-      description: 'Set up proper cache headers for static assets',
-      impact: 'high',
-      category: 'caching',
-      implemented: false,
-    },
-    {
-      id: 'server - optimization',
-      title: 'Server Response Optimization',
-      description: 'Optimize server response time and enable compression',
-      impact: 'medium',
-      category: 'server',
-      implemented: false,
-    },
+;
+  const [suggestions, setSuggestions] = useState < OptimizationSuggestion[]> ([;
+    {;
+      id: 'image - optimization',;
+      title: 'Optimize Images',;
+      description: 'Convert images to WebP format and implement lazy loading',;
+      impact: 'high',;
+      category: 'images',;
+      implemented: false,;
+    },;
+    {;
+      id: 'code - splitting',;
+      title: 'Implement Code Splitting',;
+      description: 'Split JavaScript bundles to reduce initial load time',;
+      impact: 'high',;
+      category: 'javascript',;
+      implemented: false,;
+    },;
+    {;
+      id: 'css - optimization',;
+      title: 'Optimize CSS Delivery',;
+      description: 'Inline critical CSS and defer non - critical styles',;
+      impact: 'medium',;
+      category: 'css',;
+      implemented: false,;
+    },;
+    {;
+      id: 'font - optimization',;
+      title: 'Optimize Font Loading',;
+      description: 'Use font - display: swap and preload critical fonts',;
+      impact: 'medium',;
+      category: 'fonts',;
+      implemented: false,;
+    },;
+    {;
+      id: 'caching',;
+      title: 'Implement Caching Strategy',;
+      description: 'Set up proper cache headers for static assets',;
+      impact: 'high',;
+      category: 'caching',;
+      implemented: false,;
+    },;
+    {;
+      id: 'server - optimization',;
+      title: 'Server Response Optimization',;
+      description: 'Optimize server response time and enable compression',;
+      impact: 'medium',;
+      category: 'server',;
+      implemented: false,;
+    },;
   ]) ;
-
+;
   const [isMonitoring, setIsMonitoring] = useState (false) ;
   const [history, setHistory] = useState < PerformanceMetrics[]> ([]) ;
-
-  // Simulate performance monitoring
-  const measurePerformance = useCallback ( () => {
-    const newMetrics: PerformanceMetrics = {
-      fcp: Math.random () * 2000 + 500, // 500 - 2500ms
-      lcp: Math.random () * 3000 + 1000, // 1000 - 4000ms
-      fid: Math.random () * 100 + 10, // 10 - 110ms
-      cls: Math.random () * 0.1, // 0 - 0.1
-      ttfb: Math.random () * 500 + 100, // 100 - 600ms
-      score: 0,
+;
+  // Simulate performance monitoring;
+  const measurePerformance = useCallback ( () => {;
+    const newMetrics: PerformanceMetrics = {;
+      fcp: Math.random () * 2000 + 500, // 500 - 2500ms;
+      lcp: Math.random () * 3000 + 1000, // 1000 - 4000ms;
+      fid: Math.random () * 100 + 10, // 10 - 110ms;
+      cls: Math.random () * 0.1, // 0 - 0.1;
+      ttfb: Math.random () * 500 + 100, // 100 - 600ms;
+      score: 0,;
     };
-
-    // Calculate performance score
+;
+    // Calculate performance score;
     let score = 100;
     if (newMetrics.fcp > 1800) score -= 20;
     if (newMetrics.lcp > 2500) score -= 25;
     if (newMetrics.fid > 100) score -= 20;
     if (newMetrics.cls > 0.1) score -= 15;
     if (newMetrics.ttfb > 600) score -= 20;
-
+;
     newMetrics.score = Math.max (0, score) ;
     setMetrics (newMetrics) ;
     setHistory (prev => [...prev.slice (-9) , newMetrics]) ;
   }, []) ;
-
-  useEffect ( () => {
-    if (isMonitoring) {
+;
+  useEffect ( () => {;
+    if (isMonitoring) {;
       const interval = setInterval (measurePerformance, 5000) ;
       return () => clearInterval (interval) ;
-    }
+    };
   }, [isMonitoring, measurePerformance]) ;
-
-  const getScoreColor = (score: number) => {
+;
+  const getScoreColor = (score: number) => {;
     if (score >= 90) return 'text - green - 500';
     if (score >= 70) return 'text - yellow - 500';
     return 'text - red - 500';
   };
-
-  const getScoreIcon = (score: number) => {
+;
+  const getScoreIcon = (score: number) => {;
     if (score >= 90) return < CheckCircle className="w - 5 h - 5 text - green - 500" />;
     if (score >= 70) return < AlertTriangle className="w - 5 h - 5 text - yellow - 500" />;
     return < AlertTriangle className="w - 5 h - 5 text - red - 500" />;
   };
-
-  const getMetricStatus = (value: number,
-    threshold: number,
-    lowerIsBetter = true) => {
+;
+  const getMetricStatus = (value: number,;
+    threshold: number,;
+    lowerIsBetter = true) => {;
     const isGood = lowerIsBetter ? value <= threshold : value >= threshold;
     return isGood ? 'text - green - 500' : 'text - red - 500';
   };
-
-  const toggleSuggestion = (id: string) => {
-    setSuggestions (prev =>
-      prev.map (suggestion =>
-        suggestion.id === id
-          ? { ...suggestion, implemented: !suggestion.implemented }
+;
+  const toggleSuggestion = (id: string) => {;
+    setSuggestions (prev =>;
+      prev.map (suggestion =>;
+        suggestion.id === id;
+          ? { ...suggestion, implemented: !suggestion.implemented };
           : suggestion) ) ;
   };
-
-  return (<div
-      role="button"
-      className="bg - white / 10 backdrop - blur - lg rounded - xl p - 6 border border - white / 20"
-    >
-      <div
-        role="button"
-        className="flex items - center justify - between mb - 6"
-      >
-        <div role="button" className="flex items - center gap - 3">
-          <Activity className="w - 6 h - 6 text - zion - cyan" />
-          <h2 className="text - xl font - bold text - white">
-            Performance Optimizer
-          </h2>
-        </div>
-        <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button"
-          onClick={ () => setIsMonitoring (!isMonitoring) }
-          className={`px - 4 py - 2 rounded - lg font - medium transition - colors ${
-            isMonitoring
-              ? 'bg - red - 500 hover:bg - red - 600 text - white'
-              : 'bg - zion - cyan hover:bg - zion - cyan - dark text - white'
-          }`}
-        >
-          {isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'}
-        </button>
-      </div>
-
-      {/* Performance Score */}
-      <div
-        role="button"
-        className="grid grid - cols - 1 md:grid - cols - 2 gap - 6 mb - 8"
-      >
-        <div role="button" className="bg - white / 5 rounded - lg p - 4">
-          <div
-            role="button"
-            className="flex items - center justify - between mb - 4"
-          >
-            <h3 className="text - lg font - semibold text - white">
-              Performance Score
-            </h3>
-            {getScoreIcon (metrics.score) }
-          </div>
-          <div role="button" className="text - center">
-            <div
-              role="button"
-              className={`text - 4xl font - bold ${getScoreColor (metrics.score) }`}
-            >
-              {Math.round (metrics.score) }
-            </div>
-            <div role="button" className="text - sm text - gray - 400 mt - 1">
-              out of 100
-            </div>
-          </div>
-        </div>
-
-        <div role="button" className="bg - white / 5 rounded - lg p - 4">
-          <div role="button" className="flex items - center gap - 2 mb - 4">
-            <TrendingUp className="w - 5 h - 5 text - zion - cyan" />
-            <h3 className="text - lg font - semibold text - white">
-              Real - time Metrics
-            </h3>
-          </div>
-          <div role="button" className="space - y-2 text - sm">
-            <div role="button" className="flex justify - between">
-              <span className="text - gray - 300">FCP:</span>
-              <span className={getMetricStatus (metrics.fcp, 1800) }>
-                {Math.round (metrics.fcp) }ms
-              </span>
-            </div>
-            <div role="button" className="flex justify - between">
-              <span className="text - gray - 300">LCP:</span>
-              <span className={getMetricStatus (metrics.lcp, 2500) }>
-                {Math.round (metrics.lcp) }ms
-              </span>
-            </div>
-            <div role="button" className="flex justify - between">
-              <span className="text - gray - 300">FID:</span>
-              <span className={getMetricStatus (metrics.fid, 100) }>
-                {Math.round (metrics.fid) }ms
-              </span>
-            </div>
-            <div role="button" className="flex justify - between">
-              <span className="text - gray - 300">CLS:</span>
-              <span className={getMetricStatus (metrics.cls, 0.1) }>
-                {metrics.cls.toFixed (3) }
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Optimization Suggestions */}
-      <div role="button" className="mb - 6">
-        <div role="button" className="flex items - center gap - 2 mb - 4">
-          <Zap className="w - 5 h - 5 text - zion - cyan" />
-          <h3 className="text - lg font - semibold text - white">
-            Optimization Suggestions
-          </h3>
-        </div>
-        <div role="button" className="space - y-3">
-          {suggestions.map (suggestion => (<div
-              role="button"
-              key={suggestion.id}
-              className={`p - 4 rounded - lg border transition - colors ${
-                suggestion.implemented
-                  ? 'bg - green - 500 / 10 border - green - 500 / 30'
-                  : 'bg - white / 5 border - white / 20'
-              }`}
-            >
-              <div
-                role="button"
-                className="flex items - start justify - between"
-              >
-                <div role="button" className="flex - 1">
-                  <div
-                    role="button"
-                    className="flex items - center gap - 2 mb - 2"
-                  >
-                    <h4 className="font - medium text - white">
-                      {suggestion.title}
-                    </h4>
-                    <span
-                      className={`px - 2 py - 1 rounded text - xs font - medium ${
-                        suggestion.impact === 'high'
-                          ? 'bg - red - 500 / 20 text - red - 300'
-                          : suggestion.impact === 'medium'
-                            ? 'bg - yellow - 500 / 20 text - yellow - 300'
-                            : 'bg - blue - 500 / 20 text - blue - 300'
-                      }`}
-                    >
-                      {suggestion.impact} impact
-                    </span>
-                  </div>
-                  <p className="text - sm text - gray - 300 mb - 3">
-                    {suggestion.description}
-                  </p>
-                  <div
-                    role="button"
-                    className="flex items - center gap - 4 text - xs text - gray - 400"
-                  >
-                    <span className="capitalize">{suggestion.category}</span>
-                    <span>•</span>
-                    <span > Estimated improvement: 15 - 25%</span>
-                  </div>
-                </div>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button"
-                  onClick={ () => toggleSuggestion (suggestion.id) }
-                  className={`px - 3 py - 1 rounded text - sm font - medium transition - colors ${
-                    suggestion.implemented
-                      ? 'bg - green - 500 hover:bg - green - 600 text - white'
-                      : 'bg - zion - cyan hover:bg - zion - cyan - dark text - white'
-                  }`}
-                >
-                  {suggestion.implemented ? 'Implemented' : 'Implement'}
-                </button>
-              </div>
-            </div>) ) }
-        </div>
-      </div>
-
-      {/* Performance History */}
-      {history.length > 0 && (<div>
-          <div role="button" className="flex items - center gap - 2 mb - 4">
-            <BarChart3 className="w - 5 h - 5 text - zion - cyan" />
-            <h3 className="text - lg font - semibold text - white">
-              Performance History
-            </h3>
-          </div>
-          <div role="button" className="bg - white / 5 rounded - lg p - 4">
-            <div
-              role="button"
-              className="flex items - center justify - between text - sm text - gray - 300 mb - 3"
-            >
-              <span > Last 10 measurements</span>
-              <span > Score trend</span>
-            </div>
-            <div role="button" className="flex items - end gap - 1 h - 20">
-              {history.map ( (metric, index) => (<div
-                  role="button"
-                  key={index}
-                  className="flex - 1 bg - gradient - to - t from - zion - cyan to - zion - cyan - light rounded - t"
-                  style={{ height: `${metric.score}%` }}
-                  title={`Score: ${Math.round (metric.score) }`}
-                />) ) }
-            </div>
-          </div>
-        </div>) }
+;
+  return (<div;
+      role="button";
+      className="bg - white / 10 backdrop - blur - lg rounded - xl p - 6 border border - white / 20";
+    >;
+      <div;
+        role="button";
+        className="flex items - center justify - between mb - 6";
+      >;
+        <div role="button" className="flex items - center gap - 3">;
+          <Activity className="w - 6 h - 6 text - zion - cyan"       />;
+          <h2 className="text - xl font - bold text - white">;
+            Performance Optimizer;
+          </h2>;
+        </div>;
+        <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button";
+          onClick={ () => setIsMonitoring (!isMonitoring) };
+          className={`px - 4 py - 2 rounded - lg font - medium transition - colors ${;
+            isMonitoring;
+              ? 'bg - red - 500 hover:bg - red - 600 text - white';
+              : 'bg - zion - cyan hover:bg - zion - cyan - dark text - white';
+          }`};
+        >;
+          {isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'};
+        </button>;
+      </div>;
+;
+      {/* Performance Score */};
+      <div;
+        role="button";
+        className="grid grid - cols - 1 md:grid - cols - 2 gap - 6 mb - 8";
+      >;
+        <div role="button" className="bg - white / 5 rounded - lg p - 4">;
+          <div;
+            role="button";
+            className="flex items - center justify - between mb - 4";
+          >;
+            <h3 className="text - lg font - semibold text - white">;
+              Performance Score;
+            </h3>;
+            {getScoreIcon (metrics.score) };
+          </div>;
+          <div role="button" className="text - center">;
+            <div;
+              role="button";
+              className={`text - 4xl font - bold ${getScoreColor (metrics.score) }`};
+            >;
+              {Math.round (metrics.score) };
+            </div>;
+            <div role="button" className="text - sm text - gray - 400 mt - 1">;
+              out of 100;
+            </div>;
+          </div>;
+        </div>;
+;
+        <div role="button" className="bg - white / 5 rounded - lg p - 4">;
+          <div role="button" className="flex items - center gap - 2 mb - 4">;
+            <TrendingUp className="w - 5 h - 5 text - zion - cyan"       />;
+            <h3 className="text - lg font - semibold text - white">;
+              Real - time Metrics;
+            </h3>;
+          </div>;
+          <div role="button" className="space - y-2 text - sm">;
+            <div role="button" className="flex justify - between">;
+              <span className="text - gray - 300">FCP:</span>;
+              <span className={getMetricStatus (metrics.fcp, 1800) }>;
+                {Math.round (metrics.fcp) }ms;
+              </span>;
+            </div>;
+            <div role="button" className="flex justify - between">;
+              <span className="text - gray - 300">LCP:</span>;
+              <span className={getMetricStatus (metrics.lcp, 2500) }>;
+                {Math.round (metrics.lcp) }ms;
+              </span>;
+            </div>;
+            <div role="button" className="flex justify - between">;
+              <span className="text - gray - 300">FID:</span>;
+              <span className={getMetricStatus (metrics.fid, 100) }>;
+                {Math.round (metrics.fid) }ms;
+              </span>;
+            </div>;
+            <div role="button" className="flex justify - between">;
+              <span className="text - gray - 300">CLS:</span>;
+              <span className={getMetricStatus (metrics.cls, 0.1) }>;
+                {metrics.cls.toFixed (3) };
+              </span>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+;
+      {/* Optimization Suggestions */};
+      <div role="button" className="mb - 6">;
+        <div role="button" className="flex items - center gap - 2 mb - 4">;
+          <Zap className="w - 5 h - 5 text - zion - cyan"       />;
+          <h3 className="text - lg font - semibold text - white">;
+            Optimization Suggestions;
+          </h3>;
+        </div>;
+        <div role="button" className="space - y-3">;
+          {suggestions.map (suggestion => (<div;
+              role="button";
+              key={suggestion.id};
+              className={`p - 4 rounded - lg border transition - colors ${;
+                suggestion.implemented;
+                  ? 'bg - green - 500 / 10 border - green - 500 / 30';
+                  : 'bg - white / 5 border - white / 20';
+              }`};
+            >;
+              <div;
+                role="button";
+                className="flex items - start justify - between";
+              >;
+                <div role="button" className="flex - 1">;
+                  <div;
+                    role="button";
+                    className="flex items - center gap - 2 mb - 2";
+                  >;
+                    <h4 className="font - medium text - white">;
+                      {suggestion.title};
+                    </h4>;
+                    <span;
+                      className={`px - 2 py - 1 rounded text - xs font - medium ${;
+                        suggestion.impact === 'high';
+                          ? 'bg - red - 500 / 20 text - red - 300';
+                          : suggestion.impact === 'medium';
+                            ? 'bg - yellow - 500 / 20 text - yellow - 300';
+                            : 'bg - blue - 500 / 20 text - blue - 300';
+                      }`};
+                    >;
+                      {suggestion.impact} impact;
+                    </span>;
+                  </div>;
+                  <p className="text - sm text - gray - 300 mb - 3">;
+                    {suggestion.description};
+                  </p>;
+                  <div;
+                    role="button";
+                    className="flex items - center gap - 4 text - xs text - gray - 400";
+                  >;
+                    <span className="capitalize">{suggestion.category}</span>;
+                    <span>•</span>;
+                    <span > Estimated improvement: 15 - 25%</span>;
+                  </div>;
+                </div>;
+                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button";
+                  onClick={ () => toggleSuggestion (suggestion.id) };
+                  className={`px - 3 py - 1 rounded text - sm font - medium transition - colors ${;
+                    suggestion.implemented;
+                      ? 'bg - green - 500 hover:bg - green - 600 text - white';
+                      : 'bg - zion - cyan hover:bg - zion - cyan - dark text - white';
+                  }`};
+                >;
+                  {suggestion.implemented ? 'Implemented' : 'Implement'};
+                </button>;
+              </div>;
+            </div>) ) };
+        </div>;
+      </div>;
+;
+      {/* Performance History */};
+      {history.length > 0 && (<div>;
+          <div role="button" className="flex items - center gap - 2 mb - 4">;
+            <BarChart3 className="w - 5 h - 5 text - zion - cyan"       />;
+            <h3 className="text - lg font - semibold text - white">;
+              Performance History;
+            </h3>;
+          </div>;
+          <div role="button" className="bg - white / 5 rounded - lg p - 4">;
+            <div;
+              role="button";
+              className="flex items - center justify - between text - sm text - gray - 300 mb - 3";
+            >;
+              <span > Last 10 measurements</span>;
+              <span > Score trend</span>;
+            </div>;
+            <div role="button" className="flex items - end gap - 1 h - 20">;
+              {history.map ( (metric, index) => (<div;
+                  role="button";
+                  key={index};
+                  className="flex - 1 bg - gradient - to - t from - zion - cyan to - zion - cyan - light rounded - t";
+                  style={{ height: `${metric.score}%` }};
+                  title={`Score: ${Math.round (metric.score) }`};
+                      />) ) };
+            </div>;
+          </div>;
+        </div>) };
     </div>) ;
 };

@@ -7,32 +7,32 @@ import { Check, Users, Shield, BarChart3, Zap, Globe, Phone export default funct
 
     const features = [
         {
-            icon: <Users className="h - 8 w - 8 text - zion - cyan"/>,
+            icon: <Users className="h - 8 w - 8 text - zion - cyan"      />,
             title: "Team Management",
             description: "Manage multiple teams, projects, and stakeholders with enterprise - grade collaboration tools."
         },
         {
-            icon: <Shield className="h - 8 w - 8 text - zion - cyan"/>,
+            icon: <Shield className="h - 8 w - 8 text - zion - cyan"      />,
             title: "Advanced Security",
             description: "Enterprise - level security with SSO, role - based access control, and compliance certifications."
         },
         {
-            icon: <BarChart3 className="h - 8 w - 8 text - zion - cyan"/>,
+            icon: <BarChart3 className="h - 8 w - 8 text - zion - cyan"      />,
             title: "Analytics & Reporting",
             description: "Comprehensive insights into team performance, project metrics, and ROI tracking."
         },
         {
-            icon: <Zap className="h - 8 w - 8 text - zion - cyan"/>,
+            icon: <Zap className="h - 8 w - 8 text - zion - cyan"      />,
             title: "Custom Integrations",
             description: "Seamlessly integrate with your existing tools and workflows through our API."
         },
         {
-            icon: <Globe className="h - 8 w - 8 text - zion - cyan"/>,
+            icon: <Globe className="h - 8 w - 8 text - zion - cyan"      />,
             title: "Global Talent Pool",
             description: "Access to verified tech professionals from around the world, available 24 / 7."
         },
         {
-            icon: <Phone className="h - 8 w - 8 text - zion - cyan"/>,
+            icon: <Phone className="h - 8 w - 8 text - zion - cyan"      />,
             title: "Dedicated Support",
             description: "Priority support with dedicated account managers and 24 / 7 technical assistance."
 
@@ -79,7 +79,7 @@ import { Check, Users, Shield, BarChart3, Zap, Globe, Phone export default funct
 
     ];
     return (<div className="min - h-screen bg - background">
-      <SEO title="Enterprise Solutions - Zion Tech Group" description="Enterprise - grade AI and tech solutions for large organizations. Scale your tech operations with Zion Tech Group's comprehensive enterprise platform." keywords="enterprise solutions, enterprise AI, tech consulting, team management, Zion Tech Group" canonical="https://ziontechgroup.com / enterprise"/>
+      <SEO title="Enterprise Solutions - Zion Tech Group" description="Enterprise - grade AI and tech solutions for large organizations. Scale your tech operations with Zion Tech Group's comprehensive enterprise platform." keywords="enterprise solutions, enterprise AI, tech consulting, team management, Zion Tech Group" canonical="https://ziontechgroup.com / enterprise"      />
 
       {/* Hero Section */}
       <section className="bg - gradient - to - br from - zion - blue - dark via - zion - blue to - zion - purple py - 20">
@@ -157,7 +157,7 @@ import { Check, Users, Shield, BarChart3, Zap, Globe, Phone export default funct
                 <CardContent>
                   <ul className="space - y-3 mb - 6">
                     {plan.features.map ( (feature, featureIndex) => (<li key={featureIndex} className="flex items - center text - zion - slate - light">
-                        <Check className="h - 5 w - 5 text - zion - cyan mr - 3 flex - shrink - 0"/>
+                        <Check className="h - 5 w - 5 text - zion - cyan mr - 3 flex - shrink - 0"      />
                         {feature}
                       </li>) ) }
                   </ul>

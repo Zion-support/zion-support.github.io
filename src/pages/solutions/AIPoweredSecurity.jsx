@@ -85,7 +85,7 @@ const AIPoweredSecurity = () => {
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
             <div className="inline-flex items-center px-4 py-2 bg-red-500/10 text-red-400 rounded-full text-sm font-medium mb-6">
-              <Shield className="w-4 h-4 mr-2"/>
+              <Shield className="w-4 h-4 mr-2"      />
               AI Security Solution
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -122,14 +122,14 @@ const AIPoweredSecurity = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {securityFeatures.map((feature, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-red-500/50 transition-all duration-300">
+            {securityFeatures.map((((((((feature, index, index, index, index, index, index, index) => ({ ...((((((feature, index, index, index, index, index, index, key: index })) => ({ ...(((((feature, index, index, index, index, index, key: index })) => ({ ...((((feature, index, index, index, index, key: index })) => ({ ...(((feature, index, index, index, key: index })) => ({ ...((feature, index, index, key: index })) => ({ ...(feature, index, key: index })) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-red-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="w-8 h-8 text-white"/>
+                  <feature.icon className="w-8 h-8 text-white"      />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
-                  {feature.features.map((item, idx) => (<li key={idx} className="text-sm text-gray-400 flex items-start">
+                  {feature.features.map((((((((item, idx, index, index, index, index, index, index) => ({ ...((((((item, idx, index, index, index, index, index, key: index })) => ({ ...(((((item, idx, index, index, index, index, key: index })) => ({ ...((((item, idx, index, index, index, key: index })) => ({ ...(((item, idx, index, index, key: index })) => ({ ...((item, idx, index, key: index })) => ({ ...(item, idx, key: index })) => (<li key={idx} className="text-sm text-gray-400 flex items-start">
                       <div className="w-1.5 h-1.5 bg-red-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
                       {item}
                     </li>))}
@@ -153,14 +153,14 @@ const AIPoweredSecurity = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {securitySolutions.map((solution, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-red-500/50 transition-all duration-300">
+            {securitySolutions.map((((((((solution, index, index, index, index, index, index, index) => ({ ...((((((solution, index, index, index, index, index, index, key: index })) => ({ ...(((((solution, index, index, index, index, index, key: index })) => ({ ...((((solution, index, index, index, index, key: index })) => ({ ...(((solution, index, index, index, key: index })) => ({ ...((solution, index, index, key: index })) => ({ ...(solution, index, key: index })) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-red-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <solution.icon className="w-8 h-8 text-white"/>
+                  <solution.icon className="w-8 h-8 text-white"      />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{solution.title}</h3>
                 <p className="text-gray-300 mb-4">{solution.description}</p>
                 <ul className="space-y-2">
-                  {solution.capabilities.map((capability, idx) => (<li key={idx} className="text-sm text-gray-400 flex items-start">
+                  {solution.capabilities.map((((((((capability, idx, index, index, index, index, index, index) => ({ ...((((((capability, idx, index, index, index, index, index, key: index })) => ({ ...(((((capability, idx, index, index, index, index, key: index })) => ({ ...((((capability, idx, index, index, index, key: index })) => ({ ...(((capability, idx, index, index, key: index })) => ({ ...((capability, idx, index, key: index })) => ({ ...(capability, idx, key: index })) => (<li key={idx} className="text-sm text-gray-400 flex items-start">
                       <div className="w-1.5 h-1.5 bg-red-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
                       {capability}
                     </li>))}
@@ -183,7 +183,7 @@ const AIPoweredSecurity = () => {
                 that continuously learns and improves.
               </p>
               <ul className="space-y-3">
-                {benefits.map((benefit, index) => (<li key={index} className="flex items-center text-gray-300">
+                {benefits.map((((((((benefit, index, index, index, index, index, index, index) => ({ ...((((((benefit, index, index, index, index, index, index, key: index })) => ({ ...(((((benefit, index, index, index, index, index, key: index })) => ({ ...((((benefit, index, index, index, index, key: index })) => ({ ...(((benefit, index, index, index, key: index })) => ({ ...((benefit, index, index, key: index })) => ({ ...(benefit, index, key: index })) => (<li key={index} className="flex items-center text-gray-300">
                     <div className="w-2 h-2 bg-red-400 rounded-full mr-3"></div>
                     {benefit}
                   </li>))}
@@ -191,7 +191,7 @@ const AIPoweredSecurity = () => {
             </div>
             <div className="bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-2xl p-8 border border-red-500/30">
               <div className="text-center">
-                <Lightbulb className="w-24 h-24 text-red-400 mx-auto mb-4"/>
+                <Lightbulb className="w-24 h-24 text-red-400 mx-auto mb-4"      />
                 <h3 className="text-2xl font-bold text-white mb-2">Intelligent Defense</h3>
                 <p className="text-gray-300 mb-6">
                   AI-powered security that learns from every threat and adapts
@@ -220,7 +220,7 @@ const AIPoweredSecurity = () => {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {implementation.map((phase, index) => (<div key={index} className="text-center">
+            {implementation.map((((((((phase, index, index, index, index, index, index, index) => ({ ...((((((phase, index, index, index, index, index, index, key: index })) => ({ ...(((((phase, index, index, index, index, index, key: index })) => ({ ...((((phase, index, index, index, index, key: index })) => ({ ...(((phase, index, index, index, key: index })) => ({ ...((phase, index, index, key: index })) => ({ ...(phase, index, key: index })) => (<div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
                   {index + 1}
                 </div>

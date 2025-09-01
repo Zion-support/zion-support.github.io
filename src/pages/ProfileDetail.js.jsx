@@ -88,7 +88,7 @@ import {
         description={
           profileData.bio || "Check out this talent's profile on Zion!"
         }
-      />
+            />
 
       <div className="container mx - auto px - 4 py - 8">
         <div className="grid grid - cols - 12 gap - 6">
@@ -102,14 +102,14 @@ import {
                     {profileData.profile_picture_url ? (<AvatarImage
                         src={profileData.profile_picture_url}
                         alt={profileData.full_name}
-                      />) : (<AvatarFallback>
+                            />) : (<AvatarFallback>
                         {profileData.full_name?.charAt (0) }
                       </AvatarFallback>) }
                   </Avatar>
                   <div>
                     <CardTitle className="text - 2xl font - bold text - white flex items - center gap - 2">
                       {profileData.full_name}
-                      {profileData.is_verified && (<CheckCircle2 className="w - 5 h - 5 text - zion - cyan" />) }
+                      {profileData.is_verified && (<CheckCircle2 className="w - 5 h - 5 text - zion - cyan"       />) }
                     </CardTitle>
                     <CardDescription className="text - zion - cyan">
                       {profileData.professional_title}
@@ -120,11 +120,11 @@ import {
               <CardContent>
                 <div className="flex flex - wrap gap - 4 text - sm">
                   {profileData.location && (<div className="flex items - center text - zion - slate - light">
-                      <MapPin className="h - 4 w - 4 mr - 1" />
+                      <MapPin className="h - 4 w - 4 mr - 1"       />
                       <span>{profileData.location}</span>
                     </div>) }
                   {profileData.availability && (<div className="flex items - center text - zion - slate - light">
-                      <Clock className="h - 4 w - 4 mr - 1" />
+                      <Clock className="h - 4 w - 4 mr - 1"       />
                       <span>{profileData.availability}</span>
                     </div>) }
                   {profileData.hourly_rate && (<div className="text - white font - bold">
@@ -207,7 +207,7 @@ import {
                         rel="noopener noreferrer"
                         className="text - zion - cyan hover:text - white flex items - center gap - 2"
                       >
-                        <LinkIcon className="h - 4 w - 4" />
+                        <LinkIcon className="h - 4 w - 4"       />
                         {link.title || link.url}
                       </a>) ) }
                   </div>) : (<p className="text - zion - slate - light">
@@ -226,13 +226,13 @@ import {
                 professional_title: profileData?.professional_title || '',
                 hourly_rate: profileData?.hourly_rate || 0,
               }}
-            />
+                  />
             {/* Contact Information */}
             <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mt - 6">
               <h3 className="text - xl font - bold mb - 4">Contact</h3>
               <div className="flex flex - col space - y-3">
                 {profileData.email && (<div className="flex items - center gap - 2 text - zion - slate - light">
-                    <Mail className="h - 4 w - 4" />
+                    <Mail className="h - 4 w - 4"       />
                     <a
                       href={`mailto:${profileData.email}`}
                       className="hover:text - zion - cyan"
@@ -241,11 +241,11 @@ import {
                     </a>
                   </div>) }
                 {profileData.phone && (<div className="flex items - center gap - 2 text - zion - slate - light">
-                    <Phone className="h - 4 w - 4" />
+                    <Phone className="h - 4 w - 4"       />
                     <span>{profileData.phone}</span>
                   </div>) }
                 {profileData.website && (<div className="flex items - center gap - 2 text - zion - slate - light">
-                    <Globe className="h - 4 w - 4" />
+                    <Globe className="h - 4 w - 4"       />
                     <a
                       href={profileData.website}
                       target="_blank"
@@ -270,7 +270,7 @@ import {
                     aria - label="GitHub"
                     title="GitHub"
                   >
-                    <Github className="h - 4 w - 4" />
+                    <Github className="h - 4 w - 4"       />
                     GitHub
                   </a>) }
                 {profileData.twitter_url && (<a
@@ -281,7 +281,7 @@ import {
                     aria - label="Twitter"
                     title="Twitter"
                   >
-                    <Twitter className="h - 4 w - 4" />
+                    <Twitter className="h - 4 w - 4"       />
                     Twitter
                   </a>) }
                 {profileData.linkedin_url && (<a
@@ -292,7 +292,7 @@ import {
                     aria - label="LinkedIn"
                     title="LinkedIn"
                   >
-                    <Linkedin className="h - 4 w - 4" />
+                    <Linkedin className="h - 4 w - 4"       />
                     LinkedIn
                   </a>) }
               </div>

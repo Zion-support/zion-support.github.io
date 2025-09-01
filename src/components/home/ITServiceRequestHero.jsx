@@ -74,7 +74,7 @@ export function ITServiceRequestHero() {
           <motion.div variants={itemVariants} className="text-white">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-2 bg-zion-cyan/20 rounded-lg">
-                <Zap className="w-6 h-6 text-zion-cyan" />
+                <Zap className="w-6 h-6 text-zion-cyan"       />
               </div>
               <span className="text-zion-cyan font-semibold text-sm uppercase tracking-wider">
                 Global IT Services
@@ -137,7 +137,7 @@ export function ITServiceRequestHero() {
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 p-8 shadow-2xl">
               <div className="text-center mb-6">
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r from-zion-cyan to-zion-blue mb-4">
-                  <MapPin className="w-8 h-8 text-white" />
+                  <MapPin className="w-8 h-8 text-white"       />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-2">
                   Request IT Service
@@ -156,7 +156,7 @@ export function ITServiceRequestHero() {
                     Service Location
                   </label>
                   <div className="relative">
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"       />
                     <input
                       type="text"
                       id="location"
@@ -182,7 +182,7 @@ export function ITServiceRequestHero() {
                   ) : (
                     <>
                       Find IT Technicians
-                      <ArrowRight className="w-5 h-5" />
+                      <ArrowRight className="w-5 h-5"       />
                     </>
                   )}
                 </button>
@@ -190,9 +190,9 @@ export function ITServiceRequestHero() {
 
               {/* Features grid */}
               <div className="grid grid-cols-2 gap-4 mt-8 pt-6 border-t border-white/10">
-                {features.map((feature, index) => (
+                {features.map((((((((feature, index, index, index, index, index, index, index) => ({ ...((((((feature, index, index, index, index, index, index, key: index })) => ({ ...(((((feature, index, index, index, index, index, key: index })) => ({ ...((((feature, index, index, index, index, key: index })) => ({ ...(((feature, index, index, index, key: index })) => ({ ...((feature, index, index, key: index })) => ({ ...(feature, index, key: index })) => (
                   <div key={index} className="flex items-center gap-3">
-                    <feature.icon className={`w-5 h-5 ${feature.color}`} />
+                    <feature.icon className={`w-5 h-5 ${feature.color}`}       />
                     <span className="text-sm text-zion-slate-light">
                       {feature.text}
                     </span>

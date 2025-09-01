@@ -91,8 +91,14 @@ export function OptimizedImage({
     const widths = [320, 640, 768, 1024, 1280, 1920];
     const srcSet = widths
       .filter(w => !width || w <= width)
-      .map(w => {
-        params.set('w', w.toString());
+      .map(((((((w => {
+        params.set('w', w.toString(, index, index, index, index, index, index) => ({ ...(((((w => {
+        params.set('w', w.toString(, index, index, index, index, index, key: index })) => ({ ...((((w => {
+        params.set('w', w.toString(, index, index, index, index, key: index })) => ({ ...(((w => {
+        params.set('w', w.toString(, index, index, index, key: index })) => ({ ...((w => {
+        params.set('w', w.toString(, index, index, key: index })) => ({ ...(w => {
+        params.set('w', w.toString(, index, key: index })) => ({ ...w => {
+        params.set('w', w.toString(, key: index })));
         params.set('q', quality.toString());
         return `${baseUrl}?${params.toString()} ${w}w`;
       })
@@ -121,7 +127,7 @@ export function OptimizedImage({
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-          />
+                />
         )}
       </AnimatePresence>
 
@@ -144,12 +150,12 @@ export function OptimizedImage({
         style={{
           filter: blur && !isLoaded ? 'blur(10px)' : 'none',
         }}
-      />
+            />
 
       {/* Loading overlay */}
       {!isLoaded && isInView && (
         <div className="absolute inset-0 flex items-center justify-center bg-zion-slate-dark/50">
-          <div className="w-8 h-8 border-2 border-zion-purple border-t-transparent rounded-full animate-spin" />
+          <div className="w-8 h-8 border-2 border-zion-purple border-t-transparent rounded-full animate-spin"       />
         </div>
       )}
 
@@ -183,7 +189,7 @@ export function AvatarImage({ src, alt, size = 'md', className, ...props }) {
       objectFit="cover"
       className={cn(sizeClasses[size], 'rounded-full', className)}
       {...props}
-    />
+          />
   );
 }
 // Hero image component
@@ -197,6 +203,6 @@ export function HeroImage({ src, alt, className, ...props }) {
       className={cn('w-full', className)}
       priority
       {...props}
-    />
+          />
   );
 }

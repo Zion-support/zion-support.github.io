@@ -197,13 +197,13 @@ const PRICE_RANGES = ['Under $10K', '$10K-$50K', '$50K-$100K', '$100K+'];
             <label className="block text - sm font - medium text - zion - slate - dark mb - 2">View Mode</label>
             <div className="flex gap - 2">
               <Button variant={viewMode === 'grid' ? 'default' : 'outline'} size="sm" onClick={ () => setViewMode ('grid') }>
-                <BarChart3 className="w - 4 h - 4"/>
+                <BarChart3 className="w - 4 h - 4"      />
               </Button>
               <Button variant={viewMode === 'table' ? 'default' : 'outline'} size="sm" onClick={ () => setViewMode ('table') }>
-                <Target className="w - 4 h - 4"/>
+                <Target className="w - 4 h - 4"      />
               </Button>
               <Button variant={viewMode === 'detailed' ? 'default' : 'outline'} size="sm" onClick={ () => setViewMode ('detailed') }>
-                <Globe className="w - 4 h - 4"/>
+                <Globe className="w - 4 h - 4"      />
               </Button>
             </div>
           </div>
@@ -240,7 +240,7 @@ const PRICE_RANGES = ['Under $10K', '$10K-$50K', '$50K-$100K', '$100K+'];
                     {service.name}
                   </CardTitle>
                   <Button variant="ghost" size="sm" onClick={ () => toggleServiceSelection (service.id) } className={selectedServices.includes (service.id) ? 'text - zion - cyan' : 'text - zion - slate - light'}>
-                    {selectedServices.includes (service.id) ? <Check className="w - 4 h - 4"/> : <X className="w - 4 h - 4"/>}
+                    {selectedServices.includes (service.id) ? <Check className="w - 4 h - 4"      /> : <X className="w - 4 h - 4"      />}
                   </Button>
                 </div>
                 
@@ -256,15 +256,15 @@ const PRICE_RANGES = ['Under $10K', '$10K-$50K', '$50K-$100K', '$100K+'];
 
                 <div className="flex items - center gap - 4 text - sm text - zion - slate - light">
                   <div className="flex items - center gap - 1">
-                    <DollarSign className="w - 4 h - 4"/>
+                    <DollarSign className="w - 4 h - 4"      />
                     {service.price}
                   </div>
                   <div className="flex items - center gap - 1">
-                    <Clock className="w - 4 h - 4"/>
+                    <Clock className="w - 4 h - 4"      />
                     {service.duration}
                   </div>
                   <div className="flex items - center gap - 1">
-                    <Star className="w - 4 h - 4 text - yellow - 500"/>
+                    <Star className="w - 4 h - 4 text - yellow - 500"      />
                     {service.rating}
                   </div>
                 </div>
@@ -274,12 +274,12 @@ const PRICE_RANGES = ['Under $10K', '$10K-$50K', '$50K-$100K', '$100K+'];
                 <div className="space - y-4">
                   <div>
                     <h4 className="font - semibold text - zion - slate - dark mb - 2 flex items - center gap - 2">
-                      <Shield className="w - 4 h - 4 text - zion - cyan"/>
+                      <Shield className="w - 4 h - 4 text - zion - cyan"      />
                       Key Features
                     </h4>
                     <ul className="space - y-1">
                       {service.features.slice (0, 3) .map ( (feature, idx) => (<li key={idx} className="text - sm text - zion - slate - light flex items - center gap - 2">
-                          <Check className="w - 3 h - 3 text - green - 500"/>
+                          <Check className="w - 3 h - 3 text - green - 500"      />
                           {feature}
                         </li>) ) }
                     </ul>
@@ -287,7 +287,7 @@ const PRICE_RANGES = ['Under $10K', '$10K-$50K', '$50K-$100K', '$100K+'];
 
                   <div>
                     <h4 className="font - semibold text - zion - slate - dark mb - 2 flex items - center gap - 2">
-                      <Target className="w - 4 h - 4 text - zion - purple"/>
+                      <Target className="w - 4 h - 4 text - zion - purple"      />
                       Target Audience
                     </h4>
                     <div className="flex flex - wrap gap - 1">
@@ -345,7 +345,7 @@ const PRICE_RANGES = ['Under $10K', '$10K-$50K', '$50K-$100K', '$100K+'];
           <div className="mt - 6 text - center">
             <Button className="bg - gradient - to - r from - zion - cyan to - zion - purple hover:from - zion - cyan - dark hover:to - zion - purple - dark" onClick = { () => window.open ('mailto:kleber@ziontechgroup.com?subject = Service Comparison Inquiry',
   '_blank') }>
-              <Mail className="w - 4 h - 4 mr - 2"/>
+              <Mail className="w - 4 h - 4 mr - 2"      />
               Get Detailed Comparison
             </Button>
           </div>
@@ -370,12 +370,12 @@ const PRICE_RANGES = ['Under $10K', '$10K-$50K', '$50K-$100K', '$100K+'];
           <div className="flex flex - col sm:flex - row gap - 4 justify - center">
             <Button className="bg - white text - zion - purple hover:bg - zion - slate - light" onClick = { () => window.open ('mailto:kleber@ziontechgroup.com',
   '_blank') }>
-              <Mail className="w - 4 h - 4 mr - 2"/>
+              <Mail className="w - 4 h - 4 mr - 2"      />
               Get Started
             </Button>
             <Button variant="outline" className="border - white text - white hover:bg - white hover:text - zion - purple" onClick = { () => window.open ('tel:+13024640950',
   '_blank') }>
-              <Phone className="w - 4 h - 4 mr - 2"/>
+              <Phone className="w - 4 h - 4 mr - 2"      />
               Call Now
             </Button>
           </div>

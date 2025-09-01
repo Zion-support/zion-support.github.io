@@ -54,7 +54,7 @@ export const SmartAppBanner = ({
               src={appIconSrc}
               alt={appName}
               className="w-10 h-10 rounded-md"
-            />
+                  />
           ) : (
             <div className="text-zion-cyan font-bold text-lg">Z</div>
           )}
@@ -73,7 +73,7 @@ export const SmartAppBanner = ({
             className="flex items-center px-4 py-1.5 bg-zion-cyan text-zion-blue-dark rounded text-sm font-medium"
           >
             View
-            <ArrowRight className="w-3 h-3 ml-1" />
+            <ArrowRight className="w-3 h-3 ml-1"       />
           </Link>
 
           <button
@@ -81,7 +81,7 @@ export const SmartAppBanner = ({
             className="text-gray-300"
             aria-label="Dismiss"
           >
-            <X className="h-5 w-5" />
+            <X className="h-5 w-5"       />
           </button>
         </div>
       </div>

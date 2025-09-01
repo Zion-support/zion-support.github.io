@@ -175,7 +175,7 @@ const processSteps = [
 }}
               className="inline - flex items - center justify - center w - 20 h - 20 bg - gradient - to - br from - zion - cyan to - zion - purple rounded - 2xl mb - 8"
 
-              <Wifi className="w - 10 h - 10 text - white" />
+              <Wifi className="w - 10 h - 10 text - white"       />
             </motion.div>
 
             <h1 className="text - 5xl md:text - 6xl font - bold text - white mb - 6">
@@ -189,15 +189,15 @@ const processSteps = [
 
             <div className="flex flex - wrap justify - center gap - 4 text - sm">
               <div className="flex items - center gap - 2 text - zion - cyan">
-                <Wifi className="w - 4 h - 4" />
+                <Wifi className="w - 4 h - 4"       />
                 <span > Connected Devices</span>
               </div>
               <div className="flex items - center gap - 2 text - zion - purple">
-                <Server className="w - 4 h - 4" />
+                <Server className="w - 4 h - 4"       />
                 <span > Edge Processing</span>
               </div>
               <div className="flex items - center gap - 2 text - zion - blue">
-                <Zap className="w - 4 h - 4" />
+                <Zap className="w - 4 h - 4"       />
                 <span > Real - time Analytics</span>
               </div>
             </div>
@@ -249,7 +249,7 @@ const processSteps = [
                 className="bg - zion - blue - dark / 30 border border - zion - cyan / 20 rounded - 2xl p - 6 text - center hover:border - zion - cyan / 40 transition - all duration - 300"
 
                 <div className="w - 16 h - 16 bg - gradient - to - br from - zion - cyan to - zion - purple rounded - 2xl flex items - center justify - center mx - auto mb - 6">
-                  <technology.icon className="w - 8 h - 8 text - white" />
+                  <technology.icon className="w - 8 h - 8 text - white"       />
                 </div>
 
                 <h3 className="text - xl font - bold text - white mb - 3">{technology.name}</h3>
@@ -315,7 +315,7 @@ const processSteps = [
 
                 <div className="relative mb - 6">
                   <div className="w - 16 h - 16 bg - gradient - to - br from - zion - cyan to - zion - purple rounded - 2xl flex items - center justify - center mx - auto">
-                    <step.icon className="w - 8 h - 8 text - white" />
+                    <step.icon className="w - 8 h - 8 text - white"       />
                   </div>
                   <div className="absolute - top - 2 -right - 2 w - 8 h - 8 bg - zion - blue rounded - full flex items - center justify - center text - white text - sm font - bold">
                     {step.step}
@@ -392,7 +392,7 @@ const processSteps = [
                 onClick={ () => setSelectedSolution (solution) }
 
                 <div className="w - 16 h - 16 bg - gradient - to - br from - zion - cyan to - zion - purple rounded - 2xl flex items - center justify - center mb - 6">
-                  <solution.icon className="w - 8 h - 8 text - white" />
+                  <solution.icon className="w - 8 h - 8 text - white"       />
                 </div>
 
                 <h3 className="text - 2xl font - bold text - white mb - 3">{solution.title}</h3>
@@ -400,7 +400,7 @@ const processSteps = [
 
                 <div className="space - y-3 mb - 6">
                   {solution.features.map ( (feature, featureIndex) => (<div key={featureIndex} className="flex items - center gap - 3">
-                      <CheckCircle className="w - 5 h - 5 text - zion - cyan flex - shrink - 0" />
+                      <CheckCircle className="w - 5 h - 5 text - zion - cyan flex - shrink - 0"       />
                       <span className="text - zion - slate - light text - sm">{feature}</span>
                     </div>) ) }
                 </div>
@@ -425,7 +425,7 @@ const processSteps = [
                   </span>
                   <button className="inline - flex items - center gap - 2 text - zion - cyan hover:text - white transition - colors duration - 300">
                     <span className="text - sm font - medium">Learn More</span>
-                    <ArrowRight className="w - 4 h - 4" />
+                    <ArrowRight className="w - 4 h - 4"       />
                   </button>
                 </div>
               </motion.div>) ) }
@@ -502,7 +502,7 @@ const processSteps = [
                 </div>
 
                 <div className="flex items - center gap - 2">
-                  {[...Array (5) ].map ( (_, i) => (<Star key={i} className="w - 4 h - 4 text - yellow - 400 fill - current" />) ) }
+                  {[...Array (5) ].map ( (_, i) => (<Star key={i} className="w - 4 h - 4 text - yellow - 400 fill - current"       />) ) }
                   <span className="text - zion - slate - light text - sm ml - 2">5.0 Rating</span>
                 </div>
               </motion.div>;) ) }

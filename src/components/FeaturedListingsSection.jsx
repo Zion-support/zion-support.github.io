@@ -233,7 +233,7 @@ const featuredListings = [
                   src={listing.image}
                   alt={listing.title}
                   className="w - full h - full object - cover group - hover:scale - 110 transition - transform duration - 500"
-                />
+                      />
                 {listing.featured && (<div className="absolute top - 4 left - 4">
                     <Badge className="bg - gradient - to - r from - purple - 500 to - pink - 500 text - white border - 0">
                       Featured
@@ -241,7 +241,7 @@ const featuredListings = [
                   </div>) }
                 <div className="absolute top - 4 right - 4 flex items - center gap - 2">
                   <div className="flex items - center bg - black / 20 backdrop - blur - sm rounded - full px - 3 py - 1">
-                    <Star className="w - 4 h - 4 text - yellow - 400 fill - current" />
+                    <Star className="w - 4 h - 4 text - yellow - 400 fill - current"       />
                     <span className="text - white text - sm font - medium ml - 1">
                       {listing.rating}
                     </span>
@@ -256,7 +256,7 @@ const featuredListings = [
                     {listing.category}
                   </Badge>
                   <div className="flex items - center gap - 2 text - gray - 500 text - sm">
-                    <Clock className="w - 4 h - 4" />
+                    <Clock className="w - 4 h - 4"       />
                     <span>{listing.duration}</span>
                   </div>
                 </div>
@@ -272,15 +272,15 @@ const featuredListings = [
                 {/* Stats */}
                 <div className="flex items - center justify - between mb - 4 text - sm text - gray - 500">
                   <div className="flex items - center gap - 1">
-                    <Eye className="w - 4 h - 4" />
+                    <Eye className="w - 4 h - 4"       />
                     <span>{listing.views.toLocaleString () }</span>
                   </div>
                   <div className="flex items - center gap - 1">
-                    <Heart className="w - 4 h - 4" />
+                    <Heart className="w - 4 h - 4"       />
                     <span>{listing.likes}</span>
                   </div>
                   <div className="flex items - center gap - 1">
-                    <Users className="w - 4 h - 4" />
+                    <Users className="w - 4 h - 4"       />
                     <span>{listing.team}</span>
                   </div>
                 </div>
@@ -322,7 +322,7 @@ const featuredListings = [
                           key={highlightIndex}
                           className="flex items - center gap - 2 text - sm text - gray - 600"
                         >
-                          <CheckCircle className="w - 3 h - 3 text - green - 500 flex - shrink - 0" />
+                          <CheckCircle className="w - 3 h - 3 text - green - 500 flex - shrink - 0"       />
                           {highlight}
                         </li>) ) }
                   </ul>
@@ -340,7 +340,7 @@ const featuredListings = [
                     size="icon"
                     className="group - hover:bg - blue - 50"
                   >
-                    <Heart className="w - 4 h - 4 group - hover:text - red - 500 transition - colors" />
+                    <Heart className="w - 4 h - 4 group - hover:text - red - 500 transition - colors"       />
                   </Button>
                 </div>
               </div>
@@ -392,7 +392,7 @@ const featuredListings = [
                 className="bg - white text - blue - 600 hover:bg - gray - 100"
               >
                 <Link to="/contact" className="flex items - center gap - 2">
-                  <Phone className="w - 5 h - 5" />
+                  <Phone className="w - 5 h - 5"       />
                   Contact Sales
                 </Link>
               </Button>
@@ -402,7 +402,7 @@ const featuredListings = [
                 className="border - white text - white hover:bg - white hover:text - blue - 600"
               >
                 <Link to="/services" className="flex items - center gap - 2">
-                  <Rocket className="w - 5 h - 5" />
+                  <Rocket className="w - 5 h - 5"       />
                   Browse All Services
                 </Link>
               </Button>

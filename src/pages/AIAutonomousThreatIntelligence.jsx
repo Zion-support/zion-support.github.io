@@ -13,15 +13,15 @@ const AIAutonomousThreatIntelligence = () => {
         <meta
           name="description"
           content="Revolutionary AI autonomous threat intelligence platform that continuously monitors threats, analyzes risks, and provides intelligence insights with advanced AI capabilities and autonomous operation."
-        />
+              />
         <meta
           name="keywords"
           content="AI threat intelligence, autonomous threat intelligence, threat monitoring, risk analysis, autonomous operations, AI threat intelligence platform"
-        />
+              />
         <link
           rel="canonical"
           href="https://ziontechgroup.com / ai - autonomous - threat - intelligence"
-        />
+              />
       </Helmet>
 
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - orange - 900 to - slate - 900">

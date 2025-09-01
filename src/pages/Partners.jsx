@@ -187,7 +187,7 @@ export default function Partners () {
                       key={benefitIndex}
                       className="flex items - center text - zion - slate - light text - sm"
                     >
-                      <CheckCircle className="w - 4 h - 4 text - zion - cyan mr - 2 flex - shrink - 0" />
+                      <CheckCircle className="w - 4 h - 4 text - zion - cyan mr - 2 flex - shrink - 0"       />
                       {benefit}
                     </li>) ) }
                 </ul>
@@ -204,7 +204,7 @@ export default function Partners () {
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">
             {benefits.map ( (benefit, index) => (<div key={index} className="text - center">
                 <div className="w - 16 h - 16 bg - zion - cyan / 20 rounded - full flex items - center justify - center mx - auto mb - 4">
-                  <benefit.icon className="w - 8 h - 8 text - zion - cyan" />
+                  <benefit.icon className="w - 8 h - 8 text - zion - cyan"       />
                 </div>
                 <h3 className="text - lg font - semibold text - white mb - 2">
                   {benefit.title}
@@ -232,7 +232,7 @@ export default function Partners () {
                     src={partner.logo}
                     alt={partner.name}
                     className="w - 16 h - 16 rounded - lg object - cover"
-                  />
+                        />
                   <div>
                     <h3 className="text - lg font - semibold text - white">
                       {partner.name}
@@ -325,7 +325,7 @@ export default function Partners () {
             <Link to="/contact">
               <button className="px - 8 py - 4 bg - white text - zion - blue rounded - lg font - semibold hover:scale - 105 transition - transform flex items - center space - x-2">
                 <span > Start Partnership Discussion</span>
-                <ArrowRight className="w - 5 h - 5" />
+                <ArrowRight className="w - 5 h - 5"       />
               </button>
             </Link>
             <Link to="/about">

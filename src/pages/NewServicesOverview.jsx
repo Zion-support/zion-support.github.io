@@ -197,7 +197,7 @@ import Link from 'next / link';
           <div className="text - center">
             <div className="flex justify - center mb - 6">
               <div className="p - 3 bg - gradient - to - r from - blue - 500 to - purple - 500 rounded - full">
-                <Sparkles className="h - 8 w - 8 text - white"/>
+                <Sparkles className="h - 8 w - 8 text - white"      />
               </div>
             </div>
             <h1 className="text - 4xl md:text - 6xl font - bold text - white mb - 6">
@@ -224,7 +224,7 @@ import Link from 'next / link';
           <div className="grid grid - cols - 2 md:grid - cols - 4 gap - 8">
             {stats.map ( (stat, index) => (<div key={index} className="text - center">
                 <div className="flex justify - center mb - 4">
-                  <stat.icon className="h - 12 w - 12 text - blue - 400"/>
+                  <stat.icon className="h - 12 w - 12 text - blue - 400"      />
                 </div>
                 <div className="text - 3xl font - bold text - white mb - 2">{stat.value}</div>
                 <div className="text - gray - 400">{stat.label}</div>
@@ -250,7 +250,7 @@ import Link from 'next / link';
             {serviceCategories.map ( (category) => (<div key={category.id} className="bg - gray - 800 / 30 border border - gray - 700 rounded - 2xl p - 8">
                 <div className="flex items - center mb - 8">
                   <div className={`p - 4 rounded - xl bg - gradient - to - r ${category.color} mr - 6`}>
-                    <category.icon className="h - 8 w - 8 text - white"/>
+                    <category.icon className="h - 8 w - 8 text - white"      />
                   </div>
                   <div>
                     <h3 className="text - 2xl md:text - 3xl font - bold text - white mb - 2">
@@ -280,7 +280,7 @@ import Link from 'next / link';
                         <h5 className="text - sm font - semibold text - gray - 300 mb - 2">Key Features:</h5>
                         <div className="space - y-1">
                           {service.features.map ( (feature, featureIndex) => (<div key={featureIndex} className="flex items - center text - sm text - gray - 400">
-                              <CheckCircle className="h - 4 w - 4 text - green - 400 mr - 2 flex - shrink - 0"/>
+                              <CheckCircle className="h - 4 w - 4 text - green - 400 mr - 2 flex - shrink - 0"      />
                               {feature}
                             </div>) ) }
                         </div>
@@ -311,7 +311,7 @@ import Link from 'next / link';
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">
             {benefits.map ( (benefit, index) => (<div key={index} className="text - center">
                 <div className="flex justify - center mb - 4">
-                  <benefit.icon className={`h - 12 w - 12 ${benefit.color}`}/>
+                  <benefit.icon className={`h - 12 w - 12 ${benefit.color}`}      />
                 </div>
                 <h3 className="text - xl font - semibold text - white mb - 2">{benefit.title}</h3>
                 <p className="text - gray - 400">{benefit.description}</p>
@@ -335,7 +335,7 @@ import Link from 'next / link';
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8 mb - 8">
               <div className="text - center">
                 <div className="flex justify - center mb - 4">
-                  <Phone className="h - 12 w - 12 text - blue - 400"/>
+                  <Phone className="h - 12 w - 12 text - blue - 400"      />
                 </div>
                 <h3 className="text - xl font - semibold text - white mb - 2">Call Us</h3>
                 <p className="text - gray - 300">+1 302 464 0950</p>
@@ -343,7 +343,7 @@ import Link from 'next / link';
               </div>
               <div className="text - center">
                 <div className="flex justify - center mb - 4">
-                  <Mail className="h - 12 w - 12 text - green - 400"/>
+                  <Mail className="h - 12 w - 12 text - green - 400"      />
                 </div>
                 <h3 className="text - xl font - semibold text - white mb - 2">Email Us</h3>
                 <p className="text - gray - 300">kleber@ziontechgroup.com</p>
@@ -351,7 +351,7 @@ import Link from 'next / link';
               </div>
               <div className="text - center">
                 <div className="flex justify - center mb - 4">
-                  <MapPin className="h - 12 w - 12 text - purple - 400"/>
+                  <MapPin className="h - 12 w - 12 text - purple - 400"      />
                 </div>
                 <h3 className="text - xl font - semibold text - white mb - 2">Visit Us</h3>
                 <p className="text - gray - 300">364 E Main St STE 1008</p>

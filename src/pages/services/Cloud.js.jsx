@@ -66,7 +66,7 @@ const CloudServices = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {cloudServices.map((service, index) => (
+            {cloudServices.map((((((((service, index, index, index, index, index, index, index) => ({ ...((((((service, index, index, index, index, index, index, key: index })) => ({ ...(((((service, index, index, index, index, index, key: index })) => ({ ...((((service, index, index, index, index, key: index })) => ({ ...(((service, index, index, index, key: index })) => ({ ...((service, index, index, key: index })) => ({ ...(service, index, key: index })) => (
               <div
                 key={index}
                 className="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl border border-gray-200"
@@ -79,7 +79,7 @@ const CloudServices = () => {
                   {service.price}
                 </p>
                 <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
+                  {service.features.map((((((((feature, featureIndex, index, index, index, index, index, index) => ({ ...((((((feature, featureIndex, index, index, index, index, index, key: index })) => ({ ...(((((feature, featureIndex, index, index, index, index, key: index })) => ({ ...((((feature, featureIndex, index, index, index, key: index })) => ({ ...(((feature, featureIndex, index, index, key: index })) => ({ ...((feature, featureIndex, index, key: index })) => ({ ...(feature, featureIndex, key: index })) => (
                     <li
                       key={featureIndex}
                       className="flex items-center text-sm text-gray-700"

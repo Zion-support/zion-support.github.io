@@ -94,7 +94,7 @@ import { motion, AnimatePresence } from 'framer - motion';
         onError={handleError}
         loading={priority ? 'eager' : 'lazy'}
         decoding="async"
-      />
+            />
 
       {/* Progressive Loading Effect */}
       {isLoaded && !hasError && (<motion.div
@@ -102,6 +102,6 @@ import { motion, AnimatePresence } from 'framer - motion';
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.3 }}
           className="absolute inset - 0 bg - gradient - to - t from - black / 10 to - transparent pointer - events - none"
-        />) }
+              />) }
     </div>) ;
 };

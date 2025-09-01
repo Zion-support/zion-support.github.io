@@ -10,15 +10,15 @@ const AIAutonomousSoftwareEngineer = () => {
         <meta
           name="description"
           content="Revolutionary AI autonomous software engineer that writes code, debugs programs, and develops software solutions with advanced AI capabilities and human - like programming skills."
-        />
+              />
         <meta
           name="keywords"
           content="AI software engineer, autonomous programming, AI coding, software development, AI development, autonomous coding"
-        />
+              />
         <link
           rel="canonical"
           href="https://ziontechgroup.com / ai - autonomous - software - engineer"
-        />
+              />
       </Helmet>
 
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - emerald - 900 to - slate - 900">

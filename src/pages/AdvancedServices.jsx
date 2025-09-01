@@ -16,7 +16,7 @@ const AdvancedServices = () => {
                 top: `${Math.random () * 100}%`,
                 animationDelay: `${Math.random () * 5}s`,
                 animationDuration: `${3 + Math.random () * 4}s`,
-            }}/>) ) }
+            }}      />) ) }
         </div>
 
         <div className="relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">
@@ -89,7 +89,7 @@ const AdvancedServices = () => {
       </section>
 
       {/* Services Showcase */}
-      <FuturisticServicesShowcase />
+      <FuturisticServicesShowcase       />
 
       {/* Technology Stack Section */}
       <section className="py - 20 relative">

@@ -7,7 +7,7 @@ export function CartItem({ item, onRemove, onUpdateQuantity }) {
         src={item.image || '/placeholder.svg'}
         alt={item.name}
         className="w-16 h-16 object-cover rounded"
-      />
+            />
       <div className="flex-1">
         <p className="font-medium">{item.name}</p>
         <p className="text-sm text-muted-foreground">

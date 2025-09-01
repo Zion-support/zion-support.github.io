@@ -56,14 +56,56 @@ export function ExpandedServicesPreview() {
 
         {/* Service Categories Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {SERVICE_CATEGORIES.map(category => (
+          {SERVICE_CATEGORIES.map(((((((category => (
             <Card
               key={category.id}
               className="group hover:shadow-xl transition-all duration-300 border-zion-blue-light"
             >
               <CardHeader className="text-center pb-4">
                 <div
-                  className={`rounded-full w-20 h-20 bg-gradient-to-br ${getCategoryColor(category.name)} flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}
+                  className={`rounded-full w-20 h-20 bg-gradient-to-br ${getCategoryColor(category.name, index, index, index, index, index, index) => ({ ...(((((category => (
+            <Card
+              key={category.id}
+              className="group hover:shadow-xl transition-all duration-300 border-zion-blue-light"
+            >
+              <CardHeader className="text-center pb-4">
+                <div
+                  className={`rounded-full w-20 h-20 bg-gradient-to-br ${getCategoryColor(category.name, index, index, index, index, index, key: index })) => ({ ...((((category => (
+            <Card
+              key={category.id}
+              className="group hover:shadow-xl transition-all duration-300 border-zion-blue-light"
+            >
+              <CardHeader className="text-center pb-4">
+                <div
+                  className={`rounded-full w-20 h-20 bg-gradient-to-br ${getCategoryColor(category.name, index, index, index, index, key: index })) => ({ ...(((category => (
+            <Card
+              key={category.id}
+              className="group hover:shadow-xl transition-all duration-300 border-zion-blue-light"
+            >
+              <CardHeader className="text-center pb-4">
+                <div
+                  className={`rounded-full w-20 h-20 bg-gradient-to-br ${getCategoryColor(category.name, index, index, index, key: index })) => ({ ...((category => (
+            <Card
+              key={category.id}
+              className="group hover:shadow-xl transition-all duration-300 border-zion-blue-light"
+            >
+              <CardHeader className="text-center pb-4">
+                <div
+                  className={`rounded-full w-20 h-20 bg-gradient-to-br ${getCategoryColor(category.name, index, index, key: index })) => ({ ...(category => (
+            <Card
+              key={category.id}
+              className="group hover:shadow-xl transition-all duration-300 border-zion-blue-light"
+            >
+              <CardHeader className="text-center pb-4">
+                <div
+                  className={`rounded-full w-20 h-20 bg-gradient-to-br ${getCategoryColor(category.name, index, key: index })) => ({ ...category => (
+            <Card
+              key={category.id}
+              className="group hover:shadow-xl transition-all duration-300 border-zion-blue-light"
+            >
+              <CardHeader className="text-center pb-4">
+                <div
+                  className={`rounded-full w-20 h-20 bg-gradient-to-br ${getCategoryColor(category.name, key: index }))} flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}
                 >
                   <div className="text-3xl">
                     {getCategoryIcon(category.name)}
@@ -86,7 +128,7 @@ export function ExpandedServicesPreview() {
                     className="w-full group-hover:bg-zion-purple group-hover:text-white transition-colors"
                   >
                     Explore Services
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform"       />
                   </Button>
                 </Link>
               </CardContent>
@@ -122,17 +164,17 @@ export function ExpandedServicesPreview() {
                     $2,500
                   </div>
                   <div className="flex items-center space-x-1">
-                    <Star className="h-4 w-4 text-yellow-500 fill-current" />
+                    <Star className="h-4 w-4 text-yellow-500 fill-current"       />
                     <span className="text-sm font-medium">4.9</span>
                   </div>
                 </div>
                 <div className="space-y-2 mb-4">
                   <div className="flex items-center space-x-2 text-sm text-gray-600">
-                    <Zap className="h-4 w-4 text-zion-purple" />
+                    <Zap className="h-4 w-4 text-zion-purple"       />
                     <span>AI Score: 96</span>
                   </div>
                   <div className="flex items-center space-x-2 text-sm text-gray-600">
-                    <TrendingUp className="h-4 w-4 text-green-500" />
+                    <TrendingUp className="h-4 w-4 text-green-500"       />
                     <span>60% cost reduction</span>
                   </div>
                 </div>
@@ -166,17 +208,17 @@ export function ExpandedServicesPreview() {
                     $299
                   </div>
                   <div className="flex items-center space-x-1">
-                    <Star className="h-4 w-4 text-yellow-500 fill-current" />
+                    <Star className="h-4 w-4 text-yellow-500 fill-current"       />
                     <span className="text-sm font-medium">4.6</span>
                   </div>
                 </div>
                 <div className="space-y-2 mb-4">
                   <div className="flex items-center space-x-2 text-sm text-gray-600">
-                    <Zap className="h-4 w-4 text-zion-purple" />
+                    <Zap className="h-4 w-4 text-zion-purple"       />
                     <span>AI Score: 88</span>
                   </div>
                   <div className="flex items-center space-x-2 text-sm text-gray-600">
-                    <TrendingUp className="h-4 w-4 text-green-500" />
+                    <TrendingUp className="h-4 w-4 text-green-500"       />
                     <span>90% stockout reduction</span>
                   </div>
                 </div>
@@ -210,17 +252,17 @@ export function ExpandedServicesPreview() {
                     $8,000
                   </div>
                   <div className="flex items-center space-x-1">
-                    <Star className="h-4 w-4 text-yellow-500 fill-current" />
+                    <Star className="h-4 w-4 text-yellow-500 fill-current"       />
                     <span className="text-sm font-medium">4.9</span>
                   </div>
                 </div>
                 <div className="space-y-2 mb-4">
                   <div className="flex items-center space-x-2 text-sm text-gray-600">
-                    <Zap className="h-4 w-4 text-zion-purple" />
+                    <Zap className="h-4 w-4 text-zion-purple"       />
                     <span>AI Score: 93</span>
                   </div>
                   <div className="flex items-center space-x-2 text-sm text-gray-600">
-                    <TrendingUp className="h-4 w-4 text-green-500" />
+                    <TrendingUp className="h-4 w-4 text-green-500"       />
                     <span>30-50% cost savings</span>
                   </div>
                 </div>
@@ -251,7 +293,7 @@ export function ExpandedServicesPreview() {
                   className="bg-white text-zion-purple hover:bg-gray-100"
                 >
                   Explore All Services
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <ArrowRight className="ml-2 h-5 w-5"       />
                 </Button>
               </Link>
               <Link to="/contact">

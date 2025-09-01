@@ -133,7 +133,7 @@ import { Bell, X, CheckCircle, AlertTriangle, Info, XCircle, Search, Trash2, Eye
             return groups}, {}) : { 'All': filteredNotifications };
     if (!isOpen) {
         return (<button onClick={ () => setIsOpen (true) } className="fixed bottom - 4 right - 36 p - 3 bg - zion - emerald hover:bg - zion - emerald - light text - white rounded - full shadow - lg hover:shadow - xl transition - all duration - 300 z - 50 relative" title="Notifications">
-        <Bell className="w - 5 h - 5"/>
+        <Bell className="w - 5 h - 5"      />
         {unreadCount > 0 && (<span className="absolute - top - 1 -right - 1 bg - red - 500 text - white text - xs rounded - full w - 5 h - 5 flex items - center justify - center animate - pulse">
             {unreadCount > 9 ? '9+' : unreadCount}
           </span>) }
@@ -147,7 +147,7 @@ import { Bell, X, CheckCircle, AlertTriangle, Info, XCircle, Search, Trash2, Eye
               {unreadCount > 0 ? `${unreadCount} unread notifications` : 'No new notifications'}
             </span>
             <button onClick={ () => setIsMinimized (false) } className="text - zion - slate - light hover:text - zion - slate transition - colors">
-              <Eye className="w - 4 h - 4"/>
+              <Eye className="w - 4 h - 4"      />
             </button>
           </div>
         </div>
@@ -156,7 +156,7 @@ import { Bell, X, CheckCircle, AlertTriangle, Info, XCircle, Search, Trash2, Eye
       {/* Header */}
       <div className="flex items - center justify - between p - 4 border - b border - zion - slate - light bg - gradient - to - r from - zion - emerald / 10 to - zion - cyan / 10">
         <div className="flex items - center gap - 3">
-          <Bell className="w - 5 h - 5 text - zion - emerald"/>
+          <Bell className="w - 5 h - 5 text - zion - emerald"      />
           <span className="font - semibold text - zion - slate">Notifications</span>
           {unreadCount > 0 && (<span className="bg - red - 500 text - white text - xs rounded - full px - 2 py - 1">
               {unreadCount}
@@ -167,10 +167,10 @@ import { Bell, X, CheckCircle, AlertTriangle, Info, XCircle, Search, Trash2, Eye
             Mark all read
           </button>
           <button onClick={ () => setIsMinimized (true) } className="text - zion - slate - light hover:text - zion - slate transition - colors">
-            <EyeOff className="w - 4 h - 4"/>
+            <EyeOff className="w - 4 h - 4"      />
           </button>
           <button onClick={ () => setIsOpen (false) } className="text - zion - slate - light hover:text - zion - slate transition - colors">
-            <X className="w - 4 h - 4"/>
+            <X className="w - 4 h - 4"      />
           </button>
         </div>
       </div>
@@ -179,7 +179,7 @@ import { Bell, X, CheckCircle, AlertTriangle, Info, XCircle, Search, Trash2, Eye
       <div className="p - 4 border - b border - zion - slate - light bg - zion - slate - light / 5">
         <div className="space - y-3">
           <div className="relative">
-            <Search className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 w - 4 h - 4 text - zion - slate - light"/>
+            <Search className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 w - 4 h - 4 text - zion - slate - light"      />
             <input type="text" placeholder="Search notifications..." value={searchQuery} onChange={ (e) => setSearchQuery (e.target.value) } className="w - full pl - 10 pr - 4 py - 2 border border - zion - slate - light rounded - lg bg - white dark:bg - zion - slate text - zion - slate focus:ring - 2 focus:ring - zion - emerald focus:border - transparent text - sm"/>
           </div>
 
@@ -272,7 +272,7 @@ import { Bell, X, CheckCircle, AlertTriangle, Info, XCircle, Search, Trash2, Eye
                     </div>
 
                     <button onClick={ () => deleteNotification (notification.id) } className="text - xs text - red - 500 hover:text - red - 600 transition - colors">
-                      <Trash2 className="w - 3 h - 3"/>
+                      <Trash2 className="w - 3 h - 3"      />
                     </button>
                   </div>
                 </div>
@@ -280,7 +280,7 @@ import { Bell, X, CheckCircle, AlertTriangle, Info, XCircle, Search, Trash2, Eye
           </div>) ) }
 
         {filteredNotifications.length === 0 && (<div className="p - 8 text - center">
-            <Bell className="w - 12 h - 12 text - zion - slate - light mx - auto mb - 4"/>
+            <Bell className="w - 12 h - 12 text - zion - slate - light mx - auto mb - 4"      />
             <p className="text - zion - slate - light">No notifications found</p>
           </div>) }
       </div>

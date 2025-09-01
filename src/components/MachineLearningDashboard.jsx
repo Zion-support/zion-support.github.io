@@ -133,7 +133,7 @@ import { useMachineLearning } from "../hooks / useMachineLearning";
       <div className="flex items - center justify - between p - 4 border - b border - gray - 200 dark:border - gray - 700">
         <div className="flex items - center space - x-3">
           <div className="p - 2 bg - purple - 100 dark:bg - purple - 900 rounded - lg">
-            <Brain className="w - 6 h - 6 text - purple - 600 dark:text - purple - 400"/>
+            <Brain className="w - 6 h - 6 text - purple - 600 dark:text - purple - 400"      />
           </div>
           <div>
             <h2 className="text - lg font - semibold text - gray - 900 dark:text - white">
@@ -147,12 +147,12 @@ import { useMachineLearning } from "../hooks / useMachineLearning";
 
         <div className="flex items - center space - x-2">
           <button onClick={ () => setShowImportModel (!showImportModel) } className="flex items - center space - x-2 px - 3 py - 2 text - sm font - medium text - gray - 700 dark:text - gray - 300 bg - gray - 100 dark:bg - gray - 800 rounded - lg hover:bg - gray - 200 dark:hover:bg - gray - 700">
-            <Upload className="w - 4 h - 4"/>
+            <Upload className="w - 4 h - 4"      />
             <span > Import</span>
           </button>
 
           <button onClick={ () => setShowCreateModel (!showCreateModel) } className="flex items - center space - x-2 px - 3 py - 2 text - sm font - medium text - white bg - purple - 600 rounded - lg hover:bg - purple - 700">
-            <Plus className="w - 4 h - 4"/>
+            <Plus className="w - 4 h - 4"      />
             <span > New Model</span>
           </button>
         </div>
@@ -169,7 +169,7 @@ import { useMachineLearning } from "../hooks / useMachineLearning";
         ].map ( ({ id, label, icon: Icon }) => (<button key={id} onClick={ () => setActiveTab (id) } className={`flex items - center space - x-2 px - 4 py - 3 text - sm font - medium border - b-2 transition - colors ${activeTab === id
                 ? 'border - purple - 500 text - purple - 600 dark:text - purple - 400'
                 : 'border - transparent text - gray - 500 hover:text - gray - 700 dark:text - gray - 400 dark:hover:text - gray - 200'}`}>
-            <Icon className="w - 4 h - 4"/>
+            <Icon className="w - 4 h - 4"      />
             <span>{label}</span>
           </button>) ) }
       </div>
@@ -198,7 +198,7 @@ import { useMachineLearning } from "../hooks / useMachineLearning";
                       <p className="text - sm font - medium text - gray - 600 dark:text - gray - 400">Total Models</p>
                       <p className="text - 2xl font - bold text - gray - 900 dark:text - white">{metrics.totalModels}</p>
                     </div>
-                    <Brain className="w - 8 h - 8 text - purple - 500"/>
+                    <Brain className="w - 8 h - 8 text - purple - 500"      />
                   </div>
                 </div>
 
@@ -208,7 +208,7 @@ import { useMachineLearning } from "../hooks / useMachineLearning";
                       <p className="text - sm font - medium text - gray - 600 dark:text - gray - 400">Active Models</p>
                       <p className="text - 2xl font - bold text - green - 600">{metrics.activeModels}</p>
                     </div>
-                    <CheckCircle className="w - 8 h - 8 text - green - 500"/>
+                    <CheckCircle className="w - 8 h - 8 text - green - 500"      />
                   </div>
                 </div>
 
@@ -218,7 +218,7 @@ import { useMachineLearning } from "../hooks / useMachineLearning";
                       <p className="text - sm font - medium text - gray - 600 dark:text - gray - 400">Avg Accuracy</p>
                       <p className="text - 2xl font - bold text - blue - 600">{ (metrics.averageAccuracy * 100) .toFixed (1) }%</p>
                     </div>
-                    <Target className="w - 8 h - 8 text - blue - 500"/>
+                    <Target className="w - 8 h - 8 text - blue - 500"      />
                   </div>
                 </div>
 
@@ -228,7 +228,7 @@ import { useMachineLearning } from "../hooks / useMachineLearning";
                       <p className="text - sm font - medium text - gray - 600 dark:text - gray - 400">Predictions</p>
                       <p className="text - 2xl font - bold text - orange - 600">{metrics.totalPredictions}</p>
                     </div>
-                    <Zap className="w - 8 h - 8 text - orange - 500"/>
+                    <Zap className="w - 8 h - 8 text - orange - 500"      />
                   </div>
                 </div>
               </div>
@@ -302,7 +302,7 @@ import { useMachineLearning } from "../hooks / useMachineLearning";
                 <h3 className="text - lg font - semibold text - gray - 900 dark:text - white">AI Models</h3>
                 <div className="flex space - x-2">
                   <button onClick={ () => setShowCreateModel (!showCreateModel) } className="px - 3 py - 2 text - sm font - medium text - white bg - purple - 600 rounded - lg hover:bg - purple - 700">
-                    <Plus className="w - 4 h - 4 inline mr - 2"/>
+                    <Plus className="w - 4 h - 4 inline mr - 2"      />
                     New Model
                   </button>
                 </div>
@@ -377,7 +377,7 @@ import { useMachineLearning } from "../hooks / useMachineLearning";
 
 }} className="bg - gray - 50 dark:bg - gray - 800 p - 4 rounded - lg">
                     <h4 className="font - medium text - gray - 900 dark:text - white mb - 3">Import Model</h4>
-                    <input type="file" accept=".json" onChange={handleImportModel} className="block w - full text - sm text - gray - 500 file:mr - 4 file:py - 2 file:px - 4 file:rounded - lg file:border - 0 file:text - sm file:font - medium file:bg - purple - 50 file:text - purple - 700 hover:file:bg - purple - 100"/>
+                    <input type="file" accept=".json" onChange={handleImportModel} className="block w - full text - sm text - gray - 500 file:mr - 4 file:py - 2 file:px - 4 file:rounded - lg file:border - 0 file:text - sm file:font - medium file:bg - purple - 50 file:text - purple - 700 hover:file:bg - purple - 100"      />
                     <button onClick={ () => setShowImportModel (false) } className="mt - 3 px - 4 py - 2 text - sm font - medium text - gray - 700 dark:text - gray - 300 bg - gray - 100 dark:bg - gray - 700 rounded - lg hover:bg - gray - 200 dark:hover:bg - gray - 600">
                       Cancel
                     </button>
@@ -398,10 +398,10 @@ import { useMachineLearning } from "../hooks / useMachineLearning";
                       </div>
                       <div className="flex space - x-1">
                         <button onClick={ () => handleExportModel (model.id) } className="p - 1 text - gray - 500 hover:text - gray - 700 dark:text - gray - 400 dark:hover:text - gray - 200" title="Export">
-                          <Download className="w - 4 h - 4"/>
+                          <Download className="w - 4 h - 4"      />
                         </button>
                         <button onClick={ () => handleArchiveModel (model.id) } className="p - 1 text - gray - 500 hover:text - red - 600 dark:text - gray - 400 dark:hover:text - red - 400" title="Archive">
-                          <Trash2 className="w - 4 h - 4"/>
+                          <Trash2 className="w - 4 h - 4"      />
                         </button>
                       </div>
                     </div>
@@ -435,7 +435,7 @@ import { useMachineLearning } from "../hooks / useMachineLearning";
                     <div className="flex space - x-2">
                       {model.status === 'ready' && (<>
                           <button onClick={ () => handleStartTraining (model.id) } className="flex - 1 px - 3 py - 2 text - sm font - medium text - white bg - blue - 600 rounded - lg hover:bg - blue - 700">
-                            <Play className="w - 4 h - 4 inline mr - 2"/>
+                            <Play className="w - 4 h - 4 inline mr - 2"      />
                             Train
                           </button>
                           <button onClick={ () => handleDeployModel (model.id) } className="flex - 1 px - 3 py - 2 text - sm font - medium text - white bg - green - 600 rounded - lg hover:bg - green - 700">
@@ -472,7 +472,7 @@ import { useMachineLearning } from "../hooks / useMachineLearning";
                       <div className="flex items - center justify - between mb - 3">
                         <div className="flex items - center space - x-3">
                           <div className="p - 2 bg - purple - 100 dark:bg - purple - 900 rounded - lg">
-                            {model ? getModelTypeIcon (model.type) : <Brain className="w - 4 h - 4"/>}
+                            {model ? getModelTypeIcon (model.type) : <Brain className="w - 4 h - 4"      />}
                           </div>
                           <div>
                             <p className="font - medium text - gray - 900 dark:text - white">
@@ -494,7 +494,7 @@ import { useMachineLearning } from "../hooks / useMachineLearning";
                             <span className="font - medium text - gray - 900 dark:text - white">{job.progress.toFixed (1) }%</span>
                           </div>
                           <div className="w - full bg - gray - 200 dark:bg - gray - 700 rounded - full h - 2">
-                            <div className="bg - blue - 600 h - 2 rounded - full transition - all duration - 300" style={{ width: `${job.progress}%` }}/>
+                            <div className="bg - blue - 600 h - 2 rounded - full transition - all duration - 300" style={{ width: `${job.progress}%` }}      />
                           </div>
                         </div>) }
 
@@ -515,22 +515,22 @@ import { useMachineLearning } from "../hooks / useMachineLearning";
 
                       <div className="flex space - x-2">
                         {job.status === 'running' && (<button onClick={ () => handleStopTraining (job.id) } className="px - 3 py - 2 text - sm font - medium text - white bg - red - 600 rounded - lg hover:bg - red - 700">
-                            <Square className="w - 4 h - 4 inline mr - 2"/>
+                            <Square className="w - 4 h - 4 inline mr - 2"      />
                             Stop
                           </button>) }
                         {job.status === 'completed' && (<div className="text - sm text - green - 600 dark:text - green - 400 flex items - center">
-                            <CheckCircle className="w - 4 h - 4 mr - 2"/>
+                            <CheckCircle className="w - 4 h - 4 mr - 2"      />
                             Training completed successfully
                           </div>) }
                         {job.status === 'failed' && (<div className="text - sm text - red - 600 dark:text - red - 400 flex items - center">
-                            <XCircle className="w - 4 h - 4 mr - 2"/>
+                            <XCircle className="w - 4 h - 4 mr - 2"      />
                             Training failed
                           </div>) }
                       </div>
                     </div>) }) }
                 
                 {trainingJobs.length === 0 && (<div className="text - center py - 8 text - gray - 500 dark:text - gray - 400">
-                    <Activity className="w - 12 h - 12 mx - auto mb - 4 text - gray - 400"/>
+                    <Activity className="w - 12 h - 12 mx - auto mb - 4 text - gray - 400"      />
                     <p > No training jobs found</p>
                     <p className="text - sm">Start training a model to see jobs here</p>
                   </div>) }
@@ -564,7 +564,7 @@ import { useMachineLearning } from "../hooks / useMachineLearning";
                         {model.name} ({model.type}) </option>) ) }
                   </select>
                   <button onClick={handleMakePrediction} disabled={!predictionForm.modelId || !predictionForm.input.trim () || isPredicting} className="px - 4 py - 2 text - sm font - medium text - white bg - purple - 600 rounded - lg hover:bg - purple - 700 disabled:opacity - 50">
-                    {isPredicting ? (<Loader2 className="w - 4 h - 4 inline mr - 2 animate - spin"/>) : (<Target className="w - 4 h - 4 inline mr - 2"/>) }
+                    {isPredicting ? (<Loader2 className="w - 4 h - 4 inline mr - 2 animate - spin"      />) : (<Target className="w - 4 h - 4 inline mr - 2"      />) }
                     Make Prediction
                   </button>
                 </div>
@@ -609,7 +609,7 @@ import { useMachineLearning } from "../hooks / useMachineLearning";
                       </div>) }) }
                   
                   {predictions.length === 0 && (<div className="text - center py - 4 text - gray - 500 dark:text - gray - 400">
-                      <Target className="w - 8 h - 8 mx - auto mb - 2 text - gray - 400"/>
+                      <Target className="w - 8 h - 8 mx - auto mb - 2 text - gray - 400"      />
                       <p > No predictions yet</p>
                     </div>) }
                 </div>
@@ -642,7 +642,7 @@ import { useMachineLearning } from "../hooks / useMachineLearning";
                             { (model.accuracy * 100) .toFixed (1) }%
                           </span>
                           <div className="w - 20 bg - gray - 200 dark:bg - gray - 700 rounded - full h - 2">
-                            <div className="bg - purple - 600 h - 2 rounded - full" style={{ width: `${model.accuracy * 100}%` }}/>
+                            <div className="bg - purple - 600 h - 2 rounded - full" style={{ width: `${model.accuracy * 100}%` }}      />
                           </div>
                         </div>
                       </div>) ) }

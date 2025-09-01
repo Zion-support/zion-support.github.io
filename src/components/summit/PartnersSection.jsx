@@ -9,15 +9,63 @@ export function PartnersSection() {
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-8 text-center">Partners</h2>
         <div className="flex flex-wrap items-center justify-center gap-6">
-          {partners.map(p => (
+          {partners.map(((((((p => (
             <img
               loading="lazy"
               key={p.name}
               src={p.logo}
               alt={p.name}
               className="h-16"
-            />
-          ))}
+                  />
+          , index, index, index, index, index, index) => ({ ...(((((p => (
+            <img
+              loading="lazy"
+              key={p.name}
+              src={p.logo}
+              alt={p.name}
+              className="h-16"
+                  />
+          , index, index, index, index, index, key: index })) => ({ ...((((p => (
+            <img
+              loading="lazy"
+              key={p.name}
+              src={p.logo}
+              alt={p.name}
+              className="h-16"
+                  />
+          , index, index, index, index, key: index })) => ({ ...(((p => (
+            <img
+              loading="lazy"
+              key={p.name}
+              src={p.logo}
+              alt={p.name}
+              className="h-16"
+                  />
+          , index, index, index, key: index })) => ({ ...((p => (
+            <img
+              loading="lazy"
+              key={p.name}
+              src={p.logo}
+              alt={p.name}
+              className="h-16"
+                  />
+          , index, index, key: index })) => ({ ...(p => (
+            <img
+              loading="lazy"
+              key={p.name}
+              src={p.logo}
+              alt={p.name}
+              className="h-16"
+                  />
+          , index, key: index })) => ({ ...p => (
+            <img
+              loading="lazy"
+              key={p.name}
+              src={p.logo}
+              alt={p.name}
+              className="h-16"
+                  />
+          , key: index })))}
         </div>
         <div className="text-center mt-8">
           <a href="#register" className="text-zion-cyan underline">

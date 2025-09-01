@@ -80,7 +80,7 @@ const InnovativeNewServices2025 = () => {
         keywords="AI solutions 2025, 5G enterprise, edge computing, autonomous systems, quantum technology, Zion Tech Group"
         type="website"
         url="https://ziontechgroup.com / innovative - new - services - 2025"
-      />
+            />
 
       {/* Hero Section */}
       <section className="relative py - 20 px - 6">
@@ -116,15 +116,15 @@ const InnovativeNewServices2025 = () => {
           <div className="flex flex - col md:flex - row items - center justify - between gap - 4">
             <div className="flex items - center gap - 6">
               <div className="flex items - center gap - 2 text - cyan - 400">
-                <Phone className="w - 5 h - 5" />
+                <Phone className="w - 5 h - 5"       />
                 <span>+1 302 464 0950</span>
               </div>
               <div className="flex items - center gap - 2 text - cyan - 400">
-                <Mail className="w - 5 h - 5" />
+                <Mail className="w - 5 h - 5"       />
                 <span > kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items - center gap - 2 text - cyan - 400">
-                <MapPin className="w - 5 h - 5" />
+                <MapPin className="w - 5 h - 5"       />
                 <span > 364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
             </div>
@@ -134,7 +134,7 @@ const InnovativeNewServices2025 = () => {
               className="flex items - center gap - 2 text - blue - 400 hover:text - blue - 300 transition - colors"
             >
               <span > Visit Our Website</span>
-              <ExternalLink className="w - 4 h - 4" />
+              <ExternalLink className="w - 4 h - 4"       />
             </Link>
           </div>
         </div>
@@ -190,7 +190,7 @@ const InnovativeNewServices2025 = () => {
                       <div
                         className={`w - 16 h - 16 bg - gradient - to - br ${categoryColor} rounded - 2xl flex items - center justify - center`}
                       >
-                        <IconComponent className="w - 8 h - 8 text - white" />
+                        <IconComponent className="w - 8 h - 8 text - white"       />
                       </div>
                       <div className="text - right">
                         <div className="text - 2xl font - bold text - cyan - 400">
@@ -221,7 +221,7 @@ const InnovativeNewServices2025 = () => {
                             key={idx}
                             className="flex items - center text - sm text - gray - 300"
                           >
-                            <CheckCircle className="w - 4 h - 4 text - cyan - 400 mr - 2 flex - shrink - 0" />
+                            <CheckCircle className="w - 4 h - 4 text - cyan - 400 mr - 2 flex - shrink - 0"       />
                             {feature}
                           </li>) ) }
                       </ul>
@@ -237,7 +237,7 @@ const InnovativeNewServices2025 = () => {
                             key={idx}
                             className="flex items - center text - sm text - gray - 300"
                           >
-                            <Star className="w - 4 h - 4 text - green - 400 mr - 2 flex - shrink - 0" />
+                            <Star className="w - 4 h - 4 text - green - 400 mr - 2 flex - shrink - 0"       />
                             {benefit}
                           </li>) ) }
                       </ul>
@@ -278,14 +278,14 @@ const InnovativeNewServices2025 = () => {
                             href={`tel:${service.contactInfo.phone}`}
                             className="flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300 transition - colors"
                           >
-                            <Phone className="w - 4 h - 4" />
+                            <Phone className="w - 4 h - 4"       />
                             <span>{service.contactInfo.phone}</span>
                           </a>
                           <a
                             href={`mailto:${service.contactInfo.email}`}
                             className="flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300 transition - colors"
                           >
-                            <Mail className="w - 4 h - 4" />
+                            <Mail className="w - 4 h - 4"       />
                             <span>{service.contactInfo.email}</span>
                           </a>
                         </div>

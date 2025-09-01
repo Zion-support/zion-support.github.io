@@ -237,7 +237,7 @@ export default function DevOpsCloudServices() {
         description="Comprehensive DevOps consulting, cloud migration, CI/CD pipelines, and infrastructure automation services for modern software delivery."
         keywords="DevOps services, cloud migration, CI/CD, Kubernetes, infrastructure as code, cloud consulting, automation"
         canonical="https://ziontechgroup.com/services/devops-cloud"
-      />
+            />
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-orange-900 via-red-900 to-pink-900 text-white py-20">
@@ -269,13 +269,13 @@ export default function DevOpsCloudServices() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {devopsServices.map((service, index) => (
+            {devopsServices.map((((((((service, index, index, index, index, index, index, index) => ({ ...((((((service, index, index, index, index, index, index, key: index })) => ({ ...(((((service, index, index, index, index, index, key: index })) => ({ ...((((service, index, index, index, index, key: index })) => ({ ...(((service, index, index, index, key: index })) => ({ ...((service, index, index, key: index })) => ({ ...(service, index, key: index })) => (
               <div
                 key={service.title}
                 className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow border border-gray-200"
               >
                 <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
-                  <service.icon className="w-8 h-8 text-orange-600" />
+                  <service.icon className="w-8 h-8 text-orange-600"       />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
                   {service.title}
@@ -290,18 +290,18 @@ export default function DevOpsCloudServices() {
                   </p>
                 </div>
                 <ul className="space-y-2 mb-4">
-                  {service.features.slice(0, 4).map((feature, featureIndex) => (
+                  {service.features.slice(0, 4).map((((((((feature, featureIndex, index, index, index, index, index, index) => ({ ...((((((feature, featureIndex, index, index, index, index, index, key: index })) => ({ ...(((((feature, featureIndex, index, index, index, index, key: index })) => ({ ...((((feature, featureIndex, index, index, index, key: index })) => ({ ...(((feature, featureIndex, index, index, key: index })) => ({ ...((feature, featureIndex, index, key: index })) => ({ ...(feature, featureIndex, key: index })) => (
                     <li
                       key={featureIndex}
                       className="flex items-center text-sm text-gray-700"
                     >
-                      <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"       />
                       {feature}
                     </li>
                   ))}
                 </ul>
                 <div className="space-y-2">
-                  {service.benefits.slice(0, 2).map((benefit, benefitIndex) => (
+                  {service.benefits.slice(0, 2).map((((((((benefit, benefitIndex, index, index, index, index, index, index) => ({ ...((((((benefit, benefitIndex, index, index, index, index, index, key: index })) => ({ ...(((((benefit, benefitIndex, index, index, index, index, key: index })) => ({ ...((((benefit, benefitIndex, index, index, index, key: index })) => ({ ...(((benefit, benefitIndex, index, index, key: index })) => ({ ...((benefit, benefitIndex, index, key: index })) => ({ ...(benefit, benefitIndex, key: index })) => (
                     <div key={benefitIndex} className="text-sm text-gray-600">
                       <span className="font-medium">✓</span> {benefit}
                     </div>
@@ -327,7 +327,7 @@ export default function DevOpsCloudServices() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            {cloudProviders.map((provider, index) => (
+            {cloudProviders.map((((((((provider, index, index, index, index, index, index, index) => ({ ...((((((provider, index, index, index, index, index, index, key: index })) => ({ ...(((((provider, index, index, index, index, index, key: index })) => ({ ...((((provider, index, index, index, index, key: index })) => ({ ...(((provider, index, index, index, key: index })) => ({ ...((provider, index, index, key: index })) => ({ ...(provider, index, key: index })) => (
               <div
                 key={provider.name}
                 className="bg-white rounded-xl p-6 border border-gray-200"
@@ -373,7 +373,7 @@ export default function DevOpsCloudServices() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {useCases.map((useCase, index) => (
+            {useCases.map((((((((useCase, index, index, index, index, index, index, index) => ({ ...((((((useCase, index, index, index, index, index, index, key: index })) => ({ ...(((((useCase, index, index, index, index, index, key: index })) => ({ ...((((useCase, index, index, index, index, key: index })) => ({ ...(((useCase, index, index, index, key: index })) => ({ ...((useCase, index, index, key: index })) => ({ ...(useCase, index, key: index })) => (
               <div
                 key={useCase.title}
                 className="bg-gray-50 rounded-xl p-8 border border-gray-200"
@@ -423,9 +423,9 @@ export default function DevOpsCloudServices() {
               </p>
 
               <div className="space-y-4">
-                {benefits.map((benefit, index) => (
+                {benefits.map((((((((benefit, index, index, index, index, index, index, index) => ({ ...((((((benefit, index, index, index, index, index, index, key: index })) => ({ ...(((((benefit, index, index, index, index, index, key: index })) => ({ ...((((benefit, index, index, index, index, key: index })) => ({ ...(((benefit, index, index, index, key: index })) => ({ ...((benefit, index, index, key: index })) => ({ ...(benefit, index, key: index })) => (
                   <div key={index} className="flex items-start">
-                    <Check className="w-6 h-6 text-orange-500 mr-3 mt-0.5 flex-shrink-0" />
+                    <Check className="w-6 h-6 text-orange-500 mr-3 mt-0.5 flex-shrink-0"       />
                     <span className="text-gray-700">{benefit}</span>
                   </div>
                 ))}
@@ -475,13 +475,13 @@ export default function DevOpsCloudServices() {
           </div>
 
           <div className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            {industries.map((industry, index) => (
+            {industries.map((((((((industry, index, index, index, index, index, index, index) => ({ ...((((((industry, index, index, index, index, index, index, key: index })) => ({ ...(((((industry, index, index, index, index, index, key: index })) => ({ ...((((industry, index, index, index, index, key: index })) => ({ ...(((industry, index, index, index, key: index })) => ({ ...((industry, index, index, key: index })) => ({ ...(industry, index, key: index })) => (
               <div
                 key={industry}
                 className="bg-gray-50 rounded-xl p-6 text-center hover:bg-orange-50 transition-colors border border-gray-200"
               >
                 <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Target className="w-8 h-8 text-orange-600" />
+                  <Target className="w-8 h-8 text-orange-600"       />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900">
                   {industry}
@@ -506,7 +506,7 @@ export default function DevOpsCloudServices() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            {technologies.map((tech, index) => (
+            {technologies.map((((((((tech, index, index, index, index, index, index, index) => ({ ...((((((tech, index, index, index, index, index, index, key: index })) => ({ ...(((((tech, index, index, index, index, index, key: index })) => ({ ...((((tech, index, index, index, index, key: index })) => ({ ...(((tech, index, index, index, key: index })) => ({ ...((tech, index, index, key: index })) => ({ ...(tech, index, key: index })) => (
               <div
                 key={tech}
                 className="bg-white rounded-lg p-4 text-center hover:bg-orange-50 transition-colors border border-gray-200"

@@ -17,22 +17,22 @@ export function AboutSection () {
     {
       number: '10+',
       label: 'Years of Experience',
-      icon: <Award className="w - 6 h - 6" />,
+      icon: <Award className="w - 6 h - 6"       />,
     },
     {
       number: '500+',
       label: 'Projects Delivered',
-      icon: <Target className="w - 6 h - 6" />,
+      icon: <Target className="w - 6 h - 6"       />,
     },
     {
       number: '50+',
       label: 'Enterprise Clients',
-      icon: <Users className="w - 6 h - 6" />,
+      icon: <Users className="w - 6 h - 6"       />,
     },
     {
       number: '25+',
       label: 'Countries Served',
-      icon: <Globe className="w - 6 h - 6" />,
+      icon: <Globe className="w - 6 h - 6"       />,
     },
   ];
   const values = [
@@ -40,25 +40,25 @@ export function AboutSection () {
       title: 'Innovation First',
       description:
         "We push the boundaries of what's possible, constantly exploring emerging technologies and novel approaches.",
-      icon: <TrendingUp className="w - 8 h - 8" />,
+      icon: <TrendingUp className="w - 8 h - 8"       />,
     },
     {
       title: 'Client Success',
       description:
         'Your success is our success. We measure our achievements by the impact we create for your business.',
-      icon: <Target className="w - 8 h - 8" />,
+      icon: <Target className="w - 8 h - 8"       />,
     },
     {
       title: 'Excellence',
       description:
         'We maintain the highest standards in everything we do, from code quality to client communication.',
-      icon: <Award className="w - 8 h - 8" />,
+      icon: <Award className="w - 8 h - 8"       />,
     },
     {
       title: 'Trust & Security',
       description:
         'Your data and systems are protected with enterprise - grade security and compliance standards.',
-      icon: <Shield className="w - 8 h - 8" />,
+      icon: <Shield className="w - 8 h - 8"       />,
     },
   ];
   const technologies = [
@@ -182,7 +182,7 @@ export function AboutSection () {
                 key={index}
                 className="flex items - center text - zion - slate - light"
               >
-                <CheckCircle className="w - 4 h - 4 text - zion - cyan mr - 3 flex - shrink - 0" />
+                <CheckCircle className="w - 4 h - 4 text - zion - cyan mr - 3 flex - shrink - 0"       />
                 <span className="text - sm">{tech}</span>
               </div>) ) }
           </div>

@@ -112,7 +112,7 @@ const IndustrySolutions = () => {
         {/* Search and Filters */}
         <div className="mb - 8 space - y-4">
           <div className="relative">
-            <Search className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text - gray - 400 w - 5 h - 5" />
+            <Search className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text - gray - 400 w - 5 h - 5"       />
             <input
               type="text"
               placeholder="Search industry solutions..."
@@ -249,21 +249,21 @@ const IndustrySolutions = () => {
             </p>
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6 text - center">
               <div>
-                <Phone className="w - 8 h - 8 text - blue - 400 mx - auto mb - 2" />
+                <Phone className="w - 8 h - 8 text - blue - 400 mx - auto mb - 2"       />
                 <p className="text - white font - semibold">Phone</p>
                 <p className="text - gray - 300">
                   {industrySolutions[0].contactInfo.phone}
                 </p>
               </div>
               <div>
-                <Mail className="w - 8 h - 8 text - blue - 400 mx - auto mb - 2" />
+                <Mail className="w - 8 h - 8 text - blue - 400 mx - auto mb - 2"       />
                 <p className="text - white font - semibold">Email</p>
                 <p className="text - gray - 300">
                   {industrySolutions[0].contactInfo.email}
                 </p>
               </div>
               <div>
-                <MapPin className="w - 8 h - 8 text - blue - 400 mx - auto mb - 2" />
+                <MapPin className="w - 8 h - 8 text - blue - 400 mx - auto mb - 2"       />
                 <p className="text - white font - semibold">Address</p>
                 <p className="text - gray - 300">
                   364 E Main St STE 1008 < br />

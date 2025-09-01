@@ -163,5 +163,5 @@ export default FuturisticAnimatedBackground;
       ref={canvasRef}
       className={`fixed inset - 0 pointer - events - none ${className}`}
       style={{ zIndex: -1 }}
-    />) ;
+          />) ;
 };

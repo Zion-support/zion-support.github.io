@@ -10,15 +10,15 @@ const AIAutonomousHybridSecurity = () => {
         <meta
           name="description"
           content="Revolutionary AI autonomous hybrid security platform that continuously secures hybrid environments, detects threats, and protects hybrid infrastructure with advanced AI capabilities and autonomous operation."
-        />
+              />
         <meta
           name="keywords"
           content="AI hybrid security, autonomous hybrid security, hybrid protection, threat detection, autonomous operations, AI hybrid security platform"
-        />
+              />
         <link
           rel="canonical"
           href="https://ziontechgroup.com / ai - autonomous - hybrid - security"
-        />
+              />
       </Helmet>
 
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - emerald - 900 to - slate - 900">

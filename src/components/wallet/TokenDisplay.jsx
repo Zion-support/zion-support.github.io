@@ -11,10 +11,10 @@ export function TokenDisplay() {
           <CardTitle className="text-xl">ZION$ Balance</CardTitle>
           <CardDescription>Your current token balance</CardDescription>
         </div>
-        <BadgeDollarSign aria-hidden="true" className="h-6 w-6 text-primary"/>
+        <BadgeDollarSign aria-hidden="true" className="h-6 w-6 text-primary"      />
       </CardHeader>
       <CardContent>
-        {loading ? (<Skeleton className="h-12 w-28"/>) : (<div className="flex flex-col gap-2">
+        {loading ? (<Skeleton className="h-12 w-28"      />) : (<div className="flex flex-col gap-2">
             <div className="flex items-end">
               <span className="text-3xl font-bold">{wallet?.balance || 0}</span>
               <span className="ml-1 text-muted-foreground">ZION$</span>

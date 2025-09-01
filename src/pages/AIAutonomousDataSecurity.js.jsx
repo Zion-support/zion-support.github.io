@@ -10,15 +10,15 @@ const AIAutonomousDataSecurity = () => {
         <meta
           name="description"
           content="Revolutionary AI autonomous data security platform that continuously protects data, detects breaches, and ensures privacy with advanced AI capabilities and autonomous operation."
-        />
+              />
         <meta
           name="keywords"
           content="AI data security, autonomous data security, data protection, breach detection, autonomous operations, AI data security platform"
-        />
+              />
         <link
           rel="canonical"
           href="https://ziontechgroup.com / ai - autonomous - data - security"
-        />
+              />
       </Helmet>
 
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - indigo - 900 to - slate - 900">

@@ -96,7 +96,7 @@ const categories = ['All', 'AI Infrastructure', 'Talent Matching', 'Research & D
                 newSet.add (testimonialId) }
             return newSet}) };
     const renderStars = (rating) => {
-        return Array.from ({ length: 5 }, (_, i) => (<Star key={i} className={`w - 5 h - 5 ${i < rating ? 'text - yellow - 400 fill - current' : 'text - gray - 400'}`}/>) ) };
+        return Array.from ({ length: 5 }, (_, i) => (<Star key={i} className={`w - 5 h - 5 ${i < rating ? 'text - yellow - 400 fill - current' : 'text - gray - 400'}`}      />) ) };
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -140,7 +140,7 @@ const categories = ['All', 'AI Infrastructure', 'Talent Matching', 'Research & D
 
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <div className="inline - flex items - center gap - 2 bg - gradient - to - r from - blue - 500 / 20 to - purple - 500 / 20 px - 4 py - 2 rounded - full border border - blue - 500 / 30 mb - 6">
-            <MessageCircle className="w - 5 h - 5 text - blue - 400"/>
+            <MessageCircle className="w - 5 h - 5 text - blue - 400"      />
             <span className="text - blue - 300 font - medium">Client Success Stories</span>
           </div>
 
@@ -207,7 +207,7 @@ const categories = ['All', 'AI Infrastructure', 'Talent Matching', 'Research & D
               <div className="bg - gradient - to - br from - white / 5 to - white / 10 rounded - 3xl p - 12 border border - white / 20 backdrop - blur - sm relative overflow - hidden">
                 {/* Quote icon */}
                 <div className="absolute top - 8 left - 8 text - blue - 400 / 20">
-                  <Quote className="w - 16 h - 16"/>
+                  <Quote className="w - 16 h - 16"      />
                 </div>
 
                 {/* Rating */}
@@ -250,12 +250,12 @@ const categories = ['All', 'AI Infrastructure', 'Talent Matching', 'Research & D
                 <div className="flex items - center justify - center gap - 6 mt - 8">
                   <motion.button onClick={ () => toggleLike (filteredTestimonials[currentIndex]?.id || '') } className={`flex items - center gap - 2 px - 4 py - 2 rounded - full transition - all duration - 300 ${likedTestimonials.has (filteredTestimonials[currentIndex]?.id || '') ? 'bg - red - 500 / 20 text - red - 400 border border - red - 500 / 30'
             : 'bg - white / 10 text - zion - slate - light border border - white / 20 hover:bg - white / 20'}`} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                    <ThumbsUp className={`w - 4 h - 4 ${likedTestimonials.has (filteredTestimonials[currentIndex]?.id || '') ? 'fill - current' : ''}`}/>
+                    <ThumbsUp className={`w - 4 h - 4 ${likedTestimonials.has (filteredTestimonials[currentIndex]?.id || '') ? 'fill - current' : ''}`}      />
                     {filteredTestimonials[currentIndex]?.likes || 0}
                   </motion.button>
 
                   <button className="flex items - center gap - 2 px - 4 py - 2 rounded - full bg - white / 10 text - zion - slate - light border border - white / 20 hover:bg - white / 20 transition - all duration - 300">
-                    <Share2 className="w - 4 h - 4"/>
+                    <Share2 className="w - 4 h - 4"      />
                     Share
                   </button>
                 </div>
@@ -266,15 +266,15 @@ const categories = ['All', 'AI Infrastructure', 'Talent Matching', 'Research & D
           {/* Navigation Controls */}
           <div className="flex items - center justify - center gap - 6 mt - 8">
             <motion.button onClick={prevTestimonial} className="w - 12 h - 12 rounded - full bg - white / 10 border border - white / 20 text - white hover:bg - white / 20 transition - all duration - 300 flex items - center justify - center" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-              <ChevronLeft className="w - 6 h - 6"/>
+              <ChevronLeft className="w - 6 h - 6"      />
             </motion.button>
 
             <motion.button onClick={ () => setIsAutoPlaying (!isAutoPlaying) } className="w - 12 h - 12 rounded - full bg - gradient - to - r from - blue - 500 to - purple - 500 text - white hover:from - blue - 600 hover:to - purple - 600 transition - all duration - 300 flex items - center justify - center" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-              {isAutoPlaying ? <Pause className="w - 6 h - 6"/> : <Play className="w - 6 h - 6"/>}
+              {isAutoPlaying ? <Pause className="w - 6 h - 6"      /> : <Play className="w - 6 h - 6"      />}
             </motion.button>
 
             <motion.button onClick={nextTestimonial} className="w - 12 h - 12 rounded - full bg - white / 10 border border - white / 20 text - white hover:bg - white / 20 transition - all duration - 300 flex items - center justify - center" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-              <ChevronRight className="w - 6 h - 6"/>
+              <ChevronRight className="w - 6 h - 6"      />
             </motion.button>
           </div>
 

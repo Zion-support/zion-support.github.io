@@ -13,15 +13,15 @@ const AIConsumerWillingnessToUse = () => {
         <meta
           name="description"
           content="Revolutionary AI consumer willingness to use platform that analyzes customer usage readiness, adoption likelihood, and product utilization with advanced AI capabilities."
-        />
+              />
         <meta
           name="keywords"
           content="AI willingness to use, usage readiness, product adoption, AI analysis, customer usage, product utilization"
-        />
+              />
         <link
           rel="canonical"
           href="https://ziontechgroup.com / ai - consumer - willingness - to - use"
-        />
+              />
       </Helmet>
 
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - blue - 900 to - slate - 900">

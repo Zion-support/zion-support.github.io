@@ -74,7 +74,7 @@ export const TestimonialsSection = () => {
       <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">
         <div className="text - center mb - 16">
           <div className="inline - flex items - center px - 4 py - 2 bg - orange - 500 / 10 text - orange - 400 rounded - full text - sm font - medium mb - 6">
-            <Quote className="w - 4 h - 4 mr - 2" />
+            <Quote className="w - 4 h - 4 mr - 2"       />
             Client Success Stories
           </div>
           <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">
@@ -97,7 +97,7 @@ export const TestimonialsSection = () => {
                     className="w - 12 h - 12 rounded - full border - 2 border - white / 20"
                     src={testimonial.avatar}
                     alt={testimonial.name}
-                  />
+                        />
                 </div>
                 <div>
                   <h4 className="text - lg font - semibold text - white">
@@ -116,7 +116,7 @@ export const TestimonialsSection = () => {
                 {[...Array (testimonial.rating) ].map ( (_, i) => (<Star
                     key={i}
                     className="w - 5 h - 5 text - yellow - 400 fill - current"
-                  />) ) }
+                        />) ) }
               </div>
 
               <blockquote className="text - gray - 300 italic">
@@ -127,7 +127,7 @@ export const TestimonialsSection = () => {
 
         <div className="text - center mt - 12">
           <div className="inline - flex items - center px - 6 py - 3 bg - gradient - to - r from - orange - 600 to - red - 600 text - white font - semibold rounded - lg hover:from - orange - 700 hover:to - red - 700 transition - all duration - 300">
-            <Quote className="w - 5 h - 5 mr - 2" />
+            <Quote className="w - 5 h - 5 mr - 2"       />
             Read More Success Stories
           </div>
         </div>

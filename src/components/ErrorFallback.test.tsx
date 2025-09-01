@@ -1,16 +1,15 @@
 import { render, screen } from '@testing - library / react';
-import React from 'react';
 import ErrorFallback from './ErrorFallback';
-
-
-describe ('ErrorFallback', () => {
-  it ('renders without crashing', () => {
-    render (<ErrorFallback />) ;
+;
+;
+describe ('ErrorFallback', () => {;
+  it ('renders without crashing', () => {;
+    render (<ErrorFallback       />) ;
     expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () ;
   }) ;
-
-  it ('displays expected content', () => {
-    render (<ErrorFallback />) ;
-    // Add specific test assertions based on component content
+;
+  it ('displays expected content', () => {;
+    render (<ErrorFallback       />) ;
+    // Add specific test assertions based on component content;
   }) ;
 }) ;

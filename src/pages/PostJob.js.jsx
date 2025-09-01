@@ -24,7 +24,7 @@ export default function PostJob () {
       <SEO
         title="Post a Job | Zion AI Marketplace"
         description="Post a job to find the perfect AI talent for your project."
-      />
+            />
 
       <main
         className={`container mx - auto px-${isMobile ? '2' : '4'} py-${isMobile ? '6' : '12'} max - w-4xl`}
@@ -43,7 +43,7 @@ export default function PostJob () {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <JobPostingForm />
+            <JobPostingForm       />
           </CardContent>
         </Card>
       </main>

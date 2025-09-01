@@ -67,7 +67,7 @@ const PerformanceOptimizedHero = memo ( () => {
             <span className="neon - text">
               Transform Your Business
             </span>
-            <br />
+            <br       />
             <span className="text - white">With AI & Tech</span>
           </h1>
 
@@ -86,7 +86,7 @@ const PerformanceOptimizedHero = memo ( () => {
           </div>
 
           {/* Optimized Stats Component */}
-          <HeroStats stats={stats}/>
+          <HeroStats stats={stats}      />
         </div>
       </div>
 

@@ -55,13 +55,13 @@ import Link from "next / link";
         <div className="grid gap - 6 md:grid - cols - 2">
           {sections.map ( (section) => (<Link key={section.path} to={section.path} className="block p - 6 rounded - lg bg - zinc - 900 border border - zinc - 800 hover:border - zinc - 700 transition - all">
               <div className={`w - 12 h - 12 rounded - full bg - gradient - to - r ${section.color} flex items - center justify - center mb - 4`}>
-                <section.icon className="h - 6 w - 6 text - white"/>
+                <section.icon className="h - 6 w - 6 text - white"      />
               </div>
               <h2 className="text - xl font - semibold text - white mb - 2">{section.title}</h2>
               <p className="text - zinc - 400 mb - 4">{section.description}</p>
               <div className="flex items - center text - zion - cyan">
                 <span className="mr - 2">View documentation</span>
-                <ArrowRight className="h - 4 w - 4"/>
+                <ArrowRight className="h - 4 w - 4"      />
               </div>
             </Link>) ) }
         </div>

@@ -88,11 +88,11 @@ import { Button } from './ui / button';
               <CardContent className="space - y-4">
                 <div className="flex items - center justify - between">
                   <div className="flex items - center gap - 2">
-                    <Star className="h - 4 w - 4 text - yellow - 400 fill - current" />
+                    <Star className="h - 4 w - 4 text - yellow - 400 fill - current"       />
                     <span className="text - zinc - 300">{service.rating}</span>
                   </div>
                   <div className="flex items - center gap - 2">
-                    <Zap className="h - 4 w - 4 text - zion - cyan" />
+                    <Zap className="h - 4 w - 4 text - zion - cyan"       />
                     <span className="text - zion - cyan font - semibold">
                       AI Score: {service.aiScore}
                     </span>
@@ -129,7 +129,7 @@ import { Button } from './ui / button';
               </CardContent>
 
               {/* Hover Effect Overlay */}
-              <div className="absolute inset - 0 bg - gradient - to - r from - zion - cyan / 5 to - zion - purple / 5 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300 pointer - events - none" />
+              <div className="absolute inset - 0 bg - gradient - to - r from - zion - cyan / 5 to - zion - purple / 5 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300 pointer - events - none"       />
             </Card>) ) }
         </div>
 

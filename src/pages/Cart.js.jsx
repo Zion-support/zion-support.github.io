@@ -76,8 +76,8 @@ export default function CartPage () {
   const total = subtotal - discount;
   if (cartLoading) {
     return (<div className="container py - 10 space - y-4">
-        <Skeleton className="h - 8 w - 1/3" />
-        <Skeleton className="h - 32 w - full" />
+        <Skeleton className="h - 8 w - 1/3"       />
+        <Skeleton className="h - 32 w - full"       />
       </div>) ;
   }
   if (showEmpty) {
@@ -87,7 +87,7 @@ export default function CartPage () {
           src="/images / empty - cart.svg"
           alt="Empty cart"
           className="mx - auto mb - 4 w - 48 h - 36"
-        />
+              />
         <p>{t ('cart.empty') }</p>
         <Button asChild className="mt - 4">
           <Link href="/marketplace">Browse Marketplace</Link>

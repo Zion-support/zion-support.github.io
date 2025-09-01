@@ -79,22 +79,22 @@ export default function CybersecuritySuite () {
         {
             title: "Threat Detection & Response",
             description: "Advanced AI - powered threat detection with automated response capabilities to neutralize threats in real - time.",
-            icon: <Eye className="h - 8 w - 8 text - zion - cyan"/>
+            icon: <Eye className="h - 8 w - 8 text - zion - cyan"      />
         },
         {
             title: "Vulnerability Management",
             description: "Continuous vulnerability assessment and prioritization with automated remediation workflows.",
-            icon: <AlertTriangle className="h - 8 w - 8 text - zion - purple"/>
+            icon: <AlertTriangle className="h - 8 w - 8 text - zion - purple"      />
         },
         {
             title: "Security Compliance",
             description: "Automated compliance monitoring and reporting for major frameworks including GDPR, HIPAA, and SOC2.",
-            icon: <Shield className="h - 8 w - 8 text - zion - cyan"/>
+            icon: <Shield className="h - 8 w - 8 text - zion - cyan"      />
         },
         {
             title: "Incident Response",
             description: "Rapid incident response with automated playbooks and expert security team support.",
-            icon: <Shield className="h - 8 w - 8 text - zion - purple"/>
+            icon: <Shield className="h - 8 w - 8 text - zion - purple"      />
         }
     ];
     const complianceFrameworks = [
@@ -108,7 +108,7 @@ export default function CybersecuritySuite () {
         "FedRAMP (Federal Risk and Authorization Management Program) "
     ];
     return (<div className="min - h-screen bg - gradient - to - b from - zion - blue - dark via - zion - slate to - background">
-      <SEO title="Cybersecurity Suite - Zion Tech Group" description="Comprehensive security monitoring, threat detection, and incident response for businesses of all sizes. Starting at $199 / month." keywords="cybersecurity, threat detection, security monitoring, incident response, compliance, security audit" canonical="https://ziontechgroup.com / cybersecurity - suite"/>
+      <SEO title="Cybersecurity Suite - Zion Tech Group" description="Comprehensive security monitoring, threat detection, and incident response for businesses of all sizes. Starting at $199 / month." keywords="cybersecurity, threat detection, security monitoring, incident response, compliance, security audit" canonical="https://ziontechgroup.com / cybersecurity - suite"      />
 
       {/* Hero Section */}
       <section className="pt - 20 pb - 16 px - 4">
@@ -130,7 +130,7 @@ export default function CybersecuritySuite () {
               Start Security Assessment
             </Button>
             <Button size="lg" variant="outline" className="border - red - 500 text - red - 400 hover:bg - red - 500 / 10 px - 8 py - 4 text - lg">
-              <Shield className="h - 5 w - 5 mr - 2"/>
+              <Shield className="h - 5 w - 5 mr - 2"      />
               Security Demo
             </Button>
           </div>
@@ -179,7 +179,7 @@ export default function CybersecuritySuite () {
             {features.map ( (feature, index) => (<Card key={index} className="bg - zion - slate / 50 border - red - 500 / 20 hover:border - red - 500 / 40 transition - all duration - 300 hover:shadow - lg hover:shadow - red - 500 / 20">
                 <CardContent className="p - 6">
                   <div className="flex items - start gap - 3">
-                    <Check className="h - 5 w - 5 text - red - 400 mt - 1 flex - shrink - 0"/>
+                    <Check className="h - 5 w - 5 text - red - 400 mt - 1 flex - shrink - 0"      />
                     <span className="text - zion - slate - light">{feature}</span>
                   </div>
                 </CardContent>
@@ -203,7 +203,7 @@ export default function CybersecuritySuite () {
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 4">
             {complianceFrameworks.map ( (framework, index) => (<Card key={index} className="bg - zion - slate / 50 border - red - 500 / 20 hover:border - red - 500 / 40 transition - all duration - 300">
                 <CardContent className="p - 4 text - center">
-                  <Check className="h - 5 w - 5 text - red - 400 mx - auto mb - 2"/>
+                  <Check className="h - 5 w - 5 text - red - 400 mx - auto mb - 2"      />
                   <span className="text - sm text - zion - slate - light">{framework}</span>
                 </CardContent>
               </Card>) ) }
@@ -240,7 +240,7 @@ export default function CybersecuritySuite () {
                 </CardHeader>
                 <CardContent className="space - y-3">
                   {plan.features.map ( (feature, featureIndex) => (<div key={featureIndex} className="flex items - start gap - 3">
-                      <Check className="h - 4 w - 4 text - red - 400 mt - 1 flex - shrink - 0"/>
+                      <Check className="h - 4 w - 4 text - red - 400 mt - 1 flex - shrink - 0"      />
                       <span className="text - sm text - zion - slate - light">{feature}</span>
                     </div>) ) }
                 </CardContent>

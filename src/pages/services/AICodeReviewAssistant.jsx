@@ -8,44 +8,44 @@ const AICodeReviewAssistant = () => {
         {
             title: "Automated Security Vulnerability Detection",
             description: "AI-powered scanning identifies security flaws, SQL injections, and common vulnerabilities before they reach production",
-            icon: <Shield className="w-6 h-6"/>
+            icon: <Shield className="w-6 h-6"      />
         },
         {
             title: "Code Quality Scoring & Metrics",
             description: "Comprehensive code quality assessment with detailed metrics and improvement recommendations",
-            icon: <BarChart3 className="w-6 h-6"/>
+            icon: <BarChart3 className="w-6 h-6"      />
         },
         {
             title: "Best Practice Recommendations",
             description: "Intelligent suggestions for code improvements, design patterns, and industry best practices",
-            icon: <CheckCircle className="w-6 h-6"/>
+            icon: <CheckCircle className="w-6 h-6"      />
         },
         {
             title: "Git Integration & Automation",
             description: "Seamless integration with GitHub, GitLab, and Bitbucket with automated PR comments and reviews",
-            icon: <GitFork className="w-6 h-6"/>
+            icon: <GitFork className="w-6 h-6"      />
         }
     ];
     const benefits = [
         {
             metric: "40-60%",
             description: "Reduction in code review time",
-            icon: <Clock className="w-5 h-5"/>
+            icon: <Clock className="w-5 h-5"      />
         },
         {
             metric: "25%",
             description: "Improvement in code quality",
-            icon: <TrendingUp className="w-5 h-5"/>
+            icon: <TrendingUp className="w-5 h-5"      />
         },
         {
             metric: "90%",
             description: "Security issues caught early",
-            icon: <Shield className="w-5 h-5"/>
+            icon: <Shield className="w-5 h-5"      />
         },
         {
             metric: "24/7",
             description: "Automated review coverage",
-            icon: <Zap className="w-5 h-5"/>
+            icon: <Zap className="w-5 h-5"      />
 
     ];
     const pricingPlans = [
@@ -108,11 +108,11 @@ const AICodeReviewAssistant = () => {
     return (<>
       <Helmet>
         <title>AI Code Review Assistant — Zion Tech Group | Automated Code Quality & Security</title>
-        <meta name="description" content="Transform your development workflow with our AI-powered code review assistant. Automated security scanning, quality metrics, and best practice recommendations."/>
-        <meta property="og:title" content="AI Code Review Assistant — Zion Tech Group"/>
-        <meta property="og:description" content="AI-powered code review system with security scanning, quality metrics, and automated recommendations."/>
-        <meta property="og:url" content="https://ziontechgroup.com/services/ai-code-review-assistant"/>
-        <link rel="canonical" href="https://ziontechgroup.com/services/ai-code-review-assistant"/>
+        <meta name="description" content="Transform your development workflow with our AI-powered code review assistant. Automated security scanning, quality metrics, and best practice recommendations."      />
+        <meta property="og:title" content="AI Code Review Assistant — Zion Tech Group"      />
+        <meta property="og:description" content="AI-powered code review system with security scanning, quality metrics, and automated recommendations."      />
+        <meta property="og:url" content="https://ziontechgroup.com/services/ai-code-review-assistant"      />
+        <link rel="canonical" href="https://ziontechgroup.com/services/ai-code-review-assistant"      />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
@@ -234,7 +234,7 @@ const AICodeReviewAssistant = () => {
 
 
 }}>
-              {benefits.map((benefit, index) => (<div key={index} className="text-center">
+              {benefits.map((((((((benefit, index, index, index, index, index, index, index) => ({ ...((((((benefit, index, index, index, index, index, index, key: index })) => ({ ...(((((benefit, index, index, index, index, index, key: index })) => ({ ...((((benefit, index, index, index, index, key: index })) => ({ ...(((benefit, index, index, index, key: index })) => ({ ...((benefit, index, index, key: index })) => ({ ...(benefit, index, key: index })) => (<div key={index} className="text-center">
                   <div className="text-3xl font-bold text-blue-400 mb-2">{benefit.metric}</div>
                   <div className="text-sm text-gray-300">{benefit.description}</div>
                 </div>))}
@@ -309,7 +309,7 @@ const AICodeReviewAssistant = () => {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {features.map((feature, index) => (<motion.div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300" initial = {
+              {features.map((((((((feature, index, index, index, index, index, index, index) => ({ ...((((((feature, index, index, index, index, index, index, key: index })) => ({ ...(((((feature, index, index, index, index, index, key: index })) => ({ ...((((feature, index, index, index, index, key: index })) => ({ ...(((feature, index, index, index, key: index })) => ({ ...((feature, index, index, key: index })) => ({ ...(feature, index, key: index })) => (<motion.div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300" initial = {
   { opacity: 0,
   y: 20 
 
@@ -376,7 +376,7 @@ const AICodeReviewAssistant = () => {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (<motion.div key={index} className={`bg-white/10 backdrop-blur-lg rounded-xl p-8 border transition-all duration-300 ${plan.popular
+              {pricingPlans.map((((((((plan, index, index, index, index, index, index, index) => ({ ...((((((plan, index, index, index, index, index, index, key: index })) => ({ ...(((((plan, index, index, index, index, index, key: index })) => ({ ...((((plan, index, index, index, index, key: index })) => ({ ...(((plan, index, index, index, key: index })) => ({ ...((plan, index, index, key: index })) => ({ ...(plan, index, key: index })) => (<motion.div key={index} className={`bg-white/10 backdrop-blur-lg rounded-xl p-8 border transition-all duration-300 ${plan.popular
                 ? 'border-blue-400 bg-blue-900/20'
                 : 'border-white/20 hover:border-white/40'}`} initial = {
   { opacity: 0,
@@ -422,8 +422,8 @@ const AICodeReviewAssistant = () => {
                   </div>
 
                   <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, idx) => (<li key={idx} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"/>
+                    {plan.features.map((((((((feature, idx, index, index, index, index, index, index) => ({ ...((((((feature, idx, index, index, index, index, index, key: index })) => ({ ...(((((feature, idx, index, index, index, index, key: index })) => ({ ...((((feature, idx, index, index, index, key: index })) => ({ ...(((feature, idx, index, index, key: index })) => ({ ...((feature, idx, index, key: index })) => ({ ...(feature, idx, key: index })) => (<li key={idx} className="flex items-center text-gray-300">
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"      />
                         {feature}
                       </li>))}
                   </ul>
@@ -464,8 +464,8 @@ const AICodeReviewAssistant = () => {
 }} transition={{ duration: 0.6 }}>
                 <h3 className="text-2xl font-bold text-white mb-6">Seamless Integrations</h3>
                 <div className="grid grid-cols-2 gap-4">
-                  {integrations.map((integration, index) => (<div key={index} className="flex items-center bg-white/10 rounded-lg p-3">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3"/>
+                  {integrations.map((((((((integration, index, index, index, index, index, index, index) => ({ ...((((((integration, index, index, index, index, index, index, key: index })) => ({ ...(((((integration, index, index, index, index, index, key: index })) => ({ ...((((integration, index, index, index, index, key: index })) => ({ ...(((integration, index, index, index, key: index })) => ({ ...((integration, index, index, key: index })) => ({ ...(integration, index, key: index })) => (<div key={index} className="flex items-center bg-white/10 rounded-lg p-3">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3"      />
                       <span className="text-gray-300">{integration}</span>
                     </div>))}
                 </div>
@@ -493,8 +493,8 @@ const AICodeReviewAssistant = () => {
 }} transition={{ duration: 0.6 }}>
                 <h3 className="text-2xl font-bold text-white mb-6">Perfect For</h3>
                 <div className="space-y-3">
-                  {useCases.map((useCase, index) => (<div key={index} className="flex items-center bg-white/10 rounded-lg p-3">
-                      <Star className="w-5 h-5 text-yellow-400 mr-3"/>
+                  {useCases.map((((((((useCase, index, index, index, index, index, index, index) => ({ ...((((((useCase, index, index, index, index, index, index, key: index })) => ({ ...(((((useCase, index, index, index, index, index, key: index })) => ({ ...((((useCase, index, index, index, index, key: index })) => ({ ...(((useCase, index, index, index, key: index })) => ({ ...((useCase, index, index, key: index })) => ({ ...(useCase, index, key: index })) => (<div key={index} className="flex items-center bg-white/10 rounded-lg p-3">
+                      <Star className="w-5 h-5 text-yellow-400 mr-3"      />
                       <span className="text-gray-300">{useCase}</span>
                     </div>))}
                 </div>
@@ -588,7 +588,7 @@ const AICodeReviewAssistant = () => {
 }}>
               <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
                 Start Free Trial
-                <ArrowRight className="ml-2 w-5 h-5"/>
+                <ArrowRight className="ml-2 w-5 h-5"      />
               </Link>
               <a href="tel:+13024640950" className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">
                 Call: +1 302 464 0950

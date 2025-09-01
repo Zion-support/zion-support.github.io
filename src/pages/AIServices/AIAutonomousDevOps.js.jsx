@@ -57,7 +57,7 @@ export default function AIAutonomousDevOps() {
         description="AI-powered autonomous dev ops solution that transforms your operations with intelligent automation and real-time insights."
         keywords="AI autonomous dev ops, automation, intelligent systems, business optimization"
         canonical="https://ziontechgroup.com/aiautonomousdevops/"
-      />
+            />
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
@@ -70,7 +70,7 @@ export default function AIAutonomousDevOps() {
             className="text-center"
           >
             <div className="inline-flex items-center gap-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full px-4 py-2 text-zion-cyan text-sm font-medium mb-6">
-              <Brain className="w-4 h-4" />
+              <Brain className="w-4 h-4"       />
               AI-Powered Autonomous Dev Ops
             </div>
 
@@ -92,7 +92,7 @@ export default function AIAutonomousDevOps() {
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2 justify-center"
               >
-                <Play className="w-5 h-5" />
+                <Play className="w-5 h-5"       />
                 Watch Demo
               </motion.button>
               <Link
@@ -100,7 +100,7 @@ export default function AIAutonomousDevOps() {
                 className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-lg text-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-2 justify-center"
               >
                 Get Started
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"       />
               </Link>
             </div>
           </motion.div>
@@ -126,7 +126,7 @@ export default function AIAutonomousDevOps() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {features.map((feature, index) => {
+            {features.map((((((((feature, index, index, index, index, index, index, index) => ({ ...((((((feature, index, index, index, index, index, index, key: index })) => ({ ...(((((feature, index, index, index, index, index, key: index })) => ({ ...((((feature, index, index, index, index, key: index })) => ({ ...(((feature, index, index, index, key: index })) => ({ ...((feature, index, index, key: index })) => ({ ...(feature, index, key: index })) => {
               const IconComponent = feature.icon;
               return (
                 <motion.div
@@ -139,7 +139,7 @@ export default function AIAutonomousDevOps() {
                   <div
                     className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-2xl mb-6 flex items-center justify-center text-white`}
                   >
-                    <IconComponent className="w-8 h-8" />
+                    <IconComponent className="w-8 h-8"       />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">
                     {feature.title}
@@ -173,7 +173,7 @@ export default function AIAutonomousDevOps() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
+            {benefits.map((((((((benefit, index, index, index, index, index, index, index) => ({ ...((((((benefit, index, index, index, index, index, index, key: index })) => ({ ...(((((benefit, index, index, index, index, index, key: index })) => ({ ...((((benefit, index, index, index, index, key: index })) => ({ ...(((benefit, index, index, index, key: index })) => ({ ...((benefit, index, index, key: index })) => ({ ...(benefit, index, key: index })) => (
               <motion.div
                 key={benefit}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -181,7 +181,7 @@ export default function AIAutonomousDevOps() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="flex items-start gap-3"
               >
-                <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0" />
+                <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0"       />
                 <span className="text-zion-slate-light">{benefit}</span>
               </motion.div>
             ))}
@@ -210,14 +210,14 @@ export default function AIAutonomousDevOps() {
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2 justify-center"
               >
                 Get Started Today
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"       />
               </Link>
               <Link
                 to="/pricing"
                 className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-lg text-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-2 justify-center"
               >
                 View Pricing
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"       />
               </Link>
             </div>
           </motion.div>

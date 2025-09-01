@@ -13,31 +13,31 @@ import {
   CheckCircle,
   ArrowRight
     const achievements = [
-        { number: "10+", label: "Years of Experience", icon: <Award className="w - 6 h - 6"/> },
-        { number: "500+", label: "Projects Delivered", icon: <Target className="w - 6 h - 6"/> },
-        { number: "50+", label: "Enterprise Clients", icon: <Users className="w - 6 h - 6"/> },
-        { number: "25+", label: "Countries Served", icon: <Globe className="w - 6 h - 6"/> }
+        { number: "10+", label: "Years of Experience", icon: <Award className="w - 6 h - 6"      /> },
+        { number: "500+", label: "Projects Delivered", icon: <Target className="w - 6 h - 6"      /> },
+        { number: "50+", label: "Enterprise Clients", icon: <Users className="w - 6 h - 6"      /> },
+        { number: "25+", label: "Countries Served", icon: <Globe className="w - 6 h - 6"      /> }
     ];
     const values = [
         {
             title: "Innovation First",
             description: "We push the boundaries of what's possible, constantly exploring emerging technologies and novel approaches.",
-            icon: <TrendingUp className="w - 8 h - 8"/>
+            icon: <TrendingUp className="w - 8 h - 8"      />
         },
         {
             title: "Client Success",
             description: "Your success is our success. We measure our achievements by the impact we create for your business.",
-            icon: <Target className="w - 8 h - 8"/>
+            icon: <Target className="w - 8 h - 8"      />
         },
         {
             title: "Excellence",
             description: "We maintain the highest standards in everything we do, from code quality to client communication.",
-            icon: <Award className="w - 8 h - 8"/>
+            icon: <Award className="w - 8 h - 8"      />
         },
         {
             title: "Trust & Security",
             description: "Your data and systems are protected with enterprise - grade security and compliance standards.",
-            icon: <Shield className="w - 8 h - 8"/>
+            icon: <Shield className="w - 8 h - 8"      />
 
     ];
     const technologies = [
@@ -76,7 +76,7 @@ import {
               to="/about"
               className="inline - flex items - center gap - 2 px - 6 py - 3 bg - gradient - to - r from - zion - cyan to - zion - purple text - white rounded - lg font - semibold hover:shadow - neon - lg hover:scale - 105 transition - all duration - 300 transform"
 
-              Learn Our Story < ArrowRight className="w - 5 h - 5"/>
+              Learn Our Story < ArrowRight className="w - 5 h - 5"      />
             </Link>
           </div>
 
@@ -120,7 +120,7 @@ import {
                 key={index}
                 className="flex items - center gap - 3 p - 4 bg - white / 5 backdrop - blur - sm rounded - xl border border - white / 10 hover:border - zion - cyan / 30 transition - all duration - 300"
 
-                <CheckCircle className="w - 5 h - 5 text - zion - cyan flex - shrink - 0" />
+                <CheckCircle className="w - 5 h - 5 text - zion - cyan flex - shrink - 0"       />
                 <span className="text - zion - slate - light text - sm">{tech}</span>
               </div>;) ) }
           </div>

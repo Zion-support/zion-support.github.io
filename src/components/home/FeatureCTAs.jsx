@@ -22,7 +22,7 @@ export function FeatureCTAs() {
       description:
         'Connect with the perfect tech talent using our advanced AI algorithms',
       icon: (
-        <Users className="h-10 w-10 p-2 rounded-md bg-blue-100 text-blue-700" />
+        <Users className="h-10 w-10 p-2 rounded-md bg-blue-100 text-blue-700"       />
       ),
       link: '/talent',
       badge: 'Popular',
@@ -34,7 +34,7 @@ export function FeatureCTAs() {
       description:
         'Access cutting-edge software solutions for every business need',
       icon: (
-        <Cpu className="h-10 w-10 p-2 rounded-md bg-green-100 text-green-700" />
+        <Cpu className="h-10 w-10 p-2 rounded-md bg-green-100 text-green-700"       />
       ),
       link: '/services',
       badge: 'New',
@@ -46,7 +46,7 @@ export function FeatureCTAs() {
       description:
         'Comprehensive IT solutions for large-scale business transformation',
       icon: (
-        <Briefcase className="h-10 w-10 p-2 rounded-md bg-purple-100 text-purple-700" />
+        <Briefcase className="h-10 w-10 p-2 rounded-md bg-purple-100 text-purple-700"       />
       ),
       link: '/enterprise',
       badge: 'Enterprise',
@@ -58,7 +58,7 @@ export function FeatureCTAs() {
       description:
         'Protect your business with enterprise-grade security solutions',
       icon: (
-        <Shield className="h-10 w-10 p-2 rounded-md bg-red-100 text-red-700" />
+        <Shield className="h-10 w-10 p-2 rounded-md bg-red-100 text-red-700"       />
       ),
       link: '/cybersecurity',
       badge: 'Critical',
@@ -70,7 +70,7 @@ export function FeatureCTAs() {
       description:
         'Leverage the power of quantum computing for complex problem-solving',
       icon: (
-        <Zap className="h-10 w-10 p-2 rounded-md bg-yellow-100 text-yellow-700" />
+        <Zap className="h-10 w-10 p-2 rounded-md bg-yellow-100 text-yellow-700"       />
       ),
       link: '/quantum',
       badge: 'Cutting-Edge',
@@ -81,7 +81,7 @@ export function FeatureCTAs() {
       title: 'AI Recruiting Platform',
       description: 'Streamline your hiring process with intelligent automation',
       icon: (
-        <Clock className="h-10 w-10 p-2 rounded-md bg-violet-100 text-violet-700" />
+        <Clock className="h-10 w-10 p-2 rounded-md bg-violet-100 text-violet-700"       />
       ),
       link: '/zion-hire-ai',
       badge: 'Premium',
@@ -142,7 +142,7 @@ export function FeatureCTAs() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {features.map((feature, index) => (
+          {features.map((((((((feature, index, index, index, index, index, index, index) => ({ ...((((((feature, index, index, index, index, index, index, key: index })) => ({ ...(((((feature, index, index, index, index, index, key: index })) => ({ ...((((feature, index, index, index, index, key: index })) => ({ ...(((feature, index, index, index, key: index })) => ({ ...((feature, index, index, key: index })) => ({ ...(feature, index, key: index })) => (
             <div
               key={index}
               className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-slate-600/50 transition-all duration-300"
@@ -167,20 +167,20 @@ export function FeatureCTAs() {
                 className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-200"
               >
                 Learn More
-                <ArrowRight className="w-4 h-4 ml-2" />
+                <ArrowRight className="w-4 h-4 ml-2"       />
               </Link>
             </div>
           ))}
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {ctaItems.map((item, index) => (
+          {ctaItems.map((((((((item, index, index, index, index, index, index, index) => ({ ...((((((item, index, index, index, index, index, index, key: index })) => ({ ...(((((item, index, index, index, index, index, key: index })) => ({ ...((((item, index, index, index, index, key: index })) => ({ ...(((item, index, index, index, key: index })) => ({ ...((item, index, index, key: index })) => ({ ...(item, index, key: index })) => (
             <Link key={index} to={item.href} className="group block">
               <div className="bg-gradient-to-r from-slate-800/50 to-slate-700/50 border border-slate-600/50 rounded-xl p-6 text-center hover:border-slate-500/50 transition-all duration-300 group-hover:scale-105">
                 <div
                   className={`w-16 h-16 bg-gradient-to-r ${item.color} rounded-full flex items-center justify-center mx-auto mb-4 group-hover:${item.hoverColor} transition-all duration-300`}
                 >
-                  <item.icon className="w-8 h-8 text-white" />
+                  <item.icon className="w-8 h-8 text-white"       />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-zion-cyan transition-colors duration-200">
                   {item.title}

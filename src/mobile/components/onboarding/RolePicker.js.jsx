@@ -26,7 +26,7 @@ export function RolePicker({ onSelect }) {
           <CardContent className="p-5">
             <div className="flex items-center">
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
-                <Briefcase className="h-6 w-6 text-primary" />
+                <Briefcase className="h-6 w-6 text-primary"       />
               </div>
               <div className="flex-1">
                 <h3 className="font-medium">{t('onboarding.talent_title')}</h3>
@@ -35,7 +35,7 @@ export function RolePicker({ onSelect }) {
                 </p>
               </div>
               {selectedRole === 'talent' && (
-                <Check className="h-5 w-5 text-primary" />
+                <Check className="h-5 w-5 text-primary"       />
               )}
             </div>
           </CardContent>
@@ -52,7 +52,7 @@ export function RolePicker({ onSelect }) {
           <CardContent className="p-5">
             <div className="flex items-center">
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
-                <Users className="h-6 w-6 text-primary" />
+                <Users className="h-6 w-6 text-primary"       />
               </div>
               <div className="flex-1">
                 <h3 className="font-medium">{t('onboarding.client_title')}</h3>
@@ -61,7 +61,7 @@ export function RolePicker({ onSelect }) {
                 </p>
               </div>
               {selectedRole === 'client' && (
-                <Check className="h-5 w-5 text-primary" />
+                <Check className="h-5 w-5 text-primary"       />
               )}
             </div>
           </CardContent>

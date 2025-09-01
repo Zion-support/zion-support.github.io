@@ -10,15 +10,15 @@ const AIAutonomousSystemsPlatform = () => {
         <meta
           name="description"
           content="Comprehensive AI autonomous systems platform that orchestrates intelligent agents, automates complex workflows, and enables next - generation autonomous operations."
-        />
+              />
         <meta
           name="keywords"
           content="AI autonomous systems, autonomous platform, intelligent agents, workflow automation, AI orchestration"
-        />
+              />
         <link
           rel="canonical"
           href="https://ziontechgroup.com / ai - autonomous - systems - platform"
-        />
+              />
       </Helmet>
 
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - blue - 900 to - slate - 900">

@@ -33,7 +33,7 @@ export function PointsBadge() {
           <DropdownMenuTrigger asChild>
             <TooltipTrigger asChild>
               <button type="button" className="flex items-center gap-1 text-xs text-muted-foreground">
-                <Gift className="h-4 w-4"/>
+                <Gift className="h-4 w-4"      />
                 <span>{`${points} pts`}</span>
               </button>
             </TooltipTrigger>

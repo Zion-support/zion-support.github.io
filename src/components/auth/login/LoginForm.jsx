@@ -92,11 +92,11 @@ function LoginForm() {
                     className="bg-zion-blue pl-10 placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
                     {...field}
                     autoComplete="off"
-                  />
-                  <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
+                        />
+                  <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"       />
                 </div>
               </FormControl>
-              <FormMessage className="text-red-400" />
+              <FormMessage className="text-red-400"       />
             </FormItem>
           )}
         />
@@ -115,8 +115,8 @@ function LoginForm() {
                     className="bg-zion-blue pl-10 border-zion-blue-light focus:border-zion-purple"
                     {...field}
                     autoComplete="off"
-                  />
-                  <LogIn className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
+                        />
+                  <LogIn className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"       />
                   <Button
                     type="button"
                     variant="ghost"
@@ -125,9 +125,9 @@ function LoginForm() {
                     onClick={() => setShowPassword(!showPassword)}
                   >
                     {showPassword ? (
-                      <EyeOff className="h-4 w-4" />
+                      <EyeOff className="h-4 w-4"       />
                     ) : (
-                      <Eye className="h-4 w-4" />
+                      <Eye className="h-4 w-4"       />
                     )}
                     <span className="sr-only">
                       {showPassword ? 'Hide password' : 'Show password'}
@@ -135,7 +135,7 @@ function LoginForm() {
                   </Button>
                 </div>
               </FormControl>
-              <FormMessage className="text-red-400" />
+              <FormMessage className="text-red-400"       />
             </FormItem>
           )}
         />
@@ -163,7 +163,7 @@ function LoginForm() {
             </>
           ) : (
             <>
-              <LogIn className="h-4 w-4 mr-2" />
+              <LogIn className="h-4 w-4 mr-2"       />
               Sign in
             </>
           )}

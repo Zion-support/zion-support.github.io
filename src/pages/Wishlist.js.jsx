@@ -46,7 +46,7 @@ export default function WishlistPage () {
                     return talent ? (<TalentCard key={fav.item_id} talent={talent} onMessage={ () => { }} onBook={ () => { }} isAuthenticated={true}/>) : null}
                 const item = productMap[fav.item_id];
                 return item ? (<div key={fav.item_id} className="relative">
-                <ProductListingCard listing={item}/>
+                <ProductListingCard listing={item}      />
                 <Button size="sm" className="absolute bottom - 2 right - 2" onClick={ () => addToCart (item) } disabled={items.some (i => i.id === item.id) }>
                   {items.some (i => i.id === item.id) ? 'In Cart' : 'Add to Cart'}
                 </Button>

@@ -68,7 +68,7 @@ const AIPoweredITAssetManagement = () => {
         title="AI - Powered IT Asset Management | Zion Tech Group"
         description="Intelligent IT asset management powered by AI for comprehensive monitoring, security, and optimization of your infrastructure."
         keywords="AI asset management, IT infrastructure, predictive maintenance, security monitoring, asset discovery"
-      />
+            />
 
       {/* Hero Section */}
       <section className="pt - 24 pb - 16 px - 4 sm:px - 6 lg:px - 8">
@@ -88,7 +88,7 @@ const AIPoweredITAssetManagement = () => {
             className="flex justify - center mb - 6"
 
             <div className="p - 3 bg - blue - 600 / 20 rounded - full">
-              <Server className="h - 12 w - 12 text - blue - 400"/>
+              <Server className="h - 12 w - 12 text - blue - 400"      />
             </div>
           </motion.div>
           
@@ -213,7 +213,7 @@ const AIPoweredITAssetManagement = () => {
 
                 <div className="flex items - center mb - 4">
                   <div className="p - 2 bg - blue - 600 / 20 rounded - lg mr - 4">
-                    <feature.icon className="h - 6 w - 6 text - blue - 400"/>
+                    <feature.icon className="h - 6 w - 6 text - blue - 400"      />
                   </div>
                   <h3 className="text - xl font - semibold">{feature.title}</h3>
                 </div>
@@ -267,7 +267,7 @@ const AIPoweredITAssetManagement = () => {
 
                 <div className="flex items - center mb - 4">
                   <div className="p - 2 bg - cyan - 600 / 20 rounded - lg mr - 4">
-                    <capability.icon className="h - 6 w - 6 text - cyan - 400"/>
+                    <capability.icon className="h - 6 w - 6 text - cyan - 400"      />
                   </div>
                   <h3 className="text - xl font - semibold">{capability.title}</h3>
                 </div>

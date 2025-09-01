@@ -20,11 +20,11 @@ const AIBusinessIntelligence = () => {
         <meta
           name="description"
           content="Transform your business with AI - powered business intelligence. Get real - time insights, predictive analytics, and intelligent decision - making capabilities."
-        />
+              />
         <meta
           name="keywords"
           content="AI business intelligence, business analytics, predictive analytics, data insights, Zion Tech Group"
-        />
+              />
       </Helmet>
 
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - indigo - 900 to - slate - 900">
@@ -33,7 +33,7 @@ const AIBusinessIntelligence = () => {
           <div className="max - w-7xl mx - auto text - center">
             <div className="flex justify - center mb - 6">
               <div className="p - 3 bg - indigo - 500 / 20 rounded - full">
-                <Brain className="h - 8 w - 8 text - indigo - 400" />
+                <Brain className="h - 8 w - 8 text - indigo - 400"       />
               </div>
             </div>
             <h1 className="text - 4xl md:text - 6xl font - bold text - white mb - 6">
@@ -72,7 +72,7 @@ const AIBusinessIntelligence = () => {
             <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">
               <div className="bg - white / 5 backdrop - blur - lg rounded - xl p - 6 border border - white / 10 hover:border - indigo - 500 / 50 transition - all duration - 300">
                 <div className="p - 3 bg - indigo - 500 / 20 rounded - lg w - fit mb - 4">
-                  <BarChart3 className="h - 6 w - 6 text - indigo - 400" />
+                  <BarChart3 className="h - 6 w - 6 text - indigo - 400"       />
                 </div>
                 <h3 className="text - xl font - semibold text - white mb - 3">
                   Predictive Analytics
@@ -85,7 +85,7 @@ const AIBusinessIntelligence = () => {
 
               <div className="bg - white / 5 backdrop - blur - lg rounded - xl p - 6 border border - white / 10 hover:border - indigo - 500 / 50 transition - all duration - 300">
                 <div className="p - 3 bg - green - 500 / 20 rounded - lg w - fit mb - 4">
-                  <TrendingUp className="h - 6 w - 6 text - green - 400" />
+                  <TrendingUp className="h - 6 w - 6 text - green - 400"       />
                 </div>
                 <h3 className="text - xl font - semibold text - white mb - 3">
                   Real - time Monitoring
@@ -97,7 +97,7 @@ const AIBusinessIntelligence = () => {
 
               <div className="bg - white / 5 backdrop - blur - lg rounded - xl p - 6 border border - white / 10 hover:border - indigo - 500 / 50 transition - all duration - 300">
                 <div className="p - 3 bg - purple - 500 / 20 rounded - lg w - fit mb - 4">
-                  <Target className="h - 6 w - 6 text - purple - 400" />
+                  <Target className="h - 6 w - 6 text - purple - 400"       />
                 </div>
                 <h3 className="text - xl font - semibold text - white mb - 3">
                   Goal Tracking
@@ -109,7 +109,7 @@ const AIBusinessIntelligence = () => {
 
               <div className="bg - white / 5 backdrop - blur - lg rounded - xl p - 6 border border - white / 10 hover:border - indigo - 500 / 50 transition - all duration - 300">
                 <div className="p - 3 bg - blue - 500 / 20 rounded - lg w - fit mb - 4">
-                  <Users className="h - 6 w - 6 text - blue - 400" />
+                  <Users className="h - 6 w - 6 text - blue - 400"       />
                 </div>
                 <h3 className="text - xl font - semibold text - white mb - 3">
                   Customer Insights
@@ -121,7 +121,7 @@ const AIBusinessIntelligence = () => {
 
               <div className="bg - white / 5 backdrop - blur - lg rounded - xl p - 6 border border - white / 10 hover:border - indigo - 500 / 50 transition - all duration - 300">
                 <div className="p - 3 bg - yellow - 500 / 20 rounded - lg w - fit mb - 4">
-                  <Zap className="h - 6 w - 6 text - yellow - 400" />
+                  <Zap className="h - 6 w - 6 text - yellow - 400"       />
                 </div>
                 <h3 className="text - xl font - semibold text - white mb - 3">
                   Automated Reporting
@@ -133,7 +133,7 @@ const AIBusinessIntelligence = () => {
 
               <div className="bg - white / 5 backdrop - blur - lg rounded - xl p - 6 border border - white / 10 hover:border - indigo - 500 / 50 transition - all duration - 300">
                 <div className="p - 3 bg - red - 500 / 20 rounded - lg w - fit mb - 4">
-                  <Shield className="h - 6 w - 6 text - red - 400" />
+                  <Shield className="h - 6 w - 6 text - red - 400"       />
                 </div>
                 <h3 className="text - xl font - semibold text - white mb - 3">
                   Risk Assessment
@@ -177,7 +177,7 @@ const AIBusinessIntelligence = () => {
                       key={index}
                       className="flex items - center space - x-3"
                     >
-                      <CheckCircle className="h - 5 w - 5 text - green - 400 flex - shrink - 0" />
+                      <CheckCircle className="h - 5 w - 5 text - green - 400 flex - shrink - 0"       />
                       <span className="text - gray - 300">{capability}</span>
                     </div>) ) }
                 </div>
@@ -201,7 +201,7 @@ const AIBusinessIntelligence = () => {
                       key={index}
                       className="flex items - center space - x-3"
                     >
-                      <CheckCircle className="h - 5 w - 5 text - green - 400 flex - shrink - 0" />
+                      <CheckCircle className="h - 5 w - 5 text - green - 400 flex - shrink - 0"       />
                       <span className="text - gray - 300">{capability}</span>
                     </div>) ) }
                 </div>

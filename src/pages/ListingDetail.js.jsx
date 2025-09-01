@@ -72,7 +72,7 @@ import Link from 'next / link';
                       alt={listing.title}
                       className="w - full h - full object - cover"
                       fallbackSrc="/placeholder.svg"
-                    />) : (<div className="w - full h - full flex items - center justify - center bg - zion - blue - light / 20">
+                          />) : (<div className="w - full h - full flex items - center justify - center bg - zion - blue - light / 20">
                       <span className="text - zion - slate - light">
                         No image available
                       </span>
@@ -93,7 +93,7 @@ import Link from 'next / link';
                           alt={`${listing.title} - image ${index + 1}`}
                           className="w - full h - full object - cover"
                           fallbackSrc="/placeholder.svg"
-                        />
+                              />
                       </div>) ) }
                   </div>) }
               </div>
@@ -115,7 +115,7 @@ import Link from 'next / link';
                   <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">
                     <div className="flex items - start gap - 3">
                       <div className="p - 2 rounded - full bg - zion - purple / 20">
-                        <Brain className="h - 5 w - 5 text - zion - purple" />
+                        <Brain className="h - 5 w - 5 text - zion - purple"       />
                       </div>
                       <div>
                         <h4 className="font - medium text - white">Advanced AI</h4>
@@ -126,7 +126,7 @@ import Link from 'next / link';
                     </div>
                     <div className="flex items - start gap - 3">
                       <div className="p - 2 rounded - full bg - zion - cyan / 20">
-                        <Shield className="h - 5 w - 5 text - zion - cyan" />
+                        <Shield className="h - 5 w - 5 text - zion - cyan"       />
                       </div>
                       <div>
                         <h4 className="font - medium text - white">
@@ -182,7 +182,7 @@ import Link from 'next / link';
                           className={cn ('h - 5 w - 5',
                             i < Math.floor (listing.rating) ? 'text - zion - cyan fill - zion - cyan'
                               : 'text - zion - slate - light') }
-                        />) ) }
+                              />) ) }
                     </div>
                     <span className="text - sm text - zion - slate - light">
                       {listing.rating.toFixed (1) } ({listing.reviewCount}{' '}
@@ -227,7 +227,7 @@ import Link from 'next / link';
                     disabled={isLoading}
                     className="w - full border - zion - purple text - zion - cyan hover:bg - zion - purple / 10"
                   >
-                    <MessageSquare className="h - 4 w - 4 mr - 2" />
+                    <MessageSquare className="h - 4 w - 4 mr - 2"       />
                     Contact Publisher
                   </Button>
                 </div>
@@ -302,7 +302,7 @@ import Link from 'next / link';
         email={listing.author.email} // TypeScript now knows this might be null
         profileName={listing.author.name}
         profileType="service"
-      />
+            />
     </DialogContent>
   </Dialog>;
 }

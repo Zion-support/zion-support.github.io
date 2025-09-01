@@ -58,7 +58,7 @@ export function CTASection() {
 
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/30 rounded-full text-zion-cyan text-sm font-medium mb-6">
-            <RocketLaunchIcon className="w-4 h-4"/>
+            <RocketLaunchIcon className="w-4 h-4"      />
             Ready to Get Started?
           </div>
 
@@ -77,7 +77,7 @@ export function CTASection() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link to="/contact" className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/30 flex items-center justify-center gap-2">
-              <RocketLaunchIcon className="w-5 h-5"/>
+              <RocketLaunchIcon className="w-5 h-5"      />
               Get Free Consultation
             </Link>
             <Link to="/services" className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2">
@@ -88,12 +88,12 @@ export function CTASection() {
 
         {/* Contact Options */}
         <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {ctaOptions.map((option, index) => (<motion.div key={index} variants={itemVariants} className="group">
+          {ctaOptions.map((((((((option, index, index, index, index, index, index, index) => ({ ...((((((option, index, index, index, index, index, index, key: index })) => ({ ...(((((option, index, index, index, index, index, key: index })) => ({ ...((((option, index, index, index, index, key: index })) => ({ ...(((option, index, index, index, key: index })) => ({ ...((option, index, index, key: index })) => ({ ...(option, index, key: index })) => (<motion.div key={index} variants={itemVariants} className="group">
               <Link to={option.href} className="block">
                 <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:border-zion-cyan/30 transition-all duration-300 hover:scale-105 text-center">
                   {/* Icon */}
                   <div className={`w-16 h-16 bg-gradient-to-br ${option.color} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                    <option.icon className="w-8 h-8 text-white"/>
+                    <option.icon className="w-8 h-8 text-white"      />
                   </div>
 
                   {/* Content */}

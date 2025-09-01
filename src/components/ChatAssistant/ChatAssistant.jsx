@@ -137,7 +137,7 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
         <div className="bg-zion-blue-dark p-3 flex items-center justify-between border-b border-zion-purple/20">
           <div className="flex items-center space-x-3">
             <Avatar className="h-10 w-10 border border-zion-purple/20">
-              <AvatarImage src={recipient.avatarUrl} alt={recipient.name}/>
+              <AvatarImage src={recipient.avatarUrl} alt={recipient.name}      />
               <AvatarFallback className="bg-zion-purple/20 text-white">
                 {recipient.name.charAt(0).toUpperCase()}
               </AvatarFallback>
@@ -150,7 +150,7 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
             </div>
           </div>
           <Button variant="ghost" size="icon" className="text-white hover:bg-zion-purple/10 rounded-full" onClick={onClose} aria-label="Close chat">
-            <X className="h-5 w-5"/>
+            <X className="h-5 w-5"      />
           </Button>
         </div>
 
@@ -163,13 +163,13 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
         <div className="flex-1 overflow-y-auto p-4 space-y-4" aria-live="polite">
           {currentMessages.length === 0 ? (<div className="text-center text-zion-slate py-8">
               <p>Start a conversation with {recipient.name}</p>
-            </div>) : (currentMessages.map((msg) => (<ChatMessage key={msg.id} role={msg.role} message={msg.message}/>)))}
-          <div ref={messagesEndRef}/>
+            </div>) : (currentMessages.map((((((((msg, index, index, index, index, index, index) => ({ ...((((((msg, index, index, index, index, index, key: index })) => ({ ...(((((msg, index, index, index, index, key: index })) => ({ ...((((msg, index, index, index, key: index })) => ({ ...(((msg, index, index, key: index })) => ({ ...((msg, index, key: index })) => ({ ...(msg, key: index })) => (<ChatMessage key={msg.id} role={msg.role} message={msg.message}      />)))}
+          <div ref={messagesEndRef}      />
         </div>
 
         {/* Input */}
         <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">
-          <ChatInput onSend={handleSendMessage}/>
+          <ChatInput onSend={handleSendMessage}      />
         </div>
       </div>
 

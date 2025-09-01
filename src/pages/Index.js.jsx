@@ -36,38 +36,38 @@ export default function Index () {
     {
       title: t ('home.tool_ai_matcher') ,
       description: t ('home.tool_ai_matcher_desc') ,
-      icon: <Sparkles className="h - 6 w - 6 text - zion - cyan" />,
+      icon: <Sparkles className="h - 6 w - 6 text - zion - cyan"       />,
       link: '/match',
     },
     {
       title: t ('home.tool_talent') ,
       description: t ('home.tool_talent_desc') ,
-      icon: <Users className="h - 6 w - 6 text - zion - purple" />,
+      icon: <Users className="h - 6 w - 6 text - zion - purple"       />,
       link: '/talent',
     },
     {
       title: t ('home.tool_services') ,
       description: t ('home.tool_services_desc') ,
-      icon: <Zap className="h - 6 w - 6 text - zion - cyan" />,
+      icon: <Zap className="h - 6 w - 6 text - zion - cyan"       />,
       link: '/services',
     },
     {
       title: t ('home.tool_equipment') ,
       description: t ('home.tool_equipment_desc') ,
-      icon: <Settings className="h - 6 w - 6 text - zion - purple" />,
+      icon: <Settings className="h - 6 w - 6 text - zion - purple"       />,
       link: '/equipment',
     },
     {
       title: t ('home.tool_analytics') ,
       description: t ('home.tool_analytics_desc') ,
-      icon: <BarChart3 className="h - 6 w - 6 text - zion - cyan" />,
+      icon: <BarChart3 className="h - 6 w - 6 text - zion - cyan"       />,
       link: '/analytics',
     },
     {
       title: 'Mobile App',
       description:
         'Take Zion with you on the go with our mobile app for iOS and Android',
-      icon: <Smartphone className="h - 6 w - 6 text - zion - purple" />,
+      icon: <Smartphone className="h - 6 w - 6 text - zion - purple"       />,
       link: '/mobile - launch',
     },
   ];
@@ -77,9 +77,9 @@ export default function Index () {
         description={t ('home.seo_description') }
         keywords={t ('home.seo_keywords') }
         canonical="https://ziontechgroup.com/"
-      />
-      <Header />
-      <HeroSection />
+            />
+      <Header       />
+      <HeroSection       />
 
       {/* Quick Access Tools Section */}
       <section className="py - 16 bg - zion - blue - dark">
@@ -116,30 +116,30 @@ export default function Index () {
                   <span>{t ('general.explore') }</span>
                   <ArrowRight
                     className={`${isRTL ? 'ml - 0 mr - 2 rotate - 180' : 'ml - 2'} h - 4 w - 4`}
-                  />
+                        />
                 </div>
               </Link>) ) }
           </div>
         </div>
       </section>
 
-      <CategoriesSection />
-      <BenefitsSection />
+      <CategoriesSection       />
+      <BenefitsSection       />
 
       {/* Add the comprehensive features guide section */}
-      <FeaturesGuideSection />
+      <FeaturesGuideSection       />
 
-      <HowItWorksSection />
-      <FeaturedListingsSection />
-      <TestimonialCarousel />
-      <TrustedBySection />
-      <BlogSection />
+      <HowItWorksSection       />
+      <FeaturedListingsSection       />
+      <TestimonialCarousel       />
+      <TrustedBySection       />
+      <BlogSection       />
 
       {/* Add social share section to encourage users to spread the word */}
-      <SocialShareSection />
+      <SocialShareSection       />
 
-      <WaitlistSection />
-      <FloatingCTA />
-      <Footer />
+      <WaitlistSection       />
+      <FloatingCTA       />
+      <Footer       />
     </div>) ;
 }

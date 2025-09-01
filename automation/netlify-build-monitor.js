@@ -13,10 +13,10 @@
  * - Automatic deployment triggers
  */
 
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs');
+import path from 'path');
 const { execSync, spawn } = require('child_process');
-const cron = require('node-cron');
+import cron from 'node-cron');
 
 class NetlifyBuildMonitor {
   constructor() {
@@ -567,15 +567,15 @@ class NetlifyBuildMonitor {
         // Add performance optimizations
         if (!config.includes('swcMinify')) {
           config = config.replace(
-            'module.exports = {',
-            'module.exports = {\n  swcMinify: true,'
+            'export default {',
+            'export default {\n  swcMinify: true,'
           );
         }
         
         if (!config.includes('experimental')) {
           config = config.replace(
-            'module.exports = {',
-            'module.exports = {\n  experimental: {\n    optimizeCss: true,\n    optimizePackageImports: true\n  },'
+            'export default {',
+            'export default {\n  experimental: {\n    optimizeCss: true,\n    optimizePackageImports: true\n  },'
           );
         }
         
@@ -668,8 +668,8 @@ class NetlifyBuildMonitor {
         
         if (!config.includes('experimental')) {
           config = config.replace(
-            'module.exports = {',
-            'module.exports = {\n  experimental: {\n    optimizeCss: true,\n    optimizePackageImports: true,\n    turbo: {\n      rules: {\n        "*.svg": {\n          loaders: ["@svgr/webpack"],\n          as: "*.js"\n        }\n      }\n    }\n  },'
+            'export default {',
+            'export default {\n  experimental: {\n    optimizeCss: true,\n    optimizePackageImports: true,\n    turbo: {\n      rules: {\n        "*.svg": {\n          loaders: ["@svgr/webpack"],\n          as: "*.js"\n        }\n      }\n    }\n  },'
           );
         }
         
@@ -795,4 +795,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = NetlifyBuildMonitor;
+export default NetlifyBuildMonitor;

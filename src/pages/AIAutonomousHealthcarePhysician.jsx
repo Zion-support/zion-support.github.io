@@ -10,15 +10,15 @@ const AIAutonomousHealthcarePhysician = () => {
         <meta
           name="description"
           content="Revolutionary AI autonomous healthcare physician that provides 24 / 7 medical consultation, diagnosis support, and health monitoring with advanced medical AI capabilities."
-        />
+              />
         <meta
           name="keywords"
           content="AI healthcare, autonomous physician, AI diagnosis, medical AI, healthcare automation, AI medical consultation"
-        />
+              />
         <link
           rel="canonical"
           href="https://ziontechgroup.com / ai - autonomous - healthcare - physician"
-        />
+              />
       </Helmet>
 
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - green - 900 to - slate - 900">

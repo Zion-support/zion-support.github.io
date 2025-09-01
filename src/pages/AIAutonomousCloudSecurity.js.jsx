@@ -10,15 +10,15 @@ const AIAutonomousCloudSecurity = () => {
         <meta
           name="description"
           content="Revolutionary AI autonomous cloud security platform that continuously secures cloud environments, detects threats, and protects infrastructure with advanced AI capabilities and autonomous operation."
-        />
+              />
         <meta
           name="keywords"
           content="AI cloud security, autonomous cloud security, cloud protection, threat detection, autonomous operations, AI cloud security platform"
-        />
+              />
         <link
           rel="canonical"
           href="https://ziontechgroup.com / ai - autonomous - cloud - security"
-        />
+              />
       </Helmet>
 
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - sky - 900 to - slate - 900">

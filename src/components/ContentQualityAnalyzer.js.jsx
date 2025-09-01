@@ -166,7 +166,7 @@ const ContentQualityAnalyzer = () => {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
       >
-        <FileText className="w - 6 h - 6" />
+        <FileText className="w - 6 h - 6"       />
       </motion.button>
 
       {/* Modal */}
@@ -188,7 +188,7 @@ const ContentQualityAnalyzer = () => {
             <div className="bg - gradient - to - r from - purple - 500 to - pink - 500 p - 6 text - white">
               <div className="flex items - center justify - between">
                 <div className="flex items - center space - x-3">
-                  <FileText className="w - 8 h - 8" />
+                  <FileText className="w - 8 h - 8"       />
                   <h2 className="text - 2xl font - bold">
                     Content Quality Analyzer
                   </h2>
@@ -287,7 +287,7 @@ const ContentQualityAnalyzer = () => {
                   disabled={isAnalyzing}
                   className="bg - gradient - to - r from - purple - 500 to - pink - 500 text - white px - 6 py - 2 rounded - lg font - medium hover:from - purple - 600 hover:to - pink - 600 transition - all duration - 300 disabled:opacity - 50 disabled:cursor - not - allowed flex items - center space - x-2"
                 >
-                  {isAnalyzing ? (<Zap className="w - 4 h - 4 animate - spin" />) : (<Search className="w - 4 h - 4" />) }
+                  {isAnalyzing ? (<Zap className="w - 4 h - 4 animate - spin"       />) : (<Search className="w - 4 h - 4"       />) }
                   <span>
                     {isAnalyzing ? 'Analyzing...' : 'Analyze Content'}
                   </span>
@@ -296,7 +296,7 @@ const ContentQualityAnalyzer = () => {
 
               {/* Search */}
               <div className="relative">
-                <Search className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text - gray - 400 w - 5 h - 5" />
+                <Search className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text - gray - 400 w - 5 h - 5"       />
                 <input
                   type="text"
                   placeholder="Search issues by page title or description..."
@@ -394,19 +394,19 @@ const ContentQualityAnalyzer = () => {
                                 className="p - 2 text - blue - 400 hover:text - blue - 300 transition - colors"
                                 title="View Page"
                               >
-                                <Eye className="w - 4 h - 4" />
+                                <Eye className="w - 4 h - 4"       />
                               </button>
                               <button
                                 className="p - 2 text - green - 400 hover:text - green - 300 transition - colors"
                                 title="Mark as Resolved"
                               >
-                                <CheckCircle className="w - 4 h - 4" />
+                                <CheckCircle className="w - 4 h - 4"       />
                               </button>
                               <button
                                 className="p - 2 text - yellow - 400 hover:text - yellow - 300 transition - colors"
                                 title="Edit"
                               >
-                                <Edit3 className="w - 4 h - 4" />
+                                <Edit3 className="w - 4 h - 4"       />
                               </button>
                             </div>
                           </td>
@@ -420,7 +420,7 @@ const ContentQualityAnalyzer = () => {
               <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 4">
                 <div className="bg - gradient - to - r from - green - 900 / 20 to - emerald - 900 / 20 border border - green - 500 / 20 rounded - lg p - 4">
                   <h3 className="text - lg font - semibold text - green - 400 mb - 2 flex items - center">
-                    <CheckCircle className="w - 5 h - 5 mr - 2" />
+                    <CheckCircle className="w - 5 h - 5 mr - 2"       />
                     Quick Fixes
                   </h3>
                   <ul className="text - green - 200 text - sm space - y-1">
@@ -432,7 +432,7 @@ const ContentQualityAnalyzer = () => {
 
                 <div className="bg - gradient - to - r from - blue - 900 / 20 to - cyan - 900 / 20 border border - blue - 500 / 20 rounded - lg p - 4">
                   <h3 className="text - lg font - semibold text - blue - 400 mb - 2 flex items - center">
-                    <BarChart3 className="w - 5 h - 5 mr - 2" />
+                    <BarChart3 className="w - 5 h - 5 mr - 2"       />
                     Content Metrics
                   </h3>
                   <ul className="text - blue - 200 text - sm space - y-1">
@@ -444,7 +444,7 @@ const ContentQualityAnalyzer = () => {
 
                 <div className="bg - gradient - to - r from - purple - 900 / 20 to - pink - 900 / 20 border border - purple - 500 / 20 rounded - lg p - 4">
                   <h3 className="text - lg font - semibold text - purple - 400 mb - 2 flex items - center">
-                    <TrendingUp className="w - 5 h - 5 mr - 2" />
+                    <TrendingUp className="w - 5 h - 5 mr - 2"       />
                     SEO Impact
                   </h3>
                   <ul className="text - purple - 200 text - sm space - y-1">

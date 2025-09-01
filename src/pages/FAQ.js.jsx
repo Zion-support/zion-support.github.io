@@ -80,8 +80,8 @@ export default function FAQ () {
         description="Find answers to common questions about Zion Tech Group's AI and tech marketplace platform."
         keywords="FAQ, Zion Tech Group, AI marketplace, tech platform, questions, support"
         canonical="https://ziontechgroup.com / faq"
-      />
-      <Header />
+            />
+      <Header       />
       <main className="min - h-screen bg - zion - blue pt - 24 pb - 20">
         <div className="container mx - auto px - 4 sm:px - 6 lg:px - 8">
           <div className="text - center mb - 16">
@@ -140,6 +140,6 @@ export default function FAQ () {
           </div>
         </div>
       </main>
-      <Footer />
+      <Footer       />
     </>) ;
 }

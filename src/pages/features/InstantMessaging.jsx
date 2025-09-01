@@ -21,13 +21,13 @@ export default function InstantMessaging() {
         description="Negotiate deals and collaborate instantly with real-time chat."
         keywords="real-time messaging, Socket.IO chat, project communication"
         canonical="https://app.ziontechgroup.com/features/instant-messaging"
-      />
+            />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
-      <Header />
+      <Header       />
       <main className="bg-background text-white py-12">
         <div className="container mx-auto px-4 md:px-6">
           <GradientHeading className="mb-4 text-center">
@@ -41,7 +41,7 @@ export default function InstantMessaging() {
             src="https://placehold.co/800x400"
             alt="Screenshot of chat interface"
             className="rounded-lg shadow-xl mx-auto mb-12"
-          />
+                />
           <h2 className="text-2xl font-bold mb-4">Benefits &amp; Use Cases</h2>
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
             <li>Real-time notifications keep everyone updated.</li>
@@ -77,7 +77,7 @@ export default function InstantMessaging() {
           </div>
         </div>
       </main>
-      <Footer />
+      <Footer       />
     </>
   );
 }

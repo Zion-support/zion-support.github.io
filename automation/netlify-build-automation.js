@@ -12,11 +12,11 @@
  * - Error reporting and notifications
  */
 
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs');
+import path from 'path');
 const { execSync } = require('child_process');
-const cron = require('node-cron');
-const https = require('https');
+import cron from 'node-cron');
+import https from 'https');
 
 class NetlifyBuildAutomation {
   constructor() {
@@ -780,8 +780,8 @@ class NetlifyBuildAutomation {
         // Add performance optimizations
         if (!config.includes('swcMinify')) {
           config = config.replace(
-            'module.exports = {',
-            'module.exports = {\n  swcMinify: true,'
+            'export default {',
+            'export default {\n  swcMinify: true,'
           );
         }
         
@@ -927,8 +927,8 @@ class NetlifyBuildAutomation {
         // Add performance optimizations
         if (!config.includes('experimental')) {
           config = config.replace(
-            'module.exports = {',
-            'module.exports = {\n  experimental: {\n    optimizeCss: true,\n    optimizePackageImports: true\n  },'
+            'export default {',
+            'export default {\n  experimental: {\n    optimizeCss: true,\n    optimizePackageImports: true\n  },'
           );
         }
         
@@ -1139,4 +1139,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = NetlifyBuildAutomation;
+export default NetlifyBuildAutomation;

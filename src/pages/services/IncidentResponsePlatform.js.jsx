@@ -20,47 +20,47 @@ const IncidentResponsePlatform = () => {
       title: 'AI-Powered Threat Detection',
       description:
         'Advanced machine learning algorithms detect threats in real-time with high accuracy and low false positives',
-      icon: <Eye className="w-6 h-6" />,
+      icon: <Eye className="w-6 h-6"       />,
     },
     {
       title: 'Automated Response Workflows',
       description:
         'Intelligent automation handles routine incidents while escalating critical threats to human analysts',
-      icon: <Zap className="w-6 h-6" />,
+      icon: <Zap className="w-6 h-6"       />,
     },
     {
       title: 'Real-time Alerting & Notifications',
       description:
         'Instant notifications across multiple channels with customizable escalation paths and response teams',
-      icon: <AlertTriangle className="w-6 h-6" />,
+      icon: <AlertTriangle className="w-6 h-6"       />,
     },
     {
       title: 'Incident Timeline Tracking',
       description:
         'Comprehensive tracking of all incident activities, communications, and resolution steps for audit compliance',
-      icon: <Clock className="w-6 h-6" />,
+      icon: <Clock className="w-6 h-6"       />,
     },
   ];
   const benefits = [
     {
       metric: '70%',
       description: 'Reduction in response time',
-      icon: <Clock className="w-5 h-5" />,
+      icon: <Clock className="w-5 h-5"       />,
     },
     {
       metric: '45%',
       description: 'Improvement in resolution quality',
-      icon: <TrendingUp className="w-5 h-5" />,
+      icon: <TrendingUp className="w-5 h-5"       />,
     },
     {
       metric: '24/7',
       description: 'Automated monitoring',
-      icon: <Activity className="w-5 h-5" />,
+      icon: <Activity className="w-5 h-5"       />,
     },
     {
       metric: '90%',
       description: 'Compliance assurance',
-      icon: <Shield className="w-5 h-5" />,
+      icon: <Shield className="w-5 h-5"       />,
     },
   ];
   const pricingPlans = [
@@ -139,23 +139,23 @@ const IncidentResponsePlatform = () => {
         <meta
           name="description"
           content="Transform your security operations with our AI-driven incident response platform. Automated threat detection, response workflows, and compliance reporting."
-        />
+              />
         <meta
           property="og:title"
           content="Intelligent Incident Response Platform — Zion Tech Group"
-        />
+              />
         <meta
           property="og:description"
           content="AI-powered incident response platform with automated workflows and real-time threat detection."
-        />
+              />
         <meta
           property="og:url"
           content="https://ziontechgroup.com/services/incident-response-platform"
-        />
+              />
         <link
           rel="canonical"
           href="https://ziontechgroup.com/services/incident-response-platform"
-        />
+              />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 text-white pt-20">
@@ -200,7 +200,7 @@ const IncidentResponsePlatform = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
             >
-              {benefits.map((benefit, index) => (
+              {benefits.map((((((((benefit, index, index, index, index, index, index, index) => ({ ...((((((benefit, index, index, index, index, index, index, key: index })) => ({ ...(((((benefit, index, index, index, index, index, key: index })) => ({ ...((((benefit, index, index, index, index, key: index })) => ({ ...(((benefit, index, index, index, key: index })) => ({ ...((benefit, index, index, key: index })) => ({ ...(benefit, index, key: index })) => (
                 <div key={index} className="text-center">
                   <div className="text-3xl font-bold text-red-400 mb-2">
                     {benefit.metric}
@@ -253,7 +253,7 @@ const IncidentResponsePlatform = () => {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {features.map((feature, index) => (
+              {features.map((((((((feature, index, index, index, index, index, index, index) => ({ ...((((((feature, index, index, index, index, index, index, key: index })) => ({ ...(((((feature, index, index, index, index, index, key: index })) => ({ ...((((feature, index, index, index, index, key: index })) => ({ ...(((feature, index, index, index, key: index })) => ({ ...((feature, index, index, key: index })) => ({ ...(feature, index, key: index })) => (
                 <motion.div
                   key={index}
                   className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300"
@@ -290,7 +290,7 @@ const IncidentResponsePlatform = () => {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
+              {pricingPlans.map((((((((plan, index, index, index, index, index, index, index) => ({ ...((((((plan, index, index, index, index, index, index, key: index })) => ({ ...(((((plan, index, index, index, index, index, key: index })) => ({ ...((((plan, index, index, index, index, key: index })) => ({ ...(((plan, index, index, index, key: index })) => ({ ...((plan, index, index, key: index })) => ({ ...(plan, index, key: index })) => (
                 <motion.div
                   key={index}
                   className={`bg-white/10 backdrop-blur-lg rounded-xl p-8 border transition-all duration-300 ${
@@ -324,9 +324,9 @@ const IncidentResponsePlatform = () => {
                   </div>
 
                   <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, idx) => (
+                    {plan.features.map((((((((feature, idx, index, index, index, index, index, index) => ({ ...((((((feature, idx, index, index, index, index, index, key: index })) => ({ ...(((((feature, idx, index, index, index, index, key: index })) => ({ ...((((feature, idx, index, index, index, key: index })) => ({ ...(((feature, idx, index, index, key: index })) => ({ ...((feature, idx, index, key: index })) => ({ ...(feature, idx, key: index })) => (
                       <li key={idx} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"       />
                         {feature}
                       </li>
                     ))}
@@ -362,12 +362,12 @@ const IncidentResponsePlatform = () => {
                   Security Integrations
                 </h3>
                 <div className="grid grid-cols-2 gap-4">
-                  {integrations.map((integration, index) => (
+                  {integrations.map((((((((integration, index, index, index, index, index, index, index) => ({ ...((((((integration, index, index, index, index, index, index, key: index })) => ({ ...(((((integration, index, index, index, index, index, key: index })) => ({ ...((((integration, index, index, index, index, key: index })) => ({ ...(((integration, index, index, index, key: index })) => ({ ...((integration, index, index, key: index })) => ({ ...(integration, index, key: index })) => (
                     <div
                       key={index}
                       className="flex items-center bg-white/10 rounded-lg p-3"
                     >
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3"       />
                       <span className="text-gray-300">{integration}</span>
                     </div>
                   ))}
@@ -384,12 +384,12 @@ const IncidentResponsePlatform = () => {
                   Perfect For
                 </h3>
                 <div className="space-y-3">
-                  {useCases.map((useCase, index) => (
+                  {useCases.map((((((((useCase, index, index, index, index, index, index, index) => ({ ...((((((useCase, index, index, index, index, index, index, key: index })) => ({ ...(((((useCase, index, index, index, index, index, key: index })) => ({ ...((((useCase, index, index, index, index, key: index })) => ({ ...(((useCase, index, index, index, key: index })) => ({ ...((useCase, index, index, key: index })) => ({ ...(useCase, index, key: index })) => (
                     <div
                       key={index}
                       className="flex items-center bg-white/10 rounded-lg p-3"
                     >
-                      <Target className="w-5 h-5 text-yellow-400 mr-3" />
+                      <Target className="w-5 h-5 text-yellow-400 mr-3"       />
                       <span className="text-gray-300">{useCase}</span>
                     </div>
                   ))}
@@ -431,7 +431,7 @@ const IncidentResponsePlatform = () => {
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-red-600 to-pink-600 text-white font-semibold rounded-lg hover:from-red-700 hover:to-pink-700 transition-all duration-300"
               >
                 Start Free Trial
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5"       />
               </Link>
               <a
                 href="tel:+13024640950"

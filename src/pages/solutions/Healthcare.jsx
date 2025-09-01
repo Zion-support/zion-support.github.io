@@ -115,7 +115,7 @@ const HealthcareSolutions = () => {
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {solutions.map((solution, index) => {
+            {solutions.map((((((((solution, index, index, index, index, index, index, index) => ({ ...((((((solution, index, index, index, index, index, index, key: index })) => ({ ...(((((solution, index, index, index, index, index, key: index })) => ({ ...((((solution, index, index, index, index, key: index })) => ({ ...(((solution, index, index, index, key: index })) => ({ ...((solution, index, index, key: index })) => ({ ...(solution, index, key: index })) => {
               const Icon = solution.icon;
               return (
                 <div
@@ -124,7 +124,7 @@ const HealthcareSolutions = () => {
                 >
                   <div className="flex items-center mb-6">
                     <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mr-4">
-                      <Icon className="w-8 h-8 text-white" />
+                      <Icon className="w-8 h-8 text-white"       />
                     </div>
                     <h3 className="text-2xl font-bold">{solution.title}</h3>
                   </div>
@@ -132,7 +132,7 @@ const HealthcareSolutions = () => {
                   <p className="text-gray-300 mb-6">{solution.description}</p>
 
                   <ul className="space-y-3 mb-6">
-                    {solution.features.map((feature, featureIndex) => (
+                    {solution.features.map((((((((feature, featureIndex, index, index, index, index, index, index) => ({ ...((((((feature, featureIndex, index, index, index, index, index, key: index })) => ({ ...(((((feature, featureIndex, index, index, index, index, key: index })) => ({ ...((((feature, featureIndex, index, index, index, key: index })) => ({ ...(((feature, featureIndex, index, index, key: index })) => ({ ...((feature, featureIndex, index, key: index })) => ({ ...(feature, featureIndex, key: index })) => (
                       <li
                         key={featureIndex}
                         className="flex items-center space-x-3"
@@ -159,7 +159,7 @@ const HealthcareSolutions = () => {
                         strokeLinejoin="round"
                         strokeWidth={2}
                         d="M9 5l7 7-7 7"
-                      />
+                            />
                     </svg>
                   </Link>
                 </div>
@@ -177,12 +177,12 @@ const HealthcareSolutions = () => {
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => {
+            {benefits.map((((((((benefit, index, index, index, index, index, index, index) => ({ ...((((((benefit, index, index, index, index, index, index, key: index })) => ({ ...(((((benefit, index, index, index, index, index, key: index })) => ({ ...((((benefit, index, index, index, index, key: index })) => ({ ...(((benefit, index, index, index, key: index })) => ({ ...((benefit, index, index, key: index })) => ({ ...(benefit, index, key: index })) => {
               const Icon = benefit.icon;
               return (
                 <div key={index} className="text-center">
                   <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                    <Icon className="w-10 h-10 text-white" />
+                    <Icon className="w-10 h-10 text-white"       />
                   </div>
                   <h3 className="text-xl font-bold mb-4">{benefit.title}</h3>
                   <p className="text-gray-300">{benefit.description}</p>

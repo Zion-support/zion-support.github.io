@@ -16,7 +16,7 @@ export default function CaseStudy () {
       </div>) ;
   }
   return (<>
-      <SEO title={study.title} description={study.excerpt} />
+      <SEO title={study.title} description={study.excerpt}       />
       <div className="min - h-screen bg - zion - blue pt - 12 pb - 20 px - 4">
         <div className="container mx - auto max - w-3xl">
           <Button
@@ -25,7 +25,7 @@ export default function CaseStudy () {
             asChild
           >
             <Link to="/case - studies">
-              <ArrowLeft className="mr - 2 h - 4 w - 4" /> Back to Case Studies
+              <ArrowLeft className="mr - 2 h - 4 w - 4"       /> Back to Case Studies
             </Link>
           </Button>
           <img
@@ -33,7 +33,7 @@ export default function CaseStudy () {
             src={study.compLogo}
             alt={`${study.comp} logo`}
             className="h - 12 mb - 4"
-          />
+                />
           <h1 className="text - 3xl font - bold text - white mb - 4">
             {study.title}
           </h1>
@@ -41,7 +41,7 @@ export default function CaseStudy () {
           <div
             className="prose prose - invert"
             dangerouslySetInnerHTML={{ __html: study.content }}
-          />
+                />
           <p className="mt - 8 text - white font - semibold">
             — {study.author}, {study.role}
           </p>

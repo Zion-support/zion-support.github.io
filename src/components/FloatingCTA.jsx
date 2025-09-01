@@ -60,7 +60,7 @@ import { motion, AnimatePresence } from 'framer - motion';
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
           >
-            <ArrowUp className="w - 5 h - 5" />
+            <ArrowUp className="w - 5 h - 5"       />
           </motion.button>) }
       </AnimatePresence>) ;
   }
@@ -76,7 +76,7 @@ import { motion, AnimatePresence } from 'framer - motion';
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Star className="w - 5 h - 5" />
+              <Star className="w - 5 h - 5"       />
             </motion.button>) : (<motion.div
               className="bg - white rounded - 2xl shadow - 2xl border border - gray - 200 p - 6 w - 80"
               initial={{ opacity: 0, scale: 0.8, y: 20 }}
@@ -91,17 +91,17 @@ import { motion, AnimatePresence } from 'framer - motion';
                   onClick={ () => setIsExpanded (false) }
                   className="text - gray - 400 hover:text - gray - 600 transition - colors"
                 >
-                  <X className="w - 5 h - 5" />
+                  <X className="w - 5 h - 5"       />
                 </button>
               </div>
 
               <div className="space - y-3 mb - 4">
                 <div className="flex items - center gap - 3 p - 3 bg - gradient - to - r from - zion - cyan / 10 to - zion - purple / 10 rounded - lg">
-                  <Zap className="w - 5 h - 5 text - zion - cyan" />
+                  <Zap className="w - 5 h - 5 text - zion - cyan"       />
                   <span className="text - sm text - gray - 700">AI Solutions</span>
                 </div>
                 <div className="flex items - center gap - 3 p - 3 bg - gradient - to - r from - zion - purple / 10 to - zion - cyan / 10 rounded - lg">
-                  <Users className="w - 5 h - 5 text - zion - purple" />
+                  <Users className="w - 5 h - 5 text - zion - purple"       />
                   <span className="text - sm text - gray - 700">Team & Talent</span>
                 </div>
               </div>
@@ -128,7 +128,7 @@ import { motion, AnimatePresence } from 'framer - motion';
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
           >
-            <MessageCircle className="w - 5 h - 5" />
+            <MessageCircle className="w - 5 h - 5"       />
           </motion.button>) : (<motion.div
             className="bg - white rounded - 2xl shadow - 2xl border border - gray - 200 p - 6 w - 80"
             initial={{ opacity: 0, scale: 0.8, y: 20 }}
@@ -143,7 +143,7 @@ import { motion, AnimatePresence } from 'framer - motion';
                 onClick={ () => setIsExpanded (false) }
                 className="text - gray - 400 hover:text - gray - 600 transition - colors"
               >
-                <X className="w - 5 h - 5" />
+                <X className="w - 5 h - 5"       />
               </button>
             </div>
 

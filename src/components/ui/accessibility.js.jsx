@@ -96,7 +96,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
     return (<>
       {/* Accessibility Toggle Button */}
       <motion.button onClick={() => setIsOpen(!isOpen)} className={`fixed top-4 right-4 z-50 p-3 bg-zion-purple hover:bg-zion-purple-dark text-white rounded-full shadow-lg transition-all duration-300 ${className}`} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} aria-label="Accessibility settings">
-        <Accessibility className="w-6 h-6"/>
+        <Accessibility className="w-6 h-6"      />
       </motion.button>
 
       {/* Accessibility Panel */}
@@ -127,7 +127,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
               <div className="flex items-center justify-between mb-6">
                 <h2 className="text-xl font-bold text-white">Accessibility</h2>
                 <button onClick={() => setIsOpen(false)} className="p-2 rounded-lg hover:bg-zion-blue-light/20 transition-colors duration-200" aria-label="Close accessibility panel">
-                  <X className="w-5 h-5 text-zinc-400"/>
+                  <X className="w-5 h-5 text-zinc-400"      />
                 </button>
               </div>
 
@@ -138,7 +138,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
                 {/* High Contrast */}
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <Contrast className="w-5 h-5 text-zion-cyan"/>
+                    <Contrast className="w-5 h-5 text-zion-cyan"      />
                     <span className="text-zinc-300">High Contrast</span>
                   </div>
                   <Button size="sm" variant={settings.highContrast ? "default" : "outline"} onClick={() => toggleSetting('highContrast')} className={settings.highContrast ? 'bg-zion-cyan text-zion-blue-dark' : ''}>
@@ -149,7 +149,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
                 {/* Large Text */}
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <Type className="w-5 h-5 text-zion-cyan"/>
+                    <Type className="w-5 h-5 text-zion-cyan"      />
                     <span className="text-zinc-300">Large Text</span>
                   </div>
                   <Button size="sm" variant={settings.largeText ? "default" : "outline"} onClick={() => toggleSetting('largeText')} className={settings.largeText ? 'bg-zion-cyan text-zion-blue-dark' : ''}>
@@ -160,15 +160,15 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
                 {/* Font Size Control */}
                 <div className="space-y-2">
                   <div className="flex items-center gap-3">
-                    <Type className="w-5 h-5 text-zion-cyan"/>
+                    <Type className="w-5 h-5 text-zion-cyan"      />
                     <span className="text-zinc-300">Font Size: {settings.fontSize}px</span>
                   </div>
                   <div className="flex items-center gap-2 ml-8">
                     <Button size="sm" variant="outline" onClick={decreaseFontSize} disabled={settings.fontSize <= 12} className="p-1">
-                      <ZoomOut className="w-4 h-4"/>
+                      <ZoomOut className="w-4 h-4"      />
                     </Button>
                     <Button size="sm" variant="outline" onClick={increaseFontSize} disabled={settings.fontSize >= 24} className="p-1">
-                      <ZoomIn className="w-4 h-4"/>
+                      <ZoomIn className="w-4 h-4"      />
                     </Button>
                   </div>
                 </div>
@@ -176,7 +176,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
                 {/* Color Blind Mode */}
                 <div className="space-y-2">
                   <div className="flex items-center gap-3">
-                    <Eye className="w-5 h-5 text-zion-cyan"/>
+                    <Eye className="w-5 h-5 text-zion-cyan"      />
                     <span className="text-zinc-300">Color Blind Mode</span>
                   </div>
                   <select value={settings.colorBlindMode} onChange = {
@@ -198,7 +198,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
                 
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <Settings className="w-5 h-5 text-zion-cyan"/>
+                    <Settings className="w-5 h-5 text-zion-cyan"      />
                     <span className="text-zinc-300">Reduced Motion</span>
                   </div>
                   <Button size="sm" variant={settings.reducedMotion ? "default" : "outline"} onClick={() => toggleSetting('reducedMotion')} className={settings.reducedMotion ? 'bg-zion-cyan text-zion-blue-dark' : ''}>
@@ -213,7 +213,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
                 
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    {settings.screenReader ? (<Volume2 className="w-5 h-5 text-zion-cyan"/>) : (<VolumeX className="w-5 h-5 text-zinc-400"/>)}
+                    {settings.screenReader ? (<Volume2 className="w-5 h-5 text-zion-cyan"      />) : (<VolumeX className="w-5 h-5 text-zinc-400"      />)}
                     <span className="text-zinc-300">Screen Reader</span>
                   </div>
                   <Button size="sm" variant={settings.screenReader ? "default" : "outline"} onClick={() => toggleSetting('screenReader')} className={settings.screenReader ? 'bg-zion-cyan text-zion-blue-dark' : ''}>
@@ -302,7 +302,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
             animation-iteration-count: 1 !important;
             transition-duration: 0.01ms !important}
         `
-        }}/>
+        }}      />
 
       {/* SVG Filters for Color Blind Modes */}
       <svg style = {
@@ -312,13 +312,13 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
 }}>
         <defs>
           <filter id="protanopia-filter">
-            <feColorMatrix type="matrix" values="0.567,0.433,0,0,0 0.558,0.442,0,0,0 0,0.242,0.758,0,0 0,0,0,1,0"/>
+            <feColorMatrix type="matrix" values="0.567,0.433,0,0,0 0.558,0.442,0,0,0 0,0.242,0.758,0,0 0,0,0,1,0"      />
           </filter>
           <filter id="deuteranopia-filter">
-            <feColorMatrix type="matrix" values="0.625,0.375,0,0,0 0.7,0.3,0,0,0 0,0.3,0.7,0,0 0,0,0,1,0"/>
+            <feColorMatrix type="matrix" values="0.625,0.375,0,0,0 0.7,0.3,0,0,0 0,0.3,0.7,0,0 0,0,0,1,0"      />
           </filter>
           <filter id="tritanopia-filter">
-            <feColorMatrix type="matrix" values="0.95,0.05,0,0,0 0,0.433,0.567,0,0 0,0.475,0.525,0,0 0,0,0,1,0"/>
+            <feColorMatrix type="matrix" values="0.95,0.05,0,0,0 0,0.433,0.567,0,0 0,0.475,0.525,0,0 0,0,0,1,0"      />
           </filter>
         </defs>
       </svg>

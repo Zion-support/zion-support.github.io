@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs');
+import path from 'path');
 function content = fs.readFileSync(filePath, 'utf8');
     const filename = path.basename(filePath);
     .join('');

@@ -73,7 +73,7 @@ import { toast } from 'sonner';
             toast.error (error.message || 'Failed to connect wallet') }
     };
     return (<>
-      <SEO title="Account Settings" description="Manage your account"/>
+      <SEO title="Account Settings" description="Manage your account"      />
       
       <main className="container mx - auto py - 8 px - 4">
         <h1 className="text - 3xl font - bold mb - 6 text - white">Account Settings</h1>
@@ -87,7 +87,7 @@ import { toast } from 'sonner';
             <CardContent className="space - y-6">
               <div className="space - y-2">
                 <Label htmlFor="email">Email Address</Label>
-                <Input id="email" value={user?.email || ''} disabled className="bg - gray - 100"/>
+                <Input id="email" value={user?.email || ''} disabled className="bg - gray - 100"      />
               </div>
               
               <div className="space - y-2">

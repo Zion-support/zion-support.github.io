@@ -56,10 +56,10 @@ export const EnterpriseCallToAction = () => {
 
         {/* Enterprise Features */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-          {enterpriseFeatures.map((feature, index) => (
+          {enterpriseFeatures.map((((((((feature, index, index, index, index, index, index, index) => ({ ...((((((feature, index, index, index, index, index, index, key: index })) => ({ ...(((((feature, index, index, index, index, index, key: index })) => ({ ...((((feature, index, index, index, index, key: index })) => ({ ...(((feature, index, index, index, key: index })) => ({ ...((feature, index, index, key: index })) => ({ ...(feature, index, key: index })) => (
             <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <feature.icon className="w-8 h-8 text-white" />
+                <feature.icon className="w-8 h-8 text-white"       />
               </div>
               <h3 className="text-xl font-bold text-white mb-3 text-center">{feature.title}</h3>
               <p className="text-gray-300 text-center leading-relaxed">{feature.description}</p>
@@ -73,9 +73,9 @@ export const EnterpriseCallToAction = () => {
             Why Enterprise Organizations Choose Zion
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {enterpriseBenefits.map((benefit, index) => (
+            {enterpriseBenefits.map((((((((benefit, index, index, index, index, index, index, index) => ({ ...((((((benefit, index, index, index, index, index, index, key: index })) => ({ ...(((((benefit, index, index, index, index, index, key: index })) => ({ ...((((benefit, index, index, index, index, key: index })) => ({ ...(((benefit, index, index, index, key: index })) => ({ ...((benefit, index, index, key: index })) => ({ ...(benefit, index, key: index })) => (
               <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="w-6 h-6 text-green-400 mt-0.5 flex-shrink-0" />
+                <CheckCircle className="w-6 h-6 text-green-400 mt-0.5 flex-shrink-0"       />
                 <span className="text-gray-300">{benefit}</span>
               </div>
             ))}
@@ -84,10 +84,10 @@ export const EnterpriseCallToAction = () => {
 
         {/* Contact Methods */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-          {contactMethods.map((method, index) => (
+          {contactMethods.map((((((((method, index, index, index, index, index, index, index) => ({ ...((((((method, index, index, index, index, index, index, key: index })) => ({ ...(((((method, index, index, index, index, index, key: index })) => ({ ...((((method, index, index, index, index, key: index })) => ({ ...(((method, index, index, index, key: index })) => ({ ...((method, index, index, key: index })) => ({ ...(method, index, key: index })) => (
             <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center hover:border-white/40 transition-all duration-300">
               <div className={`w-20 h-20 bg-gradient-to-r from-${method.color}-500 to-${method.color}-600 rounded-full flex items-center justify-center mx-auto mb-6`}>
-                <method.icon className="w-10 h-10 text-white" />
+                <method.icon className="w-10 h-10 text-white"       />
               </div>
               <h4 className="text-xl font-bold text-white mb-2">{method.title}</h4>
               <p className="text-gray-300 mb-4">{method.description}</p>
@@ -96,7 +96,7 @@ export const EnterpriseCallToAction = () => {
                 className={`inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-${method.color}-500 to-${method.color}-600 text-white font-semibold rounded-lg hover:from-${method.color}-600 hover:to-${method.color}-700 transition-all duration-300`}
 
                 <span>{method.action}</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4"       />
               </a>
             </div>;
           ))}

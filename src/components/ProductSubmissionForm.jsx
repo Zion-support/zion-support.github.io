@@ -178,7 +178,7 @@ const productSchema = z.object ({
           Manual Creation
         </TabsTrigger>
         <TabsTrigger value="ai" className="data-[state = active]:bg - zion - purple / 20 data-[state = active]:text - zion - purple">
-          <Sparkles className="h - 4 w - 4 mr - 2"/>
+          <Sparkles className="h - 4 w - 4 mr - 2"      />
           AI - Powered Creation
         </TabsTrigger>
       </TabsList>
@@ -189,32 +189,32 @@ const productSchema = z.object ({
             <FormField control={form.control} name="title" render={ ({ field }) => (<FormItem>
                   <FormLabel > Product Title</FormLabel>
                   <FormControl>
-                    <Input placeholder="Enter product title" {...field}/>
+                    <Input placeholder="Enter product title" {...field}      />
                   </FormControl>
                   <FormDescription > Create a compelling title that describes your product
                   </FormDescription>
-                  <FormMessage />
+                  <FormMessage       />
                 </FormItem>) }/>
 
             <FormField control={form.control} name="description" render={ ({ field }) => (<FormItem>
                   <FormLabel > Description</FormLabel>
                   <FormControl>
-                    <Textarea placeholder="Describe your product in detail..." className="min - h-32" {...field}/>
+                    <Textarea placeholder="Describe your product in detail..." className="min - h-32" {...field}      />
                   </FormControl>
                   <FormDescription > Provide a detailed description of what you're offering
                   </FormDescription>
-                  <FormMessage />
+                  <FormMessage       />
                 </FormItem>) }/>
 
             <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">
               <FormField control={form.control} name="price" render={ ({ field }) => (<FormItem>
                     <FormLabel > Price (USD) </FormLabel>
                     <FormControl>
-                      <Input type="number" min="0" step="0.01" placeholder="0.00" {...field}/>
+                      <Input type="number" min="0" step="0.01" placeholder="0.00" {...field}      />
                     </FormControl>
                     <FormDescription > Set your price in USD
                     </FormDescription>
-                    <FormMessage />
+                    <FormMessage       />
                   </FormItem>) }/>
 
               <FormField control={form.control} name="category" render={ ({ field }) => (<FormItem>
@@ -230,30 +230,30 @@ const productSchema = z.object ({
                         <option value="other">Other</option>
                       </select>
                     </FormControl>
-                    <FormMessage />
+                    <FormMessage       />
                   </FormItem>) }/>
             </div>
 
             <FormField control={form.control} name="tags" render={ ({ field }) => (<FormItem>
                   <FormLabel > Tags</FormLabel>
                   <FormControl>
-                    <Input placeholder="Enter tags separated by commas" {...field}/>
+                    <Input placeholder="Enter tags separated by commas" {...field}      />
                   </FormControl>
                   <FormDescription > Add relevant tags to help users find your product (e.g., ai, productivity, design) </FormDescription>
-                  <FormMessage />
+                  <FormMessage       />
                 </FormItem>) }/>
 
             <FormField control={form.control} name="image" render={ () => (<FormItem>
                   <FormLabel > Product Image</FormLabel>
                   <FormControl>
-                    <Input type="file" accept="image/*" onChange={handleImageChange} className="cursor - pointer"/>
+                    <Input type="file" accept="image/*" onChange={handleImageChange} className="cursor - pointer"      />
                   </FormControl>
                   <FormDescription > Upload a high - quality image of your product (recommended size: 1200x800px) </FormDescription>
-                  <FormMessage />
+                  <FormMessage       />
 
                   {imagePreview && (<div className="mt - 2 w - full max - w-md border rounded overflow - hidden">
                       <AspectRatio ratio={3 / 2}>
-                        <img src={imagePreview} alt="Preview" className="w - full h - full object - cover"/>
+                        <img src={imagePreview} alt="Preview" className="w - full h - full object - cover"      />
                       </AspectRatio>
                     </div>) }
                 </FormItem>) }/>
@@ -261,11 +261,11 @@ const productSchema = z.object ({
             <FormField control={form.control} name="video" render={ () => (<FormItem>
                   <FormLabel > Product Video (MP4) </FormLabel>
                   <FormControl>
-                    <Input type="file" accept="video / mp4" onChange={handleVideoChange} className="cursor - pointer"/>
+                    <Input type="file" accept="video / mp4" onChange={handleVideoChange} className="cursor - pointer"      />
                   </FormControl>
                   <FormDescription > Optional video demonstrating your product
                   </FormDescription>
-                  <FormMessage />
+                  <FormMessage       />
                 </FormItem>) }/>
 
             <FormField control={form.control} name="model" render = { () => (<FormItem>
@@ -274,11 +274,11 @@ const productSchema = z.object ({
                     <Input type="file" accept="model / gltf - binary,
   .glb" onChange={handleModelChange
 
-} className="cursor - pointer"/>
+} className="cursor - pointer"      />
                   </FormControl>
                   <FormDescription > Upload a 3D model for interactive viewing
                   </FormDescription>
-                  <FormMessage />
+                  <FormMessage       />
                 </FormItem>) }/>
 
             <div className="flex justify - end">
@@ -294,6 +294,6 @@ const productSchema = z.object ({
         <AIListingGenerator onApplyGenerated={handleApplyGenerated} initialValues = {
   {
             title: form.getValues ("title") ,
-  category: form.getValues ("category") }}/>
+  category: form.getValues ("category") }}      />
       </TabsContent>
     </Tabs>) }

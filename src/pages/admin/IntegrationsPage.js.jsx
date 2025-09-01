@@ -8,10 +8,10 @@ export default function IntegrationsPage() {
       <SEO
         title="Integrations - Zion AI Marketplace"
         description="Connect your Zion account with CRMs and Applicant Tracking Systems."
-      />
+            />
 
       <main className="min-h-screen bg-background">
-        <IntegrationsHub />
+        <IntegrationsHub       />
       </main>
     </ProtectedRoute>
   );

@@ -8,7 +8,7 @@ export default function Dashboard () {
         description="Access your Zion Tech Group dashboard to manage your services, view analytics, and control your account."
         keywords="dashboard, account management, services, analytics"
         canonical="https://ziontechgroup.com / dashboard"
-      />
+            />
 
       {/* Header */}
       <section className="py - 16 px - 4 sm:px - 6 lg:px - 8">

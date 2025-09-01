@@ -51,7 +51,7 @@ const InnovativeNewServices2025 = () => {
                 return 'from - gray - 500 to - gray - 600'}
     };
     return (<div className="min - h-screen bg - gradient - to - br from - gray - 900 via - black to - blue - 900 text - white">
-      <SEOHead title="Innovative New Services 2025 - Zion Tech Group" description="Discover our cutting - edge AI solutions, 5G infrastructure, edge computing, and autonomous systems. Transform your business with next - generation technology." keywords="AI solutions 2025, 5G enterprise, edge computing, autonomous systems, quantum technology, Zion Tech Group" type="website" url="https://ziontechgroup.com / innovative - new - services - 2025"/>
+      <SEOHead title="Innovative New Services 2025 - Zion Tech Group" description="Discover our cutting - edge AI solutions, 5G infrastructure, edge computing, and autonomous systems. Transform your business with next - generation technology." keywords="AI solutions 2025, 5G enterprise, edge computing, autonomous systems, quantum technology, Zion Tech Group" type="website" url="https://ziontechgroup.com / innovative - new - services - 2025"      />
 
       {/* Hero Section */}
       <section className="relative py - 20 px - 6">
@@ -79,21 +79,21 @@ const InnovativeNewServices2025 = () => {
           <div className="flex flex - col md:flex - row items - center justify - between gap - 4">
             <div className="flex items - center gap - 6">
               <div className="flex items - center gap - 2 text - cyan - 400">
-                <Phone className="w - 5 h - 5"/>
+                <Phone className="w - 5 h - 5"      />
                 <span>+1 302 464 0950</span>
               </div>
               <div className="flex items - center gap - 2 text - cyan - 400">
-                <Mail className="w - 5 h - 5"/>
+                <Mail className="w - 5 h - 5"      />
                 <span > kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items - center gap - 2 text - cyan - 400">
-                <MapPin className="w - 5 h - 5"/>
+                <MapPin className="w - 5 h - 5"      />
                 <span > 364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
             </div>
             <Link to="https://ziontechgroup.com" target="_blank" className="flex items - center gap - 2 text - blue - 400 hover:text - blue - 300 transition - colors">
               <span > Visit Our Website</span>
-              <ExternalLink className="w - 4 h - 4"/>
+              <ExternalLink className="w - 4 h - 4"      />
             </Link>
           </div>
         </div>
@@ -136,7 +136,7 @@ const InnovativeNewServices2025 = () => {
                     {/* Header */}
                     <div className="flex items - center justify - between mb - 6">
                       <div className={`w - 16 h - 16 bg - gradient - to - br ${categoryColor} rounded - 2xl flex items - center justify - center`}>
-                        <IconComponent className="w - 8 h - 8 text - white"/>
+                        <IconComponent className="w - 8 h - 8 text - white"      />
                       </div>
                       <div className="text - right">
                         <div className="text - 2xl font - bold text - cyan - 400">
@@ -155,7 +155,7 @@ const InnovativeNewServices2025 = () => {
                       <h4 className="text - lg font - semibold mb - 3 text - cyan - 400">Key Features</h4>
                       <ul className="space - y-2">
                         {service.features.slice (0, 4) .map ( (feature, idx) => (<li key={idx} className="flex items - center text - sm text - gray - 300">
-                            <CheckCircle className="w - 4 h - 4 text - cyan - 400 mr - 2 flex - shrink - 0"/>
+                            <CheckCircle className="w - 4 h - 4 text - cyan - 400 mr - 2 flex - shrink - 0"      />
                             {feature}
                           </li>) ) }
                       </ul>
@@ -166,7 +166,7 @@ const InnovativeNewServices2025 = () => {
                       <h4 className="text - lg font - semibold mb - 3 text - green - 400">Key Benefits</h4>
                       <ul className="space - y-2">
                         {service.benefits.slice (0, 3) .map ( (benefit, idx) => (<li key={idx} className="flex items - center text - sm text - gray - 300">
-                            <Star className="w - 4 h - 4 text - green - 400 mr - 2 flex - shrink - 0"/>
+                            <Star className="w - 4 h - 4 text - green - 400 mr - 2 flex - shrink - 0"      />
                             {benefit}
                           </li>) ) }
                       </ul>
@@ -194,11 +194,11 @@ const InnovativeNewServices2025 = () => {
                         <div className="mb - 2">Ready to get started?</div>
                         <div className="flex items - center justify - center gap - 4">
                           <a href={`tel:${service.contactInfo.phone}`} className="flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300 transition - colors">
-                            <Phone className="w - 4 h - 4"/>
+                            <Phone className="w - 4 h - 4"      />
                             <span>{service.contactInfo.phone}</span>
                           </a>
                           <a href={`mailto:${service.contactInfo.email}`} className="flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300 transition - colors">
-                            <Mail className="w - 4 h - 4"/>
+                            <Mail className="w - 4 h - 4"      />
                             <span>{service.contactInfo.email}</span>
                           </a>
                         </div>

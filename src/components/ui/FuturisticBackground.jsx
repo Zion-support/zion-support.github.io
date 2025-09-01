@@ -180,7 +180,7 @@ export function FuturisticBackground({ variant = 'particles', intensity = 'mediu
 
 
 
-}}/>);
+}}      />);
 }
 // Neon text component
 export function NeonText({ children, color = '#00ffff', glowIntensity = 'medium', className = '' }) {
@@ -211,7 +211,7 @@ export function FuturisticCard({ children, className = '', glowColor = '#00ffff'
             boxShadow: `0 0 ${glowSize} ${glowColor}`,
             borderColor: `${glowColor}40`
         }}>
-      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20"/>
+      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20"      />
       <div className="relative z-10 p-6">
         {children}
       </div>
@@ -227,7 +227,7 @@ export function FuturisticCard({ children, className = '', glowColor = '#00ffff'
 
 }20 50%, transparent 70%)`,
             animation: 'shimmer 3s ease-in-out infinite'
-        }}/>
+        }}      />
     </div>)}
 // Add CSS animations
 const style = document.createElement('style');

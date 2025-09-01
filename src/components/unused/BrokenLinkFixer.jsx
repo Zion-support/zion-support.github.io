@@ -128,14 +128,20 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
         for (let i = 0; i < allLinks.length; i += batchSize) {
             const batch = allLinks.slice(i, i + batchSize);
             // Mark batch as checking
-            setLinks(prev => prev.map(link => batch.some(batchLink => batchLink.url === link.url)
+            setLinks(prev => prev.map(((((((link => batch.some(batchLink => batchLink.url === link.url, index, index, index, index, index, index) => ({ ...(((((link => batch.some(batchLink => batchLink.url === link.url, index, index, index, index, index, key: index })) => ({ ...((((link => batch.some(batchLink => batchLink.url === link.url, index, index, index, index, key: index })) => ({ ...(((link => batch.some(batchLink => batchLink.url === link.url, index, index, index, key: index })) => ({ ...((link => batch.some(batchLink => batchLink.url === link.url, index, index, key: index })) => ({ ...(link => batch.some(batchLink => batchLink.url === link.url, index, key: index })) => ({ ...link => batch.some(batchLink => batchLink.url === link.url, key: index }))
                 ? { ...link, status: 'checking' }
                 : link));
             // Check batch
-            const checkedBatch = await Promise.all(batch.map(checkLink));
+            const checkedBatch = await Promise.all(batch.map(((((((checkLink, index, index, index, index, index, index) => ({ ...(((((checkLink, index, index, index, index, index, key: index })) => ({ ...((((checkLink, index, index, index, index, key: index })) => ({ ...(((checkLink, index, index, index, key: index })) => ({ ...((checkLink, index, index, key: index })) => ({ ...(checkLink, index, key: index })) => ({ ...checkLink, key: index })));
             // Update links with results
-            setLinks(prev => prev.map(link => {
-                const checkedLink = checkedBatch.find(checked => checked.url === link.url);
+            setLinks(prev => prev.map(((((((link => {
+                const checkedLink = checkedBatch.find(checked => checked.url === link.url, index, index, index, index, index, index) => ({ ...(((((link => {
+                const checkedLink = checkedBatch.find(checked => checked.url === link.url, index, index, index, index, index, key: index })) => ({ ...((((link => {
+                const checkedLink = checkedBatch.find(checked => checked.url === link.url, index, index, index, index, key: index })) => ({ ...(((link => {
+                const checkedLink = checkedBatch.find(checked => checked.url === link.url, index, index, index, key: index })) => ({ ...((link => {
+                const checkedLink = checkedBatch.find(checked => checked.url === link.url, index, index, key: index })) => ({ ...(link => {
+                const checkedLink = checkedBatch.find(checked => checked.url === link.url, index, key: index })) => ({ ...link => {
+                const checkedLink = checkedBatch.find(checked => checked.url === link.url, key: index }));
                 return checkedLink || link}));
             // Update stats
             setStats(prev => {
@@ -217,15 +223,15 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
     // Get status icon
     const getStatusIcon = (status) => {
         switch (status) {
-            case 'healthy': return <CheckCircleIcon className="w-4 h-4 text-green-600"/>;
-            case 'broken': return <ExclamationTriangleIcon className="w-4 h-4 text-red-600"/>;
-            case 'checking': return <ArrowPathIcon className="w-4 h-4 text-yellow-600 animate-spin"/>;
-            default: return <InformationCircleIcon className="w-4 h-4 text-gray-600"/>}
+            case 'healthy': return <CheckCircleIcon className="w-4 h-4 text-green-600"      />;
+            case 'broken': return <ExclamationTriangleIcon className="w-4 h-4 text-red-600"      />;
+            case 'checking': return <ArrowPathIcon className="w-4 h-4 text-yellow-600 animate-spin"      />;
+            default: return <InformationCircleIcon className="w-4 h-4 text-gray-600"      />}
     };
     return (<>
       {/* Broken Link Fixer Toggle Button */}
       <motion.button initial={{ scale: 0 }} animate={{ scale: 1 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={() => setIsOpen(!isOpen)} className={`fixed bottom-32 right-4 z-50 w-14 h-14 bg-orange-600 hover:bg-orange-700 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 ${className}`} aria-label="Broken Link Checker" aria-expanded={isOpen}>
-        <LinkIcon className="w-6 h-6"/>
+        <LinkIcon className="w-6 h-6"      />
       </motion.button>
 
       {/* Broken Link Fixer Panel */}
@@ -264,13 +270,13 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                 Link Health Checker
               </h2>
               <button onClick={() => setIsOpen(false)} className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">
-                <XMarkIcon className="w-5 h-5"/>
+                <XMarkIcon className="w-5 h-5"      />
               </button>
             </div>
 
             {/* Tabs */}
             <div className="flex border-b border-gray-200 dark:border-gray-700">
-              {['overview', 'broken', 'healthy', 'actions'].map((tab) => (<button key={tab} onClick={() => setActiveTab(tab)} className={`flex-1 px-4 py-2 text-sm font-medium transition-colors ${activeTab === tab
+              {['overview', 'broken', 'healthy', 'actions'].map((((((((tab, index, index, index, index, index, index) => ({ ...((((((tab, index, index, index, index, index, key: index })) => ({ ...(((((tab, index, index, index, index, key: index })) => ({ ...((((tab, index, index, index, key: index })) => ({ ...(((tab, index, index, key: index })) => ({ ...((tab, index, key: index })) => ({ ...(tab, key: index })) => (<button key={tab} onClick={() => setActiveTab(tab)} className={`flex-1 px-4 py-2 text-sm font-medium transition-colors ${activeTab === tab
                     ? 'text-orange-600 border-b-2 border-orange-600'
                     : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'}`}>
                   {tab.charAt(0).toUpperCase() + tab.slice(1)}
@@ -341,14 +347,14 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
               {/* Broken Links Tab */}
               {activeTab === 'broken' && (<div className="space-y-4">
                   {links.filter(link => link.status === 'broken').length === 0 ? (<div className="text-center text-gray-500 dark:text-gray-400">
-                      <CheckCircleIcon className="w-12 h-12 mx-auto mb-3 text-green-500"/>
+                      <CheckCircleIcon className="w-12 h-12 mx-auto mb-3 text-green-500"      />
                       <p>No broken links found!</p>
                     </div>) : (<div className="space-y-3">
                       {links
                         .filter(link => link.status === 'broken')
-                        .map((link, index) => (<div key={`${link.url}-${index}`} className="p-3 rounded-lg border border-red-200 dark:border-red-700 bg-red-50 dark:bg-red-900/20 hover:border-red-300 dark:hover:border-red-600 transition-colors cursor-pointer" onClick={() => highlightBrokenLink(link)}>
+                        .map((((((((link, index, index, index, index, index, index, index) => ({ ...((((((link, index, index, index, index, index, index, key: index })) => ({ ...(((((link, index, index, index, index, index, key: index })) => ({ ...((((link, index, index, index, index, key: index })) => ({ ...(((link, index, index, index, key: index })) => ({ ...((link, index, index, key: index })) => ({ ...(link, index, key: index })) => (<div key={`${link.url}-${index}`} className="p-3 rounded-lg border border-red-200 dark:border-red-700 bg-red-50 dark:bg-red-900/20 hover:border-red-300 dark:hover:border-red-600 transition-colors cursor-pointer" onClick={() => highlightBrokenLink(link)}>
                             <div className="flex items-start gap-2">
-                              <ExclamationTriangleIcon className="w-4 h-4 text-red-600 mt-0.5"/>
+                              <ExclamationTriangleIcon className="w-4 h-4 text-red-600 mt-0.5"      />
 
                               <div className="flex-1">
                                 <h4 className="font-medium text-gray-900 dark:text-white text-sm break-all">
@@ -377,14 +383,14 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
               {/* Healthy Links Tab */}
               {activeTab === 'healthy' && (<div className="space-y-4">
                   {links.filter(link => link.status === 'healthy').length === 0 ? (<div className="text-center text-gray-500 dark:text-gray-400">
-                      <InformationCircleIcon className="w-12 h-12 mx-auto mb-3 text-blue-500"/>
+                      <InformationCircleIcon className="w-12 h-12 mx-auto mb-3 text-blue-500"      />
                       <p>No healthy links found</p>
                     </div>) : (<div className="space-y-3">
                       {links
                         .filter(link => link.status === 'healthy')
-                        .map((link, index) => (<div key={`${link.url}-${index}`} className="p-3 rounded-lg border border-green-200 dark:border-green-700 bg-green-50 dark:bg-green-900/20">
+                        .map((((((((link, index, index, index, index, index, index, index) => ({ ...((((((link, index, index, index, index, index, index, key: index })) => ({ ...(((((link, index, index, index, index, index, key: index })) => ({ ...((((link, index, index, index, index, key: index })) => ({ ...(((link, index, index, index, key: index })) => ({ ...((link, index, index, key: index })) => ({ ...(link, index, key: index })) => (<div key={`${link.url}-${index}`} className="p-3 rounded-lg border border-green-200 dark:border-green-700 bg-green-50 dark:bg-green-900/20">
                             <div className="flex items-start gap-2">
-                              <CheckCircleIcon className="w-4 h-4 text-green-600 mt-0.5"/>
+                              <CheckCircleIcon className="w-4 h-4 text-green-600 mt-0.5"      />
 
                               <div className="flex-1">
                                 <h4 className="font-medium text-gray-900 dark:text-white text-sm break-all">
@@ -407,7 +413,7 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
               {/* Actions Tab */}
               {activeTab === 'actions' && (<div className="space-y-4">
                   <div className="text-center text-gray-500 dark:text-gray-400">
-                    <WrenchScrewdriverIcon className="w-12 h-12 mx-auto mb-3 text-orange-500"/>
+                    <WrenchScrewdriverIcon className="w-12 h-12 mx-auto mb-3 text-orange-500"      />
                     <p>Take action to fix broken links</p>
                   </div>
 
@@ -418,7 +424,7 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
 
                   {/* Re-check Button */}
                   <button onClick={checkAllLinks} disabled={isChecking} className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white px-4 py-2 rounded-lg transition-colors">
-                    <ArrowPathIcon className="w-4 h-4 inline mr-2"/>
+                    <ArrowPathIcon className="w-4 h-4 inline mr-2"      />
                     {isChecking ? 'Checking...' : 'Re-check Links'}
                   </button>
 
@@ -428,11 +434,35 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                         const report = {
                             timestamp: new Date().toISOString(),
                             stats,
-                            links: links.map(link => ({
+                            links: links.map(((((((link => ({
                                 url: link.url,
                                 status: link.status,
                                 error: link.error,
-                                lastChecked: link.lastChecked.toISOString(),
+                                lastChecked: link.lastChecked.toISOString(, index, index, index, index, index, index) => ({ ...(((((link => ({
+                                url: link.url,
+                                status: link.status,
+                                error: link.error,
+                                lastChecked: link.lastChecked.toISOString(, index, index, index, index, index, key: index })) => ({ ...((((link => ({
+                                url: link.url,
+                                status: link.status,
+                                error: link.error,
+                                lastChecked: link.lastChecked.toISOString(, index, index, index, index, key: index })) => ({ ...(((link => ({
+                                url: link.url,
+                                status: link.status,
+                                error: link.error,
+                                lastChecked: link.lastChecked.toISOString(, index, index, index, key: index })) => ({ ...((link => ({
+                                url: link.url,
+                                status: link.status,
+                                error: link.error,
+                                lastChecked: link.lastChecked.toISOString(, index, index, key: index })) => ({ ...(link => ({
+                                url: link.url,
+                                status: link.status,
+                                error: link.error,
+                                lastChecked: link.lastChecked.toISOString(, index, key: index })) => ({ ...link => ({
+                                url: link.url,
+                                status: link.status,
+                                error: link.error,
+                                lastChecked: link.lastChecked.toISOString(, key: index })),
   fixable: link.fixable
                             
 

@@ -26,7 +26,7 @@ import { Button } from './ui / button';
 } from '@/data / comprehensiveServices';
   const serviceCategories = ['AI Services', 'IT Services', 'Micro SAAS'];
   const getFeatureIcon = hasFeature => {
-    return hasFeature ? (<Check className="w - 4 h - 4 text - green - 500" />) : (<X className="w - 4 h - 4 text - red - 500" />) ;
+    return hasFeature ? (<Check className="w - 4 h - 4 text - green - 500"       />) : (<X className="w - 4 h - 4 text - red - 500"       />) ;
   };
   return (<div className="py - 16 bg - slate - 50 dark:bg - slate - 900">
       <div className="container mx - auto px - 4">
@@ -214,7 +214,7 @@ import { Button } from './ui / button';
 
           <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6 mb - 6">
             <div className="text - center">
-              <Phone className="w - 8 h - 8 text - blue - 600 dark:text - blue - 400 mx - auto mb - 2" />
+              <Phone className="w - 8 h - 8 text - blue - 600 dark:text - blue - 400 mx - auto mb - 2"       />
               <h4 className="font - semibold text - slate - 900 dark:text - white mb - 1">
                 Call Us
               </h4>
@@ -223,7 +223,7 @@ import { Button } from './ui / button';
               </p>
             </div>
             <div className="text - center">
-              <Mail className="w - 8 h - 8 text - blue - 600 dark:text - blue - 400 mx - auto mb - 2" />
+              <Mail className="w - 8 h - 8 text - blue - 600 dark:text - blue - 400 mx - auto mb - 2"       />
               <h4 className="font - semibold text - slate - 900 dark:text - white mb - 1">
                 Email Us
               </h4>
@@ -232,7 +232,7 @@ import { Button } from './ui / button';
               </p>
             </div>
             <div className="text - center">
-              <Clock className="w - 8 h - 8 text - blue - 600 dark:text - blue - 400 mx - auto mb - 2" />
+              <Clock className="w - 8 h - 8 text - blue - 600 dark:text - blue - 400 mx - auto mb - 2"       />
               <h4 className="font - semibold text - slate - 900 dark:text - white mb - 1">
                 Response Time
               </h4>
@@ -247,7 +247,7 @@ import { Button } from './ui / button';
               size="lg"
               className="bg - gradient - to - r from - blue - 600 to - indigo - 600 hover:from - blue - 700 hover:to - indigo - 700"
             >
-              <Phone className="w - 4 h - 4 mr - 2" />
+              <Phone className="w - 4 h - 4 mr - 2"       />
               Schedule Free Consultation
             </Button>
           </div>
@@ -269,7 +269,7 @@ import { Button } from './ui / button';
                         Featured
                       </Badge>
                       <div className="flex items - center gap - 1">
-                        <Star className="w - 4 h - 4 text - yellow - 500 fill - current" />
+                        <Star className="w - 4 h - 4 text - yellow - 500 fill - current"       />
                         <span className="text - sm font - medium">
                           {service.rating}
                         </span>

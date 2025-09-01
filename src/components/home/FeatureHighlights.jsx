@@ -179,7 +179,7 @@ export function FeatureHighlights() {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {highlights.map((highlight, index) => (
+          {highlights.map((((((((highlight, index, index, index, index, index, index, index) => ({ ...((((((highlight, index, index, index, index, index, index, key: index })) => ({ ...(((((highlight, index, index, index, index, index, key: index })) => ({ ...((((highlight, index, index, index, index, key: index })) => ({ ...(((highlight, index, index, index, key: index })) => ({ ...((highlight, index, index, key: index })) => ({ ...(highlight, index, key: index })) => (
             <motion.div key={index} variants={itemVariants} className="group">
               <div
                 className={`${highlight.bgColor} ${highlight.borderColor} border rounded-2xl p-8 h-full transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20 group-hover:scale-105`}
@@ -187,7 +187,7 @@ export function FeatureHighlights() {
                 <div
                   className={`w-16 h-16 bg-gradient-to-r ${highlight.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
                 >
-                  <highlight.icon className="w-8 h-8 text-white" />
+                  <highlight.icon className="w-8 h-8 text-white"       />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors duration-200">
                   {highlight.title}
@@ -196,19 +196,19 @@ export function FeatureHighlights() {
                   {highlight.description}
                 </p>
                 <ul className="space-y-2 mb-6">
-                  {highlight.features.map((feature, featureIndex) => (
+                  {highlight.features.map((((((((feature, featureIndex, index, index, index, index, index, index) => ({ ...((((((feature, featureIndex, index, index, index, index, index, key: index })) => ({ ...(((((feature, featureIndex, index, index, index, index, key: index })) => ({ ...((((feature, featureIndex, index, index, index, key: index })) => ({ ...(((feature, featureIndex, index, index, key: index })) => ({ ...((feature, featureIndex, index, key: index })) => ({ ...(feature, featureIndex, key: index })) => (
                     <li
                       key={featureIndex}
                       className="flex items-center text-zion-slate-light"
                     >
-                      <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0"       />
                       {feature}
                     </li>
                   ))}
                 </ul>
                 <div className="flex items-center text-zion-purple-light font-medium group-hover:text-zion-purple transition-colors duration-200">
                   Learn More
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200"       />
                 </div>
               </div>
             </motion.div>
@@ -227,7 +227,7 @@ export function FeatureHighlights() {
             Trusted by Millions Worldwide
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {achievements.map((achievement, index) => (
+            {achievements.map((((((((achievement, index, index, index, index, index, index, index) => ({ ...((((((achievement, index, index, index, index, index, index, key: index })) => ({ ...(((((achievement, index, index, index, index, index, key: index })) => ({ ...((((achievement, index, index, index, index, key: index })) => ({ ...(((achievement, index, index, index, key: index })) => ({ ...((achievement, index, index, key: index })) => ({ ...(achievement, index, key: index })) => (
               <motion.div
                 key={index}
                 variants={achievementVariants}
@@ -242,7 +242,7 @@ export function FeatureHighlights() {
                 >
                   <achievement.icon
                     className={`w-10 h-10 ${achievement.color}`}
-                  />
+                        />
                 </div>
                 <div className={`text-3xl font-bold ${achievement.color} mb-2`}>
                   {achievement.number}
@@ -267,7 +267,7 @@ export function FeatureHighlights() {
             Cutting-Edge Technologies
           </h3>
           <div className="flex flex-wrap justify-center gap-4">
-            {technologies.map((tech, index) => (
+            {technologies.map((((((((tech, index, index, index, index, index, index, index) => ({ ...((((((tech, index, index, index, index, index, index, key: index })) => ({ ...(((((tech, index, index, index, index, index, key: index })) => ({ ...((((tech, index, index, index, index, key: index })) => ({ ...(((tech, index, index, index, key: index })) => ({ ...((tech, index, index, key: index })) => ({ ...(tech, index, key: index })) => (
               <motion.div
                 key={index}
                 variants={techVariants}

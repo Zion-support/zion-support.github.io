@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const cron = require('node-cron');
+import fs from 'fs');
+import path from 'path');
+import cron from 'node-cron');
 
 class IntelligentOrchestrator {
   constructor() {
@@ -317,7 +317,7 @@ class IntelligentOrchestrator {
 }
 
 // Export the class
-module.exports = IntelligentOrchestrator;
+export default IntelligentOrchestrator;
 
 // If running directly, start the orchestrator
 if (require.main === module) {

@@ -10,15 +10,15 @@ const AIAutonomousWriting = () => {
         <meta
           name="description"
           content="Revolutionary AI autonomous writing platform that creates content, generates articles, and produces written materials with advanced AI capabilities and human - like creativity."
-        />
+              />
         <meta
           name="keywords"
           content="AI writing, autonomous writing, AI content creation, AI article generation, AI writing platform"
-        />
+              />
         <link
           rel="canonical"
           href="https://ziontechgroup.com / ai - autonomous - writing"
-        />
+              />
       </Helmet>
 
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - amber - 900 to - slate - 900">

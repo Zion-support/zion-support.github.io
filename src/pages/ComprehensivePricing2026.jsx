@@ -133,7 +133,7 @@ const ComprehensivePricing2026 = () => {
             >
               <div
                 className={`w - 6 h - 6 bg - white rounded - full transition - all duration - 300 ${billingCycle === 'annual' ? 'translate - x-8' : ''}`}
-              />
+                    />
             </button>
             <span
               className={`text - lg ${billingCycle === 'annual' ? 'text - white' : 'text - gray - 400'}`}

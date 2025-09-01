@@ -32,7 +32,7 @@ const AdvancedAnalyticsDashboard = () => {
       value: '$2.4M',
       change: 12.5,
       changeType: 'increase',
-      icon: <DollarSign className="w - 6 h - 6" />,
+      icon: <DollarSign className="w - 6 h - 6"       />,
       color: 'from - green - 500 to - emerald - 600',
     },
     {
@@ -40,7 +40,7 @@ const AdvancedAnalyticsDashboard = () => {
       value: '1,247',
       change: 8.2,
       changeType: 'increase',
-      icon: <Users className="w - 6 h - 6" />,
+      icon: <Users className="w - 6 h - 6"       />,
       color: 'from - blue - 500 to - cyan - 600',
     },
     {
@@ -48,7 +48,7 @@ const AdvancedAnalyticsDashboard = () => {
       value: '94.2%',
       change: 2.1,
       changeType: 'increase',
-      icon: <Target className="w - 6 h - 6" />,
+      icon: <Target className="w - 6 h - 6"       />,
       color: 'from - purple - 500 to - pink - 600',
     },
     {
@@ -56,7 +56,7 @@ const AdvancedAnalyticsDashboard = () => {
       value: '4.8 / 5',
       change: 0.3,
       changeType: 'increase',
-      icon: <Star className="w - 6 h - 6" />,
+      icon: <Star className="w - 6 h - 6"       />,
       color: 'from - yellow - 500 to - orange - 600',
     },
   ];
@@ -186,7 +186,7 @@ const AdvancedAnalyticsDashboard = () => {
                     {metric.icon}
                   </div>
                   <div className="flex items - center gap - 1">
-                    {metric.changeType === 'increase' ? (<ArrowUpRight className="w - 4 h - 4 text - green - 500" />) : (<ArrowDownRight className="w - 4 h - 4 text - red - 500" />) }
+                    {metric.changeType === 'increase' ? (<ArrowUpRight className="w - 4 h - 4 text - green - 500"       />) : (<ArrowDownRight className="w - 4 h - 4 text - red - 500"       />) }
                     <span
                       className={`text - sm font - medium ${metric.changeType === 'increase' ? 'text - green - 600' : 'text - red - 600'}`}
                     >
@@ -215,7 +215,7 @@ const AdvancedAnalyticsDashboard = () => {
         <Card>
           <CardHeader>
             <CardTitle className="flex items - center gap - 2">
-              <BarChart3 className="w - 5 h - 5 text - zion - cyan" />
+              <BarChart3 className="w - 5 h - 5 text - zion - cyan"       />
               Service Performance Overview
             </CardTitle>
           </CardHeader>
@@ -272,7 +272,7 @@ const AdvancedAnalyticsDashboard = () => {
                       </td>
                       <td className="py - 3 px - 4">
                         <div className="flex items - center gap - 1">
-                          <TrendingUp className="w - 4 h - 4 text - green - 500" />
+                          <TrendingUp className="w - 4 h - 4 text - green - 500"       />
                           <span className="text - green - 600 font - medium">
                             +{service.growth}%
                           </span>
@@ -313,7 +313,7 @@ const AdvancedAnalyticsDashboard = () => {
         <Card>
           <CardHeader>
             <CardTitle className="flex items - center gap - 2">
-              <PieChart className="w - 5 h - 5 text - zion - purple" />
+              <PieChart className="w - 5 h - 5 text - zion - purple"       />
               Service Category Distribution
             </CardTitle>
           </CardHeader>
@@ -354,14 +354,14 @@ const AdvancedAnalyticsDashboard = () => {
         <Card>
           <CardHeader>
             <CardTitle className="flex items - center gap - 2">
-              <Brain className="w - 5 h - 5 text - zion - cyan" />
+              <Brain className="w - 5 h - 5 text - zion - cyan"       />
               Key Insights
             </CardTitle>
           </CardHeader>
           <CardContent>
             <div className="space - y-4">
               <div className="flex items - start gap - 3 p - 3 bg - zion - green / 10 rounded - lg">
-                <TrendingUp className="w - 5 h - 5 text - zion - green mt - 1" />
+                <TrendingUp className="w - 5 h - 5 text - zion - green mt - 1"       />
                 <div>
                   <h4 className="font - semibold text - zion - slate - dark">
                     AI Services Growth
@@ -374,7 +374,7 @@ const AdvancedAnalyticsDashboard = () => {
               </div>
 
               <div className="flex items - start gap - 3 p - 3 bg - zion - blue / 10 rounded - lg">
-                <Users className="w - 5 h - 5 text - zion - blue mt - 1" />
+                <Users className="w - 5 h - 5 text - zion - blue mt - 1"       />
                 <div>
                   <h4 className="font - semibold text - zion - slate - dark">
                     Client Acquisition
@@ -386,7 +386,7 @@ const AdvancedAnalyticsDashboard = () => {
               </div>
 
               <div className="flex items - start gap - 3 p - 3 bg - zion - purple / 10 rounded - lg">
-                <Star className="w - 5 h - 5 text - zion - purple mt - 1" />
+                <Star className="w - 5 h - 5 text - zion - purple mt - 1"       />
                 <div>
                   <h4 className="font - semibold text - zion - slate - dark">
                     Satisfaction Score
@@ -422,7 +422,7 @@ const AdvancedAnalyticsDashboard = () => {
                 window.open ('mailto:kleber@ziontechgroup.com?subject = Analytics Dashboard Access',
                   '_blank') }
             >
-              <Rocket className="w - 5 h - 5 mr - 2" />
+              <Rocket className="w - 5 h - 5 mr - 2"       />
               Request Access
             </Button>
             <Button
@@ -430,7 +430,7 @@ const AdvancedAnalyticsDashboard = () => {
               className="border - white text - white hover:bg - white hover:text - zion - purple"
               onClick={ () => window.open ('tel:+13024640950', '_blank') }
             >
-              <Shield className="w - 5 h - 5 mr - 2" />
+              <Shield className="w - 5 h - 5 mr - 2"       />
               Schedule Demo
             </Button>
           </div>

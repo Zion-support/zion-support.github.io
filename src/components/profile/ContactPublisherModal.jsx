@@ -45,7 +45,7 @@ export function ContactPublisherModal({ isOpen, onClose, publisherName, publishe
       <DialogContent className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md">
         <DialogHeader>
           <DialogTitle className="text-xl font-bold text-white flex items-center gap-2">
-            <Mail className="h-5 w-5 text-zion-cyan"/>
+            <Mail className="h-5 w-5 text-zion-cyan"      />
             Contact Publisher
           </DialogTitle>
         </DialogHeader>
@@ -60,19 +60,19 @@ export function ContactPublisherModal({ isOpen, onClose, publisherName, publishe
             <FormField control={form.control} name="subject" render={({ field }) => (<FormItem>
                   <FormLabel>Subject</FormLabel>
                   <FormControl>
-                    <Input placeholder="Subject" className="bg-zion-blue border-zion-blue-light text-white" {...field}/>
+                    <Input placeholder="Subject" className="bg-zion-blue border-zion-blue-light text-white" {...field}      />
                   </FormControl>
-                  <FormMessage className="text-red-500"/>
+                  <FormMessage className="text-red-500"      />
                 </FormItem>)}/>
             <FormField control={form.control} name="message" render={({ field }) => (<FormItem>
                   <FormLabel>Message</FormLabel>
                   <FormControl>
-                    <Textarea placeholder={`Message to ${publisherName}...`} className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]" {...field}/>
+                    <Textarea placeholder={`Message to ${publisherName}...`} className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]" {...field}      />
                   </FormControl>
-                  <FormMessage className="text-red-500"/>
+                  <FormMessage className="text-red-500"      />
                 </FormItem>)}/>
             <Button variant="primary" onClick={handleSend} className="w-full" disabled={!form.formState.isValid || isSubmitting}>
-              <PaperPlane className="mr-1"/>
+              <PaperPlane className="mr-1"      />
               {isSubmitting ? 'Sending...' : 'Send Message'}
             </Button>
           </form>

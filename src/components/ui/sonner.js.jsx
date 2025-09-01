@@ -19,7 +19,7 @@ const Toaster = ({ ...props }) => {
         },
       }}
       {...props}
-    />
+          />
   );
 };
 export { Toaster };

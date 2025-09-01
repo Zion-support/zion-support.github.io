@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
 
 class AutomationDashboard {
   constructor() {
@@ -164,7 +164,7 @@ class AutomationDashboard {
 }
 
 // Export the class
-module.exports = AutomationDashboard;
+export default AutomationDashboard;
 
 // If running directly, start the dashboard
 if (require.main === module) {

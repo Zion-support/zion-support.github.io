@@ -33,7 +33,7 @@ export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
           className="mb-8"
         >
           <div className="relative">
-            <ExclamationTriangleIcon className="w-32 h-32 text-red-400 mx-auto" />
+            <ExclamationTriangleIcon className="w-32 h-32 text-red-400 mx-auto"       />
             <div className="absolute inset-0 bg-red-400/20 rounded-full blur-3xl"></div>
           </div>
         </motion.div>
@@ -93,7 +93,7 @@ export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
             to="/"
             className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
           >
-            <HomeIcon className="w-5 h-5" />
+            <HomeIcon className="w-5 h-5"       />
             Go Home
           </Link>
 
@@ -101,7 +101,7 @@ export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
             to="/services"
             className="inline-flex items-center gap-2 bg-gray-800 hover:bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
           >
-            <MagnifyingGlassIcon className="w-5 h-5" />
+            <MagnifyingGlassIcon className="w-5 h-5"       />
             Browse Services
           </Link>
 
@@ -109,7 +109,7 @@ export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
             onClick={() => window.history.back()}
             className="inline-flex items-center gap-2 bg-gray-700 hover:bg-gray-600 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
           >
-            <ArrowLeftIcon className="w-5 h-5" />
+            <ArrowLeftIcon className="w-5 h-5"       />
             Go Back
           </button>
         </motion.div>
@@ -126,7 +126,7 @@ export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
           </h3>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {suggestions.map((route, index) => (
+            {suggestions.map((((((((route, index, index, index, index, index, index, index) => ({ ...((((((route, index, index, index, index, index, index, key: index })) => ({ ...(((((route, index, index, index, index, index, key: index })) => ({ ...((((route, index, index, index, index, key: index })) => ({ ...(((route, index, index, index, key: index })) => ({ ...((route, index, index, key: index })) => ({ ...(route, index, key: index })) => (
               <motion.div
                 key={route}
                 initial={{ opacity: 0, x: -20 }}

@@ -102,7 +102,7 @@ const AdvancedServicesShowcase2025 = () => {
             keywords: "advanced services, micro SAAS, AI services, IT solutions, real services, enterprise solutions,
   Zion Tech Group";
 
-}}/>;
+}}      />;
 
       {/* Hero Section */}
       <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">
@@ -153,15 +153,15 @@ const AdvancedServicesShowcase2025 = () => {
 }}>
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 4 text - center">
               <div className="flex items - center justify - center space - x-2">
-                <Phone className="w - 5 h - 5 text - blue - 400"/>
+                <Phone className="w - 5 h - 5 text - blue - 400"      />
                 <span>+1 302 464 0950</span>
               </div>
               <div className="flex items - center justify - center space - x-2">
-                <Mail className="w - 5 h - 5 text - blue - 400"/>
+                <Mail className="w - 5 h - 5 text - blue - 400"      />
                 <span > kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items - center justify - center space - x-2">
-                <MapPin className="w - 5 h - 5 text - blue - 400"/>
+                <MapPin className="w - 5 h - 5 text - blue - 400"      />
                 <span > 364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
             </div>
@@ -182,11 +182,11 @@ const AdvancedServicesShowcase2025 = () => {
 
 }}>
             <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="bg - gradient - to - r from - blue - 500 to - cyan - 500 hover:from - blue - 600 hover:to - cyan - 600 text - white font - semibold py - 3 px - 6 rounded - lg transition - all duration - 300 hover:scale - 105 flex items - center space - x-2">
-              <ExternalLink className="w - 5 h - 5"/>
+              <ExternalLink className="w - 5 h - 5"      />
               <span > Visit Zion Tech Group</span>
             </a>
             <a href="mailto:kleber@ziontechgroup.com" className="bg - gradient - to - r from - green - 500 to - emerald - 500 hover:from - green - 600 hover:to - emerald - 600 text - white font - semibold py - 3 px - 6 rounded - lg transition - all duration - 300 hover:scale - 105 flex items - center space - x-2">
-              <Mail className="w - 5 h - 5"/>
+              <Mail className="w - 5 h - 5"      />
               <span > Request Demo</span>
             </a>
           </motion.div>
@@ -256,7 +256,7 @@ const AdvancedServicesShowcase2025 = () => {
                     </div>
                   </div>
                   {service.popular && (<div className="bg - gradient - to - r from - yellow - 500 to - orange - 500 text - white text - xs px - 2 py - 1 rounded - full flex items - center space - x-1">
-                      <Star className="w - 3 h - 3"/>
+                      <Star className="w - 3 h - 3"      />
                       <span > Popular</span>
                     </div>) }
                 </div>
@@ -276,7 +276,7 @@ const AdvancedServicesShowcase2025 = () => {
                   <h4 className="text - sm font - medium text - gray - 300 mb - 2">Key Features:</h4>
                   <ul className="space - y-1">
                     {service.features.slice (0, 4) .map ( (feature, index) => (<li key={index} className="flex items - center space - x-2 text - sm text - gray - 400">
-                        <CheckCircle className="w - 4 h - 4 text - green - 400 flex - shrink - 0"/>
+                        <CheckCircle className="w - 4 h - 4 text - green - 400 flex - shrink - 0"      />
                         <span>{feature}</span>
                       </li>) ) }
                     {service.features.length > 4 && (<li className="text - sm text - blue - 400">+{service.features.length - 4} more features</li>) }
@@ -286,19 +286,19 @@ const AdvancedServicesShowcase2025 = () => {
                 {/* Stats */}
                 <div className="grid grid - cols - 2 gap - 4 mb - 4 text - sm">
                   <div className="flex items - center space - x-2">
-                    <Users className="w - 4 h - 4 text - blue - 400"/>
+                    <Users className="w - 4 h - 4 text - blue - 400"      />
                     <span className="text - gray - 400">{service.customers} customers</span>
                   </div>
                   <div className="flex items - center space - x-2">
-                    <Star className="w - 4 h - 4 text - yellow - 400"/>
+                    <Star className="w - 4 h - 4 text - yellow - 400"      />
                     <span className="text - gray - 400">{service.rating}/5 ({service.reviews} reviews) </span>
                   </div>
                   <div className="flex items - center space - x-2">
-                    <Clock className="w - 4 h - 4 text - green - 400"/>
+                    <Clock className="w - 4 h - 4 text - green - 400"      />
                     <span className="text - gray - 400">{service.setupTime} setup</span>
                   </div>
                   <div className="flex items - center space - x-2">
-                    <TrendingUp className="w - 4 h - 4 text - purple - 400"/>
+                    <TrendingUp className="w - 4 h - 4 text - purple - 400"      />
                     <span className="text - gray - 400">{service.growthRate}</span>
                   </div>
                 </div>
@@ -368,11 +368,11 @@ const AdvancedServicesShowcase2025 = () => {
             </p>
             <div className="flex flex - col sm:flex - row gap - 4 justify - center">
               <a href="mailto:kleber@ziontechgroup.com" className="bg - gradient - to - r from - blue - 500 to - cyan - 500 hover:from - blue - 600 hover:to - cyan - 600 text - white font - semibold py - 3 px - 8 rounded - lg transition - all duration - 300 hover:scale - 105 flex items - center justify - center space - x-2">
-                <Mail className="w - 5 h - 5"/>
+                <Mail className="w - 5 h - 5"      />
                 <span > Get Started Today</span>
               </a>
               <a href="tel:+13024640950" className="bg - gradient - to - r from - green - 500 to - emerald - 500 hover:from - green - 600 hover:to - emerald - 600 text - white font - semibold py - 3 px - 8 rounded - lg transition - all duration - 300 hover:scale - 105 flex items - center justify - center space - x-2">
-                <Phone className="w - 5 h - 5"/>
+                <Phone className="w - 5 h - 5"      />
                 <span > Call + 1 302 464 0950</span>
               </a>
             </div>

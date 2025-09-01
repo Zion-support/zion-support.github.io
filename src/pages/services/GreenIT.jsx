@@ -141,7 +141,7 @@ export default function GreenIT() {
       <SEO
         title="Green IT Services - Zion Tech Group"
         description="Sustainable and energy-efficient IT solutions. Green data centers, energy management, cloud optimization, and eco-friendly technology services."
-      />
+            />
 
       {/* Hero Section */}
       <section className="relative py-20 px-4">
@@ -153,7 +153,7 @@ export default function GreenIT() {
           >
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-gradient-to-br from-green-400 via-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center">
-                <Leaf className="w-10 h-10 text-white" />
+                <Leaf className="w-10 h-10 text-white"       />
               </div>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -202,7 +202,7 @@ export default function GreenIT() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
+            {services.map((((((((service, index, index, index, index, index, index, index) => ({ ...((((((service, index, index, index, index, index, index, key: index })) => ({ ...(((((service, index, index, index, index, index, key: index })) => ({ ...((((service, index, index, index, index, key: index })) => ({ ...(((service, index, index, index, key: index })) => ({ ...((service, index, index, key: index })) => ({ ...(service, index, key: index })) => (
               <motion.div
                 key={service.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -211,19 +211,19 @@ export default function GreenIT() {
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-green-400/50 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-500 rounded-xl flex items-center justify-center mb-4">
-                  <service.icon className="w-8 h-8 text-white" />
+                  <service.icon className="w-8 h-8 text-white"       />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">
                   {service.title}
                 </h3>
                 <p className="text-slate-300 mb-4">{service.description}</p>
                 <ul className="space-y-2">
-                  {service.features.map((feature, idx) => (
+                  {service.features.map((((((((feature, idx, index, index, index, index, index, index) => ({ ...((((((feature, idx, index, index, index, index, index, key: index })) => ({ ...(((((feature, idx, index, index, index, index, key: index })) => ({ ...((((feature, idx, index, index, index, key: index })) => ({ ...(((feature, idx, index, index, key: index })) => ({ ...((feature, idx, index, key: index })) => ({ ...(feature, idx, key: index })) => (
                     <li
                       key={idx}
                       className="flex items-center text-sm text-slate-400"
                     >
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0"       />
                       {feature}
                     </li>
                   ))}
@@ -253,7 +253,7 @@ export default function GreenIT() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (
+            {benefits.map((((((((benefit, index, index, index, index, index, index, index) => ({ ...((((((benefit, index, index, index, index, index, index, key: index })) => ({ ...(((((benefit, index, index, index, index, index, key: index })) => ({ ...((((benefit, index, index, index, index, key: index })) => ({ ...(((benefit, index, index, index, key: index })) => ({ ...((benefit, index, index, key: index })) => ({ ...(benefit, index, key: index })) => (
               <motion.div
                 key={benefit.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -262,7 +262,7 @@ export default function GreenIT() {
                 className="text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <benefit.icon className="w-8 h-8 text-white" />
+                  <benefit.icon className="w-8 h-8 text-white"       />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">
                   {benefit.title}
@@ -293,7 +293,7 @@ export default function GreenIT() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {technologies.map((tech, index) => (
+            {technologies.map((((((((tech, index, index, index, index, index, index, index) => ({ ...((((((tech, index, index, index, index, index, index, key: index })) => ({ ...(((((tech, index, index, index, index, index, key: index })) => ({ ...((((tech, index, index, index, index, key: index })) => ({ ...(((tech, index, index, index, key: index })) => ({ ...((tech, index, index, key: index })) => ({ ...(tech, index, key: index })) => (
               <motion.div
                 key={tech.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -302,7 +302,7 @@ export default function GreenIT() {
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-teal-400 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <tech.icon className="w-8 h-8 text-white" />
+                  <tech.icon className="w-8 h-8 text-white"       />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">
                   {tech.title}

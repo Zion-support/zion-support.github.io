@@ -38,7 +38,7 @@ export function LoadingSpinner({
         }}
         role="status"
         aria-label="Loading"
-      />
+            />
 
       {showText && (
         <motion.p
@@ -57,14 +57,14 @@ export function LoadingSpinner({
 export function SkeletonLoader({ className, lines = 3, height = 'h-4' }) {
   return (
     <div className={cn('space-y-3', className)}>
-      {Array.from({ length: lines }).map((_, index) => (
+      {Array.from({ length: lines }).map((((((((_, index, index, index, index, index, index, index) => ({ ...((((((_, index, index, index, index, index, index, key: index })) => ({ ...(((((_, index, index, index, index, index, key: index })) => ({ ...((((_, index, index, index, index, key: index })) => ({ ...(((_, index, index, index, key: index })) => ({ ...((_, index, index, key: index })) => ({ ...(_, index, key: index })) => (
         <motion.div
           key={index}
           className={cn('bg-zion-slate-light/20 rounded animate-pulse', height)}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: index * 0.1 }}
-        />
+              />
       ))}
     </div>
   );
@@ -76,7 +76,7 @@ export function PageLoader({ text = 'Loading page...', className }) {
       className={cn('min-h-screen flex items-center justify-center', className)}
     >
       <div className="text-center">
-        <LoadingSpinner size="xl" color="primary" showText text={text} />
+        <LoadingSpinner size="xl" color="primary" showText text={text}       />
       </div>
     </div>
   );
@@ -85,7 +85,7 @@ export function PageLoader({ text = 'Loading page...', className }) {
 export function ButtonLoader({ size = 'sm', className }) {
   return (
     <div className={cn('inline-flex items-center', className)}>
-      <LoadingSpinner size={size} color="white" />
+      <LoadingSpinner size={size} color="white"       />
       <span className="ml-2">Loading...</span>
     </div>
   );

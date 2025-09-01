@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs');
+import path from 'path');
 const { execSync, spawn } = require('child_process');
-const cron = require('node-cron');
-const crypto = require('crypto');
+import cron from 'node-cron');
+import crypto from 'crypto');
 
 class FileIntegrityMonitor {
   constructor() {
@@ -295,7 +295,7 @@ class FileIntegrityMonitor {
 }
 
 // Export the class
-module.exports = FileIntegrityMonitor;
+export default FileIntegrityMonitor;
 
 // If running directly, start the monitor
 if (require.main === module) {

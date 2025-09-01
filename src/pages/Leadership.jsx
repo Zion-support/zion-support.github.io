@@ -210,20 +210,20 @@ const Leadership = () => {
                 <div className="grid md:grid - cols - 3 gap - 8 items - start">
                   <div className="text - center md:text - left">
                     <div className="w - 48 h - 48 bg - gradient - to - r from - blue - 500 to - cyan - 500 rounded - full flex items - center justify - center mx - auto md:mx - 0 mb - 6">
-                      <Users className="w - 24 h - 24 text - white"/>
+                      <Users className="w - 24 h - 24 text - white"      />
                     </div>
                     <h3 className="text - 2xl font - bold text - slate - 900 mb - 2">{leader.name}</h3>
                     <p className="text - lg text - blue - 600 font - semibold mb - 2">{leader.role}</p>
                     <div className="flex items - center justify - center md:justify - start text - sm text - slate - 500 mb - 4">
-                      <MapPin className="w - 4 h - 4 mr - 1"/>
+                      <MapPin className="w - 4 h - 4 mr - 1"      />
                       {leader.location}
                     </div>
                     <div className="flex justify - center md:justify - start space - x-4">
                       <a href={leader.linkedin} target="_blank" rel="noopener noreferrer" className="w - 10 h - 10 bg - blue - 600 text - white rounded - lg flex items - center justify - center hover:bg - blue - 700 transition - colors duration - 200">
-                        <Linkedin className="w - 5 h - 5"/>
+                        <Linkedin className="w - 5 h - 5"      />
                       </a>
                       <a href={`mailto:${leader.email}`} className="w - 10 h - 10 bg - slate - 600 text - white rounded - lg flex items - center justify - center hover:bg - slate - 700 transition - colors duration - 200">
-                        <Mail className="w - 5 h - 5"/>
+                        <Mail className="w - 5 h - 5"      />
                       </a>
                     </div>
                   </div>
@@ -281,7 +281,7 @@ const Leadership = () => {
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">
             {compValues.map ( (value, index) => (<div key={index} className="text - center">
                 <div className="w - 20 h - 20 bg - gradient - to - r from - blue - 500 to - cyan - 500 rounded - full flex items - center justify - center mx - auto mb - 6">
-                  <value.icon className="w - 10 h - 10 text - white"/>
+                  <value.icon className="w - 10 h - 10 text - white"      />
                 </div>
                 <h3 className="text - 2xl font - bold text - slate - 900 mb - 4">
                   {value.title}

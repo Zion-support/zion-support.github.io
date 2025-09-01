@@ -47,7 +47,7 @@ export function ServiceDetails({ country }) {
     return (<Card className="bg-zion-blue-dark border-zion-blue-light">
       <CardHeader>
         <CardTitle className="text-white flex items-center">
-          <Server className="mr-2 h-5 w-5 text-zion-cyan"/> 
+          <Server className="mr-2 h-5 w-5 text-zion-cyan"      /> 
           IT Onsite Service in {country}
         </CardTitle>
         <CardDescription className="text-zion-slate-light">
@@ -56,17 +56,17 @@ export function ServiceDetails({ country }) {
       </CardHeader>
       <CardContent className="space-y-4">
         <div className="overflow-hidden rounded-lg mb-4">
-          <img loading="lazy" src={getRegionalImage(country)} alt={`Datacenter in ${country}`} className="w-full object-cover h-48 transform transition-transform duration-500 hover:scale-110"/>
+          <img loading="lazy" src={getRegionalImage(country)} alt={`Datacenter in ${country}`} className="w-full object-cover h-48 transform transition-transform duration-500 hover:scale-110"      />
         </div>
         
         <div className="space-y-4">
           <div>
             <h4 className="text-lg font-medium text-white mb-2 flex items-center">
-              <MapPin className="mr-2 h-4 w-4 text-zion-purple"/>
+              <MapPin className="mr-2 h-4 w-4 text-zion-purple"      />
               Service Locations
             </h4>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
-              {datacenters.map((dc, idx) => (<div key={idx} className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light">
+              {datacenters.map((((((((dc, idx, index, index, index, index, index, index) => ({ ...((((((dc, idx, index, index, index, index, index, key: index })) => ({ ...(((((dc, idx, index, index, index, index, key: index })) => ({ ...((((dc, idx, index, index, index, key: index })) => ({ ...(((dc, idx, index, index, key: index })) => ({ ...((dc, idx, index, key: index })) => ({ ...(dc, idx, key: index })) => (<div key={idx} className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light">
                   {dc}
                 </div>))}
             </div>
@@ -74,7 +74,7 @@ export function ServiceDetails({ country }) {
           
           <div>
             <h4 className="text-lg font-medium text-white mb-2 flex items-center">
-              <Clock className="mr-2 h-4 w-4 text-zion-purple"/>
+              <Clock className="mr-2 h-4 w-4 text-zion-purple"      />
               Service Instructions
             </h4>
             <p className="text-zion-slate-light">

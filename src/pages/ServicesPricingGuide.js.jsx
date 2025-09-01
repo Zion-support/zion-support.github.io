@@ -90,7 +90,7 @@ import {
         description="Comprehensive pricing guide for all our IT and AI services. Compare features, pricing, and benefits across our service portfolio."
         keywords="pricing guide, IT services pricing, AI development cost, cloud migration pricing, cybersecurity pricing"
         canonical="https://ziontechgroup.com / services - pricing - guide"
-      />
+            />
 
       {/* Hero Section */}
       <div className="bg - gradient - to - r from - zion - purple to - zion - purple - dark py - 20 px - 4">
@@ -108,7 +108,7 @@ import {
               size="lg"
               className="bg - zion - cyan text - zion - blue - dark hover:bg - zion - cyan - light"
             >
-              <Mail className="w - 5 h - 5 mr - 2" />
+              <Mail className="w - 5 h - 5 mr - 2"       />
               Get Custom Quote
             </Button>
             <Button
@@ -116,7 +116,7 @@ import {
               variant="outline"
               className="border - zion - cyan text - zion - cyan hover:bg - zion - cyan / 10"
             >
-              <Phone className="w - 5 h - 5 mr - 2" />
+              <Phone className="w - 5 h - 5 mr - 2"       />
               Call + 1 302 464 0950
             </Button>
           </div>
@@ -128,19 +128,19 @@ import {
         <div className="container mx - auto">
           <div className="flex flex - wrap items - center justify - center gap - 8 text - zion - cyan">
             <div className="flex items - center gap - 2">
-              <Phone className="w - 5 h - 5" />
+              <Phone className="w - 5 h - 5"       />
               <span>+1 302 464 0950</span>
             </div>
             <div className="flex items - center gap - 2">
-              <Mail className="w - 5 h - 5" />
+              <Mail className="w - 5 h - 5"       />
               <span > kleber@ziontechgroup.com</span>
             </div>
             <div className="flex items - center gap - 2">
-              <MapPin className="w - 5 h - 5" />
+              <MapPin className="w - 5 h - 5"       />
               <span > 364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
             <div className="flex items - center gap - 2">
-              <ExternalLink className="w - 5 h - 5" />
+              <ExternalLink className="w - 5 h - 5"       />
               <a
                 href="https://ziontechgroup.com"
                 target="_blank"
@@ -204,7 +204,7 @@ import {
             <Card className="bg - zion - blue - dark border - zion - blue - light">
               <CardHeader className="text - center">
                 <div className="w - 16 h - 16 bg - green - 500 rounded - full flex items - center justify - center mx - auto mb - 4">
-                  <DollarSign className="w - 8 h - 8 text - white" />
+                  <DollarSign className="w - 8 h - 8 text - white"       />
                 </div>
                 <CardTitle className="text - white">Starter Tier</CardTitle>
                 <CardDescription className="text - zion - slate - light">
@@ -218,15 +218,15 @@ import {
                 </p>
                 <ul className="text - sm text - zion - slate - light space - y-2">
                   <li className="flex items - center justify - center gap - 2">
-                    <CheckCircle className="w - 4 h - 4 text - green - 400" />
+                    <CheckCircle className="w - 4 h - 4 text - green - 400"       />
                     Basic implementation
                   </li>
                   <li className="flex items - center justify - center gap - 2">
-                    <CheckCircle className="w - 4 h - 4 text - green - 400" />
+                    <CheckCircle className="w - 4 h - 4 text - green - 400"       />
                     Standard support
                   </li>
                   <li className="flex items - center justify - center gap - 2">
-                    <CheckCircle className="w - 4 h - 4 text - green - 400" />
+                    <CheckCircle className="w - 4 h - 4 text - green - 400"       />
                     Documentation included
                   </li>
                 </ul>
@@ -236,7 +236,7 @@ import {
             <Card className="bg - zion - blue - dark border - zion - purple / 50">
               <CardHeader className="text - center">
                 <div className="w - 16 h - 16 bg - blue - 500 rounded - full flex items - center justify - center mx - auto mb - 4">
-                  <DollarSign className="w - 8 h - 8 text - white" />
+                  <DollarSign className="w - 8 h - 8 text - white"       />
                 </div>
                 <CardTitle className="text - white">Professional Tier</CardTitle>
                 <CardDescription className="text - zion - slate - light">
@@ -250,15 +250,15 @@ import {
                 </p>
                 <ul className="text - sm text - zion - slate - light space - y-2">
                   <li className="flex items - center justify - center gap - 2">
-                    <CheckCircle className="w - 4 h - 4 text - green - 400" />
+                    <CheckCircle className="w - 4 h - 4 text - green - 400"       />
                     Advanced features
                   </li>
                   <li className="flex items - center justify - center gap - 2">
-                    <CheckCircle className="w - 4 h - 4 text - green - 400" />
+                    <CheckCircle className="w - 4 h - 4 text - green - 400"       />
                     Priority support
                   </li>
                   <li className="flex items - center justify - center gap - 2">
-                    <CheckCircle className="w - 4 h - 4 text - green - 400" />
+                    <CheckCircle className="w - 4 h - 4 text - green - 400"       />
                     Training included
                   </li>
                 </ul>
@@ -268,7 +268,7 @@ import {
             <Card className="bg - zion - blue - dark border - zion - blue - light">
               <CardHeader className="text - center">
                 <div className="w - 16 h - 16 bg - purple - 500 rounded - full flex items - center justify - center mx - auto mb - 4">
-                  <DollarSign className="w - 8 h - 8 text - white" />
+                  <DollarSign className="w - 8 h - 8 text - white"       />
                 </div>
                 <CardTitle className="text - white">Enterprise Tier</CardTitle>
                 <CardDescription className="text - zion - slate - light">
@@ -282,15 +282,15 @@ import {
                 </p>
                 <ul className="text - sm text - zion - slate - light space - y-2">
                   <li className="flex items - center justify - center gap - 2">
-                    <CheckCircle className="w - 4 h - 4 text - green - 400" />
+                    <CheckCircle className="w - 4 h - 4 text - green - 400"       />
                     Full customization
                   </li>
                   <li className="flex items - center justify - center gap - 2">
-                    <CheckCircle className="w - 4 h - 4 text - green - 400" />
+                    <CheckCircle className="w - 4 h - 4 text - green - 400"       />
                     24 / 7 dedicated support
                   </li>
                   <li className="flex items - center justify - center gap - 2">
-                    <CheckCircle className="w - 4 h - 4 text - green - 400" />
+                    <CheckCircle className="w - 4 h - 4 text - green - 400"       />
                     Ongoing maintenance
                   </li>
                 </ul>
@@ -363,13 +363,13 @@ import {
                         </TableCell>
                         <TableCell className="text - zion - slate - light">
                           <div className="flex items - center gap - 2">
-                            <Clock className="w - 4 h - 4" />
+                            <Clock className="w - 4 h - 4"       />
                             {service.availability}
                           </div>
                         </TableCell>
                         <TableCell className="text - white">
                           <div className="flex items - center gap - 1">
-                            <Star className="w - 4 h - 4 text - yellow - 400 fill - current" />
+                            <Star className="w - 4 h - 4 text - yellow - 400 fill - current"       />
                             {service.rating} ({service.reviewCount}) </div>
                         </TableCell>
                         <TableCell>
@@ -377,7 +377,7 @@ import {
                             size="sm"
                             className="bg - zion - purple hover:bg - zion - purple - dark text - white"
                           >
-                            <Mail className="w - 4 h - 4 mr - 2" />
+                            <Mail className="w - 4 h - 4 mr - 2"       />
                             Quote
                           </Button>
                         </TableCell>
@@ -417,27 +417,27 @@ import {
 
                       <div className="space - y-2 text - sm text - zion - slate - light">
                         <div className="flex items - center gap - 2">
-                          <Clock className="w - 4 h - 4" />
+                          <Clock className="w - 4 h - 4"       />
                           <span > Delivery: {service.availability}</span>
                         </div>
                         <div className="flex items - center gap - 2">
-                          <Globe className="w - 4 h - 4" />
+                          <Globe className="w - 4 h - 4"       />
                           <span > Location: {service.location}</span>
                         </div>
                         {service.aiScore && (<div className="flex items - center gap - 2">
-                            <TrendingUp className="w - 4 h - 4" />
+                            <TrendingUp className="w - 4 h - 4"       />
                             <span > AI Score: {service.aiScore}/100</span>
                           </div>) }
                       </div>
 
                       <div className="flex items - center gap - 2">
-                        <Star className="w - 4 h - 4 text - yellow - 400 fill - current" />
+                        <Star className="w - 4 h - 4 text - yellow - 400 fill - current"       />
                         <span className="text - white">{service.rating}</span>
                         <span className="text - zion - slate - light"> ({service.reviewCount} reviews) </span>
                       </div>
 
                       <Button className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white">
-                        <Mail className="w - 4 h - 4 mr - 2" />
+                        <Mail className="w - 4 h - 4 mr - 2"       />
                         Get Quote
                       </Button>
                     </CardContent>
@@ -463,7 +463,7 @@ import {
               size="lg"
               className="bg - zion - cyan text - zion - blue - dark hover:bg - zion - cyan - light"
             >
-              <Mail className="w - 5 h - 5 mr - 2" />
+              <Mail className="w - 5 h - 5 mr - 2"       />
               Request Custom Quote
             </Button>
             <Button
@@ -471,7 +471,7 @@ import {
               variant="outline"
               className="border - zion - cyan text - zion - cyan hover:bg - zion - cyan / 10"
             >
-              <Phone className="w - 5 h - 5 mr - 2" />
+              <Phone className="w - 5 h - 5 mr - 2"       />
               Call + 1 302 464 0950
             </Button>
           </div>

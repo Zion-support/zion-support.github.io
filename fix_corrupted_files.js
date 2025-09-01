@@ -1,5 +1,5 @@
-const fs = require("fs");
-const path = require("path");
+import fs from "fs");
+import path from "path");
 // Function to fix corrupted TypeScript files
 function fixCorruptedFile(filePath) {
   try {

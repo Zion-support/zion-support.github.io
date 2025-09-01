@@ -210,7 +210,7 @@ const contactFormFields = [
               transition={{ duration: 0.8, delay: 0.2 }}
               className="inline - flex items - center justify - center w - 20 h - 20 bg - gradient - to - br from - zion - cyan to - zion - purple rounded - 2xl mb - 8"
             >
-              <MessageSquare className="w - 10 h - 10 text - white" />
+              <MessageSquare className="w - 10 h - 10 text - white"       />
             </motion.div>
 
             <h1 className="text - 5xl md:text - 6xl font - bold text - white mb - 6">
@@ -255,7 +255,7 @@ const contactFormFields = [
                 <div
                   className={`w - 16 h - 16 bg - gradient - to - br ${method.color} rounded - xl flex items - center justify - center mx - auto mb - 4 group - hover:scale - 110 transition - transform duration - 300`}
                 >
-                  <method.icon className="w - 8 h - 8 text - white" />
+                  <method.icon className="w - 8 h - 8 text - white"       />
                 </div>
 
                 <h3 className="text - lg font - bold text - white mb - 2">
@@ -278,7 +278,7 @@ const contactFormFields = [
                     className="inline - flex items - center gap - 2 text - zion - cyan hover:text - white transition - colors duration - 300"
                   >
                     <span className="text - sm font - medium">Contact</span>
-                    <Send className="w - 4 h - 4" />
+                    <Send className="w - 4 h - 4"       />
                   </a>) }
               </motion.div>) ) }
           </div>
@@ -309,7 +309,7 @@ const contactFormFields = [
                   animate={{ opacity: 1, scale: 1 }}
                   className="bg - green - 500 / 20 border border - green - 500 / 40 rounded - 2xl p - 8 text - center"
                 >
-                  <CheckCircle className="w - 16 h - 16 text - green - 400 mx - auto mb - 4" />
+                  <CheckCircle className="w - 16 h - 16 text - green - 400 mx - auto mb - 4"       />
                   <h3 className="text - 2xl font - bold text - white mb - 2">
                     Message Sent!
                   </h3>
@@ -336,7 +336,7 @@ const contactFormFields = [
                           required={field.required}
                           placeholder={field.placeholder}
                           className="w - full px - 4 py - 3 bg - zion - blue - dark / 50 border border - zion - cyan / 20 rounded - xl text - white placeholder - zion - slate - light focus:border - zion - cyan focus:outline - none transition - colors duration - 300"
-                        />
+                              />
                       </div>) ) }
                   </div>
 
@@ -358,7 +358,7 @@ const contactFormFields = [
                           required={field.required}
                           placeholder={field.placeholder}
                           className="w - full px - 4 py - 3 bg - zion - blue - dark / 50 border border - zion - cyan / 20 rounded - xl text - white placeholder - zion - slate - light focus:border - zion - cyan focus:outline - none transition - colors duration - 300"
-                        />
+                              />
                       </div>) ) }
                   </div>
 
@@ -392,7 +392,7 @@ const contactFormFields = [
                             required={field.required}
                             placeholder={field.placeholder}
                             className="w - full px - 4 py - 3 bg - zion - blue - dark / 50 border border - zion - cyan / 20 rounded - xl text - white placeholder - zion - slate - light focus:border - zion - cyan focus:outline - none transition - colors duration - 300"
-                          />) }
+                                />) }
                       </div>) ) }
                   </div>
 
@@ -412,7 +412,7 @@ const contactFormFields = [
                       rows={6}
                       placeholder="Tell us about your project, goals, and how we can help..."
                       className="w - full px - 4 py - 3 bg - zion - blue - dark / 50 border border - zion - cyan / 20 rounded - xl text - white placeholder - zion - slate - light focus:border - zion - cyan focus:outline - none transition - colors duration - 300 resize - none"
-                    />
+                          />
                   </div>
 
                   <button
@@ -443,7 +443,7 @@ const contactFormFields = [
                   leverage cutting - edge technology to achieve their goals.
                 </p>
                 <div className="flex items - center gap - 3 text - zion - cyan">
-                  <Building className="w - 5 h - 5" />
+                  <Building className="w - 5 h - 5"       />
                   <span className="font - medium">Established 2020</span>
                 </div>
               </div>
@@ -461,7 +461,7 @@ const contactFormFields = [
                       className={`p - 3 bg - zion - blue - dark / 30 border border - zion - cyan / 20 rounded - xl text - zion - slate - light ${social.color} hover:border - zion - cyan / 40 transition - all duration - 300`}
                       title={social.name}
                     >
-                      <social.icon className="w - 5 h - 5" />
+                      <social.icon className="w - 5 h - 5"       />
                     </a>) ) }
                 </div>
               </div>
@@ -472,19 +472,19 @@ const contactFormFields = [
                 </h3>
                 <ul className="space - y-3 text - zion - slate - light">
                   <li className="flex items - center gap - 3">
-                    <CheckCircle className="w - 5 h - 5 text - zion - cyan flex - shrink - 0" />
+                    <CheckCircle className="w - 5 h - 5 text - zion - cyan flex - shrink - 0"       />
                     <span > Expert team with 20 + years combined experience</span>
                   </li>
                   <li className="flex items - center gap - 3">
-                    <CheckCircle className="w - 5 h - 5 text - zion - cyan flex - shrink - 0" />
+                    <CheckCircle className="w - 5 h - 5 text - zion - cyan flex - shrink - 0"       />
                     <span > Proven track record of successful projects</span>
                   </li>
                   <li className="flex items - center gap - 3">
-                    <CheckCircle className="w - 5 h - 5 text - zion - cyan flex - shrink - 0" />
+                    <CheckCircle className="w - 5 h - 5 text - zion - cyan flex - shrink - 0"       />
                     <span > Cutting - edge technology solutions</span>
                   </li>
                   <li className="flex items - center gap - 3">
-                    <CheckCircle className="w - 5 h - 5 text - zion - cyan flex - shrink - 0" />
+                    <CheckCircle className="w - 5 h - 5 text - zion - cyan flex - shrink - 0"       />
                     <span > 24 / 7 support and maintenance</span>
                   </li>
                 </ul>
@@ -516,7 +516,7 @@ const contactFormFields = [
           <div className="bg - zion - blue - dark / 30 border border - zion - cyan / 20 rounded - 2xl p - 8 text - center">
             <div className="w - full h - 64 bg - gradient - to - br from - zion - cyan / 20 to - zion - purple / 20 rounded - xl flex items - center justify - center mb - 6">
               <div className="text - center">
-                <MapPin className="w - 16 h - 16 text - zion - cyan mx - auto mb - 4" />
+                <MapPin className="w - 16 h - 16 text - zion - cyan mx - auto mb - 4"       />
                 <p className="text - zion - slate - light">
                   Interactive Map Coming Soon
                 </p>

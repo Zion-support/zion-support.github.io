@@ -132,7 +132,7 @@ import { useSecurityCompliance } from '../hooks / useSecurityCompliance';
       <div className="flex items - center justify - between p - 4 border - b border - gray - 200 dark:border - gray - 700">
         <div className="flex items - center space - x-3">
           <div className="p - 2 bg - blue - 100 dark:bg - blue - 900 rounded - lg">
-            <Shield className="w - 6 h - 6 text - blue - 600 dark:text - blue - 400" />
+            <Shield className="w - 6 h - 6 text - blue - 600 dark:text - blue - 400"       />
           </div>
           <div>
             <h2 className="text - lg font - semibold text - gray - 900 dark:text - white">
@@ -150,7 +150,7 @@ import { useSecurityCompliance } from '../hooks / useSecurityCompliance';
             disabled={isComplianceChecking}
             className="flex items - center space - x-2 px - 3 py - 2 text - sm font - medium text - gray - 700 dark:text - gray - 300 bg - gray - 100 dark:bg - gray - 800 rounded - lg hover:bg - gray - 200 dark:hover:bg - gray - 700 disabled:opacity - 50"
           >
-            {isComplianceChecking ? (<Loader2 className="w - 4 h - 4 animate - spin" />) : (<RefreshCw className="w - 4 h - 4" />) }
+            {isComplianceChecking ? (<Loader2 className="w - 4 h - 4 animate - spin"       />) : (<RefreshCw className="w - 4 h - 4"       />) }
             <span > Check Compliance</span>
           </button>
 
@@ -158,7 +158,7 @@ import { useSecurityCompliance } from '../hooks / useSecurityCompliance';
             onClick={ () => setShowSettings (!showSettings) }
             className="p - 2 text - gray - 500 hover:text - gray - 700 dark:text - gray - 400 dark:hover:text - gray - 200 rounded - lg hover:bg - gray - 100 dark:hover:bg - gray - 800"
           >
-            <Settings className="w - 5 h - 5" />
+            <Settings className="w - 5 h - 5"       />
           </button>
         </div>
       </div>
@@ -170,14 +170,14 @@ import { useSecurityCompliance } from '../hooks / useSecurityCompliance';
             <div className="flex items - center space - x-2">
               <div
                 className={`w - 3 h - 3 rounded - full ${isMonitoring ? 'bg - green - 500' : 'bg - red - 500'}`}
-              />
+                    />
               <span className="text - sm font - medium text - gray - 700 dark:text - gray - 300">
                 {isMonitoring ? 'Monitoring Active' : 'Monitoring Inactive'}
               </span>
             </div>
 
             <div className="flex items - center space - x-2">
-              <Clock className="w - 4 h - 4 text - gray - 500" />
+              <Clock className="w - 4 h - 4 text - gray - 500"       />
               <span className="text - sm text - gray - 600 dark:text - gray - 400">
                 Last Check: {new Date () .toLocaleTimeString () }
               </span>
@@ -189,13 +189,13 @@ import { useSecurityCompliance } from '../hooks / useSecurityCompliance';
                 onClick={handleStartMonitoring}
                 className="flex items - center space - x-2 px - 4 py - 2 text - sm font - medium text - white bg - green - 600 rounded - lg hover:bg - green - 700"
               >
-                <Play className="w - 4 h - 4" />
+                <Play className="w - 4 h - 4"       />
                 <span > Start Monitoring</span>
               </button>) : (<button
                 onClick={handleStopMonitoring}
                 className="flex items - center space - x-2 px - 4 py - 2 text - sm font - medium text - white bg - red - 600 rounded - lg hover:bg - red - 700"
               >
-                <Square className="w - 4 h - 4" />
+                <Square className="w - 4 h - 4"       />
                 <span > Stop Monitoring</span>
               </button>) }
           </div>
@@ -219,7 +219,7 @@ import { useSecurityCompliance } from '../hooks / useSecurityCompliance';
                 : 'border - transparent text - gray - 500 hover:text - gray - 700 dark:text - gray - 400 dark:hover:text - gray - 200'
             }`}
           >
-            <Icon className="w - 4 h - 4" />
+            <Icon className="w - 4 h - 4"       />
             <span>{label}</span>
           </button>) ) }
       </div>
@@ -246,7 +246,7 @@ import { useSecurityCompliance } from '../hooks / useSecurityCompliance';
                         {securityMetrics.totalEvents}
                       </p>
                     </div>
-                    <AlertTriangle className="w - 8 h - 8 text - orange - 500" />
+                    <AlertTriangle className="w - 8 h - 8 text - orange - 500"       />
                   </div>
                 </div>
 
@@ -260,7 +260,7 @@ import { useSecurityCompliance } from '../hooks / useSecurityCompliance';
                         {securityMetrics.criticalEvents}
                       </p>
                     </div>
-                    <XCircle className="w - 8 h - 8 text - red - 500" />
+                    <XCircle className="w - 8 h - 8 text - red - 500"       />
                   </div>
                 </div>
 
@@ -274,7 +274,7 @@ import { useSecurityCompliance } from '../hooks / useSecurityCompliance';
                         {securityMetrics.complianceScore}%
                       </p>
                     </div>
-                    <CheckCircle className="w - 8 h - 8 text - green - 500" />
+                    <CheckCircle className="w - 8 h - 8 text - green - 500"       />
                   </div>
                 </div>
 
@@ -290,7 +290,7 @@ import { useSecurityCompliance } from '../hooks / useSecurityCompliance';
                         {securityMetrics.threatLevel.toUpperCase () }
                       </p>
                     </div>
-                    <Shield className="w - 8 h - 8 text - blue - 500" />
+                    <Shield className="w - 8 h - 8 text - blue - 500"       />
                   </div>
                 </div>
               </div>
@@ -309,7 +309,7 @@ import { useSecurityCompliance } from '../hooks / useSecurityCompliance';
                         <div
                           className={`p - 2 rounded - lg ${getSeverityColor (event.severity) }`}
                         >
-                          <AlertTriangle className="w - 4 h - 4" />
+                          <AlertTriangle className="w - 4 h - 4"       />
                         </div>
                         <div>
                           <p className="font - medium text - gray - 900 dark:text - white">
@@ -370,7 +370,7 @@ import { useSecurityCompliance } from '../hooks / useSecurityCompliance';
                         <div
                           className={`p - 2 rounded - lg ${getSeverityColor (event.severity) }`}
                         >
-                          <AlertTriangle className="w - 4 h - 4" />
+                          <AlertTriangle className="w - 4 h - 4"       />
                         </div>
                         <div>
                           <p className="font - medium text - gray - 900 dark:text - white">
@@ -484,7 +484,7 @@ import { useSecurityCompliance } from '../hooks / useSecurityCompliance';
                               key={index}
                               className="text - sm text - gray - 600 dark:text - gray - 400 flex items - center space - x-2"
                             >
-                              <CheckCircle className="w - 3 h - 3 text - green - 500" />
+                              <CheckCircle className="w - 3 h - 3 text - green - 500"       />
                               <span>{req}</span>
                             </li>) ) }
                         </ul>
@@ -588,10 +588,10 @@ import { useSecurityCompliance } from '../hooks / useSecurityCompliance';
                     className="w - full px - 4 py - 2 text - sm font - medium text - white bg - blue - 600 rounded - lg hover:bg - blue - 700"
                   >
                     {copied ? (<span className="flex items - center justify - center space - x-2">
-                        <CheckCircle className="w - 4 h - 4" />
+                        <CheckCircle className="w - 4 h - 4"       />
                         <span > Copied to Clipboard</span>
                       </span>) : (<span className="flex items - center justify - center space - x-2">
-                        <FileText className="w - 4 h - 4" />
+                        <FileText className="w - 4 h - 4"       />
                         <span > Generate Report</span>
                       </span>) }
                   </button>
@@ -610,7 +610,7 @@ import { useSecurityCompliance } from '../hooks / useSecurityCompliance';
                     className="w - full px - 4 py - 2 text - sm font - medium text - white bg - green - 600 rounded - lg hover:bg - green - 700"
                   >
                     <span className="flex items - center justify - center space - x-2">
-                      <Download className="w - 4 h - 4" />
+                      <Download className="w - 4 h - 4"       />
                       <span > Export Audit Log</span>
                     </span>
                   </button>

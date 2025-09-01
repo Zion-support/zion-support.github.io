@@ -14,5 +14,5 @@ export default function NewProductsPage () {
       listings={listings}
       categoryFilters={CATEGORY_FILTERS}
       initialPrice={{ min: 0, max: 5000 }}
-    />) ;
+          />) ;
 }

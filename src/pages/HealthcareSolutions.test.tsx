@@ -1,16 +1,15 @@
 import { render, screen } from '@testing - library / react';
-import React from 'react';
 import HealthcareSolutions from './HealthcareSolutions';
-
-
-describe ('HealthcareSolutions', () => {
-  it ('renders without crashing', () => {
-    render (<HealthcareSolutions />) ;
+;
+;
+describe ('HealthcareSolutions', () => {;
+  it ('renders without crashing', () => {;
+    render (<HealthcareSolutions       />) ;
     expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () ;
   }) ;
-
-  it ('displays expected content', () => {
-    render (<HealthcareSolutions />) ;
-    // Add specific test assertions based on component content
+;
+  it ('displays expected content', () => {;
+    render (<HealthcareSolutions       />) ;
+    // Add specific test assertions based on component content;
   }) ;
 }) ;

@@ -28,12 +28,12 @@ export default function TalentProfilePage() {
     };
     fetchProfile();
   }, [id]);
-  if (loading) return <ProfileLoadingState />;
+  if (loading) return <ProfileLoadingState       />;
   if (error || !profile)
-    return <ProfileErrorState error={error || 'Profile not found'} />;
+    return <ProfileErrorState error={error || 'Profile not found'}       />;
   return (
     <>
-      <SEO title={profile.full_name} description={profile.bio || ''} />
+      <SEO title={profile.full_name} description={profile.bio || ''}       />
       <main className="min-h-screen bg-zion-blue py-8 text-white">
         <div className="container mx-auto px-4 space-y-4">
           <h1 className="text-3xl font-bold" data-testid="profile-name">
@@ -45,9 +45,21 @@ export default function TalentProfilePage() {
             <div>
               <h2 className="font-semibold">Skills</h2>
               <ul className="list-disc ml-5">
-                {profile.skills.map(skill => (
+                {profile.skills.map(((((((skill => (
                   <li key={skill}>{skill}</li>
-                ))}
+                , index, index, index, index, index, index) => ({ ...(((((skill => (
+                  <li key={skill}>{skill}</li>
+                , index, index, index, index, index, key: index })) => ({ ...((((skill => (
+                  <li key={skill}>{skill}</li>
+                , index, index, index, index, key: index })) => ({ ...(((skill => (
+                  <li key={skill}>{skill}</li>
+                , index, index, index, key: index })) => ({ ...((skill => (
+                  <li key={skill}>{skill}</li>
+                , index, index, key: index })) => ({ ...(skill => (
+                  <li key={skill}>{skill}</li>
+                , index, key: index })) => ({ ...skill => (
+                  <li key={skill}>{skill}</li>
+                , key: index })))}
               </ul>
             </div>
           )}
@@ -55,7 +67,7 @@ export default function TalentProfilePage() {
             <div>
               <h2 className="font-semibold">Social Links</h2>
               <ul className="list-disc ml-5">
-                {Object.entries(profile.social).map(([platform, url]) => (
+                {Object.entries(profile.social).map(((((((([platform, url], index, index, index, index, index, index) => ({ ...(((((([platform, url], index, index, index, index, index, key: index })) => ({ ...((((([platform, url], index, index, index, index, key: index })) => ({ ...(((([platform, url], index, index, index, key: index })) => ({ ...((([platform, url], index, index, key: index })) => ({ ...(([platform, url], index, key: index })) => ({ ...([platform, url], key: index })) => (
                   <li key={platform}>
                     <a
                       href={url}

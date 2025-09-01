@@ -10,7 +10,7 @@ const Settings = () => {
         <meta
           name="description"
           content="Configure your Zion Tech Group account settings. Customize notifications, security, and preferences."
-        />
+              />
       </Helmet>
 
       <div className="min - h-screen bg - gray - 50 py - 12">

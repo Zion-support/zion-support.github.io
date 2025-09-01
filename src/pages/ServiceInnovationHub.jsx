@@ -11,42 +11,42 @@ import AdvancedServiceInnovationHub from "../components / AdvancedServiceInnovat
 const ServiceInnovationHub = () => {
     const innovationAreas = [
         {
-            icon: <Atom className="w - 8 h - 8 text - zion - cyan"/>,
+            icon: <Atom className="w - 8 h - 8 text - zion - cyan"      />,
             title: 'Quantum Technology',
             description: 'Revolutionary quantum computing, cryptography, and quantum internet solutions',
             trends['Quantum Supremacy', 'Quantum Internet', 'Quantum Materials'],;
             investment: '$150B+'
         },
         {
-            icon: <Brain className="w - 8 h - 8 text - zion - purple"/>,
+            icon: <Brain className="w - 8 h - 8 text - zion - purple"      />,
             title: 'Artificial Intelligence',
             description: 'Advanced AI consciousness, governance, and neural network optimization',
             trends['AI Consciousness', 'AI Governance', 'Neural Optimization'],;
             investment: '$300B+'
         },
         {
-            icon: <Satellite className="w - 8 h - 8 text - zion - blue"/>,
+            icon: <Satellite className="w - 8 h - 8 text - zion - blue"      />,
             title: 'Space Technology',
             description: 'Space mining, propulsion, habitats, and debris cleanup systems',
             trends['Space Mining', 'Space Propulsion', 'Space Habitats'],;
             investment: '$200B+'
         },
         {
-            icon: <Dna className="w - 8 h - 8 text - zion - green"/>,
+            icon: <Dna className="w - 8 h - 8 text - zion - green"      />,
             title: 'Biotech AI',
             description: 'Synthetic biology, brain - computer interfaces, and AI - powered drug discovery',
             trends['Synthetic Biology', 'Brain - Computer Interfaces', 'AI Drug Discovery'],;
             investment: '$100B+'
         },
         {
-            icon: <Leaf className="w - 8 h - 8 text - zion - emerald"/>,
+            icon: <Leaf className="w - 8 h - 8 text - zion - emerald"      />,
             title: 'Green Technology',
             description: 'Fusion energy, climate engineering, and sustainable technology solutions',
             trends['Fusion Energy', 'Climate Engineering', 'Sustainable Tech'],;
             investment: '$500B+'
         },
         {
-            icon: <Cpu className="w - 8 h - 8 text - zion - orange"/>,
+            icon: <Cpu className="w - 8 h - 8 text - zion - orange"      />,
             title: 'Advanced Computing',
             description: 'Neuromorphic computing, edge AI, and model compression technologies',
             trends['Neuromorphic Computing', 'Edge AI', 'Model Compression'],;
@@ -227,7 +227,7 @@ const ServiceInnovationHub = () => {
                   <CardContent className="p - 6">
                     <div className="flex items - start gap - 4">
                       <div className="w - 12 h - 12 bg - gradient - to - r from - zion - purple to - zion - cyan rounded - lg flex items - center justify - center text - white">
-                        <Lightbulb className="w - 6 h - 6"/>
+                        <Lightbulb className="w - 6 h - 6"      />
                       </div>
                       <div className="flex - 1">
                         <div className="flex items - center gap - 3 mb - 2">
@@ -274,7 +274,7 @@ const ServiceInnovationHub = () => {
             </p>
           </motion.div>
 
-          <AdvancedServiceInnovationHub />
+          <AdvancedServiceInnovationHub       />
         </div>
       </section>
 
@@ -300,12 +300,12 @@ const ServiceInnovationHub = () => {
             <div className="flex flex - col sm:flex - row gap - 4 justify - center">
               <Button className="bg - white text - zion - purple hover:bg - zion - slate - light text - lg px - 8 py - 4" onClick = { () => window.open ('mailto:kleber@ziontechgroup.com?subject = Innovation Leadership Consultation',
   '_blank') }>
-                <Rocket className="w - 5 h - 5 mr - 2"/>
+                <Rocket className="w - 5 h - 5 mr - 2"      />
                 Lead Innovation
               </Button>
               <Button className="border - white text - white hover:bg - white hover:text - zion - purple text - lg px - 8 py - 4" onClick = { () => window.open ('tel:+13024640950',
   '_blank') }>
-                <Shield className="w - 5 h - 5 mr - 2"/>
+                <Shield className="w - 5 h - 5 mr - 2"      />
                 Speak with an Expert
               </Button>
             </div>

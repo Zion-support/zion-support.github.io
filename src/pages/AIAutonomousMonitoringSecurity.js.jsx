@@ -13,15 +13,15 @@ const AIAutonomousMonitoringSecurity = () => {
         <meta
           name="description"
           content="Revolutionary AI autonomous monitoring security platform that continuously secures monitoring, detects threats, and protects monitoring infrastructure with advanced AI capabilities and autonomous operation."
-        />
+              />
         <meta
           name="keywords"
           content="AI monitoring security, autonomous monitoring security, monitoring protection, threat detection, autonomous operations, AI monitoring security platform"
-        />
+              />
         <link
           rel="canonical"
           href="https://ziontechgroup.com / ai - autonomous - monitoring - security"
-        />
+              />
       </Helmet>
 
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - yellow - 900 to - slate - 900">

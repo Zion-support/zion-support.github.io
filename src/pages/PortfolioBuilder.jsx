@@ -19,7 +19,7 @@ export default function PortfolioBuilder () {
         <SEO
           title="Portfolio Builder | Zion AI Marketplace"
           description="Create and customize your resume and portfolio to showcase your skills and experience."
-        />
+              />
 
         <main className="container mx - auto px - 4 py - 8">
           <h1 className="text - 3xl font - bold mb - 8">
@@ -47,17 +47,17 @@ export default function PortfolioBuilder () {
             </TabsList>
 
             <TabsContent value="resume" className="space - y-6">
-              <ResumeWizard />
+              <ResumeWizard       />
             </TabsContent>
 
             <TabsContent value="portfolio" className="space - y-6">
-              <PortfolioSection />
+              <PortfolioSection       />
             </TabsContent>
           </Tabs>
         </main>
       </>) ;
   }
   return (<ProtectedRoute>
-      <PortfolioBuilderContent />
+      <PortfolioBuilderContent       />
     </ProtectedRoute>) ;
 }

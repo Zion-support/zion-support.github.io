@@ -45,7 +45,7 @@ import { Download, Star, Users, Award export const AppStoreBanner = () => {
               <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-3xl p-8 shadow-2xl">
                 <div className="text-center text-white">
                   <div className="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Download className="w-12 h-12" />
+                    <Download className="w-12 h-12"       />
                   </div>
                   <h3 className="text-2xl font-bold mb-4">Zion Mobile App</h3>
                   <p className="text-blue-100 mb-6">
@@ -54,9 +54,9 @@ import { Download, Star, Users, Award export const AppStoreBanner = () => {
 
                   {/* Feature highlights */}
                   <div className="space-y-3 mb-8">
-                    {features.map((feature, index) => (
+                    {features.map((((((((feature, index, index, index, index, index, index, index) => ({ ...((((((feature, index, index, index, index, index, index, key: index })) => ({ ...(((((feature, index, index, index, index, index, key: index })) => ({ ...((((feature, index, index, index, index, key: index })) => ({ ...(((feature, index, index, index, key: index })) => ({ ...((feature, index, index, key: index })) => ({ ...(feature, index, key: index })) => (
                       <div key={index} className="flex items-center justify-center space-x-3">
-                        <feature.icon className={`w-5 h-5 ${feature.color}`} />
+                        <feature.icon className={`w-5 h-5 ${feature.color}`}       />
                         <span className="text-sm text-blue-100">{feature.text}</span>
                       </div>
                     ))}
@@ -83,7 +83,7 @@ import { Download, Star, Users, Award export const AppStoreBanner = () => {
             </div>
 
             <div className="space-y-6">
-              {appStores.map((store, index) => (
+              {appStores.map((((((((store, index, index, index, index, index, index, index) => ({ ...((((((store, index, index, index, index, index, index, key: index })) => ({ ...(((((store, index, index, index, index, index, key: index })) => ({ ...((((store, index, index, index, index, key: index })) => ({ ...(((store, index, index, index, key: index })) => ({ ...((store, index, index, key: index })) => ({ ...(store, index, key: index })) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-4">
@@ -92,7 +92,7 @@ import { Download, Star, Users, Award export const AppStoreBanner = () => {
                         <h4 className="text-xl font-semibold text-white">{store.name}</h4>
                         <div className="flex items-center space-x-2 mt-1">
                           <div className="flex items-center space-x-1">
-                            <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                            <Star className="w-4 h-4 text-yellow-400 fill-current"       />
                             <span className="text-sm text-gray-300">{store.rating}</span>
                           </div>
                           <span className="text-sm text-gray-400">({store.reviews} reviews)</span>
@@ -108,7 +108,7 @@ import { Download, Star, Users, Award export const AppStoreBanner = () => {
                         href={store.downloadUrl}
                         className="inline-flex items-center px-6 py-3 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
 
-                        <Download className="w-4 h-4 mr-2" />
+                        <Download className="w-4 h-4 mr-2"       />
                         Download
                       </a>
                     </div>

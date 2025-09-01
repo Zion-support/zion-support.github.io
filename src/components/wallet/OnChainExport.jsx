@@ -65,12 +65,12 @@ export function OnChainExport() {
     return (<Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          {isConnected ? (<Wallet aria-hidden="true" className="h-5 w-5"/>)}
+          {isConnected ? (<Wallet aria-hidden="true" className="h-5 w-5"      />)}
           On-chain Export
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
-                <Info aria-label="More info" className="h-4 w-4 text-muted-foreground cursor-help"/>
+                <Info aria-label="More info" className="h-4 w-4 text-muted-foreground cursor-help"      />
               </TooltipTrigger>
               <TooltipContent>
                 <p className="max-w-xs">Export your ZION$ tokens to an external blockchain wallet</p>
@@ -87,11 +87,11 @@ export function OnChainExport() {
               <span className="font-medium">250 ZION$</span>
             </div>
             {exportStatus === 'success' ? (<Button className="w-full bg-green-600 hover:bg-green-700" disabled>
-                <Check aria-hidden="true" className="mr-2 h-4 w-4"/>
+                <Check aria-hidden="true" className="mr-2 h-4 w-4"      />
                 Tokens Exported
               </Button>) : (<Button className="w-full" onClick={handleExportTokens} disabled={isExporting}>
                 {isExporting ? "Processing..." : "Export Tokens"}
-                {!isExporting && <ArrowUpRight aria-hidden="true" className="ml-2 h-4 w-4"/>}
+                {!isExporting && <ArrowUpRight aria-hidden="true" className="ml-2 h-4 w-4"      />}
               </Button>)}
           </div>) : (<div className="space-y-2">
             <p className="text-sm text-muted-foreground mb-3">

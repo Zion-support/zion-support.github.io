@@ -131,7 +131,7 @@ const userPosts = [
   `community, forum, profile, user profile,
   ${user.name
 
-}`}/>
+}`}      />
         ,
             <div className="container py - 8">
         <div className="flex items - center gap - 3 mb - 6">
@@ -150,7 +150,7 @@ const userPosts = [
               <CardHeader className="text - center">
                 <div className="flex justify - center mb - 4">
                   <Avatar className="h - 24 w - 24">
-                    <AvatarImage src={user.avatar}/>
+                    <AvatarImage src={user.avatar}      />
                     <AvatarFallback>{user.name.charAt (0) }</AvatarFallback>
                   </Avatar>
                 </div>
@@ -158,7 +158,7 @@ const userPosts = [
                   {user.name}
                   {user.isVerified && (<span className="text - blue - 500">
                       <svg xmlns="http://www.w3.org / 2000 / svg" viewBox="0 0 24 24" fill="currentColor" className="w - 5 h - 5">
-                        <path fillRule="evenodd" d="M8.603 3.799A4.49 4.49 0 0112 2.25c1.357 0 2.573.6 3.397 1.549a4.49 4.49 0 013.498 1.307 4.491 4.491 0 011.307 3.497A4.49 4.49 0 0121.75 12a4.49 4.49 0 01 - 1.549 3.397 4.491 4.491 0 01 - 1.307 3.497 4.491 4.491 0 01 - 3.497 1.307A4.49 4.49 0 0112 21.75a4.49 4.49 0 01 - 3.397 - 1.549 4.49 4.49 0 01 - 3.498 - 1.306 4.491 4.491 0 01 - 1.307 - 3.498A4.49 4.49 0 012.25 12c0 - 1.357.6 - 2.573 1.549 - 3.397a4.49 4.49 0 011.307 - 3.497 4.49 4.49 0 013.497 - 1.307zm7.007 6.387a.75.75 0 10 - 1.22-.872l - 3.236 4.53L9.53 12.22a.75.75 0 00 - 1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75 - 5.25z" clipRule="evenodd"/>
+                        <path fillRule="evenodd" d="M8.603 3.799A4.49 4.49 0 0112 2.25c1.357 0 2.573.6 3.397 1.549a4.49 4.49 0 013.498 1.307 4.491 4.491 0 011.307 3.497A4.49 4.49 0 0121.75 12a4.49 4.49 0 01 - 1.549 3.397 4.491 4.491 0 01 - 1.307 3.497 4.491 4.491 0 01 - 3.497 1.307A4.49 4.49 0 0112 21.75a4.49 4.49 0 01 - 3.397 - 1.549 4.49 4.49 0 01 - 3.498 - 1.306 4.491 4.491 0 01 - 1.307 - 3.498A4.49 4.49 0 012.25 12c0 - 1.357.6 - 2.573 1.549 - 3.397a4.49 4.49 0 011.307 - 3.497 4.49 4.49 0 013.497 - 1.307zm7.007 6.387a.75.75 0 10 - 1.22-.872l - 3.236 4.53L9.53 12.22a.75.75 0 00 - 1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75 - 5.25z" clipRule="evenodd"      />
                       </svg>
                     </span>) }
                 </CardTitle>
@@ -171,12 +171,12 @@ const userPosts = [
               <CardContent className="space - y-6">
                 <div>
                   <h3 className="text - sm font - medium text - muted - foreground mb - 2">Reputation</h3>
-                  <ReputationDisplay reputation={user.reputation} size="lg"/>
+                  <ReputationDisplay reputation={user.reputation} size="lg"      />
                 </div>
 
                 <div>
                   <h3 className="text - sm font - medium text - muted - foreground mb - 2">Badges</h3>
-                  <UserBadges badges={user.badges}/>
+                  <UserBadges badges={user.badges}      />
                 </div>
 
                 <div className="grid grid - cols - 2 gap - 4">
@@ -212,7 +212,7 @@ const userPosts = [
                 <h2 className="text - xl font - bold mb - 4">Posts by {user.name}</h2>
 
                 {posts.length > 0 ? (<div className="space - y-4">
-                    {posts.map ( (post) => (<PostCard key={post.id} post={post}/>) ) }
+                    {posts.map ( (post) => (<PostCard key={post.id} post={post}      />) ) }
                   </div>) : (<Card>
                     <CardContent className="p - 6 text - center">
                       <p className="text - muted - foreground">This user hasn't created  posts yet.</p>

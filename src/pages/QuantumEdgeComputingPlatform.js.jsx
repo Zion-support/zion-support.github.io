@@ -112,7 +112,7 @@ const QuantumEdgeComputingPlatform = () => {
         <div className="relative z - 10 container mx - auto px - 4 text - center">
           <div className="flex justify - center mb - 6">
             <div className="w - 20 h - 20 bg - gradient - to - r from - cyan - 500 to - blue - 500 rounded - 2xl flex items - center justify - center">
-              <Server className="w - 10 h - 10 text - white"/>
+              <Server className="w - 10 h - 10 text - white"      />
             </div>
           </div>
           <h1 className="text - 5xl md:text - 7xl font - bold mb - 6 text - gradient">
@@ -125,7 +125,7 @@ const QuantumEdgeComputingPlatform = () => {
           <div className="flex flex - wrap justify - center gap - 4 mb - 8">
             <Link to="/contact" className="btn - primary text - lg px - 8 py - 4 flex items - center space - x-2">
               <span > Get Started</span>
-              <ArrowRight className="w - 5 h - 5"/>
+              <ArrowRight className="w - 5 h - 5"      />
             </Link>
             <Link to="/contact" className="btn - secondary text - lg px - 8 py - 4">
               Request Demo
@@ -133,15 +133,15 @@ const QuantumEdgeComputingPlatform = () => {
           </div>
           <div className="flex flex - wrap justify - center items - center gap - 8 text - sm text - gray - 400">
             <div className="flex items - center space - x-2">
-              <Star className="w - 4 h - 4 text - yellow - 400"/>
+              <Star className="w - 4 h - 4 text - yellow - 400"      />
               <span > Trusted by 500 + enterprises</span>
             </div>
             <div className="flex items - center space - x-2">
-              <Users className="w - 4 h - 4 text - cyan - 400"/>
+              <Users className="w - 4 h - 4 text - cyan - 400"      />
               <span > 99.9% uptime guarantee</span>
             </div>
             <div className="flex items - center space - x-2">
-              <Users className="w - 4 h - 4 text - green - 400"/>
+              <Users className="w - 4 h - 4 text - green - 400"      />
               <span > 10x performance improvement</span>
             </div>
           </div>
@@ -162,7 +162,7 @@ const QuantumEdgeComputingPlatform = () => {
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">
             {features.map ( (feature, index) => (<div key={index} className="text - center group">
                 <div className="w - 16 h - 16 bg - gradient - to - r from - cyan - 500 to - blue - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 4 group - hover:scale - 110 transition - transform duration - 300">
-                  <Server className="w - 8 h - 8 text - white"/>
+                  <Server className="w - 8 h - 8 text - white"      />
                 </div>
                 <h3 className="text - lg font - semibold text - white mb - 2">{feature}</h3>
               </div>) ) }
@@ -184,7 +184,7 @@ const QuantumEdgeComputingPlatform = () => {
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8">
             {benefits.map ( (benefit, index) => (<div key={index} className="flex items - start space - x-4 group">
                 <div className="w - 12 h - 12 bg - gradient - to - r from - cyan - 500 to - blue - 500 rounded - xl flex items - center justify - center group - hover:scale - 110 transition - transform duration - 300">
-                  <benefit.icon className="w - 6 h - 6 text - white"/>
+                  <benefit.icon className="w - 6 h - 6 text - white"      />
                 </div>
                 <div>
                   <h3 className="text - xl font - semibold text - white mb - 2">{benefit.title}</h3>
@@ -209,7 +209,7 @@ const QuantumEdgeComputingPlatform = () => {
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">
             {useCases.map ( (useCase, index) => (<div key={index} className="text - center group">
                 <div className="w - 16 h - 16 bg - gradient - to - r from - purple - 500 to - pink - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 4 group - hover:scale - 110 transition - transform duration - 300">
-                  <useCase.icon className="w - 8 h - 8 text - white"/>
+                  <useCase.icon className="w - 8 h - 8 text - white"      />
                 </div>
                 <h3 className="text - lg font - semibold text - white mb - 2">{useCase.title}</h3>
                 <p className="text - gray - 300 text - sm">{useCase.description}</p>
@@ -248,7 +248,7 @@ const QuantumEdgeComputingPlatform = () => {
                 </div>
                 <ul className="space - y-3 mb - 8">
                   {plan.features.map ( (feature, featureIndex) => (<li key={featureIndex} className="flex items - center space - x-3">
-                      <Users className="w - 5 h - 5 text - cyan - 400 flex - shrink - 0"/>
+                      <Users className="w - 5 h - 5 text - cyan - 400 flex - shrink - 0"      />
                       <span className="text - gray - 300">{feature}</span>
                     </li>) ) }
                 </ul>

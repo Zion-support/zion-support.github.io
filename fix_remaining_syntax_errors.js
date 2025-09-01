@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs');
+import path from 'path');
 
 // Function to recursively find all files
 function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {

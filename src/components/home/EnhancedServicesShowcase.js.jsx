@@ -57,7 +57,7 @@ export function EnhancedServicesShowcase() {
 
         {/* Featured Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {featuredServices.map(service => {
+          {featuredServices.map(((((((service => {
             const IconComponent = serviceIcons[service.category] || Code;
             return (
               <Card
@@ -67,7 +67,7 @@ export function EnhancedServicesShowcase() {
                 <CardHeader>
                   <div className="flex items-center justify-between mb-4">
                     <div className="w-12 h-12 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-lg flex items-center justify-center">
-                      <IconComponent className="w-6 h-6 text-white" />
+                      <IconComponent className="w-6 h-6 text-white"       />
                     </div>
                     <Badge variant="default" className="bg-zion-purple">
                       Featured
@@ -77,13 +77,133 @@ export function EnhancedServicesShowcase() {
                     {service.title}
                   </CardTitle>
                   <CardDescription className="text-zion-slate-light">
-                    {service.description.substring(0, 120)}...
+                    {service.description.substring(0, 120, index, index, index, index, index, index) => ({ ...(((((service => {
+            const IconComponent = serviceIcons[service.category] || Code;
+            return (
+              <Card
+                key={service.id}
+                className="bg-zion-blue border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300 hover:translate-y-[-5px]"
+              >
+                <CardHeader>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-lg flex items-center justify-center">
+                      <IconComponent className="w-6 h-6 text-white"       />
+                    </div>
+                    <Badge variant="default" className="bg-zion-purple">
+                      Featured
+                    </Badge>
+                  </div>
+                  <CardTitle className="text-white text-xl mb-2">
+                    {service.title}
+                  </CardTitle>
+                  <CardDescription className="text-zion-slate-light">
+                    {service.description.substring(0, 120, index, index, index, index, index, key: index })) => ({ ...((((service => {
+            const IconComponent = serviceIcons[service.category] || Code;
+            return (
+              <Card
+                key={service.id}
+                className="bg-zion-blue border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300 hover:translate-y-[-5px]"
+              >
+                <CardHeader>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-lg flex items-center justify-center">
+                      <IconComponent className="w-6 h-6 text-white"       />
+                    </div>
+                    <Badge variant="default" className="bg-zion-purple">
+                      Featured
+                    </Badge>
+                  </div>
+                  <CardTitle className="text-white text-xl mb-2">
+                    {service.title}
+                  </CardTitle>
+                  <CardDescription className="text-zion-slate-light">
+                    {service.description.substring(0, 120, index, index, index, index, key: index })) => ({ ...(((service => {
+            const IconComponent = serviceIcons[service.category] || Code;
+            return (
+              <Card
+                key={service.id}
+                className="bg-zion-blue border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300 hover:translate-y-[-5px]"
+              >
+                <CardHeader>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-lg flex items-center justify-center">
+                      <IconComponent className="w-6 h-6 text-white"       />
+                    </div>
+                    <Badge variant="default" className="bg-zion-purple">
+                      Featured
+                    </Badge>
+                  </div>
+                  <CardTitle className="text-white text-xl mb-2">
+                    {service.title}
+                  </CardTitle>
+                  <CardDescription className="text-zion-slate-light">
+                    {service.description.substring(0, 120, index, index, index, key: index })) => ({ ...((service => {
+            const IconComponent = serviceIcons[service.category] || Code;
+            return (
+              <Card
+                key={service.id}
+                className="bg-zion-blue border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300 hover:translate-y-[-5px]"
+              >
+                <CardHeader>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-lg flex items-center justify-center">
+                      <IconComponent className="w-6 h-6 text-white"       />
+                    </div>
+                    <Badge variant="default" className="bg-zion-purple">
+                      Featured
+                    </Badge>
+                  </div>
+                  <CardTitle className="text-white text-xl mb-2">
+                    {service.title}
+                  </CardTitle>
+                  <CardDescription className="text-zion-slate-light">
+                    {service.description.substring(0, 120, index, index, key: index })) => ({ ...(service => {
+            const IconComponent = serviceIcons[service.category] || Code;
+            return (
+              <Card
+                key={service.id}
+                className="bg-zion-blue border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300 hover:translate-y-[-5px]"
+              >
+                <CardHeader>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-lg flex items-center justify-center">
+                      <IconComponent className="w-6 h-6 text-white"       />
+                    </div>
+                    <Badge variant="default" className="bg-zion-purple">
+                      Featured
+                    </Badge>
+                  </div>
+                  <CardTitle className="text-white text-xl mb-2">
+                    {service.title}
+                  </CardTitle>
+                  <CardDescription className="text-zion-slate-light">
+                    {service.description.substring(0, 120, index, key: index })) => ({ ...service => {
+            const IconComponent = serviceIcons[service.category] || Code;
+            return (
+              <Card
+                key={service.id}
+                className="bg-zion-blue border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300 hover:translate-y-[-5px]"
+              >
+                <CardHeader>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-lg flex items-center justify-center">
+                      <IconComponent className="w-6 h-6 text-white"       />
+                    </div>
+                    <Badge variant="default" className="bg-zion-purple">
+                      Featured
+                    </Badge>
+                  </div>
+                  <CardTitle className="text-white text-xl mb-2">
+                    {service.title}
+                  </CardTitle>
+                  <CardDescription className="text-zion-slate-light">
+                    {service.description.substring(0, 120, key: index }))}...
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-2">
-                      <Star className="w-4 h-4 text-yellow-500 fill-current" />
+                      <Star className="w-4 h-4 text-yellow-500 fill-current"       />
                       <span className="text-white font-medium">
                         {service.rating}
                       </span>
@@ -103,7 +223,7 @@ export function EnhancedServicesShowcase() {
                   </div>
 
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {service.tags.slice(0, 3).map((tag, index) => (
+                    {service.tags.slice(0, 3).map((((((((tag, index, index, index, index, index, index, index) => ({ ...((((((tag, index, index, index, index, index, index, key: index })) => ({ ...(((((tag, index, index, index, index, index, key: index })) => ({ ...((((tag, index, index, index, index, key: index })) => ({ ...(((tag, index, index, index, key: index })) => ({ ...((tag, index, index, key: index })) => ({ ...(tag, index, key: index })) => (
                       <Badge
                         key={index}
                         variant="outline"
@@ -116,7 +236,7 @@ export function EnhancedServicesShowcase() {
 
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2 text-sm text-zion-slate-light">
-                      <TrendingUp className="w-4 h-4" />
+                      <TrendingUp className="w-4 h-4"       />
                       AI Score: {service.aiScore}
                     </div>
                     <Button
@@ -127,7 +247,7 @@ export function EnhancedServicesShowcase() {
                     >
                       <Link to="/enhanced-services">
                         Learn More
-                        <ArrowRight className="w-4 h-4 ml-2" />
+                        <ArrowRight className="w-4 h-4 ml-2"       />
                       </Link>
                     </Button>
                   </div>
@@ -141,7 +261,7 @@ export function EnhancedServicesShowcase() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           <div className="text-center p-6 bg-zion-blue rounded-lg border border-zion-blue-light">
             <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Brain className="w-8 h-8 text-white" />
+              <Brain className="w-8 h-8 text-white"       />
             </div>
             <h3 className="text-xl font-bold text-white mb-2">
               AI & Machine Learning
@@ -154,7 +274,7 @@ export function EnhancedServicesShowcase() {
 
           <div className="text-center p-6 bg-zion-blue rounded-lg border border-zion-blue-light">
             <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Cloud className="w-8 h-8 text-white" />
+              <Cloud className="w-8 h-8 text-white"       />
             </div>
             <h3 className="text-xl font-bold text-white mb-2">
               Cloud & Infrastructure
@@ -166,7 +286,7 @@ export function EnhancedServicesShowcase() {
 
           <div className="text-center p-6 bg-zion-blue rounded-lg border border-zion-blue-light">
             <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Shield className="w-8 h-8 text-white" />
+              <Shield className="w-8 h-8 text-white"       />
             </div>
             <h3 className="text-xl font-bold text-white mb-2">Cybersecurity</h3>
             <p className="text-zion-slate-light text-sm">
@@ -177,7 +297,7 @@ export function EnhancedServicesShowcase() {
 
           <div className="text-center p-6 bg-zion-blue rounded-lg border border-zion-blue-light">
             <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Database className="w-8 h-8 text-white" />
+              <Database className="w-8 h-8 text-white"       />
             </div>
             <h3 className="text-xl font-bold text-white mb-2">
               Data & Analytics
@@ -197,7 +317,7 @@ export function EnhancedServicesShowcase() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-12 h-12 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
-                <CheckCircle className="w-6 h-6 text-zion-blue-dark" />
+                <CheckCircle className="w-6 h-6 text-zion-blue-dark"       />
               </div>
               <h4 className="text-lg font-semibold text-white mb-2">
                 Proven Results
@@ -210,7 +330,7 @@ export function EnhancedServicesShowcase() {
 
             <div className="text-center">
               <div className="w-12 h-12 bg-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
-                <Zap className="w-6 h-6 text-white" />
+                <Zap className="w-6 h-6 text-white"       />
               </div>
               <h4 className="text-lg font-semibold text-white mb-2">
                 Innovation First
@@ -223,7 +343,7 @@ export function EnhancedServicesShowcase() {
 
             <div className="text-center">
               <div className="w-12 h-12 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="w-6 h-6 text-zion-blue-dark" />
+                <TrendingUp className="w-6 h-6 text-zion-blue-dark"       />
               </div>
               <h4 className="text-lg font-semibold text-white mb-2">
                 Scalable Solutions
@@ -254,7 +374,7 @@ export function EnhancedServicesShowcase() {
             >
               <Link to="/enhanced-services">
                 View All Services
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2"       />
               </Link>
             </Button>
             <Button

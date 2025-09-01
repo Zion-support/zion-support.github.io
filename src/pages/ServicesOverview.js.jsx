@@ -51,7 +51,7 @@ import Link from 'next / link';
         description="Explore our complete range of technology services including AI, data analytics, IoT, blockchain, DevOps, and cybersecurity solutions."
         keywords="technology services, AI services, data analytics, IoT solutions, blockchain development, DevOps consulting, cybersecurity services"
         canonical="https://ziontechgroup.com / services"
-      />
+            />
 
       {/* Hero Section */}
       <section className="relative bg - gradient - to - br from - slate - 900 via - blue - 900 to - purple - 900 text - white py - 20">
@@ -84,7 +84,7 @@ import Link from 'next / link';
                 className="text - center"
               >
                 <div className="w - 16 h - 16 bg - gradient - to - r from - blue - 500 to - purple - 500 rounded - full flex items - center justify - center mx - auto mb - 4">
-                  <stat.icon className="w - 8 h - 8 text - white" />
+                  <stat.icon className="w - 8 h - 8 text - white"       />
                 </div>
                 <div className="text - 3xl font - bold text - gray - 900 mb - 2">
                   {stat.value}
@@ -131,7 +131,7 @@ import Link from 'next / link';
                 >
                   <div className="flex items - center mb - 4">
                     <div className="w - 16 h - 16 bg - white / 20 rounded - xl flex items - center justify - center mr - 6">
-                      <category.icon className="w - 8 h - 8" />
+                      <category.icon className="w - 8 h - 8"       />
                     </div>
                     <div>
                       <h3 className="text - 3xl font - bold mb - 2">
@@ -212,7 +212,7 @@ import Link from 'next / link';
           >
             <motion.div variants={itemVariants} className="text - center">
               <div className="w - 16 h - 16 bg - blue - 100 rounded - full flex items - center justify - center mx - auto mb - 4">
-                <Users className="w - 8 h - 8 text - blue - 600" />
+                <Users className="w - 8 h - 8 text - blue - 600"       />
               </div>
               <h3 className="text - xl font - bold text - gray - 900 mb - 3">
                 Expert Team
@@ -225,7 +225,7 @@ import Link from 'next / link';
 
             <motion.div variants={itemVariants} className="text - center">
               <div className="w - 16 h - 16 bg - green - 100 rounded - full flex items - center justify - center mx - auto mb - 4">
-                <Target className="w - 8 h - 8 text - green - 600" />
+                <Target className="w - 8 h - 8 text - green - 600"       />
               </div>
               <h3 className="text - xl font - bold text - gray - 900 mb - 3">
                 Proven Results
@@ -238,7 +238,7 @@ import Link from 'next / link';
 
             <motion.div variants={itemVariants} className="text - center">
               <div className="w - 16 h - 16 bg - purple - 100 rounded - full flex items - center justify - center mx - auto mb - 4">
-                <Zap className="w - 8 h - 8 text - purple - 600" />
+                <Zap className="w - 8 h - 8 text - purple - 600"       />
               </div>
               <h3 className="text - xl font - bold text - gray - 900 mb - 3">
                 Innovation Focus

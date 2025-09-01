@@ -5,7 +5,7 @@ export default function CreatorDashboard () {
 
   return (<SidebarProvider>
       <div className="min - h-screen flex w - full bg - zion - blue">
-        <AppSidebar />
+        <AppSidebar       />
         <div className="flex flex - col w - full">
           <main className="flex - 1 p - 6 md:p - 10 bg - zion - blue">
             <h1 className="text - 2xl font - bold text - white mb - 8">
@@ -19,7 +19,7 @@ export default function CreatorDashboard () {
                     {/* Only use allowed Lucide icons */}
                     <span className="text - zion - purple">
                       <svg width="28" height="28">
-                        <use href="#lucide - bar - chart" />
+                        <use href="#lucide - bar - chart"       />
                       </svg>
                     </span>
                   </span>
@@ -39,7 +39,7 @@ export default function CreatorDashboard () {
                   <span className="bg - zion - purple / 20 rounded - full p - 2">
                     <span className="text - zion - purple">
                       <svg width="28" height="28">
-                        <use href="#lucide - file - text" />
+                        <use href="#lucide - file - text"       />
                       </svg>
                     </span>
                   </span>
@@ -63,6 +63,6 @@ export default function CreatorDashboard () {
           </main>
         </div>
       </div>
-      <SidebarTrigger />
+      <SidebarTrigger       />
     </SidebarProvider>) ;
 }

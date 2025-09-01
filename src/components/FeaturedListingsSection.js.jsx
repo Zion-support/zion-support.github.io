@@ -153,7 +153,7 @@ const categories = [
             backgroundImage: `radial - gradient (circle at 75% 25%, currentColor 1px, transparent 1px) `,
   backgroundSize: '60px 60px'
 
-}}/>
+}}      />
       </div>
 
       {/* Floating decorative elements */}
@@ -162,12 +162,12 @@ const categories = [
   { duration: 20, repeat: Infinity,
   ease: "linear" 
 
-}}/>
+}}      />
         <motion.div className="absolute bottom - 20 right - 20 w - 24 h - 24 border border - zion - purple / 20 rounded - full opacity - 30" animate={{ rotate: -360 }} transition = {
   { duration: 25, repeat: Infinity,
   ease: "linear" 
 
-}}/>
+}}      />
         <motion.div className="absolute top - 1/2 left - 1/2 w - 16 h - 16 border border - zion - cyan - light / 20 rounded - full opacity - 20" animate = {
   { scale[1, 1.2,;
   1] 
@@ -176,7 +176,7 @@ const categories = [
   { duration: 3, repeat: Infinity,
   ease: "easeInOut" 
 
-}}/>
+}}      />
       </div>
       
       <div className="container mx - auto px - 4 relative z - 10">
@@ -225,18 +225,18 @@ const categories = [
                 {/* Featured badge */}
                 {listing.featured && (<div className="absolute top - 4 left - 4 z - 10">
                     <div className="bg - gradient - to - r from - zion - purple to - zion - cyan text - white px - 3 py - 1 rounded - full text - xs font - semibold shadow - lg">
-                      <Award className="w - 3 h - 3 inline mr - 1"/>
+                      <Award className="w - 3 h - 3 inline mr - 1"      />
                       Featured
                     </div>
                   </div>) }
 
                 {/* Image */}
                 <div className="relative h - 48 overflow - hidden">
-                  <img src={listing.image} alt={listing.title} className="w - full h - full object - cover group - hover:scale - 110 transition - transform duration - 500"/>
-                  <div className="absolute inset - 0 bg - gradient - to - t from - black / 60 to - transparent"/>
+                  <img src={listing.image} alt={listing.title} className="w - full h - full object - cover group - hover:scale - 110 transition - transform duration - 500"      />
+                  <div className="absolute inset - 0 bg - gradient - to - t from - black / 60 to - transparent"      />
                   <div className="absolute top - 4 right - 4">
                     <button className="p - 2 rounded - full bg - zion - blue - dark / 80 hover:bg - zion - cyan transition - colors duration - 300">
-                      <Heart className="w - 4 h - 4 text - white"/>
+                      <Heart className="w - 4 h - 4 text - white"      />
                     </button>
                   </div>
                 </div>
@@ -260,11 +260,11 @@ const categories = [
                   {/* Quick info */}
                   <div className="grid grid - cols - 2 gap - 3 mb - 4">
                     <div className="flex items - center gap - 2 text - zion - slate - light / 80 text - xs">
-                      <Clock className="w - 3 h - 3"/>
+                      <Clock className="w - 3 h - 3"      />
                       <span>{listing.duration}</span>
                     </div>
                     <div className="flex items - center gap - 2 text - zion - slate - light / 80 text - xs">
-                      <Users className="w - 3 h - 3"/>
+                      <Users className="w - 3 h - 3"      />
                       <span>{listing.team}</span>
                     </div>
                   </div>
@@ -282,17 +282,17 @@ const categories = [
                   {/* Stats */}
                   <div className="flex items - center justify - between mb - 4 text - sm text - zion - slate - light">
                     <div className="flex items - center gap - 1">
-                      <Star className="w - 4 h - 4 text - yellow - 400 fill - current"/>
+                      <Star className="w - 4 h - 4 text - yellow - 400 fill - current"      />
                       <span>{listing.rating}</span>
                       <span> ({listing.reviews}) </span>
                     </div>
                     <div className="flex items - center gap - 4">
                       <div className="flex items - center gap - 1">
-                        <Eye className="w - 4 h - 4"/>
+                        <Eye className="w - 4 h - 4"      />
                         <span>{listing.views}</span>
                       </div>
                       <div className="flex items - center gap - 1">
-                        <Heart className="w - 4 h - 4"/>
+                        <Heart className="w - 4 h - 4"      />
                         <span>{listing.likes}</span>
                       </div>
                     </div>

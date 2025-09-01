@@ -13,15 +13,15 @@ const AIConsumerWillingnessToTry = () => {
         <meta
           name="description"
           content="Revolutionary AI consumer willingness to try platform that analyzes customer trial readiness, adoption likelihood, and new product acceptance with advanced AI capabilities."
-        />
+              />
         <meta
           name="keywords"
           content="AI willingness to try, trial readiness, product adoption, AI analysis, customer trials, new product acceptance"
-        />
+              />
         <link
           rel="canonical"
           href="https://ziontechgroup.com / ai - consumer - willingness - to - try"
-        />
+              />
       </Helmet>
 
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900">

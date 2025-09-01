@@ -27,44 +27,44 @@ import { ArrowRight, Users, Zap, Settings, Sparkles, BarChart3, Smartphone expor
         {
             title: t ("home.tool_ai_matcher") ,
             description: t ("home.tool_ai_matcher_desc") ,
-            icon: <Sparkles className="h - 6 w - 6 text - zion - cyan"/>,
+            icon: <Sparkles className="h - 6 w - 6 text - zion - cyan"      />,
             link: "/match"
         },
         {
             title: t ("home.tool_talent") ,
             description: t ("home.tool_talent_desc") ,
-            icon: <Users className="h - 6 w - 6 text - zion - purple"/>,
+            icon: <Users className="h - 6 w - 6 text - zion - purple"      />,
             link: "/talent"
         },
         {
             title: t ("home.tool_services") ,
             description: t ("home.tool_services_desc") ,
-            icon: <Zap className="h - 6 w - 6 text - zion - cyan"/>,
+            icon: <Zap className="h - 6 w - 6 text - zion - cyan"      />,
             link: "/services"
         },
         {
             title: t ("home.tool_equipment") ,
             description: t ("home.tool_equipment_desc") ,
-            icon: <Settings className="h - 6 w - 6 text - zion - purple"/>,
+            icon: <Settings className="h - 6 w - 6 text - zion - purple"      />,
             link: "/equipment"
         },
         {
             title: t ("home.tool_analytics") ,
             description: t ("home.tool_analytics_desc") ,
-            icon: <BarChart3 className="h - 6 w - 6 text - zion - cyan"/>,
+            icon: <BarChart3 className="h - 6 w - 6 text - zion - cyan"      />,
             link: "/analytics"
         },
         {
             title: "Mobile App",
             description: "Take Zion with you on the go with our mobile app for iOS and Android",
-            icon: <Smartphone className="h - 6 w - 6 text - zion - purple"/>,
+            icon: <Smartphone className="h - 6 w - 6 text - zion - purple"      />,
             link: "/mobile - launch"
 
     ];
     return (<div className="min - h-screen bg - zion - blue text - white">
-      <SEO title={t ("home.seo_title") } description={t ("home.seo_description") } keywords={t ("home.seo_keywords") } canonical="https://ziontechgroup.com/"/>
-      <Header />
-      <HeroSection />
+      <SEO title={t ("home.seo_title") } description={t ("home.seo_description") } keywords={t ("home.seo_keywords") } canonical="https://ziontechgroup.com/"      />
+      <Header       />
+      <HeroSection       />
       {/* Quick Access Tools Section */}
       <section className="py - 16 bg - zion - blue - dark">
         <div className="container mx - auto px - 4">
@@ -85,24 +85,24 @@ import { ArrowRight, Users, Zap, Settings, Sparkles, BarChart3, Smartphone expor
                 <p className="text - zion - slate - light mb - 4">{feature.description}</p>
                 <div className={`flex items - center text - zion - cyan ${isRTL ? 'flex - row - reverse' : ''}`}>
                   <span>{t ("general.explore") }</span>
-                  <ArrowRight className={`${isRTL ? 'ml - 0 mr - 2 rotate - 180' : 'ml - 2'} h - 4 w - 4`}/>
+                  <ArrowRight className={`${isRTL ? 'ml - 0 mr - 2 rotate - 180' : 'ml - 2'} h - 4 w - 4`}      />
                 </div>
               </Link>) ) }
           </div>
         </div>
       </section>
-      <CategoriesSection />
-      <BenefitsSection />
+      <CategoriesSection       />
+      <BenefitsSection       />
       {/* Add the comprehensive features guide section */}
-      <FeaturesGuideSection />
-      <HowItWorksSection />
-      <FeaturedListingsSection />
-      <TestimonialCarousel />
-      <TrustedBySection />
-      <BlogSection />
+      <FeaturesGuideSection       />
+      <HowItWorksSection       />
+      <FeaturedListingsSection       />
+      <TestimonialCarousel       />
+      <TrustedBySection       />
+      <BlogSection       />
       {/* Add social share section to encourage users to spread the word */}
-      <SocialShareSection />
-      <WaitlistSection />
-      <FloatingCTA />
-      <Footer />
+      <SocialShareSection       />
+      <WaitlistSection       />
+      <FloatingCTA       />
+      <Footer       />
     </div>) }

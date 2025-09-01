@@ -44,7 +44,7 @@ const ServiceCard = ({ service, index, isVisible }) => {
 }} style={{
                 left: `${20 + Math.random () * 60}%`,
                 top: `${20 + Math.random () * 60}%`,
-            }}/>) ) }
+            }}      />) ) }
           </div>
 
           {/* Service Header */}
@@ -145,7 +145,7 @@ const ServiceCard = ({ service, index, isVisible }) => {
           </div>
 
           {/* Hover Effects */}
-          <motion.div className="absolute inset - 0 bg - gradient - to - r from - cyan - 500 / 5 via - blue - 500 / 5 to - purple - 500 / 5 rounded - 2xl opacity - 0 group - hover:opacity - 100 transition - opacity duration - 500" initial={false}/>
+          <motion.div className="absolute inset - 0 bg - gradient - to - r from - cyan - 500 / 5 via - blue - 500 / 5 to - purple - 500 / 5 rounded - 2xl opacity - 0 group - hover:opacity - 100 transition - opacity duration - 500" initial={false}      />
         </div>
       </div>
     </motion.div>) };
@@ -171,7 +171,7 @@ const ServiceCard = ({ service, index, isVisible }) => {
                 top: `${Math.random () * 100}%`,
                 animationDelay: `${Math.random () * 5}s`,
                 animationDuration: `${3 + Math.random () * 4}s`,
-            }}/>) ) }
+            }}      />) ) }
       </div>
 
       <div className="relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">
@@ -218,7 +218,7 @@ const ServiceCard = ({ service, index, isVisible }) => {
         {/* Services Grid */}
         <div className="grid grid - cols - 1 lg:grid - cols - 2 xl:grid - cols - 3 gap - 8">
           <AnimatePresence>
-            {filteredServices.map ( (service, index) => (<ServiceCard key={service.id} service={service} index={index} isVisible={visibleServices.has (index) }/>) ) }
+            {filteredServices.map ( (service, index) => (<ServiceCard key={service.id} service={service} index={index} isVisible={visibleServices.has (index) }      />) ) }
           </AnimatePresence>
         </div>
 

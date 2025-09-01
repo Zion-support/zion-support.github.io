@@ -8,7 +8,7 @@ const $service = () => {
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex justify-center mb-6">
             <div className="p-3 bg-blue-600/20 rounded-full">
-              <CogIcon className="h-12 w-12 text-blue-400" />
+              <CogIcon className="h-12 w-12 text-blue-400"       />
             </div>
           </div>
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">

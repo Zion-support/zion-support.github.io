@@ -207,7 +207,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
 
 }}>
         <Button size="sm" variant="outline" onClick={() => setIsMinimized(false)} className="bg-zion-blue-dark/80 backdrop-blur-md border-zion-blue-light/30 text-zinc-300 hover:text-white">
-          <Activity className="w-4 h-4 mr-2"/>
+          <Activity className="w-4 h-4 mr-2"      />
           {alerts.length > 0 && (<Badge variant="outline" className="ml-2 text-xs">
               {alerts.length}
             </Badge>)}
@@ -238,7 +238,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
         <div className="flex items-center justify-between p-4 border-b border-zion-blue-light/30">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">
-              <Activity className="w-5 h-5 text-white"/>
+              <Activity className="w-5 h-5 text-white"      />
             </div>
             <div>
               <h3 className="text-white font-semibold text-sm">Performance Monitor</h3>
@@ -248,15 +248,15 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
 
           <div className="flex items-center gap-2">
             <Button size="sm" variant="ghost" onClick={() => setShowSettings(!showSettings)} className="text-zinc-400 hover:text-white p-2">
-              <Settings className="w-4 h-4"/>
+              <Settings className="w-4 h-4"      />
             </Button>
 
             <Button size="sm" variant="ghost" onClick={() => setIsMinimized(true)} className="text-zinc-400 hover:text-white p-2">
-              <Minimize2 className="w-4 h-4"/>
+              <Minimize2 className="w-4 h-4"      />
             </Button>
 
             <Button size="sm" variant="ghost" onClick={() => setIsExpanded(!isExpanded)} className="text-zinc-400 hover:text-white p-2">
-              {isExpanded ? <Minimize2 className="w-4 h-4"/> : <Maximize2 className="w-4 h-4"/>}
+              {isExpanded ? <Minimize2 className="w-4 h-4"      /> : <Maximize2 className="w-4 h-4"      />}
             </Button>
           </div>
         </div>
@@ -294,7 +294,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
               <div className="space-y-3">
                 <h4 className="text-white font-medium text-sm">Alert Thresholds</h4>
                 <div className="grid grid-cols-2 gap-3">
-                  {Object.entries(thresholds).map(([key, value]) => (<div key={key}>
+                  {Object.entries(thresholds).map(((((((([key, value], index, index, index, index, index, index) => ({ ...(((((([key, value], index, index, index, index, index, key: index })) => ({ ...((((([key, value], index, index, index, index, key: index })) => ({ ...(((([key, value], index, index, index, key: index })) => ({ ...((([key, value], index, index, key: index })) => ({ ...(([key, value], index, key: index })) => ({ ...([key, value], key: index })) => (<div key={key}>
                       <label className="text-zinc-300 text-xs font-medium capitalize">
                         {key.replace(/([A-Z])/g, ' $1').trim()}
                       </label>
@@ -320,7 +320,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             {/* FPS */}
             <div className="text-center">
               <div className="flex items-center justify-center gap-2 mb-2">
-                <Activity className="w-4 h-4 text-zinc-400"/>
+                <Activity className="w-4 h-4 text-zinc-400"      />
                 <span className="text-zinc-300 text-xs">FPS</span>
               </div>
               <div className = {
@@ -340,7 +340,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             {/* Memory */}
             <div className="text-center">
               <div className="flex items-center justify-center gap-2 mb-2">
-                <Activity className="w-4 h-4 text-zinc-400"/>
+                <Activity className="w-4 h-4 text-zinc-400"      />
                 <span className="text-zinc-300 text-xs">Memory</span>
               </div>
               <div className = {
@@ -360,7 +360,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             {/* Render Time */}
             <div className="text-center">
               <div className="flex items-center justify-center gap-2 mb-2">
-                <Cpu className="w-4 h-4 text-zinc-400"/>
+                <Cpu className="w-4 h-4 text-zinc-400"      />
                 <span className="text-zinc-300 text-xs">Render</span>
               </div>
               <div className = {
@@ -380,7 +380,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             {/* Network */}
             <div className="text-center">
               <div className="flex items-center justify-center gap-2 mb-2">
-                <Wifi className="w-4 h-4 text-zinc-400"/>
+                <Wifi className="w-4 h-4 text-zinc-400"      />
                 <span className="text-zinc-300 text-xs">Network</span>
               </div>
               <div className = {
@@ -486,12 +486,12 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
               <div className="flex items-center justify-between mb-3">
                 <h4 className="text-white font-medium text-sm">Alerts</h4>
                 <Button size="sm" variant="ghost" onClick={() => setAlerts([])} className="text-zinc-400 hover:text-white p-1">
-                  <X className="w-3 h-3"/>
+                  <X className="w-3 h-3"      />
                 </Button>
               </div>
 
               <div className="space-y-2 max-h-32 overflow-y-auto">
-                {alerts.map((alert) => {
+                {alerts.map((((((((alert, index, index, index, index, index, index) => ({ ...((((((alert, index, index, index, index, index, key: index })) => ({ ...(((((alert, index, index, index, index, key: index })) => ({ ...((((alert, index, index, index, key: index })) => ({ ...(((alert, index, index, key: index })) => ({ ...((alert, index, key: index })) => ({ ...(alert, key: index })) => {
                 const Icon = getMetricIcon(alert.metric);
                 return (<motion.div key={alert.id} className={`p-2 rounded-lg border text-xs ${getSeverityColor(alert.severity)}`} initial = {
   { opacity: 0,
@@ -522,7 +522,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
 
 }}>
                       <div className="flex items-center gap-2">
-                        <Icon className="w-3 h-3"/>
+                        <Icon className="w-3 h-3"      />
                         <span className="font-medium">{alert.metric}</span>
                         <span className="text-xs opacity-75">
                           {new Date(alert.timestamp).toLocaleTimeString()}
@@ -541,12 +541,12 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             measureRenderTime();
             measureNetworkLatency();
             simulateMetrics()}} className="flex-1 border-zion-blue-light/30 text-zinc-300 hover:text-white">
-                <RefreshCw className="w-3 h-3 mr-2"/>
+                <RefreshCw className="w-3 h-3 mr-2"      />
                 Refresh
               </Button>
 
               <Button size="sm" variant="outline" onClick={() => setShowSettings(!showSettings)} className="border-zion-blue-light/30 text-zinc-300 hover:text-white">
-                <Settings className="w-3 h-3"/>
+                <Settings className="w-3 h-3"      />
               </Button>
             </div>
           </div>

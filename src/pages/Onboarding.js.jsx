@@ -125,10 +125,10 @@ export default function Onboarding () {
             {currentStep === 0 ? (<UserTypeSelection
                 onSelect={handleUserTypeSelect}
                 selectedType={userType}
-              />) : (<ProfileSetup
+                    />) : (<ProfileSetup
                 onComplete={handleProfileComplete}
                 userType={userType}
-              />) }
+                    />) }
 
             {currentStep === 1 && (<div className="mt - 6">
                 <Button

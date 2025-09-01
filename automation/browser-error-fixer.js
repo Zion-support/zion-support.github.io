@@ -12,8 +12,8 @@
  * 5. Reports all fixes applied
  */
 
-const fs = require('fs').promises;
-const path = require('path');
+import fs from 'fs').promises;
+import path from 'path');
 const { execSync } = require('child_process');
 
 class BrowserErrorFixer {
@@ -345,7 +345,7 @@ class BrowserErrorFixer {
 
 
 // Export for use in other modules
-module.exports = BrowserErrorFixer;
+export default BrowserErrorFixer;
 
 // CLI usage
 if (require.main === module) {

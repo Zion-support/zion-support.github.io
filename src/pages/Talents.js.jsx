@@ -10,7 +10,7 @@ const Talents = () => {
         <meta
           name="description"
           content="Browse our comprehensive directory of technology professionals. Find the perfect talent for your project needs."
-        />
+              />
       </Helmet>
 
       <div className="min - h-screen bg - gray - 50 py - 12">

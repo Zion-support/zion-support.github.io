@@ -73,7 +73,7 @@ const LinkHealthChecker = ({ links, className = '' }) => {
       case 'external':
         return < ExternalLink className="w - 5 h - 5 text - blue - 500" />;
       case 'checking':
-        return (<AlertTriangle className="w - 5 h - 5 text - yellow - 500 animate - pulse" />) ;
+        return (<AlertTriangle className="w - 5 h - 5 text - yellow - 500 animate - pulse"       />) ;
       default:
         return < AlertTriangle className="w - 5 h - 5 text - gray - 500" />;
     }
@@ -128,10 +128,10 @@ const LinkHealthChecker = ({ links, className = '' }) => {
           className="px - 4 py - 2 bg - blue - 600 hover:bg - blue - 700 disabled:bg - gray - 600 text - white rounded - lg transition - colors duration - 300 flex items - center gap - 2"
         >
           {isChecking ? (<>
-              <div className="w - 4 h - 4 border - 2 border - white / 30 border - t-white rounded - full animate - spin" />
+              <div className="w - 4 h - 4 border - 2 border - white / 30 border - t-white rounded - full animate - spin"       />
               Checking...
             </>) : (<>
-              <CheckCircle className="w - 4 h - 4" />
+              <CheckCircle className="w - 4 h - 4"       />
               Recheck
             </>) }
         </button>

@@ -64,7 +64,7 @@ export function NotificationProvider({
   return (
     <NotificationContext.Provider value={value}>
       {children}
-      <NotificationContainer position={position} />
+      <NotificationContainer position={position}       />
     </NotificationContext.Provider>
   );
 }
@@ -97,7 +97,7 @@ function NotificationContainer({ position }) {
       {notifications.length > 1 && (
         <div className="flex items-center justify-between mb-2">
           <div className="flex items-center gap-2">
-            <Bell className="w-4 h-4 text-zion-cyan" />
+            <Bell className="w-4 h-4 text-zion-cyan"       />
             <span className="text-zinc-300 text-sm font-medium">
               {notifications.length} notifications
             </span>
@@ -116,12 +116,42 @@ function NotificationContainer({ position }) {
       {/* Notifications */}
       <div className="space-y-2">
         <AnimatePresence mode="popLayout">
-          {notifications.map(notification => (
+          {notifications.map(((((((notification => (
             <NotificationItem
               key={notification.id}
               notification={notification}
-            />
-          ))}
+                  />
+          , index, index, index, index, index, index) => ({ ...(((((notification => (
+            <NotificationItem
+              key={notification.id}
+              notification={notification}
+                  />
+          , index, index, index, index, index, key: index })) => ({ ...((((notification => (
+            <NotificationItem
+              key={notification.id}
+              notification={notification}
+                  />
+          , index, index, index, index, key: index })) => ({ ...(((notification => (
+            <NotificationItem
+              key={notification.id}
+              notification={notification}
+                  />
+          , index, index, index, key: index })) => ({ ...((notification => (
+            <NotificationItem
+              key={notification.id}
+              notification={notification}
+                  />
+          , index, index, key: index })) => ({ ...(notification => (
+            <NotificationItem
+              key={notification.id}
+              notification={notification}
+                  />
+          , index, key: index })) => ({ ...notification => (
+            <NotificationItem
+              key={notification.id}
+              notification={notification}
+                  />
+          , key: index })))}
         </AnimatePresence>
       </div>
     </div>
@@ -132,15 +162,15 @@ function NotificationItem({ notification }) {
   const getIcon = type => {
     switch (type) {
       case 'success':
-        return <CheckCircle className="w-5 h-5 text-green-400" />;
+        return <CheckCircle className="w-5 h-5 text-green-400"       />;
       case 'error':
-        return <AlertCircle className="w-5 h-5 text-red-400" />;
+        return <AlertCircle className="w-5 h-5 text-red-400"       />;
       case 'warning':
-        return <AlertTriangle className="w-5 h-5 text-yellow-400" />;
+        return <AlertTriangle className="w-5 h-5 text-yellow-400"       />;
       case 'info':
-        return <Info className="w-5 h-5 text-blue-400" />;
+        return <Info className="w-5 h-5 text-blue-400"       />;
       default:
-        return <Info className="w-5 h-5 text-blue-400" />;
+        return <Info className="w-5 h-5 text-blue-400"       />;
     }
   };
   const getTypeClasses = type => {
@@ -195,7 +225,7 @@ function NotificationItem({ notification }) {
             duration: notification.duration / 1000,
             ease: 'linear',
           }}
-        />
+              />
       )}
 
       <div className="flex items-start gap-3">
@@ -234,7 +264,7 @@ function NotificationItem({ notification }) {
             onClick={() => removeNotification(notification.id)}
             className="flex-shrink-0 p-1 rounded hover:bg-white/10 transition-colors duration-200"
           >
-            <X className="w-4 h-4 text-zinc-400 hover:text-white" />
+            <X className="w-4 h-4 text-zinc-400 hover:text-white"       />
           </button>
         )}
       </div>

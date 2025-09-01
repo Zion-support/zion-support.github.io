@@ -13,15 +13,15 @@ const AIAutonomousQualityAssurance = () => {
         <meta
           name="description"
           content="Revolutionary AI autonomous quality assurance platform that continuously monitors quality, ensures standards, and maintains excellence with advanced AI capabilities and autonomous operation."
-        />
+              />
         <meta
           name="keywords"
           content="AI quality assurance, autonomous quality assurance, quality monitoring, standard assurance, autonomous operations, AI quality assurance platform"
-        />
+              />
         <link
           rel="canonical"
           href="https://ziontechgroup.com / ai - autonomous - quality - assurance"
-        />
+              />
       </Helmet>
 
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - blue - 900 to - slate - 900">

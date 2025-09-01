@@ -10,7 +10,7 @@ const Admin = () => {
         <meta
           name="description"
           content="Administrative dashboard for Zion Tech Group. Manage users, services, and system configurations."
-        />
+              />
       </Helmet>
 
       <div className="min - h-screen bg - gray - 50 py - 12">

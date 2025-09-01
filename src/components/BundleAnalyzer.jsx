@@ -130,7 +130,7 @@ import { motion, AnimatePresence } from 'framer - motion';
     return (<>
       {/* Bundle Analyzer Button */}
       <motion.button onClick={ () => setIsOpen (!isOpen) } className="fixed top - 4 right - 4 z - 50 bg - gradient - to - r from - purple - 600 to - pink - 600 hover:from - purple - 700 hover:to - pink - 700 text - white p - 3 rounded - full shadow - lg hover:shadow - xl transition - all duration - 300 focus:outline - none focus:ring - 4 focus:ring - purple - 300 focus:ring - opacity - 50" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} aria - label="Bundle analyzer" aria - expanded={isOpen}>
-        <BarChart3 className="w - 6 h - 6"/>
+        <BarChart3 className="w - 6 h - 6"      />
       </motion.button>
 
       {/* Bundle Analysis Panel */}
@@ -156,11 +156,11 @@ import { motion, AnimatePresence } from 'framer - motion';
             <div className="bg - gradient - to - r from - purple - 600 to - pink - 600 p - 4 text - white">
               <div className="flex items - center justify - between">
                 <h3 className="text - lg font - semibold flex items - center gap - 2">
-                  <BarChart3 className="w - 5 h - 5"/>
+                  <BarChart3 className="w - 5 h - 5"      />
                   Bundle Analyzer
                 </h3>
                 <button onClick={ () => setIsOpen (false) } className="text - white / 80 hover:text - white transition - colors p - 1 rounded - full hover:bg - white / 20" aria - label="Close bundle analyzer">
-                  <X className="w - 5 h - 5"/>
+                  <X className="w - 5 h - 5"      />
                 </button>
               </div>
               <p className="text - purple - 100 text - sm mt - 1">
@@ -177,7 +177,7 @@ import { motion, AnimatePresence } from 'framer - motion';
             ].map ( ({ id, label, icon: Icon }) => (<button key={id} onClick={ () => setActiveTab (id) } className={`flex - 1 flex items - center justify - center gap - 2 py - 3 px - 4 text - sm font - medium transition - colors ${activeTab === id
                     ? 'text - purple - 600 border - b-2 border - purple - 600 bg - purple - 50 dark:bg - purple - 900 / 20'
                     : 'text - gray - 600 dark:text - gray - 400 hover:text - gray - 800 dark:hover:text - gray - 200'}`} aria - selected={activeTab === id} role="tab">
-                  <Icon className="w - 4 h - 4"/>
+                  <Icon className="w - 4 h - 4"      />
                   {label}
                 </button>) ) }
             </div>
@@ -205,7 +205,7 @@ import { motion, AnimatePresence } from 'framer - motion';
                   <div className="grid grid - cols - 2 gap - 4">
                     <div className="bg - gray - 50 dark:bg - gray - 800 rounded - lg p - 3 border border - gray - 200 dark:border - gray - 700">
                       <div className="flex items - center gap - 2 mb - 2">
-                        <HardDrive className="w - 4 h - 4 text - blue - 500"/>
+                        <HardDrive className="w - 4 h - 4 text - blue - 500"      />
                         <span className="text - sm text - gray - 600 dark:text - gray - 400">Total Size</span>
                       </div>
                       <div className="text - lg font - semibold text - gray - 900 dark:text - white">
@@ -218,7 +218,7 @@ import { motion, AnimatePresence } from 'framer - motion';
 
                     <div className="bg - gray - 50 dark:bg - gray - 800 rounded - lg p - 3 border border - gray - 200 dark:border - gray - 700">
                       <div className="flex items - center gap - 2 mb - 2">
-                        <Zap className="w - 4 h - 4 text - green - 500"/>
+                        <Zap className="w - 4 h - 4 text - green - 500"      />
                         <span className="text - sm text - gray - 600 dark:text - gray - 400">Chunks</span>
                       </div>
                       <div className="text - lg font - semibold text - gray - 900 dark:text - white">
@@ -234,7 +234,7 @@ import { motion, AnimatePresence } from 'framer - motion';
                   <div className="space - y-2">
                     <h4 className="font - medium text - gray - 900 dark:text - white text - sm">Quick Actions</h4>
                     <button onClick={analyzeBundle} disabled={isAnalyzing} className="w - full flex items - center justify - center gap - 2 p - 2 bg - purple - 100 dark:bg - purple - 900 / 20 text - purple - 700 dark:text - purple - 300 rounded - lg hover:bg - purple - 200 dark:hover:bg - purple - 900 / 40 transition - colors disabled:opacity - 50">
-                      <RefreshCw className={`w - 4 h - 4 ${isAnalyzing ? 'animate - spin' : ''}`}/>
+                      <RefreshCw className={`w - 4 h - 4 ${isAnalyzing ? 'animate - spin' : ''}`}      />
                       {isAnalyzing ? 'Analyzing...' : 'Refresh Analysis'}
                     </button>
                   </div>
@@ -279,7 +279,7 @@ import { motion, AnimatePresence } from 'framer - motion';
                   <h4 className="font - medium text - gray - 900 dark:text - white text - sm mb - 3">Optimization Tips</h4>
                   {analysis.recommendations.map ( (recommendation, index) => (<div key={index} className="p - 3 bg - blue - 50 dark:bg - blue - 900 / 20 border border - blue - 200 dark:border - blue - 800 rounded - lg">
                       <div className="flex items - start gap - 2">
-                        <Target className="w - 4 h - 4 text - blue - 600 dark:text - blue - 400 mt - 0.5 flex - shrink - 0"/>
+                        <Target className="w - 4 h - 4 text - blue - 600 dark:text - blue - 400 mt - 0.5 flex - shrink - 0"      />
                         <p className="text - sm text - blue - 800 dark:text - blue - 200">
                           {recommendation}
                         </p>
@@ -288,7 +288,7 @@ import { motion, AnimatePresence } from 'framer - motion';
 
                   <div className="mt - 4 p - 3 bg - yellow - 50 dark:bg - yellow - 900 / 20 border border - yellow - 200 dark:border - yellow - 800 rounded - lg">
                     <div className="flex items - start gap - 2">
-                      <Info className="w - 4 h - 4 text - yellow - 600 dark:text - yellow - 400 mt - 0.5 flex - shrink - 0"/>
+                      <Info className="w - 4 h - 4 text - yellow - 600 dark:text - yellow - 400 mt - 0.5 flex - shrink - 0"      />
                       <div className="text - sm text - yellow - 800 dark:text - yellow - 200">
                         <p className="font - medium mb - 1">Pro Tip</p>
                         <p > Monitor bundle size in your CI / CD pipeline to catch size increases early.</p>

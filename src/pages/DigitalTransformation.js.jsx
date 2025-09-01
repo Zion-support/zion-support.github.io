@@ -52,7 +52,7 @@ const stats = [
         description="End - to - end business modernization strategies and implementation services that drive innovation and competitive advantage."
         keywords="digital transformation, business modernization, process automation, technology modernization, change management"
         canonical="https://ziontechgroup.com / digital - transformation"
-      />
+            />
       {/* Hero Section */}
       <section className="relative pt - 32 pb - 20 overflow - hidden">
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">
@@ -107,7 +107,7 @@ const stats = [
                   className="text - center"
                 >
                   <div className="w - 16 h - 16 bg - gradient - to - br from - zion - cyan to - zion - purple rounded - 2xl mx - auto mb - 4 flex items - center justify - center">
-                    <IconComponent className="w - 8 h - 8 text - white" />
+                    <IconComponent className="w - 8 h - 8 text - white"       />
                   </div>
                   <div className="text - 3xl font - bold text - white mb - 2">
                     {stat.value}
@@ -148,7 +148,7 @@ const stats = [
                   <div
                     className={`w - 16 h - 16 bg - gradient - to - br ${service.color} rounded - 2xl mb - 6 flex items - center justify - center text - white group - hover:scale - 110 transition - transform duration - 300`}
                   >
-                    <IconComponent className="w - 8 h - 8" />
+                    <IconComponent className="w - 8 h - 8"       />
                   </div>
                   <h3 className="text - xl font - semibold text - white mb - 3 group - hover:text - zion - cyan transition - colors">
                     {service.title}
@@ -162,7 +162,7 @@ const stats = [
                         key={idx}
                         className="flex items - center gap - 2 text - sm text - zion - slate - light"
                       >
-                        <CheckCircle className="w - 4 h - 4 text - zion - cyan" />
+                        <CheckCircle className="w - 4 h - 4 text - zion - cyan"       />
                         {feature}
                       </li>) ) }
                   </ul>
@@ -272,7 +272,7 @@ const stats = [
                 >
                   <div className="flex items - start gap - 4">
                     <div className="p - 3 bg - zion - purple / 20 rounded - lg text - zion - cyan">
-                      <IconComponent className="w - 8 h - 8" />
+                      <IconComponent className="w - 8 h - 8"       />
                     </div>
                     <div>
                       <h3 className="text - xl font - semibold text - white mb - 3">
@@ -317,7 +317,7 @@ const stats = [
                   {[...Array (testimonial.rating) ].map ( (_, i) => (<Star
                       key={i}
                       className="w - 5 h - 5 text - zion - cyan fill - current"
-                    />) ) }
+                          />) ) }
                 </div>
                 <p className="text - zion - slate - light mb - 6 leading - relaxed italic">
                   "{testimonial.content}"

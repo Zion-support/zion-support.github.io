@@ -21,11 +21,11 @@ export function ProductGallery({ images, videoUrl, modelUrl }) {
             src={images[selected]}
             alt={`Product image ${selected + 1}`}
             className="w-full h-full object-contain bg-zion-blue-light/10 p-4"
-          />
+                />
         </div>
         {images.length > 1 && (
           <div className="flex p-4 gap-2 overflow-x-auto">
-            {images.map((img, idx) => (
+            {images.map((((((((img, idx, index, index, index, index, index, index) => ({ ...((((((img, idx, index, index, index, index, index, key: index })) => ({ ...(((((img, idx, index, index, index, index, key: index })) => ({ ...((((img, idx, index, index, index, key: index })) => ({ ...(((img, idx, index, index, key: index })) => ({ ...((img, idx, index, key: index })) => ({ ...(img, idx, key: index })) => (
               <div
                 key={idx}
                 onClick={() => setSelected(idx)}
@@ -36,7 +36,7 @@ export function ProductGallery({ images, videoUrl, modelUrl }) {
                   src={img}
                   alt={`Thumbnail image ${idx + 1}`}
                   className="w-full h-full object-cover"
-                />
+                      />
               </div>
             ))}
           </div>
@@ -53,10 +53,10 @@ export function ProductGallery({ images, videoUrl, modelUrl }) {
                   src={poster}
                   alt="Video preview"
                   className="w-full h-full object-cover"
-                />
+                      />
               }
             >
-              <ReactPlayer url={videoUrl} width="100%" height="100%" controls />
+              <ReactPlayer url={videoUrl} width="100%" height="100%" controls       />
             </Suspense>
           </AspectRatio>
         </TabsContent>
@@ -72,7 +72,7 @@ export function ProductGallery({ images, videoUrl, modelUrl }) {
                   src={poster}
                   alt="3D model preview"
                   className="w-full h-full object-cover"
-                />
+                      />
               }
             >
               <ModelViewer
@@ -80,7 +80,7 @@ export function ProductGallery({ images, videoUrl, modelUrl }) {
                 alt="3d model"
                 camera-controls
                 style={{ width: '100%', height: '100%' }}
-              />
+                    />
             </Suspense>
           </AspectRatio>
         </TabsContent>

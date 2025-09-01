@@ -11,7 +11,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
             id: "crm - saas",
             title: "ZionCRM Pro",
             description: "Complete customer relationship management solution with sales automation, lead tracking, and analytics.",
-            icon: <Users className="h - 8 w - 8 text - blue - 500"/>,
+            icon: <Users className="h - 8 w - 8 text - blue - 500"      />,
             price: 29,
             currency: "$",
             features[;
@@ -39,7 +39,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
             id: "project - management",
             title: "ZionProject Hub",
             description: "Project management platform with task tracking, team collaboration, and resource management.",
-            icon: <Calendar className="h - 8 w - 8 text - green - 500"/>,
+            icon: <Calendar className="h - 8 w - 8 text - green - 500"      />,
             price: 19,
             currency: "$",
             features[;
@@ -67,7 +67,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
             id: "analytics - platform",
             title: "ZionAnalytics",
             description: "Business intelligence platform with real - time dashboards, reporting, and data visualization.",
-            icon: <BarChart3 className="h - 8 w - 8 text - purple - 500"/>,
+            icon: <BarChart3 className="h - 8 w - 8 text - purple - 500"      />,
             price: 39,
             currency: "$",
             features[;
@@ -95,7 +95,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
             id: "communication - tool",
             title: "ZionChat",
             description: "Team communication platform with chat, video calls, and file sharing capabilities.",
-            icon: <MessageSquare className="h - 8 w - 8 text - orange - 500"/>,
+            icon: <MessageSquare className="h - 8 w - 8 text - orange - 500"      />,
             price: 15,
             currency: "$",
             features[;
@@ -123,7 +123,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
             id: "document - management",
             title: "ZionDocs",
             description: "Document management system with version control, collaboration, and secure storage.",
-            icon: <FileText className="h - 8 w - 8 text - cyan - 500"/>,
+            icon: <FileText className="h - 8 w - 8 text - cyan - 500"      />,
             price: 25,
             currency: "$",
             features[;
@@ -151,7 +151,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
             id: "payment - processor",
             title: "ZionPay",
             description: "Payment processing solution with multiple payment methods, invoicing, and subscription management.",
-            icon: <CreditCard className="h - 8 w - 8 text - emerald - 500"/>,
+            icon: <CreditCard className="h - 8 w - 8 text - emerald - 500"      />,
             price: 0,
             currency: "$",
             features[;
@@ -179,7 +179,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
             id: "marketing - automation",
             title: "ZionMarketing",
             description: "Marketing automation platform with email campaigns, lead nurturing, and conversion tracking.",
-            icon: <BarChart className="h - 8 w - 8 text - pink - 500"/>,
+            icon: <BarChart className="h - 8 w - 8 text - pink - 500"      />,
             price: 49,
             currency: "$",
             features[;
@@ -207,7 +207,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
             id: "inventory - management",
             title: "ZionInventory",
             description: "Inventory management system with stock tracking, order management, and supplier management.",
-            icon: <Building className="h - 8 w - 8 text - indigo - 500"/>,
+            icon: <Building className="h - 8 w - 8 text - indigo - 500"      />,
             price: 35,
             currency: "$",
             features[;
@@ -235,7 +235,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
             id: "hr - management",
             title: "ZionHR",
             description: "Human resources management platform with employee onboarding, time tracking, and performance management.",
-            icon: <Users className="h - 8 w - 8 text - teal - 500"/>,
+            icon: <Users className="h - 8 w - 8 text - teal - 500"      />,
             price: 45,
             currency: "$",
             features[;
@@ -263,7 +263,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
             id: "accounting - software",
             title: "ZionBooks",
             description: "Cloud - based accounting software with invoicing, expense tracking, and financial reporting.",
-            icon: <BarChart3 className="h - 8 w - 8 text - amber - 500"/>,
+            icon: <BarChart3 className="h - 8 w - 8 text - amber - 500"      />,
             price: 30,
             currency: "$",
             features[;
@@ -291,7 +291,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
             id: "ecommerce - platform",
             title: "ZionShop",
             description: "E - commerce platform with online store creation, payment processing, and inventory management.",
-            icon: <Globe className="h - 8 w - 8 text - red - 500"/>,
+            icon: <Globe className="h - 8 w - 8 text - red - 500"      />,
             price: 40,
             currency: "$",
             features[;
@@ -319,7 +319,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
             id: "learning - platform",
             title: "ZionAcademy",
             description: "Online learning management system with course creation, student management, and progress tracking.",
-            icon: <FileText className="h - 8 w - 8 text - violet - 500"/>,
+            icon: <FileText className="h - 8 w - 8 text - violet - 500"      />,
             price: 55,
             currency: "$",
             features[;
@@ -381,11 +381,11 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
           </p>
           <div className="flex flex - wrap justify - center gap - 4">
             <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white px - 8 py - 3">
-              <TrendingUp className="h - 5 w - 5 mr - 2"/>
+              <TrendingUp className="h - 5 w - 5 mr - 2"      />
               Explore SAAS Solutions
             </Button>
             <Button className="border - zion - cyan text - zion - cyan hover:bg - zion - cyan / 10 px - 8 py - 3">
-              <TrendingUp className="h - 5 w - 5 mr - 2"/>
+              <TrendingUp className="h - 5 w - 5 mr - 2"      />
               Start Free Trial
             </Button>
           </div>
@@ -397,15 +397,15 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
         <div className="container mx - auto px - 4 py - 6">
           <div className="flex flex - wrap items - center justify - center gap - 8 text - center">
             <div className="flex items - center gap - 3">
-              <Phone className="h - 5 w - 5 text - zion - cyan"/>
+              <Phone className="h - 5 w - 5 text - zion - cyan"      />
               <span className="text - white">+1 302 464 0950</span>
             </div>
             <div className="flex items - center gap - 3">
-              <Mail className="h - 5 w - 5 text - zion - cyan"/>
+              <Mail className="h - 5 w - 5 text - zion - cyan"      />
               <span className="text - white">kleber@ziontechgroup.com</span>
             </div>
             <div className="flex items - center gap - 3">
-              <MapPin className="h - 5 w - 5 text - zion - cyan"/>
+              <MapPin className="h - 5 w - 5 text - zion - cyan"      />
               <span className="text - white">364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
           </div>
@@ -451,7 +451,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
                     <p className="text - sm text - zion - slate - light mb - 3">{service.details}</p>
                     <div className="grid grid - cols - 2 gap - 2 mb - 4">
                       {service.features.slice (0, 4) .map ( (feature, index) => (<div key={index} className="flex items - center text - xs text - zion - cyan">
-                          <CheckCircle className="w - 3 h - 3 mr - 2"/>
+                          <CheckCircle className="w - 3 h - 3 mr - 2"      />
                           {feature}
                         </div>) ) }
                     </div>
@@ -469,7 +469,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
                       <span className="text - zion - cyan font - semibold">{service.freeTrial}</span>
                     </div>
                     <div className="flex items - center justify - center gap - 1 mb - 3">
-                      {[...Array (5) ].map ( (_, i) => (<Star key={i} className={`w - 4 h - 4 ${i < Math.floor (service.rating) ? 'text - yellow - 400 fill - current' : 'text - zion - slate - light'}`}/>) ) }
+                      {[...Array (5) ].map ( (_, i) => (<Star key={i} className={`w - 4 h - 4 ${i < Math.floor (service.rating) ? 'text - yellow - 400 fill - current' : 'text - zion - slate - light'}`}      />) ) }
                       <span className="text - sm text - zion - slate - light ml - 2"> ({service.reviewCount}) </span>
                     </div>
                   </div>
@@ -485,7 +485,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
                 <CardFooter className="pt - 0">
                   <Button asChild className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white group - hover:shadow - lg group - hover:shadow - zion - purple / 25 transition - all">
                     <a href={service.link} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="h - 4 w - 4 mr - 2"/>
+                      <ExternalLink className="h - 4 w - 4 mr - 2"      />
                       Start Free Trial
                     </a>
                   </Button>
@@ -507,11 +507,11 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
           </p>
           <div className="flex flex - wrap justify - center gap - 4">
             <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white px - 8 py - 3">
-              <TrendingUp className="h - 5 w - 5 mr - 2"/>
+              <TrendingUp className="h - 5 w - 5 mr - 2"      />
               Start Free Trial
             </Button>
             <Button className="border - zion - cyan text - zion - cyan hover:bg - zion - cyan / 10 px - 8 py - 3">
-              <Phone className="h - 5 w - 5 mr - 2"/>
+              <Phone className="h - 5 w - 5 mr - 2"      />
               Call + 1 302 464 0950
             </Button>
           </div>

@@ -121,7 +121,7 @@ export function CollaborationPlatform () {
         className="fixed bottom - 4 right - 20 p - 3 bg - zion - purple hover:bg - zion - purple - light text - white rounded - full shadow - lg hover:shadow - xl transition - all duration - 300 z - 50"
         title="Start Collaboration Session"
       >
-        <Users className="w - 5 h - 5" />
+        <Users className="w - 5 h - 5"       />
       </button>) ;
   }
   if (isMinimized) {
@@ -136,7 +136,7 @@ export function CollaborationPlatform () {
               onClick={ () => setIsMinimized (false) }
               className="text - zion - slate - light hover:text - zion - slate transition - colors"
             >
-              <Maximize2 className="w - 4 h - 4" />
+              <Maximize2 className="w - 4 h - 4"       />
             </button>
           </div>
         </div>
@@ -151,7 +151,7 @@ export function CollaborationPlatform () {
         <div className="flex items - center gap - 3">
           <div className="w - 3 h - 3 bg - zion - emerald rounded - full animate - pulse"></div>
           <div className="flex items - center gap - 2">
-            <Users className="w - 5 h - 5 text - zion - purple" />
+            <Users className="w - 5 h - 5 text - zion - purple"       />
             <span className="font - semibold text - zion - slate">
               Collaboration Session
             </span>
@@ -177,21 +177,21 @@ export function CollaborationPlatform () {
             className="p - 2 text - zion - slate - light hover:text - zion - slate transition - colors"
             title={isFullscreen ? 'Exit Fullscreen' : 'Fullscreen'}
           >
-            {isFullscreen ? (<Minimize2 className="w - 4 h - 4" />) : (<Maximize2 className="w - 4 h - 4" />) }
+            {isFullscreen ? (<Minimize2 className="w - 4 h - 4"       />) : (<Maximize2 className="w - 4 h - 4"       />) }
           </button>
           <button
             onClick={ () => setIsMinimized (true) }
             className="p - 2 text - zion - slate - light hover:text - zion - slate transition - colors"
             title="Minimize"
           >
-            <Minimize2 className="w - 4 h - 4" />
+            <Minimize2 className="w - 4 h - 4"       />
           </button>
           <button
             onClick={ () => setIsOpen (false) }
             className="p - 2 text - zion - slate - light hover:text - zion - slate transition - colors"
             title="Close"
           >
-            <X className="w - 4 h - 4" />
+            <X className="w - 4 h - 4"       />
           </button>
         </div>
       </div>
@@ -227,10 +227,10 @@ export function CollaborationPlatform () {
                   {/* Status Indicators */}
                   <div className="absolute top - 2 right - 2 flex gap - 1">
                     {!participant.isAudioOn && (<div className="w - 6 h - 6 bg - red - 500 rounded - full flex items - center justify - center">
-                        <MicOff className="w - 3 h - 3 text - white" />
+                        <MicOff className="w - 3 h - 3 text - white"       />
                       </div>) }
                     {participant.isScreenSharing && (<div className="w - 6 h - 6 bg - zion - cyan rounded - full flex items - center justify - center">
-                        <Monitor className="w - 3 h - 3 text - white" />
+                        <Monitor className="w - 3 h - 3 text - white"       />
                       </div>) }
                   </div>
 
@@ -252,7 +252,7 @@ export function CollaborationPlatform () {
                 }`}
                 title={localUser.isVideoOn ? 'Turn Off Video' : 'Turn On Video'}
               >
-                {localUser.isVideoOn ? (<Video className="w - 5 h - 5" />) : (<VideoOff className="w - 5 h - 5" />) }
+                {localUser.isVideoOn ? (<Video className="w - 5 h - 5"       />) : (<VideoOff className="w - 5 h - 5"       />) }
               </button>
 
               <button
@@ -264,7 +264,7 @@ export function CollaborationPlatform () {
                 }`}
                 title={localUser.isAudioOn ? 'Mute' : 'Unmute'}
               >
-                {localUser.isAudioOn ? (<Mic className="w - 5 h - 5" />) : (<MicOff className="w - 5 h - 5" />) }
+                {localUser.isAudioOn ? (<Mic className="w - 5 h - 5"       />) : (<MicOff className="w - 5 h - 5"       />) }
               </button>
 
               <button
@@ -278,7 +278,7 @@ export function CollaborationPlatform () {
                   localUser.isScreenSharing ? 'Stop Sharing' : 'Share Screen'
                 }
               >
-                <Monitor className="w - 5 h - 5" />
+                <Monitor className="w - 5 h - 5"       />
               </button>
 
               <button
@@ -290,7 +290,7 @@ export function CollaborationPlatform () {
                 }`}
                 title="Toggle Chat"
               >
-                <MessageSquare className="w - 5 h - 5" />
+                <MessageSquare className="w - 5 h - 5"       />
               </button>
 
               <button
@@ -298,7 +298,7 @@ export function CollaborationPlatform () {
                 className="p - 3 bg - red - 500 hover:bg - red - 600 text - white rounded - full transition - all duration - 200"
                 title="Leave Meeting"
               >
-                <PhoneOff className="w - 5 h - 5" />
+                <PhoneOff className="w - 5 h - 5"       />
               </button>
             </div>
           </div>

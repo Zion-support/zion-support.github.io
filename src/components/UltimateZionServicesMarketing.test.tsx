@@ -1,16 +1,15 @@
 import { render, screen } from '@testing - library / react';
-import React from 'react';
 import UltimateZionServicesMarketing from './UltimateZionServicesMarketing';
-
-
-describe ('UltimateZionServicesMarketing', () => {
-  it ('renders without crashing', () => {
-    render (<UltimateZionServicesMarketing />) ;
+;
+;
+describe ('UltimateZionServicesMarketing', () => {;
+  it ('renders without crashing', () => {;
+    render (<UltimateZionServicesMarketing       />) ;
     expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () ;
   }) ;
-
-  it ('displays expected content', () => {
-    render (<UltimateZionServicesMarketing />) ;
-    // Add specific test assertions based on component content
+;
+  it ('displays expected content', () => {;
+    render (<UltimateZionServicesMarketing       />) ;
+    // Add specific test assertions based on component content;
   }) ;
 }) ;

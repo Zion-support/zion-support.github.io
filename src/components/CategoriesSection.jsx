@@ -21,7 +21,7 @@ const categories = [
   {
     title: 'Comprehensive Services',
     description: 'Micro SAAS, IT services, and AI solutions',
-    icon: <Briefcase className="w - 10 h - 10" />,
+    icon: <Briefcase className="w - 10 h - 10"       />,
     link: '/services',
     color: 'from - zion - purple to - zion - purple - dark',
     gradient: 'from - zion - purple / 20 to - zion - purple - dark / 20',
@@ -31,7 +31,7 @@ const categories = [
   {
     title: 'Talents',
     description: 'Connect with AI experts, developers, and tech specialists',
-    icon: <Users className="w - 10 h - 10" />,
+    icon: <Users className="w - 10 h - 10"       />,
     link: '/talent',
     color: 'from - zion - cyan to - zion - blue',
     gradient: 'from - zion - cyan / 20 to - zion - blue / 20',
@@ -41,7 +41,7 @@ const categories = [
   {
     title: 'Equipment',
     description: 'Rent or buy specialized hardware, servers, and devices',
-    icon: <HardDrive className="w - 10 h - 10" />,
+    icon: <HardDrive className="w - 10 h - 10"       />,
     link: '/equipment',
     color: 'from - zion - cyan - light to - zion - cyan',
     gradient: 'from - zion - cyan - light / 20 to - zion - cyan / 20',
@@ -51,7 +51,7 @@ const categories = [
   {
     title: 'Innovation',
     description: 'Discover cutting - edge solutions and tech breakthroughs',
-    icon: <Lightbulb className="w - 10 h - 10" />,
+    icon: <Lightbulb className="w - 10 h - 10"       />,
     link: '/category / innovation',
     color: 'from - zion - purple - light to - zion - purple',
     gradient: 'from - zion - purple - light / 20 to - zion - purple / 20',
@@ -68,25 +68,25 @@ const specialServices = [
   {
     title: 'IT Onsite Services',
     link: '/it - onsite - services',
-    icon: <Shield className="w - 5 h - 5" />,
+    icon: <Shield className="w - 5 h - 5"       />,
     description: 'Professional on - site technical support',
   },
   {
     title: 'Comprehensive Services',
     link: '/comprehensive - services',
-    icon: <Rocket className="w - 5 h - 5" />,
+    icon: <Rocket className="w - 5 h - 5"       />,
     description: 'End - to - end technology solutions',
   },
   {
     title: 'AI Integration',
     link: '/ai - integration',
-    icon: <Sparkles className="w - 5 h - 5" />,
+    icon: <Sparkles className="w - 5 h - 5"       />,
     description: 'Seamless AI implementation',
   },
   {
     title: 'Cloud Solutions',
     link: '/cloud - solutions',
-    icon: <Zap className="w - 5 h - 5" />,
+    icon: <Zap className="w - 5 h - 5"       />,
     description: 'Scalable cloud infrastructure',
   },
 ];
@@ -150,7 +150,7 @@ const specialServices = [
                 >
                   <div className="flex items - center justify - between mb - 4">
                     <div className="text - slate - 300">{category.icon}</div>
-                    <ArrowRight className="w - 5 h - 5 text - slate - 400 group - hover:text - white transition - colors duration - 200" />
+                    <ArrowRight className="w - 5 h - 5 text - slate - 400 group - hover:text - white transition - colors duration - 200"       />
                   </div>
                   <h3 className="text - xl font - semibold text - white mb - 2 group - hover:text - purple - 300 transition - colors duration - 200">
                     {category.title}

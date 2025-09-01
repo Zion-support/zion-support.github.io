@@ -11,8 +11,8 @@ export default function Privacy () {
         title="Privacy Policy"
         description="Learn how Zion Tech Group handles your data and protects your privacy."
         canonical="https://ziontechgroup.com / privacy"
-      />
-      {/* <Header /> */}
+            />
+      {/* <Header       /> */}
       <main className="min - h-screen bg - zion - blue pt - 24 pb - 20">
         <div className="container mx - auto px - 4 sm:px - 6 lg:px - 8">
           <div className="text - center mb - 16">
@@ -50,6 +50,6 @@ export default function Privacy () {
           </div>
         </div>
       </main>
-      <Footer />
+      <Footer       />
     </>) ;
 }

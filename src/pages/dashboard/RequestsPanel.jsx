@@ -44,7 +44,7 @@ export default function RequestsPanel() {
               setStatusFilter={setStatusFilter}
               archiveFilter={archiveFilter}
               setArchiveFilter={setArchiveFilter}
-            />
+                  />
 
             {/* Main Content */}
             <Tabs defaultValue="active" className="mb-6">
@@ -61,7 +61,7 @@ export default function RequestsPanel() {
                   onViewDetails={handleViewDetails}
                   onMarkAsResponded={markAsResponded}
                   onToggleArchive={toggleArchive}
-                />
+                      />
               </TabsContent>
 
               <TabsContent value="archived">
@@ -72,7 +72,7 @@ export default function RequestsPanel() {
                   onViewDetails={handleViewDetails}
                   onMarkAsResponded={markAsResponded}
                   onToggleArchive={toggleArchive}
-                />
+                      />
               </TabsContent>
             </Tabs>
           </div>

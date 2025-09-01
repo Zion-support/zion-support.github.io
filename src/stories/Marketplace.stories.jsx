@@ -5,7 +5,7 @@ const meta = {
     component: Marketplace,
   decorators: [
         (Story) => (<MemoryRouter>
-        <Story />
+        <Story       />
       </MemoryRouter>)
     ]
 
@@ -21,7 +21,7 @@ export const Grid = {
   render: () => {
         localStorage.setItem('marketplaceView',
   'grid');
-        return <Marketplace />;
+        return <Marketplace       />;
     
 
 
@@ -35,7 +35,7 @@ export const List = {
   render: () => {
         localStorage.setItem('marketplaceView',
   'list');
-        return <Marketplace />;
+        return <Marketplace       />;
     
 
 

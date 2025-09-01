@@ -10,15 +10,15 @@ const AIAutonomousData = () => {
         <meta
           name="description"
           content="Revolutionary AI autonomous data platform that automatically collects, processes, analyzes, and generates insights from data with intelligent automation and machine learning."
-        />
+              />
         <meta
           name="keywords"
           content="AI data platform, autonomous data processing, data analytics, machine learning, data automation, AI insights"
-        />
+              />
         <link
           rel="canonical"
           href="https://ziontechgroup.com / ai - autonomous - data"
-        />
+              />
       </Helmet>
 
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - indigo - 900 to - slate - 900">

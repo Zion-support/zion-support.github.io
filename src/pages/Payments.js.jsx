@@ -37,7 +37,7 @@ export default function Payments () {
             </TabsList>
 
             <TabsContent value="history">
-              <TransactionHistory />
+              <TransactionHistory       />
             </TabsContent>
 
             <TabsContent value="settings">
@@ -74,7 +74,7 @@ export default function Payments () {
                       completed satisfactorily.
                     </p>
                     <div className="flex items - center space - x-2">
-                      <Switch id="escrow - default" />
+                      <Switch id="escrow - default"       />
                       <Label
                         htmlFor="escrow - default"
                         className="text - white"
@@ -94,7 +94,7 @@ export default function Payments () {
                     </p>
                     <div className="space - y-2">
                       <div className="flex items - center space - x-2">
-                        <Checkbox id="notify - email" defaultChecked />
+                        <Checkbox id="notify - email" defaultChecked       />
                         <label
                           htmlFor="notify - email"
                           className="text - sm font - medium leading - none peer - disabled:cursor - not - allowed peer - disabled:opacity - 70 text - white"
@@ -103,7 +103,7 @@ export default function Payments () {
                         </label>
                       </div>
                       <div className="flex items - center space - x-2">
-                        <Checkbox id="notify - push" defaultChecked />
+                        <Checkbox id="notify - push" defaultChecked       />
                         <label
                           htmlFor="notify - push"
                           className="text - sm font - medium leading - none peer - disabled:cursor - not - allowed peer - disabled:opacity - 70 text - white"

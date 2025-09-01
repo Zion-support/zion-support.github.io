@@ -29,7 +29,7 @@ export function ListingCard ({
             src={images[0]}
             alt={title}
             className="h - full w - full object - cover transition - transform duration - 300 group - hover:scale - 105"
-          />
+                />
         </div>) }
       <div className="flex flex - col p - 4 flex - grow">
         <div className="mb - 2">
@@ -61,7 +61,7 @@ export function ListingCard ({
                 src={author.avatarUrl}
                 alt={author.name}
                 className="h - 8 w - 8 rounded - full mr - 2"
-              />) : (<div className="h - 8 w - 8 rounded - full bg - zion - purple / 20 mr - 2" />) }
+                    />) : (<div className="h - 8 w - 8 rounded - full bg - zion - purple / 20 mr - 2"       />) }
             <span className="text - sm text - zion - slate - light">
               {author.name}
             </span>

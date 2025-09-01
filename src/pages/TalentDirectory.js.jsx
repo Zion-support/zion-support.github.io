@@ -84,7 +84,7 @@ const TalentDirectory = () => {
         "UI / UX Design"
     ];
     return (<div className="min - h-screen bg - background">
-      <SEO title="Talent Directory - Zion Tech Group" description="Connect with top technology professionals and experts in AI, cloud, cybersecurity, and more." keywords="talent directory, technology professionals, AI engineers, cloud architects, cybersecurity specialists" canonical="https://ziontechgroup.com / talent - directory"/>
+      <SEO title="Talent Directory - Zion Tech Group" description="Connect with top technology professionals and experts in AI, cloud, cybersecurity, and more." keywords="talent directory, technology professionals, AI engineers, cloud architects, cybersecurity specialists" canonical="https://ziontechgroup.com / talent - directory"      />
 
       {/* Hero Section */}
       <section className="relative bg - gradient - to - br from - violet - 900 via - violet - 800 to - purple - 900 text - white py - 20">
@@ -133,8 +133,8 @@ const TalentDirectory = () => {
 
 }} className="max - w-2xl mx - auto">
             <div className="relative">
-              <Search className="absolute left - 4 top - 1/2 transform - translate - y-1 / 2 text - gray - 400 w - 5 h - 5"/>
-              <input type="text" placeholder="Search for talent, skills, or expertise..." className="w - full px - 12 py - 4 bg - white / 10 border border - white / 20 rounded - xl text - white placeholder - gray - 300 focus:outline - none focus:border - violet - 400 focus:ring - 2 focus:ring - violet - 400 / 20 backdrop - blur - sm"/>
+              <Search className="absolute left - 4 top - 1/2 transform - translate - y-1 / 2 text - gray - 400 w - 5 h - 5"      />
+              <input type="text" placeholder="Search for talent, skills, or expertise..." className="w - full px - 12 py - 4 bg - white / 10 border border - white / 20 rounded - xl text - white placeholder - gray - 300 focus:outline - none focus:border - violet - 400 focus:ring - 2 focus:ring - violet - 400 / 20 backdrop - blur - sm"      />
             </div>
           </motion.div>
         </div>
@@ -188,7 +188,7 @@ const TalentDirectory = () => {
                     </div>
                   </div>
                   <div className="flex items - center gap - 1 text - yellow - 400">
-                    <Star className="w - 4 h - 4 fill - current"/>
+                    <Star className="w - 4 h - 4 fill - current"      />
                     <span className="text - sm text - gray - 600">{talent.rating}</span>
                   </div>
                 </div>
@@ -196,15 +196,15 @@ const TalentDirectory = () => {
                 {/* Details */}
                 <div className="space - y-3 mb - 4">
                   <div className="flex items - center gap - 2 text - sm text - gray - 600">
-                    <Briefcase className="w - 4 h - 4"/>
+                    <Briefcase className="w - 4 h - 4"      />
                     <span>{talent.experience} experience</span>
                   </div>
                   <div className="flex items - center gap - 2 text - sm text - gray - 600">
-                    <MapPin className="w - 4 h - 4"/>
+                    <MapPin className="w - 4 h - 4"      />
                     <span>{talent.location}</span>
                   </div>
                   <div className="flex items - center gap - 2 text - sm text - gray - 600">
-                    <GraduationCap className="w - 4 h - 4"/>
+                    <GraduationCap className="w - 4 h - 4"      />
                     <span>{talent.projects} projects completed</span>
                   </div>
                 </div>

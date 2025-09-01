@@ -86,7 +86,7 @@ export function ErrorBoundary ({ children, fallback, onError }) {
                 <div className="w - 24 h - 24 bg - zion - purple / 10 rounded - full flex items - center justify - center mx - auto mb - 6">
                   <IconComponent
                     className={`w - 12 h - 12 ${currentError.color}`}
-                  />
+                        />
                 </div>
                 <h1 className="text - 3xl font - bold text - white mb - 3">
                   {currentError.title}
@@ -104,7 +104,7 @@ export function ErrorBoundary ({ children, fallback, onError }) {
 
               {error && process.env.NODE_ENV === 'development' && (<details className="mb - 6 text - left">
                   <summary className="cursor - pointer text - zion - cyan hover:text - zion - cyan - light mb - 3 flex items - center">
-                    <Bug className="w - 4 h - 4 mr - 2" />
+                    <Bug className="w - 4 h - 4 mr - 2"       />
                     Error Details (Development) {' '}
                   </summary>
                   <div className="bg - zion - slate - dark p - 4 rounded - lg text - xs text - zion - slate - light overflow - auto max - h-40">
@@ -129,13 +129,13 @@ export function ErrorBoundary ({ children, fallback, onError }) {
                     onClick={handleRetry}
                     className="w - full bg - zion - purple hover:bg - zion - purple - dark text - white transition - all duration - 200"
                   >
-                    <RefreshCw className="w - 4 h - 4 mr - 2" />
+                    <RefreshCw className="w - 4 h - 4 mr - 2"       />
                     Try Again
                   </Button>) : (<Button
                     onClick={ () => window.location.reload () }
                     className="w - full bg - zion - cyan hover:bg - zion - cyan - dark text - zion - blue - dark transition - all duration - 200"
                   >
-                    <Zap className="w - 4 h - 4 mr - 2" />
+                    <Zap className="w - 4 h - 4 mr - 2"       />
                     Reload Page
                   </Button>) }
 
@@ -144,7 +144,7 @@ export function ErrorBoundary ({ children, fallback, onError }) {
                   onClick={ () => navigate (-1) }
                   className="w - full border - zion - cyan text - zion - cyan hover:bg - zion - cyan hover:text - zion - blue - dark transition - all duration - 200"
                 >
-                  <ArrowLeft className="w - 4 h - 4 mr - 2" />
+                  <ArrowLeft className="w - 4 h - 4 mr - 2"       />
                   Go Back
                 </Button>
 
@@ -152,7 +152,7 @@ export function ErrorBoundary ({ children, fallback, onError }) {
                   to="/"
                   className="block w - full px - 4 py - 2 text - center border border - zion - purple text - zion - purple rounded - md hover:bg - zion - purple hover:text - white transition - all duration - 200"
                 >
-                  <Home className="w - 4 h - 4 inline mr - 2" />
+                  <Home className="w - 4 h - 4 inline mr - 2"       />
                   Go Home
                 </Link>
               </div>
@@ -231,7 +231,7 @@ export function ErrorBoundary ({ children, fallback, onError }) {
             error={error || undefined}
             resetError={resetError}
             retryCount={retryCount}
-          />) ;
+                />) ;
       }
 
       return <>{children}</>;
@@ -255,7 +255,7 @@ export function ErrorBoundary ({ children, fallback, onError }) {
   // Higher - order component for error handling
   return function WrappedComponent (props) {
     return (<ErrorBoundary fallback={fallback}>
-        <Component {...props} />
+        <Component {...props}       />
       </ErrorBoundary>) ;
   };
 }

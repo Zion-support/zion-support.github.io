@@ -35,7 +35,7 @@ import { Check, Clock, Users, Shield, Star, ArrowRight, ChevronDown, ChevronUp e
 
         {/* Services Grid */}
         <div className="space-y-6">
-          {displayServices.map((service) => (
+          {displayServices.map((((((((service, index, index, index, index, index, index) => ({ ...((((((service, index, index, index, index, index, key: index })) => ({ ...(((((service, index, index, index, index, key: index })) => ({ ...((((service, index, index, index, key: index })) => ({ ...(((service, index, index, key: index })) => ({ ...((service, index, key: index })) => ({ ...(service, key: index })) => (
             <div
               key={service.id}
               className="bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
@@ -57,15 +57,15 @@ import { Check, Clock, Users, Shield, Star, ArrowRight, ChevronDown, ChevronUp e
                       {/* Quick Info */}
                       <div className="flex items-center space-x-6 mt-4">
                         <div className="flex items-center space-x-2 text-gray-500">
-                          <Clock className="w-4 h-4" />
+                          <Clock className="w-4 h-4"       />
                           <span className="text-sm">{service.duration}</span>
                         </div>
                         <div className="flex items-center space-x-2 text-gray-500">
-                          <Users className="w-4 h-4" />
+                          <Users className="w-4 h-4"       />
                           <span className="text-sm">{service.teamSize}</span>
                         </div>
                         <div className="flex items-center space-x-2 text-gray-500">
-                          <Star className="w-4 h-4" />
+                          <Star className="w-4 h-4"       />
                           <span className="text-sm">{service.category}</span>
                         </div>
                       </div>
@@ -77,9 +77,9 @@ import { Check, Clock, Users, Shield, Star, ArrowRight, ChevronDown, ChevronUp e
                     className="ml-4 p-2 text-gray-400 hover:text-gray-600 transition-colors"
 
                     {expandedService === service.id ? (;
-                      <ChevronUp className="w-6 h-6" />
+                      <ChevronUp className="w-6 h-6"       />
                     ) : (
-                      <ChevronDown className="w-6 h-6" />
+                      <ChevronDown className="w-6 h-6"       />
                     )}
                   </button>
                 </div>
@@ -92,13 +92,13 @@ import { Check, Clock, Users, Shield, Star, ArrowRight, ChevronDown, ChevronUp e
                     {/* Features */}
                     <div>
                       <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-                        <Check className="w-5 h-5 text-green-500 mr-2" />
+                        <Check className="w-5 h-5 text-green-500 mr-2"       />
                         Features
                       </h4>
                       <ul className="space-y-2">
-                        {service.features.map((feature, index) => (
+                        {service.features.map((((((((feature, index, index, index, index, index, index, index) => ({ ...((((((feature, index, index, index, index, index, index, key: index })) => ({ ...(((((feature, index, index, index, index, index, key: index })) => ({ ...((((feature, index, index, index, index, key: index })) => ({ ...(((feature, index, index, index, key: index })) => ({ ...((feature, index, index, key: index })) => ({ ...(feature, index, key: index })) => (
                           <li key={index} className="flex items-start space-x-2">
-                            <Check className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                            <Check className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"       />
                             <span className="text-gray-700">{feature}</span>
                           </li>
                         ))}
@@ -108,13 +108,13 @@ import { Check, Clock, Users, Shield, Star, ArrowRight, ChevronDown, ChevronUp e
                     {/* Benefits */}
                     <div>
                       <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-                        <Star className="w-5 h-5 text-yellow-500 mr-2" />
+                        <Star className="w-5 h-5 text-yellow-500 mr-2"       />
                         Benefits
                       </h4>
                       <ul className="space-y-2">
-                        {service.benefits.map((benefit, index) => (
+                        {service.benefits.map((((((((benefit, index, index, index, index, index, index, index) => ({ ...((((((benefit, index, index, index, index, index, index, key: index })) => ({ ...(((((benefit, index, index, index, index, index, key: index })) => ({ ...((((benefit, index, index, index, index, key: index })) => ({ ...(((benefit, index, index, index, key: index })) => ({ ...((benefit, index, index, key: index })) => ({ ...(benefit, index, key: index })) => (
                           <li key={index} className="flex items-start space-x-2">
-                            <Star className="w-4 h-4 text-yellow-500 mt-0.5 flex-shrink-0" />
+                            <Star className="w-4 h-4 text-yellow-500 mt-0.5 flex-shrink-0"       />
                             <span className="text-gray-700">{benefit}</span>
                           </li>
                         ))}
@@ -124,13 +124,13 @@ import { Check, Clock, Users, Shield, Star, ArrowRight, ChevronDown, ChevronUp e
                     {/* Requirements */}
                     <div>
                       <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-                        <Shield className="w-5 h-5 text-blue-500 mr-2" />
+                        <Shield className="w-5 h-5 text-blue-500 mr-2"       />
                         Requirements
                       </h4>
                       <ul className="space-y-2">
-                        {service.requirements.map((requirement, index) => (
+                        {service.requirements.map((((((((requirement, index, index, index, index, index, index, index) => ({ ...((((((requirement, index, index, index, index, index, index, key: index })) => ({ ...(((((requirement, index, index, index, index, index, key: index })) => ({ ...((((requirement, index, index, index, index, key: index })) => ({ ...(((requirement, index, index, index, key: index })) => ({ ...((requirement, index, index, key: index })) => ({ ...(requirement, index, key: index })) => (
                           <li key={index} className="flex items-start space-x-2">
-                            <Shield className="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" />
+                            <Shield className="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0"       />
                             <span className="text-gray-700">{requirement}</span>
                           </li>
                         ))}
@@ -153,7 +153,7 @@ import { Check, Clock, Users, Shield, Star, ArrowRight, ChevronDown, ChevronUp e
                         </button>
                         <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center space-x-2">
                           <span>Get Quote</span>
-                          <ArrowRight className="w-4 h-4" />
+                          <ArrowRight className="w-4 h-4"       />
                         </button>
                       </div>
                     </div>

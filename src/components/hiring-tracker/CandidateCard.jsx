@@ -41,7 +41,7 @@ export function CandidateCard({ application, index }) {
               <div className="flex justify-between items-start mb-2">
                 <div className="flex items-center gap-2">
                   <Avatar className="h-8 w-8">
-                    {application.talent_profile?.profile_picture_url ? (<img src={application.talent_profile.profile_picture_url} alt={application.talent_profile.full_name || "Candidate"}/>) : (<User className="h-4 w-4"/>)}
+                    {application.talent_profile?.profile_picture_url ? (<img src={application.talent_profile.profile_picture_url} alt={application.talent_profile.full_name || "Candidate"}      />) : (<User className="h-4 w-4"      />)}
                   </Avatar>
                   <div>
                     <h4 className="font-medium text-sm">
@@ -56,7 +56,7 @@ export function CandidateCard({ application, index }) {
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                     <Button variant="ghost" className="h-8 w-8 p-0">
-                      <MoreVertical className="h-4 w-4"/>
+                      <MoreVertical className="h-4 w-4"      />
                     </Button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="end">
@@ -64,7 +64,7 @@ export function CandidateCard({ application, index }) {
                       {showNotes ? "Hide notes" : "Add notes"}
                     </DropdownMenuItem>
                     <DropdownMenuItem onClick={() => setShowHireModal(true)}>
-                      <BriefcaseIcon className="h-4 w-4 mr-2"/> Hire Candidate
+                      <BriefcaseIcon className="h-4 w-4 mr-2"      /> Hire Candidate
                     </DropdownMenuItem>
                     <DropdownMenuItem asChild>
                       <Link to={`/messages?talentId=${application.talent_id}`}>
@@ -83,19 +83,19 @@ export function CandidateCard({ application, index }) {
               {/* Application Info */}
               <div className="flex flex-wrap gap-2 items-center text-xs text-muted-foreground mb-2">
                 <div className="flex items-center">
-                  <Calendar className="h-3 w-3 mr-1"/>
+                  <Calendar className="h-3 w-3 mr-1"      />
                   {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
                 </div>
 
                 {isStalled && (<div className="flex items-center text-amber-500">
-                    <AlertTriangle className="h-3 w-3 mr-1"/>
+                    <AlertTriangle className="h-3 w-3 mr-1"      />
                     Stalled
                   </div>)}
               </div>
 
               {/* Match Score */}
               {application.match_score !== null && application.match_score !== null && (<div className="mb-2">
-                  <ScoreBadge application={application}/>
+                  <ScoreBadge application={application}      />
                 </div>)}
 
               {/* Notes Section */}
@@ -110,20 +110,20 @@ export function CandidateCard({ application, index }) {
               <div className="flex justify-between mt-2 gap-1">
                 <Button variant="outline" size="sm" className="flex-1" asChild>
                   <Link to={`/messages?talentId=${application.talent_id}`}>
-                    <MessageSquare className="h-3 w-3 mr-1"/> Message
+                    <MessageSquare className="h-3 w-3 mr-1"      /> Message
                   </Link>
                 </Button>
 
                 <Button variant="outline" size="sm" className="flex-1" asChild>
                   {application.resume?.file_url ? (<a href={application.resume.file_url} target="_blank" rel="noopener noreferrer">
-                      <FileText className="h-3 w-3 mr-1"/> Resume
+                      <FileText className="h-3 w-3 mr-1"      /> Resume
                     </a>) : (<span>
-                      <FileText className="h-3 w-3 mr-1"/> No Resume
+                      <FileText className="h-3 w-3 mr-1"      /> No Resume
                     </span>)}
                 </Button>
 
                 <Button variant="default" size="sm" className="flex-1" onClick={() => setShowHireModal(true)}>
-                  <BriefcaseIcon className="h-3 w-3 mr-1"/> Hire
+                  <BriefcaseIcon className="h-3 w-3 mr-1"      /> Hire
                 </Button>
               </div>
             </CardContent>

@@ -84,7 +84,7 @@ import Link from 'next / link';
         <Heart
           aria - hidden="true"
           className={active ? 'text - red - 500 fill - red - 500' : 'text - gray - 500'}
-        />
+              />
       </button>
 
       <div className="w - full h - 40 relative mb - 2">
@@ -98,7 +98,7 @@ import Link from 'next / link';
             <span className="text - gray - 500">No Image</span>
           </div>) }
         {active && (<div className="absolute top - 2 left - 2 p - 1 rounded - full bg - background / 70">
-            <Heart aria - hidden="true" className="text - red - 500 fill - red - 500" />
+            <Heart aria - hidden="true" className="text - red - 500 fill - red - 500"       />
           </div>) }
       </div>
       <Link href={`/marketplace / listing/${product.id}`}>

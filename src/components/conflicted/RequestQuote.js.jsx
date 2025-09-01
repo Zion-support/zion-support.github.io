@@ -247,7 +247,7 @@ export default function RequestQuote() {
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-2xl p-4 mb-8">
-              <Calculator className="w-10 h-10 text-white" />
+              <Calculator className="w-10 h-10 text-white"       />
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-400 to-purple-400 bg-clip-text text-transparent">
               Request a Quote
@@ -265,7 +265,7 @@ export default function RequestQuote() {
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="flex items-center justify-center space-x-3 text-white/80"
               >
-                <Clock className="w-5 h-5 text-cyan-400" />
+                <Clock className="w-5 h-5 text-cyan-400"       />
                 <span>24-Hour Response</span>
               </motion.div>
               <motion.div
@@ -274,7 +274,7 @@ export default function RequestQuote() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="flex items-center justify-center space-x-3 text-white/80"
               >
-                <CheckCircle className="w-5 h-5 text-green-400" />
+                <CheckCircle className="w-5 h-5 text-green-400"       />
                 <span>Free Consultation</span>
               </motion.div>
               <motion.div
@@ -283,7 +283,7 @@ export default function RequestQuote() {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="flex items-center justify-center space-x-3 text-white/80"
               >
-                <Calculator className="w-5 h-5 text-purple-400" />
+                <Calculator className="w-5 h-5 text-purple-400"       />
                 <span>Detailed Estimate</span>
               </motion.div>
             </div>
@@ -323,7 +323,7 @@ export default function RequestQuote() {
                         required
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors"
                         placeholder="Enter your first name"
-                      />
+                            />
                     </div>
                     <div>
                       <label className="block text-white font-medium mb-2">
@@ -337,7 +337,7 @@ export default function RequestQuote() {
                         required
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors"
                         placeholder="Enter your last name"
-                      />
+                            />
                     </div>
                   </div>
 
@@ -354,7 +354,7 @@ export default function RequestQuote() {
                         required
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors"
                         placeholder="Enter your email"
-                      />
+                            />
                     </div>
                     <div>
                       <label className="block text-white font-medium mb-2">
@@ -367,7 +367,7 @@ export default function RequestQuote() {
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors"
                         placeholder="Enter your phone number"
-                      />
+                            />
                     </div>
                   </div>
 
@@ -382,7 +382,7 @@ export default function RequestQuote() {
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors"
                       placeholder="Enter your comp name"
-                    />
+                          />
                   </div>
 
                   {/* Project Type */}
@@ -391,7 +391,7 @@ export default function RequestQuote() {
                       Project Type *
                     </label>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      {projectTypes.map(type => (
+                      {projectTypes.map(((((((type => (
                         <label
                           key={type.value}
                           className={`flex items-start p-4 rounded-lg border cursor-pointer transition-all duration-300 ${
@@ -407,10 +407,10 @@ export default function RequestQuote() {
                             checked={formData.projectType === type.value}
                             onChange={handleInputChange}
                             className="sr-only"
-                          />
+                                />
                           <div className="flex items-start space-x-3">
                             <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                              <type.icon className="w-4 h-4 text-white" />
+                              <type.icon className="w-4 h-4 text-white"       />
                             </div>
                             <div>
                               <div className="text-white font-medium">
@@ -422,7 +422,193 @@ export default function RequestQuote() {
                             </div>
                           </div>
                         </label>
-                      ))}
+                      , index, index, index, index, index, index) => ({ ...(((((type => (
+                        <label
+                          key={type.value}
+                          className={`flex items-start p-4 rounded-lg border cursor-pointer transition-all duration-300 ${
+                            formData.projectType === type.value
+                              ? 'border-cyan-400 bg-cyan-400/20'
+                              : 'border-white/20 hover:border-cyan-400/50'
+                          }`}
+                        >
+                          <input
+                            type="radio"
+                            name="projectType"
+                            value={type.value}
+                            checked={formData.projectType === type.value}
+                            onChange={handleInputChange}
+                            className="sr-only"
+                                />
+                          <div className="flex items-start space-x-3">
+                            <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                              <type.icon className="w-4 h-4 text-white"       />
+                            </div>
+                            <div>
+                              <div className="text-white font-medium">
+                                {type.label}
+                              </div>
+                              <div className="text-white/60 text-sm">
+                                {type.description}
+                              </div>
+                            </div>
+                          </div>
+                        </label>
+                      , index, index, index, index, index, key: index })) => ({ ...((((type => (
+                        <label
+                          key={type.value}
+                          className={`flex items-start p-4 rounded-lg border cursor-pointer transition-all duration-300 ${
+                            formData.projectType === type.value
+                              ? 'border-cyan-400 bg-cyan-400/20'
+                              : 'border-white/20 hover:border-cyan-400/50'
+                          }`}
+                        >
+                          <input
+                            type="radio"
+                            name="projectType"
+                            value={type.value}
+                            checked={formData.projectType === type.value}
+                            onChange={handleInputChange}
+                            className="sr-only"
+                                />
+                          <div className="flex items-start space-x-3">
+                            <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                              <type.icon className="w-4 h-4 text-white"       />
+                            </div>
+                            <div>
+                              <div className="text-white font-medium">
+                                {type.label}
+                              </div>
+                              <div className="text-white/60 text-sm">
+                                {type.description}
+                              </div>
+                            </div>
+                          </div>
+                        </label>
+                      , index, index, index, index, key: index })) => ({ ...(((type => (
+                        <label
+                          key={type.value}
+                          className={`flex items-start p-4 rounded-lg border cursor-pointer transition-all duration-300 ${
+                            formData.projectType === type.value
+                              ? 'border-cyan-400 bg-cyan-400/20'
+                              : 'border-white/20 hover:border-cyan-400/50'
+                          }`}
+                        >
+                          <input
+                            type="radio"
+                            name="projectType"
+                            value={type.value}
+                            checked={formData.projectType === type.value}
+                            onChange={handleInputChange}
+                            className="sr-only"
+                                />
+                          <div className="flex items-start space-x-3">
+                            <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                              <type.icon className="w-4 h-4 text-white"       />
+                            </div>
+                            <div>
+                              <div className="text-white font-medium">
+                                {type.label}
+                              </div>
+                              <div className="text-white/60 text-sm">
+                                {type.description}
+                              </div>
+                            </div>
+                          </div>
+                        </label>
+                      , index, index, index, key: index })) => ({ ...((type => (
+                        <label
+                          key={type.value}
+                          className={`flex items-start p-4 rounded-lg border cursor-pointer transition-all duration-300 ${
+                            formData.projectType === type.value
+                              ? 'border-cyan-400 bg-cyan-400/20'
+                              : 'border-white/20 hover:border-cyan-400/50'
+                          }`}
+                        >
+                          <input
+                            type="radio"
+                            name="projectType"
+                            value={type.value}
+                            checked={formData.projectType === type.value}
+                            onChange={handleInputChange}
+                            className="sr-only"
+                                />
+                          <div className="flex items-start space-x-3">
+                            <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                              <type.icon className="w-4 h-4 text-white"       />
+                            </div>
+                            <div>
+                              <div className="text-white font-medium">
+                                {type.label}
+                              </div>
+                              <div className="text-white/60 text-sm">
+                                {type.description}
+                              </div>
+                            </div>
+                          </div>
+                        </label>
+                      , index, index, key: index })) => ({ ...(type => (
+                        <label
+                          key={type.value}
+                          className={`flex items-start p-4 rounded-lg border cursor-pointer transition-all duration-300 ${
+                            formData.projectType === type.value
+                              ? 'border-cyan-400 bg-cyan-400/20'
+                              : 'border-white/20 hover:border-cyan-400/50'
+                          }`}
+                        >
+                          <input
+                            type="radio"
+                            name="projectType"
+                            value={type.value}
+                            checked={formData.projectType === type.value}
+                            onChange={handleInputChange}
+                            className="sr-only"
+                                />
+                          <div className="flex items-start space-x-3">
+                            <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                              <type.icon className="w-4 h-4 text-white"       />
+                            </div>
+                            <div>
+                              <div className="text-white font-medium">
+                                {type.label}
+                              </div>
+                              <div className="text-white/60 text-sm">
+                                {type.description}
+                              </div>
+                            </div>
+                          </div>
+                        </label>
+                      , index, key: index })) => ({ ...type => (
+                        <label
+                          key={type.value}
+                          className={`flex items-start p-4 rounded-lg border cursor-pointer transition-all duration-300 ${
+                            formData.projectType === type.value
+                              ? 'border-cyan-400 bg-cyan-400/20'
+                              : 'border-white/20 hover:border-cyan-400/50'
+                          }`}
+                        >
+                          <input
+                            type="radio"
+                            name="projectType"
+                            value={type.value}
+                            checked={formData.projectType === type.value}
+                            onChange={handleInputChange}
+                            className="sr-only"
+                                />
+                          <div className="flex items-start space-x-3">
+                            <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                              <type.icon className="w-4 h-4 text-white"       />
+                            </div>
+                            <div>
+                              <div className="text-white font-medium">
+                                {type.label}
+                              </div>
+                              <div className="text-white/60 text-sm">
+                                {type.description}
+                              </div>
+                            </div>
+                          </div>
+                        </label>
+                      , key: index })))}
                     </div>
                   </div>
 
@@ -439,11 +625,35 @@ export default function RequestQuote() {
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"
                       >
                         <option value="">Select budget range</option>
-                        {budgetRanges.map(budget => (
+                        {budgetRanges.map(((((((budget => (
                           <option key={budget.value} value={budget.value}>
                             {budget.label} - {budget.description}
                           </option>
-                        ))}
+                        , index, index, index, index, index, index) => ({ ...(((((budget => (
+                          <option key={budget.value} value={budget.value}>
+                            {budget.label} - {budget.description}
+                          </option>
+                        , index, index, index, index, index, key: index })) => ({ ...((((budget => (
+                          <option key={budget.value} value={budget.value}>
+                            {budget.label} - {budget.description}
+                          </option>
+                        , index, index, index, index, key: index })) => ({ ...(((budget => (
+                          <option key={budget.value} value={budget.value}>
+                            {budget.label} - {budget.description}
+                          </option>
+                        , index, index, index, key: index })) => ({ ...((budget => (
+                          <option key={budget.value} value={budget.value}>
+                            {budget.label} - {budget.description}
+                          </option>
+                        , index, index, key: index })) => ({ ...(budget => (
+                          <option key={budget.value} value={budget.value}>
+                            {budget.label} - {budget.description}
+                          </option>
+                        , index, key: index })) => ({ ...budget => (
+                          <option key={budget.value} value={budget.value}>
+                            {budget.label} - {budget.description}
+                          </option>
+                        , key: index })))}
                       </select>
                     </div>
                     <div>
@@ -457,11 +667,35 @@ export default function RequestQuote() {
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"
                       >
                         <option value="">Select timeline</option>
-                        {timelineOptions.map(timeline => (
+                        {timelineOptions.map(((((((timeline => (
                           <option key={timeline.value} value={timeline.value}>
                             {timeline.label} - {timeline.description}
                           </option>
-                        ))}
+                        , index, index, index, index, index, index) => ({ ...(((((timeline => (
+                          <option key={timeline.value} value={timeline.value}>
+                            {timeline.label} - {timeline.description}
+                          </option>
+                        , index, index, index, index, index, key: index })) => ({ ...((((timeline => (
+                          <option key={timeline.value} value={timeline.value}>
+                            {timeline.label} - {timeline.description}
+                          </option>
+                        , index, index, index, index, key: index })) => ({ ...(((timeline => (
+                          <option key={timeline.value} value={timeline.value}>
+                            {timeline.label} - {timeline.description}
+                          </option>
+                        , index, index, index, key: index })) => ({ ...((timeline => (
+                          <option key={timeline.value} value={timeline.value}>
+                            {timeline.label} - {timeline.description}
+                          </option>
+                        , index, index, key: index })) => ({ ...(timeline => (
+                          <option key={timeline.value} value={timeline.value}>
+                            {timeline.label} - {timeline.description}
+                          </option>
+                        , index, key: index })) => ({ ...timeline => (
+                          <option key={timeline.value} value={timeline.value}>
+                            {timeline.label} - {timeline.description}
+                          </option>
+                        , key: index })))}
                       </select>
                     </div>
                   </div>
@@ -472,7 +706,7 @@ export default function RequestQuote() {
                       Project Urgency
                     </label>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                      {urgencyLevels.map(level => (
+                      {urgencyLevels.map(((((((level => (
                         <label
                           key={level.value}
                           className={`flex items-center p-3 rounded-lg border cursor-pointer transition-all duration-300 ${
@@ -488,7 +722,7 @@ export default function RequestQuote() {
                             checked={formData.urgency === level.value}
                             onChange={handleInputChange}
                             className="sr-only"
-                          />
+                                />
                           <div className="text-center w-full">
                             <div className={`font-medium ${level.color}`}>
                               {level.label}
@@ -498,7 +732,163 @@ export default function RequestQuote() {
                             </div>
                           </div>
                         </label>
-                      ))}
+                      , index, index, index, index, index, index) => ({ ...(((((level => (
+                        <label
+                          key={level.value}
+                          className={`flex items-center p-3 rounded-lg border cursor-pointer transition-all duration-300 ${
+                            formData.urgency === level.value
+                              ? 'border-cyan-400 bg-cyan-400/20'
+                              : 'border-white/20 hover:border-cyan-400/50'
+                          }`}
+                        >
+                          <input
+                            type="radio"
+                            name="urgency"
+                            value={level.value}
+                            checked={formData.urgency === level.value}
+                            onChange={handleInputChange}
+                            className="sr-only"
+                                />
+                          <div className="text-center w-full">
+                            <div className={`font-medium ${level.color}`}>
+                              {level.label}
+                            </div>
+                            <div className="text-white/60 text-xs">
+                              {level.description}
+                            </div>
+                          </div>
+                        </label>
+                      , index, index, index, index, index, key: index })) => ({ ...((((level => (
+                        <label
+                          key={level.value}
+                          className={`flex items-center p-3 rounded-lg border cursor-pointer transition-all duration-300 ${
+                            formData.urgency === level.value
+                              ? 'border-cyan-400 bg-cyan-400/20'
+                              : 'border-white/20 hover:border-cyan-400/50'
+                          }`}
+                        >
+                          <input
+                            type="radio"
+                            name="urgency"
+                            value={level.value}
+                            checked={formData.urgency === level.value}
+                            onChange={handleInputChange}
+                            className="sr-only"
+                                />
+                          <div className="text-center w-full">
+                            <div className={`font-medium ${level.color}`}>
+                              {level.label}
+                            </div>
+                            <div className="text-white/60 text-xs">
+                              {level.description}
+                            </div>
+                          </div>
+                        </label>
+                      , index, index, index, index, key: index })) => ({ ...(((level => (
+                        <label
+                          key={level.value}
+                          className={`flex items-center p-3 rounded-lg border cursor-pointer transition-all duration-300 ${
+                            formData.urgency === level.value
+                              ? 'border-cyan-400 bg-cyan-400/20'
+                              : 'border-white/20 hover:border-cyan-400/50'
+                          }`}
+                        >
+                          <input
+                            type="radio"
+                            name="urgency"
+                            value={level.value}
+                            checked={formData.urgency === level.value}
+                            onChange={handleInputChange}
+                            className="sr-only"
+                                />
+                          <div className="text-center w-full">
+                            <div className={`font-medium ${level.color}`}>
+                              {level.label}
+                            </div>
+                            <div className="text-white/60 text-xs">
+                              {level.description}
+                            </div>
+                          </div>
+                        </label>
+                      , index, index, index, key: index })) => ({ ...((level => (
+                        <label
+                          key={level.value}
+                          className={`flex items-center p-3 rounded-lg border cursor-pointer transition-all duration-300 ${
+                            formData.urgency === level.value
+                              ? 'border-cyan-400 bg-cyan-400/20'
+                              : 'border-white/20 hover:border-cyan-400/50'
+                          }`}
+                        >
+                          <input
+                            type="radio"
+                            name="urgency"
+                            value={level.value}
+                            checked={formData.urgency === level.value}
+                            onChange={handleInputChange}
+                            className="sr-only"
+                                />
+                          <div className="text-center w-full">
+                            <div className={`font-medium ${level.color}`}>
+                              {level.label}
+                            </div>
+                            <div className="text-white/60 text-xs">
+                              {level.description}
+                            </div>
+                          </div>
+                        </label>
+                      , index, index, key: index })) => ({ ...(level => (
+                        <label
+                          key={level.value}
+                          className={`flex items-center p-3 rounded-lg border cursor-pointer transition-all duration-300 ${
+                            formData.urgency === level.value
+                              ? 'border-cyan-400 bg-cyan-400/20'
+                              : 'border-white/20 hover:border-cyan-400/50'
+                          }`}
+                        >
+                          <input
+                            type="radio"
+                            name="urgency"
+                            value={level.value}
+                            checked={formData.urgency === level.value}
+                            onChange={handleInputChange}
+                            className="sr-only"
+                                />
+                          <div className="text-center w-full">
+                            <div className={`font-medium ${level.color}`}>
+                              {level.label}
+                            </div>
+                            <div className="text-white/60 text-xs">
+                              {level.description}
+                            </div>
+                          </div>
+                        </label>
+                      , index, key: index })) => ({ ...level => (
+                        <label
+                          key={level.value}
+                          className={`flex items-center p-3 rounded-lg border cursor-pointer transition-all duration-300 ${
+                            formData.urgency === level.value
+                              ? 'border-cyan-400 bg-cyan-400/20'
+                              : 'border-white/20 hover:border-cyan-400/50'
+                          }`}
+                        >
+                          <input
+                            type="radio"
+                            name="urgency"
+                            value={level.value}
+                            checked={formData.urgency === level.value}
+                            onChange={handleInputChange}
+                            className="sr-only"
+                                />
+                          <div className="text-center w-full">
+                            <div className={`font-medium ${level.color}`}>
+                              {level.label}
+                            </div>
+                            <div className="text-white/60 text-xs">
+                              {level.description}
+                            </div>
+                          </div>
+                        </label>
+                      , key: index })))}
                     </div>
                   </div>
 
@@ -515,7 +905,7 @@ export default function RequestQuote() {
                       rows={6}
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors resize-none"
                       placeholder="Describe your project requirements, goals, and  specific features you need..."
-                    />
+                          />
                   </div>
 
                   {/* Submit Button */}
@@ -535,12 +925,12 @@ export default function RequestQuote() {
                       </>
                     ) : submissionStatus === 'success' ? (
                       <>
-                        <CheckCircle className="w-5 h-5" />
+                        <CheckCircle className="w-5 h-5"       />
                         <span>Quote Requested!</span>
                       </>
                     ) : (
                       <>
-                        <Send className="w-5 h-5" />
+                        <Send className="w-5 h-5"       />
                         <span>Request Quote</span>
                       </>
                     )}
@@ -553,7 +943,7 @@ export default function RequestQuote() {
                       animate={{ opacity: 1, y: 0 }}
                       className="flex items-center p-4 bg-green-500/20 border border-green-500/50 rounded-lg"
                     >
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3"       />
                       <span className="text-green-400">
                         Thank you! We've received your quote request and will
                         respond within 24 hours.
@@ -567,7 +957,7 @@ export default function RequestQuote() {
                       animate={{ opacity: 1, y: 0 }}
                       className="flex items-center p-4 bg-red-500/20 border border-red-500/50 rounded-lg"
                     >
-                      <AlertCircle className="w-5 h-5 text-red-400 mr-3" />
+                      <AlertCircle className="w-5 h-5 text-red-400 mr-3"       />
                       <span className="text-red-400">
                         Something went wrong. Please try again or contact us
                         directly.
@@ -596,18 +986,18 @@ export default function RequestQuote() {
                     href="tel:+13024640950"
                     className="flex items-center text-white/80 hover:text-cyan-400 transition-colors"
                   >
-                    <Phone className="w-5 h-5 mr-3 text-cyan-400" />
+                    <Phone className="w-5 h-5 mr-3 text-cyan-400"       />
                     +1 (302) 464-0950
                   </a>
                   <a
                     href="mailto:kleber@ziontechgroup.com"
                     className="flex items-center text-white/80 hover:text-cyan-400 transition-colors"
                   >
-                    <Mail className="w-5 h-5 mr-3 text-purple-400" />
+                    <Mail className="w-5 h-5 mr-3 text-purple-400"       />
                     kleber@ziontechgroup.com
                   </a>
                   <div className="flex items-start text-white/80">
-                    <MapPin className="w-5 h-5 mr-3 text-green-400 mt-1" />
+                    <MapPin className="w-5 h-5 mr-3 text-green-400 mt-1"       />
                     <span>Delaware, United States</span>
                   </div>
                 </div>
@@ -626,7 +1016,7 @@ export default function RequestQuote() {
                 </h3>
                 <div className="space-y-4">
                   <div className="flex items-start">
-                    <Star className="w-5 h-5 text-yellow-400 mr-3 mt-1 flex-shrink-0" />
+                    <Star className="w-5 h-5 text-yellow-400 mr-3 mt-1 flex-shrink-0"       />
                     <div>
                       <div className="text-white font-medium">Expert Team</div>
                       <div className="text-white/60 text-sm">
@@ -635,7 +1025,7 @@ export default function RequestQuote() {
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <Users className="w-5 h-5 text-cyan-400 mr-3 mt-1 flex-shrink-0" />
+                    <Users className="w-5 h-5 text-cyan-400 mr-3 mt-1 flex-shrink-0"       />
                     <div>
                       <div className="text-white font-medium">
                         Proven Track Record
@@ -646,7 +1036,7 @@ export default function RequestQuote() {
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <Zap className="w-5 h-5 text-purple-400 mr-3 mt-1 flex-shrink-0" />
+                    <Zap className="w-5 h-5 text-purple-400 mr-3 mt-1 flex-shrink-0"       />
                     <div>
                       <div className="text-white font-medium">
                         Fast Delivery
@@ -657,7 +1047,7 @@ export default function RequestQuote() {
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <Shield className="w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0" />
+                    <Shield className="w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0"       />
                     <div>
                       <div className="text-white font-medium">
                         Quality Guarantee

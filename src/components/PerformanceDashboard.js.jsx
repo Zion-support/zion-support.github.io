@@ -36,15 +36,15 @@ import { motion, AnimatePresence } from 'framer - motion';
   };
   const getMetricIcon = metricName => {
     const icons = {
-      FCP: <Eye className="w - 4 h - 4" />,
-      LCP: <Eye className="w - 4 h - 4" />,
-      FID: <MousePointer className="w - 4 h - 4" />,
-      CLS: <BarChart3 className="w - 4 h - 4" />,
-      TTFB: <Clock className="w - 4 h - 4" />,
-      DOMLOAD: <Activity className="w - 4 h - 4" />,
-      WINDOWLOAD: <Activity className="w - 4 h - 4" />,
+      FCP: <Eye className="w - 4 h - 4"       />,
+      LCP: <Eye className="w - 4 h - 4"       />,
+      FID: <MousePointer className="w - 4 h - 4"       />,
+      CLS: <BarChart3 className="w - 4 h - 4"       />,
+      TTFB: <Clock className="w - 4 h - 4"       />,
+      DOMLOAD: <Activity className="w - 4 h - 4"       />,
+      WINDOWLOAD: <Activity className="w - 4 h - 4"       />,
     };
-    return icons[metricName] || <Activity className="w - 4 h - 4" />;
+    return icons[metricName] || <Activity className="w - 4 h - 4"       />;
   };
   const getMetricDescription = metricName => {
     const descriptions = {
@@ -73,7 +73,7 @@ import { motion, AnimatePresence } from 'framer - motion';
         <CardHeader className="pb - 3">
           <div className="flex items - center justify - between">
             <CardTitle className="text - lg flex items - center gap - 2">
-              <Activity className="w - 5 h - 5 text - zion - cyan" />
+              <Activity className="w - 5 h - 5 text - zion - cyan"       />
               Performance
             </CardTitle>
             <div className="flex items - center gap - 2">
@@ -83,7 +83,7 @@ import { motion, AnimatePresence } from 'framer - motion';
                 onClick={ () => setIsExpanded (!isExpanded) }
                 className="p - 1 h - 8 w - 8 text - zion - slate - light hover:text - zion - cyan"
               >
-                <TrendingUp className="w - 4 h - 4" />
+                <TrendingUp className="w - 4 h - 4"       />
               </Button>
               {onClose && (<Button
                   variant="ghost"
@@ -91,7 +91,7 @@ import { motion, AnimatePresence } from 'framer - motion';
                   onClick={onClose}
                   className="p - 1 h - 8 w - 8 text - zion - slate - light hover:text - zion - cyan"
                 >
-                  <X className="w - 4 h - 4" />
+                  <X className="w - 4 h - 4"       />
                 </Button>) }
             </div>
           </div>
@@ -114,7 +114,7 @@ import { motion, AnimatePresence } from 'framer - motion';
               onClick={logMetrics}
               className="text - zion - cyan hover:text - zion - cyan - light"
             >
-              <RefreshCw className="w - 4 h - 4" />
+              <RefreshCw className="w - 4 h - 4"       />
             </Button>
           </div>
         </CardHeader>
@@ -170,7 +170,7 @@ import { motion, AnimatePresence } from 'framer - motion';
                 {/* Performance Tips */}
                 <div className="p - 3 bg - zion - purple / 10 border border - zion - purple / 20 rounded - lg">
                   <div className="flex items - center gap - 2 mb - 2">
-                    <Info className="w - 4 h - 4 text - zion - purple" />
+                    <Info className="w - 4 h - 4 text - zion - purple"       />
                     <span className="text - sm font - medium text - zion - purple">
                       Tips
                     </span>

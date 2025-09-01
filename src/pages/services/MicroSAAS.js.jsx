@@ -116,7 +116,7 @@ import { Package, Zap, Users, Globe, Cpu, Database, Shield, Target, TrendingUp, 
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
             <div className="inline-flex items-center px-4 py-2 bg-indigo-500/10 text-indigo-400 rounded-full text-sm font-medium mb-6">
-              <Package className="w-4 h-4 mr-2"/>
+              <Package className="w-4 h-4 mr-2"      />
               MicroSAAS
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -153,14 +153,14 @@ import { Package, Zap, Users, Globe, Cpu, Database, Shield, Target, TrendingUp, 
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {microsaasServices.map((service, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300">
+            {microsaasServices.map((((((((service, index, index, index, index, index, index, index) => ({ ...((((((service, index, index, index, index, index, index, key: index })) => ({ ...(((((service, index, index, index, index, index, key: index })) => ({ ...((((service, index, index, index, index, key: index })) => ({ ...(((service, index, index, index, key: index })) => ({ ...((service, index, index, key: index })) => ({ ...(service, index, key: index })) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <service.icon className="w-8 h-8 text-white"/>
+                  <service.icon className="w-8 h-8 text-white"      />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300 mb-4">{service.description}</p>
                 <ul className="space-y-2">
-                  {service.features.map((feature, idx) => (<li key={idx} className="text-sm text-gray-400 flex items-start">
+                  {service.features.map((((((((feature, idx, index, index, index, index, index, index) => ({ ...((((((feature, idx, index, index, index, index, index, key: index })) => ({ ...(((((feature, idx, index, index, index, index, key: index })) => ({ ...((((feature, idx, index, index, index, key: index })) => ({ ...(((feature, idx, index, index, key: index })) => ({ ...((feature, idx, index, key: index })) => ({ ...(feature, idx, key: index })) => (<li key={idx} className="text-sm text-gray-400 flex items-start">
                       <div className="w-1.5 h-1.5 bg-indigo-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
                       {feature}
                     </li>))}
@@ -183,7 +183,7 @@ import { Package, Zap, Users, Globe, Cpu, Database, Shield, Target, TrendingUp, 
                 to building profitable, scalable software businesses with recurring revenue.
               </p>
               <ul className="space-y-3">
-                {benefits.map((benefit, index) => (<li key={index} className="flex items-center text-gray-300">
+                {benefits.map((((((((benefit, index, index, index, index, index, index, index) => ({ ...((((((benefit, index, index, index, index, index, index, key: index })) => ({ ...(((((benefit, index, index, index, index, index, key: index })) => ({ ...((((benefit, index, index, index, index, key: index })) => ({ ...(((benefit, index, index, index, key: index })) => ({ ...((benefit, index, index, key: index })) => ({ ...(benefit, index, key: index })) => (<li key={index} className="flex items-center text-gray-300">
                     <div className="w-2 h-2 bg-indigo-400 rounded-full mr-3"></div>
                     {benefit}
                   </li>))}
@@ -191,7 +191,7 @@ import { Package, Zap, Users, Globe, Cpu, Database, Shield, Target, TrendingUp, 
             </div>
             <div className="bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-2xl p-8 border border-indigo-500/30">
               <div className="text-center">
-                <Rocket className="w-24 h-24 text-indigo-400 mx-auto mb-4"/>
+                <Rocket className="w-24 h-24 text-indigo-400 mx-auto mb-4"      />
                 <h3 className="text-2xl font-bold text-white mb-2">SAAS Success</h3>
                 <p className="text-gray-300 mb-6">
                   We've helped numerous entrepreneurs build successful SAAS businesses
@@ -222,9 +222,9 @@ import { Package, Zap, Users, Globe, Cpu, Database, Shield, Target, TrendingUp, 
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {technologies.map((tech, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-indigo-500/50 transition-all duration-300">
+            {technologies.map((((((((tech, index, index, index, index, index, index, index) => ({ ...((((((tech, index, index, index, index, index, index, key: index })) => ({ ...(((((tech, index, index, index, index, index, key: index })) => ({ ...((((tech, index, index, index, index, key: index })) => ({ ...(((tech, index, index, index, key: index })) => ({ ...((tech, index, index, key: index })) => ({ ...(tech, index, key: index })) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-indigo-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <tech.icon className="w-8 h-8 text-white"/>
+                  <tech.icon className="w-8 h-8 text-white"      />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{tech.name}</h3>
                 <p className="text-gray-300">{tech.description}</p>
@@ -247,9 +247,9 @@ import { Package, Zap, Users, Globe, Cpu, Database, Shield, Target, TrendingUp, 
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {industries.map((industry, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-indigo-500/50 transition-all duration-300">
+            {industries.map((((((((industry, index, index, index, index, index, index, index) => ({ ...((((((industry, index, index, index, index, index, index, key: index })) => ({ ...(((((industry, index, index, index, index, index, key: index })) => ({ ...((((industry, index, index, index, index, key: index })) => ({ ...(((industry, index, index, index, key: index })) => ({ ...((industry, index, index, key: index })) => ({ ...(industry, index, key: index })) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-indigo-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <industry.icon className="w-8 h-8 text-white"/>
+                  <industry.icon className="w-8 h-8 text-white"      />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{industry.title}</h3>
                 <p className="text-gray-300">{industry.description}</p>

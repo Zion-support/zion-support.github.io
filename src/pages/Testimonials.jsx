@@ -208,7 +208,7 @@ const ratings = ['All Ratings', '5 Stars', '4 + Stars', '3 + Stars'];
               transition={{ duration: 0.8, delay: 0.2 }}
               className="inline - flex items - center justify - center w - 20 h - 20 bg - gradient - to - br from - zion - cyan to - zion - purple rounded - 2xl mb - 8"
             >
-              <Quote className="w - 10 h - 10 text - white" />
+              <Quote className="w - 10 h - 10 text - white"       />
             </motion.div>
 
             <h1 className="text - 5xl md:text - 6xl font - bold text - white mb - 6">
@@ -223,15 +223,15 @@ const ratings = ['All Ratings', '5 Stars', '4 + Stars', '3 + Stars'];
 
             <div className="flex flex - wrap justify - center gap - 4 text - sm">
               <div className="flex items - center gap - 2 text - zion - cyan">
-                <Star className="w - 4 h - 4" />
+                <Star className="w - 4 h - 4"       />
                 <span > 5.0 Average Rating</span>
               </div>
               <div className="flex items - center gap - 2 text - zion - purple">
-                <User className="w - 4 h - 4" />
+                <User className="w - 4 h - 4"       />
                 <span>{testimonials.length} Success Stories</span>
               </div>
               <div className="flex items - center gap - 2 text - zion - blue">
-                <Building className="w - 4 h - 4" />
+                <Building className="w - 4 h - 4"       />
                 <span > 8+ Industries Served</span>
               </div>
             </div>
@@ -245,7 +245,7 @@ const ratings = ['All Ratings', '5 Stars', '4 + Stars', '3 + Stars'];
           <div className="flex flex - col lg:flex - row gap - 6 items - center justify - between">
             <div className="flex flex - col sm:flex - row gap - 4">
               <div className="relative">
-                <Search className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 w - 4 h - 4 text - zion - slate - light" />
+                <Search className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 w - 4 h - 4 text - zion - slate - light"       />
                 <input
                   type="text"
                   placeholder="Search testimonials..."
@@ -302,7 +302,7 @@ const ratings = ['All Ratings', '5 Stars', '4 + Stars', '3 + Stars'];
                       src={testimonial.image}
                       alt={testimonial.name}
                       className="w - 12 h - 12 rounded - full object - cover"
-                    />
+                          />
                     <div>
                       <h3 className="font - semibold text - white">
                         {testimonial.name}
@@ -320,7 +320,7 @@ const ratings = ['All Ratings', '5 Stars', '4 + Stars', '3 + Stars'];
                     {[...Array (testimonial.rating) ].map ( (_, i) => (<Star
                         key={i}
                         className="w - 4 h - 4 fill - yellow - 400 text - yellow - 400"
-                      />) ) }
+                            />) ) }
                   </div>
 
                   <blockquote className="text - zion - slate - light mb - 4 italic">
@@ -336,7 +336,7 @@ const ratings = ['All Ratings', '5 Stars', '4 + Stars', '3 + Stars'];
                           key={i}
                           className="flex items - center gap - 2 text - sm text - zion - slate - light"
                         >
-                          <CheckCircle className="w - 3 h - 3 text - green - 400" />
+                          <CheckCircle className="w - 3 h - 3 text - green - 400"       />
                           {result}
                         </div>) ) }
                     </div>

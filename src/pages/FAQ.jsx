@@ -95,7 +95,7 @@ export default function FAQ () {
                 className="w - full text - left text - white hover:text - zion - cyan px - 6 py - 4 bg - zion - blue - dark hover:bg - zion - blue transition - colors flex items - center justify - between"
               >
                 <span className="text - lg font - medium">{item.question}</span>
-                {isOpen ? (<ChevronUp className="w - 5 h - 5 text - zion - cyan" />) : (<ChevronDown className="w - 5 h - 5 text - zion - cyan" />) }
+                {isOpen ? (<ChevronUp className="w - 5 h - 5 text - zion - cyan"       />) : (<ChevronDown className="w - 5 h - 5 text - zion - cyan"       />) }
               </button>
               {isOpen && (<div className="px - 6 pb - 4 bg - zion - blue">
                   <p className="text - zion - slate - light leading - relaxed">
@@ -113,8 +113,8 @@ export default function FAQ () {
         description="Find answers to common questions about Zion Tech Group's AI and tech marketplace platform."
         keywords="FAQ, Zion Tech Group, AI marketplace, tech platform, questions, support"
         canonical="https://ziontechgroup.com / faq"
-      />
-      <Header />
+            />
+      <Header       />
       <main className="min - h-screen bg - zion - blue pt - 24 pb - 20">
         <div className="container mx - auto px - 4 sm:px - 6 lg:px - 8">
           <div className="text - center mb - 16">
@@ -125,7 +125,7 @@ export default function FAQ () {
             </p>
           </div>
           <div className="max - w-4xl mx - auto">
-            <CustomAccordion items={faqData} />
+            <CustomAccordion items={faqData}       />
           </div>
           <div className="mt - 16 text - center">
             <div className="bg - zion - blue - dark border border - zion - blue - light rounded - xl p - 8">
@@ -154,6 +154,6 @@ export default function FAQ () {
           </div>
         </div>
       </main>
-      <Footer />
+      <Footer       />
     </>) ;
 }

@@ -10,7 +10,7 @@ const NotFound = () => {
       <div className="max - w-md mx - auto text - center px - 4">
         <div className="mb - 8">
           <div className="w - 24 h - 24 bg - gradient - to - br from - zion - cyan to - zion - purple rounded - full mx - auto mb - 6 flex items - center justify - center">
-            <AlertTriangle className="w - 12 h - 12 text - white" />
+            <AlertTriangle className="w - 12 h - 12 text - white"       />
           </div>
           <h1 className="text - 6xl font - bold text - zion - blue - dark mb - 4">
             404
@@ -29,7 +29,7 @@ const NotFound = () => {
             to="/"
             className="inline - flex items - center px - 6 py - 3 bg - zion - cyan text - white font - semibold rounded - lg hover:bg - zion - cyan - light transition - colors"
           >
-            <Home className="w - 5 h - 5 mr - 2" />
+            <Home className="w - 5 h - 5 mr - 2"       />
             Go Home
           </Link>
 
@@ -38,7 +38,7 @@ const NotFound = () => {
               onClick={ () => window.history.back () }
               className="inline - flex items - center text - zion - cyan hover:text - zion - cyan - light font - medium transition - colors"
             >
-              <ArrowLeft className="w - 4 h - 4 mr - 2" />
+              <ArrowLeft className="w - 4 h - 4 mr - 2"       />
               Go Back
             </button>
           </div>
@@ -83,7 +83,7 @@ const ServerError = () => {
       <div className="max - w-md mx - auto text - center px - 4">
         <div className="mb - 8">
           <div className="w - 24 h - 24 bg - gradient - to - br from - red - 500 to - red - 600 rounded - full mx - auto mb - 6 flex items - center justify - center">
-            <AlertTriangle className="w - 12 h - 12 text - white" />
+            <AlertTriangle className="w - 12 h - 12 text - white"       />
           </div>
           <h1 className="text - 6xl font - bold text - red - 600 mb - 4">
             500
@@ -102,7 +102,7 @@ const ServerError = () => {
             to="/"
             className="inline - flex items - center px - 6 py - 3 bg - zion - cyan text - white font - semibold rounded - lg hover:bg - zion - cyan - light transition - colors"
           >
-            <Home className="w - 5 h - 5 mr - 2" />
+            <Home className="w - 5 h - 5 mr - 2"       />
             Go Home
           </Link>
 
@@ -122,8 +122,8 @@ const ErrorRoutes = () => {
   const location = useLocation () ;
   // Check if it's a 500 error (you can implement your own logic here) const isServerError = location.pathname === '/500' || location.state?.error === 'server';
   return (<Routes>
-      <Route path="/404" element={<NotFound />} />
-      <Route path="/500" element={<ServerError />} />
-      <Route path="*" element={<NotFound />} />
+      <Route path="/404" element={<NotFound       />} />
+      <Route path="/500" element={<ServerError       />} />
+      <Route path="*" element={<NotFound       />} />
     </Routes>) ;
 };

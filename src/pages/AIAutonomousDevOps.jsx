@@ -10,15 +10,15 @@ const AIAutonomousDevOps = () => {
         <meta
           name="description"
           content="Revolutionary AI autonomous DevOps platform that automates software development, testing, deployment, and operations with intelligent automation and continuous learning."
-        />
+              />
         <meta
           name="keywords"
           content="AI DevOps, autonomous DevOps, AI automation, continuous integration, continuous deployment, AI operations"
-        />
+              />
         <link
           rel="canonical"
           href="https://ziontechgroup.com / ai - autonomous - devops"
-        />
+              />
       </Helmet>
 
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - orange - 900 to - slate - 900">

@@ -1,16 +1,15 @@
 import { render, screen } from '@testing - library / react';
-import React from 'react';
 import LoadingSkeleton from './LoadingSkeleton';
-
-
-describe ('LoadingSkeleton', () => {
-  it ('renders without crashing', () => {
-    render (<LoadingSkeleton />) ;
+;
+;
+describe ('LoadingSkeleton', () => {;
+  it ('renders without crashing', () => {;
+    render (<LoadingSkeleton       />) ;
     expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () ;
   }) ;
-
-  it ('displays expected content', () => {
-    render (<LoadingSkeleton />) ;
-    // Add specific test assertions based on component content
+;
+  it ('displays expected content', () => {;
+    render (<LoadingSkeleton       />) ;
+    // Add specific test assertions based on component content;
   }) ;
 }) ;

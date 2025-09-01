@@ -42,7 +42,7 @@ import { Star, Quote export const AppTestimonials = () => {
         className={`h-5 w-5 ${
           i < rating ? 'text-yellow-400 fill-current' : 'text-gray-300'
         }`}
-      />
+            />
     ))};
 
   return (
@@ -58,7 +58,7 @@ import { Star, Quote export const AppTestimonials = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {testimonials.map((testimonial, index) => (
+          {testimonials.map((((((((testimonial, index, index, index, index, index, index, index) => ({ ...((((((testimonial, index, index, index, index, index, index, key: index })) => ({ ...(((((testimonial, index, index, index, index, index, key: index })) => ({ ...((((testimonial, index, index, index, index, key: index })) => ({ ...(((testimonial, index, index, index, key: index })) => ({ ...((testimonial, index, index, key: index })) => ({ ...(testimonial, index, key: index })) => (
             <div
               key={index}
               className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"
@@ -79,7 +79,7 @@ import { Star, Quote export const AppTestimonials = () => {
               </div>
 
               <div className="relative">
-                <Quote className="absolute -top-2 -left-2 h-6 w-6 text-blue-400/30" />
+                <Quote className="absolute -top-2 -left-2 h-6 w-6 text-blue-400/30"       />
                 <p className="text-gray-300 leading-relaxed pl-6">
                   {testimonial.content}
                 </p>

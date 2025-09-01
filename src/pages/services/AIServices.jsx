@@ -7,7 +7,7 @@ const AIServices = () => {
             id: "ai-strategy",
             title: "AI Strategy & Consulting",
             description: "Comprehensive AI strategy development and implementation for digital transformation.",
-            icon: <Brain className="h-8 w-8 text-pink-500"/>,
+            icon: <Brain className="h-8 w-8 text-pink-500"      />,
             price: 150,
             currency: "$",
             features: [
@@ -35,7 +35,7 @@ const AIServices = () => {
             id: "machine-learning",
             title: "Machine Learning Solutions",
             description: "Custom ML models and algorithms for business automation and predictive analytics.",
-            icon: <Cpu className="h-8 w-8 text-blue-500"/>,
+            icon: <Cpu className="h-8 w-8 text-blue-500"      />,
             price: 5000,
             currency: "$",
             features: [
@@ -63,7 +63,7 @@ const AIServices = () => {
             id: "natural-language-processing",
             title: "NLP & Text Analytics",
             description: "Advanced natural language processing for document analysis, chatbots, and content generation.",
-            icon: <MessageSquare className="h-8 w-8 text-green-500"/>,
+            icon: <MessageSquare className="h-8 w-8 text-green-500"      />,
             price: 8000,
             currency: "$",
             features: [
@@ -91,7 +91,7 @@ const AIServices = () => {
             id: "computer-vision",
             title: "Computer Vision & Image AI",
             description: "Visual AI solutions for image recognition, object detection, and video analysis.",
-            icon: <Eye className="h-8 w-8 text-purple-500"/>,
+            icon: <Eye className="h-8 w-8 text-purple-500"      />,
             price: 12000,
             currency: "$",
             features: [
@@ -119,7 +119,7 @@ const AIServices = () => {
             id: "predictive-analytics",
             title: "Predictive Analytics & Forecasting",
             description: "AI-powered predictive models for business forecasting and trend analysis.",
-            icon: <TrendingUp className="h-8 w-8 text-orange-500"/>,
+            icon: <TrendingUp className="h-8 w-8 text-orange-500"      />,
             price: 6000,
             currency: "$",
             features: [
@@ -147,7 +147,7 @@ const AIServices = () => {
             id: "ai-automation",
             title: "AI Process Automation",
             description: "Intelligent automation solutions for business process optimization and workflow management.",
-            icon: <Zap className="h-8 w-8 text-yellow-500"/>,
+            icon: <Zap className="h-8 w-8 text-yellow-500"      />,
             price: 4000,
             currency: "$",
             features: [
@@ -175,7 +175,7 @@ const AIServices = () => {
             id: "ai-ethics",
             title: "AI Ethics & Governance",
             description: "Responsible AI development and governance frameworks for ethical AI deployment.",
-            icon: <Shield className="h-8 w-8 text-red-500"/>,
+            icon: <Shield className="h-8 w-8 text-red-500"      />,
             price: 200,
             currency: "$",
             features: [
@@ -203,7 +203,7 @@ const AIServices = () => {
             id: "ai-infrastructure",
             title: "AI Infrastructure & MLOps",
             description: "Scalable AI infrastructure and machine learning operations for enterprise AI deployment.",
-            icon: <Server className="h-8 w-8 text-indigo-500"/>,
+            icon: <Server className="h-8 w-8 text-indigo-500"      />,
             price: 15000,
             currency: "$",
             features: [
@@ -231,7 +231,7 @@ const AIServices = () => {
             id: "ai-integration",
             title: "AI Integration Services",
             description: "Seamless integration of AI solutions with existing business systems and workflows.",
-            icon: <Code className="h-8 w-8 text-cyan-500"/>,
+            icon: <Code className="h-8 w-8 text-cyan-500"      />,
             price: 3000,
             currency: "$",
             features: [
@@ -259,7 +259,7 @@ const AIServices = () => {
             id: "ai-training",
             title: "AI Training & Workshops",
             description: "Comprehensive training programs for AI adoption and team skill development.",
-            icon: <Users className="h-8 w-8 text-teal-500"/>,
+            icon: <Users className="h-8 w-8 text-teal-500"      />,
             price: 500,
             currency: "$",
             features: [
@@ -294,7 +294,7 @@ const AIServices = () => {
                 description="Transform your business with cutting-edge AI services including machine learning, data analytics, and AI strategy." 
                 keywords="AI services, machine learning, artificial intelligence, data analytics, AI strategy, AI ethics" 
                 canonical="https://ziontechgroup.com/services/ai-services"
-            />
+                  />
 
             {/* Hero Section */}
             <section className="relative bg-gradient-to-br from-pink-900 via-pink-800 to-rose-900 text-white py-20">
@@ -326,15 +326,15 @@ const AIServices = () => {
                 <div className="container mx-auto px-4 py-6">
                     <div className="flex flex-wrap items-center justify-center gap-8 text-center">
                         <div className="flex items-center gap-3">
-                            <Phone className="h-5 w-5 text-pink-400"/>
+                            <Phone className="h-5 w-5 text-pink-400"      />
                             <span className="text-white">+1 302 464 0950</span>
                         </div>
                         <div className="flex items-center gap-3">
-                            <Mail className="h-5 w-5 text-pink-400"/>
+                            <Mail className="h-5 w-5 text-pink-400"      />
                             <span className="text-white">kleber@ziontechgroup.com</span>
                         </div>
                         <div className="flex items-center gap-3">
-                            <MapPin className="h-5 w-5 text-pink-400"/>
+                            <MapPin className="h-5 w-5 text-pink-400"      />
                             <span className="text-white">364 E Main St STE 1008, Middletown DE 19709</span>
                         </div>
                     </div>
@@ -352,7 +352,7 @@ const AIServices = () => {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {aiServices.map((service) => (
+                        {aiServices.map((((((((service, index, index, index, index, index, index) => ({ ...((((((service, index, index, index, index, index, key: index })) => ({ ...(((((service, index, index, index, index, key: index })) => ({ ...((((service, index, index, index, key: index })) => ({ ...(((service, index, index, key: index })) => ({ ...((service, index, key: index })) => ({ ...(service, key: index })) => (
                             <div key={service.id} className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 hover:border-pink-300">
                                 <div className="p-6">
                                     <div className="flex justify-between items-start mb-4">
@@ -375,9 +375,9 @@ const AIServices = () => {
                                     <div className="mb-4">
                                         <p className="text-sm text-gray-500 mb-3">{service.details}</p>
                                         <div className="grid grid-cols-2 gap-2 mb-4">
-                                            {service.features.slice(0, 4).map((feature, index) => (
+                                            {service.features.slice(0, 4).map((((((((feature, index, index, index, index, index, index, index) => ({ ...((((((feature, index, index, index, index, index, index, key: index })) => ({ ...(((((feature, index, index, index, index, index, key: index })) => ({ ...((((feature, index, index, index, index, key: index })) => ({ ...(((feature, index, index, index, key: index })) => ({ ...((feature, index, index, key: index })) => ({ ...(feature, index, key: index })) => (
                                                 <div key={index} className="flex items-center text-xs text-pink-600">
-                                                    <CheckCircle className="w-3 h-3 mr-2"/>
+                                                    <CheckCircle className="w-3 h-3 mr-2"      />
                                                     {feature}
                                                 </div>
                                             ))}
@@ -386,7 +386,7 @@ const AIServices = () => {
                                         <div className="mb-4">
                                             <h4 className="text-sm font-semibold text-gray-700 mb-2">Pricing:</h4>
                                             <div className="space-y-1">
-                                                {Object.entries(service.pricing).map(([plan, price]) => (
+                                                {Object.entries(service.pricing).map(((((((([plan, price], index, index, index, index, index, index) => ({ ...(((((([plan, price], index, index, index, index, index, key: index })) => ({ ...((((([plan, price], index, index, index, index, key: index })) => ({ ...(((([plan, price], index, index, index, key: index })) => ({ ...((([plan, price], index, index, key: index })) => ({ ...(([plan, price], index, key: index })) => ({ ...([plan, price], key: index })) => (
                                                     <div key={plan} className="flex justify-between text-xs">
                                                         <span className="text-gray-600 capitalize">{plan}:</span>
                                                         <span className="text-pink-600 font-semibold">{String(price)}</span>
@@ -401,8 +401,8 @@ const AIServices = () => {
                                         </div>
                                         
                                         <div className="flex items-center justify-center gap-1 mb-4">
-                                            {[...Array(5)].map((_, i) => (
-                                                <Star key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`}/>
+                                            {[...Array(5)].map((((((((_, i, index, index, index, index, index, index) => ({ ...((((((_, i, index, index, index, index, index, key: index })) => ({ ...(((((_, i, index, index, index, index, key: index })) => ({ ...((((_, i, index, index, index, key: index })) => ({ ...(((_, i, index, index, key: index })) => ({ ...((_, i, index, key: index })) => ({ ...(_, i, key: index })) => (
+                                                <Star key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`}      />
                                             ))}
                                             <span className="text-sm text-gray-500 ml-2">({service.reviewCount})</span>
                                         </div>
@@ -419,7 +419,7 @@ const AIServices = () => {
                                     
                                     <button className="w-full bg-gradient-to-r from-pink-600 to-rose-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-pink-700 hover:to-rose-700 transition-all duration-300 transform hover:scale-105">
                                         <a href={service.link} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
-                                            <ExternalLink className="h-4 w-4 mr-2"/>
+                                            <ExternalLink className="h-4 w-4 mr-2"      />
                                             Get Started
                                         </a>
                                     </button>
@@ -442,11 +442,11 @@ const AIServices = () => {
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
                         <button className="bg-gradient-to-r from-pink-600 to-rose-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-pink-700 hover:to-rose-700 transition-all duration-300">
-                            <Rocket className="h-5 w-5 mr-2 inline"/>
+                            <Rocket className="h-5 w-5 mr-2 inline"      />
                             Start AI Consultation
                         </button>
                         <button className="border-2 border-pink-600 text-pink-600 px-8 py-3 rounded-lg font-semibold hover:bg-pink-600 hover:text-white transition-all duration-300">
-                            <Phone className="h-5 w-5 mr-2 inline"/>
+                            <Phone className="h-5 w-5 mr-2 inline"      />
                             Call +1 302 464 0950
                         </button>
                     </div>

@@ -13,7 +13,7 @@ function withAuth(Component) {
         if (!isLoggedIn) {
             return null;
 
-        return <Component {...props}/>;
+        return <Component {...props}      />;
     };
     return Wrapped;
 
@@ -24,7 +24,7 @@ export default withAuth;
         }, [isLoggedIn, router]);
         if (!isLoggedIn) {
             return null}
-        return <Component {...props}/>};
+        return <Component {...props}      />};
     return Wrapped}
 export default withAuth;
 

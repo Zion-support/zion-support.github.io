@@ -10,22 +10,22 @@ import AdvancedServiceRecommendation from "../components / AdvancedServiceRecomm
 const ServiceRecommendations = () => {
     const features = [
         {
-            icon: <Brain className="w - 6 h - 6 text - zion - cyan"/>,
+            icon: <Brain className="w - 6 h - 6 text - zion - cyan"      />,
             title: 'AI - Powered Analysis',
             description: 'Advanced algorithms analyze your business profile to find perfect service matches'
         },
         {
-            icon: <Target className="w - 6 h - 6 text - zion - purple"/>,
+            icon: <Target className="w - 6 h - 6 text - zion - purple"      />,
             title: 'Personalized Matching',
             description: 'Get recommendations tailored to your industry, budget, and technology maturity'
         },
         {
-            icon: <TrendingUp className="w - 6 h - 6 text - zion - green"/>,
+            icon: <TrendingUp className="w - 6 h - 6 text - zion - green"      />,
             title: 'ROI Optimization',
             description: 'Focus on services that deliver the highest return on investment for your business'
         },
         {
-            icon: <Award className="w - 6 h - 6 text - zion - orange"/>,
+            icon: <Award className="w - 6 h - 6 text - zion - orange"      />,
             title: 'Expert Validation',
             description: 'All recommendations are validated by our technology experts and industry specialists'
 
@@ -43,25 +43,25 @@ const ServiceRecommendations = () => {
             step: 1,
             title: 'Tell Us About Your Business',
             description: 'Fill out our comprehensive business profile form with industry, size, goals, and challenges',
-            icon: <Users className="w - 8 h - 8 text - zion - cyan"/>
+            icon: <Users className="w - 8 h - 8 text - zion - cyan"      />
         },
         {
             step: 2,
             title: 'AI Analysis & Matching',
             description: 'Our AI engine analyzes your profile and matches it with the most suitable services',
-            icon: <Brain className="w - 8 h - 8 text - zion - purple"/>
+            icon: <Brain className="w - 8 h - 8 text - zion - purple"      />
         },
         {
             step: 3,
             title: 'Personalized Recommendations',
             description: 'Receive detailed recommendations with match scores, priorities, and implementation details',
-            icon: <Target className="w - 8 h - 8 text - zion - green"/>
+            icon: <Target className="w - 8 h - 8 text - zion - green"      />
         },
         {
             step: 4,
             title: 'Expert Consultation',
             description: 'Connect with our experts to discuss implementation and get started with your chosen solution',
-            icon: <Award className="w - 8 h - 8 text - zion - orange"/>
+            icon: <Award className="w - 8 h - 8 text - zion - orange"      />
 
     ];
     return (<div className="min - h-screen bg - zion - blue - dark">
@@ -247,7 +247,7 @@ const ServiceRecommendations = () => {
   delay: index * 0.1 
 
 }} viewport={{ once: true }} className="flex items - start gap - 3">
-                <CheckCircle className="w - 5 h - 5 text - zion - cyan mt - 1 flex - shrink - 0"/>
+                <CheckCircle className="w - 5 h - 5 text - zion - cyan mt - 1 flex - shrink - 0"      />
                 <span className="text - zion - slate - dark">{benefit}</span>
               </motion.div>) ) }
           </div>
@@ -275,7 +275,7 @@ const ServiceRecommendations = () => {
             </p>
           </motion.div>
 
-          <AdvancedServiceRecommendation />
+          <AdvancedServiceRecommendation       />
         </div>
       </section>
 
@@ -301,12 +301,12 @@ const ServiceRecommendations = () => {
             <div className="flex flex - col sm:flex - row gap - 4 justify - center">
               <Button className="bg - white text - zion - purple hover:bg - zion - slate - light text - lg px - 8 py - 4" onClick = { () => window.open ('mailto:kleber@ziontechgroup.com?subject = Business Transformation Consultation',
   '_blank') }>
-                <Rocket className="w - 5 h - 5 mr - 2"/>
+                <Rocket className="w - 5 h - 5 mr - 2"      />
                 Start Your Transformation
               </Button>
               <Button className="border - white text - white hover:bg - white hover:text - zion - purple text - lg px - 8 py - 4" onClick = { () => window.open ('tel:+13024640950',
   '_blank') }>
-                <Shield className="w - 5 h - 5 mr - 2"/>
+                <Shield className="w - 5 h - 5 mr - 2"      />
                 Speak with an Expert
               </Button>
             </div>

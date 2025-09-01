@@ -10,7 +10,7 @@ const caseStudies = [
         title: 'Healthcare AI Revolution',
         comp: 'MedTech Solutions',
         industry: 'Healthcare',
-        icon: <Shield className="w - 8 h - 8"/>,
+        icon: <Shield className="w - 8 h - 8"      />,
         color: 'from - zion - cyan to - zion - blue',
         bgColor: 'from - zion - cyan / 20 to - zion - blue / 20',
         challenge: 'Needed to reduce diagnostic errors by 40% while improving patient outcomes',
@@ -36,7 +36,7 @@ const caseStudies = [
         title: 'Next - Gen Fintech Platform',
         comp: 'DigitalBank Pro',
         industry: 'Financial Services',
-        icon: <TrendingUp className="w - 8 h - 8"/>,
+        icon: <TrendingUp className="w - 8 h - 8"      />,
         color: 'from - zion - purple to - zion - purple - dark',
         bgColor: 'from - zion - purple / 20 to - zion - purple - dark / 20',
         challenge: 'Required a scalable, secure platform to handle 10M + daily transactions',
@@ -62,7 +62,7 @@ const caseStudies = [
         title: 'Retail Digital Transformation',
         comp: 'Global Retail Co.',
         industry: 'Retail',
-        icon: <Globe className="w - 8 h - 8"/>,
+        icon: <Globe className="w - 8 h - 8"      />,
         color: 'from - zion - cyan - light to - zion - cyan',
         bgColor: 'from - zion - cyan - light / 20 to - zion - cyan / 20',
         challenge: 'Needed to modernize 500 + store locations with unified digital experience',
@@ -88,7 +88,7 @@ const caseStudies = [
         title: 'Smart Manufacturing IoT',
         comp: 'Advanced Manufacturing Inc.',
         industry: 'Manufacturing',
-        icon: <Zap className="w - 8 h - 8"/>,
+        icon: <Zap className="w - 8 h - 8"      />,
         color: 'from - zion - purple - light to - zion - purple',
         bgColor: 'from - zion - purple - light / 20 to - zion - purple / 20',
         challenge: 'Required real - time monitoring and predictive maintenance for 200 + production lines',
@@ -111,12 +111,12 @@ const caseStudies = [
     }
 ];
 const industries = [
-    { name: 'Healthcare', count: 25, icon: <Shield className="w - 5 h - 5"/> },
-    { name: 'Finance', count: 32, icon: <TrendingUp className="w - 5 h - 5"/> },
-    { name: 'Retail', count: 18, icon: <Globe className="w - 5 h - 5"/> },
-    { name: 'Manufacturing', count: 15, icon: <Zap className="w - 5 h - 5"/> },
-    { name: 'Education', count: 12, icon: <Users className="w - 5 h - 5"/> },
-    { name: 'Government', count: 8, icon: <Building className="w - 5 h - 5"/> }
+    { name: 'Healthcare', count: 25, icon: <Shield className="w - 5 h - 5"      /> },
+    { name: 'Finance', count: 32, icon: <TrendingUp className="w - 5 h - 5"      /> },
+    { name: 'Retail', count: 18, icon: <Globe className="w - 5 h - 5"      /> },
+    { name: 'Manufacturing', count: 15, icon: <Zap className="w - 5 h - 5"      /> },
+    { name: 'Education', count: 12, icon: <Users className="w - 5 h - 5"      /> },
+    { name: 'Government', count: 8, icon: <Building className="w - 5 h - 5"      /> }
 ];
     const [selectedCase, setSelectedCase] = useState (null) ;
     const [hoveredCase, setHoveredCase] = useState (null) ;
@@ -263,7 +263,7 @@ const industries = [
                   <span className="text - zion - purple - light font - medium text - sm group - hover:text - zion - purple transition - colors">
                     View Full Case Study
                   </span>
-                  <ArrowRight className="w - 5 h - 5 text - zion - purple - light group - hover:text - zion - purple group - hover:translate - x-1 transition - all duration - 300"/>
+                  <ArrowRight className="w - 5 h - 5 text - zion - purple - light group - hover:text - zion - purple group - hover:translate - x-1 transition - all duration - 300"      />
                 </div>
 
                 {/* Expanded results */}
@@ -309,7 +309,7 @@ const industries = [
                             <div className="text - zion - slate - light text - xs">{caseStudy.role}</div>
                           </div>
                           <div className="flex items - center gap - 1">
-                            {[...Array (caseStudy.rating) ].map ( (_, i) => (<Star key={i} className="w - 4 h - 4 text - yellow - 400 fill - current"/>) ) }
+                            {[...Array (caseStudy.rating) ].map ( (_, i) => (<Star key={i} className="w - 4 h - 4 text - yellow - 400 fill - current"      />) ) }
                           </div>
                         </div>
                       </div>

@@ -10,15 +10,15 @@ const AIAutonomousDevelopment = () => {
         <meta
           name="description"
           content="Revolutionary AI autonomous development platform that continuously writes code, builds applications, and creates software solutions with advanced AI capabilities and autonomous operation."
-        />
+              />
         <meta
           name="keywords"
           content="AI development, autonomous development, code generation, application building, autonomous operations, AI development platform"
-        />
+              />
         <link
           rel="canonical"
           href="https://ziontechgroup.com / ai - autonomous - development"
-        />
+              />
       </Helmet>
 
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - blue - 900 to - slate - 900">

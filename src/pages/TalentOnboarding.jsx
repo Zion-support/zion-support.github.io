@@ -23,7 +23,7 @@ export default function TalentOnboarding () {
             </p>
           </div>
 
-          <TalentOnboardingForm />
+          <TalentOnboardingForm       />
         </div>
       </div>
     </>) ;

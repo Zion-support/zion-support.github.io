@@ -1,3 +1,4 @@
+import React from 'react';
 import { jsx as _jsx, jsxs as _jsxs } from "react / jsx - runtime";
 import { Search, X, Clock, MapPin, Star, Users, Briefcase, ShoppingCart } from 'lucide - react';
 import { useState, useEffect, useRef } from 'react';

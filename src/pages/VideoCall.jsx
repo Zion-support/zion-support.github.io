@@ -100,7 +100,7 @@ export default function VideoCall () {
       <SEO
         title={`Video Call - Room ${roomId}`}
         description="Zion video call"
-      />
+            />
 
       <main className="container mx - auto py - 8 min - h-[calc (100vh - 200px) ]">
         {!hasJoined ? (<div className="flex flex - col items - center justify - center h - 96 bg - gradient - to - br from - blue - 900 / 30 to - purple - 900 / 30 rounded - lg p - 8">
@@ -129,8 +129,8 @@ export default function VideoCall () {
                         <span className="text - white font - medium">
                           {participant.name}
                         </span>
-                        {participant.isMuted && (<MicOff className="w - 4 h - 4 text - red - 400" />) }
-                        {participant.isScreenSharing && (<Monitor className="w - 4 h - 4 text - blue - 400" />) }
+                        {participant.isMuted && (<MicOff className="w - 4 h - 4 text - red - 400"       />) }
+                        {participant.isScreenSharing && (<Monitor className="w - 4 h - 4 text - blue - 400"       />) }
                       </div>
                       {participant.id === 'user - 1' && (<div className="text - xs text - gray - 400">
                           {' '} (You) {' '}
@@ -147,7 +147,7 @@ export default function VideoCall () {
                   size="lg"
                   className="rounded - full w - 14 h - 14"
                 >
-                  {isMuted ? (<MicOff className="w - 6 h - 6" />) : (<Mic className="w - 6 h - 6" />) }
+                  {isMuted ? (<MicOff className="w - 6 h - 6"       />) : (<Mic className="w - 6 h - 6"       />) }
                 </Button>
 
                 <Button
@@ -156,7 +156,7 @@ export default function VideoCall () {
                   size="lg"
                   className="rounded - full w - 14 h - 14"
                 >
-                  {isVideoEnabled ? (<Video className="w - 6 h - 6" />) : (<VideoOff className="w - 6 h - 6" />) }
+                  {isVideoEnabled ? (<Video className="w - 6 h - 6"       />) : (<VideoOff className="w - 6 h - 6"       />) }
                 </Button>
 
                 <Button
@@ -165,7 +165,7 @@ export default function VideoCall () {
                   size="lg"
                   className="rounded - full w - 14 h - 14"
                 >
-                  <Monitor className="w - 6 h - 6" />
+                  <Monitor className="w - 6 h - 6"       />
                 </Button>
 
                 <Button
@@ -174,7 +174,7 @@ export default function VideoCall () {
                   size="lg"
                   className="rounded - full w - 14 h - 14"
                 >
-                  <PhoneOff className="w - 6 h - 6" />
+                  <PhoneOff className="w - 6 h - 6"       />
                 </Button>
               </div>
 
@@ -185,7 +185,7 @@ export default function VideoCall () {
                   size="sm"
                   className="text - gray - 400 hover:text - white"
                 >
-                  <MessageCircle className="w - 4 h - 4 mr - 2" />
+                  <MessageCircle className="w - 4 h - 4 mr - 2"       />
                   Chat
                 </Button>
                 <Button
@@ -193,7 +193,7 @@ export default function VideoCall () {
                   size="sm"
                   className="text - gray - 400 hover:text - white"
                 >
-                  <Users className="w - 4 h - 4 mr - 2" />
+                  <Users className="w - 4 h - 4 mr - 2"       />
                   Participants
                 </Button>
                 <Button
@@ -201,7 +201,7 @@ export default function VideoCall () {
                   size="sm"
                   className="text - gray - 400 hover:text - white"
                 >
-                  <Settings className="w - 4 h - 4 mr - 2" />
+                  <Settings className="w - 4 h - 4 mr - 2"       />
                   Settings
                 </Button>
               </div>

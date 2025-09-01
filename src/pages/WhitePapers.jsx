@@ -24,7 +24,7 @@ const WhitePapers = () => {
         <div className="max - w-7xl mx - auto">
           <div className="mb - 8 text - center">
             <div className="inline - flex items - center px - 4 py - 2 bg - blue - 500 / 10 text - blue - 400 rounded - full text - sm font - medium mb - 6">
-              <FileText className="w - 4 h - 4 mr - 2" />
+              <FileText className="w - 4 h - 4 mr - 2"       />
               Research & Insights
             </div>
             <h1 className="text - 4xl md:text - 6xl font - bold text - white mb - 6">
@@ -46,7 +46,7 @@ const WhitePapers = () => {
                     {paper.category}
                   </span>
                   <div className="flex items - center text - gray - 400 text - sm">
-                    <Download className="w - 4 h - 4 mr - 1" />
+                    <Download className="w - 4 h - 4 mr - 1"       />
                     {paper.downloadCount}
                   </div>
                 </div>
@@ -56,11 +56,11 @@ const WhitePapers = () => {
                 <p className="text - gray - 300 mb - 4">{paper.description}</p>
                 <div className="flex items - center justify - between text - sm text - gray - 400 mb - 4">
                   <div className="flex items - center">
-                    <User className="w - 4 h - 4 mr - 1" />
+                    <User className="w - 4 h - 4 mr - 1"       />
                     {paper.author}
                   </div>
                   <div className="flex items - center">
-                    <Calendar className="w - 4 h - 4 mr - 1" />
+                    <Calendar className="w - 4 h - 4 mr - 1"       />
                     {paper.date}
                   </div>
                 </div>
@@ -68,7 +68,7 @@ const WhitePapers = () => {
                   to="/contact"
                   className="w - full inline - flex items - center justify - center px - 4 py - 3 bg - gradient - to - r from - blue - 600 to - cyan - 600 text - white font - semibold rounded - lg hover:from - blue - 700 hover:to - cyan - 700 transition - all duration - 300"
                 >
-                  <Download className="w - 4 h - 4 mr - 2" />
+                  <Download className="w - 4 h - 4 mr - 2"       />
                   Request PDF
                 </Link>
               </div>) ) }

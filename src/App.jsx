@@ -78,23 +78,23 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-        <AppHeader />
+        <AppHeader       />
         <main className="flex-1">
-          <Suspense fallback={<LoadingSpinner />}>
+          <Suspense fallback={<LoadingSpinner       />}>
             <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/blog" element={<BlogPage />} />
-              <Route path="/partners" element={<PartnersPage />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/faq" element={<FAQ />} />
-              <Route path="/careers" element={<Careers />} />
-              <Route path="/sitemap" element={<Sitemap />} />
-              <Route path="/pricing" element={<ComprehensivePricing />} />
+              <Route path="/" element={<Home       />} />
+              <Route path="/about" element={<About       />} />
+              <Route path="/contact" element={<Contact       />} />
+              <Route path="/blog" element={<BlogPage       />} />
+              <Route path="/partners" element={<PartnersPage       />} />
+              <Route path="/login" element={<Login       />} />
+              <Route path="/faq" element={<FAQ       />} />
+              <Route path="/careers" element={<Careers       />} />
+              <Route path="/sitemap" element={<Sitemap       />} />
+              <Route path="/pricing" element={<ComprehensivePricing       />} />
 
               {/* Services routes */}
-              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/services" element={<ServicesPage       />} />
 
               {/* Catch-all route for 404 */}
               <Route
@@ -121,8 +121,8 @@ function App() {
             </Routes>
           </Suspense>
         </main>
-        <Footer />
-        <ChatAssistant />
+        <Footer       />
+        <ChatAssistant       />
       </div>
     </Router>
   );

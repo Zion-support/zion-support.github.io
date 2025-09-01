@@ -29,7 +29,7 @@ export default function TenantOnboarding() {
     // Check if user has admin role
     const isAdmin = user?.role === "admin";
     if (!isAdmin) {
-        return <Navigate to="/unauthorized"/>}
+        return <Navigate to="/unauthorized"      />}
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setFormData(prev => ({ ...prev, [name]: value }))};

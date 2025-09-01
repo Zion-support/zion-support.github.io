@@ -56,7 +56,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
         <div className="max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">
           <div className="bg - white rounded - 3xl p - 12 shadow - 2xl">
             <div className="w - 20 h - 20 bg - green - 100 rounded - full flex items - center justify - center mx - auto mb - 6">
-              <CheckCircle className="w - 10 h - 10 text - green - 600" />
+              <CheckCircle className="w - 10 h - 10 text - green - 600"       />
             </div>
             <h2 className="text - 3xl font - bold text - gray - 900 mb - 4">
               Thank You for Your Request!
@@ -93,7 +93,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
             <div className="space - y-6">
               <div className="flex items - start space - x-4">
                 <div className="w - 12 h - 12 bg - blue - 100 rounded - lg flex items - center justify - center flex - shrink - 0">
-                  <Mail className="w - 6 h - 6 text - blue - 600" />
+                  <Mail className="w - 6 h - 6 text - blue - 600"       />
                 </div>
                 <div>
                   <h3 className="font - semibold text - gray - 900">Email Us</h3>
@@ -104,7 +104,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
 
               <div className="flex items - start space - x-4">
                 <div className="w - 12 h - 12 bg - green - 100 rounded - lg flex items - center justify - center flex - shrink - 0">
-                  <Phone className="w - 6 h - 6 text - green - 600" />
+                  <Phone className="w - 6 h - 6 text - green - 600"       />
                 </div>
                 <div>
                   <h3 className="font - semibold text - gray - 900">Call Us</h3>
@@ -115,7 +115,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
 
               <div className="flex items - start space - x-4">
                 <div className="w - 12 h - 12 bg - purple - 100 rounded - lg flex items - center justify - center flex - shrink - 0">
-                  <MapPin className="w - 6 h - 6 text - purple - 600" />
+                  <MapPin className="w - 6 h - 6 text - purple - 600"       />
                 </div>
                 <div>
                   <h3 className="font - semibold text - gray - 900">Visit Us</h3>
@@ -158,7 +158,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
                     required
                     className="w - full px - 4 py - 3 border border - gray - 300 rounded - lg focus:ring - 2 focus:ring - blue - 500 focus:border - transparent"
                     placeholder="John Doe"
-                  />
+                        />
                 </div>
 
                 <div>
@@ -174,7 +174,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
                     required
                     className="w - full px - 4 py - 3 border border - gray - 300 rounded - lg focus:ring - 2 focus:ring - blue - 500 focus:border - transparent"
                     placeholder="john@company.com"
-                  />
+                        />
                 </div>
               </div>
 
@@ -191,7 +191,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
                     onChange={handleChange}
                     className="w - full px - 4 py - 3 border border - gray - 300 rounded - lg focus:ring - 2 focus:ring - blue - 500 focus:border - transparent"
                     placeholder="+1 (555) 123 - 4567"
-                  />
+                        />
                 </div>
 
                 <div>
@@ -206,7 +206,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
                     onChange={handleChange}
                     className="w - full px - 4 py - 3 border border - gray - 300 rounded - lg focus:ring - 2 focus:ring - blue - 500 focus:border - transparent"
                     placeholder="Your Comp Inc."
-                  />
+                        />
                 </div>
               </div>
 
@@ -239,7 +239,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
                   rows={4}
                   className="w - full px - 4 py - 3 border border - gray - 300 rounded - lg focus:ring - 2 focus:ring - blue - 500 focus:border - transparent"
                   placeholder="Tell us about your project requirements, timeline, and  specific challenges you're facing..."
-                />
+                      />
               </div>
 
               <button
@@ -252,7 +252,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
                     <div className="animate - spin rounded - full h - 5 w - 5 border - b-2 border - white"></div>
                     <span > Submitting...</span>
                   </>) : (<>
-                    <Send className="w - 5 h - 5" />
+                    <Send className="w - 5 h - 5"       />
                     <span > Get Your Quote</span>
                   </>) }
               </button>

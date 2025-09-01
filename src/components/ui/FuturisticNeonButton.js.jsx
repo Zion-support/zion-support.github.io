@@ -98,7 +98,7 @@ export const FuturisticNeonButton = ({
           repeat: Infinity,
           ease: 'easeInOut',
         }}
-      />
+            />
 
       {/* Content */}
       <div className="relative flex items-center justify-center gap-2">
@@ -107,7 +107,7 @@ export const FuturisticNeonButton = ({
             className="w-4 h-4 border-2 border-current border-t-transparent rounded-full"
             animate={{ rotate: 360 }}
             transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
-          />
+                />
         )}
         {icon && !loading && icon}
         {children}
@@ -115,7 +115,7 @@ export const FuturisticNeonButton = ({
 
       {/* Neon glow effect */}
       <div className="absolute inset-0 rounded-lg opacity-0 hover:opacity-100 transition-opacity duration-300">
-        <div className={`absolute inset-0 rounded-lg ${styles.glow}`} />
+        <div className={`absolute inset-0 rounded-lg ${styles.glow}`}       />
       </div>
     </motion.button>
   );

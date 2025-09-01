@@ -10,15 +10,15 @@ const AIAutonomousIntegration = () => {
         <meta
           name="description"
           content="Revolutionary AI autonomous integration platform that continuously connects systems, unifies data, and creates seamless workflows with advanced AI capabilities and autonomous operation."
-        />
+              />
         <meta
           name="keywords"
           content="AI integration, autonomous integration, system connection, data unification, autonomous operations, AI integration platform"
-        />
+              />
         <link
           rel="canonical"
           href="https://ziontechgroup.com / ai - autonomous - integration"
-        />
+              />
       </Helmet>
 
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - teal - 900 to - slate - 900">

@@ -13,15 +13,15 @@ const AIAutonomousIncidentResponse = () => {
         <meta
           name="description"
           content="Revolutionary AI autonomous incident response platform that continuously detects incidents, responds automatically, and resolves issues with advanced AI capabilities and autonomous operation."
-        />
+              />
         <meta
           name="keywords"
           content="AI incident response, autonomous incident response, incident detection, automatic response, autonomous operations, AI incident response platform"
-        />
+              />
         <link
           rel="canonical"
           href="https://ziontechgroup.com / ai - autonomous - incident - response"
-        />
+              />
       </Helmet>
 
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - red - 900 to - slate - 900">

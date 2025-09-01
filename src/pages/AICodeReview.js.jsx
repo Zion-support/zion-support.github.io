@@ -81,7 +81,7 @@ import { motion } from 'framer - motion';
             className="mb - 8"
           >
             <div className="inline - flex items - center px - 4 py - 2 bg - zion - cyan / 20 text - zion - cyan rounded - full text - sm font - medium mb - 6">
-              <Code className="w - 4 h - 4 mr - 2" />
+              <Code className="w - 4 h - 4 mr - 2"       />
               AI Code Review
             </div>
           </motion.div>
@@ -155,7 +155,7 @@ import { motion } from 'framer - motion';
                 className="bg - white / 5 backdrop - blur - md rounded - 2xl p - 8 border border - white / 10 hover:border - zion - cyan / 50 transition - all duration - 300 hover:transform hover:scale - 105"
               >
                 <div className="w - 16 h - 16 bg - gradient - to - br from - zion - cyan to - zion - purple rounded - 2xl flex items - center justify - center mb - 6">
-                  <feature.icon className="w - 8 h - 8 text - white" />
+                  <feature.icon className="w - 8 h - 8 text - white"       />
                 </div>
                 <h3 className="text - xl font - bold text - white mb - 4">
                   {feature.title}
@@ -194,7 +194,7 @@ import { motion } from 'framer - motion';
                 viewport={{ once: true }}
                 className="flex items - center space - x-4"
               >
-                <CheckCircle className="w - 6 h - 6 text - zion - cyan flex - shrink - 0" />
+                <CheckCircle className="w - 6 h - 6 text - zion - cyan flex - shrink - 0"       />
                 <span className="text - zion - slate - light text - lg">{benefit}</span>
               </motion.div>) ) }
           </div>
@@ -229,7 +229,7 @@ import { motion } from 'framer - motion';
                 viewport={{ once: true }}
                 className="bg - white / 5 backdrop - blur - md rounded - xl p - 6 border border - white / 10 text - center hover:border - zion - cyan / 50 transition - all duration - 300"
               >
-                <Code className="w - 8 h - 8 text - zion - cyan mx - auto mb - 3" />
+                <Code className="w - 8 h - 8 text - zion - cyan mx - auto mb - 3"       />
                 <span className="text - white font - medium">{language}</span>
               </motion.div>) ) }
           </div>

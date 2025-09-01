@@ -64,7 +64,7 @@ const ContactForm = () => {
                 fillRule="evenodd"
                 d="M10 18a8 8 0 100 - 16 8 8 0 000 16zm3.707 - 9.293a1 1 0 00 - 1.414 - 1.414L9 10.586 7.707 9.293a1 1 0 00 - 1.414 1.414l2 2a1 1 0 001.414 0l4 - 4z"
                 clipRule="evenodd"
-              />
+                    />
             </svg>{' '}
             Thank you ! Your message has been sent successfully. We'll get back
             to you within 24 hours.
@@ -82,7 +82,7 @@ const ContactForm = () => {
                 fillRule="evenodd"
                 d="M18 10a8 8 0 11 - 16 0 8 8 0 0116 0zm - 7 4a1 1 0 11 - 2 0 1 1 0 012 0zm - 1-9a1 1 0 00 - 1 1v4a1 1 0 102 0V6a1 1 0 00 - 1-1z"
                 clipRule="evenodd"
-              />
+                    />
             </svg>{' '}
             Something went wrong. Please try again or contact us directly.
           </div>
@@ -106,7 +106,7 @@ const ContactForm = () => {
               required
               className="w - full px - 4 py - 3 bg - gray - 800 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent transition - all duration - 300"
               placeholder="Enter your first name"
-            />
+                  />
           </div>
 
           <div>
@@ -125,7 +125,7 @@ const ContactForm = () => {
               required
               className="w - full px - 4 py - 3 bg - gray - 800 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent transition - all duration - 300"
               placeholder="Enter your last name"
-            />
+                  />
           </div>
         </div>
 
@@ -146,7 +146,7 @@ const ContactForm = () => {
               required
               className="w - full px - 4 py - 3 bg - gray - 800 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent transition - all duration - 300"
               placeholder="Enter your email address"
-            />
+                  />
           </div>
 
           <div>
@@ -164,7 +164,7 @@ const ContactForm = () => {
               onChange={handleInputChange}
               className="w - full px - 4 py - 3 bg - gray - 800 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent transition - all duration - 300"
               placeholder="Enter your phone number"
-            />
+                  />
           </div>
         </div>
 
@@ -183,7 +183,7 @@ const ContactForm = () => {
             onChange={handleInputChange}
             className="w - full px - 4 py - 3 bg - gray - 800 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent transition - all duration - 300"
             placeholder="Enter your comp name"
-          />
+                />
         </div>
 
         <div>
@@ -230,7 +230,7 @@ const ContactForm = () => {
             rows={5}
             className="w - full px - 4 py - 3 bg - gray - 800 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent transition - all duration - 300 resize - none"
             placeholder="Tell us about your project or how we can help..."
-          />
+                />
         </div>
 
         <div className="pt - 4">

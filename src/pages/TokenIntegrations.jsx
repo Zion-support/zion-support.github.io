@@ -63,13 +63,13 @@ import {
     setSuggested (chain) ;
   };
   return (<div>
-      <Header />
+      <Header       />
       <div className="min - h-screen bg - zion - blue pt - 12 pb - 20">
         <div className="container mx - auto px - 4 sm:px - 6 lg:px - 8 space - y-10">
           <h1 className="text - 3xl font - bold text - white">
             ZION$ Integrations
           </h1>
-          <ConnectWalletButton />
+          <ConnectWalletButton       />
           {isConnected && (<p className="text - white">Connected wallet: {address}</p>) }
 
           <Card>
@@ -80,7 +80,7 @@ import {
               <div className="flex gap - 4">
                 <Select value={fromChain} onValueChange={setFromChain}>
                   <SelectTrigger className="w - full">
-                    <SelectValue placeholder="From" />
+                    <SelectValue placeholder="From"       />
                   </SelectTrigger>
                   <SelectContent>
                     {CHAINS.map (c => (<SelectItem key={c.id} value={c.id}>
@@ -90,7 +90,7 @@ import {
                             src={c.logo}
                             alt={c.name}
                             className="h - 4"
-                          />
+                                />
                           {c.name}
                         </div>
                       </SelectItem>) ) }
@@ -98,7 +98,7 @@ import {
                 </Select>
                 <Select value={toChain} onValueChange={setToChain}>
                   <SelectTrigger className="w - full">
-                    <SelectValue placeholder="To" />
+                    <SelectValue placeholder="To"       />
                   </SelectTrigger>
                   <SelectContent>
                     {CHAINS.map (c => (<SelectItem key={c.id} value={c.id}>
@@ -108,7 +108,7 @@ import {
                             src={c.logo}
                             alt={c.name}
                             className="h - 4"
-                          />
+                                />
                           {c.name}
                         </div>
                       </SelectItem>) ) }
@@ -162,6 +162,6 @@ import {
           </Card>
         </div>
       </div>
-      <Footer />
+      <Footer       />
     </div>) ;
 }

@@ -175,7 +175,7 @@ import { motion } from 'framer - motion';
           <motion.div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 12 items - center" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <motion.div variants={itemVariants}>
               <div className="mb - 6">
-                <Target className="h - 16 w - 16 text - zion - cyan mb - 4"/>
+                <Target className="h - 16 w - 16 text - zion - cyan mb - 4"      />
                 <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">
                   Our Mission
                 </h2>
@@ -188,7 +188,7 @@ import { motion } from 'framer - motion';
 
             <motion.div variants={itemVariants}>
               <div className="mb - 6">
-                <Globe className="h - 16 w - 16 text - zion - purple mb - 4"/>
+                <Globe className="h - 16 w - 16 text - zion - purple mb - 4"      />
                 <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">
                   Our Vision
                 </h2>
@@ -217,7 +217,7 @@ import { motion } from 'framer - motion';
           <motion.div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             {compValues.map ( (value, index) => (<motion.div key={index} className="bg - white / 10 backdrop - blur - lg rounded - xl p - 6 border border - white / 20 hover:border - white / 40 transition - all duration - 300 group" variants={cardVariants} whileHover="hover">
                 <div className="text - 4xl mb - 4 flex justify - center">
-                  <value.icon className={`h - 16 w - 16 text-${value.color} group - hover:scale - 110 transition - transform duration - 300`}/>
+                  <value.icon className={`h - 16 w - 16 text-${value.color} group - hover:scale - 110 transition - transform duration - 300`}      />
                 </div>
                 <h3 className="text - xl font - semibold text - white mb - 3 text - center">{value.title}</h3>
                 <p className="text - gray - 300 text - center">{value.description}</p>
@@ -245,7 +245,7 @@ import { motion } from 'framer - motion';
                 <p className="text - zion - cyan text - center mb - 4">{member.role}</p>
                 <div className="space - y-2">
                   {member.expertise.map ( (skill, idx) => (<div key={idx} className="flex items - center text - sm text - gray - 300">
-                      <CheckCircle className="h - 4 w - 4 text - zion - cyan mr - 2 flex - shrink - 0"/>
+                      <CheckCircle className="h - 4 w - 4 text - zion - cyan mr - 2 flex - shrink - 0"      />
                       {skill}
                     </div>) ) }
                 </div>

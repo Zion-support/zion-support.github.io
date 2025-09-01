@@ -98,14 +98,14 @@ const CloudDevOps = () => {
         description="Transform your infrastructure with Zion Tech Group's cloud migration and DevOps services. AWS, Azure, GCP expertise with modern DevOps practices."
         keywords="cloud migration, DevOps, AWS, Azure, GCP, infrastructure as code, CI/CD"
         canonical="https://ziontechgroup.com/services/cloud-devops"
-      />
+            />
 
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
             <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 text-blue-400 rounded-full text-sm font-medium mb-6">
-              <Cloud className="w-4 h-4 mr-2" />
+              <Cloud className="w-4 h-4 mr-2"       />
               Cloud & DevOps
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -130,13 +130,13 @@ const CloudDevOps = () => {
             Our Cloud & DevOps Services
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {cloudServices.map((service, index) => (
+            {cloudServices.map((((((((service, index, index, index, index, index, index, index) => ({ ...((((((service, index, index, index, index, index, index, key: index })) => ({ ...(((((service, index, index, index, index, index, key: index })) => ({ ...((((service, index, index, index, index, key: index })) => ({ ...(((service, index, index, index, key: index })) => ({ ...((service, index, index, key: index })) => ({ ...(service, index, key: index })) => (
               <div
                 key={index}
                 className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
-                  <service.icon className="w-6 h-6 text-white" />
+                  <service.icon className="w-6 h-6 text-white"       />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">
                   {service.title}
@@ -145,7 +145,7 @@ const CloudDevOps = () => {
                   {service.description}
                 </p>
                 <ul className="space-y-2">
-                  {service.features.map((feature, idx) => (
+                  {service.features.map((((((((feature, idx, index, index, index, index, index, index) => ({ ...((((((feature, idx, index, index, index, index, index, key: index })) => ({ ...(((((feature, idx, index, index, index, index, key: index })) => ({ ...((((feature, idx, index, index, index, key: index })) => ({ ...(((feature, idx, index, index, key: index })) => ({ ...((feature, idx, index, key: index })) => ({ ...(feature, idx, key: index })) => (
                     <li
                       key={idx}
                       className="text-gray-400 text-sm flex items-center"
@@ -168,7 +168,7 @@ const CloudDevOps = () => {
             Cloud Platforms We Support
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {platforms.map((platform, index) => (
+            {platforms.map((((((((platform, index, index, index, index, index, index, index) => ({ ...((((((platform, index, index, index, index, index, index, key: index })) => ({ ...(((((platform, index, index, index, index, index, key: index })) => ({ ...((((platform, index, index, index, index, key: index })) => ({ ...(((platform, index, index, index, key: index })) => ({ ...((platform, index, index, key: index })) => ({ ...(platform, index, key: index })) => (
               <div
                 key={index}
                 className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all"
@@ -191,7 +191,7 @@ const CloudDevOps = () => {
             DevOps Tools & Technologies
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {devOpsTools.map((category, index) => (
+            {devOpsTools.map((((((((category, index, index, index, index, index, index, index) => ({ ...((((((category, index, index, index, index, index, index, key: index })) => ({ ...(((((category, index, index, index, index, index, key: index })) => ({ ...((((category, index, index, index, index, key: index })) => ({ ...(((category, index, index, index, key: index })) => ({ ...((category, index, index, key: index })) => ({ ...(category, index, key: index })) => (
               <div
                 key={index}
                 className="bg-slate-800/50 border border-white/10 rounded-xl p-6"
@@ -200,7 +200,7 @@ const CloudDevOps = () => {
                   {category.category}
                 </h3>
                 <div className="space-y-2">
-                  {category.tools.map((tool, idx) => (
+                  {category.tools.map((((((((tool, idx, index, index, index, index, index, index) => ({ ...((((((tool, idx, index, index, index, index, index, key: index })) => ({ ...(((((tool, idx, index, index, index, index, key: index })) => ({ ...((((tool, idx, index, index, index, key: index })) => ({ ...(((tool, idx, index, index, key: index })) => ({ ...((tool, idx, index, key: index })) => ({ ...(tool, idx, key: index })) => (
                     <div
                       key={idx}
                       className="text-gray-300 text-sm flex items-center"

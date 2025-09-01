@@ -76,7 +76,7 @@ export function AccessibilityMenu() {
         aria-label="Accessibility settings"
         aria-expanded={isOpen}
       >
-        <Settings className="h-5 w-5" />
+        <Settings className="h-5 w-5"       />
       </motion.button>
 
       {/* Menu Panel */}
@@ -107,18 +107,60 @@ export function AccessibilityMenu() {
               {/* Font Size */}
               <div className="mb-6">
                 <label className="flex items-center gap-3 text-white mb-3">
-                  <FileText className="h-4 w-4 text-zion-cyan" />
+                  <FileText className="h-4 w-4 text-zion-cyan"       />
                   <span className="text-sm font-medium">Font Size</span>
                 </label>
                 <div className="flex gap-2">
-                  {['small', 'medium', 'large'].map(size => (
+                  {['small', 'medium', 'large'].map(((((((size => (
                     <Button
                       key={size}
                       variant={
                         settings.fontSize === size ? 'default' : 'outline'
                       }
                       size="sm"
-                      onClick={() => updateFontSize(size)}
+                      onClick={(, index, index, index, index, index, index) => ({ ...(((((size => (
+                    <Button
+                      key={size}
+                      variant={
+                        settings.fontSize === size ? 'default' : 'outline'
+                      }
+                      size="sm"
+                      onClick={(, index, index, index, index, index, key: index })) => ({ ...((((size => (
+                    <Button
+                      key={size}
+                      variant={
+                        settings.fontSize === size ? 'default' : 'outline'
+                      }
+                      size="sm"
+                      onClick={(, index, index, index, index, key: index })) => ({ ...(((size => (
+                    <Button
+                      key={size}
+                      variant={
+                        settings.fontSize === size ? 'default' : 'outline'
+                      }
+                      size="sm"
+                      onClick={(, index, index, index, key: index })) => ({ ...((size => (
+                    <Button
+                      key={size}
+                      variant={
+                        settings.fontSize === size ? 'default' : 'outline'
+                      }
+                      size="sm"
+                      onClick={(, index, index, key: index })) => ({ ...(size => (
+                    <Button
+                      key={size}
+                      variant={
+                        settings.fontSize === size ? 'default' : 'outline'
+                      }
+                      size="sm"
+                      onClick={(, index, key: index })) => ({ ...size => (
+                    <Button
+                      key={size}
+                      variant={
+                        settings.fontSize === size ? 'default' : 'outline'
+                      }
+                      size="sm"
+                      onClick={(, key: index })) => updateFontSize(size)}
                       className={`text-xs capitalize ${
                         settings.fontSize === size
                           ? 'bg-zion-cyan text-zion-blue-dark'
@@ -134,7 +176,7 @@ export function AccessibilityMenu() {
               {/* High Contrast */}
               <div className="mb-6">
                 <label className="flex items-center gap-3 text-white mb-3">
-                  <Eye className="h-4 w-4 text-zion-cyan" />
+                  <Eye className="h-4 w-4 text-zion-cyan"       />
                   <span className="text-sm font-medium">High Contrast</span>
                 </label>
                 <Button
@@ -154,7 +196,7 @@ export function AccessibilityMenu() {
               {/* Reduced Motion */}
               <div className="mb-6">
                 <label className="flex items-center gap-3 text-white mb-3">
-                  <Zap className="h-4 w-4 text-zion-cyan" />
+                  <Zap className="h-4 w-4 text-zion-cyan"       />
                   <span className="text-sm font-medium">Reduced Motion</span>
                 </label>
                 <Button
@@ -175,9 +217,9 @@ export function AccessibilityMenu() {
               <div className="mb-6">
                 <label className="flex items-center gap-3 text-white mb-3">
                   {settings.soundEnabled ? (
-                    <Volume2 className="h-4 w-4 text-zion-cyan" />
+                    <Volume2 className="h-4 w-4 text-zion-cyan"       />
                   ) : (
-                    <VolumeX className="h-4 w-4 text-zion-cyan" />
+                    <VolumeX className="h-4 w-4 text-zion-cyan"       />
                   )}
                   <span className="text-sm font-medium">Sound Effects</span>
                 </label>

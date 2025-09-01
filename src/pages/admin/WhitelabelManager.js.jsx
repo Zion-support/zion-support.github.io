@@ -11,14 +11,14 @@ export default function WhitelabelManager() {
   // Check if user has admin role
   const isAdmin = user?.role === 'admin';
   if (!isAdmin) {
-    return <Navigate to="/unauthorized" />;
+    return <Navigate to="/unauthorized"       />;
   }
   return (
     <>
       <SEO
         title="White-Label Management - Zion AI Marketplace"
         description="Create and manage white-label instances of the Zion AI Marketplace platform."
-      />
+            />
 
       <main className="flex-1 container max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col space-y-6">
@@ -44,11 +44,11 @@ export default function WhitelabelManager() {
             </TabsList>
 
             <TabsContent value="tenants" className="space-y-6">
-              <TenantsList />
+              <TenantsList       />
             </TabsContent>
 
             <TabsContent value="create" className="flex justify-center">
-              <WhitelabelRequestForm />
+              <WhitelabelRequestForm       />
             </TabsContent>
 
             <TabsContent value="docs" className="space-y-6">

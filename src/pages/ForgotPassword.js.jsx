@@ -39,12 +39,12 @@ const forgotPasswordSchema = z.object ({
           title="Password Reset Sent - Zion Tech Group"
           description="Check your email for password reset instructions."
           canonical="https://ziontechgroup.com / forgot - password"
-        />
+              />
         <div className="min - h-screen bg - zion - blue flex items - center justify - center">
           <div className="max - w-md w - full mx - auto p - 6">
             <div className="text - center">
               <div className="mx - auto flex items - center justify - center h - 12 w - 12 rounded - full bg - green - 100 mb - 4">
-                <CheckCircle className="h - 6 w - 6 text - green - 600" />
+                <CheckCircle className="h - 6 w - 6 text - green - 600"       />
               </div>
               <h1 className="text - 2xl font - bold text - white mb - 4">
                 Check Your Email
@@ -90,7 +90,7 @@ const forgotPasswordSchema = z.object ({
             <div className="bg - zion - blue - dark rounded - lg p - 6">
               {submitted ? (<div className="text - center py - 8">
                   <div className="mx - auto flex items - center justify - center h - 12 w - 12 rounded - full bg - zion - purple / 20 mb - 4">
-                    <Mail className="h - 6 w - 6 text - zion - purple" />
+                    <Mail className="h - 6 w - 6 text - zion - purple"       />
                   </div>
                   <h3 className="text - lg font - medium text - white">
                     Check your email
@@ -124,11 +124,11 @@ const forgotPasswordSchema = z.object ({
                                 placeholder="you@example.com"
                                 className="bg - zion - blue pl - 10 text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple"
                                 {...field}
-                              />
-                              <Mail className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text - zion - slate h - 4 w - 4" />
+                                    />
+                              <Mail className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text - zion - slate h - 4 w - 4"       />
                             </div>
                           </FormControl>
-                          <FormMessage className="text - red - 400" />
+                          <FormMessage className="text - red - 400"       />
                         </FormItem>) }
                     />
 
@@ -162,7 +162,7 @@ const forgotPasswordSchema = z.object ({
                 Email Address
               </label>
               <div className="relative">
-                <Mail className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 h - 4 w - 4 text - zion - slate - light" />
+                <Mail className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 h - 4 w - 4 text - zion - slate - light"       />
                 <Input
                   id="email"
                   type="email"

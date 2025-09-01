@@ -24,24 +24,24 @@ import { motion } from 'framer - motion';
 const ServiceComparison = () => {
   const features = [
     {
-      icon: <BarChart3 className="w - 6 h - 6 text - zion - cyan" />,
+      icon: <BarChart3 className="w - 6 h - 6 text - zion - cyan"       />,
       title: 'Advanced Filtering',
       description:
         'Filter services by category, complexity, price range, and technology stack',
     },
     {
-      icon: <Target className="w - 6 h - 6 text - zion - purple" />,
+      icon: <Target className="w - 6 h - 6 text - zion - purple"       />,
       title: 'Smart Comparison',
       description:
         'Compare multiple services side - by - side with detailed feature analysis',
     },
     {
-      icon: <TrendingUp className="w - 6 h - 6 text - zion - green" />,
+      icon: <TrendingUp className="w - 6 h - 6 text - zion - green"       />,
       description:
         'Real - time ratings and popularity indicators to guide your decision',
     },
     {
-      icon: <Award className="w - 6 h - 6 text - zion - orange" />,
+      icon: <Award className="w - 6 h - 6 text - zion - orange"       />,
       title: 'Expert Insights',
       description:
         "Get detailed insights into each service's capabilities and target audience",
@@ -174,7 +174,7 @@ const ServiceComparison = () => {
                 viewport={{ once: true }}
                 className="flex items - start gap - 3"
               >
-                <CheckCircle className="w - 5 h - 5 text - zion - cyan mt - 1 flex - shrink - 0" />
+                <CheckCircle className="w - 5 h - 5 text - zion - cyan mt - 1 flex - shrink - 0"       />
                 <span className="text - zion - slate - dark">{benefit}</span>
               </motion.div>) ) }
           </div>
@@ -200,7 +200,7 @@ const ServiceComparison = () => {
             </p>
           </motion.div>
 
-          <AdvancedServiceComparison />
+          <AdvancedServiceComparison       />
         </div>
       </section>
 
@@ -227,14 +227,14 @@ const ServiceComparison = () => {
                   window.open ('mailto:kleber@ziontechgroup.com?subject = Service Selection Help',
                     '_blank') }
               >
-                <Users className="w - 5 h - 5 mr - 2" />
+                <Users className="w - 5 h - 5 mr - 2"       />
                 Get Expert Consultation
               </Button>
               <Button
                 className="border - white text - white hover:bg - white hover:text - zion - purple text - lg px - 8 py - 4"
                 onClick={ () => window.open ('tel:+13024640950', '_blank') }
               >
-                <Zap className="w - 5 h - 5 mr - 2" />
+                <Zap className="w - 5 h - 5 mr - 2"       />
                 Call Now
               </Button>
             </div>

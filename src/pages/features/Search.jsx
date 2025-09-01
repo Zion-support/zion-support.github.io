@@ -21,13 +21,13 @@ export default function SearchFeature() {
         description="Find exactly what you need with fast, filterable search powered by Elasticsearch."
         keywords="search engine, filtering, tech marketplace search"
         canonical="https://app.ziontechgroup.com/features/search"
-      />
+            />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
-      <Header />
+      <Header       />
       <main className="bg-background text-white py-12">
         <div className="container mx-auto px-4 md:px-6">
           <GradientHeading className="mb-4 text-center">
@@ -42,7 +42,7 @@ export default function SearchFeature() {
             src="https://placehold.co/800x400"
             alt="Screenshot of search results"
             className="rounded-lg shadow-xl mx-auto mb-12"
-          />
+                />
           <h2 className="text-2xl font-bold mb-4">Benefits &amp; Use Cases</h2>
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
             <li>Find the right expert or product without endless scrolling.</li>
@@ -79,7 +79,7 @@ export default function SearchFeature() {
           </div>
         </div>
       </main>
-      <Footer />
+      <Footer       />
     </>
   );
 }

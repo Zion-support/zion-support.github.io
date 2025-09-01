@@ -1,16 +1,15 @@
 import { render, screen } from '@testing - library / react';
-import React from 'react';
 import Marketplace from './Marketplace';
-
-
-describe ('Marketplace', () => {
-  it ('renders without crashing', () => {
-    render (<Marketplace />) ;
+;
+;
+describe ('Marketplace', () => {;
+  it ('renders without crashing', () => {;
+    render (<Marketplace       />) ;
     expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () ;
   }) ;
-
-  it ('displays expected content', () => {
-    render (<Marketplace />) ;
-    // Add specific test assertions based on component content
+;
+  it ('displays expected content', () => {;
+    render (<Marketplace       />) ;
+    // Add specific test assertions based on component content;
   }) ;
 }) ;

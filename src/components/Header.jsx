@@ -14,7 +14,7 @@ export function Header () {
               </h1>
             </Link>
           </div>
-          <MainNavigation />
+          <MainNavigation       />
         </div>
       </div>
     </header>) ;

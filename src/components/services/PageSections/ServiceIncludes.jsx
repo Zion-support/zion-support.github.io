@@ -156,7 +156,7 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
 
         {/* Service Packages */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20">
-          {servicePackages.map((pkg, index) => (
+          {servicePackages.map((((((((pkg, index, index, index, index, index, index, index) => ({ ...((((((pkg, index, index, index, index, index, index, key: index })) => ({ ...(((((pkg, index, index, index, index, index, key: index })) => ({ ...((((pkg, index, index, index, index, key: index })) => ({ ...(((pkg, index, index, index, key: index })) => ({ ...((pkg, index, index, key: index })) => ({ ...(pkg, index, key: index })) => (
             <div
               key={index}
               className={`relative bg-white rounded-3xl shadow-xl border-2 transition-all duration-300 hover:shadow-2xl ${
@@ -183,10 +183,10 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
 
                 {/* Package Features */}
                 <div className="grid grid-cols-2 gap-4 mb-8">
-                  {pkg.features.map((feature, featureIndex) => (
+                  {pkg.features.map((((((((feature, featureIndex, index, index, index, index, index, index) => ({ ...((((((feature, featureIndex, index, index, index, index, index, key: index })) => ({ ...(((((feature, featureIndex, index, index, index, index, key: index })) => ({ ...((((feature, featureIndex, index, index, index, key: index })) => ({ ...(((feature, featureIndex, index, index, key: index })) => ({ ...((feature, featureIndex, index, key: index })) => ({ ...(feature, featureIndex, key: index })) => (
                     <div key={featureIndex} className="text-center">
                       <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-2">
-                        <feature.icon className="w-6 h-6 text-blue-600" />
+                        <feature.icon className="w-6 h-6 text-blue-600"       />
                       </div>
                       <div className="text-sm font-medium text-gray-900">{feature.name}</div>
                       <div className="text-sm text-gray-600">{feature.value}</div>
@@ -197,13 +197,13 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
                 {/* What's Included */}
                 <div className="mb-8">
                   <h4 className="font-semibold text-gray-900 mb-4 flex items-center">
-                    <Check className="w-5 h-5 text-green-500 mr-2" />
+                    <Check className="w-5 h-5 text-green-500 mr-2"       />
                     What's Included
                   </h4>
                   <ul className="space-y-2">
-                    {pkg.includes.map((item, itemIndex) => (
+                    {pkg.includes.map((((((((item, itemIndex, index, index, index, index, index, index) => ({ ...((((((item, itemIndex, index, index, index, index, index, key: index })) => ({ ...(((((item, itemIndex, index, index, index, index, key: index })) => ({ ...((((item, itemIndex, index, index, index, key: index })) => ({ ...(((item, itemIndex, index, index, key: index })) => ({ ...((item, itemIndex, index, key: index })) => ({ ...(item, itemIndex, key: index })) => (
                       <li key={itemIndex} className="flex items-start space-x-2">
-                        <Check className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                        <Check className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"       />
                         <span className="text-sm text-gray-700">{item}</span>
                       </li>
                     ))}
@@ -213,13 +213,13 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
                 {/* What's Not Included */}
                 <div className="mb-8">
                   <h4 className="font-semibold text-gray-900 mb-4 flex items-center">
-                    <X className="w-5 h-5 text-red-500 mr-2" />
+                    <X className="w-5 h-5 text-red-500 mr-2"       />
                     What's Not Included
                   </h4>
                   <ul className="space-y-2">
-                    {pkg.notIncluded.map((item, itemIndex) => (
+                    {pkg.notIncluded.map((((((((item, itemIndex, index, index, index, index, index, index) => ({ ...((((((item, itemIndex, index, index, index, index, index, key: index })) => ({ ...(((((item, itemIndex, index, index, index, index, key: index })) => ({ ...((((item, itemIndex, index, index, index, key: index })) => ({ ...(((item, itemIndex, index, index, key: index })) => ({ ...((item, itemIndex, index, key: index })) => ({ ...(item, itemIndex, key: index })) => (
                       <li key={itemIndex} className="flex items-start space-x-2">
-                        <X className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0" />
+                        <X className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0"       />
                         <span className="text-sm text-gray-500">{item}</span>
                       </li>
                     ))}
@@ -247,11 +247,11 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
             Additional Services
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {additionalServices.map((service, index) => (
+            {additionalServices.map((((((((service, index, index, index, index, index, index, index) => ({ ...((((((service, index, index, index, index, index, index, key: index })) => ({ ...(((((service, index, index, index, index, index, key: index })) => ({ ...((((service, index, index, index, index, key: index })) => ({ ...(((service, index, index, index, key: index })) => ({ ...((service, index, index, key: index })) => ({ ...(service, index, key: index })) => (
               <div key={index} className="bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:border-blue-300 transition-colors">
                 <div className="flex items-center space-x-4 mb-4">
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                    <service.icon className="w-6 h-6 text-blue-600" />
+                    <service.icon className="w-6 h-6 text-blue-600"       />
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900">{service.name}</h4>
@@ -275,7 +275,7 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Star className="w-8 h-8" />
+                <Star className="w-8 h-8"       />
               </div>
               <h4 className="text-xl font-semibold mb-2">Quality Guarantee</h4>
               <p className="text-blue-100">
@@ -284,7 +284,7 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Clock className="w-8 h-8" />
+                <Clock className="w-8 h-8"       />
               </div>
               <h4 className="text-xl font-semibold mb-2">Response Time Guarantee</h4>
               <p className="text-blue-100">
@@ -293,7 +293,7 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8" />
+                <Shield className="w-8 h-8"       />
               </div>
               <h4 className="text-xl font-semibold mb-2">Security Guarantee</h4>
               <p className="text-blue-100">

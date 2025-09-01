@@ -14,7 +14,7 @@ export function AvatarImage({ src, alt = '', className = '' }) {
       src={src}
       alt={alt}
       className={`aspect-square h-full w-full ${className}`}
-    />
+          />
   );
 }
 export function AvatarFallback({ children, className = '' }) {
@@ -36,7 +36,7 @@ const Avatar = React.forwardRef(({ className, ...props }, ref) => (
       className
     )}
     {...props}
-  />
+        />
 ));
 Avatar.displayName = 'Avatar';
 const AvatarImage = React.forwardRef(
@@ -47,7 +47,7 @@ const AvatarImage = React.forwardRef(
       src={src}
       alt={alt}
       {...props}
-    />
+          />
   )
 );
 AvatarImage.displayName = 'AvatarImage';
@@ -59,7 +59,7 @@ const AvatarFallback = React.forwardRef(({ className, ...props }, ref) => (
       className
     )}
     {...props}
-  />
+        />
 ));
 AvatarFallback.displayName = 'AvatarFallback';
 export { Avatar, AvatarImage, AvatarFallback };

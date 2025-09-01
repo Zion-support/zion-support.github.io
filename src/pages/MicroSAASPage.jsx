@@ -22,7 +22,7 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
                 professional: "$79 / month",
                 enterprise: "$199 / month"
             },
-            icon: <Mail className="h - 8 w - 8 text - blue - 500"/>,
+            icon: <Mail className="h - 8 w - 8 text - blue - 500"      />,
             category: "Marketing",
             badge: "Popular",
             users: "Up to 10,000",
@@ -45,7 +45,7 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
                 professional: "$25 / month",
                 enterprise: "$49 / month"
             },
-            icon: <Calendar className="h - 8 w - 8 text - green - 500"/>,
+            icon: <Calendar className="h - 8 w - 8 text - green - 500"      />,
             category: "Productivity",
             badge: "Essential",
             users: "Up to 50 users",
@@ -68,7 +68,7 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
                 professional: "$39 / month",
                 enterprise: "$79 / month"
             },
-            icon: <Users className="h - 8 w - 8 text - purple - 500"/>,
+            icon: <Users className="h - 8 w - 8 text - purple - 500"      />,
             category: "Sales",
             badge: "Hot",
             users: "Up to 25 users",
@@ -91,7 +91,7 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
                 professional: "$89 / month",
                 enterprise: "$199 / month"
             },
-            icon: <BarChart3 className="h - 8 w - 8 text - orange - 500"/>,
+            icon: <BarChart3 className="h - 8 w - 8 text - orange - 500"      />,
             category: "Analytics",
             badge: "Insightful",
             users: "Unlimited",
@@ -114,7 +114,7 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
                 professional: "2.5% + $0.30",
                 enterprise: "Custom"
             },
-            icon: <CreditCard className="h - 8 w - 8 text - indigo - 500"/>,
+            icon: <CreditCard className="h - 8 w - 8 text - indigo - 500"      />,
             category: "Payments",
             badge: "Secure",
             users: "Unlimited",
@@ -137,7 +137,7 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
                 professional: "$35 / month",
                 enterprise: "$75 / month"
             },
-            icon: <FileText className="h - 8 w - 8 text - teal - 500"/>,
+            icon: <FileText className="h - 8 w - 8 text - teal - 500"      />,
             category: "Forms",
             badge: "Flexible",
             users: "Unlimited",
@@ -160,7 +160,7 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
                 professional: "$59 / month",
                 enterprise: "$129 / month"
             },
-            icon: <MessageSquare className="h - 8 w - 8 text - pink - 500"/>,
+            icon: <MessageSquare className="h - 8 w - 8 text - pink - 500"      />,
             category: "Communication",
             badge: "Engaging",
             users: "Up to 5 agents",
@@ -183,7 +183,7 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
                 professional: "$99 / month",
                 enterprise: "$199 / month"
             },
-            icon: <Search className="h - 8 w - 8 text - yellow - 500"/>,
+            icon: <Search className="h - 8 w - 8 text - yellow - 500"      />,
             category: "SEO",
             badge: "Optimized",
             users: "Up to 3 users",
@@ -206,7 +206,7 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
                 professional: "$25 / month",
                 enterprise: "$49 / month"
             },
-            icon: <FileText className="h - 8 w - 8 text - red - 500"/>,
+            icon: <FileText className="h - 8 w - 8 text - red - 500"      />,
             category: "Design",
             badge: "Creative",
             users: "Up to 10 users",
@@ -229,7 +229,7 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
                 professional: "$59 / month",
                 enterprise: "$119 / month"
             },
-            icon: <Database className="h - 8 w - 8 text - blue - 600"/>,
+            icon: <Database className="h - 8 w - 8 text - blue - 600"      />,
             category: "Inventory",
             badge: "Organized",
             users: "Up to 15 users",
@@ -252,7 +252,7 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
                 professional: "$39 / month",
                 enterprise: "$79 / month"
             },
-            icon: <Clock className="h - 8 w - 8 text - emerald - 500"/>,
+            icon: <Clock className="h - 8 w - 8 text - emerald - 500"      />,
             category: "Scheduling",
             badge: "Efficient",
             users: "Up to 20 users",
@@ -275,7 +275,7 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
                 professional: "$55 / month",
                 enterprise: "$125 / month"
             },
-            icon: <Search className="h - 8 w - 8 text - violet - 500"/>,
+            icon: <Search className="h - 8 w - 8 text - violet - 500"      />,
             category: "Feedback",
             badge: "Insightful",
             users: "Unlimited",
@@ -316,11 +316,11 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
           </p>
           <div className="flex flex - wrap justify - center gap - 4">
             <Button size="lg" className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white">
-              <Zap className="h - 5 w - 5 mr - 2"/>
+              <Zap className="h - 5 w - 5 mr - 2"      />
               Explore Solutions
             </Button>
             <Button size="lg" variant="outline" className="border - zion - cyan text - zion - cyan hover:bg - zion - cyan / 10">
-              <MessageSquare className="h - 5 w - 5 mr - 2"/>
+              <MessageSquare className="h - 5 w - 5 mr - 2"      />
               Get Demo
             </Button>
           </div>
@@ -339,7 +339,7 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
         <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">
           <div className="text - center p - 6">
             <div className="w - 16 h - 16 bg - zion - purple / 20 rounded - full flex items - center justify - center mx - auto mb - 4">
-              <Zap className="h - 8 w - 8 text - zion - purple"/>
+              <Zap className="h - 8 w - 8 text - zion - purple"      />
             </div>
             <h3 className="text - xl font - semibold text - white mb - 2">Affordable Pricing</h3>
             <p className="text - zion - slate - light">
@@ -349,7 +349,7 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
 
           <div className="text - center p - 6">
             <div className="w - 16 h - 16 bg - zion - cyan / 20 rounded - full flex items - center justify - center mx - auto mb - 4">
-              <Zap className="h - 8 w - 8 text - zion - cyan"/>
+              <Zap className="h - 8 w - 8 text - zion - cyan"      />
             </div>
             <h3 className="text - xl font - semibold text - white mb - 2">Quick Implementation</h3>
             <p className="text - zion - slate - light">
@@ -359,7 +359,7 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
 
           <div className="text - center p - 6">
             <div className="w - 16 h - 16 bg - zion - purple / 20 rounded - full flex items - center justify - center mx - auto mb - 4">
-              <Shield className="h - 8 w - 8 text - zion - purple"/>
+              <Shield className="h - 8 w - 8 text - zion - purple"      />
             </div>
             <h3 className="text - xl font - semibold text - white mb - 2">Enterprise Security</h3>
             <p className="text - zion - slate - light">
@@ -394,7 +394,7 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
                         {service.badge}
                       </Badge>) }
                     <div className="flex items - center gap - 1 text - sm text - zion - slate - light">
-                      <Star className="h - 4 w - 4 text - yellow - 500 fill - current"/>
+                      <Star className="h - 4 w - 4 text - yellow - 500 fill - current"      />
                       <span>{service.rating}</span>
                       <span> ({service.reviews}) </span>
                     </div>
@@ -437,7 +437,7 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
                   <div>
                     <h4 className="font - semibold text - zion - cyan mb - 2">Users:</h4>
                     <div className="text - sm text - zion - slate - light flex items - center">
-                      <Users className="h - 4 w - 4 mr - 2 text - zion - purple"/>
+                      <Users className="h - 4 w - 4 mr - 2 text - zion - purple"      />
                       {service.users}
                     </div>
                   </div>
@@ -446,11 +446,11 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
 
               <div className="p - 6 pt - 0 space - y-3">
                 <Button className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white">
-                  <Zap className="h - 4 w - 4 mr - 2"/>
+                  <Zap className="h - 4 w - 4 mr - 2"      />
                   Start Free Trial
                 </Button>
                 <Button variant="outline" className="w - full border - zion - cyan text - zion - cyan hover:bg - zion - cyan / 10">
-                  <MessageSquare className="h - 4 w - 4 mr - 2"/>
+                  <MessageSquare className="h - 4 w - 4 mr - 2"      />
                   Request Demo
                 </Button>
               </div>
@@ -472,22 +472,22 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
             <h3 className="text - xl font - semibold text - zion - cyan mb - 4">Micro SAAS Solutions</h3>
             <ul className="space - y-2 text - zion - slate - light">
               <li className="flex items - center">
-                <CheckCircle className="h - 5 w - 5 text - green - 500 mr - 2"/>
+                <CheckCircle className="h - 5 w - 5 text - green - 500 mr - 2"      />
                 Affordable monthly pricing
               </li>
               <li className="flex items - center">
-                <CheckCircle className="h - 5 w - 5 text - green - 500 mr - 2"/>
+                <CheckCircle className="h - 5 w - 5 text - green - 500 mr - 2"      />
                 Quick implementation (days) </li>
               <li className="flex items - center">
-                <CheckCircle className="h - 5 w - 5 text - green - 500 mr - 2"/>
+                <CheckCircle className="h - 5 w - 5 text - green - 500 mr - 2"      />
                 Focused functionality
               </li>
               <li className="flex items - center">
-                <CheckCircle className="h - 5 w - 5 text - green - 500 mr - 2"/>
+                <CheckCircle className="h - 5 w - 5 text - green - 500 mr - 2"      />
                 Easy to use interfaces
               </li>
               <li className="flex items - center">
-                <CheckCircle className="h - 5 w - 5 text - green - 500 mr - 2"/>
+                <CheckCircle className="h - 5 w - 5 text - green - 500 mr - 2"      />
                 Scalable as you grow
               </li>
             </ul>
@@ -497,23 +497,23 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
             <h3 className="text - xl font - semibold text - zion - purple mb - 4">Enterprise Solutions</h3>
             <ul className="space - y-2 text - zion - slate - light">
               <li className="flex items - center">
-                <CheckCircle className="h - 5 w - 5 text - green - 500 mr - 2"/>
+                <CheckCircle className="h - 5 w - 5 text - green - 500 mr - 2"      />
                 Comprehensive feature sets
               </li>
               <li className="flex items - center">
-                <CheckCircle className="h - 5 w - 5 text - green - 500 mr - 2"/>
+                <CheckCircle className="h - 5 w - 5 text - green - 500 mr - 2"      />
                 Custom integrations
               </li>
               <li className="flex items - center">
-                <CheckCircle className="h - 5 w - 5 text - green - 500 mr - 2"/>
+                <CheckCircle className="h - 5 w - 5 text - green - 500 mr - 2"      />
                 Dedicated support teams
               </li>
               <li className="flex items - center">
-                <CheckCircle className="h - 5 w - 5 text - green - 500 mr - 2"/>
+                <CheckCircle className="h - 5 w - 5 text - green - 500 mr - 2"      />
                 Advanced security features
               </li>
               <li className="flex items - center">
-                <CheckCircle className="h - 5 w - 5 text - green - 500 mr - 2"/>
+                <CheckCircle className="h - 5 w - 5 text - green - 500 mr - 2"      />
                 White - label options
               </li>
             </ul>
@@ -531,11 +531,11 @@ import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquar
           </p>
           <div className="flex flex - col sm:flex - row justify - center gap - 4">
             <Button size="lg" className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white">
-              <MessageSquare className="h - 5 w - 5 mr - 2"/>
+              <MessageSquare className="h - 5 w - 5 mr - 2"      />
               Get Recommendations
             </Button>
             <Button size="lg" variant="outline" className="border - zion - cyan text - zion - cyan hover:bg - zion - cyan / 10">
-              <Phone className="h - 5 w - 5 mr - 2"/>
+              <Phone className="h - 5 w - 5 mr - 2"      />
               Call + 1 302 464 0950
             </Button>
           </div>

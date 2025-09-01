@@ -10,15 +10,15 @@ const AIAutonomousLearning = () => {
         <meta
           name="description"
           content="Revolutionary AI autonomous learning platform that continuously acquires knowledge, adapts to new information, and improves performance with advanced AI capabilities and autonomous operation."
-        />
+              />
         <meta
           name="keywords"
           content="AI learning, autonomous learning, machine learning, knowledge acquisition, autonomous operations, AI learning platform"
-        />
+              />
         <link
           rel="canonical"
           href="https://ziontechgroup.com / ai - autonomous - learning"
-        />
+              />
       </Helmet>
 
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - lime - 900 to - slate - 900">

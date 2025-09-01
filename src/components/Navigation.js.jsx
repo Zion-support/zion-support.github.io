@@ -51,7 +51,7 @@ const Navigation = () => {
           <div className="flex - shrink - 0">
             <Link to="/" className="flex items - center space - x-2">
               <div className="w - 8 h - 8 bg - gradient - to - r from - zion - cyan to - zion - blue rounded - lg flex items - center justify - center">
-                <Brain className="w - 5 h - 5 text - white"/>
+                <Brain className="w - 5 h - 5 text - white"      />
               </div>
               <span className="text - xl font - bold text - white">Zion Tech Group</span>
             </Link>
@@ -63,16 +63,16 @@ const Navigation = () => {
             const Icon = item.icon;
             return (<Link key={item.name} to={item.href} className={`flex items - center space - x-1 px - 3 py - 2 rounded - lg text - sm font - medium transition - colors ${isActive (item.href) ? 'text - zion - cyan bg - zion - cyan / 10'
                     : 'text - zion - slate - light hover:text - white hover:bg - white / 10'}`}>
-                  <Icon className="w - 4 h - 4"/>
+                  <Icon className="w - 4 h - 4"      />
                   <span>{item.name}</span>
                 </Link>) }) }
 
             {/* Services Dropdown */}
             <div className="relative">
               <button onClick={ () => setIsServicesOpen (!isServicesOpen) } className="flex items - center space - x-1 px - 3 py - 2 rounded - lg text - sm font - medium text - zion - slate - light hover:text - white hover:bg - white / 10 transition - colors">
-                <Shield className="w - 4 h - 4"/>
+                <Shield className="w - 4 h - 4"      />
                 <span > Services</span>
-                <ChevronDown className={`w - 4 h - 4 transition - transform ${isServicesOpen ? 'rotate - 180' : ''}`}/>
+                <ChevronDown className={`w - 4 h - 4 transition - transform ${isServicesOpen ? 'rotate - 180' : ''}`}      />
               </button>
 
               {isServicesOpen && (<div className="absolute top - full left - 0 mt - 2 w - 80 bg - zion - blue - dark border border - zion - blue - light rounded - xl shadow - 2xl z - 50">
@@ -93,7 +93,7 @@ const Navigation = () => {
 
             {/* Contact Button */}
             <a href="tel:+13024640950" className="flex items - center space - x-2 px - 4 py - 2 bg - zion - cyan text - zion - blue - dark rounded - lg font - medium hover:bg - zion - cyan - light transition - colors">
-              <Phone className="w - 4 h - 4"/>
+              <Phone className="w - 4 h - 4"      />
               <span > Contact Us</span>
             </a>
           </div>
@@ -101,7 +101,7 @@ const Navigation = () => {
           {/* Mobile menu button */}
           <div className="lg:hidden">
             <button onClick={ () => setIsOpen (!isOpen) } className="text - zion - slate - light hover:text - white focus:outline - none focus:text - white">
-              {isOpen ? <X className="w - 6 h - 6"/> : <Menu className="w - 6 h - 6"/>}
+              {isOpen ? <X className="w - 6 h - 6"      /> : <Menu className="w - 6 h - 6"      />}
             </button>
           </div>
         </div>
@@ -114,7 +114,7 @@ const Navigation = () => {
                 const Icon = item.icon;
                 return (<Link key={item.name} to={item.href} className={`flex items - center space - x-2 px - 3 py - 2 rounded - lg text - base font - medium transition - colors ${isActive (item.href) ? 'text - zion - cyan bg - zion - cyan / 10'
                         : 'text - zion - slate - light hover:text - white hover:bg - white / 10'}`} onClick={ () => setIsOpen (false) }>
-                  <Icon className="w - 5 h - 5"/>
+                  <Icon className="w - 5 h - 5"      />
                   <span>{item.name}</span>
                 </Link>) }) }
 
@@ -136,7 +136,7 @@ const Navigation = () => {
             {/* Mobile Contact */}
             <div className="px - 3 py - 2 border - t border - zion - blue - light / 30">
               <a href="tel:+13024640950" className="flex items - center space - x-2 px - 3 py - 2 bg - zion - cyan text - zion - blue - dark rounded - lg font - medium">
-                <Phone className="w - 5 h - 5"/>
+                <Phone className="w - 5 h - 5"      />
                 <span > Call + 1 302 464 0950</span>
               </a>
             </div>

@@ -90,7 +90,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
         <div className="flex items-center mb-6">
           <div className="flex-shrink-0 h-12 w-12 rounded-full overflow-hidden mr-4">
-            <img loading="lazy" src={talent.profile_picture_url || "/placeholder.svg"} alt={talent.full_name} className="h-full w-full object-cover"/>
+            <img loading="lazy" src={talent.profile_picture_url || "/placeholder.svg"} alt={talent.full_name} className="h-full w-full object-cover"      />
           </div>
           <div>
             <h3 className="text-lg font-medium text-white">{talent.full_name}</h3>
@@ -101,9 +101,9 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
         <FormField control={form.control} name="title" render={({ field }) => (<FormItem>
               <FormLabel>Interview Title</FormLabel>
               <FormControl>
-                <Input placeholder="Brief title for the interview" {...field}/>
+                <Input placeholder="Brief title for the interview" {...field}      />
               </FormControl>
-              <FormMessage />
+              <FormMessage       />
             </FormItem>)}/>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -123,7 +123,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
 
 }>
                         {field.value ? (format(field.value, "PPP")) : (<span>Pick a date</span>)}
-                        <CalendarIcon className="ml-auto h-4 w-4 opacity-50"/>
+                        <CalendarIcon className="ml-auto h-4 w-4 opacity-50"      />
                       </Button>
                     </FormControl>
                   </PopoverTrigger>
@@ -140,7 +140,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
 } initialFocus className="p-3 pointer-events-auto"/>
                   </PopoverContent>
                 </Popover>
-                <FormMessage />
+                <FormMessage       />
               </FormItem>)}/>
 
           <FormField control={form.control} name="time" render={({ field }) => (<FormItem>
@@ -148,16 +148,16 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="Select time"/>
+                      <SelectValue placeholder="Select time"      />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent className="max-h-[300px]">
-                    {timeSlots.map((time) => (<SelectItem key={time} value={time}>
+                    {timeSlots.map((((((((time, index, index, index, index, index, index) => ({ ...((((((time, index, index, index, index, index, key: index })) => ({ ...(((((time, index, index, index, index, key: index })) => ({ ...((((time, index, index, index, key: index })) => ({ ...(((time, index, index, key: index })) => ({ ...((time, index, key: index })) => ({ ...(time, key: index })) => (<SelectItem key={time} value={time}>
                         {time}
                       </SelectItem>))}
                   </SelectContent>
                 </Select>
-                <FormMessage />
+                <FormMessage       />
               </FormItem>)}/>
         </div>
 
@@ -167,7 +167,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="Select duration"/>
+                      <SelectValue placeholder="Select duration"      />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
@@ -177,7 +177,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                     <SelectItem value="60">60 minutes</SelectItem>
                   </SelectContent>
                 </Select>
-                <FormMessage />
+                <FormMessage       />
               </FormItem>)}/>
 
           <FormField control={form.control} name="platform" render={({ field }) => (<FormItem>
@@ -185,7 +185,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="Select platform"/>
+                      <SelectValue placeholder="Select platform"      />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
@@ -195,24 +195,24 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                     <SelectItem value="other">Other</SelectItem>
                   </SelectContent>
                 </Select>
-                <FormMessage />
+                <FormMessage       />
               </FormItem>)}/>
         </div>
 
         {form.watch('platform') !== 'in-app' && (<FormField control={form.control} name="meetingLink" render={({ field }) => (<FormItem>
                 <FormLabel>Meeting Link (Optional)</FormLabel>
                 <FormControl>
-                  <Input placeholder={`Add your ${form.watch('platform')} link here`} {...field}/>
+                  <Input placeholder={`Add your ${form.watch('platform')} link here`} {...field}      />
                 </FormControl>
-                <FormMessage />
+                <FormMessage       />
               </FormItem>)}/>)}
 
         <FormField control={form.control} name="notes" render={({ field }) => (<FormItem>
               <FormLabel>Notes (Optional)</FormLabel>
               <FormControl>
-                <Textarea placeholder="Share what you'd like to discuss in this interview" className="h-20" {...field}/>
+                <Textarea placeholder="Share what you'd like to discuss in this interview" className="h-20" {...field}      />
               </FormControl>
-              <FormMessage />
+              <FormMessage       />
             </FormItem>)}/>
 
         <div className="flex justify-end gap-4 pt-4">

@@ -84,7 +84,7 @@ import { Brain, Zap, Target, Shield, Users, Globe, Cpu, Lightbulb, BarChart3 con
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
             <div className="inline-flex items-center px-4 py-2 bg-purple-500/10 text-purple-400 rounded-full text-sm font-medium mb-6">
-              <Brain className="w-4 h-4 mr-2"/>
+              <Brain className="w-4 h-4 mr-2"      />
               AI Autonomous Research
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -121,14 +121,14 @@ import { Brain, Zap, Target, Shield, Users, Globe, Cpu, Lightbulb, BarChart3 con
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {researchFeatures.map((feature, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300">
+            {researchFeatures.map((((((((feature, index, index, index, index, index, index, index) => ({ ...((((((feature, index, index, index, index, index, index, key: index })) => ({ ...(((((feature, index, index, index, index, index, key: index })) => ({ ...((((feature, index, index, index, index, key: index })) => ({ ...(((feature, index, index, index, key: index })) => ({ ...((feature, index, index, key: index })) => ({ ...(feature, index, key: index })) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="w-8 h-8 text-white"/>
+                  <feature.icon className="w-8 h-8 text-white"      />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
-                  {feature.benefits.map((benefit, idx) => (<li key={idx} className="text-sm text-gray-400 flex items-start">
+                  {feature.benefits.map((((((((benefit, idx, index, index, index, index, index, index) => ({ ...((((((benefit, idx, index, index, index, index, index, key: index })) => ({ ...(((((benefit, idx, index, index, index, index, key: index })) => ({ ...((((benefit, idx, index, index, index, key: index })) => ({ ...(((benefit, idx, index, index, key: index })) => ({ ...((benefit, idx, index, key: index })) => ({ ...(benefit, idx, key: index })) => (<li key={idx} className="text-sm text-gray-400 flex items-start">
                       <div className="w-1.5 h-1.5 bg-purple-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
                       {benefit}
                     </li>))}
@@ -152,9 +152,9 @@ import { Brain, Zap, Target, Shield, Users, Globe, Cpu, Lightbulb, BarChart3 con
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {applications.map((app, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-purple-500/50 transition-all duration-300">
+            {applications.map((((((((app, index, index, index, index, index, index, index) => ({ ...((((((app, index, index, index, index, index, index, key: index })) => ({ ...(((((app, index, index, index, index, index, key: index })) => ({ ...((((app, index, index, index, index, key: index })) => ({ ...(((app, index, index, index, key: index })) => ({ ...((app, index, index, key: index })) => ({ ...(app, index, key: index })) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-purple-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <app.icon className="w-8 h-8 text-white"/>
+                  <app.icon className="w-8 h-8 text-white"      />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{app.title}</h3>
                 <p className="text-gray-300">{app.description}</p>
@@ -176,7 +176,7 @@ import { Brain, Zap, Target, Shield, Users, Globe, Cpu, Lightbulb, BarChart3 con
                 to accelerate discoveries and gain competitive advantages.
               </p>
               <ul className="space-y-3">
-                {benefits.map((benefit, index) => (<li key={index} className="flex items-center text-gray-300">
+                {benefits.map((((((((benefit, index, index, index, index, index, index, index) => ({ ...((((((benefit, index, index, index, index, index, index, key: index })) => ({ ...(((((benefit, index, index, index, index, index, key: index })) => ({ ...((((benefit, index, index, index, index, key: index })) => ({ ...(((benefit, index, index, index, key: index })) => ({ ...((benefit, index, index, key: index })) => ({ ...(benefit, index, key: index })) => (<li key={index} className="flex items-center text-gray-300">
                     <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
                     {benefit}
                   </li>))}
@@ -184,7 +184,7 @@ import { Brain, Zap, Target, Shield, Users, Globe, Cpu, Lightbulb, BarChart3 con
             </div>
             <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl p-8 border border-purple-500/30">
               <div className="text-center">
-                <Lightbulb className="w-24 h-24 text-purple-400 mx-auto mb-4"/>
+                <Lightbulb className="w-24 h-24 text-purple-400 mx-auto mb-4"      />
                 <h3 className="text-2xl font-bold text-white mb-2">Research Innovation</h3>
                 <p className="text-gray-300 mb-6">
                   We're at the forefront of AI autonomous research technology,
@@ -225,7 +225,7 @@ import { Brain, Zap, Target, Shield, Users, Globe, Cpu, Lightbulb, BarChart3 con
 };
 // Icon components
 const BookOpen = ({ className }) => (<svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"      />
   </svg>);
 export default AIAutonomousResearch;
 }}}

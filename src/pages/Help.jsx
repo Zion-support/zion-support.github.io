@@ -203,7 +203,7 @@ export default function Help () {
           </p>
           {/* Search Bar */}
           <div className="max - w-2xl mx - auto relative">
-            <Search className="absolute left - 4 top - 1/2 transform - translate - y-1 / 2 text - zion - slate - light w - 5 h - 5" />
+            <Search className="absolute left - 4 top - 1/2 transform - translate - y-1 / 2 text - zion - slate - light w - 5 h - 5"       />
             <input
               type="text"
               placeholder="Search for help articles, guides, or topics..."
@@ -262,12 +262,12 @@ export default function Help () {
                   className="w - full px - 6 py - 4 text - left flex items - center justify - between hover:bg - zion - cyan / 10 transition - colors"
                 >
                   <div className="flex items - center space - x-3">
-                    <category.icon className="w - 6 h - 6 text - zion - cyan" />
+                    <category.icon className="w - 6 h - 6 text - zion - cyan"       />
                     <h3 className="text - lg font - semibold text - white">
                       {category.title}
                     </h3>
                   </div>
-                  {openCategories.includes (category.id) ? (<ChevronUp className="w - 5 h - 5 text - zion - cyan" />) : (<ChevronDown className="w - 5 h - 5 text - zion - cyan" />) }
+                  {openCategories.includes (category.id) ? (<ChevronUp className="w - 5 h - 5 text - zion - cyan"       />) : (<ChevronDown className="w - 5 h - 5 text - zion - cyan"       />) }
                 </button>
                 {openCategories.includes (category.id) && (<div className="px - 6 pb - 4 border - t border - zion - cyan / 20">
                     <div className="space - y-3 pt - 4">
@@ -286,14 +286,14 @@ export default function Help () {
                             className="inline - flex items - center space - x-2 text - zion - cyan hover:text - zion - cyan - light transition - colors text - sm font - medium"
                           >
                             <span > Read Article</span>
-                            <ArrowRight className="w - 4 h - 4" />
+                            <ArrowRight className="w - 4 h - 4"       />
                           </Link>
                         </div>) ) }
                     </div>
                   </div>) }
               </div>) ) }
             {filteredCategories.length === 0 && (<div className="text - center py - 16">
-                <FileText className="w - 16 h - 16 text - zion - slate - light mx - auto mb - 4" />
+                <FileText className="w - 16 h - 16 text - zion - slate - light mx - auto mb - 4"       />
                 <h3 className="text - xl font - bold text - white mb - 2">
                   No help articles found
                 </h3>
@@ -314,7 +314,7 @@ export default function Help () {
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8 max - w-6xl mx - auto">
             <div className="bg - zion - blue - dark / 50 rounded - lg border border - zion - cyan / 20 overflow - hidden">
               <div className="aspect - video bg - zion - blue - dark / 30 flex items - center justify - center">
-                <Video className="w - 16 h - 16 text - zion - cyan" />
+                <Video className="w - 16 h - 16 text - zion - cyan"       />
               </div>
               <div className="p - 6">
                 <h3 className="text - lg font - semibold text - white mb - 2">
@@ -331,7 +331,7 @@ export default function Help () {
             </div>
             <div className="bg - zion - blue - dark / 50 rounded - lg border border - zion - cyan / 20 overflow - hidden">
               <div className="aspect - video bg - zion - blue - dark / 30 flex items - center justify - center">
-                <Video className="w - 16 h - 16 text - zion - cyan" />
+                <Video className="w - 16 h - 16 text - zion - cyan"       />
               </div>
               <div className="p - 6">
                 <h3 className="text - lg font - semibold text - white mb - 2">
@@ -347,7 +347,7 @@ export default function Help () {
             </div>
             <div className="bg - zion - blue - dark / 50 rounded - lg border border - zion - cyan / 20 overflow - hidden">
               <div className="aspect - video bg - zion - blue - dark / 30 flex items - center justify - center">
-                <Video className="w - 16 h - 16 text - zion - cyan" />
+                <Video className="w - 16 h - 16 text - zion - cyan"       />
               </div>
               <div className="p - 6">
                 <h3 className="text - lg font - semibold text - white mb - 2">
@@ -376,7 +376,7 @@ export default function Help () {
           </p>
           <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8 max - w-4xl mx - auto">
             <div className="bg - zion - blue - dark / 50 p - 6 rounded - lg border border - zion - cyan / 20">
-              <MessageCircle className="w - 12 h - 12 text - zion - cyan mx - auto mb - 4" />
+              <MessageCircle className="w - 12 h - 12 text - zion - cyan mx - auto mb - 4"       />
               <h3 className="text - lg font - semibold text - white mb - 2">
                 Live Chat
               </h3>
@@ -388,7 +388,7 @@ export default function Help () {
               </button>
             </div>
             <div className="bg - zion - blue - dark / 50 p - 6 rounded - lg border border - zion - cyan / 20">
-              <Phone className="w - 12 h - 12 text - zion - cyan mx - auto mb - 4" />
+              <Phone className="w - 12 h - 12 text - zion - cyan mx - auto mb - 4"       />
               <h3 className="text - lg font - semibold text - white mb - 2">
                 Phone Support
               </h3>
@@ -403,7 +403,7 @@ export default function Help () {
               </a>
             </div>
             <div className="bg - zion - blue - dark / 50 p - 6 rounded - lg border border - zion - cyan / 20">
-              <Mail className="w - 12 h - 12 text - zion - cyan mx - auto mb - 4" />
+              <Mail className="w - 12 h - 12 text - zion - cyan mx - auto mb - 4"       />
               <h3 className="text - lg font - semibold text - white mb - 2">
                 Email Support
               </h3>

@@ -452,11 +452,11 @@ import GeneratedComponent from "./GeneratedComponent";
 
 describe('GeneratedComponent', () => {
   it('renders without crashing', () => {
-    render(<GeneratedComponent />);
+    render(<GeneratedComponent       />);
     expect(screen.getByText('Generated Component')).toBeInTheDocument()});
 
   it('handles user interactions', () => {
-    render(<GeneratedComponent />);
+    render(<GeneratedComponent       />);
     // TODO: Add specific test cases based on component functionality
   });
 });`;
@@ -494,7 +494,7 @@ describe('Generated Code Tests', () => {
  *
  * @component
  * @example
- * <GeneratedComponent />
+ * <GeneratedComponent       />
  */
 export const GeneratedComponent = () => {
   // Component implementation

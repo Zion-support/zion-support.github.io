@@ -22,7 +22,7 @@ import { motion } from 'framer - motion';
         <div className="relative z - 10 max - w-7xl mx - auto text - center">
           <div className="mb - 8">
             <div className="inline - flex items - center px - 4 py - 2 rounded - full bg - cyan - 500 / 20 border border - cyan - 400 / 50 text - cyan - 400 text - sm font - medium mb - 6">
-              <Building2 className="w - 4 h - 4 mr - 2" />
+              <Building2 className="w - 4 h - 4 mr - 2"       />
               Enterprise Solutions
             </div>
             <h1 className="text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - cyan - 400 via - blue - 400 to - purple - 400 bg - clip - text text - transparent mb - 6">
@@ -48,7 +48,7 @@ import { motion } from 'framer - motion';
               className="bg - gradient - to - br from - gray - 800 / 50 to - gray - 900 / 50 rounded - 2xl p - 6 border border - cyan - 500 / 30"
             >
               <div className="w - 12 h - 12 bg - cyan - 500 / 20 rounded - lg flex items - center justify - center mb - 4">
-                <Server className="w - 6 h - 6 text - cyan - 400" />
+                <Server className="w - 6 h - 6 text - cyan - 400"       />
               </div>
               <h3 className="text - xl font - bold text - white mb - 3">
                 Infrastructure Management
@@ -66,7 +66,7 @@ import { motion } from 'framer - motion';
               className="bg - gradient - to - br from - gray - 800 / 50 to - gray - 900 / 50 rounded - 2xl p - 6 border border - cyan - 500 / 30"
             >
               <div className="w - 12 h - 12 bg - cyan - 500 / 20 rounded - lg flex items - center justify - center mb - 4">
-                <Shield className="w - 6 h - 6 text - cyan - 400" />
+                <Shield className="w - 6 h - 6 text - cyan - 400"       />
               </div>
               <h3 className="text - xl font - bold text - white mb - 3">
                 Security & Compliance
@@ -84,7 +84,7 @@ import { motion } from 'framer - motion';
               className="bg - gradient - to - br from - gray - 800 / 50 to - gray - 900 / 50 rounded - 2xl p - 6 border border - cyan - 500 / 30"
             >
               <div className="w - 12 h - 12 bg - cyan - 500 / 20 rounded - lg flex items - center justify - center mb - 4">
-                <Zap className="w - 6 h - 6 text - cyan - 400" />
+                <Zap className="w - 6 h - 6 text - cyan - 400"       />
               </div>
               <h3 className="text - xl font - bold text - white mb - 3">
                 Performance Optimization
@@ -102,7 +102,7 @@ import { motion } from 'framer - motion';
               className="bg - gradient - to - br from - gray - 800 / 50 to - gray - 900 / 50 rounded - 2xl p - 6 border border - cyan - 500 / 30"
             >
               <div className="w - 12 h - 12 bg - cyan - 500 / 20 rounded - lg flex items - center justify - center mb - 4">
-                <Users className="w - 6 h - 6 text - cyan - 400" />
+                <Users className="w - 6 h - 6 text - cyan - 400"       />
               </div>
               <h3 className="text - xl font - bold text - white mb - 3">
                 User Management
@@ -120,7 +120,7 @@ import { motion } from 'framer - motion';
               className="bg - gradient - to - br from - gray - 800 / 50 to - gray - 900 / 50 rounded - 2xl p - 6 border border - cyan - 500 / 30"
             >
               <div className="w - 12 h - 12 bg - cyan - 500 / 20 rounded - lg flex items - center justify - center mb - 4">
-                <Globe className="w - 6 h - 6 text - cyan - 400" />
+                <Globe className="w - 6 h - 6 text - cyan - 400"       />
               </div>
               <h3 className="text - xl font - bold text - white mb - 3">
                 Global Deployment
@@ -138,7 +138,7 @@ import { motion } from 'framer - motion';
               className="bg - gradient - to - br from - gray - 800 / 50 to - gray - 900 / 50 rounded - 2xl p - 6 border border - cyan - 500 / 30"
             >
               <div className="w - 12 h - 12 bg - cyan - 500 / 20 rounded - lg flex items - center justify - center mb - 4">
-                <Building2 className="w - 6 h - 6 text - cyan - 400" />
+                <Building2 className="w - 6 h - 6 text - cyan - 400"       />
               </div>
               <h3 className="text - xl font - bold text - white mb - 3">
                 Enterprise Support

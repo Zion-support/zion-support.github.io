@@ -21,13 +21,13 @@ export default function AdminDashboard() {
         description="Gain insight into your marketplace with powerful administration tools."
         keywords="admin dashboard, analytics, manage listings"
         canonical="https://app.ziontechgroup.com/features/admin-dashboard"
-      />
+            />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
-      <Header />
+      <Header       />
       <main className="bg-background text-white py-12">
         <div className="container mx-auto px-4 md:px-6">
           <GradientHeading className="mb-4 text-center">
@@ -42,7 +42,7 @@ export default function AdminDashboard() {
             src="https://placehold.co/800x400"
             alt="Screenshot of admin dashboard"
             className="rounded-lg shadow-xl mx-auto mb-12"
-          />
+                />
           <h2 className="text-2xl font-bold mb-4">Benefits &amp; Use Cases</h2>
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
             <li>Track sales and service metrics in real time.</li>
@@ -73,7 +73,7 @@ export default function AdminDashboard() {
           </div>
         </div>
       </main>
-      <Footer />
+      <Footer       />
     </>
   );
 }

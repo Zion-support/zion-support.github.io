@@ -100,13 +100,13 @@ export function KanbanBoard({ jobId }) {
       <div
         className={`grid grid-cols-1 ${!isMobile ? 'md:grid-cols-3 lg:grid-cols-5' : ''} gap-4`}
       >
-        {Array.from({ length: isMobile ? 1 : 5 }).map((_, i) => (
+        {Array.from({ length: isMobile ? 1 : 5 }).map((((((((_, i, index, index, index, index, index, index) => ({ ...((((((_, i, index, index, index, index, index, key: index })) => ({ ...(((((_, i, index, index, index, index, key: index })) => ({ ...((((_, i, index, index, index, key: index })) => ({ ...(((_, i, index, index, key: index })) => ({ ...((_, i, index, key: index })) => ({ ...(_, i, key: index })) => (
           <Card key={i} className="h-[500px]">
             <CardHeader>
-              <Skeleton className="h-8 w-24" />
+              <Skeleton className="h-8 w-24"       />
             </CardHeader>
             <CardContent>
-              <Skeleton className="h-[400px] w-full" />
+              <Skeleton className="h-[400px] w-full"       />
             </CardContent>
           </Card>
         ))}
@@ -130,7 +130,7 @@ export function KanbanBoard({ jobId }) {
       <div
         className={`grid ${isMobile ? 'grid-cols-1 gap-y-6' : 'grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4'} overflow-x-auto`}
       >
-        {COLUMNS.map(column => (
+        {COLUMNS.map(((((((column => (
           <KanbanColumn
             key={column.id}
             id={column.id}
@@ -138,8 +138,62 @@ export function KanbanBoard({ jobId }) {
             description={column.description}
             applications={columns[column.id] || []}
             count={columns[column.id]?.length || 0}
-          />
-        ))}
+                />
+        , index, index, index, index, index, index) => ({ ...(((((column => (
+          <KanbanColumn
+            key={column.id}
+            id={column.id}
+            title={column.title}
+            description={column.description}
+            applications={columns[column.id] || []}
+            count={columns[column.id]?.length || 0}
+                />
+        , index, index, index, index, index, key: index })) => ({ ...((((column => (
+          <KanbanColumn
+            key={column.id}
+            id={column.id}
+            title={column.title}
+            description={column.description}
+            applications={columns[column.id] || []}
+            count={columns[column.id]?.length || 0}
+                />
+        , index, index, index, index, key: index })) => ({ ...(((column => (
+          <KanbanColumn
+            key={column.id}
+            id={column.id}
+            title={column.title}
+            description={column.description}
+            applications={columns[column.id] || []}
+            count={columns[column.id]?.length || 0}
+                />
+        , index, index, index, key: index })) => ({ ...((column => (
+          <KanbanColumn
+            key={column.id}
+            id={column.id}
+            title={column.title}
+            description={column.description}
+            applications={columns[column.id] || []}
+            count={columns[column.id]?.length || 0}
+                />
+        , index, index, key: index })) => ({ ...(column => (
+          <KanbanColumn
+            key={column.id}
+            id={column.id}
+            title={column.title}
+            description={column.description}
+            applications={columns[column.id] || []}
+            count={columns[column.id]?.length || 0}
+                />
+        , index, key: index })) => ({ ...column => (
+          <KanbanColumn
+            key={column.id}
+            id={column.id}
+            title={column.title}
+            description={column.description}
+            applications={columns[column.id] || []}
+            count={columns[column.id]?.length || 0}
+                />
+        , key: index })))}
       </div>
     </DragDropContext>
   );

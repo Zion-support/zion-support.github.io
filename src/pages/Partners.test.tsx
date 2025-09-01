@@ -1,16 +1,15 @@
 import { render, screen } from '@testing - library / react';
-import React from 'react';
 import Partners from './Partners';
-
-
-describe ('Partners', () => {
-  it ('renders without crashing', () => {
-    render (<Partners />) ;
+;
+;
+describe ('Partners', () => {;
+  it ('renders without crashing', () => {;
+    render (<Partners       />) ;
     expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () ;
   }) ;
-
-  it ('displays expected content', () => {
-    render (<Partners />) ;
-    // Add specific test assertions based on component content
+;
+  it ('displays expected content', () => {;
+    render (<Partners       />) ;
+    // Add specific test assertions based on component content;
   }) ;
 }) ;

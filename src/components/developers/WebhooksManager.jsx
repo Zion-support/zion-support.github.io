@@ -61,7 +61,7 @@ export function WebhooksManager() {
     return (<Card className="bg-zinc-900 border-zinc-800 text-white">
       <CardHeader>
         <CardTitle className="text-xl flex items-center">
-          <Webhook className="mr-2" size={20}/> Webhooks
+          <Webhook className="mr-2" size={20}      /> Webhooks
         </CardTitle>
         <CardDescription className="text-zinc-400">
           Set up webhooks to get notified when events happen in your Zion account.
@@ -77,7 +77,7 @@ export function WebhooksManager() {
           <Dialog open={showCreateDialog} onOpenChange={setShowCreateDialog}>
             <DialogTrigger asChild>
               <Button variant="default">
-                <Plus size={16} className="mr-1"/> Add Webhook
+                <Plus size={16} className="mr-1"      /> Add Webhook
               </Button>
             </DialogTrigger>
             <DialogContent className="bg-zinc-900 border-zinc-800 text-white">
@@ -113,7 +113,7 @@ export function WebhooksManager() {
                 <div className="space-y-2">
                   <Label>Event Types</Label>
                   <div className="grid gap-2 pt-2">
-                    {eventOptions.map((event) => (<div key={event.value} className="flex items-center space-x-2">
+                    {eventOptions.map((((((((event, index, index, index, index, index, index) => ({ ...((((((event, index, index, index, index, index, key: index })) => ({ ...(((((event, index, index, index, index, key: index })) => ({ ...((((event, index, index, index, key: index })) => ({ ...(((event, index, index, key: index })) => ({ ...((event, index, key: index })) => ({ ...(event, key: index })) => (<div key={event.value} className="flex items-center space-x-2">
                         <Checkbox id={event.value} checked={selectedEvents.includes(event.value)} onCheckedChange={() => toggleEvent(event.value)}/>
                         <Label htmlFor={event.value} className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
                           {event.label}
@@ -143,15 +143,15 @@ export function WebhooksManager() {
         {/* Webhooks List */}
         <div className="space-y-4">
           {loading ? (<div className="text-center py-8 text-zinc-500">Loading webhooks...</div>) : webhooks.length === 0 ? (<div className="text-center py-8 text-zinc-500">
-              <Webhook className="mx-auto mb-2 opacity-30" size={24}/>
+              <Webhook className="mx-auto mb-2 opacity-30" size={24}      />
               <p>No webhooks found.</p>
               <p className="text-sm mt-1">Create one to receive event notifications.</p>
-            </div>) : (webhooks.map((webhook) => (<div key={webhook.id} className="p-4 border border-zinc-800 rounded-lg">
+            </div>) : (webhooks.map((((((((webhook, index, index, index, index, index, index) => ({ ...((((((webhook, index, index, index, index, index, key: index })) => ({ ...(((((webhook, index, index, index, index, key: index })) => ({ ...((((webhook, index, index, index, key: index })) => ({ ...(((webhook, index, index, key: index })) => ({ ...((webhook, index, key: index })) => ({ ...(webhook, key: index })) => (<div key={webhook.id} className="p-4 border border-zinc-800 rounded-lg">
                 <div className="flex items-center justify-between">
                   <div>
                     <h3 className="font-medium">{webhook.name}</h3>
                     <div className="flex items-center text-sm text-zinc-400 mt-1">
-                      <Globe size={14} className="mr-1"/>
+                      <Globe size={14} className="mr-1"      />
                       <span className="max-w-md truncate">{webhook.url}</span>
                     </div>
                   </div>
@@ -176,15 +176,15 @@ export function WebhooksManager() {
                     <DropdownMenu>
                       <DropdownMenuTrigger asChild>
                         <Button variant="ghost" size="icon">
-                          <MoreVertical size={16}/>
+                          <MoreVertical size={16}      />
                         </Button>
                       </DropdownMenuTrigger>
                       <DropdownMenuContent align="end" className="bg-zinc-900 border-zinc-800 text-white">
                         <DropdownMenuItem onClick={() => setShowTestDialog(webhook.id)} className="cursor-pointer">
-                          <PlayCircle size={14} className="mr-2"/> Test
+                          <PlayCircle size={14} className="mr-2"      /> Test
                         </DropdownMenuItem>
                         <DropdownMenuItem onClick={() => setShowDeleteConfirm(webhook.id)} className="cursor-pointer text-red-500">
-                          <X size={14} className="mr-2"/> Delete
+                          <X size={14} className="mr-2"      /> Delete
                         </DropdownMenuItem>
                       </DropdownMenuContent>
                     </DropdownMenu>
@@ -192,7 +192,7 @@ export function WebhooksManager() {
                 </div>
 
                 <div className="mt-3 flex flex-wrap gap-2">
-                  {webhook.event_types.map((event) => (<Badge key={event} variant="secondary" className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800">
+                  {webhook.event_types.map((((((((event, index, index, index, index, index, index) => ({ ...((((((event, index, index, index, index, index, key: index })) => ({ ...(((((event, index, index, index, index, key: index })) => ({ ...((((event, index, index, index, key: index })) => ({ ...(((event, index, index, key: index })) => ({ ...((event, index, key: index })) => ({ ...(event, key: index })) => (<Badge key={event} variant="secondary" className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800">
                       {event}
                     </Badge>))}
                 </div>
@@ -210,7 +210,7 @@ export function WebhooksManager() {
           Webhooks will be sent with HTTPS POST requests to your endpoint.
         </div>
         <Button variant="outline" size="sm" onClick={fetchWebhooks}>
-          <RefreshCw size={14} className="mr-1"/> Refresh
+          <RefreshCw size={14} className="mr-1"      /> Refresh
         </Button>
       </CardFooter>
 
@@ -238,10 +238,10 @@ export function WebhooksManager() {
                   <Label htmlFor="test-event-type">Event Type</Label>
                   <Select value={testEventType} onValueChange={(value) => setTestEventType(value)}>
                     <SelectTrigger className="bg-zinc-800 border-zinc-700">
-                      <SelectValue placeholder="Select an event type"/>
+                      <SelectValue placeholder="Select an event type"      />
                     </SelectTrigger>
                     <SelectContent className="bg-zinc-900 border-zinc-800">
-                      {eventOptions.map((option) => (<SelectItem key={option.value} value={option.value}>
+                      {eventOptions.map((((((((option, index, index, index, index, index, index) => ({ ...((((((option, index, index, index, index, index, key: index })) => ({ ...(((((option, index, index, index, index, key: index })) => ({ ...((((option, index, index, index, key: index })) => ({ ...(((option, index, index, key: index })) => ({ ...((option, index, key: index })) => ({ ...(option, key: index })) => (<SelectItem key={option.value} value={option.value}>
                           {option.label}
                         </SelectItem>))}
                     </SelectContent>

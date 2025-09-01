@@ -110,10 +110,10 @@ import { motion } from 'framer - motion';
             window.removeEventListener ('resize', handleResize) }}, [intensity, showParticles]) ;
     return (<div className="fixed inset - 0 overflow - hidden pointer - events - none z - 0">
       {/* Quantum Matrix Canvas */}
-      {showParticles && (<canvas ref={canvasRef} className="absolute inset - 0 w - full h - full" style={{ opacity: intensity === 'high' ? 0.8 : intensity === 'medium' ? 0.6 : 0.4 }}/>) }
+      {showParticles && (<canvas ref={canvasRef} className="absolute inset - 0 w - full h - full" style={{ opacity: intensity === 'high' ? 0.8 : intensity === 'medium' ? 0.6 : 0.4 }}      />) }
 
       {/* Cyber Grid Background */}
-      {showGrid && (<div className="absolute inset - 0 cyber - grid - dense opacity - 20"/>) }
+      {showGrid && (<div className="absolute inset - 0 cyber - grid - dense opacity - 20"      />) }
 
       {/* Holographic Projections */}
       {showHolograms && (<>
@@ -137,7 +137,7 @@ import { motion } from 'framer - motion';
                 repeat: Infinity,
   ease: "easeInOut"
 
-}}/>
+}}      />
 
           <motion.div className="absolute top - 40 right - 32 w - 24 h - 24" style = {
   {
@@ -158,7 +158,7 @@ import { motion } from 'framer - motion';
                 repeat: Infinity,
   ease: "easeInOut"
 
-}}/>
+}}      />
 
           <motion.div className="absolute bottom - 32 left - 1/4 w - 20 h - 20 rounded - full" style = {
   {
@@ -177,7 +177,7 @@ import { motion } from 'framer - motion';
                 repeat: Infinity,
   ease: "linear"
 
-}}/>
+}}      />
 
           {/* Matrix Rain Effect */}
           <div className="absolute inset - 0 overflow - hidden">
@@ -221,7 +221,7 @@ import { motion } from 'framer - motion';
             repeat: Infinity,
   ease: "easeInOut"
 
-}}/>
+}}      />
 
         <motion.div className="absolute bottom - 1/4 right - 1/4 w - 48 h - 48 rounded - full" style = {
   {
@@ -241,7 +241,7 @@ import { motion } from 'framer - motion';
             repeat: Infinity,
   ease: "easeInOut"
 
-}}/>
+}}      />
       </div>
 
       {/* Neural Network Nodes */}
@@ -261,6 +261,6 @@ import { motion } from 'framer - motion';
                 repeat: Infinity,
   ease: "easeInOut"
 
-}}/>) ) }
+}}      />) ) }
       </div>
     </div>) };

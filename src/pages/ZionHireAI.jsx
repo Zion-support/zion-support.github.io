@@ -60,7 +60,7 @@ const ZionHireAI = () => {
               src="https://placehold.co / 600x400 / 192134 / 9b87f5?text = Zion + Hire + AI"
               alt="Zion Hire AI Dashboard"
               className="relative z - 10 rounded - lg shadow - xl mx - auto"
-            />
+                  />
           </div>
 
           {/* Contact Section */}
@@ -74,17 +74,17 @@ const ZionHireAI = () => {
 
             <div className="grid md:grid - cols - 3 gap - 6 text - center mb - 8">
               <div>
-                <Phone className="w - 8 h - 8 text - zion - cyan mx - auto mb - 2"/>
+                <Phone className="w - 8 h - 8 text - zion - cyan mx - auto mb - 2"      />
                 <p className="text - white font - semibold">Phone</p>
                 <p className="text - zion - slate - light">+1 302 464 0950</p>
               </div>
               <div>
-                <Mail className="w - 8 h - 8 text - zion - cyan mx - auto mb - 2"/>
+                <Mail className="w - 8 h - 8 text - zion - cyan mx - auto mb - 2"      />
                 <p className="text - white font - semibold">Email</p>
                 <p className="text - zion - slate - light">kleber@ziontechgroup.com</p>
               </div>
               <div>
-                <MapPin className="w - 8 h - 8 text - zion - cyan mx - auto mb - 2"/>
+                <MapPin className="w - 8 h - 8 text - zion - cyan mx - auto mb - 2"      />
                 <p className="text - white font - semibold">Address</p>
                 <p className="text - zion - slate - light">364 E Main St STE 1008 < br />Middletown DE 19709</p>
               </div>
@@ -97,13 +97,13 @@ const ZionHireAI = () => {
                 target="_blank"
                 rel="noopener noreferrer"
 
-                Start Your Free Trial Today < ArrowRight className="w - 5 h - 5 ml - 2"/>
+                Start Your Free Trial Today < ArrowRight className="w - 5 h - 5 ml - 2"      />
               </a>
             </div>
           </div>
         </div>
       </main>
-      <Footer />
+      <Footer       />
     </>) };
 
 }

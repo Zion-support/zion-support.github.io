@@ -32,25 +32,25 @@ const iotUseCases = [
     title: 'Smart Manufacturing',
     description:
       'Monitor production lines, predict maintenance needs, and optimize manufacturing processes',
-    icon: <Cpu className="h - 6 w - 6" />,
+    icon: <Cpu className="h - 6 w - 6"       />,
   },
   {
     title: 'Smart Cities',
     description:
       'Manage traffic, utilities, and public services with connected IoT infrastructure',
-    icon: <Globe className="h - 6 w - 6" />,
+    icon: <Globe className="h - 6 w - 6"       />,
   },
   {
     title: 'Connected Healthcare',
     description:
       'Remote patient monitoring, medical device management, and healthcare analytics',
-    icon: <Activity className="h - 6 w - 6" />,
+    icon: <Activity className="h - 6 w - 6"       />,
   },
   {
     title: 'Smart Agriculture',
     description:
       'Precision farming, environmental monitoring, and automated irrigation systems',
-    icon: <Settings className="h - 6 w - 6" />,
+    icon: <Settings className="h - 6 w - 6"       />,
   },
 ];
   return (<div className="min - h-screen bg - background">
@@ -161,7 +161,7 @@ const iotUseCases = [
                     src={service.image}
                     alt={service.title}
                     className="w - full h - full object - cover hover:scale - 105 transition - transform duration - 300"
-                  />
+                        />
                 </div>
                 <CardHeader className="pb - 3">
                   <div className="flex justify - between items - start mb - 2">
@@ -203,7 +203,7 @@ const iotUseCases = [
                         key={index}
                         className="flex items - center gap - 2 text - sm"
                       >
-                        <CheckCircle className="h - 4 w - 4 text - green - 500 flex - shrink - 0" />
+                        <CheckCircle className="h - 4 w - 4 text - green - 500 flex - shrink - 0"       />
                         <span>{feature}</span>
                       </li>) ) }
                   </ul>
@@ -259,6 +259,6 @@ const iotUseCases = [
         </div>
       </section>
 
-      <TrustedBySection />
+      <TrustedBySection       />
     </div>) ;
 }

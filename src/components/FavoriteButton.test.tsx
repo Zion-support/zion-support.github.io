@@ -1,16 +1,15 @@
 import { render, screen } from '@testing - library / react';
-import React from 'react';
 import FavoriteButton from './FavoriteButton';
-
-
-describe ('FavoriteButton', () => {
-  it ('renders without crashing', () => {
-    render (<FavoriteButton />) ;
+;
+;
+describe ('FavoriteButton', () => {;
+  it ('renders without crashing', () => {;
+    render (<FavoriteButton       />) ;
     expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () ;
   }) ;
-
-  it ('displays expected content', () => {
-    render (<FavoriteButton />) ;
-    // Add specific test assertions based on component content
+;
+  it ('displays expected content', () => {;
+    render (<FavoriteButton       />) ;
+    // Add specific test assertions based on component content;
   }) ;
 }) ;

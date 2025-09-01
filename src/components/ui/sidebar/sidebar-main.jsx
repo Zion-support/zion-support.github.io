@@ -41,7 +41,7 @@ export const Sidebar = React.forwardRef((props, ref) => {
 
 
 
-}/>
+}      />
       <div className = {
   cn("duration-200 fixed inset-y-0 z-10 hidden h-svh w-[--sidebar-width] transition-[left,right,width] ease-linear md:flex", props.side === "left"
             ? "left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)]"
@@ -75,7 +75,7 @@ export const SidebarRail = React.forwardRef((props, ref) => {
 
 
 
-} {...props}/>);
+} {...props}      />);
 });
 SidebarRail.displayName = "SidebarRail";
 export const SidebarInset = React.forwardRef((props, ref) => {
@@ -88,7 +88,7 @@ export const SidebarInset = React.forwardRef((props, ref) => {
 
 
 
-} {...props}/>);
+} {...props}      />);
 });
 SidebarInset.displayName = "SidebarInset";
 }}

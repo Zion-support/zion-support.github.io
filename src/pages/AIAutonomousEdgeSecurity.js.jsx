@@ -10,15 +10,15 @@ const AIAutonomousEdgeSecurity = () => {
         <meta
           name="description"
           content="Revolutionary AI autonomous edge security platform that continuously secures edge devices, detects threats, and protects edge infrastructure with advanced AI capabilities and autonomous operation."
-        />
+              />
         <meta
           name="keywords"
           content="AI edge security, autonomous edge security, edge protection, threat detection, autonomous operations, AI edge security platform"
-        />
+              />
         <link
           rel="canonical"
           href="https://ziontechgroup.com / ai - autonomous - edge - security"
-        />
+              />
       </Helmet>
 
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - violet - 900 to - slate - 900">

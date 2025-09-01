@@ -54,11 +54,11 @@ export default function ResetPasswordPage () {
         <h2 className="text - 2xl font - bold text - center">Reset Your Password</h2>
         {error && <p className="text - red - 500 text - sm text - center">{error}</p>}
         <div>
-          <Input type="password" name="password" placeholder="Enter new password" value={password} onChange={handlePasswordChange} disabled={isLoading}/>
+          <Input type="password" name="password" placeholder="Enter new password" value={password} onChange={handlePasswordChange} disabled={isLoading}      />
           {/* Assuming PasswordStrengthMeter is available and configured */}
-          {/* <PasswordStrengthMeter password={password} /> */}
+          {/* <PasswordStrengthMeter password={password}       /> */}
         </div>
-        <Input type="password" name="confirmPassword" placeholder="Confirm new password" value={confirmPassword} onChange={handleConfirmPasswordChange} disabled={isLoading}/>
+        <Input type="password" name="confirmPassword" placeholder="Confirm new password" value={confirmPassword} onChange={handleConfirmPasswordChange} disabled={isLoading}      />
         <Button type="submit" className="w - full" disabled={isLoading}>
           {isLoading ? 'Resetting Password...' : 'Reset Password'}
         </Button>

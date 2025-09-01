@@ -10,15 +10,15 @@ const AIAutonomousDevOpsSecurity = () => {
         <meta
           name="description"
           content="Revolutionary AI autonomous DevOps security platform that continuously secures DevOps pipelines, detects threats, and protects DevOps infrastructure with advanced AI capabilities and autonomous operation."
-        />
+              />
         <meta
           name="keywords"
           content="AI DevOps security, autonomous DevOps security, DevOps protection, threat detection, autonomous operations, AI DevOps security platform"
-        />
+              />
         <link
           rel="canonical"
           href="https://ziontechgroup.com / ai - autonomous - devops - security"
-        />
+              />
       </Helmet>
 
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - orange - 900 to - slate - 900">

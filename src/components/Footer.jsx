@@ -46,7 +46,7 @@ import { motion } from 'framer - motion';
           animate={{ opacity: 1, scale: 1 }}
           className="flex items - center gap - 3 p - 3 bg - green - 500 / 20 border border - green - 500 / 30 rounded - lg"
         >
-          <CheckCircle className="w - 5 h - 5 text - green - 400" />
+          <CheckCircle className="w - 5 h - 5 text - green - 400"       />
           <span className="text - green - 400 text - sm">
             Successfully subscribed!
           </span>
@@ -66,7 +66,7 @@ import { motion } from 'framer - motion';
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            {isLoading ? (<div className="w - 4 h - 4 border - 2 border - white border - t-transparent rounded - full animate - spin"></div>) : (<Send className="w - 4 h - 4" />) }
+            {isLoading ? (<div className="w - 4 h - 4 border - 2 border - white border - t-transparent rounded - full animate - spin"></div>) : (<Send className="w - 4 h - 4"       />) }
           </motion.button>
         </form>) }
     </div>) ;
@@ -199,18 +199,18 @@ import { motion } from 'framer - motion';
 
   return (<footer className="bg - gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc - 900 text - white relative overflow - hidden">
       {/* Background Pattern */}
-      <div className="absolute inset - 0 bg-[linear - gradient (rgba (34,221,210,0.05) _1px,transparent_1px) ,linear - gradient (90deg,rgba (34,221,210,0.05) _1px,transparent_1px) ] bg-[size:50px_50px]" />
+      <div className="absolute inset - 0 bg-[linear - gradient (rgba (34,221,210,0.05) _1px,transparent_1px) ,linear - gradient (90deg,rgba (34,221,210,0.05) _1px,transparent_1px) ] bg-[size:50px_50px]"       />
 
       {/* Floating Elements */}
-      <div className="absolute top - 1/4 left - 1/4 w - 2 h - 2 bg - zion - cyan / 30 rounded - full animate - pulse" />
+      <div className="absolute top - 1/4 left - 1/4 w - 2 h - 2 bg - zion - cyan / 30 rounded - full animate - pulse"       />
       <div
         className="absolute bottom - 1/3 right - 1/4 w - 1.5 h - 1.5 bg - zion - purple / 20 rounded - full animate - pulse"
         style={{ animationDelay: '1s' }}
-      />
+            />
       <div
         className="absolute top - 1/2 right - 1/3 w - 1 h - 1 bg - zion - cyan / 25 rounded - full animate - pulse"
         style={{ animationDelay: '2s' }}
-      />
+            />
 
       {/* Main Footer Content */}
       <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 20 relative z - 10">
@@ -267,7 +267,7 @@ import { motion } from 'framer - motion';
 
         {/* Newsletter Section */}
         <div className="mt - 16">
-          <FooterNewsletter />
+          <FooterNewsletter       />
         </div>
 
         {/* Contact Info */}
@@ -279,7 +279,7 @@ import { motion } from 'framer - motion';
               whileHover={{ scale: 1.02 }}
             >
               <div className="p - 2 bg - zion - cyan / 20 rounded - lg group - hover:bg - zion - cyan / 30 transition - colors">
-                <contact.icon className="w - 5 h - 5 text - zion - cyan" />
+                <contact.icon className="w - 5 h - 5 text - zion - cyan"       />
               </div>
               <div>
                 <p className="text - zinc - 400 text - sm">{contact.label}</p>
@@ -315,7 +315,7 @@ import { motion } from 'framer - motion';
 
             <div className="flex items - center space - x-2 text - zinc - 400 text - sm">
               <span > Made with</span>
-              <Heart className="w - 4 h - 4 text - red - 400" />
+              <Heart className="w - 4 h - 4 text - red - 400"       />
               <span > by Zion Tech Group</span>
             </div>
           </div>
@@ -332,7 +332,7 @@ import { motion } from 'framer - motion';
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1 }}
       >
-        <ArrowUp className="w - 6 h - 6 mx - auto" />
+        <ArrowUp className="w - 6 h - 6 mx - auto"       />
       </motion.button>
     </footer>) ;
 }

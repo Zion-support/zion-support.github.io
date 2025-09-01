@@ -104,7 +104,7 @@ export default function AIAutonomousBusinessPlatform() {
         description="Transform your business with our cloud-native AI platform. Scalable, secure, and intelligent business management for the modern enterprise."
         keywords="AI business platform, cloud AI platform, autonomous business platform, enterprise AI, business intelligence platform"
         canonical="https://ziontechgroup.com/ai-services/ai-autonomous-business-platform/"
-      />
+            />
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
@@ -117,7 +117,7 @@ export default function AIAutonomousBusinessPlatform() {
             className="text-center"
           >
             <div className="inline-flex items-center gap-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full px-4 py-2 text-cyan-400 text-sm font-medium mb-6">
-              <Cloud className="w-4 h-4" />
+              <Cloud className="w-4 h-4"       />
               Cloud-Native AI Platform
             </div>
 
@@ -140,7 +140,7 @@ export default function AIAutonomousBusinessPlatform() {
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-cyan-500/25 transition-all duration-300 flex items-center gap-2 justify-center"
               >
-                <Play className="w-5 h-5" />
+                <Play className="w-5 h-5"       />
                 Watch Demo
               </motion.button>
               <Link
@@ -148,7 +148,7 @@ export default function AIAutonomousBusinessPlatform() {
                 className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 flex items-center gap-2 justify-center"
               >
                 Get Started
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"       />
               </Link>
             </div>
           </motion.div>
@@ -174,7 +174,7 @@ export default function AIAutonomousBusinessPlatform() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {features.map((feature, index) => {
+            {features.map((((((((feature, index, index, index, index, index, index, index) => ({ ...((((((feature, index, index, index, index, index, index, key: index })) => ({ ...(((((feature, index, index, index, index, index, key: index })) => ({ ...((((feature, index, index, index, index, key: index })) => ({ ...(((feature, index, index, index, key: index })) => ({ ...((feature, index, index, key: index })) => ({ ...(feature, index, key: index })) => {
               const IconComponent = feature.icon;
               return (
                 <motion.div
@@ -187,7 +187,7 @@ export default function AIAutonomousBusinessPlatform() {
                   <div
                     className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-2xl mb-6 flex items-center justify-center text-white`}
                   >
-                    <IconComponent className="w-8 h-8" />
+                    <IconComponent className="w-8 h-8"       />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">
                     {feature.title}
@@ -221,7 +221,7 @@ export default function AIAutonomousBusinessPlatform() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
+            {benefits.map((((((((benefit, index, index, index, index, index, index, index) => ({ ...((((((benefit, index, index, index, index, index, index, key: index })) => ({ ...(((((benefit, index, index, index, index, index, key: index })) => ({ ...((((benefit, index, index, index, index, key: index })) => ({ ...(((benefit, index, index, index, key: index })) => ({ ...((benefit, index, index, key: index })) => ({ ...(benefit, index, key: index })) => (
               <motion.div
                 key={benefit}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -229,7 +229,7 @@ export default function AIAutonomousBusinessPlatform() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="flex items-start gap-3"
               >
-                <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
+                <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0"       />
                 <span className="text-gray-300">{benefit}</span>
               </motion.div>
             ))}
@@ -256,7 +256,7 @@ export default function AIAutonomousBusinessPlatform() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => {
+            {useCases.map((((((((useCase, index, index, index, index, index, index, index) => ({ ...((((((useCase, index, index, index, index, index, index, key: index })) => ({ ...(((((useCase, index, index, index, index, index, key: index })) => ({ ...((((useCase, index, index, index, index, key: index })) => ({ ...(((useCase, index, index, index, key: index })) => ({ ...((useCase, index, index, key: index })) => ({ ...(useCase, index, key: index })) => {
               const IconComponent = useCase.icon;
               return (
                 <motion.div
@@ -267,7 +267,7 @@ export default function AIAutonomousBusinessPlatform() {
                   className="text-center"
                 >
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-2xl mx-auto mb-4 flex items-center justify-center">
-                    <IconComponent className="w-8 h-8 text-white" />
+                    <IconComponent className="w-8 h-8 text-white"       />
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2">
                     {useCase.title}
@@ -299,7 +299,7 @@ export default function AIAutonomousBusinessPlatform() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {testimonials.map((testimonial, index) => (
+            {testimonials.map((((((((testimonial, index, index, index, index, index, index, index) => ({ ...((((((testimonial, index, index, index, index, index, index, key: index })) => ({ ...(((((testimonial, index, index, index, index, index, key: index })) => ({ ...((((testimonial, index, index, index, index, key: index })) => ({ ...(((testimonial, index, index, index, key: index })) => ({ ...((testimonial, index, index, key: index })) => ({ ...(testimonial, index, key: index })) => (
               <motion.div
                 key={testimonial.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -308,11 +308,11 @@ export default function AIAutonomousBusinessPlatform() {
                 className="bg-gray-800/50 backdrop-blur-md border border-gray-700 rounded-2xl p-8"
               >
                 <div className="flex gap-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
+                  {[...Array(testimonial.rating)].map((((((((_, i, index, index, index, index, index, index) => ({ ...((((((_, i, index, index, index, index, index, key: index })) => ({ ...(((((_, i, index, index, index, index, key: index })) => ({ ...((((_, i, index, index, index, key: index })) => ({ ...(((_, i, index, index, key: index })) => ({ ...((_, i, index, key: index })) => ({ ...(_, i, key: index })) => (
                     <Star
                       key={i}
                       className="w-5 h-5 text-cyan-400 fill-current"
-                    />
+                          />
                   ))}
                 </div>
                 <p className="text-gray-300 mb-6 leading-relaxed italic">
@@ -353,14 +353,14 @@ export default function AIAutonomousBusinessPlatform() {
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-cyan-500/25 transition-all duration-300 flex items-center gap-2 justify-center"
               >
                 Get Started Today
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"       />
               </Link>
               <Link
                 to="/pricing"
                 className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 flex items-center gap-2 justify-center"
               >
                 View Pricing
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5"       />
               </Link>
             </div>
           </motion.div>

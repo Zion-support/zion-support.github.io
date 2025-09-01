@@ -105,7 +105,7 @@ const teamMembers = [
 const expertiseAreas = [
     {
         name: "Artificial Intelligence",
-        icon: <Brain className="w - 8 h - 8"/>,
+        icon: <Brain className="w - 8 h - 8"      />,
         color: "from - zion - purple to - zion - purple - dark",
         description: "Machine learning, computer vision, NLP, and AI solutions",
         experts: 12,
@@ -114,7 +114,7 @@ const expertiseAreas = [
     },
     {
         name: "Cloud Infrastructure",
-        icon: <Cloud className="w - 8 h - 8"/>,
+        icon: <Cloud className="w - 8 h - 8"      />,
         color: "from - zion - cyan to - zion - blue",
         description: "AWS, Azure, Google Cloud, and hybrid solutions",
         experts: 18,
@@ -123,7 +123,7 @@ const expertiseAreas = [
     },
     {
         name: "Web Development",
-        icon: <Globe className="w - 8 h - 8"/>,
+        icon: <Globe className="w - 8 h - 8"      />,
         color: "from - zion - cyan - light to - zion - cyan",
         description: "Modern web applications and progressive web apps",
         experts: 25,
@@ -132,7 +132,7 @@ const expertiseAreas = [
     },
     {
         name: "Mobile Development",
-        icon: <Zap className="w - 8 h - 8"/>,
+        icon: <Zap className="w - 8 h - 8"      />,
         color: "from - zion - purple - light to - zion - purple",
         description: "iOS, Android, and cross - platform solutions",
         experts: 20,
@@ -141,7 +141,7 @@ const expertiseAreas = [
     },
     {
         name: "Data Analytics",
-        icon: <Database className="w - 8 h - 8"/>,
+        icon: <Database className="w - 8 h - 8"      />,
         color: "from - zion - cyan to - zion - purple",
         description: "Business intelligence and predictive analytics",
         experts: 15,
@@ -150,7 +150,7 @@ const expertiseAreas = [
     },
     {
         name: "Cybersecurity",
-        icon: <Shield className="w - 8 h - 8"/>,
+        icon: <Shield className="w - 8 h - 8"      />,
         color: "from - zion - purple to - zion - cyan",
         description: "Security auditing, compliance, and threat protection",
         experts: 10,
@@ -159,10 +159,10 @@ const expertiseAreas = [
     }
 ];
 const stats = [
-    { icon: <Users className="w - 6 h - 6"/>, value: "100+", label: "Expert Team Members" },
-    { icon: <Award className="w - 6 h - 6"/>, value: "500+", label: "Projects Completed" },
-    { icon: <Star className="w - 6 h - 6"/>, value: "4.9 / 5", label: "Average Rating" },
-    { icon: <Globe className="w - 6 h - 6"/>, value: "25+", label: "Countries Served" }
+    { icon: <Users className="w - 6 h - 6"      />, value: "100+", label: "Expert Team Members" },
+    { icon: <Award className="w - 6 h - 6"      />, value: "500+", label: "Projects Completed" },
+    { icon: <Star className="w - 6 h - 6"      />, value: "4.9 / 5", label: "Average Rating" },
+    { icon: <Globe className="w - 6 h - 6"      />, value: "25+", label: "Countries Served" }
 ];
     const [selectedMember, setSelectedMember] = useState (null) ;
     const [hoveredExpertise, setHoveredExpertise] = useState (null) ;
@@ -370,7 +370,7 @@ const stats = [
                     <span className="text - zion - purple - light font - medium text - sm group - hover:text - zion - purple transition - colors">
                       View Profile
                     </span>
-                    <ArrowRight className="w - 4 h - 4 text - zion - purple - light group - hover:text - zion - purple group - hover:translate - x-1 transition - all duration - 300"/>
+                    <ArrowRight className="w - 4 h - 4 text - zion - purple - light group - hover:text - zion - purple group - hover:translate - x-1 transition - all duration - 300"      />
                   </div>
 
                   {/* Expanded details */}
@@ -401,27 +401,27 @@ const stats = [
   x: 0 
 
 }} transition={{ delay: idx * 0.1 }}>
-                              <CheckCircle className="w - 3 h - 3 text - zion - cyan"/>
+                              <CheckCircle className="w - 3 h - 3 text - zion - cyan"      />
                               <span>{achievement}</span>
                             </motion.div>) ) }
                         </div>
 
                         <div className="flex items - center justify - between">
                           <div className="flex items - center gap - 1">
-                            <Star className="w - 4 h - 4 text - yellow - 400 fill - current"/>
+                            <Star className="w - 4 h - 4 text - yellow - 400 fill - current"      />
                             <span className="text - white font - semibold text - sm">{member.rating}</span>
                           </div>
                           <div className="flex gap - 2">
                             <a href={member.linkedin} className="text - zion - cyan hover:text - zion - cyan - light transition - colors">
-                              <Linkedin className="w - 4 h - 4"/>
+                              <Linkedin className="w - 4 h - 4"      />
                             </a>
                             <a href={member.github} className="text - zion - cyan hover:text - zion - cyan - light transition - colors">
-                              <Github className="w - 4 h - 4"/>
+                              <Github className="w - 4 h - 4"      />
                             </a>
                             <a href = {
   `mailto:${member.name.toLowerCase () .replace (' ',
   '.') }@ziontechgroup.com`} className="text - zion - cyan hover:text - zion - cyan - light transition - colors">
-                              <Mail className="w - 4 h - 4"/>
+                              <Mail className="w - 4 h - 4"      />
                             </a>
                           </div>
                         </div>

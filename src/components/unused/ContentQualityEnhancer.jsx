@@ -326,7 +326,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
     return (<>
       {/* Content Quality Toggle Button */}
       <motion.button initial={{ scale: 0 }} animate={{ scale: 1 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={() => setIsOpen(!isOpen)} className={`fixed bottom-20 right-4 z-50 w-14 h-14 bg-purple-600 hover:bg-purple-700 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 ${className}`} aria-label="Content Quality Analysis" aria-expanded={isOpen}>
-        <DocumentTextIcon className="w-6 h-6"/>
+        <DocumentTextIcon className="w-6 h-6"      />
       </motion.button>
 
       {/* Content Quality Panel */}
@@ -365,13 +365,13 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                 Content Quality
               </h2>
               <button onClick={() => setIsOpen(false)} className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">
-                <XMarkIcon className="w-5 h-5"/>
+                <XMarkIcon className="w-5 h-5"      />
               </button>
             </div>
 
             {/* Tabs */}
             <div className="flex border-b border-gray-200 dark:border-gray-700">
-              {['overview', 'issues', 'suggestions', 'actions'].map((tab) => (<button key={tab} onClick={() => setActiveTab(tab)} className={`flex-1 px-4 py-2 text-sm font-medium transition-colors ${activeTab === tab
+              {['overview', 'issues', 'suggestions', 'actions'].map((((((((tab, index, index, index, index, index, index) => ({ ...((((((tab, index, index, index, index, index, key: index })) => ({ ...(((((tab, index, index, index, index, key: index })) => ({ ...((((tab, index, index, index, key: index })) => ({ ...(((tab, index, index, key: index })) => ({ ...((tab, index, key: index })) => ({ ...(tab, key: index })) => (<button key={tab} onClick={() => setActiveTab(tab)} className={`flex-1 px-4 py-2 text-sm font-medium transition-colors ${activeTab === tab
                     ? 'text-purple-600 border-b-2 border-purple-600'
                     : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'}`}>
                   {tab.charAt(0).toUpperCase() + tab.slice(1)}
@@ -383,7 +383,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
               {/* Overview Tab */}
               {activeTab === 'overview' && (<div className="space-y-4">
                   {!analysis ? (<div className="text-center text-gray-500 dark:text-gray-400">
-                      <DocumentTextIcon className="w-12 h-12 mx-auto mb-3 text-purple-500"/>
+                      <DocumentTextIcon className="w-12 h-12 mx-auto mb-3 text-purple-500"      />
                       <p>Click "Analyze Content" to get started</p>
                     </div>) : (<>
                       {/* Overall Score */}
@@ -465,17 +465,17 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
               {/* Issues Tab */}
               {activeTab === 'issues' && (<div className="space-y-4">
                   {!analysis ? (<div className="text-center text-gray-500 dark:text-gray-400">
-                      <ExclamationTriangleIcon className="w-12 h-12 mx-auto mb-3 text-yellow-500"/>
+                      <ExclamationTriangleIcon className="w-12 h-12 mx-auto mb-3 text-yellow-500"      />
                       <p>No analysis available</p>
                     </div>) : analysis.issues.length === 0 ? (<div className="text-center text-gray-500 dark:text-gray-400">
-                      <CheckCircleIcon className="w-12 h-12 mx-auto mb-3 text-green-500"/>
+                      <CheckCircleIcon className="w-12 h-12 mx-auto mb-3 text-green-500"      />
                       <p>No issues found! Great job!</p>
                     </div>) : (<div className="space-y-3">
-                      {analysis.issues.map((issue) => (<div key={issue.id} className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-600 transition-colors cursor-pointer" onClick={() => issue.element && highlightElement(issue.element)}>
+                      {analysis.issues.map((((((((issue, index, index, index, index, index, index) => ({ ...((((((issue, index, index, index, index, index, key: index })) => ({ ...(((((issue, index, index, index, index, key: index })) => ({ ...((((issue, index, index, index, key: index })) => ({ ...(((issue, index, index, key: index })) => ({ ...((issue, index, key: index })) => ({ ...(issue, key: index })) => (<div key={issue.id} className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-600 transition-colors cursor-pointer" onClick={() => issue.element && highlightElement(issue.element)}>
                           <div className="flex items-start gap-2">
-                            {issue.type === 'error' && (<ExclamationTriangleIcon className="w-4 h-4 text-red-600 mt-0.5"/>)}
-                            {issue.type === 'warning' && (<ExclamationTriangleIcon className="w-4 h-4 text-yellow-600 mt-0.5"/>)}
-                            {issue.type === 'info' && (<InformationCircleIcon className="w-4 h-4 text-blue-600 mt-0.5"/>)}
+                            {issue.type === 'error' && (<ExclamationTriangleIcon className="w-4 h-4 text-red-600 mt-0.5"      />)}
+                            {issue.type === 'warning' && (<ExclamationTriangleIcon className="w-4 h-4 text-yellow-600 mt-0.5"      />)}
+                            {issue.type === 'info' && (<InformationCircleIcon className="w-4 h-4 text-blue-600 mt-0.5"      />)}
 
                             <div className="flex-1">
                               <h4 className="font-medium text-gray-900 dark:text-white text-sm">
@@ -507,15 +507,15 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
               {/* Suggestions Tab */}
               {activeTab === 'suggestions' && (<div className="space-y-4">
                   {!analysis ? (<div className="text-center text-gray-500 dark:text-gray-400">
-                      <InformationCircleIcon className="w-12 h-12 mx-auto mb-3 text-blue-500"/>
+                      <InformationCircleIcon className="w-12 h-12 mx-auto mb-3 text-blue-500"      />
                       <p>No analysis available</p>
                     </div>) : analysis.suggestions.length === 0 ? (<div className="text-center text-gray-500 dark:text-gray-400">
-                      <CheckCircleIcon className="w-12 h-12 mx-auto mb-3 text-green-500"/>
+                      <CheckCircleIcon className="w-12 h-12 mx-auto mb-3 text-green-500"      />
                       <p>No suggestions available</p>
                     </div>) : (<div className="space-y-3">
-                      {analysis.suggestions.map((suggestion) => (<div key={suggestion.id} className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-blue-50 dark:bg-blue-900/20">
+                      {analysis.suggestions.map((((((((suggestion, index, index, index, index, index, index) => ({ ...((((((suggestion, index, index, index, index, index, key: index })) => ({ ...(((((suggestion, index, index, index, index, key: index })) => ({ ...((((suggestion, index, index, index, key: index })) => ({ ...(((suggestion, index, index, key: index })) => ({ ...((suggestion, index, key: index })) => ({ ...(suggestion, key: index })) => (<div key={suggestion.id} className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-blue-50 dark:bg-blue-900/20">
                           <div className="flex items-start gap-2">
-                            <InformationCircleIcon className="w-4 h-4 text-blue-600 mt-0.5"/>
+                            <InformationCircleIcon className="w-4 h-4 text-blue-600 mt-0.5"      />
 
                             <div className="flex-1">
                               <h4 className="font-medium text-gray-900 dark:text-white text-sm">
@@ -544,7 +544,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
               {/* Actions Tab */}
               {activeTab === 'actions' && (<div className="space-y-4">
                   <div className="text-center text-gray-500 dark:text-gray-400">
-                    <WrenchScrewdriverIcon className="w-12 h-12 mx-auto mb-3 text-purple-500"/>
+                    <WrenchScrewdriverIcon className="w-12 h-12 mx-auto mb-3 text-purple-500"      />
                     <p>Take action to improve content quality</p>
                   </div>
 
@@ -555,7 +555,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
 
                   {/* Re-analyze Button */}
                   <button onClick={analyzeContent} disabled={isAnalyzing} className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white px-4 py-2 rounded-lg transition-colors">
-                    <ArrowPathIcon className="w-4 h-4 inline mr-2"/>
+                    <ArrowPathIcon className="w-4 h-4 inline mr-2"      />
                     {isAnalyzing ? 'Analyzing...' : 'Re-analyze Content'}
                   </button>
 

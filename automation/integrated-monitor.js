@@ -12,10 +12,10 @@
  * 5. Integrates with PM2 for process management
  */
 
-const BrowserErrorMonitor = require('./browser-error-monitor');
-const BrowserErrorFixer = require('./browser-error-fixer');
-const fs = require('fs').promises;
-const path = require('path');
+import BrowserErrorMonitor from './browser-error-monitor');
+import BrowserErrorFixer from './browser-error-fixer');
+import fs from 'fs').promises;
+import path from 'path');
 
 class IntegratedMonitor {
   constructor() {
@@ -231,5 +231,5 @@ integratedMonitor.start().catch(async (error) => {
   process.exit(1);
 });
 
-module.exports = integratedMonitor;
+export default integratedMonitor;
 }}}}}}}}}}}}}}}}}}}}}}

@@ -107,7 +107,7 @@ const EnhancedAccessibility = () => {
     return (<>
       {/* Accessibility Toggle Button */}
       <button onClick={() => setIsOpen(!isOpen)} className="fixed bottom-6 left-6 z-50 p-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-purple-300 focus:ring-opacity-50" aria-label="Toggle accessibility settings" aria-expanded={isOpen} aria-controls="accessibility-panel">
-        <AdjustmentsHorizontalIcon className="w-6 h-6"/>
+        <AdjustmentsHorizontalIcon className="w-6 h-6"      />
       </button>
 
       {/* Accessibility Panel */}
@@ -157,7 +157,7 @@ const EnhancedAccessibility = () => {
                     High Contrast Mode
                   </span>
                   <button onClick={toggleHighContrast} className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${settings.highContrast ? 'bg-purple-600' : 'bg-gray-200'}`} role="switch" aria-checked={settings.highContrast}>
-                    <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.highContrast ? 'translate-x-6' : 'translate-x-1'}`}/>
+                    <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.highContrast ? 'translate-x-6' : 'translate-x-1'}`}      />
                   </button>
                 </label>
                 <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
@@ -172,13 +172,13 @@ const EnhancedAccessibility = () => {
                 </label>
                 <div className="flex items-center space-x-2">
                   <button onClick={decreaseFontSize} className="p-2 bg-gray-100 dark:bg-slate-700 rounded-md hover:bg-gray-200 dark:hover:bg-slate-600 transition-colors" aria-label="Decrease font size">
-                    <ArrowDownIcon className="w-4 h-4"/>
+                    <ArrowDownIcon className="w-4 h-4"      />
                   </button>
                   <div className="flex-1 bg-gray-200 dark:bg-slate-600 rounded-full h-2">
-                    <div className="bg-purple-600 h-2 rounded-full transition-all duration-300" style={{ width: `${((settings.fontSize - 12) / 12) * 100}%` }}/>
+                    <div className="bg-purple-600 h-2 rounded-full transition-all duration-300" style={{ width: `${((settings.fontSize - 12) / 12) * 100}%` }}      />
                   </div>
                   <button onClick={increaseFontSize} className="p-2 bg-gray-100 dark:bg-slate-700 rounded-md hover:bg-gray-200 dark:hover:bg-slate-600 transition-colors" aria-label="Increase font size">
-                    <ArrowUpIcon className="w-4 h-4"/>
+                    <ArrowUpIcon className="w-4 h-4"      />
                   </button>
                 </div>
               </div>
@@ -199,7 +199,7 @@ const EnhancedAccessibility = () => {
 
 
 } className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${settings.reducedMotion ? 'bg-purple-600' : 'bg-gray-200'}`} role="switch" aria-checked={settings.reducedMotion}>
-                    <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.reducedMotion ? 'translate-x-6' : 'translate-x-1'}`}/>
+                    <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.reducedMotion ? 'translate-x-6' : 'translate-x-1'}`}      />
                   </button>
                 </label>
                 <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
@@ -223,7 +223,7 @@ const EnhancedAccessibility = () => {
 
 
 } className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${settings.focusIndicator ? 'bg-purple-600' : 'bg-gray-200'}`} role="switch" aria-checked={settings.focusIndicator}>
-                    <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.focusIndicator ? 'translate-x-6' : 'translate-x-1'}`}/>
+                    <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.focusIndicator ? 'translate-x-6' : 'translate-x-1'}`}      />
                   </button>
                 </label>
                 <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
@@ -269,7 +269,7 @@ const EnhancedAccessibility = () => {
 
 
 } className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${settings.screenReader ? 'bg-purple-600' : 'bg-gray-200'}`} role="switch" aria-checked={settings.screenReader}>
-                    <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.screenReader ? 'translate-x-6' : 'translate-x-1'}`}/>
+                    <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.screenReader ? 'translate-x-6' : 'translate-x-1'}`}      />
                   </button>
                 </label>
                 <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
@@ -293,7 +293,7 @@ const EnhancedAccessibility = () => {
 
 
 } className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${settings.keyboardNavigation ? 'bg-purple-600' : 'bg-gray-200'}`} role="switch" aria-checked={settings.keyboardNavigation}>
-                    <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.keyboardNavigation ? 'translate-x-6' : 'translate-x-1'}`}/>
+                    <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.keyboardNavigation ? 'translate-x-6' : 'translate-x-1'}`}      />
                   </button>
                 </label>
                 <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
@@ -304,7 +304,7 @@ const EnhancedAccessibility = () => {
               {/* Action Buttons */}
               <div className="space-y-2">
                 <button onClick={() => speakText('Accessibility settings panel opened. You can adjust various accessibility options here.')} className="w-full px-4 py-2 text-sm bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2">
-                  <SpeakerWaveIcon className="w-4 h-4"/>
+                  <SpeakerWaveIcon className="w-4 h-4"      />
                   <span>Test Screen Reader</span>
                 </button>
 

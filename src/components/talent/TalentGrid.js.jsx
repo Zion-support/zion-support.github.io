@@ -19,7 +19,7 @@ export function TalentGrid({
     }
   };
   if (isLoading) {
-    return <TalentSkeleton />;
+    return <TalentSkeleton       />;
   }
   if (!talents || talents.length === 0) {
     return (
@@ -40,11 +40,35 @@ export function TalentGrid({
   }
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {talents.map(talent => (
+      {talents.map(((((((talent => (
         <TalentCard
           key={talent.id}
           talent={talent}
-          onMessage={() => handleMessageInternal(talent)}
+          onMessage={(, index, index, index, index, index, index) => ({ ...(((((talent => (
+        <TalentCard
+          key={talent.id}
+          talent={talent}
+          onMessage={(, index, index, index, index, index, key: index })) => ({ ...((((talent => (
+        <TalentCard
+          key={talent.id}
+          talent={talent}
+          onMessage={(, index, index, index, index, key: index })) => ({ ...(((talent => (
+        <TalentCard
+          key={talent.id}
+          talent={talent}
+          onMessage={(, index, index, index, key: index })) => ({ ...((talent => (
+        <TalentCard
+          key={talent.id}
+          talent={talent}
+          onMessage={(, index, index, key: index })) => ({ ...(talent => (
+        <TalentCard
+          key={talent.id}
+          talent={talent}
+          onMessage={(, index, key: index })) => ({ ...talent => (
+        <TalentCard
+          key={talent.id}
+          talent={talent}
+          onMessage={(, key: index })) => handleMessageInternal(talent)}
           onBook={() => handleBookInternal(talent)}
           isAuthenticated={isAuthenticated}
         />

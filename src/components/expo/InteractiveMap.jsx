@@ -20,16 +20,64 @@ export function InteractiveMap() {
             src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.png"
             alt="World map"
             className="w-full h-auto"
-          />
-          {locations.map(loc => (
+                />
+          {locations.map(((((((loc => (
             <a
               key={loc.name}
               href={`https://${loc.subdomain}`}
               className="absolute inline-flex items-center justify-center w-4 h-4 bg-zion-cyan rounded-full"
               style={{ top: loc.top, left: loc.left }}
               title={`Visit ${loc.name}`}
-            />
-          ))}
+                  />
+          , index, index, index, index, index, index) => ({ ...(((((loc => (
+            <a
+              key={loc.name}
+              href={`https://${loc.subdomain}`}
+              className="absolute inline-flex items-center justify-center w-4 h-4 bg-zion-cyan rounded-full"
+              style={{ top: loc.top, left: loc.left }}
+              title={`Visit ${loc.name}`}
+                  />
+          , index, index, index, index, index, key: index })) => ({ ...((((loc => (
+            <a
+              key={loc.name}
+              href={`https://${loc.subdomain}`}
+              className="absolute inline-flex items-center justify-center w-4 h-4 bg-zion-cyan rounded-full"
+              style={{ top: loc.top, left: loc.left }}
+              title={`Visit ${loc.name}`}
+                  />
+          , index, index, index, index, key: index })) => ({ ...(((loc => (
+            <a
+              key={loc.name}
+              href={`https://${loc.subdomain}`}
+              className="absolute inline-flex items-center justify-center w-4 h-4 bg-zion-cyan rounded-full"
+              style={{ top: loc.top, left: loc.left }}
+              title={`Visit ${loc.name}`}
+                  />
+          , index, index, index, key: index })) => ({ ...((loc => (
+            <a
+              key={loc.name}
+              href={`https://${loc.subdomain}`}
+              className="absolute inline-flex items-center justify-center w-4 h-4 bg-zion-cyan rounded-full"
+              style={{ top: loc.top, left: loc.left }}
+              title={`Visit ${loc.name}`}
+                  />
+          , index, index, key: index })) => ({ ...(loc => (
+            <a
+              key={loc.name}
+              href={`https://${loc.subdomain}`}
+              className="absolute inline-flex items-center justify-center w-4 h-4 bg-zion-cyan rounded-full"
+              style={{ top: loc.top, left: loc.left }}
+              title={`Visit ${loc.name}`}
+                  />
+          , index, key: index })) => ({ ...loc => (
+            <a
+              key={loc.name}
+              href={`https://${loc.subdomain}`}
+              className="absolute inline-flex items-center justify-center w-4 h-4 bg-zion-cyan rounded-full"
+              style={{ top: loc.top, left: loc.left }}
+              title={`Visit ${loc.name}`}
+                  />
+          , key: index })))}
         </div>
       </div>
     </section>

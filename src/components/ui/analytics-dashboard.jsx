@@ -93,9 +93,9 @@ export function AnalyticsDashboard({
             className="text-zinc-400 hover:text-white p-2"
           >
             {showTargets ? (
-              <EyeOff className="w-4 h-4" />
+              <EyeOff className="w-4 h-4"       />
             ) : (
-              <Eye className="w-4 h-4" />
+              <Eye className="w-4 h-4"       />
             )}
           </Button>
           <Button
@@ -107,14 +107,14 @@ export function AnalyticsDashboard({
           >
             <RefreshCw
               className={`w-4 h-4 ${isLoading ? 'animate-spin' : ''}`}
-            />
+                  />
           </Button>
           <Button
             size="sm"
             variant="outline"
             className="border-zion-blue-light/30 text-zinc-300 hover:text-white"
           >
-            <Download className="w-4 h-4" />
+            <Download className="w-4 h-4"       />
           </Button>
         </div>
       </div>
@@ -129,7 +129,7 @@ export function AnalyticsDashboard({
         >
           <div className="flex items-center justify-between mb-3">
             <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
-              <Users className="w-5 h-5 text-white" />
+              <Users className="w-5 h-5 text-white"       />
             </div>
             <div className="text-right">
               <div className="text-2xl font-bold text-white">
@@ -152,7 +152,7 @@ export function AnalyticsDashboard({
                   style={{
                     width: `${calculateProgress(metrics.totalUsers, 15000)}%`,
                   }}
-                />
+                      />
               </div>
             </div>
           )}
@@ -166,7 +166,7 @@ export function AnalyticsDashboard({
         >
           <div className="flex items-center justify-between mb-3">
             <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center">
-              <TrendingUp className="w-5 h-5 text-white" />
+              <TrendingUp className="w-5 h-5 text-white"       />
             </div>
             <div className="text-right">
               <div className="text-2xl font-bold text-white">
@@ -189,7 +189,7 @@ export function AnalyticsDashboard({
                   style={{
                     width: `${calculateProgress(metrics.activeUsers, 12000)}%`,
                   }}
-                />
+                      />
               </div>
             </div>
           )}
@@ -203,7 +203,7 @@ export function AnalyticsDashboard({
         >
           <div className="flex items-center justify-between mb-3">
             <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
-              <BarChart3 className="w-5 h-5 text-white" />
+              <BarChart3 className="w-5 h-5 text-white"       />
             </div>
             <div className="text-right">
               <div className="text-2xl font-bold text-white">
@@ -226,7 +226,7 @@ export function AnalyticsDashboard({
                   style={{
                     width: `${calculateProgress(metrics.revenue, 500000)}%`,
                   }}
-                />
+                      />
               </div>
             </div>
           )}
@@ -240,7 +240,7 @@ export function AnalyticsDashboard({
         >
           <div className="flex items-center justify-between mb-3">
             <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center">
-              <Target className="w-5 h-5 text-white" />
+              <Target className="w-5 h-5 text-white"       />
             </div>
             <div className="text-right">
               <div className="text-2xl font-bold text-white">
@@ -261,7 +261,7 @@ export function AnalyticsDashboard({
                 <div
                   className="bg-gradient-to-r from-orange-500 to-red-500 h-2 rounded-full transition-all duration-500"
                   style={{ width: `${calculateProgress(metrics.growth, 25)}%` }}
-                />
+                      />
               </div>
             </div>
           )}

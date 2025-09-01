@@ -75,7 +75,7 @@ import { motion } from 'framer - motion';
             repeat: Infinity,
   ease: "linear"
 
-}}/>
+}}      />
         <motion.div className="absolute top - 40 right - 20 w - 96 h - 96 bg - cyan - 500 / 20 rounded - full blur - 3xl" animate = {
   {
             x[0, -80, 0],;
@@ -89,7 +89,7 @@ import { motion } from 'framer - motion';
             repeat: Infinity,
   ease: "linear"
 
-}}/>
+}}      />
         <motion.div className="absolute bottom - 20 left - 1/2 w - 80 h - 80 bg - purple - 500 / 20 rounded - full blur - 3xl" animate = {
   {
             x[0, 60, 0],;
@@ -103,7 +103,7 @@ import { motion } from 'framer - motion';
             repeat: Infinity,
   ease: "linear"
 
-}}/>
+}}      />
       </div>
 
       {/* Interactive Grid */}
@@ -115,7 +115,7 @@ import { motion } from 'framer - motion';
             linear - gradient (90deg, rgba (59, 130, 246, 0.1) 1px, transparent 1px) `,
   backgroundSize: '50px 50px'
 
-}}/>
+}}      />
       </div>
 
       {/* Main Content */}
@@ -156,8 +156,8 @@ import { motion } from 'framer - motion';
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link to={primaryAction.href} className="group relative inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - cyan - 600 text - white rounded - lg font - semibold text - lg overflow - hidden transition - all duration - 300 hover:from - blue - 700 hover:to - cyan - 700 shadow - lg hover:shadow - xl">
                 <span className="relative z - 10">{primaryAction.text}</span>
-                <motion.div className="absolute inset - 0 bg - gradient - to - r from - blue - 400 to - cyan - 400 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300" initial={false}/>
-                <motion.div className="absolute - inset - 1 bg - gradient - to - r from - blue - 400 to - cyan - 400 rounded - lg blur opacity - 25 group - hover:opacity - 75 transition - opacity duration - 300" initial={false}/>
+                <motion.div className="absolute inset - 0 bg - gradient - to - r from - blue - 400 to - cyan - 400 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300" initial={false}      />
+                <motion.div className="absolute - inset - 1 bg - gradient - to - r from - blue - 400 to - cyan - 400 rounded - lg blur opacity - 25 group - hover:opacity - 75 transition - opacity duration - 300" initial={false}      />
               </Link>
             </motion.div>
 
@@ -165,7 +165,7 @@ import { motion } from 'framer - motion';
               <Link to={secondaryAction.href} className="group inline - flex items - center px - 8 py - 4 border - 2 border - white / 20 text - white rounded - lg font - semibold text - lg hover:bg - white / 10 transition - all duration - 300 backdrop - blur - sm">
                 {secondaryAction.text}
                 <motion.svg className="ml - 2 w - 5 h - 5 group - hover:translate - x-1 transition - transform duration - 300" fill="none" stroke="currentColor" viewBox="0 0 24 24" initial={false}>
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l - 4 4m4 - 4H3"/>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l - 4 4m4 - 4H3"      />
                 </motion.svg>
               </Link>
             </motion.div>
@@ -198,7 +198,7 @@ import { motion } from 'framer - motion';
             repeat: Infinity,
   ease: "easeInOut"
 
-}}/>
+}}      />
 
       <motion.div className="absolute top - 1/3 right - 16 w - 16 h - 16 bg - cyan - 500 / 10 rounded - full border border - cyan - 400 / 20 backdrop - blur - sm" animate = {
   {
@@ -212,7 +212,7 @@ import { motion } from 'framer - motion';
             repeat: Infinity,
   ease: "easeInOut"
 
-}}/>
+}}      />
 
       {/* Mouse Follower Effect */}
       <motion.div className="fixed w - 4 h - 4 bg - blue - 400 / 50 rounded - full pointer - events - none z - 50 mix - blend - difference" animate = {
@@ -227,5 +227,5 @@ import { motion } from 'framer - motion';
             stiffness: 500,
   damping: 30
 
-}}/>
+}}      />
     </section>) };

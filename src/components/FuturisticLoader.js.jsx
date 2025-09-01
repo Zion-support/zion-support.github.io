@@ -64,7 +64,7 @@ export default FuturisticLoader;
                   stroke="rgba (6, 182, 212, 0.3) "
                   strokeWidth="1"
                   className="animate - neural - network"
-                />
+                      />
                 <line
                   x1="50"
                   y1="50"
@@ -74,7 +74,7 @@ export default FuturisticLoader;
                   strokeWidth="1"
                   className="animate - neural - network"
                   style={{ animationDelay: '0.5s' }}
-                />
+                      />
                 <line
                   x1="50"
                   y1="50"
@@ -84,7 +84,7 @@ export default FuturisticLoader;
                   strokeWidth="1"
                   className="animate - neural - network"
                   style={{ animationDelay: '1s' }}
-                />
+                      />
                 <line
                   x1="50"
                   y1="50"
@@ -94,7 +94,7 @@ export default FuturisticLoader;
                   strokeWidth="1"
                   className="animate - neural - network"
                   style={{ animationDelay: '1.5s' }}
-                />
+                      />
               </svg>
             </div>
           </div>) ;

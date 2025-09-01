@@ -1,16 +1,15 @@
 import { render, screen } from '@testing - library / react';
-import React from 'react';
 import EnhancedZionTechServices2025 from './EnhancedZionTechServices2025';
-
-
-describe ('EnhancedZionTechServices2025', () => {
-  it ('renders without crashing', () => {
-    render (<EnhancedZionTechServices2025 />) ;
+;
+;
+describe ('EnhancedZionTechServices2025', () => {;
+  it ('renders without crashing', () => {;
+    render (<EnhancedZionTechServices2025       />) ;
     expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () ;
   }) ;
-
-  it ('displays expected content', () => {
-    render (<EnhancedZionTechServices2025 />) ;
-    // Add specific test assertions based on component content
+;
+  it ('displays expected content', () => {;
+    render (<EnhancedZionTechServices2025       />) ;
+    // Add specific test assertions based on component content;
   }) ;
 }) ;

@@ -130,24 +130,24 @@ const CONTACT_INFO = {
 // Benefits section
 const BENEFITS = [
   {
-    icon: <Zap className="h - 6 w - 6" />,
+    icon: <Zap className="h - 6 w - 6"       />,
     title: 'Immediate Deployment',
     description:
       'All services are ready for immediate deployment with no setup delays',
   },
   {
-    icon: <Shield className="h - 6 w - 6" />,
+    icon: <Shield className="h - 6 w - 6"       />,
     title: 'Enterprise Security',
     description:
       'Bank - level security with SOC 2 compliance and 24 / 7 monitoring',
   },
   {
-    icon: <Users className="h - 6 w - 6" />,
+    icon: <Users className="h - 6 w - 6"       />,
     title: 'Dedicated Support',
     description: '24 / 7 technical support with dedicated account managers',
   },
   {
-    icon: <TrendingUp className="h - 6 w - 6" />,
+    icon: <TrendingUp className="h - 6 w - 6"       />,
     title: 'Proven ROI',
     description: 'Average 300% ROI within 6 months of implementation',
   },
@@ -203,7 +203,7 @@ const BENEFITS = [
               size="lg"
               className="bg - white text - zion - blue hover:bg - gray - 100"
             >
-              <Globe className="h - 5 w - 5 mr - 2" />
+              <Globe className="h - 5 w - 5 mr - 2"       />
               Explore All Services
             </Button>
             <Button
@@ -211,7 +211,7 @@ const BENEFITS = [
               variant="outline"
               className="border - white text - white hover:bg - white hover:text - zion - blue"
             >
-              <Phone className="h - 5 w - 5 mr - 2" />
+              <Phone className="h - 5 w - 5 mr - 2"       />
               Contact Sales
             </Button>
           </div>
@@ -283,7 +283,7 @@ const BENEFITS = [
           <div className="mb - 8">
             <div className="flex flex - col md:flex - row gap - 4 mb - 6">
               <div className="relative flex - 1">
-                <Search className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text - gray - 400 h - 4 w - 4" />
+                <Search className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text - gray - 400 h - 4 w - 4"       />
                 <Input
                   placeholder="Search services..."
                   value={searchQuery}
@@ -312,7 +312,7 @@ const BENEFITS = [
                     value={category.id}
                     className="flex items - center gap - 2"
                   >
-                    <category.icon className="h - 4 w - 4" />
+                    <category.icon className="h - 4 w - 4"       />
                     <span className="hidden md:inline">{category.name}</span>
                     <Badge variant="secondary" className="ml - 1">
                       {category.count}
@@ -333,7 +333,7 @@ const BENEFITS = [
                     <Badge variant="outline" className="text - xs">
                       {service.category}
                     </Badge>
-                    {service.featured && (<Star className="h - 5 w - 5 text - yellow - 500 fill - current" />) }
+                    {service.featured && (<Star className="h - 5 w - 5 text - yellow - 500 fill - current"       />) }
                   </div>
                   <CardTitle className="text - lg">{service.title}</CardTitle>
                   <CardDescription className="line - clamp - 2">
@@ -358,7 +358,7 @@ const BENEFITS = [
                             key={index}
                             className="flex items - center text - sm text - gray - 600"
                           >
-                            <CheckCircle className="h - 4 w - 4 text - green - 500 mr - 2 flex - shrink - 0" />
+                            <CheckCircle className="h - 4 w - 4 text - green - 500 mr - 2 flex - shrink - 0"       />
                             {feature}
                           </li>) ) }
                       </ul>
@@ -372,7 +372,7 @@ const BENEFITS = [
                             key={index}
                             className="flex items - center text - sm text - gray - 600"
                           >
-                            <TrendingUp className="h - 4 w - 4 text - blue - 500 mr - 2 flex - shrink - 0" />
+                            <TrendingUp className="h - 4 w - 4 text - blue - 500 mr - 2 flex - shrink - 0"       />
                             {benefit}
                           </li>) ) }
                       </ul>
@@ -381,12 +381,12 @@ const BENEFITS = [
                     {/* Rating and AI Score */}
                     <div className="flex items - center justify - between text - sm">
                       <div className="flex items - center">
-                        <Star className="h - 4 w - 4 text - yellow - 500 fill - current mr - 1" />
+                        <Star className="h - 4 w - 4 text - yellow - 500 fill - current mr - 1"       />
                         <span>{service.rating}</span>
                         <span className="text - gray - 500 ml - 1"> ({service.reviewCount}) </span>
                       </div>
                       <div className="flex items - center">
-                        <Brain className="h - 4 w - 4 text - purple - 500 mr - 1" />
+                        <Brain className="h - 4 w - 4 text - purple - 500 mr - 1"       />
                         <span > AI: {service.aiScore}</span>
                       </div>
                     </div>
@@ -408,7 +408,7 @@ const BENEFITS = [
                         </Link>
                       </Button>
                       <Button variant="outline" size="sm">
-                        <Mail className="h - 4 w - 4 mr - 1" />
+                        <Mail className="h - 4 w - 4 mr - 1"       />
                         Contact
                       </Button>
                     </div>
@@ -419,7 +419,7 @@ const BENEFITS = [
 
           {/* No Results */}
           {sortedServices.length === 0 && (<div className="text - center py - 20">
-              <Search className="h - 16 w - 16 text - gray - 400 mx - auto mb - 4" />
+              <Search className="h - 16 w - 16 text - gray - 400 mx - auto mb - 4"       />
               <h3 className="text - xl font - semibold mb - 2">No services found</h3>
               <p className="text - gray - 500">
                 Try adjusting your search or filter criteria
@@ -448,21 +448,21 @@ const BENEFITS = [
                 <h3 className="text - 2xl font - bold mb - 6">Contact Information</h3>
                 <div className="space - y-4">
                   <div className="flex items - center">
-                    <Phone className="h - 5 w - 5 text - zion - blue mr - 3" />
+                    <Phone className="h - 5 w - 5 text - zion - blue mr - 3"       />
                     <div>
                       <div className="font - semibold">Phone</div>
                       <div className="text - gray - 600">{CONTACT_INFO.phone}</div>
                     </div>
                   </div>
                   <div className="flex items - center">
-                    <Mail className="h - 5 w - 5 text - zion - blue mr - 3" />
+                    <Mail className="h - 5 w - 5 text - zion - blue mr - 3"       />
                     <div>
                       <div className="font - semibold">Email</div>
                       <div className="text - gray - 600">{CONTACT_INFO.email}</div>
                     </div>
                   </div>
                   <div className="flex items - center">
-                    <MapPin className="h - 5 w - 5 text - zion - blue mr - 3" />
+                    <MapPin className="h - 5 w - 5 text - zion - blue mr - 3"       />
                     <div>
                       <div className="font - semibold">Address</div>
                       <div className="text - gray - 600">
@@ -471,7 +471,7 @@ const BENEFITS = [
                     </div>
                   </div>
                   <div className="flex items - center">
-                    <Globe className="h - 5 w - 5 text - zion - blue mr - 3" />
+                    <Globe className="h - 5 w - 5 text - zion - blue mr - 3"       />
                     <div>
                       <div className="font - semibold">Website</div>
                       <div className="text - gray - 600">
@@ -500,12 +500,12 @@ const BENEFITS = [
               <h3 className="text - 2xl font - bold mb - 6">Get Started Today</h3>
               <form className="space - y-4">
                 <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">
-                  <Input placeholder="First Name" />
-                  <Input placeholder="Last Name" />
+                  <Input placeholder="First Name"       />
+                  <Input placeholder="Last Name"       />
                 </div>
-                <Input placeholder="Company" />
-                <Input placeholder="Email" type="email" />
-                <Input placeholder="Phone" />
+                <Input placeholder="Company"       />
+                <Input placeholder="Email" type="email"       />
+                <Input placeholder="Phone"       />
                 <select className="w - full px - 3 py - 2 border border - gray - 300 rounded - md focus:outline - none focus:ring - 2 focus:ring - zion - blue">
                   <option > Select Service Category</option>
                   <option > AI Services</option>
@@ -519,9 +519,9 @@ const BENEFITS = [
                   placeholder="Tell us about your project or requirements..."
                   className="w - full px - 3 py - 2 border border - gray - 300 rounded - md focus:outline - none focus:ring - 2 focus:ring - zion - blue"
                   rows={4}
-                />
+                      />
                 <Button className="w - full" size="lg">
-                  <Mail className="h - 5 w - 5 mr - 2" />
+                  <Mail className="h - 5 w - 5 mr - 2"       />
                   Send Message
                 </Button>
               </form>
@@ -546,7 +546,7 @@ const BENEFITS = [
               size="lg"
               className="bg - white text - zion - blue hover:bg - gray - 100"
             >
-              <Rocket className="h - 5 w - 5 mr - 2" />
+              <Rocket className="h - 5 w - 5 mr - 2"       />
               Explore Services
             </Button>
             <Button
@@ -554,7 +554,7 @@ const BENEFITS = [
               variant="outline"
               className="border - white text - white hover:bg - white hover:text - zion - blue"
             >
-              <Phone className="h - 5 w - 5 mr - 2" />
+              <Phone className="h - 5 w - 5 mr - 2"       />
               Schedule Demo
             </Button>
           </div>

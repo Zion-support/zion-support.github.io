@@ -107,17 +107,17 @@ export default function HealthcareSolutions() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {solutions.map((solution, index) => {
+            {solutions.map((((((((solution, index, index, index, index, index, index, index) => ({ ...((((((solution, index, index, index, index, index, index, key: index })) => ({ ...(((((solution, index, index, index, index, index, key: index })) => ({ ...((((solution, index, index, index, index, key: index })) => ({ ...(((solution, index, index, index, key: index })) => ({ ...((solution, index, index, key: index })) => ({ ...(solution, index, key: index })) => {
             const Icon = solution.icon;
             return (<div key={index} className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6">
-                    <Icon className="w-8 h-8 text-white"/>
+                    <Icon className="w-8 h-8 text-white"      />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">{solution.title}</h3>
                   <p className="text-gray-300 mb-6">{solution.description}</p>
                   <ul className="space-y-2">
-                    {solution.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-gray-400">
-                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0"/>
+                    {solution.features.map((((((((feature, featureIndex, index, index, index, index, index, index) => ({ ...((((((feature, featureIndex, index, index, index, index, index, key: index })) => ({ ...(((((feature, featureIndex, index, index, index, index, key: index })) => ({ ...((((feature, featureIndex, index, index, index, key: index })) => ({ ...(((feature, featureIndex, index, index, key: index })) => ({ ...((feature, featureIndex, index, key: index })) => ({ ...(feature, featureIndex, key: index })) => (<li key={featureIndex} className="flex items-center text-sm text-gray-400">
+                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0"      />
                         {feature}
                       </li>))}
                   </ul>
@@ -140,9 +140,9 @@ export default function HealthcareSolutions() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (<div key={index} className="text-center">
+            {benefits.map((((((((benefit, index, index, index, index, index, index, index) => ({ ...((((((benefit, index, index, index, index, index, index, key: index })) => ({ ...(((((benefit, index, index, index, index, index, key: index })) => ({ ...((((benefit, index, index, index, index, key: index })) => ({ ...(((benefit, index, index, index, key: index })) => ({ ...((benefit, index, index, key: index })) => ({ ...(benefit, index, key: index })) => (<div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <TrendingUp className="w-8 h-8 text-white"/>
+                  <TrendingUp className="w-8 h-8 text-white"      />
                 </div>
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>))}
@@ -163,9 +163,9 @@ export default function HealthcareSolutions() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {caseStudies.map((study, index) => (<div key={index} className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8">
+            {caseStudies.map((((((((study, index, index, index, index, index, index, index) => ({ ...((((((study, index, index, index, index, index, index, key: index })) => ({ ...(((((study, index, index, index, index, index, key: index })) => ({ ...((((study, index, index, index, index, key: index })) => ({ ...(((study, index, index, index, key: index })) => ({ ...((study, index, index, key: index })) => ({ ...(study, index, key: index })) => (<div key={index} className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8">
                 <div className="flex items-center mb-4">
-                  <Star className="w-5 h-5 text-yellow-400 mr-2"/>
+                  <Star className="w-5 h-5 text-yellow-400 mr-2"      />
                   <span className="text-sm text-gray-400">{study.specialty}</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">{study.organization}</h3>
@@ -185,7 +185,7 @@ export default function HealthcareSolutions() {
                 </div>
                 <Link to="/case-studies" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300">
                   Read Full Case Study
-                  <ArrowRight className="w-4 h-4 ml-2"/>
+                  <ArrowRight className="w-4 h-4 ml-2"      />
                 </Link>
               </div>))}
           </div>

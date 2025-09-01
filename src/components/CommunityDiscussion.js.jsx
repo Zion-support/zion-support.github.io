@@ -51,7 +51,7 @@ const initialPosts = [
           aria - hidden="true"
           size={28}
           className="text - zion - cyan"
-        />
+              />
         <span className="font - bold text - 2xl text - white tracking - tight">
           Community Discussion
         </span>
@@ -59,7 +59,7 @@ const initialPosts = [
           {posts.length} posts
         </span>
       </div>
-      <Separator className="mb - 6" />
+      <Separator className="mb - 6"       />
       <div className="mb - 4 flex justify - end">
         <Button
           className="bg - zion - purple text - white hover:bg - zion - purple - light transition hover - scale"

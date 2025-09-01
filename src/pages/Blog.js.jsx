@@ -52,7 +52,7 @@ export default function Blog () {
         description="Stay updated with the latest trends in AI technology, marketplace strategies, and IT services. Expert articles on innovation, sustainability, and digital transformation."
         keywords="AI blog, tech trends, IT services blog, artificial intelligence news, technology innovation, digital transformation, sustainable IT"
         canonical="https://ziontechgroup.com / blog"
-      />
+            />
       <div className="min - h-screen bg - zion - blue pt - 12 pb - 20 px - 4">
         <div className="container mx - auto">
           <div className="text - center mb - 12">
@@ -124,7 +124,7 @@ export default function Blog () {
           <div className="bg - zion - blue - dark rounded - lg p - 6 mb - 8 border border - zion - blue - light">
             <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">
               <div className="relative">
-                <Search className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text - zion - slate" />
+                <Search className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text - zion - slate"       />
                 <Input
                   type="text"
                   placeholder="Search articles..."
@@ -138,7 +138,7 @@ export default function Blog () {
                 onValueChange={setSelectedCategory}
               >
                 <SelectTrigger className="bg - zion - blue border border - zion - blue - light text - white">
-                  <SelectValue placeholder="Select Category" />
+                  <SelectValue placeholder="Select Category"       />
                 </SelectTrigger>
                 <SelectContent className="bg - zion - blue - dark border border - zion - blue - light">
                   {CATEGORIES.map (category => (<SelectItem

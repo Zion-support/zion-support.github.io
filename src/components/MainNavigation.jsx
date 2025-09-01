@@ -97,7 +97,7 @@ import ThemeToggle from "./ThemeToggle";
                     ? 'text - zion - slate - dark hover:text - zion - cyan hover:bg - zion - cyan / 10'
                     : 'text - white hover:text - zion - cyan hover:bg - white / 10'}`}>
                   <span>{item.name}</span>
-                  <ChevronDown className="w - 4 h - 4 transition - transform duration - 300 group - hover:rotate - 180"/>
+                  <ChevronDown className="w - 4 h - 4 transition - transform duration - 300 group - hover:rotate - 180"      />
                 </button>
 
                 {/* Dropdown Menu */}
@@ -115,25 +115,25 @@ import ThemeToggle from "./ThemeToggle";
             <button className={`p - 2 rounded - lg transition - all duration - 300 ${isScrolled
             ? 'text - zion - slate - dark hover:text - zion - cyan hover:bg - zion - cyan / 10'
             : 'text - white hover:text - zion - cyan hover:bg - white / 10'}`}>
-              <Search className="w - 5 h - 5"/>
+              <Search className="w - 5 h - 5"      />
             </button>
 
             {/* Notifications */}
             <button className={`p - 2 rounded - lg transition - all duration - 300 ${isScrolled
             ? 'text - zion - slate - dark hover:text - zion - cyan hover:bg - zion - cyan / 10'
             : 'text - white hover:text - zion - cyan hover:bg - white / 10'}`}>
-              <Bell className="w - 5 h - 5"/>
+              <Bell className="w - 5 h - 5"      />
             </button>
 
             {/* Theme Toggle */}
-            <ThemeToggle />
+            <ThemeToggle       />
 
             {/* User Menu */}
             <div className="relative group">
               <button className={`flex items - center space - x-2 p - 2 rounded - lg transition - all duration - 300 ${isScrolled
             ? 'text - zion - slate - dark hover:text - zion - cyan hover:bg - zion - cyan / 10'
             : 'text - white hover:text - zion - cyan hover:bg - white / 10'}`}>
-                <User className="w - 5 h - 5"/>
+                <User className="w - 5 h - 5"      />
               </button>
 
               {/* User Dropdown */}
@@ -160,7 +160,7 @@ import ThemeToggle from "./ThemeToggle";
           <button onClick={ () => setIsOpen (!isOpen) } className={`lg:hidden p - 2 rounded - lg transition - all duration - 300 ${isScrolled
             ? 'text - zion - slate - dark hover:text - zion - cyan hover:bg - zion - cyan / 10'
             : 'text - white hover:text - zion - cyan hover:bg - white / 10'}`}>
-            {isOpen ? <X className="w - 6 h - 6"/> : <Menu className="w - 6 h - 6"/>}
+            {isOpen ? <X className="w - 6 h - 6"      /> : <Menu className="w - 6 h - 6"      />}
           </button>
         </div>
 
@@ -172,7 +172,7 @@ import ThemeToggle from "./ThemeToggle";
                     : 'text - zion - slate - dark hover:text - zion - cyan hover:bg - zion - cyan / 10'}`}>
                     <div className="flex items - center justify - between">
                       <span>{item.name}</span>
-                      <ChevronDown className={`w - 4 h - 4 transition - transform duration - 300 ${activeDropdown === item.name ? 'rotate - 180' : ''}`}/>
+                      <ChevronDown className={`w - 4 h - 4 transition - transform duration - 300 ${activeDropdown === item.name ? 'rotate - 180' : ''}`}      />
                     </div>
                   </button>
 

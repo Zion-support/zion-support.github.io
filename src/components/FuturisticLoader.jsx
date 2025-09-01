@@ -48,10 +48,10 @@ export default FuturisticLoader;
 
               {/* Connecting Lines */}
               <svg className="absolute inset - 0 w - full h - full" viewBox="0 0 100 100">
-                <line x1="50" y1="50" x2="50" y2="20" stroke="rgba (6, 182, 212, 0.3) " strokeWidth="1" className="animate - neural - network"/>
-                <line x1="50" y1="50" x2="80" y2="30" stroke="rgba (147, 51, 234, 0.3) " strokeWidth="1" className="animate - neural - network" style={{ animationDelay: '0.5s' }}/>
-                <line x1="50" y1="50" x2="20" y2="70" stroke="rgba (34, 197, 94, 0.3) " strokeWidth="1" className="animate - neural - network" style={{ animationDelay: '1s' }}/>
-                <line x1="50" y1="50" x2="50" y2="80" stroke="rgba (239, 68, 68, 0.3) " strokeWidth="1" className="animate - neural - network" style={{ animationDelay: '1.5s' }}/>
+                <line x1="50" y1="50" x2="50" y2="20" stroke="rgba (6, 182, 212, 0.3) " strokeWidth="1" className="animate - neural - network"      />
+                <line x1="50" y1="50" x2="80" y2="30" stroke="rgba (147, 51, 234, 0.3) " strokeWidth="1" className="animate - neural - network" style={{ animationDelay: '0.5s' }}      />
+                <line x1="50" y1="50" x2="20" y2="70" stroke="rgba (34, 197, 94, 0.3) " strokeWidth="1" className="animate - neural - network" style={{ animationDelay: '1s' }}      />
+                <line x1="50" y1="50" x2="50" y2="80" stroke="rgba (239, 68, 68, 0.3) " strokeWidth="1" className="animate - neural - network" style={{ animationDelay: '1.5s' }}      />
               </svg>
             </div>
           </div>) ;

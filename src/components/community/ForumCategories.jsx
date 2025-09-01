@@ -29,7 +29,7 @@ export default function ForumCategories() {
 
     ];
     return (<div className="space-y-4">
-      {categories.map((category) => (<div key={category.id} className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+      {categories.map((((((((category, index, index, index, index, index, index) => ({ ...((((((category, index, index, index, index, index, key: index })) => ({ ...(((((category, index, index, index, index, key: index })) => ({ ...((((category, index, index, index, key: index })) => ({ ...(((category, index, index, key: index })) => ({ ...((category, index, key: index })) => ({ ...(category, key: index })) => (<div key={category.id} className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
           <h3 className="text-lg font-semibold text-zion-cyan mb-2">{category.name}</h3>
           <p className="text-zion-slate-light mb-2">{category.description}</p>
           <div className="flex justify-between text-sm text-zion-slate-light">

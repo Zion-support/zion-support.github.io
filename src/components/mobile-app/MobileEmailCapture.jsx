@@ -22,11 +22,11 @@ import { Mail, CheckCircle, AlertCircle export const MobileEmailCapture = () => 
   const getStatusIcon = () => {
     switch (status) {
       case 'success':
-        return <CheckCircle className="h-5 w-5 text-green-400" />;
+        return <CheckCircle className="h-5 w-5 text-green-400"       />;
       case 'error':
-        return <AlertCircle className="h-5 w-5 text-red-400" />;
+        return <AlertCircle className="h-5 w-5 text-red-400"       />;
       default:
-        return <Mail className="h-5 w-5 text-blue-400" />}
+        return <Mail className="h-5 w-5 text-blue-400"       />}
   };
 
   const getStatusText = () => {

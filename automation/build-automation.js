@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs');
+import path from 'path');
 const { execSync, spawn } = require('child_process');
-const cron = require('node-cron');
+import cron from 'node-cron');
 
 // // console.log('🚀 Build Automation Starting...\n');
 

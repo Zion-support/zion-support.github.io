@@ -171,7 +171,7 @@ const AIBusinessIntelligence = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px]" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"       />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
           <motion.div
@@ -181,7 +181,7 @@ const AIBusinessIntelligence = () => {
             className="text-center"
           >
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full mb-6">
-              <TrendingUp className="w-10 h-10 text-white" />
+              <TrendingUp className="w-10 h-10 text-white"       />
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-600 bg-clip-text text-transparent">
@@ -230,7 +230,7 @@ const AIBusinessIntelligence = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {features.map((feature, index) => (
+          {features.map((((((((feature, index, index, index, index, index, index, index) => ({ ...((((((feature, index, index, index, index, index, index, key: index })) => ({ ...(((((feature, index, index, index, index, index, key: index })) => ({ ...((((feature, index, index, index, index, key: index })) => ({ ...(((feature, index, index, index, key: index })) => ({ ...((feature, index, index, key: index })) => ({ ...(feature, index, key: index })) => (
             <motion.div
               key={feature.title}
               variants={itemVariants}
@@ -238,7 +238,7 @@ const AIBusinessIntelligence = () => {
             >
               <div className="flex items-start mb-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                  <feature.icon className="w-6 h-6 text-white" />
+                  <feature.icon className="w-6 h-6 text-white"       />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-2">
@@ -255,7 +255,7 @@ const AIBusinessIntelligence = () => {
                   Key Benefits:
                 </h4>
                 <ul className="space-y-2">
-                  {feature.benefits.map((benefit, idx) => (
+                  {feature.benefits.map((((((((benefit, idx, index, index, index, index, index, index) => ({ ...((((((benefit, idx, index, index, index, index, index, key: index })) => ({ ...(((((benefit, idx, index, index, index, index, key: index })) => ({ ...((((benefit, idx, index, index, index, key: index })) => ({ ...(((benefit, idx, index, index, key: index })) => ({ ...((benefit, idx, index, key: index })) => ({ ...(benefit, idx, key: index })) => (
                     <li
                       key={idx}
                       className="flex items-center text-sm text-gray-400"
@@ -291,7 +291,7 @@ const AIBusinessIntelligence = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {solutions.map((category, index) => (
+            {solutions.map((((((((category, index, index, index, index, index, index, index) => ({ ...((((((category, index, index, index, index, index, index, key: index })) => ({ ...(((((category, index, index, index, index, index, key: index })) => ({ ...((((category, index, index, index, index, key: index })) => ({ ...(((category, index, index, index, key: index })) => ({ ...((category, index, index, key: index })) => ({ ...(category, index, key: index })) => (
               <motion.div
                 key={category.category}
                 initial={{ opacity: 0, y: 20 }}
@@ -302,7 +302,7 @@ const AIBusinessIntelligence = () => {
               >
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mr-4">
-                    <category.icon className="w-6 h-6 text-white" />
+                    <category.icon className="w-6 h-6 text-white"       />
                   </div>
                   <h3 className="text-xl font-semibold text-white">
                     {category.category}
@@ -310,7 +310,7 @@ const AIBusinessIntelligence = () => {
                 </div>
 
                 <ul className="space-y-3">
-                  {category.solutions.map((solution, idx) => (
+                  {category.solutions.map((((((((solution, idx, index, index, index, index, index, index) => ({ ...((((((solution, idx, index, index, index, index, index, key: index })) => ({ ...(((((solution, idx, index, index, index, index, key: index })) => ({ ...((((solution, idx, index, index, index, key: index })) => ({ ...(((solution, idx, index, index, key: index })) => ({ ...((solution, idx, index, key: index })) => ({ ...(solution, idx, key: index })) => (
                     <li
                       key={idx}
                       className="flex items-center text-sm text-gray-400"
@@ -346,7 +346,7 @@ const AIBusinessIntelligence = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {technologies.map((tech, index) => (
+          {technologies.map((((((((tech, index, index, index, index, index, index, index) => ({ ...((((((tech, index, index, index, index, index, index, key: index })) => ({ ...(((((tech, index, index, index, index, index, key: index })) => ({ ...((((tech, index, index, index, index, key: index })) => ({ ...(((tech, index, index, index, key: index })) => ({ ...((tech, index, index, key: index })) => ({ ...(tech, index, key: index })) => (
             <motion.div
               key={tech.name}
               initial={{ opacity: 0, y: 20 }}
@@ -356,7 +356,7 @@ const AIBusinessIntelligence = () => {
               className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 text-center hover:border-blue-500/50 transition-all duration-300"
             >
               <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <tech.icon className="w-8 h-8 text-white" />
+                <tech.icon className="w-8 h-8 text-white"       />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">
                 {tech.name}

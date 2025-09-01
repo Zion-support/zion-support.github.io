@@ -11,7 +11,7 @@ export const ProfileErrorState = ({
       <Card>
         <CardHeader className="text-center">
           <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <AlertCircle className="w-8 h-8 text-red-600" />
+            <AlertCircle className="w-8 h-8 text-red-600"       />
           </div>
           <h2 className="text-2xl font-bold text-gray-900 mb-2">
             Oops! Something went wrong
@@ -31,7 +31,7 @@ export const ProfileErrorState = ({
                   onClick={onRetry}
                   className="flex items-center space-x-2"
                 >
-                  <RefreshCw className="w-4 h-4" />
+                  <RefreshCw className="w-4 h-4"       />
                   <span>Try Again</span>
                 </Button>
               )}

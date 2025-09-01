@@ -119,7 +119,7 @@ const EnhancedComprehensiveServicesShowcase = () => {
                   strokeLinejoin="round"
                   strokeWidth={2}
                   d="M21 21l - 6-6m2 - 5a7 7 0 11 - 14 0 7 7 0 0114 0z"
-                />
+                      />
               </svg>
             </div>
           </div>
@@ -200,7 +200,7 @@ const EnhancedComprehensiveServicesShowcase = () => {
                           className={`w - 4 h - 4 ${i < Math.floor (service.rating) ? 'fill - current' : 'fill - gray - 600'}`}
                           viewBox="0 0 20 20"
                         >
-                          <path d="M10 15l - 5.878 3.09 1.123 - 6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955 - 4.756 4.635 1.123 6.545z" />
+                          <path d="M10 15l - 5.878 3.09 1.123 - 6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955 - 4.756 4.635 1.123 6.545z"       />
                         </svg>) ) }
                     </div>
                     <span className="text - sm text - gray - 400">
@@ -324,7 +324,7 @@ const EnhancedComprehensiveServicesShowcase = () => {
                       strokeLinejoin="round"
                       strokeWidth={2}
                       d="M6 18L18 6M6 6l12 12"
-                    />
+                          />
                   </svg>
                 </button>
               </div>

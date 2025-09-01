@@ -104,16 +104,16 @@ import { useAnalytics } from "../hooks / useAnalytics";
       <div className="bg - gradient - to - r from - purple - 500 to - blue - 500 p - 6 text - white">
         <div className="flex items - center justify - between">
           <h2 className="text - 2xl font - bold flex items - center gap - 3">
-            <Code className="w - 8 h - 8"/>
+            <Code className="w - 8 h - 8"      />
             AI Code Generator < div className="flex items - center gap - 1 px - 3 py - 1 bg - white / 20 rounded - full text - sm">
-              <Sparkles className="w - 4 h - 4"/>
+              <Sparkles className="w - 4 h - 4"      />
               Powered by AI
             </div>
           </h2>
 
           <div className="flex items - center gap - 2">
             <button onClick={ () => exportCode ('json') } className="px - 4 py - 2 bg - white / 20 hover:bg - white / 30 rounded - lg transition - colors flex items - center gap - 2">
-              <Download className="w - 4 h - 4"/>
+              <Download className="w - 4 h - 4"      />
               Export
             </button>
           </div>
@@ -132,7 +132,7 @@ import { useAnalytics } from "../hooks / useAnalytics";
         ].map ( ({ id, label, icon: Icon }) => (<button key={id} onClick={ () => setActiveTab (id) } className={`flex items - center gap - 2 py - 4 px - 1 border - b-2 font - medium text - sm transition - colors ${activeTab === id
                 ? 'border - purple - 500 text - purple - 600 dark:text - purple - 400'
                 : 'border - transparent text - gray - 500 hover:text - gray - 700 dark:text - gray - 400 dark:hover:text - gray - 300'}`}>
-              <Icon className="w - 4 h - 4"/>
+              <Icon className="w - 4 h - 4"      />
               {label}
             </button>) ) }
         </nav>
@@ -239,7 +239,7 @@ import { useAnalytics } from "../hooks / useAnalytics";
 
                 {/* Advanced Options Toggle */}
                 <button type="button" onClick={ () => setShowAdvanced (!showAdvanced) } className="flex items - center gap - 2 text - sm text - purple - 600 hover:text - purple - 700 dark:text - purple - 400 dark:hover:text - purple - 300">
-                  <Settings className="w - 4 h - 4"/>
+                  <Settings className="w - 4 h - 4"      />
                   {showAdvanced ? 'Hide' : 'Show'} Advanced Options
                 </button>
 
@@ -268,17 +268,17 @@ import { useAnalytics } from "../hooks / useAnalytics";
   [key]: e.target.checked 
 
 }) ) } className="w - 4 h - 4 text - purple - 600 bg - gray - 100 border - gray - 300 rounded focus:ring - purple - 500 dark:focus:ring - purple - 600 dark:ring - offset - gray - 800 focus:ring - 2 dark:bg - gray - 700 dark:border - gray - 600"/>
-                        <Icon className="w - 4 h - 4 text - gray - 600 dark:text - gray - 400"/>
+                        <Icon className="w - 4 h - 4 text - gray - 600 dark:text - gray - 400"      />
                         <span className="text - sm text - gray - 700 dark:text - gray - 300">{label}</span>
                       </label>) ) }
                   </motion.div>) }
 
                 <button type="submit" disabled={isGenerating || !form.prompt.trim () } className="w - full py - 3 px - 6 bg - purple - 600 hover:bg - purple - 700 disabled:bg - gray - 400 text - white font - medium rounded - lg transition - colors flex items - center justify - center gap - 2 disabled:cursor - not - allowed">
                   {isGenerating ? (<>
-                      <Loader2 className="w - 5 h - 5 animate - spin"/>
+                      <Loader2 className="w - 5 h - 5 animate - spin"      />
                       Generating Code...
                     </>) : (<>
-                      <Sparkles className="w - 5 h - 5"/>
+                      <Sparkles className="w - 5 h - 5"      />
                       Generate Code
                     </>) }
                 </button>
@@ -300,11 +300,11 @@ import { useAnalytics } from "../hooks / useAnalytics";
                     </h3>
                     <div className="flex items - center gap - 2">
                       <button onClick={ () => copyToClipboard (generatedCode) } className="px - 3 py - 1 bg - gray - 100 hover:bg - gray - 200 dark:bg - gray - 700 dark:hover:bg - gray - 600 text - gray - 700 dark:text - gray - 300 rounded text - sm transition - colors flex items - center gap - 2">
-                        {copied ? <CheckCircle className="w - 4 h - 4"/> : <Copy className="w - 4 h - 4"/>}
+                        {copied ? <CheckCircle className="w - 4 h - 4"      /> : <Copy className="w - 4 h - 4"      />}
                         {copied ? 'Copied!' : 'Copy'}
                       </button>
                       <button onClick={ () => exportCode ('txt') } className="px - 3 py - 1 bg - blue - 100 hover:bg - blue - 200 dark:bg - blue - 900 / 30 dark:hover:bg - blue - 900 / 50 text - blue - 700 dark:text - blue - 300 rounded text - sm transition - colors flex items - center gap - 2">
-                        <Download className="w - 4 h - 4"/>
+                        <Download className="w - 4 h - 4"      />
                         Export
                       </button>
                     </div>
@@ -340,10 +340,10 @@ import { useAnalytics } from "../hooks / useAnalytics";
 
               <button onClick={handleAnalyzeCustomCode} disabled={isAnalyzing || !customCode.trim () } className="w - full py - 3 px - 6 bg - blue - 600 hover:bg - blue - 700 disabled:bg - gray - 400 text - white font - medium rounded - lg transition - colors flex items - center justify - center gap - 2 disabled:cursor - not - allowed">
                 {isAnalyzing ? (<>
-                    <Loader2 className="w - 5 h - 5 animate - spin"/>
+                    <Loader2 className="w - 5 h - 5 animate - spin"      />
                     Analyzing Code...
                   </>) : (<>
-                    <Eye className="w - 5 h - 5"/>
+                    <Eye className="w - 5 h - 5"      />
                     Analyze Code
                   </>) }
               </button>
@@ -370,7 +370,7 @@ import { useAnalytics } from "../hooks / useAnalytics";
                     const value = codeAnalysis[key];
                     if (typeof value === 'number') {
                         return (<div key={key} className="text - center p - 4 bg - gray - 50 dark:bg - gray - 700 rounded - lg">
-                            <Icon className={`w - 8 h - 8 mx - auto mb - 2 text-${color}-500`}/>
+                            <Icon className={`w - 8 h - 8 mx - auto mb - 2 text-${color}-500`}      />
                             <div className="text - 2xl font - bold text - gray - 900 dark:text - white">
                               {value}/10
                             </div>
@@ -399,7 +399,7 @@ import { useAnalytics } from "../hooks / useAnalytics";
                         {codeAnalysis.issues.map ( (issue, index) => (<div key={index} className={`flex items - start gap - 3 p - 3 rounded - lg ${issue.severity === 'error' ? 'bg - red - 50 dark:bg - red - 900 / 30' :
                             issue.severity === 'warning' ? 'bg - yellow - 50 dark:bg - yellow - 900 / 30' :
                                 'bg - blue - 50 dark:bg - blue - 900 / 30'}`}>
-                            {issue.severity === 'error' ? (<AlertCircle className="w - 5 h - 5 text - red - 500 mt - 0.5"/>) : issue.severity === 'warning' ? (<AlertCircle className="w - 5 h - 5 text - yellow - 500 mt - 0.5"/>) : (<Info className="w - 5 h - 5 text - blue - 500 mt - 0.5"/>) }
+                            {issue.severity === 'error' ? (<AlertCircle className="w - 5 h - 5 text - red - 500 mt - 0.5"      />) : issue.severity === 'warning' ? (<AlertCircle className="w - 5 h - 5 text - yellow - 500 mt - 0.5"      />) : (<Info className="w - 5 h - 5 text - blue - 500 mt - 0.5"      />) }
                             <div className="flex - 1">
                               <div className="text - sm font - medium text - gray - 900 dark:text - white">
                                 {issue.message}
@@ -428,7 +428,7 @@ import { useAnalytics } from "../hooks / useAnalytics";
 
 }} className="space - y-6">
               <div className="text - center py - 8">
-                <Zap className="w - 16 h - 16 text - yellow - 500 mx - auto mb - 4"/>
+                <Zap className="w - 16 h - 16 text - yellow - 500 mx - auto mb - 4"      />
                 <h3 className="text - xl font - semibold text - gray - 900 dark:text - white mb - 2">
                   Code Optimization
                 </h3>
@@ -446,7 +446,7 @@ import { useAnalytics } from "../hooks / useAnalytics";
             ].map ( ({ key, label, icon: Icon, color }) => (<button key={key} onClick={ () => handleOptimizeCode (key) } disabled={!generatedCode && !customCode} className={`p - 6 text - center rounded - lg border - 2 transition - all ${!generatedCode && !customCode
                     ? 'border - gray - 200 dark:border - gray - 600 bg - gray - 50 dark:bg - gray - 700 cursor - not - allowed'
                     : 'border - gray - 200 dark:border - gray - 600 hover:border - purple - 500 hover:bg - purple - 50 dark:hover:bg - purple - 900 / 20 cursor - pointer'}`}>
-                    <Icon className={`w - 12 h - 12 mx - auto mb - 3 text-${color}-500`}/>
+                    <Icon className={`w - 12 h - 12 mx - auto mb - 3 text-${color}-500`}      />
                     <div className="font - medium text - gray - 900 dark:text - white">{label}</div>
                   </button>) ) }
               </div>
@@ -466,7 +466,7 @@ import { useAnalytics } from "../hooks / useAnalytics";
 
 }} className="space - y-6">
               <div className="text - center py - 8">
-                <TestTube className="w - 16 h - 16 text - green - 500 mx - auto mb - 4"/>
+                <TestTube className="w - 16 h - 16 text - green - 500 mx - auto mb - 4"      />
                 <h3 className="text - xl font - semibold text - gray - 900 dark:text - white mb - 2">
                   Generate Tests
                 </h3>
@@ -476,7 +476,7 @@ import { useAnalytics } from "../hooks / useAnalytics";
               </div>
 
               <button onClick={handleGenerateTests} disabled={!generatedCode && !customCode} className="w - full py - 4 px - 6 bg - green - 600 hover:bg - green - 700 disabled:bg - gray - 400 text - white font - medium rounded - lg transition - colors flex items - center justify - center gap - 2 disabled:cursor - not - allowed">
-                <TestTube className="w - 5 h - 5"/>
+                <TestTube className="w - 5 h - 5"      />
                 Generate Test Suite
               </button>
             </motion.div>) }
@@ -495,7 +495,7 @@ import { useAnalytics } from "../hooks / useAnalytics";
 
 }} className="space - y-6">
               <div className="text - center py - 8">
-                <FileText className="w - 16 h - 16 text - indigo - 500 mx - auto mb - 4"/>
+                <FileText className="w - 16 h - 16 text - indigo - 500 mx - auto mb - 4"      />
                 <h3 className="text - xl font - semibold text - gray - 900 dark:text - white mb - 2">
                   Generate Documentation
                 </h3>
@@ -505,7 +505,7 @@ import { useAnalytics } from "../hooks / useAnalytics";
               </div>
 
               <button onClick={handleGenerateDocs} disabled={!generatedCode && !customCode} className="w - full py - 4 px - 6 bg - indigo - 600 hover:bg - indigo - 700 disabled:bg - gray - 400 text - white font - medium rounded - lg transition - colors flex items - center justify - center gap - 2 disabled:cursor - not - allowed">
-                <FileText className="w - 5 h - 5"/>
+                <FileText className="w - 5 h - 5"      />
                 Generate Documentation
               </button>
             </motion.div>) }
@@ -589,7 +589,7 @@ import { useAnalytics } from "../hooks / useAnalytics";
               <h3 className="text - lg font - semibold text - gray - 900 dark:text - white">
                 Generation History ({history.length}) </h3>
               <button onClick={handleClearHistory} className="px - 3 py - 1 bg - red - 100 hover:bg - red - 200 dark:bg - red - 900 / 30 dark:hover:bg - red - 900 / 50 text - red - 700 dark:text - red - 300 rounded text - sm transition - colors flex items - center gap - 2">
-                <Trash2 className="w - 4 h - 4"/>
+                <Trash2 className="w - 4 h - 4"      />
                 Clear History
               </button>
             </div>

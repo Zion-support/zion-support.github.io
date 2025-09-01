@@ -75,7 +75,7 @@ export default function ApiKeysManager() {
             <div>
               <Label className="text-white">Permissions</Label>
               <div className="space-y-2 mt-2">
-                {scopeOptions.map((scope) => (<Checkbox key={scope.value} checked={selectedScopes.includes(scope.value)} onChange={() => handleScopeToggle(scope.value)} label={`${scope.label} - ${scope.description}`}/>))}
+                {scopeOptions.map((((((((scope, index, index, index, index, index, index) => ({ ...((((((scope, index, index, index, index, index, key: index })) => ({ ...(((((scope, index, index, index, index, key: index })) => ({ ...((((scope, index, index, index, key: index })) => ({ ...(((scope, index, index, key: index })) => ({ ...((scope, index, key: index })) => ({ ...(scope, key: index })) => (<Checkbox key={scope.value} checked={selectedScopes.includes(scope.value)} onChange={() => handleScopeToggle(scope.value)} label={`${scope.label} - ${scope.description}`}/>))}
               </div>
             </div>
           </div>
@@ -97,10 +97,10 @@ export default function ApiKeysManager() {
           <p className="text-green-300 text-sm mb-3">
             Copy this key now. You won't be able to see it again.
           </p>
-          <CodeBlock code={newApiKey} className="mb-3"/>
+          <CodeBlock code={newApiKey} className="mb-3"      />
           <div className="space-y-2">
             <p className="text-green-300 text-sm font-medium">Example Usage:</p>
-            <CodeBlock code={getExampleCode(newApiKey)} language="bash"/>
+            <CodeBlock code={getExampleCode(newApiKey)} language="bash"      />
           </div>
           <Button onClick={clearNewApiKey} className="mt-3 bg-green-600 hover:bg-green-700">
             I've Copied the Key
@@ -109,7 +109,7 @@ export default function ApiKeysManager() {
 
       {/* API Keys List */}
       <div className="space-y-4">
-        {apiKeys.map((apiKey) => (<div key={apiKey.id} className="bg-zinc-900 border border-zinc-800 rounded-lg p-4">
+        {apiKeys.map((((((((apiKey, index, index, index, index, index, index) => ({ ...((((((apiKey, index, index, index, index, index, key: index })) => ({ ...(((((apiKey, index, index, index, index, key: index })) => ({ ...((((apiKey, index, index, index, key: index })) => ({ ...(((apiKey, index, index, key: index })) => ({ ...((apiKey, index, key: index })) => ({ ...(apiKey, key: index })) => (<div key={apiKey.id} className="bg-zinc-900 border border-zinc-800 rounded-lg p-4">
             <div className="flex items-center justify-between">
               <div className="flex-1">
                 <div className="flex items-center gap-3 mb-2">
@@ -129,7 +129,7 @@ export default function ApiKeysManager() {
                 <div className="mt-2">
                   <span className="text-zinc-400 text-sm">Permissions: </span>
                   <div className="flex flex-wrap gap-1 mt-1">
-                    {apiKey.scopes.map((scope) => (<span key={scope} className="px-2 py-1 bg-zinc-800 text-zinc-300 text-xs rounded">
+                    {apiKey.scopes.map((((((((scope, index, index, index, index, index, index) => ({ ...((((((scope, index, index, index, index, index, key: index })) => ({ ...(((((scope, index, index, index, index, key: index })) => ({ ...((((scope, index, index, index, key: index })) => ({ ...(((scope, index, index, key: index })) => ({ ...((scope, index, key: index })) => ({ ...(scope, key: index })) => (<span key={scope} className="px-2 py-1 bg-zinc-800 text-zinc-300 text-xs rounded">
                         {scope}
                       </span>))}
                   </div>
@@ -138,22 +138,22 @@ export default function ApiKeysManager() {
 
               <div className="flex items-center gap-2">
                 <Button variant="ghost" size="icon" onClick={() => toggleApiKey(apiKey.id)} className="text-zinc-400 hover:text-white">
-                  {apiKey.isActive ? <EyeOff className="h-4 w-4"/> : <Eye className="h-4 w-4"/>}
+                  {apiKey.isActive ? <EyeOff className="h-4 w-4"      /> : <Eye className="h-4 w-4"      />}
                 </Button>
 
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                     <Button variant="ghost" size="icon" className="text-zinc-400 hover:text-white">
-                      <MoreHorizontal className="h-4 w-4"/>
+                      <MoreHorizontal className="h-4 w-4"      />
                     </Button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="end" className="bg-zinc-900 border-zinc-800 text-white">
                     <DropdownMenuItem onClick={() => setShowRegenerateConfirm(apiKey.id)} className="cursor-pointer">
-                      <RotateCcw className="h-4 w-4 mr-2"/>
+                      <RotateCcw className="h-4 w-4 mr-2"      />
                       Regenerate Key
                     </DropdownMenuItem>
                     <DropdownMenuItem onClick={() => setShowDeleteConfirm(apiKey.id)} className="cursor-pointer text-red-500">
-                      <Trash2 className="h-4 w-4 mr-2"/>
+                      <Trash2 className="h-4 w-4 mr-2"      />
                       Delete Key
                     </DropdownMenuItem>
                   </DropdownMenuContent>
@@ -165,7 +165,7 @@ export default function ApiKeysManager() {
             <div className="mt-3 pt-3 border-t border-zinc-800">
               <Popover>
                 <PopoverTrigger className="flex items-center hover:text-zinc-300">
-                  <Settings className="h-4 w-4 mr-2"/>
+                  <Settings className="h-4 w-4 mr-2"      />
                   <span className="text-sm text-zinc-400">View Key</span>
                 </PopoverTrigger>
                 <PopoverContent className="bg-zinc-900 border-zinc-800 text-white w-64 p-3">
@@ -173,7 +173,7 @@ export default function ApiKeysManager() {
                     <p className="text-xs text-zinc-400">API Key (first 8 characters):</p>
                     <code className="text-zinc-300 text-sm">{apiKey.key.substring(0, 8)}...</code>
                     <Button variant="ghost" size="sm" onClick={() => navigator.clipboard.writeText(apiKey.key)} className="w-full text-zinc-400 hover:text-white">
-                      <Copy className="h-4 w-4 mr-2"/>
+                      <Copy className="h-4 w-4 mr-2"      />
                       Copy Full Key
                     </Button>
                   </div>

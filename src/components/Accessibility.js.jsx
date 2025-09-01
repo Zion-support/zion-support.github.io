@@ -143,7 +143,7 @@ const AccessibilityContext = createContext (null) ;
         className="fixed bottom - 6 right - 6 w - 14 h - 14 bg - gradient - to - br from - zion - cyan to - zion - purple text - white rounded - full shadow - 2xl shadow - zion - cyan / 25 z - 50 flex items - center justify - center hover:shadow - 2xl hover:shadow - zion - cyan / 40 transition - all duration - 300"
         aria - label="Open Accessibility Settings"
       >
-        <Accessibility className="w - 6 h - 6" />
+        <Accessibility className="w - 6 h - 6"       />
       </motion.button>
 
       {/* Accessibility Panel */}
@@ -165,7 +165,7 @@ const AccessibilityContext = createContext (null) ;
               {/* Header */}
               <div className="flex items - center justify - between mb - 6">
                 <h2 className="text - xl font - bold text - white flex items - center gap - 2">
-                  <Accessibility className="w - 5 h - 5 text - zion - cyan" />
+                  <Accessibility className="w - 5 h - 5 text - zion - cyan"       />
                   Accessibility Settings
                 </h2>
                 <Button
@@ -174,7 +174,7 @@ const AccessibilityContext = createContext (null) ;
                   onClick={ () => setIsOpen (false) }
                   className="text - zion - slate - light hover:text - white"
                 >
-                  <X className="w - 4 h - 4" />
+                  <X className="w - 4 h - 4"       />
                 </Button>
               </div>
 
@@ -200,7 +200,7 @@ const AccessibilityContext = createContext (null) ;
                         : 'border - zion - cyan / 30 text - zion - cyan'
                     }
                   >
-                    {highContrast ? (<Eye className="w - 4 h - 4" />) : (<EyeOff className="w - 4 h - 4" />) }
+                    {highContrast ? (<Eye className="w - 4 h - 4"       />) : (<EyeOff className="w - 4 h - 4"       />) }
                   </Button>
                 </div>
 
@@ -224,7 +224,7 @@ const AccessibilityContext = createContext (null) ;
                         : 'border - zion - cyan / 30 text - zion - cyan'
                     }
                   >
-                    {reducedMotion ? (<VolumeX className="w - 4 h - 4" />) : (<Volume2 className="w - 4 h - 4" />) }
+                    {reducedMotion ? (<VolumeX className="w - 4 h - 4"       />) : (<Volume2 className="w - 4 h - 4"       />) }
                   </Button>
                 </div>
 
@@ -275,7 +275,7 @@ const AccessibilityContext = createContext (null) ;
                 {/* Keyboard Shortcuts */}
                 <div className="bg - zion - blue - dark / 50 rounded - lg p - 4">
                   <h3 className="text - white font - medium mb - 3 flex items - center gap - 2">
-                    <Keyboard className="w - 4 h - 4 text - zion - cyan" />
+                    <Keyboard className="w - 4 h - 4 text - zion - cyan"       />
                     Keyboard Shortcuts
                   </h3>
                   <div className="space - y-2 text - sm text - zion - slate - light">

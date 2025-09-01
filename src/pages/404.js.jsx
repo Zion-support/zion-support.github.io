@@ -71,7 +71,7 @@ const NotFoundPage = () => {
                 to={link.path}
                 className="group p - 4 bg - gray - 800 / 50 hover:bg - gray - 700 / 70 rounded - lg border border - gray - 700 hover:border - cyan - 500 transition - all duration - 300"
               >
-                <link.icon className="w - 6 h - 6 text - cyan - 400 mx - auto mb - 2 group - hover:text - cyan - 300 transition - colors" />
+                <link.icon className="w - 6 h - 6 text - cyan - 400 mx - auto mb - 2 group - hover:text - cyan - 300 transition - colors"       />
                 <span className="text - white font - medium">{link.name}</span>
               </Link>) ) }
           </div>
@@ -88,7 +88,7 @@ const NotFoundPage = () => {
                 to={service.path}
                 className="group p - 6 bg - gray - 800 / 50 hover:bg - gray - 700 / 70 rounded - lg border border - gray - 700 hover:border - purple - 500 transition - all duration - 300 text - left"
               >
-                <service.icon className="w - 8 h - 8 text - purple - 400 mb - 3 group - hover:text - purple - 300 transition - colors" />
+                <service.icon className="w - 8 h - 8 text - purple - 400 mb - 3 group - hover:text - purple - 300 transition - colors"       />
                 <h4 className="text - white font - semibold mb - 2 group - hover:text - purple - 300 transition - colors">
                   {service.name}
                 </h4>
@@ -105,7 +105,7 @@ const NotFoundPage = () => {
             to="/"
             className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 hover:from - cyan - 600 hover:to - purple - 700 text - white font - semibold rounded - lg transition - all duration - 300 transform hover:scale - 105"
           >
-            <ArrowLeft className="w - 5 h - 5 mr - 2" />
+            <ArrowLeft className="w - 5 h - 5 mr - 2"       />
             Back to Home
           </Link>
         </div>

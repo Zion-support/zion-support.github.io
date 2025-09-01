@@ -10,15 +10,15 @@ const AIAutonomousAPISecurity = () => {
         <meta
           name="description"
           content="Revolutionary AI autonomous API security platform that continuously secures APIs, detects threats, and protects API infrastructure with advanced AI capabilities and autonomous operation."
-        />
+              />
         <meta
           name="keywords"
           content="AI API security, autonomous API security, API protection, threat detection, autonomous operations, AI API security platform"
-        />
+              />
         <link
           rel="canonical"
           href="https://ziontechgroup.com / ai - autonomous - api - security"
-        />
+              />
       </Helmet>
 
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - cyan - 900 to - slate - 900">

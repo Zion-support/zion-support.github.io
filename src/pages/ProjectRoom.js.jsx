@@ -80,14 +80,14 @@ import { toast } from 'sonner';
       <SEO
         title={`Project Room - ${projectId}`}
         description="Collaborate on your project"
-      />
+            />
 
       <main className="container mx - auto py - 8">
         <div className="flex justify - between items - center mb - 6">
           <h1 className="text - 3xl font - bold">Project Room: {projectId}</h1>
           <div className="flex gap - 2">
             {isInCall && (<Button variant="destructive" className="flex items - center gap - 2">
-                <X className="h - 4 w - 4" />
+                <X className="h - 4 w - 4"       />
                 End Call
               </Button>) }
             <Button variant="outline">Invite Team Member</Button>
@@ -101,15 +101,15 @@ import { toast } from 'sonner';
         >
           <TabsList className="grid grid - cols - 6 md:w - fit">
             <TabsTrigger value="chat" className="flex items - center gap - 2">
-              <MessageSquare className="h - 4 w - 4" />
+              <MessageSquare className="h - 4 w - 4"       />
               <span className="hidden sm:inline">Chat</span>
             </TabsTrigger>
             <TabsTrigger value="files" className="flex items - center gap - 2">
-              <FileText className="h - 4 w - 4" />
+              <FileText className="h - 4 w - 4"       />
               <span className="hidden sm:inline">Files</span>
             </TabsTrigger>
             <TabsTrigger value="video" className="flex items - center gap - 2">
-              <Video className="h - 4 w - 4" />
+              <Video className="h - 4 w - 4"       />
               <span className="hidden sm:inline">Video</span>
               {isInCall && (<span className="relative flex h - 2 w - 2">
                   <span className="animate - ping absolute inline - flex h - full w - full rounded - full bg - red - 400 opacity - 75"></span>
@@ -117,15 +117,15 @@ import { toast } from 'sonner';
                 </span>) }
             </TabsTrigger>
             <TabsTrigger value="calendar" className="flex items - center gap - 2">
-              <Calendar className="h - 4 w - 4" />
+              <Calendar className="h - 4 w - 4"       />
               <span className="hidden sm:inline">Calendar</span>
             </TabsTrigger>
             <TabsTrigger value="team" className="flex items - center gap - 2">
-              <Users className="h - 4 w - 4" />
+              <Users className="h - 4 w - 4"       />
               <span className="hidden sm:inline">Team</span>
             </TabsTrigger>
             <TabsTrigger value="settings" className="flex items - center gap - 2">
-              <Settings className="h - 4 w - 4" />
+              <Settings className="h - 4 w - 4"       />
               <span className="hidden sm:inline">Settings</span>
             </TabsTrigger>
           </TabsList>
@@ -175,7 +175,7 @@ import { toast } from 'sonner';
                       roomId={`project-${projectId}`}
                       participants={callParticipants}
                       onLeave={endVideoCall}
-                    />
+                          />
 
                     {/* This button is just for demo / testing purposes */}
                     <div className="flex justify - center mt - 4">
@@ -195,7 +195,7 @@ import { toast } from 'sonner';
                         onClick={startVideoCall}
                         className="bg - zion - blue hover:bg - zion - blue - light gap - 2"
                       >
-                        <Video className="h - 4 w - 4" />
+                        <Video className="h - 4 w - 4"       />
                         Start Video Call
                       </Button>
                     </div>

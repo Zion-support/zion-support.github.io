@@ -113,7 +113,7 @@ import {
         description="Discover our comprehensive ecosystem of AI services, micro SAAS solutions, IT infrastructure, and digital transformation services. Expert solutions for modern businesses."
         keywords="AI services, micro SAAS, IT services, digital transformation, cloud migration, cybersecurity, DevOps, business automation, Zion Tech Group"
         canonical="https://ziontechgroup.com / services"
-      />
+            />
 
       {/* Hero Section */}
       <section className="bg - gradient - to - br from - zion - blue via - zion - purple to - zion - blue - dark py - 20">
@@ -132,7 +132,7 @@ import {
               size="lg"
               className="bg - white text - zion - purple hover:bg - gray - 100"
             >
-              <Phone className="h - 5 w - 5 mr - 2" />
+              <Phone className="h - 5 w - 5 mr - 2"       />
               Call + 1 302 464 0950
             </Button>
             <Button
@@ -140,7 +140,7 @@ import {
               variant="outline"
               className="border - white text - white hover:bg - white hover:text - zion - purple"
             >
-              <Mail className="h - 5 w - 5 mr - 2" />
+              <Mail className="h - 5 w - 5 mr - 2"       />
               Get Free Consultation
             </Button>
           </div>
@@ -248,7 +248,7 @@ import {
                         <div className="flex items - center justify - between">
                           <div className="flex items - center space - x-2">
                             <div className="flex items - center">
-                              <Star className="h - 4 w - 4 text - yellow - 500 fill - current" />
+                              <Star className="h - 4 w - 4 text - yellow - 500 fill - current"       />
                               <span className="ml - 1 text - sm font - medium">
                                 {service.rating}
                               </span>
@@ -256,7 +256,7 @@ import {
                             </div>
                           </div>
                           <div className="flex items - center space - x-2">
-                            <Zap className="h - 4 w - 4 text - zion - purple" />
+                            <Zap className="h - 4 w - 4 text - zion - purple"       />
                             <span className="text - sm font - medium text - zion - purple">
                               AI Score: {service.aiScore}
                             </span>
@@ -306,7 +306,7 @@ import {
                                   key={index}
                                   className="flex items - start space - x-2 text - sm text - gray - 600"
                                 >
-                                  <CheckCircle className="h - 4 w - 4 text - green - 500 mt - 0.5 flex - shrink - 0" />
+                                  <CheckCircle className="h - 4 w - 4 text - green - 500 mt - 0.5 flex - shrink - 0"       />
                                   <span>{benefit}</span>
                                 </li>) ) }
                           </ul>
@@ -342,15 +342,15 @@ import {
                         <div className="pt - 4 border - t border - gray - 200">
                           <div className="space - y-2">
                             <div className="flex items - center space - x-2 text - sm text - gray - 600">
-                              <Phone className="h - 4 w - 4" />
+                              <Phone className="h - 4 w - 4"       />
                               <span>{service.contactInfo.phone}</span>
                             </div>
                             <div className="flex items - center space - x-2 text - sm text - gray - 600">
-                              <Mail className="h - 4 w - 4" />
+                              <Mail className="h - 4 w - 4"       />
                               <span>{service.contactInfo.email}</span>
                             </div>
                             <div className="flex items - center space - x-2 text - sm text - gray - 600">
-                              <Globe className="h - 4 w - 4" />
+                              <Globe className="h - 4 w - 4"       />
                               <a
                                 href={service.contactInfo.website}
                                 target="_blank"
@@ -390,7 +390,7 @@ import {
           <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8 max - w-4xl mx - auto">
             <div className="text - center">
               <div className="bg - zion - purple rounded - full w - 16 h - 16 flex items - center justify - center mx - auto mb - 4">
-                <TrendingUp className="h - 8 w - 8 text - white" />
+                <TrendingUp className="h - 8 w - 8 text - white"       />
               </div>
               <h3 className="text - xl font - semibold text - white mb - 2">
                 Proven Results
@@ -403,7 +403,7 @@ import {
 
             <div className="text - center">
               <div className="bg - zion - purple rounded - full w - 16 h - 16 flex items - center justify - center mx - auto mb - 4">
-                <Users className="h - 8 w - 8 text - white" />
+                <Users className="h - 8 w - 8 text - white"       />
               </div>
               <h3 className="text - xl font - semibold text - white mb - 2">
                 Expert Team
@@ -416,7 +416,7 @@ import {
 
             <div className="text - center">
               <div className="bg - zion - purple rounded - full w - 16 h - 16 flex items - center justify - center mx - auto mb - 4">
-                <Shield className="h - 8 w - 8 text - white" />
+                <Shield className="h - 8 w - 8 text - white"       />
               </div>
               <h3 className="text - xl font - semibold text - white mb - 2">
                 Reliable Support
@@ -446,7 +446,7 @@ import {
               size="lg"
               className="bg - white text - zion - purple hover:bg - gray - 100"
             >
-              <Phone className="h - 5 w - 5 mr - 2" />
+              <Phone className="h - 5 w - 5 mr - 2"       />
               Call + 1 302 464 0950
             </Button>
             <Button
@@ -454,7 +454,7 @@ import {
               variant="outline"
               className="border - white text - white hover:bg - white hover:text - zion - purple"
             >
-              <Mail className="h - 5 w - 5 mr - 2" />
+              <Mail className="h - 5 w - 5 mr - 2"       />
               Email kleber@ziontechgroup.com
             </Button>
           </div>
@@ -477,6 +477,6 @@ import {
         </div>
       </section>
 
-      <TrustedBySection />
+      <TrustedBySection       />
     </div>) ;
 }

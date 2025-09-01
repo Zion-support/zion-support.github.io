@@ -51,10 +51,10 @@ const renderApp = () => {
                     >
                       <ViewModeProvider>
                         <AppLayout>
-                          <App />
+                          <App       />
                         </AppLayout>
                       </ViewModeProvider>
-                      <LanguageDetectionPopup />
+                      <LanguageDetectionPopup       />
                     </LanguageProvider>
                   </AnalyticsProvider>
                 </NotificationProvider>

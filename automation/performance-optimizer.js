@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs');
+import path from 'path');
 const { execSync } = require('child_process');
 
 class PerformanceOptimizer {
@@ -135,7 +135,7 @@ class PerformanceOptimizer {
 }
 
 // Export the class
-module.exports = PerformanceOptimizer;
+export default PerformanceOptimizer;
 
 // If running directly, start the optimizer
 if (require.main === module) {

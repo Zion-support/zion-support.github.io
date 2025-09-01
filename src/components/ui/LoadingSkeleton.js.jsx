@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 export function LoadingSkeleton({ className, count = 1, height = "h-4", width = "w-full", rounded = true }) {
     return (<>
-      {Array.from({ length: count }).map((_, index) => (<motion.div key={index} className={
+      {Array.from({ length: count }).map((((((((_, index, index, index, index, index, index, index) => ({ ...((((((_, index, index, index, index, index, index, key: index })) => ({ ...(((((_, index, index, index, index, index, key: index })) => ({ ...((((_, index, index, index, index, key: index })) => ({ ...(((_, index, index, index, key: index })) => ({ ...((_, index, index, key: index })) => ({ ...(_, index, key: index })) => (<motion.div key={index} className={
   cn("bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark", height, width, rounded && "rounded",
   className)
 
@@ -26,7 +26,7 @@ export function LoadingSkeleton({ className, count = 1, height = "h-4", width = 
 
 }} style={{
                 backgroundSize: "200% 100%"
-            }}/>))}
+            }}      />))}
     </>)}
 export function CardSkeleton({ className }) {
     return (<div className={
@@ -35,16 +35,16 @@ export function CardSkeleton({ className }) {
 
 }>
       <div className="flex items-center space-x-4 mb-4">
-        <LoadingSkeleton className="w-12 h-12 rounded-full"/>
+        <LoadingSkeleton className="w-12 h-12 rounded-full"      />
         <div className="space-y-2 flex-1">
-          <LoadingSkeleton height="h-4" width="w-3/4"/>
-          <LoadingSkeleton height="h-3" width="w-1/2"/>
+          <LoadingSkeleton height="h-4" width="w-3/4"      />
+          <LoadingSkeleton height="h-3" width="w-1/2"      />
         </div>
       </div>
       <div className="space-y-2">
-        <LoadingSkeleton height="h-3" width="w-full"/>
-        <LoadingSkeleton height="h-3" width="w-5/6"/>
-        <LoadingSkeleton height="h-3" width="w-4/6"/>
+        <LoadingSkeleton height="h-3" width="w-full"      />
+        <LoadingSkeleton height="h-3" width="w-5/6"      />
+        <LoadingSkeleton height="h-3" width="w-4/6"      />
       </div>
     </div>)}
 export function GridSkeleton({ columns = 3, className }) {
@@ -53,7 +53,7 @@ export function GridSkeleton({ columns = 3, className }) {
   className)
 
 }>
-      {Array.from({ length: columns }).map((_, index) => (<CardSkeleton key={index}/>))}
+      {Array.from({ length: columns }).map((((((((_, index, index, index, index, index, index, index) => ({ ...((((((_, index, index, index, index, index, index, key: index })) => ({ ...(((((_, index, index, index, index, index, key: index })) => ({ ...((((_, index, index, index, index, key: index })) => ({ ...(((_, index, index, index, key: index })) => ({ ...((_, index, index, key: index })) => ({ ...(_, index, key: index })) => (<CardSkeleton key={index}      />))}
     </div>)}
 export function HeroSkeleton({ className }) {
     return (<div className={
@@ -62,11 +62,11 @@ export function HeroSkeleton({ className }) {
 
 }>
       <div className="container mx-auto px-4 text-center space-y-8">
-        <LoadingSkeleton height="h-16 md:h-20" width="w-3/4" className="mx-auto"/>
-        <LoadingSkeleton height="h-6 md:h-8" width="w-2/3" className="mx-auto"/>
+        <LoadingSkeleton height="h-16 md:h-20" width="w-3/4" className="mx-auto"      />
+        <LoadingSkeleton height="h-6 md:h-8" width="w-2/3" className="mx-auto"      />
         <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <LoadingSkeleton height="h-14" width="w-32" className="rounded-md"/>
-          <LoadingSkeleton height="h-14" width="w-40" className="rounded-md"/>
+          <LoadingSkeleton height="h-14" width="w-32" className="rounded-md"      />
+          <LoadingSkeleton height="h-14" width="w-40" className="rounded-md"      />
         </div>
       </div>
     </div>)}

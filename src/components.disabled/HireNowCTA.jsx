@@ -26,7 +26,7 @@ export const HireNowCTA = ({
           <div className="flex items-center justify-between">
             <span className="text-gray-600">Rating</span>
             <div className="flex items-center space-x-1">
-              <Star className="w-4 h-4 text-yellow-400 fill-current" />
+              <Star className="w-4 h-4 text-yellow-400 fill-current"       />
               <span className="font-medium">{rating}</span>
               <span className="text-gray-500">({reviewCount})</span>
             </div>
@@ -49,12 +49,12 @@ export const HireNowCTA = ({
 
         <div className="space-y-3">
           <Button className="w-full bg-blue-600 hover:bg-blue-700">
-            <MessageCircle className="w-4 h-4 mr-2" />
+            <MessageCircle className="w-4 h-4 mr-2"       />
             Send Message
           </Button>
 
           <Button variant="outline" className="w-full">
-            <Calendar className="w-4 h-4 mr-2" />
+            <Calendar className="w-4 h-4 mr-2"       />
             Schedule Call
           </Button>
         </div>

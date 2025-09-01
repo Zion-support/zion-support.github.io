@@ -61,22 +61,22 @@ export default function ComprehensiveContact () {
                   <div className="grid md:grid - cols - 2 gap - 4">
                     <div>
                       <Label htmlFor="name" className="text - white">Full Name *</Label>
-                      <Input id="name" name="name" value={formData.name} onChange={handleChange} required className="bg - white / 10 border - zion - cyan / 30 text - white placeholder:text - zion - cyan - light" placeholder="Enter your full name"/>
+                      <Input id="name" name="name" value={formData.name} onChange={handleChange} required className="bg - white / 10 border - zion - cyan / 30 text - white placeholder:text - zion - cyan - light" placeholder="Enter your full name"      />
                     </div>
                     <div>
                       <Label htmlFor="email" className="text - white">Email Address *</Label>
-                      <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} required className="bg - white / 10 border - zion - cyan / 30 text - white placeholder:text - zion - cyan - light" placeholder="Enter your email"/>
+                      <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} required className="bg - white / 10 border - zion - cyan / 30 text - white placeholder:text - zion - cyan - light" placeholder="Enter your email"      />
                     </div>
                   </div>
 
                   <div className="grid md:grid - cols - 2 gap - 4">
                     <div>
                       <Label htmlFor="comp" className="text - white">Company</Label>
-                      <Input id="comp" name="comp" value={formData.comp} onChange={handleChange} className="bg - white / 10 border - zion - cyan / 30 text - white placeholder:text - zion - cyan - light" placeholder="Enter comp name"/>
+                      <Input id="comp" name="comp" value={formData.comp} onChange={handleChange} className="bg - white / 10 border - zion - cyan / 30 text - white placeholder:text - zion - cyan - light" placeholder="Enter comp name"      />
                     </div>
                     <div>
                       <Label htmlFor="phone" className="text - white">Phone Number</Label>
-                      <Input id="phone" name="phone" value={formData.phone} onChange={handleChange} className="bg - white / 10 border - zion - cyan / 30 text - white placeholder:text - zion - cyan - light" placeholder="Enter phone number"/>
+                      <Input id="phone" name="phone" value={formData.phone} onChange={handleChange} className="bg - white / 10 border - zion - cyan / 30 text - white placeholder:text - zion - cyan - light" placeholder="Enter phone number"      />
                     </div>
                   </div>
 
@@ -98,11 +98,11 @@ export default function ComprehensiveContact () {
 
                   <div>
                     <Label htmlFor="message" className="text - white">Message *</Label>
-                    <Textarea id="message" name="message" value={formData.message} onChange={handleChange} required rows={5} className="bg - white / 10 border - zion - cyan / 30 text - white placeholder:text - zion - cyan - light" placeholder="Tell us about your project or requirements..."/>
+                    <Textarea id="message" name="message" value={formData.message} onChange={handleChange} required rows={5} className="bg - white / 10 border - zion - cyan / 30 text - white placeholder:text - zion - cyan - light" placeholder="Tell us about your project or requirements..."      />
                   </div>
 
                   <Button type="submit" className="w - full bg - zion - purple hover:bg - zion - purple - dark text - white py - 3">
-                    <Send className="mr - 2 h - 5 w - 5"/>
+                    <Send className="mr - 2 h - 5 w - 5"      />
                     Send Message
                   </Button>
                 </form>
@@ -116,7 +116,7 @@ export default function ComprehensiveContact () {
               <h2 className="text - 3xl font - bold text - white mb - 6">Contact Information</h2>
               <div className="space - y-6">
                 <div className="flex items - start gap - 4">
-                  <Phone className="h - 6 w - 6 text - zion - cyan mt - 1"/>
+                  <Phone className="h - 6 w - 6 text - zion - cyan mt - 1"      />
                   <div>
                     <h3 className="font - semibold text - white">Phone</h3>
                     <p className="text - zion - cyan - light">+1 302 464 0950</p>
@@ -125,7 +125,7 @@ export default function ComprehensiveContact () {
                 </div>
 
                 <div className="flex items - start gap - 4">
-                  <Mail className="h - 6 w - 6 text - zion - cyan mt - 1"/>
+                  <Mail className="h - 6 w - 6 text - zion - cyan mt - 1"      />
                   <div>
                     <h3 className="font - semibold text - white">Email</h3>
                     <p className="text - zion - cyan - light">kleber@ziontechgroup.com</p>
@@ -134,7 +134,7 @@ export default function ComprehensiveContact () {
                 </div>
 
                 <div className="flex items - start gap - 4">
-                  <MapPin className="h - 6 w - 6 text - zion - cyan mt - 1"/>
+                  <MapPin className="h - 6 w - 6 text - zion - cyan mt - 1"      />
                   <div>
                     <h3 className="font - semibold text - white">Address</h3>
                     <p className="text - zion - cyan - light">364 E Main St STE 1008</p>
@@ -143,7 +143,7 @@ export default function ComprehensiveContact () {
                 </div>
 
                 <div className="flex items - start gap - 4">
-                  <Globe className="h - 6 w - 6 text - zion - cyan mt - 1"/>
+                  <Globe className="h - 6 w - 6 text - zion - cyan mt - 1"      />
                   <div>
                     <h3 className="font - semibold text - white">Website</h3>
                     <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text - zion - cyan hover:text - zion - cyan - light underline">
@@ -159,15 +159,15 @@ export default function ComprehensiveContact () {
               <h3 className="text - xl font - semibold text - white mb - 4">Quick Actions</h3>
               <div className="space - y-3">
                 <Button variant="outline" className="w - full border - zion - cyan text - zion - cyan hover:bg - zion - cyan / 10">
-                  <Calendar className="mr - 2 h - 4 w - 4"/>
+                  <Calendar className="mr - 2 h - 4 w - 4"      />
                   Schedule a Consultation
                 </Button>
                 <Button variant="outline" className="w - full border - zion - cyan text - zion - cyan hover:bg - zion - cyan / 10">
-                  <FileText className="mr - 2 h - 4 w - 4"/>
+                  <FileText className="mr - 2 h - 4 w - 4"      />
                   Request a Quote
                 </Button>
                 <Button variant="outline" className="w - full border - zion - cyan text - zion - cyan hover:bg - zion - cyan / 10">
-                  <MessageSquare className="mr - 2 h - 4 w - 4"/>
+                  <MessageSquare className="mr - 2 h - 4 w - 4"      />
                   Live Chat Support
                 </Button>
               </div>
@@ -198,7 +198,7 @@ export default function ComprehensiveContact () {
                 <CardContent>
                   <div className="space - y-2">
                     {category.services.slice (0, 3) .map ( (service) => (<div key={service.id} className="flex items - center gap - 2 text - sm">
-                        <CheckCircle className="h - 3 w - 3 text - green - 400"/>
+                        <CheckCircle className="h - 3 w - 3 text - green - 400"      />
                         <span className="text - zion - cyan - light">{service.title}</span>
                       </div>) ) }
                   </div>
@@ -223,7 +223,7 @@ export default function ComprehensiveContact () {
         <div className="grid md:grid - cols - 2 lg:grid - cols - 3 gap - 8">
           <Card className="bg - white / 10 backdrop - blur - sm border - zion - cyan / 30 text - center">
             <CardContent className="p - 8">
-              <Award className="h - 16 w - 16 mx - auto mb - 4 text - zion - cyan"/>
+              <Award className="h - 16 w - 16 mx - auto mb - 4 text - zion - cyan"      />
               <h3 className="text - 2xl font - bold text - white mb - 4">Proven Expertise</h3>
               <p className="text - zion - cyan - light">
                 Years of experience delivering successful technology solutions across industries.
@@ -233,7 +233,7 @@ export default function ComprehensiveContact () {
 
           <Card className="bg - white / 10 backdrop - blur - sm border - zion - cyan / 30 text - center">
             <CardContent className="p - 8">
-              <Shield className="h - 16 w - 16 mx - auto mb - 4 text - zion - cyan"/>
+              <Shield className="h - 16 w - 16 mx - auto mb - 4 text - zion - cyan"      />
               <h3 className="text - 2xl font - bold text - white mb - 4">Custom Solutions</h3>
               <p className="text - zion - cyan - light">
                 Tailored approaches that address your specific business challenges and goals.
@@ -243,7 +243,7 @@ export default function ComprehensiveContact () {
 
           <Card className="bg - white / 10 backdrop - blur - sm border - zion - cyan / 30 text - center">
             <CardContent className="p - 8">
-              <TrendingUp className="h - 16 w - 16 mx - auto mb - 4 text - zion - cyan"/>
+              <TrendingUp className="h - 16 w - 16 mx - auto mb - 4 text - zion - cyan"      />
               <h3 className="text - 2xl font - bold text - white mb - 4">Measurable Results</h3>
               <p className="text - zion - cyan - light">
                 Trackable outcomes and ROI that demonstrate the value of our solutions.
@@ -253,7 +253,7 @@ export default function ComprehensiveContact () {
 
           <Card className="bg - white / 10 backdrop - blur - sm border - zion - cyan / 30 text - center">
             <CardContent className="p - 8">
-              <Users className="h - 16 w - 16 mx - auto mb - 4 text - zion - cyan"/>
+              <Users className="h - 16 w - 16 mx - auto mb - 4 text - zion - cyan"      />
               <h3 className="text - 2xl font - bold text - white mb - 4">Dedicated Support</h3>
               <p className="text - zion - cyan - light">
                 24 / 7 support and ongoing partnership to ensure your success.
@@ -263,7 +263,7 @@ export default function ComprehensiveContact () {
 
           <Card className="bg - white / 10 backdrop - blur - sm border - zion - cyan / 30 text - center">
             <CardContent className="p - 8">
-              <Building className="h - 16 w - 16 mx - auto mb - 4 text - zion - cyan"/>
+              <Building className="h - 16 w - 16 mx - auto mb - 4 text - zion - cyan"      />
               <h3 className="text - 2xl font - bold text - white mb - 4">Enterprise Ready</h3>
               <p className="text - zion - cyan - light">
                 Solutions that scale with your business and meet enterprise standards.
@@ -273,7 +273,7 @@ export default function ComprehensiveContact () {
 
           <Card className="bg - white / 10 backdrop - blur - sm border - zion - cyan / 30 text - center">
             <CardContent className="p - 8">
-              <Star className="h - 16 w - 16 mx - auto mb - 4 text - zion - cyan"/>
+              <Star className="h - 16 w - 16 mx - auto mb - 4 text - zion - cyan"      />
               <h3 className="text - 2xl font - bold text - white mb - 4">Quality Assured</h3>
               <p className="text - zion - cyan - light">
                 Rigorous testing and quality assurance processes for reliable solutions.
@@ -294,11 +294,11 @@ export default function ComprehensiveContact () {
           </p>
           <div className="flex flex - wrap justify - center gap - 4">
             <Button size="lg" className="bg - white text - zion - purple hover:bg - zion - cyan px - 8 py - 3">
-              <Phone className="mr - 2 h - 5 w - 5"/>
+              <Phone className="mr - 2 h - 5 w - 5"      />
               Call Now: +1 302 464 0950
             </Button>
             <Button size="lg" variant="outline" className="border - white text - white hover:bg - white / 10 px - 8 py - 3">
-              <Mail className="mr - 2 h - 5 w - 5"/>
+              <Mail className="mr - 2 h - 5 w - 5"      />
               Email: kleber@ziontechgroup.com
             </Button>
           </div>
@@ -337,11 +337,11 @@ export default function ComprehensiveContact () {
               <h4 className="text - lg font - semibold text - white mb - 4">Connect</h4>
               <div className="space - y-2">
                 <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="flex items - center text - zion - cyan hover:text - zion - cyan - light">
-                  <Globe className="h - 4 w - 4 mr - 2"/>
+                  <Globe className="h - 4 w - 4 mr - 2"      />
                   Website
                 </a>
                 <Button variant="outline" size="sm" className="w - full border - zion - cyan text - zion - cyan hover:bg - zion - cyan / 10">
-                  <ExternalLink className="h - 4 w - 4 mr - 2"/>
+                  <ExternalLink className="h - 4 w - 4 mr - 2"      />
                   View All Services
                 </Button>
               </div>

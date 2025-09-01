@@ -74,11 +74,11 @@ import { Shield, Users, Award, Star, TrendingUp, Globe export const CommunityTru
 
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20">
-          {stats.map((stat, index) => (
+          {stats.map((((((((stat, index, index, index, index, index, index, index) => ({ ...((((((stat, index, index, index, index, index, index, key: index })) => ({ ...(((((stat, index, index, index, index, index, key: index })) => ({ ...((((stat, index, index, index, index, key: index })) => ({ ...(((stat, index, index, index, key: index })) => ({ ...((stat, index, index, key: index })) => ({ ...(stat, index, key: index })) => (
             <div key={index} className="text-center">
               <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
                 <div className="flex justify-center mb-4">
-                  <stat.icon className={`w-8 h-8 ${stat.color}`} />
+                  <stat.icon className={`w-8 h-8 ${stat.color}`}       />
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-300 text-sm">{stat.label}</div>
@@ -93,7 +93,7 @@ import { Shield, Users, Award, Star, TrendingUp, Globe export const CommunityTru
             What Our Users Say
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
+            {testimonials.map((((((((testimonial, index, index, index, index, index, index, index) => ({ ...((((((testimonial, index, index, index, index, index, index, key: index })) => ({ ...(((((testimonial, index, index, index, index, index, key: index })) => ({ ...((((testimonial, index, index, index, index, key: index })) => ({ ...(((testimonial, index, index, index, key: index })) => ({ ...((testimonial, index, index, key: index })) => ({ ...(testimonial, index, key: index })) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
                 <div className="flex items-center mb-4">
                   <div className="text-3xl mr-3">{testimonial.avatar}</div>
@@ -105,8 +105,8 @@ import { Shield, Users, Award, Star, TrendingUp, Globe export const CommunityTru
                 </div>
 
                 <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                  {[...Array(testimonial.rating)].map((((((((_, i, index, index, index, index, index, index) => ({ ...((((((_, i, index, index, index, index, index, key: index })) => ({ ...(((((_, i, index, index, index, index, key: index })) => ({ ...((((_, i, index, index, index, key: index })) => ({ ...(((_, i, index, index, key: index })) => ({ ...((_, i, index, key: index })) => ({ ...(_, i, key: index })) => (
+                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current"       />
                   ))}
                 </div>
 
@@ -124,7 +124,7 @@ import { Shield, Users, Award, Star, TrendingUp, Globe export const CommunityTru
             Industry Certifications & Compliance
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {certifications.map((cert, index) => (
+            {certifications.map((((((((cert, index, index, index, index, index, index, index) => ({ ...((((((cert, index, index, index, index, index, index, key: index })) => ({ ...(((((cert, index, index, index, index, index, key: index })) => ({ ...((((cert, index, index, index, index, key: index })) => ({ ...(((cert, index, index, index, key: index })) => ({ ...((cert, index, index, key: index })) => ({ ...(cert, index, key: index })) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 text-center">
                 <div className="text-4xl mb-4">{cert.icon}</div>
                 <h4 className="text-lg font-semibold text-white mb-2">{cert.name}</h4>
@@ -140,10 +140,10 @@ import { Shield, Users, Award, Star, TrendingUp, Globe export const CommunityTru
             Why IT Teams Choose Zion
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((((((((feature, index, index, index, index, index, index, index) => ({ ...((((((feature, index, index, index, index, index, index, key: index })) => ({ ...(((((feature, index, index, index, index, index, key: index })) => ({ ...((((feature, index, index, index, index, key: index })) => ({ ...(((feature, index, index, index, key: index })) => ({ ...((feature, index, index, key: index })) => ({ ...(feature, index, key: index })) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <feature.icon className="w-8 h-8 text-white" />
+                  <feature.icon className="w-8 h-8 text-white"       />
                 </div>
                 <h4 className="text-xl font-semibold text-white mb-4">{feature.title}</h4>
                 <p className="text-gray-300 leading-relaxed">{feature.description}</p>

@@ -47,7 +47,7 @@ const EquipmentPage = () => {
       <CardContent className="pt - 0">
         <div className="flex items - center gap - 4 mb - 3">
           <div className="flex items - center gap - 1">
-            <Star className="h - 4 w - 4 text - yellow - 500 fill - current"/>
+            <Star className="h - 4 w - 4 text - yellow - 500 fill - current"      />
             <span className="text - sm font - medium">{equipment.rating?.toFixed (1) }</span>
             <span className="text - xs text - muted - foreground"> ({equipment.reviewCount} reviews) </span>
           </div>
@@ -56,7 +56,7 @@ const EquipmentPage = () => {
         <div className="flex items - center justify - between">
           <span className="text - sm font - medium">{equipment.category}</span>
           <Button size="sm">
-            <ShoppingCart className="h - 4 w - 4 mr - 1"/>
+            <ShoppingCart className="h - 4 w - 4 mr - 1"      />
             View Details
           </Button>
         </div>
@@ -74,7 +74,7 @@ const EquipmentPage = () => {
           </p>
         </div>
 
-        <EquipmentFilterControls />
+        <EquipmentFilterControls       />
 
         <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 4 gap - 6">
           {loading ? (// Loading skeleton
@@ -120,10 +120,10 @@ const EquipmentPage = () => {
                 description: "Reliable 2U server with excellent performance and enterprise support."
 
             ].map ( (equipment, index) => (;
-              <EquipmentCard key={index} equipment={equipment} />) ) ) }
+              <EquipmentCard key={index} equipment={equipment}       />) ) ) }
         </div>
       </div>
-      <Footer />
+      <Footer       />
     </div>) };
 
 }}

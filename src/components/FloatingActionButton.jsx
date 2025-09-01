@@ -50,7 +50,7 @@ const FloatingActionButton = ({ className = '' }) => {
                   whileTap={{ scale: 0.95 }}
                   aria - label={item.label}
                 >
-                  <item.icon className="w - 5 h - 5" />
+                  <item.icon className="w - 5 h - 5"       />
                 </motion.button>
                 <motion.span
                   initial={{ opacity: 0, x: -10 }}
@@ -78,7 +78,7 @@ const FloatingActionButton = ({ className = '' }) => {
               exit={{ rotate: 90, opacity: 0 }}
               transition={{ duration: 0.2 }}
             >
-              <X className="w - 6 h - 6" />
+              <X className="w - 6 h - 6"       />
             </motion.div>) : (<motion.div
               key="open"
               initial={{ rotate: 90, opacity: 0 }}
@@ -86,7 +86,7 @@ const FloatingActionButton = ({ className = '' }) => {
               exit={{ rotate: -90, opacity: 0 }}
               transition={{ duration: 0.2 }}
             >
-              <Plus className="w - 6 h - 6" />
+              <Plus className="w - 6 h - 6"       />
             </motion.div>) }
         </AnimatePresence>
       </motion.button>

@@ -130,7 +130,7 @@ const News = () => {
           <div className="text - center mb - 12">
             <div className="flex justify - center mb - 6">
               <div className="p - 3 bg - blue - 600 / 20 rounded - full">
-                <Globe className="h - 12 w - 12 text - blue - 400" />
+                <Globe className="h - 12 w - 12 text - blue - 400"       />
               </div>
             </div>
             <h1 className="text - 4xl md:text - 5xl font - bold mb - 6">
@@ -146,7 +146,7 @@ const News = () => {
           <div className="mb - 12">
             <div className="flex flex - col lg:flex - row gap - 6 items - center justify - between">
               <div className="relative flex - 1 max - w-md">
-                <Search className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text - gray - 400 h - 5 w - 5" />
+                <Search className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text - gray - 400 h - 5 w - 5"       />
                 <input
                   type="text"
                   placeholder="Search news..."
@@ -183,7 +183,7 @@ const News = () => {
                     >
                       <div className="aspect - video bg - slate - 700 flex items - center justify - center">
                         <div className="text - slate - 500 text - center">
-                          <Globe className="h - 16 w - 16 mx - auto mb - 2" />
+                          <Globe className="h - 16 w - 16 mx - auto mb - 2"       />
                           <p > News Image</p>
                         </div>
                       </div>
@@ -193,11 +193,11 @@ const News = () => {
                             {item.category}
                           </span>
                           <div className="flex items - center gap - 1">
-                            <Calendar className="h - 4 w - 4" />
+                            <Calendar className="h - 4 w - 4"       />
                             {item.date}
                           </div>
                           <div className="flex items - center gap - 1">
-                            <Clock className="h - 4 w - 4" />
+                            <Clock className="h - 4 w - 4"       />
                             {item.readTime}
                           </div>
                         </div>
@@ -209,7 +209,7 @@ const News = () => {
                         </p>
                         <button className="inline - flex items - center text - blue - 400 hover:text - blue - 300 transition - colors">
                           Read More{' '}
-                          <ArrowRight className="h - 4 w - 4 ml - 2" />
+                          <ArrowRight className="h - 4 w - 4 ml - 2"       />
                         </button>
                       </div>
                     </div>) ) }
@@ -228,7 +228,7 @@ const News = () => {
                 >
                   <div className="aspect - video bg - slate - 700 flex items - center justify - center">
                     <div className="text - slate - 500 text - center">
-                      <Globe className="h - 12 w - 12 mx - auto mb - 2" />
+                      <Globe className="h - 12 w - 12 mx - auto mb - 2"       />
                       <p > News Image</p>
                     </div>
                   </div>
@@ -238,7 +238,7 @@ const News = () => {
                         {item.category}
                       </span>
                       <div className="flex items - center gap - 1">
-                        <Calendar className="h - 4 w - 4" />
+                        <Calendar className="h - 4 w - 4"       />
                         {item.date}
                       </div>
                     </div>
@@ -262,7 +262,7 @@ const News = () => {
           </div>
 
           {filteredNews.length === 0 && (<div className="text - center py - 16">
-              <Globe className="w - 16 h - 16 text - gray - 400 mx - auto mb - 4" />
+              <Globe className="w - 16 h - 16 text - gray - 400 mx - auto mb - 4"       />
               <h3 className="text - xl font - semibold text - white mb - 2">
                 No news found
               </h3>

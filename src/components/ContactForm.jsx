@@ -51,7 +51,7 @@ const ContactForm = () => {
       {submitStatus === 'success' && (<div className="mb - 6 p - 4 bg - green - 100 border border - green - 400 text - green - 700 rounded - lg">
           <div className="flex items - center">
             <svg className="w - 5 h - 5 mr - 2" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M10 18a8 8 0 100 - 16 8 8 0 000 16zm3.707 - 9.293a1 1 0 00 - 1.414 - 1.414L9 10.586 7.707 9.293a1 1 0 00 - 1.414 1.414l2 2a1 1 0 001.414 0l4 - 4z" clipRule="evenodd"/>
+              <path fillRule="evenodd" d="M10 18a8 8 0 100 - 16 8 8 0 000 16zm3.707 - 9.293a1 1 0 00 - 1.414 - 1.414L9 10.586 7.707 9.293a1 1 0 00 - 1.414 1.414l2 2a1 1 0 001.414 0l4 - 4z" clipRule="evenodd"      />
             </svg > Thank you ! Your message has been sent successfully. We'll get back to you within 24 hours.
           </div>
         </div>) }
@@ -59,7 +59,7 @@ const ContactForm = () => {
       {submitStatus === 'error' && (<div className="mb - 6 p - 4 bg - red - 100 border border - red - 400 text - red - 700 rounded - lg">
           <div className="flex items - center">
             <svg className="w - 5 h - 5 mr - 2" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M18 10a8 8 0 11 - 16 0 8 8 0 0116 0zm - 7 4a1 1 0 11 - 2 0 1 1 0 012 0zm - 1-9a1 1 0 00 - 1 1v4a1 1 0 102 0V6a1 1 0 00 - 1-1z" clipRule="evenodd"/>
+              <path fillRule="evenodd" d="M18 10a8 8 0 11 - 16 0 8 8 0 0116 0zm - 7 4a1 1 0 11 - 2 0 1 1 0 012 0zm - 1-9a1 1 0 00 - 1 1v4a1 1 0 102 0V6a1 1 0 00 - 1-1z" clipRule="evenodd"      />
             </svg > Something went wrong. Please try again or contact us directly.
           </div>
         </div>) }
@@ -70,14 +70,14 @@ const ContactForm = () => {
             <label htmlFor="firstName" className="block text - sm font - medium text - gray - 300 mb - 2">
               First Name *
             </label>
-            <input type="text" id="firstName" name="firstName" value={formData.firstName} onChange={handleInputChange} required className="w - full px - 4 py - 3 bg - gray - 800 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent transition - all duration - 300" placeholder="Enter your first name"/>
+            <input type="text" id="firstName" name="firstName" value={formData.firstName} onChange={handleInputChange} required className="w - full px - 4 py - 3 bg - gray - 800 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent transition - all duration - 300" placeholder="Enter your first name"      />
           </div>
 
           <div>
             <label htmlFor="lastName" className="block text - sm font - medium text - gray - 300 mb - 2">
               Last Name *
             </label>
-            <input type="text" id="lastName" name="lastName" value={formData.lastName} onChange={handleInputChange} required className="w - full px - 4 py - 3 bg - gray - 800 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent transition - all duration - 300" placeholder="Enter your last name"/>
+            <input type="text" id="lastName" name="lastName" value={formData.lastName} onChange={handleInputChange} required className="w - full px - 4 py - 3 bg - gray - 800 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent transition - all duration - 300" placeholder="Enter your last name"      />
           </div>
         </div>
 
@@ -86,14 +86,14 @@ const ContactForm = () => {
             <label htmlFor="email" className="block text - sm font - medium text - gray - 300 mb - 2">
               Email Address *
             </label>
-            <input type="email" id="email" name="email" value={formData.email} onChange={handleInputChange} required className="w - full px - 4 py - 3 bg - gray - 800 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent transition - all duration - 300" placeholder="Enter your email address"/>
+            <input type="email" id="email" name="email" value={formData.email} onChange={handleInputChange} required className="w - full px - 4 py - 3 bg - gray - 800 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent transition - all duration - 300" placeholder="Enter your email address"      />
           </div>
 
           <div>
             <label htmlFor="phone" className="block text - sm font - medium text - gray - 300 mb - 2">
               Phone Number
             </label>
-            <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleInputChange} className="w - full px - 4 py - 3 bg - gray - 800 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent transition - all duration - 300" placeholder="Enter your phone number"/>
+            <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleInputChange} className="w - full px - 4 py - 3 bg - gray - 800 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent transition - all duration - 300" placeholder="Enter your phone number"      />
           </div>
         </div>
 
@@ -101,7 +101,7 @@ const ContactForm = () => {
           <label htmlFor="comp" className="block text - sm font - medium text - gray - 300 mb - 2">
             Comp Name
           </label>
-          <input type="text" id="comp" name="comp" value={formData.comp} onChange={handleInputChange} className="w - full px - 4 py - 3 bg - gray - 800 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent transition - all duration - 300" placeholder="Enter your comp name"/>
+          <input type="text" id="comp" name="comp" value={formData.comp} onChange={handleInputChange} className="w - full px - 4 py - 3 bg - gray - 800 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent transition - all duration - 300" placeholder="Enter your comp name"      />
         </div>
 
         <div>
@@ -125,7 +125,7 @@ const ContactForm = () => {
           <label htmlFor="message" className="block text - sm font - medium text - gray - 300 mb - 2">
             Message *
           </label>
-          <textarea id="message" name="message" value={formData.message} onChange={handleInputChange} required rows={5} className="w - full px - 4 py - 3 bg - gray - 800 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent transition - all duration - 300 resize - none" placeholder="Tell us about your project or how we can help..."/>
+          <textarea id="message" name="message" value={formData.message} onChange={handleInputChange} required rows={5} className="w - full px - 4 py - 3 bg - gray - 800 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent transition - all duration - 300 resize - none" placeholder="Tell us about your project or how we can help..."      />
         </div>
 
         <div className="pt - 4">

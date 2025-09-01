@@ -241,7 +241,7 @@ const mockReplies = [
   `community, forum, discussion, ${post.tags.join (',
   ') ;
 
-}`} canonical={`https://ziontechgroup.com / community / post/${post.id}`}/>;
+}`} canonical={`https://ziontechgroup.com / community / post/${post.id}`}      />;
       
       <div className="container py - 8">
         <div className="flex items - center gap - 3 mb - 6">
@@ -261,7 +261,7 @@ const mockReplies = [
             <div className="flex justify - between items - start mb - 6">
               <div className="flex items - center gap - 4">
                 <Avatar className="h - 12 w - 12">
-                  <AvatarImage src={post.authorAvatar}/>
+                  <AvatarImage src={post.authorAvatar}      />
                   <AvatarFallback>{post.authorName.charAt (0) }</AvatarFallback>
                 </Avatar>
                 <div>
@@ -273,7 +273,7 @@ const mockReplies = [
               </div>
 
               <div className="flex items - center text - sm text - muted - foreground">
-                <Calendar className="h - 4 w - 4 mr - 1"/>
+                <Calendar className="h - 4 w - 4 mr - 1"      />
                 <time dateTime={post.createdAt} title={formattedDate}>
                   {timeAgo}
                 </time>
@@ -295,11 +295,11 @@ const mockReplies = [
             <div className="flex flex - wrap items - center justify - between gap - 4 mt - 6">
               <div className="flex items - center gap - 4">
                 <Button variant="outline" size="sm" onClick={handleUpvote} className="flex items - center gap - 2">
-                  <ThumbsUp className="h - 4 w - 4"/>
+                  <ThumbsUp className="h - 4 w - 4"      />
                   <span>{post.upvotes}</span>
                 </Button>
                 <Button variant="outline" size="sm" onClick={handleDownvote} className="flex items - center gap - 2">
-                  <ThumbsDown className="h - 4 w - 4"/>
+                  <ThumbsDown className="h - 4 w - 4"      />
                   <span>{post.downvotes}</span>
                 </Button>
               </div>
@@ -307,24 +307,24 @@ const mockReplies = [
               <div className="flex items - center gap - 2">
                 { (isAuthor || isAdminOrMod) && (<Button variant="ghost" size="sm" asChild>
                     <Link to={`/community / edit/${post.id}`}>
-                      <Edit className="h - 4 w - 4 mr - 1"/>
+                      <Edit className="h - 4 w - 4 mr - 1"      />
                       Edit
                     </Link>
                   </Button>) }
 
                 {isAdminOrMod && (<>
                     <Button variant="ghost" size="sm" onClick={handlePinPost}>
-                      <Pin className="h - 4 w - 4 mr - 1"/>
+                      <Pin className="h - 4 w - 4 mr - 1"      />
                       {post.isPinned ? "Unpin" : "Pin"}
                     </Button>
                     <Button variant="ghost" size="sm" onClick={handleLockPost}>
-                      <Lock className="h - 4 w - 4 mr - 1"/>
+                      <Lock className="h - 4 w - 4 mr - 1"      />
                       {post.isLocked ? "Unlock" : "Lock"}
                     </Button>
                   </>) }
 
                 <Button variant="ghost" size="sm" onClick={handleReportPost}>
-                  <Flag className="h - 4 w - 4 mr - 1"/>
+                  <Flag className="h - 4 w - 4 mr - 1"      />
                   Report
                 </Button>
               </div>
@@ -337,15 +337,15 @@ const mockReplies = [
 
           {post.isAnswered && (<div className="mb - 6">
               <h3 className="flex items - center text - green - 600 font - medium mb - 2">
-                <CheckCircle className="h - 4 w - 4 mr - 2"/>
+                <CheckCircle className="h - 4 w - 4 mr - 2"      />
                 Accepted Answer
               </h3>
-              {replies.filter (reply => reply.isAnswer) .map (reply => (<ReplyCard key={reply.id} reply={reply} className="border - green - 500"/>) ) }
+              {replies.filter (reply => reply.isAnswer) .map (reply => (<ReplyCard key={reply.id} reply={reply} className="border - green - 500"      />) ) }
             </div>) }
 
           {!post.isLocked && (<div className="mb - 8">
               <h3 className="text - lg font - medium mb - 4">Your Response</h3>
-              {user ? (<ReplyForm onSubmit={handleSubmitReply}/>) : (<Alert>
+              {user ? (<ReplyForm onSubmit={handleSubmitReply}      />) : (<Alert>
                   <AlertDescription > Please < Link to="/login" className="font - medium text - zion - purple hover:underline">sign in</Link > to join the discussion.
                   </AlertDescription>
                 </Alert>) }
@@ -353,7 +353,7 @@ const mockReplies = [
 
           {post.isLocked && (<Alert className="mb - 8">
               <AlertDescription className="flex items - center">
-                <Lock className="h - 4 w - 4 mr - 2"/>
+                <Lock className="h - 4 w - 4 mr - 2"      />
                 This thread has been locked and is no longer open for responses.
               </AlertDescription>
             </Alert>) }

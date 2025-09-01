@@ -74,14 +74,14 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 export function Categor
           <div className="bg - zion - blue - dark rounded - lg p - 6 mb - 8 border border - zion - blue - light">
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 4">
               <div className="relative">
-                <Search className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text - zion - slate"/>
+                <Search className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text - zion - slate"      />
                 <Input type="text" placeholder="Search listings..." value={searchQuery} onChange={ (e) => setSearchQuery (e.target.value) } className="pl - 10 bg - zion - blue border border - zion - blue - light text - white"/>
               </div>
 
               <Select value={selectedSort} onValueChange={setSelectedSort}>
                 <SelectTrigger className="bg - zion - blue border border - zion - blue - light text - white">
                   <div className="flex items - center">
-                    {selectedSort === 'a - z' ? (<ArrowDownAZ className="mr - 2 h - 4 w - 4"/>) : selectedSort === 'z - a' ? (<ArrowUpZA className="mr - 2 h - 4 w - 4"/>) : null}
+                    {selectedSort === 'a - z' ? (<ArrowDownAZ className="mr - 2 h - 4 w - 4"      />) : selectedSort === 'z - a' ? (<ArrowUpZA className="mr - 2 h - 4 w - 4"      />) : null}
                     <span>
                       {sortOptions.find (option => option.value === selectedSort) ?.label || 'Sort By'}
                     </span>
@@ -97,7 +97,7 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 export function Categor
               <Select value={selectedFilter} onValueChange={setSelectedFilter}>
                 <SelectTrigger className="bg - zion - blue border border - zion - blue - light text - white">
                   <div className="flex items - center">
-                    <Filter className="mr - 2 h - 4 w - 4"/>
+                    <Filter className="mr - 2 h - 4 w - 4"      />
                     <span>
                       {filterOptions.find (option => option.value === selectedFilter) ?.label || 'Filter'}
                     </span>
@@ -122,9 +122,9 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 export function Categor
 
           {/* Listings Grid */}
           {isLoading ? (<div className="flex justify - center py - 20">
-              <Loader2 className="h - 8 w - 8 animate - spin text - zion - purple"/>
+              <Loader2 className="h - 8 w - 8 animate - spin text - zion - purple"      />
             </div>) : processedListings.length > 0 ? (<div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">
-              {processedListings.map ( (listing) => (<ListingScoreCard key={listing.id} title={listing.title} description={listing.description} category={listing.subcategory || listing.category} image={listing.image} tags={listing.tags} author={listing.author} authorImage={listing.authorImage} aiScore={listing.aiScore} rating={listing.rating} reviewCount={listing.reviewCount}/>) ) }
+              {processedListings.map ( (listing) => (<ListingScoreCard key={listing.id} title={listing.title} description={listing.description} category={listing.subcategory || listing.category} image={listing.image} tags={listing.tags} author={listing.author} authorImage={listing.authorImage} aiScore={listing.aiScore} rating={listing.rating} reviewCount={listing.reviewCount}      />) ) }
             </div>) : (<div className="text - center py - 20">
               <h3 className="text - xl font - bold text - white mb - 2">No listings found</h3>
               <p className="text - zion - slate - light mb - 6">Try adjusting your filters or search query</p>
@@ -136,5 +136,5 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 export function Categor
             </div>) }
         </div>
       </div>
-      <Footer />
+      <Footer       />
     </>) }

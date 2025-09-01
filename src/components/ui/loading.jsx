@@ -42,7 +42,7 @@ export function Skeleton({ className, ...props }) {
         className
       )}
       {...props}
-    />
+          />
   );
 }
 // Page loading component
@@ -50,7 +50,7 @@ export function PageLoading() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-background">
       <div className="text-center space-y-4">
-        <Loading size="xl" variant="spinner" className="text-zion-cyan" />
+        <Loading size="xl" variant="spinner" className="text-zion-cyan"       />
         <h2 className="text-xl font-semibold text-zion-slate-light">
           Loading Zion Tech Group
         </h2>

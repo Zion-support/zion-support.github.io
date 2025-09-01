@@ -63,7 +63,7 @@ const notificationStyles = {
       aria - live="assertive"
     >
       <div className="flex items - start space - x-3">
-        <Icon className={`w - 5 h - 5 mt - 0.5 ${styles.iconColor}`} />
+        <Icon className={`w - 5 h - 5 mt - 0.5 ${styles.iconColor}`}       />
         <div className="flex - 1 min - w-0">
           <h4 className={`text - sm font - medium ${styles.textColor}`}>{title}</h4>
           <p className="text - sm text - muted - foreground mt - 1">{message}</p>
@@ -73,7 +73,7 @@ const notificationStyles = {
           className="text - muted - foreground hover:text - foreground transition - colors"
           aria - label="Close notification"
         >
-          <X className="w - 4 h - 4" />
+          <X className="w - 4 h - 4"       />
         </button>
       </div>
     </div>) ;
@@ -83,6 +83,6 @@ const notificationStyles = {
           key={notification.id}
           {...notification}
           onClose={onClose}
-        />) ) }
+              />) ) }
     </div>) ;
 }

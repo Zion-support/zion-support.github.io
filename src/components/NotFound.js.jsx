@@ -41,7 +41,7 @@ const NotFound = () => {
 
 }}>
           <div className="w - 32 h - 32 mx - auto bg - gradient - to - r from - red - 500 to - orange - 500 rounded - full flex items - center justify - center">
-            <AlertTriangle className="w - 16 h - 16 text - white"/>
+            <AlertTriangle className="w - 16 h - 16 text - white"      />
           </div>
         </motion.div>
 
@@ -60,8 +60,8 @@ const NotFound = () => {
         {/* Search Section */}
         <motion.div className="mb - 12" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}>
           <div className="max - w-md mx - auto relative">
-            <Search className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text - gray - 400 w - 5 h - 5"/>
-            <input type="text" placeholder="Search our website..." className="w - full pl - 10 pr - 4 py - 3 bg - white / 10 border border - white / 20 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - blue - 400 transition - colors"/>
+            <Search className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text - gray - 400 w - 5 h - 5"      />
+            <input type="text" placeholder="Search our website..." className="w - full pl - 10 pr - 4 py - 3 bg - white / 10 border border - white / 20 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - blue - 400 transition - colors"      />
           </div>
         </motion.div>
 
@@ -86,7 +86,7 @@ const NotFound = () => {
                       </h4>
                       <p className="text - gray - 400 text - sm">{page.description}</p>
                     </div>
-                    <ArrowRight className="w - 5 h - 5 text - gray - 400 group - hover:text - blue - 400 group - hover:translate - x-1 transition - all duration - 300"/>
+                    <ArrowRight className="w - 5 h - 5 text - gray - 400 group - hover:text - blue - 400 group - hover:translate - x-1 transition - all duration - 300"      />
                   </div>
                 </Link>
               </motion.div>) ) }
@@ -114,7 +114,7 @@ const NotFound = () => {
                       </h4>
                       <p className="text - gray - 300 text - sm">{service.description}</p>
                     </div>
-                    <ArrowRight className="w - 5 h - 5 text - blue - 400 group - hover:text - blue - 300 group - hover:translate - x-1 transition - all duration - 300"/>
+                    <ArrowRight className="w - 5 h - 5 text - blue - 400 group - hover:text - blue - 300 group - hover:translate - x-1 transition - all duration - 300"      />
                   </div>
                 </Link>
               </motion.div>) ) }
@@ -124,7 +124,7 @@ const NotFound = () => {
         {/* CTA Buttons */}
         <motion.div className="flex flex - col sm:flex - row gap - 4 justify - center" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.9 }}>
           <Link to="/" className="inline - flex items - center gap - 2 px - 6 py - 3 bg - gradient - to - r from - blue - 600 to - cyan - 600 text - white font - semibold rounded - lg hover:from - blue - 700 hover:to - cyan - 700 transition - all duration - 300 shadow - lg hover:shadow - xl">
-            <Home className="w - 5 h - 5"/>
+            <Home className="w - 5 h - 5"      />
             Go Home
           </Link>
           <Link to="/contact" className="inline - flex items - center gap - 2 px - 6 py - 3 bg - white / 10 border border - white / 20 text - white font - semibold rounded - lg hover:bg - white / 20 hover:border - white / 30 transition - all duration - 300">

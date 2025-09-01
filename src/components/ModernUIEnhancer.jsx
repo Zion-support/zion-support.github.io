@@ -223,7 +223,7 @@ import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet expo
   rotate: 90 
 
 }} transition={{ duration: 0.3 }}>
-                <Sun className="w - 5 h - 5 text - yellow - 500"/>
+                <Sun className="w - 5 h - 5 text - yellow - 500"      />
               </motion.div>) }
             {currentTheme === 'dark' && (<motion.div key="dark" initial = {
   { opacity: 0,
@@ -238,7 +238,7 @@ import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet expo
   rotate: 90 
 
 }} transition={{ duration: 0.3 }}>
-                <Moon className="w - 5 h - 5 text - blue - 400"/>
+                <Moon className="w - 5 h - 5 text - blue - 400"      />
               </motion.div>) }
             {currentTheme === 'auto' && (<motion.div key="auto" initial = {
   { opacity: 0,
@@ -253,7 +253,7 @@ import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet expo
   rotate: 90 
 
 }} transition={{ duration: 0.3 }}>
-                <Monitor className="w - 5 h - 5 text - gray - 600 dark:text - gray - 400"/>
+                <Monitor className="w - 5 h - 5 text - gray - 600 dark:text - gray - 400"      />
               </motion.div>) }
           </AnimatePresence>
         </motion.button>) }
@@ -269,9 +269,9 @@ import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet expo
 
 }} className="fixed top - 6 left - 6 z - 50 p - 2 bg - white dark:bg - gray - 800 rounded - lg shadow - lg border border - gray - 200 dark:border - gray - 700">
           <div className="flex items - center space - x-2 text - sm">
-            {deviceType === 'desktop' && <Monitor className="w - 4 h - 4 text - blue - 500"/>}
-            {deviceType === 'tablet' && <Tablet className="w - 4 h - 4 text - green - 500"/>}
-            {deviceType === 'mobile' && <Smartphone className="w - 4 h - 4 text - purple - 500"/>}
+            {deviceType === 'desktop' && <Monitor className="w - 4 h - 4 text - blue - 500"      />}
+            {deviceType === 'tablet' && <Tablet className="w - 4 h - 4 text - green - 500"      />}
+            {deviceType === 'mobile' && <Smartphone className="w - 4 h - 4 text - purple - 500"      />}
             <span className="text - gray - 700 dark:text - gray - 300 capitalize">{deviceType}</span>
           </div>
         </motion.div>) }
@@ -291,7 +291,7 @@ import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet expo
   scale: 0 
 
 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={scrollToTop} className="fixed bottom - 6 left - 6 z - 50 p - 3 bg - gradient - to - r from - blue - 600 to - purple - 600 text - white rounded - full shadow - lg hover:shadow - xl transition - all duration - 300" title="Scroll to top">
-            <ArrowUp className="w - 5 h - 5"/>
+            <ArrowUp className="w - 5 h - 5"      />
           </motion.button>) }
       </AnimatePresence>
 
@@ -305,7 +305,7 @@ import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet expo
   scale: 1 
 
 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={ () => setIsVisible (!isVisible) } className="fixed bottom - 6 right - 6 z - 50 p - 3 bg - gradient - to - r from - purple - 600 to - pink - 600 text - white rounded - full shadow - lg hover:shadow - xl transition - all duration - 300" title="UI Enhancements">
-        <Palette className="w - 5 h - 5"/>
+        <Palette className="w - 5 h - 5"      />
       </motion.button>
 
       {/* UI Enhancement Panel */}
@@ -331,7 +331,7 @@ import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet expo
             <div className="bg - gradient - to - r from - purple - 600 to - pink - 600 text - white p - 4">
               <div className="flex items - center justify - between">
                 <div className="flex items - center space - x-2">
-                  <Sparkles className="w - 5 h - 5"/>
+                  <Sparkles className="w - 5 h - 5"      />
                   <h3 className="font - semibold">UI Enhancements</h3>
                 </div>
                 <button onClick={ () => setIsVisible (false) } className="text - white hover:text - gray - 200 transition - colors">

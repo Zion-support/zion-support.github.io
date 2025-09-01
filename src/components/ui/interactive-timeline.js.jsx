@@ -127,7 +127,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
         <div className="flex items-center gap-2">
           {/* View Mode Toggle */}
           <div className="flex bg-zion-blue/20 rounded-lg p-1">
-            {['timeline', 'list', 'kanban'].map((mode) => (<button key={mode} onClick={() => setViewMode(mode)} className={`px-3 py-1 rounded-md text-xs font-medium transition-all duration-200 ${viewMode === mode
+            {['timeline', 'list', 'kanban'].map((((((((mode, index, index, index, index, index, index) => ({ ...((((((mode, index, index, index, index, index, key: index })) => ({ ...(((((mode, index, index, index, index, key: index })) => ({ ...((((mode, index, index, index, key: index })) => ({ ...(((mode, index, index, key: index })) => ({ ...((mode, index, key: index })) => ({ ...(mode, key: index })) => (<button key={mode} onClick={() => setViewMode(mode)} className={`px-3 py-1 rounded-md text-xs font-medium transition-all duration-200 ${viewMode === mode
                 ? 'bg-zion-cyan text-zion-blue-dark'
                 : 'text-zinc-400 hover:text-white'}`}>
                 {mode.charAt(0).toUpperCase() + mode.slice(1)}
@@ -137,11 +137,11 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
           {/* Playback Controls */}
           <div className="flex items-center gap-2 bg-zion-blue/20 rounded-lg p-1">
             <Button size="sm" variant="ghost" onClick={togglePlayback} className="text-zinc-400 hover:text-white p-2">
-              {isPlaying ? <Pause className="w-4 h-4"/> : <Play className="w-4 h-4"/>}
+              {isPlaying ? <Pause className="w-4 h-4"      /> : <Play className="w-4 h-4"      />}
             </Button>
             
             <Button size="sm" variant="ghost" onClick={resetTimeline} className="text-zinc-400 hover:text-white p-2">
-              <RotateCcw className="w-4 h-4"/>
+              <RotateCcw className="w-4 h-4"      />
             </Button>
             
             <select value={playbackSpeed} onChange={(e) => setPlaybackSpeed(Number(e.target.value))} className="bg-transparent text-zinc-300 text-xs border-none focus:outline-none">
@@ -159,7 +159,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
   prev - 0.1))
 
 } className="text-zinc-400 hover:text-white p-2">
-              <ZoomOut className="w-4 h-4"/>
+              <ZoomOut className="w-4 h-4"      />
             </Button>
             <span className="text-zinc-300 text-xs px-2">{Math.round(zoomLevel * 100)}%</span>
             <Button size="sm" variant="ghost" onClick = {
@@ -167,18 +167,18 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
   prev + 0.1))
 
 } className="text-zinc-400 hover:text-white p-2">
-              <ZoomIn className="w-4 h-4"/>
+              <ZoomIn className="w-4 h-4"      />
             </Button>
           </div>
           
           {/* Action Buttons */}
           <Button size="sm" variant="outline" onClick={shareTimeline} className="border-zion-blue-light/30 text-zinc-300 hover:text-white">
-            <Share2 className="w-4 h-4 mr-2"/>
+            <Share2 className="w-4 h-4 mr-2"      />
             Share
           </Button>
           
           <Button size="sm" variant="outline" onClick={exportTimeline} className="border-zion-blue-light/30 text-zinc-300 hover:text-white">
-            <Download className="w-4 h-4 mr-2"/>
+            <Download className="w-4 h-4 mr-2"      />
             Export
           </Button>
         </div>
@@ -187,7 +187,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
       {/* Filters */}
       <div className="mb-6">
         <Button size="sm" variant="ghost" onClick={() => setShowFilters(!showFilters)} className="text-zinc-400 hover:text-white mb-3">
-          <Filter className="w-4 h-4 mr-2"/>
+          <Filter className="w-4 h-4 mr-2"      />
           {showFilters ? 'Hide' : 'Show'} Filters
         </Button>
         
@@ -291,11 +291,11 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
       {/* Timeline View */}
       {viewMode === 'timeline' && (<div className="relative">
           {/* Timeline Line */}
-          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-zion-cyan via-zion-blue to-zion-purple"/>
+          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-zion-cyan via-zion-blue to-zion-purple"      />
           
           {/* Events */}
           <div className="space-y-6">
-            {filteredEvents.map((event, index) => {
+            {filteredEvents.map((((((((event, index, index, index, index, index, index, index) => ({ ...((((((event, index, index, index, index, index, index, key: index })) => ({ ...(((((event, index, index, index, index, index, key: index })) => ({ ...((((event, index, index, index, index, key: index })) => ({ ...(((event, index, index, index, key: index })) => ({ ...((event, index, index, key: index })) => ({ ...(event, index, key: index })) => {
                 const statusInfo = getStatusIcon(event.status);
                 const CategoryIcon = getCategoryIcon(event.category);
                 const isCurrent = index === currentEventIndex;
@@ -325,17 +325,17 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
   repeat: Infinity 
 
 }}>
-                      <statusInfo.icon className={`w-8 h-8 ${statusInfo.color}`}/>
+                      <statusInfo.icon className={`w-8 h-8 ${statusInfo.color}`}      />
                     </motion.div>
                     
                     {/* Progress Ring for in-progress events */}
                     {event.status === 'in-progress' && (<svg className="absolute inset-0 w-16 h-16 transform -rotate-90">
-                        <circle cx="32" cy="32" r="28" stroke="currentColor" strokeWidth="2" fill="none" className="text-zion-cyan/20"/>
+                        <circle cx="32" cy="32" r="28" stroke="currentColor" strokeWidth="2" fill="none" className="text-zion-cyan/20"      />
                         <motion.circle cx="32" cy="32" r="28" stroke="currentColor" strokeWidth="2" fill="none" className="text-zion-cyan" strokeDasharray={2 * Math.PI * 28} strokeDashoffset={2 * Math.PI * 28 * (1 - event.metadata.progress / 100)} initial={{ strokeDashoffset: 2 * Math.PI * 28 }} animate={{ strokeDashoffset: 2 * Math.PI * 28 * (1 - event.metadata.progress / 100) }} transition = {
   { duration: 1,
   ease: "easeOut" 
 
-}}/>
+}}      />
                       </svg>)}
                   </div>
 
@@ -363,19 +363,19 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                         
                         <div className="flex items-center gap-4 text-xs text-zinc-400">
                           <span className="flex items-center gap-1">
-                            <Calendar className="w-3 h-3"/>
+                            <Calendar className="w-3 h-3"      />
                             {event.date}
                           </span>
                           <span className="flex items-center gap-1">
-                            <Clock className="w-3 h-3"/>
+                            <Clock className="w-3 h-3"      />
                             {event.duration}
                           </span>
                           <span className="flex items-center gap-1">
-                            <CategoryIcon className="w-3 h-3"/>
+                            <CategoryIcon className="w-3 h-3"      />
                             {event.category}
                           </span>
                           {event.participants.length > 0 && (<span className="flex items-center gap-1">
-                              <Users className="w-3 h-3"/>
+                              <Users className="w-3 h-3"      />
                               {event.participants.length} participants
                             </span>)}
                         </div>
@@ -398,17 +398,17 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
 
                     {/* Tags */}
                     {event.tags.length > 0 && (<div className="flex flex-wrap gap-2 mt-3">
-                        {event.tags.map((tag, tagIndex) => (<Badge key={tagIndex} variant="outline" className="text-xs border-zion-blue-light/30 text-zinc-400 hover:text-white">
+                        {event.tags.map((((((((tag, tagIndex, index, index, index, index, index, index) => ({ ...((((((tag, tagIndex, index, index, index, index, index, key: index })) => ({ ...(((((tag, tagIndex, index, index, index, index, key: index })) => ({ ...((((tag, tagIndex, index, index, index, key: index })) => ({ ...(((tag, tagIndex, index, index, key: index })) => ({ ...((tag, tagIndex, index, key: index })) => ({ ...(tag, tagIndex, key: index })) => (<Badge key={tagIndex} variant="outline" className="text-xs border-zion-blue-light/30 text-zinc-400 hover:text-white">
                             {tag}
                           </Badge>))}
                       </div>)}
 
                     {/* Actions */}
                     {event.actions && event.actions.length > 0 && (<div className="flex items-center gap-2 mt-4 pt-3 border-t border-zion-blue-light/20">
-                        {event.actions.map((action, actionIndex) => (<Button key={actionIndex} size="sm" variant={action.variant || 'outline'} onClick={(e) => {
+                        {event.actions.map((((((((action, actionIndex, index, index, index, index, index, index) => ({ ...((((((action, actionIndex, index, index, index, index, index, key: index })) => ({ ...(((((action, actionIndex, index, index, index, index, key: index })) => ({ ...((((action, actionIndex, index, index, index, key: index })) => ({ ...(((action, actionIndex, index, index, key: index })) => ({ ...((action, actionIndex, index, key: index })) => ({ ...(action, actionIndex, key: index })) => (<Button key={actionIndex} size="sm" variant={action.variant || 'outline'} onClick={(e) => {
                                 e.stopPropagation();
                                 action.action()}} className="text-xs">
-                            <action.icon className="w-3 h-3 mr-1"/>
+                            <action.icon className="w-3 h-3 mr-1"      />
                             {action.label}
                           </Button>))}
                       </div>)}
@@ -419,7 +419,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
 
       {/* List View */}
       {viewMode === 'list' && (<div className="space-y-3">
-          {filteredEvents.map((event, index) => (<motion.div key={event.id} className="p-4 rounded-lg border border-zion-blue-light/30 hover:border-zion-blue-light/50 hover:bg-zion-blue/10 transition-all duration-200 cursor-pointer" initial = {
+          {filteredEvents.map((((((((event, index, index, index, index, index, index, index) => ({ ...((((((event, index, index, index, index, index, index, key: index })) => ({ ...(((((event, index, index, index, index, index, key: index })) => ({ ...((((event, index, index, index, index, key: index })) => ({ ...(((event, index, index, index, key: index })) => ({ ...((event, index, index, key: index })) => ({ ...(event, index, key: index })) => (<motion.div key={event.id} className="p-4 rounded-lg border border-zion-blue-light/30 hover:border-zion-blue-light/50 hover:bg-zion-blue/10 transition-all duration-200 cursor-pointer" initial = {
   { opacity: 0,
   y: 20 
 
@@ -436,7 +436,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                 <div className="flex items-center gap-4">
                   <div className={`w-3 h-3 rounded-full ${event.status === 'completed' ? 'bg-green-400' :
                     event.status === 'in-progress' ? 'bg-yellow-400' :
-                        event.status === 'milestone' ? 'bg-purple-400' : 'bg-zinc-400'}`}/>
+                        event.status === 'milestone' ? 'bg-purple-400' : 'bg-zinc-400'}`}      />
                   <div>
                     <h4 className="text-white font-medium">{event.title}</h4>
                     <p className="text-zinc-400 text-sm">{event.date}</p>
@@ -449,7 +449,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                   <Badge variant="outline" className={`text-xs ${getPriorityColor(event.priority)}`}>
                     {event.priority}
                   </Badge>
-                  <ArrowRight className="w-4 h-4 text-zinc-400"/>
+                  <ArrowRight className="w-4 h-4 text-zinc-400"      />
                 </div>
               </div>
             </motion.div>))}
@@ -457,14 +457,14 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
 
       {/* Kanban View */}
       {viewMode === 'kanban' && (<div className="grid grid-cols-4 gap-4">
-          {['upcoming', 'in-progress', 'completed', 'milestone'].map((status) => (<div key={status} className="space-y-3">
+          {['upcoming', 'in-progress', 'completed', 'milestone'].map((((((((status, index, index, index, index, index, index) => ({ ...((((((status, index, index, index, index, index, key: index })) => ({ ...(((((status, index, index, index, index, key: index })) => ({ ...((((status, index, index, index, key: index })) => ({ ...(((status, index, index, key: index })) => ({ ...((status, index, key: index })) => ({ ...(status, key: index })) => (<div key={status} className="space-y-3">
               <h4 className="text-zinc-300 font-medium text-center capitalize">
                 {status.replace('-', ' ')} ({filteredEvents.filter(e => e.status === status).length})
               </h4>
               <div className="space-y-2">
                 {filteredEvents
                     .filter(event => event.status === status)
-                    .map((event, index) => (<motion.div key={event.id} className="p-3 rounded-lg border border-zion-blue-light/30 bg-zion-blue/20 cursor-pointer hover:border-zion-blue-light/50 transition-all duration-200" initial = {
+                    .map((((((((event, index, index, index, index, index, index, index) => ({ ...((((((event, index, index, index, index, index, index, key: index })) => ({ ...(((((event, index, index, index, index, index, key: index })) => ({ ...((((event, index, index, index, index, key: index })) => ({ ...(((event, index, index, index, key: index })) => ({ ...((event, index, index, key: index })) => ({ ...(event, index, key: index })) => (<motion.div key={event.id} className="p-3 rounded-lg border border-zion-blue-light/30 bg-zion-blue/20 cursor-pointer hover:border-zion-blue-light/50 transition-all duration-200" initial = {
   { opacity: 0,
   scale: 0.9 
 
@@ -510,7 +510,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-xl font-semibold text-white">{selectedEvent.title}</h3>
                 <Button size="sm" variant="ghost" onClick={() => setSelectedEvent(null)} className="text-zinc-400 hover:text-white">
-                  <X className="w-4 h-4"/>
+                  <X className="w-4 h-4"      />
                 </Button>
               </div>
               
@@ -539,7 +539,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                 {selectedEvent.participants.length > 0 && (<div>
                     <span className="text-zinc-400 text-sm">Participants:</span>
                     <div className="flex flex-wrap gap-2 mt-2">
-                      {selectedEvent.participants.map((participant, index) => (<Badge key={index} variant="outline" className="text-xs">
+                      {selectedEvent.participants.map((((((((participant, index, index, index, index, index, index, index) => ({ ...((((((participant, index, index, index, index, index, index, key: index })) => ({ ...(((((participant, index, index, index, index, index, key: index })) => ({ ...((((participant, index, index, index, index, key: index })) => ({ ...(((participant, index, index, index, key: index })) => ({ ...((participant, index, index, key: index })) => ({ ...(participant, index, key: index })) => (<Badge key={index} variant="outline" className="text-xs">
                           {participant}
                         </Badge>))}
                     </div>
@@ -548,7 +548,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                 {selectedEvent.metadata.dependencies.length > 0 && (<div>
                     <span className="text-zinc-400 text-sm">Dependencies:</span>
                     <div className="flex flex-wrap gap-2 mt-2">
-                      {selectedEvent.metadata.dependencies.map((dependency, index) => (<Badge key={index} variant="outline" className="text-xs border-orange-500/30 text-orange-400">
+                      {selectedEvent.metadata.dependencies.map((((((((dependency, index, index, index, index, index, index, index) => ({ ...((((((dependency, index, index, index, index, index, index, key: index })) => ({ ...(((((dependency, index, index, index, index, index, key: index })) => ({ ...((((dependency, index, index, index, index, key: index })) => ({ ...(((dependency, index, index, index, key: index })) => ({ ...((dependency, index, index, key: index })) => ({ ...(dependency, index, key: index })) => (<Badge key={index} variant="outline" className="text-xs border-orange-500/30 text-orange-400">
                           {dependency}
                         </Badge>))}
                     </div>

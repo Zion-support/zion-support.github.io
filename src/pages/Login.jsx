@@ -44,7 +44,7 @@ export default function Login () {
     return (<ErrorBoundary
         fallback={<div > Something went wrong. Please try again.</div>}
       >
-        <LoginContent />
+        <LoginContent       />
       </ErrorBoundary>) ;
   }
 

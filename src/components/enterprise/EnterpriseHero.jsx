@@ -35,19 +35,19 @@ export function EnterpriseHero() {
                   src="/logos/placeholder-logo.svg"
                   alt="Enterprise 1"
                   className="h-8"
-                />
+                      />
                 <img
                   loading="lazy"
                   src="/logos/placeholder-logo.svg"
                   alt="Enterprise 2"
                   className="h-8"
-                />
+                      />
                 <img
                   loading="lazy"
                   src="/logos/placeholder-logo.svg"
                   alt="Enterprise 3"
                   className="h-8"
-                />
+                      />
               </div>
             </div>
           </div>
@@ -59,7 +59,7 @@ export function EnterpriseHero() {
                   src="/placeholder.svg"
                   alt="Enterprise Dashboard"
                   className="rounded max-w-full max-h-full object-cover"
-                />
+                      />
               </div>
             </div>
             <div className="absolute -bottom-4 -right-4 bg-card p-4 rounded-lg shadow-lg border border-border">

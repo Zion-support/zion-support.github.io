@@ -1,5 +1,5 @@
-export interface UltimateInnovativeService {
-
+export interface UltimateInnovativeService {;
+;
   id: string;
   title: string;
   description: string;
@@ -18,23 +18,23 @@ export interface UltimateInnovativeService {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-contactInfo: {
+contactInfo: {;
     phone: string;
     email: string;
     website: string};
-  technicalSpecs?: {
+  technicalSpecs?: {;
     technology: string[];
     integrations: string[];
     apiEndpoints: number;
     uptime: string;
     security: string[]};
   competitors?: string[];
-  caseStudies?: string[]}
-
-export const SERVICE_CATEGORIES = [
-  'AI & Automation',
-  'Quantum Computing',
-  'Blockchain & Web3',
+  caseStudies?: string[]};
+;
+export const SERVICE_CATEGORIES = [;
+  'AI & Automation',;
+  'Quantum Computing',;
+  'Blockchain & Web3',;
   'Cybersecurity',;
   'IoT & Edge Computing',;
   'Metaverse & AR/VR',;
@@ -43,5 +43,5 @@ export const SERVICE_CATEGORIES = [
   'Space Technology',;
   'Green Technology';
 ];
-
-export const SERVICE_SUBCATEGORIES = {
+;
+export const SERVICE_SUBCATEGORIES = {;

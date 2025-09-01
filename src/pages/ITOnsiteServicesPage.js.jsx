@@ -62,7 +62,7 @@ export default function ITOnsiteServicesPage () {
   return ( (<section className="py - 16 bg - zion - blue">
         <div className="container mx - auto px - 4 sm:px - 6 lg:px - 8">
           {/* Hero Section with Features */}
-          <PageHero />
+          <PageHero       />
 
           {/* Country Selection Tabs */}
           <div className="mb - 12">
@@ -72,20 +72,20 @@ export default function ITOnsiteServicesPage () {
               handleCountrySelect={handleCountrySelect}
               searchQuery={searchQuery}
               setSearchQuery={setSearchQuery}
-            />
+                  />
           </div>
 
           {/* Service Details Section */}
           <ServiceDetailsSection
             selectedCountry={selectedCountry}
             setSelectedCountry={setSelectedCountry}
-          />
+                />
 
           {/* How It Works Section */}
-          <ServiceProcessSteps />
+          <ServiceProcessSteps       />
 
           {/* What's Included Section */}
-          <ServiceIncludes />
+          <ServiceIncludes       />
 
           {/* Complete Pricing Table */}
           <div id="pricing - table" className="my - 16">
@@ -100,10 +100,10 @@ export default function ITOnsiteServicesPage () {
               </p>
             </div>
 
-            <ITServicePricingTable />
+            <ITServicePricingTable       />
           </div>
 
-          <EnterpriseCallToAction />
+          <EnterpriseCallToAction       />
         </div>
-      </section>) , (<GlobalServiceSection />) , (<TrustedBySection />) , (<QuoteFormSection />) ) ;
+      </section>) , (<GlobalServiceSection       />) , (<TrustedBySection       />) , (<QuoteFormSection       />) ) ;
 }

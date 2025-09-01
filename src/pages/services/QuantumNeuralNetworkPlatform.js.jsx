@@ -8,7 +8,7 @@ const QuantumNeuralNetworkPlatform = () => {
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex justify-center mb-6">
             <div className="p-3 bg-purple-600/20 rounded-full">
-              <CubeIcon className="h-12 w-12 text-purple-400" />
+              <CubeIcon className="h-12 w-12 text-purple-400"       />
             </div>
           </div>
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">

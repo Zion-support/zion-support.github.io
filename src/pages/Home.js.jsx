@@ -30,29 +30,29 @@ export default function Home () {
         description="Discover cutting - edge AI solutions, expert talent, and innovative technology services. Transform your business with Zion Tech Group's comprehensive tech ecosystem."
         canonical="/"
         url="https://ziontechgroup.com"
-      />
+            />
 
-      <HeroSection />
-      <QuickAccess />
-      <AIServicesShowcase />
-      <FeatureCTAs />
-      <FeatureHighlights />
-      <CategoriesSection />
-      <BenefitsSection />
-      <HowItWorksSection />
-      <TechSolutionsSection />
-      <CaseStudiesSection />
-      <TeamExpertiseSection />
-      <GlobalPresenceSection />
-      <InnovationResearchSection />
-      <ClientSuccessStoriesSection />
-      <InteractiveTestimonials />
-      <TechnologyStackSection />
-      <SecurityComplianceSection />
-      <PricingSection />
-      <FeaturedListingsSection />
-      <NewsletterSection />
-      <ITServiceRequestHero />
-      <FloatingCTA />
+      <HeroSection       />
+      <QuickAccess       />
+      <AIServicesShowcase       />
+      <FeatureCTAs       />
+      <FeatureHighlights       />
+      <CategoriesSection       />
+      <BenefitsSection       />
+      <HowItWorksSection       />
+      <TechSolutionsSection       />
+      <CaseStudiesSection       />
+      <TeamExpertiseSection       />
+      <GlobalPresenceSection       />
+      <InnovationResearchSection       />
+      <ClientSuccessStoriesSection       />
+      <InteractiveTestimonials       />
+      <TechnologyStackSection       />
+      <SecurityComplianceSection       />
+      <PricingSection       />
+      <FeaturedListingsSection       />
+      <NewsletterSection       />
+      <ITServiceRequestHero       />
+      <FloatingCTA       />
     </>) ;
 }

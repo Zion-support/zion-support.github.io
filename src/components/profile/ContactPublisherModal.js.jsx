@@ -65,7 +65,7 @@ export function ContactPublisherModal({
       <DialogContent className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md">
         <DialogHeader>
           <DialogTitle className="text-xl font-bold text-white flex items-center gap-2">
-            <Mail className="h-5 w-5 text-zion-cyan" />
+            <Mail className="h-5 w-5 text-zion-cyan"       />
             Contact Publisher
           </DialogTitle>
         </DialogHeader>
@@ -93,9 +93,9 @@ export function ContactPublisherModal({
                       placeholder="Subject"
                       className="bg-zion-blue border-zion-blue-light text-white"
                       {...field}
-                    />
+                          />
                   </FormControl>
-                  <FormMessage className="text-red-500" />
+                  <FormMessage className="text-red-500"       />
                 </FormItem>
               )}
             />
@@ -110,9 +110,9 @@ export function ContactPublisherModal({
                       placeholder={`Message to ${publisherName}...`}
                       className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]"
                       {...field}
-                    />
+                          />
                   </FormControl>
-                  <FormMessage className="text-red-500" />
+                  <FormMessage className="text-red-500"       />
                 </FormItem>
               )}
             />
@@ -122,7 +122,7 @@ export function ContactPublisherModal({
               className="w-full"
               disabled={!form.formState.isValid || isSubmitting}
             >
-              <PaperPlane className="mr-1" />
+              <PaperPlane className="mr-1"       />
               {isSubmitting ? 'Sending...' : 'Send Message'}
             </Button>
           </form>

@@ -36,7 +36,7 @@ import { Loader2 export function LoadingFallback({ message = "Loading...", size 
 
 
 }} className={`${sizeClasses[size]} text-zion-purple`}>
-        <Loader2 className="w-full h-full"/>
+        <Loader2 className="w-full h-full"      />
       </motion.div>
       
       <motion.p initial = {
@@ -80,7 +80,7 @@ import { Loader2 export function LoadingFallback({ message = "Loading...", size 
 
 
 }}>
-        {[0, 1, 2].map((i) => (<motion.div key={i} className="w-2 h-2 bg-zion-purple rounded-full" animate = {
+        {[0, 1, 2].map((((((((i, index, index, index, index, index, index) => ({ ...((((((i, index, index, index, index, index, key: index })) => ({ ...(((((i, index, index, index, index, key: index })) => ({ ...((((i, index, index, index, key: index })) => ({ ...(((i, index, index, key: index })) => ({ ...((i, index, key: index })) => ({ ...(i, key: index })) => (<motion.div key={i} className="w-2 h-2 bg-zion-purple rounded-full" animate = {
   {
                 scale: [1, 1.2, 1],
                 opacity: [0.5, 1,
@@ -104,13 +104,13 @@ import { Loader2 export function LoadingFallback({ message = "Loading...", size 
 
 
 
-}}/>))}
+}}      />))}
       </motion.div>
     </div>)}
 // Full screen loading fallback
 export function FullScreenLoading({ message = "Loading Zion..." }) {
     return (<div className="min-h-screen bg-zion-blue flex items-center justify-center">
-      <LoadingFallback message={message} size="lg"/>
+      <LoadingFallback message={message} size="lg"      />
     </div>)}
 // Inline loading fallback
 export function InlineLoading({ message = "Loading..." }) {
@@ -125,7 +125,7 @@ export function InlineLoading({ message = "Loading..." }) {
 
 
 }} className="w-4 h-4 text-zion-purple">
-        <Loader2 className="w-full h-full"/>
+        <Loader2 className="w-full h-full"      />
       </motion.div>
       <span className="text-sm">{message}</span>
     </div>)}

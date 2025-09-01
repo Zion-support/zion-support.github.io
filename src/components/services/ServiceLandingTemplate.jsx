@@ -28,7 +28,7 @@ export const ServiceLandingTemplate = ({
               src={heroImage}
               alt={title}
               className="mx-auto mt-8 rounded-lg shadow-xl max-w-3xl"
-            />
+                  />
           )}
         </div>
       </section>
@@ -47,7 +47,7 @@ export const ServiceLandingTemplate = ({
             Benefits
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, idx) => (
+            {benefits.map((((((((benefit, idx, index, index, index, index, index, index) => ({ ...((((((benefit, idx, index, index, index, index, index, key: index })) => ({ ...(((((benefit, idx, index, index, index, index, key: index })) => ({ ...((((benefit, idx, index, index, index, key: index })) => ({ ...(((benefit, idx, index, index, key: index })) => ({ ...((benefit, idx, index, key: index })) => ({ ...(benefit, idx, key: index })) => (
               <div
                 key={idx}
                 className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/20 text-center"
@@ -71,7 +71,7 @@ export const ServiceLandingTemplate = ({
             What Our Clients Say
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {testimonials.map((t, idx) => (
+            {testimonials.map((((((((t, idx, index, index, index, index, index, index) => ({ ...((((((t, idx, index, index, index, index, index, key: index })) => ({ ...(((((t, idx, index, index, index, index, key: index })) => ({ ...((((t, idx, index, index, index, key: index })) => ({ ...(((t, idx, index, index, key: index })) => ({ ...((t, idx, index, key: index })) => ({ ...(t, idx, key: index })) => (
               <Card
                 key={idx}
                 className="bg-zion-blue-dark border-zion-purple/30"
@@ -87,7 +87,7 @@ export const ServiceLandingTemplate = ({
                         src={t.avatar}
                         alt={t.name}
                         className="h-10 w-10 rounded-full mr-4"
-                      />
+                            />
                     )}
                     <div>
                       <p className="font-semibold text-white">{t.name}</p>

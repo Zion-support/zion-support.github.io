@@ -248,7 +248,7 @@ import { useRealTimeCollaboration } from "../hooks / useRealTimeCollaboration";
       <div className="bg - gradient - to - r from - blue - 500 to - purple - 500 p - 4 text - white">
         <div className="flex items - center justify - between">
           <h3 className="text - lg font - semibold flex items - center gap - 2">
-            <MessageSquare className="w - 5 h - 5"/>
+            <MessageSquare className="w - 5 h - 5"      />
             Collaborative Text Editor
             {collaboration.isConnected && (<div className="flex items - center gap - 1 px - 2 py - 1 bg - green - 500 / 20 rounded - full text - xs">
                 <div className="w - 2 h - 2 bg - green - 400 rounded - full"></div > Live
@@ -258,19 +258,19 @@ import { useRealTimeCollaboration } from "../hooks / useRealTimeCollaboration";
           <div className="flex items - center gap - 2">
             {/* Collaboration Status */}
             {enableCollaboration && (<button onClick={ () => setShowCollaborators (!showCollaborators) } className="px - 3 py - 1 bg - white / 20 hover:bg - white / 30 rounded text - sm transition - colors flex items - center gap - 2">
-                <Users className="w - 4 h - 4"/>
+                <Users className="w - 4 h - 4"      />
                 {collaboration.onlineUsers.length}
               </button>) }
 
             {/* AI Suggestions */}
             {enableAI && (<button onClick={generateAISuggestions} disabled={isProcessing} className="px - 3 py - 1 bg - white / 20 hover:bg - white / 30 rounded text - sm transition - colors flex items - center gap - 2 disabled:opacity - 50">
-                {isProcessing ? (<Loader2 className="w - 4 h - 4 animate - spin"/>) : (<Sparkles className="w - 4 h - 4"/>) }
+                {isProcessing ? (<Loader2 className="w - 4 h - 4 animate - spin"      />) : (<Sparkles className="w - 4 h - 4"      />) }
                 AI
               </button>) }
 
             {/* Save Button */}
             <button onClick={handleSave} className="px - 3 py - 1 bg - green - 500 hover:bg - green - 600 rounded text - sm transition - colors flex items - center gap - 2">
-              <Save className="w - 4 h - 4"/>
+              <Save className="w - 4 h - 4"      />
               Save
             </button>
           </div>
@@ -281,7 +281,7 @@ import { useRealTimeCollaboration } from "../hooks / useRealTimeCollaboration";
       <div className="flex h - 96">
         {/* Editor */}
         <div className="flex - 1 p - 4">
-          <textarea ref={editorRef} value={editorState.content} onChange={handleTextChange} onSelect={handleSelectionChange} onMouseMove={handleCursorMove} placeholder="Start typing your document..." className="w - full h - full p - 4 border border - gray - 300 dark:border - gray - 600 rounded - lg focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent bg - white dark:bg - gray - 700 text - gray - 900 dark:text - gray - 100 resize - none font - mono text - sm"/>
+          <textarea ref={editorRef} value={editorState.content} onChange={handleTextChange} onSelect={handleSelectionChange} onMouseMove={handleCursorMove} placeholder="Start typing your document..." className="w - full h - full p - 4 border border - gray - 300 dark:border - gray - 600 rounded - lg focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent bg - white dark:bg - gray - 700 text - gray - 900 dark:text - gray - 100 resize - none font - mono text - sm"      />
 
           {/* Status Bar */}
           <div className="flex items - center justify - between mt - 2 text - xs text - gray - 500">
@@ -299,7 +299,7 @@ import { useRealTimeCollaboration } from "../hooks / useRealTimeCollaboration";
           {/* AI Suggestions */}
           {enableAI && showSuggestions && (<div className="p - 4 border - b border - gray - 200 dark:border - gray - 600">
               <h4 className="font - medium text - gray - 900 dark:text - white mb - 3 flex items - center gap - 2">
-                <Sparkles className="w - 4 h - 4"/>
+                <Sparkles className="w - 4 h - 4"      />
                 AI Suggestions
               </h4>
 
@@ -346,7 +346,7 @@ import { useRealTimeCollaboration } from "../hooks / useRealTimeCollaboration";
           {/* Collaborators */}
           {enableCollaboration && showCollaborators && (<div className="p - 4 border - b border - gray - 200 dark:border - gray - 600">
               <h4 className="font - medium text - gray - 900 dark:text - white mb - 3 flex items - center gap - 2">
-                <Users className="w - 4 h - 4"/>
+                <Users className="w - 4 h - 4"      />
                 Collaborators ({collaboration.onlineUsers.length}) </h4>
 
               <div className="space - y-2">
@@ -376,17 +376,17 @@ import { useRealTimeCollaboration } from "../hooks / useRealTimeCollaboration";
 
             <div className="space - y-2">
               <button onClick={ () => handleExport ('txt') } className="w - full px - 3 py - 2 bg - gray - 500 hover:bg - gray - 600 text - white text - sm rounded transition - colors flex items - center justify - center gap - 2">
-                <Download className="w - 4 h - 4"/>
+                <Download className="w - 4 h - 4"      />
                 Export as TXT
               </button>
 
               <button onClick={ () => handleExport ('md') } className="w - full px - 3 py - 2 bg - blue - 500 hover:bg - blue - 600 text - white text - sm rounded transition - colors flex items - center justify - center gap - 2">
-                <Download className="w - 4 h - 4"/>
+                <Download className="w - 4 h - 4"      />
                 Export as MD
               </button>
 
               <button onClick={ () => handleExport ('html') } className="w - full px - 3 py - 2 bg - purple - 500 hover:bg - purple - 600 text - white text - sm rounded transition - colors flex items - center justify - center gap - 2">
-                <Download className="w - 4 h - 4"/>
+                <Download className="w - 4 h - 4"      />
                 Export as HTML
               </button>
             </div>

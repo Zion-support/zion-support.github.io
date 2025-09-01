@@ -13,15 +13,15 @@ const AIAutonomousMicroserviceSecurity = () => {
         <meta
           name="description"
           content="Revolutionary AI autonomous microservice security platform that continuously secures microservices, detects threats, and protects microservice infrastructure with advanced AI capabilities and autonomous operation."
-        />
+              />
         <meta
           name="keywords"
           content="AI microservice security, autonomous microservice security, microservice protection, threat detection, autonomous operations, AI microservice security platform"
-        />
+              />
         <link
           rel="canonical"
           href="https://ziontechgroup.com / ai - autonomous - microservice - security"
-        />
+              />
       </Helmet>
 
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - fuchsia - 900 to - slate - 900">

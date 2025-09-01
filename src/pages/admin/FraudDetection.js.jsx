@@ -144,7 +144,7 @@ export default function FraudDetection() {
       <SEO
         title="Fraud Detection | Admin Dashboard"
         description="Monitor and manage fraud detection alerts on the Zion AI Marketplace"
-      />
+            />
     ),
     (
       <div className="container mx-auto px-4 py-8">
@@ -171,7 +171,7 @@ export default function FraudDetection() {
         </div>
 
         {/* Stats Cards */}
-        <FraudStatsCards stats={stats} />
+        <FraudStatsCards stats={stats}       />
 
         <Tabs defaultValue="all" className="mb-8">
           <TabsList>
@@ -193,7 +193,7 @@ export default function FraudDetection() {
               contentTypeFilter={contentTypeFilter}
               setContentTypeFilter={setContentTypeFilter}
               resetFilters={resetFilters}
-            />
+                  />
 
             {/* Flags Table */}
             <Card>
@@ -204,21 +204,21 @@ export default function FraudDetection() {
                   hasFilters={hasFilters}
                   resetFilters={resetFilters}
                   onAction={handleAction}
-                />
+                      />
               </CardContent>
             </Card>
           </TabsContent>
 
           <TabsContent value="pending">
-            <FraudTabContent tabValue="pending" />
+            <FraudTabContent tabValue="pending"       />
           </TabsContent>
 
           <TabsContent value="dangerous">
-            <FraudTabContent tabValue="dangerous" />
+            <FraudTabContent tabValue="dangerous"       />
           </TabsContent>
 
           <TabsContent value="actioned">
-            <FraudTabContent tabValue="actioned" />
+            <FraudTabContent tabValue="actioned"       />
           </TabsContent>
         </Tabs>
       </div>

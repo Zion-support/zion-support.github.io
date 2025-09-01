@@ -125,7 +125,7 @@ const ContentQualityDashboard = ({ className = '' }) => {
     return (<div className={`fixed bottom - 6 left - 6 z - 50 ${className}`}>
       {/* Floating Action Button */}
       <button onClick={ () => setIsOpen (!isOpen) } className="bg - gradient - to - r from - green - 600 to - blue - 600 hover:from - green - 700 hover:to - blue - 700 text - white p - 3 rounded - full shadow - lg hover:shadow - xl transition - all duration - 300 transform hover:scale - 105" aria - label="Toggle Content Quality Dashboard">
-        <BarChart3 className="w - 6 h - 6"/>
+        <BarChart3 className="w - 6 h - 6"      />
       </button>
 
       {/* Dashboard Panel */}
@@ -134,7 +134,7 @@ const ContentQualityDashboard = ({ className = '' }) => {
           <div className="bg - gradient - to - r from - green - 600 to - blue - 600 text - white p - 4">
             <div className="flex items - center justify - between">
               <h3 className="text - lg font - semibold flex items - center gap - 2">
-                <FileText className="w - 5 h - 5"/>
+                <FileText className="w - 5 h - 5"      />
                 Content Quality Dashboard
               </h3>
               <button onClick={ () => setIsOpen (false) } className="text - white / 80 hover:text - white transition - colors">
@@ -166,13 +166,13 @@ const ContentQualityDashboard = ({ className = '' }) => {
           {/* Content */}
           <div className="p - 4 max - h-[600px] overflow - y-auto">
             {isLoading ? (<div className="flex items - center justify - center py - 8">
-                <RefreshCw className="w - 6 h - 6 animate - spin text - green - 600"/>
+                <RefreshCw className="w - 6 h - 6 animate - spin text - green - 600"      />
                 <span className="ml - 2 text - gray - 600">Analyzing content...</span>
               </div>) : report ? (<div className="space - y-4">
                 {/* Filters and Search */}
                 <div className="flex gap - 3 items - center">
                   <div className="flex - 1 relative">
-                    <Search className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 w - 4 h - 4 text - gray - 400"/>
+                    <Search className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 w - 4 h - 4 text - gray - 400"      />
                     <input type="text" placeholder="Search pages..." value={searchTerm} onChange={ (e) => setSearchTerm (e.target.value) } className="w - full pl - 10 pr - 4 py - 2 border border - gray - 300 rounded - md focus:ring - 2 focus:ring - green - 500 focus:border - transparent"/>
                   </div>
                   <select value={filterStatus} onChange={ (e) => setFilterStatus (e.target.value) } className="px - 3 py - 2 border border - gray - 300 rounded - md focus:ring - 2 focus:ring - green - 500 focus:border - transparent">
@@ -182,7 +182,7 @@ const ContentQualityDashboard = ({ className = '' }) => {
                     <option value="poor">Poor (&lt;40%) </option>
                   </select>
                   <button onClick={exportReport} className="px - 3 py - 2 bg - green - 600 hover:bg - green - 700 text - white rounded - md transition - colors flex items - center gap - 2">
-                    <Download className="w - 4 h - 4"/>
+                    <Download className="w - 4 h - 4"      />
                     Export
                   </button>
                 </div>
@@ -190,7 +190,7 @@ const ContentQualityDashboard = ({ className = '' }) => {
                 {/* Top Issues */}
                 {report.topIssues.length > 0 && (<div className="bg - yellow - 50 dark:bg - yellow - 900 / 20 p - 4 rounded - lg">
                     <h4 className="font - medium text - yellow - 800 dark:text - yellow - 200 mb - 2 flex items - center gap - 2">
-                      <AlertTriangle className="w - 4 h - 4"/>
+                      <AlertTriangle className="w - 4 h - 4"      />
                       Top Issues to Address
                     </h4>
                     <div className="space - y-1">
@@ -261,7 +261,7 @@ const ContentQualityDashboard = ({ className = '' }) => {
                           Page Analysis: {selectedPage.title}
                         </h3>
                         <button onClick={ () => setSelectedPage (null) } className="text - gray - 400 hover:text - gray - 600 dark:hover:text - gray - 300">
-                          <X className="w - 5 h - 5"/>
+                          <X className="w - 5 h - 5"      />
                         </button>
                       </div>
                       
@@ -289,7 +289,7 @@ const ContentQualityDashboard = ({ className = '' }) => {
                             <h4 className="font - medium text - red - 600 dark:text - red - 400 mb - 2">Issues Found</h4>
                             <div className="space - y-2">
                               {selectedPage.issues.map ( (issue, index) => (<div key={index} className="flex items - start gap - 2 text - sm text - red - 600 dark:text - red - 400">
-                                  <AlertTriangle className="w - 4 h - 4 mt - 0.5 flex - shrink - 0"/>
+                                  <AlertTriangle className="w - 4 h - 4 mt - 0.5 flex - shrink - 0"      />
                                   <span>{issue}</span>
                                 </div>) ) }
                             </div>
@@ -299,7 +299,7 @@ const ContentQualityDashboard = ({ className = '' }) => {
                             <h4 className="font - medium text - green - 600 dark:text - green - 400 mb - 2">Recommendations</h4>
                             <div className="space - y-2">
                               {selectedPage.recommendations.map ( (rec, index) => (<div key={index} className="flex items - start gap - 2 text - sm text - green - 600 dark:text - green - 400">
-                                  <Zap className="w - 4 h - 4 mt - 0.5 flex - shrink - 0"/>
+                                  <Zap className="w - 4 h - 4 mt - 0.5 flex - shrink - 0"      />
                                   <span>{rec}</span>
                                 </div>) ) }
                             </div>
@@ -315,7 +315,7 @@ const ContentQualityDashboard = ({ className = '' }) => {
           {/* Footer Actions */}
           <div className="bg - gray - 50 dark:bg - gray - 800 p - 3 flex gap - 2">
             <button onClick={analyzeAllPages} disabled={isLoading} className="flex - 1 bg - green - 600 hover:bg - green - 700 disabled:bg - green - 400 text - white px - 3 py - 2 rounded - md text - sm font - medium transition - colors flex items - center justify - center gap - 2">
-              <RefreshCw className={`w - 4 h - 4 ${isLoading ? 'animate - spin' : ''}`}/>
+              <RefreshCw className={`w - 4 h - 4 ${isLoading ? 'animate - spin' : ''}`}      />
               {isLoading ? 'Analyzing...' : 'Analyze All Pages'}
             </button>
             <button onClick={ () => contentAnalyzer.clearCache () } className="px - 3 py - 2 text - gray - 600 hover:text - gray - 800 dark:text - gray - 400 dark:hover:text - gray - 200 text - sm transition - colors">

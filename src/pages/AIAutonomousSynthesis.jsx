@@ -10,15 +10,15 @@ const AIAutonomousSynthesis = () => {
         <meta
           name="description"
           content="Revolutionary AI autonomous synthesis platform that continuously synthesizes information, creates content, and generates insights with advanced AI capabilities and autonomous operation."
-        />
+              />
         <meta
           name="keywords"
           content="AI synthesis, autonomous synthesis, content creation, information synthesis, autonomous operations, AI synthesis platform"
-        />
+              />
         <link
           rel="canonical"
           href="https://ziontechgroup.com / ai - autonomous - synthesis"
-        />
+              />
       </Helmet>
 
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - amber - 900 to - slate - 900">

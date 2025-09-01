@@ -119,7 +119,7 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
                 className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                   billingCycle === 'yearly' ? 'translate-x-6' : 'translate-x-1'
                 }`}
-              />
+                    />
             </button>
             <span className={`text-lg font-medium ${billingCycle === 'yearly' ? 'text-gray-900' : 'text-gray-500'}`}>
               Yearly
@@ -130,7 +130,7 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
 
         {/* Pricing Plans */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20">
-          {plans.map((plan, index) => (
+          {plans.map((((((((plan, index, index, index, index, index, index, index) => ({ ...((((((plan, index, index, index, index, index, index, key: index })) => ({ ...(((((plan, index, index, index, index, index, key: index })) => ({ ...((((plan, index, index, index, index, key: index })) => ({ ...(((plan, index, index, index, key: index })) => ({ ...((plan, index, index, key: index })) => ({ ...(plan, index, key: index })) => (
             <div
               key={index}
               className={`relative bg-white rounded-2xl shadow-xl border-2 transition-all duration-300 hover:shadow-2xl ${
@@ -150,7 +150,7 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
               <div className="p-8">
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-                    <plan.icon className="w-6 h-6 text-blue-600" />
+                    <plan.icon className="w-6 h-6 text-blue-600"       />
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900">{plan.name}</h3>
@@ -169,9 +169,9 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
 
                 <div className="space-y-4 mb-8">
                   <h4 className="font-semibold text-gray-900">What's Included:</h4>
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map((((((((feature, featureIndex, index, index, index, index, index, index) => ({ ...((((((feature, featureIndex, index, index, index, index, index, key: index })) => ({ ...(((((feature, featureIndex, index, index, index, index, key: index })) => ({ ...((((feature, featureIndex, index, index, index, key: index })) => ({ ...(((feature, featureIndex, index, index, key: index })) => ({ ...((feature, featureIndex, index, key: index })) => ({ ...(feature, featureIndex, key: index })) => (
                     <div key={featureIndex} className="flex items-center">
-                      <Check className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
+                      <Check className="w-5 h-5 text-green-500 mr-3 flex-shrink-0"       />
                       <span className="text-gray-700">{feature}</span>
                     </div>
                   ))}
@@ -179,9 +179,9 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
 
                 <div className="space-y-4 mb-8">
                   <h4 className="font-semibold text-gray-900">Not Included:</h4>
-                  {plan.notIncluded.map((feature, featureIndex) => (
+                  {plan.notIncluded.map((((((((feature, featureIndex, index, index, index, index, index, index) => ({ ...((((((feature, featureIndex, index, index, index, index, index, key: index })) => ({ ...(((((feature, featureIndex, index, index, index, index, key: index })) => ({ ...((((feature, featureIndex, index, index, index, key: index })) => ({ ...(((feature, featureIndex, index, index, key: index })) => ({ ...((feature, featureIndex, index, key: index })) => ({ ...(feature, featureIndex, key: index })) => (
                     <div key={featureIndex} className="flex items-center">
-                      <X className="w-5 h-5 text-red-500 mr-3 flex-shrink-0" />
+                      <X className="w-5 h-5 text-red-500 mr-3 flex-shrink-0"       />
                       <span className="text-gray-500">{feature}</span>
                     </div>
                   ))}
@@ -207,10 +207,10 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
             Additional Services
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {additionalServices.map((service, index) => (
+            {additionalServices.map((((((((service, index, index, index, index, index, index, index) => ({ ...((((((service, index, index, index, index, index, index, key: index })) => ({ ...(((((service, index, index, index, index, index, key: index })) => ({ ...((((service, index, index, index, index, key: index })) => ({ ...(((service, index, index, index, key: index })) => ({ ...((service, index, index, key: index })) => ({ ...(service, index, key: index })) => (
               <div key={index} className="text-center p-6 border border-gray-200 rounded-xl hover:border-blue-300 transition-colors">
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Clock className="w-8 h-8 text-blue-600" />
+                  <Clock className="w-8 h-8 text-blue-600"       />
                 </div>
                 <h4 className="text-lg font-semibold text-gray-900 mb-2">{service.name}</h4>
                 <div className="text-3xl font-bold text-blue-600 mb-2">${service.price}</div>

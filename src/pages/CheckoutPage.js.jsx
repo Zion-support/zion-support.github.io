@@ -48,7 +48,7 @@ export default function CheckoutPage () {
   }
   return (<div className="container max - w-2xl py - 10 space - y-6">
       <h1 className="text - 3xl font - bold">Checkout</h1>
-      <CheckoutProgress currentStep={1} className="mb - 6" />
+      <CheckoutProgress currentStep={1} className="mb - 6"       />
       <div>
         <p className="font - semibold">{product.title}</p>
         <p className="text - sm text - zion - slate - light">
@@ -62,7 +62,7 @@ export default function CheckoutPage () {
           <p className="font - semibold">Payment Successful!</p>
           <p > Confirmation ID: {intent.id}</p>
         </div>) : (<Elements stripe={getStripe () }>
-          <CardForm amount={product.price ?? 0} onSuccess={setIntent} />
+          <CardForm amount={product.price ?? 0} onSuccess={setIntent}       />
         </Elements>) }
       {!intent && (<p className="text - xs text - zion - slate - light text - center">
           Use test card 4242 - 4242 - 4242 - 4242 with future date and CVC.

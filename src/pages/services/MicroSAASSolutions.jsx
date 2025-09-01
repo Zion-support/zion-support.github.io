@@ -125,7 +125,7 @@ export default function MicroSAASSolutions() {
         description="Custom software-as-a-service solutions designed for rapid deployment, scalability, and business growth across industries."
         keywords="micro SAAS, custom software, subscription management, multi-tenant, API development, business software"
         canonical="https://ziontechgroup.com/services/micro-saas-solutions"
-      />
+            />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden">
@@ -168,20 +168,20 @@ export default function MicroSAASSolutions() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
+            {services.map((((((((service, index, index, index, index, index, index, index) => ({ ...((((((service, index, index, index, index, index, index, key: index })) => ({ ...(((((service, index, index, index, index, index, key: index })) => ({ ...((((service, index, index, index, index, key: index })) => ({ ...(((service, index, index, index, key: index })) => ({ ...((service, index, index, key: index })) => ({ ...(service, index, key: index })) => (
               <div
                 key={index}
                 className="bg-white rounded-xl shadow-lg p-6 border border-zion-blue-light hover:shadow-xl transition-shadow"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-6">
-                  <service.icon className="w-8 h-8 text-white" />
+                  <service.icon className="w-8 h-8 text-white"       />
                 </div>
                 <h3 className="text-xl font-semibold text-zion-blue-dark mb-3">
                   {service.title}
                 </h3>
                 <p className="text-zion-slate mb-4">{service.description}</p>
                 <ul className="space-y-2">
-                  {service.features.map((feature, idx) => (
+                  {service.features.map((((((((feature, idx, index, index, index, index, index, index) => ({ ...((((((feature, idx, index, index, index, index, index, key: index })) => ({ ...(((((feature, idx, index, index, index, index, key: index })) => ({ ...((((feature, idx, index, index, index, key: index })) => ({ ...(((feature, idx, index, index, key: index })) => ({ ...((feature, idx, index, key: index })) => ({ ...(feature, idx, key: index })) => (
                     <li
                       key={idx}
                       className="flex items-center text-sm text-zion-slate"
@@ -211,10 +211,10 @@ export default function MicroSAASSolutions() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+            {benefits.map((((((((benefit, index, index, index, index, index, index, index) => ({ ...((((((benefit, index, index, index, index, index, index, key: index })) => ({ ...(((((benefit, index, index, index, index, index, key: index })) => ({ ...((((benefit, index, index, index, index, key: index })) => ({ ...(((benefit, index, index, index, key: index })) => ({ ...((benefit, index, index, key: index })) => ({ ...(benefit, index, key: index })) => (
               <div key={index} className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-6">
-                  <benefit.icon className="w-10 h-10 text-white" />
+                  <benefit.icon className="w-10 h-10 text-white"       />
                 </div>
                 <h3 className="text-xl font-semibold text-zion-blue-dark mb-3">
                   {benefit.title}
@@ -240,13 +240,13 @@ export default function MicroSAASSolutions() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {industries.map((industry, index) => (
+            {industries.map((((((((industry, index, index, index, index, index, index, index) => ({ ...((((((industry, index, index, index, index, index, index, key: index })) => ({ ...(((((industry, index, index, index, index, index, key: index })) => ({ ...((((industry, index, index, index, index, key: index })) => ({ ...(((industry, index, index, index, key: index })) => ({ ...((industry, index, index, key: index })) => ({ ...(industry, index, key: index })) => (
               <div
                 key={index}
                 className="bg-zion-blue-light rounded-xl p-6 text-center hover:shadow-lg transition-shadow"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <industry.icon className="w-8 h-8 text-white" />
+                  <industry.icon className="w-8 h-8 text-white"       />
                 </div>
                 <h3 className="text-lg font-semibold text-zion-blue-dark mb-2">
                   {industry.name}

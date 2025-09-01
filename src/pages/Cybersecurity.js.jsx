@@ -43,7 +43,7 @@ const Cybersecurity = () => {
         description="Comprehensive cybersecurity solutions including threat detection, compliance automation, zero trust architecture, and advanced security services from Zion Tech Group."
         keywords="cybersecurity, threat detection, SOC2 compliance, zero trust, network security, data protection"
         canonical="https://ziontechgroup.com / cybersecurity"
-      />
+            />
 
       {/* Hero Section */}
       <section className="py - 20 bg - gradient - to - br from - slate - 900 via - red - 900 to - slate - 900">
@@ -94,7 +94,7 @@ const Cybersecurity = () => {
               >
                 <div className="p - 8">
                   <div className="w - 16 h - 16 bg - gradient - to - r from - red - 500 to - orange - 500 rounded - lg flex items - center justify - center mb - 6 group - hover:scale - 110 transition - transform duration - 300">
-                    <service.icon className="w - 8 h - 8 text - white" />
+                    <service.icon className="w - 8 h - 8 text - white"       />
                   </div>
                   <h3 className="text - xl font - bold text - gray - 900 mb - 3">
                     {service.title}
@@ -136,7 +136,7 @@ const Cybersecurity = () => {
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">
             {securityFeatures.map (feature => (<div key={feature.title} className="text - center">
                 <div className="w - 16 h - 16 bg - gradient - to - r from - red - 500 to - orange - 500 rounded - lg flex items - center justify - center mx - auto mb - 6">
-                  <feature.icon className="w - 8 h - 8 text - white" />
+                  <feature.icon className="w - 8 h - 8 text - white"       />
                 </div>
                 <h3 className="text - xl font - bold text - gray - 900 mb - 3">
                   {feature.title}

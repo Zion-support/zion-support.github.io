@@ -1,12 +1,11 @@
 #!/bin/bash
 
-# Enhanced Error Automation System Startup Script
-# This script will fix current project errors and set up PM2 automation to prevent future errors
+# Error Automation System Startup Script
+# This script starts the comprehensive error fixing automation system
 
 set -e
 
-echo "🚀 Starting Enhanced Error Automation System"
-echo "=============================================="
+echo "🚀 Starting Error Automation System..."
 
 # Colors for output
 RED='\033[0;31m'
@@ -17,210 +16,128 @@ NC='\033[0m' # No Color
 
 # Function to print colored output
 print_status() {
-    echo -e "${BLUE}[INFO]${NC} $1"
+    echo -e "${BLUE}[$(date '+%Y-%m-%d %H:%M:%S')]${NC} $1"
 }
 
 print_success() {
-    echo -e "${GREEN}[SUCCESS]${NC} $1"
+    echo -e "${GREEN}✅ $1${NC}"
 }
 
 print_warning() {
-    echo -e "${YELLOW}[WARNING]${NC} $1"
+    echo -e "${YELLOW}⚠️  $1${NC}"
 }
 
 print_error() {
-    echo -e "${RED}[ERROR]${NC} $1"
+    echo -e "${RED}❌ $1${NC}"
 }
 
-# Check if we're in the right directory
-if [ ! -f "package.json" ]; then
-    print_error "package.json not found. Please run this script from the project root."
-    exit 1
-fi
-
-print_status "📁 Working directory: $(pwd)"
-
-# Step 1: Install dependencies
-print_status "📦 Installing dependencies..."
-if npm install; then
-    print_success "Dependencies installed successfully"
-else
-    print_warning "Some dependencies may not have installed correctly"
-fi
-
-# Step 2: Install PM2 globally if not already installed
-print_status "🔧 Checking PM2 installation..."
+# Check if PM2 is installed
 if ! command -v pm2 &> /dev/null; then
-    print_status "Installing PM2 globally..."
+    print_error "PM2 is not installed. Installing PM2..."
     npm install -g pm2
     print_success "PM2 installed successfully"
-else
-    print_success "PM2 is already installed"
 fi
 
-# Step 3: Run the enhanced project error fixer
-print_status "🔧 Running Enhanced Project Error Fixer..."
-if node scripts/automation/enhanced-project-error-fixer.cjs; then
-    print_success "Enhanced Project Error Fixer completed"
-else
-    print_warning "Enhanced Project Error Fixer encountered some issues"
+# Create logs directory
+print_status "Creating logs directory..."
+mkdir -p logs
+mkdir -p error-reports
+
+# Install dependencies if needed
+if [ ! -d "node_modules" ]; then
+    print_status "Installing dependencies..."
+    npm install --legacy-peer-deps
+    print_success "Dependencies installed"
 fi
 
-# Step 4: Run the PM2 Error Automation Orchestrator
-print_status "🚀 Starting PM2 Error Automation Orchestrator..."
-if node scripts/automation/pm2-error-automation-orchestrator.cjs; then
-    print_success "PM2 Error Automation Orchestrator completed"
-else
-    print_error "PM2 Error Automation Orchestrator failed"
-    exit 1
-fi
+# Stop any existing error automation processes
+print_status "Stopping existing error automation processes..."
+pm2 stop ecosystem.error-automation.config.cjs 2>/dev/null || true
+pm2 delete ecosystem.error-automation.config.cjs 2>/dev/null || true
 
-# Step 5: Check PM2 status
-print_status "📊 Checking PM2 status..."
-if pm2 status; then
-    print_success "PM2 processes are running"
-else
-    print_warning "Some PM2 processes may not be running correctly"
-fi
+# Start the error automation system
+print_status "Starting error automation system..."
+pm2 start ecosystem.error-automation.config.cjs --update-env
 
-# Step 6: Show automation processes
-print_status "🔍 Showing automation processes..."
-pm2 list | grep -E "(enhanced|typescript|eslint|build|dependency|config|error|critical|auto|analytics|quality|ai|predictive|intelligent)"
+# Wait a moment for processes to start
+sleep 3
 
-# Step 7: Generate summary report
-print_status "📊 Generating summary report..."
-
-# Create summary report
-cat > error-automation-summary.md << EOF
-# Error Automation System Summary
-
-## Setup Completed: $(date)
-
-### ✅ Steps Completed:
-1. **Dependencies Installation**: All project dependencies installed
-2. **PM2 Installation**: PM2 process manager installed globally
-3. **Enhanced Error Fixer**: Current project errors addressed
-4. **PM2 Automation Orchestrator**: Automation processes configured and started
-5. **Monitoring Setup**: Process monitoring and auto-recovery enabled
-
-### 🔧 Automation Processes Started:
-- **Enhanced Project Error Fixer**: Runs every 10 minutes
-- **TypeScript Error Monitor**: Runs every 15 minutes
-- **ESLint Error Cleaner**: Runs every 20 minutes
-- **Build Error Detector**: Runs every 30 minutes
-- **Dependency Error Resolver**: Runs every hour
-- **Configuration Error Fixer**: Runs every 2 hours
-- **Enhanced Error Fixer**: Runs every 45 minutes
-- **Error Prevention Monitor**: Runs every 15 minutes
-- **Critical Error Alert System**: Runs every 5 minutes
-- **Auto Recovery Manager**: Runs every 10 minutes
-- **Error Analytics Dashboard**: Runs every hour
-- **Code Quality Automation**: Runs every 2 hours
-- **AI Code Review Automation**: Runs every 4 hours
-- **Predictive Issue Detection**: Runs every 3 hours
-- **Intelligent Automation Orchestrator**: Runs every 6 hours
-
-### 📊 Monitoring Features:
-- **Auto-restart**: Failed processes automatically restart
-- **Memory monitoring**: Processes restart if memory usage exceeds limits
-- **Log rotation**: Logs are automatically rotated and compressed
-- **Error alerts**: Critical errors trigger immediate alerts
-- **Performance tracking**: Continuous performance monitoring
-
-### 🛠️ Useful Commands:
-\`\`\`bash
-# Check PM2 status
+# Check status
+print_status "Checking automation status..."
 pm2 status
 
-# View logs
-pm2 logs
+# Show logs
+print_status "Recent logs from error automation processes:"
+echo ""
 
-# Restart all processes
-pm2 restart all
+# Show logs from key processes
+print_status "Console Error Fixer logs:"
+pm2 logs console-error-fixer --lines 5 2>/dev/null || print_warning "No logs available yet"
 
-# Stop all processes
-pm2 stop all
+echo ""
+print_status "Comprehensive Error Fixer logs:"
+pm2 logs error-fixing-orchestrator --lines 5 2>/dev/null || print_warning "No logs available yet"
 
-# Delete all processes
-pm2 delete all
+echo ""
+print_status "TypeScript Error Fixer logs:"
+pm2 logs typescript-error-fixer --lines 5 2>/dev/null || print_warning "No logs available yet"
 
-# Monitor processes in real-time
-pm2 monit
-\`\`\`
-
-### 📁 Log Files:
-All automation logs are stored in \`automation/logs/\` directory:
-- \`enhanced-error-fixer.log\`
-- \`typescript-monitor.log\`
-- \`eslint-cleaner.log\`
-- \`build-detector.log\`
-- \`dependency-resolver.log\`
-- \`config-fixer.log\`
-- \`error-prevention.log\`
-- \`critical-alerts.log\`
-- \`auto-recovery.log\`
-- \`error-analytics.log\`
-- \`code-quality.log\`
-- \`ai-code-review.log\`
-- \`predictive-detection.log\`
-- \`intelligent-orchestrator.log\`
-
-### 🎯 Next Steps:
-1. Monitor the automation processes for the first few hours
-2. Check logs for any issues or warnings
-3. Adjust automation intervals if needed
-4. Set up additional monitoring if required
-
-### ⚠️ Important Notes:
-- The system will automatically fix common errors as they occur
-- Critical errors will trigger immediate alerts
-- All processes are configured to restart automatically on failure
-- Logs are automatically rotated to prevent disk space issues
-- The system is designed to be self-healing and self-maintaining
-
----
-*Generated by Enhanced Error Automation System*
+# Create monitoring script
+cat > monitor-error-automation.sh << 'EOF'
+#!/bin/bash
+echo "🔍 Error Automation System Monitor"
+echo "=================================="
+echo ""
+echo "PM2 Status:"
+pm2 status
+echo ""
+echo "Recent Logs:"
+pm2 logs --lines 20
+echo ""
+echo "Error Reports:"
+ls -la error-reports/ 2>/dev/null || echo "No error reports yet"
+echo ""
+echo "Log Files:"
+ls -la logs/ 2>/dev/null || echo "No log files yet"
 EOF
 
-print_success "Summary report generated: error-automation-summary.md"
+chmod +x monitor-error-automation.sh
 
-# Step 8: Final status check
-print_status "🔍 Performing final status check..."
+# Create quick restart script
+cat > restart-error-automation.sh << 'EOF'
+#!/bin/bash
+echo "🔄 Restarting Error Automation System..."
+pm2 restart ecosystem.error-automation.config.cjs
+echo "✅ Error automation system restarted"
+EOF
 
-# Check if key processes are running
-if pm2 list | grep -q "enhanced-project-error-fixer"; then
-    print_success "Enhanced Project Error Fixer is running"
-else
-    print_warning "Enhanced Project Error Fixer may not be running"
-fi
+chmod +x restart-error-automation.sh
 
-if pm2 list | grep -q "critical-error-alert-system"; then
-    print_success "Critical Error Alert System is running"
-else
-    print_warning "Critical Error Alert System may not be running"
-fi
+# Create stop script
+cat > stop-error-automation.sh << 'EOF'
+#!/bin/bash
+echo "🛑 Stopping Error Automation System..."
+pm2 stop ecosystem.error-automation.config.cjs
+echo "✅ Error automation system stopped"
+EOF
 
-# Check log directory
-if [ -d "automation/logs" ]; then
-    print_success "Log directory created successfully"
-else
-    print_warning "Log directory may not exist"
-fi
+chmod +x stop-error-automation.sh
 
+print_success "Error automation system started successfully!"
 echo ""
-echo "🎉 Enhanced Error Automation System Setup Complete!"
-echo "=================================================="
+echo "📋 Available commands:"
+echo "  ./monitor-error-automation.sh  - Monitor the system"
+echo "  ./restart-error-automation.sh  - Restart the system"
+echo "  ./stop-error-automation.sh     - Stop the system"
+echo "  pm2 logs                       - View all logs"
+echo "  pm2 status                     - View process status"
 echo ""
-echo "✅ Current project errors have been addressed"
-echo "✅ PM2 automation processes are running"
-echo "✅ Monitoring and auto-recovery are enabled"
-echo "✅ Critical error alerts are active"
+echo "🔄 The system will automatically:"
+echo "  • Fix TypeScript errors every 10 minutes"
+echo "  • Fix JSX errors every 12 minutes"
+echo "  • Fix build errors every 20 minutes"
+echo "  • Fix dependency issues every 30 minutes"
+echo "  • Run comprehensive error fixing every 15 minutes"
+echo "  • Monitor for critical errors every 3 minutes"
 echo ""
-echo "📊 To monitor the system:"
-echo "   - Run 'pm2 status' to see all processes"
-echo "   - Run 'pm2 logs' to view logs"
-echo "   - Run 'pm2 monit' for real-time monitoring"
-echo ""
-echo "📁 Check 'error-automation-summary.md' for detailed information"
-echo ""
-echo "🚀 The system will now automatically prevent and fix errors!"
+print_success "Error automation system is now running and will automatically fix project errors!"

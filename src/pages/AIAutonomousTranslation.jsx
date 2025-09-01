@@ -10,15 +10,15 @@ const AIAutonomousTranslation = () => {
         <meta
           name="description"
           content="Revolutionary AI autonomous translation platform that continuously translates content, languages, and communications with advanced AI capabilities and autonomous operation."
-        />
+              />
         <meta
           name="keywords"
           content="AI translation, autonomous translation, language translation, multilingual support, autonomous operations, AI translation platform"
-        />
+              />
         <link
           rel="canonical"
           href="https://ziontechgroup.com / ai - autonomous - translation"
-        />
+              />
       </Helmet>
 
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - blue - 900 to - slate - 900">

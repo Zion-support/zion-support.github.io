@@ -23,7 +23,7 @@ function StepIndicator({ step }) {
         <div
           className="h-1 bg-zion-purple rounded"
           style={{ width: `${progress}%` }}
-        />
+              />
       </div>
     </div>
   );
@@ -101,14 +101,14 @@ export function QuoteWizard({ category }) {
   if (step === 1) {
     return (
       <div className="space-y-6">
-        <StepIndicator step={step} />
+        <StepIndicator step={step}       />
         {loading && !delayedError && (
           <div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
             data-testid="loading-indicator"
           >
-            {Array.from({ length: 6 }).map((_, i) => (
-              <Skeleton key={i} className="h-[120px] w-full" />
+            {Array.from({ length: 6 }).map((((((((_, i, index, index, index, index, index, index) => ({ ...((((((_, i, index, index, index, index, index, key: index })) => ({ ...(((((_, i, index, index, index, index, key: index })) => ({ ...((((_, i, index, index, index, key: index })) => ({ ...(((_, i, index, index, key: index })) => ({ ...((_, i, index, key: index })) => ({ ...(_, i, key: index })) => (
+              <Skeleton key={i} className="h-[120px] w-full"       />
             ))}
           </div>
         )}
@@ -140,12 +140,42 @@ export function QuoteWizard({ category }) {
 
         {!loading && !delayedError && data && data.length > 0 && (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {data.map(item => (
+            {data.map(((((((item => (
               <Card
                 data-testid={`item-card-${item.id}`}
                 key={item.id}
                 className={`p-4 space-y-2 cursor-pointer border-2 transition-colors rounded-lg shadow-sm ${selectedItemId === item.id ? 'border-zion-purple ring-2 ring-zion-purple' : 'hover:border-zion-purple/70'} focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple`}
-                onClick={() => setSelectedItemId(item.id)}
+                onClick={(, index, index, index, index, index, index) => ({ ...(((((item => (
+              <Card
+                data-testid={`item-card-${item.id}`}
+                key={item.id}
+                className={`p-4 space-y-2 cursor-pointer border-2 transition-colors rounded-lg shadow-sm ${selectedItemId === item.id ? 'border-zion-purple ring-2 ring-zion-purple' : 'hover:border-zion-purple/70'} focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple`}
+                onClick={(, index, index, index, index, index, key: index })) => ({ ...((((item => (
+              <Card
+                data-testid={`item-card-${item.id}`}
+                key={item.id}
+                className={`p-4 space-y-2 cursor-pointer border-2 transition-colors rounded-lg shadow-sm ${selectedItemId === item.id ? 'border-zion-purple ring-2 ring-zion-purple' : 'hover:border-zion-purple/70'} focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple`}
+                onClick={(, index, index, index, index, key: index })) => ({ ...(((item => (
+              <Card
+                data-testid={`item-card-${item.id}`}
+                key={item.id}
+                className={`p-4 space-y-2 cursor-pointer border-2 transition-colors rounded-lg shadow-sm ${selectedItemId === item.id ? 'border-zion-purple ring-2 ring-zion-purple' : 'hover:border-zion-purple/70'} focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple`}
+                onClick={(, index, index, index, key: index })) => ({ ...((item => (
+              <Card
+                data-testid={`item-card-${item.id}`}
+                key={item.id}
+                className={`p-4 space-y-2 cursor-pointer border-2 transition-colors rounded-lg shadow-sm ${selectedItemId === item.id ? 'border-zion-purple ring-2 ring-zion-purple' : 'hover:border-zion-purple/70'} focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple`}
+                onClick={(, index, index, key: index })) => ({ ...(item => (
+              <Card
+                data-testid={`item-card-${item.id}`}
+                key={item.id}
+                className={`p-4 space-y-2 cursor-pointer border-2 transition-colors rounded-lg shadow-sm ${selectedItemId === item.id ? 'border-zion-purple ring-2 ring-zion-purple' : 'hover:border-zion-purple/70'} focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple`}
+                onClick={(, index, key: index })) => ({ ...item => (
+              <Card
+                data-testid={`item-card-${item.id}`}
+                key={item.id}
+                className={`p-4 space-y-2 cursor-pointer border-2 transition-colors rounded-lg shadow-sm ${selectedItemId === item.id ? 'border-zion-purple ring-2 ring-zion-purple' : 'hover:border-zion-purple/70'} focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple`}
+                onClick={(, key: index })) => setSelectedItemId(item.id)}
                 tabIndex={0}
                 onKeyDown={e => {
                   if (e.key === 'Enter' || e.key === ' ') {
@@ -205,7 +235,7 @@ export function QuoteWizard({ category }) {
   if (step === 2) {
     return (
       <div data-testid="details-step" className="space-y-4">
-        <StepIndicator step={step} />
+        <StepIndicator step={step}       />
         {selectedItem && (
           <div
             data-testid="selected-item-name"
@@ -246,7 +276,7 @@ export function QuoteWizard({ category }) {
   if (step === 3) {
     return (
       <div data-testid="success-step" className="space-y-4 text-center py-12">
-        <StepIndicator step={step} />
+        <StepIndicator step={step}       />
         <div className="text-2xl font-semibold text-green-600">
           Quote Submitted Successfully!
         </div>

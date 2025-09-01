@@ -159,7 +159,7 @@ export default function SupportRequests() {
       <SEO
         title="Support Requests | Admin Dashboard"
         description="Manage and track user support requests and issues"
-      />
+            />
     ),
     (
       <div className="container mx-auto px-4 py-8">
@@ -227,7 +227,7 @@ export default function SupportRequests() {
             {/* Search and Filters */}
             <div className="flex flex-col md:flex-row gap-4 mb-6">
               <div className="relative flex-1">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400"       />
                 <Input
                   placeholder="Search by ID, user or issue..."
                   value={searchQuery}
@@ -241,7 +241,7 @@ export default function SupportRequests() {
                 onValueChange={value => setStatusFilter(value || null)}
               >
                 <SelectTrigger className="w-[180px]">
-                  <SelectValue placeholder="Status" />
+                  <SelectValue placeholder="Status"       />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="">All Statuses</SelectItem>
@@ -256,7 +256,7 @@ export default function SupportRequests() {
                 onValueChange={value => setPriorityFilter(value || null)}
               >
                 <SelectTrigger className="w-[180px]">
-                  <SelectValue placeholder="Priority" />
+                  <SelectValue placeholder="Priority"       />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="">All Priorities</SelectItem>
@@ -271,7 +271,7 @@ export default function SupportRequests() {
                 onValueChange={value => setCategoryFilter(value || null)}
               >
                 <SelectTrigger className="w-[180px]">
-                  <SelectValue placeholder="Category" />
+                  <SelectValue placeholder="Category"       />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="">All Categories</SelectItem>
@@ -289,7 +289,7 @@ export default function SupportRequests() {
                 onClick={resetFilters}
                 className="md:w-auto"
               >
-                <Filter className="h-4 w-4 mr-2" /> Reset Filters
+                <Filter className="h-4 w-4 mr-2"       /> Reset Filters
               </Button>
             </div>
 
@@ -311,7 +311,7 @@ export default function SupportRequests() {
                     </TableRow>
                   </TableHeader>
                   <TableBody>
-                    {filteredRequests.map(request => (
+                    {filteredRequests.map(((((((request => (
                       <TableRow key={request.id}>
                         <TableCell className="font-medium">
                           {request.id}
@@ -348,7 +348,229 @@ export default function SupportRequests() {
                         </TableCell>
                         <TableCell>{request.category}</TableCell>
                         <TableCell>
-                          {new Date(request.createdAt).toLocaleDateString()}
+                          {new Date(request.createdAt, index, index, index, index, index, index) => ({ ...(((((request => (
+                      <TableRow key={request.id}>
+                        <TableCell className="font-medium">
+                          {request.id}
+                        </TableCell>
+                        <TableCell>{request.user}</TableCell>
+                        <TableCell className="max-w-xs truncate">
+                          {request.issue}
+                        </TableCell>
+                        <TableCell>
+                          <Badge
+                            variant={
+                              request.status === 'open'
+                                ? 'default'
+                                : request.status === 'in-progress'
+                                  ? 'secondary'
+                                  : 'outline'
+                            }
+                          >
+                            {request.status}
+                          </Badge>
+                        </TableCell>
+                        <TableCell>
+                          <Badge
+                            variant={
+                              request.priority === 'high'
+                                ? 'destructive'
+                                : request.priority === 'medium'
+                                  ? 'default'
+                                  : 'outline'
+                            }
+                          >
+                            {request.priority}
+                          </Badge>
+                        </TableCell>
+                        <TableCell>{request.category}</TableCell>
+                        <TableCell>
+                          {new Date(request.createdAt, index, index, index, index, index, key: index })) => ({ ...((((request => (
+                      <TableRow key={request.id}>
+                        <TableCell className="font-medium">
+                          {request.id}
+                        </TableCell>
+                        <TableCell>{request.user}</TableCell>
+                        <TableCell className="max-w-xs truncate">
+                          {request.issue}
+                        </TableCell>
+                        <TableCell>
+                          <Badge
+                            variant={
+                              request.status === 'open'
+                                ? 'default'
+                                : request.status === 'in-progress'
+                                  ? 'secondary'
+                                  : 'outline'
+                            }
+                          >
+                            {request.status}
+                          </Badge>
+                        </TableCell>
+                        <TableCell>
+                          <Badge
+                            variant={
+                              request.priority === 'high'
+                                ? 'destructive'
+                                : request.priority === 'medium'
+                                  ? 'default'
+                                  : 'outline'
+                            }
+                          >
+                            {request.priority}
+                          </Badge>
+                        </TableCell>
+                        <TableCell>{request.category}</TableCell>
+                        <TableCell>
+                          {new Date(request.createdAt, index, index, index, index, key: index })) => ({ ...(((request => (
+                      <TableRow key={request.id}>
+                        <TableCell className="font-medium">
+                          {request.id}
+                        </TableCell>
+                        <TableCell>{request.user}</TableCell>
+                        <TableCell className="max-w-xs truncate">
+                          {request.issue}
+                        </TableCell>
+                        <TableCell>
+                          <Badge
+                            variant={
+                              request.status === 'open'
+                                ? 'default'
+                                : request.status === 'in-progress'
+                                  ? 'secondary'
+                                  : 'outline'
+                            }
+                          >
+                            {request.status}
+                          </Badge>
+                        </TableCell>
+                        <TableCell>
+                          <Badge
+                            variant={
+                              request.priority === 'high'
+                                ? 'destructive'
+                                : request.priority === 'medium'
+                                  ? 'default'
+                                  : 'outline'
+                            }
+                          >
+                            {request.priority}
+                          </Badge>
+                        </TableCell>
+                        <TableCell>{request.category}</TableCell>
+                        <TableCell>
+                          {new Date(request.createdAt, index, index, index, key: index })) => ({ ...((request => (
+                      <TableRow key={request.id}>
+                        <TableCell className="font-medium">
+                          {request.id}
+                        </TableCell>
+                        <TableCell>{request.user}</TableCell>
+                        <TableCell className="max-w-xs truncate">
+                          {request.issue}
+                        </TableCell>
+                        <TableCell>
+                          <Badge
+                            variant={
+                              request.status === 'open'
+                                ? 'default'
+                                : request.status === 'in-progress'
+                                  ? 'secondary'
+                                  : 'outline'
+                            }
+                          >
+                            {request.status}
+                          </Badge>
+                        </TableCell>
+                        <TableCell>
+                          <Badge
+                            variant={
+                              request.priority === 'high'
+                                ? 'destructive'
+                                : request.priority === 'medium'
+                                  ? 'default'
+                                  : 'outline'
+                            }
+                          >
+                            {request.priority}
+                          </Badge>
+                        </TableCell>
+                        <TableCell>{request.category}</TableCell>
+                        <TableCell>
+                          {new Date(request.createdAt, index, index, key: index })) => ({ ...(request => (
+                      <TableRow key={request.id}>
+                        <TableCell className="font-medium">
+                          {request.id}
+                        </TableCell>
+                        <TableCell>{request.user}</TableCell>
+                        <TableCell className="max-w-xs truncate">
+                          {request.issue}
+                        </TableCell>
+                        <TableCell>
+                          <Badge
+                            variant={
+                              request.status === 'open'
+                                ? 'default'
+                                : request.status === 'in-progress'
+                                  ? 'secondary'
+                                  : 'outline'
+                            }
+                          >
+                            {request.status}
+                          </Badge>
+                        </TableCell>
+                        <TableCell>
+                          <Badge
+                            variant={
+                              request.priority === 'high'
+                                ? 'destructive'
+                                : request.priority === 'medium'
+                                  ? 'default'
+                                  : 'outline'
+                            }
+                          >
+                            {request.priority}
+                          </Badge>
+                        </TableCell>
+                        <TableCell>{request.category}</TableCell>
+                        <TableCell>
+                          {new Date(request.createdAt, index, key: index })) => ({ ...request => (
+                      <TableRow key={request.id}>
+                        <TableCell className="font-medium">
+                          {request.id}
+                        </TableCell>
+                        <TableCell>{request.user}</TableCell>
+                        <TableCell className="max-w-xs truncate">
+                          {request.issue}
+                        </TableCell>
+                        <TableCell>
+                          <Badge
+                            variant={
+                              request.status === 'open'
+                                ? 'default'
+                                : request.status === 'in-progress'
+                                  ? 'secondary'
+                                  : 'outline'
+                            }
+                          >
+                            {request.status}
+                          </Badge>
+                        </TableCell>
+                        <TableCell>
+                          <Badge
+                            variant={
+                              request.priority === 'high'
+                                ? 'destructive'
+                                : request.priority === 'medium'
+                                  ? 'default'
+                                  : 'outline'
+                            }
+                          >
+                            {request.priority}
+                          </Badge>
+                        </TableCell>
+                        <TableCell>{request.category}</TableCell>
+                        <TableCell>
+                          {new Date(request.createdAt, key: index })).toLocaleDateString()}
                         </TableCell>
                         <TableCell>
                           {new Date(request.lastUpdated).toLocaleDateString()}

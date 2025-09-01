@@ -9,7 +9,7 @@ const Solutions = () => {
         <meta
           name="description"
           content="Custom technology solutions tailored to your business needs. Zion Tech Group delivers innovative solutions that drive results."
-        />
+              />
       </Helmet>
 
       <div className="min - h-screen bg - gray - 50 py - 12">

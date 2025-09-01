@@ -101,23 +101,23 @@ const ITInfrastructure = () => {
         <meta
           name="description"
           content="Build robust IT infrastructure with Zion Tech Group. Network design, server management, storage solutions, and security infrastructure services."
-        />
+              />
         <meta
           property="og:title"
           content="IT Infrastructure — Zion Tech Group"
-        />
+              />
         <meta
           property="og:description"
           content="Leading IT infrastructure services including network design, server management, storage solutions, and security infrastructure."
-        />
+              />
         <meta
           property="og:url"
           content="https://ziontechgroup.com/services/it-infrastructure"
-        />
+              />
         <link
           rel="canonical"
           href="https://ziontechgroup.com/services/it-infrastructure"
-        />
+              />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
@@ -166,7 +166,7 @@ const ITInfrastructure = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
+              {features.map((((((((feature, index, index, index, index, index, index, index) => ({ ...((((((feature, index, index, index, index, index, index, key: index })) => ({ ...(((((feature, index, index, index, index, index, key: index })) => ({ ...((((feature, index, index, index, index, key: index })) => ({ ...(((feature, index, index, index, key: index })) => ({ ...((feature, index, index, key: index })) => ({ ...(feature, index, key: index })) => (
                 <div
                   key={index}
                   className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20"
@@ -177,7 +177,7 @@ const ITInfrastructure = () => {
                   </h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
-                    {feature.features.map((item, idx) => (
+                    {feature.features.map((((((((item, idx, index, index, index, index, index, index) => ({ ...((((((item, idx, index, index, index, index, index, key: index })) => ({ ...(((((item, idx, index, index, index, index, key: index })) => ({ ...((((item, idx, index, index, index, key: index })) => ({ ...(((item, idx, index, index, key: index })) => ({ ...((item, idx, index, key: index })) => ({ ...(item, idx, key: index })) => (
                       <li key={idx} className="text-gray-300 flex items-center">
                         <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
                         {item}
@@ -203,7 +203,7 @@ const ITInfrastructure = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {infrastructureAreas.map((area, index) => (
+              {infrastructureAreas.map((((((((area, index, index, index, index, index, index, index) => ({ ...((((((area, index, index, index, index, index, index, key: index })) => ({ ...(((((area, index, index, index, index, index, key: index })) => ({ ...((((area, index, index, index, index, key: index })) => ({ ...(((area, index, index, index, key: index })) => ({ ...((area, index, index, key: index })) => ({ ...(area, index, key: index })) => (
                 <div
                   key={index}
                   className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20"
@@ -212,7 +212,7 @@ const ITInfrastructure = () => {
                     {area.area}
                   </h3>
                   <ul className="space-y-2">
-                    {area.solutions.map((solution, idx) => (
+                    {area.solutions.map((((((((solution, idx, index, index, index, index, index, index) => ({ ...((((((solution, idx, index, index, index, index, index, key: index })) => ({ ...(((((solution, idx, index, index, index, index, key: index })) => ({ ...((((solution, idx, index, index, index, key: index })) => ({ ...(((solution, idx, index, index, key: index })) => ({ ...((solution, idx, index, key: index })) => ({ ...(solution, idx, key: index })) => (
                       <li key={idx} className="text-gray-300 flex items-center">
                         <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
                         {solution}
@@ -252,7 +252,7 @@ const ITInfrastructure = () => {
                       strokeLinejoin="round"
                       strokeWidth={2}
                       d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
+                          />
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">
@@ -276,7 +276,7 @@ const ITInfrastructure = () => {
                       strokeLinejoin="round"
                       strokeWidth={2}
                       d="M7 11l5-5m0 0l5 5m-5-5v12"
-                    />
+                          />
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">
@@ -300,7 +300,7 @@ const ITInfrastructure = () => {
                       strokeLinejoin="round"
                       strokeWidth={2}
                       d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
-                    />
+                          />
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">

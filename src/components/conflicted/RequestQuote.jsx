@@ -103,7 +103,7 @@ import { Calculator, Clock, CheckCircle, AlertCircle, Send, Phone, Mail, MapPin,
 
 }} transition={{ duration: 0.8 }}>
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-2xl p-4 mb-8">
-              <Calculator className="w-10 h-10 text-white"/>
+              <Calculator className="w-10 h-10 text-white"      />
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-400 to-purple-400 bg-clip-text text-transparent">
               Request a Quote
@@ -143,7 +143,7 @@ import { Calculator, Clock, CheckCircle, AlertCircle, Send, Phone, Mail, MapPin,
 
 
 }} className="flex items-center justify-center space-x-3 text-white/80">
-                <Clock className="w-5 h-5 text-cyan-400"/>
+                <Clock className="w-5 h-5 text-cyan-400"      />
                 <span>24-Hour Response</span>
               </motion.div>
               <motion.div initial = {
@@ -174,7 +174,7 @@ import { Calculator, Clock, CheckCircle, AlertCircle, Send, Phone, Mail, MapPin,
 
 
 }} className="flex items-center justify-center space-x-3 text-white/80">
-                <CheckCircle className="w-5 h-5 text-green-400"/>
+                <CheckCircle className="w-5 h-5 text-green-400"      />
                 <span>Free Consultation</span>
               </motion.div>
               <motion.div initial = {
@@ -205,7 +205,7 @@ import { Calculator, Clock, CheckCircle, AlertCircle, Send, Phone, Mail, MapPin,
 
 
 }} className="flex items-center justify-center space-x-3 text-white/80">
-                <Calculator className="w-5 h-5 text-purple-400"/>
+                <Calculator className="w-5 h-5 text-purple-400"      />
                 <span>Detailed Estimate</span>
               </motion.div>
             </div>
@@ -245,41 +245,41 @@ import { Calculator, Clock, CheckCircle, AlertCircle, Send, Phone, Mail, MapPin,
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-white font-medium mb-2">First Name *</label>
-                      <input type="text" name="firstName" value={formData.firstName} onChange={handleInputChange} required className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors" placeholder="Enter your first name"/>
+                      <input type="text" name="firstName" value={formData.firstName} onChange={handleInputChange} required className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors" placeholder="Enter your first name"      />
                     </div>
                     <div>
                       <label className="block text-white font-medium mb-2">Last Name *</label>
-                      <input type="text" name="lastName" value={formData.lastName} onChange={handleInputChange} required className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors" placeholder="Enter your last name"/>
+                      <input type="text" name="lastName" value={formData.lastName} onChange={handleInputChange} required className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors" placeholder="Enter your last name"      />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-white font-medium mb-2">Email *</label>
-                      <input type="email" name="email" value={formData.email} onChange={handleInputChange} required className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors" placeholder="Enter your email"/>
+                      <input type="email" name="email" value={formData.email} onChange={handleInputChange} required className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors" placeholder="Enter your email"      />
                     </div>
                     <div>
                       <label className="block text-white font-medium mb-2">Phone</label>
-                      <input type="tel" name="phone" value={formData.phone} onChange={handleInputChange} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors" placeholder="Enter your phone number"/>
+                      <input type="tel" name="phone" value={formData.phone} onChange={handleInputChange} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors" placeholder="Enter your phone number"      />
                     </div>
                   </div>
 
                   <div>
                     <label className="block text-white font-medium mb-2">Company</label>
-                    <input type="text" name="comp" value={formData.comp} onChange={handleInputChange} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors" placeholder="Enter your comp name"/>
+                    <input type="text" name="comp" value={formData.comp} onChange={handleInputChange} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors" placeholder="Enter your comp name"      />
                   </div>
 
                   {/* Project Type */}
                   <div>
                     <label className="block text-white font-medium mb-4">Project Type *</label>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      {projectTypes.map((type) => (<label key={type.value} className={`flex items-start p-4 rounded-lg border cursor-pointer transition-all duration-300 ${formData.projectType === type.value
+                      {projectTypes.map((((((((type, index, index, index, index, index, index) => ({ ...((((((type, index, index, index, index, index, key: index })) => ({ ...(((((type, index, index, index, index, key: index })) => ({ ...((((type, index, index, index, key: index })) => ({ ...(((type, index, index, key: index })) => ({ ...((type, index, key: index })) => ({ ...(type, key: index })) => (<label key={type.value} className={`flex items-start p-4 rounded-lg border cursor-pointer transition-all duration-300 ${formData.projectType === type.value
                 ? 'border-cyan-400 bg-cyan-400/20'
                 : 'border-white/20 hover:border-cyan-400/50'}`}>
-                          <input type="radio" name="projectType" value={type.value} checked={formData.projectType === type.value} onChange={handleInputChange} className="sr-only"/>
+                          <input type="radio" name="projectType" value={type.value} checked={formData.projectType === type.value} onChange={handleInputChange} className="sr-only"      />
                           <div className="flex items-start space-x-3">
                             <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                              <type.icon className="w-4 h-4 text-white"/>
+                              <type.icon className="w-4 h-4 text-white"      />
                             </div>
                             <div>
                               <div className="text-white font-medium">{type.label}</div>
@@ -296,7 +296,7 @@ import { Calculator, Clock, CheckCircle, AlertCircle, Send, Phone, Mail, MapPin,
                       <label className="block text-white font-medium mb-4">Budget Range</label>
                       <select name="budget" value={formData.budget} onChange={handleInputChange} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors">
                         <option value="">Select budget range</option>
-                        {budgetRanges.map((budget) => (<option key={budget.value} value={budget.value}>
+                        {budgetRanges.map((((((((budget, index, index, index, index, index, index) => ({ ...((((((budget, index, index, index, index, index, key: index })) => ({ ...(((((budget, index, index, index, index, key: index })) => ({ ...((((budget, index, index, index, key: index })) => ({ ...(((budget, index, index, key: index })) => ({ ...((budget, index, key: index })) => ({ ...(budget, key: index })) => (<option key={budget.value} value={budget.value}>
                             {budget.label} - {budget.description}
                           </option>))}
                       </select>
@@ -305,7 +305,7 @@ import { Calculator, Clock, CheckCircle, AlertCircle, Send, Phone, Mail, MapPin,
                       <label className="block text-white font-medium mb-4">Timeline</label>
                       <select name="timeline" value={formData.timeline} onChange={handleInputChange} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors">
                         <option value="">Select timeline</option>
-                        {timelineOptions.map((timeline) => (<option key={timeline.value} value={timeline.value}>
+                        {timelineOptions.map((((((((timeline, index, index, index, index, index, index) => ({ ...((((((timeline, index, index, index, index, index, key: index })) => ({ ...(((((timeline, index, index, index, index, key: index })) => ({ ...((((timeline, index, index, index, key: index })) => ({ ...(((timeline, index, index, key: index })) => ({ ...((timeline, index, key: index })) => ({ ...(timeline, key: index })) => (<option key={timeline.value} value={timeline.value}>
                             {timeline.label} - {timeline.description}
                           </option>))}
                       </select>
@@ -316,10 +316,10 @@ import { Calculator, Clock, CheckCircle, AlertCircle, Send, Phone, Mail, MapPin,
                   <div>
                     <label className="block text-white font-medium mb-4">Project Urgency</label>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                      {urgencyLevels.map((level) => (<label key={level.value} className={`flex items-center p-3 rounded-lg border cursor-pointer transition-all duration-300 ${formData.urgency === level.value
+                      {urgencyLevels.map((((((((level, index, index, index, index, index, index) => ({ ...((((((level, index, index, index, index, index, key: index })) => ({ ...(((((level, index, index, index, index, key: index })) => ({ ...((((level, index, index, index, key: index })) => ({ ...(((level, index, index, key: index })) => ({ ...((level, index, key: index })) => ({ ...(level, key: index })) => (<label key={level.value} className={`flex items-center p-3 rounded-lg border cursor-pointer transition-all duration-300 ${formData.urgency === level.value
                 ? 'border-cyan-400 bg-cyan-400/20'
                 : 'border-white/20 hover:border-cyan-400/50'}`}>
-                          <input type="radio" name="urgency" value={level.value} checked={formData.urgency === level.value} onChange={handleInputChange} className="sr-only"/>
+                          <input type="radio" name="urgency" value={level.value} checked={formData.urgency === level.value} onChange={handleInputChange} className="sr-only"      />
                           <div className="text-center w-full">
                             <div className={`font-medium ${level.color}`}>{level.label}</div>
                             <div className="text-white/60 text-xs">{level.description}</div>
@@ -331,7 +331,7 @@ import { Calculator, Clock, CheckCircle, AlertCircle, Send, Phone, Mail, MapPin,
                   {/* Project Description */}
                   <div>
                     <label className="block text-white font-medium mb-2">Project Description *</label>
-                    <textarea name="description" value={formData.description} onChange={handleInputChange} required rows={6} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors resize-none" placeholder="Describe your project requirements, goals, and  specific features you need..."/>
+                    <textarea name="description" value={formData.description} onChange={handleInputChange} required rows={6} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors resize-none" placeholder="Describe your project requirements, goals, and  specific features you need..."      />
                   </div>
 
                   {/* Submit Button */}
@@ -342,10 +342,10 @@ import { Calculator, Clock, CheckCircle, AlertCircle, Send, Phone, Mail, MapPin,
                         <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
                         <span>Submitting...</span>
                       </>) : submissionStatus === 'success' ? (<>
-                        <CheckCircle className="w-5 h-5"/>
+                        <CheckCircle className="w-5 h-5"      />
                         <span>Quote Requested!</span>
                       </>) : (<>
-                        <Send className="w-5 h-5"/>
+                        <Send className="w-5 h-5"      />
                         <span>Request Quote</span>
                       </>)}
                   </button>
@@ -370,7 +370,7 @@ import { Calculator, Clock, CheckCircle, AlertCircle, Send, Phone, Mail, MapPin,
 
 
 }} className="flex items-center p-4 bg-green-500/20 border border-green-500/50 rounded-lg">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3"/>
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3"      />
                       <span className="text-green-400">
                         Thank you! We've received your quote request and will respond within 24 hours.
                       </span>
@@ -395,7 +395,7 @@ import { Calculator, Clock, CheckCircle, AlertCircle, Send, Phone, Mail, MapPin,
 
 
 }} className="flex items-center p-4 bg-red-500/20 border border-red-500/50 rounded-lg">
-                      <AlertCircle className="w-5 h-5 text-red-400 mr-3"/>
+                      <AlertCircle className="w-5 h-5 text-red-400 mr-3"      />
                       <span className="text-red-400">
                         Something went wrong. Please try again or contact us directly.
                       </span>
@@ -429,15 +429,15 @@ import { Calculator, Clock, CheckCircle, AlertCircle, Send, Phone, Mail, MapPin,
                 <h3 className="text-xl font-bold text-white mb-4">Get in Touch</h3>
                 <div className="space-y-4">
                   <a href="tel:+13024640950" className="flex items-center text-white/80 hover:text-cyan-400 transition-colors">
-                    <Phone className="w-5 h-5 mr-3 text-cyan-400"/>
+                    <Phone className="w-5 h-5 mr-3 text-cyan-400"      />
                     +1 (302) 464-0950
                   </a>
                   <a href="mailto:kleber@ziontechgroup.com" className="flex items-center text-white/80 hover:text-cyan-400 transition-colors">
-                    <Mail className="w-5 h-5 mr-3 text-purple-400"/>
+                    <Mail className="w-5 h-5 mr-3 text-purple-400"      />
                     kleber@ziontechgroup.com
                   </a>
                   <div className="flex items-start text-white/80">
-                    <MapPin className="w-5 h-5 mr-3 text-green-400 mt-1"/>
+                    <MapPin className="w-5 h-5 mr-3 text-green-400 mt-1"      />
                     <span>Delaware, United States</span>
                   </div>
                 </div>
@@ -475,28 +475,28 @@ import { Calculator, Clock, CheckCircle, AlertCircle, Send, Phone, Mail, MapPin,
                 <h3 className="text-xl font-bold text-white mb-4">Why Choose Us</h3>
                 <div className="space-y-4">
                   <div className="flex items-start">
-                    <Star className="w-5 h-5 text-yellow-400 mr-3 mt-1 flex-shrink-0"/>
+                    <Star className="w-5 h-5 text-yellow-400 mr-3 mt-1 flex-shrink-0"      />
                     <div>
                       <div className="text-white font-medium">Expert Team</div>
                       <div className="text-white/60 text-sm">Certified professionals</div>
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <Users className="w-5 h-5 text-cyan-400 mr-3 mt-1 flex-shrink-0"/>
+                    <Users className="w-5 h-5 text-cyan-400 mr-3 mt-1 flex-shrink-0"      />
                     <div>
                       <div className="text-white font-medium">Proven Track Record</div>
                       <div className="text-white/60 text-sm">500+ successful projects</div>
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <Zap className="w-5 h-5 text-purple-400 mr-3 mt-1 flex-shrink-0"/>
+                    <Zap className="w-5 h-5 text-purple-400 mr-3 mt-1 flex-shrink-0"      />
                     <div>
                       <div className="text-white font-medium">Fast Delivery</div>
                       <div className="text-white/60 text-sm">Quick turnaround times</div>
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <Shield className="w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0"/>
+                    <Shield className="w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0"      />
                     <div>
                       <div className="text-white font-medium">Quality Guarantee</div>
                       <div className="text-white/60 text-sm">100% satisfaction</div>

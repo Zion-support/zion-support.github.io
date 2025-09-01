@@ -208,7 +208,7 @@ const mockBusinessProcesses = [
     if (!isOpen) {
         return (<button onClick={ () => setIsOpen (true) } className="fixed bottom - 4 right - 4 bg - gradient - to - r from - zion - blue to - zion - purple text - white p - 4 rounded - full shadow - 2xl hover:shadow - zion - blue / 50 transition - all duration - 300 z - 50 group">
         <div className="flex items - center gap - 3">
-          <Workflow className="w - 6 h - 6"/>
+          <Workflow className="w - 6 h - 6"      />
           <span className="font - semibold">AI BPA</span>
         </div>
         <div className="absolute - top - 2 -right - 2 bg - zion - cyan text - zion - slate text - xs px - 2 py - 1 rounded - full font - bold">
@@ -218,10 +218,10 @@ const mockBusinessProcesses = [
     if (isMinimized) {
         return (<div className="fixed bottom - 4 right - 4 bg - white dark:bg - zion - slate border border - zion - slate - light rounded - lg shadow - 2xl z - 50">
         <div className="flex items - center gap - 3 p - 3">
-          <Workflow className="w - 5 h - 5 text - zion - blue"/>
+          <Workflow className="w - 5 h - 5 text - zion - blue"      />
           <span className="font - semibold text - sm">AI BPA</span>
           <button onClick={ () => setIsMinimized (false) } className="ml - auto p - 1 hover:bg - zion - slate - light rounded">
-            <Maximize2 className="w - 4 h - 4"/>
+            <Maximize2 className="w - 4 h - 4"      />
           </button>
         </div>
       </div>) }
@@ -229,7 +229,7 @@ const mockBusinessProcesses = [
       {/* Header */}
       <div className="bg - gradient - to - r from - zion - blue to - zion - purple text - white p - 4 flex items - center justify - between">
         <div className="flex items - center gap - 3">
-          <Workflow className="w - 6 h - 6"/>
+          <Workflow className="w - 6 h - 6"      />
           <div>
             <h2 className="text - xl font - bold">Advanced AI Business Process Automation</h2>
             <p className="text - zion - blue - light text - sm">Intelligent workflow automation & optimization</p>
@@ -237,13 +237,13 @@ const mockBusinessProcesses = [
         </div>
         <div className="flex items - center gap - 2">
           <button onClick={ () => setIsMinimized (true) } className="p - 2 hover:bg - white / 20 rounded - lg transition - colors">
-            <Minimize2 className="w - 4 h - 4"/>
+            <Minimize2 className="w - 4 h - 4"      />
           </button>
           <button onClick={ () => setIsFullscreen (!isFullscreen) } className="p - 2 hover:bg - white / 20 rounded - lg transition - colors">
-            {isFullscreen ? <Minimize2 className="w - 4 h - 4"/> : <Maximize2 className="w - 4 h - 4"/>}
+            {isFullscreen ? <Minimize2 className="w - 4 h - 4"      /> : <Maximize2 className="w - 4 h - 4"      />}
           </button>
           <button onClick={ () => setIsOpen (false) } className="p - 2 hover:bg - white / 20 rounded - lg transition - colors">
-            <X className="w - 4 h - 4"/>
+            <X className="w - 4 h - 4"      />
           </button>
         </div>
       </div>
@@ -275,7 +275,7 @@ const mockBusinessProcesses = [
             </select>
           </div>
           <div className="flex items - center gap - 2">
-            <Search className="w - 4 h - 4 text - zion - slate - light"/>
+            <Search className="w - 4 h - 4 text - zion - slate - light"      />
             <input type="text" placeholder="Search processes..." value={searchQuery} onChange={ (e) => setSearchQuery (e.target.value) } className="px - 3 py - 1 border border - zion - slate - light rounded - md text - sm bg - white dark:bg - zion - slate w - 64"/>
           </div>
         </div>
@@ -310,7 +310,7 @@ const mockBusinessProcesses = [
                     <p className="text - zion - blue - light text - sm">Total Processes</p>
                     <p className="text - 3xl font - bold">{businessProcesses.length}</p>
                   </div>
-                  <Workflow className="w - 12 h - 12 text - white / 50"/>
+                  <Workflow className="w - 12 h - 12 text - white / 50"      />
                 </div>
               </div>
               <div className="bg - gradient - to - br from - green - 500 to - green - 600 text - white p - 6 rounded - xl">
@@ -321,7 +321,7 @@ const mockBusinessProcesses = [
                       {businessProcesses.filter (p => p.status === 'active') .length}
                     </p>
                   </div>
-                  <CheckCircle className="w - 12 h - 12 text - white / 50"/>
+                  <CheckCircle className="w - 12 h - 12 text - white / 50"      />
                 </div>
               </div>
               <div className="bg - gradient - to - br from - yellow - 500 to - orange - 500 text - white p - 6 rounded - xl">
@@ -332,7 +332,7 @@ const mockBusinessProcesses = [
                       {Math.round (businessProcesses.reduce ( (acc, p) => acc + p.efficiency, 0) / businessProcesses.length) }%
                     </p>
                   </div>
-                  <TrendingUp className="w - 12 h - 12 text - white / 50"/>
+                  <TrendingUp className="w - 12 h - 12 text - white / 50"      />
                 </div>
               </div>
               <div className="bg - gradient - to - br from - purple - 500 to - pink - 500 text - white p - 6 rounded - xl">
@@ -343,7 +343,7 @@ const mockBusinessProcesses = [
                       {formatCurrency (businessProcesses.reduce ( (acc, p) => acc + p.costSavings, 0) ) }
                     </p>
                   </div>
-                  <DollarSign className="w - 12 h - 12 text - white / 50"/>
+                  <DollarSign className="w - 12 h - 12 text - white / 50"      />
                 </div>
               </div>
             </div>
@@ -351,7 +351,7 @@ const mockBusinessProcesses = [
             <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 6">
               <div className="bg - white dark:bg - zion - slate border border - zion - slate - light rounded - xl p - 6">
                 <h3 className="text - lg font - semibold mb - 4 flex items - center gap - 2">
-                  <Brain className="w - 5 h - 5 text - zion - blue"/>
+                  <Brain className="w - 5 h - 5 text - zion - blue"      />
                   AI Insights & Recommendations
                 </h3>
                 <div className="space - y-3">
@@ -359,7 +359,7 @@ const mockBusinessProcesses = [
                       <p className="font - medium text - sm mb - 2">{process.name}</p>
                       <div className="space - y-2">
                         {process.aiInsights.slice (0, 2) .map ( (insight, idx) => (<div key={idx} className="flex items - start gap - 2 text - sm">
-                            <Lightbulb className="w - 4 h - 4 text - yellow - 500 mt - 0.5 flex - shrink - 0"/>
+                            <Lightbulb className="w - 4 h - 4 text - yellow - 500 mt - 0.5 flex - shrink - 0"      />
                             <span className="text - zion - slate">{insight}</span>
                           </div>) ) }
                       </div>
@@ -369,7 +369,7 @@ const mockBusinessProcesses = [
 
               <div className="bg - white dark:bg - zion - slate border border - zion - slate - light rounded - xl p - 6">
                 <h3 className="text - lg font - semibold mb - 4 flex items - center gap - 2">
-                  <Activity className="w - 5 h - 5 text - zion - blue"/>
+                  <Activity className="w - 5 h - 5 text - zion - blue"      />
                   Recent Executions
                 </h3>
                 <div className="space - y-3">
@@ -410,11 +410,11 @@ const mockBusinessProcesses = [
                   </div>
                   <div className="flex items - center gap - 2">
                     <button onClick={ () => executeProcess (process.id) } disabled={isExecuting} className="px - 4 py - 2 bg - zion - blue text - white rounded - lg hover:bg - zion - blue - dark disabled:opacity - 50 flex items - center gap - 2">
-                      {isExecuting ? <Loader className="w - 4 h - 4 animate - spin"/> : <Play className="w - 4 h - 4"/>}
+                      {isExecuting ? <Loader className="w - 4 h - 4 animate - spin"      /> : <Play className="w - 4 h - 4"      />}
                       Execute
                     </button>
                     <button onClick={ () => setSelectedProcess (process) } className="p - 2 text - zion - slate - light hover:text - zion - slate hover:bg - zion - slate - light / 10 rounded - lg">
-                      <MoreVertical className="w - 4 h - 4"/>
+                      <MoreVertical className="w - 4 h - 4"      />
                     </button>
                   </div>
                 </div>
@@ -452,12 +452,12 @@ const mockBusinessProcesses = [
 
                 {showAIInsights && (<div className="mb - 4">
                     <h4 className="font - medium text - sm mb - 2 flex items - center gap - 2">
-                      <Brain className="w - 4 h - 4 text - zion - blue"/>
+                      <Brain className="w - 4 h - 4 text - zion - blue"      />
                       AI Insights
                     </h4>
                     <div className="space - y-2">
                       {process.aiInsights.map ( (insight, idx) => (<div key={idx} className="flex items - start gap - 2 text - sm">
-                          <Lightbulb className="w - 4 h - 4 text - yellow - 500 mt - 0.5 flex - shrink - 0"/>
+                          <Lightbulb className="w - 4 h - 4 text - yellow - 500 mt - 0.5 flex - shrink - 0"      />
                           <span className="text - zion - slate">{insight}</span>
                         </div>) ) }
                     </div>
@@ -465,7 +465,7 @@ const mockBusinessProcesses = [
 
                 {showAutomation && (<div>
                     <h4 className="font - medium text - sm mb - 2 flex items - center gap - 2">
-                                             <Settings className="w - 4 h - 4 text - zion - blue"/>
+                                             <Settings className="w - 4 h - 4 text - zion - blue"      />
                        Automation Rules
                     </h4>
                     <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 3">
@@ -497,24 +497,24 @@ const mockBusinessProcesses = [
         {activeTab === 'automation' && (<div className="space - y-6">
             <div className="bg - white dark:bg - zion - slate border border - zion - slate - light rounded - xl p - 6">
               <h3 className="text - lg font - semibold mb - 4 flex items - center gap - 2">
-                                 <Settings className="w - 5 h - 5 text - zion - blue"/>
+                                 <Settings className="w - 5 h - 5 text - zion - blue"      />
                  Automation Engine Status
               </h3>
               <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 4">
                 <div className="text - center p - 4 bg - green - 100 dark:bg - green - 900 / 20 rounded - lg">
-                  <CheckCircle className="w - 8 h - 8 text - green - 600 mx - auto mb - 2"/>
+                  <CheckCircle className="w - 8 h - 8 text - green - 600 mx - auto mb - 2"      />
                   <p className="font - semibold text - green - 800 dark:text - green - 400">Engine Active</p>
                   <p className="text - sm text - green - 600 dark:text - green - 300">All systems operational</p>
                 </div>
                 <div className="text - center p - 4 bg - blue - 100 dark:bg - blue - 900 / 20 rounded - lg">
-                  <Activity className="w - 8 h - 8 text - blue - 600 mx - auto mb - 2"/>
+                  <Activity className="w - 8 h - 8 text - blue - 600 mx - auto mb - 2"      />
                   <p className="font - semibold text - blue - 800 dark:text - blue - 400">Rules Active</p>
                   <p className="text - sm text - blue - 600 dark:text - blue - 300">
                     {businessProcesses.reduce ( (acc, p) => acc + p.rules.filter (r => r.isActive) .length, 0) } rules
                   </p>
                 </div>
                 <div className="text - center p - 4 bg - purple - 100 dark:bg - purple - 900 / 20 rounded - lg">
-                  <Brain className="w - 8 h - 8 text - purple - 600 mx - auto mb - 2"/>
+                  <Brain className="w - 8 h - 8 text - purple - 600 mx - auto mb - 2"      />
                   <p className="font - semibold text - purple - 800 dark:text - purple - 400">AI Learning</p>
                   <p className="text - sm text - purple - 600 dark:text - purple - 300">Continuous optimization</p>
                 </div>
@@ -523,7 +523,7 @@ const mockBusinessProcesses = [
 
             <div className="bg - white dark:bg - zion - slate border border - zion - slate - light rounded - xl p - 6">
               <h3 className="text - lg font - semibold mb - 4 flex items - center gap - 2">
-                <Settings className="w - 5 h - 5 text - zion - blue"/>
+                <Settings className="w - 5 h - 5 text - zion - blue"      />
                 Automation Rules Management
               </h3>
               <div className="space - y-4">
@@ -553,7 +553,7 @@ const mockBusinessProcesses = [
                         {rule.aiOptimized ? 'AI Optimized' : 'Manual'}
                       </span>
                       <button className="p - 2 text - zion - slate - light hover:text - zion - slate hover:bg - zion - slate - light / 10 rounded - lg">
-                        <Edit3 className="w - 4 h - 4"/>
+                        <Edit3 className="w - 4 h - 4"      />
                       </button>
                     </div>
                   </div>) ) }
@@ -567,7 +567,7 @@ const mockBusinessProcesses = [
                 <h3 className="text - lg font - semibold mb - 4">Efficiency Trends</h3>
                 <div className="h - 64 bg - zion - slate - light / 10 rounded - lg flex items - center justify - center">
                   <div className="text - center">
-                    <BarChart3 className="w - 16 h - 16 text - zion - slate - light mx - auto mb - 2"/>
+                    <BarChart3 className="w - 16 h - 16 text - zion - slate - light mx - auto mb - 2"      />
                     <p className="text - zion - slate - light">Efficiency trend chart</p>
                   </div>
                 </div>
@@ -576,7 +576,7 @@ const mockBusinessProcesses = [
                 <h3 className="text - lg font - semibold mb - 4">Cost Savings Analysis</h3>
                 <div className="h - 64 bg - zion - slate - light / 10 rounded - lg flex items - center justify - center">
                   <div className="text - center">
-                    <PieChart className="w - 16 h - 16 text - zion - slate - light mx - auto mb - 2"/>
+                    <PieChart className="w - 16 h - 16 text - zion - slate - light mx - auto mb - 2"      />
                     <p className="text - zion - slate - light">Cost savings breakdown</p>
                   </div>
                 </div>
@@ -629,7 +629,7 @@ const mockBusinessProcesses = [
         {activeTab === 'optimization' && (<div className="space - y-6">
             <div className="bg - white dark:bg - zion - slate border border - zion - slate - light rounded - xl p - 6">
               <h3 className="text - lg font - semibold mb - 4 flex items - center gap - 2">
-                <Brain className="w - 5 h - 5 text - zion - blue"/>
+                <Brain className="w - 5 h - 5 text - zion - blue"      />
                 AI Optimization Recommendations
               </h3>
               <div className="space - y-4">
@@ -644,7 +644,7 @@ const mockBusinessProcesses = [
                     </div>
                     <div className="space - y-2">
                       {process.aiInsights.map ( (insight, idx) => (<div key={idx} className="flex items - start gap - 2 text - sm">
-                          <Lightbulb className="w - 4 h - 4 text - yellow - 500 mt - 0.5 flex - shrink - 0"/>
+                          <Lightbulb className="w - 4 h - 4 text - yellow - 500 mt - 0.5 flex - shrink - 0"      />
                           <span className="text - zion - slate">{insight}</span>
                         </div>) ) }
                     </div>
@@ -659,13 +659,13 @@ const mockBusinessProcesses = [
 
             <div className="bg - white dark:bg - zion - slate border border - zion - slate - light rounded - xl p - 6">
               <h3 className="text - lg font - semibold mb - 4 flex items - center gap - 2">
-                <TrendingUp className="w - 5 h - 5 text - zion - blue"/>
+                <TrendingUp className="w - 5 h - 5 text - zion - blue"      />
                 Performance Improvement Opportunities
               </h3>
               <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">
                 <div className="p - 4 bg - yellow - 50 dark:bg - yellow - 900 / 20 border border - yellow - 200 dark:border - yellow - 800 rounded - lg">
                   <div className="flex items - center gap - 2 mb - 2">
-                    <AlertTriangle className="w - 5 h - 5 text - yellow - 600"/>
+                    <AlertTriangle className="w - 5 h - 5 text - yellow - 600"      />
                     <span className="font - medium text - yellow - 800 dark:text - yellow - 200">Manual Processes</span>
                   </div>
                   <p className="text - sm text - yellow - 700 dark:text - yellow - 300 mb - 3">
@@ -677,7 +677,7 @@ const mockBusinessProcesses = [
                 </div>
                 <div className="p - 4 bg - blue - 50 dark:bg - blue - 900 / 20 border border - blue - 200 dark:border - blue - 800 rounded - lg">
                   <div className="flex items - center gap - 2 mb - 2">
-                    <Target className="w - 5 h - 5 text - blue - 600"/>
+                    <Target className="w - 5 h - 5 text - blue - 600"      />
                     <span className="font - medium text - blue - 800 dark:text - blue - 200">Efficiency Targets</span>
                   </div>
                   <p className="text - sm text - blue - 700 dark:text - blue - 300 mb - 3">

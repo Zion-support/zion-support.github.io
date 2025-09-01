@@ -10,7 +10,7 @@ const MicroSAASServices = () => {
         <meta
           name="description"
           content="Discover Zion Tech Group's micro SaaS services. Scalable, focused solutions for specific business needs."
-        />
+              />
       </Helmet>
 
       <div className="min - h-screen bg - gray - 50 py - 12">

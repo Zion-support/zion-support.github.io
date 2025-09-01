@@ -1,4 +1,4 @@
-const fs = require('fs');
+import fs from 'fs');
 
 // Read the file
 const filePath = 'data/2027-cutting-edge-comprehensive-services.ts';

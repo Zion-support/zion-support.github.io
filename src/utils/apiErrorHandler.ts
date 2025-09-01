@@ -1,22 +1,22 @@
 import { toast } from '@/hooks / use - toast';
-  export const showApiError = (error: unknown, fallbackMessage?: string) => {
-export const handleApiError = (error: unknown, fallbackMessage?: string) => {
-
+  export const showApiError = (error: unknown, fallbackMessage?: string) => {;
+export const handleApiError = (error: unknown, fallbackMessage?: string) => {;
+;
     const message = error?.message || fallbackMessage || 'An unexpected error occurred';
-    toast ({
-      variant: 'destructive',
-      title: 'Error',
-      description: message,
+    toast ({;
+      variant: 'destructive',;
+      title: 'Error',;
+      description: message,;
     }) ;
-    // Log error for debugging
-
-    if (process.env.NODE_ENV === 'development') {
+    // Log error for debugging;
+;
+    if (process.env.NODE_ENV === 'development') {;
       console.error ('API Error:', error) ;
-    }
+    };
   };
-
+;
   showApiError (error, fallbackMessage) ;
-  return {
-    error: error?.message || fallbackMessage || 'An unexpected error occurred',
+  return {;
+    error: error?.message || fallbackMessage || 'An unexpected error occurred',;
   };
 };

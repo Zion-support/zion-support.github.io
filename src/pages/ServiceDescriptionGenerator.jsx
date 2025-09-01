@@ -22,7 +22,7 @@ export default function ServiceDescriptionGenerator () {
         to="/login"
         state={{ from: '/service - description - generator' }}
         replace
-      />) ;
+            />) ;
   }
   const handleDescriptionSave = editedDescription => {
     setGeneratedDescription (editedDescription) ;
@@ -33,7 +33,7 @@ export default function ServiceDescriptionGenerator () {
         title="Service Description Generator"
         description="Generate professional service descriptions using AI"
         keywords="service description, AI content, professional description generator"
-      />
+            />
 
       <main className="flex - 1 p - 6 md:p - 10">
         <div className="max - w-4xl mx - auto">
@@ -48,12 +48,12 @@ export default function ServiceDescriptionGenerator () {
           <div className="space - y-8">
             <ServiceDescriptionForm
               onDescriptionGenerated={setGeneratedDescription}
-            />
+                  />
 
             {generatedDescription && (<GeneratedDescriptionDisplay
                 description={generatedDescription}
                 onSave={handleDescriptionSave}
-              />) }
+                    />) }
           </div>
         </div>
       </main>

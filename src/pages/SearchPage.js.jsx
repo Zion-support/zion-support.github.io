@@ -29,7 +29,7 @@ export default function SearchPage () {
           onChange={setQuery}
           searchSuggestions={suggestions}
           placeholder="Search talent, jobs, and projects..."
-        />
+              />
       </form>
 
       {loading && <p className="text - zion - slate - light">Searching...</p>}

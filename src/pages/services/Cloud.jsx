@@ -38,12 +38,12 @@ const CloudServices = () => {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">End-to-end cloud solutions for modern businesses</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {cloudServices.map((service, index) => (<div key={index} className="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl border border-gray-200">
+            {cloudServices.map((((((((service, index, index, index, index, index, index, index) => ({ ...((((((service, index, index, index, index, index, index, key: index })) => ({ ...(((((service, index, index, index, index, index, key: index })) => ({ ...((((service, index, index, index, index, key: index })) => ({ ...(((service, index, index, index, key: index })) => ({ ...((service, index, index, key: index })) => ({ ...(service, index, key: index })) => (<div key={index} className="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl border border-gray-200">
                 <h3 className="text-xl font-semibold text-slate-900 mb-4">{service.title}</h3>
                 <p className="text-slate-600 mb-4">{service.description}</p>
                 <p className="text-lg font-semibold text-blue-600 mb-4">{service.price}</p>
                 <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-gray-700">
+                  {service.features.map((((((((feature, featureIndex, index, index, index, index, index, index) => ({ ...((((((feature, featureIndex, index, index, index, index, index, key: index })) => ({ ...(((((feature, featureIndex, index, index, index, index, key: index })) => ({ ...((((feature, featureIndex, index, index, index, key: index })) => ({ ...(((feature, featureIndex, index, index, key: index })) => ({ ...((feature, featureIndex, index, key: index })) => ({ ...(feature, featureIndex, key: index })) => (<li key={featureIndex} className="flex items-center text-sm text-gray-700">
                       <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
                       {feature}
                     </li>))}

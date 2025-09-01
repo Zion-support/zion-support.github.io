@@ -54,7 +54,7 @@ import {
         description="Complete pricing guide for all our IT and AI services. Compare prices, features, and choose the perfect solution for your business needs."
         keywords="service pricing, IT services cost, AI development pricing, cybersecurity pricing, cloud migration cost"
         canonical="https://ziontechgroup.com / pricing"
-      />
+            />
 
       {/* Hero Section */}
       <div className="bg - gradient - to - r from - zion - blue to - zion - purple text - white py - 20">
@@ -103,15 +103,15 @@ import {
             <h3 className="text - xl font - semibold mb - 4">Need Custom Pricing?</h3>
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 4 text - sm">
               <div className="flex items - center space - x-2">
-                <Phone className="w - 4 h - 4 text - zion - cyan" />
+                <Phone className="w - 4 h - 4 text - zion - cyan"       />
                 <span>+1 302 464 0950</span>
               </div>
               <div className="flex items - center space - x-2">
-                <Mail className="w - 4 h - 4 text - zion - cyan" />
+                <Mail className="w - 4 h - 4 text - zion - cyan"       />
                 <span > kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items - center space - x-2">
-                <MapPin className="w - 4 h - 4 text - zion - cyan" />
+                <MapPin className="w - 4 h - 4 text - zion - cyan"       />
                 <span > Middletown, DE</span>
               </div>
             </div>
@@ -179,12 +179,12 @@ import {
                     src={service.images[0]}
                     alt={service.title}
                     className="w - full h - 48 object - cover rounded - t-lg"
-                  />
+                        />
                   <div className="absolute top - 2 left - 2">
                     <Badge className={tier.color}>{tier.tier}</Badge>
                   </div>
                   {service.featured && (<Badge className="absolute top - 2 right - 2 bg - zion - purple text - white">
-                      <Star className="w - 3 h - 3 mr - 1" />
+                      <Star className="w - 3 h - 3 mr - 1"       />
                       Featured
                     </Badge>) }
                 </div>
@@ -197,7 +197,7 @@ import {
                       </CardTitle>
                       <div className="flex items - center space - x-2 mb - 2">
                         <div className="flex items - center space - x-1">
-                          <Star className="w - 4 h - 4 fill - yellow - 400 text - yellow - 400" />
+                          <Star className="w - 4 h - 4 fill - yellow - 400 text - yellow - 400"       />
                           <span className="text - sm text - gray - 600">
                             {service.rating}
                           </span>
@@ -234,15 +234,15 @@ import {
                   {/* Service Details */}
                   <div className="space - y-2 text - sm text - gray - 600 mb - 4">
                     <div className="flex items - center space - x-2">
-                      <Clock className="w - 4 h - 4" />
+                      <Clock className="w - 4 h - 4"       />
                       <span > Delivery: {service.availability}</span>
                     </div>
                     <div className="flex items - center space - x-2">
-                      <Globe className="w - 4 h - 4" />
+                      <Globe className="w - 4 h - 4"       />
                       <span > Location: {service.location}</span>
                     </div>
                     <div className="flex items - center space - x-2">
-                      <DollarSign className="w - 4 h - 4" />
+                      <DollarSign className="w - 4 h - 4"       />
                       <span > Category: {service.category}</span>
                     </div>
                   </div>
@@ -296,7 +296,7 @@ import {
           <div className="grid grid - cols - 1 md:grid - cols - 4 gap - 8">
             <div className="text - center">
               <div className="w - 16 h - 16 bg - green - 100 rounded - full flex items - center justify - center mx - auto mb - 4">
-                <TrendingUp className="w - 8 h - 8 text - green - 600" />
+                <TrendingUp className="w - 8 h - 8 text - green - 600"       />
               </div>
               <h3 className="text - xl font - semibold text - gray - 900 mb - 2">
                 Starter
@@ -309,7 +309,7 @@ import {
 
             <div className="text - center">
               <div className="w - 16 h - 16 bg - blue - 100 rounded - full flex items - center justify - center mx - auto mb - 4">
-                <Users className="w - 8 h - 8 text - blue - 600" />
+                <Users className="w - 8 h - 8 text - blue - 600"       />
               </div>
               <h3 className="text - xl font - semibold text - gray - 900 mb - 2">
                 Professional
@@ -322,7 +322,7 @@ import {
 
             <div className="text - center">
               <div className="w - 16 h - 16 bg - purple - 100 rounded - full flex items - center justify - center mx - auto mb - 4">
-                <Award className="w - 8 h - 8 text - purple - 600" />
+                <Award className="w - 8 h - 8 text - purple - 600"       />
               </div>
               <h3 className="text - xl font - semibold text - gray - 900 mb - 2">
                 Enterprise
@@ -335,7 +335,7 @@ import {
 
             <div className="text - center">
               <div className="w - 16 h - 16 bg - orange - 100 rounded - full flex items - center justify - center mx - auto mb - 4">
-                <TrendingUp className="w - 8 h - 8 text - orange - 600" />
+                <TrendingUp className="w - 8 h - 8 text - orange - 600"       />
               </div>
               <h3 className="text - xl font - semibold text - gray - 900 mb - 2">
                 Premium
@@ -359,7 +359,7 @@ import {
           <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8 max - w-4xl mx - auto">
             <div className="text - center">
               <div className="w - 16 h - 16 bg - zion - cyan rounded - full flex items - center justify - center mx - auto mb - 4">
-                <Shield className="w - 8 h - 8 text - white" />
+                <Shield className="w - 8 h - 8 text - white"       />
               </div>
               <h3 className="text - xl font - semibold text - white mb - 2">
                 No Hidden Fees
@@ -371,7 +371,7 @@ import {
 
             <div className="text - center">
               <div className="w - 16 h - 16 bg - zion - cyan rounded - full flex items - center justify - center mx - auto mb - 4">
-                <Zap className="w - 8 h - 8 text - white" />
+                <Zap className="w - 8 h - 8 text - white"       />
               </div>
               <h3 className="text - xl font - semibold text - white mb - 2">
                 Rapid Delivery
@@ -383,7 +383,7 @@ import {
 
             <div className="text - center">
               <div className="w - 16 h - 16 bg - zion - cyan rounded - full flex items - center justify - center mx - auto mb - 4">
-                <Globe className="w - 8 h - 8 text - white" />
+                <Globe className="w - 8 h - 8 text - white"       />
               </div>
               <h3 className="text - xl font - semibold text - white mb - 2">
                 Global Expertise
@@ -411,7 +411,7 @@ import {
               size="lg"
               className="bg - zion - cyan hover:bg - zion - cyan - dark text - white"
             >
-              <Mail className="w - 5 h - 5 mr - 2" />
+              <Mail className="w - 5 h - 5 mr - 2"       />
               Request Custom Quote
             </Button>
             <Button
@@ -419,7 +419,7 @@ import {
               variant="outline"
               className="border - zion - cyan text - zion - cyan hover:bg - zion - cyan / 10"
             >
-              <Phone className="w - 5 h - 5 mr - 2" />
+              <Phone className="w - 5 h - 5 mr - 2"       />
               Call + 1 302 464 0950
             </Button>
           </div>

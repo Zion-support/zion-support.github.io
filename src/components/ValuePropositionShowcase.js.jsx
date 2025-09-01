@@ -22,28 +22,28 @@ import { motion } from 'framer - motion';
 
 const valueMetrics = [
   {
-    icon: <TrendingUp className="w - 8 h - 8" />,
+    icon: <TrendingUp className="w - 8 h - 8"       />,
     title: "Average ROI",
     value: "350%",
     description: "Our customers see an average return on investment within 6 - 12 months",
     color: "from - green - 500 to - emerald - 600"
   },
   {
-    icon: <Target className="w - 8 h - 8" />,
+    icon: <Target className="w - 8 h - 8"       />,
     title: "Market Position",
     value: "Top 5%",
     description: "Competing with enterprise solutions at fraction of the cost",
     color: "from - blue - 500 to - cyan - 600"
   },
   {
-    icon: <Zap className="w - 8 h - 8" />,
+    icon: <Zap className="w - 8 h - 8"       />,
     title: "Setup Time",
     value: "1 - 2 Weeks",
     description: "From contract to full implementation in record time",
     color: "from - yellow - 500 to - orange - 600"
   },
   {
-    icon: <Shield className="w - 8 h - 8" />,
+    icon: <Shield className="w - 8 h - 8"       />,
     title: "Security Rating",
     value: "99.9%",
     description: "Enterprise - grade security with zero compromise",
@@ -55,25 +55,25 @@ const competitiveAdvantages = [
   {
     title: "AI - Powered Intelligence",
     description: "Advanced machine learning algorithms that continuously improve performance and provide predictive insights",
-    icon: <Brain className="w - 6 h - 6" />,
+    icon: <Brain className="w - 6 h - 6"       />,
     color: "from - purple - 500 to - pink - 600"
   },
   {
     title: "Cloud - Native Architecture",
     description: "Built for scale with automatic scaling, high availability, and global distribution",
-    icon: <Globe className="w - 6 h - 6" />,
+    icon: <Globe className="w - 6 h - 6"       />,
     color: "from - blue - 500 to - cyan - 600"
   },
   {
     title: "Enterprise Integration",
     description: "Seamless integration with existing systems and workflows through comprehensive APIs",
-    icon: <Rocket className="w - 6 h - 6" />,
+    icon: <Rocket className="w - 6 h - 6"       />,
     color: "from - green - 500 to - emerald - 600"
   },
   {
     title: "24 / 7 Expert Support",
     description: "Round - the - clock technical support from certified professionals and AI assistants",
-    icon: <Users className="w - 6 h - 6" />,
+    icon: <Users className="w - 6 h - 6"       />,
     color: "from - orange - 500 to - red - 600"
   }
 ];
@@ -300,7 +300,7 @@ const successStories = [
                     <h4 className="text - lg font - bold text - white mb - 2">{comparison.category}</h4>
                     <div className="text - zion - cyan - light text - sm">
                       <div className="flex items - center space - x-1 mb - 1">
-                        <Star className="w - 4 h - 4 text - yellow - 400 fill - current" />
+                        <Star className="w - 4 h - 4 text - yellow - 400 fill - current"       />
                         <span > Our Solution</span>
                       </div>
                     </div>

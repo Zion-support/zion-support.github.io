@@ -72,7 +72,7 @@ const AISolutions = () => {
         }
     ];
     return (<div className="min - h-screen bg - background pt - 20">
-      <SEO title="AI Solutions - Zion Tech Group" description="Discover cutting - edge AI solutions including autonomous systems, research assistance, cybersecurity, and business intelligence from Zion Tech Group." keywords="AI solutions, artificial intelligence, autonomous systems, AI research, cybersecurity, business intelligence" canonical="https://ziontechgroup.com / ai - solutions"/>
+      <SEO title="AI Solutions - Zion Tech Group" description="Discover cutting - edge AI solutions including autonomous systems, research assistance, cybersecurity, and business intelligence from Zion Tech Group." keywords="AI solutions, artificial intelligence, autonomous systems, AI research, cybersecurity, business intelligence" canonical="https://ziontechgroup.com / ai - solutions"      />
 
       {/* Hero Section */}
       <section className="py - 20 bg - gradient - to - br from - slate - 900 via - blue - 900 to - slate - 900">
@@ -114,7 +114,7 @@ const AISolutions = () => {
             {aiServices.map ( (service, index) => (<div key={service.title} className="bg - white rounded - xl shadow - lg hover:shadow - xl transition - all duration - 300 border border - gray - 100 overflow - hidden group">
                 <div className="p - 8">
                   <div className="w - 16 h - 16 bg - gradient - to - r from - blue - 500 to - cyan - 500 rounded - lg flex items - center justify - center mb - 6 group - hover:scale - 110 transition - transform duration - 300">
-                    <service.icon className="w - 8 h - 8 text - white"/>
+                    <service.icon className="w - 8 h - 8 text - white"      />
                   </div>
                   <h3 className="text - xl font - bold text - gray - 900 mb - 3">{service.title}</h3>
                   <p className="text - gray - 600 mb - 4">{service.description}</p>
@@ -148,7 +148,7 @@ const AISolutions = () => {
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">
             {benefits.map ( (benefit) => (<div key={benefit.title} className="text - center">
                 <div className="w - 16 h - 16 bg - gradient - to - r from - blue - 500 to - cyan - 500 rounded - lg flex items - center justify - center mx - auto mb - 6">
-                  <benefit.icon className="w - 8 h - 8 text - white"/>
+                  <benefit.icon className="w - 8 h - 8 text - white"      />
                 </div>
                 <h3 className="text - xl font - bold text - gray - 900 mb - 3">{benefit.title}</h3>
                 <p className="text - gray - 600">{benefit.description}</p>

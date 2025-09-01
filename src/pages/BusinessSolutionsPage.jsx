@@ -12,7 +12,7 @@ import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare
         description: "Strategic planning and business model optimization for growth",
         price: "$200 - $500 / hour",
         features["Market analysis", "Competitive research", "Growth strategy", "Implementation roadmap"],;
-        icon: <CheckCircle className="h - 8 w - 8 text - zion - cyan"/>,
+        icon: <CheckCircle className="h - 8 w - 8 text - zion - cyan"      />,
         category: "Strategy",
         badge: "Popular",
         link: "/request - quote?service = business - strategy"
@@ -22,7 +22,7 @@ import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare
         description: "Streamline operations and eliminate inefficiencies",
         price: "$5,000 - $50,000",
         features["Process mapping", "Automation design", "Implementation", "Training & support"],;
-        icon: <Zap className="h - 8 w - 8 text - zion - purple"/>,
+        icon: <Zap className="h - 8 w - 8 text - zion - purple"      />,
         category: "Automation",
         badge: "Premium",
         link: "/request - quote?service = process - automation"
@@ -32,7 +32,7 @@ import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare
         description: "Modernize your business with cutting - edge technology",
         price: "$25,000 - $200,000",
         features["Technology assessment", "Migration planning", "Implementation", "Change management"],;
-        icon: <Zap className="h - 8 w - 8 text - zion - blue"/>,
+        icon: <Zap className="h - 8 w - 8 text - zion - blue"      />,
         category: "Transformation",
         link: "/request - quote?service = digital - transformation"
     },
@@ -41,7 +41,7 @@ import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare
         description: "Data - driven insights for better decision making",
         price: "$2,000 - $15,000 / month",
         features["Dashboard creation", "KPI tracking", "Predictive analytics", "Custom reporting"],;
-        icon: <BarChart3 className="h - 8 w - 8 text - zion - cyan"/>,
+        icon: <BarChart3 className="h - 8 w - 8 text - zion - cyan"      />,
         category: "Analytics",
         link: "/request - quote?service = business - intelligence"
     },
@@ -50,7 +50,7 @@ import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare
         description: "Navigate organizational changes successfully",
         price: "$150 - $300 / hour",
         features["Change strategy", "Communication planning", "Training programs", "Success measurement"],;
-        icon: <Users className="h - 8 w - 8 text - zion - purple"/>,
+        icon: <Users className="h - 8 w - 8 text - zion - purple"      />,
         category: "Change Management",
         link: "/request - quote?service = change - management"
     },
@@ -59,7 +59,7 @@ import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare
         description: "Strategic financial guidance and forecasting",
         price: "$1,500 - $8,000 / month",
         features["Budget planning", "Financial modeling", "Cash flow analysis", "Investment strategy"],;
-        icon: <DollarSign className="h - 8 w - 8 text - zion - blue"/>,
+        icon: <DollarSign className="h - 8 w - 8 text - zion - blue"      />,
         category: "Finance",
         link: "/request - quote?service = financial - planning"
     },
@@ -68,7 +68,7 @@ import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare
         description: "Deep insights into your market and customers",
         price: "$3,000 - $25,000",
         features["Customer surveys", "Competitive analysis", "Market sizing", "Trend forecasting"],;
-        icon: <Search className="h - 8 w - 8 text - zion - cyan"/>,
+        icon: <Search className="h - 8 w - 8 text - zion - cyan"      />,
         category: "Research",
         link: "/request - quote?service = market - research"
     },
@@ -77,7 +77,7 @@ import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare
         description: "Optimize your operations for maximum efficiency",
         price: "$5,000 - $40,000",
         features["Process improvement", "Quality management", "Lean methodology", "Performance metrics"],;
-        icon: <CheckCircle className="h - 8 w - 8 text - zion - purple"/>,
+        icon: <CheckCircle className="h - 8 w - 8 text - zion - purple"      />,
         category: "Operations",
         link: "/request - quote?service = operational - excellence"
     },
@@ -86,7 +86,7 @@ import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare
         description: "Create exceptional customer journeys",
         price: "$8,000 - $60,000",
         features["Journey mapping", "UX research", "Service design", "Implementation"],;
-        icon: <Eye className="h - 8 w - 8 text - zion - blue"/>,
+        icon: <Eye className="h - 8 w - 8 text - zion - blue"      />,
         category: "Customer Experience",
         link: "/request - quote?service = customer - experience"
     },
@@ -95,7 +95,7 @@ import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare
         description: "Streamline your supply chain for cost and efficiency",
         price: "$10,000 - $75,000",
         features["Supply chain audit", "Optimization strategy", "Vendor management", "Implementation"],;
-        icon: <Globe className="h - 8 w - 8 text - zion - cyan"/>,
+        icon: <Globe className="h - 8 w - 8 text - zion - cyan"      />,
         category: "Supply Chain",
         link: "/request - quote?service = supply - chain"
     },
@@ -104,7 +104,7 @@ import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare
         description: "Identify and mitigate business risks",
         price: "$2,000 - $20,000",
         features["Risk assessment", "Compliance audit", "Policy development", "Training programs"],;
-        icon: <Shield className="h - 8 w - 8 text - zion - purple"/>,
+        icon: <Shield className="h - 8 w - 8 text - zion - purple"      />,
         category: "Risk Management",
         link: "/request - quote?service = risk - management"
     },
@@ -113,7 +113,7 @@ import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare
         description: "Implement effective performance tracking and improvement",
         price: "$3,000 - $25,000",
         features["KPI framework", "Performance tracking", "Feedback systems", "Improvement plans"],;
-        icon: <Star className="h - 8 w - 8 text - zion - blue"/>,
+        icon: <Star className="h - 8 w - 8 text - zion - blue"      />,
         category: "Performance",
         link: "/request - quote?service = performance - management"
     },
@@ -122,7 +122,7 @@ import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare
         description: "Drive innovation and research initiatives",
         price: "$5,000 - $50,000",
         features["Innovation strategy", "R & D planning", "Partnership development", "IP protection"],;
-        icon: <Lightbulb className="h - 8 w - 8 text - zion - cyan"/>,
+        icon: <Lightbulb className="h - 8 w - 8 text - zion - cyan"      />,
         category: "Innovation",
         link: "/request - quote?service = innovation - strategy"
     },
@@ -131,7 +131,7 @@ import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare
         description: "Navigate complex M & A transactions successfully",
         price: "$25,000 - $200,000",
         features["Due diligence", "Valuation analysis", "Integration planning", "Post - merger support"],;
-        icon: <Building className="h - 8 w - 8 text - zion - purple"/>,
+        icon: <Building className="h - 8 w - 8 text - zion - purple"      />,
         category: "M & A",
         link: "/request - quote?service = mergers - acquisitions"
     },
@@ -140,7 +140,7 @@ import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare
         description: "Expand your business globally with confidence",
         price: "$15,000 - $100,000",
         features["Market entry strategy", "Legal compliance", "Local partnerships", "Cultural adaptation"],;
-        icon: <Globe className="h - 8 w - 8 text - zion - blue"/>,
+        icon: <Globe className="h - 8 w - 8 text - zion - blue"      />,
         category: "Expansion",
         link: "/request - quote?service = international - expansion"
     },
@@ -149,30 +149,30 @@ import { Building, CheckCircle, Users, BarChart3, Zap, Globe, Eye, MessageSquare
         description: "Build sustainable business practices and ESG compliance",
         price: "$3,000 - $30,000",
         features["Sustainability audit", "ESG strategy", "Implementation planning", "Reporting"],;
-        icon: <Leaf className="h - 8 w - 8 text - zion - cyan"/>,
+        icon: <Leaf className="h - 8 w - 8 text - zion - cyan"      />,
         category: "Sustainability",
         badge: "New",
         link: "/request - quote?service = sustainability - consulting"
 
 ];
 const categories = [
-    { name: "All", value: "all", icon: <Building className="h - 4 w - 4"/> },
-    { name: "Strategy", value: "strategy", icon: <CheckCircle className="h - 4 w - 4"/> },
-    { name: "Automation", value: "automation", icon: <Zap className="h - 4 w - 4"/> },
-    { name: "Transformation", value: "transformation", icon: <Zap className="h - 4 w - 4"/> },
-    { name: "Analytics", value: "analytics", icon: <BarChart3 className="h - 4 w - 4"/> },
-    { name: "Change Management", value: "change management", icon: <Users className="h - 4 w - 4"/> },
-    { name: "Finance", value: "finance", icon: <DollarSign className="h - 4 w - 4"/> },
-    { name: "Research", value: "research", icon: <Search className="h - 4 w - 4"/> },
-    { name: "Operations", value: "operations", icon: <CheckCircle className="h - 4 w - 4"/> },
-    { name: "Customer Experience", value: "customer experience", icon: <Eye className="h - 4 w - 4"/> },
-    { name: "Supply Chain", value: "supply chain", icon: <Globe className="h - 4 w - 4"/> },
-    { name: "Risk Management", value: "risk management", icon: <Shield className="h - 4 w - 4"/> },
-    { name: "Performance", value: "performance", icon: <Star className="h - 4 w - 4"/> },
-    { name: "Innovation", value: "innovation", icon: <Lightbulb className="h - 4 w - 4"/> },
-    { name: "M & A", value: "m & a", icon: <Building className="h - 4 w - 4"/> },
-    { name: "Expansion", value: "expansion", icon: <Globe className="h - 4 w - 4"/> },
-    { name: "Sustainability", value: "sustainability", icon: <Leaf className="h - 4 w - 4"/> }
+    { name: "All", value: "all", icon: <Building className="h - 4 w - 4"      /> },
+    { name: "Strategy", value: "strategy", icon: <CheckCircle className="h - 4 w - 4"      /> },
+    { name: "Automation", value: "automation", icon: <Zap className="h - 4 w - 4"      /> },
+    { name: "Transformation", value: "transformation", icon: <Zap className="h - 4 w - 4"      /> },
+    { name: "Analytics", value: "analytics", icon: <BarChart3 className="h - 4 w - 4"      /> },
+    { name: "Change Management", value: "change management", icon: <Users className="h - 4 w - 4"      /> },
+    { name: "Finance", value: "finance", icon: <DollarSign className="h - 4 w - 4"      /> },
+    { name: "Research", value: "research", icon: <Search className="h - 4 w - 4"      /> },
+    { name: "Operations", value: "operations", icon: <CheckCircle className="h - 4 w - 4"      /> },
+    { name: "Customer Experience", value: "customer experience", icon: <Eye className="h - 4 w - 4"      /> },
+    { name: "Supply Chain", value: "supply chain", icon: <Globe className="h - 4 w - 4"      /> },
+    { name: "Risk Management", value: "risk management", icon: <Shield className="h - 4 w - 4"      /> },
+    { name: "Performance", value: "performance", icon: <Star className="h - 4 w - 4"      /> },
+    { name: "Innovation", value: "innovation", icon: <Lightbulb className="h - 4 w - 4"      /> },
+    { name: "M & A", value: "m & a", icon: <Building className="h - 4 w - 4"      /> },
+    { name: "Expansion", value: "expansion", icon: <Globe className="h - 4 w - 4"      /> },
+    { name: "Sustainability", value: "sustainability", icon: <Leaf className="h - 4 w - 4"      /> }
 ];
     const [selectedCategory, setSelectedCategory] = React.useState ("all") ;
     const filteredSolutions = selectedCategory === "all"
@@ -192,11 +192,11 @@ const categories = [
           </p>
           <div className="flex flex - wrap justify - center gap - 4">
             <Button size="lg" className="bg - zion - cyan hover:bg - zion - cyan - light text - zion - slate font - semibold">
-              <Search className="h - 5 w - 5 mr - 2"/>
+              <Search className="h - 5 w - 5 mr - 2"      />
               Explore Solutions
             </Button>
             <Button size="lg" variant="outline" className="border - zion - cyan text - zion - cyan hover:bg - zion - cyan / 10">
-              <MessageSquare className="h - 5 w - 5 mr - 2"/>
+              <MessageSquare className="h - 5 w - 5 mr - 2"      />
               Get Free Assessment
             </Button>
           </div>
@@ -265,11 +265,11 @@ const categories = [
           </p>
           <div className="flex flex - col sm:flex - row gap - 4 justify - center">
             <Button size="lg" className="bg - zion - blue hover:bg - zion - blue - light text - white">
-              <MessageSquare className="h - 5 w - 5 mr - 2"/>
+              <MessageSquare className="h - 5 w - 5 mr - 2"      />
               Schedule Consultation
             </Button>
             <Button size="lg" variant="outline" className="border - zion - cyan text - zion - cyan hover:bg - zion - cyan / 10">
-              <BarChart3 className="h - 5 w - 5 mr - 2"/>
+              <BarChart3 className="h - 5 w - 5 mr - 2"      />
               Get Free Business Assessment
             </Button>
           </div>

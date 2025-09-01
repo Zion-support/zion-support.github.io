@@ -34,7 +34,7 @@ const EnhancedScrollToTop = () => {
           whileTap={{ scale: 0.95 }}
           aria - label="Scroll to top"
         >
-          <ChevronUpIcon className="w - 6 h - 6" />
+          <ChevronUpIcon className="w - 6 h - 6"       />
         </motion.button>) }
     </AnimatePresence>) ;
 };

@@ -103,14 +103,14 @@ export default function Marketplace () {
         <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 4 mb - 8">
           <div className="flex flex - col md:flex - row gap - 4">
             <div className="relative flex - 1">
-              <EnhancedSearchInput value={searchQuery} onChange={setSearchQuery} onSelectSuggestion={setSearchQuery} placeholder={t ('marketplace.search_placeholder') } searchSuggestions={searchSuggestions}/>
+              <EnhancedSearchInput value={searchQuery} onChange={setSearchQuery} onSelectSuggestion={setSearchQuery} placeholder={t ('marketplace.search_placeholder') } searchSuggestions={searchSuggestions}      />
             </div>
             <div className="flex gap - 2">
               <Button variant="ghost" size="icon" onClick={ () => setView ('grid') } aria - pressed={view === 'grid'} className={view === 'grid' ? 'text - zion - purple' : 'text - zion - slate - light'}>
-                <Grid3X3 className="h - 4 w - 4"/>
+                <Grid3X3 className="h - 4 w - 4"      />
               </Button>
               <Button variant="ghost" size="icon" onClick={ () => setView ('list') } aria - pressed={view === 'list'} className={view === 'list' ? 'text - zion - purple' : 'text - zion - slate - light'}>
-                <ListFilter className="h - 4 w - 4"/>
+                <ListFilter className="h - 4 w - 4"      />
               </Button>
             </div>
           </div>
@@ -127,7 +127,7 @@ export default function Marketplace () {
             selectedAvailability,
   selectedRating
 
-}} filterOptions={filterOptions} onFilterChange={handleFilterChange} onRatingChange={setSelectedRating} onClearFilters={clearAllFilters}/>
+}} filterOptions={filterOptions} onFilterChange={handleFilterChange} onRatingChange={setSelectedRating} onClearFilters={clearAllFilters}      />
           </div>
           
           {/* Main content */}
@@ -145,9 +145,9 @@ export default function Marketplace () {
             
             {/* Display actual marketplace listings */}
             {isLoading ? (<div className="flex justify - center py - 20">
-                <Loader2 className="h - 8 w - 8 animate - spin text - zion - purple"/>
+                <Loader2 className="h - 8 w - 8 animate - spin text - zion - purple"      />
               </div>) : (<div className={view === 'grid' ? 'grid grid - cols - 1 md:grid - cols - 2 gap - 6' : 'flex flex - col gap - 6'}>
-                {filteredListings.length > 0 ? (filteredListings.map ( (listing) => (<ProductListingCard key={listing.id} listing={listing} view={view} onRequestQuote={handleRequestQuote}/>) ) ) : (<div className="col - span - 2 text - center py - 16 bg - zion - blue - dark border border - zion - blue - light rounded - lg">
+                {filteredListings.length > 0 ? (filteredListings.map ( (listing) => (<ProductListingCard key={listing.id} listing={listing} view={view} onRequestQuote={handleRequestQuote}      />) ) ) : (<div className="col - span - 2 text - center py - 16 bg - zion - blue - dark border border - zion - blue - light rounded - lg">
                   <h2 className="text - 2xl font - bold text - white mb - 4">No Results Found</h2>
                   <p className="text - zion - slate - light max - w-md mx - auto mb - 8">
                     We couldn't find  listings matching your filters. Try adjusting your search criteria.

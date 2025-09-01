@@ -32,7 +32,7 @@ const LazyWrapper = ({
           variant={loadingVariant}
           text={loadingText}
           size={loadingSize}
-        />
+              />
       </div>) ;
   }
   if (!isLoaded) {
@@ -41,7 +41,7 @@ const LazyWrapper = ({
           variant={loadingVariant}
           text={loadingText}
           size={loadingSize}
-        />
+              />
       </div>) ;
   }
   return (<motion.div

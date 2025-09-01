@@ -10,15 +10,15 @@ const AIAutonomousAnalytics = () => {
         <meta
           name="description"
           content="Revolutionary AI autonomous analytics platform that analyzes data, generates insights, and provides intelligent business intelligence with advanced AI capabilities."
-        />
+              />
         <meta
           name="keywords"
           content="AI analytics, autonomous analytics, AI business intelligence, data analytics, AI insights, autonomous BI"
-        />
+              />
         <link
           rel="canonical"
           href="https://ziontechgroup.com / ai - autonomous - analytics"
-        />
+              />
       </Helmet>
 
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - teal - 900 to - slate - 900">

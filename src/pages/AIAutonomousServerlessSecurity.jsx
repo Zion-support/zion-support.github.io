@@ -13,15 +13,15 @@ const AIAutonomousServerlessSecurity = () => {
         <meta
           name="description"
           content="Revolutionary AI autonomous serverless security platform that continuously secures serverless functions, detects threats, and protects serverless infrastructure with advanced AI capabilities and autonomous operation."
-        />
+              />
         <meta
           name="keywords"
           content="AI serverless security, autonomous serverless security, serverless protection, threat detection, autonomous operations, AI serverless security platform"
-        />
+              />
         <link
           rel="canonical"
           href="https://ziontechgroup.com / ai - autonomous - serverless - security"
-        />
+              />
       </Helmet>
 
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - rose - 900 to - slate - 900">

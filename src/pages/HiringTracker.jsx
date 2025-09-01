@@ -13,13 +13,13 @@ import { Briefcase function HiringTrackerContent () {
     const { jobId } = useParams () ;
     const [activeTab, setActiveTab] = useState ("kanban") ;
     return (<>
-      <SEO title="Hiring Tracker | Zion AI Marketplace" description="Manage your candidate pipeline in the Zion AI Marketplace."/>
+      <SEO title="Hiring Tracker | Zion AI Marketplace" description="Manage your candidate pipeline in the Zion AI Marketplace."      />
 
       <main className="container mx - auto px - 4 py - 8">
         <div className="flex justify - between items - center mb - 8">
           <div>
             <h1 className="text - 3xl font - bold flex items - center">
-              <Briefcase className="mr - 2 h - 6 w - 6 text - primary"/>
+              <Briefcase className="mr - 2 h - 6 w - 6 text - primary"      />
               Hiring Pipeline
             </h1>
             <p className="text - muted - foreground mt - 1">
@@ -35,16 +35,16 @@ import { Briefcase function HiringTrackerContent () {
           </TabsList>
 
           <TabsContent value="kanban" className="mt - 6">
-            <KanbanBoard jobId={jobId}/>
+            <KanbanBoard jobId={jobId}      />
           </TabsContent>
 
           <TabsContent value="analytics" className="mt - 6">
-            <HiringAnalytics jobId={jobId}/>
+            <HiringAnalytics jobId={jobId}      />
           </TabsContent>
         </Tabs>
       </main>
       
     </>) }
     return (<ProtectedRoute>
-      <HiringTrackerContent />
+      <HiringTrackerContent       />
     </ProtectedRoute>) }

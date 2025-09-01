@@ -102,7 +102,7 @@ const Accessibility = () => {
         <div className="max - w-7xl mx - auto text - center">
           <div className="mb - 8">
             <div className="inline - flex items - center px - 4 py - 2 bg - green - 500 / 10 text - green - 400 rounded - full text - sm font - medium mb - 6">
-              <Shield className="w - 4 h - 4 mr - 2"/>
+              <Shield className="w - 4 h - 4 mr - 2"      />
               Accessibility Commitment
             </div>
             <h1 className="text - 4xl md:text - 6xl font - bold text - white mb - 6">
@@ -140,13 +140,13 @@ const Accessibility = () => {
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8">
             {accessibilityFeatures.map ( (feature, index) => (<div key={index} className="bg - slate - 800 / 50 border border - white / 10 rounded - xl p - 6 hover:border - green - 500 / 50 transition - all duration - 300">
                 <div className="w - 16 h - 16 bg - gradient - to - r from - green - 500 to - blue - 500 rounded - full flex items - center justify - center mx - auto mb - 4">
-                  <feature.icon className="w - 8 h - 8 text - white"/>
+                  <feature.icon className="w - 8 h - 8 text - white"      />
                 </div>
                 <h3 className="text - xl font - semibold text - white mb - 3">{feature.title}</h3>
                 <p className="text - gray - 300 mb - 4">{feature.description}</p>
                 <ul className="space - y-2">
                   {feature.features.map ( (item, idx) => (<li key={idx} className="text - sm text - gray - 400 flex items - start">
-                      <CheckCircle className="w - 4 h - 4 text - green - 400 mr - 2 mt - 0.5 flex - shrink - 0"/>
+                      <CheckCircle className="w - 4 h - 4 text - green - 400 mr - 2 mt - 0.5 flex - shrink - 0"      />
                       {item}
                     </li>) ) }
                 </ul>
@@ -199,7 +199,7 @@ const Accessibility = () => {
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">
             {toolsAndTechnologies.map ( (tool, index) => (<div key={index} className="bg - slate - 800 / 50 border border - white / 10 rounded - xl p - 6 text - center hover:border - green - 500 / 50 transition - all duration - 300">
                 <div className="w - 16 h - 16 bg - gradient - to - r from - green - 500 to - blue - 500 rounded - full flex items - center justify - center mx - auto mb - 4">
-                  <tool.icon className="w - 8 h - 8 text - white"/>
+                  <tool.icon className="w - 8 h - 8 text - white"      />
                 </div>
                 <h3 className="text - xl font - semibold text - white mb - 3">{tool.name}</h3>
                 <p className="text - gray - 300">{tool.description}</p>
@@ -222,14 +222,14 @@ const Accessibility = () => {
               </p>
               <ul className="space - y-3">
                 {ongoingImprovements.map ( (improvement, index) => (<li key={index} className="flex items - center text - gray - 300">
-                    <CheckCircle className="w - 5 h - 5 text - green - 400 mr - 3 flex - shrink - 0"/>
+                    <CheckCircle className="w - 5 h - 5 text - green - 400 mr - 3 flex - shrink - 0"      />
                     {improvement}
                   </li>) ) }
               </ul>
             </div>
             <div className="bg - gradient - to - br from - green - 500 / 20 to - blue - 500 / 20 rounded - 2xl p - 8 border border - green - 500 / 30">
               <div className="text - center">
-                <Award className="w - 24 h - 24 text - green - 400 mx - auto mb - 4"/>
+                <Award className="w - 24 h - 24 text - green - 400 mx - auto mb - 4"      />
                 <h3 className="text - 2xl font - bold text - white mb - 2">Our Commitment</h3>
                 <p className="text - gray - 300 mb - 6">
                   We believe that digital accessibility is not just a legal 

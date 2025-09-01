@@ -32,7 +32,7 @@ const ITSolutions = () => {
         "Expert technical support and maintenance"
     ];
     return (<div className="min-h-screen bg-background">
-      <SEO title="IT Solutions - Zion Tech Group" description="Comprehensive IT solutions to optimize your business operations and technology infrastructure." keywords="IT solutions, system integration, IT support, data management, IT security" canonical="https://ziontechgroup.com/services/it-solutions"/>
+      <SEO title="IT Solutions - Zion Tech Group" description="Comprehensive IT solutions to optimize your business operations and technology infrastructure." keywords="IT solutions, system integration, IT support, data management, IT security" canonical="https://ziontechgroup.com/services/it-solutions"      />
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-teal-900 via-teal-800 to-cyan-900 text-white py-20">
@@ -139,7 +139,7 @@ const ITSolutions = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (<motion.div key={feature.title} className="text-center p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-all duration-300" initial = {
+            {features.map((((((((feature, index, index, index, index, index, index, index) => ({ ...((((((feature, index, index, index, index, index, index, key: index })) => ({ ...(((((feature, index, index, index, index, index, key: index })) => ({ ...((((feature, index, index, index, index, key: index })) => ({ ...(((feature, index, index, index, key: index })) => ({ ...((feature, index, index, key: index })) => ({ ...(feature, index, key: index })) => (<motion.div key={feature.title} className="text-center p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-all duration-300" initial = {
   { opacity: 0,
   y: 20 
 
@@ -168,7 +168,7 @@ const ITSolutions = () => {
 
 }} viewport={{ once: true }}>
                 <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="w-8 h-8 text-teal-600"/>
+                  <feature.icon className="w-8 h-8 text-teal-600"      />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
@@ -189,7 +189,7 @@ const ITSolutions = () => {
             </div>
 
             <div className="space-y-6">
-              {benefits.map((benefit, index) => (<motion.div key={index} className="flex items-center p-4 bg-white rounded-lg shadow-sm" initial = {
+              {benefits.map((((((((benefit, index, index, index, index, index, index, index) => ({ ...((((((benefit, index, index, index, index, index, index, key: index })) => ({ ...(((((benefit, index, index, index, index, index, key: index })) => ({ ...((((benefit, index, index, index, index, key: index })) => ({ ...(((benefit, index, index, index, key: index })) => ({ ...((benefit, index, index, key: index })) => ({ ...(benefit, index, key: index })) => (<motion.div key={index} className="flex items-center p-4 bg-white rounded-lg shadow-sm" initial = {
   { opacity: 0,
   x: -20 
 
@@ -218,7 +218,7 @@ const ITSolutions = () => {
 
 }} viewport={{ once: true }}>
                   <div className="w-8 h-8 bg-teal-100 rounded-full flex items-center justify-center mr-4">
-                    <TrendingUp className="w-4 h-4 text-teal-600"/>
+                    <TrendingUp className="w-4 h-4 text-teal-600"      />
                   </div>
                   <span className="text-lg text-gray-700">{benefit}</span>
                 </motion.div>))}

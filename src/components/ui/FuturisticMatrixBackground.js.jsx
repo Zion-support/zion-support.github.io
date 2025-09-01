@@ -78,5 +78,5 @@ export const FuturisticMatrixBackground = ({ intensity = 'medium', color = '#00f
   #16213e 100%)';
         
 
-}}/>)};
+}}      />)};
 export default FuturisticMatrixBackground;

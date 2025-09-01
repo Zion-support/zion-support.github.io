@@ -112,7 +112,7 @@ export default function WishlistPage () {
                       src={item.image}
                       alt={item.title}
                       className="w - full h - full object - cover"
-                    />) : (<div className="text - slate - 400 text - 4xl">
+                          />) : (<div className="text - slate - 400 text - 4xl">
                       {item.type === 'talent' ? '👤' : '📦'}
                     </div>) }
                 </div>
@@ -127,7 +127,7 @@ export default function WishlistPage () {
                       onClick={ () => removeFromWishlist (item.id) }
                       className="text - red - 500 hover:text - red - 600 transition - colors ml - 2"
                     >
-                      <Heart className="w - 5 h - 5 fill - current" />
+                      <Heart className="w - 5 h - 5 fill - current"       />
                     </button>
                   </div>
 
@@ -145,19 +145,19 @@ export default function WishlistPage () {
                       </div>) }
 
                     {item.rating && (<div className="flex items - center gap - 1">
-                        <Star className="w - 4 h - 4 text - yellow - 400 fill - current" />
+                        <Star className="w - 4 h - 4 text - yellow - 400 fill - current"       />
                         <span className="text - sm text - slate - 600 dark:text - slate - 400">
                           {item.rating}
                         </span>
                       </div>) }
 
                     {item.location && (<div className="flex items - center gap - 1 text - sm text - slate - 500">
-                        <MapPin className="w - 4 h - 4" />
+                        <MapPin className="w - 4 h - 4"       />
                         <span>{item.location}</span>
                       </div>) }
 
                     {item.availability && (<div className="flex items - center gap - 1 text - sm text - slate - 500">
-                        <Clock className="w - 4 h - 4" />
+                        <Clock className="w - 4 h - 4"       />
                         <span>{item.availability}</span>
                       </div>) }
                   </div>
@@ -168,12 +168,12 @@ export default function WishlistPage () {
                       onClick={ () => addToCart (item) }
                       className="flex - 1 bg - cyan - 600 hover:bg - cyan - 700 text - white px - 4 py - 2 rounded - lg text - sm font - medium transition - colors flex items - center justify - center gap - 2"
                     >
-                      <ShoppingCart className="w - 4 h - 4" />
+                      <ShoppingCart className="w - 4 h - 4"       />
                       Add to Cart
                     </button>
 
                     {item.type === 'talent' && (<button className="px - 4 py - 2 border border - slate - 300 dark:border - slate - 600 text - slate - 700 dark:text - slate - 300 rounded - lg text - sm font - medium hover:bg - slate - 50 dark:hover:bg - slate - 700 transition - colors flex items - center gap - 2">
-                        <MessageCircle className="w - 4 h - 4" />
+                        <MessageCircle className="w - 4 h - 4"       />
                         Message
                       </button>) }
                   </div>

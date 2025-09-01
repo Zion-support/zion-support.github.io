@@ -17,7 +17,7 @@ const AIAutonomousResearchAssistant = () => {
           <div className="text-center">
             <div className="flex justify-center mb-6">
               <div className="p-3 bg-blue-600/20 rounded-full">
-                <Search className="h-12 w-12 text-blue-400" />
+                <Search className="h-12 w-12 text-blue-400"       />
               </div>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
@@ -86,7 +86,7 @@ const AIAutonomousResearchAssistant = () => {
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
                     <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
-                      <GraduationCap className="h-5 w-5 text-white" />
+                      <GraduationCap className="h-5 w-5 text-white"       />
                     </div>
                     <span className="text-lg font-semibold">
                       Academic Research
@@ -94,7 +94,7 @@ const AIAutonomousResearchAssistant = () => {
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
-                      <BarChart3 className="h-5 w-5 text-white" />
+                      <BarChart3 className="h-5 w-5 text-white"       />
                     </div>
                     <span className="text-lg font-semibold">
                       Market Analysis
@@ -102,7 +102,7 @@ const AIAutonomousResearchAssistant = () => {
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center">
-                      <Lightbulb className="h-5 w-5 text-white" />
+                      <Lightbulb className="h-5 w-5 text-white"       />
                     </div>
                     <span className="text-lg font-semibold">
                       Innovation Discovery
@@ -110,7 +110,7 @@ const AIAutonomousResearchAssistant = () => {
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
-                      <Globe className="h-5 w-5 text-white" />
+                      <Globe className="h-5 w-5 text-white"       />
                     </div>
                     <span className="text-lg font-semibold">Global Trends</span>
                   </div>
@@ -130,7 +130,7 @@ const AIAutonomousResearchAssistant = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center mb-4">
-                <Search className="h-8 w-8 text-blue-400" />
+                <Search className="h-8 w-8 text-blue-400"       />
               </div>
               <h3 className="text-xl font-semibold mb-3">
                 Intelligent Search & Discovery
@@ -144,7 +144,7 @@ const AIAutonomousResearchAssistant = () => {
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center mb-4">
-                <Lightbulb className="h-8 w-8 text-green-400" />
+                <Lightbulb className="h-8 w-8 text-green-400"       />
               </div>
               <h3 className="text-xl font-semibold mb-3">
                 Pattern Recognition
@@ -157,7 +157,7 @@ const AIAutonomousResearchAssistant = () => {
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center mb-4">
-                <BarChart3 className="h-8 w-8 text-purple-400" />
+                <BarChart3 className="h-8 w-8 text-purple-400"       />
               </div>
               <h3 className="text-xl font-semibold mb-3">
                 Data Analysis & Visualization
@@ -170,7 +170,7 @@ const AIAutonomousResearchAssistant = () => {
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-orange-600/20 rounded-lg flex items-center justify-center mb-4">
-                <GraduationCap className="h-8 w-8 text-orange-400" />
+                <GraduationCap className="h-8 w-8 text-orange-400"       />
               </div>
               <h3 className="text-xl font-semibold mb-3">
                 Multi-Domain Expertise
@@ -183,7 +183,7 @@ const AIAutonomousResearchAssistant = () => {
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-cyan-600/20 rounded-lg flex items-center justify-center mb-4">
-                <Rocket className="h-8 w-8 text-cyan-400" />
+                <Rocket className="h-8 w-8 text-cyan-400"       />
               </div>
               <h3 className="text-xl font-semibold mb-3">
                 Autonomous Operation
@@ -196,7 +196,7 @@ const AIAutonomousResearchAssistant = () => {
 
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <div className="w-12 h-12 bg-pink-600/20 rounded-lg flex items-center justify-center mb-4">
-                <Globe className="h-8 w-8 text-pink-400" />
+                <Globe className="h-8 w-8 text-pink-400"       />
               </div>
               <h3 className="text-xl font-semibold mb-3">
                 Global Knowledge Access

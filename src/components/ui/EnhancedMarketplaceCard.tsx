@@ -1,13 +1,12 @@
-import React from 'react';
-
-interface EnhancedMarketplaceCardProps {
+;
+interface EnhancedMarketplaceCardProps {;
   title: string;
   description: string;
   className?: string;
-
-const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({ 
-  title, 
-  description, 
+;
+const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({ ;
+  title, ;
+  description, ;
   className = "" ;
 }) => {;
   return (;
@@ -17,5 +16,5 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({
     </div>;
   );
 };
-
+;
 export default EnhancedMarketplaceCard;}

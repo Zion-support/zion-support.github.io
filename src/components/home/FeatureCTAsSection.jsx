@@ -48,14 +48,14 @@ import { ArrowRight, Users, Zap, Play, Download export const FeatureCTAsSection 
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {ctaItems.map((item, index) => (
+          {ctaItems.map((((((((item, index, index, index, index, index, index, index) => ({ ...((((((item, index, index, index, index, index, index, key: index })) => ({ ...(((((item, index, index, index, index, index, key: index })) => ({ ...((((item, index, index, index, index, key: index })) => ({ ...(((item, index, index, index, key: index })) => ({ ...((item, index, index, key: index })) => ({ ...(item, index, key: index })) => (
             <a
               key={index}
               href={item.href}
               className="group bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105"
 
               <div className={`w-16 h-16 bg-gradient-to-r ${item.color} rounded-full flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg transition-all duration-300`}>
-                <item.icon className="w-8 h-8 text-white"/>
+                <item.icon className="w-8 h-8 text-white"      />
               </div>
 
               <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">
@@ -68,7 +68,7 @@ import { ArrowRight, Users, Zap, Play, Download export const FeatureCTAsSection 
 
               <div className={`inline-flex items-center px-4 py-2 bg-gradient-to-r ${item.color} text-white font-medium rounded-lg hover:bg-gradient-to-r ${item.hoverColor} transition-all duration-300`}>
                 Get Started
-                <ArrowRight className="w-4 h-4 ml-2"/>
+                <ArrowRight className="w-4 h-4 ml-2"      />
               </div>
             </a>;
           ))}
@@ -83,7 +83,7 @@ import { ArrowRight, Users, Zap, Play, Download export const FeatureCTAsSection 
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-600 to-red-600 text-white font-semibold rounded-lg hover:from-orange-700 hover:to-red-700 transition-all duration-300 shadow-lg hover:shadow-xl"
 
             Talk to an Expert
-            <ArrowRight className="w-5 h-5 ml-2"/>
+            <ArrowRight className="w-5 h-5 ml-2"      />
           </a>
         </div>
       </div>;

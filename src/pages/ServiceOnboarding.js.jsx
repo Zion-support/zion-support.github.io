@@ -22,7 +22,7 @@ export default function ServiceOnboarding () {
             </p>
           </div>
 
-          <ServiceProviderRegistrationForm />
+          <ServiceProviderRegistrationForm       />
         </div>
       </div>
     </>) ;

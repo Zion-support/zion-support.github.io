@@ -28,7 +28,7 @@ const renderWithRouter = component => {
 
 describe('App Component', () => {
   test('renders without crashing', () => {
-    renderWithRouter(<App />);
+    renderWithRouter(<App       />);
     expect(screen.getByTestId('index-page')).toBeInTheDocument();
   });
 });

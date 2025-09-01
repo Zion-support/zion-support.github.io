@@ -29,7 +29,7 @@ export function ConversationDetailView() {
         setMessageText('')};
     if (!activeConversation) {
         return (<div className="flex-1 flex flex-col items-center justify-center p-8">
-        <MessageSquare className="h-16 w-16 text-zion-purple/40 mb-4"/>
+        <MessageSquare className="h-16 w-16 text-zion-purple/40 mb-4"      />
         <h3 className="text-xl font-medium text-white mb-2">No Conversation Selected</h3>
         <p className="text-zion-slate text-center max-w-md">
           Select a conversation from the list to view and send messages.
@@ -55,7 +55,7 @@ export function ConversationDetailView() {
       <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/30">
         <div className="flex items-center gap-3">
           <Avatar className="h-10 w-10 border border-zion-purple/20">
-            <AvatarImage src={activeConversation.other_user.avatar_url} alt={activeConversation.other_user.name}/>
+            <AvatarImage src={activeConversation.other_user.avatar_url} alt={activeConversation.other_user.name}      />
             <AvatarFallback className="bg-zion-blue-dark text-white">
               {activeConversation.other_user.name.charAt(0).toUpperCase()}
             </AvatarFallback>
@@ -78,7 +78,7 @@ export function ConversationDetailView() {
           <div className="text-sm text-zion-slate flex items-start gap-3">
             {activeConversation.context_data && activeConversation.context_data.image_url && (<div className="w-16 h-16 flex-shrink-0">
                 <AspectRatio ratio={1 / 1} className="rounded bg-zion-blue-dark/30 overflow-hidden">
-                  <img loading="lazy" src={activeConversation.context_data.image_url} alt={activeConversation.context_data.title || "Context"} className="object-cover"/>
+                  <img loading="lazy" src={activeConversation.context_data.image_url} alt={activeConversation.context_data.title || "Context"} className="object-cover"      />
                 </AspectRatio>
               </div>)}
             <div>
@@ -101,13 +101,13 @@ export function ConversationDetailView() {
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
         {groupedMessages.length === 0 ? (<div className="text-center text-zion-slate py-12">
             <p>No messages yet. Start the conversation!</p>
-          </div>) : (groupedMessages.map((group, groupIndex) => (<div key={group.date}>
-              <DateDivider date={new Date(group.date)}/>
+          </div>) : (groupedMessages.map((((((((group, groupIndex, index, index, index, index, index, index) => ({ ...((((((group, groupIndex, index, index, index, index, index, key: index })) => ({ ...(((((group, groupIndex, index, index, index, index, key: index })) => ({ ...((((group, groupIndex, index, index, index, key: index })) => ({ ...(((group, groupIndex, index, index, key: index })) => ({ ...((group, groupIndex, index, key: index })) => ({ ...(group, groupIndex, key: index })) => (<div key={group.date}>
+              <DateDivider date={new Date(group.date)}      />
               <div className="space-y-3">
-                {group.messages.map((message) => (<MessageBubble key={message.id} message={message} isUserMessage={message.sender_id === user?.id}/>))}
+                {group.messages.map((((((((message, index, index, index, index, index, index) => ({ ...((((((message, index, index, index, index, index, key: index })) => ({ ...(((((message, index, index, index, index, key: index })) => ({ ...((((message, index, index, index, key: index })) => ({ ...(((message, index, index, key: index })) => ({ ...((message, index, key: index })) => ({ ...(message, key: index })) => (<MessageBubble key={message.id} message={message} isUserMessage={message.sender_id === user?.id}      />))}
               </div>
             </div>)))}
-        <div ref={messagesEndRef}/>
+        <div ref={messagesEndRef}      />
       </div>
       
       {/* Input */}

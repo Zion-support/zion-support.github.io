@@ -7,7 +7,7 @@ export default function PostCard({ post }) {
           src={post.author.avatar}
           alt={post.author.name}
           className="w-10 h-10 rounded-full"
-        />
+              />
         <div className="flex-1">
           <h3 className="text-lg font-semibold text-zion-cyan mb-2">
             {post.title}

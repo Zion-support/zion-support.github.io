@@ -188,12 +188,12 @@ const industryStats = [
     { industry: "Energy", projects: 33, successRate: "97%", avgROI: "380%" }
 ];
 const overallStats = [
-    { icon: <Trophy className="w - 6 h - 6"/>, value: "238+", label: "Successful Projects" },
-    { icon: <Users className="w - 6 h - 6"/>, value: "180+", label: "Happy Clients" },
-    { icon: <Star className="w - 6 h - 6"/>, value: "4.9 / 5", label: "Client Rating" },
-    { icon: <TrendingUp className="w - 6 h - 6"/>, value: "95%", label: "Success Rate" },
-    { icon: <DollarSign className="w - 6 h - 6"/>, value: "320%", label: "Average ROI" },
-    { icon: <Clock className="w - 6 h - 6"/>, value: "12 months", label: "Avg. Delivery Time" }
+    { icon: <Trophy className="w - 6 h - 6"      />, value: "238+", label: "Successful Projects" },
+    { icon: <Users className="w - 6 h - 6"      />, value: "180+", label: "Happy Clients" },
+    { icon: <Star className="w - 6 h - 6"      />, value: "4.9 / 5", label: "Client Rating" },
+    { icon: <TrendingUp className="w - 6 h - 6"      />, value: "95%", label: "Success Rate" },
+    { icon: <DollarSign className="w - 6 h - 6"      />, value: "320%", label: "Average ROI" },
+    { icon: <Clock className="w - 6 h - 6"      />, value: "12 months", label: "Avg. Delivery Time" }
 ];
     const [selectedStory, setSelectedStory] = useState (null) ;
     const [hoveredIndustry, setHoveredIndustry] = useState (null) ;
@@ -359,7 +359,7 @@ const overallStats = [
                   <div className="flex items - center justify - between mb - 4">
                     <div className="flex items - center gap - 3">
                       <div className="w - 12 h - 12 rounded - xl bg - gradient - to - br from - zion - cyan to - zion - purple flex items - center justify - center">
-                        <Building className="w - 6 h - 6 text - white"/>
+                        <Building className="w - 6 h - 6 text - white"      />
                       </div>
                       <div>
                         <h4 className="text - xl font - bold text - white group - hover:text - zion - cyan transition - colors">
@@ -409,7 +409,7 @@ const overallStats = [
                     <span className="text - zion - purple - light font - medium text - sm group - hover:text - zion - purple transition - colors">
                       View Full Case Study
                     </span>
-                    <ArrowRight className="w - 4 h - 4 text - zion - purple - light group - hover:text - zion - purple group - hover:translate - x-1 transition - all duration - 300"/>
+                    <ArrowRight className="w - 4 h - 4 text - zion - purple - light group - hover:text - zion - purple group - hover:translate - x-1 transition - all duration - 300"      />
                   </div>
 
                   {/* Expanded details */}
@@ -435,7 +435,7 @@ const overallStats = [
                                 <span className="text - zion - slate - light / 80">{metric.label}:</span>
                                 <div className="flex items - center gap - 2">
                                   <span className="text - zion - slate - light / 60 line - through">{metric.before}</span>
-                                  <ArrowRight className="w - 3 h - 3 text - zion - cyan"/>
+                                  <ArrowRight className="w - 3 h - 3 text - zion - cyan"      />
                                   <span className="text - zion - cyan font - semibold">{metric.after}</span>
                                   <span className="text - zion - purple font - bold"> ({metric.improvement}) </span>
                                 </div>
@@ -462,7 +462,7 @@ const overallStats = [
                               <div className="text - zion - slate - light / 70 text - xs">{story.role}</div>
                             </div>
                             <div className="flex items - center gap - 1">
-                              {[...Array (story.rating) ].map ( (_, idx) => (<Star key={idx} className="w - 4 h - 4 text - yellow - 400 fill - current"/>) ) }
+                              {[...Array (story.rating) ].map ( (_, idx) => (<Star key={idx} className="w - 4 h - 4 text - yellow - 400 fill - current"      />) ) }
                             </div>
                           </div>
                         </div>

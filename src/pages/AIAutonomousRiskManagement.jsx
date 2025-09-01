@@ -10,15 +10,15 @@ const AIAutonomousRiskManagement = () => {
         <meta
           name="description"
           content="Revolutionary AI autonomous risk management platform that continuously identifies risks, assesses threats, and mitigates vulnerabilities with advanced AI capabilities and autonomous operation."
-        />
+              />
         <meta
           name="keywords"
           content="AI risk management, autonomous risk management, risk identification, threat assessment, autonomous operations, AI risk management platform"
-        />
+              />
         <link
           rel="canonical"
           href="https://ziontechgroup.com / ai - autonomous - risk - management"
-        />
+              />
       </Helmet>
 
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - red - 900 to - slate - 900">

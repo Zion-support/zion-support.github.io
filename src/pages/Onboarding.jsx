@@ -117,7 +117,7 @@ export default function Onboarding () {
           </div>
 
           <div className="bg - zion - blue - dark rounded - xl p - 8 shadow - lg border border - zion - blue - light">
-            {currentStep === 0 ? (<UserTypeSelection onSelect={handleUserTypeSelect} selectedType={userType}/>) : (<ProfileSetup onComplete={handleProfileComplete} userType={userType}/>) }
+            {currentStep === 0 ? (<UserTypeSelection onSelect={handleUserTypeSelect} selectedType={userType}      />) : (<ProfileSetup onComplete={handleProfileComplete} userType={userType}      />) }
 
             {currentStep === 1 && (<div className="mt - 6">
                 <Button variant="outline" className="w - full border - zion - blue - light text - white hover:bg - zion - blue - light" onClick={ () => setCurrentStep (0) }>

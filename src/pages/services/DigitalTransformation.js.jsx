@@ -126,7 +126,7 @@ const DigitalTransformation = () => {
         description="Transform your business for the digital age with our comprehensive digital transformation services."
         keywords="digital transformation, process automation, digital strategy, change management, performance optimization"
         canonical="https://ziontechgroup.com/services/digital-transformation"
-      />
+            />
 
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -163,7 +163,7 @@ const DigitalTransformation = () => {
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold text-lg rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
             >
               Start Your Transformation
-              <ArrowRight className="w-5 h-5 ml-2" />
+              <ArrowRight className="w-5 h-5 ml-2"       />
             </Link>
           </motion.div>
         </div>
@@ -182,7 +182,7 @@ const DigitalTransformation = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {transformationServices.map((service, index) => (
+            {transformationServices.map((((((((service, index, index, index, index, index, index, index) => ({ ...((((((service, index, index, index, index, index, index, key: index })) => ({ ...(((((service, index, index, index, index, index, key: index })) => ({ ...((((service, index, index, index, index, key: index })) => ({ ...(((service, index, index, index, key: index })) => ({ ...((service, index, index, key: index })) => ({ ...(service, index, key: index })) => (
               <motion.div
                 key={index}
                 className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105"
@@ -202,7 +202,7 @@ const DigitalTransformation = () => {
                     Key Features:
                   </h4>
                   <ul className="space-y-2">
-                    {service.features.map((feature, idx) => (
+                    {service.features.map((((((((feature, idx, index, index, index, index, index, index) => ({ ...((((((feature, idx, index, index, index, index, index, key: index })) => ({ ...(((((feature, idx, index, index, index, index, key: index })) => ({ ...((((feature, idx, index, index, index, key: index })) => ({ ...(((feature, idx, index, index, key: index })) => ({ ...((feature, idx, index, key: index })) => ({ ...(feature, idx, key: index })) => (
                       <li
                         key={idx}
                         className="text-sm text-gray-300 flex items-center"
@@ -251,7 +251,7 @@ const DigitalTransformation = () => {
                     strokeLinejoin="round"
                     strokeWidth={2}
                     d="M13 10V3L4 14h7v7l9-11h-7z"
-                  />
+                        />
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">
@@ -281,7 +281,7 @@ const DigitalTransformation = () => {
                     strokeLinejoin="round"
                     strokeWidth={2}
                     d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                  />
+                        />
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">
@@ -311,7 +311,7 @@ const DigitalTransformation = () => {
                     strokeLinejoin="round"
                     strokeWidth={2}
                     d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-                  />
+                        />
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">
@@ -338,7 +338,7 @@ const DigitalTransformation = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {transformationApproach.map((step, index) => (
+            {transformationApproach.map((((((((step, index, index, index, index, index, index, index) => ({ ...((((((step, index, index, index, index, index, index, key: index })) => ({ ...(((((step, index, index, index, index, index, key: index })) => ({ ...((((step, index, index, index, index, key: index })) => ({ ...(((step, index, index, index, key: index })) => ({ ...((step, index, index, key: index })) => ({ ...(step, index, key: index })) => (
               <motion.div
                 key={index}
                 className="text-center"
@@ -375,7 +375,7 @@ const DigitalTransformation = () => {
             className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
           >
             Start Your Transformation
-            <ArrowRight className="w-5 h-5 ml-2" />
+            <ArrowRight className="w-5 h-5 ml-2"       />
           </Link>
         </div>
       </section>

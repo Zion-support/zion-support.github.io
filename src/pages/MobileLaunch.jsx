@@ -10,7 +10,7 @@ const MobileLaunch = () => {
         <meta
           name="description"
           content="Launch Zion Tech Group's mobile applications. Access our services on the go with our mobile apps."
-        />
+              />
       </Helmet>
 
       <div className="min - h-screen bg - gray - 50 py - 12">

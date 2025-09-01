@@ -10,7 +10,7 @@ export function Loading({ size = 'md', variant = 'spinner', className, text }) {
   const renderSkeleton = () => (
     <div
       className={cn('bg-current rounded animate-pulse', sizeClasses[size])}
-    />
+          />
   );
   const renderContent = () => {
     switch (variant) {
@@ -47,7 +47,7 @@ export function Skeleton({ className, ...props }) {
         className
       )}
       {...props}
-    />
+          />
   );
 }
 // Page loading component
@@ -55,7 +55,7 @@ export function PageLoading() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-background">
       <div className="text-center space-y-4">
-        <Loading size="xl" variant="spinner" className="text-zion-cyan" />
+        <Loading size="xl" variant="spinner" className="text-zion-cyan"       />
         <h2 className="text-xl font-semibold text-zion-slate-light">
           Loading Zion Tech Group
         </h2>

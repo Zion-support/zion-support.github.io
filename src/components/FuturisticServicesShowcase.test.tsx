@@ -1,16 +1,15 @@
 import { render, screen } from '@testing - library / react';
-import React from 'react';
 import FuturisticServicesShowcase from './FuturisticServicesShowcase';
-
-
-describe ('FuturisticServicesShowcase', () => {
-  it ('renders without crashing', () => {
-    render (<FuturisticServicesShowcase />) ;
+;
+;
+describe ('FuturisticServicesShowcase', () => {;
+  it ('renders without crashing', () => {;
+    render (<FuturisticServicesShowcase       />) ;
     expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () ;
   }) ;
-
-  it ('displays expected content', () => {
-    render (<FuturisticServicesShowcase />) ;
-    // Add specific test assertions based on component content
+;
+  it ('displays expected content', () => {;
+    render (<FuturisticServicesShowcase       />) ;
+    // Add specific test assertions based on component content;
   }) ;
 }) ;

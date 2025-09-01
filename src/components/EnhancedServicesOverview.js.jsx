@@ -45,19 +45,19 @@ const ServiceCategory = ({ category, services }) => {
   if (categoryServices.length === 0) return null;
   const getCategoryIcon = categoryName => {
     const iconMap = {
-      'AI & Machine Learning': <Brain className="w - 6 h - 6" />,
-      'Cybersecurity & Compliance': <Shield className="w - 6 h - 6" />,
-      'Data & Analytics': <Database className="w - 6 h - 6" />,
-      'Business Process': <Briefcase className="w - 6 h - 6" />,
-      'Marketing & Sales': <TrendingUp className="w - 6 h - 6" />,
-      'Financial Services': <DollarSign className="w - 6 h - 6" />,
-      'Healthcare & Life Sciences': <Heart className="w - 6 h - 6" />,
-      'Education & Training': <GraduationCap className="w - 6 h - 6" />,
-      'Supply Chain & Logistics': <Truck className="w - 6 h - 6" />,
-      'Real Estate & Property': <Home className="w - 6 h - 6" />,
-      'Legal & Compliance': <Lock className="w - 6 h - 6" />,
+      'AI & Machine Learning': <Brain className="w - 6 h - 6"       />,
+      'Cybersecurity & Compliance': <Shield className="w - 6 h - 6"       />,
+      'Data & Analytics': <Database className="w - 6 h - 6"       />,
+      'Business Process': <Briefcase className="w - 6 h - 6"       />,
+      'Marketing & Sales': <TrendingUp className="w - 6 h - 6"       />,
+      'Financial Services': <DollarSign className="w - 6 h - 6"       />,
+      'Healthcare & Life Sciences': <Heart className="w - 6 h - 6"       />,
+      'Education & Training': <GraduationCap className="w - 6 h - 6"       />,
+      'Supply Chain & Logistics': <Truck className="w - 6 h - 6"       />,
+      'Real Estate & Property': <Home className="w - 6 h - 6"       />,
+      'Legal & Compliance': <Lock className="w - 6 h - 6"       />,
     };
-    return iconMap[categoryName] || <Briefcase className="w - 6 h - 6" />;
+    return iconMap[categoryName] || <Briefcase className="w - 6 h - 6"       />;
   };
   const getCategoryColor = categoryName => {
     const colorMap = {
@@ -132,17 +132,17 @@ const ServiceCategory = ({ category, services }) => {
                 <div className="flex items - center justify - between text - sm text - zion - slate - light">
                   <div className="flex items - center space - x-4">
                     <div className="flex items - center space - x-1">
-                      <Star className="w - 4 h - 4 text - yellow - 400 fill - current" />
+                      <Star className="w - 4 h - 4 text - yellow - 400 fill - current"       />
                       <span>{service.rating}</span>
                       <span className="text - zion - slate"> ({service.reviewCount}) </span>
                     </div>
                     <div className="flex items - center space - x-1">
-                      <Brain className="w - 4 h - 4 text - zion - cyan" />
+                      <Brain className="w - 4 h - 4 text - zion - cyan"       />
                       <span>{service.aiScore}%</span>
                     </div>
                   </div>
                   <div className="flex items - center space - x-1">
-                    <Clock className="w - 4 h - 4" />
+                    <Clock className="w - 4 h - 4"       />
                     <span>{service.availability}</span>
                   </div>
                 </div>
@@ -172,7 +172,7 @@ const ServiceCategory = ({ category, services }) => {
 
                 {/* Location */}
                 <div className="flex items - center space - x-2 text - sm text - zion - slate - light">
-                  <Globe className="w - 4 h - 4" />
+                  <Globe className="w - 4 h - 4"       />
                   <span>{service.location}</span>
                 </div>
               </div>
@@ -197,7 +197,7 @@ const BenefitsSection = () => (<section className="py - 16 bg - zion - blue - da
       <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">
         <div className="text - center">
           <div className="w - 16 h - 16 bg - gradient - to - br from - zion - purple to - zion - purple - dark rounded - full flex items - center justify - center mx - auto mb - 4">
-            <Brain className="w - 8 h - 8 text - white" />
+            <Brain className="w - 8 h - 8 text - white"       />
           </div>
           <h3 className="text - xl font - bold text - white mb - 3">
             AI - Powered Solutions
@@ -210,7 +210,7 @@ const BenefitsSection = () => (<section className="py - 16 bg - zion - blue - da
 
         <div className="text - center">
           <div className="w - 16 h - 16 bg - gradient - to - br from - zion - cyan to - blue - 600 rounded - full flex items - center justify - center mx - auto mb - 4">
-            <Shield className="w - 8 h - 8 text - white" />
+            <Shield className="w - 8 h - 8 text - white"       />
           </div>
           <h3 className="text - xl font - bold text - white mb - 3">
             Enterprise Security
@@ -223,7 +223,7 @@ const BenefitsSection = () => (<section className="py - 16 bg - zion - blue - da
 
         <div className="text - center">
           <div className="w - 16 h - 16 bg - gradient - to - br from - green - 500 to - emerald - 600 rounded - full flex items - center justify - center mx - auto mb - 4">
-            <Zap className="w - 8 h - 8 text - white" />
+            <Zap className="w - 8 h - 8 text - white"       />
           </div>
           <h3 className="text - xl font - bold text - white mb - 3">
             Rapid Implementation
@@ -236,7 +236,7 @@ const BenefitsSection = () => (<section className="py - 16 bg - zion - blue - da
 
         <div className="text - center">
           <div className="w - 16 h - 16 bg - gradient - to - br from - orange - 500 to - red - 600 rounded - full flex items - center justify - center mx - auto mb - 4">
-            <Users className="w - 8 h - 8 text - white" />
+            <Users className="w - 8 h - 8 text - white"       />
           </div>
           <h3 className="text - xl font - bold text - white mb - 3">Expert Support</h3>
           <p className="text - zion - slate - light">
@@ -247,7 +247,7 @@ const BenefitsSection = () => (<section className="py - 16 bg - zion - blue - da
 
         <div className="text - center">
           <div className="w - 16 h - 16 bg - gradient - to - br from - purple - 500 to - indigo - 600 rounded - full flex items - center justify - center mx - auto mb - 4">
-            <BarChart3 className="w - 8 h - 8 text - white" />
+            <BarChart3 className="w - 8 h - 8 text - white"       />
           </div>
           <h3 className="text - xl font - bold text - white mb - 3">
             Scalable Architecture
@@ -260,7 +260,7 @@ const BenefitsSection = () => (<section className="py - 16 bg - zion - blue - da
 
         <div className="text - center">
           <div className="w - 16 h - 16 bg - gradient - to - br from - teal - 500 to - cyan - 600 rounded - full flex items - center justify - center mx - auto mb - 4">
-            <CheckCircle className="w - 8 h - 8 text - white" />
+            <CheckCircle className="w - 8 h - 8 text - white"       />
           </div>
           <h3 className="text - xl font - bold text - white mb - 3">Proven Results</h3>
           <p className="text - zion - slate - light">
@@ -283,7 +283,7 @@ const ContactSection = () => (<section className="py - 16 bg - gradient - to - b
 
       <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6 mb - 8 max - w-4xl mx - auto">
         <div className="flex items - center justify - center space - x-3 p - 4 bg - zion - blue - dark rounded - lg border border - zion - blue - light">
-          <Mail className="w - 6 h - 6 text - zion - cyan" />
+          <Mail className="w - 6 h - 6 text - zion - cyan"       />
           <div className="text - left">
             <p className="font - medium text - white">Email</p>
             <a
@@ -296,7 +296,7 @@ const ContactSection = () => (<section className="py - 16 bg - gradient - to - b
         </div>
 
         <div className="flex items - center justify - center space - x-3 p - 4 bg - zion - blue - dark rounded - lg border border - zion - blue - light">
-          <Phone className="w - 6 h - 6 text - zion - cyan" />
+          <Phone className="w - 6 h - 6 text - zion - cyan"       />
           <div className="text - left">
             <p className="font - medium text - white">Phone</p>
             <a
@@ -309,7 +309,7 @@ const ContactSection = () => (<section className="py - 16 bg - gradient - to - b
         </div>
 
         <div className="flex items - center justify - center space - x-3 p - 4 bg - zion - blue - dark rounded - lg border border - zion - blue - light">
-          <MapPin className="w - 6 h - 6 text - zion - cyan" />
+          <MapPin className="w - 6 h - 6 text - zion - cyan"       />
           <div className="text - left">
             <p className="font - medium text - white">Address</p>
             <p className="text - zion - slate - light text - sm">
@@ -386,13 +386,13 @@ const ContactSection = () => (<section className="py - 16 bg - gradient - to - b
             key={category.value}
             category={category.label}
             services={ENHANCED_SERVICES}
-          />) ) }
+                />) ) }
       </div>
 
       {/* Benefits Section */}
-      <BenefitsSection />
+      <BenefitsSection       />
 
       {/* Contact Section */}
-      <ContactSection />
+      <ContactSection       />
     </div>) ;
 }

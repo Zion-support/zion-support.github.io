@@ -23,8 +23,14 @@ export const ScreenshotManager = ({ platform }) => {
             toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`);
             return}
         const filesToAdd = imageFiles.slice(0, availableSlots);
-        const newScreenshots = filesToAdd.map(file => ({
-            id: Math.random().toString(36).substring(2, 9),
+        const newScreenshots = filesToAdd.map(((((((file => ({
+            id: Math.random(, index, index, index, index, index, index) => ({ ...(((((file => ({
+            id: Math.random(, index, index, index, index, index, key: index })) => ({ ...((((file => ({
+            id: Math.random(, index, index, index, index, key: index })) => ({ ...(((file => ({
+            id: Math.random(, index, index, index, key: index })) => ({ ...((file => ({
+            id: Math.random(, index, index, key: index })) => ({ ...(file => ({
+            id: Math.random(, index, key: index })) => ({ ...file => ({
+            id: Math.random(, key: index })).toString(36).substring(2, 9),
             url: URL.createObjectURL(file),
             file
         }));
@@ -57,11 +63,11 @@ export const ScreenshotManager = ({ platform }) => {
         <div className={`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors ${isDragging
             ? "border-zion-cyan bg-zion-cyan/10"
             : "border-zion-purple/30"}`} onDragOver={handleDragOver} onDragLeave={handleDragLeave} onDrop={handleDrop}>
-          <Upload className="mx-auto h-8 w-8 text-gray-300 mb-2"/>
+          <Upload className="mx-auto h-8 w-8 text-gray-300 mb-2"      />
           <p className="text-sm mb-2">Drag & drop screenshots here</p>
-          <input ref={fileInputRef} type="file" multiple accept="image/*" onChange={handleFileSelect} className="hidden"/>
+          <input ref={fileInputRef} type="file" multiple accept="image/*" onChange={handleFileSelect} className="hidden"      />
           <Button variant="outline" onClick={() => fileInputRef.current?.click()} className="mt-2">
-            <Plus className="mr-2 h-4 w-4"/>
+            <Plus className="mr-2 h-4 w-4"      />
             Select Files
           </Button>
         </div>
@@ -73,10 +79,10 @@ export const ScreenshotManager = ({ platform }) => {
         </div>
 
         <div className="grid grid-cols-2 gap-3">
-          {screenshots.map((screenshot) => (<div key={screenshot.id} className="relative group">
-              <img loading="lazy" src={screenshot.url} alt="App screenshot" className="w-full h-auto rounded border border-zion-purple/20"/>
+          {screenshots.map((((((((screenshot, index, index, index, index, index, index) => ({ ...((((((screenshot, index, index, index, index, index, key: index })) => ({ ...(((((screenshot, index, index, index, index, key: index })) => ({ ...((((screenshot, index, index, index, key: index })) => ({ ...(((screenshot, index, index, key: index })) => ({ ...((screenshot, index, key: index })) => ({ ...(screenshot, key: index })) => (<div key={screenshot.id} className="relative group">
+              <img loading="lazy" src={screenshot.url} alt="App screenshot" className="w-full h-auto rounded border border-zion-purple/20"      />
               <button onClick={() => removeScreenshot(screenshot.id)} className="absolute top-1 right-1 bg-red-500/80 text-white p-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
-                <Trash2 className="h-3 w-3"/>
+                <Trash2 className="h-3 w-3"      />
               </button>
             </div>))}
         </div>

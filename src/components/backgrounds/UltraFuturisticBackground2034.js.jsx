@@ -131,5 +131,5 @@ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) =
   filter: theme === 'quantum' ? 'blur(0.5px)' : 'none'
         
 
-}}/>)};
+}}      />)};
 export default UltraFuturisticBackground2034;

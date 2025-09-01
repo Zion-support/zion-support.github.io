@@ -26,28 +26,28 @@ export function ContactInfo() {
     {
       label: 'Years Experience',
       value: '10+',
-      icon: <Clock className="h-6 w-6 text-zion-cyan" />,
+      icon: <Clock className="h-6 w-6 text-zion-cyan"       />,
     },
     {
       label: 'Team Members',
       value: '50+',
-      icon: <Users className="h-6 w-6 text-zion-purple" />,
+      icon: <Users className="h-6 w-6 text-zion-purple"       />,
     },
     {
       label: 'Projects Completed',
       value: '500+',
-      icon: <Shield className="h-6 w-6 text-zion-cyan" />,
+      icon: <Shield className="h-6 w-6 text-zion-cyan"       />,
     },
     {
       label: 'Client Satisfaction',
       value: '98%',
-      icon: <Zap className="h-6 w-6 text-zion-purple" />,
+      icon: <Zap className="h-6 w-6 text-zion-purple"       />,
     },
   ];
   return (
     <section className="py-20 relative">
       {/* Background accent */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zion-blue-dark/10 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zion-blue-dark/10 to-transparent"       />
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
@@ -65,7 +65,7 @@ export function ContactInfo() {
 
         {/* Contact Methods Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          {contactMethods.map((method, index) => (
+          {contactMethods.map((((((((method, index, index, index, index, index, index, index) => ({ ...((((((method, index, index, index, index, index, index, key: index })) => ({ ...(((((method, index, index, index, index, index, key: index })) => ({ ...((((method, index, index, index, index, key: index })) => ({ ...(((method, index, index, index, key: index })) => ({ ...((method, index, index, key: index })) => ({ ...(method, index, key: index })) => (
             <FuturisticCard
               key={index}
               glowColor={method.color}
@@ -109,7 +109,7 @@ export function ContactInfo() {
                     rel="noopener noreferrer"
                   >
                     <span>Contact via {method.title.split(' ')[0]}</span>
-                    <ExternalLink className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                    <ExternalLink className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform duration-300"       />
                   </a>
                 </Button>
               </CardContent>
@@ -130,7 +130,7 @@ export function ContactInfo() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-          {compStats.map((stat, index) => (
+          {compStats.map((((((((stat, index, index, index, index, index, index, index) => ({ ...((((((stat, index, index, index, index, index, index, key: index })) => ({ ...(((((stat, index, index, index, index, index, key: index })) => ({ ...((((stat, index, index, index, index, key: index })) => ({ ...(((stat, index, index, index, key: index })) => ({ ...((stat, index, index, key: index })) => ({ ...(stat, index, key: index })) => (
             <Card
               key={index}
               className="text-center group hover:shadow-lg hover:border-primary/50 transition-all duration-300"
@@ -190,14 +190,14 @@ export function ContactInfo() {
                   href="tel:+13024640950"
                   className="flex items-center justify-center gap-2 text-zion-cyan hover:text-zion-cyan-light transition-colors"
                 >
-                  <Phone className="h-4 w-4" />
+                  <Phone className="h-4 w-4"       />
                   +1 302 464 0950
                 </a>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="flex items-center justify-center gap-2 text-zion-purple hover:text-zion-purple-light transition-colors"
                 >
-                  <Mail className="h-4 w-4" />
+                  <Mail className="h-4 w-4"       />
                   kleber@ziontechgroup.com
                 </a>
               </div>

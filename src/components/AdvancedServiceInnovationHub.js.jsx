@@ -125,12 +125,12 @@ const AdvancedServiceInnovationHub = () => {
             default: return < Cpu className="w - 5 h - 5"/>}
     };
     const categories = [
-        { id: 'all', name: 'All Categories', icon: <Globe className="w - 4 h - 4"/> },
-        { id: 'quantum', name: 'Quantum Technology', icon: <Atom className="w - 4 h - 4"/> },
-        { id: 'ai', name: 'Artificial Intelligence', icon: <Brain className="w - 4 h - 4"/> },
-        { id: 'space - tech', name: 'Space Technology', icon: <Satellite className="w - 4 h - 4"/> },
-        { id: 'green - tech', name: 'Green Technology', icon: <Leaf className="w - 4 h - 4"/> },
-        { id: 'biotech - ai', name: 'Biotech AI', icon: <Dna className="w - 4 h - 4"/> }
+        { id: 'all', name: 'All Categories', icon: <Globe className="w - 4 h - 4"      /> },
+        { id: 'quantum', name: 'Quantum Technology', icon: <Atom className="w - 4 h - 4"      /> },
+        { id: 'ai', name: 'Artificial Intelligence', icon: <Brain className="w - 4 h - 4"      /> },
+        { id: 'space - tech', name: 'Space Technology', icon: <Satellite className="w - 4 h - 4"      /> },
+        { id: 'green - tech', name: 'Green Technology', icon: <Leaf className="w - 4 h - 4"      /> },
+        { id: 'biotech - ai', name: 'Biotech AI', icon: <Dna className="w - 4 h - 4"      /> }
     ];
     return (<div className="max - w-7xl mx - auto p - 6">
       {/* Header */}
@@ -155,9 +155,9 @@ const AdvancedServiceInnovationHub = () => {
           
           <div className="flex gap - 2">
             {['trends', 'roadmap', 'insights'].map ( (mode) => (<Button key={mode} variant={viewMode === mode ? 'default' : 'outline'} size="sm" onClick={ () => setViewMode (mode) }>
-                {mode === 'trends' && <TrendingUp className="w - 4 h - 4 mr - 2"/>}
-                {mode === 'roadmap' && <Rocket className="w - 4 h - 4 mr - 2"/>}
-                {mode === 'insights' && <Lightbulb className="w - 4 h - 4 mr - 2"/>}
+                {mode === 'trends' && <TrendingUp className="w - 4 h - 4 mr - 2"      />}
+                {mode === 'roadmap' && <Rocket className="w - 4 h - 4 mr - 2"      />}
+                {mode === 'insights' && <Lightbulb className="w - 4 h - 4 mr - 2"      />}
                 {mode.charAt (0) .toUpperCase () + mode.slice (1) }
               </Button>) ) }
           </div>
@@ -361,7 +361,7 @@ const AdvancedServiceInnovationHub = () => {
                   <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 6">
                     <div>
                       <h4 className="font - semibold text - zion - slate - dark mb - 3 flex items - center gap - 2">
-                        <CheckCircle className="w - 4 h - 4 text - green - 500"/>
+                        <CheckCircle className="w - 4 h - 4 text - green - 500"      />
                         Key Milestones
                       </h4>
                       <ul className="space - y-2">
@@ -374,7 +374,7 @@ const AdvancedServiceInnovationHub = () => {
                     
                     <div>
                       <h4 className="font - semibold text - zion - slate - dark mb - 3 flex items - center gap - 2">
-                        <Shield className="w - 4 h - 4 text - orange - 500"/>
+                        <Shield className="w - 4 h - 4 text - orange - 500"      />
                         Challenges
                       </h4>
                       <ul className="space - y-2">
@@ -387,7 +387,7 @@ const AdvancedServiceInnovationHub = () => {
                     
                     <div>
                       <h4 className="font - semibold text - zion - slate - dark mb - 3 flex items - center gap - 2">
-                        <Star className="w - 4 h - 4 text - yellow - 500"/>
+                        <Star className="w - 4 h - 4 text - yellow - 500"      />
                         Opportunities
                       </h4>
                       <ul className="space - y-2">
@@ -417,7 +417,7 @@ const AdvancedServiceInnovationHub = () => {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items - center gap - 2">
-                  <TrendingUp className="w - 5 h - 5 text - zion - green"/>
+                  <TrendingUp className="w - 5 h - 5 text - zion - green"      />
                   Investment Trends
                 </CardTitle>
               </CardHeader>
@@ -461,7 +461,7 @@ const AdvancedServiceInnovationHub = () => {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items - center gap - 2">
-                  <Users className="w - 5 h - 5 text - zion - blue"/>
+                  <Users className="w - 5 h - 5 text - zion - blue"      />
                   Market Adoption
                 </CardTitle>
               </CardHeader>
@@ -506,7 +506,7 @@ const AdvancedServiceInnovationHub = () => {
           <Card>
             <CardHeader>
               <CardTitle className="flex items - center gap - 2">
-                <Lightbulb className="w - 5 h - 5 text - zion - yellow"/>
+                <Lightbulb className="w - 5 h - 5 text - zion - yellow"      />
                 Strategic Recommendations
               </CardTitle>
             </CardHeader>
@@ -516,15 +516,15 @@ const AdvancedServiceInnovationHub = () => {
                   <h4 className="font - semibold text - zion - slate - dark mb - 3">Immediate Actions (0 - 2 years) </h4>
                   <ul className="space - y-2">
                     <li className="text - sm text - zion - slate - light flex items - start gap - 2">
-                      <CheckCircle className="w - 4 h - 4 text - green - 500 mt - 1 flex - shrink - 0"/>
+                      <CheckCircle className="w - 4 h - 4 text - green - 500 mt - 1 flex - shrink - 0"      />
                       Invest in quantum computing research and development
                     </li>
                     <li className="text - sm text - zion - slate - light flex items - start gap - 2">
-                      <CheckCircle className="w - 4 h - 4 text - green - 500 mt - 1 flex - shrink - 0"/>
+                      <CheckCircle className="w - 4 h - 4 text - green - 500 mt - 1 flex - shrink - 0"      />
                       Develop AI ethics and governance frameworks
                     </li>
                     <li className="text - sm text - zion - slate - light flex items - start gap - 2">
-                      <CheckCircle className="w - 4 h - 4 text - green - 500 mt - 1 flex - shrink - 0"/>
+                      <CheckCircle className="w - 4 h - 4 text - green - 500 mt - 1 flex - shrink - 0"      />
                       Establish partnerships with space technology companies
                     </li>
                   </ul>
@@ -534,15 +534,15 @@ const AdvancedServiceInnovationHub = () => {
                   <h4 className="font - semibold text - zion - slate - dark mb - 3">Strategic Planning (2 - 5 years) </h4>
                   <ul className="space - y-2">
                     <li className="text - sm text - zion - slate - light flex items - start gap - 2">
-                      <CheckCircle className="w - 4 h - 4 text - blue - 500 mt - 1 flex - shrink - 0"/>
+                      <CheckCircle className="w - 4 h - 4 text - blue - 500 mt - 1 flex - shrink - 0"      />
                       Build quantum internet infrastructure
                     </li>
                     <li className="text - sm text - zion - slate - light flex items - start gap - 2">
-                      <CheckCircle className="w - 4 h - 4 text - blue - 500 mt - 1 flex - shrink - 0"/>
+                      <CheckCircle className="w - 4 h - 4 text - blue - 500 mt - 1 flex - shrink - 0"      />
                       Develop synthetic biology capabilities
                     </li>
                     <li className="text - sm text - zion - slate - light flex items - start gap - 2">
-                      <CheckCircle className="w - 4 h - 4 text - blue - 500 mt - 1 flex - shrink - 0"/>
+                      <CheckCircle className="w - 4 h - 4 text - blue - 500 mt - 1 flex - shrink - 0"      />
                       Invest in fusion energy research
                     </li>
                   </ul>
@@ -571,12 +571,12 @@ const AdvancedServiceInnovationHub = () => {
           <div className="flex flex - col sm:flex - row gap - 4 justify - center">
             <Button className="bg - white text - zion - purple hover:bg - zion - slate - light" onClick = { () => window.open ('mailto:kleber@ziontechgroup.com?subject = Innovation Strategy Consultation',
   '_blank') }>
-              <Users className="w - 5 h - 5 mr - 2"/>
+              <Users className="w - 5 h - 5 mr - 2"      />
               Get Innovation Strategy
             </Button>
             <Button variant="outline" className="border - white text - white hover:bg - white hover:text - zion - purple" onClick = { () => window.open ('tel:+13024640950',
   '_blank') }>
-              <Zap className="w - 5 h - 5 mr - 2"/>
+              <Zap className="w - 5 h - 5 mr - 2"      />
               Speak with an Expert
             </Button>
           </div>

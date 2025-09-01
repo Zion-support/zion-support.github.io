@@ -25,9 +25,9 @@ export function ProfileHero({
               src={coverImageUrl}
               alt={`${name} cover`}
               className="w-full h-full object-cover"
-            />
+                  />
           ) : (
-            <div className="w-full h-full bg-gradient-to-r from-zion-blue via-zion-blue-light to-zion-blue-dark" />
+            <div className="w-full h-full bg-gradient-to-r from-zion-blue via-zion-blue-light to-zion-blue-dark"       />
           )}
         </AspectRatio>
 
@@ -35,7 +35,7 @@ export function ProfileHero({
           <div className="flex flex-col md:flex-row md:items-end -mt-16 md:-mt-20 relative z-10 mb-6 md:mb-10">
             <Avatar className="h-24 w-24 md:h-32 md:w-32 border-4 border-zion-blue-dark ring-2 ring-zion-purple/30">
               {avatarUrl ? (
-                <AvatarImage src={avatarUrl} alt={name} />
+                <AvatarImage src={avatarUrl} alt={name}       />
               ) : (
                 <AvatarFallback className="bg-zion-purple/20 text-zion-cyan text-xl">
                   {name.substring(0, 2).toUpperCase()}
@@ -74,7 +74,7 @@ export function ProfileHero({
 
                 {rating && (
                   <div className="flex items-center gap-1">
-                    <Star className="w-4 h-4 fill-zion-cyan text-zion-cyan" />
+                    <Star className="w-4 h-4 fill-zion-cyan text-zion-cyan"       />
                     <span className="text-white font-medium">
                       {rating.toFixed(1)}
                     </span>

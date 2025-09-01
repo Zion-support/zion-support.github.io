@@ -10,7 +10,7 @@ export default function ApplicationStatusTracker () {
 function ApplicationStatusTrackerContent () {
     const isMobile = useIsMobile () ;
     return (<>
-      <SEO title="Application Status Tracker | Zion AI Marketplace" description="Track the status of your job applications in the Zion AI marketplace."/>
+      <SEO title="Application Status Tracker | Zion AI Marketplace" description="Track the status of your job applications in the Zion AI marketplace."      />
 
       <div className="container mx - auto px - 4 py - 8">
         <div className="flex flex - col md:flex - row justify - between items - start md:items - center gap - 4 mb - 8">
@@ -24,11 +24,11 @@ function ApplicationStatusTrackerContent () {
           <Card>
             <CardHeader className="border - b bg - muted / 50">
               <CardTitle className="flex items - center text - lg">
-                <Inbox className="mr - 2 h - 5 w - 5"/> Your Applications
+                <Inbox className="mr - 2 h - 5 w - 5"      /> Your Applications
               </CardTitle>
             </CardHeader>
             <CardContent className={`p-${isMobile ? '3' : '6'}`}>
-              <ApplicationsTracker />
+              <ApplicationsTracker       />
             </CardContent>
           </Card>
         </div>
@@ -36,6 +36,6 @@ function ApplicationStatusTrackerContent () {
     </>) }
     return (<ProtectedRoute>
 
-        <ApplicationStatusTrackerContent />
+        <ApplicationStatusTrackerContent       />
       
     </ProtectedRoute>) }

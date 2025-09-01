@@ -14,7 +14,7 @@ export default function ReplyCard({
           src={reply.author.avatar}
           alt={reply.author.name}
           className="w-8 h-8 rounded-full"
-        />
+              />
         <div className="flex-1">
           <div className="flex items-center space-x-2 mb-2">
             <span className="font-medium text-zion-cyan">

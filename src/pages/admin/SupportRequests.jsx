@@ -121,7 +121,7 @@ export default function SupportRequests() {
         setStatusFilter(null);
         setPriorityFilter(null);
         setCategoryFilter(null)};
-    return (<SEO title="Support Requests | Admin Dashboard" description="Manage and track user support requests and issues"/>
+    return (<SEO title="Support Requests | Admin Dashboard" description="Manage and track user support requests and issues"      />
         ,
             <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8">
@@ -184,13 +184,13 @@ export default function SupportRequests() {
             {/* Search and Filters */}
             <div className="flex flex-col md:flex-row gap-4 mb-6">
               <div className="relative flex-1">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400"/>
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400"      />
                 <Input placeholder="Search by ID, user or issue..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="pl-10"/>
               </div>
 
               <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
-                  <SelectValue placeholder="Status"/>
+                  <SelectValue placeholder="Status"      />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="">All Statuses</SelectItem>
@@ -202,7 +202,7 @@ export default function SupportRequests() {
 
               <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
-                  <SelectValue placeholder="Priority"/>
+                  <SelectValue placeholder="Priority"      />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="">All Priorities</SelectItem>
@@ -214,7 +214,7 @@ export default function SupportRequests() {
 
               <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
-                  <SelectValue placeholder="Category"/>
+                  <SelectValue placeholder="Category"      />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="">All Categories</SelectItem>
@@ -228,7 +228,7 @@ export default function SupportRequests() {
               </Select>
 
               <Button variant="outline" onClick={resetFilters} className="md:w-auto">
-                <Filter className="h-4 w-4 mr-2"/> Reset Filters
+                <Filter className="h-4 w-4 mr-2"      /> Reset Filters
               </Button>
             </div>
 
@@ -250,7 +250,7 @@ export default function SupportRequests() {
                     </TableRow>
                   </TableHeader>
                   <TableBody>
-                    {filteredRequests.map((request) => (<TableRow key={request.id}>
+                    {filteredRequests.map((((((((request, index, index, index, index, index, index) => ({ ...((((((request, index, index, index, index, index, key: index })) => ({ ...(((((request, index, index, index, index, key: index })) => ({ ...((((request, index, index, index, key: index })) => ({ ...(((request, index, index, key: index })) => ({ ...((request, index, key: index })) => ({ ...(request, key: index })) => (<TableRow key={request.id}>
                         <TableCell className="font-medium">{request.id}</TableCell>
                         <TableCell>{request.user}</TableCell>
                         <TableCell className="max-w-xs truncate">{request.issue}</TableCell>

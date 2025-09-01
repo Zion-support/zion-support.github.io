@@ -36,7 +36,7 @@ export default function CreatePostPage () {
         title="Create New Post | Community Forum | Zion AI Marketplace"
         description="Create a new discussion post in the Zion AI Marketplace community forum."
         keywords="community, forum, discussion, create post, new thread"
-      />) , (<div className="container py - 8">
+            />) , (<div className="container py - 8">
         <div className="flex items - center gap - 3 mb - 6">
           <Link
             to="/community"
@@ -50,6 +50,6 @@ export default function CreatePostPage () {
 
         <h1 className="text - 3xl font - bold mb - 8">Create New Post</h1>
 
-        <PostForm initialValues={initialValues} onSubmit={handleSubmit} />
+        <PostForm initialValues={initialValues} onSubmit={handleSubmit}       />
       </div>) ) ;
 }

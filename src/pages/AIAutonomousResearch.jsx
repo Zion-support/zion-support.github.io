@@ -10,15 +10,15 @@ const AIAutonomousResearch = () => {
         <meta
           name="description"
           content="Revolutionary AI autonomous research platform that accelerates scientific discovery, automates research workflows, and provides intelligent insights across multiple domains."
-        />
+              />
         <meta
           name="keywords"
           content="AI research, autonomous research, scientific discovery, research automation, AI platform"
-        />
+              />
         <link
           rel="canonical"
           href="https://ziontechgroup.com / ai - autonomous - research"
-        />
+              />
       </Helmet>
 
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900">

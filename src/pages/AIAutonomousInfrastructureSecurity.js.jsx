@@ -13,15 +13,15 @@ const AIAutonomousInfrastructureSecurity = () => {
         <meta
           name="description"
           content="Revolutionary AI autonomous infrastructure security platform that continuously secures infrastructure, detects threats, and protects infrastructure with advanced AI capabilities and autonomous operation."
-        />
+              />
         <meta
           name="keywords"
           content="AI infrastructure security, autonomous infrastructure security, infrastructure protection, threat detection, autonomous operations, AI infrastructure security platform"
-        />
+              />
         <link
           rel="canonical"
           href="https://ziontechgroup.com / ai - autonomous - infrastructure - security"
-        />
+              />
       </Helmet>
 
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">

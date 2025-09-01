@@ -34,7 +34,7 @@ export function FeatureCTAs() {
       description:
         'Comprehensive AI services from strategy to implementation, including custom model development and AI consulting.',
       icon: (
-        <Brain className="h-10 w-10 p-2 rounded-md bg-cyan-100 text-cyan-700" />
+        <Brain className="h-10 w-10 p-2 rounded-md bg-cyan-100 text-cyan-700"       />
       ),
       link: '/ai-services',
       badge: 'New',
@@ -46,7 +46,7 @@ export function FeatureCTAs() {
       description:
         'Complete IT solutions including cloud management, cybersecurity, DevOps, and infrastructure modernization.',
       icon: (
-        <Server className="h-10 w-10 p-2 rounded-md bg-blue-100 text-blue-700" />
+        <Server className="h-10 w-10 p-2 rounded-md bg-blue-100 text-blue-700"       />
       ),
       link: '/it-services',
       badge: 'Popular',
@@ -58,7 +58,7 @@ export function FeatureCTAs() {
       description:
         'Full-service digital marketing including SEO, PPC, social media, content marketing, and analytics.',
       icon: (
-        <TrendingUp className="h-10 w-10 p-2 rounded-md bg-purple-100 text-purple-700" />
+        <TrendingUp className="h-10 w-10 p-2 rounded-md bg-purple-100 text-purple-700"       />
       ),
       link: '/digital-marketing',
       badge: 'Featured',
@@ -70,7 +70,7 @@ export function FeatureCTAs() {
       description:
         'Strategic business consulting, process optimization, and digital transformation services.',
       icon: (
-        <CheckCircle className="h-10 w-10 p-2 rounded-md bg-green-100 text-green-700" />
+        <CheckCircle className="h-10 w-10 p-2 rounded-md bg-green-100 text-green-700"       />
       ),
       link: '/business-solutions',
       details:
@@ -81,7 +81,7 @@ export function FeatureCTAs() {
       description:
         'Our AI-powered matching algorithm connects you with the perfect talent or job based on skills, experience, and preferences.',
       icon: (
-        <Search className="h-10 w-10 p-2 rounded-md bg-indigo-100 text-indigo-700" />
+        <Search className="h-10 w-10 p-2 rounded-md bg-indigo-100 text-indigo-700"       />
       ),
       link: '/marketplace',
       badge: 'Popular',
@@ -93,7 +93,7 @@ export function FeatureCTAs() {
       description:
         'Browse our extensive database of verified AI and tech specialists, filtered by expertise and availability.',
       icon: (
-        <Users className="h-10 w-10 p-2 rounded-md bg-pink-100 text-pink-700" />
+        <Users className="h-10 w-10 p-2 rounded-md bg-pink-100 text-pink-700"       />
       ),
       link: '/talent',
       details:
@@ -104,7 +104,7 @@ export function FeatureCTAs() {
       description:
         'Find specialized hardware and tech equipment for AI development and research.',
       icon: (
-        <Settings className="h-10 w-10 p-2 rounded-md bg-amber-100 text-amber-700" />
+        <Settings className="h-10 w-10 p-2 rounded-md bg-amber-100 text-amber-700"       />
       ),
       link: '/equipment',
       details:
@@ -115,7 +115,7 @@ export function FeatureCTAs() {
       description:
         'Connect with like-minded professionals, share insights, and stay updated with industry trends.',
       icon: (
-        <MessageSquare className="h-10 w-10 p-2 rounded-md bg-emerald-100 text-emerald-700" />
+        <MessageSquare className="h-10 w-10 p-2 rounded-md bg-emerald-100 text-emerald-700"       />
       ),
       link: '/community',
       details:
@@ -126,7 +126,7 @@ export function FeatureCTAs() {
       description:
         'Custom-branded hiring portal, dedicated talent pool, and powerful admin controls for your organization.',
       icon: (
-        <Building className="h-10 w-10 p-2 rounded-md bg-red-100 text-red-700" />
+        <Building className="h-10 w-10 p-2 rounded-md bg-red-100 text-red-700"       />
       ),
       link: '/enterprise',
       details:
@@ -137,7 +137,7 @@ export function FeatureCTAs() {
       description:
         'AI-powered recruiting assistant to streamline your hiring process and find better matches.',
       icon: (
-        <Clock className="h-10 w-10 p-2 rounded-md bg-violet-100 text-violet-700" />
+        <Clock className="h-10 w-10 p-2 rounded-md bg-violet-100 text-violet-700"       />
       ),
       link: '/zion-hire-ai',
       badge: 'Premium',
@@ -159,7 +159,7 @@ export function FeatureCTAs() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((feature, index) => (
+          {features.map((((((((feature, index, index, index, index, index, index, index) => ({ ...((((((feature, index, index, index, index, index, index, key: index })) => ({ ...(((((feature, index, index, index, index, index, key: index })) => ({ ...((((feature, index, index, index, index, key: index })) => ({ ...(((feature, index, index, index, key: index })) => ({ ...((feature, index, index, key: index })) => ({ ...(feature, index, key: index })) => (
             <Card
               key={index}
               className="overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-primary/50"
@@ -190,7 +190,7 @@ export function FeatureCTAs() {
                 <Button className="w-full gap-1">
                   <Link to={feature.link}>
                     <span>Explore {feature.title}</span>
-                    <ArrowRight className="h-4 w-4" />
+                    <ArrowRight className="h-4 w-4"       />
                   </Link>
                 </Button>
               </CardFooter>

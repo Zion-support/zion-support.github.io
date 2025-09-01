@@ -152,7 +152,7 @@ const LaunchToolkitPage = () => {
       <NextSeo
         title="Launch Operations Toolkit"
         description="Your complete toolkit for the Zion platform public release."
-      />
+            />
       <div className="container mx-auto py-8 px-4">
         <h1 className="text-3xl font-bold mb-2 text-center">
           Launch Operations Toolkit
@@ -244,7 +244,7 @@ const LaunchToolkitPage = () => {
                       src="/toolkit_assets/media_kit/logos/zion_logo_color.svg"
                       alt="Zion Logo Color"
                       className="h-10 border p-1 rounded"
-                    />
+                          />
                     <a
                       href="/toolkit_assets/media_kit/logos/zion_logo_color.svg"
                       download
@@ -392,7 +392,7 @@ const LaunchToolkitPage = () => {
                     src="/toolkit_assets/social_media_kit/banners/linkedin_banner.png"
                     alt="LinkedIn Banner Placeholder"
                     className="h-20 border p-1 rounded mb-1"
-                  />
+                        />
                   <a
                     href="/toolkit_assets/social_media_kit/banners/linkedin_banner.png"
                     download
@@ -408,7 +408,7 @@ const LaunchToolkitPage = () => {
                     src="/toolkit_assets/social_media_kit/banners/twitter_banner.png"
                     alt="Twitter Banner Placeholder"
                     className="h-20 border p-1 rounded mb-1"
-                  />
+                        />
                   <a
                     href="/toolkit_assets/social_media_kit/banners/twitter_banner.png"
                     download
@@ -428,7 +428,7 @@ const LaunchToolkitPage = () => {
                     src="/toolkit_assets/social_media_kit/gifs/promo_banner.gif"
                     alt="Promo GIF Placeholder"
                     className="h-20 border p-1 rounded mb-1"
-                  />
+                        />
                   <a
                     href="/toolkit_assets/social_media_kit/gifs/promo_banner.gif"
                     download

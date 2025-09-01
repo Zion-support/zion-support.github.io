@@ -70,7 +70,7 @@ export function SecurityHeaders ({ className }) {
                 <div
                   className={`mx - auto w - 16 h - 16 bg - zion - cyan / 10 rounded - full flex items - center justify - center mb - 4`}
                 >
-                  <feature.icon className={`w - 8 h - 8 ${feature.color}`} />
+                  <feature.icon className={`w - 8 h - 8 ${feature.color}`}       />
                 </div>
                 <h3 className="text - lg font - semibold text - white mb - 2">
                   {feature.title}
@@ -79,7 +79,7 @@ export function SecurityHeaders ({ className }) {
                   {feature.description}
                 </p>
                 <div className="mt - 3 flex items - center justify - center gap - 2">
-                  <CheckCircle className="w - 4 h - 4 text - zion - cyan" />
+                  <CheckCircle className="w - 4 h - 4 text - zion - cyan"       />
                   <span className="text - xs text - zion - cyan font - medium">
                     Verified
                   </span>
@@ -112,7 +112,7 @@ export function SecurityHeaders ({ className }) {
                           ? 'text - zion - cyan'
                           : 'text - yellow - 500'
                       }`}
-                    />
+                          />
                   </div>
                   <h4 className="font - semibold text - white mb - 1">
                     {badge.name}
@@ -187,19 +187,19 @@ export function SecurityHeaders ({ className }) {
       className={`flex flex - wrap justify - center gap - 6 ${className || ''}`}
     >
       <div className="flex items - center gap - 2 text - zion - cyan text - sm">
-        <Shield className="w - 4 h - 4" />
+        <Shield className="w - 4 h - 4"       />
         <span > SOC 2 Certified</span>
       </div>
       <div className="flex items - center gap - 2 text - zion - purple text - sm">
-        <Lock className="w - 4 h - 4" />
+        <Lock className="w - 4 h - 4"       />
         <span > 256 - bit AES</span>
       </div>
       <div className="flex items - center gap - 2 text - zion - cyan text - sm">
-        <CheckCircle className="w - 4 h - 4" />
+        <CheckCircle className="w - 4 h - 4"       />
         <span > GDPR Compliant</span>
       </div>
       <div className="flex items - center gap - 2 text - zion - purple text - sm">
-        <Shield className="w - 4 h - 4" />
+        <Shield className="w - 4 h - 4"       />
         <span > Zero - Knowledge</span>
       </div>
     </div>) ;

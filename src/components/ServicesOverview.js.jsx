@@ -10,7 +10,7 @@ const serviceCategories = [
     {
         title: "AI Services",
         description: "Cutting - edge artificial intelligence solutions that transform business operations",
-        icon: <Zap className="w - 8 h - 8 text - zion - cyan"/>,
+        icon: <Zap className="w - 8 h - 8 text - zion - cyan"      />,
         services[;
             {
                 name: "AI Chatbot Builder Pro",
@@ -38,7 +38,7 @@ const serviceCategories = [
     {
         title: "Business Solutions",
         description: "Data - driven insights and analytics to drive business growth and decision - making",
-        icon: <BarChart3 className="w - 8 h - 8 text - zion - purple"/>,
+        icon: <BarChart3 className="w - 8 h - 8 text - zion - purple"      />,
         services[;
             {
                 name: "Business Intelligence Dashboard",
@@ -60,7 +60,7 @@ const serviceCategories = [
     {
         title: "Cybersecurity",
         description: "Comprehensive security solutions to protect your digital assets and ensure compliance",
-        icon: <Shield className="w - 8 h - 8 text - zion - red"/>,
+        icon: <Shield className="w - 8 h - 8 text - zion - red"      />,
         services[;
             {
                 name: "24 / 7 Cybersecurity Monitoring",
@@ -82,7 +82,7 @@ const serviceCategories = [
     {
         title: "Cloud Services",
         description: "Scalable cloud solutions for modern business infrastructure and digital transformation",
-        icon: <Cloud className="w - 8 h - 8 text - zion - blue"/>,
+        icon: <Cloud className="w - 8 h - 8 text - zion - blue"      />,
         services[;
             {
                 name: "Cloud Migration Expert",
@@ -104,7 +104,7 @@ const serviceCategories = [
     {
         title: "Data Services",
         description: "Enterprise - grade data solutions for analytics, warehousing, and business intelligence",
-        icon: <Database className="w - 8 h - 8 text - zion - green"/>,
+        icon: <Database className="w - 8 h - 8 text - zion - green"      />,
         services[;
             {
                 name: "Data Warehouse Solution",
@@ -126,7 +126,7 @@ const serviceCategories = [
     {
         title: "Development",
         description: "Custom software development solutions for web, mobile, and enterprise applications",
-        icon: <Code className="w - 8 h - 8 text - zion - orange"/>,
+        icon: <Code className="w - 8 h - 8 text - zion - orange"      />,
         services[;
             {
                 name: "Progressive Web App Development",
@@ -154,7 +154,7 @@ const serviceCategories = [
     {
         title: "E - commerce",
         description: "Complete e - commerce solutions for online businesses and digital marketplaces",
-        icon: <ShoppingCart className="w - 8 h - 8 text - zion - pink"/>,
+        icon: <ShoppingCart className="w - 8 h - 8 text - zion - pink"      />,
         services[;
             {
                 name: "E - commerce Platform Development",
@@ -170,7 +170,7 @@ const serviceCategories = [
     {
         title: "Marketing",
         description: "AI - powered marketing automation and analytics solutions for business growth",
-        icon: <BarChart3 className="w - 8 h - 8 text - zion - yellow"/>,
+        icon: <BarChart3 className="w - 8 h - 8 text - zion - yellow"      />,
         services[;
             {
                 name: "Marketing Automation Platform",
@@ -186,7 +186,7 @@ const serviceCategories = [
     {
         title: "Integration",
         description: "Seamless third - party integrations and API synchronization services",
-        icon: <LinkIcon className="w - 8 h - 8 text - zion - indigo"/>,
+        icon: <LinkIcon className="w - 8 h - 8 text - zion - indigo"      />,
         services[;
             {
                 name: "Third - Party Integration Service",
@@ -202,7 +202,7 @@ const serviceCategories = [
     {
         title: "Blockchain",
         description: "Next - generation blockchain and Web3 development solutions",
-        icon: <Network className="w - 8 h - 8 text - zion - teal"/>,
+        icon: <Network className="w - 8 h - 8 text - zion - teal"      />,
         services[;
             {
                 name: "Smart Contract Development",
@@ -224,7 +224,7 @@ const serviceCategories = [
     {
         title: "IoT",
         description: "Internet of Things platform development and hardware prototyping services",
-        icon: <Monitor className="w - 8 h - 8 text - zion - lime"/>,
+        icon: <Monitor className="w - 8 h - 8 text - zion - lime"      />,
         services[;
             {
                 name: "IoT Platform Development",
@@ -240,7 +240,7 @@ const serviceCategories = [
     {
         title: "Hardware",
         description: "Rapid prototyping and hardware development services for IoT and embedded systems",
-        icon: <Smartphone className="w - 8 h - 8 text - zion - gray"/>,
+        icon: <Smartphone className="w - 8 h - 8 text - zion - gray"      />,
         services[;
             {
                 name: "Hardware Prototyping Service",
@@ -259,22 +259,22 @@ const whyChooseUs = [
     {
         title: "Expert Team",
         description: "Certified professionals with 10 + years of experience",
-        icon: <Users className="w - 6 h - 6 text - zion - cyan"/>
+        icon: <Users className="w - 6 h - 6 text - zion - cyan"      />
     },
     {
         title: "Global Reach",
         description: "Serving clients worldwide with 24 / 7 support",
-        icon: <Globe className="w - 6 h - 6 text - zion - purple"/>
+        icon: <Globe className="w - 6 h - 6 text - zion - purple"      />
     },
     {
         title: "Fast Delivery",
         description: "Quick turnaround times without compromising quality",
-        icon: <Clock className="w - 6 h - 6 text - zion - green"/>
+        icon: <Clock className="w - 6 h - 6 text - zion - green"      />
     },
     {
         title: "Proven Results",
         description: "Track record of successful project deliveries",
-        icon: <Star className="w - 6 h - 6 text - zion - yellow"/>
+        icon: <Star className="w - 6 h - 6 text - zion - yellow"      />
     }
 ];
     return (<div className="py - 20 bg - zion - blue - dark">
@@ -313,7 +313,7 @@ const whyChooseUs = [
                       <h5 className="text - zion - slate - light text - sm font - medium mb - 2">Key Features:</h5>
                       <ul className="space - y-1">
                         {service.features.map ( (feature, featureIndex) => (<li key={featureIndex} className="flex items - center text - zion - slate - light text - sm">
-                            <CheckCircle className="w - 4 h - 4 text - zion - cyan mr - 2 flex - shrink - 0"/>
+                            <CheckCircle className="w - 4 h - 4 text - zion - cyan mr - 2 flex - shrink - 0"      />
                             {feature}
                           </li>) ) }
                       </ul>
@@ -323,7 +323,7 @@ const whyChooseUs = [
                       <h5 className="text - zion - slate - light text - sm font - medium mb - 2">Benefits:</h5>
                       <ul className="space - y-1">
                         {service.benefits.map ( (benefit, benefitIndex) => (<li key={benefitIndex} className="flex items - center text - zion - slate - light text - sm">
-                            <Star className="w - 4 h - 4 text - zion - purple mr - 2 flex - shrink - 0"/>
+                            <Star className="w - 4 h - 4 text - zion - purple mr - 2 flex - shrink - 0"      />
                             {benefit}
                           </li>) ) }
                       </ul>
@@ -381,7 +381,7 @@ const whyChooseUs = [
           <div className="flex flex - wrap justify - center gap - 4">
             <Link to="/micro - saas - services">
               <Button size="lg" className="bg - zion - cyan hover:bg - zion - cyan - dark text - white px - 8 py - 4 text - lg">
-                <Zap className="w - 5 h - 5 mr - 2"/>
+                <Zap className="w - 5 h - 5 mr - 2"      />
                 Explore All Services
               </Button>
             </Link>

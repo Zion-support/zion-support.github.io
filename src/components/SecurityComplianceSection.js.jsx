@@ -89,12 +89,12 @@ const complianceFrameworks = [
     }
 ];
 const securityStats = [
-    { icon: <Shield className="w - 6 h - 6"/>, value: "99.99%", label: "Uptime" },
-    { icon: <Lock className="w - 6 h - 6"/>, value: "256 - bit", label: "Encryption" },
-    { icon: <Eye className="w - 6 h - 6"/>, value: "24 / 7", label: "Monitoring" },
-    { icon: <CheckCircle className="w - 6 h - 6"/>, value: "15+", label: "Certifications" },
-    { icon: <Users className="w - 6 h - 6"/>, value: "0", label: "Security Breaches" },
-    { icon: <Award className="w - 6 h - 6"/>, value: "100%", label: "Compliance" }
+    { icon: <Shield className="w - 6 h - 6"      />, value: "99.99%", label: "Uptime" },
+    { icon: <Lock className="w - 6 h - 6"      />, value: "256 - bit", label: "Encryption" },
+    { icon: <Eye className="w - 6 h - 6"      />, value: "24 / 7", label: "Monitoring" },
+    { icon: <CheckCircle className="w - 6 h - 6"      />, value: "15+", label: "Certifications" },
+    { icon: <Users className="w - 6 h - 6"      />, value: "0", label: "Security Breaches" },
+    { icon: <Award className="w - 6 h - 6"      />, value: "100%", label: "Compliance" }
 ];
     const [selectedStandard, setSelectedStandard] = useState (null) ;
     const [selectedFramework, setSelectedFramework] = useState (null) ;
@@ -210,7 +210,7 @@ const securityStats = [
                   <div className="flex items - center justify - between mb - 4">
                     <div className="flex items - center gap - 3">
                       <div className="w - 12 h - 12 rounded - xl bg - gradient - to - br from - zion - cyan to - zion - purple flex items - center justify - center">
-                        <Shield className="w - 6 h - 6 text - white"/>
+                        <Shield className="w - 6 h - 6 text - white"      />
                       </div>
                       <div>
                         <h4 className="text - xl font - bold text - white group - hover:text - zion - cyan transition - colors">
@@ -259,7 +259,7 @@ const securityStats = [
                     <span className="text - zion - purple - light font - medium text - sm group - hover:text - zion - purple transition - colors">
                       View Certification Details
                     </span>
-                    <ArrowRight className="w - 4 h - 4 text - zion - purple - light group - hover:text - zion - purple group - hover:translate - x-1 transition - all duration - 300"/>
+                    <ArrowRight className="w - 4 h - 4 text - zion - purple - light group - hover:text - zion - purple group - hover:translate - x-1 transition - all duration - 300"      />
                   </div>
 
                   {/* Expanded details */}
@@ -343,7 +343,7 @@ const securityStats = [
                   <div className="flex items - center justify - between mb - 4">
                     <div className="flex items - center gap - 3">
                       <div className="w - 12 h - 12 rounded - xl bg - gradient - to - br from - zion - cyan to - zion - purple flex items - center justify - center">
-                        <CheckCircle className="w - 6 h - 6 text - white"/>
+                        <CheckCircle className="w - 6 h - 6 text - white"      />
                       </div>
                       <div>
                         <h4 className="text - xl font - bold text - white group - hover:text - zion - cyan transition - colors">
@@ -392,7 +392,7 @@ const securityStats = [
                     <span className="text - zion - purple - light font - medium text - sm group - hover:text - zion - purple transition - colors">
                       View Framework Details
                     </span>
-                    <ArrowRight className="w - 4 h - 4 text - zion - purple - light group - hover:text - zion - purple group - hover:translate - x-1 transition - all duration - 300"/>
+                    <ArrowRight className="w - 4 h - 4 text - zion - purple - light group - hover:text - zion - purple group - hover:translate - x-1 transition - all duration - 300"      />
                   </div>
 
                   {/* Expanded details */}

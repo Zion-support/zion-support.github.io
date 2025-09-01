@@ -100,7 +100,7 @@ import {
                         required
                         className="bg - white / 10 border - zion - cyan / 30 text - white placeholder:text - zion - cyan - light"
                         placeholder="Enter your full name"
-                      />
+                            />
                     </div>
                     <div>
                       <Label htmlFor="email" className="text - white">
@@ -115,7 +115,7 @@ import {
                         required
                         className="bg - white / 10 border - zion - cyan / 30 text - white placeholder:text - zion - cyan - light"
                         placeholder="Enter your email"
-                      />
+                            />
                     </div>
                   </div>
 
@@ -131,7 +131,7 @@ import {
                         onChange={handleChange}
                         className="bg - white / 10 border - zion - cyan / 30 text - white placeholder:text - zion - cyan - light"
                         placeholder="Enter comp name"
-                      />
+                            />
                     </div>
                     <div>
                       <Label htmlFor="phone" className="text - white">
@@ -144,7 +144,7 @@ import {
                         onChange={handleChange}
                         className="bg - white / 10 border - zion - cyan / 30 text - white placeholder:text - zion - cyan - light"
                         placeholder="Enter phone number"
-                      />
+                            />
                     </div>
                   </div>
 
@@ -191,14 +191,14 @@ import {
                       rows={5}
                       className="bg - white / 10 border - zion - cyan / 30 text - white placeholder:text - zion - cyan - light"
                       placeholder="Tell us about your project or requirements..."
-                    />
+                          />
                   </div>
 
                   <Button
                     type="submit"
                     className="w - full bg - zion - purple hover:bg - zion - purple - dark text - white py - 3"
                   >
-                    <Send className="mr - 2 h - 5 w - 5" />
+                    <Send className="mr - 2 h - 5 w - 5"       />
                     Send Message
                   </Button>
                 </form>
@@ -214,7 +214,7 @@ import {
               </h2>
               <div className="space - y-6">
                 <div className="flex items - start gap - 4">
-                  <Phone className="h - 6 w - 6 text - zion - cyan mt - 1" />
+                  <Phone className="h - 6 w - 6 text - zion - cyan mt - 1"       />
                   <div>
                     <h3 className="font - semibold text - white">Phone</h3>
                     <p className="text - zion - cyan - light">+1 302 464 0950</p>
@@ -225,7 +225,7 @@ import {
                 </div>
 
                 <div className="flex items - start gap - 4">
-                  <Mail className="h - 6 w - 6 text - zion - cyan mt - 1" />
+                  <Mail className="h - 6 w - 6 text - zion - cyan mt - 1"       />
                   <div>
                     <h3 className="font - semibold text - white">Email</h3>
                     <p className="text - zion - cyan - light">
@@ -238,7 +238,7 @@ import {
                 </div>
 
                 <div className="flex items - start gap - 4">
-                  <MapPin className="h - 6 w - 6 text - zion - cyan mt - 1" />
+                  <MapPin className="h - 6 w - 6 text - zion - cyan mt - 1"       />
                   <div>
                     <h3 className="font - semibold text - white">Address</h3>
                     <p className="text - zion - cyan - light">
@@ -249,7 +249,7 @@ import {
                 </div>
 
                 <div className="flex items - start gap - 4">
-                  <Globe className="h - 6 w - 6 text - zion - cyan mt - 1" />
+                  <Globe className="h - 6 w - 6 text - zion - cyan mt - 1"       />
                   <div>
                     <h3 className="font - semibold text - white">Website</h3>
                     <a
@@ -275,21 +275,21 @@ import {
                   variant="outline"
                   className="w - full border - zion - cyan text - zion - cyan hover:bg - zion - cyan / 10"
                 >
-                  <Calendar className="mr - 2 h - 4 w - 4" />
+                  <Calendar className="mr - 2 h - 4 w - 4"       />
                   Schedule a Consultation
                 </Button>
                 <Button
                   variant="outline"
                   className="w - full border - zion - cyan text - zion - cyan hover:bg - zion - cyan / 10"
                 >
-                  <FileText className="mr - 2 h - 4 w - 4" />
+                  <FileText className="mr - 2 h - 4 w - 4"       />
                   Request a Quote
                 </Button>
                 <Button
                   variant="outline"
                   className="w - full border - zion - cyan text - zion - cyan hover:bg - zion - cyan / 10"
                 >
-                  <MessageSquare className="mr - 2 h - 4 w - 4" />
+                  <MessageSquare className="mr - 2 h - 4 w - 4"       />
                   Live Chat Support
                 </Button>
               </div>
@@ -329,7 +329,7 @@ import {
                         key={service.id}
                         className="flex items - center gap - 2 text - sm"
                       >
-                        <CheckCircle className="h - 3 w - 3 text - green - 400" />
+                        <CheckCircle className="h - 3 w - 3 text - green - 400"       />
                         <span className="text - zion - cyan - light">
                           {service.title}
                         </span>
@@ -362,7 +362,7 @@ import {
         <div className="grid md:grid - cols - 2 lg:grid - cols - 3 gap - 8">
           <Card className="bg - white / 10 backdrop - blur - sm border - zion - cyan / 30 text - center">
             <CardContent className="p - 8">
-              <Award className="h - 16 w - 16 mx - auto mb - 4 text - zion - cyan" />
+              <Award className="h - 16 w - 16 mx - auto mb - 4 text - zion - cyan"       />
               <h3 className="text - 2xl font - bold text - white mb - 4">
                 Proven Expertise
               </h3>
@@ -375,7 +375,7 @@ import {
 
           <Card className="bg - white / 10 backdrop - blur - sm border - zion - cyan / 30 text - center">
             <CardContent className="p - 8">
-              <Shield className="h - 16 w - 16 mx - auto mb - 4 text - zion - cyan" />
+              <Shield className="h - 16 w - 16 mx - auto mb - 4 text - zion - cyan"       />
               <h3 className="text - 2xl font - bold text - white mb - 4">
                 Custom Solutions
               </h3>
@@ -388,7 +388,7 @@ import {
 
           <Card className="bg - white / 10 backdrop - blur - sm border - zion - cyan / 30 text - center">
             <CardContent className="p - 8">
-              <TrendingUp className="h - 16 w - 16 mx - auto mb - 4 text - zion - cyan" />
+              <TrendingUp className="h - 16 w - 16 mx - auto mb - 4 text - zion - cyan"       />
               <h3 className="text - 2xl font - bold text - white mb - 4">
                 Measurable Results
               </h3>
@@ -401,7 +401,7 @@ import {
 
           <Card className="bg - white / 10 backdrop - blur - sm border - zion - cyan / 30 text - center">
             <CardContent className="p - 8">
-              <Users className="h - 16 w - 16 mx - auto mb - 4 text - zion - cyan" />
+              <Users className="h - 16 w - 16 mx - auto mb - 4 text - zion - cyan"       />
               <h3 className="text - 2xl font - bold text - white mb - 4">
                 Dedicated Support
               </h3>
@@ -413,7 +413,7 @@ import {
 
           <Card className="bg - white / 10 backdrop - blur - sm border - zion - cyan / 30 text - center">
             <CardContent className="p - 8">
-              <Building className="h - 16 w - 16 mx - auto mb - 4 text - zion - cyan" />
+              <Building className="h - 16 w - 16 mx - auto mb - 4 text - zion - cyan"       />
               <h3 className="text - 2xl font - bold text - white mb - 4">
                 Enterprise Ready
               </h3>
@@ -426,7 +426,7 @@ import {
 
           <Card className="bg - white / 10 backdrop - blur - sm border - zion - cyan / 30 text - center">
             <CardContent className="p - 8">
-              <Star className="h - 16 w - 16 mx - auto mb - 4 text - zion - cyan" />
+              <Star className="h - 16 w - 16 mx - auto mb - 4 text - zion - cyan"       />
               <h3 className="text - 2xl font - bold text - white mb - 4">
                 Quality Assured
               </h3>
@@ -454,7 +454,7 @@ import {
               size="lg"
               className="bg - white text - zion - purple hover:bg - zion - cyan px - 8 py - 3"
             >
-              <Phone className="mr - 2 h - 5 w - 5" />
+              <Phone className="mr - 2 h - 5 w - 5"       />
               Call Now: +1 302 464 0950
             </Button>
             <Button
@@ -462,7 +462,7 @@ import {
               variant="outline"
               className="border - white text - white hover:bg - white / 10 px - 8 py - 3"
             >
-              <Mail className="mr - 2 h - 5 w - 5" />
+              <Mail className="mr - 2 h - 5 w - 5"       />
               Email: kleber@ziontechgroup.com
             </Button>
           </div>
@@ -513,7 +513,7 @@ import {
                   rel="noopener noreferrer"
                   className="flex items - center text - zion - cyan hover:text - zion - cyan - light"
                 >
-                  <Globe className="h - 4 w - 4 mr - 2" />
+                  <Globe className="h - 4 w - 4 mr - 2"       />
                   Website
                 </a>
                 <Button
@@ -521,7 +521,7 @@ import {
                   size="sm"
                   className="w - full border - zion - cyan text - zion - cyan hover:bg - zion - cyan / 10"
                 >
-                  <ExternalLink className="h - 4 w - 4 mr - 2" />
+                  <ExternalLink className="h - 4 w - 4 mr - 2"       />
                   View All Services
                 </Button>
               </div>

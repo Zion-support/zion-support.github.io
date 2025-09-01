@@ -255,12 +255,12 @@ const developmentTools = [
     }
 ];
 const technologyStats = [
-    { icon: <Code className="w - 6 h - 6"/>, value: "50+", label: "Technologies" },
-    { icon: <Layers className="w - 6 h - 6"/>, value: "15+", label: "Categories" },
-    { icon: <Star className="w - 6 h - 6"/>, value: "4.9 / 5", label: "Expertise Rating" },
-    { icon: <TrendingUp className="w - 6 h - 6"/>, value: "1000+", label: "Projects Delivered" },
-    { icon: <GitBranch className="w - 6 h - 6"/>, value: "24 / 7", label: "Support Available" },
-    { icon: <Zap className="w - 6 h - 6"/>, value: "99.9%", label: "Uptime Guarantee" }
+    { icon: <Code className="w - 6 h - 6"      />, value: "50+", label: "Technologies" },
+    { icon: <Layers className="w - 6 h - 6"      />, value: "15+", label: "Categories" },
+    { icon: <Star className="w - 6 h - 6"      />, value: "4.9 / 5", label: "Expertise Rating" },
+    { icon: <TrendingUp className="w - 6 h - 6"      />, value: "1000+", label: "Projects Delivered" },
+    { icon: <GitBranch className="w - 6 h - 6"      />, value: "24 / 7", label: "Support Available" },
+    { icon: <Zap className="w - 6 h - 6"      />, value: "99.9%", label: "Uptime Guarantee" }
 ];
     const [selectedTech, setSelectedTech] = useState (null) ;
     const [selectedCategory, setSelectedCategory] = useState ("frontend") ;
@@ -396,7 +396,7 @@ const technologyStats = [
                   <div className="flex items - center justify - between mb - 4">
                     <div className="flex items - center gap - 3">
                       <div className="w - 12 h - 12 rounded - xl bg - gradient - to - br from - zion - cyan to - zion - purple flex items - center justify - center">
-                        <Code className="w - 6 h - 6 text - white"/>
+                        <Code className="w - 6 h - 6 text - white"      />
                       </div>
                       <div>
                         <h4 className="text - xl font - bold text - white group - hover:text - zion - cyan transition - colors">
@@ -445,7 +445,7 @@ const technologyStats = [
                     <span className="text - zion - purple - light font - medium text - sm group - hover:text - zion - purple transition - colors">
                       View Technology Details
                     </span>
-                    <ArrowRight className="w - 4 h - 4 text - zion - purple - light group - hover:text - zion - purple group - hover:translate - x-1 transition - all duration - 300"/>
+                    <ArrowRight className="w - 4 h - 4 text - zion - purple - light group - hover:text - zion - purple group - hover:translate - x-1 transition - all duration - 300"      />
                   </div>
 
                   {/* Expanded details */}

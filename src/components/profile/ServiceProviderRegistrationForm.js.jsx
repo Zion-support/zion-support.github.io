@@ -342,15 +342,15 @@ export function ServiceProviderRegistrationForm() {
                           </FormLabel>
                           <FormControl>
                             <div className="relative">
-                              <UserRound className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
+                              <UserRound className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"       />
                               <Input
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white"
                                 placeholder="Your full name"
                                 {...field}
-                              />
+                                    />
                             </div>
                           </FormControl>
-                          <FormMessage className="text-red-400" />
+                          <FormMessage className="text-red-400"       />
                         </FormItem>
                       )}
                     />
@@ -367,15 +367,15 @@ export function ServiceProviderRegistrationForm() {
                           </FormLabel>
                           <FormControl>
                             <div className="relative">
-                              <Briefcase className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
+                              <Briefcase className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"       />
                               <Input
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white"
                                 placeholder="e.g., Creative Design Studio"
                                 {...field}
-                              />
+                                    />
                             </div>
                           </FormControl>
-                          <FormMessage className="text-red-400" />
+                          <FormMessage className="text-red-400"       />
                         </FormItem>
                       )}
                     />
@@ -392,15 +392,15 @@ export function ServiceProviderRegistrationForm() {
                           </FormLabel>
                           <FormControl>
                             <div className="relative">
-                              <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
+                              <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"       />
                               <Input
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white"
                                 placeholder="City, State/Province, Country"
                                 {...field}
-                              />
+                                    />
                             </div>
                           </FormControl>
-                          <FormMessage className="text-red-400" />
+                          <FormMessage className="text-red-400"       />
                         </FormItem>
                       )}
                     />
@@ -417,15 +417,15 @@ export function ServiceProviderRegistrationForm() {
                           </FormLabel>
                           <FormControl>
                             <div className="relative">
-                              <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
+                              <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"       />
                               <Input
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white"
                                 placeholder="https://yourwebsite.com"
                                 {...field}
-                              />
+                                    />
                             </div>
                           </FormControl>
-                          <FormMessage className="text-red-400" />
+                          <FormMessage className="text-red-400"       />
                         </FormItem>
                       )}
                     />
@@ -446,24 +446,24 @@ export function ServiceProviderRegistrationForm() {
                             src={uploadedAvatar}
                             alt="Avatar preview"
                             className="w-full h-full object-cover"
-                          />
+                                />
                         </AspectRatio>
                       ) : (
                         <div className="flex items-center justify-center h-full">
-                          <UserRound className="h-10 w-10 text-zion-slate opacity-50" />
+                          <UserRound className="h-10 w-10 text-zion-slate opacity-50"       />
                         </div>
                       )}
                     </div>
 
                     <label className="flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors">
-                      <Upload className="mr-2 h-4 w-4" />
+                      <Upload className="mr-2 h-4 w-4"       />
                       <span>Upload Photo</span>
                       <input
                         type="file"
                         accept="image/*"
                         className="hidden"
                         onChange={handleAvatarUpload}
-                      />
+                            />
                     </label>
                   </div>
                   <p className="text-sm text-zion-slate">
@@ -473,7 +473,7 @@ export function ServiceProviderRegistrationForm() {
                 </div>
               </div>
 
-              <Separator className="bg-zion-blue-light/50" />
+              <Separator className="bg-zion-blue-light/50"       />
 
               {/* Bio Section */}
               <div className="space-y-4">
@@ -493,9 +493,9 @@ export function ServiceProviderRegistrationForm() {
                           className="h-32 min-h-[128px] bg-zion-blue border-zion-blue-light text-white"
                           placeholder="Describe your services, expertise, and what sets you apart from others..."
                           {...field}
-                        />
+                              />
                       </FormControl>
-                      <FormMessage className="text-red-400" />
+                      <FormMessage className="text-red-400"       />
                       <FormDescription className="text-zion-slate">
                         {field.value?.length || 0}/1000 characters
                       </FormDescription>
@@ -511,7 +511,7 @@ export function ServiceProviderRegistrationForm() {
                     <FormItem className="flex flex-row items-center justify-between p-3 border border-zion-blue-light bg-zion-blue/30 rounded-md">
                       <div className="space-y-0.5">
                         <FormLabel className="text-white flex items-center">
-                          <Sparkles className="w-4 h-4 mr-2 text-zion-purple" />
+                          <Sparkles className="w-4 h-4 mr-2 text-zion-purple"       />
                           AI Profile Enhancement
                         </FormLabel>
                         <FormDescription className="text-zion-slate-light">
@@ -525,7 +525,7 @@ export function ServiceProviderRegistrationForm() {
                           checked={field.value}
                           onCheckedChange={field.onChange}
                           className="data-[state=checked]:bg-zion-purple"
-                        />
+                              />
                       </FormControl>
                     </FormItem>
                   )}
@@ -540,7 +540,7 @@ export function ServiceProviderRegistrationForm() {
                       onClick={generateEnhancedProfile}
                       disabled={isGenerating}
                     >
-                      <Sparkles className="mr-2 h-4 w-4" />
+                      <Sparkles className="mr-2 h-4 w-4"       />
                       {isGenerating
                         ? 'Generating...'
                         : 'Generate Enhanced Profile'}
@@ -553,7 +553,7 @@ export function ServiceProviderRegistrationForm() {
                   <div className="bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4">
                     <div className="flex items-center justify-between mb-3">
                       <h4 className="text-white font-medium flex items-center">
-                        <Sparkles className="w-4 h-4 mr-2 text-zion-purple" />
+                        <Sparkles className="w-4 h-4 mr-2 text-zion-purple"       />
                         AI-Generated Content
                       </h4>
                       <Button
@@ -562,7 +562,7 @@ export function ServiceProviderRegistrationForm() {
                         className="bg-zion-purple hover:bg-zion-purple-dark text-white"
                         onClick={applyGeneratedContent}
                       >
-                        <Check className="mr-1 h-3 w-3" /> Apply
+                        <Check className="mr-1 h-3 w-3"       /> Apply
                       </Button>
                     </div>
 
@@ -583,8 +583,14 @@ export function ServiceProviderRegistrationForm() {
                               Suggested Services
                             </h5>
                             <div className="flex flex-wrap gap-2 mt-1">
-                              {generatedContent.services.map(
-                                (service, index) => (
+                              {generatedContent.services.map(((((((
+                                (service, index, index, index, index, index, index, index) => ({ ...(((((
+                                (service, index, index, index, index, index, index, key: index })) => ({ ...((((
+                                (service, index, index, index, index, index, key: index })) => ({ ...(((
+                                (service, index, index, index, index, key: index })) => ({ ...((
+                                (service, index, index, index, key: index })) => ({ ...(
+                                (service, index, index, key: index })) => ({ ...
+                                (service, index, key: index })) => (
                                   <Badge
                                     key={index}
                                     className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none"
@@ -601,7 +607,7 @@ export function ServiceProviderRegistrationForm() {
                 )}
               </div>
 
-              <Separator className="bg-zion-blue-light/50" />
+              <Separator className="bg-zion-blue-light/50"       />
 
               {/* Services and Availability */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -625,7 +631,7 @@ export function ServiceProviderRegistrationForm() {
                               placeholder="Add a service..."
                               {...field}
                               onKeyDown={handleServiceKeyPress}
-                            />
+                                  />
                           </FormControl>
                           <Button
                             type="button"
@@ -639,13 +645,13 @@ export function ServiceProviderRegistrationForm() {
                         <FormDescription className="text-zion-slate">
                           Press Enter or click Add to include a service
                         </FormDescription>
-                        <FormMessage className="text-red-400" />
+                        <FormMessage className="text-red-400"       />
                       </FormItem>
                     )}
                   />
 
                   <div className="flex flex-wrap gap-2 mt-2">
-                    {serviceTags.map(service => (
+                    {serviceTags.map(((((((service => (
                       <Badge
                         key={service}
                         className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1"
@@ -653,10 +659,58 @@ export function ServiceProviderRegistrationForm() {
                         {service}
                         <button
                           type="button"
-                          onClick={() => handleRemoveService(service)}
+                          onClick={(, index, index, index, index, index, index) => ({ ...(((((service => (
+                      <Badge
+                        key={service}
+                        className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1"
+                      >
+                        {service}
+                        <button
+                          type="button"
+                          onClick={(, index, index, index, index, index, key: index })) => ({ ...((((service => (
+                      <Badge
+                        key={service}
+                        className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1"
+                      >
+                        {service}
+                        <button
+                          type="button"
+                          onClick={(, index, index, index, index, key: index })) => ({ ...(((service => (
+                      <Badge
+                        key={service}
+                        className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1"
+                      >
+                        {service}
+                        <button
+                          type="button"
+                          onClick={(, index, index, index, key: index })) => ({ ...((service => (
+                      <Badge
+                        key={service}
+                        className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1"
+                      >
+                        {service}
+                        <button
+                          type="button"
+                          onClick={(, index, index, key: index })) => ({ ...(service => (
+                      <Badge
+                        key={service}
+                        className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1"
+                      >
+                        {service}
+                        <button
+                          type="button"
+                          onClick={(, index, key: index })) => ({ ...service => (
+                      <Badge
+                        key={service}
+                        className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1"
+                      >
+                        {service}
+                        <button
+                          type="button"
+                          onClick={(, key: index })) => handleRemoveService(service)}
                           className="rounded-full hover:bg-zion-purple-dark/20 p-0.5"
                         >
-                          <X className="h-3 w-3" />
+                          <X className="h-3 w-3"       />
                         </button>
                       </Badge>
                     ))}
@@ -690,13 +744,13 @@ export function ServiceProviderRegistrationForm() {
                               className="pl-8 bg-zion-blue border-zion-blue-light text-white"
                               placeholder="e.g., 85"
                               {...field}
-                            />
+                                  />
                           </div>
                         </FormControl>
                         <FormDescription className="text-zion-slate">
                           Your base hourly or project rate
                         </FormDescription>
-                        <FormMessage className="text-red-400" />
+                        <FormMessage className="text-red-400"       />
                       </FormItem>
                     )}
                   />
@@ -766,7 +820,7 @@ export function ServiceProviderRegistrationForm() {
                             </div>
                           </div>
                         </FormControl>
-                        <FormMessage className="text-red-400" />
+                        <FormMessage className="text-red-400"       />
                       </FormItem>
                     )}
                   />

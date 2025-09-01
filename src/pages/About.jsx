@@ -71,7 +71,7 @@ const About = () => {
         <div className="max - w-7xl mx - auto text - center">
           <div className="mb - 8">
             <div className="inline - flex items - center px - 4 py - 2 bg - blue - 500 / 10 text - blue - 400 rounded - full text - sm font - medium mb - 6">
-              <Users className="w - 4 h - 4 mr - 2" />
+              <Users className="w - 4 h - 4 mr - 2"       />
               About Us
             </div>
             <h1 className="text - 4xl md:text - 6xl font - bold text - white mb - 6">
@@ -96,7 +96,7 @@ const About = () => {
           <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 12">
             <div className="bg - slate - 800 / 50 border border - white / 10 rounded - xl p - 8">
               <div className="w - 16 h - 16 bg - gradient - to - r from - blue - 500 to - cyan - 500 rounded - lg flex items - center justify - center mb - 6">
-                <Target className="w - 8 h - 8 text - white" />
+                <Target className="w - 8 h - 8 text - white"       />
               </div>
               <h2 className="text - 3xl font - bold text - white mb - 4">
                 Our Mission
@@ -110,7 +110,7 @@ const About = () => {
 
             <div className="bg - slate - 800 / 50 border border - white / 10 rounded - xl p - 8">
               <div className="w - 16 h - 16 bg - gradient - to - r from - purple - 500 to - pink - 500 rounded - lg flex items - center justify - center mb - 6">
-                <Lightbulb className="w - 8 h - 8 text - white" />
+                <Lightbulb className="w - 8 h - 8 text - white"       />
               </div>
               <h2 className="text - 3xl font - bold text - white mb - 4">
                 Our Vision
@@ -137,7 +137,7 @@ const About = () => {
                 className="bg - slate - 800 / 50 border border - white / 10 rounded - xl p - 6 text - center"
               >
                 <div className="w - 12 h - 12 bg - gradient - to - r from - blue - 500 to - cyan - 500 rounded - lg flex items - center justify - center mx - auto mb - 4">
-                  <value.icon className="w - 6 h - 6 text - white" />
+                  <value.icon className="w - 6 h - 6 text - white"       />
                 </div>
                 <h3 className="text - xl font - bold text - white mb - 3">
                   {value.title}
@@ -156,7 +156,7 @@ const About = () => {
           <div className="grid grid - cols - 2 md:grid - cols - 4 gap - 8">
             {stats.map ( (stat, index) => (<div key={index} className="text - center">
                 <div className="w - 16 h - 16 bg - gradient - to - r from - blue - 500 to - cyan - 500 rounded - lg flex items - center justify - center mx - auto mb - 4">
-                  <stat.icon className="w - 8 h - 8 text - white" />
+                  <stat.icon className="w - 8 h - 8 text - white"       />
                 </div>
                 <div className="text - 3xl font - bold text - white mb - 2">
                   {stat.number}

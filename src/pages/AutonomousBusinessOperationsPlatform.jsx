@@ -80,7 +80,7 @@ const AutonomousBusinessOperationsPlatform = () => {
         <div className="max - w-7xl mx - auto text - center">
           <div className="mb - 8">
             <div className="inline - flex items - center px - 4 py - 2 bg - green - 600 / 20 text - green - 400 rounded - full text - sm font - medium mb - 6">
-              <Bot className="w - 4 h - 4 mr - 2"/>
+              <Bot className="w - 4 h - 4 mr - 2"      />
               Autonomous Operations
             </div>
             <h1 className="text - 4xl md:text - 6xl font - bold text - white mb - 6">
@@ -98,7 +98,7 @@ const AutonomousBusinessOperationsPlatform = () => {
                 Get Started < ArrowRight className="ml - 2 w - 5 h - 5"/>
               </Link>
               <button className="inline - flex items - center px - 8 py - 4 border border - white / 20 text - white font - semibold rounded - lg hover:bg - white / 10 transition - all duration - 300">
-                <Play className="mr - 2 w - 5 h - 5"/>
+                <Play className="mr - 2 w - 5 h - 5"      />
                 Watch Demo
               </button>
             </div>
@@ -132,7 +132,7 @@ const AutonomousBusinessOperationsPlatform = () => {
   { opacity: 1,
   y: 0 
 
-}}/>
+}}      />
                                                 ,
                                                     <section className="py - 16 px - 4 sm:px - 6 lg:px - 8">
         <div className="max - w-7xl mx - auto">
@@ -149,7 +149,7 @@ const AutonomousBusinessOperationsPlatform = () => {
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">
             {features.map ( (feature, index) => (<div key={index} className="bg - gray - 800 / 50 backdrop - blur - sm rounded - xl p - 6 border border - gray - 700 hover:border - cyan - 500 transition - all duration - 300 hover:transform hover:scale - 105">
                 <div className="w - 16 h - 16 bg - gradient - to - br from - cyan - 500 to - purple - 600 rounded - lg flex items - center justify - center mb - 4">
-                  <feature.icon className="w - 8 h - 8 text - white"/>
+                  <feature.icon className="w - 8 h - 8 text - white"      />
                 </div>
                 <h3 className="text - xl font - semibold text - white mb - 3">{feature.title}</h3>
                 <p className="text - gray - 300">{feature.description}</p>
@@ -162,7 +162,7 @@ const AutonomousBusinessOperationsPlatform = () => {
                 className="bg - gray - 800 / 50 backdrop - blur - sm rounded - xl p - 6 border border - gray - 700 hover:border - green - 500 transition - all duration - 300 hover:transform hover:scale - 105"
               >
                 <div className="w - 16 h - 16 bg - gradient - to - br from - green - 500 to - blue - 600 rounded - lg flex items - center justify - center mb - 4 mx - auto">
-                  <feature.icon className="w - 8 h - 8 text - white"/>
+                  <feature.icon className="w - 8 h - 8 text - white"      />
                 </div>
                 <h3 className="text - xl font - semibold mb - 3">{feature.title}</h3>
                 <p className="text - gray - 300">{feature.description}</p>
@@ -259,7 +259,7 @@ const AutonomousBusinessOperationsPlatform = () => {
                                                             const IconComponent = feature.icon;
                                                             return (<div key={index} className="bg - slate - 800 / 50 backdrop - blur - lg rounded - xl p - 6 border border - white / 10 hover:border - green - 500 / 30 transition - all duration - 300">
                   <div className="w - 12 h - 12 bg - gradient - to - r from - green - 600 to - emerald - 600 rounded - lg flex items - center justify - center mb - 4">
-                    <IconComponent className="w - 6 h - 6 text - white"/>
+                    <IconComponent className="w - 6 h - 6 text - white"      />
                   </div>
                   <h3 className="text - xl font - semibold text - white mb - 3">{feature.title}</h3>
                   <p className="text - gray - 300">{feature.description}</p>
@@ -286,7 +286,7 @@ const AutonomousBusinessOperationsPlatform = () => {
                                                             const IconComponent = useCase.icon;
                                                             return (<div key={index} className="bg - slate - 800 / 50 backdrop - blur - lg rounded - xl p - 8 border border - white / 10">
                   <div className="w - 16 h - 16 bg - gradient - to - r from - green - 600 to - emerald - 600 rounded - xl flex items - center justify - center mb - 6">
-                    <IconComponent className="w - 8 h - 8 text - white"/>
+                    <IconComponent className="w - 8 h - 8 text - white"      />
                   </div>
                   <h3 className="text - 2xl font - semibold text - white mb - 4">{useCase.title}</h3>
                   <p className="text - gray - 300 text - lg">{useCase.description}</p>
@@ -309,7 +309,7 @@ const AutonomousBusinessOperationsPlatform = () => {
               </p>
               <div className="space - y-4">
                 {benefits.map ( (benefit, index) => (<div key={index} className="flex items - center">
-                    <CheckCircle className="w - 5 h - 5 text - green - 400 mr - 3 flex - shrink - 0"/>
+                    <CheckCircle className="w - 5 h - 5 text - green - 400 mr - 3 flex - shrink - 0"      />
                     <span className="text - gray - 300">{benefit}</span>
                   </div>) ) }
               </div>
@@ -373,7 +373,7 @@ const AutonomousBusinessOperationsPlatform = () => {
           <div className="grid grid - cols - 2 md:grid - cols - 4 gap - 6">
             {industries.map ( (industry, index) => (<div key={index} className="bg - slate - 800 / 50 backdrop - blur - lg rounded - xl p - 6 border border - white / 10 hover:border - green - 500 / 30 transition - all duration - 300 text - center">
                 <div className="w - 12 h - 12 bg - gradient - to - r from - green - 600 to - emerald - 600 rounded - lg flex items - center justify - center mx - auto mb - 4">
-                  <Target className="w - 6 h - 6 text - white"/>
+                  <Target className="w - 6 h - 6 text - white"      />
                 </div>
                 <h3 className="text - lg font - semibold text - white">{industry}</h3>
               </div>) ) }
@@ -397,7 +397,7 @@ const AutonomousBusinessOperationsPlatform = () => {
           <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">
             <div className="bg - slate - 800 / 50 backdrop - blur - lg rounded - xl p - 8 border border - white / 10">
               <div className="w - 16 h - 16 bg - gradient - to - r from - green - 600 to - emerald - 600 rounded - xl flex items - center justify - center mb - 6">
-                <Cpu className="w - 8 h - 8 text - white"/>
+                <Cpu className="w - 8 h - 8 text - white"      />
               </div>
               <h3 className="text - 2xl font - semibold text - white mb - 4">AI & Machine Learning</h3>
               <p className="text - gray - 300 text - lg mb - 4">
@@ -413,7 +413,7 @@ const AutonomousBusinessOperationsPlatform = () => {
             
             <div className="bg - slate - 800 / 50 backdrop - blur - lg rounded - xl p - 8 border border - white / 10">
               <div className="w - 16 h - 16 bg - gradient - to - r from - green - 600 to - emerald - 600 rounded - xl flex items - center justify - center mb - 6">
-                <Database className="w - 8 h - 8 text - white"/>
+                <Database className="w - 8 h - 8 text - white"      />
               </div>
               <h3 className="text - 2xl font - semibold text - white mb - 4">Cloud Infrastructure</h3>
               <p className="text - gray - 300 text - lg mb - 4">
@@ -429,7 +429,7 @@ const AutonomousBusinessOperationsPlatform = () => {
             
             <div className="bg - slate - 800 / 50 backdrop - blur - lg rounded - xl p - 8 border border - white / 10">
               <div className="w - 16 h - 16 bg - gradient - to - r from - green - 600 to - emerald - 600 rounded - xl flex items - center justify - center mb - 6">
-                <Shield className="w - 8 h - 8 text - white"/>
+                <Shield className="w - 8 h - 8 text - white"      />
               </div>
               <h3 className="text - 2xl font - semibold text - white mb - 4">Enterprise Security</h3>
               <p className="text - gray - 300 text - lg mb - 4">
@@ -457,7 +457,7 @@ const AutonomousBusinessOperationsPlatform = () => {
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">
             <div className="bg - white / 10 backdrop - blur - md rounded - xl p - 8 border border - white / 20 hover:border - zion - cyan / 50 transition - all duration - 300 hover:transform hover:scale - 105">
               <div className="w - 16 h - 16 bg - gradient - to - br from - zion - cyan to - zion - purple rounded - lg flex items - center justify - center mb - 6">
-                <Bot className="w - 8 h - 8 text - white"/>
+                <Bot className="w - 8 h - 8 text - white"      />
               </div>
               <h3 className="text - 2xl font - bold text - white mb - 4">AI - Powered Automation</h3>
               <p className="text - zion - slate - light leading - relaxed">
@@ -467,7 +467,7 @@ const AutonomousBusinessOperationsPlatform = () => {
 
             <div className="bg - white / 10 backdrop - blur - md rounded - xl p - 8 border border - white / 20 hover:border - zion - cyan / 50 transition - all duration - 300 hover:transform hover:scale - 105">
               <div className="w - 16 h - 16 bg - gradient - to - br from - zion - purple to - zion - cyan rounded - lg flex items - center justify - center mb - 6">
-                <TrendingUp className="w - 8 h - 8 text - white"/>
+                <TrendingUp className="w - 8 h - 8 text - white"      />
               </div>
               <h3 className="text - 2xl font - bold text - white mb - 4">Performance Analytics</h3>
               <p className="text - zion - slate - light leading - relaxed">
@@ -477,7 +477,7 @@ const AutonomousBusinessOperationsPlatform = () => {
 
             <div className="bg - white / 10 backdrop - blur - md rounded - xl p - 8 border border - white / 20 hover:border - zion - cyan / 50 transition - all duration - 300 hover:transform hover:scale - 105">
               <div className="w - 16 h - 16 bg - gradient - to - br from - zion - blue to - zion - cyan rounded - lg flex items - center justify - center mb - 6">
-                <Users className="w - 8 h - 8 text - white"/>
+                <Users className="w - 8 h - 8 text - white"      />
               </div>
               <h3 className="text - 2xl font - bold text - white mb - 4">Team Collaboration</h3>
               <p className="text - zion - slate - light leading - relaxed">
@@ -487,7 +487,7 @@ const AutonomousBusinessOperationsPlatform = () => {
 
             <div className="bg - white / 10 backdrop - blur - md rounded - xl p - 8 border border - white / 20 hover:border - zion - cyan / 50 transition - all duration - 300 hover:transform hover:scale - 105">
               <div className="w - 16 h - 16 bg - gradient - to - br from - zion - cyan to - zion - blue rounded - lg flex items - center justify - center mb - 6">
-                <Shield className="w - 8 h - 8 text - white"/>
+                <Shield className="w - 8 h - 8 text - white"      />
               </div>
               <h3 className="text - 2xl font - bold text - white mb - 4">Enterprise Security</h3>
               <p className="text - zion - slate - light leading - relaxed">
@@ -497,7 +497,7 @@ const AutonomousBusinessOperationsPlatform = () => {
 
             <div className="bg - white / 10 backdrop - blur - md rounded - xl p - 8 border border - white / 20 hover:border - zion - cyan / 50 transition - all duration - 300 hover:transform hover:scale - 105">
               <div className="w - 16 h - 16 bg - gradient - to - br from - zion - purple to - zion - blue rounded - lg flex items - center justify - center mb - 6">
-                <Zap className="w - 8 h - 8 text - white"/>
+                <Zap className="w - 8 h - 8 text - white"      />
               </div>
               <h3 className="text - 2xl font - bold text - white mb - 4">Lightning Fast</h3>
               <p className="text - zion - slate - light leading - relaxed">
@@ -507,7 +507,7 @@ const AutonomousBusinessOperationsPlatform = () => {
 
             <div className="bg - white / 10 backdrop - blur - md rounded - xl p - 8 border border - white / 20 hover:border - zion - cyan / 50 transition - all duration - 300 hover:transform hover:scale - 105">
               <div className="w - 16 h - 16 bg - gradient - to - br from - zion - blue to - zion - purple rounded - lg flex items - center justify - center mb - 6">
-                <Globe className="w - 8 h - 8 text - white"/>
+                <Globe className="w - 8 h - 8 text - white"      />
               </div>
               <h3 className="text - 2xl font - bold text - white mb - 4">Global Scalability</h3>
               <p className="text - zion - slate - light leading - relaxed">
@@ -625,7 +625,7 @@ const AutonomousBusinessOperationsPlatform = () => {
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">
             <div className="text - center">
               <div className="w - 20 h - 20 bg - gradient - to - br from - zion - cyan to - zion - purple rounded - full flex items - center justify - center mx - auto mb - 6">
-                <Cpu className="w - 10 h - 10 text - white"/>
+                <Cpu className="w - 10 h - 10 text - white"      />
               </div>
               <h3 className="text - xl font - bold text - white mb - 2">Machine Learning</h3>
               <p className="text - zion - slate - light text - sm">
@@ -635,7 +635,7 @@ const AutonomousBusinessOperationsPlatform = () => {
 
             <div className="text - center">
               <div className="w - 20 h - 20 bg - gradient - to - br from - zion - purple to - zion - cyan rounded - full flex items - center justify - center mx - auto mb - 6">
-                <Network className="w - 10 h - 10 text - white"/>
+                <Network className="w - 10 h - 10 text - white"      />
               </div>
               <h3 className="text - xl font - bold text - white mb - 2">Cloud Native</h3>
               <p className="text - zion - slate - light text - sm">
@@ -645,7 +645,7 @@ const AutonomousBusinessOperationsPlatform = () => {
 
             <div className="text - center">
               <div className="w - 20 h - 20 bg - gradient - to - br from - zion - blue to - zion - cyan rounded - full flex items - center justify - center mx - auto mb - 6">
-                <BarChart3 className="w - 10 h - 10 text - white"/>
+                <BarChart3 className="w - 10 h - 10 text - white"      />
               </div>
               <h3 className="text - xl font - bold text - white mb - 2">Real - time Analytics</h3>
               <p className="text - zion - slate - light text - sm">
@@ -655,7 +655,7 @@ const AutonomousBusinessOperationsPlatform = () => {
 
             <div className="text - center">
               <div className="w - 20 h - 20 bg - gradient - to - br from - zion - cyan to - zion - blue rounded - full flex items - center justify - center mx - auto mb - 6">
-                <Shield className="w - 10 h - 10 text - white"/>
+                <Shield className="w - 10 h - 10 text - white"      />
               </div>
               <h3 className="text - xl font - bold text - white mb - 2">Enterprise Security</h3>
               <p className="text - zion - slate - light text - sm">
@@ -691,7 +691,7 @@ const AutonomousBusinessOperationsPlatform = () => {
               
               <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">
                 {capabilities.map ( (capability, index) => (<div key={index} className="flex items - center">
-                    <CheckCircle className="w - 5 h - 5 text - green - 400 mr - 3 flex - shrink - 0"/>
+                    <CheckCircle className="w - 5 h - 5 text - green - 400 mr - 3 flex - shrink - 0"      />
                     <span className="text - gray - 300 text - sm">{capability}</span>
                   </div>) ) }
               </div>
@@ -700,7 +700,7 @@ const AutonomousBusinessOperationsPlatform = () => {
             <div className="relative">
               <div className="bg - gradient - to - br from - gray - 800 / 50 to - gray - 900 / 50 backdrop - blur - sm border border - gray - 700 / 50 rounded - 2xl p - 8">
                 <div className="text - center mb - 6">
-                  <Settings className="w - 12 h - 12 text - green - 400 mx - auto mb - 4"/>
+                  <Settings className="w - 12 h - 12 text - green - 400 mx - auto mb - 4"      />
                   <h3 className="text - 2xl font - bold text - white mb - 2">Platform Benefits</h3>
                   <p className="text - gray - 300">Transform your business operations today</p>
                 </div>
@@ -733,7 +733,7 @@ const AutonomousBusinessOperationsPlatform = () => {
           <div className="grid grid - cols - 2 md:grid - cols - 4 gap - 6">
             {industries.map ( (industry, index) => (<div key={index} className="bg - gradient - to - br from - gray - 800 / 50 to - gray - 900 / 50 backdrop - blur - sm border border - gray - 700 / 50 rounded - xl p - 6 text - center hover:border - green - 500 / 50 transition - all duration - 300 transform hover:scale - 105">
                 <div className="w - 12 h - 12 bg - gradient - to - r from - green - 500 to - emerald - 600 rounded - lg flex items - center justify - center mx - auto mb - 4">
-                  <Users className="w - 6 h - 6 text - white"/>
+                  <Users className="w - 6 h - 6 text - white"      />
                 </div>
                 <h3 className="text - lg font - semibold text - white">{industry}</h3>
               </div>) ) }
@@ -777,7 +777,7 @@ const AutonomousBusinessOperationsPlatform = () => {
           <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">
             <div className="bg - slate - 800 / 50 backdrop - blur - lg rounded - xl p - 6 border border - white / 10 hover:border - green - 500 / 30 transition - all duration - 300">
               <div className="w - 12 h - 12 bg - gradient - to - r from - green - 600 to - emerald - 600 rounded - lg flex items - center justify - center mb - 4">
-                <BookOpen className="w - 6 h - 6 text - white"/>
+                <BookOpen className="w - 6 h - 6 text - white"      />
               </div>
               <h3 className="text - xl font - semibold text - white mb - 3">Documentation</h3>
               <p className="text - gray - 300 mb - 4">Comprehensive guides and API documentation for developers.</p>
@@ -788,7 +788,7 @@ const AutonomousBusinessOperationsPlatform = () => {
             
             <div className="bg - slate - 800 / 50 backdrop - blur - lg rounded - xl p - 6 border border - white / 10 hover:border - green - 500 / 30 transition - all duration - 300">
               <div className="w - 12 h - 12 bg - gradient - to - r from - green - 600 to - emerald - 600 rounded - lg flex items - center justify - center mb - 4">
-                <Download className="w - 6 h - 6 text - white"/>
+                <Download className="w - 6 h - 6 text - white"      />
               </div>
               <h3 className="text - xl font - semibold text - white mb - 3">SDK & Tools</h3>
               <p className="text - gray - 300 mb - 4">Download our SDK and development tools to get started.</p>
@@ -799,7 +799,7 @@ const AutonomousBusinessOperationsPlatform = () => {
             
             <div className="bg - slate - 800 / 50 backdrop - blur - lg rounded - xl p - 6 border border - white / 10 hover:border - green - 500 / 30 transition - all duration - 300">
               <div className="w - 12 h - 12 bg - gradient - to - r from - green - 600 to - emerald - 600 rounded - lg flex items - center justify - center mb - 4">
-                <MessageSquare className="w - 6 h - 6 text - white"/>
+                <MessageSquare className="w - 6 h - 6 text - white"      />
               </div>
               <h3 className="text - xl font - semibold text - white mb - 3">Support</h3>
               <p className="text - gray - 300 mb - 4">Get help from our automation experts and support team.</p>
@@ -854,7 +854,7 @@ const AutonomousBusinessOperationsPlatform = () => {
         </div > className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - green - 500 to - emerald - 600 rounded - lg text - white font - semibold hover:from - green - 600 hover:to - emerald - 700 transition - all duration - 200 transform hover:scale - 105"
               >
                 <span > Schedule a Demo</span>
-                <ArrowRight className="ml - 2 w - 5 h - 5"/>
+                <ArrowRight className="ml - 2 w - 5 h - 5"      />
               </Link>
               <Link to="/pricing" className="inline - flex items - center px - 8 py - 4 border border - green - 500 text - green - 400 rounded - lg font - semibold hover:bg - green - 500 hover:text - white transition - all duration - 200">
                 View Pricing
@@ -870,7 +870,7 @@ const AutonomousBusinessOperationsPlatform = () => {
         <section className="py - 20 relative">
           <div className="max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">
             <div className="bg - gradient - to - r from - green - 500 / 10 to - emerald - 500 / 10 border border - green - 500 / 30 rounded - 3xl p - 12">
-              <Lightbulb className="w - 20 h - 20 text - green - 400 mx - auto mb - 6"/>
+              <Lightbulb className="w - 20 h - 20 text - green - 400 mx - auto mb - 6"      />
               <h2 className="text - 4xl font - bold text - white mb - 6">
                 Ready to Go Autonomous?
               </h2>
@@ -900,7 +900,7 @@ const AutonomousBusinessOperationsPlatform = () => {
                                                             type: "website",
   url: "https://ziontechgroup.com / autonomous - business - operations - platform"
 
-}}/>
+}}      />
       
       <div className="min - h-screen bg - gradient - to - br from - black via - gray - 900 to - blue - 900">
         {/* Hero Section */}
@@ -927,7 +927,7 @@ const AutonomousBusinessOperationsPlatform = () => {
             <div className="grid grid - cols - 2 md:grid - cols - 4 gap - 8 mt - 16">
               {stats.map ( (stat, index) => (<div key={index} className="text - center">
                   <div className="flex justify - center mb - 3">
-                    <stat.icon className="h - 8 w - 8 text - cyan - 400"/>
+                    <stat.icon className="h - 8 w - 8 text - cyan - 400"      />
                   </div>
                   <div className="text - 3xl font - bold text - white mb - 2">{stat.value}</div>
                   <div className="text - sm font - medium text - cyan - 300 mb - 1">{stat.label}</div>
@@ -952,13 +952,13 @@ const AutonomousBusinessOperationsPlatform = () => {
             <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">
               {features.map ( (feature, index) => (<div key={index} className="bg - gray - 800 / 50 backdrop - blur - sm rounded - xl p - 6 border border - gray - 700 hover:border - cyan - 500 transition - all duration - 300">
                   <div className="flex justify - center mb - 4">
-                    <feature.icon className="h - 12 w - 12 text - cyan - 400"/>
+                    <feature.icon className="h - 12 w - 12 text - cyan - 400"      />
                   </div>
                   <h3 className="text - xl font - semibold text - white mb - 3 text - center">{feature.title}</h3>
                   <p className="text - gray - 300 text - center mb - 4">{feature.description}</p>
                   <ul className="space - y-2">
                     {feature.benefits.map ( (benefit, idx) => (<li key={idx} className="flex items - center text - sm text - gray - 400">
-                        <CheckCircle className="h - 4 w - 4 text - cyan - 400 mr - 2"/>
+                        <CheckCircle className="h - 4 w - 4 text - cyan - 400 mr - 2"      />
                         {benefit}
                       </li>) ) }
                   </ul>
@@ -983,7 +983,7 @@ const AutonomousBusinessOperationsPlatform = () => {
               {useCases.map ( (useCase, index) => (<div key={index} className="bg - gray - 800 / 50 backdrop - blur - sm rounded - xl p - 8 border border - gray - 700">
                   <div className="flex items - start mb - 6">
                     <div className="flex - shrink - 0">
-                      <useCase.icon className="h - 12 w - 12 text - cyan - 400"/>
+                      <useCase.icon className="h - 12 w - 12 text - cyan - 400"      />
                     </div>
                     <div className="ml - 4">
                       <h3 className="text - 2xl font - semibold text - white mb - 2">{useCase.title}</h3>
@@ -1023,7 +1023,7 @@ const AutonomousBusinessOperationsPlatform = () => {
             >
               Get Started Free
             </Link>
-            <Link to="/pricing" className="px - 8 py - 4 border border - green - 500 text - green - 400 rounded - lg font - semibold hover:bg - green - 500 hover:text - white transition - all duration - 200"/>
+            <Link to="/pricing" className="px - 8 py - 4 border border - green - 500 text - green - 400 rounded - lg font - semibold hover:bg - green - 500 hover:text - white transition - all duration - 200"      />
       <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">
         <div className="max - w-4xl mx - auto text - center">
           <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 6">
@@ -1077,7 +1077,7 @@ const AutonomousBusinessOperationsPlatform = () => {
         <div className="relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">
           <div className="max - w-4xl mx - auto">
             <div className="inline - flex items - center px - 4 py - 2 rounded - full bg - green - 500 / 20 border border - green - 400 / 50 text - green - 400 text - sm font - medium mb - 6">
-              <Zap className="w - 4 h - 4 mr - 2"/>
+              <Zap className="w - 4 h - 4 mr - 2"      />
               Autonomous Operations Platform
             </div>
             
@@ -1092,11 +1092,11 @@ const AutonomousBusinessOperationsPlatform = () => {
             
             <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center mb - 12">
               <button className="px - 8 py - 4 bg - gradient - to - r from - green - 500 to - cyan - 500 text - white font - semibold rounded - xl hover:from - green - 400 hover:to - cyan - 400 transition - all duration - 300 transform hover:scale - 105 shadow - lg shadow - green - 500 / 30 flex items - center">
-                <Play className="w - 5 h - 5 mr - 2"/>
+                <Play className="w - 5 h - 5 mr - 2"      />
                 Watch Demo
               </button>
               <button className="px - 8 py - 4 border border - green - 400 / 50 text - green - 400 font - semibold rounded - xl hover:bg - green - 400 / 20 transition - all duration - 300 flex items - center">
-                <ArrowRight className="w - 5 h - 5 mr - 2"/>
+                <ArrowRight className="w - 5 h - 5 mr - 2"      />
                 Get Started
               </button>
             </div>
@@ -1140,14 +1140,14 @@ const AutonomousBusinessOperationsPlatform = () => {
             {features.map ( (feature, index) => (<div key={index} className="p - 8 rounded - 2xl bg - gradient - to - br from - gray - 800 / 50 to - gray - 900 / 50 border border - green - 500 / 30 hover:border - green - 400 / 50 transition - all duration - 300 hover:transform hover:scale - 105">
                 <div className="flex items - start space - x-4">
                   <div className="p - 3 rounded - xl bg - green - 500 / 20 border border - green - 400 / 50">
-                    <feature.icon className="w - 8 h - 8 text - green - 400"/>
+                    <feature.icon className="w - 8 h - 8 text - green - 400"      />
                   </div>
                   <div className="flex - 1">
                     <h3 className="text - 2xl font - bold text - white mb - 3">{feature.title}</h3>
                     <p className="text - gray - 300 mb - 4">{feature.description}</p>
                     <ul className="space - y-2">
                       {feature.benefits.map ( (benefit, idx) => (<li key={idx} className="flex items - center text - gray - 300">
-                          <CheckCircle className="w - 4 h - 4 text - green - 400 mr - 2 flex - shrink - 0"/>
+                          <CheckCircle className="w - 4 h - 4 text - green - 400 mr - 2 flex - shrink - 0"      />
                           {benefit}
                         </li>) ) }
                     </ul>
@@ -1175,7 +1175,7 @@ const AutonomousBusinessOperationsPlatform = () => {
                 <h3 className="text - xl font - bold text - green - 400 mb - 4">{capability.category}</h3>
                 <ul className="space - y-3">
                   {capability.items.map ( (item, idx) => (<li key={idx} className="flex items - start text - gray - 300">
-                      <Target className="w - 4 h - 4 text - green - 400 mr - 2 mt - 1 flex - shrink - 0"/>
+                      <Target className="w - 4 h - 4 text - green - 400 mr - 2 mt - 1 flex - shrink - 0"      />
                       {item}
                     </li>) ) }
                 </ul>
@@ -1217,7 +1217,7 @@ const AutonomousBusinessOperationsPlatform = () => {
                 
                 <ul className="space - y-4 mb - 8">
                   {plan.features.map ( (feature, idx) => (<li key={idx} className="flex items - center text - gray - 300">
-                      <CheckCircle className="w - 5 h - 5 text - green - 400 mr - 3 flex - shrink - 0"/>
+                      <CheckCircle className="w - 5 h - 5 text - green - 400 mr - 3 flex - shrink - 0"      />
                       {feature}
                     </li>) ) }
                 </ul>
@@ -1256,7 +1256,7 @@ const AutonomousBusinessOperationsPlatform = () => {
                 </div>
                 
                 <div className="flex items - center mb - 4">
-                  {[...Array (testimonial.rating) ].map ( (_, i) => (<Star key={i} className="w - 5 h - 5 text - yellow - 400 fill - current"/>) ) }
+                  {[...Array (testimonial.rating) ].map ( (_, i) => (<Star key={i} className="w - 5 h - 5 text - yellow - 400 fill - current"      />) ) }
                 </div>
                 
                 <p className="text - gray - 300 italic">"{testimonial.content}"</p>
@@ -1278,11 +1278,11 @@ const AutonomousBusinessOperationsPlatform = () => {
             
             <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center">
               <button className="px - 8 py - 4 bg - gradient - to - r from - green - 500 to - cyan - 500 text - white font - semibold rounded - xl hover:from - green - 400 hover:to - cyan - 400 transition - all duration - 300 transform hover:scale - 105 shadow - lg shadow - green - 500 / 30 flex items - center">
-                <Rocket className="w - 5 h - 5 mr - 2"/>
+                <Rocket className="w - 5 h - 5 mr - 2"      />
                 Start Free Trial
               </button>
               <button className="px - 8 py - 4 border border - green - 400 / 50 text - green - 400 font - semibold rounded - xl hover:bg - green - 400 / 20 transition - all duration - 300 flex items - center">
-                <ArrowRight className="w - 5 h - 5 mr - 2"/>
+                <ArrowRight className="w - 5 h - 5 mr - 2"      />
                 Schedule Demo
               </button>
             </div>

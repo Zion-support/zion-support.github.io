@@ -45,7 +45,7 @@ import {
         description="Transparent pricing for our comprehensive micro SAAS, IT, and AI services. Competitive rates with flexible tiers for businesses of all sizes."
         keywords="pricing, micro SAAS pricing, IT services pricing, AI services pricing, Zion Tech Group"
         url="https://ziontechgroup.com / services - pricing"
-      />
+            />
 
       {/* Hero Section */}
       <div className="bg - gradient - to - br from - zion - blue to - zion - blue - dark py - 20 px - 4">
@@ -64,7 +64,7 @@ import {
                 size="lg"
                 className="bg - zion - cyan text - zion - blue - dark hover:bg - zion - cyan - light"
               >
-                <Phone className="w - 5 h - 5 mr - 2" />
+                <Phone className="w - 5 h - 5 mr - 2"       />
                 Get Custom Quote
               </Button>
             </Link>
@@ -74,7 +74,7 @@ import {
                 variant="outline"
                 className="border - white text - white hover:bg - white / 10"
               >
-                <Building className="w - 5 h - 5 mr - 2" />
+                <Building className="w - 5 h - 5 mr - 2"       />
                 View All Services
               </Button>
             </Link>
@@ -87,19 +87,19 @@ import {
         <div className="container mx - auto">
           <div className="flex flex - wrap justify - center items - center gap - 8 text - white">
             <div className="flex items - center gap - 2">
-              <Phone className="w - 5 h - 5 text - zion - cyan" />
+              <Phone className="w - 5 h - 5 text - zion - cyan"       />
               <span>+1 302 464 0950</span>
             </div>
             <div className="flex items - center gap - 2">
-              <Mail className="w - 5 h - 5 text - zion - cyan" />
+              <Mail className="w - 5 h - 5 text - zion - cyan"       />
               <span > kleber@ziontechgroup.com</span>
             </div>
             <div className="flex items - center gap - 2">
-              <MapPin className="w - 5 h - 5 text - zion - cyan" />
+              <MapPin className="w - 5 h - 5 text - zion - cyan"       />
               <span > 364 E Main St STE 1008 Middletown DE 19709</span>
             </div>
             <div className="flex items - center gap - 2">
-              <Globe className="w - 5 h - 5 text - zion - cyan" />
+              <Globe className="w - 5 h - 5 text - zion - cyan"       />
               <a
                 href="https://ziontechgroup.com"
                 className="hover:text - zion - cyan transition - colors"
@@ -142,25 +142,25 @@ import {
                 <CardContent className="space - y-6">
                   <ul className="space - y-3">
                     <li className="flex items - center gap - 3">
-                      <Check className="w - 5 h - 5 text - green - 400 flex - shrink - 0" />
+                      <Check className="w - 5 h - 5 text - green - 400 flex - shrink - 0"       />
                       <span className="text - white text - sm">
                         Custom solution development
                       </span>
                     </li>
                     <li className="flex items - center gap - 3">
-                      <Check className="w - 5 h - 5 text - green - 400 flex - shrink - 0" />
+                      <Check className="w - 5 h - 5 text - green - 400 flex - shrink - 0"       />
                       <span className="text - white text - sm">
                         Technical support
                       </span>
                     </li>
                     <li className="flex items - center gap - 3">
-                      <Check className="w - 5 h - 5 text - green - 400 flex - shrink - 0" />
+                      <Check className="w - 5 h - 5 text - green - 400 flex - shrink - 0"       />
                       <span className="text - white text - sm">
                         Documentation & training
                       </span>
                     </li>
                     <li className="flex items - center gap - 3">
-                      <Check className="w - 5 h - 5 text - green - 400 flex - shrink - 0" />
+                      <Check className="w - 5 h - 5 text - green - 400 flex - shrink - 0"       />
                       <span className="text - white text - sm">
                         Maintenance & updates
                       </span>
@@ -168,7 +168,7 @@ import {
                   </ul>
 
                   <Button className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white">
-                    <Phone className="w - 4 h - 4 mr - 2" />
+                    <Phone className="w - 4 h - 4 mr - 2"       />
                     Get Started
                   </Button>
                 </CardContent>
@@ -215,13 +215,13 @@ import {
                       </p>
                       <div className="flex items - center justify - between">
                         <div className="flex items - center gap - 2">
-                          <DollarSign className="w - 4 h - 4 text - zion - cyan" />
+                          <DollarSign className="w - 4 h - 4 text - zion - cyan"       />
                           <span className="text - white font - semibold">
                             {service.price?.toLocaleString () }
                           </span>
                         </div>
                         <div className="flex items - center gap - 1">
-                          <Star className="w - 4 h - 4 text - yellow - 400 fill - current" />
+                          <Star className="w - 4 h - 4 text - yellow - 400 fill - current"       />
                           <span className="text - white text - sm">
                             {service.rating}
                           </span>
@@ -250,25 +250,25 @@ import {
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6">
             {[
               {
-                icon: <Zap className="w - 8 h - 8" />,
+                icon: <Zap className="w - 8 h - 8"       />,
                 title: 'Competitive Pricing',
                 description:
                   'Market - leading rates without compromising on quality or features',
               },
               {
-                icon: <Shield className="w - 8 h - 8" />,
+                icon: <Shield className="w - 8 h - 8"       />,
                 title: 'No Hidden Fees',
                 description:
                   'Transparent pricing with clear breakdowns of all costs',
               },
               {
-                icon: <Users className="w - 8 h - 8" />,
+                icon: <Users className="w - 8 h - 8"       />,
                 title: 'Flexible Plans',
                 description:
                   'Customizable solutions that grow with your business needs',
               },
               {
-                icon: <Building className="w - 8 h - 8" />,
+                icon: <Building className="w - 8 h - 8"       />,
                 title: 'Proven ROI',
                 description:
                   'Measurable business outcomes and return on investment',
@@ -306,7 +306,7 @@ import {
               size="lg"
               className="bg - zion - cyan text - zion - blue - dark hover:bg - zion - cyan - light"
             >
-              <Phone className="w - 5 h - 5 mr - 2" />
+              <Phone className="w - 5 h - 5 mr - 2"       />
               Get Custom Quote
             </Button>
             <Button
@@ -314,7 +314,7 @@ import {
               variant="outline"
               className="border - zion - cyan text - zion - cyan hover:bg - zion - cyan / 10"
             >
-              <Mail className="w - 5 h - 5 mr - 2" />
+              <Mail className="w - 5 h - 5 mr - 2"       />
               Schedule Consultation
             </Button>
           </div>

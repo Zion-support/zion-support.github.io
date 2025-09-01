@@ -132,7 +132,7 @@ import { motion } from 'framer - motion';
 
 }} transition={{ duration: 0.5 }}>
         <div className="text - center max - w-md mx - auto px - 4">
-          <CheckCircle className="h - 24 w - 24 text - green - 400 mx - auto mb - 6"/>
+          <CheckCircle className="h - 24 w - 24 text - green - 400 mx - auto mb - 6"      />
           <h1 className="text - 3xl font - bold text - white mb - 4">Thank You!</h1>
           <p className="text - xl text - gray - 300 mb - 6">
             Your message has been sent successfully. We'll get back to you within 24 hours.
@@ -165,7 +165,7 @@ import { motion } from 'framer - motion';
             {contactMethods.map ( (method, index) => (<motion.a key={index} href={method.href} target={method.href.startsWith ('http') ? '_blank' : null} rel={method.href.startsWith ('http') ? 'noopener noreferrer' : null} className="group" variants={cardVariants} whileHover="hover">
                 <div className="bg - white / 10 backdrop - blur - lg rounded - xl p - 6 border border - white / 20 hover:border - white / 40 transition - all duration - 300 h - full">
                   <div className="text - 4xl mb - 4 flex justify - center">
-                    <method.icon className="h - 16 w - 16 text - zion - cyan group - hover:scale - 110 transition - transform duration - 300"/>
+                    <method.icon className="h - 16 w - 16 text - zion - cyan group - hover:scale - 110 transition - transform duration - 300"      />
                   </div>
                   <h3 className="text - xl font - semibold text - white mb - 3 text - center">{method.title}</h3>
                   <p className="text - gray - 300 mb - 4 text - center">{method.description}</p>
@@ -196,16 +196,16 @@ import { motion } from 'framer - motion';
                 <label htmlFor="name" className="block text - sm font - medium text - gray - 300 mb - 2">
                   Full Name *
                 </label>
-                <Input type="text" placeholder="Enter your full name" value={formData.name} onChange={handleInputChange} className="bg - white / 20 border - white / 30 text - white placeholder - gray - 400 focus:border - zion - cyan focus:ring - zion - cyan"/>
-                <input type="hidden" name="name" value={formData.name}/>
+                <Input type="text" placeholder="Enter your full name" value={formData.name} onChange={handleInputChange} className="bg - white / 20 border - white / 30 text - white placeholder - gray - 400 focus:border - zion - cyan focus:ring - zion - cyan"      />
+                <input type="hidden" name="name" value={formData.name}      />
               </motion.div>
 
               <motion.div variants={itemVariants}>
                 <label htmlFor="email" className="block text - sm font - medium text - gray - 300 mb - 2">
                   Email Address *
                 </label>
-                <Input type="email" placeholder="Enter your email address" value={formData.email} onChange={handleInputChange} className="bg - white / 20 border - white / 30 text - white placeholder - gray - 400 focus:border - zion - cyan focus:ring - zion - cyan"/>
-                <input type="hidden" name="email" value={formData.email}/>
+                <Input type="email" placeholder="Enter your email address" value={formData.email} onChange={handleInputChange} className="bg - white / 20 border - white / 30 text - white placeholder - gray - 400 focus:border - zion - cyan focus:ring - zion - cyan"      />
+                <input type="hidden" name="email" value={formData.email}      />
               </motion.div>
             </div>
 
@@ -213,16 +213,16 @@ import { motion } from 'framer - motion';
               <motion.div variants={itemVariants}>
                 <label htmlFor="comp" className="block text - sm font - medium text - gray - 300 mb - 2">
                   Comp </label>
-                <Input type="text" placeholder="Enter your comp name" value={formData.comp} onChange={handleInputChange} className="bg - white / 20 border - white / 30 text - white placeholder - gray - 400 focus:border - zion - cyan focus:ring - zion - cyan"/>
-                <input type="hidden" name="comp" value={formData.comp}/>
+                <Input type="text" placeholder="Enter your comp name" value={formData.comp} onChange={handleInputChange} className="bg - white / 20 border - white / 30 text - white placeholder - gray - 400 focus:border - zion - cyan focus:ring - zion - cyan"      />
+                <input type="hidden" name="comp" value={formData.comp}      />
               </motion.div>
 
               <motion.div variants={itemVariants}>
                 <label htmlFor="phone" className="block text - sm font - medium text - gray - 300 mb - 2">
                   Phone Number
                 </label>
-                <Input type="tel" placeholder="Enter your phone number" value={formData.phone} onChange={handleInputChange} className="bg - white / 20 border - white / 30 text - white placeholder - gray - 400 focus:border - zion - cyan focus:ring - zion - cyan"/>
-                <input type="hidden" name="phone" value={formData.phone}/>
+                <Input type="tel" placeholder="Enter your phone number" value={formData.phone} onChange={handleInputChange} className="bg - white / 20 border - white / 30 text - white placeholder - gray - 400 focus:border - zion - cyan focus:ring - zion - cyan"      />
+                <input type="hidden" name="phone" value={formData.phone}      />
               </motion.div>
             </div>
 
@@ -242,8 +242,8 @@ import { motion } from 'framer - motion';
               <label htmlFor="message" className="block text - sm font - medium text - gray - 300 mb - 2">
                 Message *
               </label>
-              <Textarea rows={6} placeholder="Tell us about your project, requirements, or  questions you have..." value={formData.message} onChange={handleInputChange} className="bg - white / 20 border - white / 30 text - white placeholder - gray - 400 focus:border - zion - cyan focus:ring - zion - cyan resize - none"/>
-              <input type="hidden" name="message" value={formData.message}/>
+              <Textarea rows={6} placeholder="Tell us about your project, requirements, or  questions you have..." value={formData.message} onChange={handleInputChange} className="bg - white / 20 border - white / 30 text - white placeholder - gray - 400 focus:border - zion - cyan focus:ring - zion - cyan resize - none"      />
+              <input type="hidden" name="message" value={formData.message}      />
             </motion.div>
 
             <motion.div className="text - center" variants={itemVariants}>
@@ -251,7 +251,7 @@ import { motion } from 'framer - motion';
                 {isSubmitting ? (<>
                     <div className="animate - spin rounded - full h - 5 w - 5 border - b-2 border - white mr - 2"></div > Sending...
                   </>) : (<>
-                    <Send className="h - 5 w - 5 mr - 2"/>
+                    <Send className="h - 5 w - 5 mr - 2"      />
                     Send Message
                   </>) }
               </Button>
@@ -274,19 +274,19 @@ import { motion } from 'framer - motion';
 
           <motion.div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <motion.div className="text - center" variants={itemVariants}>
-              <Building className="h - 16 w - 16 text - zion - cyan mx - auto mb - 4"/>
+              <Building className="h - 16 w - 16 text - zion - cyan mx - auto mb - 4"      />
               <h3 className="text - xl font - semibold text - white mb - 2">Enterprise Solutions</h3>
               <p className="text - gray - 300">Scalable technology solutions for businesses of all sizes</p>
             </motion.div>
 
             <motion.div className="text - center" variants={itemVariants}>
-              <Users className="h - 16 w - 16 text - zion - cyan mx - auto mb - 4"/>
+              <Users className="h - 16 w - 16 text - zion - cyan mx - auto mb - 4"      />
               <h3 className="text - xl font - semibold text - white mb - 2">Expert Team</h3>
               <p className="text - gray - 300">Seasoned professionals with deep industry expertise</p>
             </motion.div>
 
             <motion.div className="text - center" variants={itemVariants}>
-              <Globe className="h - 16 w - 16 text - zion - cyan mx - auto mb - 4"/>
+              <Globe className="h - 16 w - 16 text - zion - cyan mx - auto mb - 4"      />
               <h3 className="text - xl font - semibold text - white mb - 2">Global Reach</h3>
               <p className="text - gray - 300">Serving clients worldwide with innovative solutions</p>
             </motion.div>

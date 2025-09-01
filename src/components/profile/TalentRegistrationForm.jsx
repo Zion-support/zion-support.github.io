@@ -245,7 +245,7 @@ export function TalentRegistrationForm() {
                 bio: values.bio,
                 summary: finalSummary,
                 location: values.location,
-                skills: finalSkills.map(name => ({ name, level: 4 })), // Default skill level
+                skills: finalSkills.map(((((((name => ({ name, level: 4 }, index, index, index, index, index, index) => ({ ...(((((name => ({ name, level: 4 }, index, index, index, index, index, key: index })) => ({ ...((((name => ({ name, level: 4 }, index, index, index, index, key: index })) => ({ ...(((name => ({ name, level: 4 }, index, index, index, key: index })) => ({ ...((name => ({ name, level: 4 }, index, index, key: index })) => ({ ...(name => ({ name, level: 4 }, index, key: index })) => ({ ...name => ({ name, level: 4 }, key: index }))), // Default skill level
                 hourly_rate: Number(values.hourlyRate),
                 availability_status: values.availability,
                 // Other fields would be handled here
@@ -284,11 +284,11 @@ export function TalentRegistrationForm() {
                           <FormLabel className="text-zion-slate-light">Full Name</FormLabel>
                           <FormControl>
                             <div className="relative">
-                              <UserRound className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"/>
-                              <Input className="pl-10 bg-zion-blue border-zion-blue-light text-white" placeholder="Your full name" {...field}/>
+                              <UserRound className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"      />
+                              <Input className="pl-10 bg-zion-blue border-zion-blue-light text-white" placeholder="Your full name" {...field}      />
                             </div>
                           </FormControl>
-                          <FormMessage className="text-red-400"/>
+                          <FormMessage className="text-red-400"      />
                         </FormItem>)}/>
                   </div>
 
@@ -297,11 +297,11 @@ export function TalentRegistrationForm() {
                           <FormLabel className="text-zion-slate-light">Professional Title</FormLabel>
                           <FormControl>
                             <div className="relative">
-                              <Briefcase className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"/>
-                              <Input className="pl-10 bg-zion-blue border-zion-blue-light text-white" placeholder="e.g., Senior Software Developer" {...field}/>
+                              <Briefcase className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"      />
+                              <Input className="pl-10 bg-zion-blue border-zion-blue-light text-white" placeholder="e.g., Senior Software Developer" {...field}      />
                             </div>
                           </FormControl>
-                          <FormMessage className="text-red-400"/>
+                          <FormMessage className="text-red-400"      />
                         </FormItem>)}/>
                   </div>
 
@@ -310,11 +310,11 @@ export function TalentRegistrationForm() {
                           <FormLabel className="text-zion-slate-light">Location</FormLabel>
                           <FormControl>
                             <div className="relative">
-                              <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"/>
-                              <Input className="pl-10 bg-zion-blue border-zion-blue-light text-white" placeholder="City, State/Province, Country" {...field}/>
+                              <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"      />
+                              <Input className="pl-10 bg-zion-blue border-zion-blue-light text-white" placeholder="City, State/Province, Country" {...field}      />
                             </div>
                           </FormControl>
-                          <FormMessage className="text-red-400"/>
+                          <FormMessage className="text-red-400"      />
                         </FormItem>)}/>
                   </div>
 
@@ -324,10 +324,10 @@ export function TalentRegistrationForm() {
                           <FormControl>
                             <div className="relative">
                               <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">$</span>
-                              <Input className="pl-8 bg-zion-blue border-zion-blue-light text-white" placeholder="e.g., 85" {...field}/>
+                              <Input className="pl-8 bg-zion-blue border-zion-blue-light text-white" placeholder="e.g., 85" {...field}      />
                             </div>
                           </FormControl>
-                          <FormMessage className="text-red-400"/>
+                          <FormMessage className="text-red-400"      />
                         </FormItem>)}/>
                   </div>
                 </div>
@@ -338,16 +338,16 @@ export function TalentRegistrationForm() {
                   <div className="flex items-center gap-6">
                     <div className="relative w-24 h-24 rounded-full overflow-hidden bg-zion-blue-light border border-zion-blue-light">
                       {uploadedAvatar ? (<AspectRatio ratio={1 / 1}>
-                          <img loading="lazy" src={uploadedAvatar} alt="Avatar preview" className="w-full h-full object-cover"/>
+                          <img loading="lazy" src={uploadedAvatar} alt="Avatar preview" className="w-full h-full object-cover"      />
                         </AspectRatio>) : (<div className="flex items-center justify-center h-full">
-                          <UserRound className="h-10 w-10 text-zion-slate opacity-50"/>
+                          <UserRound className="h-10 w-10 text-zion-slate opacity-50"      />
                         </div>)}
                     </div>
 
                     <label className="flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors">
-                      <Upload className="mr-2 h-4 w-4"/>
+                      <Upload className="mr-2 h-4 w-4"      />
                       <span>Upload Photo</span>
-                      <input type="file" accept="image/*" className="hidden" onChange={handleAvatarUpload}/>
+                      <input type="file" accept="image/*" className="hidden" onChange={handleAvatarUpload}      />
                     </label>
                   </div>
                   <p className="text-sm text-zion-slate">
@@ -356,7 +356,7 @@ export function TalentRegistrationForm() {
                 </div>
               </div>
 
-              <Separator className="bg-zion-blue-light/50"/>
+              <Separator className="bg-zion-blue-light/50"      />
 
               {/* Bio Section */}
               <div className="space-y-4">
@@ -364,9 +364,9 @@ export function TalentRegistrationForm() {
                 <FormField control={form.control} name="bio" render={({ field }) => (<FormItem>
                       <FormLabel className="text-zion-slate-light">About Yourself</FormLabel>
                       <FormControl>
-                        <Textarea className="h-32 min-h-[128px] bg-zion-blue border-zion-blue-light text-white" placeholder="Describe your professional background, expertise, and the value you bring to clients..." {...field}/>
+                        <Textarea className="h-32 min-h-[128px] bg-zion-blue border-zion-blue-light text-white" placeholder="Describe your professional background, expertise, and the value you bring to clients..." {...field}      />
                       </FormControl>
-                      <FormMessage className="text-red-400"/>
+                      <FormMessage className="text-red-400"      />
                       <FormDescription className="text-zion-slate">
                         {field.value?.length || 0}/1000 characters
                       </FormDescription>
@@ -376,7 +376,7 @@ export function TalentRegistrationForm() {
                 <FormField control={form.control} name="enhancedProfile" render={({ field }) => (<FormItem className="flex flex-row items-center justify-between p-3 border border-zion-blue-light bg-zion-blue/30 rounded-md">
                       <div className="space-y-0.5">
                         <FormLabel className="text-white flex items-center">
-                          <Sparkles className="w-4 h-4 mr-2 text-zion-purple"/>
+                          <Sparkles className="w-4 h-4 mr-2 text-zion-purple"      />
                           AI Profile Enhancement
                         </FormLabel>
                         <FormDescription className="text-zion-slate-light">
@@ -384,13 +384,13 @@ export function TalentRegistrationForm() {
                         </FormDescription>
                       </div>
                       <FormControl>
-                        <Switch aria-label="AI profile enhancement" checked={field.value} onCheckedChange={field.onChange} className="data-[state=checked]:bg-zion-purple"/>
+                        <Switch aria-label="AI profile enhancement" checked={field.value} onCheckedChange={field.onChange} className="data-[state=checked]:bg-zion-purple"      />
                       </FormControl>
                     </FormItem>)}/>
 
                 {form.watch("enhancedProfile") && (<div className="flex justify-end">
                     <Button type="button" variant="outline" className="border-zion-purple text-zion-purple hover:bg-zion-purple/10" onClick={generateEnhancedProfile} disabled={isGenerating}>
-                      <Sparkles className="mr-2 h-4 w-4"/>
+                      <Sparkles className="mr-2 h-4 w-4"      />
                       {isGenerating ? "Generating..." : "Generate Enhanced Profile"}
                     </Button>
                   </div>)}
@@ -399,11 +399,11 @@ export function TalentRegistrationForm() {
                 {generatedContent && (<div className="bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4">
                     <div className="flex items-center justify-between mb-3">
                       <h4 className="text-white font-medium flex items-center">
-                        <Sparkles className="w-4 h-4 mr-2 text-zion-purple"/>
+                        <Sparkles className="w-4 h-4 mr-2 text-zion-purple"      />
                         AI-Generated Content
                       </h4>
                       <Button type="button" size="sm" className="bg-zion-purple hover:bg-zion-purple-dark text-white" onClick={applyGeneratedContent}>
-                        <Check className="mr-1 h-3 w-3"/> Apply
+                        <Check className="mr-1 h-3 w-3"      /> Apply
                       </Button>
                     </div>
 
@@ -416,12 +416,12 @@ export function TalentRegistrationForm() {
                       {generatedContent.categorizedSkills && (<div>
                           <h5 className="text-zion-slate-light text-sm mb-1">Categorized Skills</h5>
                           <div className="flex flex-wrap gap-2 mt-1">
-                            {Object.entries(generatedContent.categorizedSkills).map(([category, skills]) => (<div key={category} className="flex items-center gap-2">
+                            {Object.entries(generatedContent.categorizedSkills).map(((((((([category, skills], index, index, index, index, index, index) => ({ ...(((((([category, skills], index, index, index, index, index, key: index })) => ({ ...((((([category, skills], index, index, index, index, key: index })) => ({ ...(((([category, skills], index, index, index, key: index })) => ({ ...((([category, skills], index, index, key: index })) => ({ ...(([category, skills], index, key: index })) => ({ ...([category, skills], key: index })) => (<div key={category} className="flex items-center gap-2">
                                 <Badge className={`w-fit ${getCategoryColor(category)}`}>
                                   {category}
                                 </Badge>
                                 <div className="flex flex-wrap gap-1">
-                                  {skills.map((skill) => (<Badge key={skill} className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none">
+                                  {skills.map((((((((skill, index, index, index, index, index, index) => ({ ...((((((skill, index, index, index, index, index, key: index })) => ({ ...(((((skill, index, index, index, index, key: index })) => ({ ...((((skill, index, index, index, key: index })) => ({ ...(((skill, index, index, key: index })) => ({ ...((skill, index, key: index })) => ({ ...(skill, key: index })) => (<Badge key={skill} className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none">
                                       {skill}
                                     </Badge>))}
                                 </div>
@@ -432,7 +432,7 @@ export function TalentRegistrationForm() {
                   </div>)}
               </div>
 
-              <Separator className="bg-zion-blue-light/50"/>
+              <Separator className="bg-zion-blue-light/50"      />
 
               {/* Skills and Availability */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -443,7 +443,7 @@ export function TalentRegistrationForm() {
                         <FormLabel className="text-zion-slate-light">Skills</FormLabel>
                         <div className="flex gap-2">
                           <FormControl>
-                            <Input className="flex-1 bg-zion-blue border-zion-blue-light text-white" placeholder="Add a skill..." {...field} onKeyDown={handleSkillKeyPress}/>
+                            <Input className="flex-1 bg-zion-blue border-zion-blue-light text-white" placeholder="Add a skill..." {...field} onKeyDown={handleSkillKeyPress}      />
                           </FormControl>
                           <Button type="button" variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" onClick={handleAddSkill}>
                             Add
@@ -452,14 +452,26 @@ export function TalentRegistrationForm() {
                         <FormDescription className="text-zion-slate">
                           Press Enter or click Add to include a skill
                         </FormDescription>
-                        <FormMessage className="text-red-400"/>
+                        <FormMessage className="text-red-400"      />
                       </FormItem>)}/>
 
                   <div className="flex flex-wrap gap-2 mt-2">
-                    {skillTags.map(skill => (<Badge key={skill} className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1">
+                    {skillTags.map(((((((skill => (<Badge key={skill} className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1">
                         {skill}
-                        <button type="button" onClick={() => handleRemoveSkill(skill)} className="rounded-full hover:bg-zion-purple-dark/20 p-0.5">
-                          <X className="h-3 w-3"/>
+                        <button type="button" onClick={(, index, index, index, index, index, index) => ({ ...(((((skill => (<Badge key={skill} className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1">
+                        {skill}
+                        <button type="button" onClick={(, index, index, index, index, index, key: index })) => ({ ...((((skill => (<Badge key={skill} className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1">
+                        {skill}
+                        <button type="button" onClick={(, index, index, index, index, key: index })) => ({ ...(((skill => (<Badge key={skill} className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1">
+                        {skill}
+                        <button type="button" onClick={(, index, index, index, key: index })) => ({ ...((skill => (<Badge key={skill} className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1">
+                        {skill}
+                        <button type="button" onClick={(, index, index, key: index })) => ({ ...(skill => (<Badge key={skill} className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1">
+                        {skill}
+                        <button type="button" onClick={(, index, key: index })) => ({ ...skill => (<Badge key={skill} className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1">
+                        {skill}
+                        <button type="button" onClick={(, key: index })) => handleRemoveSkill(skill)} className="rounded-full hover:bg-zion-purple-dark/20 p-0.5">
+                          <X className="h-3 w-3"      />
                         </button>
                       </Badge>))}
                     {skillTags.length === 0 && (<p className="text-zion-slate text-sm italic">No skills added yet</p>)}
@@ -498,7 +510,7 @@ export function TalentRegistrationForm() {
                             </div>
                           </div>
                         </FormControl>
-                        <FormMessage className="text-red-400"/>
+                        <FormMessage className="text-red-400"      />
                       </FormItem>)}/>
                 </div>
               </div>
