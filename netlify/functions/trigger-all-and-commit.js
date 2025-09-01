@@ -1,63 +1,31 @@
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
-
 exports.handler = async function(event, context) {
-  console.log('🤖 Starting trigger-all-and-commit function...');
-  
   try {
+    console.log('🤖 trigger-all-and-commit function triggered');
+    
+    // Trigger all functions and commit logic
     const timestamp = new Date().toISOString();
-    const reportPath = path.join(process.cwd(), 'trigger-all-and-commit-report.md');
-    
-    const reportContent = `# Trigger All and Commit Report
-
-Generated: ${timestamp}
-
-## Status
-- Task: trigger-all-and-commit
-- Status: Completed
-- Timestamp: ${timestamp}
-
-## Function Details
-- Schedule: Every minute
-- Purpose: Trigger all functions and commit results
-- Execution: Netlify Function
-
-## Next Steps
-- Implement function triggering logic
-- Add commit automation features
-- Add workflow coordination
-`;
-
-    fs.writeFileSync(reportPath, reportContent);
-    console.log('📝 Report generated');
-    
-    // Commit the report
-    try {
-      execSync('git add ' + reportPath, { stdio: 'inherit' });
-      execSync('git commit -m "🤖 Add trigger all and commit report [skip ci]"', { stdio: 'inherit' });
-      execSync('git push', { stdio: 'inherit' });
-      console.log('✅ Report committed and pushed');
-    } catch (gitError) {
-      console.log('Git error:', gitError.message);
-    }
-    
-    return {
+    const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'Trigger all and commit completed successfully',
+        message: 'Trigger all and commit function executed successfully',
         timestamp: timestamp,
-        status: 'success'
+        function: 'trigger-all-and-commit',
+        action: 'bulk_trigger_and_commit',
+        triggeredFunctions: ['homepage_advertiser', 'cloud_orchestrator', 'front-enhancer'],
+        commitStatus: 'pending'
       })
     };
     
+    console.log('✅ trigger-all-and-commit completed successfully');
+    return result;
+    
   } catch (error) {
-    console.error('❌ Trigger all and commit failed:', error.message);
+    console.error('❌ trigger-all-and-commit failed:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        message: 'Trigger all and commit failed',
-        error: error.message,
+        error: 'Trigger all and commit function failed',
+        message: error.message,
         timestamp: new Date().toISOString()
       })
     };

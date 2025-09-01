@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-08-18T16:54:22.880Z",
+  "generatedAt": "2025-08-18T17:13:49.947Z",
   "functions": [
     "a11y-alt-text-runner",
     "a11y_alt_text_runner",
@@ -45,7 +45,7 @@
     "docs_index_runner",
     "docs_search_index_runner",
     "duplicate-media-finder-runner",
-    "duplicate_media_finder_runner",
+    "external-link-check",
     "external-link-check-runner",
     "external_link_check_runner",
     "fast-front-promoter",
@@ -100,7 +100,7 @@
     "orphan-pages-detector",
     "orphan_pages_detector",
     "pagespeed-insights-runner",
-    "pagespeed_insights_runner",
+    "performance-monitoring-runner",
     "readme-advertiser",
     "readme_advertiser",
     "repo-knowledge-graph-runner",
