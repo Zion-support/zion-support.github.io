@@ -87,46 +87,26 @@ Home: https://github.com/Zion-Holdings/zion.app#readme
 
 ---
 This README is auto-generated. Do not edit manually.
+## 🤖 Automation Engine
 
-# Cloud Automations
+This project includes a comprehensive automation engine with the following features:
 
-Autonomous, intelligent, and useful automations that run on a schedule in the cloud via GitHub Actions. Outputs are versioned in this repository and visualized on the front page.
+### Scheduled Functions
+- **homepage_advertiser**: Auto-advertise homepage features and links
+- **front-enhancer**: Run front improvements continuously
+- **cloud_orchestrator**: Coordinate broader agents and git sync
+- **sitemap_runner**: Keep sitemap fresh for SEO
+- **marketing-and-features-promo**: Regenerate promos and deep links
 
-## What it does
+### Automation Scripts
+- Master automation orchestrator
+- Workflow health monitoring
+- Dependency health checking
+- Performance optimization
+- Content generation
 
-- Trending GitHub repositories (last 7 days)
-- Tech news RSS aggregation
-- Public website uptime checks
+### Reports
+All automation activities generate detailed reports in the `automation/reports/` directory.
 
-Data is written to JSON files under `data/`:
-
-- `data/trending/latest.json`
-- `data/feeds/latest.json`
-- `data/uptime/latest.json`
-
-The `index.html` page renders the latest data dynamically.
-
-## How it runs
-
-- A scheduled workflow (`.github/workflows/automations.yml`) executes every 6 hours and on demand.
-- Python scripts in `scripts/` fetch and generate the data.
-- If there are changes, the workflow commits them back to the repository using the `GITHUB_TOKEN`.
-- A Pages workflow (`.github/workflows/pages.yml`) publishes the site so it is accessible as a public dashboard.
-
-## Local development
-
-```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-python scripts/fetch_trending.py
-python scripts/aggregate_feeds.py
-python scripts/uptime_check.py
-open index.html
-```
-
-## Customize
-
-- Edit `scripts/aggregate_feeds.py` to add or remove feeds.
-- Edit `scripts/uptime_check.py` to change the monitored URLs.
-- Adjust the schedule in `.github/workflows/automations.yml` as needed.
+---
+*Last updated: 2025-08-18T16:58:26.566Z*

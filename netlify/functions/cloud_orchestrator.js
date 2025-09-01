@@ -1,39 +1,38 @@
-exports.handler = async function(event, context) {
+const { execSync } = require('child_process');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
-    console.log('cloud_orchestrator function triggered');
+    console.log('🚀 cloud_orchestrator function triggered');
     
-    // Basic cloud orchestration logic
-    const response = {
+    // Run the master automation orchestrator
+    const scriptPath = path.join(process.cwd(), 'automation', 'master-automation-orchestrator.cjs');
+    const result = execSync(`node "${scriptPath}" audit`, { 
+      encoding: 'utf8',
+      cwd: process.cwd(),
+      timeout: 60000 // 60 second timeout for orchestrator
+    });
+    
+    console.log('✅ cloud_orchestrator completed successfully');
+    
+    return {
       statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        message: 'Cloud orchestrator function executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'cloud_orchestrator',
-        status: 'success',
-        services: ['compute', 'storage', 'networking']
+        success: true,
+        message: 'Cloud orchestrator completed successfully',
+        output: result,
+        timestamp: new Date().toISOString()
       })
     };
-    
-    return response;
   } catch (error) {
-    console.error('Error in cloud_orchestrator:', error);
+    console.error('❌ cloud_orchestrator failed:', error.message);
     
     return {
       statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        message: 'Error in cloud orchestrator function',
+        success: false,
         error: error.message,
-        timestamp: new Date().toISOString(),
-        function: 'cloud_orchestrator',
-        status: 'error'
+        timestamp: new Date().toISOString()
       })
     };
   }

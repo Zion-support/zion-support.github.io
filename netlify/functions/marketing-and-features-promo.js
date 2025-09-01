@@ -1,41 +1,59 @@
-exports.handler = async function(event, context) {
+const fs = require('fs');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
-    console.log('marketing-and-features-promo function triggered');
+    console.log('🚀 marketing-and-features-promo function triggered');
     
-    // Basic marketing and features promotion logic
-    const response = {
-      statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
-      body: JSON.stringify({
-        message: 'Marketing and features promo function executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'marketing-and-features-promo',
-        status: 'success',
-        promoType: 'features',
-        campaigns: ['new-features', 'performance', 'security', 'usability'],
-        targetAudience: 'developers'
-      })
+    // Generate marketing content
+    const marketingContent = {
+      features: [
+        'Advanced Automation Engine',
+        'Intelligent Content Generation',
+        'Real-time Monitoring',
+        'Cloud Orchestration',
+        'Performance Optimization'
+      ],
+      benefits: [
+        'Increased productivity',
+        'Reduced manual work',
+        'Better content quality',
+        'Faster deployment',
+        'Cost optimization'
+      ],
+      timestamp: new Date().toISOString()
     };
     
-    return response;
+    // Save marketing content
+    const reportsDir = path.join(process.cwd(), 'automation', 'reports');
+    if (!fs.existsSync(reportsDir)) {
+      fs.mkdirSync(reportsDir, { recursive: true });
+    }
+    
+    const reportPath = path.join(reportsDir, `marketing-promo-${Date.now()}.json`);
+    fs.writeFileSync(reportPath, JSON.stringify(marketingContent, null, 2));
+    
+    console.log('✅ marketing-and-features-promo completed successfully');
+    
+    return {
+      statusCode: 200,
+      body: JSON.stringify({
+        success: true,
+        message: 'Marketing and features promo generated successfully',
+        content: marketingContent,
+        reportPath: reportPath,
+        timestamp: new Date().toISOString()
+      })
+    };
   } catch (error) {
-    console.error('Error in marketing-and-features-promo:', error);
+    console.error('❌ marketing-and-features-promo failed:', error.message);
     
     return {
       statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        message: 'Error in marketing and features promo function',
+        success: false,
         error: error.message,
-        timestamp: new Date().toISOString(),
-        function: 'marketing-and-features-promo',
-        status: 'error'
+        timestamp: new Date().toISOString()
       })
     };
   }

@@ -1,41 +1,65 @@
-exports.handler = async function(event, context) {
+const fs = require('fs');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
-    console.log('sitemap_runner function triggered');
+    console.log('🚀 sitemap_runner function triggered');
     
-    // Basic sitemap generation logic
-    const response = {
+    // Generate a basic sitemap
+    const pagesDir = path.join(process.cwd(), 'pages');
+    const publicDir = path.join(process.cwd(), 'public');
+    
+    let urls = [];
+    
+    // Add static pages
+    if (fs.existsSync(pagesDir)) {
+      const pageFiles = fs.readdirSync(pagesDir)
+        .filter(f => f.endsWith('.tsx') || f.endsWith('.js'))
+        .map(f => f.replace(/\.(tsx|js)$/, ''))
+        .filter(f => f !== 'index' && f !== '_app' && f !== '_document');
+      
+      urls = urls.concat(pageFiles.map(page => `/${page}`));
+    }
+    
+    // Add index page
+    urls.unshift('/');
+    
+    // Generate sitemap XML
+    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls.map(url => `  <url>
+    <loc>https://ziontechgroup.com${url}</loc>
+    <lastmod>${new Date().toISOString()}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>`).join('\n')}
+</urlset>`;
+    
+    // Save sitemap to public directory
+    const sitemapPath = path.join(publicDir, 'sitemap.xml');
+    fs.writeFileSync(sitemapPath, sitemap);
+    
+    console.log('✅ sitemap_runner completed successfully');
+    
+    return {
       statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        message: 'Sitemap runner function executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'sitemap_runner',
-        status: 'success',
-        sitemapType: 'dynamic',
-        pages: ['/', '/about', '/contact', '/services'],
-        lastUpdated: new Date().toISOString()
+        success: true,
+        message: 'Sitemap generated successfully',
+        urls: urls,
+        sitemapPath: sitemapPath,
+        timestamp: new Date().toISOString()
       })
     };
-    
-    return response;
   } catch (error) {
-    console.error('Error in sitemap_runner:', error);
+    console.error('❌ sitemap_runner failed:', error.message);
     
     return {
       statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        message: 'Error in sitemap runner function',
+        success: false,
         error: error.message,
-        timestamp: new Date().toISOString(),
-        function: 'sitemap_runner',
-        status: 'error'
+        timestamp: new Date().toISOString()
       })
     };
   }

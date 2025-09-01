@@ -1,38 +1,38 @@
-exports.handler = async function(event, context) {
+const { execSync } = require('child_process');
+const path = require('path');
+
+exports.handler = async (event, context) => {
   try {
-    console.log('homepage_advertiser function triggered');
+    console.log('🚀 homepage_advertiser function triggered');
     
-    // Basic homepage advertising logic
-    const response = {
+    // Run the corresponding automation script
+    const scriptPath = path.join(process.cwd(), 'automation', 'homepage-auto-advertiser.cjs');
+    const result = execSync(`node "${scriptPath}"`, { 
+      encoding: 'utf8',
+      cwd: process.cwd(),
+      timeout: 30000 // 30 second timeout
+    });
+    
+    console.log('✅ homepage_advertiser completed successfully');
+    
+    return {
       statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        message: 'Homepage advertiser function executed successfully',
-        timestamp: new Date().toISOString(),
-        function: 'homepage_advertiser',
-        status: 'success'
+        success: true,
+        message: 'Homepage advertiser completed successfully',
+        output: result,
+        timestamp: new Date().toISOString()
       })
     };
-    
-    return response;
   } catch (error) {
-    console.error('Error in homepage_advertiser:', error);
+    console.error('❌ homepage_advertiser failed:', error.message);
     
     return {
       statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
       body: JSON.stringify({
-        message: 'Error in homepage advertiser function',
+        success: false,
         error: error.message,
-        timestamp: new Date().toISOString(),
-        function: 'homepage_advertiser',
-        status: 'error'
+        timestamp: new Date().toISOString()
       })
     };
   }
