@@ -14,8 +14,8 @@ export default function Footer() {
               </div>
               <span className="text-xl font-bold">Zion Tech Group</span>
             </div>
-            <p className="text-gray-400 mb-6 max-w-md">
-              The world&apos;s most advanced autonomous innovation hub delivering cutting-edge technology solutions and intelligent automation systems.
+            <p className="text-white/70 mb-6 max-w-md leading-relaxed">
+              AI-powered cloud automation and autonomous deployment solutions that continuously optimize infrastructure and applications across industries.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">

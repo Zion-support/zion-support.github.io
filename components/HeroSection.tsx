@@ -20,17 +20,11 @@ const HeroSection: React.FC = () => {
           <span className="text-sm text-white/80 font-medium">Autonomous Innovation Hub</span>
         </div>
 
-        {/* Main Heading */}
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-8 animate-fade-in stagger-1">
-          <span className="block text-white mb-4">Zion</span>
-          <span className="block gradient-text">Tech Group</span>
-        </h1>
-
-        {/* Subtitle */}
-        <p className="text-xl md:text-2xl lg:text-3xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed animate-fade-in stagger-2">
-          Leading-edge technology solutions and{' '}
-          <span className="text-cyan-400 font-semibold">autonomous innovation systems</span>{' '}
-          that transform businesses and drive the future of digital transformation.
+        {/* Description */}
+        <p className="text-lg md:text-xl lg:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed">
+          AI-powered cloud automation and autonomous deployment solutions that 
+          <span className="text-cyan-400 font-semibold"> continuously optimize</span> your 
+          <span className="text-purple-400 font-semibold"> infrastructure</span> and applications.
         </p>
 
         {/* CTA Buttons */}
