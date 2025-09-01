@@ -1,7 +1,6 @@
 import React from 'react.ts';
 import { SEO  } from '../../components/SEO';
 import { motion  } from 'framer-motion.ts';
-import { Atom, Zap, Brain, Target, TrendingUp, Shield, Users, CheckCircle, Lightbulb, Database, Cloud, Cpu  } from 'lucide-react.ts';
 
 export default function QuantumComputingSolutions(...args: any[]): any {
   const features = [

@@ -31,7 +31,7 @@ interface HeroSlide {
   stats: { label: string; value: string; icon: React.ComponentType<any> 
 }[]}
 
-const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): any {
+const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: []):  {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
@@ -137,8 +137,8 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
       </div>
 
       {/* Hero content */}
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">;
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="relative z-10 container mx-auto px-4 sm: px-6 lg: px-8">;
+        <div className="grid lg: grid-cols-2 gap-12 items-center">
           {/* Left content */}
           <motion.div
             initial = {
@@ -162,7 +162,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
 
 }}
             transition={{ duration: 0.8 }}
-            className="text-center lg:text-left"
+            className="text-center lg: text-left"
 
             <AnimatePresence mode="wait">
               <motion.div
@@ -201,7 +201,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
 
                 {/* Icon and category */}
                 <motion.div
-                  className="flex items-center justify-center lg:justify-start mb-6"
+                  className="flex items-center justify-center lg: justify-start mb-6"
                   whileHover={{ scale: 1.05 }}
 
                   <div className={`p-3 rounded-2xl bg-gradient-to-r ${currentSlideData.gradient} bg-opacity-20 border border-zion-cyan/30`}>
@@ -211,22 +211,22 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
                 </motion.div>
 
                 {/* Title */}
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                <h1 className="text-4xl sm: text-5xl lg: text-6xl font-bold text-white mb-6 leading-tight">
                   {currentSlideData.title}
                 </h1>
 
                 {/* Subtitle */}
-                <p className="text-xl sm:text-2xl text-zion-cyan font-semibold mb-4">
+                <p className="text-xl sm: text-2xl text-zion-cyan font-semibold mb-4">
                   {currentSlideData.subtitle}
                 </p>
 
                 {/* Description */}
-                <p className="text-lg text-gray-300 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                <p className="text-lg text-gray-300 mb-8 leading-relaxed max-w-2xl mx-auto lg: mx-0">
                   {currentSlideData.description}
                 </p>
 
                 {/* Features */}
-                <div className="grid grid-cols-2 gap-3 mb-8 max-w-md mx-auto lg:mx-0">
+                <div className="grid grid-cols-2 gap-3 mb-8 max-w-md mx-auto lg: mx-0">
                   {currentSlideData.features.map((feature, index) => (
                     <motion.div
                       key={feature}
@@ -263,16 +263,16 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+                  className="flex flex-col sm: flex-row gap-4 justify-center lg: justify-start"
 
                   <Link
                     to={currentSlideData.path}
-                    className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1 border border-zion-cyan/30"
+                    className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover: shadow-2xl hover: shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1 border border-zion-cyan/30"
 
                     {currentSlideData.cta}
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Link>
-                  <button className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan/30 text-zion-cyan font-semibold rounded-2xl hover:bg-zion-cyan/10 transition-all duration-300 backdrop-blur-sm">
+                  <button className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan/30 text-zion-cyan font-semibold rounded-2xl hover: bg-zion-cyan/10 transition-all duration-300 backdrop-blur-sm">
                     <Play className="mr-2 w-5 h-5" />
                     Watch Demo
                   </button>
@@ -318,7 +318,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
             {/* Main image */}
             <div className="relative">
               <motion.div
-                className={`w-full h-96 lg:h-[500px] rounded-3xl bg-gradient-to-br ${currentSlideData.gradient} bg-opacity-20 border border-zion-cyan/20 overflow-hidden`}
+                className={`w-full h-96 lg: h-[500px] rounded-3xl bg-gradient-to-br ${currentSlideData.gradient} bg-opacity-20 border border-zion-cyan/20 overflow-hidden`}
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
 
@@ -382,7 +382,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
 
 }}
                   transition={{ delay: 0.5 + index * 0.1 }}
-                  className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-4 shadow-2xl hover:bg-white/20 transition-all duration-300"
+                  className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-4 shadow-2xl hover: bg-white/20 transition-all duration-300"
 
                   <div className="flex items-center space-x-3">
                     <div className="p-2 bg-zion-cyan/20 rounded-xl">
@@ -439,7 +439,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
         <div className="flex items-center justify-center mt-16 space-x-4">;
           <motion.button
             onClick={prevSlide}
-            className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200 border border-white/20"
+            className="p-3 rounded-full bg-white/10 hover: bg-white/20 transition-colors duration-200 border border-white/20"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
 
@@ -454,7 +454,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   index === currentSlide
                     ? 'bg-zion-cyan w-8'
-                    : 'bg-white/30 hover:bg-white/50'
+                    : 'bg-white/30 hover: bg-white/50'
                 }`}
                 whileHover={{ scale: 1.2 }}
               />
@@ -463,7 +463,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
 
           <motion.button
             onClick={nextSlide}
-            className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200 border border-white/20"
+            className="p-3 rounded-full bg-white/10 hover: bg-white/20 transition-colors duration-200 border border-white/20"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
 
@@ -500,7 +500,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
 
 
 }}
-          className="w-6 h-10 border-2 border-zion-cyan/50 rounded-full flex justify-center cursor-pointer hover:border-zion-cyan transition-colors duration-300"
+          className="w-6 h-10 border-2 border-zion-cyan/50 rounded-full flex justify-center cursor-pointer hover: border-zion-cyan transition-colors duration-300"
         >
           <motion.div
             animate = {

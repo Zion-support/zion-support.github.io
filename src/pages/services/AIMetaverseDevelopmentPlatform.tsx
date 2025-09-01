@@ -1,5 +1,4 @@
 import React from 'react';
-import { Globe, Brain, Zap, Shield, TrendingUp, Users, ArrowRight, CheckCircle, Star, Eye, Sparkles } from 'lucide-react';
 import { SEO } from "../../components/SEO";
 
 export default function AIMetaverseDevelopmentPlatform() {

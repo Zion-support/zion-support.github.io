@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { RefreshCw, X, CheckCircle, AlertTriangle, Info } from 'lucide-react';
 
 interface PWAUpdaterProps {
   autoCheck?: boolean;

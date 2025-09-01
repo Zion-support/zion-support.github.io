@@ -1,95 +1,94 @@
-import React from 'react';
-import { SEO } from "../../components/SEO";
-import { motion } from 'framer-motion';
-import { Shield, Lock, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Activity, FileText, CheckCircle, Eye, Key, Fingerprint, ShieldCheck } from 'lucide-react';
+import React from 'react&apos;;
+import { SEO } from "../../components/SEO&quot;;
+import { motion } from 'framer-motion&apos;;
 
 export default function ZeroTrustNetworkArchitecture(...args: []):  {
   const features = [
     {
       icon: Shield,
-      title: 'Never Trust, Always Verify',
-      description: 'Continuous verification of every user, device, and network request',
-      color: 'from-red-500 to-pink-500'
+      title: 'Never Trust, Always Verify&apos;,
+      description: 'Continuous verification of every user, device, and network request&apos;,
+      color: 'from-red-500 to-pink-500&apos;
     },
     {
       icon: Lock,
-      title: 'Least Privilege Access',
-      description: 'Users and systems only get access to what they absolutely need',
-      color: 'from-blue-500 to-cyan-500'
+      title: 'Least Privilege Access&apos;,
+      description: 'Users and systems only get access to what they absolutely need&apos;,
+      color: 'from-blue-500 to-cyan-500&apos;
     },
     {
       icon: Eye,
-      title: 'Continuous Monitoring',
-      description: 'Real-time monitoring and analysis of all network activities',
-      color: 'from-green-500 to-emerald-500'
+      title: 'Continuous Monitoring&apos;,
+      description: 'Real-time monitoring and analysis of all network activities&apos;,
+      color: 'from-green-500 to-emerald-500&apos;
     },
     {
       icon: Key,
-      title: 'Multi-Factor Authentication',
-      description: 'Multiple layers of identity verification and access control',
-      color: 'from-yellow-500 to-orange-500'
+      title: 'Multi-Factor Authentication&apos;,
+      description: 'Multiple layers of identity verification and access control&apos;,
+      color: 'from-yellow-500 to-orange-500&apos;
     },
     {
       icon: Fingerprint,
-      title: 'Identity-Based Security',
-      description: 'Security policies based on user identity and context',
-      color: 'from-purple-500 to-pink-500'
+      title: 'Identity-Based Security&apos;,
+      description: 'Security policies based on user identity and context&apos;,
+      color: 'from-purple-500 to-pink-500&apos;
     },;
     {;
       icon: ShieldCheck,;
-      title: 'Micro-Segmentation',;
-      description: 'Network segmentation at the application and workload level',;
-      color: 'from-indigo-500 to-purple-500';
+      title: 'Micro-Segmentation&apos;,;
+      description: 'Network segmentation at the application and workload level&apos;,;
+      color: 'from-indigo-500 to-purple-500&apos;;
     };
   ];
 
   const services = [
     {
-      title: 'Zero Trust Assessment',
-      description: 'Comprehensive evaluation of current security posture',
-      price: 'From $5,000',
-      features: ['Security audit', 'Gap analysis', 'Risk assessment', 'Implementation roadmap']
+      title: 'Zero Trust Assessment&apos;,
+      description: 'Comprehensive evaluation of current security posture&apos;,
+      price: 'From $5,000&apos;,
+      features: ['Security audit&apos;, 'Gap analysis&apos;, 'Risk assessment&apos;, 'Implementation roadmap&apos;]
     },
     {
-      title: 'Identity & Access Management',
-      description: 'Modern IAM solutions with multi-factor authentication',
-      price: 'From $15,000',
-      features: ['Single sign-on', 'MFA implementation', 'Role-based access', 'Identity governance']
+      title: 'Identity & Access Management&apos;,
+      description: 'Modern IAM solutions with multi-factor authentication&apos;,
+      price: 'From $15,000&apos;,
+      features: ['Single sign-on&apos;, 'MFA implementation&apos;, 'Role-based access&apos;, 'Identity governance&apos;]
     },
     {
-      title: 'Network Segmentation',
-      description: 'Micro-segmentation and network isolation strategies',
-      price: 'From $20,000',
-      features: ['Network design', 'Segmentation policies', 'Traffic monitoring', 'Security controls']
+      title: 'Network Segmentation&apos;,
+      description: 'Micro-segmentation and network isolation strategies&apos;,
+      price: 'From $20,000&apos;,
+      features: ['Network design&apos;, 'Segmentation policies&apos;, 'Traffic monitoring&apos;, 'Security controls&apos;]
     },;
     {;
-      title: 'Continuous Monitoring',;
-      description: 'Real-time security monitoring and threat detection',;
-      price: 'From $12,000',;
-      features: ['SIEM implementation', 'Threat detection', 'Incident response', 'Security analytics'];
+      title: 'Continuous Monitoring&apos;,;
+      description: 'Real-time security monitoring and threat detection&apos;,;
+      price: 'From $12,000&apos;,;
+      features: ['SIEM implementation&apos;, 'Threat detection&apos;, 'Incident response&apos;, 'Security analytics&apos;];
     };
   ];
 
   const benefits = [;
-    { name: 'Enhanced Security', icon: Shield, description: 'Reduce attack surface and improve threat detection' },;
-    { name: 'Compliance', icon: CheckCircle, description: 'Meet regulatory requirements and industry standards' },;
-    { name: 'Cost Reduction', icon: TrendingUp, description: 'Lower security costs and reduce breach impact' },;
-    { name: 'User Experience', icon: Users, description: 'Seamless access while maintaining security' },;
-    { name: 'Scalability', icon: Cloud, description: 'Security that grows with your business' },;
-    { name: 'Visibility', icon: Eye, description: 'Complete visibility into network activities' };
+    { name: 'Enhanced Security&apos;, icon: Shield, description: 'Reduce attack surface and improve threat detection&apos; },;
+    { name: 'Compliance&apos;, icon: CheckCircle, description: 'Meet regulatory requirements and industry standards&apos; },;
+    { name: 'Cost Reduction&apos;, icon: TrendingUp, description: 'Lower security costs and reduce breach impact&apos; },;
+    { name: 'User Experience&apos;, icon: Users, description: 'Seamless access while maintaining security&apos; },;
+    { name: 'Scalability&apos;, icon: Cloud, description: 'Security that grows with your business&apos; },;
+    { name: 'Visibility&apos;, icon: Eye, description: 'Complete visibility into network activities&apos; };
   ];
 
   return (
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900&quot;>
       <SEO 
-        title="Zero Trust Network Architecture - Zion Tech Group"
+        title="Zero Trust Network Architecture - Zion Tech Group&quot;
         description="Transform your security with Zero Trust Network Architecture. Never trust, always verify with our comprehensive security solutions."
       />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20">
-        <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 to-pink-600/20"></div>
-        <div className="container mx-auto px-4 relative z-10">
+      <section className="relative overflow-hidden py-20&quot;>
+        <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 to-pink-600/20&quot;></div>
+        <div className="container mx-auto px-4 relative z-10&quot;>
           <motion.div
             initial = {
   { opacity: 0,
@@ -112,35 +111,35 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {
 
 }}
             transition={{ duration: 0.6 }}
-            className="text-center max-w-4xl mx-auto"
+            className="text-center max-w-4xl mx-auto&quot;
 
-            <div className="flex justify-center mb-6">
-              <div className="w-20 h-20 bg-gradient-to-br from-red-500 to-pink-500 rounded-2xl flex items-center justify-center">
-                <Shield className="w-10 h-10 text-white" />
+            <div className="flex justify-center mb-6&quot;>
+              <div className="w-20 h-20 bg-gradient-to-br from-red-500 to-pink-500 rounded-2xl flex items-center justify-center&quot;>
+                <Shield className="w-10 h-10 text-white&quot; />
               </div>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6&quot;>
               Zero Trust
-              <span className="block bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent&quot;>
                 Network Architecture
               </span>
             </h1>
-            <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto&quot;>
               Never trust, always verify. Transform your security posture with Zero Trust principles
               that protect your network from modern cyber threats.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-4&quot;>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-red-500 to-pink-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-pink-600 transition-all duration-300"
+                className="px-8 py-4 bg-gradient-to-r from-red-500 to-pink-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-pink-600 transition-all duration-300&quot;
 
                 Get Started
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-slate-600 text-white font-semibold rounded-lg hover:border-slate-500 hover:bg-slate-800/50 transition-all duration-300"
+                className="px-8 py-4 border border-slate-600 text-white font-semibold rounded-lg hover:border-slate-500 hover:bg-slate-800/50 transition-all duration-300&quot;
 
                 Learn More
               </motion.button>
@@ -150,8 +149,8 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {
       </section>
 
       {/* Features Section */}
-      <section className="py-20">;
-        <div className="container mx-auto px-4">
+      <section className="py-20&quot;>;
+        <div className="container mx-auto px-4&quot;>
           <motion.div
             initial = {
   { opacity: 0,
@@ -174,18 +173,18 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {
 
 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-16&quot;
 
-            <h2 className="text-4xl font-bold text-white mb-4">
+            <h2 className="text-4xl font-bold text-white mb-4&quot;>
               Core Zero Trust Principles
             </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto&quot;>
               Zero Trust is built on fundamental principles that ensure comprehensive
               security across your entire network infrastructure.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8&quot;>
             {features.map((feature, index)  => (
               <motion.div
                 key={feature.title}
@@ -219,13 +218,13 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {
 
 
 }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300"
+                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300&quot;
 
                 <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>
-                  <feature.icon className="w-6 h-6 text-white" />
+                  <feature.icon className="w-6 h-6 text-white&quot; />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-slate-300">{feature.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3&quot;>{feature.title}</h3>
+                <p className="text-slate-300&quot;>{feature.description}</p>
               </motion.div>;
             ))}
           </div>
@@ -233,8 +232,8 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {
       </section>
 
       {/* Services & Pricing */}
-      <section className="py-20 bg-slate-800/30">;
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-slate-800/30&quot;>;
+        <div className="container mx-auto px-4&quot;>
           <motion.div
             initial = {
   { opacity: 0,
@@ -257,18 +256,18 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {
 
 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-16&quot;
 
-            <h2 className="text-4xl font-bold text-white mb-4">
+            <h2 className="text-4xl font-bold text-white mb-4&quot;>
               Our Zero Trust Services
             </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto&quot;>
               Comprehensive Zero Trust implementation services designed to meet your
               security requirements and business objectives
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6&quot;>
             {services.map((service, index)  => (
               <motion.div
                 key={service.title}
@@ -302,15 +301,15 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {
 
 
 }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300"
+                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300&quot;
 
-                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                <p className="text-slate-300 mb-4">{service.description}</p>
-                <div className="text-2xl font-bold text-pink-400 mb-4">{service.price}</div>
-                <ul className="space-y-2">
+                <h3 className="text-xl font-semibold text-white mb-3&quot;>{service.title}</h3>
+                <p className="text-slate-300 mb-4&quot;>{service.description}</p>
+                <div className="text-2xl font-bold text-pink-400 mb-4&quot;>{service.price}</div>
+                <ul className="space-y-2&quot;>
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-slate-300">
-                      <div className="w-2 h-2 bg-pink-400 rounded-full mr-3"></div>
+                    <li key={featureIndex} className="flex items-center text-sm text-slate-300&quot;>
+                      <div className="w-2 h-2 bg-pink-400 rounded-full mr-3&quot;></div>
                       {feature}
                     </li>
                   ))}
@@ -318,7 +317,7 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="w-full mt-6 px-4 py-2 bg-gradient-to-r from-red-500 to-pink-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-pink-600 transition-all duration-300"
+                  className="w-full mt-6 px-4 py-2 bg-gradient-to-r from-red-500 to-pink-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-pink-600 transition-all duration-300&quot;
 
                   Get Quote
                 </motion.button>;
@@ -329,8 +328,8 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {
       </section>
 
       {/* Benefits */}
-      <section className="py-20">;
-        <div className="container mx-auto px-4">
+      <section className="py-20&quot;>;
+        <div className="container mx-auto px-4&quot;>
           <motion.div
             initial = {
   { opacity: 0,
@@ -353,18 +352,18 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {
 
 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-16&quot;
 
-            <h2 className="text-4xl font-bold text-white mb-4">
+            <h2 className="text-4xl font-bold text-white mb-4&quot;>
               Benefits of Zero Trust
             </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto&quot;>
               Discover how Zero Trust Network Architecture can transform your security
               posture and protect your business from modern cyber threats
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-8">
+          <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-8&quot;>
             {benefits.map((benefit, index)  => (
               <motion.div
                 key={benefit.name}
@@ -398,13 +397,13 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {
 
 
 }}
-                className="text-center group"
+                className="text-center group&quot;
 
-                <div className="w-16 h-16 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-700 transition-all duration-300">
-                  <benefit.icon className="w-8 h-8 text-pink-400" />
+                <div className="w-16 h-16 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-700 transition-all duration-300&quot;>
+                  <benefit.icon className="w-8 h-8 text-pink-400&quot; />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{benefit.name}</h3>
-                <p className="text-sm text-slate-400">{benefit.description}</p>
+                <h3 className="text-lg font-semibold text-white mb-2&quot;>{benefit.name}</h3>
+                <p className="text-sm text-slate-400&quot;>{benefit.description}</p>
               </motion.div>;
             ))}
           </div>
@@ -412,8 +411,8 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-red-600/20 to-pink-600/20">;
-        <div className="container mx-auto px-4 text-center">
+      <section className="py-20 bg-gradient-to-r from-red-600/20 to-pink-600/20&quot;>;
+        <div className="container mx-auto px-4 text-center&quot;>
           <motion.div
             initial = {
   { opacity: 0,
@@ -437,25 +436,25 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {
 }}
             transition={{ duration: 0.6 }}
 
-            <h2 className="text-4xl font-bold text-white mb-6">
+            <h2 className="text-4xl font-bold text-white mb-6&quot;>
               Ready to Secure Your Network?
             </h2>
-            <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Let's discuss how Zero Trust Network Architecture can protect your business,
-              improve compliance, and provide peace of mind in today's threat landscape.
+            <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto&quot;>
+              Let&apos;s discuss how Zero Trust Network Architecture can protect your business,
+              improve compliance, and provide peace of mind in today&apos;s threat landscape.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-4&quot;>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-red-500 to-pink-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-pink-600 transition-all duration-300"
+                className="px-8 py-4 bg-gradient-to-r from-red-500 to-pink-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-pink-600 transition-all duration-300&quot;
 
                 Schedule Consultation
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-slate-600 text-white font-semibold rounded-lg hover:border-slate-500 hover:bg-slate-800/50 transition-all duration-300"
+                className="px-8 py-4 border border-slate-600 text-white font-semibold rounded-lg hover:border-slate-500 hover:bg-slate-800/50 transition-all duration-300&quot;
               >
                 View Case Studies;
               </motion.button>;

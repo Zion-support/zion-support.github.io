@@ -3,7 +3,6 @@ import { SEO  } from '../../components/SEO';
 import { Button  } from '../../components/ui/Button';
 import { Card  } from '../../components/ui/Card';
 import { Badge  } from '../../components/ui/Badge';
-import { CheckCircle, Brain, TrendingUp, Users, Shield, Zap, Globe, Clock, Phone, Mail, MessageCircle, Heart, Star, Target, BarChart3, Headphones, ShoppingBag  } from 'lucide-react.ts';
 
 const AICustomerExperience: React.FC = (): JSX.Element => {
   return (

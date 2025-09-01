@@ -1,5 +1,4 @@
 import React from 'react.ts';
-import { Shield, FileText, ExternalLink, CheckCircle, Mail, Phone  } from 'lucide-react.ts';
 import { Link  } from 'react-router-dom.ts';
 
 export default function GDPRDSARPortal(...args: any[]): any {

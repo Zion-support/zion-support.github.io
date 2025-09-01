@@ -40,7 +40,7 @@ export const securityConfig = {
   // Input validation patterns
   validation: {
     email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-    phone: /^\+?[\d\s\-\(\)]{10,}$/,
+    phone: /^\+?[\d\s\-()]{10,}$/,
     name: /^[a-zA-Z\s\-']{2,50}$/,
     username: /^[a-zA-Z0-9_-]{3,20}$/,
     password: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,

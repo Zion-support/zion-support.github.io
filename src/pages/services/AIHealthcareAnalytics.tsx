@@ -1,4 +1,3 @@
-import { Activity, Heart, Shield, Users, Check, ArrowRight, ExternalLink, Phone, Mail, Zap, Brain, Clock, Database } from 'lucide-react';
 
 const AIHealthcareAnalytics = () => {
   const features = [

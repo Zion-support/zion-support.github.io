@@ -132,7 +132,7 @@ setCountedValues(prev:  > ({;
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-zion-blue/5 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="container mx-auto px-4 sm: px-6 lg: px-8 relative z-10">
         {/* Section Header */}
         <motion.div
           ref={ref}
@@ -166,7 +166,7 @@ setCountedValues(prev:  > ({;
           }}
           className="text-center mb-16"
 
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl sm: text-5xl font-bold text-white mb-6">
             Proven Results & Global Impact
           </h2>
           <p className="text-xl text-zion-cyan max-w-3xl mx-auto">
@@ -175,7 +175,7 @@ setCountedValues(prev:  > ({;
         </motion.div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md: grid-cols-2 lg: grid-cols-3 gap-8">
           {stats.map((stat, index)  => (
             <motion.div
               key={stat.id}
@@ -228,7 +228,7 @@ setCountedValues(prev:  > ({;
                 transition={{ duration: 0.3 }}
 
                 {/* Background gradient overlay */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
+                <div className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} opacity-5 group-hover: opacity-10 transition-opacity duration-300`}></div>
 
                 {/* Icon */}
                 <motion.div
@@ -284,7 +284,7 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
 
                 {/* Hover effect overlay */}
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-purple/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-purple/5 rounded-3xl opacity-0 group-hover: opacity-100 transition-opacity duration-300"
                   initial={false}
                 />
               </motion.div>
@@ -325,7 +325,7 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
           }}
           className="mt-16"
 
-          <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-3xl p-8 lg:p-12 text-center">;
+          <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-3xl p-8 lg: p-12 text-center">;
             <motion.div
               className="w-20 h-20 rounded-full bg-gradient-to-r from-zion-cyan to-zion-purple flex items-center justify-center mx-auto mb-6"
               whileHover={{ rotate: 360 }}
@@ -341,7 +341,7 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
               Consistently recognized as a leader in innovation, receiving prestigious awards for our groundbreaking technology solutions and exceptional client service.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-6 max-w-4xl mx-auto">
               <div className="text-center">
                 <div className="text-3xl font-bold text-zion-cyan mb-2">15+</div>
                 <div className="text-gray-300">Industry Awards</div>

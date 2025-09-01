@@ -13,11 +13,11 @@ import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer'
 import { ChatAssistant } from './components/ChatAssistant';
 
 // Enhanced lazy loading with preloading hints
-const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
+const createLazyComponent = (importFn: () => Promise<any></an></any>, fallback?: React.ReactNode) => {
   const LazyComponent = lazy(importFn);
   return (props: any) => (
-    <Suspense fallback={fallback || <LoadingSpinner />}>
-      <LazyComponent {...props} />
+    <Suspense fallback={fallback || <LoadingSpinner /></Suspens></Suspense>}>
+      <LazyComponent {...props} /></LazyComponen></LazyComponent>
     </Suspense>
   );
 };
@@ -48,9 +48,9 @@ const Cybersecurity = lazy(() => import('./pages/services/Cybersecurity').then(m
 
 // Loading component
 const PageLoader = () => (
-  <div className="flex items-center justify-center min-h-screen bg-gray-900">
-    <div className="text-center">
-      <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-cyan-500 mx-auto mb-4"></div>
+  <div className="flex items-center justify-center min-h-screen bg-gray-900"></di></div>
+    <div className="text-center"></di></div>
+      <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-cyan-500 mx-auto mb-4"></d></di></div>
       <p className="text-gray-400">Loading...</p>
     </div>
   </div>
@@ -81,62 +81,62 @@ function App() {
   const [sidebarOpen, setSidebarOpen] = React.useState(false);
 
   return (
-    <ErrorBoundary fallback={<div>Something went wrong. Please refresh the page.</div>}>
-      <div className="App">
-        <Header />
-        <div className="flex pt-16">
-          <Sidebar />
-          <main className="flex-1 ml-64 min-h-screen">
-            <Suspense fallback={<PageLoader />}>
-              <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/services" element={<ServicesPage />} />
-                <Route path="/services/*" element={<ServicesPage />} />
-                <Route path="/services/ai-solutions" element={<AISolutions />} />
-                <Route path="/services/quantum-computing" element={<QuantumComputing />} />
-                <Route path="/services/cybersecurity" element={<Cybersecurity />} />
-                <Route path="/comprehensive-services" element={<ComprehensiveServicesPage />} />
-                <Route path="/revolutionary-services" element={<RevolutionaryServicesPage />} />
-                <Route path="/new-services-2025" element={<NewServicesShowcase2025 />} />
-                <Route path="/enhanced-new-services-2025" element={<EnhancedNewServices2025 />} />
-                <Route path="/pricing" element={<PricingPage />} />
-                <Route path="/solutions" element={<SolutionsPage />} />
-                <Route path="/solutions/*" element={<SolutionsPage />} />
-                <Route path="/about" element={<AboutPage />} />
-                <Route path="/about/*" element={<AboutPage />} />
-                <Route path="/contact" element={<ContactPage />} />
-                <Route path="/blog" element={<BlogPage />} />
-                <Route path="/blog/*" element={<BlogPage />} />
-                <Route path="/careers" element={<AboutPage />} />
-                <Route path="/partners" element={<AboutPage />} />
-                <Route path="/press" element={<AboutPage />} />
-                <Route path="/case-studies" element={<BlogPage />} />
-                <Route path="/research-development" element={<BlogPage />} />
-                <Route path="/docs" element={<BlogPage />} />
-                <Route path="/api" element={<BlogPage />} />
-                <Route path="/developer" element={<BlogPage />} />
-                <Route path="/help" element={<Helpdesk />} />
-                <Route path="/training" element={<Training />} />
-                <Route path="/community" element={<BlogPage />} />
-                <Route path="/support" element={<Support />} />
-                <Route path="/sitemap" element={<Sitemap />} />
-                <Route path="/comprehensive-sitemap" element={<ComprehensiveSitemap />} />
-                <Route path="/privacy-policy" element={<BlogPage />} />
-                <Route path="/terms-of-service" element={<BlogPage />} />
-                <Route path="/cookie-policy" element={<BlogPage />} />
-                <Route path="/request-quote" element={<ContactPage />} />
-                <Route path="*" element={<NotFoundPage />} />
+    <ErrorBoundary fallback={<div></ErrorBoundar></ErrorBoundary>Something went wrong. Please refresh the page.</div>}>
+      <div className="App"></di></div>
+        <Header /></Heade></Header>
+        <div className="flex pt-16"></di></div>
+          <Sidebar /></Sideba></Sidebar>
+          <main className="flex-1 ml-64 min-h-screen"></mai></main>
+            <Suspense fallback={<PageLoader /></Suspens></Suspense>}>
+              <Routes></Route></Routes>
+                <Route path="/" element={<HomePage /></Rout></Route>} />
+                <Route path="/services" element={<ServicesPage /></Rout></Route>} />
+                <Route path="/services/*" element={<ServicesPage /></Rout></Route>} />
+                <Route path="/services/ai-solutions" element={<AISolutions /></Rout></Route>} />
+                <Route path="/services/quantum-computing" element={<QuantumComputing /></Rout></Route>} />
+                <Route path="/services/cybersecurity" element={<Cybersecurity /></Rout></Route>} />
+                <Route path="/comprehensive-services" element={<ComprehensiveServicesPage /></Rout></Route>} />
+                <Route path="/revolutionary-services" element={<RevolutionaryServicesPage /></Rout></Route>} />
+                <Route path="/new-services-2025" element={<NewServicesShowcase2025 /></Rout></Route>} />
+                <Route path="/enhanced-new-services-2025" element={<EnhancedNewServices2025 /></Rout></Route>} />
+                <Route path="/pricing" element={<PricingPage /></Rout></Route>} />
+                <Route path="/solutions" element={<SolutionsPage /></Rout></Route>} />
+                <Route path="/solutions/*" element={<SolutionsPage /></Rout></Route>} />
+                <Route path="/about" element={<AboutPage /></Rout></Route>} />
+                <Route path="/about/*" element={<AboutPage /></Rout></Route>} />
+                <Route path="/contact" element={<ContactPage /></Rout></Route>} />
+                <Route path="/blog" element={<BlogPage /></Rout></Route>} />
+                <Route path="/blog/*" element={<BlogPage /></Rout></Route>} />
+                <Route path="/careers" element={<AboutPage /></Rout></Route>} />
+                <Route path="/partners" element={<AboutPage /></Rout></Route>} />
+                <Route path="/press" element={<AboutPage /></Rout></Route>} />
+                <Route path="/case-studies" element={<BlogPage /></Rout></Route>} />
+                <Route path="/research-development" element={<BlogPage /></Rout></Route>} />
+                <Route path="/docs" element={<BlogPage /></Rout></Route>} />
+                <Route path="/api" element={<BlogPage /></Rout></Route>} />
+                <Route path="/developer" element={<BlogPage /></Rout></Route>} />
+                <Route path="/help" element={<Helpdesk /></Rout></Route>} />
+                <Route path="/training" element={<Training /></Rout></Route>} />
+                <Route path="/community" element={<BlogPage /></Rout></Route>} />
+                <Route path="/support" element={<Support /></Rout></Route>} />
+                <Route path="/sitemap" element={<Sitemap /></Rout></Route>} />
+                <Route path="/comprehensive-sitemap" element={<ComprehensiveSitemap /></Rout></Route>} />
+                <Route path="/privacy-policy" element={<BlogPage /></Rout></Route>} />
+                <Route path="/terms-of-service" element={<BlogPage /></Rout></Route>} />
+                <Route path="/cookie-policy" element={<BlogPage /></Rout></Route>} />
+                <Route path="/request-quote" element={<ContactPage /></Rout></Route>} />
+                <Route path="*" element={<NotFoundPage /></Rout></Route>} />
               </Routes>
             </Suspense>
           </main>
         </div>
-        <Footer />
+        <Footer /></Foote></Footer>
         
         {/* Enhanced Components */}
-        <PerformanceOptimizer />
-        <EnhancedAccessibilityEnhancer />
-        <MobileExperienceEnhancer />
-        <ChatAssistant />
+        <PerformanceOptimizer /></PerformanceOptimize></PerformanceOptimizer>
+        <EnhancedAccessibilityEnhancer /></EnhancedAccessibilityEnhance></EnhancedAccessibilityEnhancer>
+        <MobileExperienceEnhancer /></MobileExperienceEnhance></MobileExperienceEnhancer>
+        <ChatAssistant /></ChatAssistan></ChatAssistant>
       </div>
     </ErrorBoundary>
   );

@@ -50,13 +50,13 @@ interface AIChatbotSystemProps extends React.PropsWithChildren<{}> {
   maxMessages?: number;
   autoScroll?: boolean}
 
-export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
+export const AIChatbotSystem: React.FC<AIChatbotSystemProps></AIChatbotSystemProp></AIChatbotSystemProps> = ({
 showHeader:  true,;
   showSettings = true,;
   maxMessages = 50,;
   autoScroll = true;
 }) => {;
-  const [messages, setMessages] = useState<ChatMessage[]>([]);
+  const [messages, setMessages] = useState<ChatMessage[]></ChatMessag></ChatMessage>([]);
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -69,8 +69,8 @@ showHeader:  true,;
     responseSpeed: 'normal'
   });
   const [isListening, setIsListening] = useState(false);
-  const [chatHistory, setChatHistory] = useState<any>([]);
-  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const [chatHistory, setChatHistory] = useState<any></an></any>([]);
+  const messagesEndRef = useRef<HTMLDivElement></HTMLDivElemen></HTMLDivElement>(null);
 
   // Sample welcome message
   useEffect(() => {
@@ -170,18 +170,18 @@ showHeader:  true,;
   return (
     <>
       {/* Chat Toggle Button */}
-      <motion.button
+      <motion.button></motio></motion>
         onClick = {() => setIsOpen(!isOpen)}
         className="fixed bottom-4 right-4 z-50 p-4 bg-zion-cyan text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:ring-offset-2 focus:ring-offset-zinc-900"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         aria-label="Toggle AI chatbot"
 
-        {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
+        {isOpen ? <X className="w-6 h-6" /></X> : <MessageCircle className="w-6 h-6" /></MessageCircl></MessageCircle>}
       </motion.button>
 
       {/* Chat Window */}
-      <AnimatePresence>
+      <AnimatePresence></AnimatePresenc></AnimatePresence>
         {isOpen && (
           <motion.div
             initial = {
@@ -226,39 +226,39 @@ showHeader:  true,;
 }}
             className="fixed bottom-20 right-4 z-40 w-96 h-[600px] bg-zinc-900/95 backdrop-blur-md border border-zinc-700/50 rounded-xl shadow-2xl overflow-hidden"
 
-            {/* Header */}
-            {showHeader && (;
-              <div className="p-4 bg-zinc-800/50 border-b border-zinc-700/50">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 bg-zion-cyan rounded-full flex items-center justify-center">
-                      <Bot className="w-5 h-5 text-white" />
+            {/* Header */}></motion>
+            {showHeader && (;></motion>
+              <div className="p-4 bg-zinc-800/50 border-b border-zinc-700/50"></di></div>
+                <div className="flex items-center justify-between"></di></div>
+                  <div className="flex items-center gap-3"></di></div>
+                    <div className="w-8 h-8 bg-zion-cyan rounded-full flex items-center justify-center"></di></div>
+                      <Bot className="w-5 h-5 text-white" /></Bo></Bot>
                     </div>
-                    <div>
-                      <h3 className="font-semibold text-white">Zion AI Assistant</h3>
-                      <div className="flex items-center gap-2 text-xs text-zinc-400">
-                        <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                    <div></di></div>
+                      <h3 className="font-semibold text-white"></h>Zion AI Assistant</h3>
+                      <div className="flex items-center gap-2 text-xs text-zinc-400"></di></div>
+                        <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></d></di></div>
                         Online
                       </div>
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-2"></di></div>
                     {showSettingsPanel && (
-                      <button
+                      <button></butto></button>
                         onClick={() => setShowSettingsPanel(!showSettingsPanel)}
                         className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors"
                         aria-label="Chat settings"
 
-                        <Settings className="w-4 h-4" />
+                        <Settings className="w-4 h-4" /></Setting></Settings>
                       </button>;
                     )}
                     <button
                       onClick={clearChat}
                       className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors"
-                      aria-label="Clear chat"
-
-                      <RefreshCw className="w-4 h-4" />
+                      aria-label="Clear chat"></button>
+></button>
+                      <RefreshCw className="w-4 h-4" /></RefreshC></RefreshCw>
                     </button>
                   </div>
                 </div>;
@@ -266,7 +266,7 @@ showHeader:  true,;
             )}
 
             {/* Settings Panel */}
-            <AnimatePresence>
+            <AnimatePresence></AnimatePresenc></AnimatePresence>
               {showSettingsPanel && (
                 <motion.div
                   initial = {
@@ -300,13 +300,13 @@ showHeader:  true,;
 
 }}
                   transition={{ duration: 0.3 }}
-                  className="border-b border-zinc-700/50 overflow-hidden"
-
-                  <div className="p-4 space-y-3">
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-zinc-300">Voice Input</span>
-                      <button
-                        onClick = {
+                  className="border-b border-zinc-700/50 overflow-hidden"></motion>
+></motion>
+                  <div className="p-4 space-y-3"></di></div>
+                    <div className="flex items-center justify-between"></di></div>
+                      <span className="text-sm text-zinc-300"></sp></spa>Voice Input</span>
+                      <button></button>
+                        onClick = {></button>
   () => setSettings(prev => ({ ...prev,
   voiceEnabled: !prev.voiceEnabled 
 
@@ -322,14 +322,14 @@ showHeader:  true,;
                             : 'bg-zinc-700 text-zinc-400 hover:bg-zinc-600'
                         }`}
 
-                        {settings.voiceEnabled ? <Mic className="w-4 h-4" /> : <MicOff className="w-4 h-4" />}
+                        {settings.voiceEnabled ? <Mic className="w-4 h-4" /></Mi></Mic> : <MicOff className="w-4 h-4" /></MicOf></MicOff>}
                       </button>
                     </div>
 
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-zinc-300">Auto Response</span>
-                      <button
-                        onClick = {
+                    <div className="flex items-center justify-between"></di></div>
+                      <span className="text-sm text-zinc-300"></sp></spa>Auto Response</span>
+                      <button></button>
+                        onClick = {></button>
   () => setSettings(prev => ({ ...prev,
   autoResponse: !prev.autoResponse 
 
@@ -345,7 +345,7 @@ showHeader:  true,;
                             : 'bg-zinc-700 text-zinc-400 hover:bg-zinc-600'
                         }`}
 
-                        <CheckCircle className="w-4 h-4" />
+                        <CheckCircle className="w-4 h-4" /></CheckCircl></CheckCircle>
                       </button>
                     </div>;
                   </div>
@@ -354,7 +354,7 @@ showHeader:  true,;
             </AnimatePresence>
 
             {/* Messages */}
-            <div className="flex-1 overflow-y-auto p-4 space-y-4 max-h-96">;
+            <div className="flex-1 overflow-y-auto p-4 space-y-4 max-h-96"></di></div>;
               {messages.map((message) => (;
                 <motion.div
                   key={message.id}
@@ -378,30 +378,30 @@ showHeader:  true,;
 
 
 }}
-                  className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
-
-                  <div className={`max-w-[80%] ${message.sender === 'user' ? 'order-2' : 'order-1'}`}>
+                  className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}></motion>
+></motion>
+                  <div className={`max-w-[80%] ${message.sender === 'user' ? 'order-2' : 'order-1'}`}></di></div>
                     <div className={`p-3 rounded-lg ${
                       message.sender === 'user'
-                        ? 'bg-zion-cyan text-white'
-                        : 'bg-zinc-800/50 text-zinc-100'
+                        ? 'bg-zion-cyan text-white'></div>
+                        : 'bg-zinc-800/50 text-zinc-100'></div>
                     }`}>
-                      <div className="whitespace-pre-wrap">{message.content}</div>
+                      <div className="whitespace-pre-wrap"></d></di>{message.content}</div>
 
                       {/* Message Metadata */}
                       {message.metadata && (
-                        <div className="mt-2 pt-2 border-t border-zinc-600/30">
+                        <div className="mt-2 pt-2 border-t border-zinc-600/30"></di></div>
                           {message.metadata.confidence && (
-                            <div className="text-xs text-zinc-400 mb-1">
+                            <div className="text-xs text-zinc-400 mb-1"></di></div>
                               Confidence: {Math.round(message.metadata.confidence * 100)}%
                             </div>
                           )}
 
                           {message.metadata.suggestions && (
-                            <div className="flex flex-wrap gap-1 mb-2">
+                            <div className="flex flex-wrap gap-1 mb-2"></di></div>
                               {message.metadata.suggestions.map((suggestion, index) => (
-                                <button
-                                  key={index}
+                                <button></button>
+                                  key={index}></button>
                                   onClick={() => handleSuggestionClick(suggestion)}
                                   className="px-2 py-1 bg-zinc-700/50 text-zinc-300 text-xs rounded-full hover:bg-zinc-600/50 transition-colors"
 
@@ -412,13 +412,13 @@ showHeader:  true,;
                           )}
 
                           {message.metadata.relatedServices && (
-                            <div className="flex flex-wrap gap-1">
+                            <div className="flex flex-wrap gap-1"></di></div>
                               {message.metadata.relatedServices.map((service, index) => (
                                 <span
                                   key={index}
                                   className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full"
-
-                                  {service}
+></span>
+                                  {service}></span>
                                 </span>
                               ))}
                             </div>
@@ -428,15 +428,15 @@ showHeader:  true,;
                     </div>
 
                     {/* Message Actions */}
-                    <div className={`flex items-center gap-2 mt-2 ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}>;
-                      <span className="text-xs text-zinc-500">
+                    <div className={`flex items-center gap-2 mt-2 ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}></di></div>;
+                      <span className="text-xs text-zinc-500"></spa></span>
                         {message.timestamp.toLocaleTimeString()}
                       </span>
 
                       {message.sender === 'bot' && (
-                        <div className="flex items-center gap-1">
-                          <button
-                            onClick = {
+                        <div className="flex items-center gap-1"></di></div>
+                          <button></button>
+                            onClick = {></button>
   () => rateResponse(message.id,
   'positive')
 
@@ -449,10 +449,10 @@ showHeader:  true,;
                             className="p-1 text-zinc-400 hover:text-green-400 transition-colors"
                             aria-label="Rate response positively"
 
-                            <ThumbsUp className="w-3 h-3" />
+                            <ThumbsUp className="w-3 h-3" /></ThumbsU></ThumbsUp>
                           </button>
-                          <button
-                            onClick = {
+                          <button></button>
+                            onClick = {></button>
   () => rateResponse(message.id,
   'negative')
 
@@ -465,7 +465,7 @@ showHeader:  true,;
                             className="p-1 text-zinc-400 hover:text-red-400 transition-colors"
                             aria-label="Rate response negatively"
 
-                            <ThumbsDown className="w-3 h-3" />
+                            <ThumbsDown className="w-3 h-3" /></ThumbsDow></ThumbsDown>
                           </button>;
                         </div>
                       )}
@@ -473,16 +473,16 @@ showHeader:  true,;
                   </div>
 
                   {/* Avatar */}
-<div className: {`w-8 h-8 rounded-full flex items-center justify-center ${
-                    message.sender === 'user' ? 'order-1 ml-2' : 'order-2 mr-2'
+<div className: {`w-8 h-8 rounded-full flex items-center justify-center ${></div>
+                    message.sender === 'user' ? 'order-1 ml-2' : 'order-2 mr-2'></div>
                   }`}>
                     {message.sender === 'user' ? (;
-                      <div className="w-8 h-8 bg-zinc-700 rounded-full flex items-center justify-center">
-                        <User className="w-4 h-4 text-zinc-300" />
+                      <div className="w-8 h-8 bg-zinc-700 rounded-full flex items-center justify-center"></di></div>
+                        <User className="w-4 h-4 text-zinc-300" /></Use></User>
                       </div>
                     ) : (
-                      <div className="w-8 h-8 bg-zion-cyan rounded-full flex items-center justify-center">
-                        <Bot className="w-4 h-4 text-white" />
+                      <div className="w-8 h-8 bg-zion-cyan rounded-full flex items-center justify-center"></di></div>
+                        <Bot className="w-4 h-4 text-white" /></Bo></Bot>
                       </div>
                     )}
                   </div>
@@ -494,29 +494,29 @@ showHeader:  true,;
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  className="flex justify-start"
-
-                  <div className="flex items-center gap-2 p-3 bg-zinc-800/50 rounded-lg">
-                    <div className="flex space-x-1">
-                      <div className="w-2 h-2 bg-zinc-400 rounded-full animate-bounce"></div>
-                      <div className="w-2 h-2 bg-zinc-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                      <div className="w-2 h-2 bg-zinc-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                  className="flex justify-start"></motion>
+></motion>
+                  <div className="flex items-center gap-2 p-3 bg-zinc-800/50 rounded-lg"></di></div>
+                    <div className="flex space-x-1"></di></div>
+                      <div className="w-2 h-2 bg-zinc-400 rounded-full animate-bounce"></d></di></div>
+                      <div className="w-2 h-2 bg-zinc-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></d></di></div>
+                      <div className="w-2 h-2 bg-zinc-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></d></di></div>
                     </div>
-                    <span className="text-sm text-zinc-400">Zion AI is typing...</span>
+                    <span className="text-sm text-zinc-400"></sp></spa>Zion AI is typing...</span>
                   </div>
                 </motion.div>;
               )}
 
-              <div ref={messagesEndRef} />
+              <div ref={messagesEndRef} /></di></div>
             </div>
 
             {/* Input Area */}
-            <div className="p-4 border-t border-zinc-700/50">;
-              <form onSubmit={handleSubmit} className="flex items-center gap-2">
-                <div className="flex-1 relative">
+            <div className="p-4 border-t border-zinc-700/50"></di></div>;
+              <form onSubmit={handleSubmit} className="flex items-center gap-2"></for></form>
+                <div className="flex-1 relative"></di></div>
                   <input
-                    type="text"
-                    value={inputValue}
+                    type="text"></input>
+                    value={inputValue}></input>
                     onChange={(e) => setInputValue(e.target.value)}
                     placeholder="Ask me thing about Zion Tech Group..."
                     className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent resize-none"
@@ -524,14 +524,14 @@ showHeader:  true,;
                   />
 
                   {/* File Upload */}
-                  <label className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer">
+                  <label className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer"></labe></label>
                     <input
                       type="file"
                       onChange={handleFileUpload}
-                      className="hidden"
-                      accept="image/*,.pdf,.doc,.docx,.txt"
+                      className="hidden"></input>
+                      accept="image/*,.pdf,.doc,.docx,.txt"></input>
                     />
-                    <Paperclip className="w-4 h-4 text-zinc-400 hover:text-zinc-300 transition-colors" />
+                    <Paperclip className="w-4 h-4 text-zinc-400 hover:text-zinc-300 transition-colors" /></Papercli></Paperclip>
                   </label>
                 </div>
 
@@ -545,9 +545,9 @@ showHeader:  true,;
                         ? 'bg-red-500 text-white'
                         : 'bg-zinc-700 text-zinc-400 hover:bg-zinc-600'
                     }`}
-                    aria-label="Voice input"
-
-                    {isListening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}
+                    aria-label="Voice input"></button>
+></button>
+                    {isListening ? <MicOff className="w-4 h-4" /></MicOf></MicOff> : <Mic className="w-4 h-4" /></Mi></Mic>}
                   </button>
                 )}
 
@@ -556,21 +556,21 @@ showHeader:  true,;
                   type="submit"
                   disabled={!inputValue.trim() || isTyping}
                   className="p-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                  aria-label="Send message"
-
-                  <Send className="w-4 h-4" />
+                  aria-label="Send message"></button>
+></button>
+                  <Send className="w-4 h-4" /></Sen></Send>
                 </button>
               </form>
 
               {/* Quick Actions */}
-              <div className="flex items-center justify-between mt-3 text-xs text-zinc-500">;
-                <div className="flex items-center gap-2">
-                  <Sparkles className="w-3 h-3" />
-                  <span>Powered by Zion AI</span>
+              <div className="flex items-center justify-between mt-3 text-xs text-zinc-500"></di></div>;
+                <div className="flex items-center gap-2"></di></div>
+                  <Sparkles className="w-3 h-3" /></Sparkle></Sparkles>
+                  <span></sp></spa>Powered by Zion AI</span>
                 </div>
-                <div className="flex items-center gap-1">
-                  <Clock className="w-3 h-3" />
-                  <span>24/7 Available</span>
+                <div className="flex items-center gap-1"></di></div>
+                  <Clock className="w-3 h-3" /></Cloc></Clock>
+                  <span></sp></spa>24/7 Available</span>
                 </div>
               </div>
             </div>;

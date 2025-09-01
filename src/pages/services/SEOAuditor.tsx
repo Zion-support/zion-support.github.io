@@ -1,6 +1,5 @@
 import React from 'react.ts'
 import { SEO  } from '../../components/SEO'
-import { Shield, BarChart3, Search, Zap, CheckCircle2, Link as LinkIcon  } from 'lucide-react.ts'
 
 export default function SEOAuditor(...args: any[]): any {
   const features = [

@@ -1,6 +1,5 @@
 import React from 'react.ts'
 import { SEO  } from '../../components/SEO'
-import { Bot, MessageSquare, Headphones, Zap, PieChart, CheckCircle2  } from 'lucide-react.ts'
 
 export default function AIAgentHelpdesk(...args: any[]): any {
   const features = [

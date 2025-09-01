@@ -75,12 +75,12 @@ export const api = {
 
   // Authentication
   login: (credentials: { email: string; password: string }) =>
-    apiRequest<{ token: string; user: any }>('/auth/login', {
+    apiRequest<{ token: string; user: unknown }>('/auth/login', {
       method: 'POST',
       body: JSON.stringify(credentials),
     }),
   register: (userData: { name: string; email: string; password: string }) =>
-    apiRequest<{ token: string; user: any }>('/auth/register', {
+    apiRequest<{ token: string; user: unknown }>('/auth/register', {
       method: 'POST',
       body: JSON.stringify(userData),
     }),
@@ -89,12 +89,12 @@ export const api = {
   // Products/Services
   getProducts: () => apiRequest<Array<any>>('/products'),
   getProduct: (id: number) => apiRequest<any>(`/products/${id}`),
-  createProduct: (productData: any) =>
+  createProduct: (productData: unknown) =>
     apiRequest<any>('/products', {
       method: 'POST',
       body: JSON.stringify(productData),
     }),
-  updateProduct: (id: number, productData: any) =>
+  updateProduct: (id: number, productData: unknown) =>
     apiRequest<any>(`/products/${id}`, {
       method: 'PUT',
       body: JSON.stringify(productData),
@@ -104,12 +104,12 @@ export const api = {
   // Orders
   getOrders: () => apiRequest<Array<any>>('/orders'),
   getOrder: (id: number) => apiRequest<any>(`/orders/${id}`),
-  createOrder: (orderData: any) =>
+  createOrder: (orderData: unknown) =>
     apiRequest<any>('/orders', {
       method: 'POST',
       body: JSON.stringify(orderData),
     }),
-  updateOrder: (id: number, orderData: any) =>
+  updateOrder: (id: number, orderData: unknown) =>
     apiRequest<any>(`/orders/${id}`, {
       method: 'PUT',
       body: JSON.stringify(orderData),

@@ -1,6 +1,5 @@
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
-import { CheckCircle, TrendingUp, Target, Zap, BarChart3, Globe, Smartphone, Users, Shield, Brain, Search, PenTool  } from 'lucide-react.ts';
 import { SEO  } from '@/components/SEO';
 
 export default function AIContentOptimizer(...args: any[]): any {

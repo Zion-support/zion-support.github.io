@@ -1,6 +1,5 @@
 import React, { useState } from 'react.ts';
 import { motion  } from 'framer-motion.ts';
-import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap  } from 'lucide-react';
 
       description: "Get exclusive access to tech trends and analysis";
     },;

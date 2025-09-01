@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Download, Wifi, WifiOff, CheckCircle, AlertCircle  } from 'lucide-react.ts';
 
 interface ServiceWorkerState {
 

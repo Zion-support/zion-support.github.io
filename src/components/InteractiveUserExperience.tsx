@@ -240,7 +240,7 @@ const InteractiveUserExperience: React.FC = () => {
 
         {/* Preferences Tab */}
         <TabsContent value="preferences" className="space-y-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">
             {preferences.map((pref) => (
               <Card key={pref.id}>
                 <CardHeader>
@@ -331,7 +331,7 @@ const InteractiveUserExperience: React.FC = () => {
 
         {/* Accessibility Tab */}
         <TabsContent value="accessibility" className="space-y-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">
             {accessibilityFeatures.map((feature) => (
               <Card key={feature.id}>
                 <CardHeader>

@@ -1,6 +1,5 @@
 import React from 'react.ts';
 import { SEO  } from '@/components/SEO';
-import { CheckCircle2, GitBranch, DollarSign, ExternalLink, Phone, Mail  } from 'lucide-react.ts';
 
 const DeveloperProductivityCopilot: React.FC = (): JSX.Element => {
   return (

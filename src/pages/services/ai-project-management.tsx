@@ -1,6 +1,5 @@
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
-import { Target, Brain, Users, Clock, Shield, CheckCircle, Star, Award, Rocket, ArrowRight, Phone, Video, Zap, TrendingUp, BarChart3, Globe, Heart, Settings, Monitor, Smartphone, Laptop, Calendar, GitBranch, PieChart, AlertTriangle  } from 'lucide-react.ts';
 import { SEO  } from '@/components/SEO';
 
 export default function AIProjectManagement(...args: any[]): any {

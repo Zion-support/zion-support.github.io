@@ -1,6 +1,5 @@
 import React from 'react.ts';
 import { SEO  } from '@/components/SEO';
-import { CheckCircle2, BarChart3, DollarSign, ExternalLink, Phone, Mail  } from 'lucide-react.ts';
 
 const PriceIntelligenceService: React.FC = (): JSX.Element => {
   return (

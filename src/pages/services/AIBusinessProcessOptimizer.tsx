@@ -1,4 +1,3 @@
-import { Brain, TrendingUp, Zap, Check, ExternalLink, Phone, Mail, BarChart3, Clock, Users, Target, Award  } from 'lucide-react.ts';
 
 export default function AIBusinessProcessOptimizer(...args: any[]): any {
   const features = [

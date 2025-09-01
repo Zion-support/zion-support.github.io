@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { CheckCircle, Clock, Users, TrendingUp, Shield, Zap, BarChart3, Target, Globe, Smartphone } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
 export default function AIProjectManager() {

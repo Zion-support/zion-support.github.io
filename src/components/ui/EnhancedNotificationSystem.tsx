@@ -122,7 +122,7 @@ const NotificationContainer: React.FC = () => {;
 
 }}
           onClick={clearAll}
-          className="w-full px-4 py-2 bg-zion-slate-dark/80 backdrop-blur-sm border border-white/20 rounded-lg text-white text-sm hover:bg-zion-slate-dark transition-colors duration-200 flex items-center justify-center space-x-2"
+          className="w-full px-4 py-2 bg-zion-slate-dark/80 backdrop-blur-sm border border-white/20 rounded-lg text-white text-sm hover: bg-zion-slate-dark transition-colors duration-200 flex items-center justify-center space-x-2"
         >
           <Bell className="w-4 h-4" />;
           <span>Clear All</span>;
@@ -166,7 +166,7 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
           {notification.action && (
             <button
               onClick={notification.action.onClick}
-              className="mt-2 text-xs font-medium text-zion-cyan hover:text-zion-cyan/80 transition-colors duration-200"
+              className="mt-2 text-xs font-medium text-zion-cyan hover: text-zion-cyan/80 transition-colors duration-200"
 
               {notification.action.label}
             </button>
@@ -175,7 +175,7 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
 
         <button
           onClick={() => onRemove(notification.id)}
-          className="flex-shrink-0 text-gray-400 hover:text-white transition-colors duration-200"
+          className="flex-shrink-0 text-gray-400 hover: text-white transition-colors duration-200"
         >;
           <X className="w-4 h-4" />;
         </button>;
@@ -192,11 +192,11 @@ export const notify = {
   ...options 
 
 })},
-  error: (title: string, message: string, options?: Partial<Notification>)  => {
+  error: (title: string, message: string, options?: Partial<Notification>) => {
     console.log('Error notification: ', { title, message, ...options })},
   warning: (title: string, message: string, options?: Partial<Notification>)  => {
     console.log('Warning notification: ', { title, message, ...options })},
-  info: (title: string, message: string, options?: Partial<Notification>)  => {
+  info: (title: string, message: string, options?: Partial<Notification>) => {
     console.log('Info notification:', { title, message, ...options })};
     console.log('Success notification:', { title, message,;
   ;

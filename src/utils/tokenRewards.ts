@@ -1,6 +1,6 @@
 import { apiClient  } from '@/utils/apiClient';
 
-export async function rewardOnboarding(...args: any[]): any {
+export async function rewardOnboarding(...args: any[]): {
   await apiClient('/functions/v1/token-manager/earn', {
     method: 'POST',
     body: JSON.stringify({ userId, action, amount })

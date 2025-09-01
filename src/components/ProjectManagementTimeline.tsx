@@ -59,7 +59,7 @@ interface ProjectManagementTimelineProps extends React.PropsWithChildren<{}> {
   maxProjects?: number}
 
 export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps> = ({
-showFilters:  true,;
+showFilters: true,;
   showStats = true,;
   maxProjects = 10;
 }) => {;
@@ -192,7 +192,7 @@ showFilters:  true,;
     setFilteredProjects(sampleProjects)}, []);
 
   // Filter projects
-  useEffect(()  => {
+  useEffect(() => {
     let filtered = projects;
 
     if (selectedStatus !== 'all') {

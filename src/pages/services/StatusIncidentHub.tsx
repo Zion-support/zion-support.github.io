@@ -1,5 +1,4 @@
 import React from 'react.ts';
-import { Activity, Server, CheckCircle, ExternalLink, Mail, Phone  } from 'lucide-react.ts';
 import { Link  } from 'react-router-dom.ts';
 
 export default function StatusIncidentHub(...args: any[]): any {

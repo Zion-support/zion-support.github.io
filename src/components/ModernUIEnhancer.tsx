@@ -16,7 +16,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     // Add modern font loading
     const fontLink = document.createElement('link');
     fontLink.rel = 'preload';
-    fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap';
+    fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter: wght@300;400;500;600;700&display=swap';
     fontLink.as = 'style';
     document.head.appendChild(fontLink);
 
