@@ -1,0 +1,40 @@
+{
+  "timestamp": "2025-09-01T10:26:21.769Z",
+  "totalErrors": 5,
+  "errorTypes": {
+    "typescript": [],
+    "eslint": [],
+    "syntax": [],
+    "dependency": [],
+    "build": [
+      {
+        "message": "npm error code EJSONPARSE",
+        "type": "build"
+      },
+      {
+        "message": "npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 4541 (line 91 column 1) while parsing near \"...rettier\\\": \\\"^3.0.3\\\",\\n<<<<<<< HEAD\\n    \\\"st...\"",
+        "type": "build"
+      },
+      {
+        "message": "npm error JSON.parse Failed to parse JSON data.",
+        "type": "build"
+      },
+      {
+        "message": "npm error JSON.parse Note: package.json must be actual JSON, not just JavaScript.",
+        "type": "build"
+      },
+      {
+        "message": "npm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-01T10_26_21_726Z-debug-0.log",
+        "type": "build"
+      }
+    ]
+  },
+  "summary": {
+    "typescript": 0,
+    "eslint": 0,
+    "syntax": 0,
+    "dependency": 0,
+    "build": 5
+  },
+  "status": "completed"
+}

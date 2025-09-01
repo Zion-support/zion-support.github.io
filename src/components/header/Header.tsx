@@ -7,12 +7,10 @@ import { Menu, X, Search, Bell, User, ShoppingBag } from 'lucide-react';
 import { SearchFunctionality } from '../SearchFunctionality';
 
 export function Header() {
-
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
 
   const toggleMobileMenu = () => {
-
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
@@ -45,16 +43,15 @@ export function Header() {
               </Link>
               <div className="flex items-center space-x-2">
                 <span className="text-zion-slate-light text-xs">Follow us:</span>
-                <a href="https://linkedin.com/company/ziontechgroup" target="_blank" rel="noopener noreferrer" 
+                <a href="https://linkedin.com/company/ziontechgroup" target="_blank" rel="noopener noreferrer"
                    className="text-zion-slate-light hover:text-zion-cyan transition-colors">LinkedIn</a>
-                <a href="https://twitter.com/ziontechgroup" target="_blank" rel="noopener noreferrer" 
+                <a href="https://twitter.com/ziontechgroup" target="_blank" rel="noopener noreferrer"
                    className="text-zion-slate-light hover:text-zion-cyan transition-colors">Twitter</a>
               </div>
             </div>
           </div>
         </div>
       </div>
-
       {/* Main Header */}
       <header className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-slate-dark/95 backdrop-blur supports-[backdrop-filter]:bg-zion-slate-dark/75 shadow-lg shadow-zion-purple/10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -71,10 +68,8 @@ export function Header() {
                 </div>
               </Link>
             </div>
-
             {/* Desktop Navigation */}
             <MainNavigation className="hidden lg:flex" />
-
             {/* Mobile Menu Button */}
             <button
               type="button"
@@ -84,7 +79,6 @@ export function Header() {
             >
               {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
-
             {/* Right Side Actions */}
             <div className="flex items-center space-x-4">
               {/* Search */}
@@ -96,7 +90,6 @@ export function Header() {
               >
                 <Search className="h-5 w-5" />
               </button>
-
               {/* Notifications */}
               <button
                 type="button"
@@ -106,7 +99,6 @@ export function Header() {
                 <Bell className="h-5 w-5" />
                 <span className="absolute -top-1 -right-1 h-3 w-3 bg-zion-cyan rounded-full"></span>
               </button>
-
               {/* User Account */}
               <Link
                 to="/signup"
@@ -115,7 +107,6 @@ export function Header() {
               >
                 <User className="h-5 w-5" />
               </Link>
-
               {/* Cart */}
               <Link
                 to="/marketplace"
@@ -124,7 +115,6 @@ export function Header() {
               >
                 <ShoppingBag className="h-5 w-5" />
               </Link>
-
               {/* Get Started CTA */}
               <Link
                 to="/contact"
@@ -135,14 +125,12 @@ export function Header() {
             </div>
           </div>
         </div>
-
         {/* Mobile Menu */}
         <MobileMenu isOpen={isMobileMenuOpen} onClose={closeMobileMenu} />
-
         {/* Search Functionality */}
-        <SearchFunctionality 
-          showSearch={showSearch} 
-          onClose={() => setShowSearch(false)} 
+        <SearchFunctionality
+          showSearch={showSearch}
+          onClose={() => setShowSearch(false)}
         />
       </header>
     </>

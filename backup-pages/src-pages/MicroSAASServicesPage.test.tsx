@@ -1,13 +1,13 @@
-describe('MicroSAASServicesPage', () => {
+describe('MicroSaasServicesPage', () => {
   it('renders without crashing', () => {
-    render(<MicroSAASServicesPage />);
+    render(<MicroSaasServicesPage />);
     expect(
       screen.getByRole('main') || screen.getByText(/.*/)
     ).toBeInTheDocument();
   });
 
   it('displays expected content', () => {
-    render(<MicroSAASServicesPage />);
+    render(<MicroSaasServicesPage />);
     // Add specific test assertions based on component content
   });
 });
