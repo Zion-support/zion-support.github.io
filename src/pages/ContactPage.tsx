@@ -1,467 +1,675 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { ; Phone,; Mail,; MapPin,; Clock,; MessageSquare,; Send,; CheckCircle,; Building,; Users,; Globe,; ArrowRight,; Linkedin,; Twitter,; Github,; Facebook,; Instagram,; Youtube; } from 'lucide-react';
-;
-export default function ContactPage() {;
-  const [formData, setFormData] = useState({;
-    name: '',;
-    email: '',;
-    company: '',;
-    phone: '',;
-    service: '',;
-    message: '';
+import { Link } from 'react-router-dom';
+import { 
+  Mail, 
+  Phone, 
+  MapPin, 
+  Clock, 
+  MessageCircle, 
+  Send, 
+  CheckCircle, 
+  ArrowRight,
+  Building2,
+  Users,
+  Globe,
+  Zap,
+  Brain,
+  Shield,
+  Target,
+  Star,
+  Award,
+  TrendingUp,
+  Rocket,
+  Cpu,
+  Cloud,
+  Lock,
+  Database,
+  Workflow,
+  Heart,
+  DollarSign,
+  Atom,
+  Satellite,
+  Truck,
+  Factory,
+  ShoppingCart,
+  Network,
+  Wifi,
+  Server,
+  Code,
+  Monitor,
+  Smartphone,
+  Activity,
+  Eye,
+  Search,
+  Settings,
+  Palette,
+  Video,
+  GraduationCap,
+  Handshake,
+  ShoppingBag,
+  Leaf,
+  Gamepad2,
+  Coins,
+  MessageSquare,
+  FileText,
+  Calendar,
+  User,
+  Map,
+  Navigation,
+  ExternalLink,
+  Trophy
+} from 'lucide-react';
+
+export function ContactPage() {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    company: '',
+    jobTitle: '',
+    serviceInterest: '',
+    budget: '',
+    timeline: '',
+    message: '',
+    preferredContact: 'email',
+    newsletter: false
   });
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-;
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
-    const { name, value } = e.target;
-    setFormData(prev => ({;
-      ...prev,;
-      [name]: value;
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value, type } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: type === 'checkbox' ? (e.target as HTMLInputElement).checked : value
     }));
   };
-;
-  const handleSubmit = async (e: React.FormEvent) => {;
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-;
-    // Simulate API call;
-    setTimeout(() => {;
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      setFormData({;
-        name: '',;
-        email: '',;
-        company: '',;
-        phone: '',;
-        service: '',;
-        message: '';
+    
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    
+    setIsSubmitting(false);
+    setIsSubmitted(true);
+    
+    // Reset form after 5 seconds
+    setTimeout(() => {
+      setIsSubmitted(false);
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        company: '',
+        jobTitle: '',
+        serviceInterest: '',
+        budget: '',
+        timeline: '',
+        message: '',
+        preferredContact: 'email',
+        newsletter: false
       });
-;
-      // Reset success message after 5 seconds;
-      setTimeout(() => setIsSubmitted(false), 5000);
-    }, 2000);
+    }, 5000);
   };
-;
-  const contactInfo = [;
-    {;
-      icon: Phone,;
-      title: 'Phone',;
-      value: '+1 (555) 123-4567',;
-      href: 'tel:+15551234567',;
-      description: 'Available Mon-Fri, 9AM-6PM EST';
-    },;
-    {;
-      icon: Mail,;
-      title: 'Email',;
-      value: 'info@ziontechgroup.com',;
-      href: 'mailto:info@ziontechgroup.com',;
-      description: 'We respond within 24 hours';
-    },;
-    {;
-      icon: MapPin,;
-      title: 'Address',;
-      value: '123 Tech Street, Innovation City, IC 12345',;
-      href: '#',;
-      description: 'Visit our headquarters';
-    },;
-    {;
-      icon: Clock,;
-      title: 'Business Hours',;
-      value: 'Monday - Friday: 9:00 AM - 6:00 PM EST',;
-      href: '#',;
-      description: 'Weekend support available for urgent matters';
-    };
+
+  const serviceCategories = [
+    {
+      name: 'Micro SAAS Solutions',
+      icon: Zap,
+      description: 'AI-powered business applications and automation tools',
+      services: ['AI Sales Copilot', 'Cloud FinOps Optimizer', 'AI Compliance Assistant']
+    },
+    {
+      name: 'AI & Automation',
+      icon: Brain,
+      description: 'Intelligent automation and artificial intelligence solutions',
+      services: ['AI Business Intelligence', 'AI Customer Support', 'AI Project Management']
+    },
+    {
+      name: 'IT Infrastructure',
+      icon: Shield,
+      description: 'Robust IT infrastructure and cybersecurity solutions',
+      services: ['Cloud & DevOps', 'Cybersecurity', 'Digital Transformation']
+    },
+    {
+      name: 'Quantum Computing',
+      icon: Atom,
+      description: 'Next-generation quantum computing solutions',
+      services: ['Quantum AI Platform', 'Quantum Machine Learning', 'Quantum Computing as a Service']
+    },
+    {
+      name: 'Emerging Technologies',
+      icon: Rocket,
+      description: 'Cutting-edge technology solutions for the future',
+      services: ['Blockchain Solutions', 'Space Technology', 'Sustainable Technology']
+    }
   ];
-;
-  const socialLinks = [;
-    {;
-      icon: Linkedin,;
-      href: 'https://www.linkedin.com/company/ziontechgroup',;
-      label: 'LinkedIn',;
-      color: 'hover:bg-blue-600';
-    },;
-    {;
-      icon: Twitter,;
-      href: 'https://twitter.com/ziontechgroup',;
-      label: 'Twitter',;
-      color: 'hover:bg-sky-500';
-    },;
-    {;
-      icon: Github,;
-      href: 'https://github.com/Zion-Holdings',;
-      label: 'GitHub',;
-      color: 'hover:bg-gray-600';
-    },;
-    {;
-      icon: Facebook,;
-      href: 'https://facebook.com/ziontechgroup',;
-      label: 'Facebook',;
-      color: 'hover:bg-blue-600';
-    },;
-    {;
-      icon: Instagram,;
-      href: 'https://instagram.com/ziontechgroup',;
-      label: 'Instagram',;
-      color: 'hover:bg-pink-600';
-    },;
-    {;
-      icon: Youtube,;
-      href: 'https://youtube.com/@ziontechgroup',;
-      label: 'YouTube',;
-      color: 'hover:bg-red-600';
-    };
+
+  const contactMethods = [
+    {
+      icon: Phone,
+      title: 'Phone',
+      value: '+1 (302) 464-0950',
+      href: 'tel:+13024640950',
+      description: 'Call us directly for immediate assistance'
+    },
+    {
+      icon: Mail,
+      title: 'Email',
+      value: 'kleber@ziontechgroup.com',
+      href: 'mailto:kleber@ziontechgroup.com',
+      description: 'Send us a detailed message anytime'
+    },
+    {
+      icon: MapPin,
+      title: 'Office',
+      value: '364 E Main St STE 1008, Middletown DE 19709',
+      href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709',
+      description: 'Visit our headquarters for in-person meetings'
+    },
+    {
+      icon: Clock,
+      title: 'Business Hours',
+      value: 'Monday - Friday: 9:00 AM - 6:00 PM EST',
+      href: '',
+      description: 'We\'re available during standard business hours'
+    }
   ];
-;
-  const services = [;
-    'AI & Machine Learning',;
-    'Cloud & DevOps',;
-    'Cybersecurity',;
-    'Digital Transformation',;
-    'Data Analytics',;
-    'IoT & Edge Computing',;
-    'Blockchain Solutions',;
-    'Quantum Computing',;
-    'Custom Development',;
-    'Consulting Services';
+
+  const socialLinks = [
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Users },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: MessageSquare },
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Code },
+    { name: 'Website', href: 'https://ziontechgroup.com', icon: Globe }
   ];
-;
-  if (isSubmitted) {;
-    return (;
-      <div className="min-h-screen bg-zion-blue-dark flex items-center justify-center py-8">";"
-        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
-          <motion.div;
-            initial={{ opacity: 0, scale: 0.8 }};
-            animate={{ opacity: 1, scale: 1 }};"
-            transition={{ duration: 0.5 }}";"
-            className="bg-zinc-900/50 rounded-2xl p-12 border border-zinc-700/50";"
-          >";"
-            <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">";"
-              <CheckCircle className="w-10 h-10 text-white" />;"
-            </div>";"
-            <h2 className="text-3xl font-bold text-white mb-4">Message Sent Successfully!</h2>";"
-            <p className="text-zion-slate-light mb-8">;
-              Thank you for reaching out to Zion Tech Group. We've received your message and will get back to you within 24 hours.;"
-            </p>";"
-            <div className="text-sm text-zion-slate-light">;
-              You'll receive a confirmation email shortly.;
-            </div>;
-          </motion.div>;
-        </div>;
-      </div>;
+
+  const stats = [
+    { label: 'Years of Experience', value: '10+', icon: Award },
+    { label: 'Projects Delivered', value: '1000+', icon: CheckCircle },
+    { label: 'Happy Clients', value: '500+', icon: Star },
+    { label: 'Team Members', value: '150+', icon: Users },
+    { label: 'Countries Served', value: '25+', icon: Globe },
+    { label: 'Innovation Awards', value: '15+', icon: Trophy }
+  ];
+
+  if (isSubmitted) {
+    return (
+      <div className="min-h-screen bg-zion-slate-dark flex items-center justify-center">
+        <div className="bg-zion-slate-darker border border-zion-cyan/20 rounded-xl p-12 text-center max-w-2xl mx-4">
+          <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
+            <CheckCircle className="w-12 h-12 text-white" />
+          </div>
+          <h1 className="text-3xl font-bold text-white mb-4">Thank You!</h1>
+          <p className="text-xl text-zion-slate-light mb-6">
+            Your message has been sent successfully. We'll get back to you within 24 hours.
+          </p>
+          <div className="space-y-4">
+            <p className="text-zion-slate-light">
+              In the meantime, you can:
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/services"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-medium rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300"
+              >
+                Explore Our Services
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
+              <Link
+                to="/"
+                className="inline-flex items-center px-6 py-3 border-2 border-zion-cyan text-zion-cyan font-medium rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
+              >
+                Return Home
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
     );
-  };"
-  return (";"
-    <div className="min-h-screen bg-zion-blue-dark">;"
-      {/* Hero Section */}";"
-      <section className="relative py-20 overflow-hidden">;"
-        {/* Background Pattern */}";"
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30" />;"
-        ";"
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">;
-          <motion.div;
-            initial={{ opacity: 0, y: 30 }};
-            animate={{ opacity: 1, y: 0 }};"
-            transition={{ duration: 0.8 }}";"
-            className="text-center max-w-4xl mx-auto";"
-          >";"
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">";"
-              Get in <span className="text-zion-cyan">Touch</span>;"
-            </h1>";"
-            <p className="text-xl text-zion-slate-light leading-relaxed mb-8">;
-              Ready to transform your business with cutting-edge technology? Let's discuss how our solutions can help you achieve your goals.;
-            </p>;
-          </motion.div>;
-        </div>;
-      </section>;"
-      {/* Contact Methods */}";"
-      <section className="py-16 bg-zinc-900/30">";"
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">";"
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-            {contactInfo.map((info, index) => (;
-              <motion.div;
-                key={info.title};
-                initial={{ opacity: 0, y: 30 }};
-                whileInView={{ opacity: 1, y: 0 }};"
-                transition={{ duration: 0.5, delay: index * 0.1 }}";"
-                className="bg-zinc-900/50 rounded-xl p-6 border border-zinc-700/50 hover:border-zion-cyan/30 transition-all duration-300 text-center";"
-              >";"
-                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4">";"
-                  <info.icon className="w-8 h-8 text-white" />;"
-                </div>";"
-                <h3 className="text-lg font-semibold text-white mb-2">{info.title}</h3>;
-                <a;"
-                  href={info.href}";"
-                  className="text-zion-cyan font-medium mb-2 hover:text-zion-cyan-light transition-colors cursor-pointer block";
-                  target={info.href.startsWith('http') ? '_blank' : undefined};
-                  rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined};
-                >;
-                  {info.value};"
-                </a>";"
-                <p className="text-zion-slate-light text-sm">{info.description}</p>;
-              </motion.div>;
-            ))};
-          </div>;
-        </div>;
-      </section>;"
-      {/* Contact Form & Info */}";"
-      <section className="py-20">";"
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">";"
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">;
-            {/* Contact Form */};
-            <motion.div;
-              initial={{ opacity: 0, x: -30 }};
-              whileInView={{ opacity: 1, x: 0 }};"
-              transition={{ duration: 0.6 }}";"
-              className="bg-zinc-900/50 rounded-2xl p-8 border border-zinc-700/50";"
-            >";"
-              <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>";"
-              <form onSubmit={handleSubmit} className="space-y-6">";"
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;"
-                  <div>";"
-                    <label htmlFor="name" className="block text-sm font-medium text-zion-slate-light mb-2">;
-                      Full Name *;
-                    </label>;"
-                    <input";"
-                      type="text";"
-                      id="name";"
-                      name="name";
-                      value={formData.name};
-                      onChange={handleInputChange};"
-                      required";"
-                      className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent";"
-                      placeholder="John Doe";
-                    / / />;
-                  </div>;"
-                  <div>";"
-                    <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-2">;
-                      Email *;
-                    </label>;"
-                    <input";"
-                      type="email";"
-                      id="email";"
-                      name="email";
-                      value={formData.email};
-                      onChange={handleInputChange};"
-                      required";"
-                      className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent";"
-                      placeholder="john@company.com";
-                    / / />;
-                  </div>;
-                </div>;"
-";"
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;"
-                  <div>";"
-                    <label htmlFor="company" className="block text-sm font-medium text-zion-slate-light mb-2">;
-                      Company;
-                    </label>;"
-                    <input";"
-                      type="text";"
-                      id="company";"
-                      name="company";
-                      value={formData.company};"
-                      onChange={handleInputChange}";"
-                      className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent";"
-                      placeholder="Your Company";
-                    / / />;
-                  </div>;"
-                  <div>";"
-                    <label htmlFor="phone" className="block text-sm font-medium text-zion-slate-light mb-2">;
-                      Phone;
-                    </label>;"
-                    <input";"
-                      type="tel";"
-                      id="phone";"
-                      name="phone";
-                      value={formData.phone};"
-                      onChange={handleInputChange}";"
-                      className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent";"
-                      placeholder="+1 (555) 123-4567";
-                    / / />;
-                  </div>;
-                </div>;"
-                <div>";"
-                  <label htmlFor="service" className="block text-sm font-medium text-zion-slate-light mb-2">;
-                    Service Interest;
-                  </label>;"
-                  <select";"
-                    id="service";"
-                    name="service";
-                    value={formData.service};"
-                    onChange={handleInputChange}";"
-                    className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-600/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent";"
-                  >";"
-                    <option value=">Select a service</option>;
-                    {services.map(service => (;
-                      <option key={service} value={service}>{service}</option>;
-                    ))};
-                  </select>;
-                </div>;"
-                <div>";"
-                  <label htmlFor="message" className="block text-sm font-medium text-zion-slate-light mb-2">;
-                    Message *;
-                  </label>;"
-                  <textarea";"
-                    id="message";"
-                    name="message";
-                    value={formData.message};
-                    onChange={handleInputChange};
-                    required;"
-                    rows={5}";"
-                    className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent resize-none";"
-                    placeholder="Tell us about your project or how we can help...";
-                  />;
-                </div>;"
-                <button";"
-                  type="submit";"
-                  disabled={isSubmitting}";"
-                  className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-4 px-6 rounded-lg font-semibold hover:from-zion-cyan/80 hover:to-zion-purple/80 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2";
-                >;
-                  {isSubmitting ? (;"
-                    <>";"
-                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>;
-                      <span>Sending...</span>;
-                    </>;
-                  ) : (;"
-                    <>";"
-                      <Send className="w-5 h-5" />;
-                      <span>Send Message</span>;
-                    </>;
-                  )};
-                </button>;
-              </form>;
-            </motion.div>;
-            {/* Contact Info & Social */};
-            <motion.div;
-              initial={{ opacity: 0, x: 30 }};
-              whileInView={{ opacity: 1, x: 0 }};"
-              transition={{ duration: 0.6, delay: 0.2 }}";"
-              className="space-y-8";
-            >;"
-              {/* Company Info */}";"
-              <div className="bg-zinc-900/50 rounded-2xl p-8 border border-zinc-700/50">";"
-                <h3 className="text-2xl font-bold text-white mb-6">About Zion Tech Group</h3>";"
-                <p className="text-zion-slate-light mb-6 leading-relaxed">;
-                  We are a leading technology company specializing in AI, quantum computing, and advanced technology solutions.;
-                  Our team of experts is dedicated to helping businesses transform and thrive in the digital age.;"
-                </p>";"
-                <div className="space-y-4">";"
-                  <div className="flex items-center space-x-3 text-zion-slate-light">";"
-                    <Building className="w-5 h-5 text-zion-cyan" />;
-                    <span>Founded in 2010</span>;"
-                  </div>";"
-                  <div className="flex items-center space-x-3 text-zion-slate-light">";"
-                    <Users className="w-5 h-5 text-zion-cyan" />;
-                    <span>100+ Team Members</span>;"
-                  </div>";"
-                  <div className="flex items-center space-x-3 text-zion-slate-light">";"
-                    <Globe className="w-5 h-5 text-zion-cyan" />;
-                    <span>25+ Countries Served</span>;
-                  </div>;
-                </div>;
-              </div>;"
-              {/* Quick Actions */}";"
-              <div className="bg-zinc-900/50 rounded-2xl p-8 border border-zinc-700/50">";"
-                <h3 className="text-2xl font-bold text-white mb-6">Quick Actions</h3>";"
-                <div className="space-y-4">;"
-                  <a";"
-                    href="tel:+15551234567";"
-                    className="flex items-center space-x-3 p-4 bg-zinc-800/50 rounded-lg hover:bg-zinc-700/50 transition-colors group";"
-                  >";"
-                    <Phone className="w-5 h-5 text-zion-cyan group-hover:scale-110 transition-transform" />";"
-                    <span className="text-white">Call Now</span>";"
-                    <ArrowRight className="w-4 h-4 text-zion-slate-light ml-auto group-hover:translate-x-1 transition-transform" />;
-                  </a>;"
-                  <a";"
-                    href="mailto:info@ziontechgroup.com";"
-                    className="flex items-center space-x-3 p-4 bg-zinc-800/50 rounded-lg hover:bg-zinc-700/50 transition-colors group";"
-                  >";"
-                    <Mail className="w-5 h-5 text-zion-cyan group-hover:scale-110 transition-transform" />";"
-                    <span className="text-white">Send Email</span>";"
-                    <ArrowRight className="w-4 h-4 text-zion-slate-light ml-auto group-hover:translate-x-1 transition-transform" />;
-                  </a>;"
-                  <a";"
-                    href="/request-quote";"
-                    className="flex items-center space-x-3 p-4 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg hover:from-zion-cyan/80 hover:to-zion-purple/80 transition-all duration-200 group";"
-                  >";"
-                    <MessageSquare className="w-5 h-5 text-white group-hover:scale-110 transition-transform" />";"
-                    <span className="text-white font-medium">Request Quote</span>";"
-                    <ArrowRight className="w-4 h-4 text-white ml-auto group-hover:translate-x-1 transition-transform" />;
-                  </a>;
-                </div>;
-              </div>;"
-              {/* Social Links */}";"
-              <div className="bg-zinc-900/50 rounded-2xl p-8 border border-zinc-700/50">";"
-                <h3 className="text-2xl font-bold text-white mb-6">Connect With Us</h3>";"
-                <div className="grid grid-cols-3 gap-4">;
-                  {socialLinks.map(social => (;
-                    <a;
-                      key={social.label};"
-                      href={social.href}";"
-                      target="_blank";"
-                      rel="noopener noreferrer";
-                      className={`w-12 h-12 bg-zinc-800/50 hover:bg-zion-cyan rounded-lg flex items-center justify-center transition-all duration-200 group ${social.color}`};"
-                    >";"
-                      <social.icon className="w-6 h-6 text-zion-slate-light group-hover:text-white transition-colors" />;
-                    </a>;
-                  ))};
-                </div>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </div>;
-      </section>;"
-      {/* Office Location */}";"
-      <section className="py-20 bg-zinc-900/30">";"
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
-          <motion.div;
-            initial={{ opacity: 0, y: 30 }};
-            whileInView={{ opacity: 1, y: 0 }};"
-            transition={{ duration: 0.6 }}";"
-            className="text-center mb-16";"
-          >";"
-            <h2 className="text-4xl font-bold text-white mb-4">Visit Our Office</h2>";"
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">;
-              Located in the heart of innovation, our headquarters is designed to inspire creativity and collaboration.;
-            </p>;
-          </motion.div>;"
-";"
-          <div className="bg-zinc-900/50 rounded-2xl p-8 border border-zinc-700/50">";"
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">;"
-              <div>";"
-                <h3 className="text-2xl font-bold text-white mb-4">Zion Tech Group Headquarters</h3>";"
-                <div className="space-y-4 text-zion-slate-light">";"
-                  <div className="flex items-start space-x-3">";"
-                    <MapPin className="w-5 h-5 text-zion-cyan mt-1 flex-shrink-0" />;"
-                    <div>";"
-                      <p className="font-medium text-white">123 Tech Street</p>;
-                      <p>Innovation City, IC 12345</p>;
-                      <p>United States</p>;
-                    </div>;"
-                  </div>";"
-                  <div className="flex items-center space-x-3">";"
-                    <Clock className="w-5 h-5 text-zion-cyan" />;
-                    <span>Monday - Friday: 9:00 AM - 6:00 PM EST</span>;"
-                  </div>";"
-                  <div className="flex items-center space-x-3">";"
-                    <Phone className="w-5 h-5 text-zion-cyan" />;
-                    <span>+1 (555) 123-4567</span>;
-                  </div>;
-                </div>;"
-              </div>";"
-              <div className="bg-zinc-800/50 rounded-lg p-6 border border-zinc-700/50">";"
-                <div className="text-center text-zion-slate-light">";"
-                  <MapPin className="w-16 h-16 text-zion-cyan mx-auto mb-4" />";"
-                  <p className="text-lg font-medium text-white mb-2">Interactive Map</p>";"
-                  <p className="text-sm">Map integration would go here</p>;
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-    </div>;
+  }
+
+  return (
+    <div className="min-h-screen bg-zion-slate-dark">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-zion-slate-darker via-zion-slate-dark to-zion-blue-dark py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Let's Build Something
+              <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">
+                {' '}Amazing Together
+              </span>
+            </h1>
+            <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
+              Ready to transform your business with cutting-edge technology? Get in touch with our team 
+              of experts and let's discuss how we can help you achieve your goals.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:+13024640950"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 transform hover:scale-105"
+              >
+                <Phone className="mr-2 w-5 h-5" />
+                Call Now: +1 (302) 464-0950
+              </a>
+              <a
+                href="mailto:kleber@ziontechgroup.com"
+                className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
+              >
+                <Mail className="mr-2 w-5 h-5" />
+                Send Email
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Form & Information */}
+      <section className="py-20 bg-zion-slate-dark">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            {/* Contact Form */}
+            <div className="bg-zion-slate-darker border border-zion-purple/20 rounded-xl p-8">
+              <h2 className="text-3xl font-bold text-white mb-6">Get In Touch</h2>
+              <p className="text-zion-slate-light mb-8">
+                Fill out the form below and we'll get back to you within 24 hours. 
+                Let's discuss your project and explore how we can help.
+              </p>
+
+              <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Personal Information */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="firstName" className="block text-sm font-medium text-white mb-2">
+                      First Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="firstName"
+                      name="firstName"
+                      value={formData.firstName}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                      placeholder="Enter your first name"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="lastName" className="block text-sm font-medium text-white mb-2">
+                      Last Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="lastName"
+                      name="lastName"
+                      value={formData.lastName}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                      placeholder="Enter your last name"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
+                      Email Address *
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                      placeholder="Enter your email address"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-medium text-white mb-2">
+                      Phone Number
+                    </label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                      placeholder="Enter your phone number"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="company" className="block text-sm font-medium text-white mb-2">
+                      Company
+                    </label>
+                    <input
+                      type="text"
+                      id="company"
+                      name="company"
+                      value={formData.company}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                      placeholder="Enter your company name"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="jobTitle" className="block text-sm font-medium text-white mb-2">
+                      Job Title
+                    </label>
+                    <input
+                      type="text"
+                      id="jobTitle"
+                      name="jobTitle"
+                      value={formData.jobTitle}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                      placeholder="Enter your job title"
+                    />
+                  </div>
+                </div>
+
+                {/* Project Information */}
+                <div>
+                  <label htmlFor="serviceInterest" className="block text-sm font-medium text-white mb-2">
+                    Service Interest *
+                  </label>
+                  <select
+                    id="serviceInterest"
+                    name="serviceInterest"
+                    value={formData.serviceInterest}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-purple/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                  >
+                    <option value="">Select a service category</option>
+                    {serviceCategories.map((category) => (
+                      <option key={category.name} value={category.name}>
+                        {category.name}
+                      </option>
+                    ))}
+                    <option value="custom">Custom Solution</option>
+                    <option value="consulting">Consulting</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="budget" className="block text-sm font-medium text-white mb-2">
+                      Budget Range
+                    </label>
+                    <select
+                      id="budget"
+                      name="budget"
+                      value={formData.budget}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-purple/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                    >
+                      <option value="">Select budget range</option>
+                      <option value="under-10k">Under $10,000</option>
+                      <option value="10k-50k">$10,000 - $50,000</option>
+                      <option value="50k-100k">$50,000 - $100,000</option>
+                      <option value="100k-500k">$100,000 - $500,000</option>
+                      <option value="over-500k">Over $500,000</option>
+                      <option value="custom">Custom</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label htmlFor="timeline" className="block text-sm font-medium text-white mb-2">
+                      Project Timeline
+                    </label>
+                    <select
+                      id="timeline"
+                      name="timeline"
+                      value={formData.timeline}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-purple/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                    >
+                      <option value="">Select timeline</option>
+                      <option value="asap">ASAP</option>
+                      <option value="1-3-months">1-3 months</option>
+                      <option value="3-6-months">3-6 months</option>
+                      <option value="6-12-months">6-12 months</option>
+                      <option value="over-12-months">Over 12 months</option>
+                      <option value="flexible">Flexible</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
+                    Project Details *
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    required
+                    rows={6}
+                    className="w-full px-4 py-3 bg-zion-slate-dark border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                    placeholder="Tell us about your project, goals, and requirements..."
+                  />
+                </div>
+
+                {/* Preferences */}
+                <div>
+                  <label className="block text-sm font-medium text-white mb-3">
+                    Preferred Contact Method
+                  </label>
+                  <div className="flex space-x-6">
+                    <label className="flex items-center">
+                      <input
+                        type="radio"
+                        name="preferredContact"
+                        value="email"
+                        checked={formData.preferredContact === 'email'}
+                        onChange={handleInputChange}
+                        className="mr-2 text-zion-cyan focus:ring-zion-cyan"
+                      />
+                      <span className="text-zion-slate-light">Email</span>
+                    </label>
+                    <label className="flex items-center">
+                      <input
+                        type="radio"
+                        name="preferredContact"
+                        value="phone"
+                        checked={formData.preferredContact === 'phone'}
+                        onChange={handleInputChange}
+                        className="mr-2 text-zion-cyan focus:ring-zion-cyan"
+                      />
+                      <span className="text-zion-slate-light">Phone</span>
+                    </label>
+                  </div>
+                </div>
+
+                <div className="flex items-center">
+                  <input
+                    type="checkbox"
+                    id="newsletter"
+                    name="newsletter"
+                    checked={formData.newsletter}
+                    onChange={handleInputChange}
+                    className="mr-3 text-zion-cyan focus:ring-zion-cyan rounded"
+                  />
+                  <label htmlFor="newsletter" className="text-sm text-zion-slate-light">
+                    Subscribe to our newsletter for updates and insights
+                  </label>
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                >
+                  {isSubmitting ? (
+                    <div className="flex items-center justify-center">
+                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                      Sending Message...
+                    </div>
+                  ) : (
+                    <div className="flex items-center justify-center">
+                      <Send className="mr-2 w-5 h-5" />
+                      Send Message
+                    </div>
+                  )}
+                </button>
+              </form>
+            </div>
+
+            {/* Contact Information */}
+            <div className="space-y-8">
+              {/* Contact Methods */}
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
+                <div className="space-y-4">
+                  {contactMethods.map((method) => (
+                    <div key={method.title} className="flex items-start space-x-4">
+                      <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <method.icon className="w-6 h-6 text-zion-cyan" />
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-semibold text-white mb-1">{method.title}</h4>
+                        {method.href ? (
+                          <a
+                            href={method.href}
+                            target={method.href.startsWith('http') ? '_blank' : '_self'}
+                            rel={method.href.startsWith('http') ? 'noopener noreferrer' : ''}
+                            className="text-zion-cyan hover:text-zion-cyan-light transition-colors"
+                          >
+                            {method.value}
+                          </a>
+                        ) : (
+                          <p className="text-zion-slate-light">{method.value}</p>
+                        )}
+                        <p className="text-sm text-zion-slate-light mt-1">{method.description}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Social Links */}
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-6">Follow Us</h3>
+                <div className="flex space-x-4">
+                  {socialLinks.map((social) => (
+                    <a
+                      key={social.name}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-12 h-12 bg-zion-slate-darker border border-zion-purple/30 rounded-lg flex items-center justify-center text-zion-slate-light hover:text-zion-cyan hover:border-zion-cyan/50 transition-all duration-300"
+                      aria-label={social.name}
+                    >
+                      <social.icon className="w-6 h-6" />
+                    </a>
+                  ))}
+                </div>
+              </div>
+
+              {/* Company Stats */}
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-6">Why Choose Zion Tech Group?</h3>
+                <div className="grid grid-cols-2 gap-4">
+                  {stats.map((stat) => (
+                    <div key={stat.label} className="text-center p-4 bg-zion-slate-darker border border-zion-purple/20 rounded-lg">
+                      <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mx-auto mb-3">
+                        <stat.icon className="w-6 h-6 text-zion-cyan" />
+                      </div>
+                      <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
+                      <div className="text-sm text-zion-slate-light">{stat.label}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Service Categories Overview */}
+      <section className="py-20 bg-zion-slate-darker">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Our Service Categories
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Explore our comprehensive range of technology solutions and services
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {serviceCategories.map((category) => (
+              <div key={category.name} className="bg-zion-slate-dark border border-zion-purple/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mr-4">
+                    <category.icon className="w-6 h-6 text-zion-cyan" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white">{category.name}</h3>
+                </div>
+                <p className="text-zion-slate-light mb-4">{category.description}</p>
+                <ul className="space-y-2 mb-6">
+                  {category.services.map((service) => (
+                    <li key={service} className="flex items-center text-sm text-zion-slate-light">
+                      <div className="w-2 h-2 bg-zion-cyan rounded-full mr-3"></div>
+                      {service}
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  to="/services"
+                  className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors font-medium"
+                >
+                  Learn More
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-zion-cyan to-zion-blue">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Start Your Project?
+          </h2>
+          <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+            Don't wait to transform your business. Contact us today and let's discuss 
+            how our innovative solutions can help you achieve your goals.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:+13024640950"
+              className="inline-flex items-center px-8 py-4 bg-white text-zion-blue font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+            >
+              <Phone className="mr-2 w-5 h-5" />
+              Call Now: +1 (302) 464-0950
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-zion-blue transition-all duration-300"
+            >
+              <Mail className="mr-2 w-5 h-5" />
+              Send Email
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
   );
-};"
-";"
+}
