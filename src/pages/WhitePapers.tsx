@@ -23,7 +23,7 @@ export default function WhitePapers() {
     { value: 'popular', label: 'Most Popular' },
     { value: 'alphabetical', label: 'Alphabetical' },
     { value: 'downloads', label: 'Most Downloaded' }
-    ];
+  ];
 
 export default function WhitePapers() {
   const [searchQuery, setSearchQuery] = useState('');
