@@ -1,65 +1,46 @@
-<<<<<<< HEAD
-=======
-:src/store/wishlistSlice.tsx
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
-interface WishlistState {
+:src/store/wishlistSlice.tsx;
+interface WishlistState {}
   items: WishlistItem[];
-:src/store/wishlistSlice.tsx
+:src/store/wishlistSlice.tsx;
   itemCount: number;
 
   itemCount: number}
 
 }
 ;
-const initialState: WishlistState = {
-
+const initialState: WishlistState = {}
   items: [],
   itemCount: 0,;
   ;
   ;
   ;
   ;
-<<<<<<< HEAD
-  ;
-  ;
-
-};
-=======
   };
->>>>>>> main
 
-<<<<<<< HEAD
-const wishlistSlice:  createSlice({;
-=======
-:src/store/wishlistSlice.tsx
-const wishlistSlice:  createSlice({;'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+:src/store/wishlistSlice.tsx;
+const wishlistSlice:  createSlice({;''
   name: anywishlist',;
-const wishlistSlice:  createSlice({;
+const wishlistSlice:  createSlice({;'
   name: anywishlist',;
   initialState,;
-  reducers: {
+  reducers: {}
     addToWishlist: (state, action: PayloadAction<WishlistItem>)  => {;
-      
-      if (!existingItem) {
 
+      if(!existingItem) {}
+      if (!existingItem) {}
         state.items.push(action.payload);
         state.itemCount = state.items.length}
     },
-    removeFromWishlist: any(state, action: PayloadAction<string>)  => {
-
+    removeFromWishlist: any(state, action: PayloadAction<string>)  => {}
       state.items = state.items.filter(item => item.listingId !== action.payload);
       state.itemCount = state.items.length},
-    clearWishlist: any(state)  => {
-
+    clearWishlist: any(state)  => {}
       state.items = [];
-:src/store/wishlistSlice.tsx
+:src/store/wishlistSlice.tsx;
       state.itemCount = 0}}});
-      state.itemCount = 0},
-  },
-});
+      state.itemCount = 0}}});
 
 export const { addToWishlist, removeFromWishlist, clearWishlist } = wishlistSlice.actions;
 export { wishlistSlice };
 export default wishlistSlice.reducer;
+'

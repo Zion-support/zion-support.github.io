@@ -1,11 +1,12 @@
-;const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
-
+;const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {}
   return()
     <>
-      <SEO title="AI-Powered IoT Edge Computing Platform | Zion Tech Group"
-        description="Advanced AI-driven IoT edge computing platform. Reduce latency by 90%, lower bandwidth costs by 70%, and process data at the edge with sub-millisecond response times."
-        keywords="AI IoT, edge computing, real-time processing, distributed computing, hybrid cloud, edge intelligence, IoT analytics, edge AI"
+      <SEO title="AI-Powered IoT Edge Computing Platform | Zion Tech Group""
+        description="Advanced AI-driven IoT edge computing platform. Reduce latency by 90%, lower bandwidth costs by 70%, and process data at the edge with sub-millisecond response times.""
+        keywords="AI IoT, edge computing, real-time processing, distributed computing, hybrid cloud, edge intelligence, IoT analytics, edge AI""
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
         canonical="https://ziontechgroup.com/services/ai-iot-edge-computing-platform"
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
 <<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
       />
 
@@ -18,290 +19,489 @@
         {/* Hero Section */}"
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
 >>>>>>>> main:backup-pages/src-pages/services/ai-iot-edge-computing-platform.tsx
+=======
+       />"
+      "      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
+        {/* Hero Section */}""
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-iot-edge-computing-platform.tsx
+=======
+        canonical="https://ziontechgroup.com/services/ai-iot-edge-computing-platform""
+       />
+      "      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}""
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
           <div className="max-w-7xl mx-auto text-center">
-            <motion.div
-              initial = {
-
+            <motion.div;
+              initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
   y: 20
 
+=======
+  y: 20;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
 }}
-              animate = {
-
+              animate = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
   y: 0
 
 }}
-              transition={{ duration: 0.8 }}
-            >"
+              transition={{ duration: 0.8 }}"
+            >""
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                AI-Powered IoT Edge Computing Platform
-              </h1>"
+                AI-Powered IoT Edge Computing Platform"
+              </h1>""
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Revolutionize IoT with AI-powered edge computing. Process data at the edge with sub-millisecond latency, reduce bandwidth costs by 70%, and enable real-time intelligent decision making."
+              </p>""
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">""
+                <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  Start Free Trial"
+=======
+  y: 0;
+}}
+              transition={{ duration: 0.8 }}
+            >""
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                AI-Powered IoT Edge Computing Platform;
+              </h1>""
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Revolutionize IoT with AI-powered edge computing. Process data at the edge with sub-millisecond latency, reduce bandwidth costs by 70%, and enable real-time intelligent decision making.
-              </p>"
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+              </p>""
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">""
                 <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Start Free Trial
-                </button>"
+                  Start Free Trial;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
+                </button>""
                 <button className="border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300">
-                  Schedule Demo
+                  Schedule Demo;
                 </button>
               </div>
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
+"
+=======
 
-        {/* Features Section */}"
-        <section className="py-20 px-4 sm:px-6 lg:px-8">"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
+        {/* Features Section */}""
+        <section className="py-20 px-4 sm:px-6 lg:px-8">""
           <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial = {
-
+            <motion.div;
+              initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
   y: 20
 
+=======
+  y: 20;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
 }}
-              whileInView = {
-
+              whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
   y: 0
 
 }}
+              transition={{ duration: 0.8 }}"
+=======
+  y: 0;
+}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}"
-              className="text-center mb-16"
-            >"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
+              viewport={{ once: true }}""
+              className="text-center mb-16""
+            >""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Advanced AI-Powered Features
-              </h2>"
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
+                Advanced AI-Powered Features"
+=======
+                Advanced AI-Powered Features;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
+              </h2>""
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our platform combines cutting-edge AI with distributed edge computing to deliver unprecedented IoT performance and intelligence.
               </p>
-            </motion.div>
-"
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
+            </motion.div>"
+""
             <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
 "
-                  title: "AI-Powered Edge Intelligence","
-                  description: "Machine learning models deployed at the edge for real-time decision making and intelligent data processing.","
+""
+                  title: "AI-Powered Edge Intelligence",""
+                  description: "Machine learning models deployed at the edge for real-time decision making and intelligent data processing.",""
                   icon: "🧠"
                 },
                 {
 "
-                  title: "Real-Time Data Processing","
-                  description: "Sub-millisecond response times with local data processing and intelligent filtering at the edge.","
+""
+                  title: "Real-Time Data Processing",""
+                  description: "Sub-millisecond response times with local data processing and intelligent filtering at the edge.",""
                   icon: "⚡"
                 },
                 {
 "
-                  title: "Distributed Edge Computing","
-                  description: "Scalable edge computing infrastructure with intelligent load balancing and resource optimization.","
+""
+                  title: "Distributed Edge Computing",""
+                  description: "Scalable edge computing infrastructure with intelligent load balancing and resource optimization.",""
                   icon: "🌐"
                 },
                 {
 "
-                  title: "Edge-to-Cloud Orchestration","
-                  description: "Seamless integration between edge devices and cloud infrastructure with intelligent data routing.","
+""
+                  title: "Edge-to-Cloud Orchestration",""
+                  description: "Seamless integration between edge devices and cloud infrastructure with intelligent data routing.",""
                   icon: "☁️"
                 },
                 {
 "
-                  title: "Hybrid Cloud Integration","
-                  description: "Support for multi-cloud environments with intelligent workload distribution and data synchronization.","
+""
+                  title: "Hybrid Cloud Integration",""
+                  description: "Support for multi-cloud environments with intelligent workload distribution and data synchronization.",""
                   icon: "🔗"
                 },
                 {
 "
-                  title: "Edge Security & Privacy","
-                  description: "Built-in security features with local data processing and privacy-preserving AI algorithms.","
+""
+                  title: "Edge Security & Privacy",""
+                  description: "Built-in security features with local data processing and privacy-preserving AI algorithms.",""
                   icon: "🔒"
                 }
-              ].map((feature, index (
+              ].map((feature, index()
                 <motion.div
+=======
+            </motion.div>
+""
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+              {[]
+                {}
+""
+                  title: "AI-Powered Edge Intelligence",""
+                  description: "Machine learning models deployed at the edge for real-time decision making and intelligent data processing.",""
+                  icon: "🧠""
+                },
+                {}
+""
+                  title: "Real-Time Data Processing",""
+                  description: "Sub-millisecond response times with local data processing and intelligent filtering at the edge.",""
+                  icon: "⚡""
+                },
+                {}
+""
+                  title: "Distributed Edge Computing",""
+                  description: "Scalable edge computing infrastructure with intelligent load balancing and resource optimization.",""
+                  icon: "🌐""
+                },
+                {}
+""
+                  title: "Edge-to-Cloud Orchestration",""
+                  description: "Seamless integration between edge devices and cloud infrastructure with intelligent data routing.",""
+                  icon: "☁️""
+                },
+                {}
+""
+                  title: "Hybrid Cloud Integration",""
+                  description: "Support for multi-cloud environments with intelligent workload distribution and data synchronization.",""
+                  icon: "🔗""
+                },
+                {}
+""
+                  title: "Edge Security & Privacy",""
+                  description: "Built-in security features with local data processing and privacy-preserving AI algorithms.",""
+                  icon: "🔒""
+                }
+              ].map((feature, index (
+                <motion.div;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
                   key={index}
-                  initial = {
-
+                  initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
   y: 20
 
+=======
+  y: 20;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
 }}
-                  whileInView = {
-
+                  whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
   y: 0
 
+=======
+  y: 0;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
 }}
-                  transition = {
-
+                  transition = {}
   { duration: 0.6,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
   delay: index * 0.1
 
+}}"
+=======
+  delay: index * 0.1;
 }}
-                  viewport={{ once: true }}"
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"
-                >"
-                  <div className="text-4xl mb-4">{feature.icon}</div>"
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
+                  viewport={{ once: true }}""
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300""
+                >""
+                  <div className="text-4xl mb-4">{feature.icon}</div>""
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>""
                   <p className="text-gray-300">{feature.description}</p>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
+"
+=======
 
-        {/* Benefits Section */}"
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
+        {/* Benefits Section */}""
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">""
           <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial = {
-
+            <motion.div;
+              initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
   y: 20
 
+=======
+  y: 20;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
 }}
-              whileInView = {
-
+              whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
   y: 0
 
 }}
+              transition={{ duration: 0.8 }}"
+=======
+  y: 0;
+}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}"
-              className="text-center mb-16"
-            >"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
+              viewport={{ once: true }}""
+              className="text-center mb-16""
+            >""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Measurable Business Impact
-              </h2>"
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
+                Measurable Business Impact"
+=======
+                Measurable Business Impact;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
+              </h2>""
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our platform delivers quantifiable results that directly impact your IoT performance and operational efficiency.
               </p>
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
+            </motion.div>"
+""
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">"
+=======
             </motion.div>
-"
+""
             <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-              {["
-                { metric: "90%", description: "Reduction in latency" },"
-                { metric: "70%", description: "Lower bandwidth costs" },"
-                { metric: "85%", description: "Faster decision making" },"
-                { metric: "80%", description: "Reduction in cloud costs" },"
-                { metric: "95%", description: "Data processing accuracy" },"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
+              {[""
+                { metric: "90%", description: "Reduction in latency" },""
+                { metric: "70%", description: "Lower bandwidth costs" },""
+                { metric: "85%", description: "Faster decision making" },""
+                { metric: "80%", description: "Reduction in cloud costs" },""
+                { metric: "95%", description: "Data processing accuracy" },""
                 { metric: "60%", description: "Improvement in reliability" }
-              ].map(benefit: unknown, index: unknown (
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
+              ].map(benefit: unknown, index: unknown()
                 <motion.div
+=======
+              ].map(benefit: unknown, index: unknown (
+                <motion.div;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
                   key={index}
-                  initial = {
-
+                  initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
   scale: 0.9
 
+=======
+  scale: 0.9;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
 }}
-                  whileInView = {
-
+                  whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
   scale: 1
 
+=======
+  scale: 1;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
 }}
-                  transition = {
-
+                  transition = {}
   { duration: 0.6,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
   delay: index * 0.1
 
+}}"
+=======
+  delay: index * 0.1;
 }}
-                  viewport={{ once: true }}"
-                  className="text-center bg-gradient-to-br from-orange-600/20 to-red-600/20 rounded-xl p-8 border border-orange-500/30"
-                >"
-                  <div className="text-4xl md:text-5xl font-bold text-orange-400 mb-2">{benefit.metric}</div>"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
+                  viewport={{ once: true }}""
+                  className="text-center bg-gradient-to-br from-orange-600/20 to-red-600/20 rounded-xl p-8 border border-orange-500/30""
+                >""
+                  <div className="text-4xl md:text-5xl font-bold text-orange-400 mb-2">{benefit.metric}</div>""
                   <p className="text-white text-lg">{benefit.description}</p>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
+"
+=======
 
-        {/* Use Cases Section */}"
-        <section className="py-20 px-4 sm:px-6 lg:px-8">"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
+        {/* Use Cases Section */}""
+        <section className="py-20 px-4 sm:px-6 lg:px-8">""
           <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial = {
-
+            <motion.div;
+              initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
   y: 20
 
+=======
+  y: 20;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
 }}
-              whileInView = {
-
+              whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
   y: 0
 
 }}
+              transition={{ duration: 0.8 }}"
+=======
+  y: 0;
+}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}"
-              className="text-center mb-16"
-            >"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
+              viewport={{ once: true }}""
+              className="text-center mb-16""
+            >""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Industry-Specific Use Cases
-              </h2>"
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
+                Industry-Specific Use Cases"
+=======
+                Industry-Specific Use Cases;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
+              </h2>""
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our platform is designed to address the unique IoT challenges across various industries.
               </p>
-            </motion.div>
-"
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
+            </motion.div>"
+""
             <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
               {[
                 {
 "
-                  industry: "Manufacturing","
-                  description: "Real-time monitoring and predictive maintenance for industrial IoT with edge AI processing.","
+=======
+            </motion.div>
+""
+            <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+              {[]
+                {}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
+""
+                  industry: "Manufacturing",""
+                  description: "Real-time monitoring and predictive maintenance for industrial IoT with edge AI processing.",""
                   features: ["Predictive maintenance", "Quality control", "Production optimization"]
                 },
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
                 {
 "
-                  industry: "Healthcare","
-                  description: "Patient monitoring and medical device management with privacy-preserving edge computing.","
+=======
+                {}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
+""
+                  industry: "Healthcare",""
+                  description: "Patient monitoring and medical device management with privacy-preserving edge computing.",""
                   features: ["Patient monitoring", "Medical device management", "Privacy protection"]
                 },
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
                 {
 "
-                  industry: "Smart Cities","
-                  description: "Intelligent traffic management and environmental monitoring with distributed edge computing.","
+=======
+                {}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
+""
+                  industry: "Smart Cities",""
+                  description: "Intelligent traffic management and environmental monitoring with distributed edge computing.",""
                   features: ["Traffic optimization", "Environmental monitoring", "Public safety"]
                 },
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
                 {
 "
-                  industry: "Agriculture","
-                  description: "Precision farming and crop monitoring with AI-powered edge analytics.","
+=======
+                {}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
+""
+                  industry: "Agriculture",""
+                  description: "Precision farming and crop monitoring with AI-powered edge analytics.",""
                   features: ["Crop monitoring", "Soil analysis", "Irrigation optimization"]
                 }
-              ].map(useCase: unknown, index: unknown 
-                <motion.div
+              ].map(useCase: unknown, index: unknown;
+                <motion.div;
                   key={index}
-                  initial = {
-
+                  initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
   y: 20
 
+=======
+  y: 20;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
 }}
-                  whileInView = {
-
+                  whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
   y: 0
 
+=======
+  y: 0;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
 }}
-                  transition = {
-
+                  transition = {}
   { duration: 0.6,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
   delay: index * 0.1
 
+}}"
+=======
+  delay: index * 0.1;
 }}
-                  viewport={{ once: true }}"
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
-                >"
-                  <h3 className="text-xl font-semibold text-white mb-3">{useCase.industry}</h3>"
-                  <p className="text-gray-300 mb-4">{useCase.description}</p>"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
+                  viewport={{ once: true }}""
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20""
+                >""
+                  <h3 className="text-xl font-semibold text-white mb-3">{useCase.industry}</h3>""
+                  <p className="text-gray-300 mb-4">{useCase.description}</p>""
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
+                  <ul className="space-y-2">"
+=======
                   <ul className="space-y-2">
-                    {useCase.features.map((feature, featureIndex) => ("
-                      <li key={featureIndex} className="text-blue-300 flex items-center">"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
+                    {useCase.features.map((feature, featureIndex) => (""
+                      <li key={featureIndex} className="text-blue-300 flex items-center">""
                         <span className="text-green-400 mr-2">✓</span>
                         {feature}
                       </li>
@@ -312,170 +512,277 @@
             </div>
           </div>
         </section>
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
+"
+=======
 
-        {/* Technologies Section */}"
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
+        {/* Technologies Section */}""
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">""
           <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial = {
-
+            <motion.div;
+              initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
   y: 20
 
+=======
+  y: 20;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
 }}
-              whileInView = {
-
+              whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
   y: 0
 
 }}
+              transition={{ duration: 0.8 }}"
+=======
+  y: 0;
+}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}"
-              className="text-center mb-16"
-            >"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
+              viewport={{ once: true }}""
+              className="text-center mb-16""
+            >""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Technology Stack & Integrations
-              </h2>"
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
+                Technology Stack & Integrations"
+=======
+                Technology Stack & Integrations;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
+              </h2>""
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Built on industry-leading technologies and seamlessly integrates with your existing IoT infrastructure.
               </p>
-            </motion.div>
-"
-            <div className="grid grid-cols-2 md: anygrid-cols-4 gap-6">
-              {["
-                "TensorFlow Lite", "ONNX Runtime", "Apache Kafka", "MQTT", "Kubernetes Edge", "Docker Edge", "AWS IoT", "Azure IoT","
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
+            </motion.div>"
+""
+            <div className="grid grid-cols-2 md: anygrid-cols-4 gap-6">"
+              {[""
+                "TensorFlow Lite", "ONNX Runtime", "Apache Kafka", "MQTT", "Kubernetes Edge", "Docker Edge", "AWS IoT", "Azure IoT",""
                 "Google Cloud IoT", "Node-RED", "Grafana", "Prometheus", "InfluxDB", "Redis", "PostgreSQL", "MongoDB"
-              ].map(tech: unknown, index: unknown (
+              ].map(tech: unknown, index: unknown()
                 <motion.div
+=======
+            </motion.div>
+""
+            <div className="grid grid-cols-2 md: anygrid-cols-4 gap-6">
+              {[""
+                "TensorFlow Lite", "ONNX Runtime", "Apache Kafka", "MQTT", "Kubernetes Edge", "Docker Edge", "AWS IoT", "Azure IoT",""
+                "Google Cloud IoT", "Node-RED", "Grafana", "Prometheus", "InfluxDB", "Redis", "PostgreSQL", "MongoDB""
+              ].map(tech: unknown, index: unknown (
+                <motion.div;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
                   key={index}
-                  initial = {
-
+                  initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
   scale: 0.8
 
+=======
+  scale: 0.8;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
 }}
-                  whileInView = {
-
+                  whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
   scale: 1
 
+=======
+  scale: 1;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
 }}
-                  transition = {
-
+                  transition = {}
   { duration: 0.4,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
   delay: index * 0.05
 
+}}"
+=======
+  delay: index * 0.05;
 }}
-                  viewport={{ once: true }}"
-                  className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-white/20 hover:border-white/40 transition-all duration-300"
-                >"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
+                  viewport={{ once: true }}""
+                  className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-white/20 hover:border-white/40 transition-all duration-300""
+                >""
                   <span className="text-white font-medium">{tech}</span>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
+"
+=======
 
-        {/* Pricing Section */}"
-        <section className="py-20 px-4 sm:px-6 lg:px-8">"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
+        {/* Pricing Section */}""
+        <section className="py-20 px-4 sm:px-6 lg:px-8">""
           <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial = {
-
+            <motion.div;
+              initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
   y: 20
 
+=======
+  y: 20;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
 }}
-              whileInView = {
-
+              whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
   y: 0
 
 }}
+              transition={{ duration: 0.8 }}"
+=======
+  y: 0;
+}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}"
-              className="text-center mb-16"
-            >"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
+              viewport={{ once: true }}""
+              className="text-center mb-16""
+            >""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Transparent Pricing Plans
-              </h2>"
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
+                Transparent Pricing Plans"
+=======
+                Transparent Pricing Plans;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
+              </h2>""
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Choose the plan that best fits your IoT deployment size and edge computing requirements.
               </p>
-            </motion.div>
-"
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
+            </motion.div>"
+""
             <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
               {[
                 {
 "
-                  name: "Starter","
-                  price: "$299","
-                  period: "/month","
+=======
+            </motion.div>
+""
+            <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+              {[]
+                {}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
+""
+                  name: "Starter",""
+                  price: "$299",""
+                  period: "/month",""
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
+                  description: "Perfect for small IoT deployments starting with edge computing","
+=======
                   description: "Perfect for small IoT deployments starting with edge computing",
-                  features: ["
-                    "Up to 100 IoT devices","
-                    "Basic edge AI processing","
-                    "MQTT support","
-                    "Email support","
-                    "Standard templates","
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
+                  features: [""
+                    "Up to 100 IoT devices",""
+                    "Basic edge AI processing",""
+                    "MQTT support",""
+                    "Email support",""
+                    "Standard templates",""
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
                     "Monthly reports"
+=======
+                    "Monthly reports""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
                   ],
-                  popular: false
+                  popular: false;
                 },
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
                 {
 "
-                  name: "Professional","
-                  price: "$899","
-                  period: "/month","
+=======
+                {}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
+""
+                  name: "Professional",""
+                  price: "$899",""
+                  period: "/month",""
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
+                  description: "Ideal for growing IoT deployments with advanced edge computing needs","
+=======
                   description: "Ideal for growing IoT deployments with advanced edge computing needs",
-                  features: ["
-                    "Up to 1,000 IoT devices","
-                    "Advanced edge AI processing","
-                    "Multi-protocol support","
-                    "Priority support","
-                    "Custom integrations","
-                    "Real-time monitoring","
-                    "Advanced analytics","
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
+                  features: [""
+                    "Up to 1,000 IoT devices",""
+                    "Advanced edge AI processing",""
+                    "Multi-protocol support",""
+                    "Priority support",""
+                    "Custom integrations",""
+                    "Real-time monitoring",""
+                    "Advanced analytics",""
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
                     "Team collaboration tools"
+=======
+                    "Team collaboration tools""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
                   ],
-                  popular: true
+                  popular: true;
                 },
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
                 {
 "
-                  name: "Enterprise","
-                  price: "$2,499","
-                  period: "/month","
+=======
+                {}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
+""
+                  name: "Enterprise",""
+                  price: "$2,499",""
+                  period: "/month",""
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
+                  description: "Comprehensive solution for large IoT deployments","
+=======
                   description: "Comprehensive solution for large IoT deployments",
-                  features: ["
-                    "Unlimited IoT devices","
-                    "Full edge AI suite","
-                    "Custom AI models","
-                    "24/7 dedicated support","
-                    "White-label solutions","
-                    "Advanced compliance","
-                    "Custom integrations","
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
+                  features: [""
+                    "Unlimited IoT devices",""
+                    "Full edge AI suite",""
+                    "Custom AI models",""
+                    "24/7 dedicated support",""
+                    "White-label solutions",""
+                    "Advanced compliance",""
+                    "Custom integrations",""
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
                     "Dedicated IoT consultant"
+=======
+                    "Dedicated IoT consultant""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
                   ],
-                  popular: false
+                  popular: false;
                 }
-              ].map(plan: unknown, index: unknown (
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
+              ].map(plan: unknown, index: unknown()
                 <motion.div
+=======
+              ].map(plan: unknown, index: unknown (
+                <motion.div;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
                   key={index}
-                  initial = {
-
+                  initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
   y: 20
 
+=======
+  y: 20;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
 }}
-                  whileInView = {
-
+                  whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
   y: 0
 
+=======
+  y: 0;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
 }}
-                  transition = {
-
+                  transition = {}
   { duration: 0.6,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
   delay: index * 0.1
 
 }}
@@ -487,19 +794,37 @@
                       : 'bg-white/10 backdrop-blur-sm border border-white/20'
 ========
 
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
+=======
+  delay: index * 0.1;
+}}
+                  viewport={{ once: true }}
+                  className={`relative rounded-xl p-8 ${}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
                     plan.popular '
                       ? 'bg-gradient-to-br from-orange-600 to-red-600 border-2 border-orange-400' '
                       : 'bg-white/10 backdrop-blur-sm border border-white/20'`
 >>>>>>>> main:backup-pages/src-pages/services/ai-iot-edge-computing-platform.tsx
+=======
+                    plan.popular ''
+                      ? 'bg-gradient-to-br from-orange-600 to-red-600 border-2 border-orange-400' ''`
+                      : 'bg-white/10 backdrop-blur-sm border border-white/20'``
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-iot-edge-computing-platform.tsx
                   }`}
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
+                >"
+=======
                 >
-                  {plan.popular && ("
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
+                  {plan.popular && (""
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                       <span className="bg-yellow-400 text-black px-4 py-2 rounded-full text-sm font-semibold">
-                        Most Popular
+                        Most Popular;
                       </span>
                     </div>
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
                   )}
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
 <<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
 
                   <div className="text-center mb-6">
@@ -513,10 +838,18 @@
                     <div className="flex items-baseline justify-center">"
                       <span className="text-4xl font-bold text-white">{plan.price}</span>"
 >>>>>>>> main:backup-pages/src-pages/services/ai-iot-edge-computing-platform.tsx
+=======
+                  ""
+                  <div className="text-center mb-6">""
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>""
+                    <div className="flex items-baseline justify-center">""
+                      <span className="text-4xl font-bold text-white">{plan.price}</span>""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
                       <span className="text-white/70 ml-1">{plan.period}</span>
-                    </div>"
+                    </div>""
                     <p className="text-gray-300 mt-2">{plan.description}</p>
                   </div>
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
 <<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
 
 ========
@@ -525,27 +858,63 @@
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => ("
                       <li key={featureIndex} className="flex items-center text-white">"
+=======
+                  )}"
+                  ""
+                  <div className="text-center mb-6">""
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>""
+                    <div className="flex items-baseline justify-center">""
+                      <span className="text-4xl font-bold text-white">{plan.price}</span>""
+                      <span className="text-white/70 ml-1">{plan.period}</span>"
+                    </div>""
+                    <p className="text-gray-300 mt-2">{plan.description}</p>
+                  </div>"
+                  ""
+                  <ul className="space-y-3 mb-8">"
+                    {plan.features.map((feature, featureIndex) => (""
+                      <li key={featureIndex} className="flex items-center text-white">""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-iot-edge-computing-platform.tsx
+=======
+                  ""
+                  <ul className="space-y-3 mb-8">
+                    {plan.features.map((feature, featureIndex) => (""
+                      <li key={featureIndex} className="flex items-center text-white">""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
                         <span className="text-green-400 mr-3">✓</span>
                         {feature}
                       </li>
                     ))}
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
                   </ul>
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
 <<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
 
 ========
                   `
 >>>>>>>> main:backup-pages/src-pages/services/ai-iot-edge-computing-platform.tsx
+=======
+                  </ul>`
+                  ``
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-iot-edge-computing-platform.tsx
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-
+'
+                    plan.popular''
+                      ? 'bg-white text-orange-600 hover:bg-gray-100'''`
+                      : 'bg-orange-600 text-white hover:bg-orange-700'``
+=======
+                  `
+                  <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
                     plan.popular'
                       ? 'bg-white text-orange-600 hover:bg-gray-100''
                       : 'bg-orange-600 text-white hover:bg-orange-700'`
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
                   }`}>
-                    Get Started
+                    Get Started;
                   </button>
                 </motion.div>
               ))}
             </div>
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
 
             <motion.div
               initial = {
@@ -553,57 +922,93 @@
   { opacity: 0,
   y: 20
 
+=======
+            
+            <motion.div;
+              initial = {}
+  { opacity: 0,
+  y: 20;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
 }}
-              whileInView = {
-
+              whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
   y: 0
 
+=======
+  y: 0;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
 }}
-              transition = {
-
+              transition = {}
   { duration: 0.8,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
   delay: 0.4
 
+}}"
+=======
+  delay: 0.4;
 }}
-              viewport={{ once: true }}"
-              className="text-center mt-12"
-            >"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
+              viewport={{ once: true }}""
+              className="text-center mt-12""
+            >""
               <p className="text-gray-300 mb-4">
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
+                All plans include a 14-day free trial. Annual plans save 20%."
+=======
                 All plans include a 14-day free trial. Annual plans save 20%.
-              </p>"
-              <p className="text-gray-300">"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
+              </p>""
+              <p className="text-gray-300">""
                 Need a custom plan? <span className="text-blue-400 cursor-pointer hover:underline">Contact us</span>
               </p>
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
+"
+=======
 
-        {/* Contact Section */}"
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
+        {/* Contact Section */}""
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">""
           <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial = {
-
+            <motion.div;
+              initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
   y: 20
 
+=======
+  y: 20;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
 }}
-              whileInView = {
-
+              whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
   y: 0
 
 }}
               transition={{ duration: 0.8 }}
+              viewport={{ once: true }}"
+            >""
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Transform Your IoT with Edge AI?"
+=======
+  y: 0;
+}}
+              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-            >"
+            >""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Ready to Transform Your IoT with Edge AI?
-              </h2>"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
+              </h2>""
               <p className="text-xl text-gray-300 mb-8">
                 Join leading organizations who trust our AI-powered platform to revolutionize their IoT deployments.
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
               </p>
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
 <<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
@@ -635,18 +1040,57 @@
                   <h3 className="text-xl font-semibold text-white mb-3">Quick Actions</h3>"
                   <div className="space-y-3">"
 >>>>>>>> main:backup-pages/src-pages/services/ai-iot-edge-computing-platform.tsx
+=======
+              </p>"
+              ""
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">""
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">""
+                  <h3 className="text-xl font-semibold text-white mb-3">Contact Information</h3>""
+                  <div className="space-y-2 text-gray-300">""
+                    <p>📱 <span className="text-white">+1 302 464 0950</span></p>""
+                    <p>✉️ <span className="text-white">kleber@ziontechgroup.com</span></p>""
+                    <p>📍 <span className="text-white">364 E Main St STE 1008, Middletown DE 19709</span></p>
+                  </div>
+                </div>"
+=======
+              ""
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">""
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">""
+                  <h3 className="text-xl font-semibold text-white mb-3">Contact Information</h3>""
+                  <div className="space-y-2 text-gray-300">""
+                    <p>📱 <span className="text-white">+1 302 464 0950</span></p>""
+                    <p>✉️ <span className="text-white">kleber@ziontechgroup.com</span></p>""
+                    <p>📍 <span className="text-white">364 E Main St STE 1008, Middletown DE 19709</span></p>
+                  </div>
+                </div>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
+                ""
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">""
+                  <h3 className="text-xl font-semibold text-white mb-3">Quick Actions</h3>""
+                  <div className="space-y-3">""
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-iot-edge-computing-platform.tsx
                     <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors duration-300">
-                      Schedule Demo
-                    </button>"
+                      Schedule Demo"
+                    </button>""
                     <button className="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg transition-colors duration-300">
-                      Start Free Trial
-                    </button>"
+                      Start Free Trial"
+=======
+                    <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors duration-300">
+                      Schedule Demo;
+                    </button>""
+                    <button className="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg transition-colors duration-300">
+                      Start Free Trial;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
+                    </button>""
                     <button className="w-full bg-orange-600 hover:bg-orange-700 text-white py-2 px-4 rounded-lg transition-colors duration-300">
-                      Download Case Study
+                      Download Case Study;
                     </button>
                   </div>
                 </div>
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
               </div>
+<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
 <<<<<<<< HEAD:pages.disabled/pages/services/ai-iot-edge-computing-platform.tsx
 
               <div className="text-gray-300">
@@ -654,6 +1098,15 @@
               "
               <div className="text-gray-300">"
 >>>>>>>> main:backup-pages/src-pages/services/ai-iot-edge-computing-platform.tsx
+=======
+              </div>"
+              ""
+              <div className="text-gray-300">""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-iot-edge-computing-platform.tsx
+=======
+              ""
+              <div className="text-gray-300">""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-iot-edge-computing-platform.tsx
                 <p>Visit our website: <a href="https://ziontechgroup.com" className="text-blue-400 hover:underline">https://ziontechgroup.com</a></p>
               </div>
             </motion.div>
@@ -661,5 +1114,5 @@
         </section>
       </div>;
     </>
-  )};
-export default AIIoTEdgeComputingPlatform;'"`
+  )};'"`
+export default AIIoTEdgeComputingPlatform;'"`'"`

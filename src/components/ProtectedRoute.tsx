@@ -1,38 +1,20 @@
-<<<<<<< HEAD
-import { Navigate, useLocation  } from 'react - router - dom.ts';
-import React from 'react.ts';
-import { useAuth  } from '@/hooks / useAuth';
-export function ProtectedRoute (...args: any[]) : any {;
-=======
-<<<<<<< HEAD
->>>>>>> main
-
-interface ProtectedRouteProps extends React.PropsWithChildren<{}> {
-
-  children: React.ReactNode;
-  requireAuth?: boolean;
-  roles?: string[]}
-
-  const { user, isAuthenticated, isLoading } = useAuth () ;
-  
-  if (isLoading) {
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
+if (isLoading) {}
     return()
-      <div className = "flex items-center justify-center min-h-screen">;"
+      <div className = "flex items-center justify-center min-h-screen">;""""
         <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary"></div>;
       </div>;
     )}
 
-  if (requireAuth && !isAuthenticated) {
-"
+  if (requireAuth && !isAuthenticated) {}
+"""
+""""
     return <Navigate to="/login" state={{ from: location }} replace  />}
 
-  if (roles.length > 0 && user && !roles.includes(user.role || 'user')) {
-"
+  if(roles.length > 0 && user && !roles.includes(user.role || 'user')) {}
+"""
+""""
     return <Navigate to="/unauthorized" replace  />}
 
   return <>{children}</>
-}
-'"
+}'"""
+'"'"""

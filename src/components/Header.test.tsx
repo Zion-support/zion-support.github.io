@@ -1,10 +1,16 @@
+describe('Header', () => {}
+  it('renders without crashing', () => {}
+    render(<Header  />) ;
+    expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ;
 
-describe ('Header', () => {
-  it ('renders without crashing', () => {
-    render (<Header  />) ;
+describe ('Header', () => {}
+'
+  it ('renders without crashing', () => {}
+    render (<Header  />) ;'
     expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
-
-  it ('displays expected content', () => {
+'
+  it ('displays expected content', () => {}
     render (<Header  />) ;
-    // Add specific test assertions based on component content
+    // Add specific test assertions based on component content;
   }) }) ;
+'

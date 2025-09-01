@@ -1,22 +1,22 @@
 import React, { createContext, useContext, useState } from 'react';
-const LanguageProvider({ children }) {
-
+const LanguageProvider({ children }) {}
+'
+''
+'''
     const [language, setLanguage] = useState('en');
-    const t = (key) => {
-
-        return translations[language]?.[key] || key};
+    const t = (key) => {}
+        return translations[language]?.[key] || key};'
     const isRTL = language === 'ar' || language === 'he';
-    return (<LanguageContext.Provider value = {
-
+    return (<LanguageContext.Provider value = {}
   { language, setLanguage, t,
-  isRTL
-
+  isRTL;
 }}>
       {children}
     </LanguageContext.Provider>)};
-export function useLanguage() {
+export function useLanguage() {}
     const context = useContext(LanguageContext);
-    if (!context) {
-
+    if (!context) {}
+'
         throw new Error('useLanguage must be used within a LanguageProvider')}
     return context}
+'

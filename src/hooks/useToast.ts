@@ -1,11 +1,11 @@
 import toast from 'react-hot-toast';
 
-const useToast = () => {
-  const successToast = (message: string) => {
+const useToast: any = () => {}
+  const successToast: any = (message: string) => {}
     toast.success(message);
   };
 
-  const errorToast = (message: string) => {
+  const errorToast: any = (message: string) => {}
     toast.error(message);
   };
 
@@ -13,3 +13,4 @@ const useToast = () => {
 };
 
 export default useToast;
+'

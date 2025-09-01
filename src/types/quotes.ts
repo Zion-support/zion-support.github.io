@@ -1,28 +1,27 @@
-
 export type ServiceType = "service" | "talent" | "equipment" | "";
-export type ServiceCategory = string;
-export type TimelineType = "fixed" | "flexible";
+export type ServiceCategory = string;"""
+export type TimelineType = "fixed" | "flexible";"""
 export type BudgetType = "fixed" | "hourly" | "range";
 
-export interface ListingItem {
+export interface ListingItem {}
   id: string;
   title: string;
   category: string;
   image?: string;
   description?: string}
 
-export interface ContactInfo {
+export interface ContactInfo {}
   name: string;
   email: string;
   phone: string;
   company: string}
 
-export interface Budget {
+export interface Budget {}
   amount: number;
   maxAmount?: number;
   type: BudgetType}
 
-export interface QuoteFormData {
+export interface QuoteFormData {}
   serviceType: ServiceType;
   serviceCategory: ServiceCategory;
   specificItem: ListingItem | null;
@@ -36,7 +35,7 @@ export interface QuoteFormData {
 
 export type QuoteStatus = 'new' | 'in_review' | 'accepted' | 'responded' | 'closed' | 'archived';
 
-export interface QuoteRequest {
+export interface QuoteRequest {}
   id: string;
   talent_id: string;
   talent_name?: string;
@@ -57,3 +56,4 @@ export interface QuoteRequest {
   replied_at?: string;
   created_at: string;
   updated_at: string}
+'"""

@@ -1,10 +1,16 @@
+describe('MobileSidebarToggle', () => {}
+  it('renders without crashing', () => {}
+    render(<MobileSidebarToggle  />) ;
+    expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ;
 
-describe ('MobileSidebarToggle', () => {
-  it ('renders without crashing', () => {
-    render (<MobileSidebarToggle  />) ;
+describe ('MobileSidebarToggle', () => {}
+'
+  it ('renders without crashing', () => {}
+    render (<MobileSidebarToggle  />) ;'
     expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
-
-  it ('displays expected content', () => {
+'
+  it ('displays expected content', () => {}
     render (<MobileSidebarToggle  />) ;
-    // Add specific test assertions based on component content
+    // Add specific test assertions based on component content;
   }) }) ;
+'

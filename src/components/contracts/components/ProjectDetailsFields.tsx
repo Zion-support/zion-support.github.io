@@ -1,145 +1,134 @@
-
-import { 
+import {}
   FormField, 
   FormItem, 
   FormLabel, 
   FormControl, 
   FormDescription, 
-  FormMessage 
+  FormMessage;
 } from "@/components/ui/form";
-
-interface ProjectDetailsFieldsProps {
+interface ProjectDetailsFieldsProps {}
   form: UseFormReturn<ContractFormValues>}
-
-export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
-  return (
+export function ProjectDetailsFields(function ProjectDetailsFields(function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {): any {): any {}
+  return()
     <>
-      <FormField
-        control={form.control}
-        name="projectTitle" // Renamed
+      <FormField;
+        control={form.control}"""
+        name="projectTitle" // Renamed;
         render={({ field }) => (
           <FormItem>
             <FormLabel>Project Title</FormLabel> {/* Renamed */}
-            <FormControl>
+            <FormControl>"""
               <Input placeholder="Enter the project title" {...field}  /> {/* Updated placeholder */}
             </FormControl>
             <FormMessage  />
           </FormItem>
         )}
       />
-
-      <FormField
-        control={form.control}
-        name="clientName" // Added
+      <FormField;
+        control={form.control}"""
+        name="clientName" // Added;
         render={({ field }) => (
           <FormItem>
             <FormLabel>Client Name</FormLabel>
-            <FormControl>
+            <FormControl>"""
               <Input placeholder="Enter client's full name or company name" {...field}  />
             </FormControl>
             <FormMessage  />
           </FormItem>
         )}
       />
-
-      <FormField
-        control={form.control}
-        name="talentName" // Added
+      <FormField;
+        control={form.control}"""
+        name="talentName" // Added;
         render={({ field }) => (
           <FormItem>
             <FormLabel>Talent Name</FormLabel>
-            <FormControl>
+            <FormControl>'"""
               <Input placeholder="Enter talent's full name" {...field}  />
             </FormControl>
             <FormMessage  />
           </FormItem>
         )}
       />
-      
-      <FormField
-        control={form.control}
-        name="deliverables"
+      <FormField;
+        control={form.control}"""
+        name="deliverables"""
         render={({ field }) => (
           <FormItem>
             <FormLabel>Deliverables</FormLabel>
-            <FormControl>
-              <Textarea placeholder="Describe the project deliverables in detail, including specific outcomes, reports, software features, etc."
-                className="min-h-[120px]"
+            <FormControl>"""
+              <Textarea placeholder="Describe the project deliverables in detail, including specific outcomes, reports, software features, etc.""""
+                className="min-h-[120px]"""
                 {...field}
                />
             </FormControl>
             <FormDescription>
-              Be very specific about what will be delivered.
-            </FormDescription>
+              Be very specific about what will be delivered.</FormDescription>
             <FormMessage  />
           </FormItem>
         )}
       />
-
-      <FormField
-        control={form.control}
-        name="jurisdiction"
+      <FormField;
+        control={form.control}"""
+        name="jurisdiction"""
         render={({ field }) => (
           <FormItem>
             <FormLabel>Jurisdiction</FormLabel>
-            <FormControl>
+            <FormControl>"""
               <Input placeholder="e.g., State of California, USA" {...field}  />
             </FormControl>
             <FormDescription>
-              The governing law for the contract.
-            </FormDescription>
+              The governing law for the contract.</FormDescription>
             <FormMessage  />
           </FormItem>
         )}
       />
-
-      <FormField
-        control={form.control}
-        name="deliverables"
+      <FormField;
+        control={form.control}"""
+        name="deliverables"""
         render={({ field }) => (
           <FormItem>
             <FormLabel>Jurisdiction</FormLabel>
-            <FormControl>
+            <FormControl>"""
               <Input placeholder="e.g., State of California, USA" {...field}  />
             </FormControl>
             <FormDescription>
-              The governing law for the contract.
-            </FormDescription>
+              The governing law for the contract.</FormDescription>
             <FormMessage  />
           </FormItem>
         )}
       />
-      
+      """
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <FormField
-          control={form.control}
-          name="startDate"
-          render={({ field }) => (
+        <FormField;
+          control={form.control}"""
+          name="startDate"""
+          render={({ field }) => ("""
             <FormItem className="flex flex-col">
               <FormLabel>Start Date</FormLabel>
               <Popover>
                 <PopoverTrigger asChild>
                   <FormControl>
-                    <Button
-                      variant={"outline"}
+                    <Button"""
+                      variant={"outline"}"""
                       className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
                     >
-                      {field.value ? (
+                      {field.value ? ("""
                         format(field.value, "PPP")
                       ) : (
                         <span>Pick a date</span>
-                      )}
+                      )}"""
                       <CalendarIcon className="ml-auto h-4 w-4 opacity-50"  />
                     </Button>
                   </FormControl>
-                </PopoverTrigger>
+                </PopoverTrigger>"""
                 <PopoverContent className="w-auto p-0" align="start">
-                  <Calendar
-                    mode="single"
+                  <Calendar"""
+                    mode="single"""
                     selected={field.value}
                     onSelect={field.onChange}
                     disabled={(date) => date < new Date()}
-                    initialFocus
+                    initialFocus;
                   />
                 </PopoverContent>
               </Popover>
@@ -147,41 +136,40 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
             </FormItem>
           )}
         />
-        
-        <FormField
-          control={form.control}
-          name="endDate"
-          render={({ field }) => (
+        <FormField;
+          control={form.control}"""
+          name="endDate"""
+          render={({ field }) => ("""
             <FormItem className="flex flex-col">
-              <FormLabel>End Date (Optional)</FormLabel>
+              <FormLabel>End Date(Optional)</FormLabel>
               <Popover>
                 <PopoverTrigger asChild>
                   <FormControl>
-                    <Button
-                      variant={"outline"}
+                    <Button"""
+                      variant={"outline"}"`
                       className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
                     >
-                      {field.value ? (
+                      {field.value ? ("""
                         format(field.value, "PPP")
                       ) : (
                         <span>Pick a date</span>
-                      )}
+                      )}"""
                       <CalendarIcon className="ml-auto h-4 w-4 opacity-50"  />
                     </Button>
                   </FormControl>
-                </PopoverTrigger>
+                </PopoverTrigger>"""
                 <PopoverContent className="w-auto p-0" align="start">
-                  <Calendar
-                    mode="single"
+                  <Calendar"""
+                    mode="single"""
                     selected={field.value || undefined}
-                    onSelect={field.onChange}
+                    onSelect={field.onChange}"""
                     disabled={(date) => date < form.getValues("startDate")}
-                    initialFocus
+                    initialFocus;
                   />
                 </PopoverContent>
               </Popover>
               <FormDescription>
-                Leave empty if the end date is flexible
+                Leave empty if the end date is flexible;
               </FormDescription>
               <FormMessage  />
             </FormItem>
@@ -190,3 +178,4 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
       </div>
     </>
   )}
+'"`

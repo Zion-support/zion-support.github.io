@@ -1,66 +1,23 @@
-<<<<<<< HEAD
-import { Link } from 'react - router - dom';
-import React, { useState } from 'react';
-export /**
-export default FloatingCTA;
-import { motion, AnimatePresence } from 'framer - motion';
-
- * FloatingCTA function
- * @param {*} params - Function parameters
- * @returns {*} Function return value
- */
-function FloatingCTA () {
-
-} from 'lucide - react';
-=======
-<<<<<<< HEAD
-} from 'lucide-react';
->>>>>>> main
-
-const FloatingCTA: React.FC = () : JSX.Element => {;
-  const [isOpen, setIsOpen] = useState (false) ;
-  const [isVisible, setIsVisible] = useState (false) ;
-
-  useEffect ( () => {
-    // Show CTA after 5 seconds
-    
-      setIsVisible (true) }, 5000) ;
-
-    return () => clearTimeout (timer) }, []) };
-  ];
-
-  const quickServices = ["
-    { name: "AI Solutions", icon: Brain, link: "/ai-services" },"
-    { name: "Cybersecurity", icon: Shield, link: "/cybersecurity" },"
-    { name: "Cloud Services", icon: Cloud, link: "/cloud-solutions" },;"
-    { name: "Digital Transformation", icon: Zap, link: "/digital-transformation" };
-  ];
-
-  if (!isVisible) return null;
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+const [isExpanded, setIsExpanded] = useState(false);
   const [isExpanded, setIsExpanded] = useState (false) ;
 
-  return()
+  return ()
     <>
       {/* Floating Action Button */}
-      <motion.div"
-        className = "fixed bottom-6 right-6 z-50"
+      <motion.div""""
+        className = "fixed bottom-6 right-6 z-50"""
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
-        transition = {
-
+        transition = {}
   { duration: 0.3,
-  delay: 2
-
-}}
-      >"
+  delay: 2;
+}}"""
+      >""""
         <div className="relative">
           {/* Main Button */}
-          <motion.button
-            onClick={() => setIsExpanded(!isExpanded)}"
-            className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center text-white text-2xl"
+          <motion.button"""
+            onClick={() => setIsExpanded(!isExpanded)}""""
+            className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center text-white text-2xl"""
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
@@ -69,94 +26,75 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
 
           {/* Expanded Menu */}
           <AnimatePresence>
-            {isExpanded && (
-              <motion.div"
-                className="absolute bottom-20 right-0 bg-slate-800 border border-slate-700 rounded-lg shadow-xl p-4 min-w-[200px]"
-                initial = {
-
+            {isExpanded && ("""
+              <motion.div""""
+                className="absolute bottom-20 right-0 bg-slate-800 border border-slate-700 rounded-lg shadow-xl p-4 min-w-[200px]"""
+                initial = {}
   { opacity: 0, scale: 0.8,
-  y: 10
-
+  y: 10;
 }}
-                animate = {
-
+                animate = {}
   { opacity: 1, scale: 1,
-  y: 0
-
+  y: 0;
 }}
-                exit = {
-
+                exit = {}
   { opacity: 0, scale: 0.8,
-  y: 10
-
+  y: 10;
 }}
-                transition={{ duration: 0.2 }}
-              >"
-                <div className="space-y-3">
-                  <Link"
-                    to="/contact"
-                    className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-700 transition-colors duration-200 text-white"
-                    onClick={() => setIsExpanded(false)}
-                  >"
-                    <span className="text-xl">📞</span>
-                    <div>"
-                      <div className="font-semibold">Contact Us</div>"
+                transition={{ duration: 0.2 }}"""
+              >""""
+                <div className="space-y-3">"""
+                  <Link""""
+                    to="/contact""""
+                    className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-700 transition-colors duration-200 text-white"""
+                    onClick={() => setIsExpanded(false)}"""
+                  >""""
+                    <span className="text-xl">📞</span>"""
+                    <div>""""
+                      <div className="font-semibold">Contact Us</div>""""
                       <div className="text-sm text-gray-400">Get in touch</div>
                     </div>
                   </Link>
-<<<<<<< HEAD
 
-                  <Link
-=======
-                  
-                  <Link"
->>>>>>> main
-                    to="/services"
-                    className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-700 transition-colors duration-200 text-white"
-                    onClick={() => setIsExpanded(false)}
-                  >"
-                    <span className="text-xl">🚀</span>
-                    <div>"
-                      <div className="font-semibold">Our Services</div>"
+                  <Link"""
+                    to="/services"""
+                  """
+                  <Link""""
+                    to="/services""""
+                    className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-700 transition-colors duration-200 text-white"""
+                    onClick={() => setIsExpanded(false)}"""
+                  >""""
+                    <span className="text-xl">🚀</span>"""
+                    <div>""""
+                      <div className="font-semibold">Our Services</div>""""
                       <div className="text-sm text-gray-400">Explore solutions</div>
                     </div>
                   </Link>
-<<<<<<< HEAD
 
-                  <Link
-=======
-                  
-                  <Link"
->>>>>>> main
-                    to="/quote"
-                    className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-700 transition-colors duration-200 text-white"
-                    onClick={() => setIsExpanded(false)}
-                  >"
-                    <span className="text-xl">💰</span>
-                    <div>"
-                      <div className="font-semibold">Get Quote</div>"
+                  <Link"""
+                    to="/quote"""
+                  """
+                  <Link""""
+                    to="/quote""""
+                    className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-700 transition-colors duration-200 text-white"""
+                    onClick={() => setIsExpanded(false)}"""
+                  >""""
+                    <span className="text-xl">💰</span>"""
+                    <div>""""
+                      <div className="font-semibold">Get Quote</div>""""
                       <div className="text-sm text-gray-400">Request pricing</div>
                     </div>
-                  </Link>
-<<<<<<< HEAD
-
-                  <div role="button" className="border - t border - slate - 600 pt - 3">
-                    <div role="button" className="text - center text - sm text - gray - 400 mb - 2">
-                      Available 24 / 7
-                    </div>
-                    <div role="button" className="flex items - center justify - center gap - 2">
-                      <div role="button" className="w - 2 h - 2 bg - green - 400 rounded - full animate - pulse"></div>
-                      <span className="text - green - 400 text - sm font - semibold">Online Now</span>
-=======
-                  "
-                  <div className="border-t border-slate-600 pt-3">"
+                  """
+                  <div className="border-t border-slate-600 pt-3">"""
+                  </Link>"""
+                  """"
+                  <div className="border-t border-slate-600 pt-3">""""
                     <div className="text-center text-sm text-gray-400 mb-2">
-                      Available 24/7
-                    </div>"
-                    <div className="flex items-center justify-center gap-2">"
-                      <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>"
+                      Available 24/7"""
+                    </div>""""
+                    <div className="flex items-center justify-center gap-2">""""
+                      <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>""""
                       <span className="text-green-400 text-sm font-semibold">Online Now</span>
->>>>>>> main
                     </div>
                   </div>
                 </div>
@@ -167,21 +105,21 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
 
       {/* Backdrop */}
       <AnimatePresence>
-        {isExpanded && (
-          <motion.div"
-            className="fixed inset-0 bg-black/20 z-40"
+        {isExpanded && ("""
+          <motion.div""""
+            className="fixed inset-0 bg-black/20 z-40"""
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            onClick={ () => setIsExpanded (false) }
+            onClick={ () => setIsExpanded(false) }
           />) }
       </AnimatePresence>;
     </>
   )};
 
-            onClick={ () => setIsExpanded (false) };
+            onClick={ () => setIsExpanded(false) };
           />;) };
       </AnimatePresence>;
     </>
-  )}
-'"
+  )}'"""
+'"'"""

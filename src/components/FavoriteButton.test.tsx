@@ -1,10 +1,16 @@
+describe('FavoriteButton', () => {}
+  it('renders without crashing', () => {}
+    render(<FavoriteButton  />) ;
+    expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ;
 
-describe ('FavoriteButton', () => {
-  it ('renders without crashing', () => {
-    render (<FavoriteButton  />) ;
+describe ('FavoriteButton', () => {}
+'
+  it ('renders without crashing', () => {}
+    render (<FavoriteButton  />) ;'
     expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
-
-  it ('displays expected content', () => {
+'
+  it ('displays expected content', () => {}
     render (<FavoriteButton  />) ;
-    // Add specific test assertions based on component content
+    // Add specific test assertions based on component content;
   }) }) ;
+'

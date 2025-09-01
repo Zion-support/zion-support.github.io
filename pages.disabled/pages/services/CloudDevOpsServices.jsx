@@ -1,208 +1,372 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';'
+import { Link } from 'react-router-dom';'
 import { Cloud, Server, Database, Shield, GitFork, ArrowRight, CheckCircle, Monitor } from 'lucide-react';
+<<<<<<< HEAD:pages.disabled/pages/services/CloudDevOpsServices.jsx
 const CloudDevOpsServices = () => {
     const cloudServices = [
         {
 
-            title: "Cloud Migration & Strategy","
+            title: "Cloud Migration & Strategy",""
+            description: "Seamless migration to cloud platforms with strategic planning and execution.",
+            icon: Cloud,"
+=======
+const CloudDevOpsServices = () => {}
+    const cloudServices = []
+        {}
+            title: "Cloud Migration & Strategy",""
             description: "Seamless migration to cloud platforms with strategic planning and execution.",
             icon: Cloud,
-            features[;"
-                "Multi-cloud Strategy","
-                "Legacy System Migration","
-                "Cost Optimization","
-                "Performance Optimization","
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CloudDevOpsServices.jsx
+            features[;""
+                "Multi-cloud Strategy",""
+                "Legacy System Migration",""
+                "Cost Optimization",""
+                "Performance Optimization",""
+<<<<<<< HEAD:pages.disabled/pages/services/CloudDevOpsServices.jsx
                 "Security Assessment"
             ]
         },;
         {
 "
-            title: "DevOps Implementation","
+""
+            title: "DevOps Implementation",""
+            description: "Streamline development and operations with modern DevOps practices and tools.",
+            icon: GitFork,"
+=======
+                "Security Assessment""
+            ]
+        },;
+        {}
+""
+            title: "DevOps Implementation",""
             description: "Streamline development and operations with modern DevOps practices and tools.",
             icon: GitFork,
-            features: ["
-                "CI/CD Pipeline Setup","
-                "Infrastructure as Code","
-                "Automated Testing","
-                "Deployment Automation","
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CloudDevOpsServices.jsx
+            features: [""
+                "CI/CD Pipeline Setup",""
+                "Infrastructure as Code",""
+                "Automated Testing",""
+                "Deployment Automation",""
+<<<<<<< HEAD:pages.disabled/pages/services/CloudDevOpsServices.jsx
                 "Monitoring & Alerting"
             ]
         },
         {
 "
-            title: "Container Orchestration","
+""
+            title: "Container Orchestration",""
+            description: "Manage and scale containerized applications with Kubernetes and Docker.",
+            icon: Server,"
+=======
+                "Monitoring & Alerting""
+            ]
+        },
+        {}
+""
+            title: "Container Orchestration",""
             description: "Manage and scale containerized applications with Kubernetes and Docker.",
             icon: Server,
-            features[;"
-                "Kubernetes Deployment","
-                "Docker Containerization","
-                "Service Mesh","
-                "Auto-scaling","
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CloudDevOpsServices.jsx
+            features[;""
+                "Kubernetes Deployment",""
+                "Docker Containerization",""
+                "Service Mesh",""
+                "Auto-scaling",""
+<<<<<<< HEAD:pages.disabled/pages/services/CloudDevOpsServices.jsx
                 "Load Balancing"
             ]
         },;
         {
 "
-            title: "Database Management","
+""
+            title: "Database Management",""
+            description: "Optimize and manage databases in cloud environments for performance and reliability.",
+            icon: Database,"
+=======
+                "Load Balancing""
+            ]
+        },;
+        {}
+""
+            title: "Database Management",""
             description: "Optimize and manage databases in cloud environments for performance and reliability.",
             icon: Database,
-            features[;"
-                "Database Migration","
-                "Performance Tuning","
-                "Backup & Recovery","
-                "High Availability","
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CloudDevOpsServices.jsx
+            features[;""
+                "Database Migration",""
+                "Performance Tuning",""
+                "Backup & Recovery",""
+                "High Availability",""
+<<<<<<< HEAD:pages.disabled/pages/services/CloudDevOpsServices.jsx
                 "Data Security"
             ]
         },;
         {
 "
-            title: "Security & Compliance","
+""
+            title: "Security & Compliance",""
+            description: "Ensure cloud security and compliance with industry standards and best practices.",
+            icon: Shield,"
+=======
+                "Data Security""
+            ]
+        },;
+        {}
+""
+            title: "Security & Compliance",""
             description: "Ensure cloud security and compliance with industry standards and best practices.",
             icon: Shield,
-            features[;"
-                "Identity & Access Management","
-                "Network Security","
-                "Data Encryption","
-                "Compliance Auditing","
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CloudDevOpsServices.jsx
+            features[;""
+                "Identity & Access Management",""
+                "Network Security",""
+                "Data Encryption",""
+                "Compliance Auditing",""
+<<<<<<< HEAD:pages.disabled/pages/services/CloudDevOpsServices.jsx
                 "Threat Detection"
             ]
         },;
         {
 "
-            title: "Monitoring & Observability","
+""
+            title: "Monitoring & Observability",""
+            description: "Comprehensive monitoring and observability solutions for cloud infrastructure.",
+            icon: Monitor,"
+=======
+                "Threat Detection""
+            ]
+        },;
+        {}
+""
+            title: "Monitoring & Observability",""
             description: "Comprehensive monitoring and observability solutions for cloud infrastructure.",
             icon: Monitor,
-            features[;"
-                "Real-time Monitoring","
-                "Log Management","
-                "Performance Metrics","
-                "Alert Management","
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CloudDevOpsServices.jsx
+            features[;""
+                "Real-time Monitoring",""
+                "Log Management",""
+                "Performance Metrics",""
+                "Alert Management",""
+<<<<<<< HEAD:pages.disabled/pages/services/CloudDevOpsServices.jsx
                 "Troubleshooting Tools"
             ]
 
+    ];"
+=======
+                "Troubleshooting Tools""
+            ]
+
     ];
-    const benefits = ["
-        "Faster time to market with automated deployments","
-        "Improved reliability and uptime","
-        "Cost optimization through resource management","
-        "Enhanced security and compliance","
-        "Scalable infrastructure that grows with your business","
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CloudDevOpsServices.jsx
+    const benefits = [""
+        "Faster time to market with automated deployments",""
+        "Improved reliability and uptime",""
+        "Cost optimization through resource management",""
+        "Enhanced security and compliance",""
+        "Scalable infrastructure that grows with your business",""
+<<<<<<< HEAD:pages.disabled/pages/services/CloudDevOpsServices.jsx
         "Better collaboration between development and operations teams"
+    ];"
+=======
+        "Better collaboration between development and operations teams""
     ];
-    const technologies = ["
-        "AWS, Azure, GCP","
-        "Kubernetes & Docker","
-        "Terraform & Ansible","
-        "Jenkins & GitLab CI","
-        "Prometheus & Grafana","
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CloudDevOpsServices.jsx
+    const technologies = [""
+        "AWS, Azure, GCP",""
+        "Kubernetes & Docker",""
+        "Terraform & Ansible",""
+        "Jenkins & GitLab CI",""
+        "Prometheus & Grafana",""
+<<<<<<< HEAD:pages.disabled/pages/services/CloudDevOpsServices.jsx
         "ELK Stack"
     ];
     const cloudPlatforms = [
         {
 "
-            name: "Amazon Web Services","
-            description: "Leading cloud platform with comprehensive services","
+=======
+        "ELK Stack""
+    ];
+    const cloudPlatforms = []
+        {}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CloudDevOpsServices.jsx
+""
+            name: "Amazon Web Services",""
+            description: "Leading cloud platform with comprehensive services",""
             features["EC2, S3, RDS", "Lambda Functions", "CloudFormation", "CloudWatch"];
         },;
+<<<<<<< HEAD:pages.disabled/pages/services/CloudDevOpsServices.jsx
         {
 "
-            name: "Microsoft Azure","
-            description: "Enterprise-grade cloud solutions for Windows environments","
+=======
+        {}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CloudDevOpsServices.jsx
+""
+            name: "Microsoft Azure",""
+            description: "Enterprise-grade cloud solutions for Windows environments",""
             features["Virtual Machines", "Azure DevOps", "Azure Functions", "Application Insights"];
         },;
+<<<<<<< HEAD:pages.disabled/pages/services/CloudDevOpsServices.jsx
         {
 "
-            name: "Google Cloud Platform","
-            description: "Innovative cloud services with AI and ML capabilities","
+=======
+        {}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CloudDevOpsServices.jsx
+""
+            name: "Google Cloud Platform",""
+            description: "Innovative cloud services with AI and ML capabilities",""
             features["Compute Engine", "Cloud Run", "BigQuery", "Cloud Build"];
+<<<<<<< HEAD:pages.disabled/pages/services/CloudDevOpsServices.jsx
+        }"
+    ];""
+    return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">"
+=======
         }
-    ];"
+    ];""
     return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      {/* Hero Section */}"
-      <section className="relative bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white py-20">"
-        <div className="absolute inset-0 bg-black/20"></div>"
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CloudDevOpsServices.jsx
+      {/* Hero Section */}""
+      <section className="relative bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white py-20">""
+        <div className="absolute inset-0 bg-black/20"></div>""
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">""
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Cloud & DevOps Services
-          </h1>"
+<<<<<<< HEAD:pages.disabled/pages/services/CloudDevOpsServices.jsx
+            Cloud & DevOps Services"
+          </h1>""
           <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">
             Accelerate your digital transformation with modern cloud infrastructure
-            and DevOps practices that drive innovation and efficiency.
-          </p>"
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+            and DevOps practices that drive innovation and efficiency."
+          </p>""
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">""
             <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-              Get Started
-            </Link>"
+              Get Started"
+=======
+            Cloud & DevOps Services;
+          </h1>""
+          <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">
+            Accelerate your digital transformation with modern cloud infrastructure;
+            and DevOps practices that drive innovation and efficiency.
+          </p>""
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">""
+            <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+              Get Started;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CloudDevOpsServices.jsx
+            </Link>""
             <Link to="/request-quote" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-slate-900 transition-all duration-300">
-              Request Quote
+              Request Quote;
             </Link>
           </div>
         </div>
       </section>
+<<<<<<< HEAD:pages.disabled/pages/services/CloudDevOpsServices.jsx
+"
+=======
 
-      {/* Services Grid */}"
-      <section className="py-20">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
-          <div className="text-center mb-16">"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CloudDevOpsServices.jsx
+      {/* Services Grid */}""
+      <section className="py-20">""
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
+          <div className="text-center mb-16">""
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
-              Comprehensive Cloud & DevOps Solutions
-            </h2>"
+<<<<<<< HEAD:pages.disabled/pages/services/CloudDevOpsServices.jsx
+              Comprehensive Cloud & DevOps Solutions"
+=======
+              Comprehensive Cloud & DevOps Solutions;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CloudDevOpsServices.jsx
+            </h2>""
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              From cloud migration to DevOps transformation, we provide end-to-end
+              From cloud migration to DevOps transformation, we provide end-to-end;
               solutions that modernize your infrastructure and accelerate delivery.
             </p>
+<<<<<<< HEAD:pages.disabled/pages/services/CloudDevOpsServices.jsx
+          </div>"
+=======
           </div>
-"
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
-            {cloudServices.map((service, index) => (<div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-slate-100">"
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6">"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CloudDevOpsServices.jsx
+""
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""
+            {cloudServices.map((service, index) => (<div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-slate-100">""
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6">""
+<<<<<<< HEAD:pages.disabled/pages/services/CloudDevOpsServices.jsx
+                  <service.icon className="w-8 h-8 text-white"/>"
+                </div>""
+                <h3 className="text-2xl font-bold text-slate-900 mb-4">
+                  {service.title}"
+                </h3>""
+                <p className="text-slate-600 mb-6">
+                  {service.description}"
+=======
                   <service.icon className="w-8 h-8 text-white"/>
-                </div>"
+                </div>""
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">
                   {service.title}
-                </h3>"
+                </h3>""
                 <p className="text-slate-600 mb-6">
                   {service.description}
-                </p>"
-                <ul className="space-y-2 mb-6">"
-                  {service.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-slate-600">"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CloudDevOpsServices.jsx
+                </p>""
+                <ul className="space-y-2 mb-6">""
+                  {service.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-slate-600">""
                       <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"/>
                       {feature}
+<<<<<<< HEAD:pages.disabled/pages/services/CloudDevOpsServices.jsx
+                    </li>))}"
+                </ul>""
+                <Link to="/contact" className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold transition-colors duration-200">"
+=======
                     </li>))}
-                </ul>"
+                </ul>""
                 <Link to="/contact" className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold transition-colors duration-200">
-                  Learn More"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CloudDevOpsServices.jsx
+                  Learn More""
                   <ArrowRight className="w-4 h-4 ml-2"/>
                 </Link>
               </div>))}
           </div>
         </div>
       </section>
+<<<<<<< HEAD:pages.disabled/pages/services/CloudDevOpsServices.jsx
+"
+=======
 
-      {/* Cloud Platforms Section */}"
-      <section className="py-20 bg-white">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
-          <div className="text-center mb-16">"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CloudDevOpsServices.jsx
+      {/* Cloud Platforms Section */}""
+      <section className="py-20 bg-white">""
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
+          <div className="text-center mb-16">""
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
-              Multi-Cloud Expertise
-            </h2>"
+<<<<<<< HEAD:pages.disabled/pages/services/CloudDevOpsServices.jsx
+              Multi-Cloud Expertise"
+=======
+              Multi-Cloud Expertise;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CloudDevOpsServices.jsx
+            </h2>""
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              We work with all major cloud providers to give you the best solutions
+              We work with all major cloud providers to give you the best solutions;
               for your specific needs and budget.
             </p>
+<<<<<<< HEAD:pages.disabled/pages/services/CloudDevOpsServices.jsx
+          </div>"
+=======
           </div>
-"
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
-            {cloudPlatforms.map((platform, index) => (<div key={index} className="bg-slate-50 rounded-2xl p-8 border border-slate-200">"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CloudDevOpsServices.jsx
+""
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">""
+            {cloudPlatforms.map((platform, index) => (<div key={index} className="bg-slate-50 rounded-2xl p-8 border border-slate-200">""
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">
+<<<<<<< HEAD:pages.disabled/pages/services/CloudDevOpsServices.jsx
+                  {platform.name}"
+                </h3>""
+                <p className="text-slate-600 mb-6">
+                  {platform.description}"
+=======
                   {platform.name}
-                </h3>"
+                </h3>""
                 <p className="text-slate-600 mb-6">
                   {platform.description}
-                </p>"
-                <ul className="space-y-2">"
-                  {platform.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-slate-600">"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CloudDevOpsServices.jsx
+                </p>""
+                <ul className="space-y-2">""
+                  {platform.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-slate-600">""
                       <CheckCircle className="w-4 h-4 text-blue-500 mr-2 flex-shrink-0"/>
                       {feature}
                     </li>))}
@@ -211,71 +375,120 @@ const CloudDevOpsServices = () => {
           </div>
         </div>
       </section>
+<<<<<<< HEAD:pages.disabled/pages/services/CloudDevOpsServices.jsx
+"
+=======
 
-      {/* Benefits Section */}"
-      <section className="py-20 bg-slate-50">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
-          <div className="text-center mb-16">"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CloudDevOpsServices.jsx
+      {/* Benefits Section */}""
+      <section className="py-20 bg-slate-50">""
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
+          <div className="text-center mb-16">""
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
-              Benefits of Cloud & DevOps
-            </h2>"
+<<<<<<< HEAD:pages.disabled/pages/services/CloudDevOpsServices.jsx
+              Benefits of Cloud & DevOps"
+=======
+              Benefits of Cloud & DevOps;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CloudDevOpsServices.jsx
+            </h2>""
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Transform your organization with modern cloud and DevOps practices.
             </p>
+<<<<<<< HEAD:pages.disabled/pages/services/CloudDevOpsServices.jsx
+          </div>"
+=======
           </div>
-"
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
-            {benefits.map((benefit, index) => (<div key={index} className="text-center">"
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CloudDevOpsServices.jsx
+""
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""
+            {benefits.map((benefit, index) => (<div key={index} className="text-center">""
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">""
+<<<<<<< HEAD:pages.disabled/pages/services/CloudDevOpsServices.jsx
+                  <CheckCircle className="w-8 h-8 text-white"/>"
+=======
                   <CheckCircle className="w-8 h-8 text-white"/>
-                </div>"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CloudDevOpsServices.jsx
+                </div>""
                 <p className="text-lg text-slate-700">{benefit}</p>
               </div>))}
           </div>
         </div>
       </section>
+<<<<<<< HEAD:pages.disabled/pages/services/CloudDevOpsServices.jsx
+"
+=======
 
-      {/* Technologies Section */}"
-      <section className="py-20 bg-white">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
-          <div className="text-center mb-16">"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CloudDevOpsServices.jsx
+      {/* Technologies Section */}""
+      <section className="py-20 bg-white">""
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
+          <div className="text-center mb-16">""
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
-              Technologies We Use
-            </h2>"
+<<<<<<< HEAD:pages.disabled/pages/services/CloudDevOpsServices.jsx
+              Technologies We Use"
+=======
+              Technologies We Use;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CloudDevOpsServices.jsx
+            </h2>""
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               We leverage industry-leading tools and technologies to deliver robust solutions.
             </p>
+<<<<<<< HEAD:pages.disabled/pages/services/CloudDevOpsServices.jsx
+          </div>"
+=======
           </div>
-"
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">"
-            {technologies.map((tech, index) => (<div key={index} className="bg-slate-50 rounded-xl p-6 text-center shadow-md hover:shadow-lg transition-all duration-300">"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CloudDevOpsServices.jsx
+""
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">""
+            {technologies.map((tech, index) => (<div key={index} className="bg-slate-50 rounded-xl p-6 text-center shadow-md hover:shadow-lg transition-all duration-300">""
                 <p className="text-slate-700 font-semibold">{tech}</p>
               </div>))}
           </div>
         </div>
       </section>
+<<<<<<< HEAD:pages.disabled/pages/services/CloudDevOpsServices.jsx
+"
+=======
 
-      {/* CTA Section */}"
-      <section className="py-20 bg-gradient-to-r from-slate-900 to-blue-900 text-white">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CloudDevOpsServices.jsx
+      {/* CTA Section */}""
+      <section className="py-20 bg-gradient-to-r from-slate-900 to-blue-900 text-white">""
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">""
           <h2 className="text-4xl font-bold mb-6">
+<<<<<<< HEAD:pages.disabled/pages/services/CloudDevOpsServices.jsx
+            Ready to Modernize Your Infrastructure?"
+          </h2>""
+          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">'
+            Let's discuss how our cloud and DevOps expertise can transform your''
+            organization's technology landscape."
+          </p>""
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">""
+            <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+              Start Your Transformation"
+=======
             Ready to Modernize Your Infrastructure?
-          </h2>"
+          </h2>""
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
             Let's discuss how our cloud and DevOps expertise can transform your'
             organization's technology landscape.
-          </p>"
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+          </p>""
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">""
             <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-              Start Your Transformation
-            </Link>"
+              Start Your Transformation;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CloudDevOpsServices.jsx
+            </Link>""
             <Link to="/case-studies" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-slate-900 transition-all duration-300">
-              View Case Studies
+              View Case Studies;
             </Link>
           </div>
         </div>
       </section>
     </div>)};
 export { CloudDevOpsServices };
+<<<<<<< HEAD:pages.disabled/pages/services/CloudDevOpsServices.jsx
+export default CloudDevOpsServices;'"
+}}}'"'"
+=======
 export default CloudDevOpsServices;
-}}}'"
+}}}'""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/CloudDevOpsServices.jsx

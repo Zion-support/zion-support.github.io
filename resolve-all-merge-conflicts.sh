@@ -1,93 +1,166 @@
 #!/bin/bash
 
+# Resolve All Merge Conflicts Script
+# This script systematically resolves all merge conflicts by keeping the main branch version
+
+set -e
+
 echo "🚀 Starting comprehensive merge conflict resolution..."
 
-# Function to resolve merge conflicts in a file
-resolve_conflicts() {
-    local file="$1"
-    echo "🔧 Resolving conflicts in: $file"
+# Function to resolve conflicts in a specific file
+resolve_file_conflicts() {
+    local file=$1
     
-    # Check if file has merge conflicts
-    if grep -q "<<<<<<< HEAD" "$file"; then
-        echo "  ⚠️  Found merge conflicts, resolving..."
-        
-        # Create backup
-        cp "$file" "${file}.backup"
-        
-        # Remove all merge conflict markers and keep the HEAD version (first part)
-        sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-        sed -i '/>>>>>>> .*/d' "$file"
-        
-        # Clean up any remaining conflict markers
-        sed -i '/<<<<<<< HEAD/d' "$file"
-        sed -i '/=======/d' "$file"
-        sed -i '/>>>>>>> /d' "$file"
-        
-        # Remove empty lines that might have been left
-        sed -i '/^[[:space:]]*$/d' "$file"
-        
-        echo "  ✅ Conflicts resolved in: $file"
+    echo "  📄 Resolving conflicts in: $file"
+    
+    # Check if file exists and has conflicts
+    if [ -f "$file" ]; then
+        # For most files, keep the main version (ours)
+        if git checkout --ours "$file" 2>/dev/null; then
+            echo "    ✅ Kept main version of $file"
+            git add "$file"
+        else
+            echo "    ⚠️  Could not resolve $file with main version, trying branch version"
+            if git checkout --theirs "$file" 2>/dev/null; then
+                echo "    ✅ Kept branch version of $file"
+                git add "$file"
+            else
+                echo "    ❌ Failed to resolve $file, removing it"
+                git rm "$file" 2>/dev/null || rm -f "$file"
+            fi
+        fi
     else
-        echo "  ✅ No conflicts found in: $file"
+        echo "    ⚠️  File $file doesn't exist, skipping"
     fi
 }
 
-# Resolve conflicts in data files
-echo "📁 Resolving conflicts in data files..."
-for file in data/*.ts; do
-    if [ -f "$file" ]; then
-        resolve_conflicts "$file"
+# Function to resolve all conflicts systematically
+resolve_all_conflicts() {
+    echo "🔧 Resolving all merge conflicts systematically..."
+    
+    # Get list of all conflicted files
+    local conflicted_files=$(git diff --name-only --diff-filter=U)
+    
+    if [ -z "$conflicted_files" ]; then
+        echo "✅ No conflicted files found"
+        return 0
     fi
-done
-
-# Resolve conflicts in src files
-echo "📁 Resolving conflicts in src files..."
-find src -name "*.ts" -o -name "*.tsx" | while read file; do
-    if [ -f "$file" ]; then
-        resolve_conflicts "$file"
+    
+    echo "📊 Found $(echo "$conflicted_files" | wc -l) conflicted files to resolve"
+    
+    # Process each conflicted file
+    for file in $conflicted_files; do
+        resolve_file_conflicts "$file"
+    done
+    
+    # Also handle added/deleted conflicts
+    local added_conflicts=$(git diff --name-only --diff-filter=AA)
+    local deleted_conflicts=$(git diff --name-only --diff-filter=DD)
+    
+    if [ -n "$added_conflicts" ]; then
+        echo "📁 Resolving added file conflicts..."
+        for file in $added_conflicts; do
+            echo "  📄 Resolving added conflict in: $file"
+            if git checkout --ours "$file" 2>/dev/null; then
+                echo "    ✅ Kept main version of $file"
+                git add "$file"
+            else
+                echo "    ⚠️  Could not resolve $file, keeping branch version"
+                git add "$file"
+            fi
+        done
     fi
-done
-
-# Resolve conflicts in pages files
-echo "📁 Resolving conflicts in pages files..."
-find pages -name "*.ts" -o -name "*.tsx" | while read file; do
-    if [ -f "$file" ]; then
-        resolve_conflicts "$file"
+    
+    if [ -n "$deleted_conflicts" ]; then
+        echo "🗑️  Resolving deleted file conflicts..."
+        for file in $deleted_conflicts; do
+            echo "  📄 Resolving deleted conflict in: $file"
+            # For deleted conflicts, usually keep the deletion
+            git rm "$file" 2>/dev/null || echo "    ⚠️  Could not remove $file"
+        done
     fi
-done
+}
 
-# Resolve conflicts in components files
-echo "📁 Resolving conflicts in components files..."
-find components -name "*.ts" -o -name "*.tsx" | while read file; do
-    if [ -f "$file" ]; then
-        resolve_conflicts "$file"
+# Function to handle special file types
+handle_special_files() {
+    echo "🔧 Handling special file types..."
+    
+    # Handle package files - keep main version
+    if [ -f "package.json" ]; then
+        echo "  📦 Resolving package.json conflicts"
+        git checkout --ours package.json
+        git add package.json
     fi
-done
-
-# Resolve conflicts in GitHub workflow files
-echo "📁 Resolving conflicts in GitHub workflow files..."
-find .github/workflows -name "*.yml" | while read file; do
-    if [ -f "$file" ]; then
-        resolve_conflicts "$file"
+    
+    if [ -f "yarn.lock" ]; then
+        echo "  📦 Resolving yarn.lock conflicts"
+        git checkout --ours yarn.lock
+        git add yarn.lock
     fi
-done
-
-# Resolve conflicts in other important files
-echo "📁 Resolving conflicts in other important files..."
-for file in public/favicon.svg offline.html; do
-    if [ -f "$file" ]; then
-        resolve_conflicts "$file"
+    
+    if [ -f "package-lock.json" ]; then
+        echo "  📦 Resolving package-lock.json conflicts"
+        git checkout --ours package-lock.json
+        git add package-lock.json
     fi
-done
+    
+    # Handle config files - keep main version
+    if [ -f "tsconfig.json" ]; then
+        echo "  ⚙️  Resolving tsconfig.json conflicts"
+        git checkout --ours tsconfig.json
+        git add tsconfig.json
+    fi
+    
+    if [ -f "tailwind.config.ts" ]; then
+        echo "  ⚙️  Resolving tailwind.config.ts conflicts"
+        git checkout --ours tailwind.config.ts
+        git add tailwind.config.ts
+    fi
+    
+    if [ -f "vite.config.ts" ]; then
+        echo "  ⚙️  Resolving vite.config.ts conflicts"
+        git checkout --ours vite.config.ts
+        git add vite.config.ts
+    fi
+}
 
-echo "🔍 Checking for remaining merge conflicts..."
-remaining_conflicts=$(grep -r "<<<<<<< HEAD" . --exclude-dir=node_modules --exclude-dir=.git --exclude="*.backup" | wc -l)
+# Main conflict resolution process
+echo "🔄 Starting conflict resolution process..."
 
-if [ "$remaining_conflicts" -eq 0 ]; then
-    echo "✅ All merge conflicts have been resolved!"
-else
-    echo "⚠️  Found $remaining_conflicts remaining merge conflicts:"
-    grep -r "<<<<<<< HEAD" . --exclude-dir=node_modules --exclude-dir=.git --exclude="*.backup"
+# First, handle special files
+handle_special_files
+
+# Then resolve all other conflicts
+resolve_all_conflicts
+
+# Check if there are any remaining conflicts
+if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
+    echo "⚠️  Some conflicts remain, attempting final resolution..."
+    
+    # Get remaining conflicted files
+    local remaining_conflicts=$(git diff --name-only --diff-filter=U)
+    
+    for file in $remaining_conflicts; do
+        echo "  🔧 Final resolution attempt for: $file"
+        
+        # Try to resolve by keeping main version
+        if git checkout --ours "$file" 2>/dev/null; then
+            echo "    ✅ Successfully resolved $file"
+            git add "$file"
+        else
+            echo "    ❌ Could not resolve $file, removing it"
+            git rm "$file" 2>/dev/null || rm -f "$file"
+        fi
+    done
 fi
 
-echo "🎉 Merge conflict resolution completed!"
+# Final check
+if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
+    echo "❌ Some conflicts still remain after resolution attempts"
+    echo "📋 Remaining conflicted files:"
+    git diff --name-only --diff-filter=U
+    return 1
+else
+    echo "✅ All conflicts have been resolved!"
+    return 0
+fi

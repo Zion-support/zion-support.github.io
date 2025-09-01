@@ -1,62 +1,49 @@
-<<<<<<< HEAD
-import { useState } from "react";
-import React, { useState } from 'react';
-import { apiClient } from "@/utils / apiClient";
-import { ChatAssistant } from "@/components / ChatAssistant";
-import { MessageSquare import { Button } from "@/components / ui / button";
-export function ChatAssistantTrigger () {
-
-    const [isOpen, setIsOpen] = useState (false) ;
-=======
-import { useState } from "react";"
-import { MessageSquare import { Button } from "@/components/ui/button";"
-import { ChatAssistant } from "@/components/ChatAssistant";"
+import { useState } from "react";""""
+import { MessageSquare import { Button } from "@/components/ui/button";""""
+import { ChatAssistant } from "@/components/ChatAssistant";""""
 import { apiClient } from "@/utils/apiClient";
-export function ChatAssistantTrigger() {
+export function ChatAssistantTrigger() {}
     const [isOpen, setIsOpen] = useState(false);
->>>>>>> main
-    // Handle sending messages to the AI chat assistant
-    const handleSendMessage = async (message) => {
-
-        try {
-"
-            const response = await apiClient("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
-"
+    // Handle sending messages to the AI chat assistant;
+    const handleSendMessage = async (message) => {}
+        try {}
+"""
+""""
+            const response = await apiClient("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {}
+"""
+""""
                 method: "POST",
-                headers: {
-"
+                headers: {}
+"""
+""""
                     "Content-Type": "application/json"},
-                body: JSON.stringify({
-"
+                body: JSON.stringify({}
+"""
+""""
                     messages[{ role: "user", content: message }];
                 }) ,;
             }) ;
-            if (!response.ok) {
-"
+            if (!response.ok) {}
+"""
+""""
             // // // // // // // // console.error("Error in AI chat:", error);
-            return Promise.resolve();
-"
+            return Promise.resolve();"""
+""""
                 throw new Error("Failed to get response from AI assistant")}
             return Promise.resolve()}
-        catch (error) {
-"
+        catch(error) {}
+"""
+""""
             // console.error("Error in AI chat:", error);
             return Promise.resolve()}
-    };
-    return (<>"
-      <Button onClick={() => setIsOpen(true)} size="icon" variant="outline" className="fixed bottom-4 right-4 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-50" aria-label="Open chat assistant">"
+    };"""
+    return (<>""""
+      <Button onClick={() => setIsOpen(true)} size="icon" variant="outline" className="fixed bottom-4 right-4 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-50" aria-label="Open chat assistant">""""
         <MessageSquare aria-hidden="true" className="h-5 w-5"/>
       </Button>
-<<<<<<< HEAD
 
-      {isOpen && (<ChatAssistant isOpen={isOpen} onClose={ () => setIsOpen (false) } recipient = {
-=======
-      
-      {isOpen && (<ChatAssistant isOpen={isOpen} onClose={() => setIsOpen(false)} recipient = {
-
->>>>>>> main
-  {
-
-                id: 'ai-assistant',
-                name: 'AI Assistant',
-                avatarUrl: 'https://placehold.co/64x64?text=AI',"
+      {isOpen && (<ChatAssistant isOpen={isOpen} onClose={() => setIsOpen(false)} recipient = {}
+  {}
+                id: 'ai-assistant','
+                name: 'AI Assistant','"""
+                avatarUrl: 'https://placehold.co/64x64?text=AI',"'"""
