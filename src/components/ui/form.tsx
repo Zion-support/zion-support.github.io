@@ -1,7 +1,7 @@
 import React from 'react.ts';
 interface FormProps extends React.PropsWithChildren<{}> {
 
-  children: anyanyanyanyanyanyanyanyanyanyanyanyanyReact.ReactNode;
+  children: anyanyanyanyReact.ReactNode;
   onSubmit?: (e: React.FormEvent)                => void}
 
 export function FormItem(...args[]: ):  {
@@ -16,11 +16,11 @@ export function FormLabel(...args[]: ):  {
   return <label className = {`block text-sm font-medium ${className}`}>{children}</label>}
 interface FormFieldProps extends React.PropsWithChildren<{}> {;
 ;
-  control;name: anyanyanyanyanyanyanyanyanyanyanyanyanystring;
+  control;name: anyanyanyanystring;
   render: (props)                => React.ReactNode}
 
 export function FormField(...args[]: ):  {
-  return render({ field: anyanyanyanyanyanyanyanyanyanyanyanyany{ name, value: '', onChange: ()                => {} } })}
+  return render({ field: anyanyanyany{ name, value: '', onChange: ()                => {} } })}
 
 interface FormMessageProps extends React.PropsWithChildren<{}> {
   children?: React.ReactNode;
