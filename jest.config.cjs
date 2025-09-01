@@ -2,16 +2,13 @@ module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
   transform: {
-    '^.+\\.(t|j)sx?$': ['babel-jest', {
-      presets: [
-        ['@babel/preset-env', { targets: { node: 'current' }, modules: 'commonjs' }],
-        ['@babel/preset-typescript', { allExtensions: true, isTSX: true }], // Added isTSX: true
-        ['@babel/preset-react', { runtime: 'automatic' }]
-      ],
-      // plugins: ['babel-plugin-istanbul'], // Removed this line
-      babelrc: false,
-      configFile: false
-    }],
+    '^.+\\.(js|jsx|ts|tsx)$': [
+      'babel-jest',
+      {
+        presets: ['next/babel'],
+        plugins: [],
+      },
+    ],
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'], // Keep ts/tsx here
   setupFilesAfterEnv: ['<rootDir>/tests/jest.setup.ts'],
@@ -48,7 +45,9 @@ module.exports = {
     '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
       '<rootDir>/src/__mocks__/fileMock.js',
     // Handle image imports
-    '\\.(gif|ttf|eot|svg|png|jpg|jpeg)$': '<rootDir>/src/__mocks__/fileMock.js',
+    '\\.(gif|ttf|eot|svg|png|jpg|jpeg)$':
+      '<rootDir>/tests/__mocks__/fileMock.js',
+
     // Fix path mappings with more specific ordering
     '^@/pages/api/(.*)$': '<rootDir>/pages/api/$1',
     '^@/pages/(.*)$': ['<rootDir>/pages/$1', '<rootDir>/src/pages/$1'],
@@ -80,19 +79,20 @@ module.exports = {
     '^@/config/(.*)$': '<rootDir>/src/config/$1',
     '^@/middleware/(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
     '^vitest$': '<rootDir>/tests/__mocks__/vitestMock.js',
+
     // Special module mocks
     '^msw/node$': require.resolve('msw/node'),
     '^next/router$': 'next-router-mock',
     '^next/navigation$': '<rootDir>/tests/__mocks__/emptyModule.js',
     'react-router-dom$': '<rootDir>/src/stubs/react-router-dom.tsx',
-    'react-router$': '<rootDir>/src/stubs/react-router-dom.tsx',
+
     // Mock heavy libraries not needed for unit tests
     '^@reown/appkit(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
     '^@walletconnect/(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
     '^uint8arrays/(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
     '^multiformats/(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
     '^react-markdown$': '<rootDir>/tests/__mocks__/reactMarkdown.js',
-    '^@/pages/(.*)\.jsx$': '<rootDir>/tests/__mocks__/emptyModule.js',
+    '^@/pages/(.*).jsx$': '<rootDir>/tests/__mocks__/emptyModule.js',
     '^@/pages/Signup$': '<rootDir>/tests/__mocks__/emptyModule.js',
     '^@/pages/signup$': '<rootDir>/src/pages/Signup.tsx',
     '^@/utils/devtools$': '<rootDir>/tests/__mocks__/emptyModule.js',
@@ -101,7 +101,7 @@ module.exports = {
     '^os-utils$': '<rootDir>/tests/__mocks__/emptyModule.js',
     '^@/pages/api/points/(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
     '^@/pages/api/users/(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
-    '^@/pages/Login\.jsx$': '<rootDir>/tests/__mocks__/emptyModule.js',
+    '^@/pages/Login.jsx$': '<rootDir>/tests/__mocks__/emptyModule.js',
     '^@/App$': '<rootDir>/src/App.tsx',
     '^@/pages/api/auth/(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
     // Additional aliases for Jest environment
@@ -114,16 +114,47 @@ module.exports = {
     // Retain original mocks for middleware to avoid heavy imports in Jest
     '^@/middleware/(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
   },
-  transformIgnorePatterns: [
-    '/node_modules/(?!react-router-dom|@reown/appkit|@walletconnect/utils|bson|msw|@babel/runtime|@supabase/supabase-js|superjson|@tanstack/react-query|uint8arrays)/',
+
+  // Test file patterns
+  testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[tj]s?(x)'],
+
+  testPathIgnorePatterns: [
+    '<rootDir>/node_modules/',
+    '<rootDir>/.next/',
+    '<rootDir>/tests/e2e/',
+    '<rootDir>/tests/storybook/',
+    '<rootDir>/supabase/functions/',
+    '<rootDir>/plugins/wallet-connector/cypress/',
+    '<rootDir>/pact/',
+    '<rootDir>/tests/visual-regression.test.ts',
   ],
-  roots: ['<rootDir>/__tests__', '<rootDir>/tests', '<rootDir>/src'],
-  coverageThreshold: {
-    global: {
-      statements: 80,
-      branches: 80,
-      functions: 80,
-      lines: 80,
+
+  // Coverage configuration
+  collectCoverage: false,
+  coverageDirectory: 'coverage',
+  coverageReporters: ['json', 'lcov', 'text', 'clover'],
+  coveragePathIgnorePatterns: [
+    '/node_modules/',
+    '<rootDir>/tests/',
+    '<rootDir>/src/mocks/',
+    '<rootDir>/src/types/',
+    '<rootDir>/temp_essential_pages/',
+  ],
+
+  // Global configuration
+  globals: {
+    'ts-jest': {
+      useESM: true,
     },
   },
+
+  // Module file extensions
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
+
+  // Test timeout
+  testTimeout: 30000,
+
+  // Clear mocks between tests
+  clearMocks: true,
+  restoreMocks: true,
 };

@@ -30,5 +30,5 @@
       "socket.io-client"
     ]
   },
-  "include": ["src", "types"]
+  "include": ["src", "pages", "types"]
 }

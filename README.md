@@ -6,7 +6,18 @@ This is the main README for the project. Below are details about specific compon
 
 This project includes a URL/API performance monitoring service located in the `monitoring/` directory. It periodically checks configured endpoints, logs their performance, and can trigger alerts and custom remediation actions if performance degrades. For detailed information, see the [`monitoring/README.md`](./monitoring/README.md) file.
 
-### 🎯 Core Functionality
+- **Frontend Application (Next.js):** Located primarily in `src/` (for application code like components, hooks, pages using App Router) and `pages/` (for API routes and potentially older Pages Router content). This is the main user-facing application.
+- **Backend API (Django):** Located in `backend/`. This Python-based backend serves core business logic and data management, likely interacting with a PostgreSQL database.
+- **Node.js Backend Services:**
+  - **`server/`:** An Express.js application that provides additional API endpoints, potentially for specific features, BFF patterns, or integration tasks. It connects to MongoDB.
+  - **`api/` (within `pages/api/` or `src/pages/api`):** Next.js API routes providing serverless backend functionality directly within the Next.js application.
+- **Monitoring Service:** Located in `monitoring/`. A Node.js service for monitoring URL performance and health. (See `monitoring/README.md` for details).
+- **Supabase Integration:** Utilizes Supabase for backend-as-a-service features, with functions in `supabase/functions/` and schema definitions in `prisma/` (Prisma is used with Supabase, and potentially also for the Django backend or other Node.js services).
+- **Blockchain/DAO Components:** Directories like `dao/` and `token/` suggest features related to Decentralized Autonomous Organizations and cryptocurrency tokens.
+- **SDK:** A software development kit is present in `sdk/`, likely for interacting with Zion platform services.
+- **Documentation:** General documentation is in `docs/`, with specific component documentation potentially within their respective directories.
+- **Testing:** Extensive test suites using Vitest and Cypress are in `tests/` and `cypress/`. See **[docs/QA_TESTING_CHECKLIST.md](docs/QA_TESTING_CHECKLIST.md)** for common QA steps.
+- **Connect Portal:** Access the portal at `/portal` for account management and settings. The previous `/app` path is deprecated.
 
 ## Set environment variables (optional):
 Copy `.env.example` to `.env` and adjust any values needed for your setup.
@@ -20,6 +31,14 @@ Important variables include:
   notifications (used by the `monitoring/` service).
 * `LOG_LEVEL` – logging verbosity (`error`, `warn`, `info`, `debug`).
 
+- **Frontend:** Next.js, React, TypeScript, Redux Toolkit, Chakra UI, Radix UI, Tailwind CSS
+- **Backend (Django):** Python, Django, Django REST Framework, PostgreSQL
+- **Backend (Node.js):** Node.js, Express.js, TypeScript, MongoDB (for `server/`), Next.js API Routes
+- **Database/BaaS:** PostgreSQL, MongoDB, Supabase, Prisma
+- **Authentication:** Supabase Auth (handles login, signup, password reset, social auth) with optional two-factor authentication for the IPO portal
+- **Monitoring:** Custom Node.js service, Sentry, Datadog
+- **CI/CD:** GitHub Actions, Netlify (including Lighthouse CI)
+- **Other:** IPFS, OrbitDB, Ethers.js, Elasticsearch
 
 ## Running Tests
 
@@ -28,6 +47,7 @@ Important variables include:
 ### Authentication Setup
 
 The application uses Supabase for all authentication functionality:
+
 - User registration and login
 - Email verification and password reset
 - Social authentication (Google, Facebook, GitHub, Microsoft, Twitter)
@@ -39,21 +59,21 @@ A comprehensive list of environment variables can be found in the `.env.example`
 
 **Key variables include:**
 
--   **Supabase Configuration:**
-    -   `NEXT_PUBLIC_SUPABASE_URL`
-    -   `NEXT_PUBLIC_SUPABASE_ANON_KEY`
-    -   `SUPABASE_SERVICE_ROLE_KEY` (for server-side operations)
--   **NextAuth.js Configuration:**
-    -   `NEXTAUTH_SECRET` (a randomly generated string for signing tokens)
-    -   `NEXTAUTH_URL` (the canonical URL of your application)
--   **OAuth Provider Credentials:**
-    -   `GOOGLE_CLIENT_ID` & `GOOGLE_CLIENT_SECRET`
-    -   `FACEBOOK_CLIENT_ID` & `FACEBOOK_CLIENT_SECRET`
-    -   `GITHUB_CLIENT_ID` & `GITHUB_CLIENT_SECRET`
-    -   `MICROSOFT_CLIENT_ID` & `MICROSOFT_CLIENT_SECRET` (and potentially `MICROSOFT_TENANT_ID`)
-    -   Other provider credentials as needed.
--   **Internal Authentication Service:**
-    -   `INTERNAL_AUTH_SERVICE_URL` (if used for specific flows like registration)
+- **Supabase Configuration:**
+  - `NEXT_PUBLIC_SUPABASE_URL`
+  - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+  - `SUPABASE_SERVICE_ROLE_KEY` (for server-side operations)
+- **NextAuth.js Configuration:**
+  - `NEXTAUTH_SECRET` (a randomly generated string for signing tokens)
+  - `NEXTAUTH_URL` (the canonical URL of your application)
+- **OAuth Provider Credentials:**
+  - `GOOGLE_CLIENT_ID` & `GOOGLE_CLIENT_SECRET`
+  - `FACEBOOK_CLIENT_ID` & `FACEBOOK_CLIENT_SECRET`
+  - `GITHUB_CLIENT_ID` & `GITHUB_CLIENT_SECRET`
+  - `MICROSOFT_CLIENT_ID` & `MICROSOFT_CLIENT_SECRET` (and potentially `MICROSOFT_TENANT_ID`)
+  - Other provider credentials as needed.
+- **Internal Authentication Service:**
+  - `INTERNAL_AUTH_SERVICE_URL` (if used for specific flows like registration)
 
 Ensure all variables marked as required in `.env.example` or in specific documentation (like `docs/SUPABASE_AUTHENTICATION_SETUP.md`) are correctly set.
 
@@ -99,59 +119,160 @@ npm run test:e2e          # End-to-end tests
 
 ### Test coverage
 
-```bash
-npm run test:coverage
-```
+3.  **Install project dependencies:** Run the setup script with your preferred
+    package manager. Example:
 
-## 🏗️ Building
+    - `./setup.sh npm` _(default)_
+    - `./setup.sh pnpm`
+    - `./setup.sh yarn`
+    - `./setup.sh bun`
+      Ensure you have internet connectivity so dependencies can be downloaded.
 
-### Development build
+4.  **Configure environment variables:**
 
-Deployment instructions to be updated.
+    - For **local development**: Create `.env.local` based on environment variable requirements above
+    - Set `NEXT_PUBLIC_REOWN_PROJECT_ID` to your Reown AppKit project ID (see `docs/ENVIRONMENT_SAFEGUARDS.md`)
+    - For **production**: Set variables in Netlify UI (see deployment guide)
+    - Ensure `INTERNAL_AUTH_SERVICE_URL` points to your authentication service
+    - **Enable DevTools**: Set `NEXT_PUBLIC_DEVTOOLS=true` in `.env.local` if you want browser DevTools enabled
+    - **Validate configuration**: Run `npx ts-node --transpile-only scripts/check-env.ts`
 
-## Integrations
+5.  **Install backend dependencies:**
 
-See [docs/Integrations.md](docs/Integrations.md) for information on the Zion Assistant browser extension and Slack bot.
+    - **Django backend**: Refer to `backend/README.md` or run `pip install -r backend/requirements.txt`
+    - **Monitoring service**: `cd monitoring && npm install`
 
-## Product Media
+6.  **Database Setup:**
 
-Product listings now support rich media. The `product_listings` table includes new
-`video_url` and `model_url` fields for MP4 videos and GLB 3D models. Upload media
-through the product submission form and view it in the gallery tabs (Images, Video, 3D).
+    - Run Prisma migrations: `npx prisma migrate dev`
+    - Seed data: `npx prisma db seed`
+    - Set up Django database (see backend documentation)
 
-## Product Media
+7.  **Running the application:**
 
-Product listings now support rich media. The `product_listings` table includes new
-`video_url` and `model_url` fields for MP4 videos and GLB 3D models. Upload media
-through the product submission form and view it in the gallery tabs (Images, Video, 3D).
+    - **Next.js frontend**: `npm run dev` _(automatically validates your development environment)_
+    - **Django backend**: `python backend/manage.py runserver`
+    - **Node.js server**: `node server/index.cjs` (or via npm script)
 
-## Product Media
+8.  **Verify authentication setup:**
 
-Product listings now support rich media. The `product_listings` table includes new
-`video_url` and `model_url` fields for MP4 videos and GLB 3D models. Upload media
-through the product submission form and view it in the gallery tabs (Images, Video, 3D).
+    - Test user registration at `/auth/register`
+    - Test login at `/auth/login`
+    - Verify email verification flow
+
+9.  **Cleaning caches and logs:**
+
+    - Run `npm run clean:cache` to remove temporary log files and common build caches.
+    - Regenerate the sitemap with `npm run sitemap` whenever routes change.
+    - Fix any accidental `react-router` links by running `node scripts/fix-link-hrefs.cjs`.
+
+10. **Generate Press Kit Archive:**
+
+    - The downloadable press kit is not stored in the repository.
+    - Run `npm run build:media-kit` to create `public/toolkit_assets/media_kit.zip`.
+
+11. **Payment Testing:**
+
+    - **Enable Test Mode:** Ensure `STRIPE_TEST_MODE=true` (for backend) and `NEXT_PUBLIC_STRIPE_TEST_MODE=true` (for frontend) are set in your environment (e.g., `.env.local` or CI/staging environment variables). This forces the application to use Stripe test API keys.
+    - **Test Card:** Use the generic Stripe test card:
+      - Card Number: `4242 4242 4242 4242`
+      - Expiration Date: Any future date (e.g., 12/30)
+      - CVC: Any 3 digits (e.g., 123)
+    - **View Transactions:** Test transactions can be viewed in your Stripe Dashboard (ensure "View test data" is enabled).
+    - **Demo Products:** If no products appear, run `npm run seed` to populate demo products.
+    - **Guest Checkout:** Available at `/marketplace` (add items to cart and proceed to checkout).
+    - **Sandbox Login:** For authenticated flows, use development credentials from `.env.local` as described in `docs/SECURITY_CREDENTIALS.md`.
+    - **Full Details:** For a comprehensive list of test cards and scenarios, see the detailed guide in **[docs/Payments.md](docs/Payments.md)**.
+
+12. **Contract Tests:**
+
+    - Pact-based contract tests verify that front-end routes match available API endpoints.
+    - Start the stub server with `node server/stubServer.js` and run `npm test`.
+
+13. **Cross-Browser Testing:**
+
+    - Set `BROWSERSTACK_USERNAME` and `BROWSERSTACK_ACCESS_KEY` environment variables.
+    - Run `npm run test:browserstack` to execute Playwright tests on BrowserStack across desktop and mobile browsers.
+
+14. **Local Cypress Testing:**
+
+    - Copy `cypress.env.example.json` to `cypress.env.json`.
+    - Adjust the placeholder values with your test credentials.
+    - This prevents "EXISTING_USER_EMAIL" and similar errors during `npm run test:e2e`.
+
+15. **Privacy Policy & Terms (login-gated):**
+    - AI-Prompt: "Generate a plain-language summary (≤ 200 words) of a standard tech marketplace privacy policy aimed at U.S. users."
+    - AI-Prompt: "Write an FAQ with 5 common questions users ask about Zion's Terms of Service."
+16. **Frequently Asked Questions:** See [docs/FAQ.md](docs/FAQ.md) or the in-app Help Center for quick answers.
 
 ## Troubleshooting
+
+### Common Issues
+
+1. **"Supabase not configured" warnings**
+
+   - Ensure `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` are set with actual values (not placeholders)
+   - Check variable names for typos
+
+2. **Authentication failures**
+
+   - Verify Supabase project is properly configured
+   - Check that email authentication is enabled in Supabase dashboard
+   - Ensure redirect URLs are configured correctly
+
+3. **Build failures on Netlify**
+   - Verify all required environment variables are set in Netlify UI
+   - Check build logs for specific TypeScript or dependency errors
+4. **Blank screen when starting the app**
+   - Ensure dependencies are installed by running `./setup.sh npm`
+   - Run `npm run fix:loading` to diagnose and apply the emergency loader
+   - A fail-safe message will now appear if the page stays blank for a few seconds
+   - Detection logic improved to catch cases where only stylesheets or scripts are rendered
+   - See [docs/BLANK_SCREEN_FIX_GUIDE.md](docs/BLANK_SCREEN_FIX_GUIDE.md) for detailed instructions
+
+For detailed troubleshooting, see the [Supabase Authentication Setup Guide](docs/SUPABASE_AUTHENTICATION_SETUP.md).
+
+## 🚀 Performance & Monitoring
+
+### Performance Metrics
+
+- **Server Response Time**: ~2.6s (initial compilation) → ~83ms (cached)
+- **Image Optimization**: ~10ms response time with WebP/AVIF support
+- **Bundle Size**: Optimized with chunk splitting and tree shaking
+- **Build Time**: Improved with selective experimental features
+
+### Health Checks
+
+Run comprehensive performance and health checks:
 
 ```bash
 npm run preview
 ```
 
-## 🚀 Deployment
+### Key Optimizations Applied
 
-### Vercel (Recommended)
+1. **Image Optimization**: Fixed 400 errors, added comprehensive domain support
+2. **Webpack Configuration**: Optimized chunking, reduced serialization warnings
+3. **Sentry Integration**: Conditional loading, graceful fallbacks
+4. **Environment Handling**: Enhanced validation, placeholder detection
+5. **CSS Optimization**: Production-only to avoid development conflicts
+6. **Error Handling**: Improved user experience, reduced console spam
 
-1. Connect your GitHub repository to Vercel
-2. Configure environment variables
-3. Deploy automatically on push to main
+### Monitoring Dashboard
 
-### Netlify
+The application includes built-in monitoring for:
 
-1. Connect your GitHub repository to Netlify
-2. Set build command: `npm run build`
-3. Set publish directory: `dist`
+- Server health and response times
+- Image optimization performance
+- File system integrity
+- Environment configuration validation
+- Error reporting and analytics
 
-### Manual Deployment
+### Troubleshooting Blank Screens
+
+If the application loads with a completely empty page, it usually means
+the required `node_modules` directory is missing. Check `next_dev_server.log`
+for errors and reinstall dependencies:
 
 ```bash
 npm run build
@@ -165,7 +286,9 @@ until dependencies can be installed.
 
 For pnpm errors showing "This project is configured to use npm", use `./setup.sh npm` instead as the project may have npm-specific configurations.
 
-If you see a warning about `rimraf@3.0.2` being deprecated, run:
+### Self-Maintenance Automation
+
+The project includes several automations that help it heal itself and stay up to date:
 
 ```sh
 npm install rimraf@latest --save-dev
@@ -177,59 +300,4 @@ To prevent memory leaks from the deprecated `inflight` package, the project pins
 `glob` to version `10.4.5` via the `resolutions` field in `package.json`. Run
 `npm install` to ensure this version is installed.
 
-If you see `npm WARN deprecated @humanwhocodes/object-schema@2.0.3`, the project
-uses an override to replace this package with `@eslint/object-schema`. Pull the
-latest code and run `npm install` to update your lock file and remove the
-warning.
-
-### Whitelabel Tenant Errors
-
-If the app logs **"Error loading tenant"** during startup, the request to the
-Supabase edge function that provides whitelabel settings failed. Confirm that
-`VITE_SUPABASE_URL`/`VITE_SUPABASE_ANON_KEY` (or the Next.js style
-`NEXT_PUBLIC_SUPABASE_URL`/`NEXT_PUBLIC_SUPABASE_ANON_KEY`) are set in your
-environment and that you have network connectivity. The tenant hook will retry
-a few times before giving up.
-
-## Testing
-
-Run unit tests with:
-
-```sh
-npm run test
-```
-
-## Generating Test Logs
-
-For offline debugging you can run the test suite and capture the output by using the helper script `scripts/generate-tests-log.sh`.
-
-```bash
-bash scripts/generate-tests-log.sh
-```
-
-### End-to-End Tests
-
-Open Cypress for interactive debugging:
-
-```sh
-npm run cypress:open
-```
-
-Run the Cypress suite headlessly:
-
-```sh
-npm run cypress:run
-```
-
-### Coverage Report
-
-After running `npm run test`, open `coverage/lcov-report/index.html` in your
-browser to view detailed coverage information.
-
-## Observability
-
-For instructions on structured logging, Prometheus metrics, and Sentry error reporting, see [docs/observability.md](docs/observability.md).
-
-When tests run on GitHub Actions, the workflow uploads the `coverage` directory
-using `actions/upload-artifact@v4`. Visit a workflow run and download the
-`coverage-report` artifact to retrieve the generated HTML coverage report.
+_This README provides a general overview. For more detailed information on specific parts of the system, please refer to the README files within the relevant subdirectories and the `docs/` folder._
