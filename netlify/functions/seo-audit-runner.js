@@ -1,29 +1,10 @@
-const path = require('path');
-const { spawnSync } = require('child_process');
-
-function runNode(relPath, args = []) {
-  const abs = path.resolve(__dirname, '..', '..', relPath);
-  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
-  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
-}
-
-exports.config = {
-  schedule: '*/30 * * * *',
-};
-
-exports.handler = async () => {
-  const logs = [];
-  function step(name, rel, args = []) {
-    logs.push(`\n=== ${name} ===`);
-    const { status, stdout, stderr } = runNode(rel, args);
-    if (stdout) logs.push(stdout);
-    if (stderr) logs.push(stderr);
-    logs.push(`exit=${status}`);
-    return status;
+exports.handler = async function() {
+  const { execSync } = require('child_process');
+  try {
+    execSync('node scripts/seo-audit.js', { stdio: 'inherit' });
+    execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(seo): update SEO audit reports [ci skip]" || true) && (git push origin main || true)', { stdio: 'inherit', shell: true });
+    return { statusCode: 200, body: JSON.stringify({ ok: true, task: 'seo-audit-runner' }) };
+  } catch (e) {
+    return { statusCode: 200, body: JSON.stringify({ ok: false, error: String(e) }) };
   }
-
-  step('seo:audit', 'scripts/seo-audit.js');
-  step('git:sync', 'automation/advanced-git-sync.cjs');
-
-  return { statusCode: 200, body: logs.join('\n') };
 };

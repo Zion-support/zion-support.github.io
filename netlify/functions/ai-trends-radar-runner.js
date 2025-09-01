@@ -1,29 +1,10 @@
-const path = require('path');
-const { spawnSync } = require('child_process');
-
-function runNode(relPath, args = []) {
-  const abs = path.resolve(__dirname, '..', '..', relPath);
-  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
-  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
-}
-
-exports.config = {
-  schedule: '*/15 * * * *',
-};
-
-exports.handler = async () => {
-  const logs = [];
-  function step(name, rel, args = []) {
-    logs.push(`\n=== ${name} ===`);
-    const { status, stdout, stderr } = runNode(rel, args);
-    if (stdout) logs.push(stdout);
-    if (stderr) logs.push(stderr);
-    logs.push(`exit=${status}`);
-    return status;
+exports.handler = async function() {
+  const { execSync } = require('child_process');
+  try {
+    execSync('node scripts/ai-trends-radar.js', { stdio: 'inherit' });
+    execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(ai): refresh AI trends radar [ci skip]" || true) && (git push origin main || true)', { stdio: 'inherit', shell: true });
+    return { statusCode: 200, body: JSON.stringify({ ok: true, task: 'ai-trends-radar-runner' }) };
+  } catch (e) {
+    return { statusCode: 200, body: JSON.stringify({ ok: false, error: String(e) }) };
   }
-
-  step('ai-trends:radar', 'scripts/ai-trends-radar.js');
-  step('git:sync', 'automation/advanced-git-sync.cjs');
-
-  return { statusCode: 200, body: logs.join('\n') };
 };

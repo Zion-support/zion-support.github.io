@@ -334,5 +334,17 @@ schedule = "*/2 * * * *" # every 2 minutes
   schedule = "*/15 * * * *" # every 15 minutes
 
 [[scheduled.functions]]
-  name = "meta-accelerator"
-  schedule = "*/2 * * * *"
+  name = "deps-auto-upgrade-runner"
+  schedule = "17 */6 * * *" # every 6 hours
+
+[[scheduled.functions]]
+  name = "seo-audit-runner"
+  schedule = "*/30 * * * *" # every 30 minutes
+
+[[scheduled.functions]]
+  name = "ai-trends-radar-runner"
+  schedule = "*/20 * * * *" # every 20 minutes
+
+[[scheduled.functions]]
+  name = "ui-beautifier-runner"
+  schedule = "*/45 * * * *" # every 45 minutes
