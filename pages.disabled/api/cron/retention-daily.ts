@@ -3,7 +3,7 @@ import { supabaseAdmin } from "../../../utils/supabase/admin";
 import { sendEmail } from "../../../utils/email/resend";
 import { generateEmailCopy } from "../../../utils/email/gpt";
 import { v4 as uuidv4 } from "uuid";
-
+;
 const WEBHOOK_SECRET = process.env.RETENTION_WEBHOOK_SECRET || "";
 
 type EmailLog = {
@@ -17,21 +17,22 @@ type EmailLog = {
   status: string;
 };
 
-async function upsertEmailLog(log: EmailLog) {
+async function upsertEmailLog(...args: unknown[]): unknown {
   const { error } = await supabaseAdmin
     .from("email_logs")
     .upsert(log, { onConflict: "dedupe_key" });
   if (error) throw error;
 }
-
-function requireSecret(req: NextApiRequest) {
+;
+function requireSecret(...args: unknown[]): unknown {
   const secret = req.headers["x-operator-secret"] || req.query.secret;
   if (!WEBHOOK_SECRET || secret !== WEBHOOK_SECRET) {
     throw new Error("Unauthorized");
   }
 }
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+;
+export { async };
+export default async function handler(...args: unknown[]): unknown {
   try {
     if (req.method !== "POST") return res.status(405).end();
     requireSecret(req);
@@ -57,11 +58,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         persona: "talent",
         firstName: user.first_name || undefined,
         context: "New user signup. Send a warm, actionable welcome with onboarding checklist link",
-        callToAction: "Open your Zion checklist",
+        callToAction: "Open your Zion checklist"
       });
 
       const html = `
-
+;
 export default function Retention-dailyPage() {
   return (
     <div style="font-family:Inter,Arial,sans-serif;font-size:14px;color:#111;">
@@ -76,7 +77,7 @@ export default function Retention-dailyPage() {
         to: user.email,
         subject: copy.subject || "Welcome to Zion! Here's what to do next",
         html,
-        tags: [{ name: "flow", value: "welcome" }, { name: "step", value: "day0" }],
+        tags: [{ name: "flow", value: "welcome" }, { name: "step", value: "day0" }]
       });
 
       await upsertEmailLog({
@@ -87,7 +88,7 @@ export default function Retention-dailyPage() {
         step: "day0",
         dedupe_key: dedupeKey,
         subject: copy.subject,
-        status: resp?.error ? "error" : "sent",
+        status: resp?.error ? "error" : "sent"
       });
     }
 
@@ -116,7 +117,7 @@ export default function Retention-dailyPage() {
         const incompleteProfile = u.profile_complete === false;
         const contextParts = [
           `User inactive ${days} days`,
-          incompleteProfile ? "Profile incomplete" : "",
+          incompleteProfile ? "Profile incomplete" : "
         ].filter(Boolean);
 
         const copy = await generateEmailCopy({
@@ -124,7 +125,7 @@ export default function Retention-dailyPage() {
           firstName: u.first_name || undefined,
           context: contextParts.join("; ") || `Inactivity ${days} days`,
           callToAction: incompleteProfile ? "Complete your profile" : "Browse top talent/projects",
-          incentive: incompleteProfile ? "Complete your profile this week and unlock premium visibility" : undefined,
+          incentive: incompleteProfile ? "Complete your profile this week and unlock premium visibility" : undefined
         });
 
         const html = `
@@ -140,7 +141,7 @@ export default function Retention-dailyPage() {
           to: u.email,
           subject: copy.subject || (incompleteProfile ? "Add your availability to get matched" : "Zion’s top talent this week — don’t miss out"),
           html,
-          tags: [{ name: "flow", value: "reactivation" }, { name: "step", value: step }],
+          tags: [{ name: "flow", value: "reactivation" }, { name: "step", value: step }]
         });
 
         await upsertEmailLog({
@@ -151,7 +152,7 @@ export default function Retention-dailyPage() {
           step,
           dedupe_key: dedupeKey,
           subject: copy.subject,
-          status: resp?.error ? "error" : "sent",
+          status: resp?.error ? "error" : "sent"
         });
       }
     }
@@ -177,7 +178,7 @@ export default function Retention-dailyPage() {
         persona: "hirer",
         firstName: j.owner_first_name || undefined,
         context: `Job not filled: ${j.title}. Encourage sending invites to talent to get quotes faster`,
-        callToAction: "Invite talent now",
+        callToAction: "Invite talent now"
       });
 
       const html = `
@@ -193,7 +194,7 @@ export default function Retention-dailyPage() {
         to: j.owner_email,
         subject: copy.subject || "Invite talent now to get quotes faster",
         html,
-        tags: [{ name: "flow", value: "job-not-filled" }, { name: "step", value: "reminder" }],
+        tags: [{ name: "flow", value: "job-not-filled" }, { name: "step", value: "reminder" }]
       });
 
       await upsertEmailLog({
@@ -204,7 +205,7 @@ export default function Retention-dailyPage() {
         step: "reminder",
         dedupe_key: dedupeKey,
         subject: copy.subject,
-        status: resp?.error ? "error" : "sent",
+        status: resp?.error ? "error" : "sent"
       });
     }
 
@@ -230,7 +231,7 @@ export default function Retention-dailyPage() {
         persona: "talent",
         firstName: t.first_name || undefined,
         context: "Talent has not received applications in 7 days. Re-engage with new projects and profile tuning.",
-        callToAction: "Discover new projects",
+        callToAction: "Discover new projects"
       });
 
       const html = `
@@ -246,7 +247,7 @@ export default function Retention-dailyPage() {
         to: t.email,
         subject: copy.subject || "New projects waiting for your expertise",
         html,
-        tags: [{ name: "flow", value: "talent-reactivation" }, { name: "step", value: "7d" }],
+        tags: [{ name: "flow", value: "talent-reactivation" }, { name: "step", value: "7d" }]
       });
 
       await upsertEmailLog({
@@ -257,12 +258,12 @@ export default function Retention-dailyPage() {
         step: "7d",
         dedupe_key: dedupeKey,
         subject: copy.subject,
-        status: resp?.error ? "error" : "sent",
+        status: resp?.error ? "error" : "sent"
       });
     }
 
     return res.json({ ok: true });
-  } catch (e: any) {
+  } catch (e: unknown) {
     const message = e?.message || "Internal Error";
     return res.status(message === "Unauthorized" ? 401 : 500).json({ error: message });
   }

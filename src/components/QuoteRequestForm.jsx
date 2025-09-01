@@ -3,406 +3,447 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/
 import { Button } from './ui/Button.jsx';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea.jsx';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
-import { Checkbox } from './ui/checkbox';
-import { Mail, Phone, Building, Send, CheckCircle, AlertCircle } from 'lucide-react';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';import { Checkbox } from './ui/checkbox';
+import {}
+  Mail,
+  Phone,
+  Building,'
+  Send,''
+  CheckCircle,'''
+  AlertCircle} from 'lucide-react';
 
-export const QuoteRequestForm = () => {
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    company: '',
-    serviceType: '',
-    projectDescription: '',
-    timeline: '',
-    budget: '',
-    urgency: 'medium',
+export const QuoteRequestForm = () => {}
+  const [formData, setFormData] = useState({}
+'
+''
+'''
+    firstName: '','''
+    lastName: '','''
+    email: '','''
+    phone: '','''
+    company: '','''
+    serviceType: '','''
+    projectDescription: '','''
+    timeline: '','''
+    budget: '','''
+    urgency: 'medium','''
     contactMethod: 'email',
     agreeToTerms: false,
-    agreeToMarketing: false
-  });
+    agreeToMarketing: false});
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [errors, setErrors] = useState({});
-
-  const serviceTypes = [
-    { value: 'ai-services', label: 'AI & Machine Learning Services' },
-    { value: 'it-solutions', label: 'IT Infrastructure & Solutions' },
-    { value: 'talent-hiring', label: 'Talent Acquisition & Staffing' },
-    { value: 'equipment', label: 'Equipment & Hardware' },
-    { value: 'consulting', label: 'IT Consulting & Strategy' },
-    { value: 'custom-development', label: 'Custom Software Development' },
+  const [isSubmitting, setIsSubmitting] = useState (false) ;
+  const [isSubmitted, setIsSubmitted] = useState (false) ;
+  const [errors, setErrors] = useState ({}) ;
+'
+  const serviceTypes = [''
+    { value: 'ai-services', label: 'AI & Machine Learning Services' },'
+    { value: 'it-solutions', label: 'IT Infrastructure & Solutions' },'
+    { value: 'talent-hiring', label: 'Talent Acquisition & Staffing' },'
+    { value: 'equipment', label: 'Equipment & Hardware' },'
+    { value: 'consulting', label: 'IT Consulting & Strategy' },'
+    { value: 'custom-development', label: 'Custom Software Development' },'
     { value: 'other', label: 'Other Services' }
   ];
-
-  const timelineOptions = [
-    { value: 'asap', label: 'ASAP (Within 1 week)' },
-    { value: '1-2-weeks', label: '1-2 weeks' },
-    { value: '1-month', label: '1 month' },
-    { value: '2-3-months', label: '2-3 months' },
-    { value: '3-6-months', label: '3-6 months' },
+'
+  const timelineOptions = [''
+    { value: 'asap', label: 'ASAP (Within 1 week)},'
+    { value: '1-2-weeks', label: '1-2 weeks' },'
+    { value: '1-month', label: '1 month' },'
+    { value: '2-3-months', label: '2-3 months' },'
+    { value: '3-6-months', label: '3-6 months' },'
     { value: '6-months-plus', label: '6+ months' }
   ];
-
-  const budgetRanges = [
-    { value: 'under-5k', label: 'Under $5,000' },
-    { value: '5k-10k', label: '$5,000 - $10,000' },
-    { value: '10k-25k', label: '$10,000 - $25,000' },
-    { value: '25k-50k', label: '$25,000 - $50,000' },
-    { value: '50k-100k', label: '$50,000 - $100,000' },
-    { value: '100k-plus', label: '$100,000+' },
+'
+  const budgetRanges = [''
+    { value: 'under-5k', label: 'Under $5,000' },'
+    { value: '5k-10k', label: '$5,000 - $10,000' },'
+    { value: '10k-25k', label: '$10,000 - $25,000' },'
+    { value: '25k-50k', label: '$25,000 - $50,000' },'
+    { value: '50k-100k', label: '$50,000 - $100,000' },'
+    { value: '100k-plus', label: '$100,000+' },'
     { value: 'to-be-discussed', label: 'To be discussed' }
   ];
-
-  const urgencyLevels = [
-    { value: 'low', label: 'Low - Planning phase' },
-    { value: 'medium', label: 'Medium - Ready to start soon' },
-    { value: 'high', label: 'High - Need to start immediately' },
+'
+  const urgencyLevels = [''
+    { value: 'low', label: 'Low - Planning phase' },'
+    { value: 'medium', label: 'Medium - Ready to start soon' },'
+    { value: 'high', label: 'High - Need to start immediately' },'
     { value: 'critical', label: 'Critical - Emergency situation' }
   ];
 
-  const handleChange = (field, value) => {
-    setFormData(prev => ({
+  const handleChange = (field, value) => {}
+    setFormData(prev => ({}
       ...prev,
-      [field]: value
-    }));
+      [field]: value}));
 
-    // Clear error when user starts typing
-    if (errors[field]) {
-      setErrors(prev => ({
-        ...prev,
-        [field]: ''
-      }));
+    // Clear error when user starts typing;
+    if(errors[field]) {}
+      setErrors(prev => ({}
+        ...prev,'
+        [field]: ''}));
     }
   };
 
-  const validateForm = () => {
+  const validateForm = () => {}
     const newErrors = {};
 
-    if (!formData.firstName.trim()) newErrors.firstName = 'First name is required';
-    if (!formData.lastName.trim()) newErrors.lastName = 'Last name is required';
+    if (!formData.firstName.trim())'
+      newErrors.firstName = 'First name is required';'
+    if (!formData.lastName.trim()) newErrors.lastName = 'Last name is required';'
     if (!formData.email.trim()) newErrors.email = 'Email is required';
-    if (!formData.company.trim()) newErrors.company = 'Company name is required';
-    if (!formData.serviceType) newErrors.serviceType = 'Service type is required';
-    if (!formData.projectDescription.trim()) newErrors.projectDescription = 'Project description is required';
-    if (!formData.agreeToTerms) newErrors.agreeToTerms = 'You must agree to the terms and conditions';
+    if (!formData.company.trim())'
+      newErrors.company = 'Company name is required';
+    if (!formData.serviceType)'
+      newErrors.serviceType = 'Service type is required';
+    if (!formData.projectDescription.trim())'
+      newErrors.projectDescription = 'Project description is required';
+    if (!formData.agreeToTerms)'
+      newErrors.agreeToTerms = 'You must agree to the terms and conditions';
 
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
+    setErrors(newErrors) ;
+    return Object.keys(newErrors) .length === 0;
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async e => {}
     e.preventDefault();
-    
-    if (!validateForm()) {
+
+    if(!validateForm()) {}
       return;
     }
 
-    setIsSubmitting(true);
+    setIsSubmitting(true) ;
 
-    try {
-      // Simulate API call
+    try {}
+      // Simulate API call;
       await new Promise(resolve => setTimeout(resolve, 2000));
-      
+
       setIsSubmitted(true);
-      // Reset form
-      setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        company: '',
-        serviceType: '',
-        projectDescription: '',
-        timeline: '',
-        budget: '',
-        urgency: 'medium',
+      // Reset form;
+      setFormData({}
+'
+''
+'''
+        firstName: '','''
+        lastName: '','''
+        email: '','''
+        phone: '','''
+        company: '','''
+        serviceType: '','''
+        projectDescription: '','''
+        timeline: '','''
+        budget: '','''
+        urgency: 'medium','''
         contactMethod: 'email',
         agreeToTerms: false,
-        agreeToMarketing: false
-      });
-    } catch (error) {
-      console.error('Error submitting form:', error);
-    } finally {
+        agreeToMarketing: false});
+    } catch (error) {}
+'
+''
+'''
+      // console.error('Error submitting form:', error);
+    } finally {}
       setIsSubmitting(false);
     }
   };
 
-  if (isSubmitted) {
-    return (
-      <Card className="max-w-2xl mx-auto">
-        <CardContent className="p-8 text-center">
-          <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">Quote Request Submitted!</h2>
+  if(isSubmitted) {}
+    return()
+      <Card className="max-w-2xl mx-auto">""""
+        <CardContent className="p-8 text-center">""""
+          <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />""""
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            Quote Request Submitted!"""
+          </h2>""""
           <p className="text-gray-600 mb-6">
-            Thank you for your interest. Our team will review your request and get back to you within 24 hours.
-          </p>
-          <Button onClick={() => setIsSubmitted(false)}>
-            Submit Another Request
+            Thank you for your interest.Our team will review your request and;
+            get back to you within 24 hours.</p>
+          <Button onClick={ () => setIsSubmitted(false) }>
+            Submit Another Request;
           </Button>
         </CardContent>
-      </Card>
-    );
+      </Card>) ;
   }
-
-  return (
-    <Card className="max-w-4xl mx-auto">
-      <CardHeader className="text-center">
+"""
+  return (""""
+    <Card className="max-w-4xl mx-auto">""""
+      <CardHeader className="text-center">""""
         <CardTitle className="text-3xl font-bold">Request a Quote</CardTitle>
-        <CardDescription>
-          Tell us about your project and we'll provide you with a customized quote
-        </CardDescription>
-      </CardHeader>
-      <CardContent className="p-6">
-        <form onSubmit={handleSubmit} className="space-y-6">
-          {/* Personal Information */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
+        <CardDescription>'
+          Tell us about your project and we'll provide you with a customized;
+          quote;
+        </CardDescription>"""
+      </CardHeader>""""
+      <CardContent className="p-6">""""
+        <form onSubmit={handleSubmit} className="space-y-6">"""
+          {/* Personal Information */}""""
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">"""
+            <div>""""
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 First Name *
               </label>
-              <Input
-                value={formData.firstName}
-                onChange={(e) => handleChange('firstName', e.target.value)}
-                placeholder="John"
+              <Input;
+                value={formData.firstName}'"""
+                onChange={e => handleChange('firstName', e.target.value)}"'"""
+                placeholder="John"''
                 className={errors.firstName ? 'border-red-500' : ''}
-              />
-              {errors.firstName && (
+              />"""
+              {errors.firstName && (""""
                 <p className="text-red-500 text-sm mt-1">{errors.firstName}</p>
               )}
             </div>
-            
-            <div>
+"""
+            <div>""""
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Last Name *
               </label>
-              <Input
-                value={formData.lastName}
-                onChange={(e) => handleChange('lastName', e.target.value)}
-                placeholder="Doe"
+              <Input;
+                value={formData.lastName}'"""
+                onChange={e => handleChange('lastName', e.target.value)}"'"""
+                placeholder="Doe"''
                 className={errors.lastName ? 'border-red-500' : ''}
-              />
-              {errors.lastName && (
+              />"""
+              {errors.lastName && (""""
                 <p className="text-red-500 text-sm mt-1">{errors.lastName}</p>
               )}
             </div>
           </div>
-
-          {/* Contact Information */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
+"""
+          {/* Contact Information */}""""
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">"""
+            <div>""""
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Email *
-              </label>
-              <Input
-                type="email"
-                value={formData.email}
-                onChange={(e) => handleChange('email', e.target.value)}
-                placeholder="john@company.com"
+              </label>"""
+              <Input""""
+                type="email"""
+                value={formData.email}'"""
+                onChange={e => handleChange('email', e.target.value)}"'"""
+                placeholder="john@company.com"''
                 className={errors.email ? 'border-red-500' : ''}
-              />
-              {errors.email && (
+              />"""
+              {errors.email && (""""
                 <p className="text-red-500 text-sm mt-1">{errors.email}</p>
               )}
             </div>
-            
-            <div>
+"""
+            <div>""""
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Phone
+                Phone;
               </label>
-              <Input
-                value={formData.phone}
-                onChange={(e) => handleChange('phone', e.target.value)}
-                placeholder="+1 (555) 123-4567"
+              <Input;
+                value={formData.phone}'"""
+                onChange={e => handleChange('phone', e.target.value)}""""
+                placeholder="+1 (555) 123-4567"""
               />
             </div>
           </div>
 
-          {/* Company Information */}
-          <div>
+          {/* Company Information */}"""
+          <div>""""
             <label className="block text-sm font-medium text-gray-700 mb-2">
               Company Name *
             </label>
-            <Input
-              value={formData.company}
-              onChange={(e) => handleChange('company', e.target.value)}
-              placeholder="Your Company Inc."
+            <Input;
+              value={formData.company}'"""
+              onChange={e => handleChange('company', e.target.value)}"'"""
+              placeholder="Your Company Inc."''
               className={errors.company ? 'border-red-500' : ''}
-            />
-            {errors.company && (
+            />"""
+            {errors.company && (""""
               <p className="text-red-500 text-sm mt-1">{errors.company}</p>
             )}
           </div>
-
-          {/* Project Details */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
+"""
+          {/* Project Details */}""""
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">"""
+            <div>""""
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Service Type *
               </label>
-              <Select value={formData.serviceType} onValueChange={(value) => handleChange('serviceType', value)}>
-                <SelectTrigger className={errors.serviceType ? 'border-red-500' : ''}>
+              <Select;
+                value={formData.serviceType}'
+                onValueChange={value => handleChange('serviceType', value)}
+              >'
+                <SelectTrigger''
+                  className={errors.serviceType ? 'border-red-500' : ''}"""
+                >""""
                   <SelectValue placeholder="Select a service" />
                 </SelectTrigger>
                 <SelectContent>
-                  {serviceTypes.map((service) => (
+                  {serviceTypes.map(service => (
                     <SelectItem key={service.value} value={service.value}>
                       {service.label}
-                    </SelectItem>
-                  ))}
+                    </SelectItem>) ) }
                 </SelectContent>
-              </Select>
-              {errors.serviceType && (
-                <p className="text-red-500 text-sm mt-1">{errors.serviceType}</p>
+              </Select>"""
+              {errors.serviceType && (""""
+                <p className="text-red-500 text-sm mt-1">
+                  {errors.serviceType}
+                </p>
               )}
             </div>
-            
-            <div>
+"""
+            <div>""""
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Timeline
+                Timeline;
               </label>
-              <Select value={formData.timeline} onValueChange={(value) => handleChange('timeline', value)}>
-                <SelectTrigger>
+              <Select;
+                value={formData.timeline}'
+                onValueChange={value => handleChange('timeline', value)}
+              >"""
+                <SelectTrigger>""""
                   <SelectValue placeholder="Select timeline" />
                 </SelectTrigger>
                 <SelectContent>
-                  {timelineOptions.map((timeline) => (
+                  {timelineOptions.map(timeline => (
                     <SelectItem key={timeline.value} value={timeline.value}>
                       {timeline.label}
-                    </SelectItem>
-                  ))}
+                    </SelectItem>) ) }
                 </SelectContent>
               </Select>
             </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
+          </div>"""
+""""
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">"""
+            <div>""""
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Budget Range
+                Budget Range;
               </label>
-              <Select value={formData.budget} onValueChange={(value) => handleChange('budget', value)}>
-                <SelectTrigger>
+              <Select;
+                value={formData.budget}'
+                onValueChange={value => handleChange('budget', value)}
+              >"""
+                <SelectTrigger>""""
                   <SelectValue placeholder="Select budget range" />
                 </SelectTrigger>
                 <SelectContent>
-                  {budgetRanges.map((budget) => (
+                  {budgetRanges.map(budget => (
                     <SelectItem key={budget.value} value={budget.value}>
                       {budget.label}
-                    </SelectItem>
-                  ))}
+                    </SelectItem>) ) }
                 </SelectContent>
               </Select>
             </div>
-            
-            <div>
+"""
+            <div>""""
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Urgency Level
+                Urgency Level;
               </label>
-              <Select value={formData.urgency} onValueChange={(value) => handleChange('urgency', value)}>
+              <Select;
+                value={formData.urgency}'
+                onValueChange={value => handleChange('urgency', value)}
+              >
                 <SelectTrigger>
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent>
-                  {urgencyLevels.map((urgency) => (
+                  {urgencyLevels.map(urgency => (
                     <SelectItem key={urgency.value} value={urgency.value}>
                       {urgency.label}
-                    </SelectItem>
-                  ))}
+                    </SelectItem>) ) }
                 </SelectContent>
               </Select>
             </div>
           </div>
 
-          {/* Project Description */}
-          <div>
+          {/* Project Description */}"""
+          <div>""""
             <label className="block text-sm font-medium text-gray-700 mb-2">
               Project Description *
             </label>
-            <Textarea
-              value={formData.projectDescription}
-              onChange={(e) => handleChange('projectDescription', e.target.value)}
-              placeholder="Please describe your project requirements, goals, and any specific needs..."
-              rows={6}
+            <Textarea;
+              value={formData.projectDescription}'"""
+              onChange={e => handleChange('projectDescription', e.target.value)}""""
+              placeholder="Please describe your project requirements, goals, and any specific needs..."""
+              rows={6}'
               className={errors.projectDescription ? 'border-red-500' : ''}
-            />
-            {errors.projectDescription && (
-              <p className="text-red-500 text-sm mt-1">{errors.projectDescription}</p>
+            />"""
+            {errors.projectDescription && (""""
+              <p className="text-red-500 text-sm mt-1">
+                {errors.projectDescription}
+              </p>
             )}
           </div>
-
-          {/* Preferences */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
+"""
+          {/* Preferences */}""""
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">"""
+            <div>""""
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Preferred Contact Method
+                Preferred Contact Method;
               </label>
-              <Select value={formData.contactMethod} onValueChange={(value) => handleChange('contactMethod', value)}>
+              <Select;
+                value={formData.contactMethod}'
+                onValueChange={value => handleChange('contactMethod', value)}
+              >
                 <SelectTrigger>
                   <SelectValue />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="email">Email</SelectItem>
-                  <SelectItem value="phone">Phone</SelectItem>
+                </SelectTrigger>"""
+                <SelectContent>""""
+                  <SelectItem value="email">Email</SelectItem>""""
+                  <SelectItem value="phone">Phone</SelectItem>""""
                   <SelectItem value="both">Both</SelectItem>
                 </SelectContent>
               </Select>
             </div>
           </div>
-
-          {/* Checkboxes */}
-          <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <Checkbox
-                id="terms"
+"""
+          {/* Checkboxes */}""""
+          <div className="space-y-4">""""
+            <div className="flex items-center space-x-2">"""
+              <Checkbox""""
+                id="terms"""
                 checked={formData.agreeToTerms}
-                onCheckedChange={(checked) => handleChange('agreeToTerms', checked)}
-              />
-              <label htmlFor="terms" className="text-sm text-gray-700">
-                I agree to the <a href="/terms" className="text-blue-600 hover:underline">Terms and Conditions</a> *
+                onCheckedChange={checked =>'
+                  handleChange('agreeToTerms', checked)
+                }"""
+              />""""
+              <label htmlFor="terms" className="text-sm text-gray-700">'"""
+                I agree to the{' '}""""
+                <a href="/terms" className="text-blue-600 hover:underline">'
+                  Terms and Conditions''
+                </a>{' '}
+                *
               </label>
-            </div>
-            {errors.agreeToTerms && (
+            </div>"""
+            {errors.agreeToTerms && (""""
               <p className="text-red-500 text-sm">{errors.agreeToTerms}</p>
-            )}
-
-            <div className="flex items-center space-x-2">
-              <Checkbox
-                id="marketing"
+            )}"""
+""""
+            <div className="flex items-center space-x-2">"""
+              <Checkbox""""
+                id="marketing"""
                 checked={formData.agreeToMarketing}
-                onCheckedChange={(checked) => handleChange('agreeToMarketing', checked)}
-              />
+                onCheckedChange={checked =>'
+                  handleChange('agreeToMarketing', checked)
+                }"""
+              />""""
               <label htmlFor="marketing" className="text-sm text-gray-700">
-                I agree to receive marketing communications from Zion Tech Group
+                I agree to receive marketing communications from Zion Tech Group;
               </label>
             </div>
           </div>
-
-          {/* Submit Button */}
-          <div className="text-center">
-            <Button
-              type="submit"
-              disabled={isSubmitting}
-              className="px-8 py-3 text-lg"
+"""
+          {/* Submit Button */}""""
+          <div className="text-center">"""
+            <Button""""
+              type="submit""""
+              disabled={isSubmitting}""""
+              className="px-8 py-3 text-lg"""
             >
-              {isSubmitting ? (
-                <>
+              {isSubmitting ? ("""
+                <>""""
                   <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
                   Submitting...
                 </>
-              ) : (
-                <>
+              ) : ("""
+                <>""""
                   <Send className="w-5 h-5 mr-2" />
-                  Submit Quote Request
-                </>
-              )}
+                  Submit Quote Request;
+                </>) }
             </Button>
           </div>
         </form>
       </CardContent>
-    </Card>
-  );
-};
+    </Card>) ;
+};'"""
+'"'"""

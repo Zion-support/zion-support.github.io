@@ -1,0 +1,70 @@
+import { createClient } from '@supabase/supabase-js';
+import { randomUUID } from 'crypto';
+import { withErrorLogging } from '@/utils/withErrorLogging';
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+// Define response types
+interface GuestSuccessResponse {
+  userId: string;
+  message: string;
+}
+
+interface ErrorResponse {
+  error: string;
+}
+
+interface GuestRequestBody {
+  email: string;
+  name?: string;
+}
+
+// Initialize Supabase client
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
+if (!supabaseUrl || !serviceKey) {
+  const errorMessage = 'CRITICAL: SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY is missing for backend auth (guest creation) API. Service cannot start.';
+  console.error(errorMessage);
+  throw new Error(errorMessage);
+}
+
+const supabase = createClient(supabaseUrl, serviceKey);
+
+// Assuming withErrorLogging correctly adapts or expects a Next.js compatible handler
+async function handler(req: NextApiRequest, res: NextApiResponse<GuestSuccessResponse | ErrorResponse>) {
+  if (req.method !== 'POST') {
+    res.setHeader('Allow', 'POST');
+    res.status(405).json({ error: `Method ${req.method} Not Allowed` });
+    return;
+  }
+
+  const { email, name = 'Guest' } = req.body as GuestRequestBody;
+
+  if (!email) {
+    res.status(400).json({ error: 'Missing email' });
+    return;
+  }
+
+  try {
+    // Create guest user in Supabase
+    const { data, error } = await supabase.auth.admin.createUser({
+      email,
+      password: randomUUID(), // Generate random password for guest
+      email_confirm: true, // Auto-confirm email for guests
+      user_metadata: { display_name: name, is_guest: true }
+    });
+
+    if (error || !data?.user) {
+      console.error('Supabase admin.createUser error:', error);
+      res.status(500).json({ error: error?.message || 'Failed to create guest user' });
+      return;
+    }
+
+    res.status(200).json({ userId: data.user.id });
+  } catch (error) {
+    console.error('Error creating guest user:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+}
+
+export default withErrorLogging(handler);

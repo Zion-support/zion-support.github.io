@@ -88,11 +88,13 @@ We use the following security tools and practices:
 ## Security Contacts
 
 ### Primary Security Contact
+
 - **Email**: kleber@ziontechgroup.com
 - **Phone**: +1 302 464 0950
 - **Response Time**: 48 hours
 
 ### Security Team
+
 - **Lead**: Kleber (CTO)
 - **Backup**: Security Team
 - **Escalation**: Executive Team
@@ -113,6 +115,7 @@ We are committed to addressing security issues promptly:
 ## Security Changelog
 
 ### Version 1.0.0
+
 - Initial security policy implementation
 - Basic security controls in place
 - Regular security scanning enabled

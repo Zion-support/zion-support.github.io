@@ -1,14 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import OpenAI from "openai";
 import type { AiAssistRequest, AiAssistResponse } from "../../../utils/types/portfolio";
-
+;
 const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-
-export default function Portfolio-assistPage() {
+;
+export { async };
+export default async function handler(...args: unknown[]): unknown {
   return (
     <AiAssistResponse>
 ) {
@@ -47,9 +44,9 @@ export default function Portfolio-assistPage() {
       model: process.env.OPENAI_MODEL || "gpt-4o-mini",
       messages: [
         { role: "system", content: system },
-        { role: "user", content: user },
+        { role: "user", content: user }
       ],
-      temperature: 0.5,
+      temperature: 0.5
     });
 
     const content = response.choices?.[0]?.message?.content?.trim() ?? "";
@@ -67,7 +64,7 @@ export default function Portfolio-assistPage() {
     }
 
     res.status(200).json({ ok: true, result: content });
-  } catch (error: any) {
+  } catch (error: unknown) {
     res.status(500).json({ ok: false, error: error?.message ?? "AI error" });
   }
 }

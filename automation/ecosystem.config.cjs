@@ -12,12 +12,12 @@ module.exports = {
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        PORT: 3000
+        PORT: 3000,
       },
       env_production: {
         NODE_ENV: 'production',
-        PORT: 3000
-      }
+        PORT: 3000,
+      },
     },
 
     // Netlify Build Monitor - Core monitoring and auto-fixing
@@ -31,12 +31,12 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
         NETLIFY_SITE_ID: process.env.NETLIFY_SITE_ID,
-        NETLIFY_TOKEN: process.env.NETLIFY_TOKEN
+        NETLIFY_TOKEN: process.env.NETLIFY_TOKEN,
       },
       cron_restart: '0 0 * * *', // Restart daily at midnight
       log_file: './logs/netlify-build-monitor.log',
       error_file: './logs/netlify-build-monitor-error.log',
-      out_file: './logs/netlify-build-monitor-out.log'
+      out_file: './logs/netlify-build-monitor-out.log',
     },
 
     // Netlify Build Automation - API integration and deployment
@@ -50,12 +50,12 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
         NETLIFY_SITE_ID: process.env.NETLIFY_SITE_ID,
-        NETLIFY_TOKEN: process.env.NETLIFY_TOKEN
+        NETLIFY_TOKEN: process.env.NETLIFY_TOKEN,
       },
       cron_restart: '0 6 * * *', // Restart daily at 6 AM
       log_file: './logs/netlify-build-automation.log',
       error_file: './logs/netlify-build-automation-error.log',
-      out_file: './logs/netlify-build-automation-out.log'
+      out_file: './logs/netlify-build-automation-out.log',
     },
 
     // Build Health Monitor - Prevents build issues
@@ -67,12 +67,12 @@ module.exports = {
       watch: false,
       max_memory_restart: '512M',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
       },
       cron_restart: '0 12 * * *', // Restart daily at noon
       log_file: './logs/build-monitor.log',
       error_file: './logs/build-monitor-error.log',
-      out_file: './logs/build-monitor-out.log'
+      out_file: './logs/build-monitor-out.log',
     },
 
     // Code Quality Monitor - Prevents code issues
@@ -84,12 +84,12 @@ module.exports = {
       watch: false,
       max_memory_restart: '256M',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
       },
       cron_restart: '0 18 * * *', // Restart daily at 6 PM
       log_file: './logs/code-quality.log',
       error_file: './logs/code-quality-error.log',
-      out_file: './logs/code-quality-out.log'
+      out_file: './logs/code-quality-out.log',
     },
 
     // Dependency Health Monitor - Prevents dependency issues
@@ -101,12 +101,12 @@ module.exports = {
       watch: false,
       max_memory_restart: '256M',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
       },
       cron_restart: '0 3 * * *', // Restart daily at 3 AM
       log_file: './logs/dependency.log',
       error_file: './logs/dependency-error.log',
-      out_file: './logs/dependency-out.log'
+      out_file: './logs/dependency-out.log',
     },
 
     // Build Automation - Automatically fixes common issues
@@ -118,12 +118,12 @@ module.exports = {
       watch: false,
       max_memory_restart: '512M',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
       },
       cron_restart: '0 9 * * *', // Restart daily at 9 AM
       log_file: './logs/build-automation.log',
       error_file: './logs/build-automation-error.log',
-      out_file: './logs/build-automation-out.log'
+      out_file: './logs/build-automation-out.log',
     },
 
     // File Integrity Monitor - Prevents file corruption
@@ -135,12 +135,12 @@ module.exports = {
       watch: false,
       max_memory_restart: '256M',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
       },
       cron_restart: '0 15 * * *', // Restart daily at 3 PM
       log_file: './logs/file-integrity.log',
       error_file: './logs/file-integrity-error.log',
-      out_file: './logs/file-integrity-out.log'
+      out_file: './logs/file-integrity-out.log',
     },
 
     // Performance Optimizer - Continuous performance monitoring
@@ -152,12 +152,12 @@ module.exports = {
       watch: false,
       max_memory_restart: '256M',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
       },
       cron_restart: '0 21 * * *', // Restart daily at 9 PM
       log_file: './logs/performance-optimizer.log',
       error_file: './logs/performance-optimizer-error.log',
-      out_file: './logs/performance-optimizer-out.log'
+      out_file: './logs/performance-optimizer-out.log',
     },
 
     // Lint Monitor - Continuous code quality enforcement
@@ -169,12 +169,12 @@ module.exports = {
       watch: false,
       max_memory_restart: '256M',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
       },
       cron_restart: '0 1 * * *', // Restart daily at 1 AM
       log_file: './logs/lint-monitor.log',
       error_file: './logs/lint-monitor-error.log',
-      out_file: './logs/lint-monitor-out.log'
+      out_file: './logs/lint-monitor-out.log',
     },
 
     // Intelligent Orchestrator - Coordinates all automation
@@ -186,12 +186,12 @@ module.exports = {
       watch: false,
       max_memory_restart: '512M',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
       },
       cron_restart: '0 5 * * *', // Restart daily at 5 AM
       log_file: './logs/intelligent-orchestrator.log',
       error_file: './logs/intelligent-orchestrator-error.log',
-      out_file: './logs/intelligent-orchestrator-out.log'
+      out_file: './logs/intelligent-orchestrator-out.log',
     },
 
     // Automation Dashboard - Monitoring and control interface
@@ -204,12 +204,12 @@ module.exports = {
       max_memory_restart: '256M',
       env: {
         NODE_ENV: 'production',
-        PORT: 3001
+        PORT: 3001,
       },
       cron_restart: '0 7 * * *', // Restart daily at 7 AM
       log_file: './logs/automation-dashboard.log',
       error_file: './logs/automation-dashboard-error.log',
-      out_file: './logs/automation-dashboard-out.log'
+      out_file: './logs/automation-dashboard-out.log',
     },
 
     // Project Health Monitor - Overall project health
@@ -221,12 +221,12 @@ module.exports = {
       watch: false,
       max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
       },
       cron_restart: '*/15 * * * *', // Every 15 minutes
       log_file: './logs/project-health-monitor.log',
       error_file: './logs/project-health-monitor-error.log',
-      out_file: './logs/project-health-monitor-out.log'
+      out_file: './logs/project-health-monitor-out.log',
     },
 
     // TypeScript Syntax Fixer - Continuous TypeScript fixes
@@ -238,12 +238,12 @@ module.exports = {
       watch: false,
       max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
       },
       cron_restart: '*/10 * * * *', // Every 10 minutes
       log_file: './logs/typescript-syntax-fixer.log',
       error_file: './logs/typescript-syntax-fixer-error.log',
-      out_file: './logs/typescript-syntax-fixer-out.log'
+      out_file: './logs/typescript-syntax-fixer-out.log',
     },
 
     // Dependency Manager - Dependency health management
@@ -255,12 +255,12 @@ module.exports = {
       watch: false,
       max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
       },
       cron_restart: '0 */2 * * *', // Every 2 hours
       log_file: './logs/dependency-manager.log',
       error_file: './logs/dependency-manager-error.log',
-      out_file: './logs/dependency-manager-out.log'
+      out_file: './logs/dependency-manager-out.log',
     },
 
     // Project Health Dashboard - Real-time health monitoring
@@ -272,13 +272,13 @@ module.exports = {
       watch: false,
       max_memory_restart: '512M',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
       },
       cron_restart: '*/5 * * * *', // Every 5 minutes
       log_file: './logs/project-health-dashboard.log',
       error_file: './logs/project-health-dashboard-error.log',
-      out_file: './logs/project-health-dashboard-out.log'
-    }
+      out_file: './logs/project-health-dashboard-out.log',
+    },
   ],
 
   deploy: {
@@ -289,8 +289,9 @@ module.exports = {
       repo: 'https://github.com/Zion-Holdings/zion.app.git',
       path: '/Users/miami2/zion-app-clone',
       'pre-deploy-local': '',
-      'post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.cjs --env production',
-      'pre-setup': ''
-    }
-  }
+      'post-deploy':
+        'npm install && npm run build && pm2 reload ecosystem.config.cjs --env production',
+      'pre-setup': '',
+    },
+  },
 };

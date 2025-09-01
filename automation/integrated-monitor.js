@@ -11,12 +11,12 @@
  * 4. Provides comprehensive reporting and analytics
  * 5. Integrates with PM2 for process management
  */
-
+;
 const BrowserErrorMonitor = require('./browser-error-monitor');
 const BrowserErrorFixer = require('./browser-error-fixer');
 const fs = require('fs').promises;
 const path = require('path');
-
+;
 class IntegratedMonitor {
   constructor() {
     this.browserMonitor = new BrowserErrorMonitor();
@@ -156,7 +156,7 @@ class IntegratedMonitor {
 
       };
       
-      const reportPath = path.join(this.browserMonitor.CONFIG.logDir, 'integrated-monitor-report.json');
+      const reportPath = path.join(this.browserMonitor.CONFIG.logDir,integrated-monitor-report.json');
       await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
       
       // console.log(`📄 Integrated report generated: ${reportPath}`);
@@ -195,7 +195,7 @@ class IntegratedMonitor {
 
 
 
-// PM2 process management
+// PM2 process management;
 const integratedMonitor = new IntegratedMonitor();
 
 // Handle process signals
@@ -219,7 +219,7 @@ process.on('uncaughtException', async (error) => {
 });
 
 process.on('unhandledRejection', async (reason, promise) => {
-  console.error('❌ Unhandled Rejection at:', promise, 'reason:', reason);
+  console.error('❌ Unhandled Rejection at:', promise,reason:', reason);
   await integratedMonitor.stop();
   process.exit(1);
 });

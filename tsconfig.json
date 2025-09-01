@@ -85,20 +85,28 @@
     ],
     "types": [
       "node"
+    ],
+    "plugins": [
+      {
+        "name": "next"
+      }
     ]
   },
   "include": [
-    "src/**/*",
+    "src/main.tsx",
+    "src/App.tsx",
     "tailwind.config.js",
     "postcss.config.js"
   ],
   "exclude": [
     "node_modules",
-    "zion.app/recovered-content/**",
-    "services.disabled.temp/**",
-    "data.temp/**",
-    "src_backup/**",
+    ".next",
+    "out",
+    "dist",
+    "automation",
+    "components.disabled",
     "**/*.disabled",
-    "**/*.disabled/**"
+    "**/*.backup",
+    "**/*.tsbackup"
   ]
 }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react';'''
 import { Link } from 'react-router-dom';
 ;
 const AdvancedInnovativeServicesShowcase2025 = () => {
@@ -27,8 +27,7 @@ const AdvancedInnovativeServicesShowcase2025 = () => {
         ...advancedITServices2025.map(service => ({ ...service, type: 'IT Service' })),
         ...advancedAIServices2025.map(service => ({ ...service, type: 'AI Service' }))
     ];
-    const filteredServices = allServices
-        .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
+    const filteredServices = allServices        .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
         .filter(service => service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.features?.some((feature) => feature.toLowerCase().includes(searchTerm.toLowerCase())))

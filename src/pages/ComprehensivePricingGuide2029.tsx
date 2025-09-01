@@ -140,40 +140,41 @@ export default function ComprehensivePricingGuide2029(...args: unknown[]): unkno
       
       {/* Hero Section */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <motion.div
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Pricing Guide
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> 2029</span>
-            </h1>
+            animate={{ opacity: 1, y: 0 }}"""
+            transition={{ duration: 0.8 }}""""
+            className="text-center""""
+          >""""
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">"""
+              Pricing Guide""""
+              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> 2029</span>"""
+            </h1>""""
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Transparent pricing for our revolutionary AI, quantum computing, space technology, and emerging tech services. Choose the plan that fits your business needs.
             </p>
-            
-            {/* Billing Toggle */}
+            """
+            {/* Billing Toggle */}""""
             <div className="flex items-center justify-center gap-4 mb-8">
-              <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>Monthly</span>
-              <button
-                onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
-                className={`relative inline-flex h-8 w-16 items-center rounded-full transition-colors ${
-                  billingCycle === 'yearly' ? 'bg-blue-600' : 'bg-gray-600'
+              <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>Monthly</span>'
+              <button''`
+                onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}``
+                className={`relative inline-flex h-8 w-16 items-center rounded-full transition-colors ${}
+'`
+                  billingCycle === 'yearly' ? 'bg-blue-600' : 'bg-gray-600'``
                 }`}
-              >
-                <span
-                  className={`inline-block h-6 w-6 transform rounded-full bg-white transition-transform ${
-                    billingCycle === 'yearly' ? 'translate-x-9' : 'translate-x-1'
+              >`
+                <span``
+                  className={`inline-block h-6 w-6 transform rounded-full bg-white transition-transform ${}
+'`
+                    billingCycle === 'yearly' ? 'translate-x-9' : 'translate-x-1'``
                   }`}
-                />
-              </button>
-              <span className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}>
-                Yearly
-                {billingCycle === 'yearly' && (
+                />'`
+              </button>'`'`
+              <span className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}>'
+                Yearly''"""
+                {billingCycle === 'yearly' && (""""
                   <span className="ml-2 text-sm bg-green-500 text-white px-2 py-1 rounded-full">Save 17%</span>
                 )}
               </span>
@@ -184,89 +185,86 @@ export default function ComprehensivePricingGuide2029(...args: unknown[]): unkno
 
       {/* Pricing Plans */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md: unknowngrid-cols-3 gap-8">
-          {pricingPlans.map((plan, index)  => (
-            <motion.div
+        <div className="grid grid-cols-1 md: unknowngrid-cols-3 gap-8">          {pricingPlans.map((plan, index)  => (
+            <motion.div;
               key={plan.id}
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              whileInView={{ opacity: 1, y: 0 }}'`
+              transition={{ duration: 0.6, delay: index * 0.1 }}'`'`
               className={`relative ${plan.popular ? 'scale-105' : ''}`}
-            >
-              {plan.popular && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
-                    <Crown className="w-4 h-4" />
-                    Most Popular
+            >"""
+              {plan.popular && (""""
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""""
+                  <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">""""
+                    <Crown className="w-4 h-4"  />                    Most Popular;
                   </span>
                 </div>
-              )}
-              
-              <div className={`bg-white/5 backdrop-blur-sm rounded-2xl p-8 border-2 ${
-                plan.popular ? 'border-blue-500' : 'border-white/10'
+              )}`
+              ``
+              <div className={`bg-white/5 backdrop-blur-sm rounded-2xl p-8 border-2 ${}
+'`
+                plan.popular ? 'border-blue-500' : 'border-white/10'``
               } hover:border-white/20 transition-all duration-300`}>
-                
-                {/* Plan Header */}
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <p className="text-gray-400 mb-4">{plan.description}</p>
-                  <div className="mb-2">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
+                """
+                {/* Plan Header */}""""
+                <div className="text-center mb-8">""""
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>""""
+                  <p className="text-gray-400 mb-4">{plan.description}</p>""""
+                  <div className="mb-2">""""
+                    <span className="text-4xl font-bold text-white">{plan.price}</span>""""
                     <span className="text-gray-400 text-xl">{plan.period}</span>
-                  </div>
-                  {plan.savings && (
+                  </div>"""
+                  {plan.savings && (""""
                     <span className="text-green-400 text-sm font-semibold">{plan.savings}</span>
                   )}
                 </div>
-
-                {/* Features */}
-                <div className="space-y-4 mb-8">
-                  {plan.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-center gap-3">
-                      <Check className="w-5 h-5 text-green-400 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
+"""
+                {/* Features */}""""
+                <div className="space-y-4 mb-8">"""
+                  {plan.features.map((feature, idx) => (""""
+                    <div key={idx} className="flex items-center gap-3">""""
+                      <Check className="w-5 h-5 text-green-400 flex-shrink-0"  />"                      <span className="text-gray-300">{feature}</span>
                     </div>
-                  ))}
-                </div>
-
-                {/* CTA Button */}
+                  ))}`
+                </div>``
+```
+                {/* CTA Button */}````
                 <button className={`w-full bg-gradient-to-r ${plan.buttonColor} text-white py-3 px-6 rounded-lg font-semibold hover:opacity-90 transition-all duration-300`}>
-                  Get Started
+                  Get Started;
                 </button>
               </div>
-            </motion.div>
-          ))}
+            </motion.div>) ) }
         </div>
       </div>
-
-      {/* Service Categories Pricing */}
+"""
+      {/* Service Categories Pricing */}""""
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <motion.div
+        <motion.div;
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
+          whileInView={{ opacity: 1, y: 0 }}"""
+          transition={{ duration: 0.8 }}""""
+          className="text-center mb-16""""
+        >""""
           <h2 className="text-4xl font-bold text-white mb-6">
-            Service-Specific Pricing
-          </h2>
+            Service-Specific Pricing"""
+          </h2>""""
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Detailed pricing for each category of our revolutionary services. Mix and match services based on your specific needs.
           </p>
-        </motion.div>
-
+        </motion.div>"""
+""""
         <div className="space-y-12">
           {serviceCategories.map((category, index) => (
-            <motion.div
+            <motion.div;
               key={category.name}
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
-            >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="text-blue-400">{category.icon}</div>
-                <h3 className="text-2xl font-bold text-white">{category.name}</h3>
+              whileInView={{ opacity: 1, y: 0 }}"""
+              transition={{ duration: 0.6, delay: index * 0.1 }}""""
+              className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10""""
+            >""""
+              <div className="flex items-center gap-3 mb-6">""""
+                <div className="text-blue-400">{category.icon}</div>""""
+                <h3 className="text-2xl font-bold text-white">{category.name}</h3>""""
                 <span className="text-gray-400 text-sm">({category.services.length} services)</span>
               </div>
 
@@ -276,47 +274,43 @@ export default function ComprehensivePricingGuide2029(...args: unknown[]): unkno
                     <div key={service.id} className="bg-white/5 rounded-lg p-4 border border-white/10">
                       <div className="flex items-start justify-between mb-3">
                         <div className="text-2xl">{service.icon}</div>
-                        {service.popular && (
-                          <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full">
-                            Popular
-                          </span>
-                        )}
-                      </div>
-                      
-                      <h4 className="text-white font-semibold mb-2">{service.name}</h4>
-                      <p className="text-gray-400 text-sm mb-3 line-clamp-2">{service.tagline}</p>
-                      
-                      <div className="flex items-center justify-between mb-3">
-                        <div className="text-xl font-bold text-white">
-                          {service.price}
-                          <span className="text-gray-400 text-sm">{service.period}</span>
+                        {service.popular && (                          <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full">
+                            Popular;
+                          </span>) }
+                      </div>"""
+                      """"
+                      <h4 className="text-white font-semibold mb-2">{service.name}</h4>""""
+                      <p className="text-gray-400 text-sm mb-3 line-clamp-2">{service.tagline}</p>"""
+                      """"
+                      <div className="flex items-center justify-between mb-3">""""
+                        <div className="text-xl font-bold text-white">"""
+                          {service.price}""""
+                          <span className="text-gray-400 text-sm">{service.period}</span>"""
+                        </div>""""
+                        <div className="flex items-center gap-1 text-sm text-gray-400">""""
+                          <Star className="w-4 h-4 text-yellow-400 fill-current"  />                          <span>{service.rating}</span>
                         </div>
-                        <div className="flex items-center gap-1 text-sm text-gray-400">
-                          <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                          <span>{service.rating}</span>
-                        </div>
-                      </div>
-
-                      <div className="space-y-2 mb-4">
-                        {service.features.slice(0, 2).map((feature, idx) => (
-                          <div key={idx} className="flex items-center gap-2 text-gray-300 text-sm">
+                      </div>"""
+""""
+                      <div className="space-y-2 mb-4">"""
+                        {service.features.slice(0, 2).map((feature, idx) => (""""
+                          <div key={idx} className="flex items-center gap-2 text-gray-300 text-sm">""""
                             <div className="w-1 h-1 bg-blue-400 rounded-full"></div>
                             {feature}
-                          </div>
-                        ))}
+                          </div>) ) }
                       </div>
 
-                      <a
-                        href={service.link}
-                        className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-2 px-4 rounded-lg text-sm font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+                      <a"""
+                        href={service.link}""""
+                        className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-2 px-4 rounded-lg text-sm font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"""
                       >
-                        Learn More
+                        Learn More;
                       </a>
                     </div>
                   ))}
-                </div>
-              ) : (
-                <div className="text-center py-8">
+                </div>"""
+              ) : (""""
+                <div className="text-center py-8">""""
                   <p className="text-gray-400">Services coming soon...</p>
                 </div>
               )}
@@ -324,134 +318,140 @@ export default function ComprehensivePricingGuide2029(...args: unknown[]): unkno
           ))}
         </div>
       </div>
-
-      {/* Enterprise Custom Pricing */}
+"""
+      {/* Enterprise Custom Pricing */}""""
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <motion.div
+        <motion.div;
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl p-12 text-center"
-        >
+          whileInView={{ opacity: 1, y: 0 }}"""
+          transition={{ duration: 0.8 }}""""
+          className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl p-12 text-center""""
+        >""""
           <h2 className="text-4xl font-bold text-white mb-6">
-            Need Custom Enterprise Solutions?
-          </h2>
+            Need Custom Enterprise Solutions?"""
+          </h2>""""
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             For large organizations with specific requirements, we offer custom enterprise solutions with dedicated support, custom integrations, and tailored pricing.
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            <div className="text-center">
-              <div className="text-3xl text-blue-400 mb-2">🎯</div>
-              <h3 className="text-xl font-semibold text-white mb-2">Custom Development</h3>
-              <p className="text-gray-300">Tailored solutions built specifically for your business needs</p>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl text-purple-400 mb-2">🔧</div>
-              <h3 className="text-xl font-semibold text-white mb-2">Custom Integrations</h3>
-              <p className="text-gray-300">Seamless integration with your existing systems and workflows</p>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl text-green-400 mb-2">👥</div>
-              <h3 className="text-xl font-semibold text-white mb-2">Dedicated Support</h3>
+          </p>"""
+          """"
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">""""
+            <div className="text-center">""""
+              <div className="text-3xl text-blue-400 mb-2">🎯</div>""""
+              <h3 className="text-xl font-semibold text-white mb-2">Custom Development</h3>""""
+              <p className="text-gray-300">Tailored solutions built specifically for your business needs</p>"""
+            </div>""""
+            <div className="text-center">""""
+              <div className="text-3xl text-purple-400 mb-2">🔧</div>""""
+              <h3 className="text-xl font-semibold text-white mb-2">Custom Integrations</h3>""""
+              <p className="text-gray-300">Seamless integration with your existing systems and workflows</p>"""
+            </div>""""
+            <div className="text-center">""""
+              <div className="text-3xl text-green-400 mb-2">👥</div>""""
+              <h3 className="text-xl font-semibold text-white mb-2">Dedicated Support</h3>""""
               <p className="text-gray-300">24/7 dedicated support team and account management</p>
             </div>
-          </div>
-
+          </div>"""
+""""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-white text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300"
+            <motion.button;
+              whileHover={{ scale: 1.05 }}"""
+              whileTap={{ scale: 0.95 }}""""
+              className="bg-white text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300"""
             >
-              Request Custom Quote
+              Request Custom Quote;
             </motion.button>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300"
+            <motion.button;
+              whileHover={{ scale: 1.05 }}"""
+              whileTap={{ scale: 0.95 }}""""
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300"""
             >
-              Schedule Consultation
+              Schedule Consultation;
             </motion.button>
           </div>
         </motion.div>
       </div>
-
-      {/* FAQ Section */}
+"""
+      {/* FAQ Section */}""""
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <motion.div
+        <motion.div;
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-12"
-        >
+          whileInView={{ opacity: 1, y: 0 }}"""
+          transition={{ duration: 0.8 }}""""
+          className="text-center mb-12""""
+        >""""
           <h2 className="text-4xl font-bold text-white mb-6">
-            Frequently Asked Questions
+            Frequently Asked Questions;
           </h2>
-        </motion.div>
-
+        </motion.div>"""
+""""
         <div className="space-y-6">
           {[
             {
               question: unknown"Can I mix and match services from different categories?",;
-              answer: "Yes! Our flexible pricing allows you to choose services from any category based on your specific business needs. You can start with a few services and add more as you grow."
+              answer: "Yes! Our flexible pricing allows you to choose services from any category based on your specific business needs. You can start with a few services and add more as you grow."            },
+            {}
+"""
+""""
+              question: "Do you offer volume discounts for enterprise customers?",""""
+              answer: "Absolutely! Enterprise customers with multiple service subscriptions receive significant volume discounts. Contact our sales team for custom enterprise pricing."""
             },
-            {
-              question: "Do you offer volume discounts for enterprise customers?",
-              answer: "Absolutely! Enterprise customers with multiple service subscriptions receive significant volume discounts. Contact our sales team for custom enterprise pricing."
+            {}
+'"""
+'"'"""
+              question: "What's included in the support packages?",""""
+              answer: "Starter plans include email support, Professional plans include priority email support, and Enterprise plans include 24/7 phone and email support with dedicated account management."""
             },
-            {
-              question: "What's included in the support packages?",
-              answer: "Starter plans include email support, Professional plans include priority email support, and Enterprise plans include 24/7 phone and email support with dedicated account management."
+            {}
+"""
+""""
+              question: "Can I cancel or change my plan at any time?",""""
+              answer: "Yes, you can upgrade, downgrade, or cancel your plan at any time. Changes take effect at the start of your next billing cycle."""
             },
-            {
-              question: "Can I cancel or change my plan at any time?",
-              answer: "Yes, you can upgrade, downgrade, or cancel your plan at any time. Changes take effect at the start of your next billing cycle."
-            },
-            {
-              question: "Do you offer free trials?",
-              answer: "Yes! Most of our services offer free trials ranging from 14-30 days, depending on the service complexity and setup requirements."
+            {}
+"""
+""""
+              question: "Do you offer free trials?",""""
+              answer: "Yes! Most of our services offer free trials ranging from 14-30 days, depending on the service complexity and setup requirements."""
             }
-          ].map((faq, index)  => (
-            <motion.div
+          ].map((faq, index) => (<motion.div;
               key={index}
               initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10"
-            >
-              <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
+              whileInView={{ opacity: 1, x: 0 }}"""
+              transition={{ duration: 0.6, delay: index * 0.1 }}""""
+              className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10""""
+            >""""
+              <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>""""
               <p className="text-gray-300">{faq.answer}</p>
             </motion.div>
           ))}
         </div>
       </div>
-
-      {/* Contact Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-        <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl p-12 text-center">
+"""
+      {/* Contact Section */}""""
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">""""
+        <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl p-12 text-center">""""
           <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Get Started?
-          </h2>
+            Ready to Get Started?"""
+          </h2>""""
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Our team is ready to help you choose the right services and pricing plan for your business needs.
-          </p>
+            Our team is ready to help you choose the right services and pricing plan for your business needs."""
+          </p>""""
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-white text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300"
+            <motion.button;
+              whileHover={{ scale: 1.05 }}"""
+              whileTap={{ scale: 0.95 }}""""
+              className="bg-white text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300"""
             >
-              Start Free Trial
+              Start Free Trial;
             </motion.button>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300"
+            <motion.button;
+              whileHover={{ scale: 1.05 }}"""
+              whileTap={{ scale: 0.95 }}""""
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300"""
             >
-              Contact Sales
-            </motion.button>
-          </div>
+              Contact Sales;
+            </motion.button>"""
+          </div>""""
           <div className="text-gray-300">
             <p>Mobile: +1 302 464 0950 | Email: kleber@ziontechgroup.com</p>
             <p>Address: 364 E Main St STE 1008 Middletown DE 19709</p>

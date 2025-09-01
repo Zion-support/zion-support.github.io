@@ -1,4 +1,3 @@
-
 import type { Config } from 'tailwindcss';
 import defaultTheme from 'tailwindcss/defaultTheme';
 import plugin from 'tailwindcss/plugin';
@@ -9,7 +8,7 @@ const config: Config = {
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx,js,jsx}'
   ],
   theme: {
     extend: {
@@ -21,98 +20,87 @@ const config: Config = {
         foreground: 'hsl(var(--foreground))',
         primary: {
           DEFAULT: 'hsl(var(--primary))',
-          foreground: 'hsl(var(--primary-foreground))',
+          foreground: 'hsl(var(--primary-foreground))'
         },
         secondary: {
           DEFAULT: 'hsl(var(--secondary))',
-          foreground: 'hsl(var(--secondary-foreground))',
+          foreground: 'hsl(var(--secondary-foreground))'
         },
         destructive: {
           DEFAULT: 'hsl(var(--destructive))',
-          foreground: 'hsl(var(--destructive-foreground))',
+          foreground: 'hsl(var(--destructive-foreground))'
         },
         muted: {
           DEFAULT: 'hsl(var(--muted))',
-          foreground: 'hsl(var(--muted-foreground))',
+          foreground: 'hsl(var(--muted-foreground))'
         },
         accent: {
           DEFAULT: 'hsl(var(--accent))',
-          foreground: 'hsl(var(--accent-foreground))',
+          foreground: 'hsl(var(--accent-foreground))'
         },
         popover: {
           DEFAULT: 'hsl(var(--popover))',
-          foreground: 'hsl(var(--popover-foreground))',
+          foreground: 'hsl(var(--popover-foreground))'
         },
         card: {
           DEFAULT: 'hsl(var(--card))',
-          foreground: 'hsl(var(--card-foreground))',
+          foreground: 'hsl(var(--card-foreground))'
         },
         'zion-blue': {
           DEFAULT: '#2e73ea',
           light: '#8ab1f3',
-          dark: '#172d67',
+          dark: '#172d67'
         },
         'zion-purple': {
           DEFAULT: '#a855f7',
           light: '#c084fc',
-          dark: '#6b21a8',
+          dark: '#6b21a8'
         },
         'zion-cyan': {
           DEFAULT: '#0d9488',
           light: '#7aeae4',
-          dark: '#0f766e',
+          dark: '#0f766e'
         },
         'zion-slate': {
           DEFAULT: '#17072b',
           light: '#451582',
-          dark: '#000000',
+          dark: '#000000'
         }
       },
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)',
+        sm: 'calc(var(--radius) - 4px)'
       },
       fontFamily: {
-        sans: ['var(--font-inter)', 'Inter Fallback', ...defaultTheme.fontFamily.sans],
-        heading: [
-          'var(--font-poppins)',
-          'Poppins Fallback',
+        sans: [
+          'var(--font-inter), Inter',
           ...defaultTheme.fontFamily.sans
-        ]
-      },
+        ],
+        heading: [
+          'var(--font-poppins), Poppins',
+          ...defaultTheme.fontFamily.sans
+        ]      },
       keyframes: {
         'accordion-down': {
           from: { height: '0' },
-          to: { height: 'var(--radix-accordion-content-height)' },
-        },
+          to: { height: 'var(--radix-accordion-content-height)' }        },
         'accordion-up': {
           from: { height: 'var(--radix-accordion-content-height)' },
-          to: { height: '0' },
+          to: { height: '0' }
         }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
-        'accordion-up': 'accordion-up 0.2s ease-out',
+        'accordion-up': 'accordion-up 0.2s ease-out'
       }
     }
   },
   plugins: [
-    plugin(function ({ addUtilities }) {
-      const newUtilities = {
-        '.rtl': {
-          direction: 'rtl',
-          textAlign: 'right',
-        },
-        '.ltr': {
-          direction: 'ltr',
-          textAlign: 'left',
-        }
-      };
-      addUtilities(newUtilities);
-    })
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/aspect-ratio')
   ]
 };
 
 export default config;
-

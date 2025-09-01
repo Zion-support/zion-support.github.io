@@ -2,17 +2,18 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import type { TalentRateRequest } from '@/utils/api/aiPricing';
 import { generateTalentRateSuggestion } from '@/utils/api/aiPricing';
 import { logPricingAnalytics } from '@/utils/data/pricingAnalytics';
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+;
+export { async };
+export default async function handler(...args: unknown[]): unknown {
   if (req.method !== 'POST') {
-    res.setHeader('Allow', 'POST');
+    res.setHeader('Allow',POST');
     return res.status(405).json({ error: 'Method Not Allowed' });
   }
 
   try {
     const body = req.body as Partial
-
-export default function TalentPage() {
+;
+export default function TalentPage(...args: unknown[]): unknown {
   return (
     <TalentRateRequest>;
     if (!body || !Array.isArray(body.skills) || typeof body.yearsExperience !== 'number' || !body.location) {
@@ -22,7 +23,7 @@ export default function TalentPage() {
     const input: TalentRateRequest = {
       skills: body.skills.map(String),
       yearsExperience: Number(body.yearsExperience),
-      location: String(body.location),
+      location: String(body.location)
     };
 
     const suggestion = await generateTalentRateSuggestion(input);

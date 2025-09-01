@@ -119,10 +119,7 @@ module.exports = {
       host: 'localhost',
       ref: 'origin/main',
       repo: 'https://github.com/Zion-Holdings/zion.app.git',
-      path: '/var/www/zion.app',
-      'pre-deploy-local': '',
-      'post-deploy': 'npm install && pm2 reload ecosystem.config.js --env production',
-      'pre-setup': ''
+      path: '/var/www/zion.app',pre-deploy-local': '',post-deploy': 'npm install && pm2 reload ecosystem.config.js --env production',pre-setup': ''
 
 
 };

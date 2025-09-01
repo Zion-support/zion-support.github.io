@@ -1,0 +1,28 @@
+<<<<<<< HEAD
+import React from 'react';
+import { ActiveFilters } from '@/components/talent/ActiveFilters';
+=======
+import React from 'react';'
+import { ActiveFilters } from '@/components/talent/ActiveFilters';'
+import { ResultsHeader } from '@/components/talent/ResultsHeader';'
+import { TalentGrid } from '@/components/talent/TalentGrid';
+export function TalentResults({
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f
+
+export default function Page() {
+      <ResultsHeader isLoading={isLoading} resultCount={totalCount} />
+
+      {/* Talents grid */}
+      <TalentGrid
+        talents={talents}
+        isLoading={isLoading}
+        onTalentClick={viewProfile}
+        handleBook={handleBook}
+        handleMessage={handleMessage}
+        isAuthenticated={isAuthenticated}
+        clearFilters={activeFiltersProps.clearFilters}
+      />
+    </div>
+  );
+}'"
+'"'"

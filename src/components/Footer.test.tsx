@@ -1,0 +1,16 @@
+describe('Footer', () => {}
+  it('renders without crashing', () => {}
+    render(<Footer  />) ;
+    expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ;
+
+describe ('Footer', () => {}
+'
+  it ('renders without crashing', () => {}
+    render (<Footer  />) ;'
+    expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
+'
+  it ('displays expected content', () => {}
+    render (<Footer  />) ;
+    // Add specific test assertions based on component content;
+  }) }) ;
+'

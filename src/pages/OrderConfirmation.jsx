@@ -1,5 +1,5 @@
-import { useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';'''
+import { Link } from 'react-router-dom';'''
 import CheckoutProgress from '@/components/checkout/CheckoutProgress';
 export default function OrderConfirmation() {
     const router = useNavigate();

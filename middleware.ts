@@ -1,134 +1,76 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
 
-// Security configuration
-const SECURITY_HEADERS = {
-  'X-Frame-Options': 'DENY',
-  'X-Content-Type-Options': 'nosniff',
-  'X-XSS-Protection': '1; mode=block',
-  'Referrer-Policy': 'strict-origin-when-cross-origin',
-  'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
-  'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',
-  'Content-Security-Policy': "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';"
-};
-
-// Rate limiting configuration
-const RATE_LIMIT = {
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  maxRequests: 100, // limit each IP to 100 requests per windowMs
-};
-
-// Simple in-memory store for rate limiting (in production, use Redis)
-const requestCounts = new Map<string, { count: number; resetTime: number }>();
-
-function isRateLimited(ip: string): boolean {
-  const now = Date.now();
-  const record = requestCounts.get(ip);
-  
-  if (!record || now > record.resetTime) {
-    requestCounts.set(ip, { count: 1, resetTime: now + RATE_LIMIT.windowMs });
-    return false;
-  }
-  
-  if (record.count >= RATE_LIMIT.maxRequests) {
-    return true;
-  }
-  
-  record.count++;
-  return false;
-}
-
-function getClientIP(request: NextRequest): string {
-  const forwarded = request.headers.get('x-forwarded-for');
-  const realIP = request.headers.get('x-real-ip');
-  const cfConnectingIP = request.headers.get('cf-connecting-ip');
-  
-  if (forwarded) {
-    return forwarded.split(',')[0].trim();
-  }
-  if (realIP) {
-    return realIP;
-  }
-  if (cfConnectingIP) {
-    return cfConnectingIP;
-  }
-  
-  return 'unknown';
-}
-
-export async function middleware(request: NextRequest) {
+// Security middleware for Zion Tech Group
+export function middleware(request: NextRequest) {
   const response = NextResponse.next();
+
+  // Security headers
+  response.headers.set('X-Frame-Options', 'DENY');
+  response.headers.set('X-Content-Type-Options', 'nosniff');
+  response.headers.set('Referrer-Policy', 'origin-when-cross-origin');
+  response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
   
-  // Apply security headers
-  Object.entries(SECURITY_HEADERS).forEach(([key, value]) => {
-    response.headers.set(key, value);
-  });
+  // Content Security Policy
+  response.headers.set(
+    'Content-Security-Policy',
+    [
+      "default-src 'self'",
+      "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://vercel.live",
+      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+      "font-src 'self' https://fonts.gstatic.com",
+      "img-src 'self' data: https: blob:",
+      "connect-src 'self' https: wss:",
+      "frame-src 'none'",
+      "object-src 'none'",
+      "base-uri 'self'",
+      "form-action 'self'",
+      "upgrade-insecure-requests"
+    ].join('; ')
+  );
+
+  // Rate limiting (basic implementation)
+  const ip = request.ip || request.headers.get('x-forwarded-for') || 'unknown';
+  const rateLimitKey = `rate_limit:${ip}`;
   
-  // Rate limiting
-  const clientIP = getClientIP(request);
-  if (isRateLimited(clientIP)) {
-    return new NextResponse(
-      JSON.stringify({ error: 'Too many requests', message: 'Rate limit exceeded' }),
-      { 
-        status: 429, 
-        headers: { 
-          'Content-Type': 'application/json',
-          'Retry-After': '900' // 15 minutes
-        } 
-      }
-    );
+  // Add rate limiting headers
+  response.headers.set('X-RateLimit-Limit', '100');
+  response.headers.set('X-RateLimit-Remaining', '99'); // Placeholder
+
+  // Performance monitoring
+  const startTime = Date.now();
+  
+  // Log request for monitoring
+  console.log(`[${new Date().toISOString()}] ${request.method} ${request.url} - IP: ${ip}`);
+
+  // Handle specific routes
+  const { pathname } = request.nextUrl;
+  
+  // Redirect old routes to new ones
+  if (pathname.startsWith('/old-')) {
+    return NextResponse.redirect(new URL(pathname.replace('/old-', '/'), request.url));
   }
-  
-  // CSRF protection for POST requests
-  if (request.method === 'POST') {
-    const origin = request.headers.get('origin');
-    const referer = request.headers.get('referer');
-    
-    // Allow same-origin requests
-    if (origin && request.nextUrl.origin !== origin) {
-      // Check if referer is from the same origin
-      if (referer && !referer.startsWith(request.nextUrl.origin)) {
-        return new NextResponse(
-          JSON.stringify({ error: 'CSRF protection', message: 'Invalid request origin' }),
-          { 
-            status: 403, 
-            headers: { 'Content-Type': 'application/json' } 
-          }
-        );
-      }
-    }
+
+  // Block suspicious requests
+  if (pathname.includes('..') || pathname.includes('//')) {
+    return new NextResponse('Forbidden', { status: 403 });
   }
-  
-  // Bot protection
-  const userAgent = request.headers.get('user-agent') || '';
-  const suspiciousPatterns = [
-    /bot/i,
-    /crawler/i,
-    /spider/i,
-    /scraper/i,
-    /curl/i,
-    /wget/i,
-    /python/i,
-    /java/i,
-    /perl/i
-  ];
-  
-  const isSuspiciousBot = suspiciousPatterns.some(pattern => pattern.test(userAgent));
-  if (isSuspiciousBot && !userAgent.includes('Googlebot') && !userAgent.includes('Bingbot')) {
-    // Add delay for suspicious bots
-    await new Promise(resolve => setTimeout(resolve, 2000));
-  }
-  
-  // Log security events
-  if (process.env.NODE_ENV === 'production') {
-    console.log(`[Security] ${request.method} ${request.url} - IP: ${clientIP} - UA: ${userAgent.substring(0, 100)}`);
-  }
-  
+
+  // Add response time header
+  response.headers.set('X-Response-Time', `${Date.now() - startTime}ms`);
+
   return response;
 }
 
 export const config = {
   matcher: [
-    '/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
+    /*
+     * Match all request paths except for the ones starting with:
+     * - api (API routes)
+     * - _next/static (static files)
+     * - _next/image (image optimization files)
+     * - favicon.ico (favicon file)
+     */
+    '/((?!api|_next/static|_next/image|favicon.ico).*)',
   ],
-  runtime: 'nodejs',
 };

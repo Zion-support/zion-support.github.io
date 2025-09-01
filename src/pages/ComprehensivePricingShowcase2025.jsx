@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react';'''
 import { Link } from 'react-router-dom';
 ;
 const ComprehensivePricingShowcase2025 = () => {
@@ -32,33 +32,38 @@ const ComprehensivePricingShowcase2025 = () => {
         { value: 'medium', label: '$500 - $2,000/month', min: 500, max: 2000 },
         { value: 'high', label: 'Over $2,000/month', min: 2000 }
     ];
-    const filteredServices = allServices
-        .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
-        .filter(service => {
+    const filteredServices = allServices        .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
+        .filter(service => {}
+'
+''
+'''
         if (priceRange === 'all')
             return true;
         const range = priceRanges.find(r => r.value === priceRange);
         if (!range)
             return true;
-        if (service.price) {
-            const price = parseFloat(service.price.replace(/[^0-9.]/g, ''));
-            if (range.min && range.max) {
+        if (service.price) {}
+            const price = parseFloat(service.price.replace(/[^0-9.]/g,));
+            if (range.min && range.max) {}
                 return price >= range.min && price <= range.max}
-            else if (range.max) {
+            else if(range.max) {}
                 return price <= range.max}
-            else if (range.min) {
+            else if(range.min) {}
                 return price >= range.min}
         }
-        return true});
-    const getServiceTypeColor = (type) => {
-        switch (type) {
-            case 'Micro SAAS':
-                return 'bg-blue-100 text-blue-800 border-blue-200';
-            case 'IT Service':
-                return 'bg-green-100 text-green-800 border-green-200';
-            case 'AI Service':
-                return 'bg-purple-100 text-purple-800 border-purple-200';
-            default:
+        return true}) ;
+    const getServiceTypeColor = (type) => {}
+        switch (type) {}
+'
+''
+'''
+            case 'Micro SAAS':''''
+                return 'bg-blue-100 text-blue-800 border-blue-200';'''
+            case 'IT Service':''''
+                return 'bg-green-100 text-green-800 border-green-200';'''
+            case 'AI Service':''''
+                return 'bg-purple-100 text-purple-800 border-purple-200';'''
+            default:''''
                 return 'bg-gray-100 text-gray-800 border-gray-200'}
     };
     const getCategoryIcon = (category) => {

@@ -1,0 +1,615 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';
+<<<<<<< HEAD
+import { Link  } from 'react-router-dom';
+=======
+import React, { useState } from 'react';'
+import { Link } from 'react-router-dom';'
+import { cn } from '@/lib/utils';'
+import { NavLink } from 'react-router-dom';
+import {
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f
+
+export default function Page() {
+=======
+import { Link, NavLink } from 'react-router-dom';
+import { cn } from '@/lib/utils';
+import {
+  ChevronDown,
+  Zap,
+  Brain,
+  Shield,
+  Users,
+<<<<<<< HEAD
+  HardDrive,
+  TrendingUp,
+  Home,
+  FileText,
+  Calendar,
+  User,
+  MessageCircle,
+  Rocket
+} from 'lucide-react';
+=======
+  HardDrive,'
+  TrendingUp} from 'lucide-react';
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f
+
+export function MainNavigation({ className }) {
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+<<<<<<< HEAD
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+
+  return (
+    <nav className={cn('hidden md:flex items-center space-x-6', className)}>
+      <NavLink
+        to="/"
+        className={({ isActive }) =>
+          cn(
+            'text-sm font-medium transition-colors hover:text-primary flex items-center',
+=======
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);'
+  return (''
+    <nav className={cn('hidden md:flex items-center space-x-6', className)}>
+      <NavLink
+        to="/"
+        className={({ isActive }) =>'
+          cn(''
+            'text-sm font-medium transition-colors hover:text-primary','
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f
+            isActive ? 'text-zion-cyan' : 'text-muted-foreground'
+          )
+        }
+>>>>>>> 555b9ffae2e68b00750b91675d62a559987674d9
+      >
+        <Home className="w-4 h-4 mr-1" />
+        Home
+      </NavLink>
+<<<<<<< HEAD
+
+      {/* Services Dropdown */}
+      <div className="relative group">
+        <button
+          onMouseEnter={() => setIsServicesOpen(true)}
+          onMouseLeave={() => setIsServicesOpen(false)}
+          className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground"
+        >
+          <Zap className="w-4 h-4" />
+          <span>Services</span>
+=======
+"
+      {/* Services Dropdown */}""
+      <div className="relative group">
+        <button
+          onMouseEnter={() => setIsServicesOpen(true)}"
+          onMouseLeave={() => setIsServicesOpen(false)}""
+          className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground""
+        >""
+          <Zap className="w-4 h-4" />"
+          <span>Services</span>""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f
+          <ChevronDown className="w-3 h-3" />
+        </button>
+
+        {isServicesOpen && (
+          <div
+<<<<<<< HEAD
+            onMouseEnter={() => setIsServicesOpen(true)}
+            onMouseLeave={() => setIsServicesOpen(false)}
+            className="absolute top-full left-0 mt-2 w-80 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50"
+          >
+            <div className="p-4">
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
+                    <Zap className="w-4 h-4 mr-2" />
+                    Micro SAAS
+                  </h4>
+                  <ul className="space-y-2 text-sm">
+                    <li>
+                      <Link
+                        to="/micro-saas"
+=======
+            onMouseEnter={() => setIsServicesOpen(true)}"
+            onMouseLeave={() => setIsServicesOpen(false)}""
+            className="absolute top-full left-0 mt-2 w-80 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50""
+          >""
+            <div className="p-4">""
+              <div className="grid grid-cols-2 gap-4">"
+                <div>""
+                  <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">""
+                    <Zap className="w-4 h-4 mr-2" />
+                    Micro SAAS"
+                  </h4>""
+                  <ul className="space-y-2 text-sm">
+                    <li>"
+                      <Link""
+                        to="/micro-saas""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f
+                        className="text-zion-slate-light hover:text-zion-cyan transition-colors"
+                      >
+                        Content Tools
+                      </Link>
+                    </li>
+<<<<<<< HEAD
+                    <li>
+                      <Link
+                        to="/micro-saas"
+=======
+                    <li>"
+                      <Link""
+                        to="/micro-saas""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f
+                        className="text-zion-slate-light hover:text-zion-cyan transition-colors"
+                      >
+                        Marketing Automation
+                      </Link>
+                    </li>
+<<<<<<< HEAD
+                    <li>
+                      <Link
+                        to="/micro-saas"
+=======
+                    <li>"
+                      <Link""
+                        to="/micro-saas""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f
+                        className="text-zion-slate-light hover:text-zion-cyan transition-colors"
+                      >
+                        Business Tools
+                      </Link>
+                    </li>
+<<<<<<< HEAD
+                    <li>
+                      <Link
+                        to="/micro-saas"
+=======
+                    <li>"
+                      <Link""
+                        to="/micro-saas""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f
+                        className="text-zion-slate-light hover:text-zion-cyan transition-colors"
+                      >
+                        Customer Support
+                      </Link>
+                    </li>
+                  </ul>
+<<<<<<< HEAD
+                </div>
+                <div>
+                  <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
+                    <Shield className="w-4 h-4 mr-2" />
+                    IT Services
+                  </h4>
+                  <ul className="space-y-2 text-sm">
+                    <li>
+                      <Link
+                        to="/services/cloud-devops"
+=======
+                </div>"
+                <div>""
+                  <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">""
+                    <Shield className="w-4 h-4 mr-2" />
+                    IT Services"
+                  </h4>""
+                  <ul className="space-y-2 text-sm">
+                    <li>"
+                      <Link""
+                        to="/services/cloud-devops""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f
+                        className="text-zion-slate-light hover:text-zion-cyan transition-colors"
+                      >
+                        Cloud Migration
+                      </Link>
+                    </li>
+<<<<<<< HEAD
+                    <li>
+                      <Link
+                        to="/services/it-infrastructure"
+=======
+                    <li>"
+                      <Link""
+                        to="/services/it-infrastructure""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f
+                        className="text-zion-slate-light hover:text-zion-cyan transition-colors"
+                      >
+                        IT Infrastructure
+                      </Link>
+                    </li>
+<<<<<<< HEAD
+                    <li>
+                      <Link
+                        to="/services"
+=======
+                    <li>"
+                      <Link""
+                        to="/services""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f
+                        className="text-zion-slate-light hover:text-zion-cyan transition-colors"
+                      >
+                        DevOps
+                      </Link>
+                    </li>
+<<<<<<< HEAD
+                    <li>
+                      <Link
+                        to="/services"
+=======
+                    <li>"
+                      <Link""
+                        to="/services""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f
+                        className="text-zion-slate-light hover:text-zion-cyan transition-colors"
+                      >
+                        Cybersecurity
+                      </Link>
+                    </li>
+                  </ul>
+<<<<<<< HEAD
+                </div>
+              </div>
+              <div className="mt-4 pt-4 border-t border-zion-purple/20">
+                <Link
+                  to="/services"
+                  className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center"
+                >
+                  View All Services
+=======
+                </div>"
+              </div>""
+              <div className="mt-4 pt-4 border-t border-zion-purple/20">"
+                <Link""
+                  to="/services""
+                  className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center"
+                >"
+                  View All Services""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f
+                  <TrendingUp className="w-4 h-4 ml-2" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+<<<<<<< HEAD
+
+      {/* Solutions Dropdown */}
+      <div className="relative group">
+        <button
+          onMouseEnter={() => setIsSolutionsOpen(true)}
+          onMouseLeave={() => setIsSolutionsOpen(false)}
+          className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground"
+        >
+          <Brain className="w-4 h-4" />
+          <span>Solutions</span>
+=======
+"
+      {/* Solutions Dropdown */}""
+      <div className="relative group">
+        <button
+          onMouseEnter={() => setIsSolutionsOpen(true)}"
+          onMouseLeave={() => setIsSolutionsOpen(false)}""
+          className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground""
+        >""
+          <Brain className="w-4 h-4" />"
+          <span>Solutions</span>""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f
+          <ChevronDown className="w-3 h-3" />
+        </button>
+
+        {isSolutionsOpen && (
+          <div
+<<<<<<< HEAD
+            onMouseEnter={() => setIsSolutionsOpen(true)}
+            onMouseLeave={() => setIsSolutionsOpen(false)}
+            className="absolute top-full left-0 mt-2 w-80 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50"
+          >
+            <div className="p-4">
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
+                    <Users className="w-4 h-4 mr-2" />
+                    Talent
+                  </h4>
+                  <ul className="space-y-2 text-sm">
+                    <li>
+                      <Link
+                        to="/talent"
+=======
+            onMouseEnter={() => setIsSolutionsOpen(true)}"
+            onMouseLeave={() => setIsSolutionsOpen(false)}""
+            className="absolute top-full left-0 mt-2 w-80 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50""
+          >""
+            <div className="p-4">""
+              <div className="grid grid-cols-2 gap-4">"
+                <div>""
+                  <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">""
+                    <Users className="w-4 h-4 mr-2" />
+                    Talent"
+                  </h4>""
+                  <ul className="space-y-2 text-sm">
+                    <li>"
+                      <Link""
+                        to="/talent""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f
+                        className="text-zion-slate-light hover:text-zion-cyan transition-colors"
+                      >
+                        Find Experts
+                      </Link>
+                    </li>
+<<<<<<< HEAD
+                    <li>
+                      <Link
+                        to="/talent"
+=======
+                    <li>"
+                      <Link""
+                        to="/talent""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f
+                        className="text-zion-slate-light hover:text-zion-cyan transition-colors"
+                      >
+                        AI Hiring
+                      </Link>
+                    </li>
+<<<<<<< HEAD
+                    <li>
+                      <Link
+                        to="/talent"
+=======
+                    <li>"
+                      <Link""
+                        to="/talent""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f
+                        className="text-zion-slate-light hover:text-zion-cyan transition-colors"
+                      >
+                        Skill Matching
+                      </Link>
+                    </li>
+<<<<<<< HEAD
+                    <li>
+                      <Link
+                        to="/talent"
+=======
+                    <li>"
+                      <Link""
+                        to="/talent""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f
+                        className="text-zion-slate-light hover:text-zion-cyan transition-colors"
+                      >
+                        Project Teams
+                      </Link>
+                    </li>
+                  </ul>
+<<<<<<< HEAD
+                </div>
+                <div>
+                  <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
+                    <HardDrive className="w-4 h-4 mr-2" />
+                    Resources
+                  </h4>
+                  <ul className="space-y-2 text-sm">
+                    <li>
+                      <Link
+                        to="/equipment"
+=======
+                </div>"
+                <div>""
+                  <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">""
+                    <HardDrive className="w-4 h-4 mr-2" />
+                    Resources"
+                  </h4>""
+                  <ul className="space-y-2 text-sm">
+                    <li>"
+                      <Link""
+                        to="/equipment""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f
+                        className="text-zion-slate-light hover:text-zion-cyan transition-colors"
+                      >
+                        Equipment
+                      </Link>
+                    </li>
+<<<<<<< HEAD
+                    <li>
+                      <Link
+                        to="/marketplace"
+=======
+                    <li>"
+                      <Link""
+                        to="/marketplace""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f
+                        className="text-zion-slate-light hover:text-zion-cyan transition-colors"
+                      >
+                        Marketplace
+                      </Link>
+                    </li>
+<<<<<<< HEAD
+                    <li>
+                      <Link
+                        to="/marketplace"
+=======
+                    <li>"
+                      <Link""
+                        to="/marketplace""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f
+                        className="text-zion-slate-light hover:text-zion-cyan transition-colors"
+                      >
+                        Products
+                      </Link>
+                    </li>
+<<<<<<< HEAD
+                    <li>
+                      <Link
+                        to="/green-it"
+=======
+                    <li>"
+                      <Link""
+                        to="/green-it""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f
+                        className="text-zion-slate-light hover:text-zion-cyan transition-colors"
+                      >
+                        Green IT
+                      </Link>
+                    </li>
+                  </ul>
+<<<<<<< HEAD
+                </div>
+              </div>
+              <div className="mt-4 pt-4 border-t border-zion-purple/20">
+                <Link
+                  to="/request-quote"
+                  className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center"
+                >
+                  Get Custom Quote
+=======
+                </div>"
+              </div>""
+              <div className="mt-4 pt-4 border-t border-zion-purple/20">"
+                <Link""
+                  to="/request-quote""
+                  className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center"
+                >"
+                  Get Custom Quote""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f
+                  <TrendingUp className="w-4 h-4 ml-2" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+<<<<<<< HEAD
+
+      <Link
+        to="/solutions"
+        className="text-zion-slate-light hover:text-white transition-colors flex items-center"
+=======
+"
+      <Link""
+        to="/solutions""
+        className="text-zion-slate-light hover:text-white transition-colors"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f
+      >
+        <Brain className="w-4 h-4 mr-1" />
+        Solutions
+      </Link>
+<<<<<<< HEAD
+
+      <Link
+        to="/services"
+        className="text-zion-slate-light hover:text-white transition-colors flex items-center"
+=======
+"
+      <Link""
+        to="/services""
+        className="text-zion-slate-light hover:text-white transition-colors"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f
+      >
+        <Zap className="w-4 h-4 mr-1" />
+        Services
+      </Link>
+<<<<<<< HEAD
+
+      <Link
+        to="/case-studies"
+        className="text-zion-slate-light hover:text-white transition-colors flex items-center"
+=======
+"
+      <Link""
+        to="/case-studies""
+        className="text-zion-slate-light hover:text-white transition-colors"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f
+      >
+        <FileText className="w-4 h-4 mr-1" />
+        Case Studies
+      </Link>
+<<<<<<< HEAD
+
+      <Link
+        to="/news"
+        className="text-zion-slate-light hover:text-white transition-colors flex items-center"
+=======
+"
+      <Link""
+        to="/news""
+        className="text-zion-slate-light hover:text-white transition-colors"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f
+      >
+        <FileText className="w-4 h-4 mr-1" />
+        News
+      </Link>
+<<<<<<< HEAD
+
+      <Link
+        to="/events"
+        className="text-zion-slate-light hover:text-white transition-colors flex items-center"
+=======
+"
+      <Link""
+        to="/events""
+        className="text-zion-slate-light hover:text-white transition-colors"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f
+      >
+        <Calendar className="w-4 h-4 mr-1" />
+        Events
+      </Link>
+<<<<<<< HEAD
+
+      <Link
+        to="/about"
+        className="text-zion-slate-light hover:text-white transition-colors flex items-center"
+=======
+"
+      <Link""
+        to="/about""
+        className="text-zion-slate-light hover:text-white transition-colors"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f
+      >
+        <User className="w-4 h-4 mr-1" />
+        About Us
+      </Link>
+<<<<<<< HEAD
+
+      <Link
+        to="/contact"
+        className="text-zion-slate-light hover:text-white transition-colors flex items-center"
+=======
+"
+      <Link""
+        to="/contact""
+        className="text-zion-slate-light hover:text-white transition-colors"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f
+      >
+        <MessageCircle className="w-4 h-4 mr-1" />
+        Contact
+      </Link>
+<<<<<<< HEAD
+
+      <NavLink
+        to="/signup"
+        className={({ isActive }) =>
+          cn(
+            'text-sm font-medium transition-colors hover:text-primary bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-6 py-2 rounded-lg shadow-lg shadow-zion-purple/25 hover:shadow-xl hover:shadow-zion-purple/40 transition-all duration-300 hover:-translate-y-1 flex items-center',
+            isActive ? 'text-white' : 'text-white'
+=======
+"
+      <NavLink""
+        to="/signup"
+        className={({ isActive }) =>'
+          cn(''
+            'text-sm font-medium transition-colors hover:text-primary','
+            isActive ? 'text-zion-cyan' : 'text-muted-foreground',bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-6 py-2 rounded-lg shadow-lg shadow-zion-purple/25 hover:shadow-xl hover:shadow-zion-purple/40 transition-all duration-300 hover:-translate-y-1'
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f
+          )
+        }
+      >
+        <Rocket className="w-4 h-4 mr-1" />
+        Get Started
+      </NavLink>
+    </nav>
+  );
+<<<<<<< HEAD
+}
+=======
+}'"
+'"'"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f

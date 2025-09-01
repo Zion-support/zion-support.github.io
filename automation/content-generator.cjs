@@ -8,7 +8,7 @@ class ContentGenerator {
     this.templates = {
       blog: this.getBlogTemplate(),
       component: this.getComponentTemplate(),
-      page: this.getPageTemplate()
+      page: this.getPageTemplate(),
     };
   }
 
@@ -85,19 +85,22 @@ export default Page;`;
 
     const content = template
       .replace(/Blog Post Title/g, options.title || name)
-      .replace(/Blog post description/g, options.description || 'Generated content')
+      .replace(
+        /Blog post description/g,
+        options.description || 'Generated content'
+      )
       .replace(/Component/g, name)
       .replace(/Page Title/g, options.title || name);
 
     const fileName = `${name.toLowerCase().replace(/\s+/g, '-')}.${type === 'blog' ? 'tsx' : type === 'component' ? 'tsx' : 'tsx'}`;
     const filePath = path.join(__dirname, '..', '..', 'generated', fileName);
-    
+
     // Ensure directory exists
     const dir = path.dirname(filePath);
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir, { recursive: true });
     }
-    
+
     fs.writeFileSync(filePath, content);
     console.log(`✅ Generated ${type}: ${fileName}`);
   }

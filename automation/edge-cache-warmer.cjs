@@ -36,7 +36,13 @@ async function fetchUrl(url) {
       ok: res.status >= 200 && res.status < 400,
     };
   } catch (e) {
-    return { url, status: 0, durationMs: Date.now() - start, ok: false, error: String(e.message || e) };
+    return {
+      url,
+      status: 0,
+      durationMs: Date.now() - start,
+      ok: false,
+      error: String(e.message || e),
+    };
   }
 }
 
@@ -72,14 +78,23 @@ async function warmCache() {
     total: results.length,
     ok: results.filter(r => r.ok).length,
     failed: results.filter(r => !r.ok).length,
-    p50Ms: percentile(results.map(r => r.durationMs), 50),
-    p95Ms: percentile(results.map(r => r.durationMs), 95),
+    p50Ms: percentile(
+      results.map(r => r.durationMs),
+      50
+    ),
+    p95Ms: percentile(
+      results.map(r => r.durationMs),
+      95
+    ),
     results,
   };
 
   const reportsDir = path.join(__dirname, '..', 'public', 'reports');
   if (!fs.existsSync(reportsDir)) fs.mkdirSync(reportsDir, { recursive: true });
-  fs.writeFileSync(path.join(reportsDir, 'cache-warm-log.json'), JSON.stringify(summary, null, 2));
+  fs.writeFileSync(
+    path.join(reportsDir, 'cache-warm-log.json'),
+    JSON.stringify(summary, null, 2)
+  );
 
   return { ok: true, summary };
 }
@@ -92,7 +107,7 @@ function percentile(values, p) {
 }
 
 if (require.main === module) {
-  warmCache().then((res) => {
+  warmCache().then(res => {
     console.log(JSON.stringify(res, null, 2));
   });
 }

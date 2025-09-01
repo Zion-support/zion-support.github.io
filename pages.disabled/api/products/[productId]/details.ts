@@ -1,26 +1,23 @@
 import { PrismaClient } from '@prisma/client';
 import type { Product } from '@/types/product';
 import type { NextApiRequest, NextApiResponse } from 'next';
-
+;
 const prisma = new PrismaClient();
 
-// Extend the Product type to include our aggregated review data
+// Extend the Product type to include our aggregated review data;
 export type ProductWithReviewStats = Product & {
   averageRating: number | null;
   reviewCount: number;
 };
-
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-
-export default function DetailsPage() {
+;
+export { async };
+export default async function handler(...args: unknown[]): unknown {
   return (
     <ProductWithReviewStats | { error: string }>
 ) {
   if (req.method !== 'GET') {
     res.setHeader('Allow', ['GET']);
-    return res.status(405).end(`Method ${req.method} Not Allowed`);
+    return res.status(405).json({ error: `Method ${req.method} Not Allowed` });
   }
 
   const { productId } = req.query;
@@ -32,7 +29,7 @@ export default function DetailsPage() {
   try {
     // Fetch the product
     const product = await prisma.product.findUnique({
-      where: { id: productId },
+      where: { id: productId }
     });
 
     if (!product) {
@@ -42,27 +39,27 @@ export default function DetailsPage() {
     // Aggregate review data
     const reviewStats = await prisma.productReview.aggregate({
       _avg: {
-        rating: true,
+        rating: true
       },
       _count: {
         id: true, // Counting based on the review ID
       },
       where: {
-        productId: productId,
-      },
+        productId: productId
+      }
     });
 
-    const averageRating = reviewStats._avg.rating;
+    const averageRating = reviewStats._avg.rating; // This can be null if no reviews
     const reviewCount = reviewStats._count.id;
 
     const productWithStats: ProductWithReviewStats = {
       ...product,
       averageRating: averageRating,
-      reviewCount: reviewCount,
+      reviewCount: reviewCount
     };
 
     return res.status(200).json(productWithStats);
-  } catch (e: any) {
+  } catch (e: unknown) {
     console.error(e);
     // Consider more specific error handling if needed
     return res.status(500).json({ error: 'Internal server error.' });
