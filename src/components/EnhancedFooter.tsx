@@ -8,7 +8,7 @@ export function EnhancedFooter() {
 
   const footerSections = [
     {
-      title: 'Featured Services',
+      title: 'Services',
       links: [
         { name: 'AI Intelligent Project Management', href: '/services/ai-intelligent-project-management-platform', icon: Rocket, featured: true },
         { name: 'AI Financial Analytics Platform', href: '/services/ai-financial-analytics-platform', icon: BarChart3, featured: true },
@@ -26,8 +26,7 @@ export function EnhancedFooter() {
         { name: 'IT Infrastructure', href: '/it-services', icon: Server },
         { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
         { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions', icon: Shield },
-        { name: '2025 Innovative Services', href: '/zion-innovative-services-2025', icon: Sparkles },
-        { name: '2025 Services Showcase', href: '/innovative-services-showcase-2025', icon: Sparkles }
+        { name: 'AI Content Creation Studio Pro', href: '/services/AI-Content-Creation-Studio-Pro', icon: PenTool, featured: true }
       ]
     },
     {
@@ -38,18 +37,22 @@ export function EnhancedFooter() {
         { name: 'Financial Solutions', href: '/solutions/financial', icon: TrendingUp },
         { name: 'Manufacturing Solutions', href: '/solutions/manufacturing', icon: Cpu },
         { name: 'Retail Solutions', href: '/solutions/retail', icon: ShoppingCart },
-        { name: 'Space Technology', href: '/solutions/space-tech', icon: Globe2 }
+        { name: 'Government Solutions', href: '/solutions/government', icon: Building },
+        { name: 'Industry Solutions', href: '/industry-solutions', icon: Target },
+        { name: 'Digital Transformation', href: '/digital-transformation', icon: Zap }
       ]
     },
     {
       title: 'Company',
       links: [
         { name: 'About Us', href: '/about', icon: Users },
-        { name: 'Our Team', href: '/team', icon: Award },
+        { name: 'Leadership', href: '/leadership', icon: Award },
         { name: 'Careers', href: '/careers', icon: Target },
-        { name: 'News & Press', href: '/press', icon: BookOpen },
+        { name: 'News', href: '/news', icon: BookOpen },
+        { name: 'Events', href: '/events', icon: Calendar },
         { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },
-        { name: 'Partners', href: '/partners', icon: Handshake }
+        { name: 'Partners', href: '/partners', icon: Handshake },
+        { name: 'Contact', href: '/contact', icon: MessageCircle }
       ]
     },
     {
@@ -58,9 +61,11 @@ export function EnhancedFooter() {
         { name: 'Blog', href: '/blog', icon: BookOpen },
         { name: 'Documentation', href: '/documentation', icon: FileText },
         { name: 'Help Center', href: '/help', icon: HelpCircle },
+        { name: 'Support', href: '/support', icon: HelpCircle },
         { name: 'Webinars', href: '/webinars', icon: Video },
         { name: 'White Papers', href: '/white-papers', icon: FileText },
-        { name: 'Training', href: '/training', icon: GraduationCap }
+        { name: 'Training', href: '/training', icon: GraduationCap },
+        { name: 'Research & Development', href: '/research-development', icon: Lightbulb }
       ]
     }
   ];

@@ -64,13 +64,16 @@ const MicroSAASSolutions = createLazyComponent(() => import('./pages/services/Mi
 const ComprehensiveServices = createLazyComponent(() => import('./pages/ComprehensiveServices'));
 
 // Additional pages
-const Partners = createLazyComponent(() => import('./pages/Partners'));
+const Partners = createLazyComponent(() => import('./pages/partners'));
 const Team = createLazyComponent(() => import('./pages/Team'));
 const HelpCenter = createLazyComponent(() => import('./pages/HelpCenter'));
 const Documentation = createLazyComponent(() => import('./pages/Documentation'));
 const Developers = createLazyComponent(() => import('./pages/Developers'));
 const Webinars = createLazyComponent(() => import('./pages/Webinars'));
 const Status = createLazyComponent(() => import('./pages/Status'));
+const Events = createLazyComponent(() => import('./pages/Events'));
+const Leadership = createLazyComponent(() => import('./pages/Leadership'));
+const FAQ = createLazyComponent(() => import('./pages/FAQ'));
 
 // Enhanced Services Showcase 2025
 const EnhancedServicesShowcase2025 = lazy(() => import('./pages/EnhancedServicesShowcase2025'));
@@ -464,6 +467,16 @@ function App() {
                   {/* New Innovative Services */}
                   <Route path="/services/AI-Content-Creation-Studio-Pro" element={<AIContentCreationStudioPro />} />
                   <Route path="/services/Quantum-AI-Trading-Platform" element={<QuantumAITradingPlatform />} />
+
+                  {/* Additional Core Routes */}
+                  <Route path="/events" element={<Events />} />
+                  <Route path="/leadership" element={<Leadership />} />
+                  <Route path="/news" element={<News />} />
+                  <Route path="/partners" element={<Partners />} />
+                  <Route path="/press" element={<Press />} />
+                  <Route path="/webinars" element={<Webinars />} />
+                  <Route path="/white-papers" element={<WhitePapers />} />
+                  <Route path="/faq" element={<FAQ />} />
 
                   {/* 404 Page */}
                   <Route
