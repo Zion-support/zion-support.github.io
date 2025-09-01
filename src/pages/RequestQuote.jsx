@@ -6,7 +6,8 @@ import {QuoteRequestForm} from "@/components/QuoteRequestForm";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {CheckCircle, Clock, Users, Zap} from "lucide-react";
 
-export default function RequestQuote() {
+export default function RequestQuote
+export { RequestQuote }() {
   return (
     <div className="min-h-screen bg-zion-blue">
       <EnhancedSEO

@@ -701,7 +701,8 @@ const autonomousBenefits = [
   }
 ];
 
-export default function AIAutonomousSystems() {
+export default function AIAutonomousSystems
+export { AIAutonomousSystems }() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
 

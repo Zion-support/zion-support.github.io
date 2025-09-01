@@ -17,7 +17,8 @@ import {
   Users
  } from 'lucide-react';
 
-export default function CloudSolutions(...args[]):  {
+export default function CloudSolutions
+export { CloudSolutions }(...args[]):  {
   const cloudServices = [
     {
       icon: Server,

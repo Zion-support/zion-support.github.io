@@ -1,4 +1,5 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityMonitoring() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityMonitoring
+export { AISecurityMonitoring }() {
   const features = [
     'AI-powered security monitoring optimization',
     'Intelligent monitoring strategy management and execution',;

@@ -35,7 +35,8 @@ import {
 } from 'lucide-react';
 import { SEO } from '../../components/SEO';
 
-export default function AIFinancialTrading() {
+export default function AIFinancialTrading
+export { AIFinancialTrading }() {
   const features = [
     {
       icon: Brain,

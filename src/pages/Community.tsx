@@ -25,7 +25,8 @@ import {
 } from 'lucide-react';
 import { SEO } from "../components/SEO";
 
-export default function Community() {
+export default function Community
+export { Community }() {
   const communityStats = [;
     { label: 'Active Members', value: '15,000+', icon: Users, color: 'from-blue-500 to-cyan-500' },;
     { label: 'Discussions', value: '50,000+', icon: MessageCircle, color: 'from-purple-500 to-pink-500' },;

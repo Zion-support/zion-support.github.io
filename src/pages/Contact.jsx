@@ -139,7 +139,8 @@ const contactFormFields = [
   }
 ];
 
-export default function Contact() {
+export default function Contact
+export { Contact }() {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',

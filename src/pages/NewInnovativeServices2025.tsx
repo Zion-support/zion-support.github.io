@@ -117,7 +117,8 @@ import {
   Satellite as SatelliteIcon3
 } from 'lucide-react';
 
-export default function NewInnovativeServices2025() {
+export default function NewInnovativeServices2025
+export { NewInnovativeServices2025 }() {
   const featuredServices = [
     {
       title: "AI Workflow Orchestrator",

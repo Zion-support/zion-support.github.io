@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
 import { Truck, 
   Brain, 
   Shield, 
@@ -29,7 +29,7 @@ import { Truck,
   ShoppingCart,
   Heart,
   Leaf
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const AIAutonomousSupplyChain = () => {
   const features = [

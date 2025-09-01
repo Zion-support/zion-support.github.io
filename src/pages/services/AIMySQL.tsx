@@ -1,4 +1,5 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIMySQL() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIMySQL
+export { AIMySQL }() {
   const features = [
     'AI-powered MySQL query optimization',
     'Intelligent database indexing and partitioning',;

@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
 import { TrendingUp, 
   Brain, 
   Target, 
@@ -22,7 +22,7 @@ import { TrendingUp,
   Zap,
   Shield,
   DollarSign as DollarSignIcon
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const AIAutonomousSales: React.FC = (): JSX.Element => {
   const features = [

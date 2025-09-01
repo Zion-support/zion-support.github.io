@@ -5,7 +5,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Check, Cloud, BarChart3, Globe, Settings } from "lucide-react";
 import { Link } from "react-router-dom";
-export default function CloudCostOptimizer() {
+export default function CloudCostOptimizer
+export { CloudCostOptimizer }() {
     const features = [
         "AI-driven cost optimization algorithms",
         "Multi-cloud support (AWS, Azure, GCP)",

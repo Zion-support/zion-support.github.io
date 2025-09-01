@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { Helmet  } from 'react-helmet-async.ts';
+import React from 'react';
+import { Helmet  } from 'react-helmet-async';
 import { Rocket, 
   Zap, 
   Code, 
@@ -34,9 +34,10 @@ import { Rocket,
   Play,
   Pause,
   RefreshCw
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
-export default function MicroSAASPlatform(...args: any[]): any {
+export default function MicroSAASPlatform
+export { MicroSAASPlatform }(...args: any[]): any {
   const features = [
     {
       icon: Rocket,

@@ -1,8 +1,9 @@
-import React from 'react.ts';
-import { Users, Database, Target, CheckCircle, ArrowRight, Phone, Mail, MapPin, Calendar, BarChart3, Shield, Zap, Globe, Cpu, Lock, Eye, Network, Server, Cloud, Smartphone, Building  } from 'lucide-react.ts';
+import React from 'react';
+import { Users, Database, Target, CheckCircle, ArrowRight, Phone, Mail, MapPin, Calendar, BarChart3, Shield, Zap, Globe, Cpu, Lock, Eye, Network, Server, Cloud, Smartphone, Building  } from 'lucide-react';
 import { SEO  } from '../../components/SEO';
 
-export default function MicroCRM(...args: any[]): any {
+export default function MicroCRM
+export { MicroCRM }(...args: any[]): any {
   const features = [
     {
       icon: Users,

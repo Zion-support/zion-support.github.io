@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { useState } from 'react';
 const TabsContext = createContext(undefined);
 export function Tabs({ children, defaultValue, value, onValueChange, className = '' }) {
     const [activeTab, setActiveTab] = useState(value || defaultValue || '');

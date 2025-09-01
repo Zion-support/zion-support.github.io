@@ -56,7 +56,8 @@ import {
 } from 'lucide-react';
 import EnhancedSEOManager from "../components/EnhancedSEOManager";
 
-export default function ComprehensiveImprovements2025() {
+export default function ComprehensiveImprovements2025
+export { ComprehensiveImprovements2025 }() {
   const improvements = [
     {
       category: 'AI & Machine Learning Services',

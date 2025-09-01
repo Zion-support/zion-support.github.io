@@ -3,7 +3,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Zap, Shield, Users, BarChart3, Mail, Calendar, CreditCard, MessageSquare, FileText, Database, Search, Phone, Star, CheckCircle, Clock } from 'lucide-react';
-export default function MicroSAASPage() {
+export default function MicroSAASPage
+export { MicroSAASPage }() {
     const microSAASServices = [
         {
             id: "email-automation",

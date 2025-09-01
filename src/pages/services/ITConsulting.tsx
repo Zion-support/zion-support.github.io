@@ -150,7 +150,8 @@ import {
   Building2
  } from 'lucide-react';
 
-export default function ITConsulting(...args: []):  {
+export default function ITConsulting
+export { ITConsulting }(...args: []):  {
   const services = [
     {
       icon: Briefcase,

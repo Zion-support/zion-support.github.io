@@ -1,6 +1,6 @@
-import React from 'react.ts';
+import React from 'react';
 import { SEO  } from '@/components/SEO';
-import { CheckCircle2, BarChart3, DollarSign, ExternalLink, Phone, Mail  } from 'lucide-react.ts';
+import { CheckCircle2, BarChart3, DollarSign, ExternalLink, Phone, Mail  } from 'lucide-react';
 
 const PriceIntelligenceService: React.FC = (): JSX.Element => {
   return (

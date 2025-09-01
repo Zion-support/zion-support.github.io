@@ -8,7 +8,8 @@ import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { QuoteDetails } from "@/components/quotes/QuoteDetails";
 import { ExportToCSV } from "@/components/quotes/ExportToCSV";
 import { QuoteStatusCards, QuotesFilter, QuotesTable } from "@/components/admin/quotes";
-export default function QuoteManager() {
+export default function QuoteManager
+export { QuoteManager }() {
     const { user } = useAuth();
     const isAdmin = user?.userType === 'admin';
     const [selectedQuote, setSelectedQuote] = useState(null);

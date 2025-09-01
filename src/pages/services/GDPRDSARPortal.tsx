@@ -1,8 +1,9 @@
-import React from 'react.ts';
-import { Shield, FileText, ExternalLink, CheckCircle, Mail, Phone  } from 'lucide-react.ts';
-import { Link  } from 'react-router-dom.ts';
+import React from 'react';
+import { Shield, FileText, ExternalLink, CheckCircle, Mail, Phone  } from 'lucide-react';
+import { Link  } from 'react-router-dom';
 
-export default function GDPRDSARPortal(...args: any[]): any {
+export default function GDPRDSARPortal
+export { GDPRDSARPortal }(...args: any[]): any {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <section className="mx-auto max-w-7xl px-6 py-20 lg:py-28">

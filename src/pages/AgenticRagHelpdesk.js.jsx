@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Brain, MessageCircle, Zap, Users, Shield, BarChart3, Globe, ArrowRight, CheckCircle } from 'lucide-react';
-export default function AgenticRagHelpdesk() {
+export default function AgenticRagHelpdesk
+export { AgenticRagHelpdesk }() {
     const features = [
         {
             icon: Brain,

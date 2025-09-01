@@ -701,7 +701,8 @@ const fiveGBenefits = [
   }
 ];
 
-export default function FiveGEnterpriseSolutions() {
+export default function FiveGEnterpriseSolutions
+export { FiveGEnterpriseSolutions }() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
 

@@ -1,6 +1,6 @@
-import React, { useState, useMemo } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Helmet  } from 'react-helmet-async.ts';
+import React, { useState, useMemo } from 'react';
+import { motion  } from 'framer-motion';
+import { Helmet  } from 'react-helmet-async';
 import { Search, 
     Filter, 
     TrendingUp, 
@@ -24,7 +24,7 @@ import { Search,
     ExternalLink,
     Crown,
     Sparkles
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { comprehensivePricingGuide2025, ServicePricing  } from '../data/comprehensive-pricing-guide-2025';
 
 const ComprehensivePricingShowcase2025: React.FC = (): JSX.Element => {

@@ -7,7 +7,8 @@ import { Star, Zap, TrendingUp, CheckCircle, Phone, Mail, Globe, Shield, Users, 
 import { EXPANDED_SERVICES, SERVICE_CATEGORIES } from '@/data/expandedServices';
 import { TrustedBySection } from '@/components/TrustedBySection';
 import { SEO } from '@/components/SEO';
-export default function AllServicesLandingPage() {
+export default function AllServicesLandingPage
+export { AllServicesLandingPage }() {
     const getCategoryIcon = (category) => {
         switch (category) {
             case 'AI Services': return '🤖';

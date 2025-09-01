@@ -5,7 +5,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { QuoteDetails } from "@/components/quotes/QuoteDetails";
 import { RequestsHeader, QuoteRequestsList } from "@/components/quotes";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
-export default function RequestsPanel() {
+export default function RequestsPanel
+export { RequestsPanel }() {
     const { user } = useAuth();
     const isTalent = user?.userType === 'creator' || user?.userType === 'jobSeeker';
     const [selectedQuote, setSelectedQuote] = useState(null);

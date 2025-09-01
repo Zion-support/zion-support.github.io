@@ -160,7 +160,8 @@ const blockchainBenefits = [
   }
 ];
 
-export default function Blockchain() {
+export default function Blockchain
+export { Blockchain }() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
 

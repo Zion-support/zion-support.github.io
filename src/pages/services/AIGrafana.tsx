@@ -1,4 +1,5 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIGrafana() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIGrafana
+export { AIGrafana }() {
   const features = [
     'AI-powered Grafana optimization',
     'Intelligent Grafana management',;

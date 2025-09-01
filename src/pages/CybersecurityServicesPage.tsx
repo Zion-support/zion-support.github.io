@@ -1,6 +1,6 @@
 
-import React, { useState } from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
+import React, { useState } from 'react';
+import { Link  } from 'react-router-dom';
 import { SEOHead  } from '../components/seo/SEOHead';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
 import { Button  } from '@/components/ui/button';
@@ -27,7 +27,7 @@ import { Shield,
   Monitor,
   TrendingUp
 
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { ENHANCED_SERVICES  } from '@/data/enhancedServices';
 
 // Filter cybersecurity services
@@ -78,7 +78,8 @@ const SECURITY_SERVICE_CATEGORIES = [
   }
 ];
 
-export default function CybersecurityServicesPage(...args: any[]): any {
+export default function CybersecurityServicesPage
+export { CybersecurityServicesPage }(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const getCategoryIcon = (category: anystring)  => {
     const categoryData = SECURITY_SERVICE_CATEGORIES.find(cat => cat.id === category);
@@ -440,7 +441,7 @@ import { Search,
   Key,
   ShieldCheck
 
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { EXPANDED_SERVICES, type ExpandedService  } from '@/data/expandedServices';
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedSubcategory, setSelectedSubcategory] = useState<any>('all');

@@ -8,7 +8,8 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage, } from 
 const forgotPasswordSchema = z.object({
     email: z.string().email("Please enter a valid email"),
 });
-export default function ForgotPassword() {
+export default function ForgotPassword
+export { ForgotPassword }() {
     const [email, setEmail] = useState('');
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [isLoading, setIsLoading] = useState(false);

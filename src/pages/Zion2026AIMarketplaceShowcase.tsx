@@ -1,5 +1,5 @@
-import React, { useState, useMemo } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React, { useState, useMemo } from 'react';
+import { motion  } from 'framer-motion';
 import { Search, 
   Filter, 
   Grid3X3, 
@@ -16,7 +16,7 @@ import { Search,
   Mail,
   MapPin,
   ExternalLink
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { zion2026AIMarketplaceServices  } from '../../data/zion-2026-ai-marketplace-services';
 
 const Zion2026AIMarketplaceShowcase: React.FC = (): JSX.Element => {;

@@ -5,7 +5,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Search, MessageCircle, Phone, Mail, FileText, Users, ShoppingCart, User, Settings import { Link } from 'react-router-dom';
-export default function HelpCenterPage() {
+export default function HelpCenterPage
+export { HelpCenterPage }() {
     const helpCategories = [
         {
             icon: <User className="w-8 h-8 text-zion-cyan"/>,

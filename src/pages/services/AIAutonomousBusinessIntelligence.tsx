@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
 import { SEO  } from '../../components/SEO';
 import { Brain,
   TrendingUp,
@@ -35,9 +35,10 @@ import { Brain,
   Heart,
   GraduationCap,
   Home
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
-export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
+export default function AIAutonomousBusinessIntelligence
+export { AIAutonomousBusinessIntelligence }(...args: any[]): any {
   const features = [
     {
       icon: Brain,

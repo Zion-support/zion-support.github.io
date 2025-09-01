@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
 import { Heart, 
   Brain, 
   TrendingUp, 
@@ -44,7 +44,8 @@ import { Heart,
 } from 'lucide-react';
 import { SEO } from "../../components/SEO";
 
-export default function AIHealthcarePredictiveAnalytics(...args[]):  {
+export default function AIHealthcarePredictiveAnalytics
+export { AIHealthcarePredictiveAnalytics }(...args[]):  {
   const contactInfo = {
   phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',

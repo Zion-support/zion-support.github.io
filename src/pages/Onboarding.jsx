@@ -7,7 +7,8 @@ import { ProfileSetup } from "@/components/onboarding/ProfileSetup";
 import { Steps, Step } from "@/components/ui/steps";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
-export default function Onboarding() {
+export default function Onboarding
+export { Onboarding }() {
     const { user, updateProfile, isLoading } = useAuth();
     const [currentStep, setCurrentStep] = useState(0);
     const [userType, setUserType] = useState(null);

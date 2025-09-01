@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
 import { SEO  } from '@/components/SEO';
 import { Brain, 
   TrendingUp, 
@@ -35,7 +35,8 @@ import { Brain,
   AlertTriangle
  } from 'lucide-react';
 
-export default function AIFinancialTradingPlatform(...args[]):  {
+export default function AIFinancialTradingPlatform
+export { AIFinancialTradingPlatform }(...args[]):  {
   const features = [
     "AI-powered market analysis and prediction",
     "Real-time algorithmic trading execution",

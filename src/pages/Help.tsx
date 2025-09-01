@@ -28,7 +28,8 @@ import {
   Rocket
 } from 'lucide-react';
 
-export default function Help() {
+export default function Help
+export { Help }() {
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
 

@@ -489,7 +489,8 @@ const blockchainBenefits = [
   };
 ];
 
-export default function BlockchainEnterpriseSolutions(...args[]):  {
+export default function BlockchainEnterpriseSolutions
+export { BlockchainEnterpriseSolutions }(...args[]):  {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
 

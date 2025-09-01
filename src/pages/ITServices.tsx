@@ -3,7 +3,8 @@ import { SEO } from '@/components/SEO';
 import { Link } from 'react-router-dom';
 import { Server, Shield, Cloud, Network, Wrench, Headphones } from 'lucide-react';
 
-export default function ITServices() {
+export default function ITServices
+export { ITServices }() {
   const offerings = [
     { icon: Cloud, title: 'Cloud & DevOps', desc: 'CI/CD, IaC, Kubernetes, cost optimization and SRE with 24/7 runbooks.', price: '$6,000 - $80,000+' },
     { icon: Server, title: 'Migrations & Modernization', desc: 'On-prem to cloud, containerization, monolith-to-microservices, and zero-downtime cutovers.', price: '$10,000 - $120,000+' },

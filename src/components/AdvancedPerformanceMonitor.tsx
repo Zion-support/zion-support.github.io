@@ -1,5 +1,5 @@
-import React, { useEffect, useState, useCallback } from 'react.ts';
-import { Activity, Zap, Clock, TrendingUp, AlertTriangle } from 'lucide-react.ts';
+import React, { useEffect, useState, useCallback } from 'react';
+import { Activity, Zap, Clock, TrendingUp, AlertTriangle } from 'lucide-react';
 
 interface PerformanceMetrics {
   fcp: number | null; // First Contentful Paint

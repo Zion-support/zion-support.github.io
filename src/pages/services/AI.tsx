@@ -24,7 +24,8 @@ import {
   ShoppingCart
  } from 'lucide-react';
 
-export default function AIServices(...args[]):  {
+export default function AIServices
+export { AIServices }(...args[]):  {
   const aiServices = [
     {
       name: "AI Strategy & Consulting",

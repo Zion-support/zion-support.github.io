@@ -24,7 +24,8 @@ import {
   Share2
 } from 'lucide-react';
 
-export default function AIComplianceAssistant() {
+export default function AIComplianceAssistant
+export { AIComplianceAssistant }() {
   const frameworks = [
     'SOC 2',
     'ISO 27001',

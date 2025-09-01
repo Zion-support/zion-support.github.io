@@ -5,7 +5,8 @@ import CompWorkspace from "../pages/CompWorkspace";
 import EnterpriseBilling from "../pages/EnterpriseBilling";
 import EnterpriseDemo from "../pages/EnterpriseDemo";
 
-export default function EnterpriseRoutes() {
+export default function EnterpriseRoutes
+export { EnterpriseRoutes }() {
   return (
     <Routes>
       {/* Enterprise Routes */}

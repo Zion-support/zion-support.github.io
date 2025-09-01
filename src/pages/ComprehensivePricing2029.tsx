@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion';
 import { Star, 
   CheckCircle, 
   ArrowRight, 
@@ -42,12 +42,13 @@ import { Star,
   Sparkles,
   Crown,
   Gem
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { innovativeMicroSAASServices2029  } from '../../data/innovative-micro-saas-2029';
 import { revolutionaryAIServices2029  } from '../../data/revolutionary-ai-services-2029';
 import { revolutionaryITServices2029  } from '../../data/revolutionary-it-services-2029';
 
-export default function ComprehensivePricing2029(...args: any[]): any {
+export default function ComprehensivePricing2029
+export { ComprehensivePricing2029 }(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState<any>('grid');

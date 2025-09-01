@@ -576,7 +576,8 @@ const SERVICE_FILTERS = [
     { label: 'Consulting', value: 'consulting' },
     { label: 'Strategy', value: 'strategy' },
 ];
-export default function ServicesPage() {
+export default function ServicesPage
+export { ServicesPage }() {
     const [listings, setListings] = useState(SERVICE_LISTINGS);
     useEffect(() => {
         const interval = setInterval(() => {

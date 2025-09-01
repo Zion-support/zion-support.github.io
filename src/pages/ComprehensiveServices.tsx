@@ -65,7 +65,8 @@ import {
   Filter
 } from 'lucide-react';
 
-export default function ComprehensiveServices() {
+export default function ComprehensiveServices
+export { ComprehensiveServices }() {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [priceRange, setPriceRange] = useState('all');

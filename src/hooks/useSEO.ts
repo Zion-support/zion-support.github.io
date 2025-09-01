@@ -1,4 +1,4 @@
-import { useEffect, useCallback, useMemo  } from 'react.ts';
+import { useEffect, useCallback, useMemo  } from 'react';
 
 interface SEOData {
 

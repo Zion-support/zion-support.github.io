@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
 import { Shield, 
   FileText, 
   TrendingUp, 
@@ -319,7 +319,7 @@ import { Shield,
   CloudHail10,
   CloudSnow10,
   CloudSleet10
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const AIFinancialCompliancePlatform = () => {
   const features = [

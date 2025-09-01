@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
 import { DollarSign, 
   Brain, 
   Target, 
@@ -22,7 +22,7 @@ import { DollarSign,
   Zap,
   Shield,
   Calculator
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const AIAutonomousFinance: React.FC = (): JSX.Element => {
   const features = [

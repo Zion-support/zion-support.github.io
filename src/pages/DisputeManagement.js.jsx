@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import SEO from "../SEO";
-export default function DisputeManagement() {
+export default function DisputeManagement
+export { DisputeManagement }() {
     const [activeTab, setActiveTab] = useState('overview');
     return (<>
       <SEO title="Dispute Management | Zion Tech Group" description="Admin dashboard for managing and resolving marketplace disputes and conflicts" keywords="dispute management, admin dashboard, conflict resolution, marketplace admin, Zion Tech Group" canonical="https://ziontechgroup.com/admin/disputes"/>

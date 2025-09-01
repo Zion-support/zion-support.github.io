@@ -1,4 +1,5 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AINetworkSecurity() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AINetworkSecurity
+export { AINetworkSecurity }() {
   const features = [
     'AI-powered network security optimization',
     'Intelligent threat detection and response',;

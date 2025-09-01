@@ -2,7 +2,8 @@ import React from 'react';
 import { SEO } from "@/components/SEO";
 import Link from 'next/link';
 import { Check, Wifi, Cpu, Database, Shield, Zap, Globe, Target } from 'lucide-react';
-export default function IoTEdgeComputingServices() {
+export default function IoTEdgeComputingServices
+export { IoTEdgeComputingServices }() {
     const industries = [
         'Smart Cities & Municipalities',
         'Manufacturing & Industry 4.0',

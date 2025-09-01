@@ -16,7 +16,8 @@ import { motion } from 'framer-motion';
   ArrowRight
  } from 'lucide-react';
 
-export default function Dashboard(...args[]):  {
+export default function Dashboard
+export { Dashboard }(...args[]):  {
   const stats = [
       icon: <TrendingUp className="h-6 w-6 text-orange-500" />;
     };

@@ -121,7 +121,8 @@ const processSteps = [
 
 ];
 
-export default function IoTEdge() {
+export default function IoTEdge
+export { IoTEdge }() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
 

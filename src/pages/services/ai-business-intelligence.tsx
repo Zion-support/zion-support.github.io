@@ -49,7 +49,8 @@ import {
   ShoppingBag
 } from 'lucide-react';
 
-export default function AIBusinessIntelligence() {
+export default function AIBusinessIntelligence
+export { AIBusinessIntelligence }() {
   const features = [
     {
       icon: Brain,

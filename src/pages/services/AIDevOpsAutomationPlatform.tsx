@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
 import { SEO  } from '@/components/SEO';
 import { Cpu, 
   Zap, 
@@ -28,9 +28,10 @@ import { Cpu,
   Play,
   Pause,
   RefreshCw
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
-export default function AIDevOpsAutomationPlatform(...args: any[]): any {
+export default function AIDevOpsAutomationPlatform
+export { AIDevOpsAutomationPlatform }(...args: any[]): any {
   const features = [
     "AI-Powered Code Review & Analysis",
     "Intelligent CI/CD Pipeline Optimization",

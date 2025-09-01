@@ -1,8 +1,9 @@
-import React from 'react.ts'
+import React from 'react'
 import { SEO  } from '../../components/SEO'
-import { Shield, BarChart3, Search, Zap, CheckCircle2, Link as LinkIcon  } from 'lucide-react.ts'
+import { Shield, BarChart3, Search, Zap, CheckCircle2, Link as LinkIcon  } from 'lucide-react'
 
-export default function SEOAuditor(...args: any[]): any {
+export default function SEOAuditor
+export { SEOAuditor }(...args: any[]): any {
   const features = [
     { icon: Search, title: 'AI Crawl & Indexing', desc: 'Automated site crawl, index status checks, and AI summaries of issues.' },
     { icon: BarChart3, title: 'Page-level Scores', desc: 'On-page SEO, Core Web Vitals, schema markup and accessibility scoring.' },

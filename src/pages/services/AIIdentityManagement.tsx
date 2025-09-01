@@ -1,4 +1,5 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIIdentityManagement() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIIdentityManagement
+export { AIIdentityManagement }() {
   const features = [
     'AI-powered identity management optimization',
     'Intelligent authentication and authorization',;

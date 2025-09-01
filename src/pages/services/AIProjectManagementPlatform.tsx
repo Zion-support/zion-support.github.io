@@ -1,6 +1,7 @@
 import { Calendar, Users, Check, ExternalLink, Phone, Mail, Brain, Target, TrendingUp, BarChart3, Clock, Zap, FolderOpen } from 'lucide-react';
 
-export default function AIProjectManagementPlatform() {
+export default function AIProjectManagementPlatform
+export { AIProjectManagementPlatform }() {
   const features = [
     'AI-powered project planning and scheduling optimization',
     'Intelligent resource allocation and workload balancing',

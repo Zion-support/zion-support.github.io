@@ -1,6 +1,6 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
+import { Link  } from 'react-router-dom';
 import { Wifi, 
   Cpu, 
   Zap, 
@@ -50,9 +50,10 @@ import { Wifi,
   Cloud,
   Eye,
   Brain
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
-export default function IoTEdgeComputing(...args: any[]): any {
+export default function IoTEdgeComputing
+export { IoTEdgeComputing }(...args: any[]): any {
   const features = [
     {
       icon: Wifi,

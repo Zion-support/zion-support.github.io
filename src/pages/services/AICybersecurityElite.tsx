@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
 import { Shield, 
   Lock, 
   Eye, 
@@ -22,7 +22,7 @@ import { Shield,
   AlertTriangle,
   Activity,
   Key
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const AICybersecurityElite: React.FC = (): JSX.Element => {
   const features = [

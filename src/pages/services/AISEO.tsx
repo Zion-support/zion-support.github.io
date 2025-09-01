@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
 import { Search, 
   TrendingUp, 
   Target, 
@@ -22,7 +22,7 @@ import { Search,
   Brain,
   Zap,
   Shield
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const AISEO: React.FC = (): JSX.Element => {
   const features = [

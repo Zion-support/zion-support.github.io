@@ -25,7 +25,8 @@ import {
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
-export default function DigitalTransformation() {
+export default function DigitalTransformation
+export { DigitalTransformation }() {
   const services = [
     {
       title: 'Process Automation',

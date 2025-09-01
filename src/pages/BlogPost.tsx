@@ -2,7 +2,8 @@
 import React from 'react'
 import { SEO } from '@/components/SEO'
 
-export default function BlogPost() {
+export default function BlogPost
+export { BlogPost }() {
   const { slug } = useParams();
 
   // Mock blog post data - in a real app, this would come from an API

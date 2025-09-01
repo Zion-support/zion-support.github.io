@@ -111,7 +111,8 @@ function ClientDashboardContent() {
       </main>
       
     </>)}
-export default function ClientDashboard() {
+export default function ClientDashboard
+export { ClientDashboard }() {
     return (<ProtectedRoute>
       <ClientDashboardContent />
     </ProtectedRoute>)}

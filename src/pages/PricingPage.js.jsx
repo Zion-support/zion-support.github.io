@@ -61,7 +61,8 @@ const comparisonFeatures = [
     "30-Day Money Back Guarantee",
     "Free Migration Support"
 ];
-export default function PricingPage() {
+export default function PricingPage
+export { PricingPage }() {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [billingCycle, setBillingCycle] = useState('monthly');
     const filteredServices = selectedCategory === 'all'

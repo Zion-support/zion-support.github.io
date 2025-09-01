@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
 import { SEO  } from '@/components/SEO';
 import { Brain, 
   BarChart3, 
@@ -31,7 +31,7 @@ import { Brain,
   Calendar,
   DollarSign,
   Percent
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const AIBusinessIntelligenceAnalytics = () => {
   const features = [

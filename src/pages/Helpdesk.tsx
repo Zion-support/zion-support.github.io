@@ -1,6 +1,6 @@
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import React, { useState } from 'react';
+import { motion  } from 'framer-motion';
+import { Link  } from 'react-router-dom';
 import { HelpCircle, 
   MessageCircle, 
   Phone, 
@@ -41,9 +41,10 @@ import { HelpCircle,
   ExternalLink,
   Code,
   DollarSign
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
-export default function Helpdesk(...args: any[]): any {
+export default function Helpdesk
+export { Helpdesk }(...args: any[]): any {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [expandedTicket, setExpandedTicket] = useState<any>(null);

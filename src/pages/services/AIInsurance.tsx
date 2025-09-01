@@ -1,4 +1,5 @@
-import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Lock, FileText, BarChart3 export default function AIInsurance() {
+import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Lock, FileText, BarChart3 export default function AIInsurance
+export { AIInsurance }() {
   const features = [
     'AI-powered risk assessment and underwriting automation',
     'Intelligent claims processing and fraud detection',;

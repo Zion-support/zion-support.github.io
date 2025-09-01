@@ -6,7 +6,8 @@ import { ArrowLeft, Calendar, Clock, ChevronLeft, Share2, Facebook, Twitter, Lin
 import { Separator } from "@/components/ui/separator";
 // Importing the sample blog posts - in a real app, you would fetch this from an API
 import { BLOG_POSTS } from "@/data/blog-posts";
-export default function BlogPost() {
+export default function BlogPost
+export { BlogPost }() {
     const { slug } = useParams();
     const navigate = useNavigate();
     const [post, setPost] = useState(null);

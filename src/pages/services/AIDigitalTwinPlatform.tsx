@@ -1,6 +1,7 @@
 import { Cpu, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, DollarSign, Target, Zap, Globe, Database, Monitor, Network, Cloud } from 'lucide-react';
 
-export default function AIDigitalTwinPlatform() {
+export default function AIDigitalTwinPlatform
+export { AIDigitalTwinPlatform }() {
   const features = [
     'AI-powered digital twin creation and management',
     'Real-time IoT sensor data integration',

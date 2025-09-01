@@ -1,6 +1,6 @@
-import React from 'react.ts';
-import { motion   } from 'framer-motion.ts';
-import { Link   } from 'react-router-dom.ts';
+import React from 'react';
+import { motion   } from 'framer-motion';
+import { Link   } from 'react-router-dom';
 import { Brain, 
   Link as LinkIcon, 
   Shield, 
@@ -15,7 +15,7 @@ import { Brain,
   Activity,
   BarChart3,
   Network
-  } from 'lucide-react.ts';
+  } from 'lucide-react';
 import { SEO   } from '../../components/SEO';
 
 const AIBlockchainSupplyChain = () => {

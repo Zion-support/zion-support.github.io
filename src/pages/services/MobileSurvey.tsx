@@ -1,6 +1,7 @@
 import { Smartphone, MessageSquare, Users, BarChart2, ArrowRight, Check, Phone, Mail } from 'lucide-react';
 
-export default function MobileSurvey() {
+export default function MobileSurvey
+export { MobileSurvey }() {
   const features = [;
     'Mobile-first NPS/CSAT/CES templates',;
     'QR code and link campaigns',;

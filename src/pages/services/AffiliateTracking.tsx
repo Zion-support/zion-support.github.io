@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import SEO from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, ArrowRight, Mail export default function AffiliateTracking() {
+import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, ArrowRight, Mail export default function AffiliateTracking
+export { AffiliateTracking }() {
   const features: { title: string; description: string }[] = [
     {
       title: 'Multi-channel attribution',

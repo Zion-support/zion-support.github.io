@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
 import { SEO  } from '@/components/SEO';
 import { Brain, 
   BookOpen, 
@@ -33,7 +33,8 @@ import { Brain,
   Award
  } from 'lucide-react';
 
-export default function AILegalResearchPlatform(...args[]):  {
+export default function AILegalResearchPlatform
+export { AILegalResearchPlatform }(...args[]):  {
   const features = [
     "AI-powered case law research and analysis",
     "Intelligent document review and contract analysis",

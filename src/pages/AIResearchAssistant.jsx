@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-export default function AIResearchAssistant() {
+export default function AIResearchAssistant
+export { AIResearchAssistant }() {
     const features = [
         {
             title: 'Intelligent Literature Review',

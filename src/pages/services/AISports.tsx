@@ -1,4 +1,5 @@
-import { Trophy, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Users, BarChart3 export default function AISports() {
+import { Trophy, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Users, BarChart3 export default function AISports
+export { AISports }() {
   const features = [
     'AI-powered performance analysis and optimization',
     'Intelligent training program design and monitoring',;

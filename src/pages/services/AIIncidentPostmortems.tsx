@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
 import { AlertTriangle, 
   Clock, 
   TrendingUp, 
@@ -27,7 +27,8 @@ import { AlertTriangle,
 } from 'lucide-react';
 import { SEO } from "../../components/SEO";
 
-export default function AIIncidentPostmortems(...args[]):  {
+export default function AIIncidentPostmortems
+export { AIIncidentPostmortems }(...args[]):  {
   const contactInfo = {
   phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',

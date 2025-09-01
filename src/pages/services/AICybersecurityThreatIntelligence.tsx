@@ -81,7 +81,8 @@ import {
 } from 'lucide-react';
 import { SEO } from '../../components/SEO';
 
-export default function AICybersecurityThreatIntelligence(...args[]):  {
+export default function AICybersecurityThreatIntelligence
+export { AICybersecurityThreatIntelligence }(...args[]):  {
   const features = [
     {
       title: 'Threat Database & Analytics',

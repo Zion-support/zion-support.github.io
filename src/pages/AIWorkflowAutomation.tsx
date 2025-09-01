@@ -489,7 +489,8 @@ const workflowBenefits = [
   };
 ];
 
-export default function AIWorkflowAutomation(...args[]):  {
+export default function AIWorkflowAutomation
+export { AIWorkflowAutomation }(...args[]):  {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
 

@@ -1,5 +1,6 @@
 import React from 'react';
-export default function ForumCategories() {
+export default function ForumCategories
+export { ForumCategories }() {
     const categories = [
         {
             id: '1',

@@ -156,7 +156,8 @@ const recentPosts = [
         authorRole: "Freelancer"
 
 ];
-export default function CommunityPage() {
+export default function CommunityPage
+export { CommunityPage }() {
     const { user } = useAuth();
     const [activeTab, setActiveTab] = useState("categories");
     return (<>

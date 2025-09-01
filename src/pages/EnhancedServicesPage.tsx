@@ -31,7 +31,8 @@ import {
 } from 'lucide-react';
 import SEO from '@/components/SEO';
 
-export default function EnhancedServicesPage(...args[]):  {
+export default function EnhancedServicesPage
+export { EnhancedServicesPage }(...args[]):  {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');

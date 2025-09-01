@@ -1,6 +1,6 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
+import { Link  } from 'react-router-dom';
 import { PenTool, 
   Brain, 
   Image, 
@@ -21,10 +21,11 @@ import { PenTool,
   Sparkles,
   Lightbulb,
   BarChart3
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { SEO  } from '@/components/SEO';
 
-export default function AIContentCreation(...args: any[]): any {
+export default function AIContentCreation
+export { AIContentCreation }(...args: any[]): any {
   const features = [
     {
       icon: Brain,

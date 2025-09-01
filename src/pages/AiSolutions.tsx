@@ -1,7 +1,8 @@
 
-import React from 'react.ts';
+import React from 'react';
 
-export default function AiSolutions(...args: any[]): any {
+export default function AiSolutions
+export { AiSolutions }(...args: any[]): any {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">

@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
 import { Shield, 
   Eye, 
   AlertTriangle, 
@@ -34,9 +34,10 @@ import { Shield,
   TrendingUp,
   Activity,
   ShieldCheck
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
-export default function AIAutonomousThreatIntelligence(...args: any[]): any {
+export default function AIAutonomousThreatIntelligence
+export { AIAutonomousThreatIntelligence }(...args: any[]): any {
   const features = [
     {
       icon: Eye,

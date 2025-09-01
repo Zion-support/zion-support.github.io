@@ -27,7 +27,8 @@ const iotUseCases = [
         icon: <Settings className="h-6 w-6"/>
     }
 ];
-export default function IoTServicesPage() {
+export default function IoTServicesPage
+export { IoTServicesPage }() {
     return (<div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-zion-blue via-zion-purple to-zion-blue-dark py-20">

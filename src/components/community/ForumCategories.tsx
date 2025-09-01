@@ -1,4 +1,4 @@
-import React from 'react.ts';
+import React from 'react';
 
 interface ForumCategoryInfo {
 
@@ -13,7 +13,8 @@ lastPost?: {
     author: string;
     date: string}}
 
-export default function ForumCategories(...args[]):  {
+export default function ForumCategories
+export { ForumCategories }(...args[]):  {
   const categories: ForumCategoryInfo[] = [;
     {
       id: '1',

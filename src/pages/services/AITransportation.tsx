@@ -1,4 +1,5 @@
-import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Route, BarChart3 export default function AITransportation() {
+import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Route, BarChart3 export default function AITransportation
+export { AITransportation }() {
   const features = [
     'AI-powered route optimization and fleet management',
     'Intelligent traffic prediction and congestion avoidance',;

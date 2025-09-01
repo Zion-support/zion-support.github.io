@@ -1,6 +1,6 @@
-import React, { useState, useMemo } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Helmet  } from 'react-helmet-async.ts';
+import React, { useState, useMemo } from 'react';
+import { motion  } from 'framer-motion';
+import { Helmet  } from 'react-helmet-async';
 import { Search, 
     Filter, 
     TrendingUp, 
@@ -22,7 +22,7 @@ import { Search,
     Mail,
     MapPin,
     ExternalLink
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { comprehensiveServices2025Enhanced, EnhancedService  } from '../data/comprehensive-services-2025-enhanced';
 
 const ComprehensiveServicesShowcase2025Enhanced: React.FC = (): JSX.Element => {

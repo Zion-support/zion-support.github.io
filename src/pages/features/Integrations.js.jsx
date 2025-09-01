@@ -6,7 +6,8 @@ import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus";
-export default function IntegrationsFeature() {
+export default function IntegrationsFeature
+export { IntegrationsFeature }() {
     const schema = {
   "@context": "https://schema.org",
         "@type": "WebPage",

@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
 import { Brain, 
   Shield, 
   Zap, 
@@ -20,10 +20,11 @@ import { Brain,
   Eye,
   Target,
   Rocket
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { SEO  } from '../../components/SEO';
 
-export default function AIBlockchainIntegration(...args: any[]): any {
+export default function AIBlockchainIntegration
+export { AIBlockchainIntegration }(...args: any[]): any {
   const features = [
     {
       icon: Brain,

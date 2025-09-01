@@ -118,7 +118,8 @@ const processSteps = [
 
 ];
 
-export default function EducationSolutions() {
+export default function EducationSolutions
+export { EducationSolutions }() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
 

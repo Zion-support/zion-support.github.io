@@ -1,4 +1,5 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AI5GNetwork() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AI5GNetwork
+export { AI5GNetwork }() {
   const features = [
     'AI-powered 5G optimization',
     'Intelligent 5G network management',;

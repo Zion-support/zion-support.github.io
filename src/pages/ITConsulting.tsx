@@ -57,7 +57,8 @@ import {
   Rocket
 } from 'lucide-react';
 
-export default function ITConsulting() {
+export default function ITConsulting
+export { ITConsulting }() {
   const features = [
     {
       icon: Users,

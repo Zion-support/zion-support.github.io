@@ -1,4 +1,5 @@
-import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Store, BarChart3 export default function AIRetail() {
+import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Store, BarChart3 export default function AIRetail
+export { AIRetail }() {
   const features = [
     'AI-powered customer behavior analysis and personalization',
     'Intelligent inventory management and demand forecasting',;

@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
 import { SEO  } from "../components/SEO";
 import { Wrench, 
   Clock, 
@@ -28,7 +28,8 @@ import { Wrench,
 } from 'lucide-react';
 import { SEO } from "../components/SEO";
 
-export default function OnsiteSupport(...args[]):  {
+export default function OnsiteSupport
+export { OnsiteSupport }(...args[]):  {
   const services = [
     {
       icon: Server,

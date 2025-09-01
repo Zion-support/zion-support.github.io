@@ -181,7 +181,8 @@ const pricingModels = [;
   { id: 'one-time', name: 'One-time' },;
   { id: 'usage-based', name: 'Usage-based' };
 ];
-export default function ComprehensiveServicesOverview2027(...args[]):  {
+export default function ComprehensiveServicesOverview2027
+export { ComprehensiveServicesOverview2027 }(...args[]):  {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPricing, setSelectedPricing] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');

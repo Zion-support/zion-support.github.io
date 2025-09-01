@@ -1,5 +1,5 @@
 
-import React from 'react.ts';
+import React from 'react';
 import { SEO  } from '../../components/SEO';
 import { Shield, 
   Brain, 
@@ -11,9 +11,10 @@ import { Shield,
   BarChart3,
   AlertTriangle,
   Eye
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
-export default function Cybersecurity(...args: any[]): any {
+export default function Cybersecurity
+export { Cybersecurity }(...args: any[]): any {
 
   return (
     <div className = "min-h-screen bg-futuristic">

@@ -1,4 +1,5 @@
-import { Factory, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Settings, BarChart3 export default function AIManufacturing() {
+import { Factory, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Settings, BarChart3 export default function AIManufacturing
+export { AIManufacturing }() {
   const features = [
     'AI-powered predictive maintenance and equipment monitoring',
     'Intelligent quality control and defect detection',;

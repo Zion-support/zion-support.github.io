@@ -1,6 +1,6 @@
-import React from 'react.ts';
+import React from 'react';
 import { SEO  } from "../../components/SEO";
-import { motion  } from 'framer-motion.ts';
+import { motion  } from 'framer-motion';
 import { Shield, 
   Brain, 
   Eye, 
@@ -25,7 +25,8 @@ import { Shield,
   Activity
  } from 'lucide-react';
 
-export default function AICybersecuritySuite(...args[]):  {
+export default function AICybersecuritySuite
+export { AICybersecuritySuite }(...args[]):  {
   const features = [
     {
       icon: Brain,

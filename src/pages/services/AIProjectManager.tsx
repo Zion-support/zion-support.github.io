@@ -3,7 +3,8 @@ import { motion } from 'framer-motion';
 import { CheckCircle, Clock, Users, TrendingUp, Shield, Zap, BarChart3, Target, Globe, Smartphone } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
-export default function AIProjectManager() {
+export default function AIProjectManager
+export { AIProjectManager }() {
   const features = [
     {
       title: "AI-Powered Task Prioritization",

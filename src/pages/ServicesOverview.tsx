@@ -173,7 +173,8 @@ const serviceCategories = [
   }
 ];
 
-export default function ServicesOverview() {
+export default function ServicesOverview
+export { ServicesOverview }() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [priceRange, setPriceRange] = useState<string>('all');

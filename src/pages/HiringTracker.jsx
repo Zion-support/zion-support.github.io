@@ -41,7 +41,8 @@ import { Briefcase function HiringTrackerContent() {
       </main>
       
     </>)}
-export default function HiringTracker() {
+export default function HiringTracker
+export { HiringTracker }() {
     return (<ProtectedRoute>
       <HiringTrackerContent />
     </ProtectedRoute>)}

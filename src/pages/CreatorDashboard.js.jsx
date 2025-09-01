@@ -1,6 +1,7 @@
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/creator/CreatorSidebar";
-export default function CreatorDashboard() {
+export default function CreatorDashboard
+export { CreatorDashboard }() {
     return (<SidebarProvider>
       <div className="min-h-screen flex w-full bg-zion-blue">
         <AppSidebar />

@@ -119,7 +119,8 @@ const processSteps = [
 
 ];
 
-export default function RetailSolutions() {
+export default function RetailSolutions
+export { RetailSolutions }() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
 

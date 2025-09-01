@@ -1,6 +1,7 @@
-import { Shield, Eye, AlertTriangle, Check, ExternalLink, Phone, Mail, Lock, Zap, Brain, Target, BarChart3  } from 'lucide-react.ts';
+import { Shield, Eye, AlertTriangle, Check, ExternalLink, Phone, Mail, Lock, Zap, Brain, Target, BarChart3  } from 'lucide-react';
 
-export default function AICybersecurityThreatHunter(...args: any[]): any {
+export default function AICybersecurityThreatHunter
+export { AICybersecurityThreatHunter }(...args: any[]): any {
   const features = [
     'AI-powered threat detection and hunting',
     'Real-time security monitoring 24/7',

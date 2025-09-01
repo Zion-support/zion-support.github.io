@@ -195,7 +195,8 @@ const customerExperienceBenefits = [
   }
 ];
 
-export default function CustomerExperience() {
+export default function CustomerExperience
+export { CustomerExperience }() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
 

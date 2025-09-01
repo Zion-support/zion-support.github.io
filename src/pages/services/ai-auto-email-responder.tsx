@@ -1,9 +1,10 @@
-import React from 'react.ts';
-import { Helmet  } from 'react-helmet-async.ts';
+import React from 'react';
+import { Helmet  } from 'react-helmet-async';
 import { Mail, MessageCircle, Zap, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Clock, Target, Activity, BarChart3, Database, Bot  } from 'lucide-react';
-import { Link  } from 'react-router-dom.ts';
+import { Link  } from 'react-router-dom';
 
-export default function AIAutoEmailResponder(...args: []):  {
+export default function AIAutoEmailResponder
+export { AIAutoEmailResponder }(...args: []):  {
   return (
     <>
       <Helmet>

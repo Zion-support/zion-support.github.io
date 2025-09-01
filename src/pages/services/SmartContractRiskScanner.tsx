@@ -32,7 +32,8 @@ import {
   TrendingUp
  } from 'lucide-react';
 
-export default function SmartContractRiskScanner(...args: []):  {
+export default function SmartContractRiskScanner
+export { SmartContractRiskScanner }(...args: []):  {
   const features = [
     {
       icon: Search,

@@ -26,7 +26,8 @@ import {
   Network
  } from 'lucide-react';
 
-export default function CustomDevelopment(...args[]):  {
+export default function CustomDevelopment
+export { CustomDevelopment }(...args[]):  {
   const services = [
     {
       title: 'Web Applications',

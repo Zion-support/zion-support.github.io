@@ -4,7 +4,8 @@ import { Link, Shield, Zap, BarChart3, Target, CheckCircle, ArrowRight, Globe, U
 import SEO from '@/components/SEO';
 import { Link as RouterLink } from 'react-router-dom';
 
-export default function Blockchain(...args[]):  {
+export default function Blockchain
+export { Blockchain }(...args[]):  {
   const features = [
     {
       icon: Link,

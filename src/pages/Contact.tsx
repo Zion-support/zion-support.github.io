@@ -15,7 +15,8 @@ import {
   Rocket
 } from 'lucide-react';
 
-export default function Contact() {
+export default function Contact
+export { Contact }() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',

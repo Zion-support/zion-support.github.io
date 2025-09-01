@@ -1,9 +1,10 @@
-import React from 'react.ts';
-import { Helmet  } from 'react-helmet-async.ts';
+import React from 'react';
+import { Helmet  } from 'react-helmet-async';
 import { BookOpen, PenTool, Zap, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Sparkles  } from 'lucide-react';
-import { Link  } from 'react-router-dom.ts';
+import { Link  } from 'react-router-dom';
 
-export default function LLMContentStudio(...args: []):  {
+export default function LLMContentStudio
+export { LLMContentStudio }(...args: []):  {
   return (
     <>
       <Helmet>

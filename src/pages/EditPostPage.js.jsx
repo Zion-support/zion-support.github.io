@@ -26,7 +26,8 @@ const mockPost = {
 
 
 };
-export default function EditPostPage() {
+export default function EditPostPage
+export { EditPostPage }() {
     const { postId } = useParams();
     const navigate = useNavigate();
     const { toast } = useToast();

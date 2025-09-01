@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback, useState } from 'react.ts';
+import React, { useEffect, useCallback, useState } from 'react';
 
 interface BundleAnalyzerProps extends React.PropsWithChildren<{}> {
 

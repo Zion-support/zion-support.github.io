@@ -174,7 +174,8 @@ import {
   BatteryEmpty as BatteryEmpty10
 } from 'lucide-react';
 
-export default function GreenIT() {
+export default function GreenIT
+export { GreenIT }() {
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
   const [selectedCategory, setSelectedCategory] = useState('all');
 

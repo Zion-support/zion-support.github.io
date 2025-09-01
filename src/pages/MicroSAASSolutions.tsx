@@ -24,7 +24,8 @@ import {
   Brain
  } from 'lucide-react';
 
-export default function MicroSAASSolutions(...args[]):  {
+export default function MicroSAASSolutions
+export { MicroSAASSolutions }(...args[]):  {
   const services = [
     {
       title: "Custom SAAS Development",

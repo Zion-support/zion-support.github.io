@@ -5,7 +5,8 @@ import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
-export default function AdminDashboard() {
+export default function AdminDashboard
+export { AdminDashboard }() {
     const schema = {
   "@context": "https://schema.org",
         "@type": "WebPage",

@@ -111,7 +111,8 @@ const mockReplies = [
         isAnswer: false
     }
 ];
-export default function ForumPostPage() {
+export default function ForumPostPage
+export { ForumPostPage }() {
     // Using `useParams` without type arguments avoids issues when TypeScript
     // can't determine the generic type for the helper from React Router.
     // Cast the result instead to provide the expected shape.

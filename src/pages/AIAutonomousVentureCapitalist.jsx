@@ -701,7 +701,8 @@ const vcBenefits = [
   }
 ];
 
-export default function AIAutonomousVentureCapitalist() {
+export default function AIAutonomousVentureCapitalist
+export { AIAutonomousVentureCapitalist }() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
 

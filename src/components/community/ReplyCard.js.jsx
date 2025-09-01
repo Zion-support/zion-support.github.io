@@ -1,5 +1,6 @@
 import React from 'react';
-export default function ReplyCard({ reply, className = '', onMarkAnswer, canMarkAnswer }) {
+export default function ReplyCard
+export { ReplyCard }({ reply, className = '', onMarkAnswer, canMarkAnswer }) {
     return (<div className={`bg-white/5 backdrop-blur-sm rounded-lg p-4 mb-3 ml-8 ${className}`}>
       <div className="flex items-start space-x-3">
         <img src={reply.author.avatar} alt={reply.author.name} className="w-8 h-8 rounded-full"/>

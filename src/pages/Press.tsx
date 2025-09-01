@@ -18,7 +18,8 @@ import {
   Rocket
 } from 'lucide-react';
 
-export default function Press() {
+export default function Press
+export { Press }() {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const categories = [

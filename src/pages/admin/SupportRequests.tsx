@@ -92,7 +92,8 @@ const MOCK_SUPPORT_REQUESTS = [
   };
 ];
 
-export default function SupportRequests() {
+export default function SupportRequests
+export { SupportRequests }() {
   const [searchQuery, setSearchQuery] = useState("");
   const [statusFilter, setStatusFilter] = useState<string | null>(null);
   const [priorityFilter, setPriorityFilter] = useState<string | null>(null);

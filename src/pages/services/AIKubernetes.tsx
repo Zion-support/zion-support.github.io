@@ -1,4 +1,5 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIKubernetes() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIKubernetes
+export { AIKubernetes }() {
   const features = [
     'AI-powered Kubernetes optimization',
     'Intelligent Kubernetes management',;

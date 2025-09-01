@@ -37,7 +37,8 @@ const benefits = [
     "Scale operations seamlessly",
     "Gain competitive advantage"
 ];
-export default function AIComputerVisionPlatform() {
+export default function AIComputerVisionPlatform
+export { AIComputerVisionPlatform }() {
     return (<div className="min-h-screen bg-background relative overflow-hidden">
       <SEO title="Computer Vision Platform - Zion Tech Group" description="AI-powered computer vision platform solution that transforms your operations with intelligent automation and real-time insights." keywords="AI computer vision platform, automation, intelligent systems, business optimization" canonical="https://ziontechgroup.com/aicomputervisionplatform/"/>
 

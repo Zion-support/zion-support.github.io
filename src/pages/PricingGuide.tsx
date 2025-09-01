@@ -1,5 +1,5 @@
-import React, { useState } from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
+import React, { useState } from 'react';
+import { Link  } from 'react-router-dom';
 import { Calculator, 
   Check, 
   X, 
@@ -28,7 +28,8 @@ import { Calculator,
 } from 'lucide-react';
 import { SEO } from "../components/SEO";
 
-export default function PricingGuide(...args[]):  {
+export default function PricingGuide
+export { PricingGuide }(...args[]):  {
   const [selectedCurrency, setSelectedCurrency] = useState('USD');
   const [selectedPeriod, setSelectedPeriod] = useState('monthly');
 

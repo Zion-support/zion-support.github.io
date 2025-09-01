@@ -1,6 +1,7 @@
 import { Atom, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, DollarSign, Target, Zap, Globe, Database, Cpu, Network, Cloud, Zap as Lightning } from 'lucide-react';
 
-export default function AIQuantumComputingPlatform() {
+export default function AIQuantumComputingPlatform
+export { AIQuantumComputingPlatform }() {
   const features = [
     'AI-powered quantum algorithm optimization',
     'Hybrid quantum-classical computing solutions',

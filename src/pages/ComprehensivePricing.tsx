@@ -62,7 +62,8 @@ const pricingTiers = [
   }
 ];
 
-export default function ComprehensivePricing() {
+export default function ComprehensivePricing
+export { ComprehensivePricing }() {
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState<any>('all');
 

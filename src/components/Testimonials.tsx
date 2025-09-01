@@ -1,6 +1,6 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Star, Users  } from 'lucide-react.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
+import { Star, Users  } from 'lucide-react';
 
 interface Testimonial {
 

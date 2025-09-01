@@ -23,7 +23,8 @@ import {
 } from 'lucide-react';
 import SEO from '../components/SEO';
 
-export default function Leadership() {
+export default function Leadership
+export { Leadership }() {
   const leadershipTeam = [
     {
       name: 'Kleber Santos',

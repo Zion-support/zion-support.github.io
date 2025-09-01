@@ -153,7 +153,8 @@ const quantumAdvantages = [
   }
 ];
 
-export default function QuantumComputing() {
+export default function QuantumComputing
+export { QuantumComputing }() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
 

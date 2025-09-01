@@ -1,4 +1,4 @@
-import { toast  } from 'react-hot-toast.ts'
+import { toast  } from 'react-hot-toast'
 
 interface ToastOptions {
 

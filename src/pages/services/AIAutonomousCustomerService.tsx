@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
 import { MessageCircle, 
   Brain, 
   Target, 
@@ -23,7 +23,7 @@ import { MessageCircle,
   Zap,
   Shield,
   Headphones
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const AIAutonomousCustomerService: React.FC = (): JSX.Element => {
   const features = [

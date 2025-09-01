@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Webinars() {
+export default function Webinars
+export { Webinars }() {
   const webinars = [
     {
       title: "AI-Powered Business Transformation",

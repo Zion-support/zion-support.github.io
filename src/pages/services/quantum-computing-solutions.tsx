@@ -1,9 +1,10 @@
-import React from 'react.ts';
+import React from 'react';
 import { SEO  } from '../../components/SEO';
-import { motion  } from 'framer-motion.ts';
-import { Atom, Zap, Brain, Target, TrendingUp, Shield, Users, CheckCircle, Lightbulb, Database, Cloud, Cpu  } from 'lucide-react.ts';
+import { motion  } from 'framer-motion';
+import { Atom, Zap, Brain, Target, TrendingUp, Shield, Users, CheckCircle, Lightbulb, Database, Cloud, Cpu  } from 'lucide-react';
 
-export default function QuantumComputingSolutions(...args: any[]): any {
+export default function QuantumComputingSolutions
+export { QuantumComputingSolutions }(...args: any[]): any {
   const features = [
     {
       icon: Atom,

@@ -701,7 +701,8 @@ const businessBenefits = [
   }
 ];
 
-export default function AIAutonomousBusinessManager() {
+export default function AIAutonomousBusinessManager
+export { AIAutonomousBusinessManager }() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
 

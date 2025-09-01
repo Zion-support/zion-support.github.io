@@ -30,7 +30,8 @@ import {
   Smartphone
 } from "lucide-react";
 
-export default function Index() {
+export default function Index
+export { Index }() {
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
 

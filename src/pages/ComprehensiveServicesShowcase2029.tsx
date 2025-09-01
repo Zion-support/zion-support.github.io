@@ -1,7 +1,7 @@
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React, { useState } from 'react';
+import { motion  } from 'framer-motion';
 import { SEO  } from '@/components/SEO';
-import { Link  } from 'react-router-dom.ts';
+import { Link  } from 'react-router-dom';
 import { Brain, 
   Zap, 
   Shield, 
@@ -30,10 +30,11 @@ import { Brain,
   Filter,
   ExternalLink,
   Server
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { innovativeServices2029, serviceCategories, pricingTiers, Service  } from '../data/innovativeServices2029';
 
-export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
+export default function ComprehensiveServicesShowcase2029
+export { ComprehensiveServicesShowcase2029 }(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 

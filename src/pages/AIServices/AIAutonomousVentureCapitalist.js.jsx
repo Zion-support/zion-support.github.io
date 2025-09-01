@@ -37,7 +37,8 @@ const benefits = [
     "Scale operations seamlessly",
     "Gain competitive advantage"
 ];
-export default function AIAutonomousVentureCapitalist() {
+export default function AIAutonomousVentureCapitalist
+export { AIAutonomousVentureCapitalist }() {
     return (<div className="min-h-screen bg-background relative overflow-hidden">
       <SEO title="Autonomous Venture Capitalist - Zion Tech Group" description="AI-powered autonomous venture capitalist solution that transforms your operations with intelligent automation and real-time insights." keywords="AI autonomous venture capitalist, automation, intelligent systems, business optimization" canonical="https://ziontechgroup.com/aiautonomousventurecapitalist/"/>
 

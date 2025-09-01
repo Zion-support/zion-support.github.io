@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code, Shield, Zap, Users, BarChart3, Target, CheckCircle export default function AICodeReview() {
+import { Code, Shield, Zap, Users, BarChart3, Target, CheckCircle export default function AICodeReview
+export { AICodeReview }() {
     const features = [
         {
             icon: Code,

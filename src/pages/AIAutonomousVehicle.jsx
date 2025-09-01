@@ -794,7 +794,8 @@ const vehicleBenefits = [
   }
 ];
 
-export default function AIAutonomousVehicle() {
+export default function AIAutonomousVehicle
+export { AIAutonomousVehicle }() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
 

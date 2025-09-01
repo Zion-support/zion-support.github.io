@@ -1,4 +1,5 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIQuantumComputing() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIQuantumComputing
+export { AIQuantumComputing }() {
   const features = [
     'AI-powered quantum optimization',
     'Intelligent quantum algorithm management',;

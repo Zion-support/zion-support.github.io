@@ -186,7 +186,8 @@ const processSteps = [
 
 ];
 
-export default function ITOnsiteServices() {
+export default function ITOnsiteServices
+export { ITOnsiteServices }() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedService, setSelectedService] = useState(null);
 

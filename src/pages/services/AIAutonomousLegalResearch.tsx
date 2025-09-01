@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
 import { BookOpen, 
   Brain, 
   Target, 
@@ -24,7 +24,7 @@ import { BookOpen,
   Shield,
   Users,
   Scale
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const AIAutonomousLegalResearch: React.FC = (): JSX.Element => {
   const features = [

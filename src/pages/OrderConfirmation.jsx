@@ -1,7 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import CheckoutProgress from '@/components/checkout/CheckoutProgress';
-export default function OrderConfirmation() {
+export default function OrderConfirmation
+export { OrderConfirmation }() {
     const router = useNavigate();
     const { orderId } = router.query;
     if (!orderId)

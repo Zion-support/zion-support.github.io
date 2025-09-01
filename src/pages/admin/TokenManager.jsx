@@ -8,7 +8,8 @@ import { ProtectedRoute } from '@/components/ProtectedRoute';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { useToast } from '@/hooks/use-toast';
 import { apiClient } from '@/utils/apiClient';
-export default function TokenManager() {
+export default function TokenManager
+export { TokenManager }() {
     const { user } = useAuth();
     const { toast } = useToast();
     const [transactions, setTransactions] = useState([]);

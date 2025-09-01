@@ -6,7 +6,8 @@ import SEO from "@/components/SEO";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { HireNowCTA } from "@/components/profile/HireNowCTA";
-import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 export default function ProfilePage() {
+import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 export default function ProfilePage
+export { ProfilePage }() {
     // useParams may be untyped in this environment, so avoid passing a
     // type argument and cast the result instead to prevent TS2347 errors.
     const { profileId } = useParams();

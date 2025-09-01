@@ -117,7 +117,8 @@ const processSteps = [
 
 ];
 
-export default function AIAnalytics() {
+export default function AIAnalytics
+export { AIAnalytics }() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
 

@@ -32,7 +32,8 @@ const signupSchema = z
     message: "Passwords do not match",
     path: ["confirmPassword"],
 });
-export default function Signup() {
+export default function Signup
+export { Signup }() {
     const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth();
     const navigate = useNavigate();
     const [showPassword, setShowPassword] = useState(false);

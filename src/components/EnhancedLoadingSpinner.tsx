@@ -1,7 +1,7 @@
 
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Loader2, Zap, Brain, Cloud, Atom  } from 'lucide-react.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
+import { Loader2, Zap, Brain, Cloud, Atom  } from 'lucide-react';
 
 interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
 

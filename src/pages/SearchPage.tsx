@@ -52,7 +52,8 @@ interface SearchResult {
   featured?: boolean;
 }
 
-export default function SearchPage() {
+export default function SearchPage
+export { SearchPage }() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [searchQuery, setSearchQuery] = useState(searchParams.get('q') || '');
   const [isSearching, setIsSearching] = useState(false);

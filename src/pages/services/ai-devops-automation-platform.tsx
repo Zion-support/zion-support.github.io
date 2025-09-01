@@ -1,6 +1,6 @@
-import React from 'react.ts';
+import React from 'react';
 import { SEO   } from '../../components/SEO';
-import { motion   } from 'framer-motion.ts';
+import { motion   } from 'framer-motion';
 
 const AIDevOpsAutomationPlatform: React.FC = (): JSX.Element => {
   return (

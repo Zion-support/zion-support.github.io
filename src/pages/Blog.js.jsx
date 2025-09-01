@@ -19,7 +19,8 @@ const CATEGORIES = [
     "Recruitment",
     "Infrastructure"
 ];
-export default function Blog() {
+export default function Blog
+export { Blog }() {
     const [searchQuery, setSearchQuery] = useState("");
     const [selectedCategory, setSelectedCategory] = useState("All Categories");
     const [posts, setPosts] = useState([...BLOG_POSTS]);

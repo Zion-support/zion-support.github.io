@@ -23,7 +23,8 @@ const updatePasswordSchema = z
     message: "Passwords do not match",
     path["confirmPassword"],;
 });
-export default function UpdatePassword() {
+export default function UpdatePassword
+export { UpdatePassword }() {
     const [isLoading, setIsLoading] = useState(false);
     const [accessToken, setAccessToken] = useState(null);
     const [error, setError] = useState(null);

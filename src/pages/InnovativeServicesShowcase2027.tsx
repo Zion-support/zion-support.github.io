@@ -8,7 +8,8 @@ import {
  } from 'lucide-react';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027  } from '@/data/innovativeMicroSaasServices2027';
 import { EMERGING_TECH_SERVICES_2027  } from '@/data/emergingTechServices2027';
-export default function InnovativeServicesShowcase2027(...args[]):  {
+export default function InnovativeServicesShowcase2027
+export { InnovativeServicesShowcase2027 }(...args[]):  {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [viewMode, setViewMode] = useState<any>('grid');

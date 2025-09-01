@@ -1,7 +1,8 @@
 import React from 'react';
 import SEO from '@/components/SEO';
 
-export default function AIComplianceCopilot(...args[]):  {
+export default function AIComplianceCopilot
+export { AIComplianceCopilot }(...args[]):  {
   return (
     <div className = "min-h-screen bg-futuristic text-white">;
       <SEO

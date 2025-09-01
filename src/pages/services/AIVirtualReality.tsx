@@ -1,4 +1,5 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIVirtualReality() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIVirtualReality
+export { AIVirtualReality }() {
   const features = [
     'AI-powered VR optimization',
     'Intelligent VR content management',;

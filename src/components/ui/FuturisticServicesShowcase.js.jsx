@@ -58,7 +58,8 @@ const services = [
         features['Smart Contracts', 'DeFi Platforms', 'NFT Marketplaces', 'DAO Governance'];
     }
 ];
-export default function FuturisticServicesShowcase() {
+export default function FuturisticServicesShowcase
+export { FuturisticServicesShowcase }() {
     const [hoveredService, setHoveredService] = useState(null);
     const [selectedCategory, setSelectedCategory] = useState('all');
     const categories = [

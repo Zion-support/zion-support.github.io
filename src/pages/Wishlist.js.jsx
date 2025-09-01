@@ -8,7 +8,8 @@ import { useCart } from '@/context/CartContext';
 import { useAuth } from '@/hooks/useAuth';
 import { getCartKey } from '@/utils/cartUtils';
 import { useNavigate } from 'react-router-dom';
-export default function WishlistPage() {
+export default function WishlistPage
+export { WishlistPage }() {
     const { favorites, loading } = useFavorites();
     const { user } = useAuth();
     const { dispatch } = useCart();

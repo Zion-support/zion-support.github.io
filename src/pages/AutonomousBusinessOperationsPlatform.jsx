@@ -165,7 +165,8 @@ const AutonomousBusinessOperationsPlatform = () => {
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
-export default function AutonomousBusinessOperationsPlatform() {}
+export default function AutonomousBusinessOperationsPlatform
+export { AutonomousBusinessOperationsPlatform }() {}
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-blue to-zion-purple">
       {/* Hero Section */}

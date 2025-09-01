@@ -1,4 +1,5 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIAugmentedReality() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIAugmentedReality
+export { AIAugmentedReality }() {
   const features = [
     'AI-powered AR optimization',
     'Intelligent AR content management',;

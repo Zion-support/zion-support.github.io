@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
+import React from 'react';
+import { Link  } from 'react-router-dom';
 export const UltimateServicesShowcase2027 = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800">

@@ -3,7 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Grid3X3, ListFilter, Loader2 } from 'lucide-react';
 
-export default function Marketplace() {
+export default function Marketplace
+export { Marketplace }() {
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedProductTypes, setSelectedProductTypes] = useState([]);

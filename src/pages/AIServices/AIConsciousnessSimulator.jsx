@@ -37,7 +37,8 @@ const benefits = [
     "Scale operations seamlessly",
     "Gain competitive advantage"
 ];
-export default function AIConsciousnessSimulator() {
+export default function AIConsciousnessSimulator
+export { AIConsciousnessSimulator }() {
     return (<div className="min-h-screen bg-background relative overflow-hidden">
       <SEO title="Consciousness Simulator - Zion Tech Group" description="AI-powered consciousness simulator solution that transforms your operations with intelligent automation and real-time insights." keywords="AI consciousness simulator, automation, intelligent systems, business optimization" canonical="https://ziontechgroup.com/aiconsciousnesssimulator/"/>
 

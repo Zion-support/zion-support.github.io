@@ -1,5 +1,5 @@
-import React, { useState, useMemo } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
+import React, { useState, useMemo } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion';
 import { Search, 
   Filter, 
   Star, 
@@ -18,7 +18,7 @@ import { Search,
   Users,
   Target,
   Lightbulb
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { zionTechGroup2025Services, ZionService, getServicesByCategory, getServicesByPriceRange, searchServices  } from '../data/zionTechGroup2025ComprehensiveServices';
 
 const ZionTechGroup2025ComprehensiveShowcase: React.FC = (): JSX.Element => {;

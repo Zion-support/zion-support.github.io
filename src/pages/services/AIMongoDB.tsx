@@ -1,4 +1,5 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIMongoDB() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIMongoDB
+export { AIMongoDB }() {
   const features = [
     'AI-powered MongoDB optimization',
     'Intelligent MongoDB management',;

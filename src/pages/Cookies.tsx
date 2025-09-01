@@ -22,7 +22,8 @@ import {
 import { Shield, Cookie, Settings, Eye, EyeOff, CheckCircle, XCircle, Info, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-export default function Cookies() {
+export default function Cookies
+export { Cookies }() {
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
   const [cookiePreferences, setCookiePreferences] = useState({
     essential: true,

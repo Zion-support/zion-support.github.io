@@ -39,7 +39,8 @@ import {
   Laptop
 } from 'lucide-react';
 
-export default function Login() {
+export default function Login
+export { Login }() {
   const [isLogin, setIsLogin] = useState(true);
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);

@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
 import { SEO  } from '../../components/SEO';
 import { Users, 
   TrendingUp, 
@@ -37,9 +37,10 @@ import { Users,
   Heart,
   TrendingDown,
   Lightbulb
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
-export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
+export default function AIEmployeePerformanceAnalytics
+export { AIEmployeePerformanceAnalytics }(...args: any[]): any {
   const features = [
     {
       icon: Brain,

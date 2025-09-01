@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
 import { Atom, 
   Cpu, 
   Zap, 
@@ -22,7 +22,7 @@ import { Atom,
   Rocket,
   Microscope,
   TestTube
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const QuantumComputingElite: React.FC = (): JSX.Element => {
   const features = [

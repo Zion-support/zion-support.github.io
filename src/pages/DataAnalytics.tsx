@@ -1,6 +1,6 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
+import { Link  } from 'react-router-dom';
 import { BarChart3, 
   TrendingUp, 
   Database, 
@@ -34,9 +34,10 @@ import { BarChart3,
   CheckCircle2,
   XCircle,
   Info
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
-export default function DataAnalytics(...args: any[]): any {
+export default function DataAnalytics
+export { DataAnalytics }(...args: any[]): any {
   const features = [
     {
       icon: BarChart3,

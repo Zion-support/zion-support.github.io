@@ -37,7 +37,8 @@ const benefits = [
     "Scale operations seamlessly",
     "Gain competitive advantage"
 ];
-export default function AIAutonomousDevOps() {
+export default function AIAutonomousDevOps
+export { AIAutonomousDevOps }() {
     return (<div className="min-h-screen bg-background relative overflow-hidden">
       <SEO title="Autonomous Dev Ops - Zion Tech Group" description="AI-powered autonomous dev ops solution that transforms your operations with intelligent automation and real-time insights." keywords="AI autonomous dev ops, automation, intelligent systems, business optimization" canonical="https://ziontechgroup.com/aiautonomousdevops/"/>
 

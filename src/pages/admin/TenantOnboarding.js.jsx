@@ -11,7 +11,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { Switch } from "@/components/ui/switch";
-export default function TenantOnboarding() {
+export default function TenantOnboarding
+export { TenantOnboarding }() {
     const { user } = useAuth();
     const [activeTab, setActiveTab] = useState("comp");
     const [isSubmitting, setIsSubmitting] = useState(false);

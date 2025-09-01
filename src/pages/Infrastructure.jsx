@@ -702,7 +702,8 @@ const infrastructureBenefits = [
   }
 ];
 
-export default function Infrastructure() {
+export default function Infrastructure
+export { Infrastructure }() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
 

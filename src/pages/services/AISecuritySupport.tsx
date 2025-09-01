@@ -1,4 +1,5 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecuritySupport() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecuritySupport
+export { AISecuritySupport }() {
   const features = [
     'AI-powered security support optimization',
     'Intelligent support strategy management and execution',;

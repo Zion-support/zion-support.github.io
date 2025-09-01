@@ -27,7 +27,8 @@ import {
   CreditCard
  } from 'lucide-react';
 
-export default function CybersecuritySolutions(...args[]):  {
+export default function CybersecuritySolutions
+export { CybersecuritySolutions }(...args[]):  {
   const [selectedThreat, setSelectedThreat] = useState('all');
   const [activeService, setActiveService] = useState('overview');
 

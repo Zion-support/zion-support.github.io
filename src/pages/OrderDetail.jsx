@@ -6,7 +6,8 @@ import { generateInvoicePdf } from '@/utils/generateInvoicePdf';
 import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from '@/hooks/use-toast';
-export default function OrderDetailPage() {
+export default function OrderDetailPage
+export { OrderDetailPage }() {
     const { orderId } = useParams();
     const { user } = useAuth();
     const { data: order, isLoading } = useGetOrderQuery(orderId);

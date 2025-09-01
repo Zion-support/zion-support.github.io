@@ -1,6 +1,6 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Helmet  } from 'react-helmet-async.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
+import { Helmet  } from 'react-helmet-async';
 import { Workflow, 
   Brain, 
   Zap, 
@@ -22,7 +22,7 @@ import { Workflow,
   Cpu,
   Server,
   ShoppingCart
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const AIWorkflowOrchestrator = () => {
   const features = [

@@ -1,6 +1,7 @@
 import { Cpu, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, DollarSign, Target, Zap, Globe, Database, Monitor, Network, Cloud, Wifi } from 'lucide-react';
 
-export default function AIEdgeComputingPlatform() {
+export default function AIEdgeComputingPlatform
+export { AIEdgeComputingPlatform }() {
   const features = [
     'AI-powered edge device management and optimization',
     'Real-time data processing at the edge',

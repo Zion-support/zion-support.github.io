@@ -24,7 +24,8 @@ import {
   Award
  } from 'lucide-react';
 
-export default function AIContentGenerationPlatform(...args[]):  {
+export default function AIContentGenerationPlatform
+export { AIContentGenerationPlatform }(...args[]):  {
   const features = [
     {
       icon: Brain,

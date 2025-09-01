@@ -5,7 +5,8 @@ import { TenantsList } from "@/components/admin/whitelabel/TenantsList";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom";
-export default function WhitelabelManager() {
+export default function WhitelabelManager
+export { WhitelabelManager }() {
     const { user } = useAuth();
     const [activeTab, setActiveTab] = useState("tenants");
     // Check if user has admin role

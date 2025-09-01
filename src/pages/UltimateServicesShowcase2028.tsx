@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion';
+import { Link  } from 'react-router-dom';
 import { Search, 
   Filter, 
   Star, 
@@ -27,7 +27,7 @@ import { Search,
   Clock,
   DollarSign,
   BarChart3
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { INNOVATIVE_SERVICES_2028  } from '../data/innovativeServices2028';
 
 const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {

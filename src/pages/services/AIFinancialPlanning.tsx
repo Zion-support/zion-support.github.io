@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
 import { SEO  } from '../../components/SEO';
 import { DollarSign, 
   TrendingUp, 
@@ -45,9 +45,10 @@ import { DollarSign,
   Wallet,
   Receipt,
   Banknote
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
-export default function AIFinancialPlanning(...args: any[]): any {
+export default function AIFinancialPlanning
+export { AIFinancialPlanning }(...args: any[]): any {
   const features = [
     {
       icon: Brain,

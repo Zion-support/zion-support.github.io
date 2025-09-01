@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useCallback } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Link, useLocation  } from 'react-router-dom.ts';
+import React, { useState, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion';
+import { Link, useLocation  } from 'react-router-dom';
 import { Menu, 
   X, 
   ChevronDown, 
@@ -26,7 +26,7 @@ import { Menu,
   Building,
   Rocket,
   Star
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 interface NavigationItem {
 

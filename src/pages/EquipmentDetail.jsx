@@ -8,7 +8,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ShoppingCart, Star, Truck, Shield, RotateCcw import { toast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 import { EQUIPMENT_DETAILS } from "@/data/equipmentDetails";
-export default function EquipmentDetail() {
+export default function EquipmentDetail
+export { EquipmentDetail }() {
     const { equipmentId } = useParams();
     const navigate = useNavigate();
     const { isAuthenticated } = useAuth();

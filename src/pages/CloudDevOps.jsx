@@ -193,7 +193,8 @@ const processSteps = [
 
 ];
 
-export default function CloudDevOps() {
+export default function CloudDevOps
+export { CloudDevOps }() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
 

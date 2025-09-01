@@ -1,6 +1,6 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
+import { Link  } from 'react-router-dom';
 import { MessageCircle, 
   Users, 
   Ticket, 
@@ -42,9 +42,10 @@ import { MessageCircle,
   TrendingUp,
   PieChart,
   LineChart
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
-export default function HelpdeskPlatform(...args: any[]): any {
+export default function HelpdeskPlatform
+export { HelpdeskPlatform }(...args: any[]): any {
   const features = [
     {
       icon: Ticket,

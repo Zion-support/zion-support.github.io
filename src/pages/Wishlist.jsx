@@ -11,7 +11,8 @@ import { getCartKey } from '@/utils/cartUtils';
 import { useNavigate } from 'react-router-dom';
 import { safeStorage } from '@/utils/safeStorage';
 
-export default function WishlistPage() {
+export default function WishlistPage
+export { WishlistPage }() {
     const [favorites, setFavorites] = useState([]);
     const [loading, setLoading] = useState(true);
     const navigate = useNavigate();

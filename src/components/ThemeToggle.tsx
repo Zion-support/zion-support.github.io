@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Sun, Moon, Monitor type Theme = 'dark' | 'light' | 'system';
-import React, { useState, useEffect } from 'react.ts';
+import React, { useState, useEffect } from 'react';
 import { Sun, Moon, Monitor  } from 'lucide-react';
 
 type Theme = 'dark' | 'light' | 'system';

@@ -1,4 +1,5 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityMaintenance() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityMaintenance
+export { AISecurityMaintenance }() {
   const features = [
     'AI-powered security maintenance optimization',
     'Intelligent maintenance strategy management and execution',;

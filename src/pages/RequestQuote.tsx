@@ -39,7 +39,8 @@ import {
   Headphones
 } from 'lucide-react';
 
-export default function RequestQuote() {
+export default function RequestQuote
+export { RequestQuote }() {
   const [formData, setFormData] = useState({
     companyName: '',
     contactName: '',

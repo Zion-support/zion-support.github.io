@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
 import { SEO  } from '@/components/SEO';
 import { Brain, 
   PenTool, 
@@ -27,7 +27,8 @@ import { Brain,
   Rocket
  } from 'lucide-react';
 
-export default function AIContentMarketingAutomation(...args[]):  {
+export default function AIContentMarketingAutomation
+export { AIContentMarketingAutomation }(...args[]):  {
   const features = [
     "AI-powered content generation for multiple formats",
     "Multi-channel content distribution automation",

@@ -1,4 +1,5 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityImplementation() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityImplementation
+export { AISecurityImplementation }() {
   const features = [
     'AI-powered security implementation optimization',
     'Intelligent implementation strategy management and execution',;

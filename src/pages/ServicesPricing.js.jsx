@@ -147,7 +147,8 @@ const benefits = [
         description: "Regular updates and new features to keep you ahead"
     }
 ];
-export default function ServicesPricing() {
+export default function ServicesPricing
+export { ServicesPricing }() {
     const [selectedTier, setSelectedTier] = useState('professional');
     return (<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">
       <SEO title="Micro SAAS Services Pricing - Zion Tech Group" description="Transparent pricing for our comprehensive micro SAAS services. Choose from Starter, Professional, or Enterprise tiers to match your business needs and budget." keywords="micro SAAS pricing, service costs, AI services pricing, IT solutions pricing" url="https://ziontechgroup.com/services-pricing"/>

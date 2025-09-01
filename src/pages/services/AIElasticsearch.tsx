@@ -1,4 +1,5 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIElasticsearch() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIElasticsearch
+export { AIElasticsearch }() {
   const features = [
     'AI-powered Elasticsearch optimization',
     'Intelligent Elasticsearch management',;

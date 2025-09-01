@@ -1,6 +1,6 @@
-import React from 'react.ts';
+import React from 'react';
 import { SEO  } from '@/components/SEO';
-import { CheckCircle2, GitBranch, DollarSign, ExternalLink, Phone, Mail  } from 'lucide-react.ts';
+import { CheckCircle2, GitBranch, DollarSign, ExternalLink, Phone, Mail  } from 'lucide-react';
 
 const DeveloperProductivityCopilot: React.FC = (): JSX.Element => {
   return (

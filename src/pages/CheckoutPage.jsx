@@ -5,7 +5,8 @@ import { getStripe } from '@/utils/getStripe';
 import CardForm from '@/components/checkout/CardForm';
 import CheckoutProgress from '@/components/checkout/CheckoutProgress';
 import { NEW_PRODUCTS } from '@/data/newProductsData';
-export default function CheckoutPage() {
+export default function CheckoutPage
+export { CheckoutPage }() {
     const router = useNavigate();
     const { id: rawId } = router.query;
     const id = typeof rawId === 'string' ? rawId : null;

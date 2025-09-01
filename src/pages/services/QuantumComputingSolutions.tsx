@@ -48,7 +48,8 @@ import {
 } from 'lucide-react';
 import { SEO } from '../../components/SEO';
 
-export default function QuantumComputingSolutions() {
+export default function QuantumComputingSolutions
+export { QuantumComputingSolutions }() {
   const features = [
     {
       icon: Atom,

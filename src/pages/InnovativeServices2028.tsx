@@ -29,7 +29,8 @@ import {
 } from 'lucide-react';
 import { innovativeServices2028, serviceCategories, pricingTiers, contactInfo } from "../data/innovativeServices2028";
 
-export default function InnovativeServices2028(...args[]):  {
+export default function InnovativeServices2028
+export { InnovativeServices2028 }(...args[]):  {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('name');

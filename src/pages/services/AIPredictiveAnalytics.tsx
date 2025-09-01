@@ -1,4 +1,5 @@
-import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarChart3, Target, Zap, Shield, Users export default function AIPredictiveAnalytics() {
+import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarChart3, Target, Zap, Shield, Users export default function AIPredictiveAnalytics
+export { AIPredictiveAnalytics }() {
   const features = [
     'Advanced machine learning algorithms for pattern recognition',
     'Real-time data processing and predictive modeling',;

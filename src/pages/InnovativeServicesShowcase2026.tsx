@@ -31,7 +31,8 @@ import {
   ExternalLink
 } from 'lucide-react';
 import { INNOVATIVE_SERVICES } from '../data/servicesData';
-export default function InnovativeServicesShowcase2026() {
+export default function InnovativeServicesShowcase2026
+export { InnovativeServicesShowcase2026 }() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');

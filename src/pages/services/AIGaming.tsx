@@ -1,4 +1,5 @@
-import { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Users, BarChart3 export default function AIGaming() {
+import { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Users, BarChart3 export default function AIGaming
+export { AIGaming }() {
   const features = [
     'AI-powered player behavior analysis and personalization',
     'Intelligent game difficulty adjustment and balancing',;

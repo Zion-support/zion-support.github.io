@@ -112,7 +112,8 @@ function InterviewsContent() {
       </main>
       
     </>)}
-export default function Interviews() {
+export default function Interviews
+export { Interviews }() {
     return (<ProtectedRoute>
       <InterviewsContent />
     </ProtectedRoute>)}

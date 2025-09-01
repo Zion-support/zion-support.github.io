@@ -178,7 +178,8 @@ function TalentDashboardContent() {
       </main>
       
     </>)}
-export default function TalentDashboard() {
+export default function TalentDashboard
+export { TalentDashboard }() {
     return (<ProtectedRoute>
       <TalentDashboardContent />
     </ProtectedRoute>)}

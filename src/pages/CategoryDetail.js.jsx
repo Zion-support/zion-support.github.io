@@ -41,7 +41,8 @@ function generateInnovationListing(index) {
         availability: "Immediate",
         aiScore: Math.floor(Math.random() * 20) + 80
     }}
-export default function CategoryDetail() {
+export default function CategoryDetail
+export { CategoryDetail }() {
     // Cast to specify the expected route param type since useParams may be untyped
     const { slug } = useParams();
     const navigate = useNavigate();

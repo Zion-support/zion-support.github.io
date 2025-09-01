@@ -19,7 +19,8 @@ const pricingModels = [
     { id: 'one-time', name: 'One-time' },
     { id: 'usage-based', name: 'Usage-based' }
 ];
-export default function MicroSaasServicesPage() {
+export default function MicroSaasServicesPage
+export { MicroSaasServicesPage }() {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedPricing, setSelectedPricing] = useState('all');
     const [searchQuery, setSearchQuery] = useState('');

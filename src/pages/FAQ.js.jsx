@@ -4,7 +4,8 @@ import { GradientHeading } from "@/components/GradientHeading";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-export default function FAQ() {
+export default function FAQ
+export { FAQ }() {
     const faqData = [
         {
             question: "What is Zion Tech Group?",

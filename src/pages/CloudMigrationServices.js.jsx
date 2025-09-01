@@ -5,7 +5,8 @@ import { Badge } from "@/components/ui/badge";
 import { SEO } from "@/components/SEO";
 import { Cloud, Server, Database, Zap, Target, DollarSign, ArrowRight, CheckCircle, Star, Shield, Network, BarChart3 } from "lucide-react";
 import { Link } from "react-router-dom";
-export default function CloudMigrationServices() {
+export default function CloudMigrationServices
+export { CloudMigrationServices }() {
     const services = [
         {
             title: "Cloud Assessment",

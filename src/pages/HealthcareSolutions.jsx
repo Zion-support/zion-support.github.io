@@ -208,7 +208,8 @@ const processSteps = [
 
 ];
 
-export default function HealthcareSolutions() {
+export default function HealthcareSolutions
+export { HealthcareSolutions }() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
 

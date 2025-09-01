@@ -1,4 +1,4 @@
-import React, { createContext, useContext } from 'react.ts';
+import React, { createContext, useContext } from 'react';
 
 interface User {
 

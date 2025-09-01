@@ -1,4 +1,5 @@
-import { Video, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Eye, Zap, Shield, Users, BarChart3 export default function AIVideoAnalytics() {
+import { Video, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Eye, Zap, Shield, Users, BarChart3 export default function AIVideoAnalytics
+export { AIVideoAnalytics }() {
   const features = [
     'Real-time video analysis with AI-powered object detection',
     'Advanced facial recognition and person tracking',;

@@ -1,9 +1,10 @@
-import React from 'react.ts';
+import React from 'react';
 import { SEO  } from '../../components/SEO';
-import { motion  } from 'framer-motion.ts';
-import { Globe, Leaf, Zap, Shield, TrendingUp, Users, CheckCircle, Lightbulb, Database, Cloud  } from 'lucide-react.ts';
+import { motion  } from 'framer-motion';
+import { Globe, Leaf, Zap, Shield, TrendingUp, Users, CheckCircle, Lightbulb, Database, Cloud  } from 'lucide-react';
 
-export default function GreenIT(...args: any[]): any {
+export default function GreenIT
+export { GreenIT }(...args: any[]): any {
   const features = [
     {
       icon: Leaf,

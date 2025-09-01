@@ -1,9 +1,10 @@
-import React from 'react.ts';
+import React from 'react';
 import { SEO  } from '../../components/SEO';
-import { motion  } from 'framer-motion.ts';
-import { Workflow, Zap, Brain, Target, TrendingUp, Shield, Users, Clock, BarChart3, CheckCircle  } from 'lucide-react.ts';
+import { motion  } from 'framer-motion';
+import { Workflow, Zap, Brain, Target, TrendingUp, Shield, Users, Clock, BarChart3, CheckCircle  } from 'lucide-react';
 
-export default function AIWorkflowAutomation(...args: any[]): any {
+export default function AIWorkflowAutomation
+export { AIWorkflowAutomation }(...args: any[]): any {
   const features = [
     {
       icon: Workflow,

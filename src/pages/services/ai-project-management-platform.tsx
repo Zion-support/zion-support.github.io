@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
 import { SEO  } from '@/components/SEO';
 import { Brain, 
   Users, 
@@ -23,7 +23,8 @@ import { Brain,
   Cloud
  } from 'lucide-react';
 
-export default function AIProjectManagementPlatform(...args: []):  {
+export default function AIProjectManagementPlatform
+export { AIProjectManagementPlatform }(...args: []):  {
   const features = [
     {
       icon: Brain,

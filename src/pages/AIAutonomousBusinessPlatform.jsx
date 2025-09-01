@@ -763,7 +763,8 @@ const platformBenefits = [
   }
 ];
 
-export default function AIAutonomousBusinessPlatform() {
+export default function AIAutonomousBusinessPlatform
+export { AIAutonomousBusinessPlatform }() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
 

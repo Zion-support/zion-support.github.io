@@ -5,7 +5,8 @@ import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
 import { Code, BookOpen, Zap, Shield, Users, MessageSquare, Github, ExternalLink, Terminal, Webhook, Key, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
-export default function DeveloperPortal() {
+export default function DeveloperPortal
+export { DeveloperPortal }() {
     const apiFeatures = [
         {
             title: 'RESTful APIs',

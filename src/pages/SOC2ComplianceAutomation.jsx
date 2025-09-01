@@ -666,7 +666,8 @@ const soc2Benefits = [
   }
 ];
 
-export default function SOC2ComplianceAutomation() {
+export default function SOC2ComplianceAutomation
+export { SOC2ComplianceAutomation }() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
 

@@ -7,7 +7,8 @@ import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 import { useFeatureUsage } from "@/hooks/useFeatureUsage";
 import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus";
-export default function AIPoweredContent() {
+export default function AIPoweredContent
+export { AIPoweredContent }() {
     useFeatureUsage('ZionGPT');
     const schema = {
   "@context": "https://schema.org",

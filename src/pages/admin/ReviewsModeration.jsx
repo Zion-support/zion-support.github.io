@@ -77,7 +77,8 @@ function ReviewsModerationContent() {
       </main>
       
     </>)}
-export default function ReviewsModeration() {
+export default function ReviewsModeration
+export { ReviewsModeration }() {
     return (<ProtectedRoute>
       <ReviewsModerationContent />
     </ProtectedRoute>)}

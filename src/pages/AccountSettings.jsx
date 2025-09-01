@@ -8,7 +8,8 @@ import { Separator } from '@/components/ui/separator';
 import { Switch } from '@/components/ui/switch';
 import { Label } from '@/components/ui/label';
 import { toast } from 'sonner';
-export default function AccountSettings() {
+export default function AccountSettings
+export { AccountSettings }() {
     const { user } = useAuth();
     const [displayWeb3, setDisplayWeb3] = useState(false);
     const [didHandle, setDidHandle] = useState('');

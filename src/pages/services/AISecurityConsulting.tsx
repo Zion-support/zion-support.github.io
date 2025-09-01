@@ -1,4 +1,5 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityConsulting() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityConsulting
+export { AISecurityConsulting }() {
   const features = [
     'AI-powered security consulting optimization',
     'Intelligent consulting strategy management and execution',;

@@ -57,7 +57,8 @@ import {
   Car as CarIcon2
 } from 'lucide-react';
 
-export default function ComprehensivePricingGuide2025() {
+export default function ComprehensivePricingGuide2025
+export { ComprehensivePricingGuide2025 }() {
   const pricingTiers = [
     {
       name: 'Starter',

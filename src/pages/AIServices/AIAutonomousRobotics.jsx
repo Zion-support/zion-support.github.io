@@ -37,7 +37,8 @@ const benefits = [
     "Scale operations seamlessly",
     "Gain competitive advantage"
 ];
-export default function AIAutonomousRobotics() {
+export default function AIAutonomousRobotics
+export { AIAutonomousRobotics }() {
     return (<div className="min-h-screen bg-background relative overflow-hidden">
       <SEO title="Autonomous Robotics - Zion Tech Group" description="AI-powered autonomous robotics solution that transforms your operations with intelligent automation and real-time insights." keywords="AI autonomous robotics, automation, intelligent systems, business optimization" canonical="https://ziontechgroup.com/aiautonomousrobotics/"/>
 

@@ -1,6 +1,6 @@
-import React from 'react.ts';
+import React from 'react';
 import { SEO  } from '@/components/SEO';
-import { CheckCircle2, MessageCircle, DollarSign, ExternalLink, Phone, Mail  } from 'lucide-react.ts';
+import { CheckCircle2, MessageCircle, DollarSign, ExternalLink, Phone, Mail  } from 'lucide-react';
 
 const CustomerSupportChatbot: React.FC = (): JSX.Element => {
   return (

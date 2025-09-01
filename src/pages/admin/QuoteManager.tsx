@@ -6,7 +6,7 @@ import {
   CardContent
  } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs';
-import { Navigate  } from 'react-router-dom.ts';
+import { Navigate  } from 'react-router-dom';
 import type { QuoteRequest } from "@/types/quotes";
 import { ProtectedRoute  } from '@/components/ProtectedRoute';
 import { QuoteDetails  } from '@/components/quotes/QuoteDetails';
@@ -15,7 +15,8 @@ import { QuoteStatusCards,
   QuotesFilter,
   QuotesTable
  } from '@/components/admin/quotes';
-export default function QuoteManager(...args[]):  {
+export default function QuoteManager
+export { QuoteManager }(...args[]):  {
   const { user } = useAuth();
   const isAdmin = user?.userType === 'admin';
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);

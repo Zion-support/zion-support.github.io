@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MessageCircle, Brain, Shield, Users, BarChart3, Clock, DollarSign, Smartphone, Globe, Zap, CheckCircle, TrendingUp, Phone, Mail, MessageSquare, Bot export default function AICustomerServiceAutomation() {
+import { MessageCircle, Brain, Shield, Users, BarChart3, Clock, DollarSign, Smartphone, Globe, Zap, CheckCircle, TrendingUp, Phone, Mail, MessageSquare, Bot export default function AICustomerServiceAutomation
+export { AICustomerServiceAutomation }() {
     const features = [
         {
             icon: Brain,

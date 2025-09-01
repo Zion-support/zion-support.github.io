@@ -7,7 +7,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { MessageSquare, FileText, Video, Calendar, Users, Settings, X } from 'lucide-react';
 import { VideoCallRoom } from '@/components/video/VideoCallRoom';
 import { toast } from 'sonner';
-export default function ProjectRoom() {
+export default function ProjectRoom
+export { ProjectRoom }() {
     const { projectId } = useParams();
     const [activeTab, setActiveTab] = useState('chat');
     const [isInCall, setIsInCall] = useState(false);

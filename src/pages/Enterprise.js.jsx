@@ -3,7 +3,8 @@ import { SEO } from '@/components/SEO';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Check, Users, Shield, BarChart3, Zap, Globe, Phone } from 'lucide-react';
-export default function Enterprise() {
+export default function Enterprise
+export { Enterprise }() {
     const features = [
         {
             icon: <Users className="h-8 w-8 text-zion-cyan"/>,

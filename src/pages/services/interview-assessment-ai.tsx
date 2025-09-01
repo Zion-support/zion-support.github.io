@@ -1,9 +1,10 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Users, Brain, Target, BarChart3, Clock, Shield, CheckCircle, Star, Award, Rocket, ArrowRight, Phone, Video, FileText, TrendingUp, Zap, Eye, Heart, MessageCircle, Calendar, Award as Trophy  } from 'lucide-react.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
+import { Users, Brain, Target, BarChart3, Clock, Shield, CheckCircle, Star, Award, Rocket, ArrowRight, Phone, Video, FileText, TrendingUp, Zap, Eye, Heart, MessageCircle, Calendar, Award as Trophy  } from 'lucide-react';
 import { SEO  } from '@/components/SEO';
 
-export default function InterviewAssessmentAI(...args: any[]): any {
+export default function InterviewAssessmentAI
+export { InterviewAssessmentAI }(...args: any[]): any {
   const features = [
     {
       icon: Brain,

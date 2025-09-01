@@ -37,7 +37,8 @@ const benefits = [
     "Scale operations seamlessly",
     "Gain competitive advantage"
 ];
-export default function AIContentFactory() {
+export default function AIContentFactory
+export { AIContentFactory }() {
     return (<div className="min-h-screen bg-background relative overflow-hidden">
       <SEO title="Content Factory - Zion Tech Group" description="AI-powered content factory solution that transforms your operations with intelligent automation and real-time insights." keywords="AI content factory, automation, intelligent systems, business optimization" canonical="https://ziontechgroup.com/aicontentfactory/"/>
 

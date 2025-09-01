@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
 import { Brain, 
   Shield, 
   Cloud, 
@@ -22,7 +22,7 @@ import { Brain,
   Target,
   Zap,
   Globe
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const InnovativeServicesOverview2025 = () => {
   const serviceCategories = [

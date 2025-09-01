@@ -1,202 +1,211 @@
 module.exports = {
   apps: [
-    // 🚨 Comprehensive Error Fixer - Main error fixing automation
+    // Main Error Fixer Automation - Core error detection and fixing
     {
-      name: 'comprehensive-error-fixer',
-      script: './scripts/automation/comprehensive-error-fixer.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        PM2_HOME: './.pm2'
-      },
-      cron_restart: '0 */2 * * *', // Every 2 hours
-      log_file: './logs/comprehensive-error-fixer.log',
-      error_file: './logs/comprehensive-error-fixer-error.log',
-      out_file: './logs/comprehensive-error-fixer-out.log',
-      merge_logs: true,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
-    },
-
-    // 🔧 TypeScript Error Monitor - Real-time TypeScript error detection
-    {
-      name: 'typescript-error-monitor',
-      script: './scripts/automation/typescript-error-monitor.cjs',
+      name: 'error-fixer-automation',
+      script: './scripts/automation/error-fixer-automation.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        PM2_HOME: './.pm2'
+        ERROR_FIXING_MODE: 'true',
+        AUTOMATION_INTERVAL: '300000' // 5 minutes
       },
-      cron_restart: '*/15 * * * *', // Every 15 minutes
-      log_file: './logs/typescript-error-monitor.log',
-      error_file: './logs/typescript-error-monitor-error.log',
-      out_file: './logs/typescript-error-monitor-out.log',
+      cron_restart: '*/5 * * * *', // Restart every 5 minutes
+      log_file: './logs/error-fixer-automation.log',
+      error_file: './logs/error-fixer-automation-error.log',
+      out_file: './logs/error-fixer-automation-out.log',
       merge_logs: true,
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
     },
 
-    // 🧹 ESLint Error Cleaner - Continuous ESLint error fixing
+    // TypeScript Error Fixer - Specialized TypeScript error fixing
     {
-      name: 'eslint-error-cleaner',
-      script: './scripts/automation/eslint-error-cleaner.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        PM2_HOME: './.pm2'
-      },
-      cron_restart: '*/20 * * * *', // Every 20 minutes
-      log_file: './logs/eslint-error-cleaner.log',
-      error_file: './logs/eslint-error-cleaner-error.log',
-      out_file: './logs/eslint-error-cleaner-out.log',
-      merge_logs: true,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
-    },
-
-    // 🔍 Build Error Detector - Prevents build failures
-    {
-      name: 'build-error-detector',
-      script: './scripts/automation/build-error-detector.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        PM2_HOME: './.pm2'
-      },
-      cron_restart: '0 */4 * * *', // Every 4 hours
-      log_file: './logs/build-error-detector.log',
-      error_file: './logs/build-error-detector-error.log',
-      out_file: './logs/build-error-detector-out.log',
-      merge_logs: true,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
-    },
-
-    // 🚨 Dependency Error Resolver - Fixes dependency conflicts
-    {
-      name: 'dependency-error-resolver',
-      script: './scripts/automation/dependency-error-resolver.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        PM2_HOME: './.pm2'
-      },
-      cron_restart: '0 6 * * *', // Daily at 6 AM
-      log_file: './logs/dependency-error-resolver.log',
-      error_file: './logs/dependency-error-resolver-error.log',
-      out_file: './logs/dependency-error-resolver-out.log',
-      merge_logs: true,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
-    },
-
-    // 🔧 Configuration Error Fixer - Fixes config file issues
-    {
-      name: 'config-error-fixer',
-      script: './scripts/automation/config-error-fixer.cjs',
+      name: 'typescript-error-fixer',
+      script: './scripts/automation/typescript-error-fixer.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '256M',
       env: {
         NODE_ENV: 'production',
-        PM2_HOME: './.pm2'
+        TYPESCRIPT_FIXING_MODE: 'true',
+        AUTOMATION_INTERVAL: '600000' // 10 minutes
       },
-      cron_restart: '0 12 * * *', // Daily at noon
-      log_file: './logs/config-error-fixer.log',
-      error_file: './logs/config-error-fixer-error.log',
-      out_file: './logs/config-error-fixer-out.log',
+      cron_restart: '*/10 * * * *', // Restart every 10 minutes
+      log_file: './logs/typescript-error-fixer.log',
+      error_file: './logs/typescript-error-fixer-error.log',
+      out_file: './logs/typescript-error-fixer-out.log',
       merge_logs: true,
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
     },
 
-    // 🚨 Error Prevention Monitor - Proactive error prevention
+    // ESLint Error Fixer - Linting error automation
     {
-      name: 'error-prevention-monitor',
-      script: './scripts/automation/error-prevention-monitor.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        PM2_HOME: './.pm2'
-      },
-      cron_restart: '*/10 * * * *', // Every 10 minutes
-      log_file: './logs/error-prevention-monitor.log',
-      error_file: './logs/error-prevention-monitor-error.log',
-      out_file: './logs/error-prevention-monitor-out.log',
-      merge_logs: true,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
-    },
-
-    // 📊 Error Analytics Dashboard - Error reporting and analytics
-    {
-      name: 'error-analytics-dashboard',
-      script: './scripts/automation/error-analytics-dashboard.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        PM2_HOME: './.pm2',
-        PORT: 3001
-      },
-      cron_restart: '0 0 * * *', // Daily at midnight
-      log_file: './logs/error-analytics-dashboard.log',
-      error_file: './logs/error-analytics-dashboard-error.log',
-      out_file: './logs/error-analytics-dashboard-out.log',
-      merge_logs: true,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
-    },
-
-    // 🔄 Auto-Recovery Manager - Automatically recovers from errors
-    {
-      name: 'auto-recovery-manager',
-      script: './scripts/automation/auto-recovery-manager.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        PM2_HOME: './.pm2'
-      },
-      cron_restart: '*/5 * * * *', // Every 5 minutes
-      log_file: './logs/auto-recovery-manager.log',
-      error_file: './logs/auto-recovery-manager-error.log',
-      out_file: './logs/auto-recovery-manager-out.log',
-      merge_logs: true,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
-    },
-
-    // 🚨 Critical Error Alert System - Notifies about critical errors
-    {
-      name: 'critical-error-alert-system',
-      script: './scripts/automation/critical-error-alert-system.cjs',
+      name: 'eslint-error-fixer',
+      script: './scripts/automation/eslint-error-fixer.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '256M',
       env: {
         NODE_ENV: 'production',
-        PM2_HOME: './.pm2'
+        ESLINT_FIXING_MODE: 'true',
+        AUTOMATION_INTERVAL: '300000' // 5 minutes
       },
-      cron_restart: '*/1 * * * *', // Every minute
-      log_file: './logs/critical-error-alert-system.log',
-      error_file: './logs/critical-error-alert-system-error.log',
-      out_file: './logs/critical-error-alert-system-out.log',
+      cron_restart: '*/5 * * * *', // Restart every 5 minutes
+      log_file: './logs/eslint-error-fixer.log',
+      error_file: './logs/eslint-error-fixer-error.log',
+      out_file: './logs/eslint-error-fixer-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+    },
+
+    // Build Error Fixer - Build error detection and fixing
+    {
+      name: 'build-error-fixer',
+      script: './scripts/automation/build-error-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        BUILD_FIXING_MODE: 'true',
+        AUTOMATION_INTERVAL: '900000' // 15 minutes
+      },
+      cron_restart: '*/15 * * * *', // Restart every 15 minutes
+      log_file: './logs/build-error-fixer.log',
+      error_file: './logs/build-error-fixer-error.log',
+      out_file: './logs/build-error-fixer-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+    },
+
+    // Import/Export Fixer - Import and export error automation
+    {
+      name: 'import-export-fixer',
+      script: './scripts/automation/import-export-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '256M',
+      env: {
+        NODE_ENV: 'production',
+        IMPORT_EXPORT_FIXING_MODE: 'true',
+        AUTOMATION_INTERVAL: '600000' // 10 minutes
+      },
+      cron_restart: '*/10 * * * *', // Restart every 10 minutes
+      log_file: './logs/import-export-fixer.log',
+      error_file: './logs/import-export-fixer-error.log',
+      out_file: './logs/import-export-fixer-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+    },
+
+    // Dependency Error Fixer - Dependency and package.json error fixing
+    {
+      name: 'dependency-error-fixer',
+      script: './scripts/automation/dependency-error-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '256M',
+      env: {
+        NODE_ENV: 'production',
+        DEPENDENCY_FIXING_MODE: 'true',
+        AUTOMATION_INTERVAL: '1800000' // 30 minutes
+      },
+      cron_restart: '*/30 * * * *', // Restart every 30 minutes
+      log_file: './logs/dependency-error-fixer.log',
+      error_file: './logs/dependency-error-fixer-error.log',
+      out_file: './logs/dependency-error-fixer-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+    },
+
+    // Syntax Error Fixer - Syntax and formatting error automation
+    {
+      name: 'syntax-error-fixer',
+      script: './scripts/automation/syntax-error-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '256M',
+      env: {
+        NODE_ENV: 'production',
+        SYNTAX_FIXING_MODE: 'true',
+        AUTOMATION_INTERVAL: '300000' // 5 minutes
+      },
+      cron_restart: '*/5 * * * *', // Restart every 5 minutes
+      log_file: './logs/syntax-error-fixer.log',
+      error_file: './logs/syntax-error-fixer-error.log',
+      out_file: './logs/syntax-error-fixer-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+    },
+
+    // Error Monitor - Monitors and reports on error fixing progress
+    {
+      name: 'error-monitor',
+      script: './scripts/automation/error-monitor.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '256M',
+      env: {
+        NODE_ENV: 'production',
+        MONITORING_MODE: 'true',
+        AUTOMATION_INTERVAL: '600000' // 10 minutes
+      },
+      cron_restart: '*/10 * * * *', // Restart every 10 minutes
+      log_file: './logs/error-monitor.log',
+      error_file: './logs/error-monitor-error.log',
+      out_file: './logs/error-monitor-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+    },
+
+    // Error Prevention - Proactive error prevention automation
+    {
+      name: 'error-prevention',
+      script: './scripts/automation/error-prevention.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        PREVENTION_MODE: 'true',
+        AUTOMATION_INTERVAL: '900000' // 15 minutes
+      },
+      cron_restart: '*/15 * * * *', // Restart every 15 minutes
+      log_file: './logs/error-prevention.log',
+      error_file: './logs/error-prevention-error.log',
+      out_file: './logs/error-prevention-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+    },
+
+    // Code Quality Fixer - Code quality and best practices automation
+    {
+      name: 'code-quality-fixer',
+      script: './scripts/automation/code-quality-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        QUALITY_FIXING_MODE: 'true',
+        AUTOMATION_INTERVAL: '1800000' // 30 minutes
+      },
+      cron_restart: '*/30 * * * *', // Restart every 30 minutes
+      log_file: './logs/code-quality-fixer.log',
+      error_file: './logs/code-quality-fixer-error.log',
+      out_file: './logs/code-quality-fixer-out.log',
       merge_logs: true,
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
     }
@@ -204,12 +213,14 @@ module.exports = {
 
   deploy: {
     production: {
-      user: 'node',
+      user: 'root',
       host: 'localhost',
       ref: 'origin/main',
-      repo: 'git@github.com:username/repo.git',
-      path: '/var/www/production',
-      'post-deploy': 'npm install && pm2 reload ecosystem-error-fixing.config.cjs --env production'
+      repo: 'git@github.com:your-username/bolt.new.zion.app.git',
+      path: '/workspace/production',
+      'pre-deploy-local': '',
+      'post-deploy': 'npm install && npm run build && pm2 reload ecosystem-error-fixing.config.cjs --env production',
+      'pre-setup': ''
     }
   }
 };

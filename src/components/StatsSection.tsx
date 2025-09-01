@@ -1,6 +1,6 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { LucideIcon  } from 'lucide-react.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
+import { LucideIcon  } from 'lucide-react';
 
 interface Stat {
 

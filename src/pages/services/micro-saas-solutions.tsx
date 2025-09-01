@@ -1,9 +1,10 @@
-import React from 'react.ts';
-import { Helmet  } from 'react-helmet-async.ts';
+import React from 'react';
+import { Helmet  } from 'react-helmet-async';
 import { ShoppingCart, Zap, Settings, Users, Shield, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Rocket  } from 'lucide-react';
-import { Link  } from 'react-router-dom.ts';
+import { Link  } from 'react-router-dom';
 
-export default function MicroSAASSolutions(...args: []):  {
+export default function MicroSAASSolutions
+export { MicroSAASSolutions }(...args: []):  {
   return (
     <>
       <Helmet>

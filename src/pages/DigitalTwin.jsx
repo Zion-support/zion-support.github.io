@@ -163,7 +163,8 @@ const digitalTwinBenefits = [
   }
 ];
 
-export default function DigitalTwin() {
+export default function DigitalTwin
+export { DigitalTwin }() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
 

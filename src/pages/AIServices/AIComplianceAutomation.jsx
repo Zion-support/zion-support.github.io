@@ -37,7 +37,8 @@ const benefits = [
     "Scale operations seamlessly",
     "Gain competitive advantage"
 ];
-export default function AIComplianceAutomation() {
+export default function AIComplianceAutomation
+export { AIComplianceAutomation }() {
     return (<div className="min-h-screen bg-background relative overflow-hidden">
       <SEO title="Compliance Automation - Zion Tech Group" description="AI-powered compliance automation solution that transforms your operations with intelligent automation and real-time insights." keywords="AI compliance automation, automation, intelligent systems, business optimization" canonical="https://ziontechgroup.com/aicomplianceautomation/"/>
 

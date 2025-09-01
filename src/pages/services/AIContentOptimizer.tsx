@@ -1,9 +1,10 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { CheckCircle, TrendingUp, Target, Zap, BarChart3, Globe, Smartphone, Users, Shield, Brain, Search, PenTool  } from 'lucide-react.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
+import { CheckCircle, TrendingUp, Target, Zap, BarChart3, Globe, Smartphone, Users, Shield, Brain, Search, PenTool  } from 'lucide-react';
 import { SEO  } from '@/components/SEO';
 
-export default function AIContentOptimizer(...args: any[]): any {
+export default function AIContentOptimizer
+export { AIContentOptimizer }(...args: any[]): any {
   const features = [
     {
       title: "AI-Powered SEO Optimization",

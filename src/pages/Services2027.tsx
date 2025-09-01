@@ -1,6 +1,6 @@
-import React, { useState, useMemo } from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
-import { motion  } from 'framer-motion.ts';
+import React, { useState, useMemo } from 'react';
+import { Link  } from 'react-router-dom';
+import { motion  } from 'framer-motion';
 import { Search, 
   ArrowRight, 
   DollarSign, 
@@ -54,7 +54,7 @@ import { Search,
   ShieldCheck,
   Server,
   Chip
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { SEO  } from '@/components/SEO';
 
 // Mock data for 2027 services

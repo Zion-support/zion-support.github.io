@@ -20,7 +20,8 @@ import {
   MessageCircle
 } from 'lucide-react';
 
-export default function AccessibilityPage() {
+export default function AccessibilityPage
+export { AccessibilityPage }() {
   const currentYear = new Date().getFullYear();
 
   const accessibilityFeatures = [

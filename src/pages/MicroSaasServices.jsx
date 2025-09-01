@@ -56,7 +56,8 @@ const features = [
     "White-label Solutions",
     "Comprehensive Documentation"
 ];
-export default function MicroSaasServices() {
+export default function MicroSaasServices
+export { MicroSaasServices }() {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const filteredServices = selectedCategory === 'all'
         ? MICRO_SAAS_SERVICES

@@ -59,7 +59,8 @@ import {
 import SEO from "@/components/SEO";
 import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from "@/data/ultimateInnovativeServices2026";
 
-export default function UltimateInnovativeServices2026(...args[]):  {
+export default function UltimateInnovativeServices2026
+export { UltimateInnovativeServices2026 }(...args[]):  {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');

@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
 import { Brain, 
   Zap, 
   TrendingUp, 
@@ -20,8 +20,8 @@ import { Brain,
   Database,
   Workflow,
   Gauge
- } from 'lucide-react.ts';
-import { Link  } from 'react-router-dom.ts';
+ } from 'lucide-react';
+import { Link  } from 'react-router-dom';
 
 const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
   const features = [

@@ -1,5 +1,5 @@
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React, { useState } from 'react';
+import { motion  } from 'framer-motion';
 import { FileText, 
   Shield, 
   CheckCircle, 
@@ -18,7 +18,7 @@ import { FileText,
   Mail,
   MapPin,
   ExternalLink
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
   const [activeTab, setActiveTab] = useState('overview');

@@ -58,7 +58,8 @@ import {
   ShoppingBag
 } from 'lucide-react';
 
-export default function AICustomerSupportAutomation() {
+export default function AICustomerSupportAutomation
+export { AICustomerSupportAutomation }() {
   const features = [
     {
       icon: Bot,

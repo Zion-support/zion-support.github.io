@@ -4,7 +4,8 @@ import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom";
 import SEO from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
-export default function EnterpriseAdmin() {
+export default function EnterpriseAdmin
+export { EnterpriseAdmin }() {
     const { user } = useAuth();
     // Check if user has enterprise admin role
     const isEnterpriseAdmin = user?.role === "enterprise_admin";

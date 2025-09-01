@@ -241,7 +241,8 @@ const supportBenefits = [
   }
 ];
 
-export default function OnsiteSupport() {
+export default function OnsiteSupport
+export { OnsiteSupport }() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
 

@@ -37,7 +37,8 @@ const benefits = [
     "Scale operations seamlessly",
     "Gain competitive advantage"
 ];
-export default function AIAutonomousManufacturing() {
+export default function AIAutonomousManufacturing
+export { AIAutonomousManufacturing }() {
     return (<div className="min-h-screen bg-background relative overflow-hidden">
       <SEO title="Autonomous Manufacturing - Zion Tech Group" description="AI-powered autonomous manufacturing solution that transforms your operations with intelligent automation and real-time insights." keywords="AI autonomous manufacturing, automation, intelligent systems, business optimization" canonical="https://ziontechgroup.com/aiautonomousmanufacturing/"/>
 

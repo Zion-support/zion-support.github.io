@@ -13,7 +13,8 @@ import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
 import { FloatingCTA } from "@/components/FloatingCTA";
 import { ServicesShowcase } from "@/components/ServicesShowcase";
 
-export default function Home() {
+export default function Home
+export { Home }() {
   return (
     <>
       <SEO

@@ -11,7 +11,8 @@ import useJobDetails from '@/hooks/useJobDetails';
 import { ApplyToJobModal } from '@/components/messaging/job-application';
 import SEO from '@/components/SEO';
 import { useWhitelabel } from '@/context/WhitelabelContext';
-export default function JobDetails() {
+export default function JobDetails
+export { JobDetails }() {
     // Cast to specify the expected route param type since useParams may be untyped
     const { jobId } = useParams();
     const { job, isLoading, error } = useJobDetails(jobId);

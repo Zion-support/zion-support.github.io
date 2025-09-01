@@ -37,7 +37,8 @@ const benefits = [
     "Scale operations seamlessly",
     "Gain competitive advantage"
 ];
-export default function AIAutonomousDecisionPlatform() {
+export default function AIAutonomousDecisionPlatform
+export { AIAutonomousDecisionPlatform }() {
     return (<div className="min-h-screen bg-background relative overflow-hidden">
       <SEO title="Autonomous Decision Platform - Zion Tech Group" description="AI-powered autonomous decision platform solution that transforms your operations with intelligent automation and real-time insights." keywords="AI autonomous decision platform, automation, intelligent systems, business optimization" canonical="https://ziontechgroup.com/aiautonomousdecisionplatform/"/>
 

@@ -1,4 +1,4 @@
-import { useCallback  } from 'react.ts';
+import { useCallback  } from 'react';
 
 interface User {
 

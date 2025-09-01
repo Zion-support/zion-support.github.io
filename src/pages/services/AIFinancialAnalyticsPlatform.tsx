@@ -1,6 +1,7 @@
-import { TrendingUp, DollarSign, BarChart3, Check, ExternalLink, Phone, Mail, Brain, Target, PieChart, Calculator, Shield  } from 'lucide-react.ts';
+import { TrendingUp, DollarSign, BarChart3, Check, ExternalLink, Phone, Mail, Brain, Target, PieChart, Calculator, Shield  } from 'lucide-react';
 
-export default function AIFinancialAnalyticsPlatform(...args: any[]): any {
+export default function AIFinancialAnalyticsPlatform
+export { AIFinancialAnalyticsPlatform }(...args: any[]): any {
   const features = [
     'AI-powered financial forecasting and modeling',
     'Real-time market data analysis and insights',

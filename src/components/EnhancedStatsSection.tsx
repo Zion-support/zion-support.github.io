@@ -79,7 +79,8 @@ const stats: Stat[] = [
 
 ];
 
-export default function EnhancedStatsSection(...args[]):  {
+export default function EnhancedStatsSection
+export { EnhancedStatsSection }(...args[]):  {
   const [countedValues, setCountedValues] = useState<any>({});
   const controls = useAnimation();
   const [ref, inView] = useInView({

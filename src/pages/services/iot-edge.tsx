@@ -1,9 +1,10 @@
-import React from 'react.ts';
-import { Helmet  } from 'react-helmet-async.ts';
+import React from 'react';
+import { Helmet  } from 'react-helmet-async';
 import { Cpu, Wifi, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Shield  } from 'lucide-react';
-import { Link  } from 'react-router-dom.ts';
+import { Link  } from 'react-router-dom';
 
-export default function IoTEdge(...args: []):  {
+export default function IoTEdge
+export { IoTEdge }(...args: []):  {
   return (
     <>
       <Helmet>

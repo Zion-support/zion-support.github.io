@@ -265,7 +265,8 @@ const hrBenefits = [
   }
 ];
 
-export default function HRPlatform() {
+export default function HRPlatform
+export { HRPlatform }() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
 

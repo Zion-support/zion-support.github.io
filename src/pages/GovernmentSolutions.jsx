@@ -210,7 +210,8 @@ const processSteps = [
 
 ];
 
-export default function GovernmentSolutions() {
+export default function GovernmentSolutions
+export { GovernmentSolutions }() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
 

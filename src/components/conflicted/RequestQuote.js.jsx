@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Calculator, Clock, CheckCircle, AlertCircle, Send, Phone, Mail, MapPin, Star, Users, Zap, Shield, Brain, Cloud, Smartphone, Globe, Database, BarChart3, Palette, Code, Server, Wifi, Briefcase } from 'lucide-react';
-export default function RequestQuote() {
+export default function RequestQuote
+export { RequestQuote }() {
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',

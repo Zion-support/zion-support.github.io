@@ -107,7 +107,8 @@ const faqData: FAQItem[] = [
 
 const categories = ['All', 'AI Services', 'Security', 'Cloud', 'Support', 'General'];
 
-export default function FAQ() {
+export default function FAQ
+export { FAQ }() {
   const [activeItem, setActiveItem] = useState<string | null>(null);
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');

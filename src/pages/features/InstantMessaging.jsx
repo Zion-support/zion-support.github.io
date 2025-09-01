@@ -5,7 +5,8 @@ import SEO from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import { Link } from 'react-router-dom';
-export default function InstantMessaging() {
+export default function InstantMessaging
+export { InstantMessaging }() {
     const schema = {
   "@context": "https://schema.org",
         "@type": "WebPage",

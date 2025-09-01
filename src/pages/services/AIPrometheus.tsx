@@ -1,4 +1,5 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIPrometheus() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIPrometheus
+export { AIPrometheus }() {
   const features = [
     'AI-powered Prometheus optimization',
     'Intelligent Prometheus management',;

@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
 import { Star, 
   Rocket, 
   Brain, 
@@ -44,9 +44,10 @@ import { Star,
   Newspaper,
   BookOpen,
   ExternalLink
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
-export default function UltimateServicesShowcase2026(...args: any[]): any {
+export default function UltimateServicesShowcase2026
+export { UltimateServicesShowcase2026 }(...args: any[]): any {
   const services = [
     {
       category: 'AI & Machine Learning',

@@ -2,7 +2,8 @@ import React from 'react';
 import { Car, Brain, Zap, Shield, TrendingUp, Users, Globe, ArrowRight, CheckCircle, Star, Navigation } from 'lucide-react';
 import { SEO } from "../../components/SEO";
 
-export default function AIAutonomousVehiclePlatform() {
+export default function AIAutonomousVehiclePlatform
+export { AIAutonomousVehiclePlatform }() {
   const features = [;
     'Advanced computer vision and sensor fusion',;
     'Real-time decision making and path planning',;

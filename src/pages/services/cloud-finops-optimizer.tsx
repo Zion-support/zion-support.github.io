@@ -46,7 +46,8 @@ import {
   AlertTriangle
 } from 'lucide-react';
 
-export default function CloudFinOpsOptimizer() {
+export default function CloudFinOpsOptimizer
+export { CloudFinOpsOptimizer }() {
   const features = [
     {
       icon: Calculator,

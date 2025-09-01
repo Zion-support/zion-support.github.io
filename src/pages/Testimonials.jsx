@@ -139,7 +139,8 @@ const ratings = [
   '3+ Stars'
 ];
 
-export default function Testimonials() {
+export default function Testimonials
+export { Testimonials }() {
   const [selectedIndustry, setSelectedIndustry] = useState('All Industries');
   const [selectedRating, setSelectedRating] = useState('All Ratings');
   const [searchQuery, setSearchQuery] = useState('');

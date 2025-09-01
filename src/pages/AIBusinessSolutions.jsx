@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-export default function AIBusinessSolutions() {
+export default function AIBusinessSolutions
+export { AIBusinessSolutions }() {
     const benefits = [
         {
             title: 'Increased Efficiency',

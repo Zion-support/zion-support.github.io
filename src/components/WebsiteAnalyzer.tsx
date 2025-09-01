@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react.ts';
+import React, { useState, useEffect } from 'react';
 import { LinkChecker, LinkInfo, PageInfo  } from '../utils/linkChecker';
 import { CheckCircle, 
   XCircle, 
@@ -9,7 +9,7 @@ import { CheckCircle,
   Link as LinkIcon,
   Download,
   RefreshCw
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 interface AnalysisResult {
 

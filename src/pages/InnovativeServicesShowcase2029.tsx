@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion';
 import { Brain, 
   Shield, 
   Cloud, 
@@ -44,10 +44,11 @@ import { Brain,
   Pause,
   Volume2,
   VolumeX
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { innovativeMicroSAASServices2029  } from '../../data/innovative-micro-saas-2029';
 
-export default function InnovativeServicesShowcase2029(...args: any[]): any {
+export default function InnovativeServicesShowcase2029
+export { InnovativeServicesShowcase2029 }(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState<any>('grid');

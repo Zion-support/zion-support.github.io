@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback, useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 
 interface ModernUIEnhancerProps {
   enabled?: boolean;

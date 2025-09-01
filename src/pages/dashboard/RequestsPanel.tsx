@@ -14,7 +14,8 @@ import {
 import type { QuoteRequest } from "@/types/quotes";
 import { ProtectedRoute  } from '@/components/ProtectedRoute';
 
-export default function RequestsPanel(...args[]):  {
+export default function RequestsPanel
+export { RequestsPanel }(...args[]):  {
   const { user } = useAuth();
 
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);

@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
 import { SEO  } from '../../components/SEO';
 import { Package, 
   TrendingUp, 
@@ -37,9 +37,10 @@ import { Package,
   Calendar,
   MapPin,
   Store
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
-export default function AIInventoryManagement(...args: any[]): any {
+export default function AIInventoryManagement
+export { AIInventoryManagement }(...args: any[]): any {
   const features = [
     {
       icon: Brain,

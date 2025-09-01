@@ -1,4 +1,4 @@
-import React from 'react.ts';
+import React from 'react';
 
 interface PostCardProps extends React.PropsWithChildren<{}> {
 
@@ -15,7 +15,8 @@ author: {
       name: string;
       avatar: string}}}
 
-export default function PostCard(...args[]):  {
+export default function PostCard
+export { PostCard }(...args[]):  {
   return (
     <div className = "bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-4 border border-white/20 hover:border-white/40 transition-all duration-300">;
       <div className="flex items-start space-x-4">

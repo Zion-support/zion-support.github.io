@@ -6,7 +6,8 @@ import { PasswordStrengthMeter } from '@/components/PasswordStrengthMeter'; // A
 import { toast } from '@/hooks/use-toast'; // Assuming this hook exists
 // Placeholder for the actual API call, to be implemented in a later step
 import { resetPassword } from '@/services/auth';
-export default function ResetPasswordPage() {
+export default function ResetPasswordPage
+export { ResetPasswordPage }() {
     const { token } = useParams();
     const navigate = useNavigate();
     const [password, setPassword] = useState('');

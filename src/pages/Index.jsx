@@ -16,7 +16,8 @@ import { FeaturesGuideSection } from "@/components/FeaturesGuideSection";
 import { SocialShareSection } from "@/components/SocialShareSection";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "@/context/LanguageContext";
-import { ArrowRight, Users, Zap, Settings, Sparkles, BarChart3, Smartphone export default function Index() {
+import { ArrowRight, Users, Zap, Settings, Sparkles, BarChart3, Smartphone export default function Index
+export { Index }() {
     const { t } = useTranslation();
     const { isRTL } = useLanguage();
     // Tools and features showcase

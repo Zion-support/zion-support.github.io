@@ -1,6 +1,6 @@
-import React from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { Link  } from 'react-router-dom';
+import { motion  } from 'framer-motion';
 import { Brain, 
   Shield, 
   Cloud, 
@@ -25,10 +25,11 @@ import { Brain,
   Workflow,
   Sparkles,
   Award
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { SEO  } from '../../components/SEO';
 
-export default function Solutions(...args: any[]): any {
+export default function Solutions
+export { Solutions }(...args: any[]): any {
   const solutionCategories = [
     {
       title: 'AI & Machine Learning Solutions',

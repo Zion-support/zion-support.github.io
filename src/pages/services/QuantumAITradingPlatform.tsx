@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion';
 import { Atom, 
   TrendingUp, 
   Zap, 
@@ -37,9 +37,10 @@ import { Atom,
   BarChart,
   LineChart,
   PieChart
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
-export default function QuantumAITradingPlatform(...args: any[]): any {
+export default function QuantumAITradingPlatform
+export { QuantumAITradingPlatform }(...args: any[]): any {
   const [activeTab, setActiveTab] = useState('overview');
   const [isVisible, setIsVisible] = useState(false);
 

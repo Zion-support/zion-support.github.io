@@ -241,7 +241,8 @@ const contentBenefits = [
   }
 ];
 
-export default function ContentCreation() {
+export default function ContentCreation
+export { ContentCreation }() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
 

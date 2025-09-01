@@ -24,7 +24,8 @@ import {
 
 } from 'lucide-react';
 
-export default function About() {
+export default function About
+export { About }() {
   const stats = [
 
     { number: '500+', label: 'Projects Completed', description: 'Successfully delivered across industries' },

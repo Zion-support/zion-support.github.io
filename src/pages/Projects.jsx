@@ -45,5 +45,6 @@ import { Clock, Briefcase function ProjectsContent() {
       </main>
       
     </>)}
-export default function Projects() {
+export default function Projects
+export { Projects }() {
     return <ProjectsContent />}

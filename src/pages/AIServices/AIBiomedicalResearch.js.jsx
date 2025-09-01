@@ -37,7 +37,8 @@ const benefits = [
     "Scale operations seamlessly",
     "Gain competitive advantage"
 ];
-export default function AIBiomedicalResearch() {
+export default function AIBiomedicalResearch
+export { AIBiomedicalResearch }() {
     return (<div className="min-h-screen bg-background relative overflow-hidden">
       <SEO title="Biomedical Research - Zion Tech Group" description="AI-powered biomedical research solution that transforms your operations with intelligent automation and real-time insights." keywords="AI biomedical research, automation, intelligent systems, business optimization" canonical="https://ziontechgroup.com/aibiomedicalresearch/"/>
 

@@ -123,7 +123,8 @@ const AIBusinessIntelligence: React.FC = () => {
       cta: 'Contact Sales',
       popular: false
 
-export default function AIBusinessIntelligence() {
+export default function AIBusinessIntelligence
+export { AIBusinessIntelligence }() {
   const features = [;
     {
       icon: Brain,

@@ -42,7 +42,8 @@ import {
   Palette
 } from 'lucide-react';
 
-export default function AISalesCopilot() {
+export default function AISalesCopilot
+export { AISalesCopilot }() {
   const features = [
     {
       icon: Brain,

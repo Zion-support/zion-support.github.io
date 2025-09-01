@@ -4,7 +4,8 @@ import { Button } from '@/components/ui/button';
 import { NEW_PRODUCTS } from '@/data/newProductsData';
 import { useCart } from '@/context/CartContext';
 import { toast } from '@/hooks/use-toast';
-export default function ProductPage() {
+export default function ProductPage
+export { ProductPage }() {
     const { id } = useParams();
     const product = NEW_PRODUCTS.find(p => p.id === id);
     const { dispatch } = useCart();

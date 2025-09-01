@@ -100,7 +100,8 @@ const userPosts = [
         replyCount: 6
     }
 ];
-export default function CommunityProfilePage() {
+export default function CommunityProfilePage
+export { CommunityProfilePage }() {
     const { userId } = useParams();
     const [user, setUser] = useState(null);
     const [isLoading, setIsLoading] = useState(true);

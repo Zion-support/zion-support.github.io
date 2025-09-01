@@ -62,7 +62,8 @@ const categoryColors: { [key: string]: string } = {
   'IoT & Smart Cities': 'from-blue-500 to-cyan-600'
 };
 
-export default function InnovativeServices2027() {
+export default function InnovativeServices2027
+export { InnovativeServices2027 }() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState<'price' | 'innovation' | 'roi'>('innovation');

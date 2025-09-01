@@ -37,7 +37,8 @@ const benefits = [
     "Scale operations seamlessly",
     "Gain competitive advantage"
 ];
-export default function AIAutonomousCreativeDirector() {
+export default function AIAutonomousCreativeDirector
+export { AIAutonomousCreativeDirector }() {
     return (<div className="min-h-screen bg-background relative overflow-hidden">
       <SEO title="Autonomous Creative Director - Zion Tech Group" description="AI-powered autonomous creative director solution that transforms your operations with intelligent automation and real-time insights." keywords="AI autonomous creative director, automation, intelligent systems, business optimization" canonical="https://ziontechgroup.com/aiautonomouscreativedirector/"/>
 

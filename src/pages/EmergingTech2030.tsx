@@ -1,6 +1,6 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
+import { Link  } from 'react-router-dom';
 import { Brain, 
   Rocket, 
   Zap, 
@@ -31,7 +31,8 @@ import { Brain,
 import { SEO } from "../components/SEO";
 import { emergingTechServices2030 } from "../data/emergingTechServices2030";
 
-export default function EmergingTech2030(...args[]):  {
+export default function EmergingTech2030
+export { EmergingTech2030 }(...args[]):  {
   const containerVariants = {
     hidden: { opacity: 0 },;
     visible: {;

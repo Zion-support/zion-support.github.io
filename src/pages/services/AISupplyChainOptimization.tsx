@@ -44,7 +44,8 @@ import {
   Store
 } from 'lucide-react';
 
-export default function AISupplyChainOptimization() {
+export default function AISupplyChainOptimization
+export { AISupplyChainOptimization }() {
   const features = [
     {
       icon: Brain,

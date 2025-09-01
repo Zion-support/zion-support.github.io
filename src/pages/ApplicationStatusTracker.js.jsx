@@ -31,7 +31,8 @@ function ApplicationStatusTrackerContent() {
         </div>
       </div>
     </>)}
-export default function ApplicationStatusTracker() {
+export default function ApplicationStatusTracker
+export { ApplicationStatusTracker }() {
     return (<ProtectedRoute>
       
         <ApplicationStatusTrackerContent />

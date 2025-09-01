@@ -1,6 +1,6 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
+import { Link  } from 'react-router-dom';
 import { Eye, 
   Cpu, 
   Network, 
@@ -49,9 +49,10 @@ import { Eye,
   Car,
   Plane,
   Ship
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
-export default function DigitalTwin(...args: any[]): any {
+export default function DigitalTwin
+export { DigitalTwin }(...args: any[]): any {
   const features = [
     {
       icon: Eye,

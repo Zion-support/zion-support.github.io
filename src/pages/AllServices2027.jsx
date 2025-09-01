@@ -78,7 +78,8 @@ const BENEFITS = [
     }
 ];
 
-export default function AllServices2027() {
+export default function AllServices2027
+export { AllServices2027 }() {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchQuery, setSearchQuery] = useState('');
     const [sortBy, setSortBy] = useState('featured');

@@ -49,7 +49,8 @@ const useCases = [
         icon: <Wallet className="h-6 w-6"/>
 
 ];
-export default function BlockchainServicesPage() {
+export default function BlockchainServicesPage
+export { BlockchainServicesPage }() {
     return (<div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-zion-blue via-zion-purple to-zion-blue-dark py-20">

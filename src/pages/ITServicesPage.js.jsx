@@ -172,7 +172,8 @@ const categories = [
     { name: "Project Management", value: "project management", icon: <BarChart3 className="h-4 w-4"/> },
     { name: "Support", value: "support", icon: <Monitor className="h-4 w-4"/> }
 ];
-export default function ITServicesPage() {
+export default function ITServicesPage
+export { ITServicesPage }() {
     const [selectedCategory, setSelectedCategory] = React.useState("all");
     const filteredServices = selectedCategory === "all"
         ? ITServices

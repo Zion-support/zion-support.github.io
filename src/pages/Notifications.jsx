@@ -163,7 +163,8 @@ const NotificationCard = ({ notification, onMarkAsRead, onDismiss }) => {
         </div>
       </div>
     </div>)};
-export default function NotificationsPage() {
+export default function NotificationsPage
+export { NotificationsPage }() {
     const { filteredNotifications, unreadCount, markAsRead, markAllAsRead, dismissNotification, loading, filter, setFilter } = useNotifications();
     return (<>
       <SEO title="Notifications | Zion AI Marketplace" description="View and manage your notifications on the Zion AI Marketplace."/>

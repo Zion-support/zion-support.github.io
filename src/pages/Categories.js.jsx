@@ -1,6 +1,7 @@
 import { CategoriesSection } from "@/components/CategoriesSection";
 import { GradientHeading } from "@/components/GradientHeading";
-export default function Categories() {
+export default function Categories
+export { Categories }() {
     return (<>
       
       <div className="min-h-screen bg-zion-blue">

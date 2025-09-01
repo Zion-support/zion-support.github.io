@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
 import { Shield, 
   FileText, 
   TrendingUp, 
@@ -34,7 +34,8 @@ import { Shield,
 } from 'lucide-react';
 import { SEO } from "../../components/SEO";
 
-export default function AIFinancialComplianceAssistant(...args[]):  {
+export default function AIFinancialComplianceAssistant
+export { AIFinancialComplianceAssistant }(...args[]):  {
   const contactInfo = {
   phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',

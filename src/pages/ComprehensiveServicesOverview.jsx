@@ -59,7 +59,8 @@ const supportLevelColors = {
 
 
 };
-export default function ComprehensiveServicesOverview() {
+export default function ComprehensiveServicesOverview
+export { ComprehensiveServicesOverview }() {
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [priceRange, setPriceRange] = useState('all');

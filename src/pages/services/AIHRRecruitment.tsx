@@ -1,4 +1,5 @@
-import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Briefcase, BarChart3 export default function AIHRRecruitment() {
+import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Briefcase, BarChart3 export default function AIHRRecruitment
+export { AIHRRecruitment }() {
   const features = [
     'AI-powered candidate sourcing and matching',
     'Intelligent resume parsing and skill extraction',;

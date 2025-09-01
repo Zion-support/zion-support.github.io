@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
 import { Target, 
   Brain, 
   BarChart3, 
@@ -23,7 +23,7 @@ import { Target,
   Zap,
   Shield,
   Megaphone
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const AIAutonomousMarketing: React.FC = (): JSX.Element => {
   const features = [

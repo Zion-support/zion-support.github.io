@@ -17,7 +17,8 @@ import { useNavigate } from 'react-router-dom';
 import { useMediaQuery } from 'usehooks-ts';
 import { useEnqueueSnackbar } from '@/context/SnackbarContext';
 import { captureException } from '@/utils/sentry';
-export default function ProductCard({ product, onBuy, buyDisabled = false }) {
+export default function ProductCard
+export { ProductCard }({ product, onBuy, buyDisabled = false }) {
     const { isAuthenticated } = useAuth();
     const { isWishlisted, toggle } = useWishlist();
     const [imageError, setImageError] = useState(false);

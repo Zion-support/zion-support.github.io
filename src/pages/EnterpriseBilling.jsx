@@ -4,7 +4,8 @@ import { useAuth } from "@/hooks/useAuth";
 import { useNavigate } from 'react-router-dom';
 import { SEO } from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
-export default function EnterpriseBilling() {
+export default function EnterpriseBilling
+export { EnterpriseBilling }() {
     const { user } = useAuth();
     const router = useNavigate();
     // Check if user has billing permissions

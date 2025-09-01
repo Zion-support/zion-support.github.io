@@ -8,7 +8,8 @@ import SEO from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { useCompWorkspace } from "@/hooks/useCompWorkspace";
 import { useWhitelabel } from "@/context/WhitelabelContext";
-export default function CompWorkspace() {
+export default function CompWorkspace
+export { CompWorkspace }() {
     const { compSlug } = useParams();
     const { user } = useAuth();
     const { comp, isLoading, error } = useCompWorkspace(compSlug);

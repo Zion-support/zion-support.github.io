@@ -1,6 +1,6 @@
-import React from 'react.ts';
+import React from 'react';
 import { SEO  } from '@/components/SEO';
-import { DollarSign, CheckCircle2, ExternalLink, Phone, Mail  } from 'lucide-react.ts';
+import { DollarSign, CheckCircle2, ExternalLink, Phone, Mail  } from 'lucide-react';
 
 const AISEOAuditor: React.FC = (): JSX.Element => {
   return (

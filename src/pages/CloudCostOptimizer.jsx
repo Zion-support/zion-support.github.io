@@ -4,7 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Check, Cloud, BarChart3, Globe, Settings import { Link } from "react-router-dom";
-export default function CloudCostOptimizer() {
+export default function CloudCostOptimizer
+export { CloudCostOptimizer }() {
     const features = [
         "AI-driven cost optimization algorithms",
         "Multi-cloud support (AWS, Azure, GCP)",

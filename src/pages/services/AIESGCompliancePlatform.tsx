@@ -1,6 +1,7 @@
 import { Leaf, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, DollarSign, Target, Zap, Globe, Database, Cpu, Shield, Award } from 'lucide-react';
 
-export default function AIESGCompliancePlatform() {
+export default function AIESGCompliancePlatform
+export { AIESGCompliancePlatform }() {
   const features = [
     'AI-powered ESG data collection and analysis',
     'Automated compliance reporting and monitoring',

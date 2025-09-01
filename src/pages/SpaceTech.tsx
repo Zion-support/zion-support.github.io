@@ -1,6 +1,6 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
+import { Link  } from 'react-router-dom';
 import { Rocket, 
   Satellite, 
   Globe, 
@@ -51,9 +51,10 @@ import { Rocket,
   Brain,
   Network,
   Cpu
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
-export default function SpaceTech(...args: any[]): any {
+export default function SpaceTech
+export { SpaceTech }(...args: any[]): any {
   const features = [
     {
       icon: Rocket,

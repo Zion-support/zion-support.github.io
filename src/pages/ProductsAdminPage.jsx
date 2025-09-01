@@ -8,7 +8,8 @@ const initialProducts = [
     { id: 2, name: 'Beta', category: 'Hardware', status: 'approved' },
     { id: 3, name: 'Gamma', category: 'Service', status: 'rejected' },
 ];
-export default function ProductsAdminPage() {
+export default function ProductsAdminPage
+export { ProductsAdminPage }() {
     const [search, setSearch] = useState('');
     const [products, setProducts] = useState(initialProducts);
     const filtered = products.filter((p) => p.name.toLowerCase().includes(search.toLowerCase()));

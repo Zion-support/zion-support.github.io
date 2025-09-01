@@ -35,7 +35,8 @@ import { SEO } from "@/components/SEO";
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "@/data/innovativeMicroSaasServices2025";
 import { ADDITIONAL_INNOVATIVE_SERVICES_2025 } from "@/data/additionalInnovativeServices2025";
 
-export default function ServicesPage() {
+export default function ServicesPage
+export { ServicesPage }() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');

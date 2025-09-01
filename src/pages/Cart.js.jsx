@@ -3,7 +3,8 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import Skeleton from '@/components/ui/skeleton';
 import { useAuth } from '@/hooks/useAuth';
-export default function CartPage() {
+export default function CartPage
+export { CartPage }() {
     const navigate = useNavigate();
     const { items, dispatch } = useCart();
     const { user } = useAuth();

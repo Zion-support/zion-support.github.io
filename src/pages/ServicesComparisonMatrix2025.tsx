@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React, { useState, useEffect } from 'react';
+import { motion  } from 'framer-motion';
 import { Brain, 
   Zap, 
   Shield, 
@@ -39,7 +39,7 @@ import { Brain,
   Database as DatabaseIcon,
   Shield as ShieldIcon,
   Zap as ZapIcon
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025  } from '../data/innovativeMicroSaasServices2025';
 
 const ServicesComparisonMatrix2025: React.FC = (): JSX.Element => {;

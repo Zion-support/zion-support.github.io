@@ -48,7 +48,8 @@ import {
   BookOpen
 } from 'lucide-react';
 
-export default function AIComplianceAssistant() {
+export default function AIComplianceAssistant
+export { AIComplianceAssistant }() {
   const features = [
     {
       icon: Shield,

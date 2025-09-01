@@ -1,5 +1,5 @@
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React, { useState } from 'react';
+import { motion  } from 'framer-motion';
 import { ArrowRight,
   ChevronLeft,
   ChevronRight,
@@ -47,7 +47,8 @@ import { ArrowRight,
 import { SEO } from "../components/SEO";
 import { REVOLUTIONARY_SERVICES_2030 } from "../data/revolutionaryServices2030";
 
-export default function RevolutionaryServicesShowcase2030(...args[]):  {
+export default function RevolutionaryServicesShowcase2030
+export { RevolutionaryServicesShowcase2030 }(...args[]):  {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('aiScore');

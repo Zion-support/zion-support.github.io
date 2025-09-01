@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
 import { Brain, 
   Heart, 
   Eye, 
@@ -28,10 +28,11 @@ import { Brain,
   Syringe,
   Thermometer,
   BrainCircuit
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { SEO  } from '../../components/SEO';
 
-export default function AIHealthcareDiagnostics(...args: any[]): any {
+export default function AIHealthcareDiagnostics
+export { AIHealthcareDiagnostics }(...args: any[]): any {
   const features = [
     {
       icon: Brain,

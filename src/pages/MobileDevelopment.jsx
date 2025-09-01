@@ -169,7 +169,8 @@ const mobileBenefits = [
   }
 ];
 
-export default function MobileDevelopment() {
+export default function MobileDevelopment
+export { MobileDevelopment }() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
 

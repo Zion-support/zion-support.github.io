@@ -3,7 +3,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { BarChart3, CheckCircle, Star, TrendingUp, Users, Zap } from 'lucide-react';
 
-export default function ServicesComparisonPage() {
+export default function ServicesComparisonPage
+export { ServicesComparisonPage }() {
   const services = [
     {
       name: 'AI Business Intelligence',

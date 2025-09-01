@@ -1,5 +1,5 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { motion  } from 'framer-motion';
 
 interface Props extends React.PropsWithChildren<{}> {
 

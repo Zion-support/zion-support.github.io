@@ -37,7 +37,8 @@ import {
   BarChart3
 } from 'lucide-react';
 
-export default function Compliance() {
+export default function Compliance
+export { Compliance }() {
   const complianceFrameworks = [
     {
       name: 'ISO 27001',

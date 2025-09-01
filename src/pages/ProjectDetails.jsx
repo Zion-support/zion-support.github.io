@@ -529,7 +529,8 @@ function ProjectDetailsContent() {
       </main>
       
     </>)}
-export default function ProjectDetails() {
+export default function ProjectDetails
+export { ProjectDetails }() {
     return (<ProtectedRoute>
       <ProjectDetailsContent />
     </ProtectedRoute>)}

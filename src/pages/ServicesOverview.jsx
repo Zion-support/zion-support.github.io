@@ -3,7 +3,8 @@ import { SEO } from "@/components/SEO";
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Brain, Cloud, Shield, Database, Wifi, Link as LinkIcon, Zap, Server, Users, Target, Check, ArrowRight } from 'lucide-react';
-export default function ServicesOverview() {
+export default function ServicesOverview
+export { ServicesOverview }() {
     const stats = [
         { label: "Services Offered", value: "50+", icon: Target },
         { label: "Industries Served", value: "15+", icon: Users },

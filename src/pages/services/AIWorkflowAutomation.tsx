@@ -40,7 +40,8 @@ import {
 } from 'lucide-react';
 import { SEO } from '../../components/SEO';
 
-export default function AIWorkflowAutomation(...args[]):  {
+export default function AIWorkflowAutomation
+export { AIWorkflowAutomation }(...args[]):  {
   const features = [
     {
       icon: Brain,

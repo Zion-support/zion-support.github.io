@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react.ts';
+import React, { useState, useRef } from 'react';
 import { X, Send  } from 'lucide-react';
 export interface Message {
 

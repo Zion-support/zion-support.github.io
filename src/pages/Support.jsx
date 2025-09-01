@@ -1,5 +1,6 @@
 import { useState } from 'react';
-export default function Support() {
+export default function Support
+export { Support }() {
     const [activeCategory, setActiveCategory] = useState('general');
     const faqCategories = {
         general: [

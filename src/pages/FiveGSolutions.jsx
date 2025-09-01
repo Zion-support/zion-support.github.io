@@ -171,7 +171,8 @@ const fiveGBenefits = [
   }
 ];
 
-export default function FiveGSolutions() {
+export default function FiveGSolutions
+export { FiveGSolutions }() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
 

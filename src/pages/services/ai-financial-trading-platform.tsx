@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
 import { SEO  } from '@/components/SEO';
 import { TrendingUp, 
   Brain, 
@@ -23,7 +23,8 @@ import { TrendingUp,
   PieChart
  } from 'lucide-react';
 
-export default function AIFinancialTradingPlatform(...args: []):  {
+export default function AIFinancialTradingPlatform
+export { AIFinancialTradingPlatform }(...args: []):  {
   const features = [
     {
       icon: Brain,

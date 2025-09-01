@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
 import { SEO  } from '@/components/SEO';
 import { Brain, 
   Zap, 
@@ -25,7 +25,8 @@ import { Brain,
   Sparkles
  } from 'lucide-react';
 
-export default function AIEnterpriseOrchestrator(...args[]):  {
+export default function AIEnterpriseOrchestrator
+export { AIEnterpriseOrchestrator }(...args[]):  {
   const features = [
     {
       title: "Intelligent Process Orchestration",

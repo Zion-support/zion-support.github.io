@@ -25,7 +25,8 @@ const navigation: NavItem[] = [;
   },;
   { label: 'Contact', href: '/contact' }
 ];
-export default function Layout(...args[]):  {
+export default function Layout
+export { Layout }(...args[]):  {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState<any>(null);
   const location = useLocation();

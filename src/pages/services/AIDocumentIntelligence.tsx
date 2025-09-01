@@ -1,4 +1,5 @@
-import { FileText, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Search, Shield, Zap, BarChart3 export default function AIDocumentIntelligence() {
+import { FileText, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Search, Shield, Zap, BarChart3 export default function AIDocumentIntelligence
+export { AIDocumentIntelligence }() {
   const features = [
     'Advanced OCR with 99.5% accuracy across 50+ languages',
     'Intelligent document classification and routing',;

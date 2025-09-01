@@ -1,5 +1,5 @@
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React, { useState } from 'react';
+import { motion  } from 'framer-motion';
 import { Phone,
   Mail,
   MapPin,
@@ -16,7 +16,7 @@ import { Phone,
   Github,
   Facebook,
   Instagram
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export function ContactPage(...args: any[]): any {
   const [formData, setFormData] = useState({

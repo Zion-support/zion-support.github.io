@@ -3,7 +3,8 @@ import { motion } from 'framer-motion';
 import { CheckCircle, BarChart3, TrendingUp, Target, Zap, Shield, Brain, Database, Globe, Smartphone, Users, PieChart } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
-export default function AIDataAnalytics() {
+export default function AIDataAnalytics
+export { AIDataAnalytics }() {
   const features = [
     {
       title: "Predictive Analytics Engine",

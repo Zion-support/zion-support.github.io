@@ -87,7 +87,8 @@ const testimonials: Testimonial[] = [
 
 ];
 
-export default function EnhancedTestimonialsSection(...args[]):  {
+export default function EnhancedTestimonialsSection
+export { EnhancedTestimonialsSection }(...args[]):  {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 

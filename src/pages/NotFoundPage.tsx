@@ -1,6 +1,6 @@
-import React from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { Link  } from 'react-router-dom';
+import { motion  } from 'framer-motion';
 import { Home,
   Search,
   ArrowLeft,
@@ -8,7 +8,7 @@ import { Home,
   Brain,
   Shield,
   Cpu
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export function NotFoundPage(...args: any[]): any {
   const popularPages = [

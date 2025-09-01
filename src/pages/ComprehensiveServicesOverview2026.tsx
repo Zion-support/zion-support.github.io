@@ -85,7 +85,8 @@ import {
 import SEO from "@/components/SEO";
 import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from "@/data/ultimateInnovativeServices2026";
 
-export default function ComprehensiveServicesOverview2026(...args[]):  {
+export default function ComprehensiveServicesOverview2026
+export { ComprehensiveServicesOverview2026 }(...args[]):  {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [expandedCategory, setExpandedCategory] = useState<any>(null);
 

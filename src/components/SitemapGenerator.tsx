@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
+import React, { useState, useEffect } from 'react';
+import { Link  } from 'react-router-dom';
 import { FileText, 
   Download, 
   Globe, 
@@ -39,7 +39,7 @@ import { FileText,
   Phone,
   MapPin,
   Mail
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 interface SitemapSection {
 

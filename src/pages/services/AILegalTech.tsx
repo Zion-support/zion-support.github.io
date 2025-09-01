@@ -1,4 +1,5 @@
-import { Scale, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, FileText, Zap, Shield, Gavel, BarChart3 export default function AILegalTech() {
+import { Scale, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, FileText, Zap, Shield, Gavel, BarChart3 export default function AILegalTech
+export { AILegalTech }() {
   const features = [
     'AI-powered contract analysis and risk assessment',
     'Intelligent legal document generation and review',;

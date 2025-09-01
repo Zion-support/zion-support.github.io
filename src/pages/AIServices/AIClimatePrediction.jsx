@@ -37,7 +37,8 @@ const benefits = [
     "Scale operations seamlessly",
     "Gain competitive advantage"
 ];
-export default function AIClimatePrediction() {
+export default function AIClimatePrediction
+export { AIClimatePrediction }() {
     return (<div className="min-h-screen bg-background relative overflow-hidden">
       <SEO title="Climate Prediction - Zion Tech Group" description="AI-powered climate prediction solution that transforms your operations with intelligent automation and real-time insights." keywords="AI climate prediction, automation, intelligent systems, business optimization" canonical="https://ziontechgroup.com/aiclimateprediction/"/>
 

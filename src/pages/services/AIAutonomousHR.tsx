@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
 import { Users, 
   Brain, 
   Target, 
@@ -22,7 +22,7 @@ import { Users,
   Zap,
   Shield,
   Briefcase
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const AIAutonomousHR: React.FC = (): JSX.Element => {
   const features = [

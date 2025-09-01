@@ -73,7 +73,8 @@ const testimonials = [
         rating: 5
 
 ];
-export default function AIAutonomousBusinessPlatform() {
+export default function AIAutonomousBusinessPlatform
+export { AIAutonomousBusinessPlatform }() {
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 relative overflow-hidden">
       <SEO title="AI Autonomous Business Platform - Zion Tech Group" description="Transform your business with our cloud-native AI platform. Scalable, secure, and intelligent business management for the modern enterprise." keywords="AI business platform, cloud AI platform, autonomous business platform, enterprise AI, business intelligence platform" canonical="https://ziontechgroup.com/ai-services/ai-autonomous-business-platform/"/>
 

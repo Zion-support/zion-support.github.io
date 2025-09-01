@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
 import { Search, 
   Brain, 
   Target, 
@@ -24,7 +24,7 @@ import { Search,
   Shield,
   Users,
   Fingerprint
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const AIAutonomousForensics: React.FC = (): JSX.Element => {
   const features = [

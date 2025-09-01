@@ -465,7 +465,8 @@ import {
   YellowWaxBean
 } from 'lucide-react';
 
-export default function Talent() {
+export default function Talent
+export { Talent }() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedExperience, setSelectedExperience] = useState('all');

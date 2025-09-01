@@ -51,7 +51,8 @@ import {
 } from 'lucide-react';
 import { allRevolutionaryServices2030 } from '../data/revolutionaryServices2030';
 
-export default function RevolutionaryServices2030() {
+export default function RevolutionaryServices2030
+export { RevolutionaryServices2030 }() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
   const [sortBy, setSortBy] = useState('featured');

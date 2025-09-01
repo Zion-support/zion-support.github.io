@@ -1,9 +1,10 @@
-import React from 'react.ts';
-import { Helmet  } from 'react-helmet-async.ts';
+import React from 'react';
+import { Helmet  } from 'react-helmet-async';
 import { Shield, Brain, Zap, Users, Lock, Eye, AlertTriangle, ArrowRight, CheckCircle, Play, Download, Mail, Globe, Target, Activity  } from 'lucide-react';
-import { Link  } from 'react-router-dom.ts';
+import { Link  } from 'react-router-dom';
 
-export default function AICybersecuritySuite(...args: []):  {
+export default function AICybersecuritySuite
+export { AICybersecuritySuite }(...args: []):  {
   return (
     <>
       <Helmet>

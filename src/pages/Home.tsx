@@ -585,7 +585,8 @@ const CTASection = () => {
 };
 
 // Main Home component
-export default function Home() {
+export default function Home
+export { Home }() {
   return (
 
         {/* Services Showcase */}

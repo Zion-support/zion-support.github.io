@@ -369,7 +369,8 @@ const patents = [
   };
 ];
 
-export default function ResearchDevelopment(...args[]):  {
+export default function ResearchDevelopment
+export { ResearchDevelopment }(...args[]):  {
   const [selectedArea, setSelectedArea] = useState('All');
   const [selectedStatus, setSelectedStatus] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');

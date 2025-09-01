@@ -20,7 +20,8 @@ import {
   Sparkles
 } from 'lucide-react';
 
-export default function AIContentGenerator(...args[]):  {
+export default function AIContentGenerator
+export { AIContentGenerator }(...args[]):  {
   const features = [
     {
       icon: PenTool,

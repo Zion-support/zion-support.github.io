@@ -57,7 +57,8 @@ import {
 } from 'lucide-react';
 import { SEO } from '../../components/SEO';
 
-export default function MarketplaceProducts() {
+export default function MarketplaceProducts
+export { MarketplaceProducts }() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');

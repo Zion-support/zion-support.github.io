@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
 import { SEO  } from '@/components/SEO';
 import { Heart, 
   Brain, 
@@ -23,7 +23,8 @@ import { Heart,
   AlertTriangle
  } from 'lucide-react';
 
-export default function AIHealthcareAnalyticsPlatform(...args: []):  {
+export default function AIHealthcareAnalyticsPlatform
+export { AIHealthcareAnalyticsPlatform }(...args: []):  {
   const features = [
     {
       icon: Brain,

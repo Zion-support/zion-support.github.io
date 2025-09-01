@@ -10,7 +10,8 @@ import { useTranslation } from "react-i18next";
 import { AlertTriangle, Check, Globe, Search, Loader2 import { useIsMobile } from "@/hooks/use-mobile";
 import { useLanguage } from "@/context/LanguageContext";
 import { useTranslationService } from "@/hooks/useTranslationService";
-export default function TranslationManager() {
+export default function TranslationManager
+export { TranslationManager }() {
     const { t, i18n } = useTranslation();
     const isMobile = useIsMobile();
     const { supportedLanguages } = useLanguage();

@@ -1,4 +1,5 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIApplicationSecurity() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIApplicationSecurity
+export { AIApplicationSecurity }() {
   const features = [
     'AI-powered application security optimization',
     'Intelligent threat detection and response',;

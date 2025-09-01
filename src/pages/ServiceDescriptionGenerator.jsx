@@ -4,7 +4,8 @@ import { GeneratedDescriptionDisplay } from "@/components/services/GeneratedDesc
 import SEO from "@/components/SEO";
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom";
-export default function ServiceDescriptionGenerator() {
+export default function ServiceDescriptionGenerator
+export { ServiceDescriptionGenerator }() {
     const { isAuthenticated, isLoading } = useAuth();
     const [generatedDescription, setGeneratedDescription] = useState(null);
     // Show loading while checking authentication

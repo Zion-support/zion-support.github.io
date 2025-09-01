@@ -2,7 +2,8 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
-export default function GenericPage() {
+export default function GenericPage
+export { GenericPage }() {
   const { '*': slug } = useParams();
   const slugParts = slug ? slug.split('/').filter(Boolean) : [];
   const path = '/' + slugParts.join('/');

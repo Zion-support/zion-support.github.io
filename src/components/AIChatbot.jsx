@@ -20,17 +20,19 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
             addBotMessage(welcomeMessage, {
                 intent: 'greeting',
                 confidence: 1.0,
-                suggestions[;
+                suggestions: [
                     "Tell me about your services",
                     "How can I get a quote?",
                     "What technologies do you use?",
                     "Contact information"
                 ]
-            })}
+            });
+    });
     }, [isOpen, messages.length, welcomeMessage]);
     // Auto-scroll to bottom
     useEffect(() => {
-        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })}, [messages]);
+        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    }, [messages]);
     // Track chatbot interactions
     const trackChatbotInteraction = useCallback((action, metadata) => {
         trackEvent('chatbot', action, 'chatbot_interaction', null, metadata);
@@ -115,7 +117,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
             addBotMessage(response, {
                 intent: 'response',
                 confidence: 0.9,
-                suggestions[;
+                suggestions: [
                     "Tell me more",
                     "Get a quote",
                     "View services",
@@ -137,29 +139,35 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
                 error: error instanceof Error ? error.message : 'Unknown error'
             })}
         finally {
-            setIsTyping(false)}
+            setIsTyping(false);
+    });
     }, [addMessage, addBotMessage, simulateAIProcessing, trackChatbotInteraction]);
     // Handle form submission
     const handleSubmit = useCallback((e) => {
         e.preventDefault();
-        handleUserInput(inputValue)}, [inputValue, handleUserInput]);
+        handleUserInput(inputValue);
+    }, [inputValue, handleUserInput]);
     // Handle suggestion click
     const handleSuggestionClick = useCallback((suggestion) => {
         handleUserInput(suggestion);
-        trackChatbotInteraction('suggestion_clicked', { suggestion })}, [handleUserInput, trackChatbotInteraction]);
+        trackChatbotInteraction('suggestion_clicked', { suggestion });
+    }, [handleUserInput, trackChatbotInteraction]);
     // Toggle chatbot
     const toggleChatbot = useCallback(() => {
         setIsOpen(!isOpen);
-        trackChatbotInteraction('chatbot_toggled', { action: !isOpen ? 'opened' : 'closed' })}, [isOpen, trackChatbotInteraction]);
+        trackChatbotInteraction('chatbot_toggled', { action: !isOpen ? 'opened' : 'closed' });
+    }, [isOpen, trackChatbotInteraction]);
     // Minimize/maximize
     const toggleMinimize = useCallback(() => {
         setIsMinimized(!isMinimized);
-        trackChatbotInteraction('chatbot_minimized', { action: !isMinimized ? 'minimized' : 'maximized' })}, [isMinimized, trackChatbotInteraction]);
+        trackChatbotInteraction('chatbot_minimized', { action: !isMinimized ? 'minimized' : 'maximized' });
+    }, [isMinimized, trackChatbotInteraction]);
     // Clear conversation
     const clearConversation = useCallback(() => {
         setMessages([]);
         // setConversationContext([]); // This line was removed
-        trackChatbotInteraction('conversation_cleared')}, [trackChatbotInteraction]);
+        trackChatbotInteraction('conversation_cleared');
+    }, [trackChatbotInteraction]);
     // Get typing indicator
     const TypingIndicator = () => (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex items-center space-x-2 p-3 bg-gray-100 dark:bg-gray-700 rounded-lg">
       <Bot className="w-5 h-5 text-blue-500"/>

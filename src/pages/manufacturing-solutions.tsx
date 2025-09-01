@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
 import { Factory, 
   Cog, 
   Bot, 
@@ -12,8 +12,8 @@ import { Factory,
   Brain,
   Cloud,
   Star
- } from 'lucide-react.ts';
-import { Link  } from 'react-router-dom.ts';
+ } from 'lucide-react';
+import { Link  } from 'react-router-dom';
 
 const ManufacturingSolutions: React.FC = (): JSX.Element => {
   const solutions = [

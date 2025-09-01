@@ -2,7 +2,8 @@ import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Search, Filter, Grid, List, ExternalLink, Phone, Mail, Globe, Clock, Users, CheckCircle, TrendingUp, Award } from 'lucide-react';
 import { NEXT_GEN_INNOVATIVE_SERVICES } from "../data/nextGenInnovativeServices";
-export default function NextGenInnovativeServices() {
+export default function NextGenInnovativeServices
+export { NextGenInnovativeServices }() {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedService, setSelectedService] = useState(null);

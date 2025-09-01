@@ -1,4 +1,4 @@
-import React from 'react.ts';
+import React from 'react';
 import { SEO   } from '@/components/SEO';
 
 const GDPRCookieCompliance: React.FC = (): JSX.Element => (

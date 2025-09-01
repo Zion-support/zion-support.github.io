@@ -18,7 +18,8 @@ import {
   ChevronUp
 } from 'lucide-react';
 
-export default function Help() {
+export default function Help
+export { Help }() {
   const [searchQuery, setSearchQuery] = useState('');
   const [openCategories, setOpenCategories] = useState([]);
   const toggleCategory = (category) => {

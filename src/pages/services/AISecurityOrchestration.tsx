@@ -1,4 +1,5 @@
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityOrchestration() {
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityOrchestration
+export { AISecurityOrchestration }() {
   const features = [
     'AI-powered security orchestration optimization',
     'Intelligent security workflow management and execution',;

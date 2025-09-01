@@ -112,7 +112,8 @@ function CategoryContent({ categoryId, category, IconComponent, user, }) {
           {canCreatePost && <CreatePostButton categoryId={categoryId}/>}
         </div>)}
     </div>)}
-export default function ForumCategoryPage() {
+export default function ForumCategoryPage
+export { ForumCategoryPage }() {
     const { categoryId } = useParams();
     const { user } = useAuth();
     if (!categoryId || !categoriesInfo[categoryId]) {

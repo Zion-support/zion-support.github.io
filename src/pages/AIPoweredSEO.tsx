@@ -1,6 +1,6 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
+import { Link  } from 'react-router-dom';
 import { Search, 
   TrendingUp, 
   Target, 
@@ -51,9 +51,10 @@ import { Search,
   Network,
   Rocket,
   Shield
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
-export default function AIPoweredSEO(...args: any[]): any {
+export default function AIPoweredSEO
+export { AIPoweredSEO }(...args: any[]): any {
   const features = [
     {
       icon: Search,

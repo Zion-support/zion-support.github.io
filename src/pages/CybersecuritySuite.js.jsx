@@ -5,7 +5,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Check, Shield, AlertTriangle, Eye } from "lucide-react";
 import { Link } from "react-router-dom";
-export default function CybersecuritySuite() {
+export default function CybersecuritySuite
+export { CybersecuritySuite }() {
     const features = [
         "24/7 threat monitoring and detection",
         "Real-time security incident response",

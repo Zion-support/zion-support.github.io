@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { useState } from 'react';
 const MessagingProvider({ children }) {
     const [messages, setMessages] = useState([]);
     const sendMessage = (content) => {

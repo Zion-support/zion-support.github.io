@@ -3,7 +3,8 @@ import { motion } from 'framer-motion';
 import { CheckCircle, MessageCircle, Clock, Users, TrendingUp, Shield, Zap, BarChart3, Globe, Smartphone, Headphones, Bot } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
-export default function AICustomerSupport() {
+export default function AICustomerSupport
+export { AICustomerSupport }() {
   const features = [
     {
       title: "24/7 AI Chat Support",

@@ -29,7 +29,8 @@ function PortfolioBuilderContent() {
       </main>
       
     </>)}
-export default function PortfolioBuilder() {
+export default function PortfolioBuilder
+export { PortfolioBuilder }() {
     return (<ProtectedRoute>
       <PortfolioBuilderContent />
     </ProtectedRoute>)}

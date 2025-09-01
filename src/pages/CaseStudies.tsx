@@ -28,7 +28,8 @@ import {
   Factory
 } from 'lucide-react';
 
-export default function CaseStudies() {
+export default function CaseStudies
+export { CaseStudies }() {
   const [selectedIndustry, setSelectedIndustry] = useState('all');
   const [selectedService, setSelectedService] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');

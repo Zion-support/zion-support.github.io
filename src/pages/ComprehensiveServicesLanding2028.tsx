@@ -1,6 +1,6 @@
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import React, { useState } from 'react';
+import { motion  } from 'framer-motion';
+import { Link  } from 'react-router-dom';
 import { Brain, 
   Cloud, 
   Shield, 
@@ -57,7 +57,8 @@ import { SEO  } from '@/components/SEO';
 import { Button  } from '@/components/ui/button';
 import { Badge  } from '@/components/ui/badge';
 
-export default function ComprehensiveServicesLanding2028(...args[]):  {
+export default function ComprehensiveServicesLanding2028
+export { ComprehensiveServicesLanding2028 }(...args[]):  {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [selectedService, setSelectedService] = useState(null);
 

@@ -15,7 +15,8 @@ import {
     MessageCircle
 } from 'lucide-react';
 
-export default function VideoCall() {
+export default function VideoCall
+export { VideoCall }() {
     const { roomId } = useParams();
     const navigate = useNavigate();
     const [isJoining, setIsJoining] = useState(false);

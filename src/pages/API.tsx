@@ -130,7 +130,8 @@ def check_threat(ip_address):;
   }
 ];
 
-export default function API() {
+export default function API
+export { API }() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
 

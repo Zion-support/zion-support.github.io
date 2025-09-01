@@ -101,7 +101,8 @@ const CustomAccordion = ({ items }) => {
   );
 };
 
-export default function FAQ() {
+export default function FAQ
+export { FAQ }() {
   return (
     <>
       <SEO 

@@ -308,7 +308,8 @@ const featuredSolutions = [
   };
 ];
 
-export default function Solutions() {
+export default function Solutions
+export { Solutions }() {
   const industrySolutions = [
     {
       title: 'Enterprise Solutions',

@@ -25,7 +25,8 @@ import {
 } from 'lucide-react';
 import { SEO } from '../../components/SEO';
 
-export default function AIQuantumHybridPlatform() {
+export default function AIQuantumHybridPlatform
+export { AIQuantumHybridPlatform }() {
   const features = [
     {
       icon: Atom,

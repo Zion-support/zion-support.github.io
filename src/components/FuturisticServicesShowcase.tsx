@@ -88,7 +88,8 @@ const futuristicServices: ServiceShowcase[] = [
 		status: 'active'
 
 ];
-export default function FuturisticServicesShowcase(...args[]):  {
+export default function FuturisticServicesShowcase
+export { FuturisticServicesShowcase }(...args[]):  {
 	const [currentService, setCurrentService] = useState(0);
 	const [isPlaying, setIsPlaying] = useState(true);
 	useEffect(() => {

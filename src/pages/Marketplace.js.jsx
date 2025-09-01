@@ -9,7 +9,8 @@ import { marketplaceItems, marketplaceFilters } from "@/data/marketplaceData";
 import { generateRandomListing } from "@/utils/generateRandomListing";
 import { useNavigate } from "react-router-dom";
 
-export default function Marketplace() {
+export default function Marketplace
+export { Marketplace }() {
     const navigate = useNavigate();
     const [searchQuery, setSearchQuery] = useState("");
     const [selectedProductTypes, setSelectedProductTypes] = useState([]);

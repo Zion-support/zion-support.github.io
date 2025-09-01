@@ -1,5 +1,5 @@
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React, { useState } from 'react';
+import { motion  } from 'framer-motion';
 import { comprehensiveNewServices2025  } from '../data/comprehensiveNewServices2025';
 import { Search,
   Filter,
@@ -27,7 +27,7 @@ import { Search,
   BarChart3,
   Satellite,
   Cpu
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export function ComprehensiveNewServicesShowcase2025(...args: any[]): any {
   const [searchTerm, setSearchTerm] = useState('');

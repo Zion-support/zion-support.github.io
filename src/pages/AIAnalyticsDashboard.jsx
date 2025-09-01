@@ -5,7 +5,8 @@ import { Badge } from "@/components/ui/badge";
 import SEO from "@/components/SEO";
 import { BarChart3, TrendingUp, Brain, Zap, ArrowRight, CheckCircle, Star } from "lucide-react";
 import { Link } from "react-router-dom";
-export default function AIAnalyticsDashboard() {
+export default function AIAnalyticsDashboard
+export { AIAnalyticsDashboard }() {
     const features = [
         {
             title: "AI-Powered Insights",

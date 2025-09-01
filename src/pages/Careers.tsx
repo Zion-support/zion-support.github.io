@@ -24,7 +24,8 @@ import {
   Search
 } from 'lucide-react';
 
-export default function Careers() {
+export default function Careers
+export { Careers }() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedDepartment, setSelectedDepartment] = useState('all');
   const [selectedLocation, setSelectedLocation] = useState('all');

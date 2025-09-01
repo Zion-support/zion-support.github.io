@@ -1,7 +1,7 @@
 
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import React, { useState } from 'react';
+import { motion  } from 'framer-motion';
+import { Link  } from 'react-router-dom';
 import { Calendar,
   Clock,
   MapPin,
@@ -24,7 +24,7 @@ import { Calendar,
   MessageCircle,
   BookOpen,
   CheckCircle
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const events = [
   {
@@ -159,7 +159,8 @@ const eventTypes = ['All', 'Conference', 'Workshop', 'Webinar', 'Symposium'];
 const categories = ['All', 'AI & ML', 'Cybersecurity', 'Cloud & DevOps', 'Data Analytics', 'IoT & Edge', 'Digital Transformation'];
 const statuses = ['All', 'upcoming', 'past'];
 
-export default function Events(...args: any[]): any {
+export default function Events
+export { Events }(...args: any[]): any {
   const [selectedType, setSelectedType] = useState('All');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedStatus, setSelectedStatus] = useState('All');

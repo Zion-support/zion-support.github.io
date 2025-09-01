@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
 import { Rocket, 
   ShoppingCart, 
   Zap, 
@@ -22,7 +22,7 @@ import { Rocket,
   BarChart3,
   CreditCard,
   Settings
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 const MicroSaaSPlatformElite: React.FC = (): JSX.Element => {
   const features = [

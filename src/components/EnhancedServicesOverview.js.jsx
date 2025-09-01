@@ -271,7 +271,8 @@ const ContactSection = () => (<section className="py-16 bg-gradient-to-br from-z
       </div>
     </div>
   </section>);
-export default function EnhancedServicesOverview() {
+export default function EnhancedServicesOverview
+export { EnhancedServicesOverview }() {
     return (<div className="space-y-16">
       {/* Hero Section */}
       <div className="text-center">

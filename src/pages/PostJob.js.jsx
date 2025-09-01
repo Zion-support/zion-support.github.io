@@ -3,7 +3,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { SEO } from "@/components/SEO";
 import { useAuth } from "@/hooks/useAuth";
 import { useIsMobile } from "@/hooks/use-mobile";
-export default function PostJob() {
+export default function PostJob
+export { PostJob }() {
     const { isAuthenticated, isLoading } = useAuth();
     const isMobile = useIsMobile();
     if (isLoading) {

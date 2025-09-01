@@ -5,7 +5,8 @@ import { Badge } from "@/components/ui/badge";
 import { SEO } from "@/components/SEO";
 import { Shield, Eye, Target, Users, ArrowRight, CheckCircle, Star, AlertTriangle, Network, Database, Cloud, Smartphone, Server } from "lucide-react";
 import { Link } from "react-router-dom";
-export default function CybersecurityServices() {
+export default function CybersecurityServices
+export { CybersecurityServices }() {
     const securitySolutions = [
         {
             title: "Network Security",

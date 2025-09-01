@@ -1,6 +1,6 @@
-import React, { useState, useRef, useEffect } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { ImageIcon, AlertCircle, Loader2  } from 'lucide-react.ts';
+import React, { useState, useRef, useEffect } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion';
+import { ImageIcon, AlertCircle, Loader2  } from 'lucide-react';
 
 interface OptimizedImageProps extends React.PropsWithChildren<{}> {
 

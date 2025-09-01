@@ -44,7 +44,8 @@ const categoryColors: { [key: string]: string } = {
   'Edge AI Solutions': 'from-red-500 to-pink-500',
   'Federated Learning Solutions': 'from-yellow-500 to-orange-500'
 };
-export default function EnhancedInnovativeServicesShowcase2027(...args[]):  {
+export default function EnhancedInnovativeServicesShowcase2027
+export { EnhancedInnovativeServicesShowcase2027 }(...args[]):  {
   const [selectedCategory, setSelectedCategory] = useState<any>('All');
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<any>('grid');

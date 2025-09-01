@@ -27,7 +27,8 @@ import {
 } from 'lucide-react';
 import SEO from '../../components/SEO';
 
-export default function GreenIT() {
+export default function GreenIT
+export { GreenIT }() {
   const features = [
     {
       icon: Leaf,

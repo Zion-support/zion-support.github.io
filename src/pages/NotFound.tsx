@@ -41,7 +41,8 @@ import {
   Globe
 } from 'lucide-react';
 
-export default function NotFound() {
+export default function NotFound
+export { NotFound }() {
   const popularPages = [
     { name: 'Home', path: '/', icon: Home, description: 'Main landing page' },
     { name: 'Services', path: '/services', icon: Zap, description: 'All our services' },

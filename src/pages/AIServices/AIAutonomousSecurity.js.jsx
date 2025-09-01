@@ -37,7 +37,8 @@ const benefits = [
     "Scale operations seamlessly",
     "Gain competitive advantage"
 ];
-export default function AIAutonomousSecurity() {
+export default function AIAutonomousSecurity
+export { AIAutonomousSecurity }() {
     return (<div className="min-h-screen bg-background relative overflow-hidden">
       <SEO title="Autonomous Security - Zion Tech Group" description="AI-powered autonomous security solution that transforms your operations with intelligent automation and real-time insights." keywords="AI autonomous security, automation, intelligent systems, business optimization" canonical="https://ziontechgroup.com/aiautonomoussecurity/"/>
 

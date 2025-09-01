@@ -1,6 +1,6 @@
-import React from 'react.ts';
+import React from 'react';
 import { SEO  } from '@/components/SEO';
-import { ArrowRight, CheckCircle, ExternalLink  } from 'lucide-react.ts';
+import { ArrowRight, CheckCircle, ExternalLink  } from 'lucide-react';
 
 const anchor = (url: anystring, label?: string)  => (
   <a className="text-cyan-400 underline" href={url} target="_blank" rel="noopener noreferrer">

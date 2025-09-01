@@ -1,6 +1,6 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
+import { Link  } from 'react-router-dom';
 import { Sparkles, 
   ArrowRight, 
   CheckCircle, 
@@ -16,11 +16,12 @@ import { Sparkles,
   Users,
   Target,
   Rocket
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { SEO  } from '@/components/SEO';
 import { NEW_INNOVATIVE_SERVICES_2025  } from '../data/newInnovativeServices2025';
 
-export default function NewInnovativeServicesShowcase(...args: any[]): any {
+export default function NewInnovativeServicesShowcase
+export { NewInnovativeServicesShowcase }(...args: any[]): any {
   const serviceCategories = [
     {
       title: "AI & Legal Tech",

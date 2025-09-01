@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
 import { SEO  } from '../../components/SEO';
 import { TrendingUp, 
   Brain, 
@@ -26,9 +26,10 @@ import { TrendingUp,
   Monitor,
   Filter,
   PieChart
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
-export default function AIMarketingAutomation(...args: any[]): any {
+export default function AIMarketingAutomation
+export { AIMarketingAutomation }(...args: any[]): any {
   const features = [
     {
       icon: Brain,

@@ -2,7 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Zap, Users, TrendingUp, Shield, Globe, Rocket } from 'lucide-react';
 
-export default function MicroSAASSolutions() {
+export default function MicroSAASSolutions
+export { MicroSAASSolutions }() {
   const solutions = [
     {
       name: 'AI Content Marketing Automation',

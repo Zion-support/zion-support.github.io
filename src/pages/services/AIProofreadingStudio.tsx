@@ -1,4 +1,4 @@
-import React from 'react.ts';
+import React from 'react';
 import { SEO   } from '@/components/SEO';
 
 const AIProofreadingStudio: React.FC = (): JSX.Element => (

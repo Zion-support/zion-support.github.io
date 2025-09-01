@@ -26,7 +26,8 @@ import {
   Eye
  } from 'lucide-react';
 
-export default function QuantumTechnology(...args[]):  {
+export default function QuantumTechnology
+export { QuantumTechnology }(...args[]):  {
   const [selectedApplication, setSelectedApplication] = useState('all');
   const [activeTab, setActiveTab] = useState('overview');
 

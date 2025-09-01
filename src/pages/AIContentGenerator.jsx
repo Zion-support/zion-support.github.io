@@ -6,7 +6,8 @@ import SEO from "@/components/SEO";
 import { PenTool, FileText, Brain, Zap, Target, Users, ArrowRight, CheckCircle, Star, Globe, Shield, Type, Video, ShoppingBag, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 
-export default function AIContentGenerator() {
+export default function AIContentGenerator
+export { AIContentGenerator }() {
     const features = [
         {
             title: "AI Writing Assistant",

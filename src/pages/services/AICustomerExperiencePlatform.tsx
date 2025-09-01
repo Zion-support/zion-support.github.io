@@ -1,6 +1,6 @@
-import React from 'react.ts';
+import React from 'react';
 import { SEO  } from "../../components/SEO";
-import { motion  } from 'framer-motion.ts';
+import { motion  } from 'framer-motion';
 import { Users, 
   Brain, 
   MessageSquare, 
@@ -28,7 +28,8 @@ import { Users,
   Headphones
  } from 'lucide-react';
 
-export default function AICustomerExperiencePlatform(...args[]):  {
+export default function AICustomerExperiencePlatform
+export { AICustomerExperiencePlatform }(...args[]):  {
   const features = [
     'AI-powered sentiment analysis and emotion detection',
     'Real-time customer journey mapping and optimization',;

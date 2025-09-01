@@ -27,7 +27,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Check, Star, Zap, Shield, Brain, Cloud, Users, MessageCircle, FileText } from "lucide-react";
-export default function Pricing() {
+export default function Pricing
+export { Pricing }() {
     const pricingTiers = [
         {
             name: "Starter",
