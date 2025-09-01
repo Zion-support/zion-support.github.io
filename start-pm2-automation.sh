@@ -22,7 +22,7 @@ pm2 delete all 2>/dev/null || true
 
 # Start the PM2 ecosystem
 echo "🏁 Starting PM2 ecosystem..."
-pm2 start ecosystem.config.cjs
+pm2 start ecosystem-enhanced.config.cjs
 
 # Install PM2 modules for enhanced monitoring
 echo "📊 Installing PM2 monitoring modules..."
