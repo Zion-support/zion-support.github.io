@@ -1,8 +1,6 @@
-import React from 'react';
-import type { GetServerSideProps } from 'next';
-import NextHead from '@/components/NextHead';
-import ProductReviews from '@/components/ProductReviews';
-import { Product } from '@prisma/client'; // Base product type
+import type { GetStaticProps, GetStaticPaths } from 'next'; // Updated import
+import type { ProductListing } from '@/types/listings';
+import { MARKETPLACE_LISTINGS } from '@/data/marketplaceData';
 
 // Define ProductWithReviewStats here or import from a shared types file
 // This should match the type returned by `/api/products/[productId]/details`
@@ -42,63 +40,38 @@ const RatingStarsDisplay: React.FC<RatingStarsProps> = ({ value, count }) => {
   );
 };
 
-interface ListingPageProps {
-  product: ProductWithReviewStats | null;
-  error?: string;
-}
+// export const getServerSideProps: GetServerSideProps<ListingPageProps> = async ({ params }) => {
+//   const slug = params?.slug as string;
+//   const listing = MARKETPLACE_LISTINGS.find((l) => l.id === slug) || null;
+//   if (!listing) {
+//     return { notFound: true };
+//   }
+//   return { props: { listing } };
+// };
 
-const MarketplaceListingPage: React.FC<ListingPageProps> = ({ product, error }) => {
-  if (error) {
-    return <div className="text-red-500 max-w-3xl mx-auto py-8 px-4">Error: {error}</div>;
+export const getStaticPaths: GetStaticPaths = async () => {
+  // For a dummy setup, we don't pre-render any paths
+  // Real implementation might query a DB for all slugs
+  return {
+    paths: [],
+    fallback: 'blocking', // or true, if you want to show a fallback UI
+  };
+};
+
+export const getStaticProps: GetStaticProps<ListingPageProps> = async (context) => {
+  const slug = context.params?.slug as string;
+  // In a real scenario, fetch data based on slug
+  // For this dummy version, we'll try to find it in the static data or return null
+  const listing = MARKETPLACE_LISTINGS.find((l) => l.id === slug) || null;
+
+  if (!listing) {
+    return { notFound: true };
   }
-  if (!product) {
-    // This case should ideally be handled by notFound: true in getServerSideProps
-    return <div className="max-w-3xl mx-auto py-8 px-4">Product not found.</div>;
-  }
 
-  // The slug from URL is product.id because our API uses product.id for fetching
-  const productId = product.id;
-
-  return (
-    <>
-      <NextHead
-        title={product.name}
-        description={product.description ?? undefined}
-        openGraph={{
-          title: product.name,
-          description: product.description ?? undefined,
-          images: (product as any).imageUrl ?? product.images?.[0]?.url ?? undefined,
-        }}
-      />
-      <main className="prose dark:prose-invert max-w-3xl mx-auto py-8 px-4">
-        <h1>{product.name}</h1> {/* Using product.name from Prisma Product model */}
-
-      {/* Display average rating and review count */}
-      <div className="my-4">
-        <h2 className="text-lg font-semibold mb-2">Overall Rating</h2>
-        {product.reviewCount > 0 && product.averageRating !== null ? (
-          <RatingStarsDisplay value={product.averageRating} count={product.reviewCount} />
-        ) : (
-          <p className="text-sm text-gray-500 dark:text-gray-400">No ratings yet for this product.</p>
-        )}
-      </div>
-
-      {product.description && (
-        <div className="mt-4 mb-6">
-          <h2 className="text-lg font-semibold mb-2">Description</h2>
-          <p>{product.description}</p>
-        </div>
-      )}
-
-      {/* Other product details can go here */}
-
-      <hr className="my-8" />
-
-      {/* Integrate ProductReviews component */}
-      <ProductReviews productId={productId} />
-    </main>
-    </>
-  );
+  return {
+    props: { listing },
+    // revalidate: 60, // Optional: enable ISR
+  };
 };
 
 export const getServerSideProps: GetServerSideProps<ListingPageProps> = async (context) => {
