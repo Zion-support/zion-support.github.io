@@ -30,7 +30,7 @@ export function deslugify(slug: string): string {
  * @returns A unique slug
  */
 export function generateUniqueSlug(text: string, existingSlugs: string[]): string {
-  let slug = slugify(text);
+  const slug = slugify(text);
   let counter = 1;
   let uniqueSlug = slug;
 

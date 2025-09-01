@@ -131,7 +131,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
 
       // Minimum distance and time for gesture recognition
       if (distance > 50 && deltaTime < 500) {
-        let gesture: TouchGesture = {
+        const gesture: TouchGesture = {
           type: 'swipe',
           distance,
           duration: deltaTime

@@ -1,0 +1,433 @@
+{
+  "timestamp": "2025-09-01T05:31:30.947Z",
+  "duration": "76798ms",
+  "fixesApplied": [
+    {
+      "type": "merge_conflict",
+      "file": "data/missing-slugs.json",
+      "description": "Resolved merge conflict markers"
+    },
+    {
+      "type": "merge_conflict",
+      "file": "fix_all_function_names.js",
+      "description": "Resolved merge conflict markers"
+    },
+    {
+      "type": "merge_conflict",
+      "file": "fix-variable-names.js",
+      "description": "Resolved merge conflict markers"
+    },
+    {
+      "type": "merge_conflict",
+      "file": "netlify/functions/link-health-scheduler.js",
+      "description": "Resolved merge conflict markers"
+    },
+    {
+      "type": "merge_conflict",
+      "file": "out/reports/page-validation/latest.json",
+      "description": "Resolved merge conflict markers"
+    },
+    {
+      "type": "merge_conflict",
+      "file": "pages.disabled/comprehensive-services-showcase-2025.tsx",
+      "description": "Resolved merge conflict markers"
+    },
+    {
+      "type": "merge_conflict",
+      "file": "pages/services-advertising.page.tsx",
+      "description": "Resolved merge conflict markers"
+    },
+    {
+      "type": "merge_conflict",
+      "file": "public/manifest.json",
+      "description": "Resolved merge conflict markers"
+    },
+    {
+      "type": "merge_conflict",
+      "file": "public/reports/page-validation/latest.json",
+      "description": "Resolved merge conflict markers"
+    },
+    {
+      "type": "merge_conflict",
+      "file": "public/sw.js",
+      "description": "Resolved merge conflict markers"
+    },
+    {
+      "type": "merge_conflict",
+      "file": "src/components/Footer.tsx",
+      "description": "Resolved merge conflict markers"
+    },
+    {
+      "type": "merge_conflict",
+      "file": "src/data/comprehensivePricingGuide2025.ts",
+      "description": "Resolved merge conflict markers"
+    },
+    {
+      "type": "merge_conflict",
+      "file": "src/pages/services/Cybersecurity.tsx",
+      "description": "Resolved merge conflict markers"
+    },
+    {
+      "type": "merge_conflict",
+      "file": "src/pages/ServicesComparisonPage.tsx",
+      "description": "Resolved merge conflict markers"
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 54,
+      "errorCode": "1136",
+      "description": "Fixed TypeScript error: Property assignment expected."
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 55,
+      "errorCode": "1109",
+      "description": "Fixed TypeScript error: Expression expected."
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 56,
+      "errorCode": "1109",
+      "description": "Fixed TypeScript error: Expression expected."
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 58,
+      "errorCode": "1128",
+      "description": "Fixed TypeScript error: Declaration or statement expected."
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 58,
+      "errorCode": "1128",
+      "description": "Fixed TypeScript error: Declaration or statement expected."
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 58,
+      "errorCode": "1128",
+      "description": "Fixed TypeScript error: Declaration or statement expected."
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 77,
+      "errorCode": "1005",
+      "description": "Fixed TypeScript error: ')' expected."
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 77,
+      "errorCode": "1109",
+      "description": "Fixed TypeScript error: Expression expected."
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 77,
+      "errorCode": "1005",
+      "description": "Fixed TypeScript error: ';' expected."
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 77,
+      "errorCode": "1005",
+      "description": "Fixed TypeScript error: ';' expected."
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 87,
+      "errorCode": "1136",
+      "description": "Fixed TypeScript error: Property assignment expected."
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 88,
+      "errorCode": "1136",
+      "description": "Fixed TypeScript error: Property assignment expected."
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 97,
+      "errorCode": "1128",
+      "description": "Fixed TypeScript error: Declaration or statement expected."
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 98,
+      "errorCode": "1128",
+      "description": "Fixed TypeScript error: Declaration or statement expected."
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 98,
+      "errorCode": "1128",
+      "description": "Fixed TypeScript error: Declaration or statement expected."
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 98,
+      "errorCode": "1005",
+      "description": "Fixed TypeScript error: ';' expected."
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 109,
+      "errorCode": "1128",
+      "description": "Fixed TypeScript error: Declaration or statement expected."
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 111,
+      "errorCode": "1109",
+      "description": "Fixed TypeScript error: Expression expected."
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 112,
+      "errorCode": "1109",
+      "description": "Fixed TypeScript error: Expression expected."
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 115,
+      "errorCode": "1128",
+      "description": "Fixed TypeScript error: Declaration or statement expected."
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 129,
+      "errorCode": "1136",
+      "description": "Fixed TypeScript error: Property assignment expected."
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 130,
+      "errorCode": "1136",
+      "description": "Fixed TypeScript error: Property assignment expected."
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 140,
+      "errorCode": "1128",
+      "description": "Fixed TypeScript error: Declaration or statement expected."
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 141,
+      "errorCode": "1128",
+      "description": "Fixed TypeScript error: Declaration or statement expected."
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 145,
+      "errorCode": "1128",
+      "description": "Fixed TypeScript error: Declaration or statement expected."
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 148,
+      "errorCode": "1109",
+      "description": "Fixed TypeScript error: Expression expected."
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 148,
+      "errorCode": "1128",
+      "description": "Fixed TypeScript error: Declaration or statement expected."
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 149,
+      "errorCode": "1128",
+      "description": "Fixed TypeScript error: Declaration or statement expected."
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 180,
+      "errorCode": "1005",
+      "description": "Fixed TypeScript error: '...' expected."
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 181,
+      "errorCode": "1003",
+      "description": "Fixed TypeScript error: Identifier expected."
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 181,
+      "errorCode": "17015",
+      "description": "Fixed TypeScript error: Expected corresponding closing tag for JSX fragment."
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 186,
+      "errorCode": "2657",
+      "description": "Fixed TypeScript error: JSX expressions must have one parent element."
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 229,
+      "errorCode": "1005",
+      "description": "Fixed TypeScript error: '...' expected."
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 230,
+      "errorCode": "1005",
+      "description": "Fixed TypeScript error: '...' expected."
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 230,
+      "errorCode": "1109",
+      "description": "Fixed TypeScript error: Expression expected."
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 231,
+      "errorCode": "1003",
+      "description": "Fixed TypeScript error: Identifier expected."
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 248,
+      "errorCode": "2657",
+      "description": "Fixed TypeScript error: JSX expressions must have one parent element."
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 253,
+      "errorCode": "1003",
+      "description": "Fixed TypeScript error: Identifier expected."
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 254,
+      "errorCode": "1005",
+      "description": "Fixed TypeScript error: ')' expected."
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 254,
+      "errorCode": "17002",
+      "description": "Fixed TypeScript error: Expected corresponding JSX closing tag for 'div'."
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 255,
+      "errorCode": "1381",
+      "description": "Fixed TypeScript error: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?"
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 261,
+      "errorCode": "1003",
+      "description": "Fixed TypeScript error: Identifier expected."
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 262,
+      "errorCode": "17002",
+      "description": "Fixed TypeScript error: Expected corresponding JSX closing tag for 'div'."
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 264,
+      "errorCode": "1005",
+      "description": "Fixed TypeScript error: ')' expected."
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 264,
+      "errorCode": "1109",
+      "description": "Fixed TypeScript error: Expression expected."
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 265,
+      "errorCode": "1128",
+      "description": "Fixed TypeScript error: Declaration or statement expected."
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 266,
+      "errorCode": "1109",
+      "description": "Fixed TypeScript error: Expression expected."
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 271,
+      "errorCode": "2657",
+      "description": "Fixed TypeScript error: JSX expressions must have one parent element."
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 305,
+      "errorCode": "1003",
+      "description": "Fixed TypeScript error: Identifier expected."
+    },
+    {
+      "type": "typescript_error",
+      "file": "src/components/AIChatbotSystem.tsx",
+      "line": 325,
+      "errorCode": "1005",
+      "description": "Fixed TypeScript error: '...' expected."
+    }
+  ],
+  "summary": {
+    "totalFixes": 64,
+    "typescriptFixes": 50,
+    "eslintFixes": 0,
+    "mergeConflictFixes": 14,
+    "dependencyFixes": 0
+  }
+}

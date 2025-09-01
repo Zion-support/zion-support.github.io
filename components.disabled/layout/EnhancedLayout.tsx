@@ -1,33 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD:components.disabled/layout/EnhancedLayout.tsx
-import EnhancedNavigation from './EnhancedNavigation';
-import EnhancedFooter from './EnhancedFooter';
-import dynamic from 'next/dynamic';
-
-interface EnhancedLayoutProps {
-  children: ReactNode;
-}
-
-// Lazy-load chat widget to avoid adding to initial critical path
-const ChatWidget = dynamic(() => import('../chat/ChatWidget'), { ssr: false });
-
-export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
-  return (
-    <div className="relative min-h-screen flex flex-col bg-white dark:bg-black text-gray-900 dark:text-gray-100">
-      <AnimatedBackground />
-      <header className="relative z-10">
-        <EnhancedNavigation />
-      </header>
-      <main className="relative z-10 flex-1 container mx-auto px-4 py-6">{children}</main>
-      <footer className="relative z-10">
-        <EnhancedFooter />
-      </footer>
-      {/* Global chat assistant */}
-      <ChatWidget />
-    </div>
-  );
-}
-=======
 import Head from 'next/head';
 import EnhancedNavigation from '../EnhancedNavigation';
 import EnhancedFooter from '../EnhancedFooter';
@@ -152,4 +123,3 @@ const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({
 };
 
 export default EnhancedLayout;
->>>>>>> c5596438ff9e89f471f570b77dc8abbad76d99e4:components/layout/EnhancedLayout.tsx

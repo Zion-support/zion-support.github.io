@@ -1,5 +1,5 @@
-var __rest = (this && this.__rest) || function (s, e) {
-    var t = {};
+const __rest = (this && this.__rest) || function (s, e) {
+    const t = {};
     for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
         t[p] = s[p];
     if (s != null && typeof Object.getOwnPropertySymbols === "function")
@@ -11,7 +11,7 @@ import { jsx as _jsx } from "react/jsx-runtime";
 import React from 'react';
 import { cn } from '@/lib/utils';
 const Separator = React.forwardRef((_a, ref) => {
-    var { className, orientation = 'horizontal' } = _a, props = __rest(_a, ["className", "orientation"]);
+    let { className, orientation = 'horizontal' } = _a, props = __rest(_a, ["className", "orientation"]);
     return (_jsx("div", Object.assign({ ref: ref, className: cn('shrink-0 bg-border', orientation === 'horizontal' ? 'h-[1px] w-full' : 'h-full w-[1px]', className) }, props)))});
 Separator.displayName = 'Separator';
 export { Separator };
