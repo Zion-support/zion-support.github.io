@@ -268,12 +268,7 @@ const AIBusinessIntelligenceElite: React.FC = (): JSX.Element => {
                 Email Us
               </h3>
               <a"
-<<<<<<< HEAD
-                href="mailto:kleber@ziontechgroup.com"
-                className="text-zion-slate-light hover:text-white transition-colors duration-300"
-=======
                 href="mailto:kleber@ziontechgroup.com""                className="text-zion-slate-light hover:text-white transition-colors duration-300"
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
               >
                 kleber@ziontechgroup.com
               </a>

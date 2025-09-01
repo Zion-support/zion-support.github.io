@@ -22,14 +22,8 @@ import {
 
   
   
-<<<<<<< HEAD
-
-  
-interface PricingTier {
-=======
 '
   const savings = billingCycle === 'annual' ? 20 : 0;interface PricingTier {
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   name: string;
   description: string;

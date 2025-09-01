@@ -59,18 +59,10 @@ import {
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
-<<<<<<< HEAD
-        title="AI Healthcare Predictive Analytics - Zion Tech Group"
-        description="Transform healthcare with AI-powered predictive analytics, patient monitoring, and treatment optimization. Improve outcomes while reducing costs."
-        keywords="AI healthcare analytics, predictive medicine, patient monitoring, treatment optimization, population health, clinical analytics"
-        canonical="https://ziontechgroup.com/services/ai-healthcare-predictive-analytics"
-      />
-=======
         title="AI Healthcare Predictive Analytics - Zion Tech Group""
         description="Transform healthcare with AI-powered predictive analytics, patient monitoring, and treatment optimization. Improve outcomes while reducing costs.""
         keywords="AI healthcare analytics, predictive medicine, patient monitoring, treatment optimization, population health, clinical analytics""        canonical="https://ziontechgroup.com/services/ai-healthcare-predictive-analytics"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"

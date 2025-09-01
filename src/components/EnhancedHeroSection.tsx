@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-import { ArrowRight, 
-
-
-  Play, 
-  Star, 
-  CheckCircle, 
-  ChevronLeft, 
-  ChevronRight,
-  Zap,
-  Shield,
-  Globe,
-  Brain,
-  Rocket,
-  Target,
-  TrendingUp'
- } from 'lucide-react'} from 'lucide-react';
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 interface HeroSlide {
   title: string;
   subtitle: string;

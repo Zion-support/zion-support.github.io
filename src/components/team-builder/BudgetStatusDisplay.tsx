@@ -1,37 +1,5 @@
-<<<<<<< HEAD
-
-interface BudgetStatusDisplayProps extends React.PropsWithChildren<{}> {
-
-  projectBriefBudget: string; // e.g., "$10,000 - $15,000", "< $20000", "Approx $30k"
-estimatedCost: { // From TeamRecommendation;
-    min: number;
-    max: number}}
-
-// Helper to parse budget string (very basic, needs improvement for production);
-const parseBudget = (budgetString: string): { min: number | null; max: number | null }  => {
-
-  budgetString = budgetString.toLowerCase().replace(/[^0-9-\s$k,]/g,); // Clean string
-
-  let max: number | null = null;
-
-  
-  if (budgetString.includes('-')) {
-
-    
-    min = parseFloat(parts[0].replace(/[$,\s]/g,));
-    max = parseFloat(parts[1].replace(/[$,\s]/g,));
-    if (parts[0].includes('k')) min = kTo1000(parts[0]);
-    if (parts[1].includes('k')) max = kTo1000(parts[1])} else if (budgetString.startsWith('<') || budgetString.startsWith('under')) {;
-    max = parseFloat(budgetString.replace(/[<$,\sunderk]/g,));
-    if (budgetString.includes('k')) max = kTo1000(budgetString);'"
-    min = 0; // Assuming no minimum if it's "under X"'
-  } else if (budgetString.startsWith('>) || budgetString.startsWith('over')) {
-
-    min = parseFloat(budgetString.replace(/[>$,\soverk]/g,));
-=======
 '
     min = parseFloat(budgetString.replace(/[>$,\soverk]/g, ''));'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
      if (budgetString.includes('k')) min = kTo1000(budgetString);
     max = Infinity; // No explicit maximum"
   } else { // Assuming a single number or "approx X"'
@@ -49,14 +17,8 @@ const parseBudget = (budgetString: string): { min: number | null; max: number | 
 export 
   
   
-<<<<<<< HEAD
-
-  let status: 'good' | 'warning' | 'danger' | 'info' = 'info';"
-  let message = "";
-=======
 '
   let status: 'good' | 'warning' | 'danger' | 'info' = 'info';"  let message = "";
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   let progressValue = 0; // Percentage for the progress bar
 
   if (userBudget.max !== null && userBudget.max !== Infinity) {
@@ -87,14 +49,8 @@ export
       status = 'warning';"
       message = "The estimated cost is below your specified minimum budget.";
       progressValue = (estimatedAvgCost / userBudget.min) * 100};
-<<<<<<< HEAD
-  } else {;
-    status = 'info';"
-    message = "Your budget was specified as a general figure. The estimated cost is provided for your review.";
-=======
   } else {;'
     status = 'info';"    message = "Your budget was specified as a general figure. The estimated cost is provided for your review.";
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     // No clear target for progress bar, maybe show 50% or hide it
     progressValue = 50}
 ;

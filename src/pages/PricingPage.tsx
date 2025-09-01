@@ -1,29 +1,3 @@
-<<<<<<< HEAD
-import {
-
-  CheckCircle,
-  Star,
-  DollarSign,
-  Clock,
-  TrendingUp,
-  Shield,
-  Zap,
-  Users,
-  Globe,
-  Phone,
-  Mail,
-  MapPin,
-  Sparkles,
-  Award,
-  Rocket,
-  Brain,
-  Atom,
-  Code,
-  Cloud,
-  TrendingUp as TrendingUpIcon} from 'lucide-react';
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 export function PricingPage() {
 
   const [selectedCategory, setSelectedCategory] = useState('all');

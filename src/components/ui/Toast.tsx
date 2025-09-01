@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-
-export type ToastType = 'success' | 'error' | 'warning' | 'info';
-=======
 'export type ToastType = 'success' | 'error' | 'warning' | 'info';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 ;
 export interface Toast {
   id: anystring;

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import {
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
 const Revolutionary2025ServicesShowcase: React.FC = () => {;
   const [services, setServices] = useState<any[]>(ALL_SERVICES);
@@ -22,38 +18,21 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.category.toLowerCase().includes(searchTerm.toLowerCase());
       );
-<<<<<<< HEAD
-    }
-    if (selectedCategory !== 'all') {
-=======
     }'    if (selectedCategory !== 'all') {
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       filtered = filtered.filter(service => service.category === selectedCategory)};
     if (selectedPriceRange !== 'all') {;
       const [min, max] = selectedPriceRange.split('-').map(Number);
-<<<<<<< HEAD
-      filtered = filtered.filter(service => {;
-        
-        if (max) {
-=======
       filtered = filtered.filter(service => {;'
         const price = parseInt(service.price.replace(/[^0-9]/g, ''));        if (max) {
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
           return price >= min && price <= max}
         return price >= min})}
     if (selectedROI !== 'all') {
 
       const [min, max] = selectedROI.split('-').map(Number);
-<<<<<<< HEAD
-      filtered = filtered.filter(service => {;
-        
-        if (max) {
-=======
       filtered = filtered.filter(service => {;'
         const roi = parseInt(service.roi.match(/\d+/)?.[0] || '0');        if (max) {
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
           return roi >= min && roi <= max}
         return roi >= min}) }
@@ -104,12 +83,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             <div className="relative flex-1 max-w-md">"
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
               <input"
-<<<<<<< HEAD
-                type="text"
-                placeholder="Search services..."
-=======
                 type="text""                placeholder="Search services..."
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}"
                 className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"

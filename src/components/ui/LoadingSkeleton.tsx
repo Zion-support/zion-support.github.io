@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-
-interface SkeletonProps extends React.PropsWithChildren<{}> {
-
-  className?: string;
-  count?: number;
-  height?: string;
-  width?: string;
-  rounded?: string | boolean;
-  animated?: boolean}
-
-export const Skeleton: React.FC<SkeletonProps> = ({
-
-  className = '', 
-  count = 1,
-  height = 'h-4',
-  width = 'w-full',
-  rounded = 'rounded',
-  animated = true}) => {
-
-  
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   if (animated) {
 
     return()

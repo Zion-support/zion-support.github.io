@@ -1,40 +1,3 @@
-<<<<<<< HEAD
-import {
-
-  Brain,
-  Shield,
-  Cloud,
-  Rocket,
-  Globe,
-  Cpu,
-  Lock,
-  Heart,
-  Users,
-  ShoppingCart,
-  BookOpen,
-  MessageCircle,
-  HelpCircle,
-  DollarSign,
-  Gauge,
-  Star,
-  Target,
-  TrendingUp,
-  Award,
-  Zap,
-  Eye,
-  BarChart3,
-  Smartphone,
-  Building2,
-  Car,
-  Leaf,
-  Satellite,
-  Banknote,
-  Building,
-  Phone} from 'lucide-react';
-
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 const categoryIcons: { [key: string]: React.ComponentType<any> } = {
 
   'AI & Customer Success': Brain,Blockchain & DeFi': Lock,Quantum Computing': Zap,AI & Healthcare': Heart,Metaverse & AR/VR': Eye,Autonomous Systems': Car,Green Tech': Leaf,Space Tech': Satellite,
@@ -60,9 +23,7 @@ export default function InnovativeServices2027() {
 
   
       case 'roi':
-=======
         return a.price - b.price;'      case 'roi':
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         return ('
           parseInt(b.roi.replace('%',)) - parseInt(a.roi.replace('%',))
         );
@@ -74,14 +35,8 @@ export default function InnovativeServices2027() {
   return()
     <div className="min-h-screen bg-futuristic">
       <SEO"
-<<<<<<< HEAD
-        title="2027 Innovative Services - Zion Tech Group"
-        description="Discover our revolutionary 2027 services portfolio featuring cutting-edge AI, Quantum Computing, Blockchain, and emerging technology solutions."
-      />
-=======
         title="2027 Innovative Services - Zion Tech Group""        description="Discover our revolutionary 2027 services portfolio featuring cutting-edge AI, Quantum Computing, Blockchain, and emerging technology solutions."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20">"

@@ -1,142 +1,3 @@
-<<<<<<< HEAD
-import { User, 
-
-
-  Mail, 
-  Phone, 
-  Building, 
-  Globe, 
-  MapPin, 
-  Camera, 
-  Save, 
-  Edit, 
-  X,
-  Shield,
-  Bell,
-  Palette,
-  Key,
-  Trash2,
-  Download,
-  Upload,
-  Eye,
-  EyeOff,
-  CheckCircle,
-  AlertCircle,
-  Settings,
-  UserCheck,
-  CreditCard,
-  Activity,
-  BarChart3,
-  Calendar,
-  Star,
-  Award,
-  Zap,
-  Brain,
-  Cloud,
-  Rocket'
- } from 'lucide-react';
-
-interface UserProfile {
-  firstName: string;
-  lastName: string;
-  email: string;
-  phone: string;
-  comp: string;
-  position: string;
-  industry: string;
-  location: string;
-  website: string;
-  bio: string;
-  avatar: string
-}
-
-interface NotificationSettings {
-  emailNotifications: boolean;
-  pushNotifications: boolean;
-  marketingEmails: boolean;
-  securityAlerts: boolean;
-  projectUpdates: boolean;
-  weeklyReports: boolean
-}
-
-interface SecuritySettings {
-  twoFactorEnabled: boolean;
-  sessionTimeout: number;
-  passwordLastChanged: string;
-  lastLogin: string;
-loginHistory: Array < any>}
-
-const Profile: React.FC = () => {;
-  const [activeTab, setActiveTab] = useState<'profile' | 'security' | 'notifications' | 'preferences'>('profile');
-  const [isEditing, setIsEditing] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [success, setSuccess] = useState('');
-  const [error, setError] = useState('');
-
-  const [profile, setProfile] = useState<any>({
-
-    firstName: 'John',
-    lastName: 'Doe',
-    email: 'john.doe@ziontechgroup.com',
-    phone: '+1 (555) 123-4567',
-    comp: 'Zion Tech Group',
-    position: 'Senior Developer',
-    industry: 'Technology',
-    location: 'San Francisco, CA',
-    website: 'https://ziontechgroup.com',
-    bio: 'Passionate technology professional with expertise in AI, cloud computing, and digital transformation. Committed to delivering innovative solutions that drive business growth.',
-    avatar: '/api/placeholder/150/150'
-  });
-
-  const [notifications, setNotifications] = useState<any>({
-
-    emailNotifications: true,
-    pushNotifications: true,
-    marketingEmails: false,
-    securityAlerts: true,
-    projectUpdates: true,
-    weeklyReports: false
-  }) ;
-
-  const [security, setSecurity] = useState<any>({
-
-    twoFactorEnabled: true,
-    sessionTimeout: 30,
-    passwordLastChanged: '2024-01-15',
-    lastLogin: '2024-01-20 14:30:00',
-    loginHistory[;
-      { date: '2024-01-20 14:30:00', location: 'San Francisco, CA', device: 'Chrome on MacBook Pro', status: 'success' },
-      { date: '2024-01-19 09:15:00', location: 'San Francisco, CA', device: 'Safari on iPhone', status: 'success' },
-      { date: '2024-01-18 16:45:00', location: 'New York, NY', device: 'Chrome on Windows', status: 'success' },
-      { date: '2024-01-17 11:20:00', location: 'Unknown', device: 'Unknown Device', status: 'failed' }
-    ]
-  });
-
-  const [currentPassword, setCurrentPassword] = useState('');
-  const [newPassword, setNewPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
-  const [showPasswords, setShowPasswords] = useState({
-
-    current: false,
-    new: false,
-    confirm: false
-  }) ;
-
-  
-    'Manufacturing',;
-    'Retail',;
-    'Education',;
-    'Government',;
-    'Non-profit',;
-    'Other';
-  ];
-
-  
-    setIsLoading(true);
-    setError('');
-    setSuccess('');
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     try {
       // Simulate API call
@@ -151,12 +12,7 @@ const Profile: React.FC = () => {;
   };
 
   
-<<<<<<< HEAD
-    if (!currentPassword || !newPassword || !confirmPassword) {;
-      setError('Please fill in all password fields');
-=======
     if (!currentPassword || !newPassword || !confirmPassword) {;'      setError('Please fill in all password fields');
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       return}
     if (newPassword.length < 8) {
 
@@ -843,18 +699,10 @@ setNotifications (prev: > ({;
         {/* Navigation Tabs */}"
         <div className="flex flex-wrap gap-2 mb-8">
           {['"
-<<<<<<< HEAD
-            { key: 'profile', label: 'Profile', icon: <User className="w-5 h-5"  /> },"
-            { key: 'security', label: 'Security', icon: <Shield className="w-5 h-5"  /> },"
-            { key: 'notifications', label: 'Notifications', icon: <Bell className="w-5 h-5"  /> },"
-            { key: 'preferences', label: 'Preferences', icon: <Settings className="w-5 h-5"  /> }
-          ].map((tab) => (
-=======
             { key: 'profile', label: 'Profile', icon: <User className="w-5 h-5"  /> },'"
             { key: 'security', label: 'Security', icon: <Shield className="w-5 h-5"  /> },'"
             { key: 'notifications', label: 'Notifications', icon: <Bell className="w-5 h-5"  /> },'"
             { key: 'preferences', label: 'Preferences', icon: <Settings className="w-5 h-5"  /> }          ].map((tab) => (
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
             <button
               key={tab.key}
               onClick={() => setActiveTab(tab.key as )}`

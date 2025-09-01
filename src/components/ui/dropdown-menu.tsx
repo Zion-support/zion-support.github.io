@@ -13,12 +13,7 @@ const DropdownMenu({ children }) {
     </DropdownMenuContext.Provider>)};
 export function DropdownMenuTrigger(...args: unknown[]): unknown {;
     
-<<<<<<< HEAD
-    if (!context)
-        throw new Error('DropdownMenuTrigger must be used within DropdownMenu');
-=======
     if (!context)'        throw new Error('DropdownMenuTrigger must be used within DropdownMenu');
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     if (asChild) {
 
       </div>)}
@@ -34,12 +29,7 @@ export function DropdownMenuContent(...args[]): {
     </div>)}
 export function DropdownMenuContent({ children, align = 'start', className = '' }) {;
     
-<<<<<<< HEAD
-    if (!context)
-        throw new Error('DropdownMenuContent must be used within DropdownMenu');
-=======
     if (!context)'        throw new Error('DropdownMenuContent must be used within DropdownMenu');
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     if (!context.isOpen)
         return null;
     const alignClasses = {

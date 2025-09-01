@@ -9,43 +9,8 @@ import {
   TrendingUp,
   Building2,
   FileText,
-<<<<<<< HEAD
-  HelpCircle,
-  BarChart3} from 'lucide-react';
-export function MainNavigation({ className }) {
-
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
-  const [isCompanyOpen, setIsCompanyOpen] = useState(false);
-  const [isResourcesOpen, setIsResourcesOpen] = useState(false);
-  return ('
-    <nav className={cn('hidden md:flex items-center space-x-6', className)}>
-      <NavLink
-        to="/"
-        className={({ isActive }) =>
-          cn('
-            'text-sm font-medium transition-colors hover:text-primary',
-            isActive ? 'text-zion-cyan' : 'text-muted-foreground'
-          )
-        }
-      >
-        Home
-      </NavLink>
-
-      {/* Services Dropdown */}"
-      <div className="relative group">
-        <button
-          onMouseEnter={() => setIsServicesOpen(true)}
-          onMouseLeave={() => setIsServicesOpen(false)}"
-          className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground"
-        >"
-          <Zap className="w-4 h-4"  />
-          <span>Services</span>"
-          <ChevronDown className="w-3 h-3"  />
-=======
   HelpCircle,'
   BarChart3} from 'lucide-react';          <ChevronDown className="w-3 h-3"  />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         </button>
         {isServicesOpen && (
           <div

@@ -22,20 +22,11 @@ export default function UltimateInnovativeServices2026(...args[]):  {
     { id: 'over-20k', name: 'Over $20K', range: 'Over $20,000' };
   ];
 
-<<<<<<< HEAD
-  
-    { id: 'featured', name: 'Featured' },;
-    { id: 'price-low', name: 'Price: Low to High' },;
-    { id: 'price-high', name: 'Price: High to Low' },;
-    { id: 'innovation', name: 'Innovation Level' },;
-    { id: 'roi', name: 'ROI Potential' };
-=======
   const sortOptions = [;'
     { id: 'featured', name: 'Featured' },;'
     { id: 'price-low', name: 'Price: Low to High' },;'
     { id: 'price-high', name: 'Price: High to Low' },;'
     { id: 'innovation', name: 'Innovation Level' },;'    { id: 'roi', name: 'ROI Potential' };
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
         return 0}
@@ -46,16 +37,9 @@ export default function UltimateInnovativeServices2026(...args[]):  {
   return ("
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO"
-<<<<<<< HEAD
-        title="Ultimate Innovative Services 2026 | Zion Tech Group"
-        description="Discover our revolutionary micro SAAS services including Quantum AI, Neuromorphic Computing, Synthetic Biology, Space Technology, and more cutting-edge solutions."
-        keywords="quantum AI, neuromorphic computing, synthetic biology, space technology, brain-computer interface, digital twin, extended reality, edge AI, federated learning, sustainable technology"
-      />
-=======
         title="Ultimate Innovative Services 2026 | Zion Tech Group""
         description="Discover our revolutionary micro SAAS services including Quantum AI, Neuromorphic Computing, Synthetic Biology, Space Technology, and more cutting-edge solutions.""        keywords="quantum AI, neuromorphic computing, synthetic biology, space technology, brain-computer interface, digital twin, extended reality, edge AI, federated learning, sustainable technology"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple py-20">"
@@ -122,12 +106,7 @@ export default function UltimateInnovativeServices2026(...args[]):  {
               <div className="relative">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-400 w-5 h-5"  />
                 <input"
-<<<<<<< HEAD
-                  type="text"
-                  placeholder="Search innovative services..."
-=======
                   type="text""                  placeholder="Search innovative services..."
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}"
                   className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-zion-slate-300 rounded-lg text-white placeholder-zion-slate-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"

@@ -147,13 +147,11 @@ export function EnhancedFuturisticFooter() {
     { name: 'Accessibility', href: '/accessibility', description: 'Accessibility statement' },;
     { name: 'Security', href: '/security', description: 'Security practices' },;
     { name: 'Compliance', href: '/compliance', description: 'Regulatory compliance' };
-=======
     { name: 'Privacy Policy', href: '/privacy', description: 'Data protection' },;'
     { name: 'Terms of Service', href: '/terms', description: 'Service terms' },;'
     { name: 'Cookie Policy', href: '/cookies', description: 'Cookie usage' },;'
     { name: 'Accessibility', href: '/accessibility', description: 'Accessibility statement' },;'
     { name: 'Security', href: '/security', description: 'Security practices' },;'    { name: 'Compliance', href: '/compliance', description: 'Regulatory compliance' };
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   // Create missing pages for broken links
@@ -381,14 +379,8 @@ export function EnhancedFuturisticFooter() {
                   ISO 27001 Certified
                 </span>"
                 <span className="flex items-center">"
-<<<<<<< HEAD
-                  <Award className="w-4 h-4 text-yellow-400 mr-2"  />
-                  AWS Partner
-                </span>
-=======
                   <Award className="w-4 h-4 text-yellow-400 mr-2"  />                  AWS Partner
                 </span>'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       title: 'Pricing & Plans',
       icon: DollarSign,
       color: 'from-emerald-600 to-teal-600',
@@ -482,11 +474,9 @@ export function EnhancedFuturisticFooter() {
   
     email: 'info@ziontechgroup.com',
     address: '123 Innovation Drive, Tech City, TC 12345'
-=======
 '
     phone: '+1 (555) 123-4567',;'
     email: 'info@ziontechgroup.com','    address: '123 Innovation Drive, Tech City, TC 12345'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   };
 
   return ("

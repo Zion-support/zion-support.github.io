@@ -1,29 +1,3 @@
-<<<<<<< HEAD
-export interface Message {
-  id: string;
-  role: 'user' | 'assistant';
-  message: string;
-  timestamp: Date;
-  read?: boolean
-};
-export interface ChatAssistantProps extends React.PropsWithChildren<{}> {
-
-  isOpen?: boolean;
-  onClose?: () => void}
-export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {;
-  const [isChatOpen, setIsChatOpen] = useState(isOpen);
-  const [messages, setMessages] = useState<any>([]);
-  const [inputMessage, setInputMessage] = useState('');
-  
-      timestamp: new Date(),;
-  ;
-  ;
-  ;
-  };
-    setMessages(prev => [...prev, userMessage]);
-    setInputMessage('');
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     // Simulate AI response
     setTimeout(: unknown {
       const aiMessage: Message = {

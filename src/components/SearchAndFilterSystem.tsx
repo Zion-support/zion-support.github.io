@@ -1,71 +1,3 @@
-<<<<<<< HEAD
-import {
-
-  Search,
-  Filter,
-  X,
-  ChevronDown,
-  Check,
-  Star,
-  Tag,
-  MapPin,
-  Calendar,
-  Users,
-  Zap,
-  Brain,
-  Cloud,
-  Shield,
-  Globe'
- } from 'lucide-react';
-
-interface SearchResult {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  tags: string[];
-  location?: string;
-  date?: string;
-  rating?: number;
-  type: 'service' | 'article' | 'team' | 'technology'}
-
-interface FilterOption {
-  id: string;
-  label: string;
-  value: string;
-  count: number
-}
-
-interface SearchAndFilterSystemProps extends React.PropsWithChildren<{}> {
-
-  data: SearchResult[];
-  onResultsChange?: (results: SearchResult[]) => void;
-  placeholder?: string;
-  showFilters?: boolean}
-
-export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
-
-  data,
-  onResultsChange,
-  placeholder = "Search services, articles, team members...",
-  showFilters = true}) => {
-
-  const [searchQuery, setSearchQuery] = useState('');
-  const [isSearchFocused, setIsSearchFocused] = useState(false);
-  const [activeFilters, setActiveFilters] = useState<Set<string>>(new Set());
-  const [showFilterPanel, setShowFilterPanel] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState<any>('all');
-  const [sortBy, setSortBy] = useState<any>('relevance');
-
-  // Filter options
-  
-      return acc}, {} as Record < string, any>) ;
-
-    
-      return acc}, {} as Record < string, any>) ;
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     return {
 
       categories: Object.entries(categories).map(([key, count])  => ({
@@ -98,22 +30,12 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
 
           if (!a.date || !b.date) return 0;
           return new Date(b.date).getTime() - new Date(a.date).getTime()});
-<<<<<<< HEAD
-        break;
-      case 'rating':
-=======
         break;'      case 'rating':
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         results = results.sort((a, b) => {
 
           if (!a.rating || !b.rating) return 0;
           return b.rating - a.rating});
-<<<<<<< HEAD
-        break;
-      case 'name':
-=======
         break;'      case 'name':
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         results = results.sort ( (a, b) => a.title.localeCompare (b.title) ) ;
         break;
       default: // relevance
@@ -435,14 +357,8 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
                     </div>
                   )}"
                   <div className="flex items-center gap-1">"
-<<<<<<< HEAD
-                    <Tag className="w-4 h-4"  />
-                    {result.tags.slice(0, 3).join(',)}`
-                    {result.tags.length > 3 && ` +${result.tags.length - 3} more`}
-=======
                     <Tag className="w-4 h-4"  />'
                     {result.tags.slice(0, 3).join(', ')}`                    {result.tags.length > 3 && ` +${result.tags.length - 3} more`}
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   </div>
                 </div>
               </div>

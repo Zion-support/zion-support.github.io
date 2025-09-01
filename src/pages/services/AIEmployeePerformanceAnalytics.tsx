@@ -1,114 +1,3 @@
-<<<<<<< HEAD
-import { Users, 
-  TrendingUp, 
-  BarChart3, 
-  Zap, 
-  Globe, 
-  Lock, 
-  Eye,
-  Star,
-  Cpu,
-  Database,
-  Search,
-  Filter,
-  Download,
-  Share2,
-  Play,
-  ArrowRight,
-  CheckCircle,
-  AlertTriangle,
-  FileText,
-  Clock,
-  Award,
-  Brain,
-  Target,
-  PieChart,
-  Activity,
-  UserCheck,
-  Shield,
-  Settings,
-  DollarSign,
-  AlertCircle,
-  Calendar,
-  MapPin,
-  GraduationCap,
-  Heart,
-  TrendingDown,
-  Lightbulb'
- } from 'lucide-react.ts';
-
-export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
-
-  
-    },;
-    {;
-      icon: Activity,;"
-      title: "Engagement & Wellness Monitoring",;"
-      description: "Track employee engagement, burnout indicators, and wellness metrics to support employee well-being."};
-  ]},;
-    {;
-      icon: Clock,;"
-      title: "Time Savings",;"
-      description: "Automate performance reviews and analytics, saving HR teams hours of manual work each month."};
-  ];
-
-  const pricingPlans = [
-    {
-"
-      name: "Starter","
-      price: "$399","
-      period: "/month","
-      description: "Perfect for small teams and startups beginning their performance analytics journey",
-      features: ["
-        "Up to 50 employees","
-        "Basic performance scoring","
-        "Email support","
-        "Standard integrations","
-        "Basic reporting","
-        "Goal tracking","
-        "Mobile app access"
-      ],"
-      cta: "Start Free Trial",
-      popular: false
-    },
-    {
-"
-      name: "Professional","
-      price: "$999","
-      period: "/month","
-      description: "Ideal for growing companies with advanced performance management needs",
-      features: ["
-        "Up to 500 employees","
-        "Advanced AI analytics","
-        "Priority support","
-        "Custom integrations","
-        "Advanced reporting & dashboards","
-        "Predictive insights","
-        "API access","
-        "360-degree feedback","
-        "Engagement monitoring"
-      ],"
-      cta: "Start Free Trial",
-      popular: true
-    },
-    {
-"
-      name: "Enterprise","
-      price: "$2,999","
-      period: "/month","
-      description: "For large organizations requiring enterprise-grade performance analytics",
-      features: ["
-        "Unlimited employees","
-        "Custom AI models","
-        "Dedicated account manager","
-        "White-label solutions","
-        "Advanced security features","
-        "Custom reporting","
-        "On-premise deployment",;"
-        "SLA guarantees",;"
-        "24/7 support";
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ],;"
       cta: "Contact Sales",;
       popular: false};
@@ -175,14 +64,8 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
-<<<<<<< HEAD
-        title="AI Employee Performance Analytics - Zion Tech Group"
-        description="Transform employee performance management with AI-powered analytics. Track productivity, predict retention, and optimize team performance."
-      />
-=======
         title="AI Employee Performance Analytics - Zion Tech Group""        description="Transform employee performance management with AI-powered analytics. Track productivity, predict retention, and optimize team performance."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 lg:py-32">"

@@ -1,44 +1,3 @@
-<<<<<<< HEAD
-import {
-
-  Activity,
-  TrendingUp,
-  TrendingDown,
-  Clock,
-  Zap,
-  AlertTriangle,
-  CheckCircle,
-  BarChart3,
-  Cpu,
-  HardDrive,
-  Network,
-  Monitor
-interface PerformanceMetric {
-
-  name: string;
-  value: number;
-  unit: string;
-  trend: 'up' | 'down' | 'stable';
-  status: 'good' | 'warning' | 'critical';
-  icon: React.ComponentType < any>;
-
-interface PerformanceData {
-  timestamp: number;
-  metrics: PerformanceMetric[];
-  alerts: string[];
-  recommendations: string[];
-
-const PerformanceAnalytics: React.FC = () => {;
-  const [performanceData, setPerformanceData] = useState<PerformanceData | null>(null);
-  const [isMonitoring, setIsMonitoring] = useState(false);
-  const [selectedTimeframe, setSelectedTimeframe] = useState<'1h' | '24h' | '7d' | '30d'>('24h');
-
-  // Mock performance data - in real implementation, this would come from actual monitoring
-  
-    
-    const metrics: PerformanceMetric[] = [
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       {
 
         name: 'Page Load Time',
@@ -102,16 +61,9 @@ const PerformanceAnalytics: React.FC = () => {;
       'Error rate spike detected in last 5 minutes';
     ];
 
-<<<<<<< HEAD
-    
-      'Consider implementing lazy loading for images',;
-      'Optimize database queries for better performance',;
-      'Enable CDN for static assets delivery';
-=======
     const recommendations = [;'
       'Consider implementing lazy loading for images',;'
       'Optimize database queries for better performance',;'      'Enable CDN for static assets delivery';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     ];
 
     return {

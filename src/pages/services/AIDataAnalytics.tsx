@@ -9,16 +9,9 @@ export default function AIDataAnalytics(...args: unknown[]): unknown {
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-<<<<<<< HEAD
-        title="AI Data Analytics - Intelligent Business Intelligence Platform | Zion Tech Group"
-        description="Transform your business with AI-powered data analytics, predictive insights, and automated reporting. Start free trial today."
-        keywords="AI data analytics, business intelligence, predictive analytics, data insights, AI analytics platform"
-       />
-=======
         title="AI Data Analytics - Intelligent Business Intelligence Platform | Zion Tech Group""
         description="Transform your business with AI-powered data analytics, predictive insights, and automated reporting. Start free trial today.""        keywords="AI data analytics, business intelligence, predictive analytics, data insights, AI analytics platform"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"

@@ -1,36 +1,3 @@
-<<<<<<< HEAD
-import { Brain, 
-  Link as LinkIcon, 
-  Shield, 
-  Clock, 
-  CheckCircle, 
-  Zap,
-  Globe,
-  TrendingUp,
-  ArrowRight,
-  Target,
-  Database,
-  Activity,
-  BarChart3,
-  Network'
-  } from 'lucide-react.ts';
-};
-  ];
-
-  const services = [
-    {
-"
-      name: "Starter Plan","
-      price: "$5,999","
-      period: "/month",
-      features[;"
-        "Basic blockchain tracking","
-        "AI analytics dashboard","
-        "Standard compliance","
-        "Up to 1000 transactions/month","
-        "Basic reporting"
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ],;
       popular: false
     },
@@ -94,16 +61,9 @@ import { Brain,
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-blue-dark">
       <SEO "
-<<<<<<< HEAD
-        title="AI-Powered Blockchain Supply Chain | Zion Tech Group"
-        description="Revolutionize your supply chain with AI-driven insights and blockchain transparency. Get real-time tracking, smart contracts, and automated compliance."
-        keywords="AI Supply Chain, Blockchain Supply Chain, Smart Contracts, Supply Chain Transparency, AI Analytics, Compliance Monitoring"
-       />
-=======
         title="AI-Powered Blockchain Supply Chain | Zion Tech Group""
         description="Revolutionize your supply chain with AI-driven insights and blockchain transparency. Get real-time tracking, smart contracts, and automated compliance.""        keywords="AI Supply Chain, Blockchain Supply Chain, Smart Contracts, Supply Chain Transparency, AI Analytics, Compliance Monitoring"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"

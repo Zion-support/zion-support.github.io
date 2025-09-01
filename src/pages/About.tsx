@@ -1,36 +1,3 @@
-<<<<<<< HEAD
-
-import {
-
-  Users,
-  Target,
-  Award,
-  Globe,
-  Zap,
-  Shield,
-  Rocket,
-  Heart,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Lightbulb,
-  Cpu,
-  Brain,
-  Cloud,
-  Lock,
-  Database} from 'lucide-react';
-
-  
-  
-  
-  
-  
-  return ("
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">"
-      <div className="container mx-auto px-4 py-24">
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         {/* Hero Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

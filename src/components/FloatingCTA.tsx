@@ -1,29 +1,3 @@
-<<<<<<< HEAD
-} from 'lucide-react';
-
-const FloatingCTA: React.FC = () : JSX.Element => {;
-  const [isOpen, setIsOpen] = useState (false) ;
-  const [isVisible, setIsVisible] = useState (false) ;
-
-  useEffect ( () => {
-    // Show CTA after 5 seconds
-    
-      setIsVisible (true) }, 5000) ;
-
-    return () => clearTimeout (timer) }, []) };
-  ];
-
-  const quickServices = ["
-    { name: "AI Solutions", icon: Brain, link: "/ai-services" },"
-    { name: "Cybersecurity", icon: Shield, link: "/cybersecurity" },"
-    { name: "Cloud Services", icon: Cloud, link: "/cloud-solutions" },;"
-    { name: "Digital Transformation", icon: Zap, link: "/digital-transformation" };
-  ];
-
-  if (!isVisible) return null;
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   const [isExpanded, setIsExpanded] = useState (false) ;
 
   return()

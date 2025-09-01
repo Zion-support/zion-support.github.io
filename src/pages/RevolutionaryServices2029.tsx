@@ -40,29 +40,8 @@ import {
   CheckCircle,
   Play,
   Pause,
-<<<<<<< HEAD
-  Volume2,
-  VolumeX} from 'lucide-react.ts';
-
-export default function RevolutionaryServices2029(...args: any[]): any {
-
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [sortBy, setSortBy] = useState('popularity');
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [volume, setVolume] = useState(0.5);
-
-  
-  
-      
-      return matchesSearch && matchesCategory});
-
-  
-      case 'price-low':
-=======
   Volume2,'
   VolumeX} from 'lucide-react.ts';'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         return ('
           parseFloat(a.price.replace(/[^0-9.]/g,)) -'
           parseFloat(b.price.replace(/[^0-9.]/g,))
@@ -118,16 +97,9 @@ export default function RevolutionaryServices2029(...args: any[]): any {
 "
       <div className="relative z-10">
         <SEO"
-<<<<<<< HEAD
-          title="Revolutionary 2029 Advanced Micro SAAS Services | Zion Tech Group"
-          description="Discover our cutting-edge 2029 micro SAAS services featuring AI automation, quantum computing, cybersecurity, and more. Transform your business with next-generation technology."
-          keywords="2029 micro SAAS, AI automation, quantum computing, cybersecurity, business intelligence, Zion Tech Group"
-        />
-=======
           title="Revolutionary 2029 Advanced Micro SAAS Services | Zion Tech Group""
           description="Discover our cutting-edge 2029 micro SAAS services featuring AI automation, quantum computing, cybersecurity, and more. Transform your business with next-generation technology.""          keywords="2029 micro SAAS, AI automation, quantum computing, cybersecurity, business intelligence, Zion Tech Group"
          />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
         {/* Hero Section */}"
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
@@ -218,12 +190,7 @@ export default function RevolutionaryServices2029(...args: any[]): any {
                   <div className="relative">"
                     <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
                     <input"
-<<<<<<< HEAD
-                      type="text"
-                      placeholder="Search revolutionary services..."
-=======
                       type="text""                      placeholder="Search revolutionary services..."
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                       value={searchQuery}
                       onChange={e => setSearchQuery(e.target.value)}"
                       className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"

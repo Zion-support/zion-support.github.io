@@ -9,16 +9,9 @@ export default function AIBusinessIntelligence(...args[]):  {
       title: 'Predictive Analytics',;
       description: 'Forecast trends and identify opportunities'};
   ]},;
-<<<<<<< HEAD
-    {;
-      title: 'Automated Reporting',;
-      description: 'Generate reports automatically with AI insights',;
-      icon: Target};
-=======
     {;'
       title: 'Automated Reporting',;'      description: 'Generate reports automatically with AI insights',;
       icon: Target};
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return()

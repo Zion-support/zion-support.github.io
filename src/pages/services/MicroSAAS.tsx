@@ -179,12 +179,7 @@
               <div className="text-center">"
                 <Rocket className="w-24 h-24 text-indigo-400 mx-auto mb-4" />"
                 <h3 className="text-2xl font-bold text-white mb-2">SAAS Success</h3>"
-<<<<<<< HEAD
-                <p className="text-gray-300 mb-6">
-                  We've helped numerous entrepreneurs build successful SAAS businesses
-=======
                 <p className="text-gray-300 mb-6">'                  We've helped numerous entrepreneurs build successful SAAS businesses
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   that generate millions in recurring revenue.
                 </p>"
                 <div className="text-sm text-gray-400">

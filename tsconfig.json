@@ -15,7 +15,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "incremental": true,
     "declaration": true,
     "declarationMap": true,
@@ -50,9 +50,18 @@
       "@constants/*": ["src/constants/*"]
     },
     "typeRoots": ["./node_modules/@types", "./types"],
-    "types": ["node"]
+    "types": ["node", "react", "react-dom"]
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "tailwind.config.js", "postcss.config.js"],
+  "include": [
+    "src/main.tsx",
+    "src/App.tsx",
+    "src/pages/SimpleHome.tsx",
+    "vite.config.ts",
+    "tailwind.config.ts",
+    "tailwind.config.js",
+    "postcss.config.js",
+    "src/types/**/*.d.ts"
+  ],
   "exclude": [
     "node_modules",
     "zion.app/recovered-content/**",

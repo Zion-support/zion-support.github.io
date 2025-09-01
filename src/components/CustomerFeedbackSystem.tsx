@@ -1,57 +1,4 @@
-<<<<<<< HEAD
-import {
-
-  Star,
-  MessageCircle,
-  ThumbsUp,
-  ThumbsDown,
-  Send,
-  Heart,
-  Award,
-  TrendingUp,
-  Users,
-  Clock,
-  Flag,
-  Share2,
-  Download,
-  Filter,
-  Search'
- } from 'lucide-react';
-
-  verified: boolean}
-
-interface FeedbackStats {
-  totalFeedback: number;
-  averageRating: number;
-  positivePercentage: number;
-  responseRate: number;
-  topCategories: Array < any>}
-
-interface CustomerFeedbackSystemProps extends React.PropsWithChildren<{}> {
-
-  showStats?: boolean;
-  showFilters?: boolean;
-  maxFeedback?: number}
-
-export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
-
-showStats:  true,;
-  showFilters = true,;
-  maxFeedback = 10}) => {;
-  const [feedback, setFeedback] = useState<Feedback[]>([]);
-  const [filteredFeedback, setFilteredFeedback] = useState<Feedback[]>([]);
-  const [stats, setStats] = useState<FeedbackStats>({
-
-    totalFeedback: 0,
-    averageRating: 0,
-    positivePercentage: 0,
-    responseRate: 0,
-    topCategories[]});
-  const [selectedCategory, setSelectedCategory] = useState<any>('all');
-  const [selectedRating, setSelectedRating] = useState<any>(0);
-=======
   const [selectedRating, setSelectedRating] = useState<any>(0);'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   const [searchQuery, setSearchQuery] = useState('');
   const [showFeedbackForm, setShowFeedbackForm] = useState(false);
   const [newFeedback, setNewFeedback] = useState({
@@ -212,12 +159,7 @@ showStats:  true,;
   ;
   verified: false;
     };
-<<<<<<< HEAD
-
-    setFeedback(prev  => [feedback, ...prev]);
-=======
     setFeedback(prev  => [feedback, ...prev]);'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     setNewFeedback({ rating: 0, comment: '', category: 'overall' });
     setShowFeedbackForm(false)};
 
@@ -232,29 +174,20 @@ showStats:  true,;
 
   // Get sentiment color
   
-<<<<<<< HEAD
-    switch (sentiment) {;
-      case 'positive': return 'text-green-400 bg-green-400/20';
-      case 'negative': return 'text-red-400 bg-red-400/20';
-      default: return 'text-yellow-400 bg-yellow-400/20'}
-=======
     switch (sentiment) {;'
       case 'positive': return 'text-green-400 bg-green-400/20';'
       case 'negative': return 'text-red-400 bg-red-400/20';'      default: return 'text-yellow-400 bg-yellow-400/20'}
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   };
 
   // Get category color
   
   ;
   ;
-=======
 '
   'service': 'text-blue-400 bg-blue-400/20','
       'product': 'text-green-400 bg-green-400/20','
       'support': 'text-purple-400 bg-purple-400/20',;  ;
   ;'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   'overall': 'text-zion-cyan bg-zion-cyan/20';
     };
     return colors[category as keyof typeof colors] || 'text-zinc-400 bg-zinc-400/20'};
@@ -623,14 +556,8 @@ showStats:  true,;
             <div className="flex items-center gap-2 mb-3">;
               {[1, 2, 3, 4, 5].map((star) => (;
                 <Star
-<<<<<<< HEAD
-                  key={star}`
-                  className={`w-5 h-5 ${
-
-=======
                   key={star}`                  className={`w-5 h-5 ${
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     star <= item.rating ? 'text-yellow-400 fill-current' : 'text-zinc-600'`
                   }`}
                 />

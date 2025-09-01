@@ -43,22 +43,12 @@ export default function AIMetaverseDevelopmentPlatform() {
     'Build sustainable metaverse economies and ecosystems';
   ];
 
-<<<<<<< HEAD
-  
-    'Gaming and Entertainment',;
-    'Real Estate and Architecture',;
-    'Education and Training',;
-    'Healthcare and Telemedicine',;
-    'Retail and E-commerce',;
-    'Corporate and Enterprise';
-=======
   const industries = [;'
     'Gaming and Entertainment',;'
     'Real Estate and Architecture',;'
     'Education and Training',;'
     'Healthcare and Telemedicine',;'
     'Retail and E-commerce',;'    'Corporate and Enterprise';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return()

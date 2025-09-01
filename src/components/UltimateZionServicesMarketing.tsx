@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-
-const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  
-      icon: '🖥️', ;
-      color: 'from-gray-600 to-slate-600',;
-      description: 'Advanced infrastructure and DevOps solutions',;
-      marketSize: '$25.2 billion by 2027',;
-      growthRate: '150% annually'};
-  ];
-
-  
-    if (categoryId === 'all') return ultimateZionServices2025;
-    return ultimateZionServices2025.filter (service => service.category === categoryId) };
-
-  
-  return()
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       {/* Hero Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto text-center">

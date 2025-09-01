@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-
-export type NotificationType = 'success' | 'error' | 'warning' | 'info';
-=======
 'export type NotificationType = 'success' | 'error' | 'warning' | 'info';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 ;
 export interface Notification {
   id: string;
@@ -32,14 +27,8 @@ interface NotificationContextType {
 
 ;
 export 
-<<<<<<< HEAD
-  
-  if (!context) {
-
-=======
   const context = useContext(NotificationContext);  if (!context) {
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     throw new Error('useNotifications must be used within a NotificationProvider')}
   return context};
 
@@ -145,12 +134,7 @@ const NotificationContainer: React.FC = props {;  const { notifications, removeN
 const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRemove }) => {
 "
         return <Info className = "w-5 h-5 text-blue-400"  />}};
-<<<<<<< HEAD
-
-        return 'border-blue-500/30'}
-=======
 '        return 'border-blue-500/30'}
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   };
 
         return 'bg-blue-500/10'}

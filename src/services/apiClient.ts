@@ -1,21 +1,12 @@
+export interface ApiResponse<T> {
+	data: T;
+	status: number;
+}
 
+export async function get<T = unknown>(url: string): Promise<ApiResponse<T>> {
+	return { data: {} as T, status: 200 };
+}
 
-  withCredentials: true,}) ;
-apiClient.interceptors.response.use()
-  (response)  => response,
-  async (error) => {
-
-    if (error.response?.status = == 401) {;
-      try {;
-        await supabase.auth.signOut({ scope: 'global' })} catch (e) {
-
-        // console.error('Failed to logout after 401', e)}
-      if (typeof window !== 'null') {
-
-        window.location.assign('/login')}
-    } else {
-
-      
-      toast.error (message) }
-    return Promise.throw new Error (error) }) ;
-export default apiClient;
+export async function post<T = unknown>(url: string, body?: unknown): Promise<ApiResponse<T>> {
+	return { data: {} as T, status: 200 };
+}

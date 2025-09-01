@@ -36,14 +36,8 @@
     {;
       title: 'Insecure Dependencies',;
       description: 'Identify and update vulnerable third-party libraries and dependencies.',;
-<<<<<<< HEAD
-      icon: Package,;
-      examples: ['Dependency scanning',Vulnerability databases',Update automation',License compliance']};
-  ];
-=======
       icon: Package,;'
       examples: ['Dependency scanning', 'Vulnerability databases', 'Update automation', 'License compliance']};  ];
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">

@@ -1,63 +1,3 @@
-<<<<<<< HEAD
-import { Shield, 
-  Brain, 
-  BarChart3, 
-  AlertTriangle, 
-  Clock, 
-  BarChart3, 
-  CheckCircle,
-  Play,
-  Star,
-  Award,
-  DollarSign,
-  Target,
-  Zap,
-  Brain,
-  Globe,
-  Rocket,
-  Eye,
-  Cpu'
- } from 'lucide-react';
-;
-const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
-
-  
-    },;
-    {;
-      icon: Target,;"
-      title: "Adaptive Learning",;"
-      description: "Self-improving AI models that continuously learn from new fraud patterns and adapt to evolving threats in real-time."};
-  ];
-
-  const benefits = [;"
-    "Reduce fraud losses by 85-95%",;"
-    "Improve detection accuracy by 40%",;"
-    "Reduce false positives by 60%",;"
-    "Save $100K+ annually on fraud prevention",;"
-    "Comply with PCI DSS, SOC 2, and GDPR requirements";
-  ];
-
-  const useCases = [;"
-    "Credit Card Fraud",;"
-    "Banking & Financial Services",;"
-    "E-commerce & Retail",;"
-    "Insurance Claims",;"
-    "Healthcare Billing",;"
-    "Cryptocurrency Transactions";
-  ];
-
-  const integrations = [;"
-    "Stripe, PayPal, Square",;"
-    "Visa, Mastercard, American Express",;"
-    "Banking APIs (Plaid, Yodlee)",;"
-    "QuickBooks, Xero, NetSuite",;"
-    "Salesforce, HubSpot, Pipedrive";
-  ];
-
-  
-      popular: false
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     },
     {
 "
@@ -79,18 +19,10 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       <SEO "
-<<<<<<< HEAD
-        title="AI Financial Fraud Detection Platform - Zion Tech Group"
-        description="Protect your business with AI-powered fraud detection. Detect and prevent financial fraud with 99.2% accuracy, reduce losses by 85-95%, and ensure compliance."
-        keywords="fraud detection, AI security, financial fraud prevention, machine learning security, transaction monitoring, fraud analytics"
-        canonical="https://ziontechgroup.com/services/ai-financial-fraud-detection"
-       />
-=======
         title="AI Financial Fraud Detection Platform - Zion Tech Group""
         description="Protect your business with AI-powered fraud detection. Detect and prevent financial fraud with 99.2% accuracy, reduce losses by 85-95%, and ensure compliance.""
         keywords="fraud detection, AI security, financial fraud prevention, machine learning security, transaction monitoring, fraud analytics""        canonical="https://ziontechgroup.com/services/ai-financial-fraud-detection"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"

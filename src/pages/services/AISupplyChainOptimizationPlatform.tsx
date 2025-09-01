@@ -64,14 +64,8 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-<<<<<<< HEAD
-        title="AI-Powered Supply Chain Optimization Platform - Zion Tech Group"
-        description="Revolutionize your supply chain with AI-powered optimization. Reduce costs, improve efficiency, and enhance customer satisfaction with intelligent logistics management."
-       />
-=======
         title="AI-Powered Supply Chain Optimization Platform - Zion Tech Group""        description="Revolutionize your supply chain with AI-powered optimization. Reduce costs, improve efficiency, and enhance customer satisfaction with intelligent logistics management."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       
       {/* Hero Section */}"
       <div className="relative overflow-hidden">"

@@ -1,61 +1,3 @@
-<<<<<<< HEAD
-import { TrendingUp, 
-  Brain, 
-  DollarSign, 
-  BarChart3, 
-  Shield, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight,
-  Clock,
-  Target,
-  Activity,
-  Globe,
-  Smartphone,
-  Cloud,
-  Database,
-  Cpu,
-  Users,
-  Lock,
-  Eye,
-  PieChart'
- } from 'lucide-react';
-;
-export { function };
-export default function AIFinancialTradingPlatform(...args: []):  {
-
-  
-    },;
-    {;
-      icon: Eye,;
-      title: 'Market Sentiment Analysis',;
-      description: 'AI analyzes news, social media, and market data to gauge investor sentiment'};
-  ];
-
-  
-        'Unlimited portfolio size',;
-        'On-premise options',;
-        'SLA guarantees';
-      ],;
-      popular: false};
-  ]},;
-    {;
-      icon: BarChart3,;
-      title: 'Emotion-Free Trading',;
-      description: 'Eliminate human bias and emotional decision-making from your trades'};
-  ]},;
-    {;
-      title: 'Commodities',;
-      description: 'AI-driven insights for gold, oil, and other commodity markets',;
-      icon: BarChart3};
-  ];
-
-  
-    { metric: '95%', label: 'Win Rate' },;
-    { metric: '2.5x', label: 'Sharpe Ratio' },;
-    { metric: '15%', label: 'Max Drawdown' },;
-    { metric: '24/7', label: 'Uptime' };
-=======
       icon: BarChart3};
   ];
 
@@ -63,20 +5,13 @@ export default function AIFinancialTradingPlatform(...args: []):  {
     { metric: '95%', label: 'Win Rate' },;'
     { metric: '2.5x', label: 'Sharpe Ratio' },;'
     { metric: '15%', label: 'Max Drawdown' },;'    { metric: '24/7', label: 'Uptime' };
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-<<<<<<< HEAD
-        title="AI Financial Trading Platform - Zion Tech Group"
-        description="Revolutionary AI-powered financial trading platform with 25% higher returns. Automated trading, real-time optimization, and advanced risk management. Start from $199/month."
-       />
-=======
         title="AI Financial Trading Platform - Zion Tech Group""        description="Revolutionary AI-powered financial trading platform with 25% higher returns. Automated trading, real-time optimization, and advanced risk management. Start from $199/month."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"

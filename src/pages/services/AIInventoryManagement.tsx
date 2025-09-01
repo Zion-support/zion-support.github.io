@@ -1,114 +1,3 @@
-<<<<<<< HEAD
-import { Package, 
-  TrendingUp, 
-  BarChart3, 
-  Users, 
-  Zap, 
-  Globe, 
-  Lock, 
-  Eye,
-  Star,
-  Cpu,
-  Database,
-  Search,
-  Filter,
-  Download,
-  Share2,
-  Play,
-  ArrowRight,
-  CheckCircle,
-  AlertTriangle,
-  FileText,
-  Clock,
-  Award,
-  Brain,
-  Target,
-  PieChart,
-  Activity,
-  Truck,
-  Warehouse,
-  ShoppingCart,
-  Shield,
-  Settings,
-  DollarSign,
-  AlertCircle,
-  Calendar,
-  MapPin,
-  Store'
- } from 'lucide-react.ts';
-
-export default function AIInventoryManagement(...args: any[]): any {
-
-  
-    },;
-    {;
-      icon: Activity,;"
-      title: "Supply Chain Integration",;"
-      description: "Seamless integration with suppliers, logistics partners, and e-commerce platforms for end-to-end visibility."};
-  ]},;
-    {;
-      icon: Clock,;"
-      title: "Time Savings",;"
-      description: "Automate routine inventory tasks and focus on strategic business decisions."};
-  ];
-
-  const pricingPlans = [
-    {
-"
-      name: "Starter","
-      price: "$199","
-      period: "/month","
-      description: "Perfect for small businesses with basic inventory management needs",
-      features: ["
-        "Up to 1,000 SKUs","
-        "Basic demand forecasting","
-        "Email support","
-        "Standard integrations","
-        "Basic reporting","
-        "2 warehouse locations","
-        "Mobile app access"
-      ],"
-      cta: "Start Free Trial",
-      popular: false
-    },
-    {
-"
-      name: "Professional","
-      price: "$599","
-      period: "/month","
-      description: "Ideal for growing businesses with advanced inventory requirements",
-      features: ["
-        "Up to 10,000 SKUs","
-        "Advanced AI forecasting","
-        "Priority support","
-        "Custom integrations","
-        "Advanced analytics","
-        "Multi-location support","
-        "API access","
-        "Barcode scanning","
-        "Supplier management"
-      ],"
-      cta: "Start Free Trial",
-      popular: true
-    },
-    {
-"
-      name: "Enterprise","
-      price: "$1,999","
-      period: "/month","
-      description: "For large organizations requiring enterprise-grade inventory solutions",
-      features: ["
-        "Unlimited SKUs","
-        "Custom AI models","
-        "Dedicated account manager","
-        "White-label solutions","
-        "Advanced security features","
-        "Custom reporting","
-        "On-premise deployment",;"
-        "SLA guarantees",;"
-        "24/7 support";
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ],;"
       cta: "Contact Sales",;
       popular: false};
@@ -155,14 +44,8 @@ export default function AIInventoryManagement(...args: any[]): any {
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
-<<<<<<< HEAD
-        title="AI Inventory Management - Zion Tech Group"
-        description="Optimize your inventory with AI-powered demand forecasting, real-time tracking, and automated reordering. Reduce costs and prevent stockouts."
-      />
-=======
         title="AI Inventory Management - Zion Tech Group""        description="Optimize your inventory with AI-powered demand forecasting, real-time tracking, and automated reordering. Reduce costs and prevent stockouts."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 lg:py-32">"

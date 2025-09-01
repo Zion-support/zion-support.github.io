@@ -1,34 +1,3 @@
-<<<<<<< HEAD
-import {
-
-  Loader2,
-  CheckCircle,
-  AlertCircle,
-  Zap,
-  Sparkles,
-  TrendingUp,
-  Cpu,
-  Database,
-  Network,
-  Shield'
- } from 'lucide-react';
-
-interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
-
-  size?: 'sm' | 'md' | 'lg';
-  text?: string;
-  fullScreen?: boolean}
-
-export function LoadingSpinner({
-
-  size = 'md',
-  text = 'Loading...',
-  fullScreen = false}: LoadingSpinnerProps) {
-
-  
-  ;
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   ;

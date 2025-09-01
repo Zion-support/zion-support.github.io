@@ -137,9 +137,6 @@ export function useAuth(...args: unknown[]): unknown {
     register,
 :src/hooks/useAuth.tsx
     updateProfile}}
-<<<<<<< HEAD
-=======
 '
     updateProfile,
   }}
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954

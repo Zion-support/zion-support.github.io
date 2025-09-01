@@ -89,35 +89,19 @@ export default function SmartContractRiskScanner(...args: []):  {
     'Base';
   ];
 
-<<<<<<< HEAD
-  
-    'OWASP Top 10',;
-    'Smart Contract Security Verification Standard',;
-    'Ethereum Security Best Practices',;
-    'DeFi Security Guidelines',;
-    'ISO 27001 Compliance',;
-    'SOC 2 Type II';
-=======
   const securityStandards = [;'
     'OWASP Top 10',;'
     'Smart Contract Security Verification Standard',;'
     'Ethereum Security Best Practices',;'
     'DeFi Security Guidelines',;'
     'ISO 27001 Compliance',;'    'SOC 2 Type II';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-<<<<<<< HEAD
-        title="Smart Contract Risk Scanner - Zion Tech Group"
-        description="AI-powered smart contract security scanner with automated vulnerability detection, multi-chain support, and comprehensive risk assessment. Protect your DeFi projects from security threats."
-       />
-=======
         title="Smart Contract Risk Scanner - Zion Tech Group""        description="AI-powered smart contract security scanner with automated vulnerability detection, multi-chain support, and comprehensive risk assessment. Protect your DeFi projects from security threats."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 px-4 overflow-hidden">"

@@ -646,20 +646,11 @@
 export 
 export 
 export 
-<<<<<<< HEAD
-export 
-  'Metaverse Solutions',;
-  'Web3 Solutions',;
-  'Sustainable Tech',;
-  'NeuroTech Solutions',;
-  'Fusion Energy Solutions';
-=======
 export const pricingCategories2027 = [;'
   'Metaverse Solutions',;'
   'Web3 Solutions',;'
   'Sustainable Tech',;'
   'NeuroTech Solutions',;'  'Fusion Energy Solutions';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 ];
 export const pricingSubcategories2027 = {
 '"

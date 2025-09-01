@@ -1,57 +1,3 @@
-<<<<<<< HEAD
-import {
-
-  Brain,
-  Shield,
-  Cpu,
-  Rocket,
-  Zap,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Users,
-  BarChart3,
-  Heart,
-  Eye,
-  Atom,
-  Activity,
-  Code,
-  Database,
-  Server,
-  Network,
-  Lock,
-  Cloud,
-  Target,
-  TrendingUp,
-  Briefcase,
-  Globe,
-  Phone,
-  Mail,
-  MapPin,
-  Search,
-  Filter,
-  DollarSign,
-  Clock,
-  Award,
-  TrendingDown,
-  Sparkles,
-  Lightbulb,
-  Zap as ZapIcon,
-  Shield as ShieldIcon,
-  Cpu as CpuIcon,
-  Rocket as RocketIcon,
-  Brain as BrainIcon,
-  Atom as AtomIcon,
-  Eye as EyeIcon,
-  Code as CodeIcon,
-  BarChart3 as BarChartIcon,
-  Users as UsersIcon,
-  Heart as HeartIcon,
-  Globe as GlobeIcon,
-  TrendingUp as TrendingUpIcon} from 'lucide-react';
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 export function ServicesShowcasePage() {
 
   const [searchTerm, setSearchTerm] = useState('');
@@ -170,12 +116,7 @@ export function ServicesShowcasePage() {
             <div className="relative">"
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
               <input"
-<<<<<<< HEAD
-                type="text"
-                placeholder="Search services..."
-=======
                 type="text""                placeholder="Search services..."
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                 value={searchTerm}
                 onChange={e => setSearchTerm(e.target.value)}"
                 className="w-full pl-10 pr-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"

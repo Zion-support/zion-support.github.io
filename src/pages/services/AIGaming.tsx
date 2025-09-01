@@ -31,22 +31,12 @@ import { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'Scale gaming operations efficiently';
   ];
 
-<<<<<<< HEAD
-  
-    'Mobile Gaming',;
-    'PC Gaming',;
-    'Console Gaming',;
-    'VR/AR Gaming',;
-    'Esports & Competitive Gaming',;
-    'Educational & Serious Games';
-=======
   const industries = [;'
     'Mobile Gaming',;'
     'PC Gaming',;'
     'Console Gaming',;'
     'VR/AR Gaming',;'
     'Esports & Competitive Gaming',;'    'Educational & Serious Games';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return()

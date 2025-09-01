@@ -1,42 +1,3 @@
-<<<<<<< HEAD
-import { Shield, 
-  FileText, 
-  TrendingUp, 
-  Users, 
-  Database, 
-  BarChart3, 
-  Zap,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  DollarSign,
-  Target,
-  Globe,
-  Lock,
-  Search,
-  Calendar,
-  MessageSquare,
-  Bell,
-  Phone,
-  Mail,
-  MapPin,
-  Scale,
-  AlertTriangle,
-  BookOpen,
-  CreditCard,
-  Building,
-  Eye,
-  Clock,
-  Award,
-  Gauge,
-  PieChart'
-} from 'lucide-react';
-;
-export { function };
-export default function AIFinancialComplianceAssistant(...args[]): {
-  ;
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   website: 'https://ziontechgroup.com';
@@ -103,31 +64,17 @@ export default function AIFinancialComplianceAssistant(...args[]): {
       description: 'Accounting standards compliance with automated financial reporting',;
       icon: BookOpen};
   ]},;
-<<<<<<< HEAD
-    {;
-      title: 'Fintech Startups',;
-      description: 'Rapid compliance scaling for growing financial technology companies',;
-      icon: Zap};
-=======
     {;'
       title: 'Fintech Startups',;'      description: 'Rapid compliance scaling for growing financial technology companies',;
       icon: Zap};
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <SEO "
-<<<<<<< HEAD
-        title="AI Financial Compliance Assistant | Zion Tech Group"
-        description="Revolutionize your financial compliance with AI-powered automation. Monitor regulations, detect risks, and ensure 99.9% compliance accuracy."
-        keywords="AI financial compliance, regulatory compliance, SOX compliance, GDPR compliance, PCI DSS, AML KYC, financial regulations"
-       />
-=======
         title="AI Financial Compliance Assistant | Zion Tech Group""
         description="Revolutionize your financial compliance with AI-powered automation. Monitor regulations, detect risks, and ensure 99.9% compliance accuracy.""        keywords="AI financial compliance, regulatory compliance, SOX compliance, GDPR compliance, PCI DSS, AML KYC, financial regulations"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">"

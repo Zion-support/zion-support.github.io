@@ -1,75 +1,9 @@
-<<<<<<< HEAD
-import {
-
-  Leaf,
-  Zap,
-  Shield,
-  Globe,
-  TrendingUp,
-  Settings,
-  Database,
-  Cloud,
-  Lock,
-  Users,
-  Rocket,
-  CheckCircle,
-  ArrowRight,
-  Sun,
-  Wind,
-  Battery,
-  Recycle,
-  Tree,
-  Lightbulb,
-  Gauge,
-  Target,
-  Award,
-  BarChart3'
-} from 'lucide-react';
-;
-export { function };
-export default function GreenIT(...args: unknown[]): unknown {
-  
-    },;
-    {;
-      icon: Recycle,;
-      title: 'Circular IT Economy',;
-      description: 'Implement IT asset lifecycle management with recycling and refurbishment programs.'};
-  ];
-
-  
-    {;
-      title: 'Green Software Development',;
-      description: 'Develop energy-efficient software applications and optimize existing systems',;
-      icon: Code,;
-      benefits: ['Reduced computational overhead',Lower energy consumption',Improved performance']};
-  ];
-
-  
-    {;
-      industry: 'Manufacturing',;
-      description: 'Smart manufacturing with energy-efficient automation and monitoring',;
-      icon: Factory,;
-      metrics: ['Production Efficiency',Energy Consumption',Environmental Compliance']};
-  ]},;
-    {;
-      icon: Award,;
-      title: 'Brand Reputation',;
-      description: 'Enhance brand image through commitment to sustainability'};
-  ];
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
-<<<<<<< HEAD
-        title="Green IT Services - Zion Tech Group"
-        description="Transform your IT infrastructure with sustainable, energy-efficient solutions. Reduce carbon footprint, lower costs, and meet environmental compliance standards."
-      />
-=======
         title="Green IT Services - Zion Tech Group""        description="Transform your IT infrastructure with sustainable, energy-efficient solutions. Reduce carbon footprint, lower costs, and meet environmental compliance standards."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"

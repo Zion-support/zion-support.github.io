@@ -1,48 +1,3 @@
-<<<<<<< HEAD
-import { TrendingDown, 
-  Brain, 
-  BarChart3, 
-  Shield, 
-  Zap, 
-  Users, 
-  Target, 
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Clock,
-  DollarSign'
- } from 'lucide-react';
-;
-const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
-
-  
-    },;
-    {;
-      icon: Users,;"
-      title: "Customer Segmentation",;"
-      description: "Intelligent clustering of customers by risk level, value, and behavior patterns for targeted retention strategies."};
-  ];
-
-  const benefits = [;"
-    "Reduce customer churn by 40-60%",;"
-    "Increase customer lifetime value by 35%",;"
-    "Save $50K+ annually on customer acquisition",;"
-    "Improve customer satisfaction scores by 25%",;"
-    "Automate 80% of retention workflows";
-  ];
-
-  const integrations = [;"
-    "Salesforce, HubSpot, Pipedrive",;"
-    "Stripe, PayPal, Square",;"
-    "Intercom, Zendesk, Freshdesk",;"
-    "Google Analytics, Mixpanel, Amplitude",;"
-    "Slack, Microsoft Teams, Email";
-  ];
-
-  
-      popular: false
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     },
     {
 "
@@ -64,18 +19,10 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       <SEO "
-<<<<<<< HEAD
-        title="AI Customer Churn Prediction Platform - Zion Tech Group"
-        description="Predict and prevent customer churn with AI-powered analytics. Reduce churn by 40-60% and increase customer lifetime value with our advanced machine learning platform."
-        keywords="customer churn prediction, AI analytics, customer retention, machine learning, predictive analytics, customer success"
-        canonical="https://ziontechgroup.com/services/ai-customer-churn-prediction"
-       />
-=======
         title="AI Customer Churn Prediction Platform - Zion Tech Group""
         description="Predict and prevent customer churn with AI-powered analytics. Reduce churn by 40-60% and increase customer lifetime value with our advanced machine learning platform.""
         keywords="customer churn prediction, AI analytics, customer retention, machine learning, predictive analytics, customer success""        canonical="https://ziontechgroup.com/services/ai-customer-churn-prediction"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"

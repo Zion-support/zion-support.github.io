@@ -1,51 +1,3 @@
-<<<<<<< HEAD
-import {
-
-  Brain,
-  Atom,
-  Rocket,
-  Shield,
-  Dna,
-  Microscope,
-  Cpu,
-  Zap,
-  Globe,
-  Lock,
-  Eye,
-  Network,
-  TrendingUp,
-  Star,
-  ArrowRight,
-  ChevronDown,
-  ChevronUp,
-  ExternalLink,
-  Phone,
-  Mail,
-  MapPin'
-} from 'lucide-react';
-
-const categoryColors: { [key: string]: string } = {
-
-  'AI & Consciousness': 'from-purple-500 to-pink-500',Quantum AI': 'from-blue-500 to-cyan-500',Autonomous AI': 'from-green-500 to-emerald-500',Quantum Computing': 'from-indigo-500 to-purple-500',Quantum Finance': 'from-yellow-500 to-orange-500',Space Technology': 'from-purple-500 to-blue-500',Quantum Space': 'from-cyan-500 to-blue-500',Biotechnology': 'from-green-500 to-teal-500',Quantum Medicine': 'from-teal-500 to-blue-500',Quantum Security': 'from-red-500 to-pink-500',Nanotechnology': 'from-gray-500 to-slate-500',Neural Technology': 'from-violet-500 to-purple-500'
-};
-
-export const InnovativeServicesShowcase2027: React.FC = () => {;
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
-  const [expandedService, setExpandedService] = useState<string | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect ( () => {
-    const observer = new IntersectionObserver (; ([entry]) => {;
-        if (entry.isIntersecting) {;
-          setIsVisible (true) }
-      },
-      { threshold: 0.1 }
-    );
-
-    
-    if (element) {
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       observer.observe(element)}
 
@@ -57,11 +9,9 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
 
   
   ;
-=======
 '
   phone: '+1 302 464 0950','
     email: 'kleber@ziontechgroup.com',;  ;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   ;

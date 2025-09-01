@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-
-interface LoadingSpinnerProps {
-
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  color?: 'primary' | 'secondary' | 'white' | 'cyan';
-  text?: string;
-  showText?: boolean;
-  className?: string;
-;
-
-  ;
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   ;
@@ -126,14 +112,8 @@ export const FullScreenLoader: React.FC<{
   text?: string;
   showLogo?: boolean;
   className?: string}> = ({
-<<<<<<< HEAD
-
-  text = 'Loading amazing experiences...',
-  showLogo = true,
-=======
 '  text = 'Loading amazing experiences...',
   showLogo = true,'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   className = ''
 }) => (`
   <div className={`fixed inset-0 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center z-50 ${className}`}>"
@@ -157,12 +137,7 @@ export const SkeletonLoader: React.FC<{
 
   className?: string;
   lines?: number}> = ({
-<<<<<<< HEAD
-
-  className = '',
-=======
 '  className = '',
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   lines = 3}) => (`
   <div className={`animate-pulse ${className}`}>
     {Array.from({ length: lines }).map(_: unknown, index: unknown (

@@ -1,35 +1,3 @@
-<<<<<<< HEAD
-import { AlertTriangle, 
-  Clock, 
-  TrendingUp, 
-  Shield, 
-  Users, 
-  Database, 
-  BarChart3, 
-  Zap,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  DollarSign,
-  Target,
-  Globe,
-  Lock,
-  Search,
-  FileText,
-  Calendar,
-  MessageSquare,
-  Bell,
-  Phone,
-  Mail,
-  MapPin,
-  Server'
-} from 'lucide-react';
-;
-export { function };
-export default function AIIncidentPostmortems(...args[]): {
-  ;
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   website: 'https://ziontechgroup.com';
@@ -90,31 +58,17 @@ export default function AIIncidentPostmortems(...args[]): {
       cta: 'Contact Sales',;
       popular: false};
   ]},;
-<<<<<<< HEAD
-    {;
-      title: 'Customer Support',;
-      description: 'Improve customer experience with faster incident resolution and communication',;
-      icon: MessageSquare};
-=======
     {;'
       title: 'Customer Support',;'      description: 'Improve customer experience with faster incident resolution and communication',;
       icon: MessageSquare};
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEO "
-<<<<<<< HEAD
-        title="AI Incident Postmortems Platform | Zion Tech Group"
-        description="Revolutionize your incident management with AI-powered postmortems. Automate root cause analysis, prevent future incidents, and improve team productivity."
-        keywords="AI incident management, incident postmortems, root cause analysis, DevOps, IT operations, incident response"
-       />
-=======
         title="AI Incident Postmortems Platform | Zion Tech Group""
         description="Revolutionize your incident management with AI-powered postmortems. Automate root cause analysis, prevent future incidents, and improve team productivity.""        keywords="AI incident management, incident postmortems, root cause analysis, DevOps, IT operations, incident response"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">"

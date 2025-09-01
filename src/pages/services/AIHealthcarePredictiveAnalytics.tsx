@@ -1,52 +1,3 @@
-<<<<<<< HEAD
-import { Heart, 
-  Brain, 
-  TrendingUp, 
-  Users, 
-  Database, 
-  BarChart3, 
-  Zap,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  DollarSign,
-  Target,
-  Globe,
-  Lock,
-  Search,
-  Calendar,
-  MessageSquare,
-  Bell,
-  Phone,
-  Mail,
-  MapPin,
-  Scale,
-  AlertTriangle,
-  BookOpen,
-  CreditCard,
-  Building,
-  Eye,
-  Clock,
-  Award,
-  Gauge,
-  PieChart,
-  Activity,
-  Stethoscope,
-  Pill,
-  Microscope,
-  Shield,
-  Activity as Heartbeat,
-  FileText,
-  UserCheck,
-  Clipboard,
-  TestTube'
-} from 'lucide-react';
-;
-export { function };
-export default function AIHealthcarePredictiveAnalytics(...args[]): {
-  ;
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   website: 'https://ziontechgroup.com';
@@ -113,21 +64,6 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
       description: 'Aging-related health decline prediction and prevention',;
       icon: UserCheck};
   ]},;
-<<<<<<< HEAD
-    {;
-      title: 'Insurance Companies',;
-      description: 'Risk assessment and claims prediction for health insurers',;
-      icon: Shield};
-  ];
-
-  
-    'HIPAA Compliance',;
-    'HITECH Act Support',;
-    'SOC 2 Type II Certified',;
-    'GDPR Compliance',;
-    'FDA Guidelines Adherence',;
-    'Clinical Trial Compliance';
-=======
     {;'
       title: 'Insurance Companies',;'      description: 'Risk assessment and claims prediction for health insurers',;
       icon: Shield};
@@ -139,22 +75,14 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
     'SOC 2 Type II Certified',;'
     'GDPR Compliance',;'
     'FDA Guidelines Adherence',;'    'Clinical Trial Compliance';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
       <SEO "
-<<<<<<< HEAD
-        title="AI Healthcare Predictive Analytics Platform | Zion Tech Group"
-        description="Revolutionize healthcare with AI-powered predictive analytics. Predict diseases, optimize treatments, and improve patient outcomes with 94% accuracy."
-        keywords="AI healthcare analytics, predictive medicine, disease prediction, patient risk assessment, clinical analytics, healthcare AI"
-       />
-=======
         title="AI Healthcare Predictive Analytics Platform | Zion Tech Group""
         description="Revolutionize healthcare with AI-powered predictive analytics. Predict diseases, optimize treatments, and improve patient outcomes with 94% accuracy.""        keywords="AI healthcare analytics, predictive medicine, disease prediction, patient risk assessment, clinical analytics, healthcare AI"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">"

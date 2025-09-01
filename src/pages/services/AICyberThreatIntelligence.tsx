@@ -1,36 +1,3 @@
-<<<<<<< HEAD
-import { Brain, 
-  Shield, 
-  Eye, 
-  Clock, 
-  CheckCircle, 
-  Zap,
-  Globe,
-  TrendingUp,
-  ArrowRight,
-  Target,
-  AlertTriangle,
-  Activity,
-  BarChart3,
-  Lock'
-  } from 'lucide-react.ts';
-};
-  ];
-
-  const services = [
-    {
-"
-      name: "Basic Protection","
-      price: "$4,999","
-      period: "/month",
-      features[;"
-        "Core threat detection","
-        "Basic AI analytics","
-        "Standard monitoring","
-        "Up to 100 endpoints","
-        "Basic reporting"
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ],;
       popular: false
     },
@@ -94,16 +61,9 @@ import { Brain,
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-blue-dark">
       <SEO "
-<<<<<<< HEAD
-        title="AI-Powered Cyber Threat Intelligence | Zion Tech Group"
-        description="Advanced AI-driven cyber threat detection and intelligence. Get real-time monitoring, predictive defense, and automated response to protect your digital assets."
-        keywords="AI Cybersecurity, Threat Intelligence, Cyber Defense, AI Security, Threat Detection, Cybersecurity AI"
-       />
-=======
         title="AI-Powered Cyber Threat Intelligence | Zion Tech Group""
         description="Advanced AI-driven cyber threat detection and intelligence. Get real-time monitoring, predictive defense, and automated response to protect your digital assets.""        keywords="AI Cybersecurity, Threat Intelligence, Cyber Defense, AI Security, Threat Detection, Cybersecurity AI"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"

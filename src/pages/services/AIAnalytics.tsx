@@ -8,16 +8,9 @@ export default function AIAnalytics(...args[]):  {
       title: 'Data Visualization',;
       description: 'Clear and intuitive data presentation'};
   ]},;
-<<<<<<< HEAD
-    {;
-      title: 'Computer Vision',;
-      description: 'Image and video analysis with AI',;
-      icon: Eye};
-=======
     {;'
       title: 'Computer Vision',;'      description: 'Image and video analysis with AI',;
       icon: Eye};
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return()

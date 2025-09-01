@@ -1,10 +1,5 @@
+import React from 'react';
 
-// MessagingInbox import removed - page not found"
-// Referrals import removed - page not found"
-// WalletPage import removed - page not found"
-
-
-  )};
-;
-export { DashboardRoutes };
-export default DashboardRoutes}}}}'"
+export default function DashboardRoutes(): JSX.Element {
+	return <div>Dashboard routes placeholder</div>;
+}

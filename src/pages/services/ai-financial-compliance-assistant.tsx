@@ -47,18 +47,10 @@ import {
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
-<<<<<<< HEAD
-        title="AI Financial Compliance Assistant - Zion Tech Group"
-        description="Ensure financial compliance with AI-powered monitoring, automated reporting, and real-time risk detection. Stay compliant with regulations while reducing costs."
-        keywords="AI financial compliance, AML compliance, KYC automation, fraud detection, regulatory reporting, financial risk management"
-        canonical="https://ziontechgroup.com/services/ai-financial-compliance-assistant"
-      />
-=======
         title="AI Financial Compliance Assistant - Zion Tech Group""
         description="Ensure financial compliance with AI-powered monitoring, automated reporting, and real-time risk detection. Stay compliant with regulations while reducing costs.""
         keywords="AI financial compliance, AML compliance, KYC automation, fraud detection, regulatory reporting, financial risk management""        canonical="https://ziontechgroup.com/services/ai-financial-compliance-assistant"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"

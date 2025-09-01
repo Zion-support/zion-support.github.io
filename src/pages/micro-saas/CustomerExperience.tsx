@@ -9,16 +9,9 @@ export default function CustomerExperience(...args[]):  {
       title: 'Loyalty Programs',;
       description: 'Reward and retain your best customers'};
   ]},;
-<<<<<<< HEAD
-    {;
-      title: 'Performance Analytics',;
-      description: 'Track and improve customer experience metrics',;
-      icon: TrendingUp};
-=======
     {;'
       title: 'Performance Analytics',;'      description: 'Track and improve customer experience metrics',;
       icon: TrendingUp};
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return()

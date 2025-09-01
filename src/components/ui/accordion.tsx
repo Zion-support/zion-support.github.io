@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-
-interface AccordionProps extends React.PropsWithChildren<{}> {
-
-  children: React.ReactNode;
-  className?: string;
-  type?: 'single' | 'multiple';
-  defaultValue?: string | string[]}
-
-export function Accordion({
-
-  children,
-  className = '',
-  type = 'single',
-  defaultValue
-}: AccordionProps) {
-
-  const [openItems, setOpenItems] = useState<string[]>(
-    defaultValue ? (Array.isArray(defaultValue) ? defaultValue : [defaultValue]) : []
-  )} else {
-
-      setOpenItems(prev =>
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         prev.includes(value)
           ? prev.filter(item => item !== value)
           [...prev, value];
@@ -120,16 +96,9 @@ export function AccordionTrigger({
       {children}
       <ChevronDown`
         className={`h-4 w-4 shrink-0 transition-transform duration-200 ${
-<<<<<<< HEAD
-
-          isOpen ? 'rotate-180' : ''`
-        }`}
-      />
-=======
 '
           isOpen ? 'rotate-180' : ''`        }`}
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     </button>
   )}
 

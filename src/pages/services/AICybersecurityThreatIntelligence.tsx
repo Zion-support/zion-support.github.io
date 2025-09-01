@@ -192,16 +192,9 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
       <SEO "
-<<<<<<< HEAD
-        title="AI Cybersecurity Threat Intelligence - Zion Tech Group"
-        description="Revolutionary AI-powered cybersecurity platform that detects, analyzes, and responds to cyber threats in real-time."
-        keywords="AI cybersecurity, threat intelligence, threat detection, cybersecurity AI, security automation, threat hunting"
-       />
-=======
         title="AI Cybersecurity Threat Intelligence - Zion Tech Group""
         description="Revolutionary AI-powered cybersecurity platform that detects, analyzes, and responds to cyber threats in real-time.""        keywords="AI cybersecurity, threat intelligence, threat detection, cybersecurity AI, security automation, threat hunting"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}
           >"
@@ -582,14 +575,8 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center space-x-3">"
                       <CheckCircle className="w-5 h-5 text-red-400 flex-shrink-0"  />
-<<<<<<< HEAD
-                viewport={{ once: true }}`
-                className={`bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
-
-=======
                 viewport={{ once: true }}`                className={`bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   index === 1 ? 'border-red-500/50 bg-red-500/10' : 'border-white/10'`
                 } hover:border-red-500/50 transition-all`}
               >

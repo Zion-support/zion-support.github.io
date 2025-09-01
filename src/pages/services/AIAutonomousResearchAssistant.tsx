@@ -19,47 +19,6 @@ import {
   Activity,
   Award,
   Rocket,
-<<<<<<< HEAD
-
-  Brain, 
-  Search, 
-  BookOpen, 
-  FileText, 
-  TrendingUp, 
-  Users, 
-  Globe, 
-  Cpu,
-  Database,
-  Lock,
-  BarChart3,
-  Rocket,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  DollarSign,
-  Clock,
-  Award,
-  Target,
-  Workflow,
-  Lightbulb,
-  Zap,
-  Shield,
-  Eye,
-  Code,
-  GitFork,
-  MessageCircle,
-  Phone,
-  Mail,
-  MapPin'
-} from 'lucide-react';
-;
-export { function };
-export default function AIAutonomousResearchAssistant(...args: unknown[]): unknown {
-  
-  
-  
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   Eye as EyeIcon,;
   Sparkles as SparklesIcon,;
   Zap as ZapIcon,;
@@ -93,16 +52,9 @@ export default function AIAutonomousResearchAssistant() {
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <SEO "
-<<<<<<< HEAD
-        title="AI Autonomous Research Assistant - Zion Tech Group"
-        description="Revolutionary AI-powered research automation platform that discovers, analyzes, and synthesizes research autonomously."
-        keywords="AI research assistant, research automation, literature review, academic research, research AI, autonomous research"
-       />
-=======
         title="AI Autonomous Research Assistant - Zion Tech Group""
         description="Revolutionary AI-powered research automation platform that discovers, analyzes, and synthesizes research autonomously.""        keywords="AI research assistant, research automation, literature review, academic research, research AI, autonomous research"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"

@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import {
-
-  Check, Star, Brain, Cpu, Database, Network, Shield, Zap,
-  Rocket, Atom, Globe, Cloud, Lock, Eye, Target, TrendingUp,
-  ChevronDown, ChevronUp, Search, Filter, Grid, List, DollarSign'
- } from 'lucide-react';
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 export default function ComprehensivePricing2027(...args[]):  {
 
   const [searchQuery, setSearchQuery] = useState('');
@@ -27,14 +17,8 @@ export default function ComprehensivePricing2027(...args[]):  {
         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())))
     )
     .sort((a, b) => {
-<<<<<<< HEAD
-
-      if (sortBy === 'price') return a.price - b.price;
-      if (sortBy === 'aiScore') return b.aiScore - a.aiScore;
-=======
 '
       if (sortBy === 'price') return a.price - b.price;'      if (sortBy === 'aiScore') return b.aiScore - a.aiScore;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       return b.rating - a.rating}) ;
 
   
@@ -153,12 +137,7 @@ export default function ComprehensivePricing2027(...args[]):  {
                 <div className="relative">"
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5"  />
                   <input"
-<<<<<<< HEAD
-                    type="text"
-                    placeholder="Search services, features, or technologies..."
-=======
                     type="text""                    placeholder="Search services, features, or technologies..."
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}"
                     className="w-full bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg pl-12 pr-4 py-3 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"

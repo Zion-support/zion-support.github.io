@@ -15,30 +15,8 @@ import {
   Star,
   Target,
   BarChart3,
-<<<<<<< HEAD
-  Headphones,
-  ShoppingBag} from 'lucide-react.ts';
-
-const AICustomerExperience: React.FC = (): JSX.Element => {
-
-  return()
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO"
-        title="AI Customer Experience Platform - Zion Tech Group"
-        description="Revolutionary AI-powered customer experience platform that personalizes interactions, predicts customer needs, and delivers exceptional service with 95% customer satisfaction rates."
-      />
-
-      {/* Hero Section */}"
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
-        <div className="max-w-7xl mx-auto text-center">"
-          <div className="mb-8">"
-            <Badge variant="secondary" className="mb-4">"
-              <Brain className="w-4 h-4 mr-2"  />
-              AI-Powered CX Platform
-=======
   Headphones,'
   ShoppingBag} from 'lucide-react.ts';              AI-Powered CX Platform
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
             </Badge>"
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-400 bg-clip-text text-transparent">
               AI Customer Experience Platform

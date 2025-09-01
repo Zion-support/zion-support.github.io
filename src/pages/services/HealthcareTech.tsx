@@ -17,35 +17,19 @@ export default function HealthcareTech(...args: []):  {
       features: ['Device connectivity',Data collection',Real-time monitoring',Alert systems']};
   ];
 
-<<<<<<< HEAD
-  
-    { name: 'Diagnostics', icon: Microscope, description: 'AI-powered disease detection' },;
-    { name: 'Telemedicine', icon: Activity, description: 'Remote patient consultations' },;
-    { name: 'Patient Monitoring', icon: Activity, description: 'Continuous health tracking' },;
-    { name: 'Drug Discovery', icon: Pill, description: 'AI-assisted pharmaceutical research' },;
-    { name: 'Medical Imaging', icon: Brain, description: 'Radiology and pathology analysis' },;
-    { name: 'Clinical Trials', icon: FileText, description: 'Research and trial management' };
-=======
   const applications = [;'
     { name: 'Diagnostics', icon: Microscope, description: 'AI-powered disease detection' },;'
     { name: 'Telemedicine', icon: Activity, description: 'Remote patient consultations' },;'
     { name: 'Patient Monitoring', icon: Activity, description: 'Continuous health tracking' },;'
     { name: 'Drug Discovery', icon: Pill, description: 'AI-assisted pharmaceutical research' },;'
     { name: 'Medical Imaging', icon: Brain, description: 'Radiology and pathology analysis' },;'    { name: 'Clinical Trials', icon: FileText, description: 'Research and trial management' };
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-<<<<<<< HEAD
-        title="Healthcare Technology Services - Zion Tech Group"
-        description="Transform healthcare delivery with cutting-edge technology solutions. From AI diagnostics to telemedicine, we help healthcare providers deliver better patient care."
-       />
-=======
         title="Healthcare Technology Services - Zion Tech Group""        description="Transform healthcare delivery with cutting-edge technology solutions. From AI diagnostics to telemedicine, we help healthcare providers deliver better patient care."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20">"

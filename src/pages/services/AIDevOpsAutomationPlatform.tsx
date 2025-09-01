@@ -36,16 +36,9 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <SEO"
-<<<<<<< HEAD
-        title="AI DevOps Automation Platform | Zion Tech Group"
-        description="Revolutionary AI-powered DevOps automation platform that transforms software development, deployment, and operations with intelligent automation."
-        keywords="AI DevOps, automation platform, CI/CD, deployment automation, intelligent operations, Zion Tech Group"
-      />
-=======
         title="AI DevOps Automation Platform | Zion Tech Group""
         description="Revolutionary AI-powered DevOps automation platform that transforms software development, deployment, and operations with intelligent automation.""        keywords="AI DevOps, automation platform, CI/CD, deployment automation, intelligent operations, Zion Tech Group"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
@@ -375,16 +368,9 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {
                 364 E Main St STE 1008, Middletown DE 19709
               </p>
               <a"
-<<<<<<< HEAD
-                href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-400 hover:text-blue-300 transition-colors duration-300"
-=======
                 href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709""
                 target="_blank""
                 rel="noopener noreferrer""                className="text-blue-400 hover:text-blue-300 transition-colors duration-300"
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
               >
                 View on Map
               </a>

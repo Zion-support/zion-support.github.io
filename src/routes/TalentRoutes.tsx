@@ -1,8 +1,5 @@
+import React from 'react';
 
-export default function TalentRoutes() {
-  return()
-    <>;"
-      <Route path = "directory" element={<TalentDirectory  />} />;"
-      <Route path="list" element={<TalentsPage  />} />;
-    </>
-  )}'"
+export default function TalentRoutes(): JSX.Element {
+	return <div>Talent routes placeholder</div>;
+}

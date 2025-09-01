@@ -1,47 +1,3 @@
-<<<<<<< HEAD
-import { Menu, 
-
-
-  X, 
-  ChevronDown, 
-  Search, 
-  User, 
-  Settings,
-  Bell,
-  Sun,
-  Moon,
-  Monitor,
-  Globe,
-  Phone,
-  Mail,
-  MapPin,
-  Brain,
-  Cloud,
-  Shield,
-  Zap,
-  Atom,
-  ShoppingCart,
-  BarChart3,
-  Users,
-  Building,
-  Rocket,
-  Star'
- } from 'lucide-react.ts';
-
-interface NavigationItem {
-  label: anystring;
-  href: string;
-  icon?: React.ReactNode;
-  children?: NavigationItem[];
-  featured?: boolean}
-
-interface EnhancedNavigationProps extends React.PropsWithChildren<{}> {
-
-  className?: string;
-  onThemeChange?: (theme: 'light' | 'dark' | 'system')  => void}
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 const navigationItems: NavigationItem[] = ['
   { label: 'Home', href: '/' },
   {
@@ -158,16 +114,6 @@ const navigationItems: NavigationItem[] = ['
     href: '/about',"
     icon: <Users className="w-4 h-4"  />,
     children: ['
-<<<<<<< HEAD
-      { label: 'About Us', href: '/about' },
-      { label: 'Team', href: '/team' },
-      { label: 'Leadership', href: '/leadership' },
-      { label: 'Careers', href: '/careers' },
-      { label: 'Partners', href: '/partners' },
-      { label: 'News', href: '/news' },
-      { label: 'Case Studies', href: '/case-studies' },
-      { label: 'Blog', href: '/blog' }
-=======
       { label: 'About Us', href: '/about' },'
       { label: 'Team', href: '/team' },'
       { label: 'Leadership', href: '/leadership' },'
@@ -175,7 +121,6 @@ const navigationItems: NavigationItem[] = ['
       { label: 'Partners', href: '/partners' },'
       { label: 'News', href: '/news' },'
       { label: 'Case Studies', href: '/case-studies' },'      { label: 'Blog', href: '/blog' }
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     ]
   },
   {

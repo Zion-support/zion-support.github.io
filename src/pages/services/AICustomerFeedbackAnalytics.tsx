@@ -1,104 +1,3 @@
-<<<<<<< HEAD
-import { MessageSquare, 
-  TrendingUp, 
-  BarChart3, 
-  Users, 
-  Zap, 
-  Globe, 
-  Lock, 
-  Eye,
-  Star,
-  Cpu,
-  Database,
-  Search,
-  Filter,
-  Download,
-  Share2,
-  Play,
-  ArrowRight,
-  CheckCircle,
-  AlertTriangle,
-  FileText,
-  Clock,
-  Award,
-  Brain,
-  Target,
-  PieChart,
-  Activity,
-  ShoppingCart,
-  Shield,
-  Settings'
- } from 'lucide-react.ts';
-
-export default function AICustomerFeedbackAnalytics(...args: any[]): any {
-
-  
-    },;
-    {;
-      icon: Activity,;"
-      title: "Automated Reporting",;"
-      description: "Generate comprehensive reports and alerts for stakeholders with actionable insights and recommendations."};
-  ]},;
-    {;
-      icon: Clock,;"
-      title: "Time Savings",;"
-      description: "Automate feedback analysis and reporting, saving hours of manual work each week."};
-  ];
-
-  const pricingPlans = [
-    {
-"
-      name: "Starter","
-      price: "$299","
-      period: "/month","
-      description: "Perfect for small businesses starting their feedback analytics journey",
-      features: ["
-        "Up to 10,000 feedback entries/month","
-        "Basic sentiment analysis","
-        "Email support","
-        "Standard integrations","
-        "Basic reporting","
-        "5 team members"
-      ],"
-      cta: "Start Free Trial",
-      popular: false
-    },
-    {
-"
-      name: "Professional","
-      price: "$799","
-      period: "/month","
-      description: "Ideal for growing companies with advanced analytics needs",
-      features: ["
-        "Up to 100,000 feedback entries/month","
-        "Advanced AI sentiment analysis","
-        "Priority support","
-        "Custom integrations","
-        "Advanced reporting & dashboards","
-        "Predictive analytics","
-        "Unlimited team members","
-        "API access"
-      ],"
-      cta: "Start Free Trial",
-      popular: true
-    },
-    {
-"
-      name: "Enterprise","
-      price: "$2,499","
-      period: "/month","
-      description: "For large organizations requiring enterprise-grade solutions",
-      features: ["
-        "Unlimited feedback entries","
-        "Custom AI models","
-        "Dedicated account manager","
-        "White-label solutions","
-        "Advanced security features","
-        "Custom reporting",;"
-        "On-premise deployment options",;"
-        "SLA guarantees";
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ],;"
       cta: "Contact Sales",;
       popular: false};
@@ -140,14 +39,8 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
-<<<<<<< HEAD
-        title="AI Customer Feedback Analytics - Zion Tech Group"
-        description="Transform customer feedback into actionable insights with our AI-powered analytics platform. Analyze sentiment, predict churn, and improve customer satisfaction."
-      />
-=======
         title="AI Customer Feedback Analytics - Zion Tech Group""        description="Transform customer feedback into actionable insights with our AI-powered analytics platform. Analyze sentiment, predict churn, and improve customer satisfaction."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 lg:py-32">"

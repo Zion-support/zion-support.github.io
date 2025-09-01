@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-
-interface SkeletonProps extends React.PropsWithChildren<{}> {
-
-  className?: string;
-  variant?: 'default' | 'circular' | 'rectangular' | 'text' | 'avatar' | 'card';
-  width?: string | number;
-  height?: string | number;
-  lines?: number;
-  animated?: boolean}
-
-const Skeleton: React.FC<SkeletonProps> = ({
-
-  className,
-variant:  'default',;
-  width,;
-  height,;
-  lines = 1,;
-  animated = true,}) => {;
-  
-  
-  ;
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   ;

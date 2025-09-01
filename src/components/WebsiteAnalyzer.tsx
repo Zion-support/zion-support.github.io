@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import { CheckCircle, 
-
-
-  XCircle, 
-  AlertTriangle, 
-  ExternalLink, 
-  Search, 
-  FileText, 
-  Link as LinkIcon,
-  Download,
-  RefreshCw'
- } from 'lucide-react.ts';
-
-interface AnalysisResult {
-summary: {
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     totalLinks: number;
     brokenLinks: number;
     missingPages: number;
@@ -78,12 +60,7 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
     
     
     
-<<<<<<< HEAD
-    a.href = url;
-    a.download = 'zion-website-analysis.json';
-=======
     a.href = url;'    a.download = 'zion-website-analysis.json';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
@@ -130,12 +107,7 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
                 <RefreshCw className="w-4 h-4 mr-2 animate-spin"  />
               ) : ("
                 <Search className="w-4 h-4 mr-2"  />
-<<<<<<< HEAD
-              )}
-              {isAnalyzing ? 'Analyzing...' : 'Start Analysis'}
-=======
               )}'              {isAnalyzing ? 'Analyzing...' : 'Start Analysis'}
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
             </button>
             {analysisResult && (
               <button

@@ -18,18 +18,10 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
   ];
 
   
-<<<<<<< HEAD
-    { ;
-      name: 'Enterprise', ;
-      price: '$999/mo', ;
-      features: ['Unlimited employees',Full AI suite',Custom AI training',Dedicated support',White-label solutions',Advanced compliance'],;
-      popular: false};
-=======
     { ;'
       name: 'Enterprise', ;'
       price: '$999/mo', ;'      features: ['Unlimited employees', 'Full AI suite', 'Custom AI training', 'Dedicated support', 'White-label solutions', 'Advanced compliance'],;
       popular: false};
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   

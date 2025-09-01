@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-import {
-
-  Volume2,
-  VolumeX,
-  Eye,
-  EyeOff,
-  Keyboard,
-  MousePointer,
-  Accessibility,
-  Settings,
-  X'
- } from 'lucide-react';
-
-  Eye, 
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   EyeOff, 
   Volume2, 
   VolumeX, 
@@ -100,12 +83,7 @@ export const EnhancedAccessibility: React.FC = () => {
     if (settings.reducedMotion) {
 
       root.style.setProperty('--reduced-motion',reduce')} else {
-<<<<<<< HEAD
-
-      root.style.removeProperty('--reduced-motion');
-=======
 '      root.style.removeProperty('--reduced-motion');
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     // Focus indicator
     if (settings.focusIndicator) {
@@ -145,16 +123,9 @@ export const EnhancedAccessibility: React.FC = () => {
       [key]: !prev[key]}) ) };
 
   // Screen reader announcements'
-<<<<<<< HEAD
-  
-    announcement.setAttribute('aria-live',polite');
-    announcement.setAttribute('aria-atomic',true');
-    announcement.className = 'sr-only';
-=======
   const announcement = document.createElement('div');'
     announcement.setAttribute('aria-live', 'polite');'
     announcement.setAttribute('aria-atomic', 'true');'    announcement.className = 'sr-only';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     announcement.textContent = message;
 
     document.body.appendChild (announcement) ;
@@ -184,14 +155,8 @@ export const EnhancedAccessibility: React.FC = () => {
 
             target.style.outline = '';
             target.style.outlineOffset = '';
-<<<<<<< HEAD
-          }, 2000) ;
-          break;
-
-=======
           }, 2000) ;          break;
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         case 'Enter':'
         case ' ':'
           if (target.tagName = == 'BUTTON' || target.getAttribute('role') === 'button') {;
@@ -252,18 +217,10 @@ modals.forEach(modal:  > {;
 
   // Skip to main content link
   useEffect(() => {
-<<<<<<< HEAD
-
-    
-    skipLink.href = '#main-content';
-    skipLink.textContent = 'Skip to main content';
-    skipLink.className = 'skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
-=======
 '
     const skipLink = document.createElement('a');'
     skipLink.href = '#main-content';'
     skipLink.textContent = 'Skip to main content';'    skipLink.className = 'skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     document.body.insertBefore (skipLink, document.body.firstChild) ;
 
@@ -343,12 +300,10 @@ modals.forEach(modal:  > {;
       announcement.setAttribute('aria-live',polite');
       announcement.setAttribute('aria-atomic',true');
       announcement.className = 'sr-only';
-=======
 '
       const announcement = document.createElement('div');'
       announcement.setAttribute('aria-live', 'polite');'
       announcement.setAttribute('aria-atomic', 'true');'      announcement.className = 'sr-only';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       announcement.textContent = message;
       document.body.appendChild (announcement) ;
       

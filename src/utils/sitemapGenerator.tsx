@@ -35,14 +35,9 @@ interface SitemapConfig {
 
     const { baseUrl, urls } = this.config;
     
-<<<<<<< HEAD
-    
-      
-=======
 :src/utils/sitemapGenerator.tsx
     const xmlUrls = urls.map(url => {;'
       const lastmod = url.lastmod || new Date().toISOString().split('T')[0];'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       
       
       return `  <url>

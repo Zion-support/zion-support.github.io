@@ -1,48 +1,4 @@
-<<<<<<< HEAD
-import { Workflow, 
-  Brain, 
-  Zap, 
-  Shield, 
-  Cloud, 
-  BarChart3, 
-  Users, 
-  Clock,
-  CheckCircle,
-  ArrowRight,
-  Play,
-  Pause,
-  Settings,
-  Monitor,
-  AlertTriangle,
-  TrendingUp,
-  Database,
-  Network,
-  Cpu,
-  Server,
-  ShoppingCart'
- } from 'lucide-react.ts';
-},;
-    {;
-      icon: Users,;"
-      title: "Team Collaboration",;"
-      description: "Seamless team coordination with real-time updates and communication tools"};
-  ];
-
-  const benefits = [;"
-    "Reduce manual workflow processing by up to 80%",;"
-    "Improve decision accuracy with AI-powered insights",;"
-    "Scale operations without proportional cost increases",;"
-    "Ensure compliance and audit trail maintenance",;"
-    "Real-time monitoring and alerting capabilities",;"
-    "Seamless integration with existing systems";
-  ]},;
-    {;"
-      title: "Retail",;"
-      description: "Automate inventory management and customer service workflows",;
       icon: ShoppingCart};
-=======
-      icon: ShoppingCart};
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   const pricing = [

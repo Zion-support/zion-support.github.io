@@ -1,77 +1,4 @@
-<<<<<<< HEAD
-import { Shield, 
-  Brain, 
-  Eye, 
-  Lock, 
-  AlertTriangle, 
-  TrendingUp, 
-  CheckCircle, 
-  ArrowRight, 
-  Mail, 
-  Phone, 
-  Globe, 
-  ExternalLink,
-  Zap,
-  Users,
-  BarChart3,
-  Target,
-  Cpu,
-  Network,
-  Database,
-  FileText,
-  Monitor,
-  Activity'
- } from 'lucide-react';
-;
-export { function };
-export default function AICybersecuritySuite(...args[]):  {
-
-  const features = [
-    {
-
-      icon: Brain,
-      title: 'AI Threat Detection',
-      description: 'Advanced machine learning algorithms that identify and respond to threats in real-time',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-"
-      title: "Zero-Trust Architecture","
-      description: "Implement comprehensive zero-trust security with AI-driven access control",
-      icon: Shield,
-      benefits: ["
-        "Continuous authentication","
-        "Micro-segmentation","
-        "Least privilege access","
-        "Real-time risk assessment"
-      ]
-    },
-    {
-"
-      title: "Automated Incident Response","
-      description: "AI-driven security orchestration with automated threat containment and remediation",
-      icon: Zap,
-      benefits: ["
-        "Instant threat containment","
-        "Automated remediation","
-        "Incident timeline analysis","
-        "Forensic investigation"
-      ]
-    },
-    {
-"
-      title: "Compliance Automation","
-      description: "Automated compliance monitoring and reporting for all major regulatory frameworks",
-      icon: CheckCircle,
-      benefits: [;"
-        "GDPR compliance",;"
-        "SOC 2 automation",;"
-        "HIPAA compliance",;"
-        "Real-time audit trails";
       ]};
-=======
-      ]};
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   const pricingPlans = [
@@ -260,14 +187,8 @@ export default function AICybersecuritySuite(...args[]):  {
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-<<<<<<< HEAD
-        title="AI Cybersecurity Suite - Zion Tech Group"
-        description="Advanced AI-powered cybersecurity solutions that protect your business from evolving threats. Real-time threat detection, automated response, and comprehensive security monitoring."
-       />
-=======
         title="AI Cybersecurity Suite - Zion Tech Group""        description="Advanced AI-powered cybersecurity solutions that protect your business from evolving threats. Real-time threat detection, automated response, and comprehensive security monitoring."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20">"

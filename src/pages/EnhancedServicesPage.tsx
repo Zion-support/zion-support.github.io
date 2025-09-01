@@ -1,31 +1,3 @@
-<<<<<<< HEAD
-import {
-
-  Search,
-  Filter,
-  Star,
-  Clock,
-  Globe,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  TrendingUp,
-  Shield,
-  Cloud,
-  Brain,
-  Database,
-  Code,
-  Zap,
-  Heart,
-  DollarSign,
-  Link,
-  Users,
-  CheckCircle'
-} from 'lucide-react';
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 export default function EnhancedServicesPage(...args[]):  {
 
   const [searchTerm, setSearchTerm] = useState('');

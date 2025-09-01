@@ -1,53 +1,11 @@
-<<<<<<< HEAD
-import {
-
-  Code,
-  Smartphone,
-  Globe,
-  Database,
-  Zap,
-  Shield,
-  Users,
-  Target,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Lightbulb,
-  TrendingUp,
-  Settings,
-  Workflow,
-  FileText,
-  Monitor,
-  BarChart3,
-  Rocket,
-  Building2,
-  Cpu,
-  Network'
- } from 'lucide-react';
-;
-export { function };
-export default function CustomDevelopment(...args[]):  {
-
-  
-    },;
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     {
 
       title: 'Mobile Applications',
       description: 'Native and cross-platform mobile applications for iOS and Android that deliver exceptional user experiences.',
-<<<<<<< HEAD
-      icon: Smartphone,
-      features['iOS Development',Android Development',Cross-platform Apps',App Store Optimization']},;
-    {
-
-      title: 'API Development',
-=======
       icon: Smartphone,'
       features['iOS Development', 'Android Development', 'Cross-platform Apps', 'App Store Optimization']},;    {
 '
       title: 'API Development','
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       description: 'Robust and scalable APIs that enable seamless integration between systems and services.',
       icon: Network,
       features['RESTful APIs',GraphQL APIs',API Documentation',Integration Support']},;
@@ -90,23 +48,12 @@ export default function CustomDevelopment(...args[]):  {
       icon: Database,;
       stack: ['PostgreSQL',MongoDB',MySQL',Redis',Elasticsearch']};
   ]},;
-<<<<<<< HEAD
-    {;
-      title: 'Support & Maintenance',;
-      description: 'Ongoing support and maintenance to ensure your applications run smoothly.',;
-      icon: Settings};
-  ];
-
-  
-    'Healthcare',Finance',Manufacturing',Retail',Government',Education',Transportation',Energy';
-=======
     {;'
       title: 'Support & Maintenance',;'      description: 'Ongoing support and maintenance to ensure your applications run smoothly.',;
       icon: Settings};
   ];
 
   const industries = [;'    'Healthcare', 'Finance', 'Manufacturing', 'Retail', 'Government', 'Education', 'Transportation', 'Energy';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return()

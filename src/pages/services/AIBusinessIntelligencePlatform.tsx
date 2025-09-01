@@ -1,62 +1,3 @@
-<<<<<<< HEAD
-import { Brain, 
-  TrendingUp, 
-  BarChart3, 
-  Zap, 
-  Shield, 
-  Users, 
-  Globe, 
-  CheckCircle,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  Star,
-  Clock,
-  DollarSign,
-  Target,
-  PieChart,
-  LineChart,
-  Activity'
- } from 'lucide-react';
-;
-export { function };
-export default function AIBusinessIntelligencePlatform(...args[]):  {
-
-  
-    },;
-    {;
-      icon: Users,;"
-      title: "Collaborative Insights",;"
-      description: "Share dashboards and reports with team members, enabling better collaboration and decision-making."};
-  ];
-
-  const benefits = [;"
-    "Improve decision-making speed by 80%",;"
-    "Reduce manual reporting by 90%",;"
-    "Identify business opportunities 3x faster",;"
-    "Increase operational efficiency by 45%",;"
-    "Reduce data analysis time by 70%",;"
-    "Improve forecast accuracy by 60%";
-  ];
-
-  const pricingTiers = [
-    {
-"
-      name: "Starter",
-      price: 199,"
-      period: "month","
-      description: "Perfect for small businesses getting started with AI analytics",
-      features[;"
-        "Up to 5 users","
-        "Basic AI analytics","
-        "Standard dashboards","
-        "Email support","
-        "Data integration (3 sources)","
-        "Monthly reports"
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ],;
       popular: false
     },
@@ -124,14 +65,8 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-<<<<<<< HEAD
-        title="AI Business Intelligence Platform - Zion Tech Group"
-        description="Advanced AI-powered business intelligence platform providing real-time insights, predictive analytics, and automated reporting for data-driven decision making."
-       />
-=======
         title="AI Business Intelligence Platform - Zion Tech Group""        description="Advanced AI-powered business intelligence platform providing real-time insights, predictive analytics, and automated reporting for data-driven decision making."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">"

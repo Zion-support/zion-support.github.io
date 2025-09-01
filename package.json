@@ -9,6 +9,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --max-warnings 0",
+    "lint:fix": "eslint . --ext .ts,.tsx --fix || true",
     "type-check": "tsc --noEmit",
     "ci:install": "npm ci",
     "ci:lint": "npm run lint",
@@ -32,7 +33,10 @@
     "dev:preview": "npm run preview",
     "prod:build": "npm run build",
     "prod:start": "npm run preview",
-    "prod:deploy": "npm run prod:build && pm2 start ecosystem.config.js --env production"
+    "prod:deploy": "npm run prod:build && pm2 start ecosystem.config.js --env production",
+    "pm2:start": "pm2 start ecosystem.config.js",
+    "pm2:reload": "pm2 reload ecosystem.config.js",
+    "pm2:save": "pm2 save"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",

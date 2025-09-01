@@ -1,36 +1,3 @@
-<<<<<<< HEAD
-import { Brain, 
-  Database, 
-  BarChart3, 
-  Users, 
-  Clock, 
-  CheckCircle, 
-  Zap,
-  Shield,
-  TrendingUp,
-  Globe,
-  ArrowRight,
-  Target,
-  PieChart,
-  Activity'
-  } from 'lucide-react.ts';
-};
-  ];
-
-  const services = [
-    {
-"
-      name: "Starter Plan","
-      price: "$2,999","
-      period: "/month",
-      features[;"
-        "Core ERP modules","
-        "AI-powered analytics","
-        "Basic automation","
-        "Standard support","
-        "Up to 50 users"
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ],;
       popular: false
     },
@@ -94,16 +61,9 @@ import { Brain,
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-blue-dark">
       <SEO "
-<<<<<<< HEAD
-        title="AI-Powered Enterprise Resource Planning | Zion Tech Group"
-        description="Transform your business operations with our AI-driven ERP solution. Streamline processes, optimize resources, and drive growth with intelligent automation."
-        keywords="AI ERP, Enterprise Resource Planning, Business Automation, AI Analytics, Process Optimization"
-       />
-=======
         title="AI-Powered Enterprise Resource Planning | Zion Tech Group""
         description="Transform your business operations with our AI-driven ERP solution. Streamline processes, optimize resources, and drive growth with intelligent automation.""        keywords="AI ERP, Enterprise Resource Planning, Business Automation, AI Analytics, Process Optimization"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"

@@ -1,51 +1,3 @@
-<<<<<<< HEAD
-import { Calculator, 
-
-
-  Check, 
-  X, 
-  Star, 
-  Zap, 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Rocket, 
-  Cpu, 
-  Lock, 
-  Heart, 
-  Globe, 
-  Atom,
-  Satellite'
-} from 'lucide-react';
-
-export default function PricingGuide(...args[]):  {
-
-  const [selectedCurrency, setSelectedCurrency] = useState('USD');
-  const [selectedPeriod, setSelectedPeriod] = useState('monthly');
-
-  
-;
-;
-},;
-    EUR: { symbol: '€', rate: 0.85 },;
-    GBP: { symbol: '£', rate: 0.73 }};
-
-export const PricingGuide: React.FC = () => {
-  const pricingTiers = [
-    {
-"
-      name: "Starter",
-      icon: Zap,"
-      description: "Perfect for small businesses getting started with AI",
-      price: { monthly: 299, yearly: 2990 },
-      features[;"
-        "AI Business Intelligence Basic","
-        "Cloud Infrastructure (10GB)","
-        "Basic Support (Email)","
-        "Monthly Reports","
-        "2 User Licenses"
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ],;
       notIncluded[;"
         "Advanced Analytics","
@@ -152,14 +104,8 @@ export const PricingGuide: React.FC = () => {
 "
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-<<<<<<< HEAD
-        title="Pricing Guide - Zion Tech Group"
-        description="Comprehensive pricing information for AI, cloud, cybersecurity, and emerging technology services. Transparent pricing with flexible plans for all business sizes."
-       />
-=======
         title="Pricing Guide - Zion Tech Group""        description="Comprehensive pricing information for AI, cloud, cybersecurity, and emerging technology services. Transparent pricing with flexible plans for all business sizes."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"

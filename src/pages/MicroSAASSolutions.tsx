@@ -1,35 +1,3 @@
-<<<<<<< HEAD
-import {
-
-  Code,
-  Zap,
-  Users,
-  TrendingUp,
-  Shield,
-  Globe,
-  Building,
-  Rocket,
-  Cpu,
-  BarChart3,
-  Database,
-  Cloud,
-  Lock,
-  Smartphone,
-  Target,
-  DollarSign,
-  Clock,
-  CheckCircle,
-  Star,
-  ArrowRight,
-  Brain'
- } from 'lucide-react';
-
-export default function MicroSAASSolutions(...args[]):  {
-
-  
-    },;
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     {
 "
       title: "Multi-tenant Architecture","

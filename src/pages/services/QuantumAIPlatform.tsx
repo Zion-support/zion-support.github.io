@@ -1,35 +1,4 @@
-<<<<<<< HEAD
-import { Atom, 
-  Brain, 
-  Zap, 
-  Target, 
-  BarChart3, 
-  Cpu, 
-  CheckCircle,
-  Star,
-  Clock,
-  DollarSign,
-  ArrowRight,
-  Server,
-  Network,
-  Database,
-  Cloud,
-  Lock,
-  Globe,
-  TrendingUp,
-  Users,
-  Shield'
- } from 'lucide-react';
-;
-
-        "Molecular modeling",;"
-        "Chemical reaction simulation",;"
-        "Material property prediction",;"
-        "Drug discovery acceleration";
       ]};
-=======
-      ]};
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   const pricingPlans = [
@@ -118,14 +87,8 @@ import { Atom,
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-<<<<<<< HEAD
-        title="Quantum AI Platform - Zion Tech Group"
-        description="Revolutionize your business with quantum computing and AI. Access unprecedented computational power for optimization, cryptography, and machine learning."
-       />
-=======
         title="Quantum AI Platform - Zion Tech Group""        description="Revolutionize your business with quantum computing and AI. Access unprecedented computational power for optimization, cryptography, and machine learning."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20">"

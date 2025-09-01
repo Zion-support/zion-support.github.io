@@ -1,30 +1,5 @@
-<<<<<<< HEAD
-import { Brain, 
-
-
-  Shield, 
-  Cloud, 
-  Database, 
-  Globe, 
-  Zap, 
-  TrendingUp, 
-  Users, 
-  Lock, 
-  Cpu,
-  Smartphone,
-  Building2,
-  Car,
-  Heart,
-  DollarSign,
-  Search'
-} from 'lucide-react';
-
-const InnovativeServicesShowcase2030: React.FC = () => {;
-  const [activeCategory, setActiveCategory] = useState('all');
-=======
 const InnovativeServicesShowcase2030: React.FC = () => {;'
   const [activeCategory, setActiveCategory] = useState('all');'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   const [searchTerm, setSearchTerm] = useState('');
 
   
@@ -39,18 +14,10 @@ const InnovativeServicesShowcase2030: React.FC = () => {;'
                          service.tags.some (tag => tag.toLowerCase () .includes (searchTerm.toLowerCase () ) ) ;
     return matchesCategory && matchesSearch}) ;
 
-<<<<<<< HEAD
-  
-    { id: 'all', name: 'All Services', icon: Star, count: allServices.length },;
-    { id: 'ai', name: 'AI Services', icon: Brain, count: innovativeAIServices2030.length },;
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, count: innovativeCybersecurityServices2030.length },;
-    { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: innovativeCloudDevOpsServices2030.length };
-=======
   const categories = [;'
     { id: 'all', name: 'All Services', icon: Star, count: allServices.length },;'
     { id: 'ai', name: 'AI Services', icon: Brain, count: innovativeAIServices2030.length },;'
     { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, count: innovativeCybersecurityServices2030.length },;'    { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: innovativeCloudDevOpsServices2030.length };
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return ("

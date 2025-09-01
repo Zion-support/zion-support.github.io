@@ -123,12 +123,7 @@ export default function MarketplaceProducts() {
             <div className="relative w-full lg:w-96">"
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />
               <input"
-<<<<<<< HEAD
-                type="text"
-                placeholder="Search products..."
-=======
                 type="text""                placeholder="Search products..."
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                 value={searchQuery}
                 onChange={e => setSearchQuery(e.target.value)}"
                 className="w-full pl-10 pr-4 py-3 bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-200"

@@ -1,21 +1,7 @@
-<<<<<<< HEAD
-import {
-
-  Brain, Cpu, Database, Network, Shield, Zap, Rocket, Atom,
-  Globe, Cloud, Lock, Eye, Target, TrendingUp, Star, CheckCircle,
-  ArrowRight, Search, Filter, Grid, List, ChevronDown'
- } from 'lucide-react';
-export default function InnovativeServicesShowcase2027(...args[]):  {
-
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [viewMode, setViewMode] = useState<any>('grid');
-=======
 '
   const [searchQuery, setSearchQuery] = useState('');'
   const [selectedCategory, setSelectedCategory] = useState('All');'
   const [viewMode, setViewMode] = useState<any>('grid');'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   const [sortBy, setSortBy] = useState<any>('aiScore');
   
   
@@ -196,12 +182,7 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
                 <div className="relative">"
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5"  />
                   <input"
-<<<<<<< HEAD
-                    type="text"
-                    placeholder="Search services, features, or technologies..."
-=======
                     type="text""                    placeholder="Search services, features, or technologies..."
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}"
                     className="w-full bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg pl-12 pr-4 py-3 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"

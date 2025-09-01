@@ -32,16 +32,9 @@ export default function ComprehensivePricing() {
   
     let matchesPrice = true;
     if (selectedPriceRange !== 'all') {
-<<<<<<< HEAD
-
-      
-      switch (selectedPriceRange) {
-
-=======
 '
       const price = parseInt(service.price.replace(/[^0-9]/g, ''));      switch (selectedPriceRange) {
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         case 'under-1000':
           matchesPrice = price < 1000;
           break;

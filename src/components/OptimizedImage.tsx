@@ -1,56 +1,3 @@
-<<<<<<< HEAD
-
-interface OptimizedImageProps extends React.PropsWithChildren<{}> {
-
-  src: anystring;
-  alt: string;
-  width?: number | string;
-  height?: number | string;
-  className?: string;
-  priority?: boolean;
-  placeholder?: 'blur' | 'shimmer' | 'none';
-  fallbackSrc?: string;
-  onLoad?: () => void;
-  onError?: (error: anyError) => void;
-  lazy?: boolean;
-  quality?: number;
-  sizes?: string;
-  objectFit?: 'cover' | 'contain' | 'fill' | 'none' | 'scale-down';
-  rounded?: boolean;
-  shadow?: boolean;
-  hover?: boolean}
-
-export const OptimizedImage: React.FC<OptimizedImageProps> = ({
-
-  src,
-  alt,
-  width,
-  height,
-  className = '',
-  priority = false,
-  placeholder = 'shimmer',
-  fallbackSrc = '/images/placeholder.jpg',
-  onLoad,
-  onError,
-  lazy = true,
-  quality = 75,
-  sizes = '100vw',
-  objectFit = 'cover',
-  rounded = false,
-  shadow = false,
-  hover = false}) => {
-
-  const [imageSrc, setImageSrc] = useState<any>(src);
-  const [isLoading, setIsLoading] = useState(true);
-  const [hasError, setHasError] = useState(false);
-  const [isIntersecting, setIsIntersecting] = useState(priority);
-  const [isLoaded, setIsLoaded] = useState(false);
-  
-  
-  
-  // Intersection Observer for lazy loading
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   useEffect ( () => {
     if (priority || !lazy) {
 
@@ -68,14 +15,8 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
           observerRef.current?.disconnect()}
       },
       {
-<<<<<<< HEAD
-
-        rootMargin: any50px',;
-        threshold: 0.1
-=======
 '
         rootMargin: any50px',;        threshold: 0.1
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       }) ;
 
     observerRef.current.observe (imgRef.current) ;

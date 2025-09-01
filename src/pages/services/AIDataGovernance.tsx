@@ -1,73 +1,3 @@
-<<<<<<< HEAD
-import { Shield, 
-  Database, 
-  Lock, 
-  Eye, 
-  Search, 
-  FileText, 
-  Users, 
-  CheckCircle,
-  AlertTriangle,
-  BarChart3,
-  Zap,
-  Globe,
-  Cpu,
-  Key,
-  Fingerprint,
-  ShieldCheck,
-  FileCheck,
-  UserCheck,
-  Clock,
-  TrendingUp,
-  DollarSign,
-  Building,
-  Server,
-  Cloud,
-  Network,
-  Monitor,
-  Settings,
-  RefreshCw,
-  Download,
-  Upload,
-  Trash2,
-  Archive,
-  Copy,
-  Move,
-  Link,
-  Unlink,
-  EyeOff,
-  EyeOn,
-  LockOpen,
-  LockClosed'
- } from 'lucide-react';
-;
-const AIDataGovernance: React.FC = (): JSX.Element => {
-
-  
-    {;
-      icon: Users,;"
-      title: "Data Lineage Tracking",;"
-      description: "Complete audit trail showing data origins, transformations, and usage patterns",;"
-      color: "from-yellow-500 to-orange-500"};
-  ];
-
-  const pricingPlans = [
-    {
-"
-      name: "Foundation","
-      price: "$499","
-      period: "/month","
-      description: "Essential data governance for small to medium organizations",
-      features[;"
-        "Up to 10TB data management","
-        "Basic AI classification","
-        "Standard access controls","
-        "Compliance templates","
-        "Email support","
-        "Basic reporting","
-        "5 user licenses"
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ],;"
       cta: "Start Free Trial",
       popular: false
@@ -163,14 +93,8 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-<<<<<<< HEAD
-        title="AI Data Governance - Zion Tech Group"
-        description="Protect your data with AI-powered governance solutions. Automated classification, access control, and compliance management for enterprise data security."
-       />
-=======
         title="AI Data Governance - Zion Tech Group""        description="Protect your data with AI-powered governance solutions. Automated classification, access control, and compliance management for enterprise data security."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 lg:py-32">"

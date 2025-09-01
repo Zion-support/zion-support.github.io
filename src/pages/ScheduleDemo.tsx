@@ -1,34 +1,3 @@
-<<<<<<< HEAD
-
-interface DemoFormData {
-  firstName: string;
-  lastName: string;
-  email: string;
-  comp: string;
-  phone: string;
-  preferredDate: string;
-  preferredTime: string;
-  attendees: string;
-  services: string[];
-  message: string}
-
-const ScheduleDemo: React.FC = (): JSX.Element => {
-
-  const [formData, setFormData] = useState<any>({
-
-    firstName: '',
-    lastName: '',
-    email: '',
-    comp: '',
-    phone: '',
-    preferredDate: '',;
-    preferredTime: '',;
-    attendees: '1-5',;
-    services: [],;
-    message: ''}) ;
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   const [isSubmitting, setIsSubmitting] = useState (false) ;
   const [isSubmitted, setIsSubmitted] = useState (false) ;
 
@@ -87,12 +56,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
             <CheckCircle className="w-10 h-10 text-white"  />
           </div>"
           <h1 className="text-4xl font-bold text-white mb-4">Demo Scheduled Successfully!</h1>"
-<<<<<<< HEAD
-          <p className="text-xl text-gray-300 mb-8">
-            Thank you for your interest in Zion Tech Group. We've received your demo request and will be in touch within 24 hours to confirm the details.
-=======
           <p className="text-xl text-gray-300 mb-8">'            Thank you for your interest in Zion Tech Group. We've received your demo request and will be in touch within 24 hours to confirm the details.
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
           </p>"
           <div className="bg-slate-800/50 rounded-xl p-6 mb-8">"
             <h3 className="text-lg font-semibold text-white mb-4">What happens next?</h3>"
@@ -136,16 +100,9 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
-<<<<<<< HEAD
-        title="Schedule a Demo - Zion Tech Group"
-        description="Book a personalized demo of our cutting-edge AI, quantum computing, and innovative technology solutions. See how we can transform your business."
-        keywords="schedule demo, AI demo, quantum computing demo, Zion Tech Group demo, technology consultation"
-      />
-=======
         title="Schedule a Demo - Zion Tech Group""
         description="Book a personalized demo of our cutting-edge AI, quantum computing, and innovative technology solutions. See how we can transform your business.""        keywords="schedule demo, AI demo, quantum computing demo, Zion Tech Group demo, technology consultation"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">"

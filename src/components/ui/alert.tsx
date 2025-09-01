@@ -10,24 +10,14 @@ interface AlertDescriptionProps {
 
   children: React.ReactNode;
   className?: string}
-<<<<<<< HEAD
-
-export function Alert({ children, className = '' }: AlertProps) {
-=======
 'export function Alert({ children, className = '' }: AlertProps) {
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   return ('
     <div className={cn('relative w-full rounded-lg border p-4', className)}>
       {children}
     </div>
   )}
-<<<<<<< HEAD
-
-export function AlertTitle({ children, className = '' }: AlertTitleProps) {
-=======
 'export function AlertTitle({ children, className = '' }: AlertTitleProps) {
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   return()
     <h5'

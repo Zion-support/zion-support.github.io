@@ -1,100 +1,3 @@
-<<<<<<< HEAD
-import {
-
-  Search,
-  Filter,
-  Star,
-  TrendingUp,
-  Zap,
-  Shield,
-  Brain,
-  Globe,
-  Cpu,
-  Lock,
-  ArrowRight,
-  CheckCircle,
-  DollarSign,
-  Clock,
-  Users,
-  Target,
-  Award,
-  Sparkles,
-  Rocket,
-  BarChart3,
-  MessageSquare,
-  Mail,
-  Database,
-  Network,
-  Cloud,
-  Smartphone,
-  Palette,
-  Leaf,
-  Code,
-  Wallet,
-  Box,
-  Phone,
-  Mail as MailIcon,
-  MapPin,
-  Globe as GlobeIcon,
-  ExternalLink'
-} from 'lucide-react';
-
-const ComprehensiveServicesLanding2025: React.FC = () => {;
-  
-    switch (category) {;
-      case 'AI & Automation':;
-        return <Brain className="w-8 h-8"  />;
-      case 'AI & Security':;"
-        return <Shield className="w-8 h-8"  />;
-      case 'AI & Marketing':;"
-        return <BarChart3 className="w-8 h-8" />;
-      case 'AI & Sales':;"
-        return <TrendingUp className="w-8 h-8"  />;
-      case 'AI & Customer Experience':;"
-        return <MessageSquare className="w-8 h-8"  />;
-      case 'AI & Analytics':;"
-        return <Database className="w-8 h-8"  />;
-      case 'Quantum Computing':;"
-        return <Box className="w-8 h-8"  />;
-      case 'IoT & Edge Computing':;"
-        return <Network className="w-8 h-8"  />;
-      case 'Blockchain & Web3':;"
-        return <Wallet className="w-8 h-8"  />;
-      case 'Sustainability & Technology':;"
-        return <Leaf className="w-8 h-8"  />;
-      default:;"
-        return <Sparkles className="w-8 h-8"  />};
-
-  
-    switch (category) {;
-      case 'AI & Automation':;
-        return 'from-purple-500 to-pink-500';
-      case 'AI & Security':;
-        return 'from-red-500 to-orange-500';
-      case 'AI & Marketing':;
-        return 'from-blue-500 to-cyan-500';
-      case 'AI & Sales':;
-        return 'from-green-500 to-emerald-500';
-      case 'AI & Customer Experience':;
-        return 'from-indigo-500 to-purple-500';
-      case 'AI & Analytics':;
-        return 'from-cyan-500 to-blue-500';
-      case 'Quantum Computing':;
-        return 'from-violet-500 to-purple-500';
-      case 'IoT & Edge Computing':;
-        return 'from-orange-500 to-red-500';
-      case 'Blockchain & Web3':;
-        return 'from-yellow-500 to-orange-500';
-      case 'Sustainability & Technology':;
-        return 'from-green-500 to-teal-500';
-      default:;
-        return 'from-gray-500 to-slate-500'};
-
-  
-  
-    category,;
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     services: INNOVATIVE_SERVICES_2025.filter(service => service.category === category),;
     icon: getCategoryIcon(category),;
     color: getCategoryColor(category)}));
@@ -106,14 +9,8 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-<<<<<<< HEAD
-        title="Comprehensive Services Landing 2025 - Zion Tech Group"
-        description="Discover our complete portfolio of innovative technology services. From AI and Quantum Computing to IoT and Blockchain solutions - transform your business with cutting-edge technology."
-       />
-=======
         title="Comprehensive Services Landing 2025 - Zion Tech Group""        description="Discover our complete portfolio of innovative technology services. From AI and Quantum Computing to IoT and Blockchain solutions - transform your business with cutting-edge technology."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="pt-20 pb-16 px-4">"
@@ -463,14 +360,8 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
               },
               {
 "
-<<<<<<< HEAD
-                icon: <Shield className="w-8 h-8"  />,
-                title: 'Enterprise Security',
-                description: 'Bank-grade security with compliance certifications and best practices'
-=======
                 icon: <Shield className="w-8 h-8"  />,'
                 title: 'Enterprise Security','                description: 'Bank-grade security with compliance certifications and best practices'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
             ].map ( (feature, index) => (;
               <motion.div

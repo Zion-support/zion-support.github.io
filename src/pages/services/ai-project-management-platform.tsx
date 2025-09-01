@@ -1,69 +1,11 @@
-<<<<<<< HEAD
-import { Brain, 
-  Users, 
-  Calendar, 
-  TrendingUp, 
-  Shield, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight,
-  Clock,
-  Target,
-  BarChart3,
-  MessageSquare,
-  FileText,
-  GitBranch,
-  AlertTriangle,
-  Star,
-  DollarSign,
-  Globe,
-  Smartphone,
-  Cloud'
- } from 'lucide-react';
-;
-export { function };
-export default function AIProjectManagementPlatform(...args: []):  {
-
-  
-    },;
-    {;
-      icon: Zap,;
-      title: 'Automated Reporting',;
-      description: 'Intelligent report generation with customizable dashboards and stakeholder updates'};
-  ];
-
-  
-        'Custom AI model training',;
-        'On-premise deployment options',;
-        'SLA guarantees';
-      ],;
-      popular: false};
-  ]},;
-    {;
-      icon: Users,;
-      title: 'Enhanced Team Productivity',;
-      description: 'Automated workflows free up time for strategic work'};
-  ]},;
-    {;
-      title: 'Event Planning',;
-      description: 'Streamline event coordination with AI-driven task management and vendor coordination',;
       icon: Calendar};
-=======
-      icon: Calendar};
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-<<<<<<< HEAD
-        title="AI Project Management Platform - Zion Tech Group"
-        description="Revolutionize your project management with AI-powered task prioritization, predictive analytics, and intelligent team collaboration. Start from $299/month."
-       />
-=======
         title="AI Project Management Platform - Zion Tech Group""        description="Revolutionize your project management with AI-powered task prioritization, predictive analytics, and intelligent team collaboration. Start from $299/month."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"

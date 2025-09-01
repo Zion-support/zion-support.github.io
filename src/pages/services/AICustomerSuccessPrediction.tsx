@@ -1,75 +1,4 @@
-<<<<<<< HEAD
-import {
-
-  Brain,
-  TrendingUp,
-  Users,
-  Zap,
-  Shield,
-  Globe,
-  Database,
-  Cloud,
-  Lock,
-  Rocket,
-  CheckCircle,
-  ArrowRight,
-  PieChart,
-  LineChart,
-  Activity,
-  Target,
-  Lightbulb,
-  Eye,
-  Search,
-  Filter,
-  Download,
-  Share2,
-  Phone,
-  Mail,
-  MapPin,
-  BarChart3,
-  MessageCircle,
-  Calendar,
-  AlertTriangle,
-  Star'
-} from 'lucide-react';
-;
-const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
-
-  
-    },;
-    {;
-      icon: Zap,;
-      title: 'Automated Alerts',;
-      description: 'Intelligent notification system that alerts your team to at-risk customers and opportunities before they become critical.'};
-  ];
-
-  
-    {;
-      title: 'Integration Hub',;
-      description: 'Seamless integration with your existing CRM, support, and analytics tools',;
-      icon: Database,;
-      benefits: ['API-first design',Real-time sync',Custom connectors',Data validation']};
-  ];
-
-  
-    {;
-      industry: 'Healthcare',;
-      description: 'Predict patient outcomes, optimize care plans, and improve treatment adherence',;
-      icon: Heart,;
-      metrics: ['Patient Outcomes',Treatment Adherence',Care Plan Success',Resource Optimization']};
-  ]},;
-    {;
-      icon: Zap,;
-      title: 'Optimize Resource Allocation',;
-      description: 'Focus your team\'s efforts on high-impact activities and customers who need attention most.'};
-  ];
-
-  
-        'Up to 1,000 customers',Basic prediction models',Email alerts',Standard integrations',Email support'
-      ],;
-=======
       ],;'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       cta: 'Start Free Trial',
       popular: false
     },
@@ -121,16 +50,9 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO "
-<<<<<<< HEAD
-        title="AI Customer Success Prediction Platform | Zion Tech Group"
-        description="Predict customer churn, identify upsell opportunities, and optimize customer success with our AI-powered prediction platform. 95%+ accuracy in customer behavior forecasting."
-        keywords="AI customer success, churn prediction, customer analytics, predictive analytics, customer retention, upsell optimization"
-       />
-=======
         title="AI Customer Success Prediction Platform | Zion Tech Group""
         description="Predict customer churn, identify upsell opportunities, and optimize customer success with our AI-powered prediction platform. 95%+ accuracy in customer behavior forecasting.""        keywords="AI customer success, churn prediction, customer analytics, predictive analytics, customer retention, upsell optimization"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative pt-32 pb-20 overflow-hidden">"

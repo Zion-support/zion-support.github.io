@@ -23,14 +23,8 @@ export default function IoTEdgeComputing(...args: unknown[]): unknown {
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       <SEO"
-<<<<<<< HEAD
-        title="IoT Edge Computing Services - Zion Tech Group"
-        description="Revolutionary IoT and edge computing solutions for real-time processing, low-latency applications, and connected ecosystems."
-      />
-=======
         title="IoT Edge Computing Services - Zion Tech Group""        description="Revolutionary IoT and edge computing solutions for real-time processing, low-latency applications, and connected ecosystems."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20">"

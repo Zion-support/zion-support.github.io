@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-
-interface NewsletterFormData {
-  email: string;
-  firstName: string;
-  interests: string[];
-  frequency: 'weekly' | 'monthly' | 'quarterly'}
-
-
-  { id: 'ai-solutions', label: 'AI Solutions', icon: Zap },;
-  { id: 'cloud-services', label: 'Cloud Services', icon: Shield },;
-  { id: 'cybersecurity', label: 'Cybersecurity', icon: Shield },;
-  { id: 'digital-transformation', label: 'Digital Transformation', icon: Zap },;
-  { id: 'it-consulting', label: 'IT Consulting', icon: Gift },;
-  { id: 'industry-insights', label: 'Industry Insights', icon: Zap };
-];
-
-
-  { value: 'weekly', label: 'Weekly', description: 'Stay updated with latest trends' },;
-  { value: 'monthly', label: 'Monthly', description: 'Monthly digest of insights' },;
-  { value: 'quarterly', label: 'Quarterly', description: 'Quarterly strategic updates' };
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 ];
 
   '
@@ -69,16 +46,9 @@ interface NewsletterFormData {
           frequency: 'monthly'
         });
       // // // // // // // // console.error('Newsletter subscription error:', error);
-<<<<<<< HEAD
-    }
-        setStatus('idle')}, 3000)} catch (error) {
-
-      setStatus('error');
-=======
     }'        setStatus('idle')}, 3000)} catch (error) {
 '
       setStatus('error');'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       // console.error('Newsletter subscription error:', error)}
   };
 
@@ -92,14 +62,8 @@ interface NewsletterFormData {
     if (errors[field]) {
 
       setErrors(prev => ({ ...prev, [field]: null }));
-<<<<<<< HEAD
-    }
-  };
-
-=======
     }  };
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   if (status = == 'success') {
 
     return()

@@ -3,99 +3,8 @@ import {
   Activity,
   Zap,
   Clock,
-<<<<<<< HEAD
-  TrendingUp,
-  AlertTriangle} from 'lucide-react.ts';
-
-interface PerformanceMetrics {
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
-  fcp: number | null;
-  fmp: number | null;
-  si: number | null;
-  tti: number | null}
-
-interface PerformanceScore {
-  score: number;
-  rating: 'good' | 'needs-improvement' | 'poor';
-  color: string}
-
-const AdvancedPerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-
-    fcp: null,
-    lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null,
-    fmp: null});
-
-  const [isVisible, setIsVisible] = useState(false);
-  const [overallScore, setOverallScore] = useState<PerformanceScore>({
-
-    score: 0,
-    rating: 'good',
-    color: 'text-green-500'});
-
-  // Calculate performance score based on Core Web Vitals
-  
-      let validMetrics = 0;
-
-      // FCP scoring (0-100)
-      if (metrics.fcp !== null) {
-
-        validMetrics++;
-        if (metrics.fcp < 1800) totalScore += 100;
-        else if (metrics.fcp < 3000) totalScore += 50;
-        else totalScore += 0}
-
-      // LCP scoring (0-100)
-      if (metrics.lcp !== null) {
-
-        validMetrics++;
-        if (metrics.lcp < 2500) totalScore += 100;
-        else if (metrics.lcp < 4000) totalScore += 50;
-        else totalScore += 0}
-
-      // FID scoring (0-100)
-      if (metrics.fid !== null) {
-
-        validMetrics++;
-        if (metrics.fid < 100) totalScore += 100;
-        else if (metrics.fid < 300) totalScore += 50;
-        else totalScore += 0}
-
-      // CLS scoring (0-100)
-      if (metrics.cls !== null) {
-
-        validMetrics++;
-        if (metrics.cls < 0.1) totalScore += 100;
-        else if (metrics.cls < 0.25) totalScore += 50;
-        else totalScore += 0}
-
-      
-      let rating: 'good' | 'needs-improvement' | 'poor';
-      let color: string;
-
-      if (averageScore >= 90) {
-
-        rating = 'good';
-        color = 'text-green-500'} else if (averageScore >= 50) {
-
-        rating = 'needs-improvement';
-        color = 'text-yellow-500'} else {
-
-        rating = 'poor';
-        color = 'text-red-500'}
-    });
-
-    
-=======
   TrendingUp,'
   AlertTriangle} from 'lucide-react.ts';    
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     let grade: 'A' | 'B' | 'C' | 'D' | 'F';
     let color: string;
 
@@ -160,12 +69,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
             clsValue += entry.value}
         });
         setMetrics(prev => ({ ...prev, cls: clsValue }));
-<<<<<<< HEAD
-      });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
-=======
       });'      clsObserver.observe({ entryTypes: ['layout-shift'] });
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       return () => {
         lcpObserver.disconnect();

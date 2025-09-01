@@ -1,7 +1,5 @@
+import React from 'react';
 
-export default function CommunityRoutes() {
-  return()
-    <>;"
-      <Route path = "" element={<CommunityPage  />} />;
-    </>
-  )}'"
+export default function CommunityRoutes(): JSX.Element {
+	return <div>Community routes placeholder</div>;
+}

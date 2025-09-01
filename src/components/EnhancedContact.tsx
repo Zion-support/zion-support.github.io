@@ -1,60 +1,3 @@
-<<<<<<< HEAD
-import {
-
-  Mail,
-  Phone,
-  MapPin,
-  Send,
-  CheckCircle,
-  AlertCircle,
-  CheckCircle,
-  Clock,
-  MessageSquare,
-  Building,
-  Globe'
- } from 'lucide-react';
-
-interface ContactFormData {
-  name: string;
-  email: string;
-  phone: string;
-  comp: string;
-  service: string;
-  message: string
-}
-
-interface ContactFormErrors {
-  [key: string]: string}
-
-export function EnhancedContact(...args[]):  {
-
-  const [formData, setFormData] = useState<any>({
-
-    name: '',;
-    email: '',;
-    phone: '',;
-    comp: '',;
-    service: 'general',;
-    message: ''
-  }) ;
-
-  const [errors, setErrors] = useState<any> ({}) ;
-  const [isSubmitting, setIsSubmitting] = useState (false) ;
-  const [isSubmitted, setIsSubmitted] = useState (false) ;
-
-  
-    { value: 'cloud-infrastructure', label: 'Cloud Infrastructure' },;
-    { value: 'cybersecurity', label: 'Cybersecurity' },;
-    { value: 'digital-transformation', label: 'Digital Transformation' },;
-    { value: 'consulting', label: 'IT Consulting' },;
-    { value: 'quantum-computing', label: 'Quantum Computing' },;
-    { value: 'green-it', label: 'Green IT Solutions' };
-  ];
-
-  
-    const newErrors: ContactFormErrors = {};
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     if (!formData.name.trim()) {
 
@@ -78,14 +21,8 @@ export function EnhancedContact(...args[]):  {
       // // // // // // // // console.error('Error submitting form:', error)} finally {
 
       setIsSubmitting(false);
-<<<<<<< HEAD
-    }
-      })} catch (error) {
-
-=======
     }      })} catch (error) {
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       // console.error('Error submitting form:', error)} finally {
 
       setIsSubmitting(false)}
@@ -391,12 +328,7 @@ export function EnhancedContact(...args[]):  {
 }}"
                       className="text-red-400 text-sm mt-1 flex items-center"
                     >"
-<<<<<<< HEAD
-                      <AlertCircle className="w-4 h-4 mr-1"  />
-                      {errors['name']}
-=======
                       <AlertCircle className="w-4 h-4 mr-1"  />'                      {errors['name']}
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     </motion.p>) }
                 </AnimatePresence>
               </div>
@@ -457,12 +389,7 @@ export function EnhancedContact(...args[]):  {
 }}"
                       className="text-red-400 text-sm mt-1 flex items-center"
                     >"
-<<<<<<< HEAD
-                      <AlertCircle className="w-4 h-4 mr-1"  />
-                      {errors['email']}
-=======
                       <AlertCircle className="w-4 h-4 mr-1"  />'                      {errors['email']}
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     </motion.p>) }
                 </AnimatePresence>
               </div>
@@ -599,12 +526,7 @@ export function EnhancedContact(...args[]):  {
 }}"
                       className="text-red-400 text-sm mt-1 flex items-center"
                     >"
-<<<<<<< HEAD
-                      <AlertCircle className="w-4 h-4 mr-1"  />
-                      {errors['message']}
-=======
                       <AlertCircle className="w-4 h-4 mr-1"  />'                      {errors['message']}
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     </motion.p>) }
                 </AnimatePresence>
               </div>

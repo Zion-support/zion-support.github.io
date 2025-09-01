@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-
-interface EnhancedLoadingSpinnerProps {
-
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  text?: string;
-  showProgress?: boolean;
-  progress?: number;
-  variant?: 'default' | 'futuristic' | 'minimal';
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 export function EnhancedLoadingSpinner({
 
   size = 'md',
@@ -20,12 +8,7 @@ export function EnhancedLoadingSpinner({
 
   
   
-<<<<<<< HEAD
-
-  if (variant === 'minimal') {
-=======
 '  if (variant === 'minimal') {
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     return()
       <div className="flex items-center justify-center">
@@ -39,12 +22,7 @@ export function EnhancedLoadingSpinner({
         )}
       </div>
     )}
-<<<<<<< HEAD
-
-  if (variant === 'default') {
-=======
 '  if (variant === 'default') {
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     return ("
       <div className="flex flex-col items-center justify-center space-y-4">

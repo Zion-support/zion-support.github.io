@@ -34,14 +34,8 @@ import {
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
-<<<<<<< HEAD
-        title="AI Sales Copilot - Zion Tech Group"
-        description="Transform your sales process with AI-powered automation. Increase productivity, improve conversions, and drive revenue growth."
-      />
-=======
         title="AI Sales Copilot - Zion Tech Group""        description="Transform your sales process with AI-powered automation. Increase productivity, improve conversions, and drive revenue growth."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 lg:py-32">"
