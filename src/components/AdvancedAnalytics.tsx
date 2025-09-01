@@ -36,7 +36,6 @@ interface UserBehavior {;
   topPages: Array<any>;
   userAgents: Array<any>;
   locations: Array<any>;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894;
   performance: {;
     loadTime: number;
     firstPaint: number;
@@ -112,6 +111,7 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({;
     customerLifetimeValue: 0,;
     churnRate: 0,;
     acquisitionCost: 0;
+>>>>>>> 3f7ebdbe1e1fa0e4c5dda1aa85d4701fd0f9aea5
   });
   const [isTracking, setIsTracking] = useState(false);
   const [sessionStart, setSessionStart] = useState<any>(Date.now());
@@ -360,7 +360,6 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({;
   const trackEvent = useCallback(async (event: AnalyticsEvent) => {;
     try {;
       await fetch(apiEndpoint, {;
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089;
         method: 'POST',;
         headers: {;
           'Content-Type': 'application/json',;
@@ -677,3 +676,4 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({;
   };
   return null;"
 };";"
+>>>>>>> 3f7ebdbe1e1fa0e4c5dda1aa85d4701fd0f9aea5

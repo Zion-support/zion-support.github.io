@@ -25,7 +25,7 @@ export function getStripe() {;
         : (import.meta.env['VITE_STRIPE_TEST_KEY'] as string);
     stripePromise = loadStripe(key);
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
+>>>>>>> 3f7ebdbe1e1fa0e4c5dda1aa85d4701fd0f9aea5
   return stripePromise;
 }};
 >>>>>>> cursor/add-new-services-and-advertise-them-971c;

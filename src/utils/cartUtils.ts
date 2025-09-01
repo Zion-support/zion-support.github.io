@@ -47,9 +47,9 @@ export;
 <<<<<<< HEAD;
 =======;
 };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
 <<<<<<< HEAD;
 export const calculateCartTotal = (items: CartItem[]): number  => {;
+>>>>>>> 3f7ebdbe1e1fa0e4c5dda1aa85d4701fd0f9aea5
   return items.reduce((total, item) => total + (item.price * item.quantity), 0);
 };
 ;

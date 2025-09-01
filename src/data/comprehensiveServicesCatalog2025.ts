@@ -30,9 +30,9 @@ export interface ComprehensiveService2025 {;
     technology: string[];
     integrations: string[];
     apiEndpoints: number;
-    uptime: string;
-    security: string[];
-  };
+    uptime: string
+    security: string[]
+      };
   competitors?: string[];
   marketSize?: string;
   launchDate?: string;

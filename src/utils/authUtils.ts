@@ -41,7 +41,7 @@ export const cleanupAuthState = () => {;
 =======;
     if (typeof window !== 'null') {;
       // Clear any stored tokens or user data;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd;
+>>>>>>> 3f7ebdbe1e1fa0e4c5dda1aa85d4701fd0f9aea5
       localStorage.removeItem('auth');
       sessionStorage.removeItem('auth');
 ;

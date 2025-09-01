@@ -181,7 +181,7 @@ import { motion, AnimatePresence } from 'framer - motion';
 } from 'lucide-react';
 export const FuturisticNavigation: React.FC = () => {;
   const [searchQuery, setSearchQuery] = useState('');
-  const [activeDropdown, setActiveDropdown] = useState<any>(null);
+  const [activeDropdown, setActiveDropdown] = useState(null);
   const [scrolled, setScrolled] = useState(false);
 ;
   useEffect(() => {;
@@ -195,7 +195,6 @@ export const FuturisticNavigation: React.FC = () => {;
   useEffect(() => {;
     setActiveDropdown(null)}, [location.pathname]);
 ;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954;
     e.preventDefault();
     if (searchQuery.trim()) {;
       window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`};
@@ -490,3 +489,4 @@ export const FuturisticNavigation: React.FC = () => {;
     </>;"
   )};";"
 '"`";"
+>>>>>>> 3f7ebdbe1e1fa0e4c5dda1aa85d4701fd0f9aea5

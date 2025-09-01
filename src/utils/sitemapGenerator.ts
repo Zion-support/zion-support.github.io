@@ -19,9 +19,9 @@ interface SitemapConfig {;
   baseUrl: string;
   urls: SitemapUrl[];
   outputPath?: string;
->>>>>>> cursor/add-new-services-and-advertise-them-971c;
 };
 export class SitemapGenerator {;
+>>>>>>> 3f7ebdbe1e1fa0e4c5dda1aa85d4701fd0f9aea5
   private config: SitemapConfig;
 ;
   constructor(config: SitemapConfig) {;

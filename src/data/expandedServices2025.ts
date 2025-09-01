@@ -14,9 +14,9 @@ export type ServiceItem = {;
   external?: boolean;
   contactInfo: {;
     phone: string;
-    email: string;
-    address: string;
-  };
+    email: string
+    address: string
+      };
 };
 ;
 export type ServiceCategory = {;

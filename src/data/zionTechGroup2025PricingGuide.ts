@@ -18,9 +18,9 @@ export interface ServicePricing {;
   marketComparison: {;
     averageMarketPrice: string;
     ourPrice: string;
-    savings: string;
-    valueProposition: string;
-  };
+    savings: string
+    valueProposition: string
+      };
   features: string[];
   benefits: string[];
   useCases: string[];

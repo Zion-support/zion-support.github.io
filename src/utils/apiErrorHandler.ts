@@ -5,7 +5,6 @@ import { toast } from '@/hooks/use-toast';
 ;
 export const showApiError = (error: , fallbackMessage?: string) => {;
   const message = error?.message || fallbackMessage || 'An unexpected error occurred';
->>>>>>> cursor/add-new-services-and-advertise-them-971c;
   toast({;
     variant: 'destructive',;
 =======;
@@ -45,3 +44,4 @@ export const handleApiError = (error: , fallbackMessage?: string) => {;
   return { error: error?.message || fallbackMessage || 'An unexpected error occurred' };
 };};
 >>>>>>> cursor/add-new-services-and-advertise-them-971c;
+>>>>>>> 3f7ebdbe1e1fa0e4c5dda1aa85d4701fd0f9aea5

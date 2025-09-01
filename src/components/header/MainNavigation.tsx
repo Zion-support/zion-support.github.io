@@ -270,7 +270,7 @@ export function MainNavigation({ className = '' }) {
           className="flex items-center space-x-1 text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors"
         >
           <Building2 className="w-4 h-4" />
-          <span>Company</span>
+          <span>Comp</span>
           <ChevronDown className="w-3 h-3" />
         </button>
         

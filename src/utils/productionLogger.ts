@@ -20,9 +20,9 @@ export function logErrorToProduction(message: string, error?: ): void {;
   // For now, just // // // // console.error in development;
   if (process.env.NODE_ENV = == 'development') {;
     // // // // console.error(message, error);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
   };
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
   // TODO: Implement production error logging service;
 }};
 >>>>>>> cursor/add-new-services-and-advertise-them-971c;
+>>>>>>> 3f7ebdbe1e1fa0e4c5dda1aa85d4701fd0f9aea5

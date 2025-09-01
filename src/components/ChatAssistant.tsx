@@ -117,6 +117,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({;
     } else {;
       recognitionRef.current.start();
       setIsListening(true);
+>>>>>>> 3f7ebdbe1e1fa0e4c5dda1aa85d4701fd0f9aea5
     };
   }, [isListening]);
 ;
@@ -139,6 +140,16 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({;
     try {;
       // Simulate AI response (replace with actual API call);
       await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
+<<<<<<< HEAD
+      
+      const aiResponse: Message = { id: (Date.now() + 1).toString(),
+        type: 'assistant',
+        content: generateAIResponse(content).content,
+        timestamp: new Date(),
+        metadata: { confidence: 0.95,
+          suggestions: generateSuggestions(content),
+        }
+=======
 ;
       const aiResponse: ChatMessage = {;
         id: (Date.now() + 1).toString(),;

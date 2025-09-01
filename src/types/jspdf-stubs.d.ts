@@ -41,10 +41,10 @@ export default autoTable};
 =======;
     output(type?: string): ;
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
   export function autoTable(...args: unknown[]): void;
 ;
 declare module 'jspdf-autotable' {;
+>>>>>>> 3f7ebdbe1e1fa0e4c5dda1aa85d4701fd0f9aea5
   const autoTable: ;
   export default autoTable;
 <<<<<<< HEAD;

@@ -12,9 +12,9 @@ export interface ZionService {;
   contactInfo: {;
     mobile: string;
     email: string;
-    address: string;
-    website: string;
-  };
+    address: string
+    website: string
+      };
   ctaLabel: string;
   href: string;
   external?: boolean;

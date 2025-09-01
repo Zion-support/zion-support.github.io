@@ -4,7 +4,6 @@ export function registerServiceWorker(): void {;
   if ('serviceWorker' in navigator) {;
 <<<<<<< HEAD;
 =======;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954;
     navigator.serviceWorker;
       .register(swUrl);
       .then((registration) => {;
@@ -73,6 +72,7 @@ export function registerServiceWorker() {;
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
               });
 ;
+>>>>>>> 3f7ebdbe1e1fa0e4c5dda1aa85d4701fd0f9aea5
           });
         });
         .catch((registrationError) => {;
@@ -356,5 +356,5 @@ async function syncOfflineData(data: unknown[]): Promise<void> {;
 };
 // Export for testing purposes;
 export {};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
 >>>>>>> cursor/add-new-services-and-advertise-them-971c;
+>>>>>>> 3f7ebdbe1e1fa0e4c5dda1aa85d4701fd0f9aea5

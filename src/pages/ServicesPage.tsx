@@ -207,7 +207,7 @@ export default React.memo(function ServicesPage() {
             className="text-center max-w-4xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h1 className="heading-responsive font-bold mb-6">
               <span className="text-gradient">Innovative Micro SAAS</span>
@@ -288,7 +288,7 @@ export default React.memo(function ServicesPage() {
             className="flex flex-wrap gap-3 mb-8 justify-center"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.6     }}
           >
             {categories.map(category => (
               <button
@@ -359,10 +359,10 @@ export default React.memo(function ServicesPage() {
             {sortedServices.length > 0 ? (
               <motion.div
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.5 }}
+                initial={{ opacity: 0     }}
+                animate={{ opacity: 1     }}
+                exit={{ opacity: 0     }}
+                transition={{ duration: 0.5     }}
               >
                 {sortedServices.map((service, index) => (
                   <motion.div
@@ -371,7 +371,7 @@ export default React.memo(function ServicesPage() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    whileHover={{ y: -10 }}
+                    whileHover={{ y: -10     }}
                   >
                     {/* Service Header */}
                     <div className="mb-6">
@@ -468,9 +468,9 @@ export default React.memo(function ServicesPage() {
             ) : (
               <motion.div
                 className="text-center py-16"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
+                initial={{ opacity: 0     }}
+                animate={{ opacity: 1     }}
+                exit={{ opacity: 0     }}
               >
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">
@@ -484,8 +484,7 @@ export default React.memo(function ServicesPage() {
                     setSelectedCategory('all');
                     setSelectedPriceRange('all');
                   }}
-                  className="btn-futuristic px-6 py-3"
-                >
+                  className="btn-futuristic px-6 py-3">
                   View All Services
                 </button>
               </motion.div>
@@ -500,7 +499,7 @@ export default React.memo(function ServicesPage() {
             className="text-center mb-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.6     }}
           >
             <h2 className="heading-responsive font-bold mb-4">
               <span className="text-gradient">Specialized Solutions</span>
@@ -519,7 +518,7 @@ export default React.memo(function ServicesPage() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ y: -5 }}
+                whileHover={{ y: -5     }}
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Rocket className="w-8 h-8 text-white" />
@@ -538,8 +537,7 @@ export default React.memo(function ServicesPage() {
                 </div>
                 <Link
                   to={`/services/${service.id}`}
-                  className="btn-neon w-full"
-                >
+                  className="btn-neon w-full">
                   Explore Solution
                 </Link>
               </motion.div>
@@ -553,7 +551,7 @@ export default React.memo(function ServicesPage() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h2 className="heading-responsive font-bold mb-6">
               Ready to Transform Your Business?
