@@ -1,56 +1,3 @@
-<<<<<<< HEAD
-import {
-
-  Search,
-  HelpCircle,
-  MessageCircle,
-  Phone,
-  Mail,
-  BookOpen,
-  Video,
-  FileText,
-  ChevronDown,
-  ChevronRight,
-  Star,
-  ChevronDown,
-  ChevronRight,
-  ExternalLink,
-  Lightbulb,
-  TrendingUp,
-  Target,
-  Heart,
-  Building,
-  Cpu,
-  Lock,
-  Atom,
-  Network,
-  Eye,
-  BarChart3,
-  MessageSquare,
-  Calendar,
-  Clock,
-  CheckCircle,
-  AlertCircle,
-  Info'
-} from 'lucide-react';
-
-interface HelpSection {
-
-  id: string;
-  title: string;
-  icon: unknown;
-  description: string;
-  articles: Array<{
-
-    title: string;
-    description: string;
-    path?: string;
-    external?: boolean;
-    difficulty: 'Beginner' | 'Intermediate' | 'Advanced';
-    readTime: string}[]}
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 interface FAQItem {
 
   question: string;
@@ -352,9 +299,7 @@ export function HelpCenter() {
 
   
     if (query.trim() === '') {
-=======
     setSearchQuery(query);'    if (query.trim() === '') {
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       setFilteredFAQs(faqData);
       return;

@@ -56,12 +56,7 @@ const ApiPlayground: React.FC = () => {
     setResponseData('')};
 
   
-<<<<<<< HEAD
-    setIsLoading(true);
-    setResponseData('');
-=======
     setIsLoading(true);'    setResponseData('');
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     // Simulate API call
     setTimeout ( () => {

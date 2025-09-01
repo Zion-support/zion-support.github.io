@@ -1,32 +1,10 @@
-<<<<<<< HEAD
-
-interface EnhancedLoadingSpinnerProps {
-
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  text?: string;
-  showProgress?: boolean;
-  progress?: number;
-  variant?: 'default' | 'futuristic' | 'minimal';
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 export function EnhancedLoadingSpinner({
-
   size = 'md',
   text = 'Loading...',
   showProgress = false,
   progress = 0,
   variant = 'futuristic'}: EnhancedLoadingSpinnerProps) {
-
-  
-  
-<<<<<<< HEAD
-
-  if (variant === 'minimal') {
-=======
 '  if (variant === 'minimal') {
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
     return()
       <div className="flex items-center justify-center">
         <div
@@ -39,13 +17,7 @@ export function EnhancedLoadingSpinner({
         )}
       </div>
     )}
-<<<<<<< HEAD
-
-  if (variant === 'default') {
-=======
 '  if (variant === 'default') {
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
     return ("
       <div className="flex flex-col items-center justify-center space-y-4">
         <div`
@@ -68,7 +40,6 @@ export function EnhancedLoadingSpinner({
         )}
       </div>
     )}
-
   // Futuristic variant (default)
   return ("
     <div className="flex flex-col items-center justify-center space-y-6">
@@ -82,12 +53,10 @@ export function EnhancedLoadingSpinner({
           animate={{ rotate: 360 }}
           transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
         />
-
         {/* Inner glow effect */}
         <div'`
           className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ${sizeClasses[size === 'xl' ? 'lg' : size === 'lg' ? 'md' : 'sm']} bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-20 blur-sm`}
         />
-
         {/* Center logo/text */}"
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">"
           <div className="text-cyan-400 font-bold text-lg animate-pulse">
@@ -95,7 +64,6 @@ export function EnhancedLoadingSpinner({
           </div>
         </div>
       </div>
-
       {/* Loading text */}"
       <div className="text-center space-y-2">
         <motion.p`
@@ -105,7 +73,6 @@ export function EnhancedLoadingSpinner({
         >
           {text}
         </motion.p>
-
         {/* Animated dots */}"
         <div className="flex justify-center space-x-1">
           {[0, 1, 2].map(i => (
@@ -118,7 +85,6 @@ export function EnhancedLoadingSpinner({
           ))}
         </div>
       </div>
-
       {/* Progress bar if enabled */}
       {showProgress && ("
         <div className="w-64 bg-gray-800/50 rounded-full h-3 border border-cyan-400/30">
@@ -137,7 +103,6 @@ export function EnhancedLoadingSpinner({
           </motion.div>
         </div>
       )}
-
       {/* Floating particles */}"
       <div className="relative w-full h-20">
         {[...Array(6)].map(_: unknown, i: unknown (
@@ -145,12 +110,10 @@ export function EnhancedLoadingSpinner({
             key={i}"
             className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60"
             animate={{
-
               x: [0, 50, 0],
               y: [0, -30, 0],
               opacity: [0.6, 1, 0.6]}}
             transition={{
-
               duration: 3 + i * 0.5,
               repeat: Infinity,
               delay: i * 0.3}}
@@ -163,7 +126,6 @@ export function EnhancedLoadingSpinner({
       </div>
     </div>
   )}
-
 // Export default for backward compatibility;
 export { EnhancedLoadingSpinner };
 export default EnhancedLoadingSpinner;

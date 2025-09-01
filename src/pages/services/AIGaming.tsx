@@ -1,5 +1,4 @@
 import { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Users, BarChart3 export default function AIGaming() {
-  
     'Automated content generation and procedural creation',;
     'Predictive analytics for player engagement and retention',;
     'Real-time matchmaking and player pairing optimization',;
@@ -12,8 +11,6 @@ import { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
       price: '$1,999/mo', ;
       details: ['Unlimited players',Custom AI models',Full platform integration',24/7 dedicated support'] },;
   ];
-
-  
     'Player engagement and retention optimization',;
     'Game difficulty and balance adjustment',;
     'Content generation and procedural creation',;
@@ -21,8 +18,6 @@ import { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'Anti-cheat and security systems',;
     'Monetization and in-game economy optimization';
   ];
-
-  
     'Increase player engagement by 35-55%',;
     'Improve player retention by 40-60%',;
     'Cut development costs by 25-40%',;
@@ -30,25 +25,13 @@ import { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
     'Enhance player experience and satisfaction',;
     'Scale gaming operations efficiently';
   ];
-
-<<<<<<< HEAD
-  
-    'Mobile Gaming',;
-    'PC Gaming',;
-    'Console Gaming',;
-    'VR/AR Gaming',;
-    'Esports & Competitive Gaming',;
-    'Educational & Serious Games';
-=======
   const industries = [;'
     'Mobile Gaming',;'
     'PC Gaming',;'
     'Console Gaming',;'
     'VR/AR Gaming',;'
     'Esports & Competitive Gaming',;'    'Educational & Serious Games';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
-
   return()
     <div className = "min-h-screen bg-white">"
       <section className="bg-gradient-to-br from-purple-600 via-violet-600 to-indigo-600 py-20 text-center">"

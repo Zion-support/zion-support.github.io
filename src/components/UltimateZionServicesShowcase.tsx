@@ -1,31 +1,3 @@
-<<<<<<< HEAD
-
-const UltimateZionServicesShowcase: React.FC = (): JSX.Element => {;
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-
-  
-    { id: 'blockchain-web3', name: 'Blockchain & Web3', icon: '🔗', color: 'from-green-600 to-emerald-600' },;
-    { id: 'space-tech', name: 'Space Technology', icon: '🛰️', color: 'from-indigo-600 to-purple-600' },;
-    { id: 'biotech-ai', name: 'Biotech & AI', icon: '🧬', color: 'from-red-600 to-pink-600' },;
-    { id: 'emerging-tech', name: 'Emerging Tech', icon: '🚀', color: 'from-orange-600 to-red-600' },;
-    { id: 'micro-saas', name: 'Micro SAAS', icon: '💻', color: 'from-blue-600 to-indigo-600' },;
-    { id: 'it-services', name: 'IT Services', icon: '🖥️', color: 'from-gray-600 to-slate-600' };
-  ];
-
-  
-    
-      service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
-      service.tagline.toLowerCase () .includes (searchTerm.toLowerCase () ) ;
-    return matchesCategory && matchesSearch}) ;
-
-  
-      transition: {
-        staggerChildren: 0.1,;
-        delayChildren: 0.2}}}},;
-    visible: {
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       opacity: 1,;
       y: 0,;
       transition: { duration: 0.5 }}};

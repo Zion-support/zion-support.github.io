@@ -1,189 +1,3 @@
-<<<<<<< HEAD
-import {
-
-  Users,
-  Cpu,
-  Shield,
-  Cloud,
-  Database,
-  Network,
-  Zap,
-  Target,
-  ArrowRight,
-  Play,
-  Settings,
-  Activity,
-  BarChart3,
-  TrendingUp,
-  Shield,
-  Database,
-  Smartphone,
-  Code,
-  FileText,
-  AlertCircle,
-  CheckSquare,
-  Calculator,
-  PieChart,
-  LineChart,
-  Target2,
-  Wallet,
-  PiggyBank,
-  CreditCard,
-  Receipt,
-  Cloud,
-  Zap2,
-  Gauge,
-  BarChart4,
-  TrendingUp2,
-  Lightbulb,
-  Strategy,
-  Brain,
-  Compass,
-  RefreshCw,
-  TrendingUp3,
-  Layers,
-  Workflow,
-  Scale,
-  Award,
-  Lock,
-  Wifi,
-  Bluetooth,
-  Radio,
-  Sensor,
-  Chip,
-  Circuit,
-  Orbit,
-  Planet,
-  Star,
-  Telescope,
-  Antenna,
-  Signal,
-  Navigation,
-  Earth,
-  Moon,
-  Sun,
-  Binary,
-  Network,
-  Database2,
-  Lock2,
-  Key2,
-  Fingerprint2,
-  Eye,
-  Brain2,
-  Cpu2,
-  Memory,
-  HardDrive,
-  Server2,
-  Phone,
-  Mail,
-  Calendar,
-  MessageSquare,
-  UserPlus,
-  UserCheck,
-  UserX,
-  UserMinus,
-  UserEdit,
-  UserSearch,
-  UserList,
-  UserSettings,
-  UserCog,
-  UserShield,
-  UserStar,
-  UserHeart,
-  UserCheck2,
-  UserX2,
-  UserMinus2,
-  UserPlus2,
-  UserEdit2,
-  UserSearch2,
-  UserList2,
-  UserSettings2,
-  UserCog2,
-  UserShield2,
-  UserStar2,
-  UserHeart2,
-  Monitor,
-  Eye2,
-  Users2,
-  MousePointer,
-  Clock,
-  MapPin,
-  Device,
-  Globe2,
-  Smartphone2,
-  Tablet,
-  Laptop,
-  Desktop,
-  Server3,
-  Database3,
-  HardDrive2,
-  Memory2,
-  Cpu3,
-  Network2,
-  Wifi2,
-  Bluetooth2,
-  Radio2,
-  Signal2,
-  Antenna2,
-  Satellite2,
-  Orbit2,
-  Planet2,
-  Star2,
-  Telescope2,
-  Navigation2,
-  Earth2,
-  Moon2,
-  Sun2,
-  Binary2,
-  Network3,
-  Database4,
-  Lock3,
-  Key3,
-  Fingerprint3,
-  Eye3,
-  Brain3,
-  Cpu4,
-  Memory3,
-  HardDrive3,
-  Server4,
-  Rocket,
-  Building2'
- } from 'lucide-react';
-;
-export { function };
-export default function ITConsulting(...args: []):  {
-
-  
-    },;
-    {;
-      icon: Cloud,;
-      title: 'Cloud Strategy',;
-      description: 'Plan cloud migration and hybrid cloud solutions'};
-  ];
-
-  
-    'Optimize IT infrastructure and reduce costs by 25%',;
-    'Improve system performance and reliability',;
-    'Enhance cybersecurity posture and compliance',;
-    'Enable digital transformation initiatives',;
-    'Streamline IT operations and processes',;
-    'Align technology with business objectives';
-  ]},;
-    {;
-      icon: Scale,;
-      title: 'Scalability Planning',;
-      description: 'Plan for future growth and technology scaling'};
-  ];
-
-  
-      description: 'Secure, compliant financial technology solutions'},;
-    {;
-      industry: 'Manufacturing',;
-      description: 'Industry 4.0 and smart manufacturing IT'};
-  ];
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}"
@@ -214,20 +28,17 @@ export default function ITConsulting(...args: []):  {
               <Link"
                 to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold"
-
                 Get Expert Advice
               </Link>
               <Link"
                 to="/services"
                 className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-semibold"
-
                 View All Services
               </Link>
             </div>
           </motion.div>
         </div>
       </section>;
-
       {/* Features Section */}"
       <section className="py-20">;"
         <div className="container mx-auto px-4">
@@ -252,37 +63,16 @@ export default function ITConsulting(...args: []):  {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}"
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/30 transition-all duration-200"
               >"
@@ -313,7 +103,6 @@ export default function ITConsulting(...args: []):  {
           </div>
         </div>
       </section>
-
       {/* Expertise Areas */}"
       <section className="py-20 bg-zion-slate-dark/30">;"
         <div className="container mx-auto px-4">
@@ -338,37 +127,16 @@ export default function ITConsulting(...args: []):  {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}"
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/30 transition-all duration-200"
               >"
@@ -389,7 +157,6 @@ export default function ITConsulting(...args: []):  {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}"
       <section className="py-20">;"
         <div className="container mx-auto px-4">
@@ -427,7 +194,6 @@ export default function ITConsulting(...args: []):  {
           </div>
         </div>
       </section>
-
       {/* Industries Section */}"
       <section className="py-20 bg-zion-slate-dark/30">;"
         <div className="container mx-auto px-4">
@@ -452,37 +218,16 @@ export default function ITConsulting(...args: []):  {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}"
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-blue-500/30 transition-all duration-200"
               >"
@@ -492,7 +237,6 @@ export default function ITConsulting(...args: []):  {
           </div>
         </div>
       </section>
-
       {/* Process Section */}"
       <section className="py-20">;"
         <div className="container mx-auto px-4">
@@ -534,7 +278,6 @@ export default function ITConsulting(...args: []):  {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}"
       <section className="py-20 bg-zion-slate-dark/30">;"
         <div className="container mx-auto px-4">
@@ -555,13 +298,11 @@ export default function ITConsulting(...args: []):  {
               <Link"
                 to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold"
-
                 Schedule Consultation
               </Link>
               <Link"
                 to="/services"
                 className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-semibold"
-
                 Explore Services
               </Link>
             </div>

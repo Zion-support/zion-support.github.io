@@ -1,102 +1,20 @@
-<<<<<<< HEAD
-import {
-
-  Leaf,
-  Zap,
-  Shield,
-  Globe,
-  TrendingUp,
-  Settings,
-  Database,
-  Cloud,
-  Lock,
-  Users,
-  Rocket,
-  CheckCircle,
-  ArrowRight,
-  Sun,
-  Wind,
-  Battery,
-  Recycle,
-  Tree,
-  Lightbulb,
-  Gauge,
-  Target,
-  Award,
-  BarChart3'
-} from 'lucide-react';
-;
-export { function };
-export default function GreenIT(...args: unknown[]): unknown {
-  
-    },;
-    {;
-      icon: Recycle,;
-      title: 'Circular IT Economy',;
-      description: 'Implement IT asset lifecycle management with recycling and refurbishment programs.'};
-  ];
-
-  
-    {;
-      title: 'Green Software Development',;
-      description: 'Develop energy-efficient software applications and optimize existing systems',;
-      icon: Code,;
-      benefits: ['Reduced computational overhead',Lower energy consumption',Improved performance']};
-  ];
-
-  
-    {;
-      industry: 'Manufacturing',;
-      description: 'Smart manufacturing with energy-efficient automation and monitoring',;
-      icon: Factory,;
-      metrics: ['Production Efficiency',Energy Consumption',Environmental Compliance']};
-  ]},;
-    {;
-      icon: Award,;
-      title: 'Brand Reputation',;
-      description: 'Enhance brand image through commitment to sustainability'};
-  ];
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
-<<<<<<< HEAD
-        title="Green IT Services - Zion Tech Group"
-        description="Transform your IT infrastructure with sustainable, energy-efficient solutions. Reduce carbon footprint, lower costs, and meet environmental compliance standards."
-      />
-=======
         title="Green IT Services - Zion Tech Group""        description="Transform your IT infrastructure with sustainable, energy-efficient solutions. Reduce carbon footprint, lower costs, and meet environmental compliance standards."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
         <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-emerald-500/10"></div>"
         <div className="container mx-auto px-6 relative z-10">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             animate = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}"
             className="text-center"
@@ -123,7 +41,6 @@ export default function GreenIT(...args: unknown[]): unknown {
           </motion.div>
         </div>
       </section>;
-
       {/* Green IT Services */}"
       <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">;"
         <div className="max-w-7xl mx-auto">"
@@ -159,7 +76,6 @@ export default function GreenIT(...args: unknown[]): unknown {
           </div>
         </div>
       </section>
-
       {/* Green Technologies */}"
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">;"
         <div className="max-w-7xl mx-auto">"
@@ -193,33 +109,18 @@ export default function GreenIT(...args: unknown[]): unknown {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}"
       <section className="py-16 px-4 sm:px-6 lg:px-8">;"
         <div className="max-w-7xl mx-auto">"
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial = {
-
   { opacity: 0,
   x: -20 
-
-
-
-
-
-
 }}
               whileInView = {
-
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.6 }}
 "
@@ -254,29 +155,14 @@ export default function GreenIT(...args: unknown[]): unknown {
                 </div>
               </div>
             </motion.div>
-
             <motion.div
               initial = {
-
   { opacity: 0,
   x: 20 
-
-
-
-
-
-
 }}
               whileInView = {
-
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.6 }}"
               className="relative"
@@ -314,32 +200,17 @@ export default function GreenIT(...args: unknown[]): unknown {
           </div>
         </div>
       </section>
-
       {/* Key Features */}"
       <section className="py-20 bg-slate-800/30">;"
         <div className="container mx-auto px-6">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}"
             className="text-center mb-16"
@@ -358,37 +229,16 @@ export default function GreenIT(...args: unknown[]): unknown {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}"
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105"
 "
@@ -402,32 +252,17 @@ export default function GreenIT(...args: unknown[]): unknown {
           </div>
         </div>
       </section>
-
       {/* Core Solutions */}"
       <section className="py-20">;"
         <div className="container mx-auto px-6">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}"
             className="text-center mb-16"
@@ -446,37 +281,16 @@ export default function GreenIT(...args: unknown[]): unknown {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}"
                 className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105"
 "
@@ -499,32 +313,17 @@ export default function GreenIT(...args: unknown[]): unknown {
           </div>
         </div>
       </section>
-
       {/* Industry Use Cases */}"
       <section className="py-20 bg-slate-800/30">;"
         <div className="container mx-auto px-6">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}"
             className="text-center mb-16"
@@ -543,37 +342,16 @@ export default function GreenIT(...args: unknown[]): unknown {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}"
                 className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105"
 "
@@ -596,32 +374,17 @@ export default function GreenIT(...args: unknown[]): unknown {
           </div>
         </div>
       </section>
-
       {/* Benefits */}"
       <section className="py-20">;"
         <div className="container mx-auto px-6">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}"
             className="text-center mb-16"
@@ -640,37 +403,16 @@ export default function GreenIT(...args: unknown[]): unknown {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}"
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105 text-center"
 "
@@ -684,32 +426,17 @@ export default function GreenIT(...args: unknown[]): unknown {
           </div>
         </div>
       </section>
-
       {/* Implementation Process */}"
       <section className="py-20 bg-slate-800/30">;"
         <div className="container mx-auto px-6">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}"
             className="text-center mb-16"
@@ -725,64 +452,38 @@ export default function GreenIT(...args: unknown[]): unknown {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
               {
-
                 step: '01',
                 title: 'Assessment',
                 description: 'Evaluate current IT infrastructure and identify sustainability opportunities'
               },
               {
-
                 step: '02',
                 title: 'Strategy',
                 description: 'Develop comprehensive Green IT strategy and implementation roadmap'
               },
               {
-
                 step: '03',
                 title: 'Implementation',
                 description: 'Deploy sustainable solutions and optimize existing systems'
               },
               {
-
                 step: '04',
                 title: 'Optimization',
                 description: 'Monitor performance and continuously improve sustainability metrics'
-
             ].map(phase: unknown, index: unknown (;
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}"
                 className="text-center"
 "
@@ -796,32 +497,17 @@ export default function GreenIT(...args: unknown[]): unknown {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}"
       <section className="py-20 bg-gradient-to-r from-green-500/10 to-emerald-500/10">;"
         <div className="container mx-auto px-6 text-center">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
 "

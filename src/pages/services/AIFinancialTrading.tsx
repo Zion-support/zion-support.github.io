@@ -34,23 +34,11 @@ import {
 ;
 export { function };
 export default function AIFinancialTrading(...args: unknown[]): unknown {
-  
-  
-  
-  
-  
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-<<<<<<< HEAD
-        title="AI Financial Trading Platform - Zion Tech Group"
-        description="Revolutionary AI-powered financial trading platform with advanced algorithms, predictive analytics, and automated risk management."
-       />
-=======
         title="AI Financial Trading Platform - Zion Tech Group""        description="Revolutionary AI-powered financial trading platform with advanced algorithms, predictive analytics, and automated risk management."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
         <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-blue-500/10"></div>"
@@ -88,7 +76,6 @@ export default function AIFinancialTrading(...args: unknown[]): unknown {
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto">
@@ -126,7 +113,6 @@ export default function AIFinancialTrading(...args: unknown[]): unknown {
           </div>
         </div>
       </section>
-
       {/* Trading Strategies Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-700/50">"
         <div className="max-w-7xl mx-auto">
@@ -179,7 +165,6 @@ export default function AIFinancialTrading(...args: unknown[]): unknown {
           </div>
         </div>
       </section>
-
       {/* Supported Assets Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto">
@@ -212,7 +197,6 @@ export default function AIFinancialTrading(...args: unknown[]): unknown {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-700/50">"
         <div className="max-w-7xl mx-auto">
@@ -245,7 +229,6 @@ export default function AIFinancialTrading(...args: unknown[]): unknown {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto">
@@ -271,7 +254,6 @@ export default function AIFinancialTrading(...args: unknown[]): unknown {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-8 rounded-xl border ${
-
                   index === 1 '
                     ? 'border-green-400/50 shadow-lg shadow-green-500/25' '
                     : 'border-slate-600/50'`
@@ -300,12 +282,10 @@ export default function AIFinancialTrading(...args: unknown[]): unknown {
                     </li>
                   ))}
                 </ul>
-
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}`
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-
                     index === 1'
                       ? 'bg-gradient-to-r from-green-500 to-blue-500 text-white hover:shadow-lg hover:shadow-green-500/25''
                       : 'border border-green-400 text-green-400 hover:bg-green-400/10'`
@@ -318,7 +298,6 @@ export default function AIFinancialTrading(...args: unknown[]): unknown {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-500/10 to-blue-500/10">"
         <div className="max-w-4xl mx-auto text-center">

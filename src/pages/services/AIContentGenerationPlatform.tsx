@@ -23,35 +23,28 @@ import {
 ;
 export { function };
 export default function AIContentGenerationPlatform(...args[]):  {
-
-  
     },;
     {
-
       icon: Palette,
       title: 'Visual Content Creation',
       description: 'Generate stunning images, graphics, and visual assets using cutting-edge AI image generation technology.',
       benefits['Custom brand styling',High-resolution output',Style transfer',Batch generation']},;
     {
-
       icon: Video,
       title: 'Video Content Generation',
       description: 'Create professional videos, animations, and multimedia content with AI-powered video generation tools.',
       benefits['Auto-script generation',Voice synthesis',Background music',Template library']},;
     {
-
       icon: Code,
       title: 'Technical Content',
       description: 'Generate technical documentation, code comments, and developer resources with specialized AI models.',
       benefits['Code documentation',API guides',Tutorial generation',Technical writing']},;
     {
-
       icon: Shield,
       title: 'Content Moderation',
       description: 'Built-in AI content filtering and moderation to ensure all generated content meets quality and safety standards.',
       benefits['Plagiarism detection',Content filtering',Quality scoring',Compliance checking']},;
     {
-
       benefits['Real-time editing',Approval workflows',Version history',Team analytics']};
       icon: Users,;
       title: 'Team Collaboration',;
@@ -59,35 +52,28 @@ export default function AIContentGenerationPlatform(...args[]):  {
       benefits: ['Real-time editing',Approval workflows',Version history',Team analytics']};
   ]},;
     {
-
       industry: 'E-commerce',
       title: 'Product Descriptions & Marketing',
       description: 'Create compelling product descriptions, marketing copy, and visual assets for online stores.',
       metrics['60% faster product onboarding',35% improvement in conversion rates',25% increase in SEO traffic']},;
     {
-
       industry: 'Publishing & Media',
       title: 'Content Production',
       description: 'Generate articles, blog posts, and multimedia content for digital publishing platforms.',
       metrics['70% increase in content output',45% reduction in editorial time',40% improvement in reader engagement']},;
     {
-
       metrics['55% faster report creation',50% improvement in brand consistency',35% reduction in review cycles']};
       industry: 'Corporate Communications',;
       title: 'Business Content',;
       description: 'Create professional reports, presentations, and corporate communications with consistent branding.',;
       metrics: ['55% faster report creation',50% improvement in brand consistency',35% reduction in review cycles']};
   ];
-
-  
     {;
       icon: TrendingUp,;
       title: 'Scalability',;
       description: 'Scale content production without proportional increases in resources.',;
       value: '10x'};
   ];
-
-  
     'Machine Learning',;
     'Cloud Computing',;
     'Real-time Processing',;
@@ -95,11 +81,8 @@ export default function AIContentGenerationPlatform(...args[]):  {
     'Content Management',;
     'Analytics & Insights';
   ];
-
-  
         '10,000 words per month',100 AI-generated images',5 video generations',Basic templates',Email support',Standard quality output'
       ],;
-=======
       features[;'
         '10,000 words per month','
         '100 AI-generated images','
@@ -107,12 +90,10 @@ export default function AIContentGenerationPlatform(...args[]):  {
         'Basic templates','
         'Email support','        'Standard quality output'
       ],;'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       cta: 'Start Free Trial',
       popular: false
     },
     {
-
       plan: 'Professional',
       price: '$299',
       period: '/month',
@@ -124,7 +105,6 @@ export default function AIContentGenerationPlatform(...args[]):  {
       popular: true
     },
     {
-
       plan: 'Enterprise',
       price: '$999',
       period: '/month',
@@ -137,44 +117,22 @@ export default function AIContentGenerationPlatform(...args[]):  {
       cta: 'Contact Sales',;
       popular: false};
   ];
-
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-<<<<<<< HEAD
-        title="AI Content Generation Platform - Zion Tech Group"
-        description="Transform your content creation with our AI-powered platform. Generate high-quality text, images, videos, and more with advanced AI technology."
-       />
-=======
         title="AI Content Generation Platform - Zion Tech Group""        description="Transform your content creation with our AI-powered platform. Generate high-quality text, images, videos, and more with advanced AI technology."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20">"
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             animate = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}"
             className="text-center mb-16"
@@ -196,30 +154,24 @@ export default function AIContentGenerationPlatform(...args[]):  {
               <a"
                 href="/contact"
                 className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-400 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-500 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
-
                 <span>Start Free Trial</span>"
                 <ArrowRight className="w-5 h-5"  />              </a>
               <a"
                 href="#pricing"
                 className="inline-flex items-center space-x-2 border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
-
                 <span>View Pricing</span>"
                 <ArrowRight className="w-5 h-5"  />              </a>
             </div>
           </motion.div>;
-
           {/* Stats */}
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 30 }}
             animate = {
-
   { opacity: 1,
   y: 0 }}
             transition = {
-
   { duration: 0.8,
   delay: 0.2 }}"            className="grid grid-cols-2 md:grid-cols-4 gap-8"
 "
@@ -242,32 +194,17 @@ export default function AIContentGenerationPlatform(...args[]):  {
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}"
       <section className="py-20 bg-slate-800/30">;"
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}"
             className="text-center mb-16"
@@ -289,37 +226,16 @@ export default function AIContentGenerationPlatform(...args[]):  {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.8,
   delay: index * 0.1 
-
-
-
-
-
-
 }}"
                 className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300"
 "
@@ -340,32 +256,17 @@ export default function AIContentGenerationPlatform(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}"
       <section className="py-20">;"
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}"
             className="text-center mb-16"
@@ -386,37 +287,16 @@ export default function AIContentGenerationPlatform(...args[]):  {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.8,
   delay: index * 0.1 
-
-
-
-
-
-
 }}"
                 className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300"
 "
@@ -440,32 +320,17 @@ export default function AIContentGenerationPlatform(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}"
       <section className="py-20 bg-slate-800/30">;"
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}"
             className="text-center mb-16"
@@ -486,37 +351,16 @@ export default function AIContentGenerationPlatform(...args[]):  {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.8,
   delay: index * 0.1 
-
-
-
-
-
-
 }}"
                 className="text-center"
 "
@@ -531,32 +375,17 @@ export default function AIContentGenerationPlatform(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* Technologies Section */}"
       <section className="py-20">;"
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}"
             className="text-center mb-16"
@@ -577,37 +406,16 @@ export default function AIContentGenerationPlatform(...args[]):  {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   scale: 0.9 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   scale: 1 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.6,
   delay: index * 0.05 
-
-
-
-
-
-
 }}"
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300 text-center"
 "
@@ -617,32 +425,17 @@ export default function AIContentGenerationPlatform(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}"
       <section id="pricing" className="py-20 bg-slate-800/30">;"
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}"
             className="text-center mb-16"
@@ -663,45 +456,22 @@ export default function AIContentGenerationPlatform(...args[]):  {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.8,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 ${
-
                   plan.popular'
                     ? 'border-purple-400/50 scale-105''
                     : 'border-slate-700/50 hover:border-purple-400/50'`
                 }`}
-
                 {plan.popular && (;"
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
                     <span className="bg-gradient-to-r from-purple-400 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -726,16 +496,13 @@ export default function AIContentGenerationPlatform(...args[]):  {
                     </li>
                   ))}
                 </ul>
-
                 <a'
                   href={plan.plan === 'Enterprise' ? '/contact' : '/signup'}`
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-
                     plan.popular'
                       ? 'bg-gradient-to-r from-purple-400 to-pink-500 text-white hover:from-purple-500 hover:to-pink-600''
                       : 'border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white'`
                   }`}
-
                   {plan.cta}
                 </a>;
               </motion.div>
@@ -743,32 +510,17 @@ export default function AIContentGenerationPlatform(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}"
       <section className="py-20">;"
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
 "
@@ -786,13 +538,11 @@ export default function AIContentGenerationPlatform(...args[]):  {
               <a"
                 href="/contact"
                 className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-400 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-500 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
-
                 <span>Start Free Trial</span>"
                 <ArrowRight className="w-5 h-5"  />              </a>
               <a"
                 href="tel:+13024640950"
                 className="inline-flex items-center space-x-2 border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
-
                 <span>Call +1 302 464 0950</span>"
                 <ArrowRight className="w-5 h-5"  />              </a>
             </div>"

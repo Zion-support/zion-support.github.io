@@ -1,5 +1,4 @@
 import {
-
   Cpu,
   Network,
   Zap,
@@ -17,21 +16,11 @@ import {
 ;
 export { function };
 export default function IoTEdgeComputing(...args: unknown[]): unknown {
-  
-  
-  
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       <SEO"
-<<<<<<< HEAD
-        title="IoT Edge Computing Services - Zion Tech Group"
-        description="Revolutionary IoT and edge computing solutions for real-time processing, low-latency applications, and connected ecosystems."
-      />
-=======
         title="IoT Edge Computing Services - Zion Tech Group""        description="Revolutionary IoT and edge computing solutions for real-time processing, low-latency applications, and connected ecosystems."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20">"
         <div className="absolute inset-0">"
@@ -81,7 +70,6 @@ export default function IoTEdgeComputing(...args: unknown[]): unknown {
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}"
       <section className="py-20">"
         <div className="container mx-auto px-4">
@@ -122,7 +110,6 @@ export default function IoTEdgeComputing(...args: unknown[]): unknown {
           </div>
         </div>
       </section>
-
       {/* Services Section */}"
       <section className="py-20 bg-slate-900/50">"
         <div className="container mx-auto px-4">
@@ -174,7 +161,6 @@ export default function IoTEdgeComputing(...args: unknown[]): unknown {
           </div>
         </div>
       </section>
-
       {/* Technologies Section */}"
       <section className="py-20">"
         <div className="container mx-auto px-4">
@@ -208,7 +194,6 @@ export default function IoTEdgeComputing(...args: unknown[]): unknown {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}"
       <section className="py-20 bg-gradient-to-r from-green-500/10 to-blue-500/10">"
         <div className="container mx-auto px-4 text-center">

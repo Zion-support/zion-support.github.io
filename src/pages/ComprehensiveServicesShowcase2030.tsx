@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-
-const ComprehensiveServicesShowcase2030: React.FC = () => {;
-  const [activeTab, setActiveTab] = useState<'microsaas' | 'it' | 'ai'>('microsaas');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  
-    let services: unknown[] = [];
-    
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     switch (activeTab) {
 
       case 'microsaas':
@@ -29,12 +17,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.tags.some((tag: string) => tag.toLowerCase().includes(searchTerm.toLowerCase()));
       )}
-<<<<<<< HEAD
-
-    if (selectedCategory !== 'all') {
-=======
 '    if (selectedCategory !== 'all') {
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       services = services.filter(service => service.category === selectedCategory)};
 ;

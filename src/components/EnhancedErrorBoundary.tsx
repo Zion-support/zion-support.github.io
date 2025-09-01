@@ -53,16 +53,9 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
     try {
       // You can integrate with services like Sentry, LogRocket, etc.
       
-<<<<<<< HEAD
-      // Send to your error reporting endpoint'
-      await fetch('/api/error-report', {
-
-        method: 'POST',
-=======
       // Send to your error reporting endpoint'      await fetch('/api/error-report', {
 '
         method: 'POST','
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(errorReport)})} catch (reportError) {
 

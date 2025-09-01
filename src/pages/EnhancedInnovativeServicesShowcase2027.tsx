@@ -1,38 +1,3 @@
-<<<<<<< HEAD
-import {
-
-  Brain,
-  Globe,
-  Zap,
-  Shield,
-  Cloud,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Code,
-  Lock,
-  Rocket,
-  Leaf,
-  Waves,
-  Factory,
-  Building2,
-  Cpu,
-  Network,
-  Eye,
-  Heart,
-  Lightbulb,
-  TrendingUp,
-  Users,
-  Target,
-  Award,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink} from 'lucide-react';
-const categoryColors: { [key: string]: string } = {
-
-  'Web3 Solutions': 'from-purple-500 to-pink-500',Metaverse Solutions': 'from-blue-500 to-cyan-500',Sustainable Tech': 'from-green-500 to-emerald-500',NeuroTech Solutions': 'from-indigo-500 to-purple-500',Fusion Energy Solutions': 'from-orange-500 to-red-500',OceanTech Solutions': 'from-blue-500 to-teal-500',AgriTech Solutions': 'from-green-500 to-lime-500',Smart City Solutions': 'from-gray-500 to-blue-500',Digital Twin Solutions': 'from-purple-500 to-indigo-500',Edge AI Solutions': 'from-red-500 to-pink-500',Federated Learning Solutions': 'from-yellow-500 to-orange-500'
-=======
 '
   'Web3 Solutions': 'from-purple-500 to-pink-500','
   'Metaverse Solutions': 'from-blue-500 to-cyan-500','
@@ -45,7 +10,6 @@ const categoryColors: { [key: string]: string } = {
   'Digital Twin Solutions': 'from-purple-500 to-indigo-500','
   'Edge AI Solutions': 'from-red-500 to-pink-500','
   'Federated Learning Solutions': 'from-yellow-500 to-orange-500'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 };
 export default function EnhancedInnovativeServicesShowcase2027(...args[]):  {
 
@@ -81,22 +45,12 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
   
     switch (sortBy) {;
       case 'price':;
-<<<<<<< HEAD
-        return a.price - b.price;
-      case 'innovation':;
-        
-        return (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0) -
-               (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0);
-      case 'roi':;
-        return parseInt(b.roi.replace('%',)) - parseInt(a.roi.replace('%',));
-=======
         return a.price - b.price;'
       case 'innovation':;'
         const innovationOrder = { 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 'Innovative': 0 };        return (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0) -
                (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0);'
       case 'roi':;'
         return parseInt(b.roi.replace('%', '')) - parseInt(a.roi.replace('%', ''));
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       default:;
         return 0}
   }) ;
@@ -196,12 +150,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
             <div className="relative">"
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-gray-light w-5 h-5"  />
               <input"
-<<<<<<< HEAD
-                type="text"
-                placeholder="Search services..."
-=======
                 type="text""                placeholder="Search services..."
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}"
                 className="w-full pl-10 pr-4 py-3 bg-zion-slate-dark border border-zion-gray-dark rounded-lg text-white placeholder-zion-gray-light focus:outline-none focus:border-zion-cyan"

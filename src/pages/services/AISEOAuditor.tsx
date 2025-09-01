@@ -1,30 +1,9 @@
 import {
-
   DollarSign,
   CheckCircle2,
   ExternalLink,
-<<<<<<< HEAD
-  Phone,
-  Mail} from 'lucide-react.ts';
-
-const AISEOAuditor: React.FC = (): JSX.Element => {
-
-  return()
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-      <SEO"
-        title="AI SEO Auditor - Zion Tech Group"
-        description="Autonomous on-site SEO audits, fixes, and monitoring with AI."
-      />
-"
-      <section className="container mx-auto px-4 py-16">"
-        <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight">
-          AI SEO Auditor
-        </h1>"
-        <p className="mt-4 max-w-3xl text-slate-300">
-=======
   Phone,'
   Mail} from 'lucide-react.ts';        <p className="mt-4 max-w-3xl text-slate-300">
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
           Identify SEO issues, generate prioritized fixes, and ship updates
           automatically with guardrails. Nightly crawls, Core Web Vitals checks,
           structured data validation, and content suggestions.

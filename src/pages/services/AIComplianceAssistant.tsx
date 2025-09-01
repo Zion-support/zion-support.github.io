@@ -20,25 +20,12 @@ import {
   Download,
   Share2'
 } from 'lucide-react';
-
 export default function AIComplianceAssistant() {
-  
-  
-  
-  
-  
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
-<<<<<<< HEAD
-        title="AI Compliance Assistant - Zion Tech Group"
-        description="Automate regulatory compliance with our AI-powered compliance assistant. Monitor, assess, and maintain compliance across multiple regulatory frameworks."
-      />
-=======
         title="AI Compliance Assistant - Zion Tech Group""        description="Automate regulatory compliance with our AI-powered compliance assistant. Monitor, assess, and maintain compliance across multiple regulatory frameworks."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 lg:py-32">"
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/20 via-transparent to-teal-900/20"></div>
@@ -74,7 +61,6 @@ export default function AIComplianceAssistant() {
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}"
       <section className="py-20 bg-slate-800/50">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -110,7 +96,6 @@ export default function AIComplianceAssistant() {
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                 </div>
-
                 {/* Content */}
                 <div>"
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors duration-300">
@@ -120,7 +105,6 @@ export default function AIComplianceAssistant() {
                     {feature.description}
                   </p>
                 </div>
-
                 {/* Hover Effect */}"
                 <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-teal-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </motion.div>
@@ -128,7 +112,6 @@ export default function AIComplianceAssistant() {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}"
       <section className="py-20">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -164,7 +147,6 @@ export default function AIComplianceAssistant() {
                     <benefit.icon className="w-8 h-8 text-white" />
                   </div>
                 </div>
-
                 {/* Content */}
                 <div>"
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors duration-300">
@@ -174,7 +156,6 @@ export default function AIComplianceAssistant() {
                     {benefit.description}
                   </p>
                 </div>
-
                 {/* Hover Effect */}"
                 <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-teal-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </motion.div>
@@ -182,7 +163,6 @@ export default function AIComplianceAssistant() {
           </div>
         </div>
       </section>
-
       {/* Regulations Supported Section */}"
       <section className="py-20 bg-slate-800/50">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -218,7 +198,6 @@ export default function AIComplianceAssistant() {
                     <regulation.icon className="w-8 h-8 text-white" />
                   </div>
                 </div>
-
                 {/* Content */}
                 <div>"
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors duration-300">
@@ -228,7 +207,6 @@ export default function AIComplianceAssistant() {
                     {regulation.description}
                   </p>
                 </div>
-
                 {/* Hover Effect */}"
                 <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-teal-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </motion.div>
@@ -236,7 +214,6 @@ export default function AIComplianceAssistant() {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}"
       <section className="py-20">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -272,7 +249,6 @@ export default function AIComplianceAssistant() {
                     <useCase.icon className="w-8 h-8 text-white" />
                   </div>
                 </div>
-
                 {/* Content */}
                 <div>"
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors duration-300">
@@ -282,7 +258,6 @@ export default function AIComplianceAssistant() {
                     {useCase.description}
                   </p>
                 </div>
-
                 {/* Hover Effect */}"
                 <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-teal-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </motion.div>
@@ -290,7 +265,6 @@ export default function AIComplianceAssistant() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}"
       <section className="py-20 bg-gradient-to-r from-emerald-900/20 to-teal-900/20">"
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -357,5 +331,4 @@ export default function AIComplianceAssistant() {
       </section>;
     </div>
   )}
-
 '"

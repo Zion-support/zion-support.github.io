@@ -1,37 +1,5 @@
-<<<<<<< HEAD
-import { Atom, 
-  Brain, 
-  Zap, 
-  Target, 
-  BarChart3, 
-  Cpu, 
-  CheckCircle,
-  Star,
-  Clock,
-  DollarSign,
-  ArrowRight,
-  Server,
-  Network,
-  Database,
-  Cloud,
-  Lock,
-  Globe,
-  TrendingUp,
-  Users,
-  Shield'
- } from 'lucide-react';
-;
-
-        "Molecular modeling",;"
-        "Chemical reaction simulation",;"
-        "Material property prediction",;"
-        "Drug discovery acceleration";
       ]};
-=======
-      ]};
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
-
   const pricingPlans = [
     {
 "
@@ -51,7 +19,6 @@ import { Atom,
       popular: false
     },
     {
-
       icon: Brain,"
       title: "Hybrid Quantum-Classical Computing","
       description: "Seamless integration of quantum and classical computing resources for optimal performance and practical applications.","
@@ -75,7 +42,6 @@ import { Atom,
       cta: "Contact Sales",;
       popular: false};
   ];
-
   const useCases = [
     {
 "
@@ -107,51 +73,27 @@ import { Atom,
         "Resource allocation",;"        "Climate modeling";
       ]};
   ];
-
-  
     {;"
       title: "Quantum Entanglement",;"
       description: "Leverage quantum correlations for secure communication",;
       icon: Network,;"
       metric: "100%"};  ];
-
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-<<<<<<< HEAD
-        title="Quantum AI Platform - Zion Tech Group"
-        description="Revolutionize your business with quantum computing and AI. Access unprecedented computational power for optimization, cryptography, and machine learning."
-       />
-=======
         title="Quantum AI Platform - Zion Tech Group""        description="Revolutionize your business with quantum computing and AI. Access unprecedented computational power for optimization, cryptography, and machine learning."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             animate = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}"
             className="text-center"
@@ -183,37 +125,21 @@ import { Atom,
             </div>
           </motion.div>
         </div>
-
         {/* Floating Elements */}"
         <div className="absolute top-20 left-10 w-20 h-20 bg-blue-600/20 rounded-full blur-xl"></div>"
         <div className="absolute bottom-20 right-10 w-32 h-32 bg-cyan-600/20 rounded-full blur-xl"></div>
       </section>
-
       {/* Quantum Advantages Section */}"
       <section className="py-20">;"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}"
             className="text-center mb-16"
@@ -232,37 +158,16 @@ import { Atom,
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.8,
   delay: index * 0.1 
-
-
-
-
-
-
 }}"
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300 text-center"
 "
@@ -278,32 +183,17 @@ import { Atom,
           </div>
         </div>
       </section>
-
       {/* Features Section */}"
       <section className="py-20 bg-slate-800/30">;"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}"
             className="text-center mb-16"
@@ -322,37 +212,16 @@ import { Atom,
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.8,
   delay: index * 0.1 
-
-
-
-
-
-
 }}"
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-blue-500 transition-all duration-300"
 "
@@ -376,32 +245,17 @@ import { Atom,
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}"
       <section className="py-20">;"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}"
             className="text-center mb-16"
@@ -420,45 +274,22 @@ import { Atom,
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.8,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-
                   plan.popular'
                     ? 'border-blue-500 ring-2 ring-blue-500/20''
                     : 'border-slate-700'`
                 }`}
-
                 {plan.popular && (;"
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
                     <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-medium">
@@ -484,7 +315,6 @@ import { Atom,
                 <a "
                   href="tel:+13024640950" `
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all ${
-
                     tier.popular'
                       ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:scale-105''
                       : 'bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-900'`
@@ -497,32 +327,17 @@ import { Atom,
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}"
       <section className="py-20 bg-slate-800/30">;"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}"
             className="text-center mb-16"
@@ -541,37 +356,16 @@ import { Atom,
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.8,
   delay: index * 0.1 
-
-
-
-
-
-
 }}"
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300"
 "
@@ -593,32 +387,17 @@ import { Atom,
           </div>
         </div>
       </section>
-
       {/* CTA Section */}"
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">;"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
 "
@@ -635,7 +414,6 @@ import { Atom,
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
                 className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
-
                 Start Free Trial
               </motion.button>
               <motion.button

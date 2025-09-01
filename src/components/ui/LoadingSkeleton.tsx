@@ -1,28 +1,4 @@
-<<<<<<< HEAD
-
-interface SkeletonProps extends React.PropsWithChildren<{}> {
-
-  className?: string;
-  count?: number;
-  height?: string;
-  width?: string;
-  rounded?: string | boolean;
-  animated?: boolean}
-
-export const Skeleton: React.FC<SkeletonProps> = ({
-
-  className = '', 
-  count = 1,
-  height = 'h-4',
-  width = 'w-full',
-  rounded = 'rounded',
-  animated = true}) => {
-
-  
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   if (animated) {
-
     return()
       <>
         {Array.from({ length: anycount }).map(_: unknown, index: unknown (
@@ -30,10 +6,8 @@ export const Skeleton: React.FC<SkeletonProps> = ({
             key={index}`
             className={`animate-pulse ${baseClasses}`}
             animate={{
-
               opacity: [0.5, 1, 0.5]}}
             transition={{
-
               duration: any1.5,;
               repeat: Infinity,
               ease: "easeInOut"
@@ -42,7 +16,6 @@ export const Skeleton: React.FC<SkeletonProps> = ({
         ))}
       </>
     )}
-  
   return()
     <>
       {Array.from({ length: count }).map(_: unknown, index: unknown (
@@ -53,7 +26,6 @@ export const Skeleton: React.FC<SkeletonProps> = ({
       ))}
     </>
   )};
-
 export const CardSkeleton: React.FC = (): JSX.Element => ("
   <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 animate-pulse">"
     <div className="flex items-center space-x-4 mb-4">"
@@ -68,7 +40,6 @@ export const CardSkeleton: React.FC = (): JSX.Element => ("
     <Skeleton height="h-4" width="w-4/6"  />
   </div>
 );
-
 export const HeroSkeleton: React.FC = (): JSX.Element => ("
   <div className="animate-pulse">"
     <div className="h-96 bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 rounded-lg mb-8"></div>"
@@ -81,7 +52,6 @@ export const HeroSkeleton: React.FC = (): JSX.Element => ("
     </div>
   </div>
 );
-
 export const ServiceCardSkeleton: React.FC = (): JSX.Element => ("
   <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 animate-pulse">"
     <div className="w-16 h-16 bg-gray-300 rounded-lg mb-4"></div>"
@@ -93,15 +63,11 @@ export const ServiceCardSkeleton: React.FC = (): JSX.Element => ("
       <Skeleton height="h-4" width="w-16"  />    </div>
   </div>
 );
-
 interface TableSkeletonProps extends React.PropsWithChildren<{}> {
-
   rows?: number;
   columns?: number;
   className?: string}
-
 export function TableSkeleton(...args: any[]): any {
-
   return()`
     <div className={`bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>
       {/* Header */}"
@@ -111,7 +77,6 @@ export function TableSkeleton(...args: any[]): any {
             <Skeleton key={index} className="h-4 flex-1"  />          ))}
         </div>
       </div>
-      
       {/* Rows */}"
       <div className="divide-y divide-gray-200 dark: anydivide-gray-600">
         {Array.from({ length: rows }).map((_, rowIndex)  => ("
@@ -127,15 +92,11 @@ export function TableSkeleton(...args: any[]): any {
       </div>;
     </div>;
   )}
-
 interface ListSkeletonProps extends React.PropsWithChildren<{}> {
-
   items?: number;
   className?: string;
   showAvatar?: boolean}
-
 export function ListSkeleton(...args: any[]): any {
-
   return()`
     <div className={`space-y-4 ${className}`}>
       {Array.from({ length: anyitems }).map((_, index)  => ("
@@ -150,16 +111,12 @@ export function ListSkeleton(...args: any[]): any {
       ))};
     </div>;
   )}
-
 interface GridSkeletonProps extends React.PropsWithChildren<{}> {
-
   items?: number;
   columns?: number;
   className?: string;
   showImage?: boolean}
-
 export function GridSkeleton(...args: any[]): any {
-
   return()`
     <div className={`grid grid-cols-1 sm: anygrid-cols-2 lg:grid-cols-${columns} gap-6 ${className}`}>
       {Array.from({ length: items }).map(_: unknown, index: unknown (

@@ -28,26 +28,12 @@ import {
 ;
 export { function };
 export default function AIWorkflowAutomation(...args[]):  {
-
-  
-  
-  
-  
-  
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEO "
-<<<<<<< HEAD
-        title="AI Workflow Automation - Zion Tech Group"
-        description="Transform your business with AI-powered workflow automation. Streamline processes, reduce errors, and increase efficiency by 300%."
-        keywords="AI workflow automation, business process automation, workflow orchestration, AI decision engine, process optimization"
-       />
-=======
         title="AI Workflow Automation - Zion Tech Group""
         description="Transform your business with AI-powered workflow automation. Streamline processes, reduce errors, and increase efficiency by 300%.""        keywords="AI workflow automation, business process automation, workflow orchestration, AI decision engine, process optimization"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 animate-pulse"></div>"
@@ -87,7 +73,6 @@ export default function AIWorkflowAutomation(...args[]):  {
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto">
@@ -123,7 +108,6 @@ export default function AIWorkflowAutomation(...args[]):  {
             ))}
           </div>
         </div>
-
       {/* Capabilities Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-gray-800/50">"
         <div className="max-w-7xl mx-auto">
@@ -171,7 +155,6 @@ export default function AIWorkflowAutomation(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto">
@@ -217,7 +200,6 @@ export default function AIWorkflowAutomation(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-gray-800/50">"
         <div className="max-w-7xl mx-auto">
@@ -243,7 +225,6 @@ export default function AIWorkflowAutomation(...args[]):  {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border rounded-xl p-8 ${
-
                   plan.popular '
                     ? 'border-blue-500/50 ring-2 ring-blue-500/20' '
                     : 'border-gray-700 hover:border-blue-500/50'`
@@ -273,12 +254,10 @@ export default function AIWorkflowAutomation(...args[]):  {
                     </li>
                   ))}
                 </ul>
-
                 <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}`
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-
                     plan.popular'
                       ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700''
                       : 'bg-gray-700 text-white hover:bg-gray-600'`
@@ -291,7 +270,6 @@ export default function AIWorkflowAutomation(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto">
@@ -328,7 +306,6 @@ export default function AIWorkflowAutomation(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/20 to-purple-600/20">"
         <div className="max-w-4xl mx-auto text-center">
@@ -362,7 +339,6 @@ export default function AIWorkflowAutomation(...args[]):  {
           </motion.div>
         </div>
       </section>
-
       {/* Contact Information */}"
       <section className="py-16 bg-gradient-to-r from-slate-800 to-slate-700">"
         <div className="container mx-auto px-4">"

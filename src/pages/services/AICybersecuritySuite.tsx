@@ -1,79 +1,5 @@
-<<<<<<< HEAD
-import { Shield, 
-  Brain, 
-  Eye, 
-  Lock, 
-  AlertTriangle, 
-  TrendingUp, 
-  CheckCircle, 
-  ArrowRight, 
-  Mail, 
-  Phone, 
-  Globe, 
-  ExternalLink,
-  Zap,
-  Users,
-  BarChart3,
-  Target,
-  Cpu,
-  Network,
-  Database,
-  FileText,
-  Monitor,
-  Activity'
- } from 'lucide-react';
-;
-export { function };
-export default function AICybersecuritySuite(...args[]):  {
-
-  const features = [
-    {
-
-      icon: Brain,
-      title: 'AI Threat Detection',
-      description: 'Advanced machine learning algorithms that identify and respond to threats in real-time',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-"
-      title: "Zero-Trust Architecture","
-      description: "Implement comprehensive zero-trust security with AI-driven access control",
-      icon: Shield,
-      benefits: ["
-        "Continuous authentication","
-        "Micro-segmentation","
-        "Least privilege access","
-        "Real-time risk assessment"
-      ]
-    },
-    {
-"
-      title: "Automated Incident Response","
-      description: "AI-driven security orchestration with automated threat containment and remediation",
-      icon: Zap,
-      benefits: ["
-        "Instant threat containment","
-        "Automated remediation","
-        "Incident timeline analysis","
-        "Forensic investigation"
-      ]
-    },
-    {
-"
-      title: "Compliance Automation","
-      description: "Automated compliance monitoring and reporting for all major regulatory frameworks",
-      icon: CheckCircle,
-      benefits: [;"
-        "GDPR compliance",;"
-        "SOC 2 automation",;"
-        "HIPAA compliance",;"
-        "Real-time audit trails";
       ]};
-=======
-      ]};
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
-
   const pricingPlans = [
     {
 "
@@ -129,7 +55,6 @@ export default function AICybersecuritySuite(...args[]):  {
       cta: "Contact Sales",;
       popular: false};
   ];
-
   const useCases = [
     {
 "
@@ -170,7 +95,6 @@ export default function AICybersecuritySuite(...args[]):  {
         "Compliance automation",;"        "Threat intelligence";
       ]};
   ];
-
   const securityMetrics = [
     {
 "
@@ -182,21 +106,18 @@ export default function AICybersecuritySuite(...args[]):  {
       color: 'from-green-500 to-emerald-500'
     },
     {
-
       icon: Shield,
       title: 'Zero-Day Protection',
       description: 'Protect against unknown threats using AI-powered predictive security models',
       color: 'from-purple-500 to-pink-500'
     },
     {
-
       icon: Zap,
       title: 'Automated Response',
       description: 'Instant automated threat response and incident containment without human intervention',
       color: 'from-yellow-500 to-orange-500'
     },
     {
-
       icon: Network,
       title: 'Network Security',
       description: 'Comprehensive network monitoring and protection with AI-driven threat intelligence',
@@ -210,91 +131,59 @@ export default function AICybersecuritySuite(...args[]):  {
       metric: "100%"};
   ]},;
     {
-
       title: 'Security Operations Center (SOC),
       description: 'AI-enhanced SOC services with automated threat detection and response',
       price: 'From $8,000/month',
       features['AI threat detection',Automated response',Security analysts',Incident management']},;
     {
-
       title: 'Vulnerability Assessment',
       description: 'Comprehensive security assessment using AI-powered scanning and analysis',
       price: 'From $5,000',
       features['AI vulnerability scanning',Penetration testing',Security audit',Remediation plan']},;
     {
-
       title: 'Compliance & Governance',
       description: 'AI-powered compliance monitoring and reporting for regulatory requirements',
       price: 'From $3,500/month',
       features['GDPR compliance',SOC 2 monitoring',HIPAA compliance',Automated reporting']};
   ]},;
     {
-
       title: 'Cloud Security',
       description: 'Comprehensive cloud security monitoring and threat detection',
       features['Multi-cloud protection',API security',Data encryption',Access control']},;
     {
-
       title: 'Identity & Access Management',
       description: 'AI-enhanced identity verification and access control systems',
       features['Multi-factor authentication',Behavioral biometrics',Privileged access management',Single sign-on']},;
     {
-
       title: 'Incident Response',
       description: 'Automated incident response with AI-powered threat containment',
       features['Automated containment',Forensic analysis',Recovery procedures',Post-incident review']};
   ]};
   ];
-
-  
     { name: 'Cloud-Native Security', description: 'Built for modern cloud and hybrid environments' };
-=======
     { name: 'Machine Learning', description: 'Advanced ML algorithms for threat detection and analysis' },'
     { name: 'Natural Language Processing', description: 'AI-powered analysis of security logs and reports' },'
     { name: 'Behavioral Analytics', description: 'User and system behavior monitoring for anomaly detection' },'
     { name: 'Threat Intelligence', description: 'Real-time threat feeds and global security intelligence' },'
     { name: 'Automated Response', description: 'Intelligent automation for threat containment and response' },;'    { name: 'Cloud-Native Security', description: 'Built for modern cloud and hybrid environments' };
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
-
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-<<<<<<< HEAD
-        title="AI Cybersecurity Suite - Zion Tech Group"
-        description="Advanced AI-powered cybersecurity solutions that protect your business from evolving threats. Real-time threat detection, automated response, and comprehensive security monitoring."
-       />
-=======
         title="AI Cybersecurity Suite - Zion Tech Group""        description="Advanced AI-powered cybersecurity solutions that protect your business from evolving threats. Real-time threat detection, automated response, and comprehensive security monitoring."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20">"
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20"></div>"
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             animate = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}"
             className="text-center"
@@ -325,37 +214,21 @@ export default function AICybersecuritySuite(...args[]):  {
             </div>
           </motion.div>
         </div>
-        
         {/* Floating Elements */}"
         <div className="absolute top-20 left-10 w-20 h-20 bg-red-600/20 rounded-full blur-xl"></div>"
         <div className="absolute bottom-20 right-10 w-32 h-32 bg-orange-600/20 rounded-full blur-xl"></div>
       </section>
-
       {/* Security Metrics Section */}"
       <section className="py-20">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}"
             className="text-center mb-16"
@@ -374,37 +247,16 @@ export default function AICybersecuritySuite(...args[]):  {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.8,
   delay: index * 0.1 
-
-
-
-
-
-
 }}"
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-red-500 transition-all duration-300 text-center"
 "
@@ -420,32 +272,17 @@ export default function AICybersecuritySuite(...args[]):  {
           </div>
         </div>;
       </section>
-
       {/* Features Section */}"
       <section className="py-20">;"
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}"
             className="text-center mb-16"
@@ -463,37 +300,16 @@ export default function AICybersecuritySuite(...args[]):  {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.8,
   delay: index * 0.1 
-
-
-
-
-
-
 }}"
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-red-500 transition-all duration-300"
               >
@@ -507,32 +323,17 @@ export default function AICybersecuritySuite(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* Services & Pricing Section */}"
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">;"
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}"
             className="text-center mb-16"
@@ -550,40 +351,18 @@ export default function AICybersecuritySuite(...args[]):  {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.8,
   delay: index * 0.1 
-
-
-
-
-
-
 }}`
                 className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-
                   plan.popular'
                     ? 'border-red-500 ring-2 ring-red-500/20''
                     : 'border-slate-700'`
@@ -604,32 +383,17 @@ export default function AICybersecuritySuite(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* Security Modules Section */}"
       <section className="py-20">;"
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}"
             className="text-center mb-16"
@@ -647,37 +411,16 @@ export default function AICybersecuritySuite(...args[]):  {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.8,
   delay: index * 0.1 
-
-
-
-
-
-
 }}"
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-red-500 transition-all duration-300"
               >"
@@ -695,22 +438,17 @@ export default function AICybersecuritySuite(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}"
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">;"
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
 }}
             transition={{ duration: 0.6 }}"
             className="text-center mb-16"
@@ -728,22 +466,16 @@ export default function AICybersecuritySuite(...args[]):  {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
 }}
                 transition = {
-
   { duration: 0.6,
   delay: index * 0.1 
-
 }}"
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600"
               >"
@@ -757,22 +489,17 @@ export default function AICybersecuritySuite(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* Technologies Section */}"
       <section className="py-20">;"
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
 }}
             transition={{ duration: 0.6 }}"
             className="text-center mb-16"
@@ -790,22 +517,16 @@ export default function AICybersecuritySuite(...args[]):  {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
 }}
                 transition = {
-
   { duration: 0.6,
   delay: index * 0.1 
-
 }}"
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-2xl border border-slate-600 text-center"
               >"
@@ -816,32 +537,17 @@ export default function AICybersecuritySuite(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}"
       <section className="py-20">;"
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
           >"

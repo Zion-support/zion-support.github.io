@@ -1,19 +1,13 @@
-
 const QuantumComputingAsAService: React.FC = (): JSX.Element => {
-
-  
     {;
       icon: Target,;
       title: 'Quantum Simulation',;
       description: 'Molecular modeling, material science, and chemical reaction simulations',;
       color: 'from-indigo-500 to-purple-500'};
   ];
-
-  
         'On-premise deployment options',;
         'Research partnerships';
       ],;
-=======
         'Unlimited quantum computing hours','
         'Custom quantum hardware access','
         'Dedicated quantum team','
@@ -21,7 +15,6 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
         'Custom integrations',;'
         'On-premise deployment options',;'        'Research partnerships';
       ],;'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       cta: 'Contact Sales',;
       popular: false};
   ]},;
@@ -30,8 +23,6 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
       description: 'Route optimization, inventory management, and supply chain optimization',;
       metrics: ['40% cost reduction',Optimal route planning',Real-time optimization']};
   ];
-
-  
     'Python',Qiskit',Cirq',PennyLane',Q#',Julia',MATLAB',;
     'AWS Braket',Azure Quantum',Google Cloud',IBM Quantum',;
     'REST APIs',GraphQL',Webhooks',Docker',Kubernetes';
@@ -40,45 +31,23 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
       icon: Clock,;
       title: 'Immediate Access',;
       description: 'Start using quantum computing today with our cloud-based platform'};  ];
-
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-<<<<<<< HEAD
-        title="Quantum Computing as a Service - Zion Tech Group"
-        description="Access cutting-edge quantum computing power without infrastructure investment. Solve complex problems 100x faster with our quantum computing platform and expert support."
-       />
-=======
         title="Quantum Computing as a Service - Zion Tech Group""        description="Access cutting-edge quantum computing power without infrastructure investment. Solve complex problems 100x faster with our quantum computing platform and expert support."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20">"
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20"></div>"
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             animate = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}"
             className="text-center max-w-4xl mx-auto"
@@ -98,7 +67,6 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
               <a"
                 href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 shadow-lg hover:shadow-xl"
-
                 Start Free Trial"
                 <ArrowRight className="ml-2 w-5 h-5"  />              </a>
               <a"
@@ -111,7 +79,6 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
           </motion.div>
         </div>
       </section>
-
       {/* Key Benefits */}"
       <section className="py-16 bg-slate-800/50">;"
         <div className="container mx-auto px-4">"
@@ -129,37 +96,16 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}"
                 className="text-center p-6"
 "
@@ -173,7 +119,6 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
           </div>
         </div>
       </section>
-
       {/* Features Grid */}
       <section className="py-16">;
         <div className="container mx-auto px-4">
@@ -185,7 +130,6 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
               Everything you need to harness the power of quantum computing for your business
             </p>
           </div>
-          
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)  => (
               <motion.div
@@ -193,35 +137,16 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-200"
-
                 <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
@@ -232,7 +157,6 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-16 bg-slate-800/50">;
         <div className="container mx-auto px-4">
@@ -244,7 +168,6 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
               Choose the plan that fits your quantum computing needs. All plans include a 14-day free trial.
             </p>
           </div>
-          
           <div className="grid md: grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index)  => (
               <motion.div
@@ -252,39 +175,20 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className={`bg-slate-800 rounded-xl p-8 border-2 ${
                   plan.popular
                     ? 'border-purple-500 relative'
                     : 'border-slate-700'
                 }`}
-
                 {plan.popular && (;
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -292,7 +196,6 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
                     </span>
                   </div>
                 )}
-
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="mb-4">
@@ -301,7 +204,6 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
                   </div>
                   <p className="text-slate-300">{plan.description}</p>
                 </div>
-
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-slate-300">
@@ -310,7 +212,6 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
                     </li>
                   ))}
                 </ul>
-
                 <a
                   href="/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
@@ -318,7 +219,6 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
                       ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600'
                       : 'bg-slate-700 text-white hover:bg-slate-600'
                   }`}
-
                   {plan.cta}
                 </a>;
               </motion.div>
@@ -326,7 +226,6 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
           </div>
         </div>
       </section>
-
       {/* Features Grid */}"
       <section className="py-16">;"
         <div className="container mx-auto px-4">"
@@ -344,40 +243,18 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}"
                 className="bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-200"
-
                 <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>"
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>"
@@ -387,7 +264,6 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}"
       <section className="py-16 bg-slate-800/50">;"
         <div className="container mx-auto px-4">"
@@ -405,45 +281,22 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}`
                 className={`bg-slate-800 rounded-xl p-8 border-2 ${
-
                   plan.popular'
                     ? 'border-purple-500 relative''
                     : 'border-slate-700'`
                 }`}
-
                 {plan.popular && (;"
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
                     <span className="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -469,11 +322,9 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
                     </li>
                   ))}
                 </ul>
-
                 <a"
                   href="/contact"`
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
-
                     plan.popular'
                       ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600''
                       : 'bg-slate-700 text-white hover:bg-slate-600'`
@@ -486,7 +337,6 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
           </div>
         </div>
       </section>
-
       {/* Use Cases */}"
       <section className="py-16">;"
         <div className="container mx-auto px-4">"
@@ -504,37 +354,16 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}"
                 className="bg-slate-800 rounded-xl p-6 border border-slate-700"
 "
@@ -553,7 +382,6 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
           </div>
         </div>
       </section>
-
       {/* Integrations */}"
       <section className="py-16 bg-slate-800/50">;"
         <div className="container mx-auto px-4">"
@@ -571,37 +399,16 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   scale: 0.8 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   scale: 1 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.6,
   delay: index * 0.05 
-
-
-
-
-
-
 }}"
                 className="bg-slate-800 rounded-lg p-4 border border-slate-700 text-center hover:border-slate-600 transition-all duration-200"
 "
@@ -611,7 +418,6 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
           </div>
         </div>
       </section>
-
       {/* Security & Compliance */}"
       <section className="py-16">;"
         <div className="container mx-auto px-4">"
@@ -627,26 +433,12 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
           <div className="grid md:grid-cols-3 gap-8">
             <motion.div
               initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.6 }}"
               className="bg-slate-800 rounded-xl p-6 border border-slate-700 text-center"
@@ -656,40 +448,18 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
               </div>"
               <h3 className="text-xl font-semibold text-white mb-2">Quantum-Safe Security</h3>"              <p className="text-slate-300">Post-quantum cryptography and quantum-resistant encryption protocols</p>
             </motion.div>
-            
             <motion.div
               initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition = {
-
   { duration: 0.6,
   delay: 0.2 
-
-
-
-
-
-
 }}"
               className="bg-slate-800 rounded-xl p-6 border border-slate-700 text-center"
 "
@@ -698,40 +468,18 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
               </div>"
               <h3 className="text-xl font-semibold text-white mb-2">SOC 2 Type II</h3>"              <p className="text-slate-300">SOC 2 Type II certification for enterprise-grade security and reliability</p>
             </motion.div>
-            
             <motion.div
               initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition = {
-
   { duration: 0.6,
   delay: 0.4 
-
-
-
-
-
-
 }}"
               className="bg-slate-800 rounded-xl p-6 border border-slate-700 text-center"
 "
@@ -743,32 +491,17 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}"
       <section className="py-20">;"
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}"
             className="max-w-4xl mx-auto"
@@ -784,7 +517,6 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
               <a"
                 href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 shadow-lg hover:shadow-xl"
-
                 Start Free Trial"
                 <ArrowRight className="ml-2 w-5 h-5"  />              </a>
               <a"
@@ -812,7 +544,6 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
           </motion.div>
         </div>
       </section>
-
       {/* Contact Information */}"
       <section className="py-16 bg-slate-800/50">;"
         <div className="container mx-auto px-4">"
@@ -846,5 +577,4 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
       </section>
     </div>
   )};
-
 export default QuantumComputingAsAService}}}}}'"`

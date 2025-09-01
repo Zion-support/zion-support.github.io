@@ -19,47 +19,6 @@ import {
   Activity,
   Award,
   Rocket,
-<<<<<<< HEAD
-
-  Brain, 
-  Search, 
-  BookOpen, 
-  FileText, 
-  TrendingUp, 
-  Users, 
-  Globe, 
-  Cpu,
-  Database,
-  Lock,
-  BarChart3,
-  Rocket,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  DollarSign,
-  Clock,
-  Award,
-  Target,
-  Workflow,
-  Lightbulb,
-  Zap,
-  Shield,
-  Eye,
-  Code,
-  GitFork,
-  MessageCircle,
-  Phone,
-  Mail,
-  MapPin'
-} from 'lucide-react';
-;
-export { function };
-export default function AIAutonomousResearchAssistant(...args: unknown[]): unknown {
-  
-  
-  
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   Eye as EyeIcon,;
   Sparkles as SparklesIcon,;
   Zap as ZapIcon,;
@@ -71,39 +30,19 @@ export default function AIAutonomousResearchAssistant(...args: unknown[]): unkno
 export default function AIAutonomousResearchAssistant(...args: unknown[]): unknown {
   const [activeTab, setActiveTab] = useState<typeof 'overview'>('overview');
   const [isVisible, setIsVisible] = useState<typeof false>(false);
-
 export default function AIAutonomousResearchAssistant() {
-
   const [activeTab, setActiveTab] = useState('overview');
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     setIsVisible(true)}, []);
-
-  
       icon: Globe}
   ];
-
-  
-  
-  
-  
-  
-  
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <SEO "
-<<<<<<< HEAD
-        title="AI Autonomous Research Assistant - Zion Tech Group"
-        description="Revolutionary AI-powered research automation platform that discovers, analyzes, and synthesizes research autonomously."
-        keywords="AI research assistant, research automation, literature review, academic research, research AI, autonomous research"
-       />
-=======
         title="AI Autonomous Research Assistant - Zion Tech Group""
         description="Revolutionary AI-powered research automation platform that discovers, analyzes, and synthesizes research autonomously.""        keywords="AI research assistant, research automation, literature review, academic research, research AI, autonomous research"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto text-center">
@@ -134,7 +73,6 @@ export default function AIAutonomousResearchAssistant() {
               Automate literature reviews, discover insights, and accelerate your research breakthroughs.
             </p>
           </motion.div>
-          
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -154,7 +92,6 @@ export default function AIAutonomousResearchAssistant() {
               Request Demo
             </a>
           </motion.div>
-
       {/* Features Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto">
@@ -181,7 +118,6 @@ export default function AIAutonomousResearchAssistant() {
               <div className="text-gray-300">Uptime</div>
             </div>
           </motion.div>
-
           {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -227,7 +163,6 @@ export default function AIAutonomousResearchAssistant() {
           </motion.div>
         </div>
       </div>
-
       {/* Research Capabilities Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">"
         <div className="max-w-7xl mx-auto">
@@ -260,7 +195,6 @@ export default function AIAutonomousResearchAssistant() {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">;"
         <div className="max-w-7xl mx-auto">
@@ -289,7 +223,6 @@ export default function AIAutonomousResearchAssistant() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
-
                   index === 1 ? 'border-blue-500/50 bg-blue-500/10' : 'border-white/10'`
                 } hover:border-blue-500/50 transition-all`}
               >
@@ -317,16 +250,13 @@ export default function AIAutonomousResearchAssistant() {
                 <div className="text-sm text-gray-400 mb-6">
                   <strong>Best for:</strong> {tier.bestFor}
                 </div>
-                
                 <a"
                   href="/contact"`
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-colors ${
-
                     index === 1'
                       ? 'bg-blue-600 hover:bg-blue-700 text-white''
                       : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'`
                   }`}
-
                   Get Started
                 </a>
               </motion.div>;
@@ -334,7 +264,6 @@ export default function AIAutonomousResearchAssistant() {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">;"
         <div className="max-w-7xl mx-auto">
@@ -374,7 +303,6 @@ export default function AIAutonomousResearchAssistant() {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">;"
         <div className="max-w-7xl mx-auto">
@@ -414,7 +342,6 @@ export default function AIAutonomousResearchAssistant() {
                 key={tab}
                 onClick={() => setActiveTab(tab)}`
                 className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
-
                   activeTab === tab'
                     ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg shadow-cyan-500/25''
                     : 'bg-zion-slate/50 text-gray-300 hover:bg-zion-slate/70 hover:text-white'`
@@ -426,7 +353,6 @@ export default function AIAutonomousResearchAssistant() {
           </div>
         </div>;
       </div>
-
       {/* Content Sections */}"
       <section className="relative py-12 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto">"
@@ -494,7 +420,6 @@ export default function AIAutonomousResearchAssistant() {
                 </div>
               </motion.div>
             )}
-
             {activeTab === 'features' && (
               <motion.div"
                 key="features"
@@ -533,7 +458,6 @@ export default function AIAutonomousResearchAssistant() {
                 </div>
               </motion.div>
             )}
-
             {activeTab === 'pricing' && (
               <motion.div"
                 key="pricing"
@@ -571,7 +495,6 @@ export default function AIAutonomousResearchAssistant() {
                       </button>
                     </div>
                   </div>
-
                   {/* Yearly Plan */}"
                   <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border-2 border-cyan-400 rounded-3xl p-8 backdrop-blur-sm relative transform scale-105">"
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
@@ -595,7 +518,6 @@ export default function AIAutonomousResearchAssistant() {
                       </button>
                     </div>
                   </div>
-
                   {/* Enterprise Plan */}"
                   <div className="bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-purple-400/30 rounded-3xl p-8 backdrop-blur-sm relative">"
                     <div className="text-center">"
@@ -627,7 +549,6 @@ export default function AIAutonomousResearchAssistant() {
                 </div>
               </motion.div>
             )}
-
             {activeTab === 'technical' && (
               <motion.div"
                 key="technical"
@@ -712,7 +633,6 @@ export default function AIAutonomousResearchAssistant() {
                 </div>
               </motion.div>
             )}
-
             {activeTab === 'contact' && (
               <motion.div"
                 key="contact"
@@ -774,7 +694,6 @@ export default function AIAutonomousResearchAssistant() {
           </AnimatePresence>
         </div>
       </section>
-
       {/* CTA Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">"
         <div className="max-w-4xl mx-auto text-center">

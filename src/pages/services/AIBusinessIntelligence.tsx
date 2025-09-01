@@ -40,47 +40,38 @@ import {
  } from 'lucide-react';
 ;
 const AIBusinessIntelligence: React.FC = props {
-  
       title: 'Performance Optimization',;
       description: 'AI-driven recommendations for optimizing business processes, pricing, and resource allocation.',;
       benefits: ['Process optimization',Pricing strategies',Resource allocation',Efficiency improvements']}
   ];
-
-  
 export { function };
 export default function AIBusinessIntelligence(...args: unknown[]): unknown {
   const features = [;    {
-
       icon: Brain,"
       title: "AI-Powered Analytics","
       description: "Advanced machine learning algorithms that automatically identify patterns and insights in your business data."
     },
     {
-
       icon: BarChart3,"
       title: "Real-Time Dashboards","
       description: "Live monitoring and visualization of key performance indicators with customizable reporting."
     },
     {
-
       icon: TrendingUp,"
       title: "Predictive Analytics","
       description: "Forecast future trends and outcomes using historical data and AI models."
     },
     {
-
       icon: Users,"
       title: "User Behavior Analysis","
       description: "Deep insights into customer interactions and engagement patterns."
     },
     {
-
       icon: Target,"
       title: "Goal Tracking","
       description: "Monitor progress towards business objectives with automated alerts and recommendations."
     },
     {
-
       icon: Zap,"
       title: "Automated Insights","
       description: "AI-generated recommendations and actionable insights delivered in real-time."
@@ -88,13 +79,10 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
       title: "Automated Insights",;"
       description: "Automatically discover patterns, anomalies, and actionable insights from your data."};
   ];
-
-  
       icon: Zap,;"
       title: "Automated Insights",;"
       description: "AI-generated recommendations and actionable insights delivered in real-time."};
   ];
-
   const benefits = [;"
     "Increase revenue by 15-25% through data-driven decision making",;"
     "Reduce operational costs by 20-30% with optimized processes",;"
@@ -109,8 +97,6 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
     "Enhance team productivity by 25% with automated reporting","
     "Reduce risk by 30% with early warning systems"
   ];
-
-  
   return ("    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       <Helmet>
         <title>AI Business Intelligence Platform - Zion Tech Group</title>"
@@ -118,12 +104,10 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
         <meta name="keywords" content="AI business intelligence, predictive analytics, business analytics, data visualization, business insights, AI consulting" />"
         <link rel="canonical" href="https://ziontechgroup.com/services/ai-business-intelligence" />
       </Helmet>
-
       {/* Hero Section */}"
       <section className="relative overflow-hidden bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white py-20 lg:py-32">"
         <div className="absolute inset-0 bg-black/20"></div>"
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-indigo-600/20"></div>
-        
         {/* Background Elements */}"
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden">"
           <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>"
@@ -154,45 +138,23 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
       description: "Campaign performance analysis, audience targeting, and ROI optimization"
     }
   ];
-
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-<<<<<<< HEAD
-        title="AI Business Intelligence - Zion Tech Group"
-        description="Transform your business with AI-powered analytics, real-time insights, and predictive intelligence. Get comprehensive business intelligence solutions."
-       />
-=======
         title="AI Business Intelligence - Zion Tech Group""        description="Transform your business with AI-powered analytics, real-time insights, and predictive intelligence. Get comprehensive business intelligence solutions."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 lg:py-32">"
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>"
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             animate = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}"
             className="text-center max-w-4xl mx-auto"
@@ -264,7 +226,6 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
               Watch Demo
             </a>
           </div>
-
           {/* Trust Indicators */}"
           <div className="mt-16 flex flex-wrap justify-center items-center gap-8 text-white/70">"
             <div className="flex items-center gap-2">"
@@ -281,7 +242,6 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
           </div>
         </div>
       </section>
-
       {/* Features Section */}"
       <section className="py-20 lg:py-32">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
@@ -312,37 +272,16 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
               <motion.div
                 key={feature.title}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}"
                 className="bg-slate-700/50 p-6 rounded-xl border border-slate-600/30 hover:border-cyan-400/30 transition-all duration-300 hover:transform hover:scale-105"
               >"
@@ -388,32 +327,17 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}"
       <section className="py-20">"
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
           >"
@@ -452,22 +376,16 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
               </div>
                 key={benefit}
                 initial = {
-
   { opacity: 0,
   x: -20 
-
 }}
                 whileInView = {
-
   { opacity: 1,
   x: 0 
-
 }}
                 transition = {
-
   { duration: 0.8,
   delay: index * 0.1 
-
 }}
                 viewport={{ once: true }}"
                 className="flex items-start space-x-3"
@@ -484,37 +402,16 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
                   <motion.div
                     key={index}
                     initial = {
-
   { opacity: 0,
   x: -20 
-
-
-
-
-
-
 }}
                     whileInView = {
-
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
                     transition = {
-
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}"
                     className="flex items-start space-x-3"
                   >"
@@ -551,32 +448,17 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
           </div>
         </div>
       </div>
-
       {/* Use Cases Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">;"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"
@@ -611,37 +493,16 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
               <motion.div
                 key={useCase.industry}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
       {/* Use Cases Section */}"
       <section className="py-20 bg-slate-800/50">"
@@ -693,7 +554,6 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}"
       <section className="py-20 lg:py-32 bg-gradient-to-br from-gray-50 to-blue-50">;"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
@@ -710,7 +570,6 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map(plan: unknown, index: unknown (
               <div key={index} className={`relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 ${
-
                 plan.popular ? 'border-blue-500 ring-4 ring-blue-500/20' : 'border-gray-200'`
               }`}>
                 {plan.popular && ("
@@ -738,11 +597,9 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
                     </li>
                   ))}
                 </ul>
-
                 <a"
                   href="/contact"`
                   className={`w-full text-center py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
-
                     plan.popular'
                       ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700''
                       : 'bg-gray-900 text-white hover:bg-gray-800'`
@@ -765,32 +622,17 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {
           </div>
         </div>
       </section>;
-
       {/* CTA Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-zion-blue/20 to-zion-purple/20">"
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}

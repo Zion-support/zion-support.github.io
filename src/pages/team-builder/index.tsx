@@ -1,20 +1,14 @@
 // import { NextPage   } from 'next.ts'; // Removed'
-
 // Define Zod schema for form validation}).optional(),});
 type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
-
 // const TeamBuilderPage: React.FC = (): JSX.Element => { // New, or remove type for inference;
   const [currentStep, setCurrentStep] = useState<typeof 0>(0);
   const [isLoading, setIsLoading] = useState<typeof false>(false);
   const [teamRecommendation, setTeamRecommendation] = useState<any>(null);
   const [projectBriefSubmitted, setProjectBriefSubmitted] = useState<any>(null);
-
-
   const { control, handleSubmit, trigger, formState: { errors } } = useForm<ProjectBriefFormData>({
-
     resolver: zodResolver(projectBriefSchema),
     defaultValues: {
-
       projectName: '',
       goals: '',
       timeline: '',
@@ -25,112 +19,61 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
       talentFilters: { // New
         verifiedOnly: false,
         regions: ''}}});
-
-  
     { name: 'Review & Submit', fields: [] }, // No fields, just review;
   ];
-
-  
-    
-    
     if (isValid) {
-
       setCurrentStep((prev) => prev + 1)}
   };
-
-  
     setCurrentStep(prev: unknown prev - 1)};
   const onSubmit: SubmitHandler<ProjectBriefFormData> = async (data) => {
-
     setIsLoading(true);
     setTeamRecommendation(null);
-
     const projectBriefData: ProjectBrief = {
-<<<<<<< HEAD
-
-  userId: anycurrent-user-id',;
-      createdAt: new Date().toISOString(),
-      ...data,
-      techStack: data.techStack?.split(',).map(s   => s.trim()).filter(s => s) || [],
-=======
 '
   userId: anycurrent-user-id',;      createdAt: new Date().toISOString(),
       ...data,'
       techStack: data.techStack?.split(',').map(s   => s.trim()).filter(s => s) || [],
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       talentFilters: any{ // Ensure talentFilters is structured correctly;
         verifiedOnly: data.talentFilters?.verifiedOnly,;
         regions: data.talentFilters?.regions?.split(',).map(r   => r.trim()).filter(r => r) || [],}};
     setProjectBriefSubmitted(projectBriefData);
-
     try {
-
-      
         body: JSON.stringify(projectBriefData),});
-
       if (!response.ok) {
-
-        
         throw new Error(errorData.error || 'Failed to generate team recommendation')}
-
-      
-<<<<<<< HEAD
-      setTeamRecommendation(recommendationResult);
-      toast.success('Team recommendation generated successfully!');
-=======
       setTeamRecommendation(recommendationResult);'      toast.success('Team recommendation generated successfully!');
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       // setCurrentStep(prev: unknown prev + 1); // No longer using steps for display, display immediately
     } catch (error: ) {
-
       // console.error('Error submitting project brief:', error);
       toast.error(error.message || 'An error occurred while generating the team.')} finally {
-
       setIsLoading(false)}
   };
-
-  
     if (!projectBriefSubmitted) {;
       toast.error("Cannot send invite without a project context.");
       return}
-
     // Assuming projectBriefSubmitted has an 'id' if it's saved, or we generate one'
     // For now, let's assume projectBriefSubmitted.id might be null if not saved.
     // The API and DB table are designed to handle nullable project_brief_id.
-
-    
     };
-
     try {
-
-      
         body: JSON.stringify(invitePayload),});
-
       if (!response.ok) {
-
-        
         throw new Error(errorData.error || 'Failed to send invite')}
-      
       toast.success(`Invitation sent to talent for ${roleTitle}! (Invite ID: ${inviteResult.id})`);
       // Optionally, update UI to reflect invite status on the talent card
     } catch (error: ) {
-
       // console.error('Error sending invite:', error);`
       toast.error(`Failed to send invite: ${error.message}`)}
   };
-
-  
     if (!teamRecommendation || !projectBriefSubmitted) return null; // Ensure projectBriefSubmitted is also available
     return()
       <TeamRecommendationDisplay recommendation = {teamRecommendation}        projectBrief={projectBriefSubmitted}
         onInviteTalent={handleInviteTalent};
         />;
     )};
-
   // In the main return of TeamBuilderPage:
   // Remove the step-based rendering for the last step (results view)
   // Instead, conditionally render the form or the recommendation display:
-
   return()
     <AppLayout>"
       <div className = "container mx-auto py-8 px-4 sm:px-6 lg:px-8 max-w-4xl"> {/* Increased max-width */}"
@@ -140,16 +83,13 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
             <CardDescription>Describe your project and get an AI-recommended team.</CardDescription>
           </CardHeader>
         </Card>
-
         {isLoading && ("
           <div className="flex justify-center items-center py-10">"
             <Loader2 className="h-12 w-12 animate-spin text-primary" />"
             <p className="ml-4 text-lg">Generating your dream team...</p>
           </div>
         )}
-
         {!isLoading && teamRecommendation && projectBriefSubmitted && renderRecommendation()}
-
         {!isLoading && !teamRecommendation && // Show form if no recommendation yet and not loading
           <Card>
             <CardHeader>"
@@ -274,14 +214,8 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
                               id="talentRegions"
                               {...field}
                               value={field.value || ''} // Ensure value is string"
-<<<<<<< HEAD
-                              placeholder="e.g., North America, LATAM, Global"
-                              className="mt-1"
-                            />
-=======
                               placeholder="e.g., North America, LATAM, Global""                              className="mt-1"
                              />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                           )}
                         />"
                          {errors.talentFilters?.regions && <p className="text-sm text-red-600 mt-1">{errors.talentFilters.regions.message}</p>}

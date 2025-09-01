@@ -1,87 +1,4 @@
-<<<<<<< HEAD
-import {
-
-  Smartphone,
-  Download,
-  Zap,
-  Shield,
-  Cloud,
-  Users,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Globe,
-  Lock,
-  Wifi,
-  Battery,
-  Settings,
-  Bell,
-  Search,
-  Home,
-  User,
-  BarChart3,
-  MessageCircle,
-  ShoppingCart,
-  Calendar,
-  FileText,
-  Heart,
-  Bookmark,
-  Share2,
-  Play,
-  Pause,
-  SkipBack,
-  SkipForward,
-  Volume2,
-  Maximize2,
-  RotateCcw,
-  Wifi as WifiIcon,
-  Battery as BatteryIcon,
-  Signal'
-} from 'lucide-react';
-
-const MobileLaunch: React.FC = () => {
-  
-    {;"
-      title: "Smart Notifications",;"
-      description: "Intelligent alerts that adapt to your preferences and schedule",;
-      icon: Bell,;"
-      color: "from-orange-400 to-red-500"};
-  ];
-
-  
-    {;"
-      name: "Services",;"
-      description: "Access to all Zion Tech Group services and solutions",;
-      icon: Settings,;"
-      features: ["Service catalog", "Quick setup", "Support access"]};
-  ];
-
-  const downloadOptions = [
-    {
-"
-      platform: "iOS App Store","
-      icon: "🍎","
-      description: "Download for iPhone and iPad","
-      link: "#",
-      featured: true
-    },
-    {
-"
-      platform: "Google Play Store","
-      icon: "🤖","
-      description: "Download for Android devices","
-      link: "#",
-      featured: true
-    },
-    {;"
-      platform: "Web App",;"
-      icon: "🌐",;"
-      description: "Access via browser",;"
-      link: "/",;
       featured: false};
-=======
-      featured: false};
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   const systemRequirements = [;"
@@ -94,16 +11,9 @@ const MobileLaunch: React.FC = () => {
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-<<<<<<< HEAD
-        title="Mobile App - Zion Tech Group"
-        description="Take Zion Tech Group with you on the go! Download our mobile app for iOS and Android to access AI services, analytics, and business solutions anywhere."
-        keywords="mobile app, iOS app, Android app, Zion Tech Group mobile, business app"
-       />
-=======
         title="Mobile App - Zion Tech Group""
         description="Take Zion Tech Group with you on the go! Download our mobile app for iOS and Android to access AI services, analytics, and business solutions anywhere.""        keywords="mobile app, iOS app, Android app, Zion Tech Group mobile, business app"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"

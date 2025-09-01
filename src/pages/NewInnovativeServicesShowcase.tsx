@@ -22,14 +22,8 @@ export default function NewInnovativeServicesShowcase(...args: any[]): any {
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO"
-<<<<<<< HEAD
-        title="New Innovative Services 2025 - Zion Tech Group"
-        description="Discover our latest AI-powered innovative services: Legal document automation, healthcare analytics, and financial trading platforms. Transform your business with cutting-edge technology."
-      />
-=======
         title="New Innovative Services 2025 - Zion Tech Group""        description="Discover our latest AI-powered innovative services: Legal document automation, healthcare analytics, and financial trading platforms. Transform your business with cutting-edge technology."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 sm:py-32 overflow-hidden">"

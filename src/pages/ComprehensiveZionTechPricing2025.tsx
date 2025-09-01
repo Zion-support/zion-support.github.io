@@ -1,16 +1,4 @@
 export default ComprehensiveZionTechPricing2025}}
-<<<<<<< HEAD
-
-
-const ComprehensiveZionTechPricing2025: React.FC = () => {;
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
-
-  
-  
-    selectedCategory === 'All' || service.category === selectedCategory;
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   );
 
           "

@@ -1,42 +1,3 @@
-<<<<<<< HEAD
-import { Shield, 
-  FileText, 
-  TrendingUp, 
-  Users, 
-  Database, 
-  BarChart3, 
-  Zap,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  DollarSign,
-  Target,
-  Globe,
-  Lock,
-  Search,
-  Calendar,
-  MessageSquare,
-  Bell,
-  Phone,
-  Mail,
-  MapPin,
-  Scale,
-  AlertTriangle,
-  BookOpen,
-  CreditCard,
-  Building,
-  Eye,
-  Clock,
-  Award,
-  Gauge,
-  PieChart'
-} from 'lucide-react';
-;
-export { function };
-export default function AIFinancialComplianceAssistant(...args[]): {
-  ;
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   website: 'https://ziontechgroup.com';
@@ -46,8 +7,6 @@ export default function AIFinancialComplianceAssistant(...args[]): {
       title: 'Advanced Analytics & Reporting',;
       description: 'Comprehensive dashboards and automated reporting for regulatory submissions'};
   ];
-
-  
     'Reduce compliance violations by 85%',;
     'Cut compliance costs by 60%',;
     'Improve audit efficiency by 70%',;
@@ -55,11 +14,8 @@ export default function AIFinancialComplianceAssistant(...args[]): {
     'Streamline reporting processes',;
     'Enhance risk management capabilities';
   ];
-
-  
         'Up to 1,000 transactions/month',Basic compliance monitoring',Standard regulatory updates',Email support',Basic reporting',Up to 5 user licenses',Core compliance frameworks'
       ],;
-=======
       features[;'
         'Up to 1,000 transactions/month','
         'Basic compliance monitoring','
@@ -68,12 +24,10 @@ export default function AIFinancialComplianceAssistant(...args[]): {
         'Basic reporting','
         'Up to 5 user licenses','        'Core compliance frameworks'
       ],;'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       cta: 'Start Free Trial',
       popular: false
     },
     {
-
       name: 'Professional',
       price: '$999',
       period: '/month',
@@ -85,7 +39,6 @@ export default function AIFinancialComplianceAssistant(...args[]): {
       popular: true
     },
     {
-
       name: 'Enterprise',
       price: '$2,499',
       period: '/month',
@@ -103,57 +56,27 @@ export default function AIFinancialComplianceAssistant(...args[]): {
       description: 'Accounting standards compliance with automated financial reporting',;
       icon: BookOpen};
   ]},;
-<<<<<<< HEAD
-    {;
-      title: 'Fintech Startups',;
-      description: 'Rapid compliance scaling for growing financial technology companies',;
-      icon: Zap};
-=======
     {;'
       title: 'Fintech Startups',;'      description: 'Rapid compliance scaling for growing financial technology companies',;
       icon: Zap};
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
-
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <SEO "
-<<<<<<< HEAD
-        title="AI Financial Compliance Assistant | Zion Tech Group"
-        description="Revolutionize your financial compliance with AI-powered automation. Monitor regulations, detect risks, and ensure 99.9% compliance accuracy."
-        keywords="AI financial compliance, regulatory compliance, SOX compliance, GDPR compliance, PCI DSS, AML KYC, financial regulations"
-       />
-=======
         title="AI Financial Compliance Assistant | Zion Tech Group""
         description="Revolutionize your financial compliance with AI-powered automation. Monitor regulations, detect risks, and ensure 99.9% compliance accuracy.""        keywords="AI financial compliance, regulatory compliance, SOX compliance, GDPR compliance, PCI DSS, AML KYC, financial regulations"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
       {/* Hero Section */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             animate = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
 "
@@ -184,32 +107,17 @@ export default function AIFinancialComplianceAssistant(...args[]): {
           </motion.div>
         </div>
       </section>;
-
       {/* Features Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">;"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"
@@ -228,37 +136,16 @@ export default function AIFinancialComplianceAssistant(...args[]): {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.8,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}"
                 className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300"
@@ -273,32 +160,17 @@ export default function AIFinancialComplianceAssistant(...args[]): {
           </div>
         </div>
       </section>
-
       {/* Compliance Frameworks Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">;"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"
@@ -317,37 +189,16 @@ export default function AIFinancialComplianceAssistant(...args[]): {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.8,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}"
                 className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300"
@@ -362,32 +213,17 @@ export default function AIFinancialComplianceAssistant(...args[]): {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">;"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"
@@ -406,37 +242,16 @@ export default function AIFinancialComplianceAssistant(...args[]): {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   x: -20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.8,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}"
                 className="flex items-start space-x-3"
@@ -447,32 +262,17 @@ export default function AIFinancialComplianceAssistant(...args[]): {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">;"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"
@@ -491,37 +291,16 @@ export default function AIFinancialComplianceAssistant(...args[]): {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.8,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}"
                 className="text-center"
@@ -536,32 +315,17 @@ export default function AIFinancialComplianceAssistant(...args[]): {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">;"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"
@@ -580,46 +344,23 @@ export default function AIFinancialComplianceAssistant(...args[]): {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.8,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
-
                   plan.popular'
                     ? 'border-blue-500/50 bg-gradient-to-br from-blue-900/20 to-cyan-900/20''
                     : 'border-slate-700/50'`
                 }`}
-
                 {plan.popular && (;"
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
                     <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -646,7 +387,6 @@ export default function AIFinancialComplianceAssistant(...args[]): {
                 </ul>
 `
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-
                   plan.popular'
                     ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-700 hover:to-cyan-700''
                     : 'bg-slate-700 text-white hover:bg-slate-600'`
@@ -658,32 +398,17 @@ export default function AIFinancialComplianceAssistant(...args[]): {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">;"
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -710,32 +435,17 @@ export default function AIFinancialComplianceAssistant(...args[]): {
           </motion.div>
         </div>
       </section>
-
       {/* Contact Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">;"
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -763,11 +473,9 @@ export default function AIFinancialComplianceAssistant(...args[]): {
                 <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>"                <p className="text-slate-300">{contactInfo.address}</p>
               </div>
             </div>
-
             <a`
               href={`mailto:${contactInfo.email}`}"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-
               Get in Touch"
               <ArrowRight className="w-5 h-5 ml-2"  />            </a>;
           </motion.div>;

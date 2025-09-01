@@ -1,33 +1,3 @@
-<<<<<<< HEAD
-// Regular img tag will be used instead of next/image
-
-  listing: ProductListing;
-  view?: 'grid' | 'list';
-  onRequestQuote?: (id: string) => void;
-  /**
-   * Base path for linking to the detail page. Defaults to
-   * `/marketplace / listing` to preserve existing behaviour.
-   */
-  detailBasePath?: string}
-
-  
-  };
-
-  
-    e.stopPropagation();
-
-    if (onRequestQuote) {
-
-      onRequestQuote(listing.id)} else {
-`
-      router(`/request-quote?listing=${listing.id}`)}
-  };
-
-  
-  return()
-    <div
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       data-testid = "equipment-link";'`
       className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`};
       onClick={handleViewListing};

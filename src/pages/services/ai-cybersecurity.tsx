@@ -1,5 +1,4 @@
 import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, Network, Code, Key, Target, CheckCircle, Clock, TrendingUp const AICybersecurity: React.FC = () => {
-  
     },;
     {;
       icon: Eye,;
@@ -11,62 +10,29 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
       description: 'Automate security operations and responses',;
       icon: '⚡'};
   ];
-
-<<<<<<< HEAD
-  
-    'Real-time threat detection and response',;
-    'Reduced false positives with AI accuracy',;
-    '24/7 automated security monitoring',;
-    'Predictive threat intelligence',;
-    'Cost-effective security operations',;
-    'Compliance and regulatory support';
-=======
   const benefits = [;'
     'Real-time threat detection and response',;'
     'Reduced false positives with AI accuracy',;'
     '24/7 automated security monitoring',;'
     'Predictive threat intelligence',;'
     'Cost-effective security operations',;'    'Compliance and regulatory support';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
-
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-<<<<<<< HEAD
-        title="AI Cybersecurity Services - Zion Tech Group"
-        description="Advanced AI-powered cybersecurity solutions for threat detection, prevention, and response. Protect your business with intelligent security systems."
-       />
-=======
         title="AI Cybersecurity Services - Zion Tech Group""        description="Advanced AI-powered cybersecurity solutions for threat detection, prevention, and response. Protect your business with intelligent security systems."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
       {/* Hero Section */}"
       <section className="pt-20 pb-16 px-4">"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             animate = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}"
             className="text-center"
@@ -98,32 +64,17 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}"
       <section className="py-16 px-4">;"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}"
             className="text-center mb-16"
@@ -141,37 +92,16 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
               <motion.div
                 key={feature.title}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}"
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-red-400/30 transition-all duration-200 hover:scale-105"
 "
@@ -185,32 +115,17 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
           </div>
         </div>
       </section>
-
       {/* Services Section */}"
       <section className="py-16 px-4 bg-slate-800/30">;"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}"
             className="text-center mb-16"
@@ -228,37 +143,16 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
               <motion.div
                 key={service.title}
                 initial = {
-
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}"
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-red-400/30 transition-all duration-200"
 "
@@ -283,32 +177,17 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}"
       <section className="py-16 px-4">;"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}"
             className="text-center mb-16"
@@ -324,26 +203,12 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
           <div className="grid md:grid-cols-2 gap-8">
             <motion.div
               initial = {
-
   { opacity: 0,
   x: -20 
-
-
-
-
-
-
 }}
               whileInView = {
-
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.6 }}"
               className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8"
@@ -357,29 +222,14 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
                 ))}
               </ul>
             </motion.div>
-
             <motion.div
               initial = {
-
   { opacity: 0,
   x: 20 
-
-
-
-
-
-
 }}
               whileInView = {
-
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.6 }}"
               className="bg-gradient-to-br from-red-500/20 to-orange-500/20 border border-red-400/30 rounded-xl p-8"
@@ -396,32 +246,17 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
           </div>
         </div>
       </section>
-
       {/* CTA Section */}"
       <section className="py-16 px-4">;"
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
 "
@@ -444,5 +279,4 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
       </section>;
     </div>;
   )};
-
 export default AICybersecurity}}}'"

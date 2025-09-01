@@ -1,26 +1,5 @@
 export default EnhancedZionTechServices2025}
-<<<<<<< HEAD
-
-
-const EnhancedZionTechServices2025: React.FC = () => {;
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
-  const [searchTerm, setSearchTerm] = useState<string>('');
-  const [sortBy, setSortBy] = useState<string>('name');
-
-  
-  
-    
-                         service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
-                         service.tags.some (tag => tag.toLowerCase () .includes (searchTerm.toLowerCase () ) ) ;
-    return matchesCategory && matchesSearch}) ;
-
-  
-    switch (sortBy) {;
-      case 'price':;
-        return a.price - b.price;
-=======
         return a.price - b.price;'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       case 'rating':;
         return b.rating - a.rating;
       case 'aiScore':;

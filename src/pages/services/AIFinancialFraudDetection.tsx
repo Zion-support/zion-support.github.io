@@ -1,63 +1,3 @@
-<<<<<<< HEAD
-import { Shield, 
-  Brain, 
-  BarChart3, 
-  AlertTriangle, 
-  Clock, 
-  BarChart3, 
-  CheckCircle,
-  Play,
-  Star,
-  Award,
-  DollarSign,
-  Target,
-  Zap,
-  Brain,
-  Globe,
-  Rocket,
-  Eye,
-  Cpu'
- } from 'lucide-react';
-;
-const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
-
-  
-    },;
-    {;
-      icon: Target,;"
-      title: "Adaptive Learning",;"
-      description: "Self-improving AI models that continuously learn from new fraud patterns and adapt to evolving threats in real-time."};
-  ];
-
-  const benefits = [;"
-    "Reduce fraud losses by 85-95%",;"
-    "Improve detection accuracy by 40%",;"
-    "Reduce false positives by 60%",;"
-    "Save $100K+ annually on fraud prevention",;"
-    "Comply with PCI DSS, SOC 2, and GDPR requirements";
-  ];
-
-  const useCases = [;"
-    "Credit Card Fraud",;"
-    "Banking & Financial Services",;"
-    "E-commerce & Retail",;"
-    "Insurance Claims",;"
-    "Healthcare Billing",;"
-    "Cryptocurrency Transactions";
-  ];
-
-  const integrations = [;"
-    "Stripe, PayPal, Square",;"
-    "Visa, Mastercard, American Express",;"
-    "Banking APIs (Plaid, Yodlee)",;"
-    "QuickBooks, Xero, NetSuite",;"
-    "Salesforce, HubSpot, Pipedrive";
-  ];
-
-  
-      popular: false
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     },
     {
 "
@@ -75,49 +15,25 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
       features: ["Unlimited transactions", "Custom AI models", "White-label solution", "Dedicated support", "SLA guarantees"],;
       popular: false};
   ];
-
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       <SEO "
-<<<<<<< HEAD
-        title="AI Financial Fraud Detection Platform - Zion Tech Group"
-        description="Protect your business with AI-powered fraud detection. Detect and prevent financial fraud with 99.2% accuracy, reduce losses by 85-95%, and ensure compliance."
-        keywords="fraud detection, AI security, financial fraud prevention, machine learning security, transaction monitoring, fraud analytics"
-        canonical="https://ziontechgroup.com/services/ai-financial-fraud-detection"
-       />
-=======
         title="AI Financial Fraud Detection Platform - Zion Tech Group""
         description="Protect your business with AI-powered fraud detection. Detect and prevent financial fraud with 99.2% accuracy, reduce losses by 85-95%, and ensure compliance.""
         keywords="fraud detection, AI security, financial fraud prevention, machine learning security, transaction monitoring, fraud analytics""        canonical="https://ziontechgroup.com/services/ai-financial-fraud-detection"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
         <div className="absolute inset-0 bg-gradient-to-br from-red-900/20 via-slate-800 to-orange-900/20"></div>"
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             animate = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}"
             className="mb-8"
@@ -147,32 +63,17 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
           </motion.div>
         </div>
       </section>;
-
       {/* Features Section */}"
       <section className="py-20 bg-slate-800/50">;"
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}"
@@ -191,22 +92,12 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
               <motion.div
                 key={feature.title}
                 initial = {
-
   { opacity: 0,
   x: index % 2 === 0 ? -30 : 30 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   x: 0 
-
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
@@ -216,15 +107,8 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 transition = {
-
   { duration: 0.8,
   delay: index * 0.1 
-
-
-
-
-
-
 }}"
                 className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border border-slate-700 hover:border-red-500 transition-all duration-300"
 "
@@ -238,32 +122,17 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}"
       <section className="py-20 bg-slate-900">;"
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}"
@@ -282,38 +151,17 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
               <motion.div
                 key={benefit}
                 initial = {
-
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}
                 transition = {
-
   { duration: 0.8,
   delay: index * 0.1 
-
-
-
-
-
-
 }}"
                 className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 text-center"
 "
@@ -325,32 +173,17 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}"
       <section className="py-20 bg-slate-800/50">;"
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}"
@@ -369,38 +202,17 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
               <motion.div
                 key={useCase}
                 initial = {
-
   { opacity: 0,
   scale: 0.8 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   scale: 1 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}
                 transition = {
-
   { duration: 0.8,
   delay: index * 0.1 
-
-
-
-
-
-
 }}"
                 className="bg-slate-800 p-6 rounded-xl border border-slate-700 text-center hover:border-purple-500 transition-colors"
 "
@@ -412,32 +224,17 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
           </div>
         </div>
       </section>
-
       {/* Integrations Section */}"
       <section className="py-20 bg-slate-900">;"
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}"
@@ -456,26 +253,12 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
               <motion.div
                 key={integration}
                 initial = {
-
   { opacity: 0,
   scale: 0.8 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   scale: 1 
-
-
-
-
-
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div
@@ -485,15 +268,8 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 transition = {
-
   { duration: 0.8,
   delay: index * 0.1 
-
-
-
-
-
-
 }}"
                 className="bg-slate-800 p-4 rounded-lg border border-slate-700 text-center hover:border-indigo-500 transition-colors"
 "
@@ -503,32 +279,17 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}"
       <section className="py-20 bg-slate-800/50">;"
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}"
@@ -547,22 +308,12 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
               <motion.div
                 key={plan.plan}
                 initial = {
-
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
           <div className="grid md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <motion.div
@@ -572,23 +323,14 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 transition = {
-
   { duration: 0.8,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className={`relative bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border ${
-
                   plan.popular'
                     ? 'border-red-500 shadow-lg shadow-red-500/20''
                     : 'border-slate-700'`
                 }`}
-
                 {plan.popular && (;"
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
                     <span className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -615,7 +357,6 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
                 </ul>
 "
                 <button className="w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
-
                   plan.popular'
                     ? 'bg-gradient-to-r from-red-500 to-orange-500 text-white hover:from-red-600 hover:to-orange-600''
                     : 'bg-slate-700 text-white hover:bg-slate-600'"
@@ -627,32 +368,17 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}"
       <section className="py-20 bg-gradient-to-r from-red-600 to-orange-600">;"
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -667,20 +393,17 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
               <a"
                 href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-white text-red-600 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
-
                 Start Free Trial"
                 <ArrowRight className="w-5 h-5 ml-2"  />              </a>
               <a"
                 href="/contact"
                 className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-all duration-300"
-
                 Schedule Demo
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
-
       {/* Contact Info */}"
       <section className="py-16 bg-slate-900">;"
         <div className="container mx-auto px-4 text-center">"
@@ -715,5 +438,4 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
       </section>;
     </div>;
   )};
-
 export default AIFinancialFraudDetection}}}'"`

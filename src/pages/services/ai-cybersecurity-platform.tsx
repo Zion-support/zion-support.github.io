@@ -1,99 +1,3 @@
-<<<<<<< HEAD
-import {
-
-  Brain,
-  Zap,
-  Shield,
-  Users,
-  BarChart3,
-  Rocket,
-  CheckCircle,
-  Star,
-  ArrowRight,
-  Globe,
-  Cpu,
-  Database,
-  Cloud,
-  Lock,
-  TrendingUp,
-  Target,
-  Heart,
-  Eye,
-  Activity,
-  Code,
-  Server,
-  Network,
-  Phone,
-  Mail,
-  MapPin,
-  DollarSign,
-  Clock,
-  Award,
-  Lightbulb,
-  Sparkles,
-  Atom,
-  AlertTriangle,
-  Bug,
-  Search,
-  Filter,
-  Sort,
-  Download,
-  Upload,
-  Share,
-  Copy,
-  Edit,
-  Trash,
-  Save,
-  Plus,
-  Minus,
-  X,
-  Check,
-  Info,
-  Key,
-  Fingerprint,
-  Monitor,
-  Wifi,
-  Bluetooth,
-  Satellite,
-  Telescope,
-  Microscope,
-  Flask,
-  Pill,
-  Stethoscope,
-  Calculator,
-  BookOpen,
-  GraduationCap,
-  CreditCard,
-  ShoppingCart,
-  Truck,
-  Warehouse,
-  Factory,
-  Building2,
-  Home,
-  Store,
-  Bank,
-  Insurance,
-  Law,
-  Gavel,
-  FileText,
-  Calendar,
-  Timer,
-  Stopwatch,
-  Thermometer,
-  Compass,
-  Map,
-  Navigation} from 'lucide-react';
-
-export function AICybersecurityPlatform() {
-  
-  
-  
-  
-  
-  return()
-    <div className="min-h-screen bg-gray-900 text-white">
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       {/* Hero Section */}"
       <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto">
@@ -131,7 +35,6 @@ export function AICybersecurityPlatform() {
           </motion.div>
         </div>
       </section>
-
       {/* Security Metrics */}"
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">"
         <div className="max-w-7xl mx-auto">"
@@ -153,7 +56,6 @@ export function AICybersecurityPlatform() {
           </div>
         </div>
       </section>
-
       {/* Features Section */}"
       <section className="py-16 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto">
@@ -201,7 +103,6 @@ export function AICybersecurityPlatform() {
           </div>
         </div>
       </section>
-
       {/* Security Features Section */}"
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">"
         <div className="max-w-7xl mx-auto">
@@ -255,7 +156,6 @@ export function AICybersecurityPlatform() {
           </div>
         </div>
       </section>
-
       {/* Compliance Section */}"
       <section className="py-16 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto">
@@ -291,7 +191,6 @@ export function AICybersecurityPlatform() {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}"
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">"
         <div className="max-w-7xl mx-auto">
@@ -318,7 +217,6 @@ export function AICybersecurityPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm border rounded-xl p-8 ${
-
                   plan.popular'
                     ? 'border-cyan-500 shadow-lg shadow-cyan-500/20''
                     : 'border-gray-700'`
@@ -348,11 +246,9 @@ export function AICybersecurityPlatform() {
                     </li>
                   ))}
                 </ul>
-
                 <Link'
                   to={plan.name === 'Enterprise' ? '/contact' : '/pricing'}`
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-
                     plan.popular'
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700''
                       : 'border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white'`
@@ -365,7 +261,6 @@ export function AICybersecurityPlatform() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}"
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">"
         <div className="max-w-4xl mx-auto text-center">
@@ -398,7 +293,6 @@ export function AICybersecurityPlatform() {
           </motion.div>
         </div>
       </section>
-
       {/* Contact Information */}"
       <section className="py-16 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-4xl mx-auto text-center">

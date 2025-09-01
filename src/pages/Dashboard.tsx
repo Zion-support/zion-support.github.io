@@ -1,28 +1,5 @@
-<<<<<<< HEAD
-  DollarSign,
-  Activity,
-  DollarSign,
-  Activity,
-  Shield,
-  Zap,
-  Settings,
-  Bell,
-  Search,
-  Calendar,
-  FileText,
-  MessageSquare,
-  Star,
-  ArrowRight'
- } from 'lucide-react';
-
-export default function Dashboard(...args[]):  {
-
-  
-    };
-=======
   ]};
   ]};
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ]};
   ]};
   ];
@@ -179,13 +156,11 @@ export default function Dashboard() {
     { name: 'Support Request', icon: HelpCircle, href: '/help', color: 'from-purple-500 to-pink-500' },;
     { name: 'Billing & Plans', icon: DollarSign, href: '/pricing', color: 'from-yellow-500 to-orange-500' },;
     { name: 'API Documentation', icon: Code, href: '/api-docs', color: 'from-gray-500 to-slate-500' }
-=======
     { name: 'Add New Service', icon: Plus, href: '/services', color: 'from-green-500 to-emerald-500' },;'
     { name: 'View Analytics', icon: BarChart3, href: '/analytics', color: 'from-blue-500 to-indigo-500' },;'
     { name: 'Security Settings', icon: Shield, href: '/security', color: 'from-red-500 to-orange-500' },;'
     { name: 'Support Request', icon: HelpCircle, href: '/help', color: 'from-purple-500 to-pink-500' },;'
     { name: 'Billing & Plans', icon: DollarSign, href: '/pricing', color: 'from-yellow-500 to-orange-500' },;'    { name: 'API Documentation', icon: Code, href: '/api-docs', color: 'from-gray-500 to-slate-500' }
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return ("

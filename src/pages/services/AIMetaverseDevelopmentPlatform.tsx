@@ -1,6 +1,4 @@
-
 export default function AIMetaverseDevelopmentPlatform() {
-  
     'AI-powered 3D world generation and design',;
     'Intelligent avatar creation and customization',;
     'Real-time virtual environment optimization',;
@@ -8,14 +6,11 @@ export default function AIMetaverseDevelopmentPlatform() {
     'AI-driven social interaction and engagement',;
     'Metaverse economy and NFT marketplace tools';
   ];
-
-  
         'On-premise deployment options',;
         'Custom integrations and APIs',;
         'White-label solutions available',;
         'Enterprise security features';
       ]};
-=======
         'Unlimited virtual worlds','
         'Custom AI algorithms','
         '24/7 dedicated support',;'
@@ -23,10 +18,7 @@ export default function AIMetaverseDevelopmentPlatform() {
         'Custom integrations and APIs',;'
         'White-label solutions available',;'        'Enterprise security features';
       ]};
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
-
-  
     'Virtual events and conferences',;
     'Gaming and entertainment platforms',;
     'Virtual real estate and architecture',;
@@ -34,33 +26,19 @@ export default function AIMetaverseDevelopmentPlatform() {
     'Education and training environments',;
     'Social networking and communities';
   ];
-
-  
     'Reduce development time by 50-70% with AI automation',;
     'Create immersive experiences that increase user engagement',;
     'Scale virtual worlds efficiently with intelligent optimization',;
     'Enable cross-platform compatibility and accessibility',;
     'Build sustainable metaverse economies and ecosystems';
   ];
-
-<<<<<<< HEAD
-  
-    'Gaming and Entertainment',;
-    'Real Estate and Architecture',;
-    'Education and Training',;
-    'Healthcare and Telemedicine',;
-    'Retail and E-commerce',;
-    'Corporate and Enterprise';
-=======
   const industries = [;'
     'Gaming and Entertainment',;'
     'Real Estate and Architecture',;'
     'Education and Training',;'
     'Healthcare and Telemedicine',;'
     'Retail and E-commerce',;'    'Corporate and Enterprise';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
-
   return()
     <>
       <SEO "
@@ -88,19 +66,16 @@ export default function AIMetaverseDevelopmentPlatform() {
               <a"
                 href="https://ziontechgroup.com/contact"
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200"
-
                 Get Started"
                 <ArrowRight className="ml-2 w-5 h-5"  />              </a>
               <a"
                 href="#pricing"
                 className="inline-flex items-center px-8 py-3 border border-indigo-400 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-400 hover:text-white transition-all duration-200"
-
                 View Pricing
               </a>
             </div>
           </div>
         </section>
-
         {/* Key Features */}"
         <section className="py-20 px-4 sm:px-6 lg:px-8">;"
           <div className="max-w-7xl mx-auto">"
@@ -123,7 +98,6 @@ export default function AIMetaverseDevelopmentPlatform() {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}"
         <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8">;"
           <div className="max-w-7xl mx-auto">"
@@ -138,7 +112,6 @@ export default function AIMetaverseDevelopmentPlatform() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {tiers.map(tier: unknown, index: unknown (
                 <div key={index} className={`bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
-
                   index === 1 ? 'border-indigo-400/50 scale-105' : 'border-white/10'`
                 } hover:border-indigo-400/50 transition-all duration-300`}>
                   {index === 1 && ("
@@ -159,7 +132,6 @@ export default function AIMetaverseDevelopmentPlatform() {
                   <a"
                     href="https://ziontechgroup.com/contact"
                     className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200"
-
                     Get Started
                   </a>
                 </div>;
@@ -167,7 +139,6 @@ export default function AIMetaverseDevelopmentPlatform() {
             </div>
           </div>
         </section>
-
         {/* Use Cases */}"
         <section className="py-20 px-4 sm:px-6 lg:px-8">;"
           <div className="max-w-7xl mx-auto">"
@@ -190,7 +161,6 @@ export default function AIMetaverseDevelopmentPlatform() {
             </div>
           </div>
         </section>
-
         {/* Benefits */}"
         <section className="py-20 px-4 sm:px-6 lg:px-8">;"
           <div className="max-w-7xl mx-auto">"
@@ -213,7 +183,6 @@ export default function AIMetaverseDevelopmentPlatform() {
             </div>
           </div>
         </section>
-
         {/* Industries */}"
         <section className="py-20 px-4 sm:px-6 lg:px-8">;"
           <div className="max-w-7xl mx-auto">"
@@ -236,7 +205,6 @@ export default function AIMetaverseDevelopmentPlatform() {
             </div>
           </div>
         </section>
-
         {/* Contact Section */}"
         <section className="py-20 px-4 sm:px-6 lg:px-8">;"
           <div className="max-w-4xl mx-auto text-center">"

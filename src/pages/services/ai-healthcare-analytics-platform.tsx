@@ -1,112 +1,28 @@
-<<<<<<< HEAD
-import { Heart, 
-  Brain, 
-  Activity, 
-  Shield, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight,
-  Clock,
-  Target,
-  BarChart3,
-  Users,
-  Smartphone,
-  Cloud,
-  Database,
-  Cpu,
-  Lock,
-  Eye,
-  PieChart,
-  TrendingUp,
-  AlertTriangle'
- } from 'lucide-react';
-;
-export { function };
-export default function AIHealthcareAnalyticsPlatform(...args: []):  {
-
-  
-    },;
-    {;
-      icon: Eye,;
-      title: 'Medical Image Analysis',;
-      description: 'AI-powered analysis of X-rays, MRIs, and CT scans for faster, more accurate diagnosis'};
-  ];
-
-  
-        'On-premise options',;
-        'SLA guarantees',;
-        'Custom integrations';
-      ],;
-      popular: false};
-  ]},;
-    {;
-      icon: BarChart3,;
-      title: '40% Cost Reduction',;
-      description: 'AI optimization reduces healthcare costs and improves efficiency'};
-  ]},;
-    {;
-      title: 'Drug Safety Monitoring',;
-      description: 'Real-time monitoring of drug interactions and adverse effects',;
       icon: Shield};
   ];
-
-  
-    'HIPAA Compliant',;
-    'FDA Approved',;
-    'ISO 13485',;
-    'SOC 2 Type II',;
-    'GDPR Compliant',;
-    'HITECH Certified';
-=======
-      icon: Shield};
-  ];
-
   const complianceStandards = [;'
     'HIPAA Compliant',;'
     'FDA Approved',;'
     'ISO 13485',;'
     'SOC 2 Type II',;'
     'GDPR Compliant',;'    'HITECH Certified';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
-
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-<<<<<<< HEAD
-        title="AI Healthcare Analytics Platform - Zion Tech Group"
-        description="Revolutionary AI-powered healthcare analytics platform with 95% accuracy rate. Diagnostic support, predictive analytics, and patient monitoring. Start from $799/month."
-       />
-=======
         title="AI Healthcare Analytics Platform - Zion Tech Group""        description="Revolutionary AI-powered healthcare analytics platform with 95% accuracy rate. Diagnostic support, predictive analytics, and patient monitoring. Start from $799/month."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             animate = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
 "
@@ -135,32 +51,17 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
           </motion.div>
         </div>
       </section>;
-
       {/* Features Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">;"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"
@@ -179,37 +80,16 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.8,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}"
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all duration-300"
@@ -224,32 +104,17 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"
@@ -268,37 +133,16 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.8,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}"
                 className="text-center"
@@ -313,32 +157,17 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">;"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"
@@ -357,37 +186,16 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.8,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}"
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700"
@@ -402,32 +210,17 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
           </div>
         </div>
       </section>
-
       {/* Compliance Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"
@@ -446,37 +239,16 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.8,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}"
                 className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-gray-700 text-center hover:border-blue-500 transition-all duration-300"
@@ -487,32 +259,17 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">;"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"
@@ -531,46 +288,23 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.8,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-
                   plan.popular'
                     ? 'border-blue-500 ring-2 ring-blue-500/20''
                     : 'border-gray-700'`
                 }`}
-
                 {plan.popular && (;"
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
                     <span className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -597,7 +331,6 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
                 </ul>
 `
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-
                   plan.popular'
                     ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-700 hover:to-cyan-700''
                     : 'bg-gray-700 text-white hover:bg-gray-600'`
@@ -609,32 +342,17 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;"
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}

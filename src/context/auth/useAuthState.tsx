@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-=======
 :src/context/auth/useAuthState.tsx
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
 interface User {
   id: string;
   email: string;
@@ -13,11 +9,9 @@ interface User {
   createdAt?: string;
   updatedAt?: string
 }
-
 interface AuthTokens {
   accessToken: string | null;
   refreshToken: string | null}
-
   accessToken: string | null;
   refreshToken: string | null
 }
@@ -27,34 +21,23 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : unkno
   const [isLoading, setIsLoading] = useState<typeof true>(true);
   const [onboardingStep, setOnboardingStep] = useState<typeof 0>(0);
   const [tokens, setTokens] = useState<any>({
-
     accessToken: null,
     refreshToken: null
   });
-
   useEffect(() => {
     // Check for existing auth state on mount
 :src/context/auth/useAuthState.tsx
-    
         if (typeof window !== 'null') {;
-          
           if (auth) {
-
-            
         if (typeof window !== 'null') {;
-          
           if (auth) {
-            
             if (parsed.user && parsed.token) {
-
               setUser(parsed.user);
               setTokens({
-
                 accessToken: parsed.token,
 :src/context/auth/useAuthState.tsx
                 refreshToken: parsed.refreshToken || null'
         // // // // // // // // console.error('Error checking auth state:', error)} finally {
-
         setIsLoading(false)})}
                 refreshToken: parsed.refreshToken || null
         // // // // // // // console.error('Error checking auth state:', error)} finally {
@@ -62,16 +45,11 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : unkno
           }
         }
       } catch (error) {
-
         // console.error('Error checking auth state:', error)} finally {
-
         setIsLoading(false)}
     };
-
     checkAuthState()}, []);
-
   return {
-
     user,
     setUser,
     isLoading,

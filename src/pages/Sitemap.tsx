@@ -47,9 +47,10 @@ interface SitemapPage {
   name: string;
   href: string;
   description: string;
-  featured?: boolean}
-;
-const Sitemap: React.FC = props {
+  featured?: boolean;
+}
+
+export const Sitemap: React.FC = () => {
   const sitemapSections: SitemapSection[] = [
     {
 
@@ -677,5 +678,7 @@ const Sitemap: React.FC = props {
         </div>
       </div>
     </div>
-  )};
-'"
+  );
+}
+
+export default Sitemap;

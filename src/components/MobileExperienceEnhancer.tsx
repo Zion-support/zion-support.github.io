@@ -68,14 +68,8 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
 
           setDeviceOrientation('landscape')}
       }, 100) };
-<<<<<<< HEAD
-
-    checkDevice();
-    window.addEventListener('resize', handleResize);
-=======
     checkDevice();'
     window.addEventListener('resize', handleResize);'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     window.addEventListener('orientationchange', handleOrientationChange);
 
     return () => {
@@ -127,12 +121,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
             if (window.history.length > 1) {
 
               window.history.forward();
-<<<<<<< HEAD
-            }
-          } else if (gesture.direction === 'right') {
-=======
             }'          } else if (gesture.direction === 'right') {
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
             // Swipe right - go back
             if (window.history.length > 1) {
@@ -178,12 +167,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
         if (searchInput) {
 
           searchInput.focus()}
-<<<<<<< HEAD
-        break;
-      case 'menu':
-=======
         break;'      case 'menu':
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         setShowMobileMenu(!showMobileMenu);
         break;
       case 'back':
@@ -422,12 +406,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
           className="fixed top-20 left-4 z-40 px-3 py-2 bg-slate-800 text-white text-xs rounded-lg shadow-lg"
         >"
           <div className="flex items-center space-x-2">"
-<<<<<<< HEAD
-            {isMobile ? <Smartphone className="w-4 h-4"  /> : <Tablet className="w-4 h-4"  />}
-            <span>{isMobile ? 'Mobile' : 'Tablet'}</span>
-=======
             {isMobile ? <Smartphone className="w-4 h-4"  /> : <Tablet className="w-4 h-4"  />}'            <span>{isMobile ? 'Mobile' : 'Tablet'}</span>
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
           </div>"
           <div className="text-slate-300">{deviceOrientation}</div>
         </motion.div>

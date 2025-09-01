@@ -1,16 +1,4 @@
 
-<<<<<<< HEAD
-
-interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
-
-  size?: 'sm' | 'md' | 'lg';
-  variant?: 'default' | 'futuristic' | 'ai' | 'quantum';
-  text?: string;
-  showProgress?: boolean;
-  progress?: number}
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 interface EnhancedLoadingSpinnerProps {
   // Add your props here
 
@@ -109,12 +97,7 @@ export function EnhancedLoadingSpinner({
   if (!enabled || !isVisible) return null;
 
   
-<<<<<<< HEAD
-
-      case 'minimal':
-=======
 '      case 'minimal':
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         return()
           <motion.div"
             className="w-full h-full border-2 border-zion-cyan border-t-transparent rounded-full"
@@ -197,11 +180,9 @@ export function EnhancedLoadingSpinner(...args: any[]): any {
 
   
   ;
-=======
 '
   sm: 'w-8 h-8','
     md: 'w-12 h-12',;  ;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   ;
@@ -209,11 +190,9 @@ export function EnhancedLoadingSpinner(...args: any[]): any {
 
   
   ;
-=======
 '
   sm: 'text-sm','
     md: 'text-base',;  ;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   ;

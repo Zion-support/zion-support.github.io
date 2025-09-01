@@ -59,9 +59,7 @@ export function AnalyticsManager() {
     // Create or retrieve session
     
     localStorage.setItem('zion_session_id', sessionId);
-=======
       localStorage.getItem('zion_session_id') || generateSessionId();'    localStorage.setItem('zion_session_id', sessionId);
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     const session: UserSession = {
 
@@ -99,10 +97,8 @@ export function AnalyticsManager() {
   
     document.removeEventListener('scroll', handleScroll);
     window.removeEventListener('beforeunload', handleBeforeUnload);
-=======
     document.removeEventListener('click', handleClick);'
     document.removeEventListener('scroll', handleScroll);'    window.removeEventListener('beforeunload', handleBeforeUnload);
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     // Save session data
     if (currentSession) {
@@ -118,14 +114,8 @@ export function AnalyticsManager() {
     window.addEventListener('beforeunload', handleBeforeUnload)}, []);
 
   
-<<<<<<< HEAD
-    // Track button clicks'
-    if (target.tagName === 'BUTTON' || target.closest('button')) {
-
-=======
     // Track button clicks'    if (target.tagName === 'BUTTON' || target.closest('button')) {
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       trackEvent('button_click', {
 
         text: target.textContent || target.innerText,
@@ -137,9 +127,7 @@ export function AnalyticsManager() {
 
       
       trackEvent('link_click', {
-=======
           : (target.closest('a') as HTMLAnchorElement);'      trackEvent('link_click', {
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
         href: link.href,
         text: link.textContent || link.innerText})}
@@ -371,12 +359,7 @@ export function AnalyticsManager() {
 
           {/* Tracking Status */}"
           <div className="flex items-center space-x-2">"
-<<<<<<< HEAD
-            <Zap className="w-4 h-4 text-orange-400"  />
-            <span>Tracking: {isTracking ? 'Active' : 'Inactive'}</span>
-=======
             <Zap className="w-4 h-4 text-orange-400"  />'            <span>Tracking: {isTracking ? 'Active' : 'Inactive'}</span>
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
           </div>
         </div>
       )}

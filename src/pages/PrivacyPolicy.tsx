@@ -1,45 +1,4 @@
-<<<<<<< HEAD
-import {
-
-  Shield,
-  Lock,
-  Eye,
-  Database,
-  Globe,
-  Users,
-  Mail,
-  Phone,
-  Calendar,
-  CheckCircle,
-  AlertTriangle,
-  Info,
-  Share'
- } from 'lucide-react';
-
-
-  
-  
-    {;
-      id: 'contact',;
-      title: 'Contact Us',;
-      icon: Mail,;`
-      content: `If you have any questions about this Privacy Policy or our privacy practices, please contact us using the information provided below.`};
-  ];
-
-  
-    {;
-      category: 'Communication Data',;
-      examples: ['Support tickets, chat logs',Email communications',Feedback and surveys'],;
-      purpose: 'Customer support, service improvement',;
-      retention: '3 years from last interaction'};
-  ]},;
-    {;
-      measure: 'Incident Response',;
-      description: 'Comprehensive incident response plan for handling security breaches',;
       icon: AlertTriangle};
-=======
-      icon: AlertTriangle};
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   return()
@@ -372,12 +331,7 @@ import {
               className="mb-12"
             >"
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">"
-<<<<<<< HEAD
-                <AlertTriangle className="w-8 h-8 text-zion-cyan"  />
-                Children's Privacy
-=======
                 <AlertTriangle className="w-8 h-8 text-zion-cyan"  />'                Children's Privacy
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
               </h2>
 "
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
@@ -997,12 +951,7 @@ import {
               className="mb-12"
 "
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">;"
-<<<<<<< HEAD
-                <AlertTriangle className="w-8 h-8 text-zion-cyan"  />
-                Children's Privacy
-=======
                 <AlertTriangle className="w-8 h-8 text-zion-cyan"  />'                Children's Privacy
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
               </h2>
 "
               <div className="space-y-4 text-zion-slate-light leading-relaxed">

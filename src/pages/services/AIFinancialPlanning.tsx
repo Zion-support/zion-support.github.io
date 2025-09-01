@@ -1,120 +1,3 @@
-<<<<<<< HEAD
-import { DollarSign, 
-  TrendingUp, 
-  BarChart3, 
-  Users, 
-  Zap, 
-  Globe, 
-  Lock, 
-  Eye,
-  Star,
-  Cpu,
-  Database,
-  Search,
-  Filter,
-  Download,
-  Share2,
-  Play,
-  ArrowRight,
-  CheckCircle,
-  AlertTriangle,
-  FileText,
-  Clock,
-  Award,
-  Brain,
-  Target,
-  PieChart,
-  Activity,
-  Calculator,
-  Shield,
-  Settings,
-  CreditCard,
-  AlertCircle,
-  Calendar,
-  Package,
-  Route,
-  Warehouse,
-  Factory,
-  Ship,
-  Plane,
-  PiggyBank,
-  TrendingDown,
-  Lightbulb,
-  Wallet,
-  Receipt,
-  Banknote'
- } from 'lucide-react.ts';
-
-export default function AIFinancialPlanning(...args: any[]): any {
-
-  
-    },;
-    {;
-      icon: Activity,;"
-      title: "Tax Optimization",;"
-      description: "Intelligent tax planning and optimization to maximize savings and minimize liabilities."};
-  ]},;
-    {;
-      icon: Clock,;"
-      title: "Time Savings",;"
-      description: "Automate financial tasks and focus on what matters most with intelligent automation."};
-  ];
-
-  const pricingPlans = [
-    {
-"
-      name: "Basic","
-      price: "$9.99","
-      period: "/month","
-      description: "Perfect for individuals starting their financial planning journey",
-      features: ["
-        "Basic budget tracking","
-        "Expense categorization","
-        "Email support","
-        "Mobile app access","
-        "Basic reporting","
-        "Goal setting","
-        "Bill reminders"
-      ],"
-      cta: "Start Free Trial",
-      popular: false
-    },
-    {
-"
-      name: "Premium","
-      price: "$24.99","
-      period: "/month","
-      description: "Ideal for individuals and families with advanced financial planning needs",
-      features: ["
-        "Advanced AI budgeting","
-        "Investment recommendations","
-        "Priority support","
-        "Tax optimization","
-        "Advanced analytics","
-        "Portfolio tracking","
-        "Financial health score","
-        "Custom alerts"
-      ],"
-      cta: "Start Free Trial",
-      popular: true
-    },
-    {
-"
-      name: "Professional","
-      price: "$49.99","
-      period: "/month","
-      description: "For financial advisors and professionals requiring advanced tools",
-      features: ["
-        "Client management","
-        "White-label solutions","
-        "Dedicated support","
-        "Advanced reporting","
-        "API access","
-        "Custom integrations",;"
-        "Multi-account support",;"
-        "Tax filing assistance";
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ],;"
       cta: "Contact Sales",;
       popular: false};
@@ -123,7 +6,6 @@ export default function AIFinancialPlanning(...args: any[]): any {
       industry: "Investment Management",;"      description: "Build and manage investment portfolios with AI-driven insights",;
       icon: TrendingUp};
   ];
-
   const integrations = [
     {
 "
@@ -158,7 +40,6 @@ export default function AIFinancialPlanning(...args: any[]): any {
       label: "Faster Planning",;"
       description: "Faster financial planning process"};
   ];
-
   const planningAreas = [
     {
 "
@@ -177,19 +58,11 @@ export default function AIFinancialPlanning(...args: any[]): any {
     {;"
       category: "Goal Planning",;"
       areas: ["Retirement Planning", "Debt Management", "Emergency Fund", "Major Purchases"]};  ];
-
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
-<<<<<<< HEAD
-        title="AI Financial Planning & Budgeting - Zion Tech Group"
-        description="Transform your financial future with AI-powered planning and budgeting. Optimize spending, achieve goals, and build wealth with intelligent financial management."
-      />
-=======
         title="AI Financial Planning & Budgeting - Zion Tech Group""        description="Transform your financial future with AI-powered planning and budgeting. Optimize spending, achieve goals, and build wealth with intelligent financial management."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 lg:py-32">"
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/20 via-transparent to-teal-900/20"></div>
@@ -197,26 +70,12 @@ export default function AIFinancialPlanning(...args: any[]): any {
         <div className="relative max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             animate = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
           >"
@@ -245,7 +104,6 @@ export default function AIFinancialPlanning(...args: any[]): any {
           </motion.div>
         </div>
       </section>
-
       {/* Key Metrics Section */}"
       <section className="py-20">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
@@ -254,37 +112,16 @@ export default function AIFinancialPlanning(...args: any[]): any {
               <motion.div
                 key={metric.metric}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}"
                 className="text-center"
@@ -303,32 +140,17 @@ export default function AIFinancialPlanning(...args: any[]): any {
           </div>
         </div>
       </section>
-
       {/* Features Section */}"
       <section className="py-20 bg-slate-800/50">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"
@@ -347,37 +169,16 @@ export default function AIFinancialPlanning(...args: any[]): any {
               <motion.div
                 key={feature.title}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}"
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50"
@@ -388,7 +189,6 @@ export default function AIFinancialPlanning(...args: any[]): any {
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                 </div>
-
                 {/* Content */}
                 <div>"
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors duration-300">
@@ -398,7 +198,6 @@ export default function AIFinancialPlanning(...args: any[]): any {
                     {feature.description}
                   </p>
                 </div>
-
                 {/* Hover Effect */}"
                 <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-teal-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </motion.div>
@@ -406,32 +205,17 @@ export default function AIFinancialPlanning(...args: any[]): any {
           </div>
         </div>
       </section>
-
       {/* Planning Areas Section */}"
       <section className="py-20">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"
@@ -450,37 +234,16 @@ export default function AIFinancialPlanning(...args: any[]): any {
               <motion.div
                 key={category.category}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}"
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50"
@@ -500,32 +263,17 @@ export default function AIFinancialPlanning(...args: any[]): any {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}"
       <section className="py-20 bg-slate-800/50">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"
@@ -544,37 +292,16 @@ export default function AIFinancialPlanning(...args: any[]): any {
               <motion.div
                 key={benefit.title}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}"
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50"
@@ -585,7 +312,6 @@ export default function AIFinancialPlanning(...args: any[]): any {
                     <benefit.icon className="w-8 h-8 text-white" />
                   </div>
                 </div>
-
                 {/* Content */}
                 <div>"
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors duration-300">
@@ -595,7 +321,6 @@ export default function AIFinancialPlanning(...args: any[]): any {
                     {benefit.description}
                   </p>
                 </div>
-
                 {/* Hover Effect */}"
                 <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-teal-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </motion.div>
@@ -603,32 +328,17 @@ export default function AIFinancialPlanning(...args: any[]): any {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}"
       <section className="py-20">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"
@@ -647,41 +357,19 @@ export default function AIFinancialPlanning(...args: any[]): any {
               <motion.div
                 key={plan.name}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}
                 className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${
-
                   plan.popular '
                     ? 'border-emerald-500/50 bg-gradient-to-br from-emerald-500/10 to-teal-500/10' '
                     : 'border-white/10 hover:border-emerald-500/50'`
@@ -713,7 +401,6 @@ export default function AIFinancialPlanning(...args: any[]): any {
                 </ul>
 `
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-
                   plan.popular'
                     ? 'bg-gradient-to-r from-emerald-600 to-teal-600 text-white hover:from-emerald-700 hover:to-teal-700''
                     : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'`
@@ -725,32 +412,17 @@ export default function AIFinancialPlanning(...args: any[]): any {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}"
       <section className="py-20 bg-slate-800/50">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"
@@ -769,37 +441,16 @@ export default function AIFinancialPlanning(...args: any[]): any {
               <motion.div
                 key={useCase.industry}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}"
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50"
@@ -810,7 +461,6 @@ export default function AIFinancialPlanning(...args: any[]): any {
                     <useCase.icon className="w-8 h-8 text-white" />
                   </div>
                 </div>
-
                 {/* Content */}
                 <div>"
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors duration-300">
@@ -820,7 +470,6 @@ export default function AIFinancialPlanning(...args: any[]): any {
                     {useCase.description}
                   </p>
                 </div>
-
                 {/* Hover Effect */}"
                 <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-teal-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </motion.div>
@@ -828,32 +477,17 @@ export default function AIFinancialPlanning(...args: any[]): any {
           </div>
         </div>
       </section>
-
       {/* Integrations Section */}"
       <section className="py-20">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"
@@ -872,37 +506,16 @@ export default function AIFinancialPlanning(...args: any[]): any {
               <motion.div
                 key={integration.name}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}"
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50"
@@ -925,32 +538,17 @@ export default function AIFinancialPlanning(...args: any[]): any {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}"
       <section className="py-20 bg-gradient-to-r from-emerald-900/20 to-teal-900/20">"
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}

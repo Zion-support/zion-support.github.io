@@ -1,87 +1,11 @@
-<<<<<<< HEAD
-import {
-
-  Users,
-  MessageCircle,
-  Star,
-  TrendingUp,
-  Calendar,
-  MapPin,
-  Globe,
-  ArrowRight,
-  CheckCircle,
-  Heart,
-  Share2,
-  BookOpen,
-  Video,
-  Download,
-  ExternalLink,
-  Zap,
-  Brain,
-  Shield,
-  Cloud,
-  Rocket,
-  Heart,
-  Award,
-  CheckCircle,
-  ArrowRight'
-} from 'lucide-react';
-
-export default function Community() {
-  
-    { label: 'Active Members', value: '15,000+', icon: Users, color: 'from-blue-500 to-cyan-500' },;
-    { label: 'Discussions', value: '50,000+', icon: MessageCircle, color: 'from-purple-500 to-pink-500' },;
-    { label: 'Events Hosted', value: '200+', icon: Calendar, color: 'from-green-500 to-emerald-500' },;
-    { label: 'Countries', value: '45+', icon: Globe, color: 'from-orange-500 to-red-500' };
-  ];
-
-  
-      color: 'from-green-600 to-emerald-600',;
-      topics: 620,;
-      posts: 4100,;
-      members: 1800,;
-      href: '/community/digital-transformation'};
-  ];
-
-  
-      type: 'Meetup',;
-      attendees: 75,;
-      icon: Cloud,;
-      color: 'from-blue-500 to-cyan-500',;
-      href: '/events/devops-meetup-nyc'};
-  ];
-
-  
-      lastActivity: '1 day ago',;
-      tags: ['Multi-Cloud',Cost Optimization',DevOps'],;
-      icon: Cloud,;
-      color: 'from-blue-500 to-cyan-500',;
-      href: '/community/discussions/multi-cloud-cost-optimization'};
-  ];
-
-  
-      title: 'Resource Library',;
-      description: 'Access shared resources, templates, and tools',;
-      icon: Download,;
-      href: '/community/resources',;
-      color: 'from-orange-500 to-red-500'};
-  ];
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
 export default function Community(...args[]):  {
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <SEO "
-<<<<<<< HEAD
-        title="Community - Zion Tech Group"
-        description="Join our community of technology professionals and enthusiasts. Share knowledge, get help, and connect with peers."
-       />
-=======
         title="Community - Zion Tech Group""        description="Join our community of technology professionals and enthusiasts. Share knowledge, get help, and connect with peers."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       
       {/* Header */}"
       <div className="bg-slate-800/50 border-b border-slate-700">;"
@@ -318,10 +242,8 @@ const Community: React.FC = () => {
   
       case 'popular':
         return b.likes - a.likes;
-=======
         return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();'      case 'popular':
         return b.likes - a.likes;'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       case 'most-replied':
         return b.replies - a.replies;
       case 'most-viewed':
@@ -590,12 +512,7 @@ const Community: React.FC = () => {
               <div className="relative">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
                 <input"
-<<<<<<< HEAD
-                  type="text"
-                  placeholder="Search community posts..."
-=======
                   type="text""                  placeholder="Search community posts..."
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}"
                   className="w-full pl-10 pr-4 py-3 bg-white/20 border border-white/30 rounded-xl text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"

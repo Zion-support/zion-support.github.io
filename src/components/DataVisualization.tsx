@@ -1,61 +1,4 @@
-<<<<<<< HEAD
-import {
-
-  BarChart3,
-  PieChart,
-  TrendingUp,
-  Activity,
-  Users,
-  DollarSign,
-  Calendar,
-  Target,
-  ArrowUp,
-  ArrowDown,
-  Minus,
-  Eye,
-  Download,
-  Share2,
-  RefreshCw'
- } from 'lucide-react';
-
-interface ChartData {
-  labels: string[];
-datasets: {
-
-    label: string;
-    data: number[];
-    backgroundColor: string[];
-    borderColor: string[];
-    borderWidth: number
-}[]}
-
-interface MetricCard {
-  title: string;
-  value: string | number;
-  change: number;
-  changeType: 'increase' | 'decrease' | 'neutral';
-  icon: React.ReactNode;
-  color: string
-}
-
-interface DataVisualizationProps extends React.PropsWithChildren<{}> {
-
-  title?: string;
-  showMetrics?: boolean;
-  showCharts?: boolean;
-  showActions?: boolean}
-
-export const DataVisualization: React.FC<DataVisualizationProps> = ({
-
-title:  "Data Analytics Dashboard",;
-  showMetrics = true,;
-  showCharts = true,;
-  showActions = true}) => {;
-  const [selectedTimeRange, setSelectedTimeRange] = useState('7d');
-  const [isLoading, setIsLoading] = useState(false);
-=======
   const [isLoading, setIsLoading] = useState(false);'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   const [activeChart, setActiveChart] = useState<any>('bar');
 
   // Sample data - in a real app, this would come from an API
@@ -79,12 +22,7 @@ title:  "Data Analytics Dashboard",;
       value: '$2.4M',
       change: 12.5,
       changeType: 'increase',"
-<<<<<<< HEAD
-      icon: <DollarSign className = "w-5 h-5"  />,
-      color: 'text-green-400'
-=======
       icon: <DollarSign className = "w-5 h-5"  />,'      color: 'text-green-400'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     },
     {
 
@@ -92,12 +30,7 @@ title:  "Data Analytics Dashboard",;
       value: '45.2K',
       change: 8.1,
       changeType: 'increase',"
-<<<<<<< HEAD
-      icon: <Users className="w-5 h-5"  />,
-      color: 'text-blue-400'
-=======
       icon: <Users className="w-5 h-5"  />,'      color: 'text-blue-400'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     },
     {
 
@@ -105,12 +38,7 @@ title:  "Data Analytics Dashboard",;
       value: '3.24%',
       change: -2.4,
       changeType: 'decrease',"
-<<<<<<< HEAD
-      icon: <Target className="w-5 h-5"  />,
-      color: 'text-yellow-400'
-=======
       icon: <Target className="w-5 h-5"  />,'      color: 'text-yellow-400'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     },
     {
 

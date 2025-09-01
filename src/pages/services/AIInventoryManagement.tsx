@@ -1,114 +1,3 @@
-<<<<<<< HEAD
-import { Package, 
-  TrendingUp, 
-  BarChart3, 
-  Users, 
-  Zap, 
-  Globe, 
-  Lock, 
-  Eye,
-  Star,
-  Cpu,
-  Database,
-  Search,
-  Filter,
-  Download,
-  Share2,
-  Play,
-  ArrowRight,
-  CheckCircle,
-  AlertTriangle,
-  FileText,
-  Clock,
-  Award,
-  Brain,
-  Target,
-  PieChart,
-  Activity,
-  Truck,
-  Warehouse,
-  ShoppingCart,
-  Shield,
-  Settings,
-  DollarSign,
-  AlertCircle,
-  Calendar,
-  MapPin,
-  Store'
- } from 'lucide-react.ts';
-
-export default function AIInventoryManagement(...args: any[]): any {
-
-  
-    },;
-    {;
-      icon: Activity,;"
-      title: "Supply Chain Integration",;"
-      description: "Seamless integration with suppliers, logistics partners, and e-commerce platforms for end-to-end visibility."};
-  ]},;
-    {;
-      icon: Clock,;"
-      title: "Time Savings",;"
-      description: "Automate routine inventory tasks and focus on strategic business decisions."};
-  ];
-
-  const pricingPlans = [
-    {
-"
-      name: "Starter","
-      price: "$199","
-      period: "/month","
-      description: "Perfect for small businesses with basic inventory management needs",
-      features: ["
-        "Up to 1,000 SKUs","
-        "Basic demand forecasting","
-        "Email support","
-        "Standard integrations","
-        "Basic reporting","
-        "2 warehouse locations","
-        "Mobile app access"
-      ],"
-      cta: "Start Free Trial",
-      popular: false
-    },
-    {
-"
-      name: "Professional","
-      price: "$599","
-      period: "/month","
-      description: "Ideal for growing businesses with advanced inventory requirements",
-      features: ["
-        "Up to 10,000 SKUs","
-        "Advanced AI forecasting","
-        "Priority support","
-        "Custom integrations","
-        "Advanced analytics","
-        "Multi-location support","
-        "API access","
-        "Barcode scanning","
-        "Supplier management"
-      ],"
-      cta: "Start Free Trial",
-      popular: true
-    },
-    {
-"
-      name: "Enterprise","
-      price: "$1,999","
-      period: "/month","
-      description: "For large organizations requiring enterprise-grade inventory solutions",
-      features: ["
-        "Unlimited SKUs","
-        "Custom AI models","
-        "Dedicated account manager","
-        "White-label solutions","
-        "Advanced security features","
-        "Custom reporting","
-        "On-premise deployment",;"
-        "SLA guarantees",;"
-        "24/7 support";
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ],;"
       cta: "Contact Sales",;
       popular: false};
@@ -117,7 +6,6 @@ export default function AIInventoryManagement(...args: any[]): any {
       industry: "Automotive",;"      description: "Track spare parts, manage service inventory, and optimize supply chain for dealerships",;
       icon: Truck};
   ];
-
   const integrations = [
     {
 "
@@ -151,19 +39,11 @@ export default function AIInventoryManagement(...args: any[]): any {
       metric: "3x",;"
       label: "Faster Processing",;"
       description: "Improved inventory processing speed"};  ];
-
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
-<<<<<<< HEAD
-        title="AI Inventory Management - Zion Tech Group"
-        description="Optimize your inventory with AI-powered demand forecasting, real-time tracking, and automated reordering. Reduce costs and prevent stockouts."
-      />
-=======
         title="AI Inventory Management - Zion Tech Group""        description="Optimize your inventory with AI-powered demand forecasting, real-time tracking, and automated reordering. Reduce costs and prevent stockouts."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 lg:py-32">"
         <div className="absolute inset-0 bg-gradient-to-br from-green-900/20 via-transparent to-blue-900/20"></div>
@@ -171,26 +51,12 @@ export default function AIInventoryManagement(...args: any[]): any {
         <div className="relative max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             animate = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
           >"
@@ -219,7 +85,6 @@ export default function AIInventoryManagement(...args: any[]): any {
           </motion.div>
         </div>
       </section>
-
       {/* Key Metrics Section */}"
       <section className="py-20">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
@@ -228,37 +93,16 @@ export default function AIInventoryManagement(...args: any[]): any {
               <motion.div
                 key={metric.metric}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}"
                 className="text-center"
@@ -277,32 +121,17 @@ export default function AIInventoryManagement(...args: any[]): any {
           </div>
         </div>
       </section>
-
       {/* Features Section */}"
       <section className="py-20 bg-slate-800/50">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"
@@ -321,37 +150,16 @@ export default function AIInventoryManagement(...args: any[]): any {
               <motion.div
                 key={feature.title}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}"
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-green-500/50"
@@ -362,7 +170,6 @@ export default function AIInventoryManagement(...args: any[]): any {
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                 </div>
-
                 {/* Content */}
                 <div>"
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors duration-300">
@@ -372,7 +179,6 @@ export default function AIInventoryManagement(...args: any[]): any {
                     {feature.description}
                   </p>
                 </div>
-
                 {/* Hover Effect */}"
                 <div className="absolute inset-0 bg-gradient-to-r from-green-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </motion.div>
@@ -380,32 +186,17 @@ export default function AIInventoryManagement(...args: any[]): any {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}"
       <section className="py-20">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"
@@ -424,37 +215,16 @@ export default function AIInventoryManagement(...args: any[]): any {
               <motion.div
                 key={benefit.title}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}"
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-green-500/50"
@@ -465,7 +235,6 @@ export default function AIInventoryManagement(...args: any[]): any {
                     <benefit.icon className="w-8 h-8 text-white" />
                   </div>
                 </div>
-
                 {/* Content */}
                 <div>"
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors duration-300">
@@ -475,7 +244,6 @@ export default function AIInventoryManagement(...args: any[]): any {
                     {benefit.description}
                   </p>
                 </div>
-
                 {/* Hover Effect */}"
                 <div className="absolute inset-0 bg-gradient-to-r from-green-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </motion.div>
@@ -483,32 +251,17 @@ export default function AIInventoryManagement(...args: any[]): any {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}"
       <section className="py-20 bg-slate-800/50">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"
@@ -527,41 +280,19 @@ export default function AIInventoryManagement(...args: any[]): any {
               <motion.div
                 key={plan.name}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}
                 className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${
-
                   plan.popular '
                     ? 'border-green-500/50 bg-gradient-to-br from-green-500/10 to-blue-500/10' '
                     : 'border-white/10 hover:border-green-500/50'`
@@ -593,7 +324,6 @@ export default function AIInventoryManagement(...args: any[]): any {
                 </ul>
 `
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-
                   plan.popular'
                     ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white hover:from-green-700 hover:to-blue-700''
                     : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'`
@@ -605,32 +335,17 @@ export default function AIInventoryManagement(...args: any[]): any {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}"
       <section className="py-20">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"
@@ -649,37 +364,16 @@ export default function AIInventoryManagement(...args: any[]): any {
               <motion.div
                 key={useCase.industry}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}"
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-green-500/50"
@@ -690,7 +384,6 @@ export default function AIInventoryManagement(...args: any[]): any {
                     <useCase.icon className="w-8 h-8 text-white" />
                   </div>
                 </div>
-
                 {/* Content */}
                 <div>"
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors duration-300">
@@ -700,7 +393,6 @@ export default function AIInventoryManagement(...args: any[]): any {
                     {useCase.description}
                   </p>
                 </div>
-
                 {/* Hover Effect */}"
                 <div className="absolute inset-0 bg-gradient-to-r from-green-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </motion.div>
@@ -708,32 +400,17 @@ export default function AIInventoryManagement(...args: any[]): any {
           </div>
         </div>
       </section>
-
       {/* Integrations Section */}"
       <section className="py-20 bg-slate-800/50">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"
@@ -752,37 +429,16 @@ export default function AIInventoryManagement(...args: any[]): any {
               <motion.div
                 key={integration.name}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}"
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-green-500/50"
@@ -805,32 +461,17 @@ export default function AIInventoryManagement(...args: any[]): any {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}"
       <section className="py-20 bg-gradient-to-r from-green-900/20 to-blue-900/20">"
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}

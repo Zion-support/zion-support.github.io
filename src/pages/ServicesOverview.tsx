@@ -84,65 +84,7 @@ const categoryColors: Record<string, string> = {
   Innovation: 'from-yellow-600 to-orange-600',Emerging Tech': 'from-purple-600 to-indigo-600'};
 
 
-<<<<<<< HEAD
-
-export default function ServicesOverview() {
-
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [priceRange, setPriceRange] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<string>('name');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-
   
-    return cats.sort()}, []);
-
-  // Calculate service counts for each category
-  
-        } else if (cat.name === 'Cybersecurity & Compliance') {
-
-          return ('
-            service.category.includes('Cybersecurity') ||'
-            service.category.includes('Security')
-          )} else if (cat.name === 'Cloud & DevOps') {
-
-          return ('
-            service.category.includes('Cloud') ||'
-            service.category.includes('DevOps')
-          )} else if (cat.name === 'IoT & Edge Computing') {
-
-          return ('
-            service.category.includes('IoT') ||'
-            service.category.includes('Edge')
-          )} else if (cat.name === 'Digital Transformation') {
-
-          return ('
-            service.category.includes('Digital') ||'
-            service.category.includes('Transformation')
-          )} else if (cat.name === 'Emerging Technologies') {
-
-          return ('
-            service.category.includes('Quantum') ||'
-            service.category.includes('Space') ||'
-            service.category.includes('Blockchain')
-          )} else if (cat.name === 'Micro SaaS Solutions') {
-
-          return ('
-            service.category.includes('Micro SaaS') ||'
-            service.category.includes('SaaS')
-          )} else if (cat.name === 'Healthcare & Life Sciences') {
-
-          return ('
-            service.category.includes('Healthcare') ||'
-            service.category.includes('Health')
-          )}
-        return false}) .length;
-      return { ...cat, count }}) }, []) ;
-
-  
-=======
-  
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     // Filter by search query
     if (searchQuery) {
 
@@ -170,14 +112,8 @@ export default function ServicesOverview() {
 
       filtered = filtered.filter(service => {
 
-<<<<<<< HEAD
-        
-        switch (priceRange) {
-
-=======
         const price = service.price;        switch (priceRange) {
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
           case 'low':
             return price <= 1000;
           case 'medium':
@@ -210,14 +146,8 @@ export default function ServicesOverview() {
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
-<<<<<<< HEAD
-        title="Services Overview - Zion Tech Group"
-        description="Comprehensive overview of all our innovative services including AI solutions, cybersecurity, cloud services, IoT, and emerging technologies. Transform your business with our cutting-edge solutions."
-      />
-=======
         title="Services Overview - Zion Tech Group""        description="Comprehensive overview of all our innovative services including AI solutions, cybersecurity, cloud services, IoT, and emerging technologies. Transform your business with our cutting-edge solutions."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
@@ -365,12 +295,7 @@ export default function ServicesOverview() {
               <div className="relative">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
                 <input"
-<<<<<<< HEAD
-                  type="text"
-                  placeholder="Search services..."
-=======
                   type="text""                  placeholder="Search services..."
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   value={searchQuery}
                   onChange={e => setSearchQuery(e.target.value)}"
                   className="w-full pl-10 pr-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"

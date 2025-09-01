@@ -1,11 +1,7 @@
 ;
 const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
-
-  
     };
   ];
-
-  
   const pricingPlans = [
     {
 "
@@ -60,19 +56,11 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
       popular: false};
   ]};
   ]};  ];
-
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-<<<<<<< HEAD
-        title="AI-Powered Supply Chain Optimization Platform - Zion Tech Group"
-        description="Revolutionize your supply chain with AI-powered optimization. Reduce costs, improve efficiency, and enhance customer satisfaction with intelligent logistics management."
-       />
-=======
         title="AI-Powered Supply Chain Optimization Platform - Zion Tech Group""        description="Revolutionize your supply chain with AI-powered optimization. Reduce costs, improve efficiency, and enhance customer satisfaction with intelligent logistics management."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      
       {/* Hero Section */}"
       <div className="relative overflow-hidden">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">"
@@ -94,7 +82,6 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
             </div>
           </div>
         </section>
-
       {/* Key Benefits */}"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">"
         <div className="text-center mb-16">"
@@ -110,7 +97,6 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
             </div>
           </div>
         </section>
-
       {/* Features */}"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">"
         <div className="text-center mb-16">"
@@ -134,7 +120,6 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
           ))}
         </div>
       </div>
-
       {/* Use Cases */}"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">"
         <div className="text-center mb-16">"
@@ -155,7 +140,6 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
           ))}
         </div>
       </div>
-
       {/* Pricing */}"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">"
         <div className="text-center mb-16">"
@@ -195,7 +179,6 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
           ))}
         </div>
       </div>
-
       {/* CTA Section */}"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">"
         <div className="text-center">"
@@ -213,7 +196,6 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
           </div>
         </div>
       </div>
-
       {/* Contact Information */}"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">"
         <div className="text-center">"
@@ -246,5 +228,4 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
       </div>;
     </div>;
   )};
-
 export default AISupplyChainOptimizationPlatform;'"`

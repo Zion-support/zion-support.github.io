@@ -1,5 +1,4 @@
 import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, Gauge, Database, Shield, Zap, Users, Settings, BarChart3, Activity const AIPredictiveMaintenance: React.FC = props {
-  
     },;
     {;
       icon: BarChart3,;
@@ -11,62 +10,29 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
       description: 'Medical equipment maintenance and reliability',;
       icon: '🏥'};
   ];
-
-<<<<<<< HEAD
-  
-    'Reduce unplanned downtime by up to 75%',;
-    'Extend equipment lifespan and reliability',;
-    'Lower maintenance costs and labor requirements',;
-    'Improve safety and compliance standards',;
-    'Optimize spare parts inventory management',;
-    'Increase overall operational efficiency';
-=======
   const benefits = [;'
     'Reduce unplanned downtime by up to 75%',;'
     'Extend equipment lifespan and reliability',;'
     'Lower maintenance costs and labor requirements',;'
     'Improve safety and compliance standards',;'
     'Optimize spare parts inventory management',;'    'Increase overall operational efficiency';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
-
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-<<<<<<< HEAD
-        title="AI Predictive Maintenance Services - Zion Tech Group"
-        description="Transform your maintenance operations with AI-powered predictive maintenance. Prevent equipment failures and optimize performance with intelligent monitoring."
-       />
-=======
         title="AI Predictive Maintenance Services - Zion Tech Group""        description="Transform your maintenance operations with AI-powered predictive maintenance. Prevent equipment failures and optimize performance with intelligent monitoring."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
       {/* Hero Section */}"
       <section className="pt-20 pb-16 px-4">"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             animate = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}"
             className="text-center"
@@ -98,32 +64,17 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
           </motion.div>
         </div>
       </section>;
-
       {/* Features Section */}"
       <section className="py-16 px-4">;"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}"
             className="text-center mb-16"
@@ -141,37 +92,16 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
               <motion.div
                 key={feature.title}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}"
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-400/30 transition-all duration-200 hover:scale-105"
 "
@@ -185,32 +115,17 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
           </div>
         </div>
       </section>
-
       {/* Applications Section */}"
       <section className="py-16 px-4 bg-slate-800/30">;"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}"
             className="text-center mb-16"
@@ -228,37 +143,16 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
               <motion.div
                 key={application.title}
                 initial = {
-
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}"
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-400/30 transition-all duration-200"
 "
@@ -274,32 +168,17 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}"
       <section className="py-16 px-4">;"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}"
             className="text-center mb-16"
@@ -315,26 +194,12 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
           <div className="grid md:grid-cols-2 gap-8">
             <motion.div
               initial = {
-
   { opacity: 0,
   x: -20 
-
-
-
-
-
-
 }}
               whileInView = {
-
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.6 }}"
               className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8"
@@ -348,29 +213,14 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
                 ))}
               </ul>
             </motion.div>
-
             <motion.div
               initial = {
-
   { opacity: 0,
   x: 20 
-
-
-
-
-
-
 }}
               whileInView = {
-
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.6 }}"
               className="bg-gradient-to-br from-orange-500/20 to-red-500/20 border border-orange-400/30 rounded-xl p-8"
@@ -387,32 +237,17 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
           </div>
         </div>
       </section>
-
       {/* CTA Section */}"
       <section className="py-16 px-4">;"
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
 "
@@ -435,5 +270,4 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
       </section>;
     </div>;
   )};
-
 export default AIPredictiveMaintenance}}}'"

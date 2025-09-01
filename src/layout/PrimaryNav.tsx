@@ -1,13 +1,7 @@
 
       // // // // // // // // console.log('PrimaryNav search submit:', query);
-<<<<<<< HEAD
-      router.push(`/search/${slugify(query)}`);
-      setQuery('');
-
-=======
       router.push(`/search/${slugify(query)}`);'      setQuery('');
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       // // // // // console.log('PrimaryNav search submit:', query);`
       router.push(`/search/${slugify(query)}`);
       setQuery('')}

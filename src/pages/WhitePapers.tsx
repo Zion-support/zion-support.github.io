@@ -134,12 +134,7 @@ export default function WhitePapers() {
             <div className="relative w-full lg:w-96">"
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400"  />
               <input"
-<<<<<<< HEAD
-                type="text"
-                placeholder="Search white papers..."
-=======
                 type="text""                placeholder="Search white papers..."
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                 value={searchQuery}
                 onChange={e => setSearchQuery(e.target.value)}"
                 className="w-full pl-10 pr-4 py-3 rounded-lg bg-slate-800 border border-slate-600 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white placeholder-slate-400"

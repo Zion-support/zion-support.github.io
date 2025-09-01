@@ -1,5 +1,4 @@
 import {
-
   Search,
   Filter,
   Star,
@@ -53,30 +52,17 @@ import {
   Zap as ZapIcon,
   MessageCircle} from 'lucide-react';
 export default function MarketplaceProducts() {
-
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
   const [sortBy, setSortBy] = useState('featured');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [showFilters, setShowFilters] = useState<typeof false>(false);
-
-  
-  
-  
-  
-  
-    
-    
     return matchesSearch && matchesCategory && matchesPrice});
-
-  
       case 'price-low':
         return a.price - b.price;
-=======
         );'      case 'price-low':
         return a.price - b.price;'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       case 'price-high':
         return b.price - a.price;
       case 'rating':
@@ -92,7 +78,6 @@ export default function MarketplaceProducts() {
         title="Marketplace Products - Zion Tech Group"
         description="Discover innovative technology products in our marketplace. From AI tools to cybersecurity solutions, find the perfect products for your business needs."
       />
-
       {/* Hero Section */}"
       <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue to-zion-slate-dark">"        <div className="container mx-auto px-4 text-center">
           <motion.h1
@@ -114,7 +99,6 @@ export default function MarketplaceProducts() {
           </motion.p>
         </div>
       </section>
-
       {/* Search and Filters */}"
       <section className="py-8 bg-zion-slate-dark border-b border-zion-slate-light/20">"
         <div className="container mx-auto px-4">"
@@ -123,18 +107,12 @@ export default function MarketplaceProducts() {
             <div className="relative w-full lg:w-96">"
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />
               <input"
-<<<<<<< HEAD
-                type="text"
-                placeholder="Search products..."
-=======
                 type="text""                placeholder="Search products..."
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                 value={searchQuery}
                 onChange={e => setSearchQuery(e.target.value)}"
                 className="w-full pl-10 pr-4 py-3 bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-200"
               />
             </div>
-
             {/* Controls */}"
             <div className="flex flex-wrap gap-4 items-center">
               {/* View Mode Toggle */}"
@@ -142,7 +120,6 @@ export default function MarketplaceProducts() {
                 <button'
                   onClick={() => setViewMode('grid')}`
                   className={`p-2 rounded-md transition-all duration-200 ${
-
                     viewMode === 'grid''
                       ? 'bg-zion-cyan text-white''
                       : 'text-zion-slate-light hover:text-white'`
@@ -152,7 +129,6 @@ export default function MarketplaceProducts() {
                 <button'
                   onClick={() => setViewMode('list')}`
                   className={`p-2 rounded-md transition-all duration-200 ${
-
                     viewMode === 'list''
                       ? 'bg-zion-cyan text-white''
                       : 'text-zion-slate-light hover:text-white'`
@@ -160,7 +136,6 @@ export default function MarketplaceProducts() {
                 >"
                   <List className="w-5 h-5"  />                </button>
               </div>
-
               {/* Sort */}
               <select
                 value={sortBy}
@@ -173,7 +148,6 @@ export default function MarketplaceProducts() {
                   </option>
                 ))}
               </select>
-
               {/* Filters Toggle */}
               <button
                 onClick={() => setShowFilters(!showFilters)}"
@@ -188,7 +162,6 @@ export default function MarketplaceProducts() {
                 )}              </button>
             </div>
           </div>
-
           {/* Expanded Filters */}
           {showFilters && 
             <motion.div
@@ -216,7 +189,6 @@ export default function MarketplaceProducts() {
                     ))}
                   </select>
                 </div>
-
                 {/* Price Range Filter */}
                 <div>"
                   <label className="block text-white font-medium mb-2">
@@ -234,12 +206,10 @@ export default function MarketplaceProducts() {
                     ))}
                   </select>
                 </div>
-
                 {/* Clear Filters */}"
                 <div className="flex items-end">
                   <button
                     onClick={() => {
-
                       setSelectedCategory('all');
                       setSelectedPriceRange('all');
                       setSearchQuery('')}}"                    className="w-full px-4 py-2 bg-zion-slate-light/20 text-zion-slate-light border border-zion-slate-light/30 rounded-lg hover:bg-zion-slate-light/30 hover:text-white transition-all duration-200"
@@ -252,7 +222,6 @@ export default function MarketplaceProducts() {
           )}
         </div>
       </section>
-
       {/* Results Summary */}"
       <section className="py-4 bg-zion-slate-dark">"
         <div className="container mx-auto px-4">"
@@ -266,7 +235,6 @@ export default function MarketplaceProducts() {
           </div>
         </div>
       </section>
-
       {/* Products Grid/List */}"
       <section className="py-16 bg-zion-slate-dark">"
         <div className="container mx-auto px-4">
@@ -282,7 +250,6 @@ export default function MarketplaceProducts() {
           ) : (
             <div
               className={
-
                 viewMode === 'grid''
                   ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8''
                   : 'space-y-6'
@@ -295,7 +262,6 @@ export default function MarketplaceProducts() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}`
                   className={`bg-gradient-to-br from-zion-slate-dark/50 to-zion-blue/10 backdrop-blur-sm rounded-xl overflow-hidden border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 hover:scale-105 group ${
-
                     viewMode === 'list' ? 'flex' : ''`
                   }`}
                 >
@@ -307,7 +273,6 @@ export default function MarketplaceProducts() {
                       src={product.image}
                       alt={product.name}`
                       className={`w-full object-cover group-hover:scale-105 transition-transform duration-300 ${
-
                         viewMode === 'list' ? 'h-full' : 'h-48'`
                       }`}
                     />
@@ -333,14 +298,12 @@ export default function MarketplaceProducts() {
                       </div>
                     )}
                   </div>
-
                   {/* Product Content */}'`
                   <div className={`p-6 ${viewMode === 'list' ? 'flex-1' : ''}`}>
                     {/* Category and Vendor */}"
                     <div className="flex items-center justify-between mb-3">"
                       <span className="inline-flex items-center px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full">
                         {
-
                           categories.find(cat => cat.id === product.category)
                             ?.name
                         }
@@ -353,12 +316,10 @@ export default function MarketplaceProducts() {
                           <CheckCircle className="w-4 h-4 text-zion-cyan"  />                        )}
                       </div>
                     </div>
-
                     {/* Product Name */}"
                     <h3 className="text-xl font-bold text-white mb-3 leading-tight group-hover:text-zion-cyan transition-colors duration-200">
                       {product.name}
                     </h3>
-
                     {/* Rating */}"
                     <div className="flex items-center gap-2 mb-3">"
                       <div className="flex items-center">
@@ -368,12 +329,10 @@ export default function MarketplaceProducts() {
                         {product.rating} ({product.reviewCount} reviews)
                       </span>
                     </div>
-
                     {/* Description */}"
                     <p className="text-zion-slate-light mb-4 leading-relaxed">
                       {product.description}
                     </p>
-
                     {/* Features */}"
                     <div className="mb-4">"
                       <h4 className="text-white font-semibold mb-2">
@@ -390,7 +349,6 @@ export default function MarketplaceProducts() {
                         ))}
                       </div>
                     </div>
-
                     {/* Price and Actions */}"
                     <div className="flex items-center justify-between mb-4">"
                       <div className="text-2xl font-bold text-white">
@@ -419,7 +377,6 @@ export default function MarketplaceProducts() {
                         </button>
                       </div>
                     </div>
-
                     {/* Tags */}"
                     <div className="flex flex-wrap gap-2 mb-4">
                       {product.tags.slice(0, 3).map(tag => (
@@ -431,7 +388,6 @@ export default function MarketplaceProducts() {
                         </span>
                       ))}
                     </div>
-
                     {/* Action Buttons */}"
                     <div className="flex gap-3">"
                       <button className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-medium rounded-lg hover:from-zion-cyan/80 hover:to-zion-purple/80 transition-all duration-300 group-hover:scale-105">"
@@ -448,7 +404,6 @@ export default function MarketplaceProducts() {
           )}
         </div>
       </section>
-
       {/* Call to Action */}"
       <section className="py-16 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10">"
         <div className="container mx-auto px-4 text-center">

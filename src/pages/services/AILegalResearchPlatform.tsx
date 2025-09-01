@@ -1,89 +1,3 @@
-<<<<<<< HEAD
-import { Brain, 
-  BookOpen, 
-  TrendingUp, 
-  Target, 
-  Users, 
-  BarChart3, 
-  Calendar,
-  Zap,
-  CheckCircle,
-  Star,
-  ArrowRight,
-  Globe,
-  Smartphone,
-  Monitor,
-  MessageSquare,
-  Share2,
-  Analytics,
-  Palette,
-  Clock,
-  DollarSign,
-  Shield,
-  Headphones,
-  Rocket,
-  Scale,
-  FileText,
-  Search,
-  Gavel,
-  Library,
-  Briefcase,
-  Award'
- } from 'lucide-react';
-;
-export { function };
-export default function AILegalResearchPlatform(...args[]):  {
-
-  const features = [
-    "AI-powered case law research and analysis","
-    "Intelligent document review and contract analysis","
-    "Automated legal citation checking and validation","
-    "Real-time legal precedent tracking","
-    "Advanced search with natural language queries","
-    "Legal document generation and templates",;"
-    "Compliance monitoring and risk assessment",;"
-    "Multi-jurisdiction legal research",;"
-    "Legal trend analysis and predictions",;"
-    "Automated case outcome prediction",;"
-    "Legal knowledge base management",;"
-    "Collaborative research and sharing tools";
-  ];
-
-  const benefits = [;"
-    "Reduce research time by 70%",;"
-    "Improve case outcome accuracy by 45%",;"
-    "Increase billable hours by 30%",;"
-    "Reduce legal research costs by 50%",;"
-    "Enhance client service quality";
-  ];
-
-  const useCases = ["
-    "Law firms and attorneys","
-    "Corporate legal departments",;"
-    "Legal research institutions",;"
-    "Government agencies",;"
-    "Compliance officers",;"
-    "Risk management teams",;"
-    "Legal technology companies",;"
-    "Academic legal research";
-  ];
-
-  const pricing = [
-    {
-"
-      name: "Professional","
-      price: "$299","
-      period: "/month","
-      description: "Perfect for individual attorneys and small law firms",
-      features[;"
-        "AI legal research (up to 100 queries/month)","
-        "Basic document analysis","
-        "Case law database access","
-        "Citation checking","
-        "Email support","
-        "Up to 5 users"
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ],;"
       cta: "Start Free Trial",
       popular: false
@@ -124,44 +38,22 @@ export default function AILegalResearchPlatform(...args[]):  {
       cta: "Contact Sales",;
       popular: false};
   ];
-
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-<<<<<<< HEAD
-        title="AI Legal Research Platform - Zion Tech Group"
-        description="Revolutionize your legal research with AI-powered case analysis, document review, and legal insights. Save time and improve case outcomes."
-       />
-=======
         title="AI Legal Research Platform - Zion Tech Group""        description="Revolutionize your legal research with AI-powered case analysis, document review, and legal insights. Save time and improve case outcomes."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
       {/* Hero Section */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             animate = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
 "
@@ -183,46 +75,29 @@ export default function AILegalResearchPlatform(...args[]):  {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
                 className="px-8 py-4 bg-gradient-to-r from-amber-600 to-orange-600 text-white font-semibold rounded-lg hover:from-amber-700 hover:to-orange-700 transition-all duration-200"
-
                 Start Free Trial
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
                 className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200"
-
                 Watch Demo
               </motion.button>
             </div>
           </motion.div>;
         </div>
       </section>
-
       {/* Features Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">;"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}"
             className="text-center mb-16"
@@ -240,37 +115,16 @@ export default function AILegalResearchPlatform(...args[]):  {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}"
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-amber-500 transition-all duration-300"
 "
@@ -282,32 +136,17 @@ export default function AILegalResearchPlatform(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}"
             className="text-center mb-16"
@@ -325,37 +164,16 @@ export default function AILegalResearchPlatform(...args[]):  {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}"
                 className="text-center"
 "
@@ -367,32 +185,17 @@ export default function AILegalResearchPlatform(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">;"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}"
             className="text-center mb-16"
@@ -410,37 +213,16 @@ export default function AILegalResearchPlatform(...args[]):  {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}"
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-amber-500 transition-all duration-300"
 "
@@ -452,32 +234,17 @@ export default function AILegalResearchPlatform(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}"
             className="text-center mb-16"
@@ -495,45 +262,22 @@ export default function AILegalResearchPlatform(...args[]):  {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-
                   plan.popular'
                     ? 'border-amber-500 ring-2 ring-amber-500/20''
                     : 'border-gray-700'`
                 }`}
-
                 {plan.popular && (;"
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
                     <span className="bg-gradient-to-r from-amber-600 to-orange-600 text-white px-4 py-2 rounded-full text-sm font-medium">
@@ -558,17 +302,14 @@ export default function AILegalResearchPlatform(...args[]):  {
                     </li>
                   ))}
                 </ul>
-
                 <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}`
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
-
                     plan.popular'
                       ? 'bg-gradient-to-r from-amber-600 to-orange-600 text-white hover:from-amber-700 hover:to-orange-700''
                       : 'bg-gray-700 text-white hover:bg-gray-600'`
                   }`}
-
                   {plan.cta}
                 </motion.button>;
               </motion.div>
@@ -576,32 +317,17 @@ export default function AILegalResearchPlatform(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">;"
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
 "
@@ -616,14 +342,12 @@ export default function AILegalResearchPlatform(...args[]):  {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
                 className="px-8 py-4 bg-gradient-to-r from-amber-600 to-orange-600 text-white font-semibold rounded-lg hover:from-amber-700 hover:to-orange-700 transition-all duration-200"
-
                 Start Free Trial
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
                 className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200"
-
                 Schedule Demo
               </motion.button>
             </div>"
@@ -633,7 +357,6 @@ export default function AILegalResearchPlatform(...args[]):  {
           </motion.div>
         </div>
       </section>
-
       {/* Contact Info */}"
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-800/50">;"
         <div className="max-w-4xl mx-auto text-center">"

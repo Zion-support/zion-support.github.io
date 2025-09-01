@@ -1,45 +1,3 @@
-<<<<<<< HEAD
-import {
-
-  Code,
-  Search,
-  Filter,
-  ArrowRight,
-  Download,
-  ExternalLink,
-  Brain,
-  Cloud,
-  Shield,
-  Sparkles,
-  Zap,
-  Globe,
-  Target,
-  TrendingUp,
-  CheckCircle,
-  Clock,
-  User,
-  Star,
-  Terminal,
-  Key,
-  Database,
-  Lock'
-} from 'lucide-react';
-
-const API: React.FC = () => {
-  
-    {;
-      method: 'PUT',;
-      path: '/api/v1/user/profile',;
-      description: 'Update user profile',;
-      auth: 'Required'};
-  ]},;
-    {;
-      icon: Database,;
-      title: 'Real-time Data',;
-      description: 'Live data synchronization across all endpoints'};
-  ];
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
 url = "https://api.ziontechgroup.com/v1/ai/text/analyze"
 headers = {"Authorization": "Bearer YOUR_API_KEY"}
@@ -62,12 +20,7 @@ print(response.json())`,
 
 
     return response.data;`
-<<<<<<< HEAD
-};`,
-    category: 'Cloud & DevOps'
-=======
 };`,'    category: 'Cloud & DevOps'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   },
   {
 
@@ -99,14 +52,8 @@ export default function API() {
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-<<<<<<< HEAD
-        title="API Reference - Zion Tech Group"
-        description="Comprehensive API documentation for Zion Tech Group services. Integrate with our platform using RESTful APIs, SDKs, and developer tools."
-       />
-=======
         title="API Reference - Zion Tech Group""        description="Comprehensive API documentation for Zion Tech Group services. Integrate with our platform using RESTful APIs, SDKs, and developer tools."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative pt-32 pb-20 overflow-hidden">"

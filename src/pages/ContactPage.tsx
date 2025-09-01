@@ -78,12 +78,7 @@ export function ContactPage(...args: any[]): any {
               Thank you for reaching out to Zion Tech Group. We've received your
               message and will get back to you within 24 hours.
             </p>"
-<<<<<<< HEAD
-            <div className="text-sm text-gray-500">
-              You'll receive a confirmation email shortly.
-=======
             <div className="text-sm text-gray-500">'              You'll receive a confirmation email shortly.
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
             </div>
           </motion.div>
         </div>

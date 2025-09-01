@@ -1,55 +1,3 @@
-<<<<<<< HEAD
-import { Brain, 
-
-
-  Shield, 
-  Cloud, 
-  Rocket, 
-  BarChart3, 
-  Briefcase,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  Search,
-  Filter,
-  Grid,
-  List,
-  Zap,
-  Lock,
-  Database,
-  Users,
-  TrendingUp,
-  Globe,
-  Cpu,
-  Heart,
-  ShoppingCart,
-  BookOpen,
-  MessageCircle,
-  HelpCircle,
-  DollarSign,
-  Gauge,
-  Workflow,
-  Atom,
-  Target,
-  Award,
-  Code,
-  Truck,
-  Building,
-  PenTool,
-  Eye,
-  Server,
-  Smartphone,
-  Network,
-  Clock,
-  X'
- } from 'lucide-react.ts';
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 export default function InnovativeServicesShowcase2025(...args: any[]): any {
 
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -197,12 +145,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
             <div className="relative flex-1 max-w-md">"
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
               <input"
-<<<<<<< HEAD
-                type="text"
-                placeholder="Search services..."
-=======
                 type="text""                placeholder="Search services..."
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}"
                 className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"

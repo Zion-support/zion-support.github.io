@@ -27,22 +27,11 @@ import {
   Heart'
 } from 'lucide-react';
 ;
-
-  
-  
-  
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
-<<<<<<< HEAD
-        title="AI Sales Copilot - Zion Tech Group"
-        description="Transform your sales process with AI-powered automation. Increase productivity, improve conversions, and drive revenue growth."
-      />
-=======
         title="AI Sales Copilot - Zion Tech Group""        description="Transform your sales process with AI-powered automation. Increase productivity, improve conversions, and drive revenue growth."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 lg:py-32">"
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-indigo-900/20"></div>
@@ -78,7 +67,6 @@ import {
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}"
       <section className="py-20 bg-slate-800/50">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -97,7 +85,6 @@ import {
               your sales process for maximum efficiency and results.
             </p>
           </motion.div>
-
       {/* Features */}"
       <section className="py-16 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto">"
@@ -118,7 +105,6 @@ import {
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                 </div>
-
                 {/* Content */}
                 <div>"
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-300">
@@ -128,7 +114,6 @@ import {
                     {feature.description}
                   </p>
                 </div>
-
                 {/* Hover Effect */}"
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-indigo-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </motion.div>
@@ -136,7 +121,6 @@ import {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}"
       <section className="py-20">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -172,7 +156,6 @@ import {
                     <benefit.icon className="w-8 h-8 text-white" />
                   </div>
                 </div>
-
                 {/* Content */}
                 <div>"
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-300">
@@ -182,7 +165,6 @@ import {
                     {benefit.description}
                   </p>
                 </div>
-
                 {/* Hover Effect */}"
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-indigo-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </motion.div>
@@ -190,7 +172,6 @@ import {
           </div>
         </div>
       </section>
-
       {/* Sales Process Section */}"
       <section className="py-20 bg-slate-800/50">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -226,7 +207,6 @@ import {
                     <stage.icon className="w-8 h-8 text-white" />
                   </div>
                 </div>
-
                 {/* Content */}
                 <div>"
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-300">
@@ -236,7 +216,6 @@ import {
                     {stage.description}
                   </p>
                 </div>
-
                 {/* Hover Effect */}"
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-indigo-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </motion.div>
@@ -244,7 +223,6 @@ import {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}"
       <section className="py-20">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -280,7 +258,6 @@ import {
                     <useCase.icon className="w-8 h-8 text-white" />
                   </div>
                 </div>
-
                 {/* Content */}
                 <div>"
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-300">
@@ -290,7 +267,6 @@ import {
                     {useCase.description}
                   </p>
                 </div>
-
                 {/* Hover Effect */}"
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-indigo-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </motion.div>
@@ -298,7 +274,6 @@ import {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}"
       <section className="py-20 bg-gradient-to-r from-blue-900/20 to-indigo-900/20">"
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -331,5 +306,4 @@ import {
   )};
 ;
 export { AISalesCopilot };export default AISalesCopilot;
-
 '"

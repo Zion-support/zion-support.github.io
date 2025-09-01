@@ -1,81 +1,3 @@
-<<<<<<< HEAD
-import {
-
-  CheckCircle,
-  AlertTriangle,
-  Info,
-  X,
-  Bell,
-  Settings,
-  Volume2,
-  VolumeX,
-  Zap,
-  Star,
-  MessageSquare,
-  Shield,
-  Clock'
- } from 'lucide-react';
-
-export type NotificationType = 'success' | 'warning' | 'error' | 'info' | 'achievement';
-
-export interface Notification {
-  id: string;
-  type: NotificationType;
-  title: string;
-  message: string;
-  duration?: number;
-  timestamp: Date;
-  read: boolean;
-action?: {
-
-    label: string;
-    onClick: ()  => void};
-  priority: 'low' | 'medium' | 'high';
-  category?: string;
-  icon?: React.ReactNode}
-
-interface NotificationSystemProps extends React.PropsWithChildren<{}> {
-
-  maxNotifications?: number;
-  position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
-  enableSound?: boolean;
-  enableVibration?: boolean;
-  autoDismiss?: boolean;
-  defaultDuration?: number}
-
-interface NotificationSettings {
-  sound: boolean;
-  vibration: boolean;
-  autoDismiss: boolean;
-  position: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
-  maxNotifications: number;
-  defaultDuration: number}
-
-export const NotificationSystem: React.FC<NotificationSystemProps> = ({
-
-  maxNotifications = 5,
-  position = 'top-right',
-enableSound:  true,;
-  enableVibration = true,;
-  autoDismiss = true,;
-  defaultDuration = 5000}) => {;
-  const [notifications, setNotifications] = useState<Notification[]>([]);
-  const [settings, setSettings] = useState<NotificationSettings>({
-
-    sound: enableSound,
-    vibration: enableVibration,
-    autoDismiss: autoDismiss,
-    position,
-    maxNotifications,
-    defaultDuration
-  }) ;
-  const [showSettings, setShowSettings] = useState (false) ;
-  const [isOpen, setIsOpen] = useState (false) ;
-  const [unreadCount, setUnreadCount] = useState (0) ;
-  
-  // Initialize audio for notification sounds
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   useEffect ( () => {
     if (settings.sound) {
 
@@ -172,14 +94,8 @@ enableSound:  true,;
       case 'top-right':'
         return 'top-4 right-4';
       case 'bottom-left':'
-<<<<<<< HEAD
-        return 'bottom-4 left-4';
-      case 'bottom-right':'
-        return 'bottom-4 right-4';
-=======
         return 'bottom-4 left-4';'
       case 'bottom-right':'        return 'bottom-4 right-4';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       default:'
         return 'top-4 right-4'}
   };
@@ -468,9 +384,7 @@ export
 // Utility functions for common notification types
 export 
         priority: 'medium',;
-=======
 })};'        priority: 'medium',;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   ...options;

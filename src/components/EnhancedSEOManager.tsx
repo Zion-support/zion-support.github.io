@@ -1,29 +1,3 @@
-<<<<<<< HEAD
-
-interface SEOData {
-
-  title: string;
-  description: string;
-  keywords: string[];
-  ogImage?: string;
-  ogType?: string;
-  canonicalUrl?: string;
-  structuredData?: object;
-
-interface EnhancedSEOManagerProps {
-  // Add your props here
-
-  seoData: SEOData;
-  children: React.ReactNode;
-
-const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, children }) => {
-
-  useEffect(() => {
-    // Update meta tags dynamically
-    
-      // Update title;
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       document.title = seoData.title;
 
       // Update meta description'
@@ -70,16 +44,9 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
           document.head.appendChild(twitterTag)}
         twitterTag.setAttribute('content', content)};
       '
-<<<<<<< HEAD
-      updateTwitterTag('twitter:card',summary_large_image');
-      updateTwitterTag('twitter:title', seoData.title);
-      updateTwitterTag('twitter:description', seoData.description);
-      if (seoData.ogImage) updateTwitterTag('twitter:image', seoData.ogImage);
-=======
       updateTwitterTag('twitter:card', 'summary_large_image');'
       updateTwitterTag('twitter:title', seoData.title);'
       updateTwitterTag('twitter:description', seoData.description);'      if (seoData.ogImage) updateTwitterTag('twitter:image', seoData.ogImage);
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       
       // Add canonical URL
       if (seoData.canonicalUrl) {

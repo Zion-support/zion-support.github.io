@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-
-export type ToastType = 'success' | 'error' | 'warning' | 'info';
-=======
 'export type ToastType = 'success' | 'error' | 'warning' | 'info';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 ;
 export interface Toast {
   id: anystring;
@@ -12,23 +7,16 @@ export interface Toast {
   message?: string;
   duration?: number}
 interface ToastProps extends React.PropsWithChildren<{}> {
-
   toast: Toast;
   onRemove: id: string void}
 ;
 const ToastItem: React.FC<ToastProps> = { toast: unknown, onRemove }: unknown {
   const [isVisible, setIsVisible] = useState<typeof true>(true);
 const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
-
   const [isVisible, setIsVisible] = useState(true);
-
   useEffect(() => {
-    
       setTimeout(: unknown onRemove(toast.id), 300)}, toast.duration || 5000);
-
     return : unknown clearTimeout(timer)}, [toast.id, toast.duration, onRemove]);
-
-  
       case 'error':"
         return <XCircle className="w-5 h-5 text-red-500"  />;
       case 'warning':"
@@ -38,8 +26,6 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
       default:"
         return <Info className="w-5 h-5 text-blue-500"  />}
   };
-
-  
       case 'error':'
         return 'bg-red-50 border-red-200 dark:bg-red-900/20 dark:border-red-800';
       case 'warning':'
@@ -48,7 +34,6 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
         return 'bg-blue-50 border-blue-200 dark:bg-blue-900/20 dark:border-blue-800';
       default:'
         return 'bg-blue-50 border-blue-200 dark:bg-blue-900/20 dark:border-blue-800'}  };
-
   return()
     <motion.div
       initial={{ opacity: 0, y: -50, scale: 0.9 }}
@@ -83,11 +68,7 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
     </motion.div>
   )};
 ;export const ToastContainer: React.FC = (): JSX.Element => {
-
   const [toasts, setToasts] = useState<any>([]);
-
-  
-    
     setToasts(prev => [...prev, newToast])}};
   // Expose addToast globally for easy access
   useEffect(: unknown {
@@ -106,11 +87,8 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
       </AnimatePresence>
     </div>
   )};
-
 // Utility function to show toasts
 export const showToast = (type: anyToastType, title: string, message?: string, duration?: number)  => {
-
   if (typeof window !== 'undefined' && (window as ).showToast) {
-
     (window as ).showToast({ type, title, message, duration })}
 };'"`

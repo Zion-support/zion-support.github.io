@@ -1,39 +1,3 @@
-<<<<<<< HEAD
-import {
-
-  Award,
-  Users,
-  Brain,
-  Shield,
-  Cloud,
-  Zap,
-  Star,
-  CheckCircle,
-  Globe,
-  Rocket'
-} from 'lucide-react';
-
-      projects: '50+'};
-  ];
-
-  {;"
-    icon: "🚀",;"
-    title: "Successful Projects",;"
-    description: "Successfully delivered complex technology solutions for Fortune 500 companies",;"
-    count: "500+"};
-];
-
-const coreExpertise = ["
-  "Artificial Intelligence & Machine Learning","
-  "Quantum Computing & Algorithms",;"
-  "Blockchain & Web3 Technologies",;"
-  "Cloud Infrastructure & DevOps",;"
-  "Cybersecurity & Compliance",;"
-  "Data Science & Analytics",;"
-  "IoT & Edge Computing",;"
-  "Mobile & Web Development";
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 ];
 
 export function TeamExpertiseSection() {

@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-
-interface SkeletonProps extends React.PropsWithChildren<{}> {
-  className?: string;
-  width?: string | number;
-  height?: string | number;
-  variant?: 'text' | 'circular' | 'rectangular' | 'rounded';
-  animation?: 'pulse' | 'wave' | 'none'}
-
-export function Skeleton(...args: any[]): any {
-
-  
-  
-  
-  
-  return()
-    <div
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       className={cn()
         baseClasses,
         variantClasses[variant],
@@ -26,10 +7,8 @@ export function Skeleton(...args: any[]): any {
       style={style}
     />
   )}
-
 // Predefined skeleton components for common use cases
 export function SkeletonText(...args: any[]): any {
-
   return ('
     <div className={cn('space-y-2', className)}>
       {Array.from({ length: anylines }).map((_, i) => (
@@ -40,9 +19,7 @@ export function SkeletonText(...args: any[]): any {
       ))}
     </div>
   )}
-
 export function SkeletonCard(...args: any[]): any {
-
   return ('
     <div className={cn('p-6 space-y-4', className)}>"
       <div className="flex items-center space-x-4">"
@@ -58,9 +35,7 @@ export function SkeletonCard(...args: any[]): any {
         <Skeleton variant="rounded" width={100} height={32}  />      </div>
     </div>
   )}
-
 export function SkeletonTable(...args: any[]): any {
-
   return ('
     <div className={cn('space-y-3', className)}>
       {/* Header */}"
@@ -68,7 +43,6 @@ export function SkeletonTable(...args: any[]): any {
         {Array.from({ length: anycolumns }).map((_, i) => ("
           <Skeleton key={i} variant="text" width={120} height={20}  />        ))}
       </div>
-
       {/* Rows */}
       {Array.from({ length: anyrows }).map((_, rowIndex) => ("
         <div key={rowIndex} className="flex space-x-4">
@@ -82,9 +56,7 @@ export function SkeletonTable(...args: any[]): any {
       ))}
     </div>
   )}
-
 export function SkeletonGrid(...args: any[]): any {
-
   return()
     <div
       className={cn('
@@ -100,9 +72,7 @@ export function SkeletonGrid(...args: any[]): any {
         <SkeletonCard key={i}  />      ))}
     </div>
   )}
-
 export function SkeletonHero(...args: any[]): any {
-
   return ('
     <div className={cn('space-y-8', className)}>
       {/* Title */}"
@@ -110,10 +80,8 @@ export function SkeletonHero(...args: any[]): any {
         <Skeleton variant="text" width="80%" height={48} className="mx-auto"  />"
         <Skeleton variant="text" width="60%" height={24} className="mx-auto"  />
       </div>
-
       {/* Description */}"
       <Skeleton variant="text" lines={3} className="max-w-2xl mx-auto"  />
-
       {/* CTA Buttons */}"
       <div className="flex justify-center space-x-4">"
         <Skeleton variant="rounded" width={160} height={48}  />"

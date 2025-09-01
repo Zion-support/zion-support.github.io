@@ -1,32 +1,3 @@
-<<<<<<< HEAD
-
-interface SEOProps {
-  title: string;
-  description: string;
-  canonical?: string;
-  url?: string;
-  type?: 'website' | 'article' | 'product' | 'service';
-  tags?: string[];
-  services?: Array<{
-    name: string;
-    description: string;
-    url: string;
-    category: string}>;
-  image?: string;
-  url?: string;
-  type?: 'website' | 'article' | 'product' | 'service';
-  publishedTime?: string;
-  modifiedTime?: string;
-  author?: string;
-  section?: string;
-  tags?: string[];
-  canonical?: string;
-  noindex?: boolean;
-  nofollow?: boolean;
-  structuredData?: any}
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 export const EnhancedSEO: React.FC<SEOProps> = ({
 
   title = 'Zion Tech Group - Leading AI Solutions & Technology Services',
@@ -166,12 +137,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       link.rel = 'dns-prefetch';
       link.href = domain;
       document.head.appendChild(link)});
-<<<<<<< HEAD
-  }, [ogImage]);
-  if (type === 'article') {
-=======
   }, [ogImage]);'  if (type === 'article') {
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     Object.assign(structuredData, {
 "

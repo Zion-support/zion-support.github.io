@@ -1,17 +1,12 @@
-
-
     {;
       icon: GitBranch,;
       title: 'Git Integration & Workflow',;
       description: 'Seamless integration with Git workflows, pull request reviews, and automated security checks.',;
       benefits: ['Pull request scanning',Branch protection',Automated reviews',Workflow integration']};
   ];
-
-  
         'Custom workflows',;
         'On-premise deployment';
       ],;
-=======
         'Unlimited repositories','
         'Custom AI models','
         'White-label solutions','
@@ -19,32 +14,20 @@
         'Advanced integrations',;'
         'Custom workflows',;'        'On-premise deployment';
       ],;'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       cta: 'Contact Sales',;
       popular: false};
   ];
-
-  
     {;
       title: 'Compliance & Auditing',;
       description: 'Meet regulatory requirements and maintain security standards with comprehensive code security auditing.',;
       icon: Shield,;
       benefits: ['Regulatory compliance',Security audits',Documentation',Risk assessment']};
   ];
-
-  
     {;
       title: 'Insecure Dependencies',;
       description: 'Identify and update vulnerable third-party libraries and dependencies.',;
-<<<<<<< HEAD
-      icon: Package,;
-      examples: ['Dependency scanning',Vulnerability databases',Update automation',License compliance']};
-  ];
-=======
       icon: Package,;'
       examples: ['Dependency scanning', 'Vulnerability databases', 'Update automation', 'License compliance']};  ];
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}"
@@ -52,26 +35,12 @@
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             animate = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}"
             className="text-center"
@@ -109,32 +78,17 @@
           </motion.div>
         </div>
       </section>
-
       {/* Vulnerability Types Section */}"
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}"
             className="text-center mb-12"
@@ -153,37 +107,16 @@
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}"
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500/50 transition-all duration-300"
               >"
@@ -211,32 +144,17 @@
           </div>
         </div>
       </section>
-
       {/* Features Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}"
             className="text-center mb-16"
@@ -255,37 +173,16 @@
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}"
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500/50 transition-all duration-300"
               >"
@@ -306,32 +203,17 @@
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}"
             className="text-center mb-16"
@@ -350,40 +232,18 @@
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-
                   plan.popular '
                     ? 'border-green-500/50 ring-2 ring-green-500/20' '
                     : 'border-gray-700'`
@@ -413,12 +273,10 @@
                     </li>
                   ))}
                 </ul>
-
                 <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}`
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
-
                     plan.popular'
                       ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white hover:from-green-600 hover:to-emerald-600''
                       : 'bg-gray-700 text-white hover:bg-gray-600'`
@@ -431,32 +289,17 @@
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}"
             className="text-center mb-16"
@@ -475,37 +318,16 @@
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}"
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500/50 transition-all duration-300"
               >"
@@ -530,32 +352,17 @@
           </div>
         </div>
       </section>
-
       {/* CTA Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-900/20 to-emerald-900/20">"
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
           >"
@@ -587,5 +394,4 @@
       </section>;
     </div>;
   )};
-
 export default AICodeReviewSecurityScanner;'"`

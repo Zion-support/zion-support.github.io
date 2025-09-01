@@ -15,16 +15,9 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
 
   
     // Add modern font loading'
-<<<<<<< HEAD
-    
-    fontLink.rel = 'preload';
-    fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap';
-    fontLink.as = 'style';
-=======
     const fontLink = document.createElement('link');'
     fontLink.rel = 'preload';'
     fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap';'    fontLink.as = 'style';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     document.head.appendChild (fontLink) ;
 
     // Apply modern typography
@@ -109,14 +102,8 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
 
   
     // Add modern button styles'"
-<<<<<<< HEAD
-    
-    buttons.forEach((button) => {
-
-=======
     const buttons = document.querySelectorAll('button, .btn, [role="button"]');    buttons.forEach((button) => {
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       if (!button.classList.contains('modern-enhanced')) {
 
         button.classList.add('modern-enhanced');`
@@ -129,14 +116,8 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     }) ;
 
     // Add modern card styles'"
-<<<<<<< HEAD
-    
-    cards.forEach((card) => {
-
-=======
     const cards = document.querySelectorAll('.card, [class*="card"], [class*="Card"]');    cards.forEach((card) => {
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       if (!card.classList.contains('modern-enhanced')) {
 
         card.classList.add('modern-enhanced');`

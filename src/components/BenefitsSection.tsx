@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-
-interface Benefit {
-
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-  color: string;
-  bgColor: string;
-  stats: string;
-  features: string[];
-;
-const benefits: Benefit[] = [;
-  {
-
-    title: "AI-Powered Matchmaking","
-    description: "Our advanced algorithms match your needs with the perfect service providers or products, saving you time and ensuring optimal results.","
-    icon: <Bot className="w-8 h-8"  />,"
-    color: "from-zion-cyan to-zion-cyan-dark","
-    bgColor: "from-zion-cyan/20 to-zion-cyan-dark/20","
-    stats: "95% Match Rate",
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     features: ["
       "Intelligent service matching","
       "Real-time availability","

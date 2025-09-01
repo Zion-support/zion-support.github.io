@@ -1,26 +1,16 @@
 ;
 export { function };
 export default function AIBusinessIntelligence(...args[]):  {
-
-  
     },;
     {;
       icon: Eye,;
       title: 'Predictive Analytics',;
       description: 'Forecast trends and identify opportunities'};
   ]},;
-<<<<<<< HEAD
-    {;
-      title: 'Automated Reporting',;
-      description: 'Generate reports automatically with AI insights',;
-      icon: Target};
-=======
     {;'
       title: 'Automated Reporting',;'      description: 'Generate reports automatically with AI insights',;
       icon: Target};
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
-
   return()
     <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}"
@@ -29,26 +19,12 @@ export default function AIBusinessIntelligence(...args[]):  {
         <div className="container-responsive relative z-10">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             animate = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}"
             className="text-center max-w-4xl mx-auto"
@@ -78,32 +54,17 @@ export default function AIBusinessIntelligence(...args[]):  {
           </motion.div>
         </div>
       </section>;
-
       {/* Features Section */}"
       <section className="py-20">;"
         <div className="container-responsive">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}"
@@ -122,37 +83,16 @@ export default function AIBusinessIntelligence(...args[]):  {
               <motion.div
                 key={feature.title}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}"
                 className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -167,32 +107,17 @@ export default function AIBusinessIntelligence(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* Capabilities Section */}"
       <section className="py-20 bg-white/5">;"
         <div className="container-responsive">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}"
@@ -211,37 +136,16 @@ export default function AIBusinessIntelligence(...args[]):  {
               <motion.div
                 key={capability.title}
                 initial = {
-
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}"
                 className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -260,32 +164,17 @@ export default function AIBusinessIntelligence(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}"
       <section className="py-20">;"
         <div className="container-responsive">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}"
@@ -303,37 +192,16 @@ export default function AIBusinessIntelligence(...args[]):  {
             {/* Starter Plan */}
             <motion.div
               initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition = {
-
   { duration: 0.6,
   delay: 0.1 
-
-
-
-
-
-
 }}
               viewport={{ once: true }}"
               className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
@@ -355,41 +223,19 @@ export default function AIBusinessIntelligence(...args[]):  {
               </ul>"
               <button className="w-full btn-outline py-3">Get Started</button>
             </motion.div>
-
             {/* Pro Plan */}
             <motion.div
               initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition = {
-
   { duration: 0.6,
   delay: 0.2 
-
-
-
-
-
-
 }}
               viewport={{ once: true }}"
               className="bg-gradient-to-br from-violet-600 to-violet-700 rounded-2xl p-8 border border-violet-500 relative"
@@ -420,19 +266,15 @@ export default function AIBusinessIntelligence(...args[]):  {
                 Get Started
               </button>
             </motion.div>
-
             {/* Enterprise Plan */}
             <motion.div
               initial = {
-
   { opacity: 0,
   y: 20 }}
               whileInView = {
-
   { opacity: 1,
   y: 0 }}
               transition = {
-
   { duration: 0.6,
   delay: 0.3 }}
               viewport={{ once: true }}"
@@ -462,32 +304,17 @@ export default function AIBusinessIntelligence(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}"
       <section className="py-20">;"
         <div className="container-responsive">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}"
@@ -515,7 +342,6 @@ export default function AIBusinessIntelligence(...args[]):  {
       </section>;
     </div>;
   )}
-
 // Missing icon component
 const CheckCircle = ({ className }: { className?: string }) => (;"
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">;"

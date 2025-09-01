@@ -1,35 +1,3 @@
-<<<<<<< HEAD
-import {
-
-  User,
-  Settings,
-  Palette,
-  Eye,
-  MousePointer,
-  Smartphone,
-  Monitor,
-  Zap,
-  Heart,
-  Star,
-  MessageCircle,
-  TrendingUp,
-  Accessibility,
-  Languages,
-  ShoppingCart,
-  Activity} from 'lucide-react';
-
-interface UserPreference {
-
-  id: string;
-  name: string;
-  value: string | boolean | number;
-  type: 'boolean' | 'string' | 'number' | 'select';
-  options?: string[];
-  category: 'appearance' | 'accessibility' | 'performance' | 'language';
-  description: string}
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 interface UserActivity {
 
   id: string;

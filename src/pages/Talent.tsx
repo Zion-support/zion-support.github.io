@@ -552,12 +552,7 @@ export default function Talent() {
                 <div className="relative">"
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"  />
                   <input"
-<<<<<<< HEAD
-                    type="text"
-                    placeholder="Search by name, skills, or expertise..."
-=======
                     type="text""                    placeholder="Search by name, skills, or expertise..."
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     value={searchQuery}
                     onChange={e => setSearchQuery(e.target.value)}"
                     className="w-full pl-12 pr-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-200"

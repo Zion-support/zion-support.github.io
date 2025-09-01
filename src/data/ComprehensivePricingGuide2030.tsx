@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-
-const ComprehensivePricingGuide2030: React.FC = () => {;
-  const [activeTab, setActiveTab] = useState<'microsaas' | 'it' | 'ai'>('microsaas');
-  const [priceRange, setPriceRange] = useState<[number, number]>([0, 5000]);
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  
-    let services: unknown[] = [];
-    
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     switch (activeTab) {
 
       case 'microsaas':

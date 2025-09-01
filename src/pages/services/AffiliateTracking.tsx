@@ -1,96 +1,61 @@
 import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, ArrowRight, Mail export { function };
 export default function AffiliateTracking(...args: unknown[]): unknown {  const features: { title: string; description: string }[] = [
     {
-
       title: 'Multi-channel attribution',
       description: 'Track referrals across links, coupons, QR codes, and partner portals with UTM auto-tagging.'
     },
     {
-
       title: 'Real-time fraud prevention',
       description: 'Auto-flag suspicious clicks, proxy traffic and cookie stuffing using device fingerprinting.'
     },
     {
-
       title: 'Payout automation',
       description: 'Automate tiered commissions, bonuses, holds and mass payouts via Stripe, PayPal and ACH.'
     },
     {
-
       title: 'Partner CRM',
       description: 'Manage applications, onboarding, contracts, and partner lifecycle with nurture workflows.'
     },
     {
-
       title: 'E‑commerce integrations',
       description: 'Native integrations for Shopify, WooCommerce, BigCommerce and custom checkouts via webhooks.'
     },
     {
-
       title: 'Analytics & BI',
       description: 'Cohort LTV, ROAS by partner, incremental lift analysis, and predictive recruiting scoring.'
-
   ];
-
-  
         'Unlimited partners and campaigns',;
         'SAML SSO and audit trails',;
         'Custom data retention + warehouse sync',;
         'Dedicated CSM and 99.9% SLA';
       ]};
-=======
       bullets: [;'
         'Unlimited partners and campaigns',;'
         'SAML SSO and audit trails',;'
         'Custom data retention + warehouse sync',;'        'Dedicated CSM and 99.9% SLA';
       ]};
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
-
   return()
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO"
-<<<<<<< HEAD
-        title="Affiliate Tracking Platform - Zion Tech Group"
-        description="Launch and scale a high-performing affiliate program with advanced attribution, fraud prevention, automated payouts, and partner CRM."
-        keywords="affiliate tracking, partner marketing, attribution, coupons, referral tracking, payouts"
-      />
-=======
         title="Affiliate Tracking Platform - Zion Tech Group""
         description="Launch and scale a high-performing affiliate program with advanced attribution, fraud prevention, automated payouts, and partner CRM.""        keywords="affiliate tracking, partner marketing, attribution, coupons, referral tracking, payouts"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
       {/* Hero */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">"
         <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/20 to-zion-purple/20" />"
         <div className="relative max-w-7xl mx-auto">
           <motion.h1
             initial = {
-
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             animate = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}"
             className="text-4xl md:text-6xl font-bold text-white mb-6"
-
             Affiliate Tracking Platform"
             <span className="block text-zion-cyan text-2xl md:text-3xl mt-2">Recruit. Attribute. Reward.</span>
           </motion.h1>
@@ -111,7 +76,6 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
           </div>
         </div>
       </section>;
-
       {/* Feature grid */}"
       <section className="py-16 px-4 sm:px-6 lg:px-8">;"
         <div className="max-w-7xl mx-auto">"
@@ -120,26 +84,12 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
               <motion.div
                 key={f.title}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4 }}"
@@ -156,7 +106,6 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
           </div>
         </div>
       </section>
-
       {/* Market context */}"
       <section className="py-8 px-4 sm:px-6 lg:px-8">;"
         <div className="max-w-7xl mx-auto bg-gradient-to-br from-zion-blue-dark/30 to-zion-purple/30 border border-zion-blue-light/20 rounded-2xl p-6">"
@@ -179,7 +128,6 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
           </p>
         </div>
       </section>
-
       {/* Plans */}"
       <section className="py-16 px-4 sm:px-6 lg:px-8">;"
         <div className="max-w-7xl mx-auto">"
@@ -188,41 +136,19 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
               <motion.div
                 key={plan.name}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}
                 transition = {
-
   { duration: 0.5,
   delay: i * 0.05 
-
-
-
-
-
-
 }}
                 className={`relative rounded-2xl p-8 ${i === 1 ? 'bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 border-2 border-zion-purple' : 'bg-zion-slate-dark/30 border border-zion-blue-light/20'}`}
-
                 {i === 1 && (;"
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2">"
                     <Badge className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-4 py-2">Most Popular</Badge>
@@ -252,7 +178,6 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
           </div>
         </div>
       </section>
-
       {/* CTA */}"
       <section className="py-12 px-4 sm:px-6 lg:px-8">;"
         <div className="max-w-7xl mx-auto bg-zion-purple/20 border border-zion-purple/30 rounded-2xl p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
@@ -270,7 +195,6 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
           </div>
         </div>
       </section>
-
       {/* References */}"
       <section className="py-8 px-4 sm:px-6 lg:px-8">;"
         <div className="max-w-7xl mx-auto">"
@@ -296,6 +220,5 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
     </div>;
   );
 </div>}
-
 // Duplicate leftover block removed
 }}}'"`

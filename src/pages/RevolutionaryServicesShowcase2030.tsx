@@ -96,12 +96,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
       'Sustainable Technology': 'from-green-500 to-teal-500',;
       'IT Infrastructure': 'from-slate-500 to-gray-500',;
       'Emerging Technology': 'from-violet-500 to-purple-500';
-<<<<<<< HEAD
-    };
-    return colorMap[category] || 'from-gray-500 to-slate-500'};
-=======
     };'    return colorMap[category] || 'from-gray-500 to-slate-500'};
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       return sum + roiNumber}
     return sum}, 0) / REVOLUTIONARY_SERVICES_2030.length;
@@ -193,12 +188,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                   <div className="relative">"
                     <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
                     <input"
-<<<<<<< HEAD
-                      type="text"
-                      placeholder="Search revolutionary services..."
-=======
                       type="text""                      placeholder="Search revolutionary services..."
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                       value={searchTerm}
                       onChange={(e) => setSearchTerm(e.target.value)}"
                       className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"

@@ -1,73 +1,3 @@
-<<<<<<< HEAD
-import { Shield, 
-  Database, 
-  Lock, 
-  Eye, 
-  Search, 
-  FileText, 
-  Users, 
-  CheckCircle,
-  AlertTriangle,
-  BarChart3,
-  Zap,
-  Globe,
-  Cpu,
-  Key,
-  Fingerprint,
-  ShieldCheck,
-  FileCheck,
-  UserCheck,
-  Clock,
-  TrendingUp,
-  DollarSign,
-  Building,
-  Server,
-  Cloud,
-  Network,
-  Monitor,
-  Settings,
-  RefreshCw,
-  Download,
-  Upload,
-  Trash2,
-  Archive,
-  Copy,
-  Move,
-  Link,
-  Unlink,
-  EyeOff,
-  EyeOn,
-  LockOpen,
-  LockClosed'
- } from 'lucide-react';
-;
-const AIDataGovernance: React.FC = (): JSX.Element => {
-
-  
-    {;
-      icon: Users,;"
-      title: "Data Lineage Tracking",;"
-      description: "Complete audit trail showing data origins, transformations, and usage patterns",;"
-      color: "from-yellow-500 to-orange-500"};
-  ];
-
-  const pricingPlans = [
-    {
-"
-      name: "Foundation","
-      price: "$499","
-      period: "/month","
-      description: "Essential data governance for small to medium organizations",
-      features[;"
-        "Up to 10TB data management","
-        "Basic AI classification","
-        "Standard access controls","
-        "Compliance templates","
-        "Email support","
-        "Basic reporting","
-        "5 user licenses"
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ],;"
       cta: "Start Free Trial",
       popular: false
@@ -111,23 +41,18 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
       cta: "Contact Sales",;
       popular: false};
   ];
-
-  
     {;
       icon: Clock,;"
       title: "Real-time Monitoring",;"
       description: "Instant alerts and proactive threat prevention",;"
       metric: "24/7"};
   ];
-
-  
     {;"
       name: "SOC 2",;"
       description: "Service Organization Control 2 compliance",;
       icon: CheckCircle,;"
       color: "from-yellow-500 to-orange-500"};
   ];
-
   const useCases = [
     {
 "
@@ -159,19 +84,11 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
       description: "Protect trade secrets and proprietary data with advanced classification",;
       icon: Cpu,;"
       color: "from-orange-500 to-red-500"};  ];
-
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-<<<<<<< HEAD
-        title="AI Data Governance - Zion Tech Group"
-        description="Protect your data with AI-powered governance solutions. Automated classification, access control, and compliance management for enterprise data security."
-       />
-=======
         title="AI Data Governance - Zion Tech Group""        description="Protect your data with AI-powered governance solutions. Automated classification, access control, and compliance management for enterprise data security."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 lg:py-32">"
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 to-green-900/20"></div>"
@@ -179,26 +96,12 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
           <div className="text-center">
             <motion.div
               initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               animate = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.8 }}
 "
@@ -228,7 +131,6 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
           </div>
         </div>
       </section>;
-
       {/* Features Section */}"
       <section className="py-20">;"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
@@ -246,40 +148,18 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}"
                 className="group"
-
                 <div className={`p-6 rounded-xl bg-gradient-to-br ${feature.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>`
                   <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${feature.color} mb-4`}>"
                     <feature.icon className="w-6 h-6 text-white" />
@@ -292,7 +172,6 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}"
       <section className="py-20 bg-slate-800/50">;"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
@@ -310,37 +189,16 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   scale: 0.9 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   scale: 1 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}"
                 className="text-center"
 "
@@ -355,7 +213,6 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
           </div>
         </div>
       </section>
-
       {/* Compliance Frameworks Section */}"
       <section className="py-20">;"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
@@ -373,37 +230,16 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}"
                 className="group"
 `
@@ -419,7 +255,6 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}"
       <section className="py-20 bg-slate-800/50">;"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
@@ -437,37 +272,16 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}"
                 className="group"
 `
@@ -488,7 +302,6 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}"
       <section className="py-20">;"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
@@ -506,45 +319,22 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}`
                 className={`relative rounded-xl p-8 ${
-
                   plan.popular'
                     ? 'bg-gradient-to-br from-blue-500/20 to-green-500/20 border-2 border-blue-500/50''
                     : 'bg-slate-800/50 border border-slate-700/50'`
                 }`}
-
                 {plan.popular && (;"
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
                     <span className="bg-gradient-to-r from-blue-500 to-green-500 text-white px-4 py-2 rounded-full text-sm font-medium">
@@ -571,7 +361,6 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
                 </ul>
 `
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-
                   plan.popular'
                     ? 'bg-gradient-to-r from-blue-500 to-green-500 text-white hover:from-blue-600 hover:to-green-600''
                     : 'bg-slate-700 text-white hover:bg-slate-600'`
@@ -583,32 +372,17 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}"
       <section className="py-20 bg-slate-800/50">;"
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
 "
@@ -631,5 +405,4 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
       </section>;
     </div>;
   )};
-
 export default AIDataGovernance}}}}}}'"`

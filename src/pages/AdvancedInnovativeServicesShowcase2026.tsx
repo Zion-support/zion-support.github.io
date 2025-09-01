@@ -1,42 +1,3 @@
-<<<<<<< HEAD
-import {
-
-  Brain,
-  Zap,
-  Globe,
-  Shield,
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  TrendingUp,
-  Users,
-  Search,
-  Filter,
-  Star,
-  Clock,
-  DollarSign,
-  Target,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink'
-} from 'lucide-react';
-
-const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('innovation');
-
-  
-    return ['all', ...Array.from(cats)]}, []);
-
-  
-    // Filter by category'
-    if (selectedCategory !== 'all') {
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       filtered = filtered.filter(service => service.category === selectedCategory)}
 
@@ -200,12 +161,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
             <div className="flex-1 relative">"
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5"  />
               <input"
-<<<<<<< HEAD
-                type="text"
-                placeholder="Search innovative services..."
-=======
                 type="text""                placeholder="Search innovative services..."
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}"
                 className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-transparent"

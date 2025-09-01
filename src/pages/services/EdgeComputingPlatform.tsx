@@ -1,144 +1,13 @@
-<<<<<<< HEAD
-import { Cpu, 
-  Zap, 
-  Globe, 
-  Server, 
-  Network, 
-  Cloud, 
-  Shield, 
-  Clock,
-  CheckCircle,
-  TrendingUp,
-  Users,
-  Database,
-  Wifi,
-  Satellite,
-  Smartphone,
-  Car,
-  Factory,
-  Home,
-  Building,
-  Truck,
-  Plane,
-  Ship,
-  Train,
-  Rocket,
-  Target,
-  Gauge,
-  BarChart3,
-  Settings,
-  RefreshCw,
-  Download,
-  Upload,
-  Play,
-  Pause,
-  Stop,
-  FastForward,
-  Rewind,
-  Volume2,
-  VolumeX,
-  WifiOff,
-  Signal,
-  Activity,
-  Pulse,
-  Heart,
-  Battery,
-  Power,
-  PowerOff,
-  Sun,
-  Moon,
-  Star,
-  Sparkles,
-  Flame,
-  Lightning,
-  Thunder,
-  Rain,
-  Snow,
-  Wind,
-  Thermometer,
-  Droplets,
-  Umbrella,
-  MapPin'
- } from 'lucide-react';
-;
-const EdgeComputingPlatform: React.FC = (): JSX.Element => {
-
-  
-    {;
-      icon: Shield,;"
-      title: "Edge Security",;"
-      description: "Advanced security protocols and encryption for edge computing environments",;"
-      color: "from-yellow-500 to-orange-500"};
-  ];
-
-  const pricingPlans = [
-    {
-"
-      name: "Starter","
-      price: "$399","
-      period: "/month","
-      description: "Perfect for small IoT deployments and edge computing experiments",
-      features: ["
-        "Up to 10 edge nodes","
-        "Basic edge processing","
-        "Standard security","
-        "Email support","
-        "Basic monitoring","
-        "5GB data transfer","
-        "Community support"
-      ],"
-      cta: "Start Free Trial",
-      popular: false
-    },
-    {
-"
-      name: "Professional","
-      price: "$1,199","
-      period: "/month","
-      description: "Ideal for growing businesses with significant edge computing needs",
-      features: ["
-        "Up to 100 edge nodes","
-        "Advanced edge AI","
-        "Custom security policies","
-        "Priority support","
-        "Advanced analytics","
-        "100GB data transfer","
-        "API access","
-        "Custom integrations"
-      ],"
-      cta: "Start Free Trial",
-      popular: true
-    },
-    {
-"
-      name: "Enterprise","
-      price: "$3,999","
-      period: "/month","
-      description: "For large organizations requiring enterprise-grade edge computing",
-      features: ["
-        "Unlimited edge nodes","
-        "Custom AI models","
-        "Advanced security features","
-        "Multi-tenant support","
-        "Dedicated support team","
-        "Custom development",;"
-        "SLA guarantees",;"
-        "On-premise option";
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ],;"
       cta: "Contact Sales",;
       popular: false};
   ];
-
-  
     {;
       icon: Users,;"
       title: "Global Scale",;"
       description: "Deploy edge nodes worldwide for optimal user experience",;"
       metric: "200+"};
   ];
-
   const useCases = [
     {
 "
@@ -171,26 +40,16 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
       icon: Heart,;"
       color: "from-orange-500 to-red-500"};
   ];
-
-  
     {;"
       region: "Latin America",;"
       cities: ["São Paulo", "Mexico City", "Buenos Aires", "Lima", "Bogotá"],;
       icon: MapPin,;"
       color: "from-orange-500 to-red-500"};  ];
-
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-<<<<<<< HEAD
-        title="Edge Computing Platform - Zion Tech Group"
-        description="Deploy computing power to the edge with our advanced edge computing platform. Ultra-low latency, real-time processing, and global edge network for IoT and AI applications."
-       />
-=======
         title="Edge Computing Platform - Zion Tech Group""        description="Deploy computing power to the edge with our advanced edge computing platform. Ultra-low latency, real-time processing, and global edge network for IoT and AI applications."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 lg:py-32">"
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 to-green-900/20"></div>"
@@ -198,26 +57,12 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
           <div className="text-center">
             <motion.div
               initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               animate = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.8 }}
 "
@@ -247,7 +92,6 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
           </div>
         </div>
       </section>;
-
       {/* Features Section */}"
       <section className="py-20">;"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
@@ -265,40 +109,18 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}"
                 className="group"
-
                 <div className={`p-6 rounded-xl bg-gradient-to-br ${feature.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>`
                   <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${feature.color} mb-4`}>"
                     <feature.icon className="w-6 h-6 text-white" />
@@ -311,7 +133,6 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}"
       <section className="py-20 bg-slate-800/50">;"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
@@ -329,37 +150,16 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   scale: 0.9 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   scale: 1 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}"
                 className="text-center"
 "
@@ -374,7 +174,6 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}"
       <section className="py-20">;"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
@@ -392,37 +191,16 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}"
                 className="group"
 `
@@ -443,7 +221,6 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
           </div>
         </div>
       </section>
-
       {/* Edge Locations Section */}"
       <section className="py-20 bg-slate-800/50">;"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
@@ -461,37 +238,16 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}"
                 className="group"
 `
@@ -513,7 +269,6 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}"
       <section className="py-20">;"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
@@ -531,45 +286,22 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}`
                 className={`relative rounded-xl p-8 ${
-
                   plan.popular'
                     ? 'bg-gradient-to-br from-blue-500/20 to-green-500/20 border-2 border-blue-500/50''
                     : 'bg-slate-800/50 border border-slate-700/50'`
                 }`}
-
                 {plan.popular && (;"
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
                     <span className="bg-gradient-to-r from-blue-500 to-green-500 text-white px-4 py-2 rounded-full text-sm font-medium">
@@ -596,7 +328,6 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
                 </ul>
 `
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-
                   plan.popular'
                     ? 'bg-gradient-to-r from-blue-500 to-green-500 text-white hover:from-blue-600 hover:to-green-600''
                     : 'bg-slate-700 text-white hover:bg-slate-600'`
@@ -608,32 +339,17 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}"
       <section className="py-20 bg-slate-800/50">;"
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
 "
@@ -656,5 +372,4 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
       </section>;
     </div>;
   )};
-
 export default EdgeComputingPlatform}}}}}}'"`

@@ -1,5 +1,4 @@
 import {
-
   ChevronDown,
   Zap,
   Brain,
@@ -9,43 +8,8 @@ import {
   TrendingUp,
   Building2,
   FileText,
-<<<<<<< HEAD
-  HelpCircle,
-  BarChart3} from 'lucide-react';
-export function MainNavigation({ className }) {
-
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
-  const [isCompanyOpen, setIsCompanyOpen] = useState(false);
-  const [isResourcesOpen, setIsResourcesOpen] = useState(false);
-  return ('
-    <nav className={cn('hidden md:flex items-center space-x-6', className)}>
-      <NavLink
-        to="/"
-        className={({ isActive }) =>
-          cn('
-            'text-sm font-medium transition-colors hover:text-primary',
-            isActive ? 'text-zion-cyan' : 'text-muted-foreground'
-          )
-        }
-      >
-        Home
-      </NavLink>
-
-      {/* Services Dropdown */}"
-      <div className="relative group">
-        <button
-          onMouseEnter={() => setIsServicesOpen(true)}
-          onMouseLeave={() => setIsServicesOpen(false)}"
-          className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground"
-        >"
-          <Zap className="w-4 h-4"  />
-          <span>Services</span>"
-          <ChevronDown className="w-3 h-3"  />
-=======
   HelpCircle,'
   BarChart3} from 'lucide-react';          <ChevronDown className="w-3 h-3"  />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         </button>
         {isServicesOpen && (
           <div
@@ -170,54 +134,12 @@ export function MainNavigation({ className }) {
                     AI Solutions
                   </h4>"
                   <ul className="space-y-2 text-sm">
-                    <li>
-                      <Link"
-                        to="/ai-services"
-                        className="text-zion-slate-light hover:text-zion-cyan transition-colors"
-                      >
-                        AI Services
-                      </Link>
-                    </li>
-                    <li>
-                      <Link"
-                        to="/ai-solutions"
-                        className="text-zion-slate-light hover:text-zion-cyan transition-colors"
-                      >
-                        AI Solutions
-                      </Link>
-                    </li>
-                    <li>
-                      <Link"
-                        to="/ai-cybersecurity-platform"
-                        className="text-zion-slate-light hover:text-zion-cyan transition-colors"
-                      >
-                        AI Cybersecurity
-                      </Link>
-                    </li>
-                    <li>
-                      <Link"
-                        to="/ai-healthcare-platform"
-                        className="text-zion-slate-light hover:text-zion-cyan transition-colors"
-                      >
-                        AI Healthcare
-                      </Link>
-                    </li>
-                    <li>
-                      <Link"
-                        to="/ai-supply-chain-optimization"
-                        className="text-zion-slate-light hover:text-zion-cyan transition-colors"
-                      >
-                        AI Supply Chain
-                      </Link>
-                    </li>
-                    <li>
-                      <Link"
-                        to="/ai-quantum-hybrid-platform"
-                        className="text-zion-slate-light hover:text-zion-cyan transition-colors"
-                      >
-                        AI Quantum Hybrid
-                      </Link>
-                    </li>
+                    <li><Link to="/services/ai-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Solutions</Link></li>
+                    <li><Link to="/services/quantum-computing" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Quantum Computing</Link></li>
+                    <li><Link to="/services/cybersecurity" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cybersecurity</Link></li>
+                    <li><Link to="/ai-cybersecurity-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Cybersecurity</Link></li>
+                    <li><Link to="/ai-healthcare-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Healthcare</Link></li>
+                    <li><Link to="/ai-supply-chain-optimization" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Supply Chain</Link></li>
                   </ul>
                 </div>
               </div>"
@@ -233,7 +155,6 @@ export function MainNavigation({ className }) {
           </div>
         )}
       </div>
-
       {/* Solutions Dropdown */}"
       <div className="relative group">
         <button
@@ -343,7 +264,6 @@ export function MainNavigation({ className }) {
           </div>
         )}
       </div>
-
       {/* Company Dropdown */}"
       <div className="relative group">
         <button
@@ -423,7 +343,6 @@ export function MainNavigation({ className }) {
           </div>
         )}
       </div>
-
       {/* Resources Dropdown */}"
       <div className="relative group">
         <button
@@ -442,68 +361,21 @@ export function MainNavigation({ className }) {
           >"
             <div className="p-4">"
               <ul className="space-y-2 text-sm">
-                <li>
-                  <Link"
-                    to="/blog"
-                    className="text-zion-slate-light hover:text-zion-cyan transition-colors"
-                  >
-                    Blog
-                  </Link>
-                </li>
-                <li>
-                  <Link"
-                    to="/docs"
-                    className="text-zion-slate-light hover:text-zion-cyan transition-colors"
-                  >
-                    Documentation
-                  </Link>
-                </li>
-                <li>
-                  <Link"
-                    to="/white-papers"
-                    className="text-zion-slate-light hover:text-zion-cyan transition-colors"
-                  >
-                    White Papers
-                  </Link>
-                </li>
-                <li>
-                  <Link"
-                    to="/webinars"
-                    className="text-zion-slate-light hover:text-zion-cyan transition-colors"
-                  >
-                    Webinars
-                  </Link>
-                </li>
-                <li>
-                  <Link"
-                    to="/events"
-                    className="text-zion-slate-light hover:text-zion-cyan transition-colors"
-                  >
-                    Events
-                  </Link>
-                </li>
-                <li>
-                  <Link"
-                    to="/training"
-                    className="text-zion-slate-light hover:text-zion-cyan transition-colors"
-                  >
-                    Training
-                  </Link>
-                </li>
-                <li>
-                  <Link"
-                    to="/research-development"
-                    className="text-zion-slate-light hover:text-zion-cyan transition-colors"
-                  >
-                    Research
-                  </Link>
-                </li>
+                <li><Link to="/blog" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Blog</Link></li>
+                <li><Link to="/docs" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Documentation</Link></li>
+                <li><Link to="/white-papers" className="text-zion-slate-light hover:text-zion-cyan transition-colors">White Papers</Link></li>
+                <li><Link to="/webinars" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Webinars</Link></li>
+                <li><Link to="/events" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Events</Link></li>
+                <li><Link to="/training" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Training</Link></li>
+                <li><Link to="/research-development" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Research</Link></li>
+                <li><Link to="/sitemap" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Sitemap</Link></li>
+                <li><Link to="/terms-of-service" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Terms of Service</Link></li>
+                <li><Link to="/cookie-policy" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cookie Policy</Link></li>
               </ul>
             </div>
           </div>
         )}
       </div>
-
       {/* Support */}
       <Link"
         to="/help"
@@ -511,7 +383,6 @@ export function MainNavigation({ className }) {
       >"
         <HelpCircle className="w-4 h-4 mr-1"  />        Support
       </Link>
-
       {/* Pricing */}
       <Link"
         to="/pricing"
@@ -520,7 +391,6 @@ export function MainNavigation({ className }) {
         <BarChart3 className="w-4 h-4 mr-1" />
         Pricing
       </Link>
-
       <NavLink"
         to="/signup"
         className={({ isActive }) =>

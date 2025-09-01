@@ -1,24 +1,12 @@
 ;
 export { function };
 export default function AICustomerSupport(...args: unknown[]): unknown {
-  
-  
-  
-  
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-<<<<<<< HEAD
-        title="AI Customer Support - Intelligent Customer Service Automation | Zion Tech Group"
-        description="Transform your customer support with AI-powered chatbots, 24/7 availability, and intelligent ticket routing. Start free trial today."
-        keywords="AI customer support, chatbot, customer service automation, AI support, customer service software"
-       />
-=======
         title="AI Customer Support - Intelligent Customer Service Automation | Zion Tech Group""
         description="Transform your customer support with AI-powered chatbots, 24/7 availability, and intelligent ticket routing. Start free trial today.""        keywords="AI customer support, chatbot, customer service automation, AI support, customer service software"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 via-purple-600/20 to-pink-600/20" />'"
@@ -48,7 +36,6 @@ export default function AICustomerSupport(...args: unknown[]): unknown {
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}"
       <section className="py-20 relative">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -88,7 +75,6 @@ export default function AICustomerSupport(...args: unknown[]): unknown {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}"
       <section className="py-20 bg-gradient-to-r from-white/5 to-white/10 relative">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -128,7 +114,6 @@ export default function AICustomerSupport(...args: unknown[]): unknown {
           </div>
         </div>
       </section>
-
       {/* Integrations Section */}"
       <section className="py-20 relative">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -167,7 +152,6 @@ export default function AICustomerSupport(...args: unknown[]): unknown {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}"
       <section className="py-20 bg-gradient-to-r from-white/5 to-white/10 relative">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -191,7 +175,6 @@ export default function AICustomerSupport(...args: unknown[]): unknown {
               <motion.div
                 key={index}`
                 className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
-
                   plan.popular ? 'border-purple-500/50 bg-purple-500/10' : 'border-white/10'`
                 }`}
                 initial={{ opacity: 0, y: 30 }}
@@ -226,7 +209,6 @@ export default function AICustomerSupport(...args: unknown[]): unknown {
                 </ul>
 `
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-
                   plan.popular'
                     ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-700 hover:to-purple-700''
                     : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'`
@@ -238,7 +220,6 @@ export default function AICustomerSupport(...args: unknown[]): unknown {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}"
       <section className="py-20 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 relative">"
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

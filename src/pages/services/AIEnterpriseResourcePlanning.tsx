@@ -1,36 +1,3 @@
-<<<<<<< HEAD
-import { Brain, 
-  Database, 
-  BarChart3, 
-  Users, 
-  Clock, 
-  CheckCircle, 
-  Zap,
-  Shield,
-  TrendingUp,
-  Globe,
-  ArrowRight,
-  Target,
-  PieChart,
-  Activity'
-  } from 'lucide-react.ts';
-};
-  ];
-
-  const services = [
-    {
-"
-      name: "Starter Plan","
-      price: "$2,999","
-      period: "/month",
-      features[;"
-        "Core ERP modules","
-        "AI-powered analytics","
-        "Basic automation","
-        "Standard support","
-        "Up to 50 users"
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ],;
       popular: false
     },
@@ -80,7 +47,6 @@ import { Brain,
       description: "Optimize risk management, compliance, and customer relationship management","
       benefits["Enhanced risk assessment", "Improved regulatory compliance", "Better customer insights"]};
   ];
-
   const technologies = ["
     "Machine Learning & AI","
     "Cloud Computing","
@@ -90,37 +56,24 @@ import { Brain,
     "API-First Architecture","
     "Real-time Processing",;"    "Predictive Analytics";
   ];
-
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-blue-dark">
       <SEO "
-<<<<<<< HEAD
-        title="AI-Powered Enterprise Resource Planning | Zion Tech Group"
-        description="Transform your business operations with our AI-driven ERP solution. Streamline processes, optimize resources, and drive growth with intelligent automation."
-        keywords="AI ERP, Enterprise Resource Planning, Business Automation, AI Analytics, Process Optimization"
-       />
-=======
         title="AI-Powered Enterprise Resource Planning | Zion Tech Group""
         description="Transform your business operations with our AI-driven ERP solution. Streamline processes, optimize resources, and drive growth with intelligent automation.""        keywords="AI ERP, Enterprise Resource Planning, Business Automation, AI Analytics, Process Optimization"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10"></div>"
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 30 
-
 }}
             animate = {
-
   { opacity: 1,
   y: 0 
-
 }}
             transition={{ duration: 0.8 }}"
             className="text-center max-w-4xl mx-auto"
@@ -145,22 +98,17 @@ import { Brain,
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}"
       <section className="py-20">"
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 30 
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}"
@@ -179,23 +127,17 @@ import { Brain,
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
 }}
                 viewport={{ once: true }}
                 transition = {
-
   { duration: 0.6,
   delay: index * 0.1 
-
 }}"
                 className="bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-2xl p-8 hover:border-zion-cyan/50 transition-all duration-300"
               >"
@@ -209,22 +151,17 @@ import { Brain,
           </div>
         </div>
       </section>
-
       {/* Services & Pricing */}"
       <section className="py-20 bg-zion-slate-dark/30">"
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 30 
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}"
@@ -243,26 +180,19 @@ import { Brain,
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
 }}
                 viewport={{ once: true }}
                 transition = {
-
   { duration: 0.6,
   delay: index * 0.1 
-
 }}
                 className={`relative bg-zion-slate-dark/50 backdrop-blur-lg border rounded-2xl p-8 ${
-
                   service.popular '
                     ? 'border-zion-cyan shadow-lg shadow-zion-cyan/25' '
                     : 'border-zion-slate/30'`
@@ -291,11 +221,9 @@ import { Brain,
                     </li>
                   ))}
                 </ul>
-
                 <Link"
                   to="/contact"`
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
-
                     service.popular'
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover:shadow-lg hover:shadow-zion-cyan/25''
                       : 'border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white'`
@@ -308,22 +236,17 @@ import { Brain,
           </div>
         </div>
       </section>
-
       {/* Use Cases */}"
       <section className="py-20">"
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 30 
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}"
@@ -342,23 +265,17 @@ import { Brain,
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
-
 }}
                 whileInView = {
-
   { opacity: 1,
   x: 0 
-
 }}
                 viewport={{ once: true }}
                 transition = {
-
   { duration: 0.6,
   delay: index * 0.1 
-
 }}"
                 className="bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-2xl p-8"
               >"
@@ -378,22 +295,17 @@ import { Brain,
           </div>
         </div>
       </section>
-
       {/* Technologies */}"
       <section className="py-20 bg-zion-slate-dark/30">"
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 30 
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}"
@@ -412,23 +324,17 @@ import { Brain,
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
   scale: 0.8 
-
 }}
                 whileInView = {
-
   { opacity: 1,
   scale: 1 
-
 }}
                 viewport={{ once: true }}
                 transition = {
-
   { duration: 0.6,
   delay: index * 0.1 
-
 }}"
                 className="bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-xl p-6 text-center hover:border-zion-cyan/50 transition-all duration-300"
               >"
@@ -440,22 +346,17 @@ import { Brain,
           </div>
         </div>
       </section>
-
       {/* CTA Section */}"
       <section className="py-20">"
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 30 
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}"
@@ -483,7 +384,6 @@ import { Brain,
           </motion.div>
         </div>
       </section>
-
       {/* Contact Information */}"
       <section className="py-16 bg-zion-slate-dark">"
         <div className="container mx-auto px-4 text-center">"
@@ -508,5 +408,4 @@ import { Brain,
       </section>;
     </div>;
   )};
-
 export default AIEnterpriseResourcePlanning;'"`

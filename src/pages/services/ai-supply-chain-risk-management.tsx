@@ -1,5 +1,4 @@
 import {
-
   Shield,
   AlertTriangle,
   TrendingUp,
@@ -32,27 +31,13 @@ import {
   Database,
   Cloud,
   Server} from 'lucide-react';
-
-
-  
-  
-  
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
-<<<<<<< HEAD
-        title="AI Supply Chain Risk Management - Zion Tech Group"
-        description="Protect your supply chain with AI-powered risk detection, predictive analytics, and real-time monitoring. Identify and mitigate risks before they impact your business."
-        keywords="AI supply chain risk management, supply chain monitoring, risk detection, predictive analytics, supply chain optimization"
-        canonical="https://ziontechgroup.com/services/ai-supply-chain-risk-management"
-      />
-=======
         title="AI Supply Chain Risk Management - Zion Tech Group""
         description="Protect your supply chain with AI-powered risk detection, predictive analytics, and real-time monitoring. Identify and mitigate risks before they impact your business.""
         keywords="AI supply chain risk management, supply chain monitoring, risk detection, predictive analytics, supply chain optimization""        canonical="https://ziontechgroup.com/services/ai-supply-chain-risk-management"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
         <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-blue-600/20" />"
@@ -98,7 +83,6 @@ import {
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}"
       <section className="py-20">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -139,7 +123,6 @@ import {
           </div>
         </div>
       </section>
-
       {/* Risk Types Section */}"
       <section className="py-20 bg-slate-800/30">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -183,7 +166,6 @@ import {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}"
       <section className="py-20">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -225,7 +207,6 @@ import {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}"
       <section id="pricing" className="py-20 bg-slate-800/30">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -250,7 +231,6 @@ import {
               <motion.div
                 key={index}`
                 className={`relative rounded-xl p-8 ${
-
                   plan.popular'
                     ? 'bg-gradient-to-br from-green-600 to-blue-600 border-2 border-green-400''
                     : 'bg-slate-800/50 border border-slate-700/50'`
@@ -288,11 +268,9 @@ import {
                     </li>
                   ))}
                 </ul>
-
                 <a"
                   href="mailto:kleber@ziontechgroup.com?subject=AI Supply Chain Risk Management - {plan.name} Plan"`
                   className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
-
                     plan.popular'
                       ? 'bg-white text-green-600 hover:bg-slate-100''
                       : 'bg-gradient-to-r from-green-500 to-blue-500 text-white hover:from-green-600 hover:to-blue-600'`
@@ -305,7 +283,6 @@ import {
           </div>
         </div>
       </section>
-
       {/* Contact Section */}"
       <section className="py-20">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -338,7 +315,6 @@ import {
               </div>"
               <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>"              <p className="text-slate-300">+1 302 464 0950</p>
             </motion.div>
-
             <motion.div"
               className="text-center"
               initial={{ opacity: 0, y: 20 }}
@@ -353,7 +329,6 @@ import {
                 Email Us
               </h3>"              <p className="text-slate-300">kleber@ziontechgroup.com</p>
             </motion.div>
-
             <motion.div"
               className="text-center"
               initial={{ opacity: 0, y: 20 }}
@@ -373,7 +348,6 @@ import {
                 Middletown DE 19709
               </p>            </motion.div>
           </div>
-
           <motion.div"
             className="text-center mt-12"
             initial={{ opacity: 0, y: 20 }}
@@ -392,6 +366,5 @@ import {
       </section>
     </div>
   )};
-
 export default AISupplyChainRiskManagement;
 '"`

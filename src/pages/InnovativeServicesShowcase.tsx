@@ -1,29 +1,4 @@
 export default InnovativeServicesShowcase}}}}}
-<<<<<<< HEAD
-
-
-const InnovativeServicesShowcase: React.FC = () => {;
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [priceRange, setPriceRange] = useState('all');
-  const [sortBy, setSortBy] = useState('rating');
-
-  
-  
-    { label: 'All Prices', value: 'all' },;
-    { label: 'Under $100', value: '0-100' },;
-    { label: '$100 - $500', value: '100-500' },;
-    { label: '$500 - $1000', value: '500-1000' },;
-    { label: '$1000 - $3000', value: '1000-3000' },;
-    { label: 'Over $3000', value: '3000+' };
-  ];
-  
-    { label: 'Highest Rated', value: 'rating' },;
-    { label: 'Highest AI Score', value: 'aiScore' },;
-    { label: 'Lowest Price', value: 'price' },;
-    { label: 'Newest Launch', value: 'launchDate' };
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
 
   

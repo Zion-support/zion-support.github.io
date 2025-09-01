@@ -1,58 +1,14 @@
-<<<<<<< HEAD
-import {
-
-  Code,
-  Smartphone,
-  Globe,
-  Database,
-  Zap,
-  Shield,
-  Users,
-  Target,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Lightbulb,
-  TrendingUp,
-  Settings,
-  Workflow,
-  FileText,
-  Monitor,
-  BarChart3,
-  Rocket,
-  Building2,
-  Cpu,
-  Network'
- } from 'lucide-react';
-;
-export { function };
-export default function CustomDevelopment(...args[]):  {
-
-  
-    },;
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     {
-
       title: 'Mobile Applications',
       description: 'Native and cross-platform mobile applications for iOS and Android that deliver exceptional user experiences.',
-<<<<<<< HEAD
-      icon: Smartphone,
-      features['iOS Development',Android Development',Cross-platform Apps',App Store Optimization']},;
-    {
-
-      title: 'API Development',
-=======
       icon: Smartphone,'
       features['iOS Development', 'Android Development', 'Cross-platform Apps', 'App Store Optimization']},;    {
 '
       title: 'API Development','
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       description: 'Robust and scalable APIs that enable seamless integration between systems and services.',
       icon: Network,
       features['RESTful APIs',GraphQL APIs',API Documentation',Integration Support']},;
     {
-
       features['Legacy System Integration',Third-party APIs',Data Synchronization',Workflow Automation']};
       title: 'System Integration',;
       description: 'Seamlessly connect your existing systems and third-party services for improved efficiency.',;
@@ -60,15 +16,12 @@ export default function CustomDevelopment(...args[]):  {
       features: ['Legacy System Integration',Third-party APIs',Data Synchronization',Workflow Automation']};
   ]},;
     {
-
       title: 'Backend',
       description: 'Robust backend technologies for scalable and secure applications.',
       icon: Cpu, // Changed from Server to Cpu'
       stack['Node.js',Python',Java',C#',Go']},;
     {
-
       title: 'Mobile',
-=======
       icon: Monitor,'
       stack['React', 'Vue.js', 'Angular', 'TypeScript', 'Tailwind CSS']},;    {
 '
@@ -78,37 +31,22 @@ export default function CustomDevelopment(...args[]):  {
       stack['Node.js', 'Python', 'Java', 'C#', 'Go']},;    {
 '
       title: 'Mobile','
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       description: 'Cross-platform and native mobile development technologies.',
       icon: Smartphone,
       stack['React Native',Flutter',Swift',Kotlin',Xamarin']},;
     {
-
       stack['PostgreSQL',MongoDB',MySQL',Redis',Elasticsearch']};
       title: 'Database',;
       description: 'Modern database solutions for data storage and management.',;
       icon: Database,;
       stack: ['PostgreSQL',MongoDB',MySQL',Redis',Elasticsearch']};
   ]},;
-<<<<<<< HEAD
-    {;
-      title: 'Support & Maintenance',;
-      description: 'Ongoing support and maintenance to ensure your applications run smoothly.',;
-      icon: Settings};
-  ];
-
-  
-    'Healthcare',Finance',Manufacturing',Retail',Government',Education',Transportation',Energy';
-=======
     {;'
       title: 'Support & Maintenance',;'      description: 'Ongoing support and maintenance to ensure your applications run smoothly.',;
       icon: Settings};
   ];
-
   const industries = [;'    'Healthcare', 'Finance', 'Manufacturing', 'Retail', 'Government', 'Education', 'Transportation', 'Energy';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
-
   return()
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-20">
       {/* Hero Section */}"
@@ -118,26 +56,12 @@ export default function CustomDevelopment(...args[]):  {
           <motion.div"
             className="text-center max-w-4xl mx-auto"
             initial = {
-
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             animate = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
 "
@@ -152,46 +76,29 @@ export default function CustomDevelopment(...args[]):  {
               <Link"
                 to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold"
-
                 Start Your Project
               </Link>
               <Link"
                 to="/services"
                 className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-semibold"
-
                 View All Services
               </Link>
             </div>
           </motion.div>;
         </div>
       </section>
-
       {/* Services Overview */}"
       <section className="py-20">;"
         <div className="container mx-auto px-4">
           <motion.div"
             className="text-center mb-16"
             initial = {
-
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             animate = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
 "
@@ -210,37 +117,16 @@ export default function CustomDevelopment(...args[]):  {
                 key={index}"
                 className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/10"
                 initial = {
-
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 animate = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
               >"
                 <div className="flex items-start gap-4 mb-6">"
@@ -268,33 +154,18 @@ export default function CustomDevelopment(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* Technology Stack */}"
       <section className="py-20 bg-zion-slate-dark/30">;"
         <div className="container mx-auto px-4">
           <motion.div"
             className="text-center mb-16"
             initial = {
-
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             animate = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
 "
@@ -313,37 +184,16 @@ export default function CustomDevelopment(...args[]):  {
                 key={index}"
                 className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/10 group"
                 initial = {
-
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 animate = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
               >"
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">"
@@ -363,33 +213,18 @@ export default function CustomDevelopment(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}"
       <section className="py-20">;"
         <div className="container mx-auto px-4">
           <motion.div"
             className="text-center mb-16"
             initial = {
-
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             animate = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
 "
@@ -407,37 +242,16 @@ export default function CustomDevelopment(...args[]):  {
                 key={index}"
                 className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
                 initial = {
-
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 animate = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
               >"
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mb-6">"
@@ -450,33 +264,18 @@ export default function CustomDevelopment(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* Industries Section */}"
       <section className="py-20 bg-zion-slate-dark/30">;"
         <div className="container mx-auto px-4">
           <motion.div"
             className="text-center mb-16"
             initial = {
-
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             animate = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
 "
@@ -495,37 +294,16 @@ export default function CustomDevelopment(...args[]):  {
                 key={index}"
                 className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg p-6 text-center hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/10"
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 animate = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
               >"
                 <div className="text-zion-cyan font-semibold">{industry}</div>
@@ -534,33 +312,18 @@ export default function CustomDevelopment(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* Development Process */}"
       <section className="py-20">;"
         <div className="container mx-auto px-4">
           <motion.div"
             className="text-center mb-16"
             initial = {
-
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             animate = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
 "
@@ -583,37 +346,16 @@ export default function CustomDevelopment(...args[]):  {
                 key={index}"
                 className="text-center"
                 initial = {
-
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 animate = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
               >"
                 <div className="w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
@@ -626,33 +368,18 @@ export default function CustomDevelopment(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}"
       <section className="py-20 bg-zion-slate-dark/30">;"
         <div className="container mx-auto px-4">
           <motion.div"
             className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-2xl p-12 text-center"
             initial = {
-
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             animate = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
 "
@@ -667,13 +394,11 @@ export default function CustomDevelopment(...args[]):  {
               <Link"
                 to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold"
-
                 Start Your Project
               </Link>
               <Link"
                 to="/services"
                 className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-semibold"
-
                 Explore Services
               </Link>
             </div>;

@@ -101,14 +101,8 @@ export const safeStorage = {
     try {
       return localStorage.key(index);
     } catch (error) {
-<<<<<<< HEAD
-
-      // console.warn('Failed to get key from localStorage:', error);
-      return null;
-=======
 '
       // console.warn('Failed to get key from localStorage:', error);      return null;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     }
   },
 
@@ -116,14 +110,8 @@ export const safeStorage = {
     try {
       return localStorage.length;
     } catch (error) {
-<<<<<<< HEAD
-
-      // console.warn('Failed to get localStorage length:', error);
-      return 0;
-=======
 '
       // console.warn('Failed to get localStorage length:', error);      return 0;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     }
   }};
 

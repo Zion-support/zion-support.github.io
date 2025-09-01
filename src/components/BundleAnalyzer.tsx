@@ -23,14 +23,8 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
       
       // Calculate bundle metrics
       let totalSize = 0;
-<<<<<<< HEAD
-      let chunkCount = 0;
-      let largestChunk = { name: any', size: 0 };
-      
-=======
       let chunkCount = 0;'
       let largestChunk = { name: any', size: 0 };      
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       resourceEntries.forEach((entry: )  => {
 
         if (entry.name.includes('.js') || entry.name.includes('.css')) {
@@ -120,14 +114,8 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
     if (optimizations && optimizations.length > 0) {
 
       // console.log('📊 Bundle optimization recommendations:', optimizations);
-<<<<<<< HEAD
-    }
-  }, [enabled, optimizeBundle]);
-
-=======
     }  }, [enabled, optimizeBundle]);
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   // Don't render UI unless explicitly requested
   if (!showUI) {
 

@@ -80,15 +80,12 @@ import {
 ;
 export { function };
 export default function AICybersecurityThreatIntelligence(...args[]):  {
-
   const features = [
     {
-
       title: 'Threat Database & Analytics',
       description: 'Extensive database of known threats, attack patterns, and security intelligence'
     },
     {
-
       icon: Network,
       title: 'Network Security Monitoring',
       description: 'Real-time network traffic analysis and anomaly detection using AI algorithms'
@@ -96,42 +93,31 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
       title: "AI-Powered Threat Detection","      description: "Advanced machine learning algorithms that identify and analyze cyber threats in real-time"
     },
     {
-
       icon: Eye,"
       title: "24/7 Threat Monitoring","
       description: "Continuous monitoring of network traffic, endpoints, and cloud environments for suspicious activities"
     },
     {
-
       icon: AlertTriangle,"
       title: "Predictive Threat Intelligence","
       description: "AI algorithms that predict potential threats before they materialize using behavioral analysis"
     },
     {
-
       icon: Shield,"
       title: "Automated Incident Response","
       description: "Intelligent automation that responds to threats instantly, minimizing damage and recovery time"
     },
     {
-
       icon: Network,"
       title: "Threat Hunting & Analysis","
       description: "Proactive threat hunting using AI to identify hidden threats and attack patterns"
     },
     {
-
       icon: Workflow,"
       title: "Security Orchestration","
       description: "Automated security workflows that coordinate responses across multiple security tools"
     }
   ];
-
-  
-  
-  
-  
-  
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       title: "Vulnerability Assessment","      description: "Automated scanning and assessment of system vulnerabilities",
@@ -150,7 +136,6 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
       icon: FileText
     }
   ];
-
   const threatTypes = [
     {
 "
@@ -188,21 +173,12 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
       icon: Target
     }
   ];
-
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
       <SEO "
-<<<<<<< HEAD
-        title="AI Cybersecurity Threat Intelligence - Zion Tech Group"
-        description="Revolutionary AI-powered cybersecurity platform that detects, analyzes, and responds to cyber threats in real-time."
-        keywords="AI cybersecurity, threat intelligence, threat detection, cybersecurity AI, security automation, threat hunting"
-       />
-=======
         title="AI Cybersecurity Threat Intelligence - Zion Tech Group""
         description="Revolutionary AI-powered cybersecurity platform that detects, analyzes, and responds to cyber threats in real-time.""        keywords="AI cybersecurity, threat intelligence, threat detection, cybersecurity AI, security automation, threat hunting"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
       {/* Hero Section */}
           >"
             <div className="inline-flex items-center px-4 py-2 bg-red-500/10 border border-red-500/20 rounded-full text-red-400 text-sm font-medium mb-6">"
@@ -247,40 +223,18 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
               Detect, analyze, and respond to cyber threats in real-time with unprecedented accuracy.
             </p>
           </motion.div>
-          
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             animate = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition = {
-
   { duration: 0.8,
   delay: 0.2 
-
-
-
-
-
-
 }}"
             className="grid grid-cols-2 md:grid-cols-4 gap-8";
           >;"
@@ -320,7 +274,6 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto">
@@ -373,7 +326,6 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* Security Capabilities Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">"
         <div className="max-w-7xl mx-auto">
@@ -439,7 +391,6 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* Threat Types Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto">
@@ -457,7 +408,6 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
               Experience measurable improvements in threat detection, response time, and overall security effectiveness.
             </p>
           </motion.div>
-
           >"
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Comprehensive Threat Protection
@@ -514,7 +464,6 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">"
         <div className="max-w-7xl mx-auto">
@@ -554,12 +503,10 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`relative bg-slate-800/50 border rounded-xl p-8 ${
-
                   plan.popular '
                     ? 'border-red-500/50 bg-red-500/5' '
                     : 'border-slate-700/50'`
                 }`}
-
                 {plan.popular && (;"
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
                     <span className="bg-red-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -582,14 +529,8 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center space-x-3">"
                       <CheckCircle className="w-5 h-5 text-red-400 flex-shrink-0"  />
-<<<<<<< HEAD
-                viewport={{ once: true }}`
-                className={`bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
-
-=======
                 viewport={{ once: true }}`                className={`bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   index === 1 ? 'border-red-500/50 bg-red-500/10' : 'border-white/10'`
                 } hover:border-red-500/50 transition-all`}
               >
@@ -617,17 +558,14 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
                 <div className="text-sm text-gray-400 mb-6">
                   <strong>Best for:</strong> {tier.bestFor}
                 </div>
-                
                 <a"
                   href="/contact"`
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-colors ${
-
                     index === 1'
                       ? 'bg-red-600 hover:bg-red-700 text-white''
                       : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'`
                   }`}`
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
-
                   plan.popular'
                     ? 'bg-gradient-to-r from-red-500 to-orange-500 text-white hover:from-red-600 hover:to-orange-600''
                     : 'bg-slate-700 text-white hover:bg-slate-600'`
@@ -642,7 +580,6 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto">
@@ -682,7 +619,6 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">"
         <div className="max-w-7xl mx-auto">
@@ -720,7 +656,6 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-4xl mx-auto text-center">
@@ -779,7 +714,6 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* Market Information Section */}"
       <section className="py-20 bg-slate-800/30">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -808,7 +742,6 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
               <h3 className="text-2xl font-bold text-white mb-2">$182.3B</h3>"
               <p className="text-gray-300">Global Market Size 2024</p>
             </motion.div>
-            
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -818,7 +751,6 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
               <TrendingUp className="w-12 h-12 text-orange-400 mx-auto mb-4"  />"
               <h3 className="text-2xl font-bold text-white mb-2">13.4%</h3>"              <p className="text-gray-300">Annual Growth Rate</p>
             </motion.div>
-            
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -828,7 +760,6 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
               <DollarSign className="w-12 h-12 text-yellow-400 mx-auto mb-4"  />"
               <h3 className="text-2xl font-bold text-white mb-2">400%</h3>"              <p className="text-gray-300">Average ROI</p>
             </motion.div>
-            
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -841,32 +772,17 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}"
       <section className="py-20 bg-gradient-to-r from-red-500/10 to-orange-500/10">"
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
           >"

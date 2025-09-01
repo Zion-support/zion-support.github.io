@@ -1,34 +1,3 @@
-<<<<<<< HEAD
-import { Search, 
-  Filter, 
-  Star, 
-  Zap, 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Heart, 
-  TrendingUp, 
-  Users, 
-  Globe, 
-  Cpu, 
-  Lock, 
-  Target, 
-  Rocket, 
-  Sparkles,
-  ChevronDown,
-  CheckCircle,
-  ArrowRight,
-  Phone,
-  Mail,
-  Globe as GlobeIcon,
-  Award,
-  Clock,
-  DollarSign,
-  BarChart3'
- } from 'lucide-react.ts';
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
 
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -55,14 +24,8 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
       switch (sortBy) {
 
         case 'price':
-<<<<<<< HEAD
-          return a.price - b.price;
-        case 'category':
-          return a.category.localeCompare(b.category);
-=======
           return a.price - b.price;'        case 'category':
           return a.category.localeCompare(b.category);'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         case 'innovation':'
           return a.innovationLevel === 'revolutionary' ? 1 : -1;
         case 'name':
@@ -167,12 +130,7 @@ const UltimateServicesShowcase2028: React.FC = (): JSX.Element => {
               <div className="flex-1 relative">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
                 <input"
-<<<<<<< HEAD
-                  type="text"
-                  placeholder="Search services, features, or categories..."
-=======
                   type="text""                  placeholder="Search services, features, or categories..."
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}"
                   className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50"

@@ -1,25 +1,14 @@
-
 export default function AIAnalytics(...args[]):  {
-
-  
     },;
     {;
       icon: Eye,;
       title: 'Data Visualization',;
       description: 'Clear and intuitive data presentation'};
   ]},;
-<<<<<<< HEAD
-    {;
-      title: 'Computer Vision',;
-      description: 'Image and video analysis with AI',;
-      icon: Eye};
-=======
     {;'
       title: 'Computer Vision',;'      description: 'Image and video analysis with AI',;
       icon: Eye};
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
-
   return()
     <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}"
@@ -28,26 +17,12 @@ export default function AIAnalytics(...args[]):  {
         <div className="container-responsive relative z-10">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             animate = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}"
             className="text-center max-w-4xl mx-auto"
@@ -77,32 +52,17 @@ export default function AIAnalytics(...args[]):  {
           </motion.div>
         </div>
       </section>;
-
       {/* Features Section */}"
       <section className="py-20">;"
         <div className="container-responsive">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}"
@@ -121,37 +81,16 @@ export default function AIAnalytics(...args[]):  {
               <motion.div
                 key={feature.title}
                 initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}"
                 className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -166,32 +105,17 @@ export default function AIAnalytics(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* Services Section */}"
       <section className="py-20 bg-white/5">;"
         <div className="container-responsive">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}"
@@ -210,37 +134,16 @@ export default function AIAnalytics(...args[]):  {
               <motion.div
                 key={service.title}
                 initial = {
-
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
-
-
-
-
-
-
 }}
                 whileInView = {
-
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
                 transition = {
-
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}"
                 className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -259,32 +162,17 @@ export default function AIAnalytics(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}"
       <section className="py-20">;"
         <div className="container-responsive">
           <motion.div
             initial = {
-
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}"

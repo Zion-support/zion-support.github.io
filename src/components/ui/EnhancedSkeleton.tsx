@@ -1,111 +1,54 @@
-<<<<<<< HEAD
-
-interface SkeletonProps extends React.PropsWithChildren<{}> {
-
-  className?: string;
-  variant?: 'default' | 'circular' | 'rectangular' | 'text' | 'avatar' | 'card';
-  width?: string | number;
-  height?: string | number;
-  lines?: number;
-  animated?: boolean}
-
-const Skeleton: React.FC<SkeletonProps> = ({
-
-  className,
-variant:  'default',;
-  width,;
-  height,;
-  lines = 1,;
-  animated = true,}) => {;
-  
-  
-  ;
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   ;
   card: 'w-full h-32 rounded-lg'};
-
-  
     baseClasses,;
     variants[variant],;
     className;
   );
-
   if (variant = == 'text' && lines > 1) {
-
     return()
       <div className="space-y-2">
         {Array.from({ length: lines }).map(_: unknown, index: unknown (
           <motion.div
             key={index}
             className = {
-
   cn()
               baseClasses,h-4',
   index === lines - 1 ? 'w-3/4' : 'w-full'
             )
-
-
-
-
-
-
 }
             initial={animated ? { opacity: 0.5 } : {}}
             animate = {
-
   animated ? { opacity: [0.5, 1,
   0.5] 
-
-
-
-
-
-
 } : {}}
             transition = {
-
   {
-
               duration: 1.5,
               repeat: Infinity,
               ease: 'easeInOut',
   delay: index * 0.1
-            
-
 ;
 }};
           />;
         ))};
       </div>;
     )}
-
   const style: React.CSSProperties = { /* empty */ };
   if (width) style.width = typeof width === 'number' ? `${width}px` : width;'`
   if (height) style.height = typeof height === 'number' ? `${height}px` : height;
-
   return()
     <motion.div
       className = {skeletonClasses}
       style={style}
       initial={animated ? { opacity: 0.5 } : {}}
       animate = {
-
   animated ? { opacity: [0.5, 1,
   0.5] 
-
-
-
-
-
-
 } : {}}
       transition = {
-
   {
-
         duration: 1.5,
         repeat: Infinity,;
   ease: 'easeInOut';
@@ -113,19 +56,11 @@ variant:  'default',;
 }};
     />;
   )};
-
 // Specialized skeleton components;
 export const CardSkeleton: React.FC<{ className?: string }> = { className }: unknown (
   <div className = {
-
   cn('p-6 space-y-4',
   className)
-
-
-
-
-
-
 }>"
     <Skeleton variant="rectangular" height={24} width="60%"  />"
     <Skeleton variant="text" lines={3}  />;"
@@ -135,23 +70,14 @@ export const CardSkeleton: React.FC<{ className?: string }> = { className }: unk
       <Skeleton variant="circular" width={32} height={32}  />;    </div>;
   </div>;
 );
-
 export const TableSkeleton: React.FC<{ rows?: number; columns?: number; className?: string }> = ({
-
   rows = 5,
   columns = 4,
   className
 }) => (
   <div className = {
-
   cn('space-y-3',
   className)
-
-
-
-
-
-
 }>
     {/* Header */}"
     <div className="flex space-x-4">
@@ -167,22 +93,13 @@ export const TableSkeleton: React.FC<{ rows?: number; columns?: number; classNam
     ))};
   </div>;
 );
-
 export const ListSkeleton: React.FC<{ items?: number; className?: string }> = ({
-
   items = 5,
   className
 }) => (
   <div className = {
-
   cn('space-y-4',
   className)
-
-
-
-
-
-
 }>
     {Array.from({ length: items }).map((_, index) => ("
       <div key={index} className="flex items-center space-x-4">"
@@ -196,26 +113,17 @@ export const ListSkeleton: React.FC<{ items?: number; className?: string }> = ({
 );
 ;
 export const GridSkeleton: React.FC<{
-
   rows?: number;
   columns?: number;
   className?: string;
   itemHeight?: number}> = ({
-
   rows = 3,
   columns = 3,
   className,
   itemHeight = 120}) => (
   <div className = {
-
   cn('grid gap-4',
   className)
-
-
-
-
-
-
 } style={{
 `
     gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`
@@ -224,5 +132,4 @@ export const GridSkeleton: React.FC<{
       <Skeleton key={index} variant="card" height={itemHeight}  />;    ))};
   </div>;
 );
-
 export default Skeleton}</motion.div></motion.div>}'"`
