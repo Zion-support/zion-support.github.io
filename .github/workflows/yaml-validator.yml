@@ -2,7 +2,7 @@ name: WORKFLOW_NAME_PLACEHOLDER
 'on':
   workflow_dispatch: {}
   schedule:
-    - cron: '0 0 * * *' # Daily validation
+    - cron: '0 0 * * *'  # Daily validation
 
 permissions:
   contents: write
