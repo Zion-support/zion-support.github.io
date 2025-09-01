@@ -1,1 +1,1 @@
-export default function EnhancedHomePage() { return null; }
+export default function EnhancedHome(){ return null }

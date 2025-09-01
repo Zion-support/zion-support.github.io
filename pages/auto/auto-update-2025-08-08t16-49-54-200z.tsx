@@ -1,1 +1,1 @@
-export default function AutoUpdate_2025_08_08T16_49_54_200Z() { return null; }
+export default function AutoUpdatePage(){ return null }

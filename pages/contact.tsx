@@ -1,1 +1,1 @@
-export default function ContactPage() { return null; }
+export default function ContactPage(){ return null }

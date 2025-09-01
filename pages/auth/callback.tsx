@@ -1,1 +1,1 @@
-export default function AuthCallbackPage() { return null; }
+export default function AuthCallback(){ return null }

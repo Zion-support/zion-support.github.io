@@ -1,1 +1,1 @@
-export default function AboutPage() { return null; }
+export default function AboutPage(){ return null }

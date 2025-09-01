@@ -1,1 +1,1 @@
-export default function VerifyPage() { return null; }
+export default function Verify(){ return null }

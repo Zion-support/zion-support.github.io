@@ -1,1 +1,1 @@
-export default function AuthIndexPage() { return null; }
+export default function AuthIndex(){ return null }

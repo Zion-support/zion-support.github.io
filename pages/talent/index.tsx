@@ -1,1 +1,1 @@
-export default function TalentIndexPage() { return null; }
+export default function TalentIndex(){ return null }

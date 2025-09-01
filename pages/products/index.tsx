@@ -1,1 +1,1 @@
-export default function ProductsIndexPage() { return null; }
+export default function ProductsIndex(){ return null }

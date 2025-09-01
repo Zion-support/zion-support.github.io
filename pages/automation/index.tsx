@@ -1,1 +1,1 @@
-export default function AutomationIndexPage() { return null; }
+export default function AutomationIndex(){ return null }

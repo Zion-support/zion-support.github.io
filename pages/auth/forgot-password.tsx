@@ -1,1 +1,1 @@
-export default function ForgotPasswordPage() { return null; }
+export default function ForgotPassword(){ return null }

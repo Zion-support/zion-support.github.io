@@ -1,1 +1,1 @@
-export default function BlockchainSolutionsPage() { return null; }
+export default function BlockchainSolutions(){ return null }

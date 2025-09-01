@@ -1,1 +1,1 @@
-export default function IoTPlatformsPage() { return null; }
+export default function IoTPlatforms(){ return null }
