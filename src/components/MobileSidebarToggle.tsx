@@ -1,52 +1,14 @@
-<<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { X, Menu, Home, Brain, Cloud, Server, Rocket, Users, Briefcase, FileText, HelpCircle, MessageCircle, Zap, Target, BookOpen, Building, ChevronRight, ChevronDown  } from 'lucide-react';
-import { Link, useLocation  } from 'react-router-dom.ts';
-      newExpanded.delete(section)} else {
-      newExpanded.add(section)}
-    setExpandedSections(newExpanded)};
-  const isActive = (path: string)  => location.pathname === path;
-=======
-<<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { motion, AnimatePresence               } from 'framer-motion.ts';
-import { X, Menu, Home, Brain, Cloud, Server, Rocket, Users, Briefcase, FileText, HelpCircle, MessageCircle, Zap, Target, BookOpen, Building, ChevronRight, ChevronDown import { Link, useLocation               } from 'react-router-dom.ts';
-=======
 import React, { useState } from 'react.ts';
 import { motion, AnimatePresence                } from 'framer-motion.ts';
 import { X, Menu, Home, Brain, Cloud, Server, Rocket, Users, Briefcase, FileText, HelpCircle, MessageCircle, Zap, Target, BookOpen, Building, ChevronRight, ChevronDown                } from 'lucide-react.ts';
 import { Link, useLocation                } from 'react-router-dom.ts';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-<<<<<<< HEAD
-export const MobileSidebarToggle: React.FC = (): JSX.Element => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-  const [isOpen, setIsOpen] = useState(false);
-  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['Services']));
-  const location = useLocation();
-
-<<<<<<< HEAD
-  const toggleSection = (section: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    const newExpanded = new Set(expandedSections);
-    if (newExpanded.has(section)) {
-<<<<<<< HEAD
-      newExpanded.delete(section);
-    } else {
-      newExpanded.add(section);
-
-    setExpandedSections(newExpanded);
-  };
-=======
       newExpanded.delete(section)} else {
       newExpanded.add(section)}
     setExpandedSections(newExpanded)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   const isActive = (path: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => location.pathname === path;
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const navigationSections = [
     {
       title: "Main",

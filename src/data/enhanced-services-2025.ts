@@ -1,6 +1,4 @@
 export interface EnhancedService {
-<<<<<<< HEAD
-=======
 
 
 
@@ -15,7 +13,6 @@ export interface EnhancedService {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   name: string;
   tagline: string;

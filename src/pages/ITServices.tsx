@@ -1,22 +1,9 @@
-<<<<<<< HEAD
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { Link } from 'react-router-dom';
-import { Server, Shield, Cloud, Network, Wrench, Headphones } from 'lucide-react';
-
-export default function ITServices() {
-=======
 import React from 'react.ts';
 import { SEO              } from '@/components/SEO';
 import { Link              } from 'react-router-dom.ts';
-<<<<<<< HEAD
-import { Cloud, Server, Shield, Cpu, Cable, LifeBuoy, DollarSign, ExternalLink, Wrench, Database, Building const ITServices: React.FC = (): JSX.Element => {
-=======
 import { Server, Shield, Cloud, Network, Wrench, Headphones              } from 'lucide-react.ts';
 
 export default function ITServices(...args: any[]): any {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const offerings = [
     { icon: Server, title: 'Managed IT', desc: 'Proactive monitoring, patching, backups, and end-user support.' },
     { icon: Cloud, title: 'Cloud & DevOps', desc: 'Migrations, CI/CD, IaC, containerization, and FinOps.' },

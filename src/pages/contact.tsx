@@ -1,28 +1,12 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { 
-  Phone, 
-=======
-<<<<<<< HEAD
-const Contact: React.FC = (): JSX.Element => {
-=======
 import React, { useState } from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Phone, 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Mail, 
   MapPin, 
   Clock, 
   MessageSquare, 
   Send,
   CheckCircle,
-<<<<<<< HEAD
-  AlertCircle
-} from 'lucide-react';
-export default function Contact() {
-=======
   AlertCircle,
   User,
   MessageSquare,
@@ -30,7 +14,6 @@ export default function Contact() {
              } from 'lucide-react.ts';
 
 export default function Contact(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -43,10 +26,6 @@ export default function Contact(...args: any[]): any {
     preferredContact: 'email'
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-<<<<<<< HEAD
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const handleSubmit = async (e: React.FormEvent) => {
-=======
   const [submitStatus, setSubmitStatus] = useState<any>('idle');
 
   const handleInputChange = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyReact.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>)              => {
@@ -55,7 +34,6 @@ export default function Contact(...args: any[]): any {
   };
 
   const handleSubmit = async (e: anyanyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)              => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     e.preventDefault();
     setIsSubmitting(true);
     // Simulate form submission
@@ -151,8 +129,6 @@ export default function Contact(...args: any[]): any {
               Get in touch with our team of experts and let's discuss your project.
             </p>
           </motion.div>
-<<<<<<< HEAD
-=======
 
           {/* Contact Form */}
           <motion.div
@@ -304,8 +280,6 @@ export default function Contact(...args: any[]): any {
               </button>
             </form>
           </motion.div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         </div>
       </section>
       {/* Contact Form & Info */}

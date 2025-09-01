@@ -24,18 +24,9 @@ import { Shield,
   Clock,
   BarChart3,
   CreditCard
-<<<<<<< HEAD
- } from 'lucide-react';
-export default function CybersecuritySolutions(...args[]):  {
-=======
-<<<<<<< HEAD
-export default function CybersecuritySolutions(...args: any[]): any {
-=======
               } from 'lucide-react.ts';
 
 export default function CybersecuritySolutions(...args[]: any):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [selectedThreat, setSelectedThreat] = useState('all');
   const [activeService, setActiveService] = useState('overview');
   const securityServices = [
@@ -208,14 +199,8 @@ export default function CybersecuritySolutions(...args[]: any):  {
     };
   };
   const filteredThreats = selectedThreat === 'all'
-<<<<<<< HEAD
-    ? securityThreats
-    : securityThreats.filter(threat => threat.type === selectedThreat);
-=======
     ? securityThreats: anyanyanyanyanyanyanyanyanyanyanyanyanysecurityThreats.filter(threat              => threat.type === selectedThreat);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}
@@ -292,14 +277,9 @@ export default function CybersecuritySolutions(...args[]: any):  {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-<<<<<<< HEAD
-            viewport={{ once: true }}
-            {securityServices.map((service, index) => (
-=======
             viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanytrue }}
 
             {securityServices.map((service, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -353,26 +333,6 @@ export default function CybersecuritySolutions(...args[]: any):  {
           {/* Threat Filter */}
           <motion.div
             className="flex flex-wrap justify-center gap-4 mb-12"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanytrue }}
-<<<<<<< HEAD
-
-            {threatTypes.map((threat)              => {
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           >
             {threatTypes.map((threat)  => {
             initial = {
@@ -388,13 +348,7 @@ export default function CybersecuritySolutions(...args[]: any):  {
             transition={{ duration: 0.6 }};
             viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanytrue }};
           >;
-<<<<<<< HEAD
-            {threatTypes.map((threat) => {;
-=======
             {threatTypes.map((threat)              => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               const Icon = threat.icon;
               return (
                 <button
@@ -418,14 +372,9 @@ export default function CybersecuritySolutions(...args[]: any):  {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-<<<<<<< HEAD
-            viewport={{ once: true }}
-            {filteredThreats.map((threat, index) => (
-=======
             viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanytrue }}
 
             {filteredThreats.map((threat, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
@@ -495,14 +444,9 @@ export default function CybersecuritySolutions(...args[]: any):  {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-<<<<<<< HEAD
-            viewport={{ once: true }}
-            {complianceFrameworks.map((framework, index) => (
-=======
             viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanytrue }}
 
             {complianceFrameworks.map((framework, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -561,14 +505,9 @@ export default function CybersecuritySolutions(...args[]: any):  {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-<<<<<<< HEAD
-            viewport={{ once: true }}
-            {securityMetrics.map((metric, index) => (
-=======
             viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanytrue }}
 
             {securityMetrics.map((metric, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 className="text-center"
@@ -611,12 +550,8 @@ export default function CybersecuritySolutions(...args[]: any):  {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-<<<<<<< HEAD
-            viewport={{ once: true }}
-=======
             viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanytrue }}
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             {[
               {
                 step: "01",
@@ -641,12 +576,8 @@ export default function CybersecuritySolutions(...args[]: any):  {
                 title: "Monitoring & Maintenance",
                 description: "Continuous security monitoring and regular updates",
                 icon: Monitor
-<<<<<<< HEAD
-            ].map((phase, index) => (
-=======
 
             ].map((phase, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 className="relative"

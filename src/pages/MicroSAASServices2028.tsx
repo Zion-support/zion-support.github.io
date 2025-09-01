@@ -147,15 +147,8 @@ import { Brain,
   Space,
   Handshake,
   Calendar
-<<<<<<< HEAD
- } from 'lucide-react';
-=======
-<<<<<<< HEAD
-=======
               } from 'lucide-react.ts';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const microSAASServices2028 = [
   // AI-Powered Content Creation
   {
@@ -494,49 +487,7 @@ const microSAASServices2028 = [
     customers: 123;
   };
 ];
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-const MicroSAASServices2028: React.FC = (): JSX.Element => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [sortBy, setSortBy] = useState('popularity');
-
-  const categories = [
-    { id: 'all', name: 'All Services', icon: Globe, color: 'from-zion-cyan to-zion-purple' },
-    { id: 'ai-content', name: 'AI Content', icon: FileText, color: 'from-zion-blue to-zion-cyan' },;
-    { id: 'ai-design', name: 'AI Design', icon: Palette, color: 'from-zion-purple to-zion-pink' },;
-    { id: 'ai-video', name: 'AI Video', icon: Video, color: 'from-zion-red to-zion-orange' },;
-    { id: 'ai-development', name: 'AI Development', icon: Code, color: 'from-zion-green to-zion-emerald' },;
-    { id: 'ai-ecommerce', name: 'AI E-commerce', icon: ShoppingCart, color: 'from-zion-orange to-zion-red' },;
-    { id: 'ai-customer-service', name: 'AI Customer Service', icon: MessageSquare, color: 'from-zion-blue to-zion-indigo' },;
-    { id: 'ai-analytics', name: 'AI Analytics', icon: BarChart3, color: 'from-zion-emerald to-zion-teal' };
-  ];
-
-  const filteredServices = microSAASServices2028
-    .filter(service => {
-      const matchesCategory = selectedCategory === 'all' ||
-        service.category.toLowerCase().includes(selectedCategory.replace('-', ' '));
-      const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-        service.description.toLowerCase().includes(searchQuery.toLowerCase());
-      return matchesCategory && matchesSearch})
-    .sort((a, b) => {
-      switch (sortBy) {
-        case 'price-low':
-          return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, ''));
-        case 'price-high':
-          return parseInt(b.price.replace(/[^0-9]/g, '')) - parseInt(a.price.replace(/[^0-9]/g, ''));
-        case 'rating':
-          return b.rating - a.rating;
-        case 'popularity':
-        default:
-<<<<<<< HEAD
-          return b.popular ? 1 : -1;
-
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           return b.popular ? 1 : -1}
     });
   return (

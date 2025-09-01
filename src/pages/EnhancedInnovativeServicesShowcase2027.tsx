@@ -28,35 +28,8 @@ import { Brain,
   Mail,
   MapPin,
   ExternalLink,
-<<<<<<< HEAD
- } from 'lucide-react';
-import { enhancedInnovativeServices2027, enhancedInnovativeServices2027Categories  } from "../data/enhancedInnovativeServices2027";
-=======
-<<<<<<< HEAD
-  Filter,
-  Search,
-  Grid3X3,
-  List
-<<<<<<< HEAD
-import { enhancedInnovativeServices2027, enhancedInnovativeServices2027Categories              } from '../data/enhancedInnovativeServices2027';
-const categoryIcons: { [key: string]: React.ComponentType<any> } = {
-  'Web3 Solutions': Globe,
-  'Metaverse Solutions': Eye,
-  'Sustainable Tech': Leaf,
-  'NeuroTech Solutions': Brain,
-  'Fusion Energy Solutions': Zap,
-  'OceanTech Solutions': Waves,
-  'AgriTech Solutions': Factory,
-  'Smart City Solutions': Building2,
-  'Digital Twin Solutions': Cpu,
-  'Edge AI Solutions': Network,
-  'Federated Learning Solutions': Code
-};
-=======
  } from 'lucide-react';
 import { enhancedInnovativeServices2027, enhancedInnovativeServices2027Categories               } from '../data/enhancedInnovativeServices2027';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const categoryColors: { [key: string]: string } = {
   'Web3 Solutions': 'from-purple-500 to-pink-500',
   'Metaverse Solutions': 'from-blue-500 to-cyan-500',
@@ -109,16 +82,10 @@ export default function EnhancedInnovativeServicesShowcase2027(...args[]: any): 
   X,;
   Beaker;
 } from 'lucide-react';
-<<<<<<< HEAD
-import { ENHANCED_INNOVATIVE_SERVICES_2027, EnhancedInnovativeService2027 } from "../data/enhancedInnovativeServices2027";
-const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
-  const [services, setServices] = useState<EnhancedInnovativeService2027[]>(ENHANCED_INNOVATIVE_SERVICES_2027);
-=======
 import { ENHANCED_INNOVATIVE_SERVICES_2027, EnhancedInnovativeService2027              } from '../data/enhancedInnovativeServices2027';
 
 const EnhancedInnovativeServicesShowcase2027: React.FC = (): JSX.Element => {;
   const [services, setServices] = useState<any>(ENHANCED_INNOVATIVE_SERVICES_2027);
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedInnovationLevel, setSelectedInnovationLevel] = useState('all');
@@ -147,12 +114,8 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = (): JSX.Element => {;
       default:
         return 0}
   });
-<<<<<<< HEAD
-  const getCategoryIcon = (category: string) => {;
-=======
 
   const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     switch (category) {;
       case 'AI & Financial Technology': return <DollarSign className="w-5 h-5" />;
       case 'Quantum & Cloud Computing': return <Cpu className="w-5 h-5" />;
@@ -167,12 +130,8 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = (): JSX.Element => {;
       default: return <Zap className="w-5 h-5" />;
     }
   };
-<<<<<<< HEAD
-  const getInnovationLevelColor = (level: string) => {;
-=======
 
   const getInnovationLevelColor = (level: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     switch (level) {;
       case 'Breakthrough': return 'bg-gradient-to-r from-purple-600 to-pink-600';
       case 'Advanced': return 'bg-gradient-to-r from-blue-600 to-cyan-600';
@@ -180,12 +139,8 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = (): JSX.Element => {;
       default: return 'bg-gray-600';
     }
   };
-<<<<<<< HEAD
-  const handleServiceClick = (service: EnhancedInnovativeService2027) => {;
-=======
 
   const handleServiceClick = (service: anyanyanyanyanyanyanyanyanyanyanyanyanyEnhancedInnovativeService2027)              => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setSelectedService(service);
     setCurrentSlide(0);
   };
@@ -316,29 +271,9 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = (): JSX.Element => {;
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-            className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
-          >
-            {sortedServices.map((service)  => (
-=======
-<<<<<<< HEAD
-      {/* Services Grid/List */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
-        {viewMode === 'grid' ? (
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-<<<<<<< HEAD
-            className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8"
-
-            {sortedServices.map((service)              => (
-=======
             className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8"
           >
             {sortedServices.map((service)               => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={service.id}
                 variants={itemVariants}

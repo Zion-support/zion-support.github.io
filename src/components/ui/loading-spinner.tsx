@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-interface LoadingSpinnerProps {
-=======
 import React from 'react.ts';
 import { motion               } from 'framer-motion.ts';
 
 interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: 'primary' | 'secondary' | 'white' | 'cyan';
   text?: string;
@@ -24,8 +18,6 @@ md: 'w-12 h-12',;
   ;
   xl: 'w-32 h-32';
 ;
-<<<<<<< HEAD
-=======
 
 
 
@@ -33,7 +25,6 @@ md: 'w-12 h-12',;
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 };
 const colorClasses = {
   primary: 'border-cyan-400',

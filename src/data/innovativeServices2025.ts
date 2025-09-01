@@ -1,55 +1,3 @@
-<<<<<<< HEAD
-export interface InnovativeService {
-=======
-<<<<<<< HEAD
-export interface InnovativeService2025 {
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-  id: string;
-  title: string;
-  description: string;
-  category: 'AI Solutions' | 'IT Services' | 'Micro SaaS' | 'Cybersecurity' | 'Data Analytics' | 'Cloud Services' | 'Emerging Tech';
-  subcategory: string;
-  price: number;
-  currency: string;
-  pricingModel: 'monthly' | 'yearly' | 'project' | 'hourly' | 'usage-based';
-  features: string[];
-  benefits: string[];
-<<<<<<< HEAD
-  targetAudience: string[];
-<<<<<<< HEAD
-  marketPosition: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  implementationTime: string;
-  trialDays: number;
-  contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-  };
-  link: string;
-  icon: string;
-  color: string;
-  popular?: boolean;
-  new?: boolean;
-  featured?: boolean;
-  roi?: string;
-=======
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   useCases: string[];
   targetAudience: string[];
   marketPrice: string;
@@ -104,8 +52,6 @@ contactInfo: {;
   marketSize?: string;
 =======
 import { ProductListing              } from '@/types/listings';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 export const INNOVATIVE_SERVICES_2025: InnovativeService[] = [
   // AI-Powered Business Intelligence & Analytics
@@ -571,10 +517,6 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService[] = [
   }
 ];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default innovativeServices2025;
-=======
 export const INNOVATIVE_SERVICE_CATEGORIES_2025 = {
   "AI & Machine Learning": {
     icon: "🧠",
@@ -666,11 +608,6 @@ export const INNOVATIVE_PRICING_TIERS_2025 = {
   }
 };
 
-<<<<<<< HEAD
-export const getServicesByAIScore = (minScore: anyanyanyanyanyanyanyanyanyanyanyanyanynumber): InnovativeService2025[]              => {
-  return INNOVATIVE_SERVICES_2025.filter(service => service.aiScore >= minScore);
-};}}
-=======
 export const INNOVATIVE_CONTACT_INFO_2025 = {
   phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
@@ -688,8 +625,5 @@ export const INNOVATIVE_SERVICE_GUARANTEES_2025 = {
   "Updates": "Regular feature updates and security patches included",
   "Training": "Comprehensive onboarding and training included"
 };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 =======
 export default INNOVATIVE_SERVICES_2025;
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089

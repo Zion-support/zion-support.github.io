@@ -1,65 +1,3 @@
-<<<<<<< HEAD
-export interface EnhancedService {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    id: string;
-    name: string;
-    tagline: string;
-    description: string;
-    category: 'micro-saas' | 'it-services' | 'ai-services' | 'emerging-tech' | 'fintech' | 'healthtech' | 'edutech' | 'martech';
-pricing: {;
-        monthly: string;
-        yearly: string;
-        enterprise: string;
-        setup: string;
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-};
-    features: string[];
-    benefits: string[];
-    roi: string;
-    trialDays: number;
-    setupTime: string;
-    icon: string;
-    color: string;
-    link: string;
-    technology?: string[];
-    integrations?: string[];
-    useCases?: string[];
-    targetAudience?: string;
-    marketPosition?: string;
-    competitors?: string[];
-    contactInfo: {
-        mobile: string;
-        email: string;
-        address: string;
-        website: string;
-    };
-=======
 export interface EnhancedServiceItem {
   id: string;
   title: string;
@@ -93,7 +31,6 @@ export interface EnhancedServiceItem {
   compliance: string[];
   scalability: string;
   security: string[];
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 }
 
 export const comprehensiveServices2025Enhanced: EnhancedServiceItem[] = [

@@ -1,14 +1,8 @@
 import SEO from '@/components/SEO';
-<<<<<<< HEAD
-import { DisputeDashboard } from '@/components/disputes';
-import { ProtectedRoute } from '@/components/ProtectedRoute';
-function DisputesPage(...args[]):  {
-=======
 import { DisputeDashboard              } from '@/components/disputes';
 import { ProtectedRoute              } from '@/components/ProtectedRoute';
 
 function DisputesPage(...args[]: any):  {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <ProtectedRoute>
       <>

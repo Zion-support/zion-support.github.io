@@ -1,8 +1,6 @@
 // Expanded Services Pricing Guide 2027 - Zion Tech Group
 // Comprehensive pricing information for all expanded innovative services
 export interface ExpandedServicePricing {
-<<<<<<< HEAD
-=======
 
 
 
@@ -17,7 +15,6 @@ export interface ExpandedServicePricing {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   serviceId: string;
   serviceName: string;
   category: string;
@@ -1151,36 +1148,6 @@ export const ALL_EXPANDED_SERVICES_PRICING = [;
   ...healthcarePricing;
 ];
 // Helper functions
-<<<<<<< HEAD
-export const getPricingByServiceId = (serviceId: string): ExpandedServicePricing | null => {;
-  return ALL_EXPANDED_SERVICES_PRICING.find(pricing => pricing.serviceId === serviceId);
-};
-export const getPricingByCategory = (category: string): ExpandedServicePricing[] => {;
-  return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.category === category);
-};
-export const getPricingBySubcategory = (subcategory: string): ExpandedServicePricing[] => {;
-  return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.subcategory === subcategory);
-};
-export const searchPricing = (query: string): ExpandedServicePricing[] => {;
-=======
-<<<<<<< HEAD
-export const getPricingByServiceId = (serviceId: anyanyanyanyanyanyanyanyanyanyanyanyanystring): ExpandedServicePricing | null               => {;
-  return ALL_EXPANDED_SERVICES_PRICING.find(pricing => pricing.serviceId === serviceId)};
-
-export const getPricingByCategory = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring): ExpandedServicePricing[]               => {;
-  return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.category === category)};
-
-export const getPricingBySubcategory = (subcategory: anyanyanyanyanyanyanyanyanyanyanyanyanystring): ExpandedServicePricing[]               => {;
-  return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.subcategory === subcategory)};
-
-export const searchPricing = (query: anyanyanyanyanyanyanyanyanyanyanyanyanystring): ExpandedServicePricing[]               => {;
-  const lowercaseQuery = query.toLowerCase();
-  return ALL_EXPANDED_SERVICES_PRICING.filter(pricing = > 
-    pricing.serviceName.toLowerCase().includes(lowercaseQuery) ||
-    pricing.category.toLowerCase().includes(lowercaseQuery) ||;
-    pricing.subcategory.toLowerCase().includes(lowercaseQuery);
-  )};
-=======
 export const getPricingByServiceId = (serviceId: anyanyanyanyanyanyanyanyanyanyanyanyanystring): ExpandedServicePricing | null              => {;
   return ALL_EXPANDED_SERVICES_PRICING.find(pricing => pricing.serviceId === serviceId);
 };
@@ -1194,7 +1161,6 @@ export const getPricingBySubcategory = (subcategory: anyanyanyanyanyanyanyanyany
 };
 
 export const searchPricing = (query: anyanyanyanyanyanyanyanyanyanyanyanyanystring): ExpandedServicePricing[]              => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const lowercaseQuery = query.toLowerCase();
   return ALL_EXPANDED_SERVICES_PRICING.filter(pricing =>
     pricing.serviceName.toLowerCase().includes(lowercaseQuery) ||

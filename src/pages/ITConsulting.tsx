@@ -54,15 +54,9 @@ import { Lightbulb,
   Brain,
   Network,
   Rocket
-<<<<<<< HEAD
-} from 'lucide-react';
-export default function ITConsulting() {
-=======
              } from 'lucide-react.ts';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default function ITConsulting(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const features = [
     {
       icon: Users,
@@ -200,14 +194,9 @@ export default function ITConsulting(...args: any[]): any {
               make informed technology decisions and achieve your business objectives.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -249,14 +238,9 @@ export default function ITConsulting(...args: any[]): any {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-<<<<<<< HEAD
-            viewport={{ once: true }}
-            {consultingServices.map((service, index) => (
-=======
             viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanytrue }}
 
             {consultingServices.map((service, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
@@ -314,14 +298,9 @@ export default function ITConsulting(...args: any[]): any {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-<<<<<<< HEAD
-            viewport={{ once: true }}
-            {benefits.map((benefit, index) => (
-=======
             viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanytrue }}
 
             {benefits.map((benefit, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 className="text-center"
@@ -360,14 +339,9 @@ export default function ITConsulting(...args: any[]): any {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-<<<<<<< HEAD
-            viewport={{ once: true }}
-            {industries.map((industry, index) => (
-=======
             viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanytrue }}
 
             {industries.map((industry, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}

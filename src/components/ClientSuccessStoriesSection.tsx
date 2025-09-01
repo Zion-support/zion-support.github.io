@@ -8,57 +8,8 @@ import { Star,
   CheckCircle,
   ArrowRight,
   Heart
-<<<<<<< HEAD
-} from 'lucide-react';
-=======
-<<<<<<< HEAD
-export const ClientSuccessStoriesSection: React.FC = (): JSX.Element => {
-=======
               } from 'lucide-react.ts';
 
-<<<<<<< HEAD
-export const ClientSuccessStoriesSection: React.FC = (): JSX.Element => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      role: 'CTO',
-      comp: 'TechFlow Solutions',
-      avatar: '👩‍💼',
-      rating: 5,
-      quote: 'Zion Tech Group transformed our legacy systems into a modern, AI-powered platform. The results exceeded our expectations with 300% performance improvement.',
-      metrics['300% Performance', '60% Cost Reduction', '2x Faster Deployment']
-    },
-    {
-      name: 'Michael Chen',
-      role: 'CEO',
-      comp: 'Global Manufacturing Co.',
-      avatar: '👨‍💼',
-      rating: 5,
-      quote: 'Their cybersecurity expertise helped us achieve SOC 2 compliance in record time. The team is professional, knowledgeable, and delivers exceptional results.',
-      metrics['SOC 2 Compliance', '99.9% Uptime', 'Zero Security Breaches']
-    },
-    {
-      name: 'Emily Rodriguez',
-      role: 'VP of Operations',
-      comp: 'HealthTech Innovations',
-      avatar: '👩‍⚕️',
-      rating: 5,
-      quote: 'The AI solutions they implemented have revolutionized our patient care processes. We\'ve seen a 40% improvement in diagnostic accuracy.',
-      metrics['40% Accuracy', '50% Time Savings', 'HIPAA Compliant']
-    },
-    {
-      name: 'David Thompson',
-      role: 'Founder',
-      comp: 'StartupXYZ',
-      avatar: '👨‍💻',
-      rating: 5,
-      quote: 'From concept to launch in just 8 weeks! Zion Tech Group\'s rapid development approach and technical expertise are unmatched.',
-<<<<<<< HEAD
-      metrics: ['8 Week Launch', 'MVP Ready', 'Scalable Architecture']
-
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       metrics['8 Week Launch', 'MVP Ready', 'Scalable Architecture'];
     };
   ];
@@ -121,13 +72,8 @@ const successStories = [
     image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400";
   };
 ];
-<<<<<<< HEAD
-export function ClientSuccessStoriesSection() {
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export function ClientSuccessStoriesSection(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
@@ -154,17 +100,6 @@ export function ClientSuccessStoriesSection(...args: any[]): any {
         </motion.div>
         {/* Success Metrics */}
         <motion.div
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8 mb-16"
-
-          {successMetrics.map((metric, index)               => {
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           initial = {
   { opacity: 0,
   y: 20 
@@ -179,12 +114,7 @@ export function ClientSuccessStoriesSection(...args: any[]): any {
 }}
           className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8 mb-16"
         >;
-<<<<<<< HEAD
-          {successMetrics.map((metric, index)  => {;
-=======
           {successMetrics.map((metric, index)                => {;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             const IconComponent = metric.icon;
             return (
               <div key = {metric.label} className="text-center">

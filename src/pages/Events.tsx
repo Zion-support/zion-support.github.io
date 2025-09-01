@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Calendar, 
-  MapPin, 
-  Clock, 
-  Users, 
-  ExternalLink, 
-  Filter,
-  Search,
-  Tag,
-  ArrowRight,
-  Video,
-  Globe,
-  Building
-} from 'lucide-react';
-
-const Events: React.FC = () => {
-=======
 import React, { useState } from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Link              } from 'react-router-dom.ts';
@@ -178,7 +158,6 @@ const statuses = ['All', 'upcoming', 'past'];
 
 export default function Events(...args: any[]): any {
   const [selectedType, setSelectedType] = useState('All');
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -195,98 +174,6 @@ export default function Events(...args: any[]): any {
     'Workshops'
   ];
 
-<<<<<<< HEAD
-  const events = [
-    {
-      id: 1,
-      title: "AI in Enterprise: 2025 Trends & Predictions",
-      category: "AI & Machine Learning",
-      date: "2025-02-15",
-      time: "10:00 AM - 12:00 PM EST",
-      location: "Virtual Event",
-      type: "Webinar",
-      attendees: 150,
-      description: "Join industry experts as we explore the latest trends in AI adoption across enterprise organizations and what to expect in 2025.",
-      speakers: ["Dr. Sarah Chen", "Mark Johnson", "Dr. Alex Rodriguez"],
-      tags: ["AI", "Enterprise", "Trends", "2025"],
-      registrationUrl: "#",
-      isVirtual: true
-    },
-    {
-      id: 2,
-      title: "Cybersecurity Summit 2025",
-      category: "Cybersecurity",
-      date: "2025-03-20",
-      time: "9:00 AM - 5:00 PM EST",
-      location: "Middletown, DE",
-      type: "Conference",
-      attendees: 300,
-      description: "A comprehensive one-day summit covering the latest cybersecurity threats, defense strategies, and compliance requirements.",
-      speakers: ["Chief Security Officers", "Threat Intelligence Experts", "Compliance Specialists"],
-      tags: ["Cybersecurity", "Threats", "Compliance", "Defense"],
-      registrationUrl: "#",
-      isVirtual: false
-    },
-    {
-      id: 3,
-      title: "Cloud-Native Architecture Workshop",
-      category: "Cloud & DevOps",
-      date: "2025-02-28",
-      time: "1:00 PM - 4:00 PM EST",
-      location: "Virtual Event",
-      type: "Workshop",
-      attendees: 75,
-      description: "Hands-on workshop covering cloud-native design patterns, microservices architecture, and DevOps best practices.",
-      speakers: ["Cloud Architects", "DevOps Engineers"],
-      tags: ["Cloud", "DevOps", "Microservices", "Architecture"],
-      registrationUrl: "#",
-      isVirtual: true
-    },
-    {
-      id: 4,
-      title: "Digital Transformation Success Stories",
-      category: "Digital Transformation",
-      date: "2025-04-10",
-      time: "2:00 PM - 3:30 PM EST",
-      location: "Virtual Event",
-      type: "Webinar",
-      attendees: 200,
-      description: "Learn from real-world case studies of successful digital transformation initiatives and the lessons learned along the way.",
-      speakers: ["Transformation Leaders", "Industry Experts"],
-      tags: ["Digital Transformation", "Case Studies", "Success Stories"],
-      registrationUrl: "#",
-      isVirtual: true
-    },
-    {
-      id: 5,
-      title: "Quantum Computing in Business",
-      category: "Quantum Computing",
-      date: "2025-05-15",
-      time: "11:00 AM - 1:00 PM EST",
-      location: "New York, NY",
-      type: "Conference",
-      attendees: 250,
-      description: "Explore how quantum computing is revolutionizing business applications and what organizations need to prepare for.",
-      speakers: ["Quantum Researchers", "Business Strategists"],
-      tags: ["Quantum Computing", "Business Applications", "Innovation"],
-      registrationUrl: "#",
-      isVirtual: false
-    },
-    {
-      id: 6,
-      title: "Blockchain for Enterprise Solutions",
-      category: "Blockchain",
-      date: "2025-06-20",
-      time: "10:00 AM - 4:00 PM EST",
-      location: "Virtual Event",
-      type: "Workshop",
-      attendees: 100,
-      description: "Comprehensive workshop on implementing blockchain solutions for enterprise use cases and supply chain management.",
-      speakers: ["Blockchain Experts", "Enterprise Architects"],
-      tags: ["Blockchain", "Enterprise", "Supply Chain", "Implementation"],
-      registrationUrl: "#",
-      isVirtual: true
-=======
     return matchesType && matchesCategory && matchesStatus && matchesSearch;
   });
 
@@ -312,24 +199,9 @@ export default function Events(...args: any[]): any {
       case 'IoT & Edge': return Zap;
       case 'Digital Transformation': return Globe;
       default: return BookOpen;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     }
   ];
 
-<<<<<<< HEAD
-  const upcomingEvents = events.filter(event => new Date(event.date) >= new Date());
-  const filteredEvents = selectedCategory === 'All' 
-    ? upcomingEvents 
-    : upcomingEvents.filter(event => event.category === selectedCategory);
-
-  const searchFilteredEvents = searchTerm 
-    ? filteredEvents.filter(event => 
-        event.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        event.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        event.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-      )
-    : filteredEvents;
-=======
   const getStatusBadge = (status: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
     if (status === 'upcoming') {
       return <span className="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Upcoming</span>;
@@ -337,7 +209,6 @@ export default function Events(...args: any[]): any {
       return <span className="px-3 py-1 bg-gray-500/20 text-gray-400 text-xs rounded-full border border-gray-500/30">Past</span>;
     }
   };
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -384,16 +255,6 @@ export default function Events(...args: any[]): any {
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Main Content */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          {/* Filters */}
-          <div className="flex flex-wrap items-center gap-4 mb-8">
-            <div className="flex items-center space-x-2">
-              <Filter className="w-5 h-5 text-cyan-400" />
-              <span className="text-gray-300">Filter by:</span>
-=======
       {/* Filters Section */}
       <section className="py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -453,7 +314,6 @@ export default function Events(...args: any[]): any {
                   ))}
                 </select>
               </div>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             </div>
             {eventCategories.map((category) => (
               <button
@@ -470,63 +330,6 @@ export default function Events(...args: any[]): any {
             ))}
           </div>
 
-<<<<<<< HEAD
-          {/* Events Grid */}
-          <div className="grid gap-8">
-            {searchFilteredEvents.map((event, index) => (
-              <motion.article
-                key={event.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl overflow-hidden hover:border-cyan-500/30 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/10"
-              >
-                <div className="flex flex-col lg:flex-row">
-                  <div className="lg:w-1/3">
-                    <div className={`h-48 lg:h-full flex items-center justify-center ${
-                      event.isVirtual 
-                        ? "bg-gradient-to-br from-blue-500/20 to-cyan-500/20" 
-                        : "bg-gradient-to-br from-purple-500/20 to-pink-500/20"
-                    }`}>
-                      <div className="text-center">
-                        {event.isVirtual ? (
-                          <Video className="w-12 h-12 text-blue-400 mx-auto mb-2" />
-                        ) : (
-                          <Building className="w-12 h-12 text-purple-400 mx-auto mb-2" />
-                        )}
-                        <span className={`text-sm font-medium ${
-                          event.isVirtual ? "text-blue-400" : "text-purple-400"
-                        }`}>
-                          {event.isVirtual ? "Virtual Event" : "In-Person Event"}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="lg:w-2/3 p-6">
-                    <div className="flex items-center space-x-4 mb-3">
-                      <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full">
-                        {event.category}
-                      </span>
-                      <span className="px-3 py-1 bg-gray-700/50 text-gray-300 text-xs font-medium rounded-full">
-                        {event.type}
-                      </span>
-                    </div>
-                    
-                    <h2 className="text-2xl font-bold text-white mb-3 hover:text-cyan-400 transition-colors cursor-pointer">
-                      {event.title}
-                    </h2>
-                    
-                    <p className="text-gray-300 mb-4 leading-relaxed">
-                      {event.description}
-                    </p>
-                    
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                      <div className="space-y-2">
-                        <div className="flex items-center space-x-2 text-gray-400">
-                          <Calendar className="w-4 h-4" />
-                          <span className="text-sm">{new Date(event.date).toLocaleDateString()}</span>
-=======
       {/* Upcoming Events */}
       {upcomingEvents.length > 0 && (
         <section className="py-16">
@@ -559,7 +362,6 @@ export default function Events(...args: any[]): any {
                       <div className="flex items-center gap-3">
                         <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center">
                           <CategoryIcon className="w-6 h-6 text-white" />
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                         </div>
                         <div className="flex items-center space-x-2 text-gray-400">
                           <Clock className="w-4 h-4" />
@@ -601,13 +403,6 @@ export default function Events(...args: any[]): any {
             ))}
           </div>
 
-<<<<<<< HEAD
-          {searchFilteredEvents.length === 0 && (
-            <div className="text-center py-12">
-              <Calendar className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-              <p className="text-gray-400 text-lg">No events found matching your criteria.</p>
-              <p className="text-gray-500 mt-2">Try adjusting your filters or search terms.</p>
-=======
       {/* Past Events */}
       {pastEvents.length > 0 && (
         <section className="py-16">
@@ -683,7 +478,6 @@ export default function Events(...args: any[]): any {
                   </motion.div>
                 );
               })}
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             </div>
           )}
         </div>
@@ -716,10 +510,4 @@ export default function Events(...args: any[]): any {
       </section>
     </div>
   );
-<<<<<<< HEAD
-};
-
-export default Events;
-=======
 }
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894

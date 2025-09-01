@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-// Comprehensive Pricing Guide 2031 - Zion Tech Group
-// Complete pricing information for all micro SAAS, IT services, and AI solutions
-
-export interface PricingTier {
-=======
 export interface PricingTier2031 {
 
 
@@ -19,7 +13,6 @@ export interface PricingTier2031 {
 
 
   id: string;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   name: string;
   price: string;
   billing: 'month' | 'year' | 'project' | 'hour';
@@ -27,15 +20,6 @@ export interface PricingTier2031 {
   features: string[];
   benefits: string[];
   bestFor: string[];
-<<<<<<< HEAD
-  popular?: boolean;
-  savings?: string;
-  setupFee?: string;
-  annualDiscount?: string;
-}
-
-export interface ServicePricing {
-=======
   includedServices: string[];
 addOns: {;
     name: string;
@@ -74,41 +58,9 @@ export interface ServiceCategory2031 {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title: string;
   description: string;
-<<<<<<< HEAD
-  category: string;
-  pricingTiers: PricingTier[];
-  marketComparison: {
-    averageMarketPrice: string;
-    ourPrice: string;
-    savings: string;
-    valueProposition: string;
-    competitors: string[];
-  };
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
-  contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  innovationLevel: string;
-  marketSize: string;
-  growthRate: string;
-  roi: string;
-  setupTime: string;
-  freeTrial: boolean;
-  trialPeriod: string;
-  moneyBackGuarantee: boolean;
-  sla: string;
-  support: string;
-=======
   icon: string;
 services: {;
     id: string;
@@ -142,7 +94,6 @@ contactInfo: {;
 
 };
   }[];
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 }
 
 // Contact Information for Zion Tech Group
@@ -749,13 +700,8 @@ export default comprehensivePricingGuide2031;
 
 // Pricing summary for 2031
 export const PRICING_SUMMARY_2031 = {
-<<<<<<< HEAD
-  totalServices: comprehensivePricingGuide2031.length,
-  totalCategories: 4, // Micro SAAS, IT Services, AI Services, Quantum Computing
-=======
   totalServices: anyanyanyanyanyanyanyanyanyanyanyanyanyCOMPREHENSIVE_PRICING_GUIDE_2031.reduce((acc, category)              => acc + category.services.length, 0),
   totalCategories: COMPREHENSIVE_PRICING_GUIDE_2031.length,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   priceRange: {
     min: "$299/month",
     max: "$50,000/project"

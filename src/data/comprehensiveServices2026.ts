@@ -1,13 +1,6 @@
 // Comprehensive Services 2026 - Zion Tech Group
 // Revolutionary Micro SAAS, IT Infrastructure, and AI Services
 export interface ServiceContact {
-<<<<<<< HEAD
-  phone: string;
-  email: string;
-  website: string;
-  address: string}
-export interface MicroSaasService {
-=======
 
 
 
@@ -25,9 +18,6 @@ export interface MicroSaasService {
   phone: string;
   email: string;
   website: string;
-<<<<<<< HEAD
-  address: string;
-=======
 address: string;
 
 
@@ -42,7 +32,6 @@ address: string;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export interface MicroSaasService {
 
@@ -59,7 +48,6 @@ export interface MicroSaasService {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: number;
   name: string;
   category: string;
@@ -82,13 +70,6 @@ export interface MicroSaasService {
   trialPeriod: string;
   innovationLevel: string;
   marketSize: string;
-<<<<<<< HEAD
-  growthRate: string}
-export interface ITService {
-=======
-<<<<<<< HEAD
-  growthRate: string;
-=======
 growthRate: string;
 
 
@@ -103,7 +84,6 @@ growthRate: string;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export interface ITService {
 
@@ -120,7 +100,6 @@ export interface ITService {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: number;
   name: string;
   category: string;
@@ -140,13 +119,6 @@ export interface ITService {
   support: string;
   innovationLevel: string;
   marketSize: string;
-<<<<<<< HEAD
-  compliance: string[]}
-export interface AIService {
-=======
-<<<<<<< HEAD
-  compliance: string[];
-=======
 compliance: string[];
 
 
@@ -161,7 +133,6 @@ compliance: string[];
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export interface AIService {
 
@@ -178,7 +149,6 @@ export interface AIService {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: number;
   name: string;
   category: string;
@@ -200,12 +170,6 @@ export interface AIService {
   useCases: string[];
   innovationLevel: string;
   marketSize: string;
-<<<<<<< HEAD
-  ethicalAI: string[]}
-=======
-<<<<<<< HEAD
-  ethicalAI: string[];
-=======
 ethicalAI: string[];
 
 
@@ -220,9 +184,7 @@ ethicalAI: string[];
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 // Revolutionary Micro SAAS Services 2026
 export const revolutionaryMicroSaasServices2026: MicroSaasService[] = [
   {

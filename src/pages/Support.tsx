@@ -1,23 +1,6 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Search,
-=======
 import React, { useState } from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Link              } from 'react-router-dom.ts';
-<<<<<<< HEAD
-import { HelpCircle,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-  MessageCircle,
-  Phone,
-  Mail,
-  Clock,
-  CheckCircle,
-<<<<<<< HEAD
-=======
   Search,
   BookOpen,
   Headphones,
@@ -216,7 +199,6 @@ import { HelpCircle,
   CheckCircle,
   AlertCircle,
   Info,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Star,
   Zap,
   Brain,
@@ -226,41 +208,11 @@ import { HelpCircle,
   Database,
   Workflow,
   Target,
-<<<<<<< HEAD
-  Rocket,
-  TrendingUp,
-  BarChart3,
-  Atom,
-  Network,
-  Lock,
-  Cpu,
-  Wifi,
-  Satellite,
-  Handshake,
-  FileText,
-  Video,
-  GraduationCap,
-  Lightbulb,
-  Star as StarIcon,
-  HelpCircle,
-  BarChart as BarChartIcon,
-  ShoppingCart,
-  ArrowRight,
-  User,
-  Building2,
-  Globe,
-  Eye
-} from 'lucide-react';
-
-export default function Support() {
-=======
   TrendingUp
              } from 'lucide-react.ts';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function Support(...args: any[]): any {
   const [activeTab, setActiveTab] = useState('help');
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -384,12 +336,6 @@ export default function Support(...args: any[]): any {
     }
   ];
 
-<<<<<<< HEAD
-  const filteredCategories = supportCategories.filter(category => 
-    category.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    category.description.toLowerCase().includes(searchQuery.toLowerCase())
-  );
-=======
   const faqItems = [
     {
       question: 'How do I get started with Zion Tech Group services?',
@@ -420,7 +366,6 @@ export default function Support(...args: any[]): any {
       console.log('Searching for:', searchQuery);
     }
   };
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -480,31 +425,10 @@ export default function Support(...args: any[]): any {
         </motion.div>
       </div>
 
-<<<<<<< HEAD
-      {/* Quick Help Categories */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mb-12"
-        >
-          <h2 className="text-3xl font-bold text-white mb-4 text-center">
-            How can we help you?
-          </h2>
-          <p className="text-zinc-300 text-center max-w-2xl mx-auto">
-            Browse our support categories to find the information you need quickly
-          </p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredCategories.map((category, index) => (
-=======
       {/* Support Categories */}
       <div className="container-responsive py-16">
         <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
           {supportCategories.map((category, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <motion.div
               key={category.id}
               initial={{ opacity: 0, y: 20 }}
@@ -524,12 +448,6 @@ export default function Support(...args: any[]): any {
               </p>
 
               <div className="space-y-3 mb-6">
-<<<<<<< HEAD
-                {category.articles.map((article, articleIndex) => (
-                  <div key={articleIndex} className="flex items-center justify-between text-sm">
-                    <span className="text-zinc-400">{article.title}</span>
-                    <span className="text-zinc-500">{article.readTime}</span>
-=======
                 <div className="flex justify-between items-center text-sm">
                   <span className="text-gray-400">Response Time:</span>
                   <span className="text-white font-medium">{channel.responseTime}</span>
@@ -626,32 +544,11 @@ export default function Support(...args: any[]): any {
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">{category.name}</h3>
               <p className="text-sm text-gray-400">{category.description}</p>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </motion.div>
           ))}
         </div>
       </div>
 
-<<<<<<< HEAD
-        {filteredFAQs.length === 0 && searchQuery && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.8 }}
-            className="text-center py-12"
-
-            <HelpCircle className="w-16 h-16 text-gray-500 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold text-white mb-2">No results found</h3>
-            <p className="text-gray-400 mb-6">
-              Try different keywords or contact our support team for help.
-            </p>
-            <Link
-              to="/contact"
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-medium rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200"
-
-              Contact Support
-            </Link>
-=======
       {/* Tab Content */}
       <div className="container-responsive pb-16">
         {/* Help Center Tab */}
@@ -683,51 +580,10 @@ export default function Support(...args: any[]): any {
                       <section.icon className="w-5 h-5 text-white" />
                     </div>
                     <h3 className="text-xl font-semibold text-white">{section.category}</h3>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   </div>
                 ))}
               </div>
 
-<<<<<<< HEAD
-              <button className="w-full bg-zion-cyan/20 text-zion-cyan hover:bg-zion-cyan hover:text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300">
-                View All Articles
-              </button>
-            </motion.div>
-          ))}
-        </div>
-=======
-<<<<<<< HEAD
-      {/* Additional Support Options */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 2.0 }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-8"
-
-          {/* Knowledge Base */}
-          <div className="bg-slate-800/50 rounded-2xl p-8 backdrop-blur-sm border border-slate-700/50">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-green-400/20 to-emerald-400/20 rounded-xl flex items-center justify-center">
-                <BookOpen className="w-6 h-6 text-green-400" />
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold text-white">Knowledge Base</h3>
-                <p className="text-gray-400">Self-service help articles</p>
-              </div>
-            </div>
-            <p className="text-gray-300 mb-6">
-              Browse our comprehensive knowledge base with step-by-step guides, tutorials, and troubleshooting articles.
-            </p>
-            <Link
-              to="/help"
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-400 to-emerald-500 text-white font-medium rounded-lg hover:from-green-500 hover:to-emerald-600 transition-all duration-200"
-
-              Browse Articles
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
-          </div>
-=======
         {/* Contact Support Tab */}
         {activeTab === 'contact' && (
           <motion.div
@@ -742,7 +598,6 @@ export default function Support(...args: any[]): any {
                 Multiple ways to get in touch with our support team for personalized assistance
               </p>
             </div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
               {contactMethods.map((method, index)              => (
@@ -766,147 +621,8 @@ export default function Support(...args: any[]): any {
                 </motion.div>
               ))}
             </div>
-<<<<<<< HEAD
-            <p className="text-gray-300 mb-6">
-              Check the current status of our services and get notified about any ongoing issues or maintenance.
-            </p>
-            <Link
-              to="/status"
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-400 to-cyan-500 text-white font-medium rounded-lg hover:from-blue-500 hover:to-cyan-600 transition-all duration-200"
-
-              Check Status
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
-          </div>
-        </motion.div>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-      </div>
-
-      {/* Popular Articles */}
-      <div className="bg-zinc-800/30 border-t border-zinc-700/50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            className="mb-12"
-          >
-            <h2 className="text-3xl font-bold text-white mb-4 text-center">
-              Popular Help Articles
-            </h2>
-            <p className="text-zinc-300 text-center max-w-2xl mx-auto">
-              Most viewed and helpful articles from our support library
-            </p>
-          </motion.div>
-
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {popularArticles.map((article, index) => (
-              <motion.article
-                key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 1 + index * 0.1 }}
-                className="bg-zinc-800/50 backdrop-blur-sm border border-zinc-700/50 rounded-xl p-6 hover:border-zion-cyan/30 transition-all duration-300"
-              >
-                <div className="flex items-center space-x-2 mb-3">
-                  <span className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs font-medium rounded-full">
-                    {supportCategories.find(c => c.id === article.category)?.title}
-                  </span>
-                </div>
-                
-                <h3 className="text-lg font-semibold text-white mb-3">
-                  {article.title}
-                </h3>
-                
-                <div className="flex items-center justify-between text-sm text-zinc-400">
-                  <span className="flex items-center">
-                    <Clock className="w-4 h-4 mr-1" />
-                    {article.readTime}
-                  </span>
-                  <span className="flex items-center">
-                    <Eye className="w-4 h-4 mr-1" />
-                    {article.views.toLocaleString()} views
-                  </span>
-                </div>
-              </motion.article>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Contact Support */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1.2 }}
-          className="mb-12"
-        >
-          <h2 className="text-3xl font-bold text-white mb-4 text-center">
-            Still need help?
-          </h2>
-          <p className="text-zinc-300 text-center max-w-2xl mx-auto">
-            Our expert support team is here to help you succeed. Choose your preferred contact method.
-          </p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          {contactMethods.map((method, index) => (
-            <motion.div
-              key={method.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.4 + index * 0.1 }}
-              className="bg-zinc-800/50 backdrop-blur-sm border border-zinc-700/50 rounded-2xl p-8 text-center hover:border-zion-cyan/30 transition-all duration-300 hover:transform hover:scale-105"
-            >
-              <div className={`w-16 h-16 bg-gradient-to-r ${method.color} rounded-2xl flex items-center justify-center mx-auto mb-6`}>
-                <method.icon className="w-8 h-8 text-white" />
-              </div>
-              
-              <h3 className="text-xl font-bold text-white mb-3">
-                {method.title}
-              </h3>
-              
-              <p className="text-zinc-300 text-sm mb-6">
-                {method.description}
-              </p>
-              
-              <button className={`w-full bg-gradient-to-r ${method.color} text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105`}>
-                {method.action}
-              </button>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-
-      {/* Additional Support Options */}
-      <div className="bg-zinc-800/30 border-t border-zinc-700/50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.6 }}
-            className="text-center"
-          >
-            <h2 className="text-3xl font-bold text-white mb-4">
-              More Support Resources
-            </h2>
-            <p className="text-zinc-300 mb-8 max-w-2xl mx-auto">
-              Explore additional resources to help you get the most out of our platform
-            </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
-              {[
-                { icon: FileText, title: 'Documentation', description: 'Comprehensive guides and API docs' },
-                { icon: Video, title: 'Video Tutorials', description: 'Step-by-step video guides' },
-                { icon: User, title: 'Community Forum', description: 'Connect with other users' },
-                { icon: GraduationCap, title: 'Training', description: 'Professional training programs' }
-              ].map((resource, index) => (
-=======
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
               {supportResources.map((resource, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={resource.title}
                   initial={{ opacity: 0, y: 20 }}
@@ -935,15 +651,6 @@ export default function Support(...args: any[]): any {
             transition={{ duration: 0.6, delay: 2 }}
             className="text-center"
           >
-<<<<<<< HEAD
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Ready to get started?
-            </h2>
-            <p className="text-xl text-zinc-300 mb-8 max-w-2xl mx-auto">
-              Explore our services and see how Zion Tech Group can transform your business.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-=======
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-white mb-4">System Status</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
@@ -983,7 +690,6 @@ export default function Support(...args: any[]): any {
             </div>
 
             <div className="text-center mt-12">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <Link
                 to="/services"
                 className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"

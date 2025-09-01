@@ -39,51 +39,8 @@ import { Users,
   Database,
   Lock,
   Unlock
-<<<<<<< HEAD
- } from 'lucide-react';
-  utilization: number}
-interface ResourceStats {
-=======
-<<<<<<< HEAD
-=======
                } from 'lucide-react.ts';
 
-<<<<<<< HEAD
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-interface Resource {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  id: string;
-  name: string;
-  type: 'human' | 'infrastructure' | 'software' | 'equipment' | 'facility';
-  category: string;
-  status: 'available' | 'allocated' | 'maintenance' | 'unavailable';
-  priority: 'low' | 'medium' | 'high' | 'critical';
-  capacity: number;
-  currentUsage: number;
-  location: string;
-  department: string;
-  cost: number;
-  lastUpdated: string;
-  tags: string[];
-  description: string;
-  manager: string;
-<<<<<<< HEAD
-  utilization: number;
-=======
 utilization: number;
 
 
@@ -99,10 +56,8 @@ utilization: number;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 =======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 interface ResourceStats {
 
 
@@ -119,7 +74,6 @@ interface ResourceStats {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   totalResources: number;
   availableResources: number;
   allocatedResources: number;
@@ -127,12 +81,6 @@ interface ResourceStats {
   totalCapacity: number;
   currentUtilization: number;
   averageCost: number;
-<<<<<<< HEAD
-  topDepartments: Array<any>}
-=======
-<<<<<<< HEAD
-  topDepartments: Array<any>;
-=======
 topDepartments: Array<any>;
 
 
@@ -148,7 +96,6 @@ topDepartments: Array<any>;
 
 }
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface ResourceManagementSystemProps extends React.PropsWithChildren<{}> {
   showStats?: boolean;
   showFilters?: boolean;
@@ -160,20 +107,11 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   showCharts = true,;
   maxResources = 20;
 }) => {;
-<<<<<<< HEAD
-  const [resources, setResources] = useState<Resource[]>([]);
-  const [filteredResources, setFilteredResources] = useState<Resource[]>([]);
-  const [selectedType, setSelectedType] = useState<string>('all');
-  const [selectedStatus, setSelectedStatus] = useState<string>('all');
-  const [selectedPriority, setSelectedPriority] = useState<string>('all');
-=======
   const [resources, setResources] = useState<any>([]);
   const [filteredResources, setFilteredResources] = useState<any>([]);
   const [selectedType, setSelectedType] = useState<any>('all');
   const [selectedStatus, setSelectedStatus] = useState<any>('all');
   const [selectedPriority, setSelectedPriority] = useState<any>('all');
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState<any>('grid');
   const [showResourceForm, setShowResourceForm] = useState(false);
@@ -274,11 +212,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
     setResources(sampleResources);
     setFilteredResources(sampleResources)}, []);
   // Filter resources
-<<<<<<< HEAD
-  useEffect(() => {
-=======
   useEffect(()                => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     let filtered = resources;
     if (selectedType !== 'all') {
       filtered = filtered.filter(r => r.type === selectedType)}
@@ -303,8 +237,6 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
     setFilteredResources(filtered.slice(0, maxResources))}, [resources, selectedType, selectedStatus, selectedPriority, searchQuery, maxResources]);
   // Calculate resource stats
   const resourceStats = {
-<<<<<<< HEAD
-=======
   <<<<<<< HEAD
     totalResources: anyanyanyanyanyanyanyanyanyanyanyanyanyanyresources.length,
     availableResources: resources.filter(r                => r.status === 'available').length,
@@ -321,7 +253,6 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
 
 }, {} as Record<string, any>);
 =======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   totalResources: resources.length,
     availableResources: resources.filter(r = > r.status === 'available').length,
     allocatedResources: anyanyanyanyanyanyanyanyanyanyanyanyanyanyresources.filter(r               => r.status === 'allocated').length,
@@ -337,22 +268,13 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   r) => {;
         acc[r.department] = (acc[r.department] || 0) + 1;
         return acc;
-<<<<<<< HEAD
-}, {} as Record<string, number>);
-=======
-<<<<<<< HEAD
-      }, { /* empty */ } as Record<string, any>);
-=======
       
 
 
 
 
 }, {} as Record<string, any>);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       return Object.entries(deptCounts)
         .map(([name, count]) => ({
           name,
@@ -363,83 +285,16 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
         .slice(0, 5)})()
   };
   // Get status color and icon
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  const getStatusDisplay = (status: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
-    switch (status) {;
-      case 'available':;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-        return { color: 'text-green-400 bg-green-400/20', icon: <CheckCircle className="w-4 h-4" /> };
-      case 'allocated':
-        return { color: 'text-blue-400 bg-blue-400/20', icon: <Users className="w-4 h-4" /> };
-      case 'maintenance':
-        return { color: 'text-yellow-400 bg-yellow-400/20', icon: <AlertCircle className="w-4 h-4" /> };
-      case 'unavailable':
-        return { color: 'text-red-400 bg-red-400/20', icon: <XCircle className="w-4 h-4" /> };
-      default:
-<<<<<<< HEAD
-        return { color: 'text-zinc-400 bg-zinc-400/20', icon: <Circle className="w-4 h-4" /> };
-
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         return { color: 'text-zinc-400 bg-zinc-400/20', icon: <Circle className = "w-4 h-4" /> }};
   };
   // Get type icon
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  const getTypeIcon = (type: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
-    switch (type) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'human': return <Users className="w-5 h-5" />;
-      case 'infrastructure': return <Server className="w-5 h-5" />;
-      case 'software': return <Database className="w-5 h-5" />;
-      case 'equipment': return <Briefcase className="w-5 h-5" />;
-      case 'facility': return <Building className="w-5 h-5" />;
-<<<<<<< HEAD
-      default: return <Globe className="w-5 h-5" />;
-
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       default: return <Globe className = "w-5 h-5" />};
   };
   // Get priority color
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  const getPriorityColor = (priority: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
-    switch (priority) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'low': return 'text-green-400 bg-green-400/20';
-      case 'medium': return 'text-yellow-400 bg-yellow-400/20';
-      case 'high': return 'text-orange-400 bg-orange-400/20';
-      case 'critical': return 'text-red-400 bg-red-400/20';
-<<<<<<< HEAD
-      default: return 'text-zinc-400 bg-zinc-400/20';
-
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       default: return 'text-zinc-400 bg-zinc-400/20'}
   };
   // Format currency
-<<<<<<< HEAD
-  const formatCurrency = (amount: number) => {;
-=======
-<<<<<<< HEAD
-  const formatCurrency = (amount: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber)                => {
-    return new Intl.NumberFormat('en-US', {
-      style: 'currency',
-      currency: 'USD',
-      minimumFractionDigits: 0,;
-      maximumFractionDigits: 0;
-    }).format(amount)};
-
-  // Get utilization color
-  const getUtilizationColor = (utilization: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber)                => {
-=======;
   const formatCurrency = (amount: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber)               => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     return new Intl.NumberFormat('en-US', {;
       style: 'currency',;
       currency: 'USD',;
@@ -448,12 +303,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
     }).format(amount);
   };
   // Get utilization color
-<<<<<<< HEAD
-  const getUtilizationColor = (utilization: number) => {;
-=======
   const getUtilizationColor = (utilization: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber)               => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (utilization >= 90) return 'text-red-400';
     if (utilization >= 75) return 'text-yellow-400';
     if (utilization >= 50) return 'text-blue-400';

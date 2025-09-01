@@ -1,24 +1,8 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Cookie, 
-=======
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
-<<<<<<< HEAD
-import { Shield,
-  Cookie,
-  Settings,
-  Eye,
-  EyeOff,
-  Check,
-  X,
-=======
 import { SEO              } from '../components/SEO';
 import { Cookie, 
   Shield, 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Settings, 
   Shield, 
   Eye, 
@@ -27,31 +11,7 @@ import { Cookie,
   CheckCircle,
   AlertTriangle,
   ExternalLink,
-<<<<<<< HEAD
-  Mail,
-  Phone,
-  MapPin,
-  Calendar,
-  Info,
-  Lock,
-  Zap,
   ChevronDown,
-  ChevronRight
-} from 'lucide-react';
-
-const Cookies: React.FC = () => {
-  const [expandedCategory, setExpandedCategory] = useState<string | null>('essential');
-  const lastUpdated = 'January 15, 2024';
-  const companyName = 'Zion Tech Group';
-  const companyEmail = 'privacy@ziontechgroup.com';
-  const companyPhone = '+1 (302) 464-0950';
-=======
-  ChevronDown,
-<<<<<<< HEAD
-  ChevronUp
-const Cookies: [any, React.Dispatch<React.SetStateAction<any>>] = () => {
-  const [expandedSections, setExpandedSections] = useState({
-=======
   ChevronUp,
   Lock,
   Globe,
@@ -62,13 +22,11 @@ const Cookies: [any, React.Dispatch<React.SetStateAction<any>>] = () => {
 export default function Cookies(...args: any[]): any {
   const [expandedSection, setExpandedSection] = useState<any>(null);
   const [cookiePreferences, setCookiePreferences] = useState({
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     essential: true,
     analytics: false,
     marketing: false,
     functional: false
   });
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   const cookieCategories = [
     {
@@ -200,10 +158,6 @@ export default function Cookies(...args: any[]): any {
     }
   ];
 
-<<<<<<< HEAD
-  const toggleCategory = (categoryId: string) => {
-    setExpandedCategory(expandedCategory === categoryId ? null : categoryId);
-=======
   const toggleSection = (sectionId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
     setExpandedSection(expandedSection === sectionId ? null : sectionId);
   };
@@ -242,7 +196,6 @@ export default function Cookies(...args: any[]): any {
       functional: false
     });
     savePreferences();
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   };
 
   return (
@@ -431,19 +384,6 @@ export default function Cookies(...args: any[]): any {
         </div>
       </motion.div>
 
-<<<<<<< HEAD
-      {/* Cookie Management */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.6 }}
-        className="px-4 sm:px-6 lg:px-8 mb-16"
-      >
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Managing Your Cookie Preferences</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {cookieManagement.map((method, index) => (
-=======
       {/* Cookie Types Explanation */}
       <section className="py-20">
         <div className="container mx-auto px-6">
@@ -461,7 +401,6 @@ export default function Cookies(...args: any[]): any {
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {cookieTypes.map((type, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={method.title}
                 initial={{ opacity: 0, y: 20 }}

@@ -63,15 +63,8 @@ import { Users,
   Target,
   BarChart3,
   PieChart
-<<<<<<< HEAD
- } from 'lucide-react';
-interface TeamMember {
-=======
-<<<<<<< HEAD
-=======
                } from 'lucide-react.ts';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface TeamMember {
 
 
@@ -88,7 +81,6 @@ interface TeamMember {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   name: string;
   role: string;
@@ -98,13 +90,6 @@ interface TeamMember {
   lastSeen: string;
   skills: string[];
   projects: string[];
-<<<<<<< HEAD
-  availability: 'available' | 'busy' | 'unavailable'}
-interface Project {
-=======
-<<<<<<< HEAD
-  availability: 'available' | 'busy' | 'unavailable';
-=======
 availability: 'available' | 'busy' | 'unavailable';
 
 
@@ -120,7 +105,6 @@ availability: 'available' | 'busy' | 'unavailable';
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface Project {
 
@@ -138,7 +122,6 @@ interface Project {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   name: string;
   description: string;
@@ -151,13 +134,6 @@ interface Project {
   tasks: Task[];
   budget: number;
   client: string;
-<<<<<<< HEAD
-  tags: string[]}
-interface Task {
-=======
-<<<<<<< HEAD
-  tags: string[];
-=======
 tags: string[];
 
 
@@ -173,7 +149,6 @@ tags: string[];
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface Task {
 
@@ -191,7 +166,6 @@ interface Task {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title: string;
   description: string;
@@ -203,13 +177,6 @@ interface Task {
   actualHours: number;
   dependencies: string[];
   tags: string[];
-<<<<<<< HEAD
-  comments: Comment[]}
-interface Comment {
-=======
-<<<<<<< HEAD
-  comments: Comment[];
-=======
 comments: Comment[];
 
 
@@ -225,7 +192,6 @@ comments: Comment[];
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface Comment {
 
@@ -243,19 +209,11 @@ interface Comment {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   author: string;
   content: string;
   timestamp: string;
   likes: number;
-<<<<<<< HEAD
-  replies: Comment[]}
-interface Message {
-=======
-<<<<<<< HEAD
-  replies: Comment[];
-=======
 replies: Comment[];
 
 
@@ -271,7 +229,6 @@ replies: Comment[];
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface Message {
 
@@ -289,40 +246,16 @@ interface Message {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   sender: string;
   content: string;
   timestamp: string;
   type: 'text' | 'file' | 'image' | 'link';
   attachments?: string[];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  reactions: { type: string; count: number 
-
-
-
-
-
-
-
-
-
-
-
-
-
-}[];
-  isRead: boolean;
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   reactions: { type: string; count: number 
 }[];
   isRead: boolean}
 interface FileItem {
-<<<<<<< HEAD
-=======
 
 
 
@@ -338,7 +271,6 @@ interface FileItem {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   name: string;
   type: 'document' | 'image' | 'video' | 'audio' | 'archive' | 'other';
@@ -349,12 +281,6 @@ interface FileItem {
   tags: string[];
   sharedWith: string[];
   permissions: 'view' | 'edit' | 'admin';
-<<<<<<< HEAD
-  version: string}
-=======
-<<<<<<< HEAD
-  version: string;
-=======
 version: string;
 
 
@@ -371,7 +297,6 @@ version: string;
 
 }
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface TeamCollaborationToolsProps extends React.PropsWithChildren<{}> {
   showTeamMembers?: boolean;
   showProjects?: boolean;
@@ -385,22 +310,12 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   showFileSharing = true,;
   maxItems = 20;
 }) => {;
-<<<<<<< HEAD
-  const [activeTab, setActiveTab] = useState<'team' | 'projects' | 'communication' | 'files'>('team');
-  const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]);
-  const [projects, setProjects] = useState<Project[]>([]);
-  const [messages, setMessages] = useState<Message[]>([]);
-  const [files, setFiles] = useState<FileItem[]>([]);
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-=======
   const [activeTab, setActiveTab] = useState<any>('team');
   const [teamMembers, setTeamMembers] = useState<any>([]);
   const [projects, setProjects] = useState<any>([]);
   const [messages, setMessages] = useState<any>([]);
   const [files, setFiles] = useState<any>([]);
   const [selectedProject, setSelectedProject] = useState<any>(null);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [showProjectForm, setShowProjectForm] = useState(false);
   const [showTaskForm, setShowTaskForm] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
@@ -453,117 +368,18 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
     setMessages(sampleMessages);
     setFiles(sampleFiles)}, []);
   // Get status color and icon
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  const getStatusDisplay = (status: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
-    switch (status) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'online': return { color: 'text-green-400 bg-green-400/20', icon: <div className="w-2 h-2 bg-green-400 rounded-full"></div> };
-      case 'away': return { color: 'text-yellow-400 bg-yellow-400/20', icon: <div className="w-2 h-2 bg-yellow-400 rounded-full"></div> };
-      case 'busy': return { color: 'text-red-400 bg-red-400/20', icon: <div className="w-2 h-2 bg-red-400 rounded-full"></div> };
-      case 'offline': return { color: 'text-zinc-400 bg-zinc-400/20', icon: <div className="w-2 h-2 bg-zinc-400 rounded-full"></div> };
-<<<<<<< HEAD
-      default: return { color: 'text-zinc-400 bg-zinc-400/20', icon: <div className="w-2 h-2 bg-zinc-400 rounded-full"></div> };
-
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       default: return { color: 'text-zinc-400 bg-zinc-400/20', icon: <div className = "w-2 h-2 bg-zinc-400 rounded-full"></div> }};
   };
   // Get project status color
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  const getProjectStatusColor = (status: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
-    switch (status) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'planning': return 'text-blue-400 bg-blue-400/20';
-      case 'active': return 'text-green-400 bg-green-400/20';
-      case 'review': return 'text-yellow-400 bg-yellow-400/20';
-      case 'completed': return 'text-purple-400 bg-purple-400/20';
-      case 'on-hold': return 'text-red-400 bg-red-400/20';
-<<<<<<< HEAD
-      default: return 'text-zinc-400 bg-zinc-400/20';
-
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       default: return 'text-zinc-400 bg-zinc-400/20'}
   };
   // Get priority color
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  const getPriorityColor = (priority: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
-    switch (priority) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'low': return 'text-green-400 bg-green-400/20';
-      case 'medium': return 'text-yellow-400 bg-yellow-400/20';
-      case 'high': return 'text-orange-400 bg-orange-400/20';
-      case 'critical': return 'text-red-400 bg-red-400/20';
-<<<<<<< HEAD
-      default: return 'text-zinc-400 bg-zinc-400/20';
-
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       default: return 'text-zinc-400 bg-zinc-400/20'}
   };
   // Get file type icon
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  const getFileTypeIcon = (type: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
-    switch (type) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'document': return <FileText className="w-5 h-5" />;
-      case 'image': return <img className="w-5 h-5" />;
-      case 'video': return <Video className="w-5 h-5" />;
-      case 'audio': return <File className="w-5 h-5" />;
-      case 'archive': return <Folder className="w-5 h-5" />;
-<<<<<<< HEAD
-      default: return <File className="w-5 h-5" />;
-
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       default: return <File className = "w-5 h-5" />};
   };
   // Format file size
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  const formatFileSize = (size: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber)               => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    if (size < 1) return `${(size * 1024).toFixed(0)} KB`;
-    if (size < 1024) return `${size.toFixed(1)} MB`;
-    return `${(size / 1024).toFixed(1)} GB`};
-
-  // Handle project selection
-<<<<<<< HEAD
-  const handleProjectSelect = (project: anyanyanyanyanyanyanyanyanyanyanyanyanyanyProject)                => {;
-    setSelectedProject(project)};
-
-  // Handle message reactions
-  const handleProjectSelect = (project: anyanyanyanyanyanyanyanyanyanyanyanyanyanyProject)               => {;
-    setSelectedProject(project);
-  };
-
-  // Handle message reactions
-  const handleMessageReaction = (messageId: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring, reactionType: string)               => {;
-    setMessages(prev => prev.map(msg => {;
-      if (msg.id === messageId) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-        const existingReaction = msg.reactions.find(r => r.type === reactionType);
-        if (existingReaction) {
-<<<<<<< HEAD
-          existingReaction.count += 1;
-        } else {
-          msg.reactions.push({ type: reactionType, count: 1 });
-
-
-      return msg;
-    }));
-  };
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           existingReaction.count += 1} else {
           msg.reactions.push({ type: reactionType, count: 1 })}
       }

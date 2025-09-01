@@ -16,13 +16,7 @@ import {
   DollarSign,
   Gauge,
   HelpCircle
-<<<<<<< HEAD
-} from 'lucide-react';
-
-export function ServicesShowcase() {
-=======
 export function ServicesShowcase(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const services = [
     {
       icon: Brain,
@@ -112,10 +106,6 @@ export function ServicesShowcase(...args: any[]): any {
       opacity: 1,
       transition: {
         staggerChildren: 0.1
-<<<<<<< HEAD
-      }
-    }
-=======
 
 
 =======
@@ -177,8 +167,6 @@ export function ServicesShowcase(...args: any[]): any {
         ? prev.filter(c => c !== category)
         : [...prev, category]
     );
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   };
 
   const itemVariants = {
@@ -207,12 +195,8 @@ export function ServicesShowcase(...args: any[]): any {
     return colors[category as keyof typeof colors] || 'from-zion-cyan to-zion-blue';
   };
 
-<<<<<<< HEAD
-  const filteredServices = services.filter(service =>
-=======
   const filteredServices = selectedCategory === 'all'
     ? allServices: anyanyanyanyanyanyanyanyanyanyanyanyanyanyallServices.filter(service               =>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         service.category.toLowerCase().includes(selectedCategory.toLowerCase())
       );
 
@@ -283,15 +267,7 @@ export function ServicesShowcase(...args: any[]): any {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
-<<<<<<< HEAD
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
-=======
           className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
-<<<<<<< HEAD
-
-          {services.map((service, index)               => (
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         >
           {services.map((service, index) => (
             <motion.div

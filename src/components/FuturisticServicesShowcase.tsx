@@ -14,14 +14,7 @@ import { Rocket,
 	Star,
 	Play,
 	Pause
-<<<<<<< HEAD
- } from 'lucide-react';
-interface ServiceShowcase {
-=======
-<<<<<<< HEAD
-=======
                } from 'lucide-react.ts';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface ServiceShowcase {
 
 
@@ -38,7 +31,6 @@ interface ServiceShowcase {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 	id: string;
 	title: string;
 	description: string;
@@ -46,13 +38,6 @@ interface ServiceShowcase {
 	color: string;
 	features: string[];
 	price: string;
-<<<<<<< HEAD
-	status: 'active' | 'beta' | 'new'}
-=======
-<<<<<<< HEAD
-	status: 'active' | 'beta' | 'new';
-
-=======
 status: 'active' | 'beta' | 'new';
 
 
@@ -68,8 +53,6 @@ status: 'active' | 'beta' | 'new';
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const futuristicServices: ServiceShowcase[] = [
 	{
 		id: 'quantum-ai-controller',
@@ -136,16 +119,6 @@ export default function FuturisticServicesShowcase(...args[]: any):  {
 	const [isPlaying, setIsPlaying] = useState(true);
 	useEffect(() => {
 		if (!isPlaying) return;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-		const interval = setInterval(() => {;
-			setCurrentService((prev) => (prev + 1) % futuristicServices.length)}, 5000);
-		return () => clearInterval(interval)}, [isPlaying]);
-	const getStatusColor = (status: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => {
-		switch (status) {;
-=======;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 		const interval = setInterval(() => {;
 			setCurrentService((prev) => (prev + 1) % futuristicServices.length);
 		}, 5000);
@@ -158,20 +131,6 @@ export default function FuturisticServicesShowcase(...args[]: any):  {
 			case 'active': return 'bg-blue-500';
 			default: return 'bg-gray-500'}
 	};
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-	const getStatusText = (status: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
-		switch (status) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-			case 'new': return 'NEW';
-			case 'beta': return 'BETA';
-			case 'active': return 'ACTIVE';
-<<<<<<< HEAD
-			default: return 'UNKNOWN';
-
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 			default: return 'UNKNOWN'}
 	};
 	return (

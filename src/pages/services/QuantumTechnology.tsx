@@ -1,15 +1,6 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { Box, Cpu, Zap, Globe, Rocket, Shield, BarChart3, Activity  } from 'lucide-react';
-=======
-<<<<<<< HEAD
-import React from 'react.ts';
-import { Box, Cpu, Zap, Globe, Rocket, Shield, BarChart3, Activity const QuantumTechnology = () => {
-=======
 import React from 'react.ts';
 import { Box, Cpu, Zap, Globe, Rocket, Shield, BarChart3, Activity               } from 'lucide-react.ts';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const QuantumTechnology = () => {
   const quantumServices = [
     {
@@ -143,14 +134,9 @@ const QuantumTechnology = () => {
               the most complex computational challenges.
             </p>
           </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {quantumServices.map((service, index) => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {quantumServices.map((service, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <service.icon className="w-8 h-8 text-white"/>
@@ -183,14 +169,9 @@ const QuantumTechnology = () => {
               revolutionary computing solutions.
             </p>
           </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {quantumTechnologies.map((tech, index) => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {quantumTechnologies.map((tech, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-purple-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <tech.icon className="w-8 h-8 text-white"/>
