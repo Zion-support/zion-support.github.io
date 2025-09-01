@@ -1,230 +1,282 @@
 import React from 'react';
 import Head from 'next/head';
 
-export default function ApiDocumentation() {
+const APIDocumentation: React.FC = () => {
   return (
     <>
       <Head>
-        <title>API Documentation — Zion Tech Group</title>
-        <meta name="description" content="Comprehensive API documentation for Zion Tech Group's autonomous systems and services." />
-        <meta property="og:title" content="API Documentation — Zion Tech Group" />
-        <meta property="og:description" content="Comprehensive API documentation for Zion Tech Group's autonomous systems and services." />
+        <title>API Documentation - Zion AI Marketplace</title>
+        <meta name="description" content="Complete API documentation for Zion AI Marketplace services and integrations" />
+        <meta name="keywords" content="API, documentation, Zion AI, marketplace, integration" />
       </Head>
       
-      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
-        <main className="container mx-auto px-6 py-12">
-          <section className="text-center mb-16">
-            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">
+        {/* Header */}
+        <header className="bg-black/20 backdrop-blur-sm border-b border-blue-500/30">
+          <div className="container mx-auto px-6 py-8">
+            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               API Documentation
             </h1>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto">
-              Comprehensive API reference for Zion Tech Group's autonomous systems, automation services, and cloud infrastructure.
+            <p className="text-xl text-gray-300 mt-4">
+              Complete integration guide for Zion AI Marketplace
             </p>
-          </section>
+          </div>
+        </header>
 
-          <div className="max-w-6xl mx-auto">
-            {/* Authentication */}
-            <section className="mb-12 p-8 bg-white/5 rounded-2xl border border-white/10">
-              <h2 className="text-3xl font-bold mb-6 text-cyan-400">Authentication</h2>
-              <div className="bg-slate-900 p-6 rounded-lg mb-6">
-                <h3 className="text-xl font-semibold mb-4 text-white">API Keys</h3>
-                <p className="text-white/80 mb-4">All API requests require authentication using your API key in the header:</p>
-                <code className="block bg-slate-800 p-4 rounded text-green-400 font-mono">
+        {/* Main Content */}
+        <main className="container mx-auto px-6 py-12">
+          {/* Quick Start */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-blue-400 mb-6">Quick Start</h2>
+            <div className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30">
+              <h3 className="text-xl font-semibold text-white mb-4">Authentication</h3>
+              <p className="text-gray-300 mb-4">
+                All API requests require authentication using your API key in the Authorization header.
+              </p>
+              <div className="bg-gray-900 rounded p-4 font-mono text-sm">
+                <code className="text-green-400">
                   Authorization: Bearer YOUR_API_KEY
                 </code>
               </div>
-              
-              <div className="bg-slate-900 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-4 text-white">Rate Limiting</h3>
-                <p className="text-white/80">Standard tier: 1000 requests/hour, Enterprise tier: 10000 requests/hour</p>
-              </div>
-            </section>
+            </div>
+          </section>
 
-            {/* Core APIs */}
-            <section className="mb-12 p-8 bg-white/5 rounded-2xl border border-white/10">
-              <h2 className="text-3xl font-bold mb-6 text-fuchsia-400">Core APIs</h2>
-              
-              <div className="space-y-6">
-                <div className="bg-slate-900 p-6 rounded-lg">
-                  <h3 className="text-xl font-semibold mb-3 text-white">Automation Engine API</h3>
-                  <p className="text-white/80 mb-4">Manage autonomous automation workflows and systems</p>
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-4">
-                      <span className="px-3 py-1 bg-green-500/20 text-green-400 rounded text-sm font-mono">POST</span>
-                      <code className="text-cyan-400 font-mono">/api/v1/automation/workflows</code>
-                    </div>
-                    <div className="flex items-center gap-4">
-                      <span className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded text-sm font-mono">GET</span>
-                      <code className="text-cyan-400 font-mono">/api/v1/automation/status</code>
-                    </div>
-                    <div className="flex items-center gap-4">
-                      <span className="px-3 py-1 bg-yellow-500/20 text-yellow-400 rounded text-sm font-mono">PUT</span>
-                      <code className="text-cyan-400 font-mono">/api/v1/automation/configure</code>
-                    </div>
+          {/* Core Endpoints */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-blue-400 mb-6">Core Endpoints</h2>
+            
+            {/* Services API */}
+            <div className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30 mb-6">
+              <h3 className="text-xl font-semibold text-white mb-4">Services API</h3>
+              <div className="space-y-4">
+                <div>
+                  <h4 className="text-lg font-medium text-blue-300">GET /api/services</h4>
+                  <p className="text-gray-300 text-sm">Retrieve all available services</p>
+                  <div className="bg-gray-900 rounded p-3 mt-2 font-mono text-sm">
+                    <code className="text-green-400">
+                      GET https://api.zion.ai/services
+                    </code>
                   </div>
                 </div>
-
-                <div className="bg-slate-900 p-6 rounded-lg">
-                  <h3 className="text-xl font-semibold mb-3 text-white">Content Generation API</h3>
-                  <p className="text-white/80 mb-4">AI-powered content creation and management</p>
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-4">
-                      <span className="px-3 py-1 bg-green-500/20 text-green-400 rounded text-sm font-mono">POST</span>
-                      <code className="text-cyan-400 font-mono">/api/v1/content/generate</code>
-                    </div>
-                    <div className="flex items-center gap-4">
-                      <span className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded text-sm font-mono">GET</span>
-                      <code className="text-cyan-400 font-mono">/api/v1/content/templates</code>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-slate-900 p-6 rounded-lg">
-                  <h3 className="text-xl font-semibold mb-3 text-white">Monitoring & Analytics API</h3>
-                  <p className="text-white/80 mb-4">Real-time system monitoring and performance metrics</p>
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-4">
-                      <span className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded text-sm font-mono">GET</span>
-                      <code className="text-cyan-400 font-mono">/api/v1/monitoring/health</code>
-                    </div>
-                    <div className="flex items-center gap-4">
-                      <span className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded text-sm font-mono">GET</span>
-                      <code className="text-cyan-400 font-mono">/api/v1/analytics/performance</code>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            {/* SDKs & Libraries */}
-            <section className="mb-12 p-8 bg-white/5 rounded-2xl border border-white/10">
-              <h2 className="text-3xl font-bold mb-6 text-green-400">SDKs & Libraries</h2>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-slate-900 p-6 rounded-lg">
-                  <h3 className="text-xl font-semibold mb-3 text-white">JavaScript/Node.js</h3>
-                  <p className="text-white/80 mb-4">Official SDK for Node.js and browser environments</p>
-                  <code className="block bg-slate-800 p-3 rounded text-green-400 font-mono text-sm">
-                    npm install @zion-tech/api-client
-                  </code>
-                </div>
-
-                <div className="bg-slate-900 p-6 rounded-lg">
-                  <h3 className="text-xl font-semibold mb-3 text-white">Python</h3>
-                  <p className="text-white/80 mb-4">Python client library with async support</p>
-                  <code className="block bg-slate-800 p-3 rounded text-green-400 font-mono text-sm">
-                    pip install zion-tech-api
-                  </code>
-                </div>
-
-                <div className="bg-slate-900 p-6 rounded-lg">
-                  <h3 className="text-xl font-semibold mb-3 text-white">Go</h3>
-                  <p className="text-white/80 mb-4">High-performance Go client</p>
-                  <code className="block bg-slate-800 p-3 rounded text-green-400 font-mono text-sm">
-                    go get github.com/zion-tech/go-api-client
-                  </code>
-                </div>
-
-                <div className="bg-slate-900 p-6 rounded-lg">
-                  <h3 className="text-xl font-semibold mb-3 text-white">REST API</h3>
-                  <p className="text-white/80 mb-4">Standard REST endpoints for all platforms</p>
-                  <code className="block bg-slate-800 p-3 rounded text-green-400 font-mono text-sm">
-                    Base URL: https://api.zion.tech/v1
-                  </code>
-                </div>
-              </div>
-            </section>
-
-            {/* Webhooks */}
-            <section className="mb-12 p-8 bg-white/5 rounded-2xl border border-white/10">
-              <h2 className="text-3xl font-bold mb-6 text-yellow-400">Webhooks</h2>
-              
-              <div className="bg-slate-900 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-4 text-white">Event Notifications</h3>
-                <p className="text-white/80 mb-4">Receive real-time notifications for system events:</p>
-                <ul className="space-y-2 text-white/80">
-                  <li>• Automation workflow completion</li>
-                  <li>• System health alerts</li>
-                  <li>• Content generation updates</li>
-                  <li>• Security incident notifications</li>
-                </ul>
                 
-                <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-3 text-white">Webhook Configuration</h4>
-                  <code className="block bg-slate-800 p-4 rounded text-green-400 font-mono">
-                    POST /api/v1/webhooks/configure<br/>
-                    {<br/>
-                    &nbsp;&nbsp;"url": "https://your-domain.com/webhook",<br/>
-                    &nbsp;&nbsp;"events": ["workflow.completed", "alert.triggered"],<br/>
-                    &nbsp;&nbsp;"secret": "your_webhook_secret"<br/>
-                    }
-                  </code>
+                <div>
+                  <h4 className="text-lg font-medium text-blue-300">GET /api/services/{'{id}'}</h4>
+                  <p className="text-gray-300 text-sm">Get service details by ID</p>
+                  <div className="bg-gray-900 rounded p-3 mt-2 font-mono text-sm">
+                    <code className="text-green-400">
+                      GET https://api.zion.ai/services/123
+                    </code>
+                  </div>
                 </div>
-              </div>
-            </section>
-
-            {/* Error Handling */}
-            <section className="mb-12 p-8 bg-white/5 rounded-2xl border border-white/10">
-              <h2 className="text-3xl font-bold mb-6 text-red-400">Error Handling</h2>
-              
-              <div className="bg-slate-900 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-4 text-white">Standard Error Responses</h3>
-                <div className="space-y-4">
-                  <div>
-                    <h4 className="text-lg font-semibold mb-2 text-white">400 Bad Request</h4>
-                    <code className="block bg-slate-800 p-3 rounded text-red-400 font-mono text-sm">
-                      {<br/>
-                      &nbsp;&nbsp;"error": "validation_failed",<br/>
-                      &nbsp;&nbsp;"message": "Invalid parameters provided",<br/>
-                      &nbsp;&nbsp;"details": {...}<br/>
-                      }
-                    </code>
-                  </div>
-                  
-                  <div>
-                    <h4 className="text-lg font-semibold mb-2 text-white">401 Unauthorized</h4>
-                    <code className="block bg-slate-800 p-3 rounded text-red-400 font-mono text-sm">
-                      {<br/>
-                      &nbsp;&nbsp;"error": "authentication_failed",<br/>
-                      &nbsp;&nbsp;"message": "Invalid or expired API key"<br/>
-                      }
-                    </code>
-                  </div>
-                  
-                  <div>
-                    <h4 className="text-lg font-semibold mb-2 text-white">429 Rate Limited</h4>
-                    <code className="block bg-slate-800 p-3 rounded text-red-400 font-mono text-sm">
-                      {<br/>
-                      &nbsp;&nbsp;"error": "rate_limit_exceeded",<br/>
-                      &nbsp;&nbsp;"message": "Rate limit exceeded",<br/>
-                      &nbsp;&nbsp;"retry_after": 3600<br/>
-                      }
+                
+                <div>
+                  <h4 className="text-lg font-medium text-blue-300">POST /api/services</h4>
+                  <p className="text-gray-300 text-sm">Create a new service</p>
+                  <div className="bg-gray-900 rounded p-3 mt-2 font-mono text-sm">
+                    <code className="text-green-400">
+                      POST https://api.zion.ai/services
                     </code>
                   </div>
                 </div>
               </div>
-            </section>
+            </div>
 
-            {/* Getting Started */}
-            <section className="p-8 bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl border border-cyan-500/20">
-              <h2 className="text-3xl font-bold mb-6 text-cyan-400">Getting Started</h2>
-              <p className="text-white/80 mb-6">Ready to integrate with Zion Tech Group's autonomous systems?</p>
-              
-              <div className="flex flex-wrap gap-4">
-                <a href="/contact" className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-lg transition-colors">
-                  Get API Access
-                </a>
-                <a href="/reports" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-colors">
-                  View System Status
-                </a>
-                <a href="/automation" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-colors">
-                  Explore Automation
-                </a>
+            {/* Users API */}
+            <div className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30 mb-6">
+              <h3 className="text-xl font-semibold text-white mb-4">Users API</h3>
+              <div className="space-y-4">
+                <div>
+                  <h4 className="text-lg font-medium text-blue-300">GET /api/users/profile</h4>
+                  <p className="text-gray-300 text-sm">Get current user profile</p>
+                </div>
+                
+                <div>
+                  <h4 className="text-lg font-medium text-blue-300">PUT /api/users/profile</h4>
+                  <p className="text-gray-300 text-sm">Update user profile</p>
+                </div>
+                
+                <div>
+                  <h4 className="text-lg font-medium text-blue-300">GET /api/users/talents</h4>
+                  <p className="text-gray-300 text-sm">Get available talents</p>
+                </div>
               </div>
-            </section>
-          </div>
+            </div>
+
+            {/* Projects API */}
+            <div className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30">
+              <h3 className="text-xl font-semibold text-white mb-4">Projects API</h3>
+              <div className="space-y-4">
+                <div>
+                  <h4 className="text-lg font-medium text-blue-300">GET /api/projects</h4>
+                  <p className="text-gray-300 text-sm">List all projects</p>
+                </div>
+                
+                <div>
+                  <h4 className="text-lg font-medium text-blue-300">POST /api/projects</h4>
+                  <p className="text-gray-300 text-sm">Create new project</p>
+                </div>
+                
+                <div>
+                  <h4 className="text-lg font-medium text-blue-300">GET /api/projects/{'{id}'}</h4>
+                  <p className="text-gray-300 text-sm">Get project details</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Response Formats */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-blue-400 mb-6">Response Formats</h2>
+            <div className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30">
+              <h3 className="text-xl font-semibold text-white mb-4">Standard Response</h3>
+              <div className="bg-gray-900 rounded p-4 font-mono text-sm overflow-x-auto">
+                <pre className="text-green-400">
+{`{
+  "success": true,
+  "data": {
+    // Response data here
+  },
+  "message": "Operation successful",
+  "timestamp": "2025-01-17T10:30:00Z"
+}`}
+                </pre>
+              </div>
+              
+              <h3 className="text-xl font-semibold text-white mb-4 mt-6">Error Response</h3>
+              <div className="bg-gray-900 rounded p-4 font-mono text-sm overflow-x-auto">
+                <pre className="text-red-400">
+{`{
+  "success": false,
+  "error": {
+    "code": "VALIDATION_ERROR",
+    "message": "Invalid input data",
+    "details": ["Field 'name' is required"]
+  },
+  "timestamp": "2025-01-17T10:30:00Z"
+}`}
+                </pre>
+              </div>
+            </div>
+          </section>
+
+          {/* Rate Limiting */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-blue-400 mb-6">Rate Limiting</h2>
+            <div className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30">
+              <p className="text-gray-300 mb-4">
+                API requests are limited to ensure fair usage and system stability.
+              </p>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-blue-400">1000</div>
+                  <div className="text-gray-300">requests per hour</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-blue-400">100</div>
+                  <div className="text-gray-300">requests per minute</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-blue-400">10</div>
+                  <div className="text-gray-300">requests per second</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* SDKs & Libraries */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-blue-400 mb-6">SDKs & Libraries</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30">
+                <h3 className="text-xl font-semibold text-white mb-4">JavaScript/Node.js</h3>
+                <p className="text-gray-300 mb-4">Official SDK for Node.js and browser environments</p>
+                <div className="bg-gray-900 rounded p-3 font-mono text-sm">
+                  <code className="text-green-400">npm install @zion-ai/sdk</code>
+                </div>
+              </div>
+              
+              <div className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30">
+                <h3 className="text-xl font-semibold text-white mb-4">Python</h3>
+                <p className="text-gray-300 mb-4">Python client library for easy integration</p>
+                <div className="bg-gray-900 rounded p-3 font-mono text-sm">
+                  <code className="text-green-400">pip install zion-ai</code>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Webhooks */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-blue-400 mb-6">Webhooks</h2>
+            <div className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30">
+              <p className="text-gray-300 mb-4">
+                Configure webhooks to receive real-time notifications about events in your account.
+              </p>
+              <div className="space-y-4">
+                <div>
+                  <h4 className="text-lg font-medium text-blue-300">Available Events</h4>
+                  <ul className="text-gray-300 text-sm space-y-2 mt-2">
+                    <li>• project.created - New project created</li>
+                    <li>• project.updated - Project details updated</li>
+                    <li>• service.completed - Service delivery completed</li>
+                    <li>• payment.received - Payment received</li>
+                    <li>• user.registered - New user registration</li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h4 className="text-lg font-medium text-blue-300">Webhook Setup</h4>
+                  <div className="bg-gray-900 rounded p-3 mt-2 font-mono text-sm">
+                    <code className="text-green-400">
+                      POST /api/webhooks
+                    </code>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Support */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-blue-400 mb-6">Support & Resources</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30">
+                <h3 className="text-xl font-semibold text-white mb-4">Documentation</h3>
+                <ul className="text-gray-300 space-y-2">
+                  <li>• <a href="/guides" className="text-blue-400 hover:text-blue-300">Integration Guides</a></li>
+                  <li>• <a href="/examples" className="text-blue-400 hover:text-blue-300">Code Examples</a></li>
+                  <li>• <a href="/tutorials" className="text-blue-400 hover:text-blue-300">Step-by-step Tutorials</a></li>
+                </ul>
+              </div>
+              
+              <div className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30">
+                <h3 className="text-xl font-semibold text-white mb-4">Community</h3>
+                <ul className="text-gray-300 space-y-2">
+                  <li>• <a href="/discord" className="text-blue-400 hover:text-blue-300">Discord Server</a></li>
+                  <li>• <a href="/github" className="text-blue-400 hover:text-blue-300">GitHub Discussions</a></li>
+                  <li>• <a href="/contact" className="text-blue-400 hover:text-blue-300">Contact Support</a></li>
+                </ul>
+              </div>
+            </div>
+          </section>
         </main>
+
+        {/* Footer */}
+        <footer className="bg-black/20 backdrop-blur-sm border-t border-blue-500/30 mt-20">
+          <div className="container mx-auto px-6 py-8">
+            <div className="text-center text-gray-400">
+              <p>Need help? Contact our developer support team</p>
+              <p className="mt-2">
+                <a href="/contact" className="text-blue-400 hover:text-blue-300">
+                  Get Support →
+                </a>
+              </p>
+            </div>
+          </div>
+        </footer>
       </div>
     </>
   );
-}
+};
+
+export default APIDocumentation;
