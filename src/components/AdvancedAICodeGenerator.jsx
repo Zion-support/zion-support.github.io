@@ -1,68 +1,93 @@
-import React, { useState, useRef } from 'react';
-import { Code, Brain, Zap, Download, RefreshCw, X, Maximize2, Minimize2, Eye, EyeOff, Search, FileText, CheckCircle, AlertCircle, Copy, Shield, Activity, BarChart3, Gauge const mockCodeSnippets = [;
-    {
-        id: '1',
-        title: 'React Hook for API Calls',
-        description: 'Custom hook for managing API calls with loading states and error handling',
-        language: 'typescript',
-        code: `import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import { 
+  Code, 
+  Copy, 
+  Download, 
+  Search, 
+  Filter, 
+  Star, 
+  Eye, 
+  Heart,
+  MessageSquare,
+  Share2,
+  Bookmark,
+  Play,
+  Settings,
+  Zap,
+  Brain,
+  Sparkles
+} from 'lucide-react';
 
-interface UseApiOptions<T> {
-  url: string;
+const mockCodeSnippets = [
+  {
+    id: '1',
+    title: 'Custom React Hook for API Calls',
+    description: 'A reusable hook for making API calls with loading states and error handling',
+    language: 'typescript',
+    code: `import { useState, useEffect } from 'react';
+
+interface UseApiOptions {
   method?: 'GET' | 'POST' | 'PUT' | 'DELETE';
-  body?;headers?: Record<string, string>}
+  headers?: Record<string, string>;
+  body?: any;
+}
 
-export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<T>) {
-  const [data, setData] = useState<T | null>(null);
+export const useApi = (url: string, options: UseApiOptions = {}) => {
+  const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState(null);
 
   const execute = async () => {
+    setLoading(true);
+    setError(null);
+    
     try {
-      setLoading(true);
-      setError(null);
-
       const response = await fetch(url, {
-        method,
-        headers: {
-          'Content-Type': 'application/json',
-          ...headers,
-        },
-        body: body ? JSON.stringify(body) : null,
+        method: options.method || 'GET',
+        headers: options.headers,
+        body: options.body ? JSON.stringify(options.body) : undefined,
       });
-
+      
       if (!response.ok) {
-        throw new Error(\`HTTP error! status: \${response.status}\`)}
-
+        throw new Error(\`HTTP error! status: \${response.status}\`);
+      }
+      
       const result = await response.json();
-      setData(result)} catch (err) {
-      setError(err instanceof Error ? err.message : 'An error occurred')} finally {
-      setLoading(false)}
+      setData(result);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'An error occurred');
+    } finally {
+      setLoading(false);
+    }
   };
 
   useEffect(() => {
-    if (method === 'GET') {
-      execute()}
+    if (options.method === 'GET') {
+      execute();
+    }
   }, [url]);
 
-  return { data, loading, error, execute }}`,
-        tags['react', 'hooks', 'api', 'typescript'],;
-        complexity: 'medium',
-        rating: 4.8,
-        usageCount: 1250,
-        createdAt: '2024-01-15'
-    },
-    {
-        id: '2',
-        title: 'Tailwind CSS Animation Utilities',
-        description: 'Custom Tailwind utilities for advanced animations and transitions',
-        language: 'css',
-        code: `@layer utilities {
+  return { data, loading, error, execute };
+};`,
+    tags: ['react', 'hooks', 'api', 'typescript'],
+    complexity: 'medium',
+    rating: 4.8,
+    usageCount: 1250,
+    createdAt: '2024-01-15'
+  },
+  {
+    id: '2',
+    title: 'Tailwind CSS Animation Utilities',
+    description: 'Custom Tailwind utilities for advanced animations and transitions',
+    language: 'css',
+    code: `@layer utilities {
   .animate-float {
-    animation: float 3s ease-in-out infinite}
+    animation: float 3s ease-in-out infinite;
+  }
   
   .animate-glow {
-    animation: glow 2s ease-in-out infinite alternate}
+    animation: glow 2s ease-in-out infinite alternate;
+  }
   
   .animate-shimmer {
     background: linear-gradient(
@@ -72,582 +97,324 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
       transparent
     );
     background-size: 200% 100%;
-    animation: shimmer 1.5s infinite}
+    animation: shimmer 1.5s infinite;
+  }
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px)}
-  50% { transform: translateY(-10px)}
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
 }
 
 @keyframes glow {
-  from { box-shadow: 0 0 20px rgba(59, 130, 246, 0.5)}
-  to { box-shadow: 0 0 30px rgba(59, 130, 246, 0.8)}
+  from { box-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
+  to { box-shadow: 0 0 30px rgba(59, 130, 246, 0.8); }
 }
 
 @keyframes shimmer {
-  0% { background-position: -200% 0}
-  100% { background-position: 200% 0}
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
 }`,
-        tags['css', 'tailwind', 'animations', 'utilities'],;
-        complexity: 'low',
-        rating: 4.6,
-        usageCount: 890,
-        createdAt: '2024-01-10'
-    },
-    {
-        id: '3',
-        title: 'Advanced Form Validation',
-        description: 'Comprehensive form validation with custom rules and error handling',
-        language: 'javascript',
-        code: `class FormValidator {
-  constructor(form, options = { /* empty */ }) {
+    tags: ['css', 'tailwind', 'animations', 'utilities'],
+    complexity: 'low',
+    rating: 4.6,
+    usageCount: 890,
+    createdAt: '2024-01-10'
+  },
+  {
+    id: '3',
+    title: 'Advanced Form Validation',
+    description: 'Comprehensive form validation with custom rules and error handling',
+    language: 'javascript',
+    code: `class FormValidator {
+  constructor(form, options = {}) {
     this.form = form;
     this.options = {
-  validateOnBlur: true,
+      validateOnBlur: true,
       validateOnSubmit: true,
       showErrors: true,
-  ...options
-    
-
-
-
-
-
-
-};
+      ...options
+    };
     
     this.rules = new Map();
     this.errors = new Map();
-    this.init()}
+    this.init();
+  }
 
   addRule(field, rule) {
     if (!this.rules.has(field)) {
-      this.rules.set(field, [])}
-    this.rules.get(field).push(rule)}
+      this.rules.set(field, []);
+    }
+    this.rules.get(field).push(rule);
+  }
 
   validateField(field) {
     const value = this.form[field]?.value;
     const fieldErrors = [];
 
-    for (const result = rule(value, this.form);
+    for (const rule of this.rules.get(field) || []) {
+      const result = rule(value, this.form);
       if (result !== true) {
-        fieldErrors.push(result)}
+        fieldErrors.push(result);
+      }
     }
 
     this.errors.set(field, fieldErrors);
     this.updateFieldUI(field);
-    return fieldErrors.length === 0}
+    return fieldErrors.length === 0;
+  }
 
   validateForm() {
     let isValid = true;
-    for (const fieldElement = this.form[field];
-    const errors = this.errors.get(field) || [];
-
-    if (errors.length > 0) {
-      fieldElement.classList.add('error');
-      this.showFieldErrors(field, errors)} else {
-      fieldElement.classList.remove('error');
-      this.hideFieldErrors(field)}
-  }
-
-  showFieldErrors(field, errors) {
-    // Implementation for showing field-specific errors
-
-  hideFieldErrors(field) {
-    // Implementation for hiding field-specific errors
-
-  init() {
-    if (this.options.validateOnBlur) {
-      this.form.addEventListener('blur', (e) => {
-        if (e.target.name) {
-          this.validateField(e.target.name)}
-      }, true)}
-
-    if (this.options.validateOnSubmit) {
-      this.form.addEventListener('submit', (e) => {
-        if (!this.validateForm()) {
-          e.preventDefault()}
-      })}
+    for (const field of this.rules.keys()) {
+      if (!this.validateField(field)) {
+        isValid = false;
+      }
+    }
+    return isValid;
   }
 }`,
-        tags['javascript', 'forms', 'validation', 'class'],;
-        complexity: 'high',
-        rating: 4.9,
-        usageCount: 2100,
-        createdAt: '2024-01-08'
-
+    tags: ['javascript', 'forms', 'validation', 'class'],
+    complexity: 'high',
+    rating: 4.9,
+    usageCount: 2100,
+    createdAt: '2024-01-12'
+  }
 ];
-const mockAIGenerations = [
-    {
-        id: '1',
-        prompt: 'Create a React hook for managing local storage with TypeScript',
-        generatedCode: `import { useState, useEffect } from 'react';
 
-export function useLocalStorage<T>(key: string, initialValue: T) {
-  const [storedValue, setStoredValue] = useState<T>(() => {
-    try {
-      const item = window.localStorage.getItem(key);
-      // // // // // // // console.error(\`Error reading localStorage key "\${key}":\`, error);
-      return initialValue;
+export const AdvancedAICodeGenerator = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedLanguage, setSelectedLanguage] = useState('all');
+  const [selectedComplexity, setSelectedComplexity] = useState('all');
+  const [selectedSnippet, setSelectedSnippet] = useState(null);
 
-      return item ? JSON.parse(item) : initialValue} catch (error) {
-      console.error(\`Error reading localStorage key "\${key}":\`, error);
-      return initialValue}
+  const languages = ['all', 'javascript', 'typescript', 'css', 'html', 'python', 'java'];
+  const complexities = ['all', 'low', 'medium', 'high'];
+
+  const filteredSnippets = mockCodeSnippets.filter(snippet => {
+    const matchesSearch = snippet.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         snippet.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         snippet.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    const matchesLanguage = selectedLanguage === 'all' || snippet.language === selectedLanguage;
+    const matchesComplexity = selectedComplexity === 'all' || snippet.complexity === selectedComplexity;
+    return matchesSearch && matchesLanguage && matchesComplexity;
   });
 
-  const setValue = (value: T | ((val: T) => T)) => {
-    try {
-      const valueToStore = value instanceof Function ? value(storedValue) : value;
-      setStoredValue(valueToStore);
-      // // // // // // // console.error(\`Error setting localStorage key "\${key}":\`, error);
-    }
-      window.localStorage.setItem(key, JSON.stringify(valueToStore))} catch (error) {
-      console.error(\`Error setting localStorage key "\${key}":\`, error)}
+  const copyToClipboard = (code) => {
+    navigator.clipboard.writeText(code);
   };
 
-  return [storedValue, setValue] as const}`,
-        language: 'typescript',
-        confidence: 0.94,
-        alternatives[;
-            'Alternative 1: With error boundaries',
-            'Alternative 2: With event listeners',
-            'Alternative 3: With custom serializer'
-        ],;
-        timestamp: '2024-01-15T11:45:00Z'
-
-];
-export function AdvancedAICodeGenerator() {
-    const [isOpen, setIsOpen] = useState(false);
-    const [isMinimized, setIsMinimized] = useState(false);
-    const [isFullscreen, setIsFullscreen] = useState(false);
-    const [activeTab, setActiveTab] = useState('generator');
-    const [selectedLanguage, setSelectedLanguage] = useState('all');
-    const [selectedComplexity, setSelectedComplexity] = useState('all');
-    const [searchQuery, setSearchQuery] = useState('');
-    const [aiPrompt, setAiPrompt] = useState('');
-    const [generatedCode, setGeneratedCode] = useState('');
-    const [isGenerating, setIsGenerating] = useState(false);
-    const [codeSnippets, setCodeSnippets] = useState(mockCodeSnippets);
-    const [codeAnalysis, setCodeAnalysis] = useState(mockCodeAnalysis);
-    const [aiGenerations, setAiGenerations] = useState(mockAIGenerations);
-    const [showSuggestions, setShowSuggestions] = useState(true);
-    const containerRef = useRef(null);
-    const getComplexityColor = (complexity) => {
-        switch (complexity) {
-            case 'low': return 'text-green-500';
-            case 'medium': return 'text-yellow-500';
-            case 'high': return 'text-red-500';
-            default: return 'text-gray-500'}
-    };
-    const getQualityColor = (score) => {
-        if (score >= 90)
-            return 'text-green-500';
-        if (score >= 80)
-            return 'text-yellow-500';
-        return 'text-red-500'};
-    const generateCode = async () => {
-        if (!aiPrompt.trim())
-            return;
-        setIsGenerating(true);
-        // Simulate AI code generation
-        setTimeout(() => {
-            const newGeneration = {
-  id: Date.now().toString(),
-                prompt: aiPrompt,
-                generatedCode: `// Generated code for: ${aiPrompt}\n\nfunction example() {\n  // // // // // // // console.log("Hello from AI!");\n  return "Generated code";\n}`,
-  generatedCode: `// Generated code for: ${aiPrompt
-
-
-
-
-
-
-}\n\nfunction example() {\n  console.log("Hello from AI!");\n  return "Generated code";\n}`,
-                language: 'javascript',
-                confidence: 0.87,
-                alternatives[;
-                    'Alternative 1: Functional approach',
-                    'Alternative 2: Class-based approach',
-                    'Alternative 3: Async/await pattern'
-                ],;
-                timestamp: new Date().toISOString()
-            };
-            setAiGenerations(prev => [newGeneration, ...prev]);
-            setGeneratedCode(newGeneration.generatedCode);
-            setIsGenerating(false)}, 2000)};
-    const copyToClipboard = (text) => {
-        navigator.clipboard.writeText(text)};
-    if (!isOpen) {
-        return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded-full shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-110 z-50">
-        <Code className="w-6 h-6"/>
-      </button>)}
-    if (isMinimized) {
-        return (<div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50">
-        <div className="flex items-center justify-between p-3 border-b border-zion-slate-light">
-          <div className="flex items-center space-x-2">
-            <Code className="w-5 h-5 text-blue-600"/>
-            <span className="text-sm font-medium">AI Code Generator</span>
-          </div>
-          <div className="flex items-center space-x-1">
-            <button onClick={() => setIsMinimized(false)} className="p-1 hover:bg-zion-slate-light rounded">
-              <Maximize2 className="w-4 h-4"/>
-            </button>
-            <button onClick={() => setIsOpen(false)} className="p-1 hover:bg-zion-slate-light rounded">
-              <X className="w-4 h-4"/>
-            </button>
-          </div>
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
+      <div className="container mx-auto px-4">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Advanced AI Code Generator
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Generate intelligent, production-ready code snippets powered by AI.
+            From simple utilities to complex algorithms, get the code you need instantly.
+          </p>
         </div>
-      </div>)}
-    return (<div className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1400px] h-[900px]'}`} ref={containerRef}>
-      {/* Header */}
-      <div className="flex items-center justify-between p-4 border-b border-zion-slate-light bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="flex items-center space-x-3">
-          <Code className="w-6 h-6"/>
-          <div>
-            <h2 className="text-lg font-bold">Advanced AI-Powered Code Generator</h2>
-            <p className="text-sm text-blue-100">Intelligent code generation, analysis & development assistance</p>
-          </div>
-        </div>
-        <div className="flex items-center space-x-2">
-          <button onClick={() => setIsMinimized(true)} className="p-2 hover:bg-blue-700 rounded-lg transition-colors">
-            <Minimize2 className="w-4 h-4"/>
-          </button>
-          <button onClick={() => setIsFullscreen(!isFullscreen)} className="p-2 hover:bg-blue-700 rounded-lg transition-colors">
-            {isFullscreen ? <Minimize2 className="w-4 h-4"/> : <Maximize2 className="w-4 h-4"/>}
-          </button>
-          <button onClick={() => setIsOpen(false)} className="p-2 hover:bg-blue-700 rounded-lg transition-colors">
-            <X className="w-4 h-4"/>
-          </button>
-        </div>
-      </div>
 
-      {/* Controls */}
-      <div className="flex items-center justify-between p-4 border-b border-zion-slate-light bg-zion-slate-light/50">
-        <div className="flex items-center space-x-4">
-          <select value={selectedLanguage} onChange={(e) => setSelectedLanguage(e.target.value)} className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-sm">
-            <option value="all">All Languages</option>
-            <option value="typescript">TypeScript</option>
-            <option value="javascript">JavaScript</option>
-            <option value="css">CSS</option>
-            <option value="python">Python</option>
-            <option value="java">Java</option>
+        {/* Search and Filters */}
+        <div className="mb-8 flex flex-col md:flex-row gap-4">
+          <div className="flex-1 relative">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            <input
+              type="text"
+              placeholder="Search code snippets..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+            />
+          </div>
+          <select
+            value={selectedLanguage}
+            onChange={(e) => setSelectedLanguage(e.target.value)}
+            className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+          >
+            {languages.map(lang => (
+              <option key={lang} value={lang} className="bg-gray-800">
+                {lang.charAt(0).toUpperCase() + lang.slice(1)}
+              </option>
+            ))}
           </select>
-          <select value={selectedComplexity} onChange={(e) => setSelectedComplexity(e.target.value)} className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-sm">
-            <option value="all">All Complexity</option>
-            <option value="low">Low</option>
-            <option value="medium">Medium</option>
-            <option value="high">High</option>
+          <select
+            value={selectedComplexity}
+            onChange={(e) => setSelectedComplexity(e.target.value)}
+            className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+          >
+            {complexities.map(comp => (
+              <option key={comp} value={comp} className="bg-gray-800">
+                {comp.charAt(0).toUpperCase() + comp.slice(1)}
+              </option>
+            ))}
           </select>
-          <div className="flex items-center space-x-2">
-            <input type="text" placeholder="Search code snippets..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-sm w-64"/>
-            <Search className="w-4 h-4 text-gray-400"/>
-          </div>
         </div>
-        <div className="flex items-center space-x-2">
-          <button onClick={() => setShowSuggestions(!showSuggestions)} className={`p-2 rounded-lg transition-colors ${showSuggestions ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-700'}`}>
-            {showSuggestions ? <Eye className="w-4 h-4"/> : <EyeOff className="w-4 h-4"/>}
-          </button>
-          <button className="p-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-            <RefreshCw className="w-4 h-4"/>
-          </button>
-        </div>
-      </div>
 
-      {/* Tabs */}
-      <div className="flex border-b border-zion-slate-light">
-        <button onClick={() => setActiveTab('generator')} className={`px-6 py-3 text-sm font-medium transition-colors ${activeTab === 'generator'
-            ? 'border-b-2 border-blue-600 text-blue-600'
-            : 'text-gray-600 hover:text-gray-800'}`}>
-          <Code className="w-4 h-4 inline mr-2"/>
-          AI Generator
-        </button>
-        <button onClick={() => setActiveTab('snippets')} className={`px-6 py-3 text-sm font-medium transition-colors ${activeTab === 'snippets'
-            ? 'border-b-2 border-blue-600 text-blue-600'
-            : 'text-gray-600 hover:text-gray-800'}`}>
-          <FileText className="w-4 h-4 inline mr-2"/>
-          Code Snippets
-        </button>
-        <button onClick={() => setActiveTab('analysis')} className={`px-6 py-3 text-sm font-medium transition-colors ${activeTab === 'analysis'
-            ? 'border-b-2 border-blue-600 text-blue-600'
-            : 'text-gray-600 hover:text-gray-800'}`}>
-          <BarChart3 className="w-4 h-4 inline mr-2"/>
-          Code Analysis
-        </button>
-        <button onClick={() => setActiveTab('ai')} className={`px-6 py-3 text-sm font-medium transition-colors ${activeTab === 'ai'
-            ? 'border-b-2 border-blue-600 text-blue-600'
-            : 'text-gray-600 hover:text-gray-800'}`}>
-          <Brain className="w-4 h-4 inline mr-2"/>
-          AI Generations
-        </button>
-      </div>
-
-      {/* Content */}
-      <div className="flex-1 overflow-auto p-6">
-        {activeTab === 'generator' && (<div className="space-y-6">
-            <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
-              <h3 className="text-lg font-semibold text-blue-900 dark:text-blue-100 mb-4">
-                <Brain className="w-5 h-5 inline mr-2"/>
-                AI-Powered Code Generation
-              </h3>
-              <div className="space-y-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                    Describe what you want to build:
-                  </label>
-                  <textarea value={aiPrompt} onChange={(e) => setAiPrompt(e.target.value)} placeholder="e.g., Create a React hook for managing form state with validation..." className="w-full h-24 px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-sm resize-none"/>
+        {/* Code Snippets Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {filteredSnippets.map((snippet) => (
+            <div
+              key={snippet.id}
+              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-400/30 transition-all duration-300 cursor-pointer"
+              onClick={() => setSelectedSnippet(snippet)}
+            >
+              <div className="flex items-start justify-between mb-4">
+                <div className="flex items-center gap-3">
+                  <div className="p-2 bg-purple-500/20 rounded-lg">
+                    <Code className="w-6 h-6 text-purple-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white">{snippet.title}</h3>
+                    <span className={`px-2 py-1 text-xs rounded-full ${
+                      snippet.complexity === 'low' ? 'bg-green-500/20 text-green-400' :
+                      snippet.complexity === 'medium' ? 'bg-yellow-500/20 text-yellow-400' :
+                      'bg-red-500/20 text-red-400'
+                    }`}>
+                      {snippet.complexity}
+                    </span>
+                  </div>
                 </div>
-                <div className="flex items-center space-x-4">
-                  <select className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-sm">
-                    <option value="typescript">TypeScript</option>
-                    <option value="javascript">JavaScript</option>
-                    <option value="python">Python</option>
-                    <option value="java">Java</option>
-                  </select>
-                  <button onClick={generateCode} disabled={isGenerating || !aiPrompt.trim()} className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center space-x-2">
-                    {isGenerating ? (<>
-                        <RefreshCw className="w-4 h-4 animate-spin"/>
-                        <span>Generating...</span>
-                      </>) : (<>
-                        <Zap className="w-4 h-4"/>
-                        <span>Generate Code</span>
-                      </>)}
-                  </button>
+                <div className="flex items-center gap-2">
+                  <Star className="w-4 h-4 text-yellow-400" />
+                  <span className="text-sm text-gray-300">{snippet.rating}</span>
                 </div>
               </div>
-            </div>
 
-            {generatedCode && (<div className="bg-gray-50 dark:bg-gray-900 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
-                <div className="flex items-center justify-between mb-4">
-                  <h4 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
-                    Generated Code
-                  </h4>
-                  <div className="flex items-center space-x-2">
-                    <button onClick={() => copyToClipboard(generatedCode)} className="p-2 text-gray-600 hover:text-gray-800 hover:bg-gray-200 dark:text-gray-400 dark:hover:text-gray-200 dark:hover:bg-gray-800 rounded-lg transition-colors">
-                      <Copy className="w-4 h-4"/>
-                    </button>
-                    <button className="p-2 text-gray-600 hover:text-gray-800 hover:bg-gray-200 dark:text-gray-400 dark:hover:text-gray-200 dark:hover:bg-gray-800 rounded-lg transition-colors">
-                      <Download className="w-4 h-4"/>
-                    </button>
-                  </div>
-                </div>
-                <pre className="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto text-sm">
-                  <code>{generatedCode}</code>
-                </pre>
-              </div>)}
-          </div>)}
+              <p className="text-gray-300 mb-4">{snippet.description}</p>
 
-        {activeTab === 'snippets' && (<div className="space-y-4">
-            {codeSnippets.map((snippet) => (<div key={snippet.id} className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg p-4 hover:shadow-lg transition-shadow">
-                <div className="flex items-start justify-between mb-3">
-                  <div>
-                    <h4 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-1">
-                      {snippet.title}
-                    </h4>
-                    <p className="text-gray-600 dark:text-gray-400 text-sm mb-2">
-                      {snippet.description}
-                    </p>
-                    <div className="flex items-center space-x-4 text-sm">
-                      <span className="text-blue-600 dark:text-blue-400 font-medium">
-                        {snippet.language.toUpperCase()}
-                      </span>
-                      <span className={`font-medium ${getComplexityColor(snippet.complexity)}`}>
-                        {snippet.complexity.charAt(0).toUpperCase() + snippet.complexity.slice(1)} Complexity
-                      </span>
-                      <span className="text-gray-500 dark:text-gray-400">
-                        ⭐ {snippet.rating} ({snippet.usageCount} uses)
-                      </span>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <button className="p-2 text-gray-600 hover:text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-gray-200 dark:hover:bg-gray-800 rounded-lg transition-colors">
-                      <Copy className="w-4 h-4"/>
-                    </button>
-                    <button className="p-2 text-gray-600 hover:text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-gray-200 dark:hover:bg-gray-800 rounded-lg transition-colors">
-                      <Download className="w-4 h-4"/>
-                    </button>
-                  </div>
+              <div className="mb-4">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-sm font-medium text-gray-400">Language:</span>
+                  <span className="text-sm text-white">{snippet.language}</span>
                 </div>
-                <div className="bg-gray-900 text-green-400 p-3 rounded-lg overflow-x-auto text-sm max-h-32 overflow-y-auto">
-                  <code>{snippet.code}</code>
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-sm font-medium text-gray-400">Usage:</span>
+                  <span className="text-sm text-white">{snippet.usageCount.toLocaleString()} times</span>
                 </div>
-                <div className="flex items-center justify-between mt-3">
-                  <div className="flex items-center space-x-2">
-                    {snippet.tags.map((tag) => (<span key={tag} className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded-full">
-                        {tag}
-                      </span>))}
-                  </div>
-                  <span className="text-xs text-gray-500 dark:text-gray-400">
-                    Created: {snippet.createdAt}
+              </div>
+
+              <div className="flex flex-wrap gap-2 mb-4">
+                {snippet.tags.map((tag, index) => (
+                  <span
+                    key={index}
+                    className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full"
+                  >
+                    {tag}
                   </span>
-                </div>
-              </div>))}
-          </div>)}
+                ))}
+              </div>
 
-        {activeTab === 'analysis' && (<div className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-              <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg p-4">
-                <div className="flex items-center space-x-3">
-                  <div className="p-2 bg-green-100 dark:bg-green-900 rounded-lg">
-                    <CheckCircle className="w-6 h-6 text-green-600 dark:text-green-400"/>
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">Average Quality</p>
-                    <p className="text-2xl font-bold text-green-600 dark:text-green-400">89%</p>
-                  </div>
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <Eye className="w-4 h-4 text-gray-400" />
+                  <span className="text-sm text-gray-300">View Code</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Copy className="w-4 h-4 text-gray-400" />
+                  <span className="text-sm text-gray-300">Copy</span>
                 </div>
               </div>
-              <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg p-4">
-                <div className="flex items-center space-x-3">
-                  <div className="p-2 bg-blue-100 dark:bg-blue-900 rounded-lg">
-                    <Activity className="w-6 h-6 text-blue-600 dark:text-blue-400"/>
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">Performance</p>
-                    <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">92%</p>
-                  </div>
-                </div>
+            </div>
+          ))}
+        </div>
+
+        {/* AI Features Section */}
+        <div className="mt-12">
+          <h2 className="text-3xl font-bold text-white mb-6 text-center">
+            AI-Powered Code Generation Features
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <Brain className="w-6 h-6 text-purple-400" />
+                <h3 className="text-xl font-semibold text-white">Smart Code Generation</h3>
               </div>
-              <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg p-4">
-                <div className="flex items-center space-x-3">
-                  <div className="p-2 bg-purple-100 dark:bg-purple-900 rounded-lg">
-                    <Shield className="w-6 h-6 text-purple-600 dark:text-purple-400"/>
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">Security</p>
-                    <p className="text-2xl font-bold text-purple-600 dark:text-purple-400">97%</p>
-                  </div>
+              <p className="text-gray-300 mb-4">
+                Generate context-aware code snippets based on your requirements and coding patterns.
+              </p>
+              <div className="space-y-2">
+                <div className="text-sm text-gray-300">
+                  • Context-aware suggestions
                 </div>
-              </div>
-              <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg p-4">
-                <div className="flex items-center space-x-3">
-                  <div className="p-2 bg-yellow-100 dark:bg-yellow-900 rounded-lg">
-                    <Gauge className="w-6 h-6 text-yellow-600 dark:text-yellow-400"/>
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">Maintainability</p>
-                    <p className="text-2xl font-bold text-yellow-600 dark:text-yellow-400">89%</p>
-                  </div>
+                <div className="text-sm text-gray-300">
+                  • Pattern recognition
+                </div>
+                <div className="text-sm text-gray-300">
+                  • Best practices integration
                 </div>
               </div>
             </div>
 
-            <div className="space-y-4">
-              {codeAnalysis.map((analysis) => {
-                const snippet = codeSnippets.find(s => s.id === analysis.snippetId);
-                return (<div key={analysis.id} className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg p-4">
-                    <div className="flex items-start justify-between mb-4">
-                      <div>
-                        <h4 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
-                          Analysis for: {snippet?.title}
-                        </h4>
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                          <div>
-                            <p className="text-sm text-gray-600 dark:text-gray-400">Quality</p>
-                            <p className={`text-lg font-semibold ${getQualityColor(analysis.quality)}`}>
-                              {analysis.quality}%
-                            </p>
-                          </div>
-                          <div>
-                            <p className="text-sm text-gray-600 dark:text-gray-400">Performance</p>
-                            <p className={`text-lg font-semibold ${getQualityColor(analysis.performance)}`}>
-                              {analysis.performance}%
-                            </p>
-                          </div>
-                          <div>
-                            <p className="text-sm text-gray-600 dark:text-gray-400">Security</p>
-                            <p className={`text-lg font-semibold ${getQualityColor(analysis.security)}`}>
-                              {analysis.security}%
-                            </p>
-                          </div>
-                          <div>
-                            <p className="text-sm text-gray-600 dark:text-gray-400">Maintainability</p>
-                            <p className={`text-lg font-semibold ${getQualityColor(analysis.maintainability)}`}>
-                              {analysis.maintainability}%
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <span className="text-xs text-gray-500 dark:text-gray-400">
-                        {new Date(analysis.timestamp).toLocaleDateString()}
-                      </span>
-                    </div>
-
-                    {showSuggestions && analysis.suggestions.length > 0 && (<div className="mb-4">
-                        <h5 className="text-sm font-medium text-green-700 dark:text-green-400 mb-2">
-                          <CheckCircle className="w-4 h-4 inline mr-1"/>
-                          Suggestions
-                        </h5>
-                        <ul className="space-y-1">
-                          {analysis.suggestions.map((suggestion, index) => (<li key={index} className="text-sm text-green-600 dark:text-green-300">
-                              • {suggestion}
-                            </li>))}
-                        </ul>
-                      </div>)}
-
-                    {analysis.warnings.length > 0 && (<div>
-                        <h5 className="text-sm font-medium text-yellow-700 dark:text-yellow-400 mb-2">
-                          <AlertCircle className="w-4 h-4 inline mr-1"/>
-                          Warnings
-                        </h5>
-                        <ul className="space-y-1">
-                          {analysis.warnings.map((warning, index) => (<li key={index} className="text-sm text-yellow-600 dark:text-yellow-300">
-                              • {warning}
-                            </li>))}
-                        </ul>
-                      </div>)}
-                  </div>)})}
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <Sparkles className="w-6 h-6 text-yellow-400" />
+                <h3 className="text-xl font-semibold text-white">Code Optimization</h3>
+              </div>
+              <p className="text-gray-300 mb-4">
+                Automatically optimize your code for performance, readability, and maintainability.
+              </p>
+              <div className="space-y-2">
+                <div className="text-sm text-gray-300">
+                  • Performance optimization
+                </div>
+                <div className="text-sm text-gray-300">
+                  • Code refactoring
+                </div>
+                <div className="text-sm text-gray-300">
+                  • Security improvements
+                </div>
+              </div>
             </div>
-          </div>)}
 
-        {activeTab === 'ai' && (<div className="space-y-4">
-            {aiGenerations.map((generation) => (<div key={generation.id} className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg p-4">
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex-1">
-                    <h4 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
-                      <Brain className="w-5 h-5 inline mr-2 text-purple-600"/>
-                      AI Generation
-                    </h4>
-                    <p className="text-gray-600 dark:text-gray-400 mb-3">
-                      <strong>Prompt:</strong> {generation.prompt}
-                    </p>
-                    <div className="flex items-center space-x-4 text-sm mb-3">
-                      <span className="text-blue-600 dark:text-blue-400 font-medium">
-                        {generation.language.toUpperCase()}
-                      </span>
-                      <span className="text-purple-600 dark:text-purple-400 font-medium">
-                        Confidence: {(generation.confidence * 100).toFixed(1)}%
-                      </span>
-                      <span className="text-gray-500 dark:text-gray-400">
-                        {new Date(generation.timestamp).toLocaleDateString()}
-                      </span>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <button onClick={() => copyToClipboard(generation.generatedCode)} className="p-2 text-gray-600 hover:text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-gray-200 dark:hover:bg-gray-800 rounded-lg transition-colors">
-                      <Copy className="w-4 h-4"/>
-                    </button>
-                    <button className="p-2 text-gray-600 hover:text-gray-800 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-gray-200 dark:hover:bg-gray-800 rounded-lg transition-colors">
-                      <Download className="w-4 h-4"/>
-                    </button>
-                  </div>
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <Zap className="w-6 h-6 text-blue-400" />
+                <h3 className="text-xl font-semibold text-white">Instant Generation</h3>
+              </div>
+              <p className="text-gray-300 mb-4">
+                Get production-ready code snippets instantly with comprehensive documentation.
+              </p>
+              <div className="space-y-2">
+                <div className="text-sm text-gray-300">
+                  • Real-time generation
                 </div>
-
-                <div className="bg-gray-900 text-green-400 p-3 rounded-lg overflow-x-auto text-sm max-h-48 overflow-y-auto mb-3">
-                  <code>{generation.generatedCode}</code>
+                <div className="text-sm text-gray-300">
+                  • Documentation included
                 </div>
+                <div className="text-sm text-gray-300">
+                  • Multiple formats
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-                {generation.alternatives.length > 0 && (<div>
-                    <h5 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                      Alternative Approaches:
-                    </h5>
-                    <ul className="space-y-1">
-                      {generation.alternatives.map((alternative, index) => (<li key={index} className="text-sm text-gray-600 dark:text-gray-400">
-                          • {alternative}
-                        </li>))}
-                    </ul>
-                  </div>)}
-              </div>))}
-          </div>)}
+        {/* CTA Section */}
+        <div className="mt-16 text-center">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Ready to Generate Amazing Code?
+            </h2>
+            <p className="text-xl text-purple-100 mb-6">
+              Start generating intelligent code snippets today and boost your development productivity.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-3 bg-white text-purple-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                Start Generating
+              </button>
+              <button className="px-8 py-3 border border-white text-white rounded-lg font-semibold hover:bg-white/10 transition-colors">
+                View Examples
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>)}
+    </div>
+  );
+};
+
+export default AdvancedAICodeGenerator;

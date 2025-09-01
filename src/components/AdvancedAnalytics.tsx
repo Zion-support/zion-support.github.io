@@ -7,7 +7,6 @@ import {
   Eye, 
   MousePointer, 
   Clock, 
-  TrendingUp, 
   TrendingDown,
   Activity,
   Zap,
@@ -136,8 +135,8 @@ export function AdvancedAnalytics({
       timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
     };
 
-    // Send to analytics service
-    this.sendAnalyticsData('pageview', pageViewData);
+    // Send to analytics service (placeholder)
+    console.log('Analytics data:', pageViewData);
     
     // Update local state
     setAnalyticsData(prev => ({
@@ -176,8 +175,8 @@ export function AdvancedAnalytics({
         break;
     }
 
-    // Send to analytics service
-    this.sendAnalyticsData('interaction', interactionData);
+    // Send to analytics service (placeholder)
+    console.log('Interaction data:', interactionData);
 
     // Update local state
     setAnalyticsData(prev => ({
@@ -219,8 +218,8 @@ export function AdvancedAnalytics({
         }
       }));
 
-      // Send to analytics service
-      this.sendAnalyticsData('performance', performanceData);
+      // Send to analytics service (placeholder)
+      console.log('Performance data:', performanceData);
     }
   }, [enabled, userSession]);
 
