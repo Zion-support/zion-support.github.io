@@ -23,28 +23,29 @@ const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.Reac
 };
 
 // Lazy load pages for better performance
-const HomePage = lazy(() => import('./pages/HomePage').then(module => ({ default: module.HomePage })));
-const ServicesPage = lazy(() => import('./pages/ServicesPage').then(module => ({ default: module.ServicesPage })));
-const SolutionsPage = lazy(() => import('./pages/SolutionsPage').then(module => ({ default: module.SolutionsPage })));
-const AboutPage = lazy(() => import('./pages/AboutPage').then(module => ({ default: module.AboutPage })));
-const ContactPage = lazy(() => import('./pages/ContactPage').then(module => ({ default: module.ContactPage })));
-const BlogPage = lazy(() => import('./pages/BlogPage').then(module => ({ default: module.BlogPage })));
-const NotFoundPage = lazy(() => import('./pages/NotFoundPage').then(module => ({ default: module.NotFoundPage })));
-const ComprehensiveServicesPage = lazy(() => import('./pages/ComprehensiveServicesPage').then(module => ({ default: module.ComprehensiveServicesPage })));
-const Sitemap = lazy(() => import('./pages/Sitemap').then(module => ({ default: module.default })));
-const ComprehensiveSitemap = lazy(() => import('./pages/ComprehensiveSitemap').then(module => ({ default: module.ComprehensiveSitemap })));
-const Support = lazy(() => import('./pages/Support').then(module => ({ default: module.default })));
-const Training = lazy(() => import('./pages/Training').then(module => ({ default: module.default })));
-const Helpdesk = lazy(() => import('./pages/Helpdesk').then(module => ({ default: module.default })));
-const RevolutionaryServicesPage = lazy(() => import('./pages/RevolutionaryServicesPage').then(module => ({ default: module.RevolutionaryServicesPage })));
-const NewServicesShowcase2025 = lazy(() => import('./pages/NewServicesShowcase2025').then(module => ({ default: module.NewServicesShowcase2025 })));
-const EnhancedNewServices2025 = lazy(() => import('./pages/EnhancedNewServices2025').then(module => ({ default: module.EnhancedNewServices2025 })));
-const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ default: module.PricingPage })));
+const HomePage = lazy(() => import('../pages/index').then(module => ({ default: module.default })));
+const ServicesPage = lazy(() => import('../pages/services-simple').then(module => ({ default: module.default })));
+const SolutionsPage = lazy(() => import('../pages/solutions').then(module => ({ default: module.default })));
+const AboutPage = lazy(() => import('../pages/about').then(module => ({ default: module.default })));
+const ContactPage = lazy(() => import('../pages/contact').then(module => ({ default: module.default })));
+const BlogPage = lazy(() => import('../pages/blog').then(module => ({ default: module.default })));
+const NotFoundPage = lazy(() => import('../pages/404').then(module => ({ default: module.default })));
+const ComprehensiveServicesPage = lazy(() => import('../pages/comprehensive-services').then(module => ({ default: module.default })));
+const Sitemap = lazy(() => import('../pages/sitemap').then(module => ({ default: module.default })));
+const ComprehensiveSitemap = lazy(() => import('../pages/comprehensive-sitemap').then(module => ({ default: module.default })));
+const Support = lazy(() => import('../pages/support').then(module => ({ default: module.default })));
+const Training = lazy(() => import('../pages/training').then(module => ({ default: module.default })));
+const Helpdesk = lazy(() => import('../pages/helpdesk').then(module => ({ default: module.default })));
+const RevolutionaryServicesPage = lazy(() => import('../pages/revolutionary-services').then(module => ({ default: module.default })));
+const NewServicesShowcase2025 = lazy(() => import('../pages/new-services-2025').then(module => ({ default: module.default })));
+const EnhancedNewServices2025 = lazy(() => import('../pages/enhanced-new-services-2025').then(module => ({ default: module.default })));
+const ComprehensiveServicesShowcase2025 = lazy(() => import('../pages/comprehensive-services-showcase-2025').then(module => ({ default: module.default })));
+const PricingPage = lazy(() => import('../pages/pricing').then(module => ({ default: module.default })));
 
-// Service Pages
-const AISolutions = lazy(() => import('./pages/services/AISolutions').then(module => ({ default: module.AISolutions })));
-const QuantumComputing = lazy(() => import('./pages/services/QuantumComputing').then(module => ({ default: module.QuantumComputing })));
-const Cybersecurity = lazy(() => import('./pages/services/Cybersecurity').then(module => ({ default: module.Cybersecurity })));
+// Service Pages - Commented out as they may not exist
+// const AISolutions = lazy(() => import('./pages/services/AISolutions').then(module => ({ default: module.AISolutions })));
+// const QuantumComputing = lazy(() => import('./pages/services/QuantumComputing').then(module => ({ default: module.QuantumComputing })));
+// const Cybersecurity = lazy(() => import('./pages/services/Cybersecurity').then(module => ({ default: module.Cybersecurity })));
 
 // Loading component
 const PageLoader = () => (
@@ -56,26 +57,7 @@ const PageLoader = () => (
   </div>
 );
 
-// Lazy load pages - only import existing ones
-const Home = createLazyComponent(() => import('./pages/Home'));
-const About = createLazyComponent(() => import('./pages/About'));
-const Contact = createLazyComponent(() => import('./pages/Contact'));
-const Services = createLazyComponent(() => import('./pages/Services'));
-const Solutions = createLazyComponent(() => import('./pages/Solutions'));
-const RequestQuote = createLazyComponent(() => import('./pages/RequestQuote'));
-const Dashboard = createLazyComponent(() => import('./pages/Dashboard'));
-const Login = createLazyComponent(() => import('./pages/Login'));
-const FAQ = createLazyComponent(() => import('./pages/FAQ'));
-const Privacy = createLazyComponent(() => import('./pages/Privacy'));
-const Terms = createLazyComponent(() => import('./pages/Terms'));
-const Cookies = createLazyComponent(() => import('./pages/Cookies'));
-const Pricing = createLazyComponent(() => import('./pages/Pricing'));
-const Help = createLazyComponent(() => import('./pages/Help'));
-const News = createLazyComponent(() => import('./pages/News'));
-const Careers = createLazyComponent(() => import('./pages/Careers'));
-const Support = createLazyComponent(() => import('./pages/Support'));
-const WhitePapers = createLazyComponent(() => import('./pages/WhitePapers'));
-const ComprehensivePricing = createLazyComponent(() => import('./pages/ComprehensivePricing'));
+// Remove unused lazy load components
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = React.useState(false);
@@ -92,13 +74,16 @@ function App() {
                 <Route path="/" element={<HomePage />} />
                 <Route path="/services" element={<ServicesPage />} />
                 <Route path="/services/*" element={<ServicesPage />} />
+                {/* Commented out as components may not exist
                 <Route path="/services/ai-solutions" element={<AISolutions />} />
                 <Route path="/services/quantum-computing" element={<QuantumComputing />} />
                 <Route path="/services/cybersecurity" element={<Cybersecurity />} />
+                */}
                 <Route path="/comprehensive-services" element={<ComprehensiveServicesPage />} />
                 <Route path="/revolutionary-services" element={<RevolutionaryServicesPage />} />
                 <Route path="/new-services-2025" element={<NewServicesShowcase2025 />} />
                 <Route path="/enhanced-new-services-2025" element={<EnhancedNewServices2025 />} />
+                <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
                 <Route path="/pricing" element={<PricingPage />} />
                 <Route path="/solutions" element={<SolutionsPage />} />
                 <Route path="/solutions/*" element={<SolutionsPage />} />

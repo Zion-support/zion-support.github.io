@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code, Search, Filter, Star, TrendingUp, Clock, Users2, Target, Rocket, Cpu, Database2, ShieldCheck, Globe2, Zap2, Brain2, Cloud2, Lock2, ChevronLeft, ChevronRight } from 'lucide-react'
 
-import { additionalEnhancedServices } from '../data/additional-real-services'
 import { enhancedServices2025 } from '../data/enhanced-services-2025'
+import { comprehensiveRealServices2025 } from '../data/comprehensive-real-services-2025'
 
 export default function Services(...args[]):  {
 	const [searchTerm, setSearchTerm] = useState('')
@@ -16,7 +16,7 @@ export default function Services(...args[]):  {
 	const description = 'Comprehensive AI, IT, and micro SaaS solutions for modern businesses.'
 
 	// Combine all services
-	const allServices = [...additionalEnhancedServices, ...enhancedServices2025]
+	const allServices = [...comprehensiveRealServices2025, ...enhancedServices2025]
 
 	// Get unique categories
 	const categories = ['all', ...new Set(allServices.map(service => service.category))]
@@ -88,15 +88,19 @@ export default function Services(...args[]):  {
 						<div className="mt-8 flex items-center justify-center gap-4">
 							<div className="flex items-center gap-2 text-sm text-gray-600">
 								<Users2 className="h-4 w-4" />
-								<span>500+ Active Customers</span>
+								<span>1000+ Active Customers</span>
 							</div>
 							<div className="flex items-center gap-2 text-sm text-gray-600">
 								<Star className="h-4 w-4 text-yellow-500" />
-								<span>4.7/5 Rating</span>
+								<span>4.8/5 Rating</span>
 							</div>
 							<div className="flex items-center gap-2 text-sm text-gray-600">
 								<TrendingUp className="h-4 w-4 text-green-500" />
-								<span>99.9% Uptime</span>
+								<span>99.99% Uptime</span>
+							</div>
+							<div className="flex items-center gap-2 text-sm text-gray-600">
+								<Shield className="h-4 w-4 text-blue-500" />
+								<span>SOC 2 Type II Certified</span>
 							</div>
 						</div>
 					</div>
@@ -389,7 +393,8 @@ export default function Services(...args[]):  {
 								<h3 className="text-lg font-semibold text-white">Contact Us</h3>
 								<p className="mt-2 text-blue-100">
 									Mobile: +1 302 464 0950<br />
-									Email: kleber@ziontechgroup.com
+									Email: kleber@ziontechgroup.com<br />
+									Website: ziontechgroup.com
 								</p>
 							</div>
 							<div>
@@ -399,7 +404,8 @@ export default function Services(...args[]):  {
 								<h3 className="text-lg font-semibold text-white">Visit Us</h3>
 								<p className="mt-2 text-blue-100">
 									364 E Main St STE 1008<br />
-									Middletown DE 19709
+									Middletown DE 19709<br />
+									United States
 								</p>
 							</div>
 							<div>
