@@ -29,7 +29,7 @@ class BrowserErrorFixer {
           {
             regex: /Unexpected token '([^']+)'/,
             fix: (match, filePath) => this.fixUnexpectedToken(match[1], filePath)
-
+          }
         ]
       },
       'Cannot read property': {

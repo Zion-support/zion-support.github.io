@@ -144,7 +144,7 @@ autoAnalyze:  true,;
       accessibility: 85,
       bestPractices: 88,
       seoScore: 87,
-      coreWebVitals: {;
+      coreWebVitals: {
         lcp: 2.8,;
         fid: 45,;
         cls: 0.08;

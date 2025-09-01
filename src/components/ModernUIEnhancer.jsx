@@ -198,7 +198,7 @@ import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet expo
         return () => {
             animatedElements.forEach ( (element) => {
                 observer.unobserve (element) }) }}, [enableScrollEffects]) ;
-    return (<>
+    return (<React.Fragment>
       {/* Theme Toggle Button */}
       {enableThemeToggle && (<motion.button initial = {
   { opacity: 0,

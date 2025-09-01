@@ -192,11 +192,11 @@ export const notify = {
   ...options 
 
 })},
-  error: (title: string, message: string, options?: Partial<Notification>)  => {
+  error: (title: string, message: string, options?: Partial<Notification>) => {
     console.log('Error notification: ', { title, message, ...options })},
   warning: (title: string, message: string, options?: Partial<Notification>)  => {
     console.log('Warning notification: ', { title, message, ...options })},
-  info: (title: string, message: string, options?: Partial<Notification>)  => {
+  info: (title: string, message: string, options?: Partial<Notification>) => {
     console.log('Info notification:', { title, message, ...options })};
     console.log('Success notification:', { title, message,;
   ;
