@@ -1,43 +1,70 @@
+const fs = require('fs');
+const path = require('path');
+
+const ROOT = path.resolve(__dirname, '..', '..');
+
 exports.handler = async function(event, context) {
   try {
-    console.log('⏰ auto-scheduler function triggered');
-    
-    // Simulate auto-scheduling logic
-    const timestamp = new Date().toISOString();
-    const result = {
-      status: 'success',
-      function: 'auto-scheduler',
-      timestamp: timestamp,
-      message: 'Auto-scheduling completed successfully',
-      data: {
-        tasksScheduled: Math.floor(Math.random() * 30) + 15,
-        priorityLevels: ['High', 'Medium', 'Low'],
-        schedulingEfficiency: (Math.random() * 0.25 + 0.75).toFixed(4),
-        conflictsResolved: Math.floor(Math.random() * 5) + 1,
-        nextRun: new Date(Date.now() + 15 * 60 * 1000).toISOString()
+    // Check if this is a scheduled invocation
+    if (event.source === 'local-runner' || event.source === 'netlify-scheduled') {
+      console.log('Running auto scheduler...');
+      
+      // Simulate automatic scheduling tasks
+      const tasks = [
+        'Analyzing scheduling patterns',
+        'Optimizing task distribution',
+        'Balancing resource allocation',
+        'Adapting to system load'
+      ];
+      
+      const results = [];
+      for (const task of tasks) {
+        console.log(`Executing: ${task}`);
+        // Simulate task execution
+        await new Promise(resolve => setTimeout(resolve, 155));
+        results.push({ task, status: 'completed', timestamp: new Date().toISOString() });
       }
-    };
-    
-    return {
-      statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Cache-Control': 'no-cache'
-      },
-      body: JSON.stringify(result)
-    };
+      
+      console.log('Auto scheduling completed successfully');
+      return {
+        statusCode: 200,
+        body: JSON.stringify({ 
+          success: true, 
+          message: 'Auto scheduling completed',
+          tasksExecuted: results.length,
+          schedulingOptimized: true,
+          results
+        })
+      };
+    } else {
+      // HTTP request - return status
+      return {
+        statusCode: 200,
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          function: 'auto-scheduler',
+          status: 'active',
+          description: 'Automatic scheduling capabilities',
+          lastRun: new Date().toISOString(),
+          schedule: 'Every 15 minutes',
+          capabilities: [
+            'Pattern analysis',
+            'Task distribution',
+            'Resource balancing',
+            'Load adaptation'
+          ]
+        })
+      };
+    }
   } catch (error) {
-    console.error('❌ auto-scheduler error:', error);
+    console.error('Error in auto-scheduler:', error);
     return {
       statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        status: 'error',
-        function: 'auto-scheduler',
-        error: error.message,
-        timestamp: new Date().toISOString()
+      body: JSON.stringify({ 
+        error: 'Internal server error',
+        message: error.message 
       })
     };
   }

@@ -1,48 +1,70 @@
+const fs = require('fs');
+const path = require('path');
+
+const ROOT = path.resolve(__dirname, '..', '..');
+
 exports.handler = async function(event, context) {
   try {
-    console.log('🧪 innovation-lab function triggered');
-    
-    // Simulate innovation lab logic
-    const timestamp = new Date().toISOString();
-    const result = {
-      status: 'success',
-      function: 'innovation-lab',
-      timestamp: timestamp,
-      message: 'Innovation lab completed successfully',
-      data: {
-        experimentsRun: Math.floor(Math.random() * 15) + 5,
-        innovationsGenerated: Math.floor(Math.random() * 8) + 3,
-        successRate: (Math.random() * 0.3 + 0.7).toFixed(4),
-        breakthroughIdeas: [
-          'AI-powered automation',
-          'Smart caching strategies',
-          'Predictive analytics',
-          'Self-healing systems'
-        ],
-        lastInnovation: timestamp
+    // Check if this is a scheduled invocation
+    if (event.source === 'local-runner' || event.source === 'netlify-scheduled') {
+      console.log('Running innovation lab...');
+      
+      // Simulate innovation laboratory tasks
+      const tasks = [
+        'Exploring new technologies',
+        'Testing innovative approaches',
+        'Prototyping solutions',
+        'Analyzing breakthrough potential'
+      ];
+      
+      const results = [];
+      for (const task of tasks) {
+        console.log(`Executing: ${task}`);
+        // Simulate task execution
+        await new Promise(resolve => setTimeout(resolve, 165));
+        results.push({ task, status: 'completed', timestamp: new Date().toISOString() });
       }
-    };
-    
-    return {
-      statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Cache-Control': 'no-cache'
-      },
-      body: JSON.stringify(result)
-    };
+      
+      console.log('Innovation lab completed successfully');
+      return {
+        statusCode: 200,
+        body: JSON.stringify({ 
+          success: true, 
+          message: 'Innovation lab completed',
+          tasksExecuted: results.length,
+          innovationsExplored: true,
+          results
+        })
+      };
+    } else {
+      // HTTP request - return status
+      return {
+        statusCode: 200,
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          function: 'innovation-lab',
+          status: 'active',
+          description: 'Innovation laboratory capabilities',
+          lastRun: new Date().toISOString(),
+          schedule: 'Every 10 minutes',
+          capabilities: [
+            'Technology exploration',
+            'Innovative testing',
+            'Solution prototyping',
+            'Breakthrough analysis'
+          ]
+        })
+      };
+    }
   } catch (error) {
-    console.error('❌ innovation-lab error:', error);
+    console.error('Error in innovation-lab:', error);
     return {
       statusCode: 500,
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        status: 'error',
-        function: 'innovation-lab',
-        error: error.message,
-        timestamp: new Date().toISOString()
+      body: JSON.stringify({ 
+        error: 'Internal server error',
+        message: error.message 
       })
     };
   }
