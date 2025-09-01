@@ -1,122 +1,130 @@
-interface User {}
+import { useState, useEffect } from 'react';
+
+interface User {
   id: string;
   email: string;
   name: string;
   role: 'user' | 'admin' | 'moderator';
   userType?: string;
   displayName?: string;
-:src/hooks/useAuth.tsx;
-  avatarUrl?: string}
-  avatarUrl?: string}
+  avatarUrl?: string;
+}
 
-interface AuthState {}
+interface AuthState {
   user: User | null;
   isAuthenticated: boolean;
-:src/hooks/useAuth.tsx;
   isLoading: boolean;
-  isLoading: boolean}
-
 }
-;
-export function useAuth(...args: unknown[]): unknown {}
-  const [authState, setAuthState] = useState<AuthState>({}
+
+export function useAuth() {
+  const [authState, setAuthState] = useState<AuthState>({
     user: null,
     isAuthenticated: false,
-    isLoading: true});
+    isLoading: true
+  });
 
-  useEffect(: unknown {}
-    // Check if user is logged in (e.g., check localStorage, cookies, etc.)
-:src/hooks/useAuth.tsx;
-      if(storedUser && token) {}
-        try {}
-          setAuthState({}
+  useEffect(() => {
+    const checkAuth = () => {
+      // Check if user is logged in (e.g., check localStorage, cookies, etc.)
+      const storedUser = localStorage.getItem('zion_user');
+      const token = localStorage.getItem('authToken');
+      
+      if (storedUser && token) {
+        try {
+          const user = JSON.parse(storedUser);
+          setAuthState({
             user,
             isAuthenticated: true,
-:src/hooks/useAuth.tsx;
-            isLoading: false})} catch (error) {}
-'
-''
-'''
-          // console.error('Error parsing stored user:', error);
-            isLoading: false})} catch (error) {}
-'
-''
-'''
+            isLoading: false
+          });
+        } catch (error) {
           console.error('Error parsing stored user:', error);
-          setAuthState({}
+          setAuthState({
             user: null,
             isAuthenticated: false,
-:src/hooks/useAuth.tsx;
-            isLoading: false})}
-            isLoading: false})}
-      } else {}
-        setAuthState({}
+            isLoading: false
+          });
+        }
+      } else {
+        setAuthState({
           user: null,
           isAuthenticated: false,
-:src/hooks/useAuth.tsx;
-          isLoading: false})}
+          isLoading: false
+        });
+      }
     };
 
-    checkAuth()}, []);
+    checkAuth();
+  }, []);
 
-          isLoading: false})}
+  const login = async (email: string, password: string) => {
+    // Mock login for now
+    const mockUser: User = {
+      id: '1',
+      email,
+      name: 'John Doe',
+      role: 'user',
+      userType: 'business',
+      displayName: 'John',
+      avatarUrl: undefined
     };
 
-    checkAuth()}, []);
-
-    setAuthState({}
+    setAuthState({
       user: mockUser,
-      isAuthenticated: true,'
-      isLoading: false});''
-'''
-    // Store user data in localStorage''''
-    localStorage.setItem('zion_user', JSON.stringify(mockUser));'''
-    localStorage.setItem('authToken',mock-jwt-token');
+      isAuthenticated: true,
+      isLoading: false
+    });
 
-:src/hooks/useAuth.tsx;
-    return { success: true, user: mockUser }};
+    // Store user data in localStorage
+    localStorage.setItem('zion_user', JSON.stringify(mockUser));
+    localStorage.setItem('authToken', 'mock-jwt-token');
 
-  '
-    // Clear localStorage''
-    localStorage.removeItem('zion_user');'
-    localStorage.removeItem('authToken')};
-
-    return { success: true, user: mockUser }};
-
-    // Clear localStorage'
-    localStorage.removeItem('zion_user');'
-    localStorage.removeItem('authToken')};
-
-    setAuthState({}
-      user: mockUser,
-      isAuthenticated: true,'
-      isLoading: false});''
-'''
-    // Store user data in localStorage''''
-    localStorage.setItem('zion_user', JSON.stringify(mockUser));'''
-    localStorage.setItem('authToken',mock-jwt-token');
-
-    return { success: true, user: mockUser }};
-
-:src/hooks/useAuth.tsx;
-      setAuthState(prev => ({}
-:src/hooks/useAuth.tsx;
-        ...prev,
-        user: updatedUser}));
-'
-      // Update localStorage''
-      localStorage.setItem('zion_user', JSON.stringify(updatedUser))}
-      // Update localStorage'
-      localStorage.setItem('zion_user', JSON.stringify(updatedUser))}
+    return { success: true, user: mockUser };
   };
 
-  return {}
+  const logout = () => {
+    // Clear localStorage
+    localStorage.removeItem('zion_user');
+    localStorage.removeItem('authToken');
+    
+    setAuthState({
+      user: null,
+      isAuthenticated: false,
+      isLoading: false
+    });
+
+    return { success: true };
+  };
+
+  const register = async (email: string, password: string, name: string) => {
+    // Mock registration for now
+    const mockUser: User = {
+      id: '1',
+      email,
+      name,
+      role: 'user',
+      userType: 'business',
+      displayName: name.split(' ')[0],
+      avatarUrl: undefined
+    };
+
+    setAuthState({
+      user: mockUser,
+      isAuthenticated: true,
+      isLoading: false
+    });
+
+    // Store user data in localStorage
+    localStorage.setItem('zion_user', JSON.stringify(mockUser));
+    localStorage.setItem('authToken', 'mock-jwt-token');
+
+    return { success: true, user: mockUser };
+  };
+
+  return {
     ...authState,
     login,
     logout,
-    register,
-:src/hooks/useAuth.tsx;
-    updateProfile}}'
-'
-    updateProfile}}
-'
+    register
+  };
+}

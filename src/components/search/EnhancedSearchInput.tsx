@@ -1,158 +1,177 @@
-import React, { useState, useEffect, useRef, useCallback, useMemo } from "react"; // Added useMemo"""
-import { Search, X } from "lucide-react";"""
-import { Input } from "@/components/ui/input";"""
-import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions"; """
-import { SearchSuggestion } from "@/types/search";
-import debounce from 'lodash.debounce';
-interface EnhancedSearchInputProps {}
+import React, { useState, useEffect, useRef } from 'react';
+import { Search, X, TrendingUp, Clock, Zap, Brain, Shield } from 'lucide-react';
+
+interface EnhancedSearchInputProps {
   value: string;
   onChange: (value: string) => void;
-  onSelectSuggestion?: (value: string) => void;
+  onSelectSuggestion: (suggestion: string) => void;
+  suggestions?: string[];
   placeholder?: string;
-  searchSuggestions: SearchSuggestion[];
+  className?: string;
 }
-export function EnhancedSearchInput(function EnhancedSearchInput(function EnhancedSearchInput({}
+
+export function EnhancedSearchInput({
   value,
   onChange,
-  onSelectSuggestion,"""
+  onSelectSuggestion,
+  suggestions = [],
   placeholder = "Search...",
-  searchSuggestions;
-}: EnhancedSearchInputProps) {): any {): any {): any {}
+  className = ""
+}: EnhancedSearchInputProps) {
   const [isFocused, setIsFocused] = useState(false);
-  const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]);
-  const [highlightedIndex, setHighlightedIndex] = useState<number>(-1);
-  const inputRef: any = useRef<HTMLInputElement>(null);
-  const containerRef: any = useRef<HTMLDivElement>(null);
-  const debouncedFilterSuggestions: any = useMemo(// Changed from useCallback to useMemo;
-    () => debounce((currentValue: string, suggestions: SearchSuggestion[]) => {}
-      if (!currentValue) {}
-'
-''
-'''
-        setFilteredSuggestions(suggestions.filter(s => s.type === 'recent'));
-        return;
-      }
-      const filtered: any = suggestions.filter(suggestion =>
-        suggestion.text.toLowerCase().includes(currentValue.toLowerCase())
+  const [showSuggestions, setShowSuggestions] = useState(false);
+  const [filteredSuggestions, setFilteredSuggestions] = useState<string[]>([]);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  // Recent searches (could be stored in localStorage)
+  const recentSearches = [
+    'AI Business Intelligence',
+    'Cloud FinOps',
+    'Cybersecurity Solutions',
+    'DevOps Automation'
+  ];
+
+  // Popular searches
+  const popularSearches = [
+    'AI Services',
+    'Cloud Infrastructure',
+    'Zero Trust Security',
+    'Digital Transformation'
+  ];
+
+  useEffect(() => {
+    if (value.trim()) {
+      const filtered = suggestions.filter(suggestion =>
+        suggestion.toLowerCase().includes(value.toLowerCase())
       );
-      filtered.sort((a, b) => {}
-        const aStartsWith: any = a.text.toLowerCase().startsWith(currentValue.toLowerCase()) ? -1 : 0;
-        const bStartsWith: any = b.text.toLowerCase().startsWith(currentValue.toLowerCase()) ? -1 : 0;
-        return aStartsWith-bStartsWith;
-      });
-      setFilteredSuggestions(filtered.slice(0, 8)); 
-    }, 300),
-    [setFilteredSuggestions] // setFilteredSuggestions from useState is stable;
-  );
-  useEffect(() => {}
-    debouncedFilterSuggestions(value, searchSuggestions);
-    setHighlightedIndex(-1); 
-    return () => {}
-      debouncedFilterSuggestions.cancel();
-    };
-  }, [value, searchSuggestions, debouncedFilterSuggestions]);
-  useEffect(() => {}
-    function handleClickOutside(function handleClickOutside(function handleClickOutside(event: MouseEvent) {): any {): any {}
-      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {}
-        setIsFocused(false);
-      }
+      setFilteredSuggestions(filtered);
+      setShowSuggestions(true);
+    } else {
+      setShowSuggestions(false);
     }
-    """
-    document.addEventListener("mousedown", handleClickOutside);"""
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
-  const handleSelectSuggestion: any = (suggestionText: string) => { // Renamed suggestion to suggestionText;
-    onChange(suggestionText);
-    if (onSelectSuggestion) {}
-      onSelectSuggestion(suggestionText);
-    }
-    setIsFocused(false);
+  }, [value, suggestions]);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    onChange(e.target.value);
+  };
+
+  const handleSuggestionClick = (suggestion: string) => {
+    onSelectSuggestion(suggestion);
+    setShowSuggestions(false);
     inputRef.current?.blur();
-    setHighlightedIndex(-1); 
   };
-  const handleKeyDown: any = (e: React.KeyboardEvent<HTMLInputElement>) => {}
-    if (!isFocused || filteredSuggestions.length === 0) {}
-'
-      if (e.key === 'Escape') {}
-        e.preventDefault();
-        setIsFocused(false);
-        setHighlightedIndex(-1);
-        inputRef.current?.blur();
-      }
-      return;
-    }
-    switch (e.key) {}
-'
-      case 'ArrowDown': any;
-        e.preventDefault();
-        setHighlightedIndex(prev => (prev + 1) % filteredSuggestions.length);
-        break;'
-      case 'ArrowUp': any;
-        e.preventDefault();
-        setHighlightedIndex(prev => (prev - 1 + filteredSuggestions.length) % filteredSuggestions.length);
-        break;'
-      case 'Enter': any;
-        if (highlightedIndex !== -1 && filteredSuggestions[highlightedIndex]) {}
-          e.preventDefault();
-          handleSelectSuggestion(filteredSuggestions[highlightedIndex].text);
-        }
-        break;'
-      case 'Escape': any;
-        e.preventDefault();
-        setIsFocused(false);
-        setHighlightedIndex(-1);
-        inputRef.current?.blur();
-        break;
-      default: any;
-        break;
-    }
+
+  const handleClear = () => {
+    onChange('');
+    setShowSuggestions(false);
+    inputRef.current?.focus();
   };
-  return()
-    <div"""
-      className="relative w-full"""
-      ref={containerRef}"""
-      role="combobox"""
-      aria-expanded={isFocused && filteredSuggestions.length > 0}"""
-      aria-haspopup="listbox""""
-      aria-controls="autocomplete-suggestions-list"""
-    >"""
+
+  const getSuggestionIcon = (suggestion: string) => {
+    if (suggestion.includes('AI')) return <Brain className="w-4 h-4" />;
+    if (suggestion.includes('Cloud')) return <Zap className="w-4 h-4" />;
+    if (suggestion.includes('Security') || suggestion.includes('Trust')) return <Shield className="w-4 h-4" />;
+    return <TrendingUp className="w-4 h-4" />;
+  };
+
+  return (
+    <div className={`relative ${className}`}>
       <div className="relative">
-        <Search """
-          className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate"""
-        />
-        <Input;
-          ref={inputRef}"""
-          type="text"""
+        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light" />
+        <input
+          ref={inputRef}
+          type="text"
           value={value}
-          onChange={(e) => {}
-            onChange(e.target.value);
+          onChange={handleInputChange}
+          onFocus={() => {
+            setIsFocused(true);
+            if (value.trim()) setShowSuggestions(true);
           }}
-          onFocus={() => setIsFocused(true)}
-          onKeyDown={handleKeyDown} 
-          placeholder={placeholder}"""
-          className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate""""
-          aria-autocomplete="list"""
-          aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
+          onBlur={() => {
+            setIsFocused(false);
+            // Delay hiding suggestions to allow clicks
+            setTimeout(() => setShowSuggestions(false), 200);
+          }}
+          placeholder={placeholder}
+          className="w-full pl-10 pr-10 py-2 bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan/50 transition-all duration-200"
         />
         {value && (
-          <button"""
-            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"'
-            onClick={() => onChange('')}"""
-            aria-label="Clear search"""
-          >"""
-            <X className="h-4 w-4" />
+          <button
+            onClick={handleClear}
+            className="absolute right-3 top-1/2 transform -translate-y-1/2 p-1 hover:bg-zion-purple/20 rounded transition-colors"
+          >
+            <X className="w-4 h-4 text-zion-slate-light hover:text-zion-cyan" />
           </button>
         )}
       </div>
-      <AutocompleteSuggestions;
-        suggestions={filteredSuggestions}
-        searchTerm={value}
-        onSelectSuggestion={handleSelectSuggestion}
-        visible={isFocused}
-        highlightedIndex={highlightedIndex} """
-        listId="autocomplete-suggestions-list"""
-      />
+
+      {/* Search Suggestions */}
+      {showSuggestions && (
+        <div className="absolute top-full left-0 right-0 mt-2 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50 max-h-96 overflow-y-auto">
+          {/* Filtered Suggestions */}
+          {filteredSuggestions.length > 0 && (
+            <div className="p-2">
+              <div className="px-3 py-2 border-b border-zion-purple/20">
+                <p className="text-sm font-medium text-zion-cyan">Search Results</p>
+              </div>
+              {filteredSuggestions.map((suggestion, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleSuggestionClick(suggestion)}
+                  className="flex items-center space-x-3 w-full px-3 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 rounded-md transition-colors"
+                >
+                  {getSuggestionIcon(suggestion)}
+                  <span>{suggestion}</span>
+                </button>
+              ))}
+            </div>
+          )}
+
+          {/* Recent Searches */}
+          {!value.trim() && (
+            <div className="p-2">
+              <div className="px-3 py-2 border-b border-zion-purple/20">
+                <p className="text-sm font-medium text-zion-cyan flex items-center">
+                  <Clock className="w-4 h-4 mr-2" />
+                  Recent Searches
+                </p>
+              </div>
+              {recentSearches.map((search, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleSuggestionClick(search)}
+                  className="flex items-center space-x-3 w-full px-3 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 rounded-md transition-colors"
+                >
+                  <Clock className="w-4 h-4" />
+                  <span>{search}</span>
+                </button>
+              ))}
+            </div>
+          )}
+
+          {/* Popular Searches */}
+          {!value.trim() && (
+            <div className="p-2">
+              <div className="px-3 py-2 border-b border-zion-purple/20">
+                <p className="text-sm font-medium text-zion-cyan flex items-center">
+                  <TrendingUp className="w-4 h-4 mr-2" />
+                  Popular Searches
+                </p>
+              </div>
+              {popularSearches.map((search, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleSuggestionClick(search)}
+                  className="flex items-center space-x-3 w-full px-3 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 rounded-md transition-colors"
+                >
+                  <TrendingUp className="w-4 h-4" />
+                  <span>{search}</span>
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 }
-'"`
