@@ -59,9 +59,10 @@ export default function HomePage({ pageLinks }: HomePageProps) {
         columns={3}
       />
 
-      {/* Micro SaaS Services */}
-      <section className="py-24 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Technology Stack */}
+      <section className="py-24 bg-gray-900 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.05)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20 animate-fade-in">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium mb-6">
               <span className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse" />
@@ -75,65 +76,15 @@ export default function HomePage({ pageLinks }: HomePageProps) {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            <Card className="text-center group border border-gray-800 hover:border-green-500/30">
-              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">📧</div>
-              <h3 className="text-xl font-semibold text-white mb-3">Email Marketing Automation</h3>
-              <p className="text-gray-400 mb-4">AI-powered email marketing with advanced automation and analytics.</p>
-              <div className="text-2xl font-bold text-green-400 mb-2">Starting at $89/month</div>
-              <div className="text-sm text-gray-500">Market average: $75-200/month</div>
-            </Card>
-
-            <Card className="text-center group border border-gray-800 hover:border-green-500/30">
-              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">💳</div>
-              <h3 className="text-xl font-semibold text-white mb-3">Payment Processing</h3>
-              <p className="text-gray-400 mb-4">Secure payment gateway with subscription billing and fraud detection.</p>
-              <div className="text-2xl font-bold text-green-400 mb-2">Starting at $49/month</div>
-              <div className="text-sm text-gray-500">Market average: $29-99/month</div>
-            </Card>
-
-            <Card className="text-center group border border-gray-800 hover:border-green-500/30">
-              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🎯</div>
-              <h3 className="text-xl font-semibold text-white mb-3">CRM Solutions</h3>
-              <p className="text-gray-400 mb-4">Comprehensive CRM with sales automation and customer insights.</p>
-              <div className="text-2xl font-bold text-green-400 mb-2">Starting at $25/user/month</div>
-              <div className="text-sm text-gray-500">Market average: $20-50/user/month</div>
-            </Card>
-          </div>
-
-          <div className="text-center">
-            <Button
-              href="/micro-saas"
-              size="lg"
-              className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700"
-            >
-              Explore All Micro SaaS Services
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Technology Stack */}
-      <section className="py-24 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Revolutionary Platform Capabilities
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover how our autonomous systems are transforming the future of technology
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Autonomous Cloud Systems */}
-            <Card className="hover-lift group">
-              <CardHeader>
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
-                  </svg>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6">
+            {technologyStack.map((tech, index) => (
+              <Card
+                key={index}
+                className="text-center group border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300"
+                style={{ animationDelay: `${(index * 0.05) + 0.2}s` }}
+              >
+                <div className="text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                  {tech.icon}
                 </div>
                 <CardTitle className="text-center text-blue-600">Autonomous Cloud Systems</CardTitle>
               </CardHeader>
@@ -227,10 +178,12 @@ export default function HomePage({ pageLinks }: HomePageProps) {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-r from-blue-600 to-purple-600">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Experience the Future?
+      <section className="py-24 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-transparent to-blue-800/20" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8 leading-tight">
+            Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
             Join thousands of organizations already leveraging our autonomous technology platform
@@ -240,7 +193,8 @@ export default function HomePage({ pageLinks }: HomePageProps) {
               asChild
               size="lg"
               variant="secondary"
-              className="transform hover:scale-105 transition-transform duration-200"
+              size="lg"
+              className="bg-white text-blue-600 hover:bg-gray-100 shadow-2xl hover:shadow-blue-500/25"
             >
               <Link href="/contact">
                 Get Started Today
@@ -249,8 +203,7 @@ export default function HomePage({ pageLinks }: HomePageProps) {
             <Button
               asChild
               size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-blue-600 transform hover:scale-105 transition-all duration-200"
+              className="border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl hover:shadow-white/25"
             >
               <Link href="/case-studies">
                 View Case Studies

@@ -160,8 +160,8 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-white/95 backdrop-blur-xl border-t border-gray-200/50">
+          <div className="lg:hidden">
+            <div className="px-4 pt-4 pb-6 space-y-2 bg-black/90 backdrop-blur-xl rounded-xl mt-2 border border-white/10 shadow-2xl max-h-[80vh] overflow-y-auto">
               {navigation.map((item) => (
                 <div key={item.name}>
                   {item.hasDropdown ? (
