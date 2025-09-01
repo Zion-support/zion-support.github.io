@@ -51,7 +51,7 @@ import { Eye,
   Ship
  } from 'lucide-react.ts';
 
-export default function DigitalTwin(...args: any[]): any {
+export default function DigitalTwin(...args: unknown[]): any {
   const features = [
     {
       icon: Eye,

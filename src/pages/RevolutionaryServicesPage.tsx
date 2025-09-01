@@ -134,7 +134,7 @@ import { Brain,
 import { REVOLUTIONARY_MICRO_SAAS_SERVICES_2025  } from '../data/revolutionaryMicroSaasServices2025';
 import { COMPREHENSIVE_PRICING_GUIDE_2025  } from '../data/comprehensivePricingGuide2025';
 
-export function RevolutionaryServicesPage(...args: any[]): any {
+export function RevolutionaryServicesPage(...args: unknown[]): any {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [priceRange, setPriceRange] = useState('all');
@@ -620,6 +620,15 @@ export function RevolutionaryServicesPage(...args: any[]): any {
           </div>
         </div>
       </div>
+    </div>
+  );
+}
+
+export default function RevolutionaryServicesPage() {
+  return (
+    <div>
+      <h1>RevolutionaryServicesPage</h1>
+      <p>This is the RevolutionaryServicesPage page.</p>
     </div>
   );
 }

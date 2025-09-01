@@ -57,3 +57,13 @@ const AdvancedInnovativeServicesShowcase2025 = () => {
             'Quantum Technology': '🔮',
             'AI & Machine Learning': '🧠',
             'AI & Analytics': '📊',
+
+
+export default function AdvancedInnovativeServicesShowcase2025() {
+  return (
+    <div>
+      <h1>AdvancedInnovativeServicesShowcase2025</h1>
+      <p>This is the AdvancedInnovativeServicesShowcase2025 page.</p>
+    </div>
+  );
+}

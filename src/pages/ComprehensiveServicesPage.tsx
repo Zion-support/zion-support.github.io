@@ -38,7 +38,7 @@ import { Brain,
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025  } from '../data/innovativeMicroSaasServices2025';
 import { COMPREHENSIVE_PRICING_GUIDE_2025  } from '../data/comprehensivePricingGuide2025';
 
-export function ComprehensiveServicesPage(...args: any[]): any {
+export function ComprehensiveServicesPage(...args: unknown[]): any {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [priceRange, setPriceRange] = useState('all');

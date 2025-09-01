@@ -12,7 +12,7 @@ import { FileText,
   Bot
  } from 'lucide-react.ts';
 
-export default function AIContentGenerator(...args: any[]): any {
+export default function AIContentGenerator(...args: unknown[]): any {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEO 

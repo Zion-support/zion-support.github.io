@@ -519,3 +519,12 @@ export function QuantumAITradingPlatform() {
     </div>
   );
 }
+
+export default function Quantum-ai-trading-platform() {
+  return (
+    <div>
+      <h1>Quantum-ai-trading-platform</h1>
+      <p>This is the Quantum-ai-trading-platform page.</p>
+    </div>
+  );
+}

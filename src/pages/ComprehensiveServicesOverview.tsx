@@ -37,3 +37,13 @@ import { Brain,
     }
     return service.pricing?.basic || 0;
   };
+
+
+export default function ComprehensiveServicesOverview() {
+  return (
+    <div>
+      <h1>ComprehensiveServicesOverview</h1>
+      <p>This is the ComprehensiveServicesOverview page.</p>
+    </div>
+  );
+}

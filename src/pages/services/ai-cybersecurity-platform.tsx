@@ -561,3 +561,12 @@ export function AICybersecurityPlatform() {
     </div>
   );
 }
+
+export default function Ai-cybersecurity-platform() {
+  return (
+    <div>
+      <h1>Ai-cybersecurity-platform</h1>
+      <p>This is the Ai-cybersecurity-platform page.</p>
+    </div>
+  );
+}

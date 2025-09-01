@@ -28,7 +28,7 @@ import { Brain,
  } from 'lucide-react.ts';
 import { SEO  } from '../../components/SEO';
 
-export default function Solutions(...args: any[]): any {
+export default function Solutions(...args: unknown[]): any {
   const solutionCategories = [
     {
       title: 'AI & Machine Learning Solutions',

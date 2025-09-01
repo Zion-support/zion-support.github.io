@@ -46,7 +46,7 @@ import { Star,
   ExternalLink
  } from 'lucide-react.ts';
 
-export default function UltimateServicesShowcase2026(...args: any[]): any {
+export default function UltimateServicesShowcase2026(...args: unknown[]): any {
   const services = [
     {
       category: 'AI & Machine Learning',

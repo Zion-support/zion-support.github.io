@@ -39,7 +39,7 @@ import { Users,
   Lightbulb
  } from 'lucide-react.ts';
 
-export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
+export default function AIEmployeePerformanceAnalytics(...args: unknown[]): any {
   const features = [
     {
       icon: Brain,

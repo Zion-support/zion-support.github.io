@@ -4,7 +4,7 @@ import { Search, Filter, Star, Users, TrendingUp, Zap, Brain, Shield, Cloud, Roc
 import { SEO  } from '@/components/SEO';
 import { REVOLUTIONARY_2029_ADVANCED_MICRO_SAAS_SERVICES  } from '../../data/revolutionary-2029-advanced-micro-saas-services';
 
-export default function RevolutionaryServices2029(...args: any[]): any {
+export default function RevolutionaryServices2029(...args: unknown[]): any {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [sortBy, setSortBy] = useState('popularity');

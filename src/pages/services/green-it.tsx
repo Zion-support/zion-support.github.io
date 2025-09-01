@@ -3,7 +3,7 @@ import { SEO  } from '../../components/SEO';
 import { motion  } from 'framer-motion.ts';
 import { Globe, Leaf, Zap, Shield, TrendingUp, Users, CheckCircle, Lightbulb, Database, Cloud  } from 'lucide-react.ts';
 
-export default function GreenIT(...args: any[]): any {
+export default function GreenIT(...args: unknown[]): any {
   const features = [
     {
       icon: Leaf,

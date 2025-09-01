@@ -39,7 +39,7 @@ import { Package,
   Store
  } from 'lucide-react.ts';
 
-export default function AIInventoryManagement(...args: any[]): any {
+export default function AIInventoryManagement(...args: unknown[]): any {
   const features = [
     {
       icon: Brain,

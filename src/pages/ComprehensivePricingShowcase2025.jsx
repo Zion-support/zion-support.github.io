@@ -76,3 +76,13 @@ const ComprehensivePricingShowcase2025 = () => {
             'Quantum Technology': '🔮',
             'AI & Machine Learning': '🧠',
             'AI & Analytics': '📊',
+
+
+export default function ComprehensivePricingShowcase2025() {
+  return (
+    <div>
+      <h1>ComprehensivePricingShowcase2025</h1>
+      <p>This is the ComprehensivePricingShowcase2025 page.</p>
+    </div>
+  );
+}

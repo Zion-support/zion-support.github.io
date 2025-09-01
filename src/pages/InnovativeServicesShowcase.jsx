@@ -49,3 +49,13 @@ const InnovativeServicesShowcase = () => {
             'Cybersecurity': <Shield className="h-5 w-5"/>,
             'Metaverse & VR/AR': <Eye className="h-5 w-5"/>,
             'Green Technology': <Leaf className="h-5 w-5"/>,
+
+
+export default function InnovativeServicesShowcase() {
+  return (
+    <div>
+      <h1>InnovativeServicesShowcase</h1>
+      <p>This is the InnovativeServicesShowcase page.</p>
+    </div>
+  );
+}

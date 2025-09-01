@@ -3,7 +3,7 @@ import { motion  } from 'framer-motion.ts';
 import { Search, TrendingUp, BarChart3, Target, Zap, Brain, Globe, Users, Clock, Shield, ArrowRight, CheckCircle, Star, Award, Rocket, Lightbulb, Code, Analytics, Monitor, Smartphone, Laptop, Phone  } from 'lucide-react.ts';
 import { SEO  } from '@/components/SEO';
 
-export default function AIPoweredSEO(...args: any[]): any {
+export default function AIPoweredSEO(...args: unknown[]): any {
   const features = [
     {
       icon: Brain,

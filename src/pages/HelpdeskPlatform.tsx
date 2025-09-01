@@ -44,7 +44,7 @@ import { MessageCircle,
   LineChart
  } from 'lucide-react.ts';
 
-export default function HelpdeskPlatform(...args: any[]): any {
+export default function HelpdeskPlatform(...args: unknown[]): any {
   const features = [
     {
       icon: Ticket,

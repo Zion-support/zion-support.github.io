@@ -23,7 +23,7 @@ import { Brain,
  } from 'lucide-react.ts';
 import { SEO  } from '../../components/SEO';
 
-export default function AIBlockchainIntegration(...args: any[]): any {
+export default function AIBlockchainIntegration(...args: unknown[]): any {
   const features = [
     {
       icon: Brain,

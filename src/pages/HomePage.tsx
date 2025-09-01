@@ -59,7 +59,7 @@ const HeroSkeleton = () => (
   </div>
 );
 
-export function HomePage(...args: any[]): any {
+export function HomePage(...args: unknown[]): any {
   const heroFeatures = [
     { icon: Brain, text: 'AI-Powered Solutions', description: 'Transform your business with cutting-edge artificial intelligence' },
     { icon: Atom, text: 'Quantum Computing', description: 'Harness the power of quantum mechanics for unprecedented computational capabilities' },
@@ -318,6 +318,15 @@ export function HomePage(...args: any[]): any {
           </div>
         </div>
       </section>
+    </div>
+  );
+}
+
+export default function HomePage() {
+  return (
+    <div>
+      <h1>HomePage</h1>
+      <p>This is the HomePage page.</p>
     </div>
   );
 }

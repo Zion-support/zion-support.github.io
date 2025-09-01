@@ -166,3 +166,13 @@ const MicroSAASServicesPage = () => {
     </div>;
   );
 }
+
+
+export default function MicroSAASServicesPage() {
+  return (
+    <div>
+      <h1>MicroSAASServicesPage</h1>
+      <p>This is the MicroSAASServicesPage page.</p>
+    </div>
+  );
+}

@@ -5,7 +5,7 @@ import { SEO  } from '@/components/SEO';
 import { REVOLUTIONARY_2029_CUTTING_EDGE_SERVICES  } from '../../data/revolutionary-2029-cutting-edge-services';
 import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES  } from '../../data/revolutionary-2029-emerging-tech-services';
 
-export default function RevolutionaryServicesShowcase2029(...args: any[]): any {
+export default function RevolutionaryServicesShowcase2029(...args: unknown[]): any {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('popularity');

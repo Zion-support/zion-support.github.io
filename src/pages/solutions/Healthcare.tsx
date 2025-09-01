@@ -18,3 +18,13 @@ import React from 'react';
     </div>;
   );
 
+
+
+export default function Healthcare() {
+  return (
+    <div>
+      <h1>Healthcare</h1>
+      <p>This is the Healthcare page.</p>
+    </div>
+  );
+}

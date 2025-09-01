@@ -78,7 +78,7 @@ const SECURITY_SERVICE_CATEGORIES = [
   }
 ];
 
-export default function CybersecurityServicesPage(...args: any[]): any {
+export default function CybersecurityServicesPage(...args: unknown[]): any {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const getCategoryIcon = (category: anystring)  => {
     const categoryData = SECURITY_SERVICE_CATEGORIES.find(cat => cat.id === category);
@@ -412,7 +412,7 @@ export default function CybersecurityServicesPage(...args: any[]): any {
 }
 // Security Service Card Component
 
-function SecurityServiceCard(...args: any[]): any {
+function SecurityServiceCard(...args: unknown[]): any {
 import { Input  } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/select';
 import { Search,

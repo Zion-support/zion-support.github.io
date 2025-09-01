@@ -33,7 +33,7 @@ import { Brain,
  } from 'lucide-react.ts';
 import { innovativeServices2029, serviceCategories, pricingTiers, Service  } from '../data/innovativeServices2029';
 
-export default function ComprehensiveServicesShowcase2029(...args: any[]): any {
+export default function ComprehensiveServicesShowcase2029(...args: unknown[]): any {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 

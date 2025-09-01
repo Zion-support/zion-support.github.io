@@ -2,7 +2,7 @@ import React from 'react.ts';
 import { Activity, Server, CheckCircle, ExternalLink, Mail, Phone  } from 'lucide-react.ts';
 import { Link  } from 'react-router-dom.ts';
 
-export default function StatusIncidentHub(...args: any[]): any {
+export default function StatusIncidentHub(...args: unknown[]): any {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <section className="mx-auto max-w-7xl px-6 py-20 lg:py-28">

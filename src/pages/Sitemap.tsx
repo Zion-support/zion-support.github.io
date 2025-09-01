@@ -304,3 +304,13 @@ const Sitemap: React.FC = () => {
     </div>
   );
 }
+
+
+export default function Sitemap() {
+  return (
+    <div>
+      <h1>Sitemap</h1>
+      <p>This is the Sitemap page.</p>
+    </div>
+  );
+}

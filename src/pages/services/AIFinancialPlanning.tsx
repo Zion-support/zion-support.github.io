@@ -47,7 +47,7 @@ import { DollarSign,
   Banknote
  } from 'lucide-react.ts';
 
-export default function AIFinancialPlanning(...args: any[]): any {
+export default function AIFinancialPlanning(...args: unknown[]): any {
   const features = [
     {
       icon: Brain,

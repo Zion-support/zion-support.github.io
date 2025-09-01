@@ -23,7 +23,7 @@ import { Shield,
   MapPin
  } from 'lucide-react.ts';
 
-export default function IncidentResponsePlatform(...args: any[]): any {
+export default function IncidentResponsePlatform(...args: unknown[]): any {
   const features = [
     {
       icon: AlertTriangle,

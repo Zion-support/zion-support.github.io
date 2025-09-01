@@ -47,7 +47,7 @@ import { innovativeMicroSAASServices2029  } from '../../data/innovative-micro-sa
 import { revolutionaryAIServices2029  } from '../../data/revolutionary-ai-services-2029';
 import { revolutionaryITServices2029  } from '../../data/revolutionary-it-services-2029';
 
-export default function ComprehensivePricing2029(...args: any[]): any {
+export default function ComprehensivePricing2029(...args: unknown[]): any {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState<any>('grid');

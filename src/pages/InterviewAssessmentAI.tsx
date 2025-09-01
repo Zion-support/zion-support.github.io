@@ -53,7 +53,7 @@ import { Users,
   TrendingUp
  } from 'lucide-react.ts';
 
-export default function InterviewAssessmentAI(...args: any[]): any {
+export default function InterviewAssessmentAI(...args: unknown[]): any {
   const features = [
     {
       icon: Users,

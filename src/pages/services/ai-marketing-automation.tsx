@@ -28,7 +28,7 @@ import { TrendingUp,
   PieChart
  } from 'lucide-react.ts';
 
-export default function AIMarketingAutomation(...args: any[]): any {
+export default function AIMarketingAutomation(...args: unknown[]): any {
   const features = [
     {
       icon: Brain,

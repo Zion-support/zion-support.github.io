@@ -140,7 +140,7 @@ import { Brain,
   CalendarYear2
  } from 'lucide-react.ts';
 
-export default function InnovativeServices2025(...args: any[]): any {
+export default function InnovativeServices2025(...args: unknown[]): any {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState('popularity');

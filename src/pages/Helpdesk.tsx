@@ -43,7 +43,7 @@ import { HelpCircle,
   DollarSign
  } from 'lucide-react.ts';
 
-export default function Helpdesk(...args: any[]): any {
+export default function Helpdesk(...args: unknown[]): any {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [expandedTicket, setExpandedTicket] = useState<any>(null);

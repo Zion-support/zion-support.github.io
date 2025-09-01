@@ -37,7 +37,7 @@ import { Brain,
   Home
  } from 'lucide-react.ts';
 
-export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
+export default function AIAutonomousBusinessIntelligence(...args: unknown[]): any {
   const features = [
     {
       icon: Brain,

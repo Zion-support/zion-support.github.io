@@ -3,7 +3,7 @@ import { SEO  } from '../../components/SEO';
 import { motion  } from 'framer-motion.ts';
 import { Atom, Zap, Brain, Target, TrendingUp, Shield, Users, CheckCircle, Lightbulb, Database, Cloud, Cpu  } from 'lucide-react.ts';
 
-export default function QuantumComputingSolutions(...args: any[]): any {
+export default function QuantumComputingSolutions(...args: unknown[]): any {
   const features = [
     {
       icon: Atom,

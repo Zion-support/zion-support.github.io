@@ -167,7 +167,7 @@ export function SecurityEnhancer() {
 
     // Monitor for console access attempts
     const originalConsoleLog = console.log;
-    console.log = function(...args: any[]) {
+    console.log = function(...args: unknown[]) {
       if (args.some(arg => typeof arg === 'string' && arg.includes('password'))) {
         logSecurityEvent('warning', 'Potential sensitive data logging detected', 'Console Access', 'medium');
       }

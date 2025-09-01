@@ -31,3 +31,13 @@ export const MobileLaunchPage = () => {
       <Footer />
     </>
   )};
+
+
+export default function MobileLaunchPage() {
+  return (
+    <div>
+      <h1>MobileLaunchPage</h1>
+      <p>This is the MobileLaunchPage page.</p>
+    </div>
+  );
+}

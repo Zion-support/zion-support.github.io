@@ -33,3 +33,13 @@ const ComprehensiveServicesOverview2025 = () => {
             'Legal Tech & AI': '⚖️',
             'Marketing & AI': '📢',
             'Energy & Sustainability': '⚡',
+
+
+export default function ComprehensiveServicesOverview2025() {
+  return (
+    <div>
+      <h1>ComprehensiveServicesOverview2025</h1>
+      <p>This is the ComprehensiveServicesOverview2025 page.</p>
+    </div>
+  );
+}

@@ -3,7 +3,7 @@ import { motion  } from 'framer-motion.ts';
 import { Users, Brain, Target, BarChart3, Clock, Shield, CheckCircle, Star, Award, Rocket, ArrowRight, Phone, Video, FileText, TrendingUp, Zap, Eye, Heart, MessageCircle, Calendar, Award as Trophy  } from 'lucide-react.ts';
 import { SEO  } from '@/components/SEO';
 
-export default function InterviewAssessmentAI(...args: any[]): any {
+export default function InterviewAssessmentAI(...args: unknown[]): any {
   const features = [
     {
       icon: Brain,

@@ -11,7 +11,7 @@ interface ServiceWorkerState {
 
 }
 
-export function ServiceWorker(...args: any[]): any {
+export function ServiceWorker(...args: unknown[]): any {
   const [swState, setSwState] = useState<any>({
     isInstalled: anyfalse,
     isOnline: navigator.onLine,

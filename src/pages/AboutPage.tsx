@@ -25,7 +25,7 @@ import { Users,
   Instagram
  } from 'lucide-react.ts';
 
-export function AboutPage(...args: any[]): any {
+export function AboutPage(...args: unknown[]): any {
   const values = [
     {
       title: 'Innovation First',
@@ -366,6 +366,15 @@ export function AboutPage(...args: any[]): any {
           </motion.div>
         </div>
       </div>
+    </div>
+  );
+}
+
+export default function AboutPage() {
+  return (
+    <div>
+      <h1>AboutPage</h1>
+      <p>This is the AboutPage page.</p>
     </div>
   );
 }

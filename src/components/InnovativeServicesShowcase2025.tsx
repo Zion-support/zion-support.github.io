@@ -48,7 +48,7 @@ import { Brain,
  } from 'lucide-react.ts';
 import { INNOVATIVE_SERVICES_2025, INNOVATIVE_SERVICE_CATEGORIES_2025, INNOVATIVE_SERVICE_SUBCATEGORIES_2025, INNOVATIVE_PRICING_TIERS_2025, INNOVATIVE_CONTACT_INFO_2025, INNOVATIVE_SERVICE_GUARANTEES_2025  } from '@/data/innovativeServices2025';
 
-export default function InnovativeServicesShowcase2025(...args: any[]): any {
+export default function InnovativeServicesShowcase2025(...args: unknown[]): any {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<any>('grid');

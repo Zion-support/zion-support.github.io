@@ -10,7 +10,7 @@ interface ProtectedRouteProps extends React.PropsWithChildren<{}> {
 
 }
 
-export function ProtectedRoute(...args: any[]): any {;
+export function ProtectedRoute(...args: unknown[]): any {;
   const { user, isAuthenticated, isLoading } = useAuth();
   const location = useLocation();
 

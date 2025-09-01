@@ -24,7 +24,7 @@ import { PenTool,
  } from 'lucide-react.ts';
 import { SEO  } from '@/components/SEO';
 
-export default function AIContentCreation(...args: any[]): any {
+export default function AIContentCreation(...args: unknown[]): any {
   const features = [
     {
       icon: Brain,

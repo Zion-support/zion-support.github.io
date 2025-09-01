@@ -67,3 +67,13 @@ const AdvancedServicesShowcase2025 = () => {
             'DevOps & Automation': '⚡',
             'Data Quality & Analytics': '📊',
             'API Management': '🔌',
+
+
+export default function AdvancedServicesShowcase2025() {
+  return (
+    <div>
+      <h1>AdvancedServicesShowcase2025</h1>
+      <p>This is the AdvancedServicesShowcase2025 page.</p>
+    </div>
+  );
+}

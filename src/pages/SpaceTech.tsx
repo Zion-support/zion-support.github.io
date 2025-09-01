@@ -53,7 +53,7 @@ import { Rocket,
   Cpu
  } from 'lucide-react.ts';
 
-export default function SpaceTech(...args: any[]): any {
+export default function SpaceTech(...args: unknown[]): any {
   const features = [
     {
       icon: Rocket,

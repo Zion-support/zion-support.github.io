@@ -18,7 +18,7 @@ import { Phone,
   Instagram
  } from 'lucide-react.ts';
 
-export function ContactPage(...args: any[]): any {
+export function ContactPage(...args: unknown[]): any {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -447,6 +447,15 @@ export function ContactPage(...args: any[]): any {
           </motion.div>
         </div>
       </div>
+    </div>
+  );
+}
+
+export default function ContactPage() {
+  return (
+    <div>
+      <h1>ContactPage</h1>
+      <p>This is the ContactPage page.</p>
     </div>
   );
 }

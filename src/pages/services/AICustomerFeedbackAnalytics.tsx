@@ -32,7 +32,7 @@ import { MessageSquare,
   Settings
  } from 'lucide-react.ts';
 
-export default function AICustomerFeedbackAnalytics(...args: any[]): any {
+export default function AICustomerFeedbackAnalytics(...args: unknown[]): any {
   const features = [
     {
       icon: Brain,

@@ -46,24 +46,24 @@ declare module 'react-router-dom' {
 }
 
 declare module 'react-hook-form' {
-  export function useForm<T = any>(...args: any[]): ;
+  export function useForm<T = any>(...args: unknown[]): ;
   const rhf: ;
   export default rhf;
 }
 
 declare module '@hookform/resolvers/zod' {
-  export function zodResolver(...args: any[]): ;
+  export function zodResolver(...args: unknown[]): ;
 }
 
 declare module '@tanstack/react-query' {
-  export function useMutation<T = any>(...args: any[]): ;
+  export function useMutation<T = any>(...args: unknown[]): ;
   const rq: ;
   export default rq;
 }
 
 declare module 'jspdf' {
   export class jsPDF {
-    constructor(...args: any[]);
+    constructor(...args: unknown[]);
     [key: string]: ;
   }
 }

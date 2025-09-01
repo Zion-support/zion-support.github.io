@@ -26,7 +26,7 @@ import { Rocket,
   MapPin
  } from 'lucide-react.ts';
 
-export default function SpaceTechnology(...args: any[]): any {
+export default function SpaceTechnology(...args: unknown[]): any {
   const features = [
     {
       icon: Satellite,

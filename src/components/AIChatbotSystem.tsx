@@ -51,11 +51,11 @@ interface AIChatbotSystemProps extends React.PropsWithChildren<{}> {
   autoScroll?: boolean}
 
 export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
-showHeader:  true,;
-  showSettings = true,;
-  maxMessages = 50,;
-  autoScroll = true;
-}) => {;
+  showHeader = true,
+  showSettings = true,
+  maxMessages = 50,
+  autoScroll = true
+}) => {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
@@ -74,7 +74,7 @@ showHeader:  true,;
 
   // Sample welcome message
   useEffect(() => {
-    if (isOpen && messages.length = == 0) {
+    if (isOpen && messages.length === 0) {
       const welcomeMessage: ChatMessage = {
   id: 'welcome',
         content: "Hello! I'm Zion AI, your intelligent assistant. I can help you with:\n\n• Information about our services\n• Technical support and guidance\n• Project inquiries and quotes\n• General questions about Zion Tech Group\n\nHow can I assist you today?",
@@ -84,34 +84,29 @@ showHeader:  true,;
         status: 'sent',
         metadata: {
           confidence: 0.95,
-          suggestions: ['Tell me about your services', 'Get a quote', 'Technical support', 'Contact information'],;
-          relatedServices: ['AI Consulting', 'Cloud Solutions', 'Digital Transformation'],;
-  estimatedResponseTime: 2;
-        ;
-;
-
-
-
-};
+          suggestions: ['Tell me about your services', 'Get a quote', 'Technical support', 'Contact information'],
+          relatedServices: ['AI Consulting', 'Cloud Solutions', 'Digital Transformation'],
+          estimatedResponseTime: 2
+        }
       };
       setMessages([welcomeMessage])}
   }, [isOpen, messages.length]);
 
   // Auto-scroll to bottom
-  useEffect(()  => {
+  useEffect(() => {
     if (autoScroll && messagesEndRef.current) {
       messagesEndRef.current.scrollIntoView({ behavior: 'smooth' })}
   }, [messages, autoScroll]);
 
   // Simulate AI response
-        suggestions['Strategy development', 'Implementation process', 'Change management', 'ROI examples'],
-        relatedServices['Digital Transformation', 'Process Optimization', 'Change Management']
-      };
-      {;
-        content: "Digital transformation is our specialty! We help businesses modernize their technology stack, improve processes, and enhance customer experiences. Our approach includes strategy development, implementation, and change management.",;
-        suggestions: ['Strategy development', 'Implementation process', 'Change management', 'ROI examples'],;
-        relatedServices: ['Digital Transformation', 'Process Optimization', 'Change Management'];
-      };
+        suggestions: ['Strategy development', 'Implementation process', 'Change management', 'ROI examples'],
+        relatedServices: ['Digital Transformation', 'Process Optimization', 'Change Management']
+      },
+      {
+        content: "Digital transformation is our specialty! We help businesses modernize their technology stack, improve processes, and enhance customer experiences. Our approach includes strategy development, implementation, and change management.",
+        suggestions: ['Strategy development', 'Implementation process', 'Change management', 'ROI examples'],
+        relatedServices: ['Digital Transformation', 'Process Optimization', 'Change Management']
+      }
     ];
 
     const randomResponse = responses[Math.floor(Math.random() * responses.length)];
@@ -123,21 +118,12 @@ showHeader:  true,;
       timestamp: new Date(),
       type: 'text',
       status: 'sent',
-      metadata: {
-        confidence: 0.85 + Math.random() * 0.1,
-        suggestions: randomResponse.suggestions,
-        relatedServices: randomResponse.relatedServices,;
-  ;
-  ;
-  estimatedResponseTime: 1 + Math.random() * 2;
-      ;
-;
-
-
-
-
-
-};
+              metadata: {
+          confidence: 0.85 + Math.random() * 0.1,
+          suggestions: randomResponse.suggestions,
+          relatedServices: randomResponse.relatedServices,
+          estimatedResponseTime: 1 + Math.random() * 2
+        }
     };
 
     setMessages(prev => [...prev, botMessage]);
@@ -145,11 +131,11 @@ showHeader:  true,;
   };
 
   // Handle message submission
-      setMessages(prev = > [...prev, fileMessage])};
+      setMessages(prev => [...prev, fileMessage]);
   };
 
   // Handle suggestion click
-  const handleSuggestionClick = (suggestion: string) => {;
+  const handleSuggestionClick = (suggestion: string) => {
     setInputValue(suggestion);
   };
 
@@ -163,20 +149,21 @@ showHeader:  true,;
   };
 
   // Clear chat
-  const clearChat = () => {;
+  const clearChat = () => {
     setMessages([]);
-    setChatHistory([])};
+    setChatHistory([]);
+  };
 
   return (
     <>
       {/* Chat Toggle Button */}
       <motion.button
-        onClick = {() => setIsOpen(!isOpen)}
+        onClick={() => setIsOpen(!isOpen)}
         className="fixed bottom-4 right-4 z-50 p-4 bg-zion-cyan text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:ring-offset-2 focus:ring-offset-zinc-900"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         aria-label="Toggle AI chatbot"
-
+      >
         {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
       </motion.button>
 
@@ -184,50 +171,14 @@ showHeader:  true,;
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial = {
-  { opacity: 0, scale: 0.9,
-  y: 20 
-
-
-
-
-
-
-}}
-            animate = {
-  { opacity: 1, scale: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-            exit = {
-  { opacity: 0, scale: 0.9,
-  y: 20 
-
-
-
-
-
-
-}}
-            transition = {
-  { duration: 0.3,
-  ease: 'easeOut' 
-
-
-
-
-
-
-}}
+            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.9, y: 20 }}
+            transition={{ duration: 0.3, ease: 'easeOut' }}
             className="fixed bottom-20 right-4 z-40 w-96 h-[600px] bg-zinc-900/95 backdrop-blur-md border border-zinc-700/50 rounded-xl shadow-2xl overflow-hidden"
 
             {/* Header */}
-            {showHeader && (;
+            {showHeader && (
               <div className="p-4 bg-zinc-800/50 border-b border-zinc-700/50">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
@@ -249,19 +200,19 @@ showHeader:  true,;
                         onClick={() => setShowSettingsPanel(!showSettingsPanel)}
                         className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors"
                         aria-label="Chat settings"
-
+                      >
                         <Settings className="w-4 h-4" />
-                      </button>;
+                      </button>
                     )}
                     <button
                       onClick={clearChat}
                       className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors"
                       aria-label="Clear chat"
-
+                    >
                       <RefreshCw className="w-4 h-4" />
                     </button>
                   </div>
-                </div>;
+                </div>
               </div>
             )}
 
@@ -269,59 +220,23 @@ showHeader:  true,;
             <AnimatePresence>
               {showSettingsPanel && (
                 <motion.div
-                  initial = {
-  { height: 0,
-  opacity: 0 
-
-
-
-
-
-
-}}
-                  animate = {
-  { height: 'auto',
-  opacity: 1 
-
-
-
-
-
-
-}}
-                  exit = {
-  { height: 0,
-  opacity: 0 
-
-
-
-
-
-
-}}
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: 'auto', opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
                   transition={{ duration: 0.3 }}
                   className="border-b border-zinc-700/50 overflow-hidden"
-
+                >
                   <div className="p-4 space-y-3">
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-zinc-300">Voice Input</span>
                       <button
-                        onClick = {
-  () => setSettings(prev => ({ ...prev,
-  voiceEnabled: !prev.voiceEnabled 
-
-
-
-
-
-
-}))}
+                        onClick={() => setSettings(prev => ({ ...prev, voiceEnabled: !prev.voiceEnabled }))}
                         className={`p-2 rounded-lg transition-colors ${
                           settings.voiceEnabled
                             ? 'bg-zion-cyan text-white'
                             : 'bg-zinc-700 text-zinc-400 hover:bg-zinc-600'
                         }`}
-
+                      >
                         {settings.voiceEnabled ? <Mic className="w-4 h-4" /> : <MicOff className="w-4 h-4" />}
                       </button>
                     </div>
@@ -329,16 +244,7 @@ showHeader:  true,;
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-zinc-300">Auto Response</span>
                       <button
-                        onClick = {
-  () => setSettings(prev => ({ ...prev,
-  autoResponse: !prev.autoResponse 
-
-
-
-
-
-
-}))}
+                        onClick={() => setSettings(prev => ({ ...prev, autoResponse: !prev.autoResponse }))}
                         className={`p-2 rounded-lg transition-colors ${
                           settings.autoResponse
                             ? 'bg-zion-cyan text-white'
@@ -504,14 +410,14 @@ showHeader:  true,;
                     </div>
                     <span className="text-sm text-zinc-400">Zion AI is typing...</span>
                   </div>
-                </motion.div>;
+                </motion.div>
               )}
 
               <div ref={messagesEndRef} />
             </div>
 
             {/* Input Area */}
-            <div className="p-4 border-t border-zinc-700/50">;
+            <div className="p-4 border-t border-zinc-700/50">
               <form onSubmit={handleSubmit} className="flex items-center gap-2">
                 <div className="flex-1 relative">
                   <input
@@ -546,7 +452,7 @@ showHeader:  true,;
                         : 'bg-zinc-700 text-zinc-400 hover:bg-zinc-600'
                     }`}
                     aria-label="Voice input"
-
+                  >
                     {isListening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}
                   </button>
                 )}
@@ -557,13 +463,13 @@ showHeader:  true,;
                   disabled={!inputValue.trim() || isTyping}
                   className="p-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   aria-label="Send message"
-
+                >
                   <Send className="w-4 h-4" />
                 </button>
               </form>
 
               {/* Quick Actions */}
-              <div className="flex items-center justify-between mt-3 text-xs text-zinc-500">;
+              <div className="flex items-center justify-between mt-3 text-xs text-zinc-500">
                 <div className="flex items-center gap-2">
                   <Sparkles className="w-3 h-3" />
                   <span>Powered by Zion AI</span>
@@ -573,10 +479,10 @@ showHeader:  true,;
                   <span>24/7 Available</span>
                 </div>
               </div>
-            </div>;
-          </motion.div>;
-        )};
-      </AnimatePresence>;
-    </>;
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
   );
 };

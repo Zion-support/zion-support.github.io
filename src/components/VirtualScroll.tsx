@@ -200,7 +200,7 @@ interface ServiceVirtualScrollProps extends React.PropsWithChildren<{}> {
 
 }
 
-export function ServiceVirtualScroll(...args: any[]): any {
+export function ServiceVirtualScroll(...args: unknown[]): any {
   const renderServiceCard = useCallback((service: anyServiceCard, index: number)  => (
     <div className="p-4">
       <motion.div

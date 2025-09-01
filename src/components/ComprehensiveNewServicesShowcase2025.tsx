@@ -29,7 +29,7 @@ import { Search,
   Cpu
  } from 'lucide-react.ts';
 
-export function ComprehensiveNewServicesShowcase2025(...args: any[]): any {
+export function ComprehensiveNewServicesShowcase2025(...args: unknown[]): any {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('featured');

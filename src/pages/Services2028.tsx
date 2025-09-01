@@ -6,7 +6,7 @@ import { INNOVATIVE_MICRO_SAAS_SERVICES_2028  } from '../data/innovativeMicroSaa
 import { COMPREHENSIVE_IT_SERVICES_2028  } from '../data/comprehensiveITServices2028';
 import { COMPREHENSIVE_PRICING_2028  } from '../data/comprehensivePricingGuide2028';
 
-export default function Services2028(...args: any[]): any {
+export default function Services2028(...args: unknown[]): any {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');

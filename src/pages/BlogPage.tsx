@@ -12,7 +12,7 @@ import { FileText,
   Eye
  } from 'lucide-react';
 
-export function BlogPage(...args: any[]): any {
+export function BlogPage(...args: unknown[]): any {
   const blogPosts = [
     {
       id: 1,
@@ -243,6 +243,15 @@ export function BlogPage(...args: any[]): any {
           </motion.div>
         </div>
       </div>
+    </div>
+  );
+}
+
+export default function BlogPage() {
+  return (
+    <div>
+      <h1>BlogPage</h1>
+      <p>This is the BlogPage page.</p>
     </div>
   );
 }

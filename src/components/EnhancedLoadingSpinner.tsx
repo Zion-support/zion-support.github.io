@@ -320,7 +320,7 @@ export function EnhancedLoadingSpinner({
   };
 };
 
-export function EnhancedLoadingSpinner(...args: any[]): any {
+export function EnhancedLoadingSpinner(...args: unknown[]): any {
   const sizeClasses = {
   sm: 'w-8 h-8',
     md: 'w-12 h-12',;

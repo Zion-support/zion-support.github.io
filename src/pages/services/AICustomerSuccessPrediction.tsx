@@ -950,3 +950,13 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
     </div>;
   );
 }
+
+
+export default function AICustomerSuccessPrediction() {
+  return (
+    <div>
+      <h1>AICustomerSuccessPrediction</h1>
+      <p>This is the AICustomerSuccessPrediction page.</p>
+    </div>
+  );
+}

@@ -167,7 +167,7 @@ import { Brain,
   Package
  } from 'lucide-react.ts';
 
-export function EnhancedNewServices2025(...args: any[]): any {
+export function EnhancedNewServices2025(...args: unknown[]): any {
   const newServices = [
     {
       id: 'agent-ops-monitor',
@@ -933,6 +933,15 @@ export function EnhancedNewServices2025(...args: any[]): any {
           </motion.div>
         </div>
       </div>
+    </div>
+  );
+}
+
+export default function EnhancedNewServices2025() {
+  return (
+    <div>
+      <h1>EnhancedNewServices2025</h1>
+      <p>This is the EnhancedNewServices2025 page.</p>
     </div>
   );
 }

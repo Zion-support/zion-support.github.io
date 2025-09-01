@@ -30,7 +30,7 @@ import { Cpu,
   RefreshCw
  } from 'lucide-react.ts';
 
-export default function AIDevOpsAutomationPlatform(...args: any[]): any {
+export default function AIDevOpsAutomationPlatform(...args: unknown[]): any {
   const features = [
     "AI-Powered Code Review & Analysis",
     "Intelligent CI/CD Pipeline Optimization",

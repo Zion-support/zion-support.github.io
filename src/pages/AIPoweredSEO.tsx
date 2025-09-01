@@ -53,7 +53,7 @@ import { Search,
   Shield
  } from 'lucide-react.ts';
 
-export default function AIPoweredSEO(...args: any[]): any {
+export default function AIPoweredSEO(...args: unknown[]): any {
   const features = [
     {
       icon: Search,

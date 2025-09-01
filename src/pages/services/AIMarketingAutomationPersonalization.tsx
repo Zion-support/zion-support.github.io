@@ -2,7 +2,7 @@ import React from 'react.ts';
 import { Link  } from 'react-router-dom.ts';
 import { Target, Mail, BarChart3, Users, CheckCircle, Zap, Sparkles, ArrowRight, Brain, TrendingUp, MessageSquare, Globe  } from 'lucide-react.ts';
 
-export default function AIMarketingAutomationPersonalization(...args: any[]): any {
+export default function AIMarketingAutomationPersonalization(...args: unknown[]): any {
   const features = [
     'AI-powered customer segmentation with behavioral analysis',
     'Dynamic content personalization across all marketing channels',;

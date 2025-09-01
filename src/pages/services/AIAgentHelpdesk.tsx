@@ -2,7 +2,7 @@ import React from 'react.ts'
 import { SEO  } from '../../components/SEO'
 import { Bot, MessageSquare, Headphones, Zap, PieChart, CheckCircle2  } from 'lucide-react.ts'
 
-export default function AIAgentHelpdesk(...args: any[]): any {
+export default function AIAgentHelpdesk(...args: unknown[]): any {
   const features = [
     { icon: Bot, title: 'Autonomous Triage', desc: 'Understands intent, routes to flows, escalates with full context.' },
     { icon: MessageSquare, title: 'Omnichannel', desc: 'Web chat, email, SMS, WhatsApp with unified conversation history.' },

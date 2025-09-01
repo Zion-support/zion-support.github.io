@@ -20,7 +20,7 @@ interface ServicesGridProps extends React.PropsWithChildren<{}> {
 
 }
 
-export function ServicesGrid(...args: any[]): any {
+export function ServicesGrid(...args: unknown[]): any {
   return (
     <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
       {services.map((service, index)  => (

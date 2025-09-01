@@ -10,7 +10,7 @@ import { Home,
   Cpu
  } from 'lucide-react.ts';
 
-export function NotFoundPage(...args: any[]): any {
+export function NotFoundPage(...args: unknown[]): any {
   const popularPages = [
     { name: 'Home', href: '/', icon: Home },
     { name: 'Services', href: '/services', icon: Zap },
@@ -127,6 +127,15 @@ export function NotFoundPage(...args: any[]): any {
           </div>
         </motion.div>
       </div>
+    </div>
+  );
+}
+
+export default function NotFoundPage() {
+  return (
+    <div>
+      <h1>NotFoundPage</h1>
+      <p>This is the NotFoundPage page.</p>
     </div>
   );
 }
