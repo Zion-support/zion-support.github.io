@@ -286,15 +286,7 @@ schedule = "*/2 * * * *" # every 2 minutes
 
 [[scheduled.functions]]
   name = "a11y-audit-runner"
-  schedule = "*/20 * * * *"}  
-
-[[scheduled.functions]]
-  name = "ai-trends-radar-runner"
-  schedule = "*/15 * * * *"
-
-[[scheduled.functions]]
-  name = "seo-audit-runner"
-  schedule = "*/30 * * * *"
+  schedule = "*/20 * * * *"
 
 [[scheduled.functions]]
   name = "todo-summary-runner"
@@ -322,5 +314,21 @@ schedule = "*/2 * * * *" # every 2 minutes
   schedule = "*/15 * * * *" # every 15 minutes
 
 [[scheduled.functions]]
-  name = "components-catalog-runner"
-  schedule = "*/30 * * * *" # every 30 minutes
+  name = "branch-cleanup-runner"
+  schedule = "0 3 * * *" # daily at 03:00 UTC
+
+[[scheduled.functions]]
+  name = "stale-content-auditor-runner"
+  schedule = "17 */6 * * *"
+
+[[scheduled.functions]]
+  name = "deps-auto-upgrade-runner"
+  schedule = "7 */12 * * *"
+
+[[scheduled.functions]]
+  name = "docs-drift-detector"
+  schedule = "*/10 * * * *"
+
+[[scheduled.functions]]
+  name = "smart-interlinker"
+  schedule = "*/15 * * * *"

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-08-11T23:11:07.285Z",
+  "generatedAt": "2025-08-11T23:12:28.201Z",
   "functions": [
     "a11y-alt-text-auditor-runner",
     "a11y-audit-runner",
@@ -25,7 +25,7 @@
     "dead-code-audit",
     "dead-code-report",
     "deps-auto-upgrade-runner",
-    "design-token-harmonizer-runner",
+    "docs-drift-detector",
     "docs-index-runner",
     "docs-knowledge-sync",
     "docs-link-checker-runner",
@@ -92,7 +92,8 @@
     "site-crawler",
     "sitemap-pinger",
     "sitemap_runner",
-    "stale-content-refresher",
+    "smart-interlinker",
+    "stale-content-auditor-runner",
     "todo-scanner-runner",
     "todo-summary-runner",
     "trigger-all-and-commit",
