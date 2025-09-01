@@ -1,268 +1,77 @@
 import js from '@eslint/js';
-import globals from 'globals';
-import tseslint from 'typescript-eslint';
-import pluginReact from 'eslint-plugin-react';
-import pluginReactHooks from 'eslint-plugin-react-hooks';
-import pluginJsxA11y from 'eslint-plugin-jsx-a11y';
+import nextPlugin from '@next/eslint-plugin-next';
+import reactHooksPlugin from 'eslint-plugin-react-hooks';
+import reactRefreshPlugin from 'eslint-plugin-react-refresh';
+import tseslint from '@typescript-eslint/eslint-plugin';
+import tsparser from '@typescript-eslint/parser';
 
 export default [
-  // 1. Global Ignores
+  js.configs.recommended,
   {
-    ignores: [
-      'node_modules/**',
-      'dist/**',
-      'out/**',
-      'coverage/**',
-      'build/**',
-      '.next/**',
-      'public/build/**',
-      '*.config.js',
-      '*.config.ts',
-      '*.config.cjs',
-      '*.config.mjs',
-    ],
-  },
-
-  // eslintConfigNext,
-
-  // TypeScript configuration
-  ...tseslint.configs.recommended,
-
-  // Custom rules for all files
-  {
-    files: ['**/*.{js,mjs,cjs,jsx,ts,tsx}'],
+    files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
-      ecmaVersion: 'latest',
-      sourceType: 'module',
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-        process: 'readonly',
-      },
-    },
-    rules: {
-      'no-unused-vars': 'off', // Disable base rule
-      '@typescript-eslint/no-unused-vars': [
-        'warn',
-        {
-          argsIgnorePattern: '^_',
-          varsIgnorePattern: '^_',
-        },
-      ],
-      '@typescript-eslint/no-explicit-any': 'warn',
-      'no-console': ['warn', { allow: ['warn', 'error'] }],
-    },
-  },
-
-  // React/JSX specific configuration
-  {
-    files: ['**/*.{jsx,tsx}'],
-    plugins: {
-      react: pluginReact,
-      'react-hooks': pluginReactHooks,
-      'jsx-a11y': pluginJsxA11y,
-    },
-    languageOptions: {
+      parser: tsparser,
       parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
         ecmaFeatures: {
           jsx: true,
         },
       },
       globals: {
-        ...globals.browser,
+        React: 'readonly',
+        console: 'readonly',
         process: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
+        __dirname: 'readonly',
+        window: 'readonly',
+        document: 'readonly',
+        navigator: 'readonly',
+        fetch: 'readonly',
+        setTimeout: 'readonly',
+        alert: 'readonly',
+        HTMLInputElement: 'readonly',
+        HTMLTextAreaElement: 'readonly',
+        KeyboardEvent: 'readonly',
+        path: 'readonly',
       },
+    },
+    plugins: {
+      '@typescript-eslint': tseslint,
+      '@next/next': nextPlugin,
+      'react-hooks': reactHooksPlugin,
+      'react-refresh': reactRefreshPlugin,
     },
     rules: {
-      // React rules
-      'react/react-in-jsx-scope': 'off',
-      'react/prop-types': 'off', // We use TypeScript
-      'react/display-name': 'warn',
-      // Disabled react-hooks rules due to ESLint v9 compatibility issues
-      // "react-hooks/rules-of-hooks": "error",
-      // "react-hooks/exhaustive-deps": "warn",
-
-      // Basic accessibility rules
-      'jsx-a11y/alt-text': 'error',
-      'jsx-a11y/aria-props': 'error',
-    },
-    settings: {
-      react: {
-        version: 'detect',
-      },
+      ...tseslint.configs.recommended.rules,
+      ...nextPlugin.configs.recommended.rules,
+      ...nextPlugin.configs['core-web-vitals'].rules,
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
+      'react-refresh/only-export-components': [
+        'warn',
+        { allowConstantExport: true },
+      ],
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/ban-ts-comment': 'warn',
     },
   },
-
-  // Test files configuration
   {
-    files: [
-      '**/__tests__/**/*.{js,jsx,ts,tsx}',
-      '**/tests/**/*.{js,jsx,ts,tsx}',
-      '**/*.test.{js,jsx,ts,tsx}',
-      '**/*.spec.{js,jsx,ts,tsx}',
-    ],
-  },
-
-  // 2. Base Configuration for JavaScript files
-  {
-    files: ["**/*.{js,cjs,mjs}"],
-    rules: js.configs.recommended.rules, // Using only rules from js.configs.recommended
-    languageOptions: {
-      globals: {
-        ...globals.jest,
-        ...globals.node,
-        ...globals.browser,
-        vi: 'readonly',
-        test: 'readonly',
-        expect: 'readonly',
-        describe: 'readonly',
-        it: 'readonly',
-        beforeEach: 'readonly',
-        afterEach: 'readonly',
-        beforeAll: 'readonly',
-        afterAll: 'readonly',
-      },
-    },
-    rules: {
-      '@typescript-eslint/no-explicit-any': 'off',
-      'no-console': 'off',
-    },
-  },
-
-  // Test files configuration (tests/ directory)
-  ...tseslint.config({
-    files: ["tests/**/*.{ts,tsx,js,jsx}"], // Include JS/JSX as per its tsconfig
-    ignores: ["tests/e2e/**"], // e2e tests inside 'tests' might be Playwright, not Jest
-    extends: [...tseslint.configs.recommendedTypeChecked],
-    languageOptions: {
-      parserOptions: {
-        project: "./tests/tsconfig.json",
-        tsconfigRootDir: import.meta.dirname,
-      },
-      globals: { ...globals.jest, ...browserGlobals }, // Jest and browser globals
-    },
-    rules: {
-      "@typescript-eslint/no-explicit-any": "off",
-      "@typescript-eslint/no-unsafe-assignment": "off",
-      "@typescript-eslint/no-unsafe-member-access": "off",
-      "@typescript-eslint/no-unsafe-call": "off",
-      "@typescript-eslint/no-unsafe-return": "off",
-      "@typescript-eslint/no-unsafe-argument": "off",
-      "@typescript-eslint/unbound-method": "off", // for Jest matchers
-      "@typescript-eslint/no-var-requires": "off", // Allow require in JS test files
-      "@typescript-eslint/no-require-imports": "off", // Allow require in JS test files
-    },
-  }),
-
-  // Storybook files configuration
-  ...tseslint.config({
-    files: [
-      '**/*.cjs',
-      'scripts/**/*.js',
-      'api/**/*.js',
-      'server/**/*.js',
-      'backend/**/*.js',
-      'token/**/*.js',
-      'hardhat.config.js',
-    ],
-    extends: [...tseslint.configs.recommendedTypeChecked],
-    languageOptions: {
-      sourceType: 'commonjs',
-      globals: {
-        ...globals.node,
-      },
-    },
-    rules: {
-      '@typescript-eslint/no-require-imports': 'off',
-    },
-  },
-  // Specific for cypress/support/commands.js if it's not a module and needs commonjs
-  // This might need to be adjusted if cypressPlugin.configs.recommended sets a default sourceType
-  {
-    files: ['cypress/**/*.{js,ts,jsx,tsx}'],
-    languageOptions: {
-      globals: {
-        ...globals.node,
-        cy: 'readonly',
-        Cypress: 'readonly',
-        context: 'readonly',
-        assert: 'readonly',
-        describe: 'readonly',
-        it: 'readonly',
-        expect: 'readonly',
-        beforeEach: 'readonly',
-        afterEach: 'readonly',
-        before: 'readonly',
-        after: 'readonly',
-      },
-    },
-    rules: {
-      '@typescript-eslint/no-explicit-any': 'off',
-    },
-  },
-
-  // Chrome Extension files
-  {
-    files: ['extension/**/*.{js,ts}'],
-    languageOptions: {
-      globals: {
-        ...globals.browser,
-        chrome: 'readonly',
-      },
-    },
-    rules: {
-      'no-console': 'off',
-    },
-  },
-
-  // Service Worker files
-  {
-    files: ['public/service-worker.js', '**/sw.js', '**/*service-worker*.js'],
-    languageOptions: {
-      globals: {
-        ...globals.serviceworker,
-        workbox: 'readonly',
-        importScripts: 'readonly',
-        self: 'readonly',
-        clients: 'readonly',
-        caches: 'readonly',
-      },
-    },
-    rules: {
-      'no-console': 'off',
-      'no-redeclare': 'off', // Allow workbox to be redeclared in service worker context
-    },
-  },
-
-  // Jest setup files
-  {
-    files: ['tests/jest.setup.ts', '**/*jest.setup*'],
-    languageOptions: {
-      globals: {
-        ...globals.jest,
-        ...globals.node,
-        jest: 'readonly',
-        global: 'readonly',
-      },
-    },
-    rules: {
-      '@typescript-eslint/no-require-imports': 'off',
-      '@typescript-eslint/no-explicit-any': 'off',
-    },
-  },
-
-  // Mock files in scripts directory
-  {
-    files: ['scripts/__mocks__/**/*.js'],
-    languageOptions: {
-      globals: {
-        ...globals.jest,
-        ...globals.node,
-        jest: 'readonly',
-      },
-    },
-    rules: {
-      '@typescript-eslint/no-require-imports': 'off',
-    },
+          ignores: [
+        '.next/',
+        'out/',
+        'dist/',
+        'coverage/',
+        'node_modules/',
+        '*.log',
+        '**/*.generated.*',
+        'automation/',
+        'scripts/',
+        'public/reports/',
+        'ecosystem*.cjs',
+        'ecosystem*.js',
+      ],
   },
 ];
