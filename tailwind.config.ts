@@ -1,109 +1,54 @@
 import type { Config } from 'tailwindcss';
-import defaultTheme from 'tailwindcss/defaultTheme';
-import plugin from 'tailwindcss/plugin';
-;
+
 const config: Config = {
-  darkMode: 'class',
   content: [
-    './pages/**/*.{ts,tsx},./components/**/*.{ts,tsx},./app/**/*.{ts,tsx},./src/**/*.{ts,tsx}
+    './src/**/*.{js,ts,jsx,tsx}',
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+    './app/**/*.{js,ts,jsx,tsx}',
+    './index.html'
   ],
   theme: {
     extend: {
       colors: {
-        border: 'hsl(var(--border)),
-        input: 'hsl(var(--input)),
-        ring: 'hsl(var(--ring)),
-        background: 'hsl(var(--background)),
-        foreground: 'hsl(var(--foreground)),
-        primary: {
-          DEFAULT: 'hsl(var(--primary)),
-          foreground: 'hsl(var(--primary-foreground))
-        },
-        secondary: {
-          DEFAULT: 'hsl(var(--secondary)),
-          foreground: 'hsl(var(--secondary-foreground))
-        },
-        destructive: {
-          DEFAULT: 'hsl(var(--destructive)),
-          foreground: 'hsl(var(--destructive-foreground))
-        },
-        muted: {
-          DEFAULT: 'hsl(var(--muted)),
-          foreground: 'hsl(var(--muted-foreground))
-        },
-        accent: {
-          DEFAULT: 'hsl(var(--accent)),
-          foreground: 'hsl(var(--accent-foreground))
-        },
-        popover: {
-          DEFAULT: 'hsl(var(--popover)),
-          foreground: 'hsl(var(--popover-foreground))
-        },
-        card: {
-          DEFAULT: 'hsl(var(--card)),
-          foreground: 'hsl(var(--card-foreground))
-        },zion-blue': {
+        'zion-blue': {
           DEFAULT: '#2e73ea',
           light: '#8ab1f3',
           dark: '#172d67'
-        },zion-purple': {
+        },
+        'zion-purple': {
           DEFAULT: '#a855f7',
           light: '#c084fc',
           dark: '#6b21a8'
-        },zion-cyan': {
+        },
+        'zion-cyan': {
           DEFAULT: '#0d9488',
           light: '#7aeae4',
           dark: '#0f766e'
-        },zion-slate': {
-          DEFAULT: '#17072b',
-          light: '#451582',
-          dark: '#000000',
         },
-      },
-      borderRadius: {
-        lg: 'var(--radius),
-        md: 'calc(var(--radius) - 2px),
-        sm: 'calc(var(--radius) - 4px)
+        'zion-slate': {
+          DEFAULT: '#475569',
+          light: '#64748b',
+          dark: '#334155'
+        },
+        'zion-slate-dark': '#1e293b',
+        'zion-slate-light': '#cbd5e1'
       },
       fontFamily: {
-        sans: [
-          'var(--font-inter),Inter Fallback',
-          ...defaultTheme.fontFamily.sans,
-        ],
-        heading: [
-          'var(--font-poppins),Poppins Fallback',
-          ...defaultTheme.fontFamily.sans,
-        ],
-      },
-      keyframes: {
-        'accordion-down': {
-          from: { height: '0' },
-          to: { height: 'var(--radix-accordion-content-height)}
-        },accordion-up': {
-          from: { height: 'var(--radix-accordion-content-height)},
-          to: { height: '0' },
-        },
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        heading: ['Poppins', 'system-ui', 'sans-serif']
       },
       animation: {
-        'accordion-down': 'accordion-down 0.2s ease-out',accordion-up': 'accordion-up 0.2s ease-out',
-      },
-    },
+        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'bounce-slow': 'bounce 2s infinite'
+      }
+    }
   },
   plugins: [
-    plugin(function ({ addUtilities }) {
-      const newUtilities = {
-        '.rtl': {
-          direction: 'rtl',
-          textAlign: 'right'
-        },.ltr': {
-          direction: 'ltr',
-          textAlign: 'left',
-        },
-      };
-      addUtilities(newUtilities);
-    }),
-  ],
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/aspect-ratio')
+  ]
 };
-;
-export { config };
+
 export default config;

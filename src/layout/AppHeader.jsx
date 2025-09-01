@@ -53,55 +53,50 @@ export function AppHeader() {
       icon: null,
       dropdown: [
         {
-          name: 'AI & Machine Learning',
-          path: '/services?category=ai-ml',
+          name: 'AI Services',
+          path: '/services?category=AI%20Services',
           icon: Brain,
           color: 'from-purple-500 to-pink-500'
         },
         {
-          name: 'Quantum Computing',
-          path: '/services?category=quantum',
-          icon: Zap,
+          name: 'IT Services',
+          path: '/services?category=IT%20Services',
+          icon: Shield,
           color: 'from-blue-500 to-cyan-500'
         },
         {
-          name: 'Blockchain & Web3',
-          path: '/services?category=blockchain',
-          icon: Lock,
+          name: 'Enterprise AI',
+          path: '/services?category=Enterprise%20AI',
+          icon: Database,
           color: 'from-green-500 to-emerald-500'
         },
         {
-          name: 'IoT & Edge Computing',
-          path: '/services?category=iot',
-          icon: Cloud,
+          name: 'Quantum Technology',
+          path: '/services?category=Quantum%20Technology',
+          icon: Zap,
           color: 'from-orange-500 to-red-500'
         },
         {
-          name: 'AR/VR Development',
-          path: '/services?category=ar-vr',
+          name: 'Blockchain Technology',
+          path: '/services?category=Blockchain%20Technology',
           icon: Users,
           color: 'from-indigo-500 to-purple-500'
         },
         {
-          name: 'FinTech Solutions',
-          path: '/services?category=fintech',
-          icon: Database,
+          name: 'Strategic Consulting',
+          path: '/services?category=Strategic%20Consulting',
+          icon: Cloud,
           color: 'from-yellow-500 to-orange-500'
         },
         {
-          name: 'Green Technology',
-          path: '/services?category=green-tech',
-          icon: Shield,
-          color: 'from-green-400 to-teal-500'
-        },
-        {
-          name: 'Cybersecurity',
-          path: '/services?category=cybersecurity',
+          name: 'Compliance Consulting',
+          path: '/services?category=Compliance%20Consulting',
           icon: Lock,
           color: 'from-red-500 to-pink-500'
         }
       ]
     },
+    { name: 'Pricing', path: '/pricing', icon: null },
     { name: 'About', path: '/about', icon: null },
     { name: 'Contact', path: '/contact', icon: null }
   ];

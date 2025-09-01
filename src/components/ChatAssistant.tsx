@@ -1,311 +1,272 @@
-
+import React, { useState, useEffect, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import {
-  MessageCircle, 
-  X, 
-  Send, 
-
   MessageCircle,
   X,
   Send,
-  Bot,
+  Phone,
+  Mail,
   User,
-  Sparkles,
-  Settings,
-  Mic,
-  MicOff,
-  Paperclip,
-  Download,
-  RefreshCw,
-  Zap,
-  Brain,
-  Lightbulb,
-  TrendingUp,
-  Shield,
-  Clock,
-  CheckCircle,
-  AlertCircle,
-  Loader2,
-  ChevronDown,
-  ChevronUp,
+  Bot,
   Minimize2,
-  Maximize2,
-  Volume2,
-  VolumeX,
-  Star
-
+  Maximize2
 } from 'lucide-react';
+import { contactInfo } from '../data/services.js';
 
 interface Message {
-
   id: string;
   text: string;
   sender: 'user' | 'assistant';
   timestamp: Date;
-
   isTyping?: boolean;
-  attachments?: Array<{
+}
 
-    type: 'image' | 'file' | 'video';
-    url: string;
-    name: string;
-    size?: string}[];  metadata?: {
-
-    confidence?: number;
-    sources?: string[];
-    suggestions?: string[];
-    actionRequired?: boolean}}
-
-interface ChatAssistantProps extends React.PropsWithChildren<{}> {
-
+interface ChatAssistantProps {
   enabled?: boolean;
   position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left';
   theme?: 'light' | 'dark' | 'auto';
-  language?: string;
-  maxMessages?: number;
-  enableVoice?: boolean;
-  enableFileUpload?: boolean;
-  enableSuggestions?: boolean}
+}
 
 export const ChatAssistant: React.FC<ChatAssistantProps> = ({
-
   enabled = true,
   position = 'bottom-right',
-  theme = 'auto',
-  language = 'en',
-  maxMessages = 100,
-  enableVoice = false,
-  enableFileUpload = false,
-  enableSuggestions = true}) => {
-
+  theme = 'auto'
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
-  const [messages, setMessages] = useState<Message[]>([]);
+  const [messages, setMessages] = useState<Message[]>([
+    {
+      id: '1',
+      text: 'Hello! I\'m your AI assistant. How can I help you with Zion Tech Group\'s services today?',
+      sender: 'assistant',
+      timestamp: new Date()
+    }
+  ]);
+  const [inputText, setInputText] = useState('');
+  const [isTyping, setIsTyping] = useState(false);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
 
-  const [inputValue, setInputValue] = useState('');
-  const [isProcessing, setIsProcessing] = useState(false);
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
 
-  const [currentTheme, setCurrentTheme] = useState (theme) ;
-  const [showSuggestions, setShowSuggestions] = useState (false) ;
-
-  
-  
-  
-  // Auto-scroll to bottom when new messages arrive
-  
-  }, []);
-
-  useEffect ( () => {
-    scrollToBottom () }, [messages, scrollToBottom]) ;
-  // Theme management
   useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
 
-    if (theme === 'auto') {
+  const handleSendMessage = async (text: string) => {
+    if (!text.trim()) return;
 
-      
-      setCurrentTheme(mediaQuery.matches ? 'dark' : 'light')};
-      '
-      mediaQuery.addEventListener('change', handleChange);
-      return () => mediaQuery.removeEventListener('change', handleChange)} else {
-
-      setCurrentTheme(theme)}
-  }, [theme]) ;
-  // Initialize with welcome message
-  useEffect ( () => {
-    if (messages.length === 0) {
-
-      const welcomeMessage: Message = {
-
-        id: 'welcome',
-        type: 'assistant',
-        content: 'Hello! I\'m your AI assistant. How can I help you today?',
-        timestamp: new Date(),
-        metadata: {
-
-          suggestions: ['
-            'Tell me about your services',How can I get started?',What are your pricing options?'
-          ]
-        }
-      };
-      setMessages ([welcomeMessage]) }
-  }, []) ;
-
-  
     const userMessage: Message = {
-
       id: Date.now().toString(),
-      type: 'user',
-      content: content.trim () ,
-      timestamp: new Date () ,
+      text: text.trim(),
+      sender: 'user',
+      timestamp: new Date()
     };
 
     setMessages(prev => [...prev, userMessage]);
-    setInputValue('');
+    setInputText('');
     setIsTyping(true);
 
     // Simulate AI response
-    setTimeout ( () => {
-      const aiMessage: Message = {
+    setTimeout(() => {
+      const responses = [
+        "I'd be happy to help you learn more about our services. You can check our comprehensive pricing at /pricing or contact us directly.",
+        `For immediate assistance, please call us at ${contactInfo.mobile} or email ${contactInfo.email}.`,
+        "Our AI and cybersecurity solutions are designed to transform your business. Would you like to schedule a consultation?",
+        "We offer enterprise-grade solutions including AI transformation, quantum computing, and blockchain technology. Which area interests you most?"
+      ];
 
-        id: (Date.now() + 1).toString(),
-        type: 'assistant',
-        content: `I understand you're asking about "${content.trim()}". Let me help you with that.`,
-        timestamp: new Date(),
-        metadata: {
+      const randomResponse = responses[Math.floor(Math.random() * responses.length)];
 
-          confidence: 0.95,
-          suggestions: ['
-            'Would you like more details?',Can I help with something else?',Let me know if you have questions!'
-          ]
-        }
+      const assistantMessage: Message = {
+        id: Date.now().toString(),
+        text: randomResponse,
+        sender: 'assistant',
+        timestamp: new Date()
       };
-      setMessages (prev => [...prev, aiMessage]) ;
-      setIsTyping (false) }, 1500) };
 
-  
-      handleSendMessage(inputValue)}
+      setMessages(prev => [...prev, assistantMessage]);
+      setIsTyping(false);
+    }, 1000 + Math.random() * 2000);
   };
 
-  
-    if (!isOpen) {
+  const handleKeyPress = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      handleSendMessage(inputText);
+    }
+  };
 
-      inputRef.current?.focus()}
-  }};
+  const quickActions = [
+    {
+      text: "View Services",
+      action: () => window.location.href = '/services'
+    },
+    {
+      text: "Get Pricing",
+      action: () => window.location.href = '/pricing'
+    },
+    {
+      text: "Contact Sales",
+      action: () => window.location.href = `mailto:${contactInfo.email}`
+    },
+    {
+      text: "Call Now",
+      action: () => window.location.href = `tel:${contactInfo.mobile}`
+    }
+  ];
 
-  
-      case 'top-right':'
-        return 'top-4 right-4';
-      case 'top-left':'
-        return 'top-4 left-4';
-      default:'
-        return 'bottom-4 right-4'}
-  }};
+  const positionClasses = {
+    'bottom-right': 'bottom-4 right-4',
+    'bottom-left': 'bottom-4 left-4',
+    'top-right': 'top-4 right-4',
+    'top-left': 'top-4 left-4'
+  };
+
   if (!enabled) return null;
 
-  return()`
-    <div className={`fixed ${getPositionClasses()} z-50`}>
-
-      {/* Chat Toggle Button */}
-      {!isOpen && (<motion.button
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          onClick={toggleChat}
-`
-          className={`w-14 h-14 rounded-full flex items-center justify-center transition-all duration-200 ${getThemeClasses()}`}
-
-        >"
-          <MessageCircle className="w-6 h-6"  />        </motion.button>
-      )}
-
-      {/* Chat Window */}
+  return (
+    <div className={`fixed ${positionClasses[position]} z-50`}>
       <AnimatePresence>
-        {isOpen && (<motion.div
+        {isOpen && (
+          <motion.div
             initial={{ opacity: 0, scale: 0.8, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 20 }}
-            transition={{ duration: 0.2 }}
-`
-            className={`w-80 h-96 rounded-lg border ${getThemeClasses()} flex flex-col`}
+            transition={{ duration: 0.3 }}
+            className={`mb-4 w-80 h-96 bg-white dark:bg-gray-800 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 flex flex-col ${
+              isMinimized ? 'h-12' : 'h-96'
+            }`}
           >
-            {/* Header */}"
-            <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">"
-              <div className="flex items-center space-x-2">"
-                <Bot className="w-5 h-5 text-blue-500"  />"                <span className="font-semibold">AI Assistant</span>
-              </div>"
+            {/* Header */}
+            <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
+              <div className="flex items-center space-x-2">
+                <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center">
+                  <Bot className="w-4 h-4 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-900 dark:text-white">Zion Assistant</h3>
+                  <p className="text-xs text-gray-500 dark:text-gray-400">Online</p>
+                </div>
+              </div>
               <div className="flex items-center space-x-2">
                 <button
-                  onClick={toggleMinimize}"
-                  className="p-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded"
-
-                >"
-                  {isMinimized ? <Maximize2 className="w-4 h-4" /> : <Minimize2 className="w-4 h-4" />}
+                  onClick={() => setIsMinimized(!isMinimized)}
+                  className="p-1 hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                >
+                  {isMinimized ? (
+                    <Maximize2 className="w-4 h-4 text-gray-500" />
+                  ) : (
+                    <Minimize2 className="w-4 h-4 text-gray-500" />
+                  )}
                 </button>
                 <button
-                  onClick={toggleChat}
-"
-                  className="p-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded"
-
-                >"
-                  <X className="w-4 h-4"  />                </button>
+                  onClick={() => setIsOpen(false)}
+                  className="p-1 hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                >
+                  <X className="w-4 h-4 text-gray-500" />
+                </button>
               </div>
             </div>
 
-            {/* Messages */}
             {!isMinimized && (
-              <>"
+              <>
+                {/* Messages */}
                 <div className="flex-1 overflow-y-auto p-4 space-y-4">
                   {messages.map((message) => (
                     <div
                       key={message.id}
-'`
-                      className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
+                      className={`flex ${
+                        message.sender === 'user' ? 'justify-end' : 'justify-start'
+                      }`}
                     >
-                      <div`
-                        className={`max-w-xs px-3 py-2 rounded-lg ${
-
-                          message.type === 'user''
-                            ? 'bg-blue-500 text-white''
-                            : 'bg-gray-100 dark:bg-gray-800'`
+                      <div
+                        className={`max-w-xs lg:max-w-md px-4 py-2 rounded-lg ${
+                          message.sender === 'user'
+                            ? 'bg-blue-500 text-white'
+                            : 'bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white'
                         }`}
-                      >"
-                        <p className="text-sm">{message.content}</p>
-                        {message.metadata?.suggestions && ("
-                          <div className="mt-2 space-y-1">
-                            {message.metadata.suggestions.map((suggestion, index) => (
-                              <button
-                                key={index}
-                                onClick={() => handleSendMessage(suggestion)}"
-                                className="block w-full text-left text-xs text-blue-600 dark:text-blue-400 hover:underline"
-                              >
-                                {suggestion}
-                              </button>
-                            ))}
-                          </div>
-                        )}
+                      >
+                        <p className="text-sm">{message.text}</p>
+                        <p className="text-xs opacity-70 mt-1">
+                          {message.timestamp.toLocaleTimeString([], {
+                            hour: '2-digit',
+                            minute: '2-digit'
+                          })}
+                        </p>
                       </div>
                     </div>
                   ))}
-                  {isTyping && ("
-                    <div className="flex justify-start">"
-                      <div className="bg-gray-100 dark:bg-gray-800 px-3 py-2 rounded-lg">"
-                        <div className="flex space-x-1">"
-                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>'"
-                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>'"
-                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
 
+                  {isTyping && (
+                    <div className="flex justify-start">
+                      <div className="bg-gray-100 dark:bg-gray-700 px-4 py-2 rounded-lg">
+                        <div className="flex space-x-1">
+                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
+                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
                         </div>
                       </div>
-                    </div>) }
-                  <div role="button" ref={messagesEndRef} />
+                    </div>
+                  )}
+
+                  <div ref={messagesEndRef} />
                 </div>
 
-
-                {/* Input */}"
-                <div className="p-4 border-t border-gray-200 dark:border-gray-700">"
-                  <div className="flex space-x-2">
-
-                    <input
-                      ref={inputRef}"
-                      type="text"
-                      value={inputValue}
-                      onChange={(e) => setInputValue(e.target.value)}
-
-                      onKeyPress={handleKeyPress}"
-                      placeholder="Type your message..."
-                      className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-transparent"
-                    />
-                    <button
-                      onClick={() => handleSendMessage(inputValue)}
-                      disabled={!inputValue.trim() || isTyping}"
-                      className="px-3 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed"
-
-                    >"
-                      <Send className="w-4 h-4"  />                    </button>
+                {/* Quick Actions */}
+                <div className="px-4 py-2 border-t border-gray-200 dark:border-gray-700">
+                  <div className="flex flex-wrap gap-2">
+                    {quickActions.map((action, index) => (
+                      <button
+                        key={index}
+                        onClick={action.action}
+                        className="text-xs bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-2 py-1 rounded hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+                      >
+                        {action.text}
+                      </button>
+                    ))}
                   </div>
                 </div>
-              </>) }
-          </motion.div>) }
+
+                {/* Input */}
+                <div className="p-4 border-t border-gray-200 dark:border-gray-700">
+                  <div className="flex space-x-2">
+                    <input
+                      type="text"
+                      value={inputText}
+                      onChange={(e) => setInputText(e.target.value)}
+                      onKeyPress={handleKeyPress}
+                      placeholder="Type your message..."
+                      className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                    />
+                    <button
+                      onClick={() => handleSendMessage(inputText)}
+                      className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+                    >
+                      <Send className="w-4 h-4" />
+                    </button>
+                  </div>
+                </div>
+              </>
+            )}
+          </motion.div>
+        )}
       </AnimatePresence>
-    </div>) };
-'"`
+
+      {/* Chat Button */}
+      <motion.button
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+      >
+        {isOpen ? (
+          <X className="w-6 h-6" />
+        ) : (
+          <MessageCircle className="w-6 h-6" />
+        )}
+      </motion.button>
+    </div>
+  );
+};
