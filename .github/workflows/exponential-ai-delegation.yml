@@ -5,6 +5,7 @@ name: Exponential AI Delegation
     - cron: 0 0 * * *
 permissions:
   contents: write
+  pull-requests: write
   actions: read
 concurrency:
   group: exponential-ai-delegation-${{ github.ref }}

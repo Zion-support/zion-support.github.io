@@ -5,6 +5,8 @@ name: Sitemap Auto-Commit
   workflow_dispatch: {}
 permissions:
   contents: write
+  pull-requests: write
+
 concurrency:
   group: workflow-workflow_name_placeholder-${{ github.ref }}
   cancel-in-progress: true

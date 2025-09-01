@@ -5,6 +5,7 @@ name: Security Scan
     - cron: 0 */2 * * *
 permissions:
   contents: write
+  pull-requests: write
   actions: read
 concurrency:
   group: security-scan

@@ -3,6 +3,7 @@ name: Auto-Fix GitHub Actions Workflows
   workflow_dispatch: {}
 permissions:
   contents: write
+  pull-requests: write
   actions: read
 concurrency:
   group: workflow-fixes

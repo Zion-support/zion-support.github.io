@@ -5,6 +5,7 @@ name: Secret scan (Gitleaks)
     - cron: 0 3 * * *
 permissions:
   contents: write
+  pull-requests: write
   actions: read
 concurrency:
   group: secret-scan-gitleaks-${{ github.ref }}
