@@ -10,19 +10,8 @@ import { Link } from "react-router-dom";
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',;
-  ;
-  ;
-  ;
-  ;
-  website: 'https://ziontechgroup.com';
-;
-
-
-
-
-
-
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
 };
 
 const pricingTiers = [
@@ -31,7 +20,7 @@ const pricingTiers = [
     price: '$999',
     period: '/month',
     description: 'Perfect for small businesses and startups',
-    features[
+    features: [
       'Basic AI automation',
       'Standard support',
       'Core integrations',
@@ -45,7 +34,7 @@ const pricingTiers = [
     price: '$2,999',
     period: '/month',
     description: 'Ideal for growing businesses',
-    features[
+    features: [
       'Advanced AI features',
       'Priority support',
       'Custom integrations',
@@ -60,20 +49,20 @@ const pricingTiers = [
     price: '$7,999',
     period: '/month',
     description: 'For large organizations',
-    features[
+    features: [
       'Full AI suite',
       '24/7 dedicated support',
       'Custom development',
-      'Enterprise analytics',;
-      'Dedicated account manager',;
-      'Custom training programs',;
-      'SLA guarantees';
-    ],;
-    popular: false;
-  };
+      'Enterprise analytics',
+      'Dedicated account manager',
+      'Custom training programs',
+      'SLA guarantees'
+    ],
+    popular: false
+  }
 ];
 
-export default function ComprehensivePricing(...args[]):  {
+export default function ComprehensivePricing() {
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState<any>('all');
 
