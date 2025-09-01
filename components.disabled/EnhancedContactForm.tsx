@@ -1,879 +1,640 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Send, 
-  CheckCircle, 
-  AlertCircle, 
-  User, 
-  Mail, 
-  Phone, 
-  MessageSquare, 
-  Building,
-  Globe,
-  Star,
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import {
+
+  Mail,
+  Phone,
+  MapPin,
+  Send,
+  CheckCircle,
+  AlertCircle,
   Clock,
-  Shield
-} from 'lucide-react';
+  MessageSquare,
+  Calendar,
+  User,
+  Building,
+  Globe} from 'lucide-react';
 
-interface ContactFormData {
+const EnhancedContactForm: React.FC = () => {
 
-  firstName: string;
-  lastName: string;
-  email: string;
-  phone: string;
-  company: string;
-  website: string;
-  service: string;
-  budget: string;
-  timeline: string;
-  message: string;
-  priority: 'low' | 'medium' | 'high' | 'urgent';
+  const [formData, setFormData] = useState({
 
-}
-
-interface ContactFormProps {
-  // Add your props here
-
-
-  onSubmit?: data: ContactFormData void;
-  className?: string;
-
-}
-;
-const EnhancedContactForm: React.FC<ContactFormProps> = {
-  onSubmit: unknown, className = ''
-}: unknown {
-  const [formData, setFormData] = useState<ContactFormData>({
-    firstName: '',
-    lastName: '',
+    name: '',
     email: '',
-    phone: '',
     company: '',
-    website: '',
+    phone: '',
     service: '',
     budget: '',
     timeline: '',
-    message: '',
-    priority: 'medium'
-  });
+    message: ''});
 
-  const [errors, setErrors] = useState<Partial<ContactFormData>>({});
-  const [isSubmitting, setIsSubmitting] = useState<typeof false>(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const [currentStep, setCurrentStep] = useState<typeof 1>(1);
-  const [isValidating, setIsValidating] = useState<typeof false>(false);
+  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [selectedService, setSelectedService] = useState('');
 
-  const formRef = useRef<HTMLFormElement>(null);
-  const firstInputRef = useRef<HTMLInputElement>(null);
+  const services = [
+    {
 
-  const totalSteps = 3;
+      id: 'ai-development',
+      name: 'AI Development',
+      icon: Globe,
+      color: 'from-purple-500 to-pink-500'},
+    {
 
-  // Focus first input on mount
-  useEffect(: unknown {
-    if (firstInputRef.current) {
-      firstInputRef.current.focus();
+      id: 'cloud-architecture',
+      name: 'Cloud Architecture',
+      icon: Globe,
+      color: 'from-blue-500 to-cyan-500'},
+    {
+
+      id: 'web-development',
+      name: 'Web Development',
+      icon: Globe,
+      color: 'from-green-500 to-emerald-500'},
+    {
+
+      id: 'cybersecurity',
+      name: 'Cybersecurity',
+      icon: Globe,
+      color: 'from-red-500 to-orange-500'},
+    {
+
+      id: 'iot-platforms',
+      name: 'IoT Platforms',
+      icon: Globe,
+      color: 'from-indigo-500 to-purple-500'},
+    {
+
+      id: 'digital-transformation',
+      name: 'Digital Transformation',
+      icon: Globe,
+      color: 'from-yellow-500 to-orange-500'},
+    {
+
+      id: 'custom',
+      name: 'Custom Solution',
+      icon: Globe,
+      color: 'from-gray-500 to-slate-500'},
+  ];
+
+  const budgetRanges = ['
+    { value: 'under-25k', label: 'Under $25K' },
+    { value: '25k-50k', label: '$25K - $50K' },
+    { value: '50k-100k', label: '$50K - $100K' },
+    { value: '100k-250k', label: '$100K - $250K' },
+    { value: '250k-500k', label: '$250K - $500K' },
+    { value: 'over-500k', label: 'Over $500K' },
+  ];
+
+  const timelineOptions = ['
+    { value: 'asap', label: 'ASAP' },
+    { value: '1-3-months', label: '1-3 Months' },
+    { value: '3-6-months', label: '3-6 Months' },
+    { value: '6-12-months', label: '6-12 Months' },
+    { value: '12-plus-months', label: '12+ Months' },
+  ];
+
+  const validateForm = (...args: unknown[]): unknown => {
+
+    const newErrors: Record<string, string> = {};
+
+    if (!formData.name.trim()) {
+
+      newErrors.name = 'Name is required';
     }
-  }, []);
 
-  // Validate form data
-  const validateForm = (): boolean => {
-    const newErrors: Partial<ContactFormData> = {};
+    if (!formData.email.trim()) {
 
-    // Required field validation
-    if (!formData.firstName.trim()) newErrors.firstName = 'First name is required';
-    if (!formData.lastName.trim()) newErrors.lastName = 'Last name is required';
-    if (!formData.email.trim()) newErrors.email = 'Email is required';
-    if (!formData.message.trim()) newErrors.message = 'Message is required';
+      newErrors.email = 'Email is required';
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
 
-    // Email validation
-    if (formData.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       newErrors.email = 'Please enter a valid email address';
     }
 
-    // Phone validation (optional but if provided, must be valid)
-    if (formData.phone && !/^[\+]?[1-9][\d]{0,15}$/.test(formData.phone.replace(/[\s\-\(\)]/g,))) {
-      newErrors.phone = 'Please enter a valid phone number';
+    if (!formData.message.trim()) {
+
+      newErrors.message = 'Message is required';
     }
 
-    // Website validation (optional but if provided, must be valid)
-    if (formData.website && !/^https?:\/\/.+/.test(formData.website)) {
-      newErrors.website = 'Please enter a valid website URL (include http:// or https://);
+    if (!formData.service) {
+
+      newErrors.service = 'Please select a service';
     }
-    if (!formData.company.trim()) newErrors.company = 'Company name is required';
-    if (!formData.service) newErrors.service = 'Please select a service';
-    if (!formData.message.trim()) newErrors.message = 'Message is required';
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
-  // Handle input changes
-  const handleInputChange = (...args: unknown[]): unknown => {
-    setFormData(prev => ({ ...prev, [field]: value }));
-    
-    // Clear error when user starts typing
-    if (errors[field]) {
-      setErrors(prev => ({ ...prev, [field]: undefined }));
-    }
-  };
+  const handleSubmit = async (e: React.FormEvent) => {
 
-  // Handle form submission
-  const handleSubmit = async e: React.FormEvent {
     e.preventDefault();
-    
-    setIsValidating(true);
-    const isValid = validateForm();
-    setIsValidating(false);
 
-    if (!isValid) {
-      // Scroll to first error
-      const firstErrorField = Object.keys(errors)[0];
-      if (firstErrorField) {
-        const errorElement = document.querySelector(`[name="${firstErrorField}"]`);
-        errorElement?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }
+    if (!validateForm()) {
+
       return;
     }
 
     setIsSubmitting(true);
 
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      if (onSubmit) {
-        onSubmit(formData);
-      }
-      
-      setIsSubmitted(true);
-      setCurrentStep(1);
-      
-      // Reset form after successful submission
-      setTimeout(: unknown {
-        setFormData({
-          firstName: '',
-          lastName: '',
-          email: '',
-          company: '',
-          phone: '',
-          service: '',
-          budget: '',
-          timeline: '',
-          message: '',
-          priority: 'medium'
-        });
-        setIsSubmitted(false);
-      }, 5000);
-      
-    } catch (error) {
-      console.error('Form submission error:', error);
-    } finally {
-      setIsSubmitting(false);
+    // Simulate API call
+    await new Promise(resolve => setTimeout(resolve, 2000));
+
+    setIsSubmitting(false);
+    setIsSubmitted(true);
+
+    // Reset form after successful submission
+    setTimeout(: unknown {
+
+      setIsSubmitted(false);
+      setFormData({
+
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        service: '',
+        budget: '',
+        timeline: '',
+        message: ''});
+      setSelectedService('');
+    }, 5000);
+  };
+
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
+
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+
+    // Clear error when user starts typing
+    if (errors[name]) {
+
+      setErrors(prev => ({ ...prev, [name]: '' }));
     }
   };
 
-  // Next step validation
-  const handleNextStep = (...args: unknown[]): unknown => {
-    if (currentStep === 1) {
-      if (!formData.firstName || !formData.lastName || !formData.email) {
-        setErrors({
-          firstName: !formData.firstName ? 'First name is required' : undefined,
-          lastName: !formData.lastName ? 'Last name is required' : undefined,
-          email: !formData.email ? 'Email is required' : undefined
-        });
-        return;
-      }
-    }
-    
-    if (currentStep < totalSteps) {
-      setCurrentStep(currentStep + 1);
-    }
-  };
+  const containerVariants = {
 
-  // Previous step
-  const handlePrevStep = (...args: unknown[]): unknown => {
-    if (currentStep > 1) {
-      setCurrentStep(currentStep - 1);
-    }
-  };
+    hidden: { opacity: 0 },
+    visible: {
 
-  // Get step progress percentage
-  const getStepProgress = : unknown (currentStep / totalSteps) * 100;
+      opacity: 1,
+      transition: {
 
-  // Service options
-  const serviceOptions = [
-    'AI Consciousness Evolution',Quantum Cybersecurity',Autonomous Systems',Space Technology',Cloud Infrastructure',Custom Solution',Other'
-  ];
+        staggerChildren: 0.1,
+        delayChildren: 0.2}}};
 
-  // Budget options
-  const budgetOptions = [
-    'Under $10,000',$10,000 - $50,000',$50,000 - $100,000',$100,000 - $500,000',$500,000+',To be discussed'
-  ];
+  const itemVariants = {
 
-  // Timeline options
-  const timelineOptions = [
-    'Immediate (1-2 weeks),Quick (1-2 months),Standard (3-6 months),Extended (6+ months),Flexible'
-  ];
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6 }}};
 
   if (isSubmitted) {
-    return 
+
+    return()
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
-        className={`text-center p-8 bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-2xl border border-green-400/20 ${className}`}
-      >
-        <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
-        <h3 className="text-2xl font-bold text-white mb-2">Thank You!</h3>
-        <p className="text-gray-300 mb-4">
-          Your message has been sent successfully. We'll get back to you within 24 hours.
-        </p>
-        <div className="flex items-center justify-center gap-4 text-sm text-gray-400">
-          <div className="flex items-center gap-1">
-            <Clock className="w-4 h-4" />
-            <span>24h response</span>
+        className="py-20 bg-gradient-to-br from-green-50 to-emerald-50"
+      >"
+        <div className="container mx-auto px-4 text-center">"
+          <div className="max-w-2xl mx-auto">"
+            <div className="w-24 h-24 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-8">"
+              <CheckCircle className="w-12 h-12 text-white" />
+            </div>"
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Thank You for Reaching Out!
+            </h2>"
+            <p className="text-xl text-gray-600 mb-8">
+              We&apos;ve received your message and will get back to you within
+              24 hours. Our team is excited to discuss your project and explore
+              how we can help bring your vision to life.
+            </p>"
+            <div className="bg-white rounded-2xl p-6 shadow-lg">"
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                What happens next?
+              </h3>"
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-600">"
+                <div className="flex items-center gap-2">"
+                  <Clock className="w-4 h-4 text-green-500" />
+                  <span>Response within 24h</span>
+                </div>"
+                <div className="flex items-center gap-2">"
+                  <MessageSquare className="w-4 h-4 text-green-500" />
+                  <span>Schedule consultation</span>
+                </div>"
+                <div className="flex items-center gap-2">"
+                  <Calendar className="w-4 h-4 text-green-500" />
+                  <span>Project planning</span>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="flex items-center gap-1">
-            <Shield className="w-4 h-4" />
-            <span>Secure</span>
-          </div>
         </div>
+      </motion.div>
+    );
+  }
 
-        <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">
-            Last Name *
-          </label>
-          <input
-            type="text"
-            value={formData.lastName}
-            onChange={(e handleInputChange('lastName', e.target.value)}
-            className={`w-full px-4 py-3 bg-gray-800/50 border rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all ${
-              errors.lastName ? 'border-red-500' : 'border-gray-600'
-            }`}
-            placeholder="Enter your last name"
-          />
-          {errors.lastName && (
-            <p className="mt-1 text-sm text-red-400 flex items-center">
-              <AlertCircle className="w-4 h-4 mr-1" />
-              {errors.lastName}
-            </p>
-          )}
-        </div>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">
-            Email Address *
-          </label>
-          <input
-            type="email"
-            value={formData.email}
-            onChange={e: unknown handleInputChange('email', e.target.value)}
-            className={`w-full px-4 py-3 bg-gray-800/50 border rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all ${
-              errors.email ? 'border-red-500' : 'border-gray-600'
-            }`}
-            placeholder="your.email@company.com"
-          />
-          {errors.email && (
-            <p className="mt-1 text-sm text-red-400 flex items-center">
-              <AlertCircle className="w-4 h-4 mr-1" />
-              {errors.email}
-            </p>
-          )}
-        </div>
-
-        <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">
-            Company Name *
-          </label>
-          <input
-            type="text"
-            value={formData.company}
-            onChange={e: unknown handleInputChange('company', e.target.value)}
-            className={`w-full px-4 py-3 bg-gray-800/50 border rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all ${
-              errors.company ? 'border-red-500' : 'border-gray-600'
-            }`}
-            placeholder="Your company name"
-          />
-          {errors.company && (
-            <p className="mt-1 text-sm text-red-400 flex items-center">
-              <AlertCircle className="w-4 h-4 mr-1" />
-              {errors.company}
-            </p>
-          )}
-        </div>
-      </div>
-
-      <div>
-        <label className="block text-sm font-medium text-gray-300 mb-2">
-          Phone Number
-        </label>
-        <input
-          type="tel"
-          value={formData.phone}
-          onChange={e: unknown handleInputChange('phone', e.target.value)}
-          className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all"
-          placeholder="+1 (555) 123-4567"
-        />
-      </div>
-    </motion.div>
-  );
-
-  const renderStep2 = : unknown 
-    <motion.div
-      initial={{ opacity: 0, x: 20 }}
-      animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, x: -20 }}
-      className="space-y-6"
-    >
-      <div>
-        <label className="block text-sm font-medium text-gray-300 mb-2">
-          Service of Interest *
-        </label>
-        <select
-          value={formData.service}
-          onChange={(e handleInputChange('service', e.target.value)}
-          className={`w-full px-4 py-3 bg-gray-800/50 border rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all ${
-            errors.service ? 'border-red-500' : 'border-gray-600'
-          }`}
+  return ("
+    <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">"
+      <div className="container mx-auto px-4">
+        <motion.div
+          variants={containerVariants}"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
         >
-          <option value="">Select a service</option>
-          {services.map(service: unknown (
-            <option key={service} value={service}>
-              {service}
-            </option>
-          ))}
-        </select>
-        {errors.service && (
-          <p className="mt-1 text-sm text-red-400 flex items-center">
-            <AlertCircle className="w-4 h-4 mr-1" />
-            {errors.service}
-          </p>
-        )}
-      </div>
+          {/* Header */}"
+          <motion.div variants={itemVariants} className="text-center mb-16">"
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 rounded-full text-blue-600 text-sm font-medium mb-6">"
+              <MessageSquare className="w-4 h-4" />
+              Get In Touch
+            </div>"
+            <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Ready to Start Your"
+              <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                Project?
+              </span>
+            </h2>"
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Let&apos;s discuss your technology needs and explore how our
+              expertise can drive innovation and growth for your business.
+            </p>
+          </motion.div>
+"
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-7xl mx-auto">
+            {/* Contact Information */}"
+            <motion.div variants={itemVariants} className="space-y-8">
+              <div>"
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                  Let&apos;s Connect
+                </h3>"
+                <p className="text-gray-600 mb-8 leading-relaxed">
+                  Our team of technology experts is ready to help you navigate
+                  the digital landscape and implement solutions that drive real
+                  business value.
+                </p>
+              </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">
-            Budget Range
-          </label>
-          <select
-            value={formData.budget}
-            onChange={e: unknown handleInputChange('budget', e.target.value)}
-            className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all"
-          >
-            <option value="">Select budget range</option>
-            {budgets.map(budget: unknown (
-              <option key={budget} value={budget}>
-                {budget}
-              </option>
-            ))}
-          </select>
-        </div>
-
-        <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">
-            Timeline
-          </label>
-          <select
-            value={formData.timeline}
-            onChange={e: unknown handleInputChange('timeline', e.target.value)}
-            className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all"
-          >
-            <option value="">Select timeline</option>
-            {timelines.map(timeline: unknown (
-              <option key={timeline} value={timeline}>
-                {timeline}
-              </option>
-            ))}
-          </select>
-        </div>
-      </div>
-
-      <div>
-        <label className="block text-sm font-medium text-gray-300 mb-2">
-          Preferred Contact Method
-        </label>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {contactMethods.map(method: unknown {
-            const Icon = method.icon;
-            return 
-              <label
-                key={method.value}
-                className={`flex items-center p-4 border rounded-lg cursor-pointer transition-all ${
-                  formData.preferredContact === method.value
-                    ? 'border-cyan-500 bg-cyan-500/10'
-                    : 'border-gray-600 hover:border-gray-500'
-                }`}
-              >
-                <input
-                  type="radio"
-                  name="preferredContact"
-                  value={method.value}
-                  checked={formData.preferredContact === method.value}
-                  onChange={(e handleInputChange('preferredContact', e.target.value)}
-                  className="sr-only"
-                />
-                <Icon className="w-5 h-5 mr-3 text-cyan-400" />
-                <span className="text-sm font-medium">{method.label}</span>
-              </label>
-            );
-          })}
-        </div>
-      </div>
-    </motion.div>
-  );
-
-  const renderStep3 = : unknown 
-    <motion.div
-      initial={{ opacity: 0, x: 20 }}
-      animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, x: -20 }}
-      className="space-y-6"
-    >
-      <div>
-        <label className="block text-sm font-medium text-gray-300 mb-2">
-          Project Details *
-        </label>
-        <textarea
-          value={formData.message}
-          onChange={(e handleInputChange('message', e.target.value)}
-          rows={6}
-          className={`w-full px-4 py-3 bg-gray-800/50 border rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all resize-none ${
-            errors.message ? 'border-red-500' : 'border-gray-600'
-          }`}
-          placeholder="Tell us about your project, requirements, and goals..."
-        />
-        {errors.message && (
-          <p className="mt-1 text-sm text-red-400 flex items-center">
-            <AlertCircle className="w-4 h-4 mr-1" />
-            {errors.message}
-          </p>
-        )}
-        <p className="mt-2 text-sm text-gray-400">
-          {formData.message.length}/1000 characters
-        </p>
-      </div>
-
-      <div className="space-y-4">
-        <label className="flex items-center cursor-pointer">
-          <input
-            type="checkbox"
-            checked={formData.newsletter}
-            onChange={e: unknown handleInputChange('newsletter', e.target.checked)}
-            className="w-4 h-4 text-cyan-500 bg-gray-800 border-gray-600 rounded focus:ring-cyan-500 focus:ring-2"
-          />
-          <span className="ml-3 text-sm text-gray-300">
-            Subscribe to our newsletter for technology insights and updates
-          </span>
-        </label>
-
-        <label className="flex items-start cursor-pointer">
-          <input
-            type="checkbox"
-            checked={formData.gdprConsent}
-            onChange={e: unknown handleInputChange('gdprConsent', e.target.checked)}
-            className="w-4 h-4 text-cyan-500 bg-gray-800 border-gray-600 rounded focus:ring-cyan-500 focus:ring-2 mt-1"
-          />
-          <span className="ml-3 text-sm text-gray-300">
-            I consent to Zion Tech Group processing my personal data in accordance with the{' '}
-            <a href="/privacy" className="text-cyan-400 hover:text-cyan-300 underline">
-              Privacy Policy
-            </a>
-            . *
-          </span>
-        </label>
-        {errors.gdprConsent && (
-          <p className="mt-1 text-sm text-red-400 flex items-center">
-            <AlertCircle className="w-4 h-4 mr-1" />
-            {errors.gdprConsent}
-          </p>
-        )}
-      </div>
-    </motion.div>
-  );
-
-  return (
-    <div className={`bg-black/40 backdrop-blur-sm rounded-2xl border border-white/20 p-8 ${className}`}>
-      {/* Header */}
-      <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold text-white mb-4">Get Started Today</h2>
-        <p className="text-gray-300 max-w-2xl mx-auto">
-          Ready to transform your business with cutting-edge AI, quantum computing, and autonomous solutions? 
-          Let's discuss your project and create something extraordinary together.
-        </p>
-      </div>
-
-      {/* Progress Bar */}
-      <div className="mb-8">
-        <div className="flex items-center justify-between mb-2">
-          <span className="text-sm text-gray-400">Step {currentStep} of {totalSteps}</span>
-          <span className="text-sm text-white">{Math.round(getStepProgress())}%</span>
-        </div>
-        <div className="w-full bg-white/20 rounded-full h-2">
-          <motion.div
-            className="h-2 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full"
-            initial={{ width: 0 }}
-            animate={{ width: `${getStepProgress()}%` }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-          />
-        </div>
-      </div>
-
-      {/* Form */}
-      <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
-        <AnimatePresence mode="wait">
-          {currentStep === 1 && 
-            <motion.div
-              key="step1"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
-              transition={{ duration: 0.3 }}
-              className="space-y-6"
-            >
-              <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
-                <User className="w-5 h-5 text-cyan-400" />
-                Basic Information
-              </h3>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label htmlFor="firstName" className="block text-sm font-medium text-white mb-2">
-                    First Name *
-                  </label>
-                  <input
-                    ref={firstInputRef}
-                    type="text"
-                    id="firstName"
-                    name="firstName"
-                    value={formData.firstName}
-                    onChange={(e handleInputChange('firstName', e.target.value)}
-                    className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300 ${
-                      errors.firstName ? 'border-red-400' : 'border-white/20'
-                    }`}
-                    placeholder="Enter your first name"
-                    aria-describedby={errors.firstName ? 'firstName-error' : undefined}
-                  />
-                  {errors.firstName && (
-                    <p id="firstName-error" className="mt-1 text-sm text-red-400 flex items-center gap-1">
-                      <AlertCircle className="w-4 h-4" />
-                      {errors.firstName}
+              {/* Contact Details */}"
+              <div className="space-y-6">"
+                <div className="flex items-start space-x-4">"
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center flex-shrink-0">"
+                    <Phone className="w-6 h-6 text-white" />
+                  </div>
+                  <div>"
+                    <h4 className="font-semibold text-gray-900">Phone</h4>
+                    <a"
+                      href="tel:+13024640950"
+                      className="text-blue-600 hover:text-blue-700 text-lg"
+                    >
+                      +1 (302) 464-0950
+                    </a>"
+                    <p className="text-gray-600 text-sm">
+                      Available Monday - Friday, 9 AM - 6 PM EST
                     </p>
-                  )}
+                  </div>
                 </div>
-
-                <div>
-                  <label htmlFor="lastName" className="block text-sm font-medium text-white mb-2">
-                    Last Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="lastName"
-                    name="lastName"
-                    value={formData.lastName}
-                    onChange={e: unknown handleInputChange('lastName', e.target.value)}
-                    className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300 ${
-                      errors.lastName ? 'border-red-400' : 'border-white/20'
-                    }`}
-                    placeholder="Enter your last name"
-                    aria-describedby={errors.lastName ? 'lastName-error' : undefined}
-                  />
-                  {errors.lastName && (
-                    <p id="lastName-error" className="mt-1 text-sm text-red-400 flex items-center gap-1">
-                      <AlertCircle className="w-4 h-4" />
-                      {errors.lastName}
+"
+                <div className="flex items-start space-x-4">"
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center flex-shrink-0">"
+                    <Mail className="w-6 h-6 text-white" />
+                  </div>
+                  <div>"
+                    <h4 className="font-semibold text-gray-900">Email</h4>
+                    <a"
+                      href="mailto:kleber@ziontechgroup.com"
+                      className="text-blue-600 hover:text-blue-700 text-lg"
+                    >
+                      kleber@ziontechgroup.com
+                    </a>"
+                    <p className="text-gray-600 text-sm">
+                      We typically respond within 2-4 hours
                     </p>
-                  )}
+                  </div>
+                </div>
+"
+                <div className="flex items-start space-x-4">"
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center flex-shrink-0">"
+                    <MapPin className="w-6 h-6 text-white" />
+                  </div>
+                  <div>"
+                    <h4 className="font-semibold text-gray-900">Office</h4>"
+                    <p className="text-gray-900 text-lg">
+                      364 E Main St STE 1008
+                    </p>"
+                    <p className="text-gray-600 text-sm">
+                      Middletown, DE 19709, United States
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
-                  Email Address *
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={e: unknown handleInputChange('email', e.target.value)}
-                  className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300 ${
-                    errors.email ? 'border-red-400' : 'border-white/20'
-                  }`}
-                  placeholder="Enter your email address"
-                  aria-describedby={errors.email ? 'email-error' : undefined}
-                />
-                {errors.email && (
-                  <p id="email-error" className="mt-1 text-sm text-red-400 flex items-center gap-1">
-                    <AlertCircle className="w-4 h-4" />
-                    {errors.email}
-                  </p>
-                )}
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-white mb-2">
-                    Phone Number
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={e: unknown handleInputChange('phone', e.target.value)}
-                    className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300 ${
-                      errors.phone ? 'border-red-400' : 'border-white/20'
-                    }`}
-                    placeholder="Enter your phone number"
-                    aria-describedby={errors.phone ? 'phone-error' : undefined}
-                  />
-                  {errors.phone && (
-                    <p id="phone-error" className="mt-1 text-sm text-red-400 flex items-center gap-1">
-                      <AlertCircle className="w-4 h-4" />
-                      {errors.phone}
-                    </p>
-                  )}
-                </div>
-
-                <div>
-                  <label htmlFor="priority" className="block text-sm font-medium text-white mb-2">
-                    Priority Level
-                  </label>
-                  <select
-                    id="priority"
-                    name="priority"
-                    value={formData.priority}
-                    onChange={e: unknown handleInputChange('priority', e.target.value as ContactFormData['priority'])}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
-                  >
-                    <option value="low">Low Priority</option>
-                    <option value="medium">Medium Priority</option>
-                    <option value="high">High Priority</option>
-                    <option value="urgent">Urgent</option>
-                  </select>
+              {/* Quick Stats */}"
+              <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-6 text-white">"
+                <h4 className="text-lg font-semibold mb-4">
+                  Why Choose Zion Tech Group?
+                </h4>"
+                <div className="grid grid-cols-2 gap-4 text-sm">
+                  <div>"
+                    <div className="text-2xl font-bold">500+</div>"
+                    <div className="text-blue-100">Projects Delivered</div>
+                  </div>
+                  <div>"
+                    <div className="text-2xl font-bold">98%</div>"
+                    <div className="text-blue-100">Client Satisfaction</div>
+                  </div>
+                  <div>"
+                    <div className="text-2xl font-bold">15+</div>"
+                    <div className="text-blue-100">Years Experience</div>
+                  </div>
+                  <div>"
+                    <div className="text-2xl font-bold">24/7</div>"
+                    <div className="text-blue-100">Support Available</div>
+                  </div>
                 </div>
               </div>
             </motion.div>
-          )}
 
-          {currentStep === 2 && 
-            <motion.div
-              key="step2"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
-              transition={{ duration: 0.3 }}
-              className="space-y-6"
-            >
-              <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
-                <Building className="w-5 h-5 text-blue-400" />
-                Company & Project Details
-              </h3>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-white mb-2">
-                    Company Name
-                  </label>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    value={formData.company}
-                    onChange={(e handleInputChange('company', e.target.value)}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
-                    placeholder="Enter your company name"
-                  />
+            {/* Contact Form */}
+            <motion.div variants={itemVariants}>
+              <form
+                onSubmit={handleSubmit}"
+                className="bg-white rounded-2xl shadow-xl border border-gray-200 p-8"
+              >"
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                  {/* Name */}
+                  <div>
+                    <label"
+                      htmlFor="name"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
+                      Full Name *
+                    </label>"
+                    <div className="relative">"
+                      <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                      <input"
+                        type="text"
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        className={`w-full pl-10 pr-4 py-3 border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300 ${
+
+                          errors.name ? 'border-red-500' : 'border-gray-300'`
+                        }`}"
+                        placeholder="Enter your full name"
+                      />
+                    </div>
+                    {errors.name && ("
+                      <div className="flex items-center gap-2 mt-2 text-red-600 text-sm">"
+                        <AlertCircle className="w-4 h-4" />
+                        {errors.name}
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Email */}
+                  <div>
+                    <label"
+                      htmlFor="email"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
+                      Email Address *
+                    </label>"
+                    <div className="relative">"
+                      <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                      <input"
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}`
+                        className={`w-full pl-10 pr-4 py-3 border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300 ${
+
+                          errors.email ? 'border-red-500' : 'border-gray-300'`
+                        }`}"
+                        placeholder="Enter your email"
+                      />
+                    </div>
+                    {errors.email && ("
+                      <div className="flex items-center gap-2 mt-2 text-red-600 text-sm">"
+                        <AlertCircle className="w-4 h-4" />
+                        {errors.email}
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Company */}
+                  <div>
+                    <label"
+                      htmlFor="company"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
+                      Company
+                    </label>"
+                    <div className="relative">"
+                      <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                      <input"
+                        type="text"
+                        id="company"
+                        name="company"
+                        value={formData.company}
+                        onChange={handleChange}"
+                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300"
+                        placeholder="Enter company name"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Phone */}
+                  <div>
+                    <label"
+                      htmlFor="phone"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
+                      Phone Number
+                    </label>"
+                    <div className="relative">"
+                      <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                      <input"
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}"
+                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300"
+                        placeholder="Enter phone number"
+                      />
+                    </div>
+                  </div>
                 </div>
 
-                <div>
-                  <label htmlFor="website" className="block text-sm font-medium text-white mb-2">
-                    Website
-                  </label>
-                  <input
-                    type="url"
-                    id="website"
-                    name="website"
-                    value={formData.website}
-                    onChange={e: unknown handleInputChange('website', e.target.value)}
-                    className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300 ${
-                      errors.website ? 'border-red-400' : 'border-white/20'
-                    }`}
-                    placeholder="https://yourcompany.com"
-                    aria-describedby={errors.website ? 'website-error' : undefined}
-                  />
-                  {errors.website && (
-                    <p id="website-error" className="mt-1 text-sm text-red-400 flex items-center gap-1">
+                {/* Service Selection */}"
+                <div className="mb-6">"
+                  <label className="block text-sm font-medium text-gray-700 mb-3">
+                    Service of Interest *
+                  </label>"
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                    {services.map(service => (
+                      <button
+                        key={service.id}"
+                        type="button"
+                        onClick={() => {
+
+                          setFormData(prev => ({
+
+                            ...prev,
+                            service: service.id}));
+                          setSelectedService(service.id);
+                          if (errors.service) {
+
+                            setErrors(prev => ({ ...prev, service: '' }));
+                          }
+                        }}`
+                        className={`p-3 rounded-xl border-2 transition-all duration-300 text-left ${
+
+                          selectedService === service.id'
+                            ? 'border-blue-500 bg-blue-50 text-blue-700''
+                            : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50'`
+                        }`}
+                      >"
+                        <div className="text-sm font-medium">
+                          {service.name}
+                        </div>
+                      </button>
+                    ))}
+                  </div>
+                  {errors.service && ("
+                    <div className="flex items-center gap-2 mt-2 text-red-600 text-sm">"
                       <AlertCircle className="w-4 h-4" />
-                      {errors.website}
-                    </p>
+                      {errors.service}
+                    </div>
                   )}
                 </div>
-              </div>
 
-              <div>
-                <label htmlFor="service" className="block text-sm font-medium text-white mb-2">
-                  Service of Interest
-                </label>
-                <select
-                  id="service"
-                  name="service"
-                  value={formData.service}
-                  onChange={e: unknown handleInputChange('service', e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
+                {/* Budget and Timeline */}"
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                  <div>
+                    <label"
+                      htmlFor="budget"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
+                      Budget Range
+                    </label>
+                    <select"
+                      id="budget"
+                      name="budget"
+                      value={formData.budget}
+                      onChange={handleChange}"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300"
+                    >"
+                      <option value="">Select budget range</option>
+                      {budgetRanges.map(budget => (
+                        <option key={budget.value} value={budget.value}>
+                          {budget.label}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  <div>
+                    <label"
+                      htmlFor="timeline"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
+                      Project Timeline
+                    </label>
+                    <select"
+                      id="timeline"
+                      name="timeline"
+                      value={formData.timeline}
+                      onChange={handleChange}"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300"
+                    >"
+                      <option value="">Select timeline</option>
+                      {timelineOptions.map(timeline => (
+                        <option key={timeline.value} value={timeline.value}>
+                          {timeline.label}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+
+                {/* Message */}"
+                <div className="mb-8">
+                  <label"
+                    htmlFor="message"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
+                    Project Details *
+                  </label>
+                  <textarea"
+                    id="message"
+                    name="message"
+                    rows={5}
+                    value={formData.message}
+                    onChange={handleChange}`
+                    className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-300 ${
+
+                      errors.message ? 'border-red-500' : 'border-gray-300'`
+                    }`}"
+                    placeholder="Tell us about your project, requirements, timeline, and budget..."
+                  />
+                  {errors.message && ("
+                    <div className="flex items-center gap-2 mt-2 text-red-600 text-sm">"
+                      <AlertCircle className="w-4 h-4" />
+                      {errors.message}
+                    </div>
+                  )}
+                </div>
+
+                {/* Submit Button */}
+                <button"
+                  type="submit"
+                  disabled={isSubmitting}"
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-8 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                 >
-                  <option value="">Select a service</option>
-                  {serviceOptions.map(service: unknown (
-                    <option key={service} value={service}>{service}</option>
-                  ))}
-                </select>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label htmlFor="budget" className="block text-sm font-medium text-white mb-2">
-                    Budget Range
-                  </label>
-                  <select
-                    id="budget"
-                    name="budget"
-                    value={formData.budget}
-                    onChange={e: unknown handleInputChange('budget', e.target.value)}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
+                  {isSubmitting ? ("
+                    <div className="flex items-center justify-center gap-3">"
+                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                      Sending Message...
+                    </div>
+                  ) : ("
+                    <div className="flex items-center justify-center gap-3">"
+                      <Send className="w-5 h-5" />
+                      Send Message
+                    </div>
+                  )}
+                </button>
+"
+                <p className="text-sm text-gray-500 text-center mt-4">
+                  By submitting this form, you agree to our{' '}
+                  <Link"
+                    href="/privacy"
+                    className="text-blue-600 hover:text-blue-700 underline"
                   >
-                    <option value="">Select budget range</option>
-                    {budgetOptions.map(budget: unknown (
-                      <option key={budget} value={budget}>{budget}</option>
-                    ))}
-                  </select>
-                </div>
-
-                <div>
-                  <label htmlFor="timeline" className="block text-sm font-medium text-white mb-2">
-                    Project Timeline
-                  </label>
-                  <select
-                    id="timeline"
-                    name="timeline"
-                    value={formData.timeline}
-                    onChange={e: unknown handleInputChange('timeline', e.target.value)}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
-                  >
-                    <option value="">Select timeline</option>
-                    {timelineOptions.map(timeline: unknown (
-                      <option key={timeline} value={timeline}>{timeline}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
+                    Privacy Policy
+                  </Link>
+                </p>
+              </form>
             </motion.div>
-          )}
-
-          {currentStep === 3 && 
-            <motion.div
-              key="step3"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
-              transition={{ duration: 0.3 }}
-              className="space-y-6"
-            >
-              <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
-                <MessageSquare className="w-5 h-5 text-purple-400" />
-                Project Details
-              </h3>
-              
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
-                  Project Description *
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={6}
-                  value={formData.message}
-                  onChange={(e handleInputChange('message', e.target.value)}
-                  className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300 resize-none ${
-                    errors.message ? 'border-red-400' : 'border-white/20'
-                  }`}
-                  placeholder="Tell us about your project, goals, and requirements..."
-                  aria-describedby={errors.message ? 'message-error' : undefined}
-                />
-                {errors.message && (
-                  <p id="message-error" className="mt-1 text-sm text-red-400 flex items-center gap-1">
-                    <AlertCircle className="w-4 h-4" />
-                    {errors.message}
-                  </p>
-                )}
-              </div>
-
-              {/* Trust Indicators */}
-              <div className="bg-white/5 rounded-lg p-4">
-                <div className="flex items-center justify-center gap-6 text-sm text-gray-400">
-                  <div className="flex items-center gap-2">
-                    <Shield className="w-4 h-4 text-green-400" />
-                    <span>Secure & Private</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Clock className="w-4 h-4 text-blue-400" />
-                    <span>24h Response</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Star className="w-4 h-4 text-yellow-400" />
-                    <span>Expert Team</span>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-
-        {/* Navigation Buttons */}
-        <div className="flex justify-between pt-6">
-          <button
-            type="button"
-            onClick={handlePrevStep}
-            disabled={currentStep === 1}
-            className="px-6 py-3 border border-white/20 text-white rounded-lg hover:bg-white/10 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-black"
-          >
-            Previous
-          </button>
-
-          {currentStep < totalSteps ? (
-            <button
-              type="button"
-              onClick={handleNextStep}
-              className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-black"
-            >
-              Next Step
-            </button>
-          ) : (
-            <button
-              type="submit"
-              disabled={isSubmitting || isValidating}
-              className="px-8 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg hover:from-green-600 hover:to-emerald-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
-            >
-              {isSubmitting ? (
-                <>
-                  <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                  Sending...
-                </>
-              ) : (
-                <>
-                  <Send className="w-4 h-4" />
-                  Send Message
-                </>
-              )}
-            </button>
-          )}
-        </div>
-      </form>
-    </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
   );
 };
-;
-export { EnhancedContactForm };
+
 export default EnhancedContactForm;
-}
+'"`

@@ -3,7 +3,7 @@
     "target": "ES2022",
     "useDefineForClassFields": true,
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
-    "allowJs": false,
+    "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -36,43 +36,28 @@
     "baseUrl": ".",
     "paths": {
       "@/*": [
-        "src/*"
+        "pages/*"
       ],
       "@components/*": [
-        "src/components/*"
+        "components/*"
       ],
       "@pages/*": [
-        "src/pages/*"
+        "pages/*"
       ],
       "@layout/*": [
-        "src/layout/*"
+        "components/layout/*"
       ],
       "@utils/*": [
-        "src/utils/*"
+        "utils/*"
       ],
       "@hooks/*": [
-        "src/hooks/*"
+        "hooks/*"
       ],
       "@types/*": [
-        "src/types/*"
-      ],
-      "@assets/*": [
-        "src/assets/*"
+        "types/*"
       ],
       "@styles/*": [
-        "src/styles/*"
-      ],
-      "@data/*": [
-        "src/data/*"
-      ],
-      "@services/*": [
-        "src/services/*"
-      ],
-      "@context/*": [
-        "src/context/*"
-      ],
-      "@constants/*": [
-        "src/constants/*"
+        "styles/*"
       ]
     },
     "typeRoots": [
@@ -89,10 +74,12 @@
     ]
   },
   "include": [
-    "src/main.tsx",
-    "src/utils/serviceWorker.ts",
-    "src/vite-env.d.ts",
-    "vite.config.ts"
+    "pages/**/*",
+    "components/**/*",
+    "utils/**/*",
+    "hooks/**/*",
+    "types/**/*",
+    "styles/**/*"
   ],
   "exclude": [
     "node_modules",
@@ -103,6 +90,7 @@
     "components.disabled",
     "**/*.disabled",
     "**/*.backup",
-    "**/*.tsbackup"
+    "**/*.tsbackup",
+    "src"
   ]
 }
