@@ -57,13 +57,12 @@ const navigationItems: NavigationItem[] = [
       { name: 'IT Asset Discovery Agent', href: '/it-asset-discovery-agent', description: 'Agentless discovery' },
       { name: 'Managed Postgres HA', href: '/managed-postgres-ha', description: 'HA Postgres ops' },
       { name: 'Micro SAAS', href: '/micro-saas', description: 'Business tools and automation' },
-      { name: 'DORA Metrics Dashboard', href: '/dora-metrics-dashboard', description: 'DevOps performance analytics' },
-      { name: 'Kubernetes Cost Guardrails', href: '/kubernetes-cost-guardrails', description: 'Policy-driven cost controls' },
-      { name: 'OpenTelemetry Quickstart', href: '/opentelemetry-quickstart', description: 'Traces, metrics, logs in days' },
-      { name: 'API Usage Billing Meter', href: '/api-usage-billing-meter', description: 'Metered billing for APIs' },
-      { name: 'Data Quality Monitor', href: '/data-quality-monitor', description: 'Freshness and anomaly checks' },
-      { name: 'Consent & Cookie Manager', href: '/consent-cookie-manager', description: 'GDPR/CCPA consent' },
-      { name: 'Edge Redirect Manager', href: '/edge-redirect-manager', description: 'Safe redirects at edge' }
+      { name: 'New 2034 Services', href: '/services?sort=newest', description: 'Latest additions' },
+      { name: 'RAG Evaluation Lab', href: '/rag-evaluation-lab/', description: 'Continuous evals for RAG quality' },
+      { name: 'Browser Automation Cloud', href: '/browser-automation-cloud/', description: 'Scale Playwright/Puppeteer' },
+      { name: 'Secrets Rotation Automation', href: '/secrets-rotation-automation/', description: 'Automated key and secret rotation' },
+      { name: 'API Performance Testing', href: '/api-performance-testing/', description: 'Load, latency and regression tests' },
+      { name: 'SOC 2 Compliance Automation', href: '/soc2-compliance-automation', description: 'Controls, evidence and audit room' }
     ]
   },
   {

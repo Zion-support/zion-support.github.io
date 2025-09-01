@@ -43,22 +43,24 @@ export default function Footer() {
     { name: 'Documentation', href: '/docs' },
     { name: 'API Reference', href: '/api-docs' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Webinars', href: '/webinars' },
-    { name: 'Events', href: '/events' },
-    { name: 'Training', href: '/training' },
-    { name: 'Support Center', href: '/support' },
-    { name: 'White Papers', href: '/white-papers' },
-    { name: 'Press', href: '/press' },
-    { name: 'Media Kit', href: '/media-kit' }
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'About', href: '/about' },
+    { name: 'All Services', href: '/services' },
+    { name: 'Services Advertising', href: '/services-advertising' },
+    { name: 'Market Pricing', href: '/market-pricing' },
+    { name: 'RAG Evaluation Lab', href: '/rag-evaluation-lab/' },
+    { name: 'API Performance Testing', href: '/api-performance-testing/' }
   ];
 
   const socialLinks = [
     { name: 'X', href: 'https://x.com/ziontechgroup', icon: Twitter },
     { name: 'LinkedIn', href: 'https://www.linkedin.com/company/ziontechgroup', icon: Linkedin },
     { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
-    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
-    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
-    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube }
+    { name: 'Facebook', href: 'https://www.facebook.com/ziontechgroup', icon: Facebook },
+    { name: 'Instagram', href: 'https://www.instagram.com/ziontechgroup', icon: Instagram },
+    { name: 'YouTube', href: 'https://www.youtube.com/@ziontechgroup', icon: Youtube }
   ];
 
   const social = [

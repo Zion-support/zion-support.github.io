@@ -32,8 +32,10 @@ const sidebarSections = [
       { name: 'AI Content Personalization', href: '/ai-content-personalization-engine', badge: 'New' },
       { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem-manager' },
       { name: 'AI Ethics & Governance', href: '/ai-ethics-governance-framework' },
-      { name: 'AI Creativity Studio', href: '/intelligent-content-automation-platform' },
-      { name: 'AI Education Platform', href: '/education-technology-solutions' },
+      { name: 'RAG Evaluation Lab', href: '/rag-evaluation-lab/', badge: 'New' },
+      { name: 'API Performance Testing', href: '/api-performance-testing/' },
+      { name: 'AI Creativity Studio', href: '/ai-creativity-studio' },
+      { name: 'AI Education Platform', href: '/ai-education-platform' },
       { name: 'AI Healthcare Diagnostics', href: '/healthcare-solutions' },
       { name: 'AI Financial Intelligence', href: '/ai-financial-intelligence' },
       { name: 'AI Sustainability Platform', href: '/ai-sustainability-platform' },
@@ -72,10 +74,11 @@ const sidebarSections = [
       { name: 'AI-Powered DevOps', href: '/ai-powered-devops-platform', badge: 'New' },
       { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure-platform' },
       { name: 'Zero Trust Security', href: '/zero-trust-security-platform' },
-      { name: 'Quantum Networking', href: '/quantum-networking' },
-      { name: 'Quantum Data Center', href: '/quantum-data-center' },
-      { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity' },
-      { name: 'Quantum Cloud Migration', href: '/quantum-cloud-migration' }
+      { name: 'Browser Automation Cloud', href: '/browser-automation-cloud/' },
+      { name: 'Secrets Rotation Automation', href: '/secrets-rotation-automation/' },
+      { name: 'Quantum Networking', href: '/quantum-services' },
+      { name: 'Quantum Data Center', href: '/quantum-services' },
+      { name: 'Quantum Cloud Migration', href: '/quantum-cloud-infrastructure' }
     ]
   },
   {
