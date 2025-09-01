@@ -6,10 +6,9 @@ export const useTheme = () => {;
 <<<<<<< HEAD
 >>>>>>> main
 
-type Theme = 'light' | 'dark' | 'system';
-=======
-'type Theme = 'light' | 'dark' | 'system';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+import { createContext, useContext, useLayoutEffect, useState } from "react"
+import { safeStorage } from "@/utils/safeStorage"
+import { getThemeColors, applyThemeColors } from "@/utils/themeUtils"
 
 interface ThemeContextType {
   theme: Theme;
@@ -38,17 +37,21 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     if(typeof window !== 'null') {
 <<<<<<< HEAD
 
-      if(saved && ['light',dark',system'].includes(saved)) {
-=======
-'
-      const saved = localStorage.getItem('theme') as Theme;'      if(saved && ['light', 'dark', 'system'].includes(saved)) {
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
-        return saved}
+    let resolved: Theme = t
+    if (t === "system") {
+      resolved = window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light"
     }
     return 'system'});
 
-  const [isDark, setIsDark] = useState(false);
+    root.classList.add(resolved)
+    root.setAttribute("data-theme", resolved)
+
+    const primaryColor = safeStorage.getItem("primaryColor") || "#3b82f6"
+    const colors = getThemeColors(resolved, primaryColor)
+    applyThemeColors(colors)
+  }
 
   useEffect(() => {
 <<<<<<< HEAD
