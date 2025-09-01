@@ -1,171 +1,142 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Zion Tech Group - Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services."
-    />
-    <meta
-      name="keywords"
-      content="AI, cybersecurity, cloud infrastructure, digital transformation, technology solutions, Zion Tech Group"
-    />
-    <meta name="author" content="Zion Tech Group" />
-    <meta name="keywords" content="AI marketplace, tech services, artificial intelligence, IT services, AI developers, technology marketplace, AI solutions, machine learning, digital transformation" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cloud Automations Dashboard</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Cloud Automations</h1>
+    <p>Autonomous, intelligent, and useful automations running in the cloud. No servers to manage, no manual ops.</p>
+    <nav>
+      <a href="#trending">Trending Repos</a>
+      <a href="#feeds">Tech News</a>
+      <a href="#uptime">Uptime</a>
+      <a href="README.md">About</a>
+    </nav>
+  </header>
 
-    <!-- High tech font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet" />
+  <main>
+    <section id="trending" class="card">
+      <h2>Trending GitHub Repositories (last 7 days)</h2>
+      <p>Updated on a schedule by cloud workflow. Discover rapidly growing projects.</p>
+      <div class="meta">
+        <a target="_blank" rel="noopener" href="data/trending/latest.json">View raw JSON</a>
+        <span id="trending-updated"></span>
+      </div>
+      <ul id="trending-list" class="list"></ul>
+    </section>
 
-    <meta name="theme-color" content="#0a0f1f" />
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="/logos/zion-logo.png" />
-    <meta property="og:url" content="https://app.ziontechgroup.com/" />
-    <meta property="og:site_name" content="Zion Marketplace" />
-    
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:title" content="Zion - The Future of Tech & AI Marketplace" />
-    <meta name="twitter:description" content="The world's first free marketplace dedicated to high-tech and artificial intelligence. Publish, connect, and thrive — all in one place." />
-    <meta name="twitter:image" content="/logos/zion-logo.png" />
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://app.ziontechgroup.com/" />
-    
-    <!-- Favicon -->
-    <link rel="icon" href="/logos/zion-logo.png" />
-    
-    <!-- Apple Touch Icon -->
-    <link rel="apple-touch-icon" href="/logos/zion-logo.png" />
-    
-    <!-- Structured data (JSON-LD) for SEO -->
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.gpteng.co"
-    />
-    <meta
-      property="og:description"
-      content="Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services."
-    />
-    <meta property="og:image" content="/og-image.svg" />
+    <section id="feeds" class="card">
+      <h2>Tech News Aggregator</h2>
+      <p>Latest headlines across top sources. Parsed and consolidated by our feed bot.</p>
+      <div class="meta">
+        <a target="_blank" rel="noopener" href="data/feeds/latest.json">View raw JSON</a>
+        <span id="feeds-updated"></span>
+      </div>
+      <ul id="feeds-list" class="list"></ul>
+    </section>
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://ziontechgroup.com/" />
-    <meta
-      property="twitter:title"
-      content="Zion Tech Group - Technology Solutions"
-    />
-    <meta
-      property="twitter:description"
-      content="Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services."
-    />
-    <meta property="twitter:image" content="/og-image.svg" />
+    <section id="uptime" class="card">
+      <h2>Uptime Dashboard</h2>
+      <p>Periodic health checks with response times.</p>
+      <div class="meta">
+        <a target="_blank" rel="noopener" href="data/uptime/latest.json">View raw JSON</a>
+        <span id="uptime-updated"></span>
+      </div>
+      <div id="uptime-summary" class="summary"></div>
+      <ul id="uptime-list" class="list"></ul>
+    </section>
+  </main>
 
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://ziontechgroup.com/" />
+  <footer>
+    <p>Runs on GitHub Actions. Data updates are committed back to this repository automatically.</p>
+  </footer>
 
-    <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script>
+    async function loadJson(url) {
+      const res = await fetch(url);
+      if (!res.ok) throw new Error(`Failed to load ${url}: ${res.status}`);
+      return res.json();
+    }
 
-    <!-- Fonts -->
+    function formatDate(iso) {
+      try { return new Date(iso).toLocaleString(); } catch { return iso; }
+    }
 
-    <link
-      rel="preload"
-      as="style"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-      media="print"
-      onload="this.media='all'"
-    />
-    <noscript>
-      <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet"
-      />
-    </noscript>
-
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" href="/logo192.png" />
-    <link rel="manifest" href="/manifest.json" />
-
-    <title>Zion Tech Group - Technology Solutions</title>
-
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Zion",
-        "url": "https://app.ziontechgroup.com",
-        "logo": "/logos/zion-logo.png",
-        "description": "The world's first free marketplace dedicated to high-tech and artificial intelligence. Publish, connect, and thrive — all in one place.",
-        "sameAs": [
-          "https://twitter.com/lovable_dev",
-          "https://www.facebook.com/zionmarketplace",
-          "https://www.linkedin.com/company/zion-marketplace"
-        ]
-      }
-    </script>
-  </head>
-
-  <body>
-    <div id="root"><!--app-html-->
-      <noscript>
-        <style>
-          body {
-            background: #ffffff;
-            color: #000000;
-            font-family: Arial, sans-serif;
-            padding: 1rem;
-          }
-        </style>
-        This application requires JavaScript. Please enable JavaScript and run
-        the development server.
-      </noscript>
-    </div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <!-- <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script> -->
-    <script type="module" src="/src/main.tsx"></script>
-
-    <!-- Service Worker Registration -->
-    <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker
-            .register('/sw.js')
-            .then(registration => {
-              console.log('SW registered: ', registration);
-
-              // Check for updates
-              registration.addEventListener('updatefound', () => {
-                const newWorker = registration.installing;
-                newWorker.addEventListener('statechange', () => {
-                  if (
-                    newWorker.state === 'installed' &&
-                    navigator.serviceWorker.controller
-                  ) {
-                    // New content is available
-                    if (confirm('New version available! Reload to update?')) {
-                      window.location.reload();
-                    }
-                  }
-                });
-              });
-            })
-            .catch(registrationError => {
-              console.log('SW registration failed: ', registrationError);
-            });
+    async function renderTrending() {
+      try {
+        const data = await loadJson('data/trending/latest.json');
+        document.getElementById('trending-updated').textContent = `Updated: ${formatDate(data.generated_at)}`;
+        const ul = document.getElementById('trending-list');
+        ul.innerHTML = '';
+        (data.repositories || []).slice(0, 15).forEach(repo => {
+          const li = document.createElement('li');
+          li.innerHTML = `
+            <a href="${repo.html_url}" target="_blank" rel="noopener">${repo.full_name}</a>
+            <span class="tag">⭐ ${repo.stargazers_count ?? ''}</span>
+            <span class="tag">${repo.language ?? ''}</span>
+            <div class="desc">${repo.description ?? ''}</div>
+          `;
+          ul.appendChild(li);
         });
+      } catch (e) {
+        console.error(e);
       }
-    </script>
-  </body>
+    }
+
+    async function renderFeeds() {
+      try {
+        const data = await loadJson('data/feeds/latest.json');
+        document.getElementById('feeds-updated').textContent = `Updated: ${formatDate(data.generated_at)}`;
+        const ul = document.getElementById('feeds-list');
+        ul.innerHTML = '';
+        (data.items || []).slice(0, 30).forEach(item => {
+          const li = document.createElement('li');
+          const source = item.source ? `<span class="tag">${item.source}</span>` : '';
+          const published = item.published_iso ? `<span class="time">${formatDate(item.published_iso)}</span>` : '';
+          li.innerHTML = `
+            ${source}
+            <a href="${item.link}" target="_blank" rel="noopener">${item.title}</a>
+            ${published}
+          `;
+          ul.appendChild(li);
+        });
+      } catch (e) {
+        console.error(e);
+      }
+    }
+
+    async function renderUptime() {
+      try {
+        const data = await loadJson('data/uptime/latest.json');
+        document.getElementById('uptime-updated').textContent = `Updated: ${formatDate(data.generated_at)}`;
+        const summaryDiv = document.getElementById('uptime-summary');
+        const s = data.summary || {};
+        summaryDiv.textContent = `OK: ${s.ok ?? 0} / ${s.total ?? 0} • Avg: ${s.avg_ms ?? 0} ms`;
+        const ul = document.getElementById('uptime-list');
+        ul.innerHTML = '';
+        (data.results || []).forEach(r => {
+          const li = document.createElement('li');
+          const status = r.ok ? 'ok' : 'fail';
+          li.innerHTML = `
+            <span class="dot ${status}"></span>
+            <a href="${r.url}" target="_blank" rel="noopener">${r.url}</a>
+            <span class="tag">${r.status_code ?? 'ERR'}</span>
+            <span class="time">${r.response_ms} ms</span>
+          `;
+          ul.appendChild(li);
+        });
+      } catch (e) {
+        console.error(e);
+      }
+    }
+
+    renderTrending();
+    renderFeeds();
+    renderUptime();
+  </script>
+</body>
 </html>
