@@ -245,7 +245,7 @@ module.exports = {
     // AI Code Review - Runs AI-powered code review
     {
       name: 'ai-code-review',
-      script: './scripts/automation/ai-code-reviewer.cjs',
+      script: './scripts/automation/ai-code-review.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
