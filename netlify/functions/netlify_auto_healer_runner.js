@@ -1,20 +1,20 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('homepage_advertiser function triggered');
+    console.log('netlify_auto_healer_runner function triggered');
     
     // Basic function logic
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'Homepage advertiser function executed successfully',
+        message: 'Netlify auto healer runner function executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'homepage_advertiser'
+        function: 'netlify_auto_healer_runner'
       })
     };
     
     return result;
   } catch (error) {
-    console.error('Error in homepage_advertiser:', error);
+    console.error('Error in netlify_auto_healer_runner:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({

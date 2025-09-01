@@ -1,20 +1,20 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('homepage_advertiser function triggered');
+    console.log('hyper_front_index_accelerator function triggered');
     
     // Basic function logic
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'Homepage advertiser function executed successfully',
+        message: 'Hyper front index accelerator function executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'homepage_advertiser'
+        function: 'hyper_front_index_accelerator'
       })
     };
     
     return result;
   } catch (error) {
-    console.error('Error in homepage_advertiser:', error);
+    console.error('Error in hyper_front_index_accelerator:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({

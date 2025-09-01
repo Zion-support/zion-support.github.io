@@ -1,20 +1,20 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('homepage_advertiser function triggered');
+    console.log('headers_enforcer function triggered');
     
     // Basic function logic
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'Homepage advertiser function executed successfully',
+        message: 'Headers enforcer function executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'homepage_advertiser'
+        function: 'headers_enforcer'
       })
     };
     
     return result;
   } catch (error) {
-    console.error('Error in homepage_advertiser:', error);
+    console.error('Error in headers_enforcer:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({

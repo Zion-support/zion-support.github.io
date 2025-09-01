@@ -1,20 +1,20 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('homepage_advertiser function triggered');
+    console.log('pagespeed_insights_runner function triggered');
     
     // Basic function logic
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'Homepage advertiser function executed successfully',
+        message: 'PageSpeed insights runner function executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'homepage_advertiser'
+        function: 'pagespeed_insights_runner'
       })
     };
     
     return result;
   } catch (error) {
-    console.error('Error in homepage_advertiser:', error);
+    console.error('Error in pagespeed_insights_runner:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({

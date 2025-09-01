@@ -1,20 +1,20 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('homepage_advertiser function triggered');
+    console.log('deps_auto_upgrade_runner function triggered');
     
     // Basic function logic
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'Homepage advertiser function executed successfully',
+        message: 'Deps auto upgrade runner function executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'homepage_advertiser'
+        function: 'deps_auto_upgrade_runner'
       })
     };
     
     return result;
   } catch (error) {
-    console.error('Error in homepage_advertiser:', error);
+    console.error('Error in deps_auto_upgrade_runner:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
