@@ -1,5 +1,5 @@
-const path = require('path');
 const os = require('os');
+const path = require('path');
 
 const nextConfig = {
   assetPrefix: process.env.NODE_ENV === 'production' ? 'https://ziontechgroup.com' : '',
