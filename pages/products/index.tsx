@@ -1,3 +1,3 @@
 export default function Products() {
-  return <div style={{ padding: 24 }}>Products</div>;
+  return <div className="py-8">Products</div>;
 }

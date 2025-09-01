@@ -1,3 +1,1 @@
-export default function InnovationInEnterpriseTechnology() {
-  return <div style={{ padding: 24 }}>Innovation in Enterprise Technology</div>;
-}
+export default function Page() { return <div className="py-8">innovation-in-enterprise-technology</div>; }

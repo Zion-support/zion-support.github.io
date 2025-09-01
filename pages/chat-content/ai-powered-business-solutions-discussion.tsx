@@ -1,3 +1,1 @@
-export default function AIPoweredBusinessSolutionsDiscussion() {
-  return <div style={{ padding: 24 }}>AI-powered Business Solutions Discussion</div>;
-}
+export default function Page() { return <div className="py-8">ai-powered-business-solutions-discussion</div>; }

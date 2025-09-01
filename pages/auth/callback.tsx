@@ -1,3 +1,3 @@
 export default function AuthCallback() {
-  return <div style={{ padding: 24 }}>Auth Callback</div>;
+  return <div className="py-8">Auth Callback</div>;
 }

@@ -1,3 +1,3 @@
 export default function AuthIndex() {
-  return <div style={{ padding: 24 }}>Auth</div>;
+  return <div className="py-8">Auth</div>;
 }

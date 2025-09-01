@@ -1,3 +1,3 @@
 export default function AutomationStatus() {
-  return <div style={{ padding: 24 }}>Automation Status</div>;
+  return <div className="py-8">Automation Status</div>;
 }

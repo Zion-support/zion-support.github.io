@@ -1,3 +1,1 @@
-export default function FutureOfWorkAndAutomation() {
-  return <div style={{ padding: 24 }}>Future of Work and Automation</div>;
-}
+export default function Page() { return <div className="py-8">future-of-work-and-automation</div>; }

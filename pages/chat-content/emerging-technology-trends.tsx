@@ -1,3 +1,1 @@
-export default function EmergingTechnologyTrends() {
-  return <div style={{ padding: 24 }}>Emerging Technology Trends</div>;
-}
+export default function Page() { return <div className="py-8">emerging-technology-trends</div>; }

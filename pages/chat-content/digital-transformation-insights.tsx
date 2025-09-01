@@ -1,3 +1,1 @@
-export default function DigitalTransformationInsights() {
-  return <div style={{ padding: 24 }}>Digital Transformation Insights</div>;
-}
+export default function Page() { return <div className="py-8">digital-transformation-insights</div>; }

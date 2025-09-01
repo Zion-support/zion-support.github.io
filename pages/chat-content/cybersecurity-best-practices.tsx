@@ -1,3 +1,1 @@
-export default function CybersecurityBestPractices() {
-  return <div style={{ padding: 24 }}>Cybersecurity Best Practices</div>;
-}
+export default function Page() { return <div className="py-8">cybersecurity-best-practices</div>; }

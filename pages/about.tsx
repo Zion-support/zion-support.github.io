@@ -1,3 +1,3 @@
 export default function About() {
-  return <div style={{ padding: 24 }}>About Zion</div>;
+  return <div className="py-8">About Zion</div>;
 }

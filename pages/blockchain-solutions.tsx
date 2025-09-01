@@ -1,3 +1,3 @@
 export default function BlockchainSolutions() {
-  return <div style={{ padding: 24 }}>Blockchain Solutions</div>;
+  return <div className="py-8">Blockchain Solutions</div>;
 }

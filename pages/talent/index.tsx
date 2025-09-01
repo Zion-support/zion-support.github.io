@@ -1,3 +1,3 @@
-export default function TalentIndex() {
-  return <div style={{ padding: 24 }}>Talent</div>;
+export default function Talent() {
+  return <div className="py-8">Talent</div>;
 }

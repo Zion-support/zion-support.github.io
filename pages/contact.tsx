@@ -1,3 +1,3 @@
 export default function Contact() {
-  return <div style={{ padding: 24 }}>Contact Us</div>;
+  return <div className="py-8">Contact us</div>;
 }

@@ -1,3 +1,3 @@
 export default function ForgotPassword() {
-  return <div style={{ padding: 24 }}>Forgot Password</div>;
+  return <div className="py-8">Forgot Password</div>;
 }

@@ -1,3 +1,1 @@
-export default function SustainableTechnologyPractices() {
-  return <div style={{ padding: 24 }}>Sustainable Technology Practices</div>;
-}
+export default function Page() { return <div className="py-8">sustainable-technology-practices</div>; }

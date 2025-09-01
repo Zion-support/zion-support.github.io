@@ -1,3 +1,1 @@
-export default function DataAnalyticsImplementation() {
-  return <div style={{ padding: 24 }}>Data Analytics Implementation</div>;
-}
+export default function Page() { return <div className="py-8">data-analytics-implementation</div>; }

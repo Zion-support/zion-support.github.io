@@ -1,3 +1,3 @@
 export default function EnhancedHome() {
-  return <div style={{ padding: 24 }}>Enhanced Home</div>;
+  return <div className="py-8">Enhanced Home</div>;
 }

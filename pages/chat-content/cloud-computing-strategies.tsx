@@ -1,3 +1,1 @@
-export default function CloudComputingStrategies() {
-  return <div style={{ padding: 24 }}>Cloud Computing Strategies</div>;
-}
+export default function Page() { return <div className="py-8">cloud-computing-strategies</div>; }

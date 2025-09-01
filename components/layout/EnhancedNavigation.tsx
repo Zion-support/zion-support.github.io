@@ -43,9 +43,7 @@ export default function EnhancedNavigation() {
           <Link href="/docs/gitbook"><a>Docs</a></Link>
           <Link href="/about"><a>About</a></Link>
           <Link href="/blog"><a>Blog</a></Link>
-          <Link href="/learn"><a>Learn</a></Link>
-          <Link href="/certifications"><a>Certifications</a></Link>
-          <Link href="/dao"><a>DAO</a></Link>
+          <Link href="/book-builder"><a>Book Builder</a></Link>
           <Link href="/contact"><a>Contact</a></Link>
           <Link href="/summit"><a className="font-medium">Summit</a></Link>
           <button
