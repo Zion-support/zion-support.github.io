@@ -1,20 +1,19 @@
 import React, { Suspense, lazy, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { AppHeader } from './layout/AppHeader';
-import { Footer } from './components/SiteFooter.jsx';
-import { LoadingSpinner } from './components/ui/LoadingSpinner';
-import { EnhancedSEO } from './components/EnhancedSEO';
-import { PerformanceOptimizer } from './components/PerformanceOptimizer';
-import ErrorBoundary from './components/ErrorBoundary';
-import { ThemeProvider } from './components/ThemeProvider';
+import { Routes, Route } from 'react-router-dom';
+import { ErrorBoundary } from 'react-error-boundary';
+import { LoadingSpinner } from './components/ui/loading-spinner';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import Sidebar from './components/Sidebar';
 
 // Enhanced lazy loading with preloading hints
-const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
+const createLazyComponent = (
+  importFn: () => Promise<{ default: React.ComponentType<any> }>,
+  fallback?: React.ReactNode
+) => {
   const LazyComponent = lazy(importFn);
   return (props: any) => (
-    <Suspense fallback={fallback || <div>Loading...</div>}>
+    <Suspense fallback={fallback || <LoadingSpinner />}>
       <LazyComponent {...props} />
     </Suspense>
   );
@@ -39,9 +38,9 @@ const Helpdesk = lazy(() => import('./pages/Helpdesk').then(module => ({ default
 const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ default: module.PricingPage })));
 
 // Service Pages - Updated to use backup-pages location
-const AIThreatIntelligence = lazy(() => import('./backup-pages/src-pages/services/ai-threat-intelligence-platform').then(module => ({ default: module.AIThreatIntelligencePlatform })));
-const BlockchainSupplyChain = lazy(() => import('./backup-pages/src-pages/services/blockchain-supply-chain-platform').then(module => ({ default: module.BlockchainSupplyChainPlatform })));
-const AdvancedServicesShowcase = lazy(() => import('./backup-pages/src-pages/AdvancedServicesShowcase2028').then(module => ({ default: module.AdvancedServicesShowcase2028 })));
+const AIThreatIntelligence = lazy(() => import('../backup-pages/src-pages/services/ai-threat-intelligence-platform').then(module => ({ default: module.AIThreatIntelligencePlatform })));
+const BlockchainSupplyChain = lazy(() => import('../backup-pages/src-pages/services/blockchain-supply-chain-platform').then(module => ({ default: module.BlockchainSupplyChainPlatform })));
+const AdvancedServicesShowcase = lazy(() => import('../backup-pages/src-pages/AdvancedServicesShowcase2028').then(module => ({ default: module.AdvancedServicesShowcase2028 })));
 
 // Loading component
 const PageLoader = () => (
@@ -58,55 +57,50 @@ function App() {
 
   return (
     <ErrorBoundary fallback={<div>Something went wrong. Please refresh the page.</div>}>
-      <ThemeProvider>
-        <PerformanceOptimizer>
-          <EnhancedSEO />
-          <div className="App">
-            <Header />
-            <div className="flex pt-16">
-              <Sidebar isOpen={sidebarOpen} onToggle={() => setSidebarOpen(!sidebarOpen)} />
-              <main className="flex-1 ml-64 min-h-screen">
-                <Suspense fallback={<PageLoader />}>
-                  <Routes>
-                    <Route path="/" element={<HomePage />} />
-                    <Route path="/services" element={<ServicesPage />} />
-                    <Route path="/services/*" element={<ServicesPage />} />
-                    <Route path="/services/ai-threat-intelligence" element={<AIThreatIntelligence />} />
-                    <Route path="/services/blockchain-supply-chain" element={<BlockchainSupplyChain />} />
-                    <Route path="/advanced-services-2028" element={<AdvancedServicesShowcase />} />
-                    <Route path="/comprehensive-services" element={<ComprehensiveServicesPage />} />
-                    <Route path="/comprehensive-services-2026" element={<ComprehensiveServicesShowcase2026 />} />
-                    <Route path="/comprehensive-marketing-2026" element={<ComprehensiveMarketingPage2026 />} />
-                    <Route path="/pricing" element={<PricingPage />} />
-                    <Route path="/solutions" element={<SolutionsPage />} />
-                    <Route path="/solutions/*" element={<SolutionsPage />} />
-                    <Route path="/about" element={<AboutPage />} />
-                    <Route path="/about/*" element={<AboutPage />} />
-                    <Route path="/contact" element={<ContactPage />} />
-                    <Route path="/blog" element={<BlogPage />} />
-                    <Route path="/blog/*" element={<BlogPage />} />
-                    <Route path="/careers" element={<AboutPage />} />
-                    <Route path="/partners" element={<AboutPage />} />
-                    <Route path="/press" element={<AboutPage />} />
-                    <Route path="/case-studies" element={<BlogPage />} />
-                    <Route path="/research-development" element={<BlogPage />} />
-                    <Route path="/docs" element={<BlogPage />} />
-                    <Route path="/api" element={<BlogPage />} />
-                    <Route path="/developer" element={<BlogPage />} />
-                    <Route path="/sitemap" element={<Sitemap />} />
-                    <Route path="/comprehensive-sitemap" element={<ComprehensiveSitemap />} />
-                    <Route path="/support" element={<Support />} />
-                    <Route path="/training" element={<Training />} />
-                    <Route path="/helpdesk" element={<Helpdesk />} />
-                    <Route path="*" element={<NotFoundPage />} />
-                  </Routes>
-                </Suspense>
-              </main>
-            </div>
-            <Footer />
-          </div>
-        </PerformanceOptimizer>
-      </ThemeProvider>
+      <div className="App">
+        <Header />
+        <div className="flex pt-16">
+          <Sidebar isOpen={sidebarOpen} onToggle={() => setSidebarOpen(!sidebarOpen)} />
+          <main className="flex-1 ml-64 min-h-screen">
+            <Suspense fallback={<PageLoader />}>
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/services" element={<ServicesPage />} />
+                <Route path="/services/*" element={<ServicesPage />} />
+                <Route path="/services/ai-threat-intelligence" element={<AIThreatIntelligence />} />
+                <Route path="/services/blockchain-supply-chain" element={<BlockchainSupplyChain />} />
+                <Route path="/advanced-services-2028" element={<AdvancedServicesShowcase />} />
+                <Route path="/comprehensive-services" element={<ComprehensiveServicesPage />} />
+                <Route path="/comprehensive-services-2026" element={<ComprehensiveServicesShowcase2026 />} />
+                <Route path="/comprehensive-marketing-2026" element={<ComprehensiveMarketingPage2026 />} />
+                <Route path="/pricing" element={<PricingPage />} />
+                <Route path="/solutions" element={<SolutionsPage />} />
+                <Route path="/solutions/*" element={<SolutionsPage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/about/*" element={<AboutPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="/blog" element={<BlogPage />} />
+                <Route path="/blog/*" element={<BlogPage />} />
+                <Route path="/careers" element={<AboutPage />} />
+                <Route path="/partners" element={<AboutPage />} />
+                <Route path="/press" element={<AboutPage />} />
+                <Route path="/case-studies" element={<BlogPage />} />
+                <Route path="/research-development" element={<BlogPage />} />
+                <Route path="/docs" element={<BlogPage />} />
+                <Route path="/api" element={<BlogPage />} />
+                <Route path="/developer" element={<BlogPage />} />
+                <Route path="/sitemap" element={<Sitemap />} />
+                <Route path="/comprehensive-sitemap" element={<ComprehensiveSitemap />} />
+                <Route path="/support" element={<Support />} />
+                <Route path="/training" element={<Training />} />
+                <Route path="/helpdesk" element={<Helpdesk />} />
+                <Route path="*" element={<NotFoundPage />} />
+              </Routes>
+            </Suspense>
+          </main>
+        </div>
+        <Footer />
+      </div>
     </ErrorBoundary>
   );
 }

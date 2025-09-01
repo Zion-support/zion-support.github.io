@@ -5,11 +5,8 @@ import { HelmetProvider } from 'react-helmet-async';
 import { ErrorBoundary } from 'react-error-boundary';
 import App from './App';
 import './index.css';
+import { registerServiceWorker } from './utils/serviceWorker';
 
-const rootElement = document.getElementById('root');
-if (!rootElement) throw new Error('Failed to find the root element');
-
-const root = ReactDOM.createRoot(rootElement);
 
 function ErrorFallback({ error }: { error: Error }) {
   return (
@@ -28,6 +25,11 @@ function ErrorFallback({ error }: { error: Error }) {
   );
 }
 
+const rootElement = document.getElementById('root');
+if (!rootElement) throw new Error('Failed to find the root element');
+
+const root = ReactDOM.createRoot(rootElement);
+
 root.render(
   <React.StrictMode>
     <BrowserRouter>
@@ -39,3 +41,8 @@ root.render(
     </BrowserRouter>
   </React.StrictMode>
 );
+
+// Register service worker
+registerServiceWorker().catch(error => {
+  console.warn('Service worker registration failed:', error);
+});
