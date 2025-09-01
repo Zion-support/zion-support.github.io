@@ -5,10 +5,7 @@ import { resolve } from 'path';
 // https://vitejs.dev/config/;
 export { defineConfig };
 export default defineConfig({
-  plugins: [
-    react(),
-    splitVendorChunkPlugin()
-  ],
+  plugins: [react()],
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),
