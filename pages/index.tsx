@@ -79,7 +79,123 @@ const Home: NextPage = () => {
 
 =======
 export default function HomePage() {
->>>>>>> 3c1dda747d3aa200ea8a4e49d78b84af83a4d328
+  const [currentFeature, setCurrentFeature] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+    
+    // Auto-rotate features
+    const interval = setInterval(() => {
+      setCurrentFeature((prev) => (prev + 1) % 6);
+    }, 5000);
+    
+    return () => clearInterval(interval);
+  }, []);
+
+  const features = [
+    {
+      icon: Brain,
+      title: "AI Autonomous Ecosystem",
+      description: "Revolutionary autonomous AI solutions that adapt and evolve",
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      icon: Atom,
+      title: "Quantum AI Neural Networks",
+      description: "Quantum-powered AI with advanced consciousness capabilities",
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      icon: Shield,
+      title: "Quantum Cybersecurity",
+      description: "Quantum-resistant security with AI-powered threat detection",
+      color: "from-red-500 to-orange-500"
+    },
+    {
+      icon: Rocket,
+      title: "Space Resource Intelligence",
+      description: "AI-powered space resource discovery and optimization",
+      color: "from-indigo-500 to-purple-500"
+    },
+    {
+      icon: Cpu,
+      title: "Autonomous DevOps",
+      description: "AI-powered DevOps optimization and automation",
+      color: "from-emerald-500 to-teal-500"
+    },
+    {
+      icon: Database,
+      title: "Edge Computing Orchestration",
+      description: "Advanced edge computing optimization platform",
+      color: "from-yellow-500 to-orange-500"
+    }
+  ];
+
+  const services = [
+    {
+      title: "AI Business Intelligence",
+      description: "Transform data into actionable insights with AI-powered analytics",
+      icon: Brain,
+      color: "from-purple-500 to-pink-500",
+      link: "https://ziontechgroup.com/ai-business-intelligence",
+      price: "$499/month",
+      features: ["AI-powered dashboards", "Predictive analytics", "Real-time insights"]
+    },
+    {
+      title: "Quantum Cybersecurity",
+      description: "Future-proof security with quantum-resistant encryption and AI threat detection",
+      icon: Shield,
+      color: "from-red-500 to-orange-500",
+      link: "https://ziontechgroup.com/quantum-cybersecurity",
+      price: "$799/month",
+      features: ["Quantum-resistant encryption", "AI threat detection", "Zero-trust architecture"]
+    },
+    {
+      title: "AI Healthcare Analytics",
+      description: "Transform healthcare data into actionable insights with AI-powered analytics",
+      icon: Brain,
+      color: "from-emerald-500 to-green-500",
+      link: "https://ziontechgroup.com/ai-healthcare-analytics",
+      price: "$699/month",
+      features: ["Patient outcome prediction", "Treatment optimization", "Population health insights"]
+    },
+    {
+      title: "Quantum Financial Modeling",
+      description: "Revolutionize financial modeling with quantum computing and AI",
+      icon: Atom,
+      color: "from-yellow-500 to-orange-500",
+      link: "https://ziontechgroup.com/quantum-financial-modeling",
+      price: "$1,599/month",
+      features: ["Quantum portfolio optimization", "AI market prediction", "Risk assessment"]
+    },
+    {
+      title: "Edge AI Video Processing",
+      description: "Process video in real-time with AI at the edge",
+      icon: Cpu,
+      color: "from-red-500 to-pink-500",
+      link: "https://ziontechgroup.com/edge-ai-video-processing",
+      price: "$449/month",
+      features: ["Real-time analytics", "Object detection", "Low-latency processing"]
+    },
+    {
+      title: "Autonomous Supply Chain Robotics",
+      description: "Revolutionize logistics with AI-powered autonomous robotics",
+      icon: Rocket,
+      color: "from-gray-500 to-slate-500",
+      link: "https://ziontechgroup.com/autonomous-supply-chain-robotics",
+      price: "$1,299/month",
+      features: ["Warehouse automation", "Route optimization", "Multi-robot coordination"]
+    }
+  ];
+
+  const stats = [
+    { number: "500+", label: "Projects Delivered", icon: CheckCircle },
+    { number: "50+", label: "Enterprise Clients", icon: Users },
+    { number: "99.9%", label: "Uptime Guarantee", icon: Shield },
+    { number: "24/7", label: "Support Available", icon: Clock }
+  ];
+
   return (
     <>
       <Head>

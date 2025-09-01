@@ -44,16 +44,16 @@ export interface InnovativeAIAutonomousEcosystemService2025 {
 export const innovativeAIAutonomousEcosystemServices2025 = [
   // AI Autonomous Business Orchestrator
   {
-    id: 'ai-autonomous-business-orchestrator',
-    name: 'AI Autonomous Business Orchestrator',
-    tagline: 'Fully autonomous AI system for complete business operations management',
-    description: 'Revolutionary AI system that autonomously manages all aspects of business operations including decision-making, resource allocation, strategy execution, and performance optimization.',
-    category: 'AI & Autonomous Systems',
-    type: 'AI Service',
+    id: 'ai-autonomous-sales-intelligence-2025',
+    name: 'AI Autonomous Sales Intelligence Platform 2025',
+    tagline: 'Fully autonomous sales intelligence with predictive analytics and lead scoring',
+    description: 'Revolutionary AI platform that autonomously identifies, qualifies, and nurtures sales leads using advanced predictive analytics, behavioral analysis, and automated outreach campaigns.',
+    category: 'AI & Sales Intelligence',
+    type: 'Micro SAAS',
     pricing: {
-      starter: '$1,999/month',
-      professional: '$4,999/month',
-      enterprise: '$12,999/month',
+      starter: '$499/month',
+      professional: '$1,299/month',
+      enterprise: '$3,499/month',
       custom: 'Contact for pricing'
     },
     features: [

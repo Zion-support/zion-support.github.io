@@ -8,60 +8,22 @@ import {
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 
-export default function PricingPage() {
-  const plans = [
-    {
-      name: "Starter",
-      price: "$299",
-      period: "/month",
-      description: "Perfect for small businesses getting started with AI",
-      features: [
-        "Basic AI analytics",
-        "5 customizable dashboards",
-        "Standard reporting",
-        "Email support",
-        "Up to 10 users",
-        "Basic security features"
-      ],
-      popular: false,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      name: "Professional",
-      price: "$799",
-      period: "/month",
-      description: "Advanced features for growing businesses",
-      features: [
-        "Everything in Starter",
-        "Advanced AI capabilities",
-        "Unlimited dashboards",
-        "Custom reporting",
-        "Priority support",
-        "Up to 50 users",
-        "API access",
-        "Advanced security"
-      ],
-      popular: true,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      name: "Enterprise",
-      price: "Custom",
-      period: "",
-      description: "Full-scale solution for large organizations",
-      features: [
-        "Everything in Professional",
-        "Custom AI models",
-        "Dedicated support team",
-        "Unlimited users",
-        "On-premise deployment",
-        "Custom training",
-        "SLA guarantees",
-        "Advanced compliance"
-      ],
-      popular: false,
-      color: "from-green-500 to-emerald-500"
-    }
+export default function Pricing2025() {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly');
+
+  const categories = [
+    { id: 'all', name: 'All Services', icon: '🚀' },
+    { id: 'AI & Analytics', name: 'AI & Analytics', icon: '🧠' },
+    { id: 'AI & Healthcare', name: 'AI & Healthcare', icon: '🏥' },
+    { id: 'AI & HR Tech', name: 'AI & HR Tech', icon: '👥' },
+    { id: 'AI & Content Creation', name: 'AI & Content Creation', icon: '✍️' },
+    { id: 'AI & Energy', name: 'AI & Energy', icon: '⚡' },
+    { id: 'AI & Robotics', name: 'AI & Robotics', icon: '🤖' },
+    { id: 'Cybersecurity & Quantum', name: 'Cybersecurity & Quantum', icon: '🔒' },
+    { id: 'Edge Computing & IoT', name: 'Edge Computing & IoT', icon: '🌐' },
+    { id: 'Space Technology & Innovation', name: 'Space Technology & Innovation', icon: '🚀' },
+    { id: 'Neural Technology & BCI', name: 'Neural Technology & BCI', icon: '🧬' }
   ];
 
   const addOns = [
