@@ -131,23 +131,27 @@
   name = "auto-scheduler"
   schedule = "*/15 * * * *" # every 15 minutes
 
-# Newly added audits and sync
+# New autonomous cloud automations
 [[scheduled.functions]]
-  name = "a11y-audit-runner"
-  schedule = "7 */6 * * *"
+  name = "performance-budget-checker"
+  schedule = "*/5 * * * *" # every 5 minutes
 
 [[scheduled.functions]]
-  name = "internal-anchor-audit-runner"
-  schedule = "13 */6 * * *"
+  name = "accessibility-quickscan"
+  schedule = "*/5 * * * *" # every 5 minutes
 
 [[scheduled.functions]]
-  name = "seo-schema-audit-runner"
-  schedule = "11 */4 * * *"
+  name = "og-preview-validator"
+  schedule = "*/15 * * * *" # every 15 minutes
 
 [[scheduled.functions]]
-  name = "orphan-pages-runner"
-  schedule = "0 3 * * *"
+  name = "content-freshness-runner"
+  schedule = "*/30 * * * *" # every 30 minutes
 
 [[scheduled.functions]]
-  name = "rapid-git-sync"
-  schedule = "*/1 * * * *"
+  name = "redirect-404-suggester"
+  schedule = "0 * * * *" # hourly
+
+[[scheduled.functions]]
+  name = "ai-issue-labeler"
+  schedule = "*/5 * * * *" # every 5 minutes
