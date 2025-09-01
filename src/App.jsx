@@ -1,54 +1,69 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import AppHeader from './layout/AppHeader';
-import Footer from './components/Footer';
-import ChatAssistant from './components/ChatAssistant';
+import { AppHeader } from './layout/AppHeader.jsx';
+import { Footer } from './components/Footer.jsx';
+import { ChatAssistant } from './components/ChatAssistant.tsx';
 
 // Home and main pages
 const Home = lazy(() => import('./pages/Home.tsx'));
 const About = lazy(() => import('./pages/About.tsx'));
 const Contact = lazy(() => import('./pages/Contact.tsx'));
-const Blog = lazy(() => import('./pages/Blog.tsx'));
+const BlogPage = lazy(() => import('./pages/BlogPage.tsx'));
 const PartnersPage = lazy(() => import('./pages/Partners.tsx'));
 const Login = lazy(() => import('./pages/Login.tsx'));
 const FAQ = lazy(() => import('./pages/FAQ.tsx'));
 const Careers = lazy(() => import('./pages/Careers.tsx'));
-const Privacy = lazy(() => import('./pages/Privacy.tsx'));
-const Terms = lazy(() => import('./pages/Terms.tsx'));
-const Sitemap = lazy(() => import('./pages/Sitemap.tsx'));
+const Sitemap = lazy(() => import('./pages/Sitemap.jsx'));
 
 // Services pages
-const ServicesPage = lazy(() => import('./pages/ServicesPage.tsx'));
-const ServicesPricingPage = lazy(() => import('./pages/ServicesPricingPage.tsx'));
-const ComprehensivePricing = lazy(() => import('./pages/ComprehensivePricing.tsx'));
-
-// Marketplace pages
-const Marketplace = lazy(() => import('./pages/Marketplace.tsx'));
-
-// Support pages
-const Support = lazy(() => import('./pages/Support.tsx'));
-const Security = lazy(() => import('./pages/Security.tsx'));
-const SystemStatus = lazy(() => import('./pages/SystemStatus.tsx'));
-const Accessibility = lazy(() => import('./pages/Accessibility.tsx'));
-
-// Documentation pages
-const Documentation = lazy(() => import('./pages/Documentation.tsx'));
-const WhitePapers = lazy(() => import('./pages/WhitePapers.tsx'));
-const Webinars = lazy(() => import('./pages/Webinars.tsx'));
-const Training = lazy(() => import('./pages/Training.tsx'));
-const Research = lazy(() => import('./pages/Research.tsx'));
-
-// Search and categories
-const Search = lazy(() => import('./pages/Search.tsx'));
-const Categories = lazy(() => import('./pages/Categories.tsx'));
-
-// API Playground
-const ApiPlayground = lazy(() => import('./pages/ApiPlayground.tsx'));
+const ComprehensivePricing = lazy(() => import('./pages/ComprehensivePricing2025.tsx'));
 
 // Loading component
 const LoadingSpinner = () => (
   <div className="flex items-center justify-center min-h-screen">
     <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-zion-cyan"></div>
+  </div>
+);
+
+// Simple Services page component
+const ServicesPage = () => (
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-24">
+    <div className="container mx-auto px-4 py-16">
+      <div className="text-center mb-16">
+        <h1 className="text-4xl md:text-6xl font-bold mb-6">
+          Our
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+            {" "}Services
+          </span>
+        </h1>
+        <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          Comprehensive technology solutions to drive your business forward
+        </p>
+      </div>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+          <h3 className="text-xl font-bold text-white mb-4">AI & Machine Learning</h3>
+          <p className="text-gray-300">
+            Cutting-edge artificial intelligence solutions for business automation and insights.
+          </p>
+        </div>
+        
+        <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+          <h3 className="text-xl font-bold text-white mb-4">Cybersecurity</h3>
+          <p className="text-gray-300">
+            Advanced security solutions with zero-trust architecture and threat detection.
+          </p>
+        </div>
+        
+        <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+          <h3 className="text-xl font-bold text-white mb-4">Cloud & DevOps</h3>
+          <p className="text-gray-300">
+            Scalable cloud infrastructure and automated deployment solutions.
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 );
 
@@ -63,42 +78,16 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog" element={<BlogPage />} />
               <Route path="/partners" element={<PartnersPage />} />
               <Route path="/login" element={<Login />} />
               <Route path="/faq" element={<FAQ />} />
               <Route path="/careers" element={<Careers />} />
-              <Route path="/privacy" element={<Privacy />} />
-              <Route path="/terms" element={<Terms />} />
               <Route path="/sitemap" element={<Sitemap />} />
               <Route path="/pricing" element={<ComprehensivePricing />} />
 
               {/* Services routes */}
               <Route path="/services" element={<ServicesPage />} />
-              <Route path="/services/pricing" element={<ServicesPricingPage />} />
-
-              {/* Marketplace routes */}
-              <Route path="/marketplace" element={<Marketplace />} />
-
-              {/* Support routes */}
-              <Route path="/support" element={<Support />} />
-              <Route path="/security" element={<Security />} />
-              <Route path="/status" element={<SystemStatus />} />
-              <Route path="/accessibility" element={<Accessibility />} />
-
-              {/* Documentation routes */}
-              <Route path="/docs" element={<Documentation />} />
-              <Route path="/white-papers" element={<WhitePapers />} />
-              <Route path="/webinars" element={<Webinars />} />
-              <Route path="/training" element={<Training />} />
-              <Route path="/research" element={<Research />} />
-
-              {/* Search and categories */}
-              <Route path="/search" element={<Search />} />
-              <Route path="/categories" element={<Categories />} />
-
-              {/* API Playground */}
-              <Route path="/api-playground" element={<ApiPlayground />} />
 
               {/* Catch-all route for 404 */}
               <Route path="*" element={
