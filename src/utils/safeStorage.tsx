@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-export const safeStorage = {
-export default safeStorage;
-
-// In - memory storage for fallback with optimizations
-=======
 // In-memory storage for fallback with optimizations
->>>>>>> main
 const inMemoryStore = {};
 let localStorageAvailable = null; // Cache the availability check
 let lastAvailabilityCheck = 0;
@@ -29,8 +22,8 @@ function isLocalStorageAvailable() {
       localStorageAvailable = false;
       return false;
     }
-
-    const testKey = '__localStorage_test__';
+'
+    const testKey = '__localStorage_test__';'
     localStorage.setItem(testKey,test');
     localStorage.removeItem(testKey);
     localStorageAvailable = true;
@@ -43,10 +36,10 @@ function isLocalStorageAvailable() {
 }
 
 function safeConsoleError(message, error) {
-
-  const env = globalThis.process?.env?.NODE_ENV ?? 'production';
-  // Prevent infinite recursion in console logging'
-  if(env === 'production') return;
+'
+  const env = globalThis.process?.env?.NODE_ENV ?? 'production';'
+  // Prevent infinite recursion in console logging''
+  if (env === 'production') return;
 
   try {
     // console.error(message, error);
@@ -61,8 +54,8 @@ export const safeStorage = {
 
     try {
       return localStorage.getItem(key);
-    } catch(error) {
-
+    } catch (error) {
+'
       // console.warn('Failed to get item from localStorage:', error);
       return null;
     }
@@ -73,8 +66,8 @@ export const safeStorage = {
     try {
       localStorage.setItem(key, value);
       return true;
-    } catch(error) {
-
+    } catch (error) {
+'
       // console.warn('Failed to set item in localStorage:', error);
       return false;
     }
@@ -85,8 +78,8 @@ export const safeStorage = {
     try {
       localStorage.removeItem(key);
       return true;
-    } catch(error) {
-
+    } catch (error) {
+'
       // console.warn('Failed to remove item from localStorage:', error);
       return false;
     }
@@ -96,8 +89,8 @@ export const safeStorage = {
     try {
       localStorage.clear();
       return true;
-    } catch(error) {
-
+    } catch (error) {
+'
       // console.warn('Failed to clear localStorage:', error);
       return false;
     }
@@ -107,31 +100,22 @@ export const safeStorage = {
 
     try {
       return localStorage.key(index);
-    } catch(error) {
-<<<<<<< HEAD
-
-      // console.warn('Failed to get key from localStorage:', error);
-      return null;
-=======
+    } catch (error) {
 '
+''
       // console.warn('Failed to get key from localStorage:', error);      return null;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     }
   },
 
   get length() {
     try {
       return localStorage.length;
-    } catch(error) {
-<<<<<<< HEAD
-
-      // console.warn('Failed to get localStorage length:', error);
-      return 0;
-=======
+    } catch (error) {
 '
+''
       // console.warn('Failed to get localStorage length:', error);      return 0;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     }
   }};
 
 export default safeStorage;
+'

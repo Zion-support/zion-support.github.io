@@ -1,18 +1,30 @@
 import React from 'react';
 export const calculateRelevanceScore = (result, searchTerm) => {
+
 export const calculateSearchMetrics = (results, searchTime) => {
+
 export const debounce = (func, wait) => {
+
 export const extractKeywords = (query) => {
+
 export const filteredResults = [...results];
 export const formatSearchQuery = (query) => {
+
 export const generateDynamicSuggestions = (query, recentSearches = [], availableCategories = [], availableTags = []) => {
+
 export const getActiveFilterCount = (filters) => {
+
 export const getDefaultFilters = () => ({
+
 export const hasActiveFilters = (filters) => {
+
 export const highlightSearchTerms = (text, searchTerm) => {
+
 export const matchesSearchTerm = (text, searchTerm) => {
+
 export const sortedResults = [...results];
 export default {
+
 export default for;
 export default for;
 
@@ -21,9 +33,9 @@ export default for;
  */
 export const highlightSearchTerms = (text, searchTerm) => {
 
-    if(!searchTerm.trim())
-        return text;
-    const escaped = searchTerm.replace(/[.*+?^${}()|[\]\\]/g,\\$&');
+    if (!searchTerm.trim())
+        return text;'
+    const escaped = searchTerm.replace(/[.*+?^${}()|[\]\\]/g,\\$&');'
     const regex = new RegExp(`(${escaped})`,gi');
     return text.replace(regex,<mark class="bg-yellow-200 text-black px-1 rounded">$1</mark>);
 };
@@ -78,22 +90,22 @@ export const calculateRelevanceScore = (result, searchTerm) => {
 /**
  * Sort search results based on sort option
  */
-    switch(sortBy) {
-
+    switch (sortBy) {
+'
         case 'price_asc':
-            return sortedResults.sort((a, b) => (a.price ?? 0) - (b.price ?? 0));
+            return sortedResults.sort((a, b) => (a.price ?? 0) - (b.price ?? 0));'
         case 'price_desc':
-            return sortedResults.sort((a, b) => (b.price ?? 0) - (a.price ?? 0));
+            return sortedResults.sort((a, b) => (b.price ?? 0) - (a.price ?? 0));'
         case 'rating':
-            return sortedResults.sort((a, b) => (b.rating ?? 0) - (a.rating ?? 0));
+            return sortedResults.sort((a, b) => (b.rating ?? 0) - (a.rating ?? 0));'
         case 'date':
             return sortedResults.sort((a, b) => {
 
                 const dateB = b.date ? new Date(b.date).getTime() : 0;
                 return dateB - dateA;
-            });
+            });'
         case 'alphabetical':
-            return sortedResults.sort((a, b) => a.title.localeCompare(b.title));
+            return sortedResults.sort((a, b) => a.title.localeCompare(b.title));'
         case 'relevance':
         default:
             return sortedResults.sort((a, b) => {
@@ -144,8 +156,8 @@ export const generateDynamicSuggestions = (query, recentSearches = [], available
 
         suggestions.push({
 
-            text: query,
-            type: 'recent',`
+            text: query,'`
+            type: 'recent',``
             id: `query-${query}`
         }) ;
     }
@@ -157,8 +169,8 @@ export const generateDynamicSuggestions = (query, recentSearches = [], available
 
         suggestions.push({
 
-            text: category,
-            type: 'category',`
+            text: category,'`
+            type: 'category',``
             id: `category-${category}`
         }) ;
     }) ;
@@ -170,8 +182,8 @@ export const generateDynamicSuggestions = (query, recentSearches = [], available
 
         suggestions.push({
 
-            text: tag,
-            type: 'tag',`
+            text: tag,'`
+            type: 'tag',``
             id: `tag-${tag}`
         }) ;
     }) ;
@@ -183,8 +195,8 @@ export const generateDynamicSuggestions = (query, recentSearches = [], available
 
         suggestions.push({
 
-            text: search,
-            type: 'recent',`
+            text: search,'`
+            type: 'recent',``
             id: `recent-${search}`
         }) ;
     }) ;
@@ -245,7 +257,7 @@ export const extractKeywords = (query) => {
     return query
         .toLowerCase()
         .split(/[\s,.-]+/)
-        .filter(word => word.length > 2)
+        .filter(word => word.length > 2)'
         .filter(word => !['and',or',the',for',with',from'].includes(word));
 };
 /**
@@ -259,12 +271,12 @@ export const formatSearchQuery = (query) => {
  * Check if filters are active(not default values)
  */
 export const hasActiveFilters = (filters) => {
-
-    return (filters.types.length > 0 ||'
+'
+    return (filters.types.length > 0 ||''
         filters.category !== '' ||
         filters.minPrice > 0 ||
-        filters.maxPrice < 10000 ||
-        filters.minRating > 0 ||'
+        filters.maxPrice < 10000 ||'
+        filters.minRating > 0 ||''
         filters.sort !== 'relevance');
 };
 /**
@@ -279,9 +291,9 @@ export const getActiveFilterCount = (filters) => {
         count += 1;
     if(filters.minPrice > 0 || filters.maxPrice < 10000)
         count += 1;
-    if(filters.minRating > 0)
-        count += 1;
-    if(filters.sort !== 'relevance')
+    if (filters.minRating > 0)
+        count += 1;'
+    if (filters.sort !== 'relevance')
         count += 1;
     return count;
 };
@@ -290,11 +302,11 @@ export const getActiveFilterCount = (filters) => {
  */
 export const getDefaultFilters = () => ({
 
-    types: [],
+    types: [],'
     category: '',
     minPrice: 0,
     maxPrice: 10000,
-    minRating: 0,
+    minRating: 0,'
     sort: 'relevance'
 });
 export default {
@@ -314,5 +326,5 @@ export default {
     getDefaultFilters
 };
 
-export default for;
 export default for;'"`
+export default for;'"`'"`

@@ -1,9 +1,14 @@
 import type { Config } from 'tailwindcss';
 import defaultTheme from 'tailwindcss/defaultTheme';
+<<<<<<< HEAD
+=======
+import plugin from 'tailwindcss/plugin';
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f
 
 const config: Config = {
   darkMode: 'class',
   content: [
+<<<<<<< HEAD
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
@@ -80,11 +85,37 @@ const config: Config = {
           'var(--font-poppins), Poppins',
           ...defaultTheme.fontFamily.sans
         ]
+=======
+    './index.html',
+    './src/**/*.{ts,tsx}',
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+  ],
+  theme: {
+    extend: {
+      borderRadius: {
+        lg: 'var(--radius)',
+        md: 'calc(var(--radius) - 2px)',
+        sm: 'calc(var(--radius) - 4px)',
+      },
+      fontFamily: {
+        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+        heading: ['Poppins', ...defaultTheme.fontFamily.sans],
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f
       },
       keyframes: {
         'accordion-down': {
           from: { height: '0' },
+<<<<<<< HEAD
           to: { height: 'var(--radix-accordion-content-height)' }
+=======
+          to: { height: 'var(--radix-accordion-content-height)' },
+        },
+        'accordion-up': {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0' },
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f
         },
         'accordion-up': {
           from: { height: 'var(--radix-accordion-content-height)' },
@@ -93,6 +124,7 @@ const config: Config = {
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
+<<<<<<< HEAD
         'accordion-up': 'accordion-up 0.2s ease-out'
       }
     }
@@ -105,3 +137,21 @@ const config: Config = {
 };
 
 export default config;
+=======
+        'accordion-up': 'accordion-up 0.2s ease-out',
+      },
+    },
+  },
+  plugins: [
+    plugin(function ({ addUtilities }) {
+      const newUtilities = {
+        '.rtl': { direction: 'rtl', textAlign: 'right' },
+        '.ltr': { direction: 'ltr', textAlign: 'left' },
+      };
+      addUtilities(newUtilities);
+    }),
+  ],
+};
+
+export default config;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f

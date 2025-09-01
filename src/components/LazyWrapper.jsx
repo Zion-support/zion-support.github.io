@@ -1,5 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { motion, useInView  } from 'framer-motion';
+import React, { useState, useEffect, useRef } from 'react';'
+import { motion, useInView } from 'framer-motion';
+import { EnhancedLoading } from "./EnhancedLoading";'
+const LazyWrapper = ({ children, threshold = 0.1, className = '', loadingVariant = 'default', loadingText = 'Loading...', loadingSize = 'md' }) => {
 
 export default function Page() {
     }, [inView, isInView]) ;
@@ -10,6 +12,7 @@ export default function Page() {
       </div>) }
     if(!isLoaded) {
 `
+``
         return (<div className={`min-h-[200px] ${className}`}>
         <EnhancedLoading variant={loadingVariant} text={loadingText} size={loadingSize}/>
       </div>) ;
@@ -27,5 +30,5 @@ export default function Page() {
 }} transition={{ duration: 0.6 }} className={className}>
       {children}
     </motion.div>)};
-export default LazyWrapper;
-}}}'"`
+export default LazyWrapper;'"`
+}}}'"`'"`

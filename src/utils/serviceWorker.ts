@@ -1,22 +1,23 @@
 // Service Worker Registration Utility
-export function registerServiceWorker(): Promise<ServiceWorkerRegistration | undefined> {
-  if('serviceWorker' in navigator) {
-    const swUrl = '/sw.js';
-    return navigator.serviceWorker
+export function registerServiceWorker(): void {
+
+  if ('serviceWorker' in navigator) {
+
+    navigator.serviceWorker
       .register(swUrl)
       .then((registration) => {
+'
         registration.addEventListener('updatefound', () => {
-          const newWorker = registration.installing;
-          if(newWorker) {
+          if (newWorker) {
+'
             newWorker.addEventListener('statechange', () => {
-              if(newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-                // New content is available
+'
+              if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+
+                // New content available
               }
-            });
-          }
-        });
-        return registration;
-      })
+            })}
+        })})
       .catch(() => {
         // console.error('SW registration failed')
         return undefined;
@@ -25,12 +26,14 @@ export function registerServiceWorker(): Promise<ServiceWorkerRegistration | und
   return Promise.resolve(undefined);
 }
 
-export function unregisterServiceWorker(): Promise<boolean | undefined> {
-  if('serviceWorker' in navigator) {
-    return navigator.serviceWorker.ready
+export function unregisterServiceWorker(): void {
+'
+  if ('serviceWorker' in navigator) {
+
+    navigator.serviceWorker.ready
       .then((registration) => {
-        return registration.unregister();
-      })
+
+        registration.unregister()})
       .catch(() => {
         // console.error('Unregister failed')
         return false;
@@ -38,3 +41,4 @@ export function unregisterServiceWorker(): Promise<boolean | undefined> {
   }
   return Promise.resolve(undefined);
 }
+'

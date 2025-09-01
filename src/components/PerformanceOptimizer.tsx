@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useEffect, useCallback } from 'react';
-export default PerformanceOptimizer;
-import { ======= <<<<<<< HEAD >>>>>>> main Activity, Zap, TrendingUp, AlertTriangle, CheckCircle, Clock, BarChart3, Settings  } from 'lucide-react';
 
 export default function Page() {
 ,
@@ -254,12 +250,16 @@ export default function Page() {
           </div>
         </div>) }
     </div>) ;
-=======
 const PerformanceOptimizer: React.FC<{ enabled?: boolean }> = ({ enabled = true }) => {
   if(!enabled) return null;
   return (<div className="hidden" aria-hidden="true" />
+
+const PerformanceOptimizer: React.FC<{ enabled?: boolean }> = ({ enabled = true }) => {
+
+  if (!enabled) return null;
+  return()
+    <div className="hidden" aria-hidden="true" />
   );
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 };
 
-export default PerformanceOptimizer;
+export default PerformanceOptimizer;"

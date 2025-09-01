@@ -3,31 +3,34 @@
 export async function rewardOnboarding (...args: any[]) : any {
 
   await apiClient ('/functions / v1 / token - manager / earn', {
+'
     method: 'POST',
-    body: JSON.stringify ({ userId, action, amount }) ,
-  }) ;
+    body: JSON.stringify ({ userId, action, amount }) }) ;
 
     purchaseAmount: number,
     purchaseType: string) : Promise < any> {
+'
     await apiClient ('/functions / v1 / token - manager / earn', {
+'
       method: 'POST',
       body: JSON.stringify ({
-        userId,
+
+        userId,'
         action: 'purchase',
         amount: purchaseAmount,
-        purchaseType,
-      }) ,
-    }) ;
+        purchaseType}) }) ;
 
       referredUserId: string) : Promise < any> {
+'
       await apiClient ('/functions / v1 / token - manager / earn', {
+'
         method: 'POST',
         body: JSON.stringify ({
-          userId,
+
+          userId,'
           action: 'referral',
           referredUserId,
-          amount: 100,
-        }) ,
-      }) }
+          amount: 100}) }) }
   }
 }
+'
