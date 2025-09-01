@@ -25,6 +25,8 @@ const ContactPage = lazy(() => import('./pages/ContactPage').then(module => ({ d
 const BlogPage = lazy(() => import('./pages/BlogPage').then(module => ({ default: module.BlogPage })));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage').then(module => ({ default: module.NotFoundPage })));
 const ComprehensiveServicesPage = lazy(() => import('./pages/ComprehensiveServicesPage').then(module => ({ default: module.ComprehensiveServicesPage })));
+const ComprehensiveServicesShowcase2026 = lazy(() => import('./pages/ComprehensiveServicesShowcase2026').then(module => ({ default: module.default })));
+const ComprehensiveMarketingPage2026 = lazy(() => import('./pages/ComprehensiveMarketingPage2026').then(module => ({ default: module.default })));
 const Sitemap = lazy(() => import('./pages/Sitemap').then(module => ({ default: module.default })));
 const ComprehensiveSitemap = lazy(() => import('./pages/ComprehensiveSitemap').then(module => ({ default: module.ComprehensiveSitemap })));
 const Support = lazy(() => import('./pages/Support').then(module => ({ default: module.default })));
@@ -66,6 +68,8 @@ function App() {
                 <Route path="/services/blockchain-supply-chain" element={<BlockchainSupplyChain />} />
                 <Route path="/advanced-services-2028" element={<AdvancedServicesShowcase />} />
                 <Route path="/comprehensive-services" element={<ComprehensiveServicesPage />} />
+                <Route path="/comprehensive-services-2026" element={<ComprehensiveServicesShowcase2026 />} />
+                <Route path="/comprehensive-marketing-2026" element={<ComprehensiveMarketingPage2026 />} />
                 <Route path="/pricing" element={<PricingPage />} />
                 <Route path="/solutions" element={<SolutionsPage />} />
                 <Route path="/solutions/*" element={<SolutionsPage />} />
