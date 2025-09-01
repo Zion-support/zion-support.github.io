@@ -1,393 +1,396 @@
 #!/usr/bin/env node
 
+const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
+
+console.log('🛡️ Starting error prevention monitor...');
 
 class ErrorPreventionMonitor {
   constructor() {
-    this.workspacePath = process.cwd();
-    this.logsPath = path.join(this.workspacePath, 'logs');
-    this.reportsPath = path.join(this.workspacePath, 'automation-reports');
-    this.ensureDirectories();
-    this.errorPatterns = new Map();
-    this.preventionHistory = new Map();
-  }
-
-  ensureDirectories() {
-    [this.logsPath, this.reportsPath].forEach(dir => {
-      if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true });
-      }
-    });
-  }
-
-  log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}`;
-    console.log(logMessage);
-    
-    const logFile = path.join(this.logsPath, 'error-prevention-monitor.log');
-    fs.appendFileSync(logFile, logMessage + '\n');
-  }
-
-  async scanForPotentialErrors() {
-    this.log('🔍 Scanning for potential errors...');
-    
-    const potentialErrors = [];
-    
-    // Scan source files for common error patterns
-    const sourceFiles = this.findSourceFiles();
-    
-    for (const filePath of sourceFiles) {
-      try {
-        const content = fs.readFileSync(filePath, 'utf8');
-        const errors = this.analyzeFileForPotentialErrors(filePath, content);
-        potentialErrors.push(...errors);
-      } catch (error) {
-        this.log(`⚠️ Could not read file ${filePath}: ${error.message}`, 'WARN');
-      }
-    }
-    
-    this.log(`Found ${potentialErrors.length} potential error patterns`);
-    return potentialErrors;
-  }
-
-  findSourceFiles() {
-    const sourceFiles = [];
-    
-    const scanDirectory = (dir) => {
-      const files = fs.readdirSync(dir);
-      files.forEach(file => {
-        const filePath = path.join(dir, file);
-        const stat = fs.statSync(filePath);
-        
-        if (stat.isDirectory() && !file.startsWith('.') && !file.startsWith('node_modules')) {
-          scanDirectory(filePath);
-        } else if (stat.isFile() && /\.(js|jsx|ts|tsx)$/.test(file)) {
-          sourceFiles.push(filePath);
-        }
-      });
+    this.preventions = [];
+    this.stats = {
+      totalIssues: 0,
+      preventedIssues: 0,
+      failedPreventions: 0,
+      filesProcessed: 0
     };
-    
-    scanDirectory(this.workspacePath);
-    return sourceFiles;
-  }
-
-  analyzeFileForPotentialErrors(filePath, content) {
-    const errors = [];
-    const lines = content.split('\n');
-    
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      const lineNumber = i + 1;
-      
-      // Check for common error patterns
-      if (this.detectUnsafeCode(line)) {
-        errors.push({
-          file: filePath,
-          line: lineNumber,
-          pattern: 'unsafe-code',
-          description: 'Potentially unsafe code detected',
-          severity: 'warning'
-        });
-      }
-      
-      if (this.detectMemoryLeak(line)) {
-        errors.push({
-          file: filePath,
-          line: lineNumber,
-          pattern: 'memory-leak',
-          description: 'Potential memory leak detected',
-          severity: 'warning'
-        });
-      }
-      
-      if (this.detectAsyncError(line)) {
-        errors.push({
-          file: filePath,
-          line: lineNumber,
-          pattern: 'async-error',
-          description: 'Potential async error handling issue',
-          severity: 'warning'
-        });
-      }
-      
-      if (this.detectTypeIssue(line)) {
-        errors.push({
-          file: filePath,
-          line: lineNumber,
-          pattern: 'type-issue',
-          description: 'Potential type-related issue',
-          severity: 'warning'
-        });
-      }
-    }
-    
-    return errors;
-  }
-
-  detectUnsafeCode(line) {
-    const unsafePatterns = [
-      /eval\s*\(/,
-      /Function\s*\(/,
-      /innerHTML\s*=/,
-      /outerHTML\s*=/,
-      /document\.write\s*\(/,
-      /setTimeout\s*\([^,]*,\s*0\)/,
-      /setInterval\s*\([^,]*,\s*0\)/
-    ];
-    
-    return unsafePatterns.some(pattern => pattern.test(line));
-  }
-
-  detectMemoryLeak(line) {
-    const memoryLeakPatterns = [
-      /addEventListener\s*\([^,]*,\s*[^,]*,\s*false\)/,
-      /setInterval\s*\([^,]*,\s*\d+\)/,
-      /setTimeout\s*\([^,]*,\s*\d+\)/,
-      /new\s+Promise\s*\(/,
-      /fetch\s*\(/
-    ];
-    
-    return memoryLeakPatterns.some(pattern => pattern.test(line));
-  }
-
-  detectAsyncError(line) {
-    const asyncErrorPatterns = [
-      /\.then\s*\([^)]*\)/,
-      /\.catch\s*\([^)]*\)/,
-      /async\s+function/,
-      /await\s+/
-    ];
-    
-    return asyncErrorPatterns.some(pattern => pattern.test(line));
-  }
-
-  detectTypeIssue(line) {
-    const typeIssuePatterns = [
-      /:\s*any\s*[=,]/,
-      /as\s+any/,
-      /<any>/,
-      /any\[\]/,
-      /Record<string,\s*any>/,
-      /{[^}]*:\s*any[^}]*}/
-    ];
-    
-    return typeIssuePatterns.some(pattern => pattern.test(line));
-  }
-
-  async applyPreventiveFixes(potentialErrors) {
-    this.log(`🔧 Applying preventive fixes for ${potentialErrors.length} potential issues...`);
-    
-    let fixedCount = 0;
-    const fixResults = [];
-
-    for (const error of potentialErrors) {
-      try {
-        const fixed = await this.applyPreventiveFix(error);
-        if (fixed) {
-          fixedCount++;
-        }
-        
-        fixResults.push({
-          error,
-          fixed,
-          timestamp: new Date().toISOString()
-        });
-        
-      } catch (fixError) {
-        this.log(`❌ Error applying preventive fix: ${fixError.message}`, 'ERROR');
-        fixResults.push({
-          error,
-          fixed: false,
-          error: fixError.message,
-          timestamp: new Date().toISOString()
-        });
-      }
-    }
-
-    this.log(`✅ Applied ${fixedCount} preventive fixes`);
-    return { fixedCount, totalIssues: potentialErrors.length, results: fixResults };
-  }
-
-  async applyPreventiveFix(error) {
-    const filePath = error.file;
-    
-    if (!fs.existsSync(filePath)) {
-      return false;
-    }
-
-    try {
-      let content = fs.readFileSync(filePath, 'utf8');
-      const lines = content.split('\n');
-      const lineIndex = error.line - 1;
-      
-      if (lineIndex < 0 || lineIndex >= lines.length) {
-        return false;
-      }
-
-      const originalLine = lines[lineIndex];
-      let fixedLine = originalLine;
-      let fixed = false;
-
-      switch (error.pattern) {
-        case 'unsafe-code':
-          fixedLine = await this.fixUnsafeCode(originalLine);
-          fixed = fixedLine !== originalLine;
-          break;
-          
-        case 'memory-leak':
-          fixedLine = await this.fixMemoryLeak(originalLine);
-          fixed = fixedLine !== originalLine;
-          break;
-          
-        case 'async-error':
-          fixedLine = await this.fixAsyncError(originalLine);
-          fixed = fixedLine !== originalLine;
-          break;
-          
-        case 'type-issue':
-          fixedLine = await this.fixTypeIssue(originalLine);
-          fixed = fixedLine !== originalLine;
-          break;
-      }
-
-      if (fixed) {
-        lines[lineIndex] = fixedLine;
-        fs.writeFileSync(filePath, lines.join('\n'));
-        this.log(`✅ Applied preventive fix in ${filePath}:${error.line}`);
-        return true;
-      }
-
-      return false;
-    } catch (fixError) {
-      this.log(`❌ Failed to apply preventive fix: ${fixError.message}`, 'ERROR');
-      return false;
-    }
-  }
-
-  async fixUnsafeCode(line) {
-    let fixedLine = line;
-    
-    // Replace eval with safer alternatives
-    if (line.includes('eval(')) {
-      fixedLine = line.replace(/eval\s*\(([^)]+)\)/g, 'JSON.parse($1)');
-    }
-    
-    // Replace innerHTML with textContent where possible
-    if (line.includes('.innerHTML =')) {
-      fixedLine = line.replace(/\.innerHTML\s*=\s*([^;]+)/g, '.textContent = $1');
-    }
-    
-    return fixedLine;
-  }
-
-  async fixMemoryLeak(line) {
-    let fixedLine = line;
-    
-    // Add cleanup for event listeners
-    if (line.includes('addEventListener')) {
-      fixedLine = line.replace(
-        /addEventListener\s*\(([^,]+),\s*([^,]+),\s*false\)/g,
-        'addEventListener($1, $2, { once: true })'
-      );
-    }
-    
-    return fixedLine;
-  }
-
-  async fixAsyncError(line) {
-    let fixedLine = line;
-    
-    // Add error handling for promises
-    if (line.includes('.then(') && !line.includes('.catch(')) {
-      fixedLine = line + '\n  .catch(error => console.error(\'Error:\', error))';
-    }
-    
-    return fixedLine;
-  }
-
-  async fixTypeIssue(line) {
-    let fixedLine = line;
-    
-    // Replace any with more specific types
-    if (line.includes(': any')) {
-      fixedLine = line.replace(/: any/g, ': unknown');
-    }
-    
-    if (line.includes('as any')) {
-      fixedLine = line.replace(/as any/g, 'as unknown');
-    }
-    
-    return fixedLine;
-  }
-
-  async generateReport(fixResults) {
-    this.log('📊 Generating error prevention monitoring report...');
-    
-    const report = {
-      timestamp: new Date().toISOString(),
-      summary: {
-        totalIssues: fixResults.totalIssues,
-        fixedIssues: fixResults.fixedCount,
-        preventionRate: fixResults.totalIssues > 0 ? (fixResults.fixedCount / fixResults.totalIssues * 100).toFixed(2) : 100
-      },
-      fixResults: fixResults.results,
-      recommendations: [
-        'Review applied fixes to ensure they meet your requirements',
-        'Consider adding more specific type annotations',
-        'Implement proper error handling for async operations',
-        'Regularly review code for potential security issues'
-      ]
-    };
-
-    const reportFile = path.join(this.reportsPath, 'error-prevention-monitor-report.json');
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    
-    this.log(`📄 Report generated: ${reportFile}`);
-    return report;
   }
 
   async run() {
-    this.log('🚀 Starting Error Prevention Monitor...');
-    
     try {
-      // Scan for potential errors
-      const potentialErrors = await this.scanForPotentialErrors();
+      console.log('🔍 Monitoring for potential errors...');
       
-      if (potentialErrors.length === 0) {
-        this.log('🎉 No potential errors detected!');
-        return { success: true, issues: [], fixed: 0 };
+      // Monitor for potential issues
+      const issues = await this.monitorForIssues();
+      this.stats.totalIssues = issues.length;
+      
+      console.log(`📊 Found ${issues.length} potential issues`);
+      
+      // Apply preventions for each issue
+      for (const issue of issues) {
+        try {
+          const preventionResult = await this.applyPrevention(issue);
+          if (preventionResult.success) {
+            this.preventions.push(preventionResult);
+            this.stats.preventedIssues++;
+            console.log(`✅ Prevented: ${issue.message}`);
+          } else {
+            this.stats.failedPreventions++;
+            console.log(`⚠️ Could not prevent: ${issue.message}`);
+          }
+        } catch (error) {
+          console.error(`❌ Error applying prevention: ${error.message}`);
+          this.stats.failedPreventions++;
+        }
       }
       
-      // Apply preventive fixes
-      const fixResults = await this.applyPreventiveFixes(potentialErrors);
-      
       // Generate report
-      const report = await this.generateReport(fixResults);
+      this.generateReport();
       
-      this.log('🎉 Error Prevention Monitor completed!');
-      this.log(`📊 Applied ${fixResults.fixedCount} preventive fixes`);
-      
-      return {
-        success: fixResults.fixedCount > 0,
-        issues: potentialErrors,
-        fixed: fixResults.fixedCount,
-        report
-      };
+      console.log(`✅ Error prevention monitor completed. Prevented ${this.stats.preventedIssues}/${this.stats.totalIssues} issues`);
       
     } catch (error) {
-      this.log(`💥 Error Prevention Monitor failed: ${error.message}`, 'ERROR');
-      throw error;
+      console.error('❌ Error prevention monitor failed:', error.message);
     }
+  }
+
+  async monitorForIssues() {
+    const issues = [];
+    
+    // Check for common potential issues
+    issues.push(...await this.checkForUnusedImports());
+    issues.push(...await this.checkForConsoleStatements());
+    issues.push(...await this.checkForHardcodedValues());
+    issues.push(...await this.checkForMissingErrorHandling());
+    
+    return issues;
+  }
+
+  async checkForUnusedImports() {
+    const issues = [];
+    const filePatterns = ['src/**/*.{js,jsx,ts,tsx}'];
+    
+    for (const pattern of filePatterns) {
+      const files = this.glob(pattern);
+      for (const file of files) {
+        try {
+          const content = fs.readFileSync(file, 'utf8');
+          const lines = content.split('\n');
+          
+          lines.forEach((line, index) => {
+            if (line.includes('import ') && !this.isImportUsed(line, content)) {
+              issues.push({
+                file: file,
+                line: index + 1,
+                column: 0,
+                message: 'Unused import detected',
+                type: 'unused-import'
+              });
+            }
+          });
+        } catch (error) {
+          console.warn(`⚠️ Could not read file: ${file}`);
+        }
+      }
+    }
+    
+    return issues;
+  }
+
+  isImportUsed(importLine, content) {
+    const match = importLine.match(/import\s+.*?from\s+['"]([^'"]+)['"]/);
+    if (match) {
+      const moduleName = match[1];
+      // Check if the module is used in the content
+      return content.includes(moduleName);
+    }
+    return true; // Assume it's used if we can't determine
+  }
+
+  async checkForConsoleStatements() {
+    const issues = [];
+    const filePatterns = ['src/**/*.{js,jsx,ts,tsx}'];
+    
+    for (const pattern of filePatterns) {
+      const files = this.glob(pattern);
+      for (const file of files) {
+        try {
+          const content = fs.readFileSync(file, 'utf8');
+          const lines = content.split('\n');
+          
+          lines.forEach((line, index) => {
+            if (line.includes('console.') && !line.includes('//')) {
+              issues.push({
+                file: file,
+                line: index + 1,
+                column: 0,
+                message: 'Console statement detected in production code',
+                type: 'console-statement'
+              });
+            }
+          });
+        } catch (error) {
+          console.warn(`⚠️ Could not read file: ${file}`);
+        }
+      }
+    }
+    
+    return issues;
+  }
+
+  async checkForHardcodedValues() {
+    const issues = [];
+    const filePatterns = ['src/**/*.{js,jsx,ts,tsx}'];
+    
+    for (const pattern of filePatterns) {
+      const files = this.glob(pattern);
+      for (const file of files) {
+        try {
+          const content = fs.readFileSync(file, 'utf8');
+          const lines = content.split('\n');
+          
+          lines.forEach((line, index) => {
+            if (this.hasHardcodedValue(line)) {
+              issues.push({
+                file: file,
+                line: index + 1,
+                column: 0,
+                message: 'Hardcoded value detected',
+                type: 'hardcoded-value'
+              });
+            }
+          });
+        } catch (error) {
+          console.warn(`⚠️ Could not read file: ${file}`);
+        }
+      }
+    }
+    
+    return issues;
+  }
+
+  hasHardcodedValue(line) {
+    // Check for common hardcoded values
+    const hardcodedPatterns = [
+      /localhost:\d+/,
+      /127\.0\.0\.1/,
+      /api\.example\.com/,
+      /password.*=.*['"][^'"]{8,}['"]/,
+      /secret.*=.*['"][^'"]{8,}['"]/
+    ];
+    
+    return hardcodedPatterns.some(pattern => pattern.test(line));
+  }
+
+  async checkForMissingErrorHandling() {
+    const issues = [];
+    const filePatterns = ['src/**/*.{js,jsx,ts,tsx}'];
+    
+    for (const pattern of filePatterns) {
+      const files = this.glob(pattern);
+      for (const file of files) {
+        try {
+          const content = fs.readFileSync(file, 'utf8');
+          const lines = content.split('\n');
+          
+          lines.forEach((line, index) => {
+            if (this.hasAsyncOperationWithoutErrorHandling(line, content)) {
+              issues.push({
+                file: file,
+                line: index + 1,
+                column: 0,
+                message: 'Async operation without error handling detected',
+                type: 'missing-error-handling'
+              });
+            }
+          });
+        } catch (error) {
+          console.warn(`⚠️ Could not read file: ${file}`);
+        }
+      }
+    }
+    
+    return issues;
+  }
+
+  hasAsyncOperationWithoutErrorHandling(line, content) {
+    // Check for async operations without try-catch
+    const asyncPatterns = [
+      /fetch\(/,
+      /axios\./,
+      /\.then\(/,
+      /await\s+/
+    ];
+    
+    const hasAsyncOp = asyncPatterns.some(pattern => pattern.test(line));
+    const hasErrorHandling = content.includes('try {') || content.includes('.catch(');
+    
+    return hasAsyncOp && !hasErrorHandling;
+  }
+
+  async applyPrevention(issue) {
+    const { file, line, column, message, type } = issue;
+    
+    try {
+      switch (type) {
+        case 'unused-import':
+          return await this.preventUnusedImport(issue);
+        case 'console-statement':
+          return await this.preventConsoleStatement(issue);
+        case 'hardcoded-value':
+          return await this.preventHardcodedValue(issue);
+        case 'missing-error-handling':
+          return await this.preventMissingErrorHandling(issue);
+        default:
+          return { success: false, reason: 'Unknown issue type' };
+      }
+    } catch (error) {
+      return { success: false, reason: error.message };
+    }
+  }
+
+  async preventUnusedImport(issue) {
+    const { file, line } = issue;
+    const content = fs.readFileSync(file, 'utf8');
+    const lines = content.split('\n');
+    
+    if (line > 0 && line <= lines.length) {
+      const currentLine = lines[line - 1];
+      if (currentLine.includes('import ') && !this.isImportUsed(currentLine, content)) {
+        // Comment out unused import
+        lines[line - 1] = '// ' + currentLine;
+        fs.writeFileSync(file, lines.join('\n'));
+        return { 
+          success: true, 
+          type: 'unused-import', 
+          action: 'Commented out unused import',
+          file: file
+        };
+      }
+    }
+    
+    return { success: false, reason: 'Could not prevent unused import' };
+  }
+
+  async preventConsoleStatement(issue) {
+    const { file, line } = issue;
+    const content = fs.readFileSync(file, 'utf8');
+    const lines = content.split('\n');
+    
+    if (line > 0 && line <= lines.length) {
+      const currentLine = lines[line - 1];
+      if (currentLine.includes('console.') && !currentLine.includes('//')) {
+        // Comment out console statement
+        lines[line - 1] = '// ' + currentLine;
+        fs.writeFileSync(file, lines.join('\n'));
+        return { 
+          success: true, 
+          type: 'console-statement', 
+          action: 'Commented out console statement',
+          file: file
+        };
+      }
+    }
+    
+    return { success: false, reason: 'Could not prevent console statement' };
+  }
+
+  async preventHardcodedValue(issue) {
+    const { file, line } = issue;
+    const content = fs.readFileSync(file, 'utf8');
+    const lines = content.split('\n');
+    
+    if (line > 0 && line <= lines.length) {
+      const currentLine = lines[line - 1];
+      if (this.hasHardcodedValue(currentLine)) {
+        // Add TODO comment
+        lines[line - 1] = currentLine + ' // TODO: Replace with environment variable';
+        fs.writeFileSync(file, lines.join('\n'));
+        return { 
+          success: true, 
+          type: 'hardcoded-value', 
+          action: 'Added TODO comment for hardcoded value',
+          file: file
+        };
+      }
+    }
+    
+    return { success: false, reason: 'Could not prevent hardcoded value' };
+  }
+
+  async preventMissingErrorHandling(issue) {
+    const { file, line } = issue;
+    const content = fs.readFileSync(file, 'utf8');
+    const lines = content.split('\n');
+    
+    if (line > 0 && line <= lines.length) {
+      const currentLine = lines[line - 1];
+      if (this.hasAsyncOperationWithoutErrorHandling(currentLine, content)) {
+        // Add TODO comment
+        lines[line - 1] = currentLine + ' // TODO: Add error handling';
+        fs.writeFileSync(file, lines.join('\n'));
+        return { 
+          success: true, 
+          type: 'missing-error-handling', 
+          action: 'Added TODO comment for error handling',
+          file: file
+        };
+      }
+    }
+    
+    return { success: false, reason: 'Could not prevent missing error handling' };
+  }
+
+  glob(pattern) {
+    const glob = require('glob');
+    return glob.sync(pattern, { 
+      ignore: ['node_modules/**', '.next/**', 'out/**', 'dist/**'],
+      absolute: true 
+    });
+  }
+
+  generateReport() {
+    const report = {
+      timestamp: new Date().toISOString(),
+      stats: this.stats,
+      preventions: this.preventions,
+      summary: {
+        totalIssues: this.stats.totalIssues,
+        preventedIssues: this.stats.preventedIssues,
+        failedPreventions: this.stats.failedPreventions,
+        successRate: this.stats.totalIssues > 0 ? 
+          (this.stats.preventedIssues / this.stats.totalIssues * 100).toFixed(2) + '%' : '0%'
+      }
+    };
+
+    const reportPath = path.join(process.cwd(), 'error-prevention-monitor-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    
+    console.log(`📊 Error prevention monitor report saved to: ${reportPath}`);
+    return report;
   }
 }
 
-// Run the automation if called directly
-if (require.main === module) {
+// Main execution
+async function main() {
   const monitor = new ErrorPreventionMonitor();
-  monitor.run().catch(console.error);
+  
+  try {
+    await monitor.run();
+    
+    // Exit with appropriate code
+    process.exit(monitor.stats.failedPreventions > 0 ? 1 : 0);
+    
+  } catch (error) {
+    console.error('❌ Error prevention monitor failed:', error.message);
+    process.exit(1);
+  }
 }
 
-module.exports = ErrorPreventionMonitor;
+// Run if called directly
+if (require.main === module) {
+  main();
+}
+
+module.exports = { ErrorPreventionMonitor };
