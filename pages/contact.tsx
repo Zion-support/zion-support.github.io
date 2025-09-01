@@ -14,20 +14,20 @@ export default function ContactPage() {
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
-          <div className="max-w-6xl mx-auto">
-            <header className="text-center mb-16">
-              <nav className="mb-6 text-left">
-                <a href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                  ← Back to Home
-                </a>
-              </nav>
-              <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
-                Get in Touch
-              </h1>
-              <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                Ready to explore the future of autonomous technology? We'd love to hear from you.
-              </p>
-            </header>
+          <nav className="mb-8">
+            <a href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+              ← Back to Home
+            </a>
+          </nav>
+          
+          <section className="text-center mb-16">
+            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+              Contact Us
+            </h1>
+            <p className="text-xl text-white/80 max-w-3xl mx-auto">
+              Ready to explore the future of autonomous technology? Let's connect and discuss how we can help transform your vision into reality.
+            </p>
+          </section>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <section className="bg-white/10 backdrop-blur-xl rounded-2xl p-8">
@@ -126,49 +126,13 @@ export default function ContactPage() {
                 </form>
               </section>
 
-              <section className="space-y-8">
-                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8">
-                  <h2 className="text-3xl font-bold mb-6 text-cyan-300">Contact Information</h2>
-                  <div className="space-y-4">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-10 h-10 bg-cyan-500/20 rounded-full flex items-center justify-center">
-                        <svg className="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        </svg>
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-white">Email</h3>
-                        <p className="text-cyan-400">hello@ziontech.group</p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center space-x-3">
-                      <div className="w-10 h-10 bg-purple-500/20 rounded-full flex items-center justify-center">
-                        <svg className="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                        </svg>
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-white">Location</h3>
-                        <p className="text-white/80">Global Operations</p>
-                        <p className="text-white/80">Multiple locations worldwide</p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center space-x-3">
-                      <div className="w-10 h-10 bg-green-500/20 rounded-full flex items-center justify-center">
-                        <svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-white">Response Time</h3>
-                        <p className="text-white/80">Within 24 hours</p>
-                        <p className="text-white/80">Emergency: 2-4 hours</p>
-                      </div>
-                    </div>
-                  </div>
+            <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 mb-16">
+              <h2 className="text-3xl font-bold mb-6 text-blue-400">Why Choose Zion Tech Group?</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="text-center">
+                  <div className="text-4xl mb-4">⚡</div>
+                  <h3 className="text-xl font-semibold mb-2">Fast Response</h3>
+                  <p className="text-white/70">Get a response within 24 hours, often much sooner</p>
                 </div>
 
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8">
@@ -198,7 +162,36 @@ export default function ContactPage() {
                 </div>
               </section>
             </div>
-          </div>
+
+            <div className="text-center">
+              <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 p-8 rounded-2xl border border-cyan-500/20">
+                <h2 className="text-2xl font-semibold mb-4 text-cyan-300">Explore More</h2>
+                <p className="text-white/80 mb-6 max-w-2xl mx-auto">
+                  Learn more about our services, view our case studies, and stay updated with our latest innovations.
+                </p>
+                <div className="flex flex-wrap justify-center gap-4">
+                  <a 
+                    href="/services" 
+                    className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-fuchsia-500 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-fuchsia-600 transition-all duration-200"
+                  >
+                    Our Services
+                  </a>
+                  <a 
+                    href="/case-studies" 
+                    className="inline-flex items-center px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl text-white transition-all duration-200"
+                  >
+                    Case Studies
+                  </a>
+                  <a 
+                    href="/reports" 
+                    className="inline-flex items-center px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl text-white transition-all duration-200"
+                  >
+                    Latest Reports
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
         </main>
         <Footer />
       </div>

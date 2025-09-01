@@ -14,20 +14,20 @@ export default function AboutPage() {
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
-          <div className="max-w-6xl mx-auto">
-            <header className="text-center mb-16">
-              <nav className="mb-6 text-left">
-                <a href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                  ← Back to Home
-                </a>
-              </nav>
-              <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
-                About Zion Tech Group
-              </h1>
-              <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                Pioneering the future of autonomous technology and intelligent automation systems.
-              </p>
-            </header>
+          <nav className="mb-8">
+            <a href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+              ← Back to Home
+            </a>
+          </nav>
+          
+          <section className="text-center mb-16">
+            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+              About Zion Tech Group
+            </h1>
+            <p className="text-xl text-white/80 max-w-3xl mx-auto">
+              Pioneering the future of autonomous technology and AI-driven innovation
+            </p>
+          </section>
 
             <section className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 mb-12">
               <h2 className="text-3xl font-bold mb-6 text-cyan-300">Our Mission</h2>
@@ -125,23 +125,57 @@ export default function AboutPage() {
               </div>
             </section>
 
-            <section className="bg-white/10 backdrop-blur-xl rounded-2xl p-8">
-              <h2 className="text-3xl font-bold mb-6 text-cyan-300">Join Our Mission</h2>
-              <p className="text-lg text-white/80 mb-6">
-                We're always looking for passionate individuals and organizations who share our vision 
-                of a future powered by autonomous innovation. Whether you're interested in partnering 
-                with us, joining our team, or learning more about our technology, we'd love to hear from you.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <a href="/contact" className="bg-gradient-to-r from-cyan-500 to-fuchsia-500 hover:from-cyan-600 hover:to-fuchsia-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 text-center">
-                  Get in Touch
-                </a>
-                <a href="/" className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 text-center">
-                  Explore Our Work
-                </a>
+            <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 mb-16">
+              <h2 className="text-3xl font-bold mb-6 text-purple-400">Our Impact</h2>
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-cyan-400">227</div>
+                  <div className="text-sm text-white/70">Active Automations</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-fuchsia-400">2,960</div>
+                  <div className="text-sm text-white/70">Pages Generated</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-green-400">12</div>
+                  <div className="text-sm text-white/70">AI Components</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-blue-400">99.9%</div>
+                  <div className="text-sm text-white/70">Uptime</div>
+                </div>
               </div>
-            </section>
-          </div>
+            </div>
+
+            <div className="text-center">
+              <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 p-8 rounded-2xl border border-cyan-500/20">
+                <h2 className="text-2xl font-semibold mb-4 text-cyan-300">Ready to Learn More?</h2>
+                <p className="text-white/80 mb-6 max-w-2xl mx-auto">
+                  Explore our services, case studies, and latest innovations to see how we can help transform your business.
+                </p>
+                <div className="flex flex-wrap justify-center gap-4">
+                  <a 
+                    href="/services" 
+                    className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-fuchsia-500 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-fuchsia-600 transition-all duration-200"
+                  >
+                    Our Services
+                  </a>
+                  <a 
+                    href="/case-studies" 
+                    className="inline-flex items-center px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl text-white transition-all duration-200"
+                  >
+                    Case Studies
+                  </a>
+                  <a 
+                    href="/reports" 
+                    className="inline-flex items-center px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl text-white transition-all duration-200"
+                  >
+                    Latest Reports
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
         </main>
         <Footer />
       </div>

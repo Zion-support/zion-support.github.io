@@ -14,6 +14,12 @@ export default function ServicesPage() {
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
+          <nav className="mb-8">
+            <a href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+              ← Back to Home
+            </a>
+          </nav>
+          
           <section className="text-center mb-16">
             <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
               Our Services
@@ -159,31 +165,13 @@ export default function ServicesPage() {
               </div>
             </section>
 
-            <section className="bg-white/5 backdrop-blur-xl rounded-2xl p-8 mb-12 border border-white/10">
-              <h2 className="text-3xl font-bold mb-6 text-cyan-300">Why Choose Zion Tech Group?</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="space-y-4">
-                  <div className="flex items-start">
-                    <div className="text-green-400 mr-3 mt-1">✓</div>
-                    <div>
-                      <h3 className="font-semibold text-white mb-1">Proven Expertise</h3>
-                      <p className="text-white/70 text-sm">Over 5 years of experience in autonomous technology</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start">
-                    <div className="text-green-400 mr-3 mt-1">✓</div>
-                    <div>
-                      <h3 className="font-semibold text-white mb-1">24/7 Support</h3>
-                      <p className="text-white/70 text-sm">Round-the-clock monitoring and support</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start">
-                    <div className="text-green-400 mr-3 mt-1">✓</div>
-                    <div>
-                      <h3 className="font-semibold text-white mb-1">Global Reach</h3>
-                      <p className="text-white/70 text-sm">Services available worldwide with local expertise</p>
-                    </div>
-                  </div>
+            <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 mb-16">
+              <h2 className="text-3xl font-bold mb-6 text-blue-400">Service Delivery Process</h2>
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">1</div>
+                  <h3 className="text-lg font-semibold mb-2">Discovery</h3>
+                  <p className="text-sm text-white/70">Understanding your needs and objectives</p>
                 </div>
                 <div className="space-y-4">
                   <div className="flex items-start">
@@ -209,31 +197,32 @@ export default function ServicesPage() {
                   </div>
                 </div>
               </div>
-            </section>
+            </div>
 
-            <section className="bg-white/5 backdrop-blur-xl rounded-2xl p-8 mb-12 border border-white/10">
-              <h2 className="text-3xl font-bold mb-6 text-cyan-300">Ready to Get Started?</h2>
-              <div className="text-center">
-                <p className="text-lg text-white/90 mb-6">
-                  Transform your business with autonomous technology. Let's discuss how we can help you achieve your goals.
+            <div className="text-center">
+              <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 p-8 rounded-2xl border border-cyan-500/20">
+                <h2 className="text-2xl font-semibold mb-4 text-cyan-300">Ready to Get Started?</h2>
+                <p className="text-white/80 mb-6 max-w-2xl mx-auto">
+                  Let's discuss how our AI and automation services can transform your business operations 
+                  and drive innovation in your industry.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-wrap justify-center gap-4">
                   <a 
                     href="/contact" 
-                    className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-fuchsia-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-fuchsia-600 transition-all duration-300 transform hover:scale-105"
+                    className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-fuchsia-500 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-fuchsia-600 transition-all duration-200"
                   >
-                    Schedule Consultation
+                    Get in Touch
                   </a>
                   <a 
-                    href="/about" 
-                    className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
+                    href="/case-studies" 
+                    className="inline-flex items-center px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl text-white transition-all duration-200"
                   >
-                    Learn More
+                    View Case Studies
                   </a>
                 </div>
               </div>
-            </section>
-          </div>
+            </div>
+          </section>
         </main>
         <Footer />
       </div>
