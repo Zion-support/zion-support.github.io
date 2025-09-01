@@ -19,7 +19,7 @@ if (!rootElement) throw new Error('Failed to find the root element');
 // Import analytics provider
 import { AnalyticsProvider } from './context/AnalyticsContext';
 import { initGA } from './lib/gtag';
-import { ErrorBoundary } from './components/ErrorBoundary';
+import ErrorBoundary from './components/ErrorBoundary';
 
 // Initialize a React Query client with global error handling
 const queryClient = new QueryClient({
