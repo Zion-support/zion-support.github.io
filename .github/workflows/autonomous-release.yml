@@ -1,10 +1,14 @@
 name: Autonomous Release
 
 on:
-  workflow_run:
-    workflows: ["Autonomous Cloud Automation", "Autonomous Cloud Orchestrator"]
-    types:
-      - completed
+
+    branches: [main]
+  workflow_dispatch: {}
+
+permissions:
+concurrency:
+  group: "github.workflow-${{ github.ref }}"
+  cancel-in-progress: true
 
 permissions:
   contents: write
@@ -16,12 +20,33 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          persist-credentials: true
-          fetch-depth: 0
+          with:
+            fetch-depth: 0
+fetch-depth: 0
 
-      - name: Detect changes since last tag
-        id: changes
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+          with:
+            node-version: \'20\'
+            cache: \'npm\'
+node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Determine version
+        id: ver
+          DATE_VER=$(date +"%Y.%m.%d")
+          COUNT=$(git tag -l "v$DATE_VER.*" | wc -l | tr -d ' ')
+          echo "count=$COUNT" >> $GITHUB_OUTPUT
+          NEXT=$((COUNT+1))
+          echo "version=v$DATE_VER.$NEXT" >> $GITHUB_OUTPUT
+
+      - name: Create tag
         run: |
           LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "none")
           echo "last=$LAST_TAG" >> $GITHUB_OUTPUT

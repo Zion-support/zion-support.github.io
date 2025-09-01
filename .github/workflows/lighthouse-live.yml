@@ -1,6 +1,7 @@
 name: Lighthouse Live
 
 on:
+
   schedule:
     - cron: '23 */6 * * *'
     - cron: '20 2 * * *'
@@ -9,12 +10,9 @@ on:
   workflow_dispatch: {}
 
 permissions:
-  contents: read
-
 concurrency:
   group: lighthouse-live-${{ github.ref }}
   cancel-in-progress: true
-
 jobs:
   lighthouse:
     runs-on: ubuntu-latest
@@ -22,23 +20,17 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+          with:
+            fetch-depth: 0
+fetch-depth: 0
 
-      - name: Run Lighthouse on production URLs (non-blocking on schedule)
-        if: ${{ github.event_name == 'schedule' }}
-        uses: treosh/lighthouse-ci-action@v12
-        continue-on-error: true
-        with:
-          urls: |
-            https://ziontechgroup.com/
-            https://ziontechgroup.com/explore
-            https://ziontechgroup.com/front
-            https://ziontechgroup.com/newsroom
-            https://ziontechgroup.com/reports
-            https://ziontechgroup.com/site-health
-          uploadArtifacts: true
-          temporaryPublicStorage: true
-          runs: 3
-          configPath: lighthouserc.json
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+          with:
+            node-version: \'20\'
+            cache: \'npm\'
+node-version: '20'
+          cache: 'npm'
 
       - name: Run Lighthouse on production URLs (strict)
         if: ${{ github.event_name != 'schedule' }}

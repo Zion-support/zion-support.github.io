@@ -1,0 +1,14 @@
+name: Security Auto-Heal
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: '0 0 * * *'
+
+permissions:
+
+concurrency:
+
+  group: "github.workflow-${{ github.ref }}"
+
+  cancel-in-progress: true

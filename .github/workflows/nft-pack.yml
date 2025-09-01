@@ -1,9 +1,14 @@
 name: NFT Pack Generator
 
 on:
-  schedule:
-    - cron: '*/30 * * * *'
-  workflow_dispatch:
+
+    - cron: '0 0 * * *'
+  workflow_dispatch: {}
+
+permissions:
+concurrency:
+  group: "github.workflow-${{ github.ref }}"
+  cancel-in-progress: true
 
 permissions:
   contents: write
@@ -12,18 +17,18 @@ concurrency:
   group: nft-pack-${{ github.ref }}
   cancel-in-progress: true
 
-jobs:
-  nft-pack:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
+  build-readme:
+      - name: Checkout
+        uses: actions/checkout@v4
+          with:
+            fetch-depth: 0
+fetch-depth: 0
       - name: Setup Node.js
         uses: actions/setup-node@v4
-        with:
-          node-version: 20
+          with:
+            node-version: \'20\'
+            cache: \'npm\'
+node-version: 20
           cache: npm
 
       - name: Install deps

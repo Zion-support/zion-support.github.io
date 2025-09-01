@@ -1,0 +1,18 @@
+name: Workflow Health Monitor
+
+on:
+  schedule:
+    - cron: '0 */4 * * *'  # Every 4 hours
+  workflow_dispatch: {}
+  workflow_run:
+    workflows: ["CI", "Rapid Git Sync", "Autonomous Cloud Runner"]
+    types: [completed]
+    branches: [main]
+
+permissions:
+
+concurrency:
+
+  group: "github.workflow-${{ github.ref }}"
+
+  cancel-in-progress: true

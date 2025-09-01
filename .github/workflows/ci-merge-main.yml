@@ -1,0 +1,18 @@
+name: Auto Merge to Main
+
+on:
+  push:
+    branches:
+      - cursor/deploy-autonomous-cloud-automations-and-sync-c342
+  workflow_run:
+    workflows: ["CI"]
+    types:
+      - completed
+
+permissions:
+
+concurrency:
+
+  group: "github.workflow-${{ github.ref }}"
+
+  cancel-in-progress: true
