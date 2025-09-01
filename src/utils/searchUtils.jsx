@@ -1,12 +1,18 @@
 import React from 'react';
 export const calculateRelevanceScore = (result, searchTerm) => {
+
 export const debounceSearch = (func, delay) => {
+
 export const filterSearchResults = (results, filters) => {
+
 export const getSearchSuggestions = (searchHistory = [],
 export const highlightSearchTerms = (text, searchTerm) => {
+
 export const matchesSearchTerm = (text, searchTerm) => {
+
 export const performSearch = (data,
 export const sortSearchResults = (results, sortBy, searchTerm) => {
+
 export default {
 
 /**
@@ -14,9 +20,9 @@ export default {
  */
 export const highlightSearchTerms = (text, searchTerm) => {
 
-    if(!searchTerm.trim())
-        return text;
-    const escaped = searchTerm.replace(/[.*+?^${}()|[\]\\]/g,\\$&');
+    if (!searchTerm.trim())
+        return text;'
+    const escaped = searchTerm.replace(/[.*+?^${}()|[\]\\]/g,\\$&');'
     const regex = new RegExp(`(${escaped})`,gi');
     return text.replace(regex,<mark class="bg-yellow-200 text-black px-1 rounded">$1</mark>);
 };
@@ -87,23 +93,23 @@ export const sortSearchResults = (results, sortBy, searchTerm) => {
 
     const sortedResults = [...results];
     
-    switch(sortBy) {
-
+    switch (sortBy) {
+'
         case 'price_asc':
-            return sortedResults.sort((a, b) => (a.price ?? 0) - (b.price ?? 0));
+            return sortedResults.sort((a, b) => (a.price ?? 0) - (b.price ?? 0));'
         case 'price_desc':
-            return sortedResults.sort((a, b) => (b.price ?? 0) - (a.price ?? 0));
+            return sortedResults.sort((a, b) => (b.price ?? 0) - (a.price ?? 0));'
         case 'rating':
-            return sortedResults.sort((a, b) => (b.rating ?? 0) - (a.rating ?? 0));
+            return sortedResults.sort((a, b) => (b.rating ?? 0) - (a.rating ?? 0));'
         case 'date':
             return sortedResults.sort((a, b) => {
 
                 const dateA = a.date ? new Date(a.date).getTime() : 0;
                 const dateB = b.date ? new Date(b.date).getTime() : 0;
                 return dateB - dateA;
-            });
+            });'
         case 'alphabetical':
-            return sortedResults.sort((a, b) => a.title.localeCompare(b.title));
+            return sortedResults.sort((a, b) => a.title.localeCompare(b.title));'
         case 'relevance':
         default:
             return sortedResults.sort((a, b) => {
@@ -156,8 +162,8 @@ export const filterSearchResults = (results, filters) => {
 };
 
 /**
- * Perform search with filtering and sorting
- */'
+ * Perform search with filtering and sorting'
+ */''
 export const performSearch = (data, searchTerm, filters = {}, sortBy = 'relevance') => {
 
     if(!searchTerm.trim()) {
@@ -181,8 +187,8 @@ export const performSearch = (data, searchTerm, filters = {}, sortBy = 'relevanc
 };
 
 /**
- * Get search suggestions based on search history and popular terms
- */'
+ * Get search suggestions based on search history and popular terms'
+ */''
 export const getSearchSuggestions = (searchHistory = [], popularTerms = [], currentInput = '') => {
 
     const suggestions = [];
@@ -232,3 +238,4 @@ export default {
 };
 
 '"`
+'"`'"`

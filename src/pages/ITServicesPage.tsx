@@ -42,5 +42,6 @@ const ITServicesPage = () => {
           </div>;
         </div>;
       </div>;
-    </>;) ;
-};
+    </>
+  )};
+export default ITServicesPage;'"'"

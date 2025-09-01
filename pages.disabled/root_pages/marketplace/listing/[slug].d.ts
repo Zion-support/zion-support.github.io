@@ -1,7 +1,8 @@
-import React from 'react';
-import type { GetServerSideProps } from 'next';
+import React from 'react';'
+import type { GetServerSideProps } from 'next';'
 import { Product } from '@prisma/client';
 export type ProductWithReviewStats = Product & {
+
     averageRating: number | null;
     reviewCount: number;
 };
@@ -12,3 +13,4 @@ interface ListingPageProps {
 declare const MarketplaceListingPage: React.FC<ListingPageProps>;
 export declare const getServerSideProps: GetServerSideProps<ListingPageProps>;
 export default MarketplaceListingPage;
+'

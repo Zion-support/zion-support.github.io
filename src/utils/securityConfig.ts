@@ -4,29 +4,29 @@ export const securityConfig = {
   // Content Security Policy
   csp: {
 
-    'default-src': ["'self'"],"
-    'script-src': ["'self'", "'unsafe-inline'", "'unsafe-eval'"],"
-    'style-src': ["'self'", "'unsafe-inline'"],"
-    'img-src': ["'self'",data:',https:'],"
-    'font-src': ["'self'",https:'],"
-    'connect-src': ["'self'",https:'],"
-    'frame-src': ["'none'"],"
-    'object-src': ["'none'"],"
-    'base-uri': ["'self'"],"
-    'form-action': ["'self'"],"
+    'default-src': ["'self'"],"'"
+    'script-src': ["'self'", "'unsafe-inline'", "'unsafe-eval'"],"'"
+    'style-src': ["'self'", "'unsafe-inline'"],"'"
+    'img-src': ["'self'",data:',https:'],"'"
+    'font-src': ["'self'",https:'],"'"
+    'connect-src': ["'self'",https:'],"'"
+    'frame-src': ["'none'"],"'"
+    'object-src': ["'none'"],"'"
+    'base-uri': ["'self'"],"'"
+    'form-action': ["'self'"],"'"
     'frame-ancestors': ["'none'"],upgrade-insecure-requests': true},
 
   // Security Headers
   headers: {
-
+'
     'X-Content-Type-Options': 'nosniff',X-Frame-Options': 'DENY',X-XSS-Protection': '1; mode=block',Referrer-Policy': 'strict-origin-when-cross-origin',Permissions-Policy': 'geolocation=(), microphone=(), camera=(),Strict-Transport-Security': 'max-age=31536000; includeSubDomains'},
 
   // Rate Limiting
 
   rateLimit: {
 
-    windowMs: 15 * 60 * 1000, // 15 minutes
-    max: 100, // limit each IP to 100 requests per windowMs'
+    windowMs: 15 * 60 * 1000, // 15 minutes'
+    max: 100, // limit each IP to 100 requests per windowMs''
     message: 'Too many requests from this IP, please try again later.',
     standardHeaders: true,
     legacyHeaders: false},
@@ -35,7 +35,7 @@ export const securityConfig = {
   validation: {
 
     email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-    phone: /^\+?[\d\s\-\(\)]{10}$/,
+    phone: /^\+?[\d\s\-\(\)]{10}$/,'
     name: /^[a-zA-Z\s\-']{2,50}$/,
     username: /^[a-zA-Z0-9_-]{3,20}$/,
     password:
@@ -47,15 +47,15 @@ export const securityConfig = {
 
   // Session Configuration
   session: {
-
+'
     secret: process.env.SESSION_SECRET || 'your-session-secret',
     resave: false,
     saveUninitialized: false,
     cookie: {
-
+'
       secure: process.env.NODE_ENV === 'production',
-      httpOnly: true,
-      maxAge: 24 * 60 * 60 * 1000, // 24 hours'
+      httpOnly: true,'
+      maxAge: 24 * 60 * 60 * 1000, // 24 hours''
       sameSite: 'strict'}}};
 
 // Input sanitization functions
@@ -65,11 +65,12 @@ export
   // Remove SQL injection patterns
   sql: (input: string): string => {
 '"
+'"'"
     return input.replace(/['";\\]/g,)},
 
   // Remove XSS patterns
   xss: (input: string): string => {
-
+'
     return input'
       .replace(/javascript:/gi,)
       .replace(/on\w+\s*=/gi,)
@@ -82,8 +83,8 @@ export
 
 // Helper function to generate CSP header string
 export 
-      }`
-      return `${key} ${values}`})
+      }``
+      return `${key} ${values}`})'
     .join('; ')};
 
 // Validate input against patterns
@@ -91,5 +92,5 @@ export
 export 
 // Security middleware configuration
 export 
-export default securityConfig;
-'"`
+export default securityConfig;'"`
+'"`'"`

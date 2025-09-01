@@ -4,7 +4,14 @@ describe('TechnologyStackSection', () => {
     render(<TechnologyStackSection  />) ;
     expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ;
 
-  it('displays expected content', () => {
-    render(<TechnologyStackSection  />) ;
+describe ('TechnologyStackSection', () => {
+'
+  it ('renders without crashing', () => {
+    render (<TechnologyStackSection  />) ;'
+    expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
+'
+  it ('displays expected content', () => {
+    render (<TechnologyStackSection  />) ;
     // Add specific test assertions based on component content
   }) }) ;
+'

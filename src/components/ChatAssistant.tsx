@@ -1,11 +1,66 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 
-export default function Page() {
-interface ChatAssistantProps {
-  children?: React.ReactNode;
-  enabled?: boolean;
-  position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left';
+import {
+
+  MessageCircle, 
+  X, 
+  Send, 
+
+  MessageCircle,
+  X,
+  Send,
+  Bot,
+  User,
+  Sparkles,
+  Settings,
+  Mic,
+  MicOff,
+  Paperclip,
+  Download,
+  RefreshCw,
+  Zap,
+  Brain,
+  Lightbulb,
+  TrendingUp,
+  Shield,
+  Clock,
+  CheckCircle,
+  AlertCircle,
+  Loader2,
+  ChevronDown,
+  ChevronUp,
+  Minimize2,
+  Maximize2,
+  Volume2,
+  VolumeX,
+  Star
+
+} from 'lucide-react';
+
+interface Message {
+  id: string;
+  text: string;'
+  sender: 'user' | 'assistant';
+  timestamp: Date;
+
+  isTyping?: boolean;
+  attachments?: Array<{
+'
+    type: 'image' | 'file' | 'video';
+    url: string;
+    name: string;
+    size?: string}[];  metadata?: {
+
+    confidence?: number;
+    sources?: string[];
+    suggestions?: string[];
+    actionRequired?: boolean}}
+
+interface ChatAssistantProps extends React.PropsWithChildren<{}> {
+
+  enabled?: boolean;'
+  position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left';'
   theme?: 'light' | 'dark' | 'auto';
   language?: string;
   maxMessages?: number;
@@ -15,9 +70,10 @@ interface ChatAssistantProps {
 }
 
 export const ChatAssistant: React.FC<ChatAssistantProps> = ({
-  enabled = true,
-  position = 'bottom-right',
-  theme = 'dark',
+
+  enabled = true,'
+  position = 'bottom-right','
+  theme = 'auto','
   language = 'en',
   maxMessages = 100,
   enableVoice = true,
@@ -25,13 +81,9 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   enableSuggestions = true
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [messages, setMessages] = useState<Message[]>([{
-      id: '1',
-      text: 'Hello! I\'m your AI assistant.How can I help you today?',
-      sender: 'assistant',
-      timestamp: new Date()
-    }
-  ]);
+  const [isMinimized, setIsMinimized] = useState(false);
+  const [messages, setMessages] = useState<Message[]>([]);
+'
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const [isListening, setIsListening] = useState(false);
@@ -43,33 +95,62 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   };
 
   useEffect(() => {
-    scrollToBottom();
-  }, [messages]);
+'
+    if (theme === 'auto') {
+'
+      setCurrentTheme(mediaQuery.matches ? 'dark' : 'light')};'
+      ''
+      mediaQuery.addEventListener('change', handleChange);'
+      return () => mediaQuery.removeEventListener('change', handleChange)} else {
 
-  const handleSendMessage = async () => {
-    if(!inputValue.trim()) return;
+      setCurrentTheme(theme)}
+  }, [theme]) ;
+  // Initialize with welcome message
+  useEffect ( () => {
+    if (messages.length === 0) {
 
+      const welcomeMessage: Message = {
+'
+        id: 'welcome','
+        type: 'assistant','
+        content: 'Hello! I\'m your AI assistant. How can I help you today?',
+        timestamp: new Date(),
+        metadata: {
+'
+          suggestions: [''
+            'Tell me about your services',How can I get started?',What are your pricing options?'
+          ]
+        }
+      };
+      setMessages ([welcomeMessage]) }
+  }, []) ;
+
+  
     const userMessage: Message = {
-      id: Date.now().toString(),
-      text: inputValue,
-      sender: 'user',
-      timestamp: new Date()
-    };
 
-    setMessages(prev => [...prev, userMessage]);
+      id: Date.now().toString(),'
+      type: 'user',
+      content: content.trim () ,
+      timestamp: new Date () };
+
+    setMessages(prev => [...prev, userMessage]);'
     setInputValue('');
     setIsTyping(true);
 
     // Simulate AI response
-    setTimeout(() => {
-      const aiResponse: Message = {
-        id: (Date.now() + 1).toString(),
-        text: getAIResponse(inputValue),
-        sender: 'assistant',
+    setTimeout ( () => {
+      const aiMessage: Message = {
+
+        id: (Date.now() + 1).toString(),'
+        type: 'assistant','
+        content: `I understand you're asking about "${content.trim()}". Let me help you with that.`,
         timestamp: new Date(),
         metadata: {
-          confidence: 0.95,
-          suggestions: ['Learn more about our services', 'Schedule a consultation', 'View pricing']
+
+          confidence: 0.95,'
+          suggestions: [''
+            'Would you like more details?',Can I help with something else?',Let me know if you have questions!'
+          ]
         }
       };
       
@@ -95,19 +176,32 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
     }
   };
 
-  const toggleVoice = () => {
-    setIsListening(!isListening);
-    // Voice functionality would be implemented here
-  };
+  '
+      case 'top-right':''
+        return 'top-4 right-4';'
+      case 'top-left':''
+        return 'top-4 left-4';'
+      default:''
+        return 'bottom-4 right-4'}
+  }};
+  if (!enabled) return null;
+`
+  return()``
+    <div className={`fixed ${getPositionClasses()} z-50`}>
 
-  const positionClasses = {
-    'bottom-right': 'bottom-4 right-4',
-    'bottom-left': 'bottom-4 left-4',
-    'top-right': 'top-4 right-4',
-    'top-left': 'top-4 left-4'
-  };
-
-  if(!enabled) return null;
+      {/* Chat Toggle Button */}
+      {!isOpen && (<motion.button
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={toggleChat}`
+``
+          className={`w-14 h-14 rounded-full flex items-center justify-center transition-all duration-200 ${getThemeClasses()}`}
+"
+        >""
+          <MessageCircle className="w-6 h-6"  />        </motion.button>
+      )}
 
   return (<div className={`fixed ${positionClasses[position]} z-50`}>
       {/* Chat Window */}
@@ -117,52 +211,104 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
             initial={{ opacity: 0, scale: 0.8, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 20 }}
-            transition={{ duration: 0.2 }}
-            className="mb-4 w-80 h-96 bg-slate-900/95 backdrop-blur-lg border border-white/20 rounded-xl shadow-2xl flex flex-col"
-          >
-            {/* Header */}
-            <div className="flex items-center justify-between p-4 border-b border-white/10">
-              <div className="flex items-center gap-3">
-                <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center">
-                  <Bot className="w-5 h-5 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-white font-semibold text-sm">AI Assistant</h3>
-                  <p className="text-gray-400 text-xs">Online</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-2">
-                <button 
-                  className="text-gray-400 hover:text-white transition-colors p-1"
-                  onClick={() => setIsOpen(false)}
-                >
-                  <Settings className="w-4 h-4" />
+            transition={{ duration: 0.2 }}`
+``
+            className={`w-80 h-96 rounded-lg border ${getThemeClasses()} flex flex-col`}
+          >"
+            {/* Header */}""
+            <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">""
+              <div className="flex items-center space-x-2">""
+                <Bot className="w-5 h-5 text-blue-500"  />"                <span className="font-semibold">AI Assistant</span>"
+              </div>""
+              <div className="flex items-center space-x-2">
+                <button"
+                  onClick={toggleMinimize}""
+                  className="p-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded"
+"
+                >""
+                  {isMinimized ? <Maximize2 className="w-4 h-4" /> : <Minimize2 className="w-4 h-4" />}
                 </button>
-                <button 
-                  className="text-gray-400 hover:text-white transition-colors p-1"
-                  onClick={() => setIsOpen(false)}
-                >
-                  <X className="w-4 h-4" />
-                </button>
+                <button
+                  onClick={toggleChat}"
+""
+                  className="p-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded"
+"
+                >""
+                  <X className="w-4 h-4"  />                </button>
               </div>
             </div>
 
             {/* Messages */}
-            <div className="flex-1 overflow-y-auto p-4 space-y-3">
-              {messages.map((message) => (
-                <div 
-                  key={message.id}
-                  className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
-                >
-                  <div className={`max-w-[80%] ${message.sender === 'user' 
-                      ? 'bg-cyan-500 text-white' 
-                      : 'bg-white/10 text-gray-100'
-                  } rounded-lg p-3`}>
-                    <p className="text-sm">{message.text}</p>
-                    <p className={`text-xs mt-1 ${message.sender === 'user' ? 'text-cyan-100' : 'text-gray-400'
-                    }`}>
-                      {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
-                    </p>
+            {!isMinimized && ("
+              <>""
+                <div className="flex-1 overflow-y-auto p-4 space-y-4">
+                  {messages.map((message) => (
+                    <div
+                      key={message.id}'`
+'`'`
+                      className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
+                    >`
+                      <div``
+                        className={`max-w-xs px-3 py-2 rounded-lg ${
+'
+                          message.type === 'user'''
+                            ? 'bg-blue-500 text-white'''`
+                            : 'bg-gray-100 dark:bg-gray-800'``
+                        }`}"
+                      >""
+                        <p className="text-sm">{message.content}</p>"
+                        {message.metadata?.suggestions && (""
+                          <div className="mt-2 space-y-1">
+                            {message.metadata.suggestions.map((suggestion, index) => (
+                              <button
+                                key={index}"
+                                onClick={() => handleSendMessage(suggestion)}""
+                                className="block w-full text-left text-xs text-blue-600 dark:text-blue-400 hover:underline"
+                              >
+                                {suggestion}
+                              </button>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  ))}"
+                  {isTyping && (""
+                    <div className="flex justify-start">""
+                      <div className="bg-gray-100 dark:bg-gray-800 px-3 py-2 rounded-lg">""
+                        <div className="flex space-x-1">"'"
+                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>'"'"
+                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>'"'"
+                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+
+                        </div>
+                      </div>
+                    </div>) }"
+                  <div role="button" ref={messagesEndRef} />
+                </div>
+
+"
+                {/* Input */}""
+                <div className="p-4 border-t border-gray-200 dark:border-gray-700">""
+                  <div className="flex space-x-2">
+
+                    <input"
+                      ref={inputRef}""
+                      type="text"
+                      value={inputValue}
+                      onChange={(e) => setInputValue(e.target.value)}
+"
+                      onKeyPress={handleKeyPress}""
+                      placeholder="Type your message...""
+                      className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-transparent"
+                    />
+                    <button
+                      onClick={() => handleSendMessage(inputValue)}"
+                      disabled={!inputValue.trim() || isTyping}""
+                      className="px-3 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed"
+"
+                    >""
+                      <Send className="w-4 h-4"  />                    </button>
                   </div>
                 </div>
               ))}
@@ -224,18 +370,5 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
           </motion.div>
         )}
       </AnimatePresence>
-
-      {/* Toggle Button */}
-      <motion.button
-        onClick={() => setIsOpen(!isOpen)}
-        className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full shadow-lg flex items-center justify-center text-white hover:shadow-xl transition-shadow"
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-      >
-        {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
-      </motion.button>
-    </div>
-  );
-};
-
-export default ChatAssistant;
+    </div>) };'"`
+'"`'"`
