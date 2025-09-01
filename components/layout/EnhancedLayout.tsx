@@ -3,27 +3,23 @@ import EnhancedNavigation from './EnhancedNavigation';
 import EnhancedFooter from './EnhancedFooter';
 import dynamic from 'next/dynamic';
 
-const MobileTabBar = dynamic(() => import('./MobileTabBar'), { ssr: false });
-
-const EnhancedLayout: React.FC = ({ children }) => {
-  return <>{children}</>;
+export type EnhancedLayoutProps = {
+  children: React.ReactNode;
+  title?: string;
 };
 
-export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
-  useEffect(() => {
-    const lng = i18n.resolvedLanguage || i18n.language;
-    document.documentElement.setAttribute('dir', isRtl(lng) ? 'rtl' : 'ltr');
-    document.documentElement.setAttribute('lang', lng);
-  }, []);
-
+export default function EnhancedLayout({ children, title }: EnhancedLayoutProps) {
   return (
     <div className="min-h-screen flex flex-col bg-white dark:bg-black text-gray-900 dark:text-gray-100">
       <header>
         <EnhancedNavigation />
         <LanguageSwitchPrompt />
       </header>
-      <main className="flex-1 container mx-auto px-4 py-6 pb-20 md:pb-6">{children}</main>
-      <footer className="hidden md:block">
+      <main className="flex-1 container mx-auto px-4 py-6">
+        {title && <h1 className="text-2xl font-semibold mb-4">{title}</h1>}
+        {children}
+      </main>
+      <footer>
         <EnhancedFooter />
       </footer>
       <MobileTabBar />
