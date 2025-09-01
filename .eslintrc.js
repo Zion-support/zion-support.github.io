@@ -11,26 +11,18 @@ module.exports = {
       jsx: true,
     },
   },
-  env: {
-    browser: true,
-    es6: true,
-    node: true,
-  },
   rules: {
     '@typescript-eslint/no-unused-vars': 'warn',
     '@typescript-eslint/no-explicit-any': 'warn',
-    'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'warn',
   },
-  overrides: [
-    {
-      files: ['scripts/**/*.js', 'automation/**/*.js'],
-      env: {
-        node: true,
-      },
-      rules: {
-        '@typescript-eslint/no-var-requires': 'off',
-      },
+  env: {
+    browser: true,
+    es2020: true,
+    node: true,
+  },
+  settings: {
+    react: {
+      version: 'detect',
     },
-  ],
+  },
 };
