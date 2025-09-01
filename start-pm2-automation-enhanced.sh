@@ -16,7 +16,7 @@ NC='\033[0m' # No Color
 
 # Project configuration
 PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-ENHANCED_ECOSYSTEM="$PROJECT_ROOT/ecosystem.enhanced.cjs"
+WORKING_ECOSYSTEM="$PROJECT_ROOT/ecosystem.working.cjs"
 ORIGINAL_ECOSYSTEM="$PROJECT_ROOT/ecosystem.config.cjs"
 BACKUP_ECOSYSTEM="$PROJECT_ROOT/ecosystem.config.backup.$(date +%s).cjs"
 
@@ -52,6 +52,28 @@ check_pm2() {
     fi
 }
 
+# Check if dependencies are installed
+check_dependencies() {
+    if [ ! -d "node_modules" ]; then
+        warning "Node dependencies not found. Installing..."
+        npm install
+        success "Dependencies installed successfully"
+    else
+        info "Dependencies are already installed"
+    fi
+}
+
+# Check if app is built
+check_build() {
+    if [ ! -d ".next" ]; then
+        warning "Next.js app not built. Building..."
+        npm run build
+        success "App built successfully"
+    else
+        info "App is already built"
+    fi
+}
+
 # Backup original ecosystem
 backup_original_ecosystem() {
     if [ -f "$ORIGINAL_ECOSYSTEM" ]; then
@@ -61,22 +83,23 @@ backup_original_ecosystem() {
     fi
 }
 
-# Setup enhanced ecosystem
-setup_enhanced_ecosystem() {
-    if [ ! -f "$ENHANCED_ECOSYSTEM" ]; then
-        error "Enhanced ecosystem configuration not found: $ENHANCED_ECOSYSTEM"
+# Setup working ecosystem
+setup_working_ecosystem() {
+    if [ ! -f "$WORKING_ECOSYSTEM" ]; then
+        error "Working ecosystem configuration not found: $WORKING_ECOSYSTEM"
         exit 1
     fi
     
-    log "Setting up enhanced PM2 ecosystem..."
+    log "Setting up working PM2 ecosystem..."
     
     # Create logs directory
     mkdir -p "$PROJECT_ROOT/logs"
     
     # Set proper permissions
+    chmod +x "$PROJECT_ROOT/scripts/"*.cjs
     chmod +x "$PROJECT_ROOT/scripts/automation/"*.cjs
     
-    success "Enhanced ecosystem setup completed"
+    success "Working ecosystem setup completed"
 }
 
 # Stop existing PM2 processes
@@ -92,15 +115,15 @@ stop_existing_processes() {
     fi
 }
 
-# Start enhanced PM2 system
-start_enhanced_system() {
-    log "Starting Enhanced PM2 Automation System..."
+# Start working PM2 system
+start_working_system() {
+    log "Starting Working PM2 Automation System..."
     
-    # Start the enhanced ecosystem
-    pm2 start "$ENHANCED_ECOSYSTEM"
+    # Start the working ecosystem
+    pm2 start "$WORKING_ECOSYSTEM" --update-env
     
     # Wait for processes to start
-    sleep 5
+    sleep 10
     
     # Check if processes started successfully
     local failed_processes=()
@@ -172,7 +195,7 @@ setup_pm2_monitoring() {
 
 # Display system status
 display_system_status() {
-    log "Enhanced PM2 Automation System Status:"
+    log "Working PM2 Automation System Status:"
     echo
     
     # Show PM2 process list
@@ -181,7 +204,7 @@ display_system_status() {
     echo
     info "System Information:"
     echo "  Project Root: $PROJECT_ROOT"
-    echo "  Enhanced Ecosystem: $ENHANCED_ECOSYSTEM"
+    echo "  Working Ecosystem: $WORKING_ECOSYSTEM"
     echo "  Original Ecosystem: $ORIGINAL_ECOSYSTEM"
     echo "  Backup Ecosystem: $BACKUP_ECOSYSTEM"
     echo "  PM2 Version: $(pm2 --version)"
@@ -200,10 +223,12 @@ display_system_status() {
     
     echo
     info "Log Files Location: $PROJECT_ROOT/logs/"
+    echo "  - Main App: logs/app-combined.log"
+    echo "  - Error Monitor: logs/error-monitor-combined.log"
+    echo "  - Syntax Fixer: logs/syntax-fixer-combined.log"
+    echo "  - Build Health: logs/build-health-combined.log"
+    echo "  - Merge Resolver: logs/merge-resolver-combined.log"
     echo "  - AI Code Analyzer: logs/ai-code-analyzer.log"
-    echo "  - Performance Optimizer: logs/smart-performance-optimizer.log"
-    echo "  - Dependency Manager: logs/intelligent-dependency-manager.log"
-    echo "  - Deployment Automation: logs/smart-deployment-automation.log"
     echo "  - And many more..."
 }
 
@@ -212,16 +237,16 @@ create_management_scripts() {
     log "Creating management scripts..."
     
     # Enhanced start script
-    cat > "$PROJECT_ROOT/scripts/enhanced-pm2-start.sh" << 'EOF'
+    cat > "$PROJECT_ROOT/scripts/pm2-enhanced-start.sh" << 'EOF'
 #!/bin/bash
 # Enhanced PM2 Start Script
 cd "$(dirname "$0")/.."
-pm2 start ecosystem.enhanced.cjs
+pm2 start ecosystem.working.cjs --update-env
 echo "Enhanced PM2 system started"
 EOF
     
     # Enhanced stop script
-    cat > "$PROJECT_ROOT/scripts/enhanced-pm2-stop.sh" << 'EOF'
+    cat > "$PROJECT_ROOT/scripts/pm2-enhanced-stop.sh" << 'EOF'
 #!/bin/bash
 # Enhanced PM2 Stop Script
 cd "$(dirname "$0")/.."
@@ -231,7 +256,7 @@ echo "Enhanced PM2 system stopped"
 EOF
     
     # Enhanced restart script
-    cat > "$PROJECT_ROOT/scripts/enhanced-pm2-restart.sh" << 'EOF'
+    cat > "$PROJECT_ROOT/scripts/pm2-enhanced-restart.sh" << 'EOF'
 #!/bin/bash
 # Enhanced PM2 Restart Script
 cd "$(dirname "$0")/.."
@@ -240,7 +265,7 @@ echo "Enhanced PM2 system restarted"
 EOF
     
     # Enhanced logs script
-    cat > "$PROJECT_ROOT/scripts/enhanced-pm2-logs.sh" << 'EOF'
+    cat > "$PROJECT_ROOT/scripts/pm2-enhanced-logs.sh" << 'EOF'
 #!/bin/bash
 # Enhanced PM2 Logs Script
 cd "$(dirname "$0")/.."
@@ -248,7 +273,7 @@ pm2 logs
 EOF
     
     # Enhanced monitor script
-    cat > "$PROJECT_ROOT/scripts/enhanced-pm2-monitor.sh" << 'EOF'
+    cat > "$PROJECT_ROOT/scripts/pm2-enhanced-monitor.sh" << 'EOF'
 #!/bin/bash
 # Enhanced PM2 Monitor Script
 cd "$(dirname "$0")/.."
@@ -256,7 +281,7 @@ pm2 monit
 EOF
     
     # Make scripts executable
-    chmod +x "$PROJECT_ROOT/scripts/enhanced-pm2-"*.sh
+    chmod +x "$PROJECT_ROOT/scripts/pm2-enhanced-"*.sh
     
     success "Management scripts created"
 }
@@ -269,17 +294,19 @@ main() {
     
     # Check prerequisites
     check_pm2
+    check_dependencies
+    check_build
     
     # Setup system
     backup_original_ecosystem
-    setup_enhanced_ecosystem
+    setup_working_ecosystem
     
     # Stop existing processes
     stop_existing_processes
     
-    # Start enhanced system
-    if start_enhanced_system; then
-        success "Enhanced PM2 system started successfully"
+    # Start working system
+    if start_working_system; then
+        success "Working PM2 system started successfully"
     else
         warning "Some processes failed to start. Check logs for details."
     fi
@@ -304,10 +331,10 @@ main() {
     echo "  4. Use management scripts in scripts/ directory"
     echo
     info "The system will automatically:"
-    echo "  - Analyze and fix code issues"
-    echo "  - Optimize performance and bundle size"
-    echo "  - Manage dependencies and security"
-    echo "  - Handle deployments intelligently"
+    echo "  - Monitor and fix code issues"
+    echo "  - Check build health and dependencies"
+    echo "  - Resolve merge conflicts"
+    echo "  - Analyze code with AI assistance"
     echo "  - Monitor project health continuously"
     echo
 }
