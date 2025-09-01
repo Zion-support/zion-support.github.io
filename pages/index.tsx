@@ -406,7 +406,7 @@ export default function HomePage({ latestUpdates }: HomeProps) {
                   <li>• Continuous validation</li>
                 </ul>
                 <Link href="/resources" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
-                  Explore QA Resources →
+                  Explore Testing Resources →
                 </Link>
               </div>
 
@@ -421,7 +421,7 @@ export default function HomePage({ latestUpdates }: HomeProps) {
                   <li>• Automated QA</li>
                 </ul>
                 <Link href="/blog/performance-optimization" className="text-green-400 hover:text-green-300 text-sm font-semibold">
-                  Read Performance Guide →
+                  Read Performance Article →
                 </Link>
               </div>
             </div>
@@ -440,9 +440,9 @@ export default function HomePage({ latestUpdates }: HomeProps) {
                   <li>• Health monitoring</li>
                   <li>• Self-healing infrastructure</li>
                 </ul>
-                <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
-                  Learn More →
-                </a>
+                <Link href="/services" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                  Explore Services →
+                </Link>
               </div>
 
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
@@ -455,8 +455,8 @@ export default function HomePage({ latestUpdates }: HomeProps) {
                   <li>• Predictive analytics</li>
                 </ul>
                 <Link href="/services" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
-                  Learn More →
-                </a>
+                  Explore Services →
+                </Link>
               </div>
 
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
@@ -469,8 +469,8 @@ export default function HomePage({ latestUpdates }: HomeProps) {
                   <li>• Cluster management</li>
                 </ul>
                 <Link href="/resources" className="text-green-400 hover:text-green-300 text-sm font-semibold">
-                  Learn More →
-                </a>
+                  Explore Resources →
+                </Link>
               </div>
             </div>
           </section>
