@@ -22,6 +22,8 @@ function EnhancedServicesShowcase () {
   Star,
   TrendingUp,
   Users,
+  Target,
+  DollarSign,
   Clock,
   CheckCircle,
   Search
@@ -194,6 +196,7 @@ const categories = ['All', 'AI & Analytics', 'Quantum Computing', 'Cybersecurity
                     </div>
                   </div>
                 </div>
+              </div>
 
                 {/* Description */}
                 <p className="text - zion - slate - light mb - 6 leading - relaxed">
@@ -210,6 +213,7 @@ const categories = ['All', 'AI & Analytics', 'Quantum Computing', 'Cybersecurity
                       </div>) ) }
                   </div>
                 </div>
+              </div>
 
                 {/* Benefits */}
                 <div role="button" className="mb - 8">
@@ -221,6 +225,7 @@ const categories = ['All', 'AI & Analytics', 'Quantum Computing', 'Cybersecurity
                       </div>) ) }
                   </div>
                 </div>
+              </div>
 
                 {/* CTA Button */}
                 <Link
@@ -418,7 +423,14 @@ const categories = ['All', 'AI & Analytics', 'Quantum Computing', 'Cybersecurity
           <div role="button" className="mt - 6 text - zion - slate - light">
             Questions? Email < a href="mailto:kleber@ziontechgroup.com" className="text - zion - cyan hover:underline">kleber@ziontechgroup.com</a>
           </div>
-        </motion.div>
+        )}
+
+        {/* Results Count */}
+        {filteredServices.length > 0 && (
+          <div className="text-center mt-8 text-slate-400">
+            Showing {filteredServices.length} of {allServices.length} services
+          </div>
+        )}
       </div>
     </section>) ;
 };
