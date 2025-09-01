@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, Dispatch, SetStateAction } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle, X, Send, Bot, User, Sparkles, ChevronUp, ChevronDown } from 'lucide-react';
 
@@ -39,7 +39,7 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
   }, [messages]);
 
   // AI response simulation
-  const generateAIResponse = async (userMessage: string): Promise<string> => {
+  const generateAIResponse = async (userMessage: string) => {
     setIsTyping(true);
     
     // Simulate AI processing time
@@ -54,7 +54,7 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
       "Great question! Our pricing is competitive and we offer flexible plans to meet your specific needs. Let me get you in touch with our sales team."
     ];
     
-    const randomResponse = responses[Math.floor(Math.random() * responses.length)] || responses[0];
+    const randomResponse = responses[Math.floor(Math.random() * responses.length)];
     
     // Add some context-aware responses
     let finalResponse = randomResponse;
@@ -66,7 +66,7 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
       finalResponse = "Our quantum computing solutions cover neural networks, cybersecurity, materials discovery, and financial intelligence. These cutting-edge technologies can solve problems that classical computers cannot. What specific quantum application are you exploring?";
     }
     
-    return finalResponse!;
+    return finalResponse;
   };
 
   const handleSendMessage = async () => {
@@ -79,7 +79,7 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
       timestamp: new Date()
     };
 
-    setMessages([...messages, userMessage]);
+    setMessages((prev: ChatMessage[]) => [...prev, userMessage]);
     setInputValue('');
     
     // Generate AI response
@@ -92,7 +92,7 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
       timestamp: new Date()
     };
 
-    setMessages([...messages, botMessage]);
+    setMessages((prev: ChatMessage[]) => [...prev, botMessage]);
     setIsTyping(false);
   };
 

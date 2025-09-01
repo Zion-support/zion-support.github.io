@@ -1,31 +1,27 @@
 import React, { useEffect, useRef } from 'react';
 
-// Performance entry types
+// Browser API types are declared globally in PerformanceOptimizer.tsx
+
+// Performance entry types for Core Web Vitals
 interface PerformanceEventTiming extends PerformanceEntry {
   processingStart: number;
   processingEnd: number;
   target?: any;
 }
 
-interface LayoutShift extends PerformanceEntry {
-  value: number;
-  sources?: LayoutShiftSource[];
-}
-
-interface LayoutShiftSource {
-  node?: any;
-  currentRect?: any;
-  previousRect?: any;
-}
-
 interface AnalyticsTrackerProps {
-  trackingId?: string;
-  enableTracking?: boolean;
+  pageTitle?: string;
+  pagePath?: string;
+  customEvents?: Array<{
+    name: string;
+    parameters?: Record<string, unknown>;
+  }>;
 }
 
-const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({ 
-  trackingId = 'G-XXXXXXXXXX', 
-  enableTracking = true 
+const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
+  pageTitle,
+  pagePath,
+  customEvents = []
 }) => {
   const router = useRouter();
   const trackingId = Math.random().toString(36).substr(2, 9);
@@ -118,6 +114,11 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
           // Silently handle fetch errors
         });
       }
+    };
+
+    // Helper function to track metrics
+    const trackMetric = (name: string, value: number) => {
+      trackEvent('Metric', { metric_name: name, metric_value: value });
     };
 
     // Initialize analytics and performance monitoring
