@@ -6,10 +6,9 @@ exports.handler = async function(event, context) {
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'external-link-check-runner function executed successfully',
+        message: 'external-link-check-runner executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'external-link-check-runner',
-        action: 'executing external-link-check-runner functionality'
+        function: 'external-link-check-runner'
       })
     };
     

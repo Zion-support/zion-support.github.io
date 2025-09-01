@@ -14,11 +14,7 @@ yarn-error.log*
 # Env
 .env
 .env.local
-.env.*
+.env.*.local
 
-# OS/Editor
-.DS_Store
-*.swp
-*.swo
-.idea/
-.vscode/
+# Local Netlify folder
+.netlify

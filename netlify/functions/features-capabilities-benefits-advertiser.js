@@ -6,10 +6,9 @@ exports.handler = async function(event, context) {
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'features-capabilities-benefits-advertiser function executed successfully',
+        message: 'features-capabilities-benefits-advertiser executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'features-capabilities-benefits-advertiser',
-        action: 'executing features-capabilities-benefits-advertiser functionality'
+        function: 'features-capabilities-benefits-advertiser'
       })
     };
     

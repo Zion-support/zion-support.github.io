@@ -6,10 +6,9 @@ exports.handler = async function(event, context) {
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'broken-image-scanner function executed successfully',
+        message: 'broken-image-scanner executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'broken-image-scanner',
-        action: 'executing broken-image-scanner functionality'
+        function: 'broken-image-scanner'
       })
     };
     

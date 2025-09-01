@@ -6,10 +6,9 @@ exports.handler = async function(event, context) {
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'topic-cluster-builder-runner function executed successfully',
+        message: 'topic-cluster-builder-runner executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'topic-cluster-builder-runner',
-        action: 'executing topic-cluster-builder-runner functionality'
+        function: 'topic-cluster-builder-runner'
       })
     };
     

@@ -6,10 +6,9 @@ exports.handler = async function(event, context) {
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'docs-search-index-runner function executed successfully',
+        message: 'docs-search-index-runner executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'docs-search-index-runner',
-        action: 'executing docs-search-index-runner functionality'
+        function: 'docs-search-index-runner'
       })
     };
     

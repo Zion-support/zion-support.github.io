@@ -1,28 +1,24 @@
 exports.handler = async function(event, context) {
-  console.log('marketing-and-features-promo function executed');
-  
   try {
-    // Basic marketing and features promotion logic
-    const timestamp = new Date().toISOString();
-    console.log(`Marketing and features promotion process started at ${timestamp}`);
+    console.log('marketing-and-features-promo function triggered');
     
-    // Simulate some promotion work
-    await new Promise(resolve => setTimeout(resolve, 250));
-    
-    return {
+    // Basic marketing-and-features-promo logic
+    const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'Marketing and features promotion completed successfully',
-        timestamp: timestamp,
+        message: 'marketing-and-features-promo executed successfully',
+        timestamp: new Date().toISOString(),
         function: 'marketing-and-features-promo'
       })
     };
+    
+    return result;
   } catch (error) {
     console.error('Error in marketing-and-features-promo:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Marketing and features promotion failed',
+        error: 'Internal server error',
         message: error.message,
         function: 'marketing-and-features-promo'
       })

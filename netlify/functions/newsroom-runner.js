@@ -6,10 +6,9 @@ exports.handler = async function(event, context) {
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'newsroom-runner function executed successfully',
+        message: 'newsroom-runner executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'newsroom-runner',
-        action: 'executing newsroom-runner functionality'
+        function: 'newsroom-runner'
       })
     };
     

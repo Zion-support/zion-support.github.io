@@ -6,10 +6,9 @@ exports.handler = async function(event, context) {
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'todo-scanner-runner function executed successfully',
+        message: 'todo-scanner-runner executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'todo-scanner-runner',
-        action: 'executing todo-scanner-runner functionality'
+        function: 'todo-scanner-runner'
       })
     };
     

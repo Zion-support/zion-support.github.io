@@ -6,10 +6,9 @@ exports.handler = async function(event, context) {
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'content-freshness-score-runner function executed successfully',
+        message: 'content-freshness-score-runner executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'content-freshness-score-runner',
-        action: 'executing content-freshness-score-runner functionality'
+        function: 'content-freshness-score-runner'
       })
     };
     

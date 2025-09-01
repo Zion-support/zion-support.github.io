@@ -6,10 +6,9 @@ exports.handler = async function(event, context) {
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'readme-advertiser function executed successfully',
+        message: 'readme-advertiser executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'readme-advertiser',
-        action: 'executing readme-advertiser functionality'
+        function: 'readme-advertiser'
       })
     };
     

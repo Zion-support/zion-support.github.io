@@ -1,28 +1,24 @@
 exports.handler = async function(event, context) {
-  console.log('front-enhancer function executed');
-  
   try {
-    // Basic front enhancement logic
-    const timestamp = new Date().toISOString();
-    console.log(`Front enhancement process started at ${timestamp}`);
+    console.log('front-enhancer function triggered');
     
-    // Simulate some enhancement work
-    await new Promise(resolve => setTimeout(resolve, 120));
-    
-    return {
+    // Basic front-enhancer logic
+    const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'Front enhancement completed successfully',
-        timestamp: timestamp,
+        message: 'front-enhancer executed successfully',
+        timestamp: new Date().toISOString(),
         function: 'front-enhancer'
       })
     };
+    
+    return result;
   } catch (error) {
     console.error('Error in front-enhancer:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Front enhancement failed',
+        error: 'Internal server error',
         message: error.message,
         function: 'front-enhancer'
       })

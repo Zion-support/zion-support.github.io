@@ -6,10 +6,9 @@ exports.handler = async function(event, context) {
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'hyper-front-index-accelerator function executed successfully',
+        message: 'hyper-front-index-accelerator executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'hyper-front-index-accelerator',
-        action: 'executing hyper-front-index-accelerator functionality'
+        function: 'hyper-front-index-accelerator'
       })
     };
     

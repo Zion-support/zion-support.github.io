@@ -6,10 +6,9 @@ exports.handler = async function(event, context) {
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'og-image-update-runner function executed successfully',
+        message: 'og-image-update-runner executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'og-image-update-runner',
-        action: 'executing og-image-update-runner functionality'
+        function: 'og-image-update-runner'
       })
     };
     

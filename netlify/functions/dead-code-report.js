@@ -6,10 +6,9 @@ exports.handler = async function(event, context) {
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'dead-code-report function executed successfully',
+        message: 'dead-code-report executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'dead-code-report',
-        action: 'executing dead-code-report functionality'
+        function: 'dead-code-report'
       })
     };
     

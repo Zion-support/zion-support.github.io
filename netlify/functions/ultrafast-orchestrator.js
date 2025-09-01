@@ -1,28 +1,24 @@
 exports.handler = async function(event, context) {
-  console.log('ultrafast-orchestrator function executed');
-  
   try {
-    // Basic ultrafast orchestration logic
-    const timestamp = new Date().toISOString();
-    console.log(`Ultrafast orchestration process started at ${timestamp}`);
+    console.log('ultrafast-orchestrator function triggered');
     
-    // Simulate some ultrafast orchestration work
-    await new Promise(resolve => setTimeout(resolve, 50));
-    
-    return {
+    // Basic ultrafast-orchestrator logic
+    const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'Ultrafast orchestration completed successfully',
-        timestamp: timestamp,
+        message: 'ultrafast-orchestrator executed successfully',
+        timestamp: new Date().toISOString(),
         function: 'ultrafast-orchestrator'
       })
     };
+    
+    return result;
   } catch (error) {
     console.error('Error in ultrafast-orchestrator:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Ultrafast orchestration failed',
+        error: 'Internal server error',
         message: error.message,
         function: 'ultrafast-orchestrator'
       })

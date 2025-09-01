@@ -1,28 +1,24 @@
 exports.handler = async function(event, context) {
-  console.log('frontpage-enhancer function executed');
-  
   try {
-    // Basic frontpage enhancement logic
-    const timestamp = new Date().toISOString();
-    console.log(`Frontpage enhancement process started at ${timestamp}`);
+    console.log('frontpage-enhancer function triggered');
     
-    // Simulate some enhancement work
-    await new Promise(resolve => setTimeout(resolve, 180));
-    
-    return {
+    // Basic frontpage-enhancer logic
+    const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'Frontpage enhancement completed successfully',
-        timestamp: timestamp,
+        message: 'frontpage-enhancer executed successfully',
+        timestamp: new Date().toISOString(),
         function: 'frontpage-enhancer'
       })
     };
+    
+    return result;
   } catch (error) {
     console.error('Error in frontpage-enhancer:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Frontpage enhancement failed',
+        error: 'Internal server error',
         message: error.message,
         function: 'frontpage-enhancer'
       })

@@ -6,10 +6,9 @@ exports.handler = async function(event, context) {
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'front-maximizer function executed successfully',
+        message: 'front-maximizer executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'front-maximizer',
-        action: 'executing front-maximizer functionality'
+        function: 'front-maximizer'
       })
     };
     

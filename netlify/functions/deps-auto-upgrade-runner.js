@@ -6,10 +6,9 @@ exports.handler = async function(event, context) {
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'deps-auto-upgrade-runner function executed successfully',
+        message: 'deps-auto-upgrade-runner executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'deps-auto-upgrade-runner',
-        action: 'executing deps-auto-upgrade-runner functionality'
+        function: 'deps-auto-upgrade-runner'
       })
     };
     

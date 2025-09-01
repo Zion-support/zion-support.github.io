@@ -1,28 +1,24 @@
 exports.handler = async function(event, context) {
-  console.log('trigger-all-and-commit function executed');
-  
   try {
-    // Basic trigger all and commit logic
-    const timestamp = new Date().toISOString();
-    console.log(`Trigger all and commit process started at ${timestamp}`);
+    console.log('trigger-all-and-commit function triggered');
     
-    // Simulate some trigger work
-    await new Promise(resolve => setTimeout(resolve, 100));
-    
-    return {
+    // Basic trigger-all-and-commit logic
+    const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'Trigger all and commit completed successfully',
-        timestamp: timestamp,
+        message: 'trigger-all-and-commit executed successfully',
+        timestamp: new Date().toISOString(),
         function: 'trigger-all-and-commit'
       })
     };
+    
+    return result;
   } catch (error) {
     console.error('Error in trigger-all-and-commit:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Trigger all and commit failed',
+        error: 'Internal server error',
         message: error.message,
         function: 'trigger-all-and-commit'
       })

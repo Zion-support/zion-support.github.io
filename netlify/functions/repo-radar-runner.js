@@ -6,10 +6,9 @@ exports.handler = async function(event, context) {
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'repo-radar-runner function executed successfully',
+        message: 'repo-radar-runner executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'repo-radar-runner',
-        action: 'executing repo-radar-runner functionality'
+        function: 'repo-radar-runner'
       })
     };
     

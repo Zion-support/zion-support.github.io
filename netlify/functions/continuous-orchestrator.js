@@ -2,14 +2,13 @@ exports.handler = async function(event, context) {
   try {
     console.log('continuous-orchestrator function triggered');
     
-    // Basic continuous orchestration logic
+    // Basic continuous-orchestrator logic
     const result = {
       statusCode: 200,
       body: JSON.stringify({
         message: 'continuous-orchestrator executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'continuous-orchestrator',
-        purpose: 'Multi-tool refresh and sitemap generation'
+        function: 'continuous-orchestrator'
       })
     };
     

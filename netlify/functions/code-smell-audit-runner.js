@@ -6,10 +6,9 @@ exports.handler = async function(event, context) {
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'code-smell-audit-runner function executed successfully',
+        message: 'code-smell-audit-runner executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'code-smell-audit-runner',
-        action: 'executing code-smell-audit-runner functionality'
+        function: 'code-smell-audit-runner'
       })
     };
     

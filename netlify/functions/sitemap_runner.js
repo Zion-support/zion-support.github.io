@@ -2,14 +2,13 @@ exports.handler = async function(event, context) {
   try {
     console.log('sitemap_runner function triggered');
     
-    // Basic sitemap generation logic
+    // Basic sitemap_runner logic
     const result = {
       statusCode: 200,
       body: JSON.stringify({
         message: 'sitemap_runner executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'sitemap_runner',
-        purpose: 'Sitemap generation and maintenance'
+        function: 'sitemap_runner'
       })
     };
     

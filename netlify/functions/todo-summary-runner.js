@@ -6,10 +6,9 @@ exports.handler = async function(event, context) {
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'todo-summary-runner function executed successfully',
+        message: 'todo-summary-runner executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'todo-summary-runner',
-        action: 'executing todo-summary-runner functionality'
+        function: 'todo-summary-runner'
       })
     };
     

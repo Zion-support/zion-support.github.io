@@ -6,10 +6,9 @@ exports.handler = async function(event, context) {
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'internal-link-graph-runner function executed successfully',
+        message: 'internal-link-graph-runner executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'internal-link-graph-runner',
-        action: 'executing internal-link-graph-runner functionality'
+        function: 'internal-link-graph-runner'
       })
     };
     

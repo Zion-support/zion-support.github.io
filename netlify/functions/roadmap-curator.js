@@ -6,10 +6,9 @@ exports.handler = async function(event, context) {
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'roadmap-curator function executed successfully',
+        message: 'roadmap-curator executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'roadmap-curator',
-        action: 'executing roadmap-curator functionality'
+        function: 'roadmap-curator'
       })
     };
     

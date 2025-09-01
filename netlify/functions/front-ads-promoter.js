@@ -6,10 +6,9 @@ exports.handler = async function(event, context) {
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'front-ads-promoter function executed successfully',
+        message: 'front-ads-promoter executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'front-ads-promoter',
-        action: 'executing front-ads-promoter functionality'
+        function: 'front-ads-promoter'
       })
     };
     

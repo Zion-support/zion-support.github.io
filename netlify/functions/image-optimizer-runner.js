@@ -6,10 +6,9 @@ exports.handler = async function(event, context) {
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'image-optimizer-runner function executed successfully',
+        message: 'image-optimizer-runner executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'image-optimizer-runner',
-        action: 'executing image-optimizer-runner functionality'
+        function: 'image-optimizer-runner'
       })
     };
     

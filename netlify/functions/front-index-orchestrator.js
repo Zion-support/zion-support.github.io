@@ -1,28 +1,24 @@
 exports.handler = async function(event, context) {
-  console.log('front-index-orchestrator function executed');
-  
   try {
-    // Basic front index orchestration logic
-    const timestamp = new Date().toISOString();
-    console.log(`Front index orchestration process started at ${timestamp}`);
+    console.log('front-index-orchestrator function triggered');
     
-    // Simulate some orchestration work
-    await new Promise(resolve => setTimeout(resolve, 200));
-    
-    return {
+    // Basic front-index-orchestrator logic
+    const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'Front index orchestration completed successfully',
-        timestamp: timestamp,
+        message: 'front-index-orchestrator executed successfully',
+        timestamp: new Date().toISOString(),
         function: 'front-index-orchestrator'
       })
     };
+    
+    return result;
   } catch (error) {
     console.error('Error in front-index-orchestrator:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({
-        error: 'Front index orchestration failed',
+        error: 'Internal server error',
         message: error.message,
         function: 'front-index-orchestrator'
       })

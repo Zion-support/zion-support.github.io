@@ -2,14 +2,13 @@ exports.handler = async function(event, context) {
   try {
     console.log('home-visionary-expander function triggered');
     
-    // Basic home visionary expansion logic
+    // Basic home-visionary-expander logic
     const result = {
       statusCode: 200,
       body: JSON.stringify({
         message: 'home-visionary-expander executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'home-visionary-expander',
-        purpose: 'Refreshes homepage highlights and links'
+        function: 'home-visionary-expander'
       })
     };
     

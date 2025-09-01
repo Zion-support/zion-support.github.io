@@ -6,10 +6,9 @@ exports.handler = async function(event, context) {
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'continuous-front-runner function executed successfully',
+        message: 'continuous-front-runner executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'continuous-front-runner',
-        action: 'executing continuous-front-runner functionality'
+        function: 'continuous-front-runner'
       })
     };
     

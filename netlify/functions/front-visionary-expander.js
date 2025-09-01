@@ -2,14 +2,13 @@ exports.handler = async function(event, context) {
   try {
     console.log('front-visionary-expander function triggered');
     
-    // Basic front visionary expansion logic
+    // Basic front-visionary-expander logic
     const result = {
       statusCode: 200,
       body: JSON.stringify({
         message: 'front-visionary-expander executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'front-visionary-expander',
-        purpose: 'Enhances main/front with animated sections and deep links'
+        function: 'front-visionary-expander'
       })
     };
     

@@ -6,10 +6,9 @@ exports.handler = async function(event, context) {
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'repo-knowledge-graph-runner function executed successfully',
+        message: 'repo-knowledge-graph-runner executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'repo-knowledge-graph-runner',
-        action: 'executing repo-knowledge-graph-runner functionality'
+        function: 'repo-knowledge-graph-runner'
       })
     };
     

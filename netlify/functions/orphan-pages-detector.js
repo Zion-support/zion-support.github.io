@@ -6,10 +6,9 @@ exports.handler = async function(event, context) {
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'orphan-pages-detector function executed successfully',
+        message: 'orphan-pages-detector executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'orphan-pages-detector',
-        action: 'executing orphan-pages-detector functionality'
+        function: 'orphan-pages-detector'
       })
     };
     

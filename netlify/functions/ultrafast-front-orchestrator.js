@@ -6,10 +6,9 @@ exports.handler = async function(event, context) {
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'ultrafast-front-orchestrator function executed successfully',
+        message: 'ultrafast-front-orchestrator executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'ultrafast-front-orchestrator',
-        action: 'executing ultrafast-front-orchestrator functionality'
+        function: 'ultrafast-front-orchestrator'
       })
     };
     

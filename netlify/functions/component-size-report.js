@@ -6,10 +6,9 @@ exports.handler = async function(event, context) {
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'component-size-report function executed successfully',
+        message: 'component-size-report executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'component-size-report',
-        action: 'executing component-size-report functionality'
+        function: 'component-size-report'
       })
     };
     

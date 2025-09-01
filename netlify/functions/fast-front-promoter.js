@@ -6,10 +6,9 @@ exports.handler = async function(event, context) {
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'fast-front-promoter function executed successfully',
+        message: 'fast-front-promoter executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'fast-front-promoter',
-        action: 'executing fast-front-promoter functionality'
+        function: 'fast-front-promoter'
       })
     };
     

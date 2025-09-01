@@ -6,10 +6,9 @@ exports.handler = async function(event, context) {
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'autonomous-meta-orchestrator function executed successfully',
+        message: 'autonomous-meta-orchestrator executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'autonomous-meta-orchestrator',
-        action: 'executing autonomous-meta-orchestrator functionality'
+        function: 'autonomous-meta-orchestrator'
       })
     };
     

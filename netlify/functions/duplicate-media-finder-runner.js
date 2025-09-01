@@ -6,10 +6,9 @@ exports.handler = async function(event, context) {
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'duplicate-media-finder-runner function executed successfully',
+        message: 'duplicate-media-finder-runner executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'duplicate-media-finder-runner',
-        action: 'executing duplicate-media-finder-runner functionality'
+        function: 'duplicate-media-finder-runner'
       })
     };
     

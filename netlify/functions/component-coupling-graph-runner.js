@@ -6,10 +6,9 @@ exports.handler = async function(event, context) {
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'component-coupling-graph-runner function executed successfully',
+        message: 'component-coupling-graph-runner executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'component-coupling-graph-runner',
-        action: 'executing component-coupling-graph-runner functionality'
+        function: 'component-coupling-graph-runner'
       })
     };
     

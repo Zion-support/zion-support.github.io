@@ -2,7 +2,7 @@ exports.handler = async function(event, context) {
   try {
     console.log('a11y-alt-text-runner function triggered');
     
-    // Basic accessibility alt-text scanning logic
+    // Basic accessibility alt-text checking logic
     const result = {
       statusCode: 200,
       body: JSON.stringify({

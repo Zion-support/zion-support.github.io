@@ -6,10 +6,9 @@ exports.handler = async function(event, context) {
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'canonical-auditor function executed successfully',
+        message: 'canonical-auditor executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'canonical-auditor',
-        action: 'executing canonical-auditor functionality'
+        function: 'canonical-auditor'
       })
     };
     

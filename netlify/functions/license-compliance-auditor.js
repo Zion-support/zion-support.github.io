@@ -6,10 +6,9 @@ exports.handler = async function(event, context) {
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'license-compliance-auditor function executed successfully',
+        message: 'license-compliance-auditor executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'license-compliance-auditor',
-        action: 'executing license-compliance-auditor functionality'
+        function: 'license-compliance-auditor'
       })
     };
     

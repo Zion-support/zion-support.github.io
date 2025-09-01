@@ -6,10 +6,9 @@ exports.handler = async function(event, context) {
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'pagespeed-insights-runner function executed successfully',
+        message: 'pagespeed-insights-runner executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'pagespeed-insights-runner',
-        action: 'executing pagespeed-insights-runner functionality'
+        function: 'pagespeed-insights-runner'
       })
     };
     

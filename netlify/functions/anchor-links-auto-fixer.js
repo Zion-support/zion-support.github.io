@@ -2,7 +2,7 @@ exports.handler = async function(event, context) {
   try {
     console.log('anchor-links-auto-fixer function triggered');
     
-    // Basic anchor links auto-fixing logic
+    // Basic anchor-links-auto-fixer logic
     const result = {
       statusCode: 200,
       body: JSON.stringify({

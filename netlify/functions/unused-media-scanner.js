@@ -6,10 +6,9 @@ exports.handler = async function(event, context) {
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'unused-media-scanner function executed successfully',
+        message: 'unused-media-scanner executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'unused-media-scanner',
-        action: 'executing unused-media-scanner functionality'
+        function: 'unused-media-scanner'
       })
     };
     

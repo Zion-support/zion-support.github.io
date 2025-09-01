@@ -6,10 +6,9 @@ exports.handler = async function(event, context) {
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'stale-content-auditor-runner function executed successfully',
+        message: 'stale-content-auditor-runner executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'stale-content-auditor-runner',
-        action: 'executing stale-content-auditor-runner functionality'
+        function: 'stale-content-auditor-runner'
       })
     };
     

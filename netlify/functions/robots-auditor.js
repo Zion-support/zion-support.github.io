@@ -6,10 +6,9 @@ exports.handler = async function(event, context) {
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'robots-auditor function executed successfully',
+        message: 'robots-auditor executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'robots-auditor',
-        action: 'executing robots-auditor functionality'
+        function: 'robots-auditor'
       })
     };
     

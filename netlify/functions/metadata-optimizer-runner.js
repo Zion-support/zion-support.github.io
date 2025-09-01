@@ -6,10 +6,9 @@ exports.handler = async function(event, context) {
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'metadata-optimizer-runner function executed successfully',
+        message: 'metadata-optimizer-runner executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'metadata-optimizer-runner',
-        action: 'executing metadata-optimizer-runner functionality'
+        function: 'metadata-optimizer-runner'
       })
     };
     

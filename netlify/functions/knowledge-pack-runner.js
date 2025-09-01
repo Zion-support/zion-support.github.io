@@ -6,10 +6,9 @@ exports.handler = async function(event, context) {
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'knowledge-pack-runner function executed successfully',
+        message: 'knowledge-pack-runner executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'knowledge-pack-runner',
-        action: 'executing knowledge-pack-runner functionality'
+        function: 'knowledge-pack-runner'
       })
     };
     

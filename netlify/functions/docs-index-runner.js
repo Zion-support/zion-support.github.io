@@ -2,14 +2,13 @@ exports.handler = async function(event, context) {
   try {
     console.log('docs-index-runner function triggered');
     
-    // Basic documentation indexing logic
+    // Basic docs-index-runner logic
     const result = {
       statusCode: 200,
       body: JSON.stringify({
         message: 'docs-index-runner executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'docs-index-runner',
-        purpose: 'Technical notes and guides indexing'
+        function: 'docs-index-runner'
       })
     };
     

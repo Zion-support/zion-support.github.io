@@ -6,10 +6,9 @@ exports.handler = async function(event, context) {
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'site-404-map-runner function executed successfully',
+        message: 'site-404-map-runner executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'site-404-map-runner',
-        action: 'executing site-404-map-runner functionality'
+        function: 'site-404-map-runner'
       })
     };
     

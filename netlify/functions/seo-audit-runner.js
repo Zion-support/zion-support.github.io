@@ -2,14 +2,13 @@ exports.handler = async function(event, context) {
   try {
     console.log('seo-audit-runner function triggered');
     
-    // Basic SEO audit logic
+    // Basic seo-audit-runner logic
     const result = {
       statusCode: 200,
       body: JSON.stringify({
         message: 'seo-audit-runner executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'seo-audit-runner',
-        purpose: 'SEO optimization and audit'
+        function: 'seo-audit-runner'
       })
     };
     

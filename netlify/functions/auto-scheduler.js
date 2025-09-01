@@ -6,10 +6,9 @@ exports.handler = async function(event, context) {
     const result = {
       statusCode: 200,
       body: JSON.stringify({
-        message: 'auto-scheduler function executed successfully',
+        message: 'auto-scheduler executed successfully',
         timestamp: new Date().toISOString(),
-        function: 'auto-scheduler',
-        action: 'executing auto-scheduler functionality'
+        function: 'auto-scheduler'
       })
     };
     
