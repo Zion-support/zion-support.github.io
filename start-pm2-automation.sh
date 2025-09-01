@@ -15,7 +15,7 @@ CYAN='\033[0;36m'
 NC='\033[0m' # No Color
 
 # Project configuration
-PROJECT_ROOT="/workspace"
+PROJECT_ROOT="$(pwd)"
 ECOSYSTEM_CONFIG="$PROJECT_ROOT/ecosystem.config.cjs"
 LOGS_DIR="$PROJECT_ROOT/logs"
 
