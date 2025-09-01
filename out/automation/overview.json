@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-08-11T22:46:17.128Z",
+  "generatedAt": "2025-08-11T22:47:05.578Z",
   "functions": [
     "a11y-audit-runner",
     "ai-changelog-runner",
@@ -19,8 +19,7 @@
     "capability-map-runner",
     "cloud-autonomous-orchestrator-runner",
     "cloud_orchestrator",
-    "component-usage-index-runner",
-    "content-freshness-runner",
+    "content-gap-finder",
     "continuous-front-runner",
     "continuous-orchestrator",
     "css-bloat-report",
@@ -76,7 +75,7 @@
     "repo-knowledge-graph-runner",
     "repo-radar-and-graph",
     "repo-radar-runner",
-    "repo-velocity-runner",
+    "roadmap-synthesizer",
     "schedule-content-index",
     "schedule-homepage",
     "schedule-knowledge-graph",
@@ -97,7 +96,7 @@
     "ui-evolution-runner",
     "ultrafast-front-orchestrator",
     "ultrafast-orchestrator",
-    "unused-images-runner",
+    "ux-heuristics-audit-runner",
     "website-search-index-runner"
   ]
 }

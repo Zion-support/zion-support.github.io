@@ -1,21 +1,21 @@
 #!/usr/bin/env node
 
-// No-op Netlify functions manifest generator placeholder
-// Writes a minimal manifest file if functions dir exists
+'use strict';
+
 const fs = require('fs');
 const path = require('path');
 
-const outDir = path.resolve(process.cwd(), 'automation');
-const manifestPath = path.join(outDir, 'netlify-functions-manifest.json');
-try {
-  fs.mkdirSync(outDir, { recursive: true });
-} catch {}
-
-const manifest = { functions: [], generatedAt: new Date().toISOString() };
-try {
-  fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
-  console.log('[netlify:manifest] wrote', manifestPath);
-} catch (e) {
-  console.log('[netlify:manifest] skipped (write failed)');
+function listFunctions(dir) {
+  const entries = fs.readdirSync(dir).filter(f => f.endsWith('.js'));
+  return entries.map(f => f.replace(/\.js$/, ''));
 }
-process.exit(0);
+
+(function main() {
+  const root = process.cwd();
+  const fnDir = path.join(root, 'netlify', 'functions');
+  const out = path.join(fnDir, 'functions-manifest.json');
+  const names = listFunctions(fnDir).filter(n => n !== 'functions-manifest');
+  const json = { generatedAt: new Date().toISOString(), functions: names.sort() };
+  fs.writeFileSync(out, JSON.stringify(json, null, 2), 'utf8');
+  console.log(`Wrote manifest with ${names.length} functions.`);
+})();
