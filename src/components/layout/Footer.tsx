@@ -247,7 +247,6 @@ export function Footer() {
     { name: "Contact", href: "/contact", icon: Phone },
     { name: "Legal", href: "/legal", icon: Scale }
   ];
-  ];
 
   const socialLinks = [
     { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: Linkedin },

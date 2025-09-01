@@ -1,59 +1,21 @@
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter, Routes, Route } from 'react-router-dom';
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
 import CartPage from '@/pages/Cart';
 import { CartProvider } from '@/context/CartContext';
 import { AuthContext } from '@/context/auth/AuthContext';
 import { safeStorage } from '@/utils/safeStorage';
-<<<<<<< HEAD
-=======
 import { getCartKey } from '@/utils/cartUtils';
+
 vi.mock('next/router', () => ({
   useRouter: () => ({ push: vi.fn() })
 }));
-<<<<<<< HEAD
-const item = {
-  id: '1', name: 'Test Item', price: 10,;
-  quantity: 1 ;
-
-};
-function renderCart(user: ) {
-  return render(
-    <AuthContext.Provider value = {
-  { user,
-  isLoading: false 
-
-} as }>
-=======
-const item = {
-  id: '1', name: 'Test Item', price: 10,;
-  ;
-  ;
-  ;
-  ;
-  ;
-  quantity: 1 ;
->>>>>>> cursor/add-new-services-and-advertise-them-971c
 
 const item = { id: '1', name: 'Test Item', price: 10, quantity: 1 };
 
 function renderCart(user: any) {
   return render(
-<<<<<<< HEAD
     <AuthContext.Provider value={{ user, isLoading: false } as any}>
-=======
-    <AuthContext.Provider value = {
-  { user,
-  isLoading: false 
-
-
-
-
-
-
-} as any}>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> cursor/add-new-services-and-advertise-them-971c
       <CartProvider>
         <MemoryRouter initialEntries={['/cart']}>
           <Routes>
@@ -73,15 +35,7 @@ describe('cart persistence', () => {
     expect(screen.getByText(/Test Item/i)).toBeInTheDocument();
 
     rerender(
-<<<<<<< HEAD
       <AuthContext.Provider value={{ user: { id: 'u1' }, isLoading: false } as any}>
-=======
-<<<<<<< HEAD
-      <AuthContext.Provider value = {{ user: { id: 'u1' }, isLoading: false } as }>
-=======
-      <AuthContext.Provider value = {{ user: { id: 'u1' }, isLoading: false } as any}>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> cursor/add-new-services-and-advertise-them-971c
         <CartProvider>
           <MemoryRouter initialEntries={['/cart']}>
             <Routes>

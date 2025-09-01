@@ -10,24 +10,12 @@ export function EnhancedFooter() {
     {
       title: 'Featured Services',
       links: [
-        { name: 'AI Content Creation Studio Pro', href: '/services/AI-Content-Creation-Studio-Pro', icon: PenTool, featured: true },
-        { name: 'Quantum AI Trading Platform', href: '/services/Quantum-AI-Trading-Platform', icon: Atom, featured: true },
-        { name: 'AI Project Management Platform', href: '/services/ai-powered-project-management-platform', icon: Workflow, featured: true },
+        { name: 'AI Intelligent Project Management', href: '/services/ai-intelligent-project-management-platform', icon: Rocket, featured: true },
         { name: 'AI Financial Analytics Platform', href: '/services/ai-financial-analytics-platform', icon: BarChart3, featured: true },
         { name: 'AI Healthcare Analytics Platform', href: '/services/ai-healthcare-analytics-platform', icon: Heart, featured: true },
-        { name: 'AI Content Intelligence Platform', href: '/services/ai-content-intelligence-platform', icon: Brain, featured: true },
-        { name: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics', icon: Users, featured: true },
-        { name: 'AI Financial Risk Management', href: '/services/ai-financial-risk-management', icon: Shield, featured: true },
-        { name: 'AI Autonomous Business Operations', href: '/services/ai-autonomous-business-operations-platform', icon: Cpu, featured: true },
-        { name: 'AI Data Governance Platform', href: '/services/ai-data-governance-platform', icon: Database, featured: true },
-        { name: 'AI Digital Twin Platform', href: '/services/ai-digital-twin-platform', icon: Globe, featured: true },
-        { name: 'AI ESG Compliance Platform', href: '/services/ai-esg-compliance-platform', icon: Leaf, featured: true },
-        { name: 'AI Edge Computing Platform', href: '/services/ai-edge-computing-platform', icon: CpuIcon, featured: true },
-        { name: 'AI Supply Chain Risk Management', href: '/services/ai-supply-chain-risk-management-platform', icon: Shield, featured: true },
-        { name: 'Quantum AI Cybersecurity Platform', href: '/services/quantum-ai-cybersecurity-platform', icon: Lock, featured: true },
-        { name: '2025 Services Showcase', href: '/innovative-services-showcase-2025', icon: Sparkles, featured: true },
-        { name: '2029 Cutting-Edge Services', href: '/zion-cutting-edge-services-2029', icon: Sparkles, featured: true },
-        { name: 'AI-Powered Micro SAAS', href: '/zion-cutting-edge-services-2029', icon: Brain, featured: true }
+        { name: 'AI Content Creation Studio Pro', href: '/services/AI-Content-Creation-Studio-Pro', icon: PenTool, featured: true },
+        { name: 'Quantum AI Trading Platform', href: '/services/Quantum-AI-Trading-Platform', icon: Atom, featured: true },
+        { name: '2025 Services Showcase', href: '/innovative-services-showcase-2025', icon: Sparkles, featured: true }
       ]
     },
     {
