@@ -1,28 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { SEO } from "../components/SEO";
-import { innovativeMicroSaasServices2030 } from "../data/innovativeMicroSaasServices2030";
-import { comprehensiveITServices2030 } from "../data/comprehensiveITServices2030";
-import { comprehensiveAIServices2030 } from "../data/comprehensiveAIServices2030";
-const ComprehensivePricingGuide2030: React.FC = () => {;
-  const [activeTab, setActiveTab] = useState<'microsaas' | 'it' | 'ai'>('microsaas');
-  const [priceRange, setPriceRange] = useState<[number, number]>([0, 5000]);
-=======
-<<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { SEO                } from '../components/SEO';
-import { innovativeMicroSaasServices2030                } from '../data/innovativeMicroSaasServices2030';
-import { comprehensiveITServices2030                } from '../data/comprehensiveITServices2030';
-import { comprehensiveAIServices2030                } from '../data/comprehensiveAIServices2030';
-
-const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {;
-  const [activeTab, setActiveTab] = useState<any>('microsaas');
-  const [priceRange, setPriceRange] = useState<any>([0, 5000]);
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  const getFilteredServices = () => {;
-    let services[] = [];
-=======
 import React, { useState } from 'react.ts';
 import { SEO               } from '../components/SEO';
 import { innovativeMicroSaasServices2030               } from '../data/innovativeMicroSaasServices2030';
@@ -32,7 +7,6 @@ import { comprehensiveAIServices2030               } from '../data/comprehensive
 const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {;
   const [activeTab, setActiveTab] = useState<any>('microsaas');
   const [priceRange, setPriceRange] = useState<any>([0, 5000]);
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [selectedCategory, setSelectedCategory] = useState('all');
   const getFilteredServices = () => {;
     let services: any[] = [];

@@ -21,38 +21,9 @@ import { Brain,
   Phone,
   Mail,
   MapPin
-<<<<<<< HEAD
-} from 'lucide-react';
-import { innovativeServices2027, serviceCategories2027, getServicesByCategory } from "../data/innovativeServices2027";
-=======
-<<<<<<< HEAD
-import { innovativeServices2027, serviceCategories2027, getServicesByCategory               } from '../data/innovativeServices2027';
-=======
-<<<<<<< HEAD
- } from 'lucide-react';
-import { innovativeServices2027, serviceCategories2027, getServicesByCategory                } from '../data/innovativeServices2027';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
-const categoryIcons: { [key: string]: React.ComponentType<any> } = {
-  'AI & Consciousness': Brain,
-  'Quantum AI': Atom,
-  'Autonomous AI': Cpu,
-  'Quantum Computing': Atom,
-  'Quantum Finance': TrendingUp,
-  'Space Technology': Rocket,
-  'Quantum Space': Rocket,
-  'Biotechnology': Dna,
-  'Quantum Medicine': Dna,
-  'Quantum Security': Shield,
-  'Nanotechnology': Microscope,
-  'Neural Technology': Eye
-};
-=======
 } from 'lucide-react';
 import { innovativeServices2027, serviceCategories2027, getServicesByCategory               } from '../data/innovativeServices2027';
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const categoryColors: { [key: string]: string } = {
   'AI & Consciousness': 'from-purple-500 to-pink-500',
   'Quantum AI': 'from-blue-500 to-cyan-500',
@@ -67,28 +38,10 @@ const categoryColors: { [key: string]: string } = {
   'Nanotechnology': 'from-gray-500 to-slate-500',
   'Neural Technology': 'from-violet-500 to-purple-500'
 };
-<<<<<<< HEAD
-export const InnovativeServicesShowcase2027: React.FC = () => {;
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
-  const [expandedService, setExpandedService] = useState<string | null>(null);
-=======
 
-<<<<<<< HEAD
 export const InnovativeServicesShowcase2027: React.FC = (): JSX.Element => {;
   const [selectedCategory, setSelectedCategory] = useState<any>('All');
   const [expandedService, setExpandedService] = useState<any>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)};
-=======;
-export const InnovativeServicesShowcase2027: React.FC = (): JSX.Element => {;
-  const [selectedCategory, setSelectedCategory] = useState<any>('All');
-  const [expandedService, setExpandedService] = useState<any>(null);
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     const observer = new IntersectionObserver(;
@@ -106,16 +59,8 @@ export const InnovativeServicesShowcase2027: React.FC = (): JSX.Element => {;
   const filteredServices = selectedCategory === 'All'
     ? innovativeServices2027
     : getServicesByCategory(selectedCategory);
-<<<<<<< HEAD
-  const toggleServiceExpansion = (serviceId: string) => {;
-=======
 
-<<<<<<< HEAD
-  const toggleServiceExpansion = (serviceId: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => {;
-    setExpandedService(expandedService === serviceId ? null : serviceId)};
-=======
   const toggleServiceExpansion = (serviceId: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setExpandedService(expandedService === serviceId ? null : serviceId);
   };
   const contactInfo = {
@@ -186,28 +131,12 @@ export const InnovativeServicesShowcase2027: React.FC = (): JSX.Element => {;
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                 selectedCategory === 'All'
                   ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
-<<<<<<< HEAD
-                  : 'bg-zion-slate-light/50 text-gray-300 hover:bg-zion-slate-light/70 hover:text-white';
-=======
-<<<<<<< HEAD: anyanyanyanyanyanyanyanyanyanyanyanyanyany'bg-zion-slate-light/50 text-gray-300 hover: bg-zion-slate-light/70 hover:text-white'
-              }`}
-
-              All Categories
-            </button>
-            {serviceCategories2027.map((category)                => {
-=======;
                   : 'bg-zion-slate-light/50 text-gray-300 hover: anyanyanyanyanyanyanyanyanyanyanyanyanyanybg-zion-slate-light/70 hover:text-white';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               }`};
             >;
               All Categories;
             </button>;
-<<<<<<< HEAD
-            {serviceCategories2027.map((category) => {;
-=======
             {serviceCategories2027.map((category)               => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               const Icon = categoryIcons[category];
               return (
                 <button
@@ -240,16 +169,7 @@ export const InnovativeServicesShowcase2027: React.FC = (): JSX.Element => {;
   { duration: 0.8,
   delay: 0.4 
 }}
-<<<<<<< HEAD
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
-=======
           className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8 mb-16"
-<<<<<<< HEAD
-
-          {filteredServices.map((service, index)               => (
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         >
           {filteredServices.map((service, index)  => (
             <motion.div

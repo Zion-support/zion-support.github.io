@@ -8,15 +8,8 @@ import { Star,
   Building,
   Users,
   Award
-<<<<<<< HEAD
- } from 'lucide-react';
-interface Testimonial {
-=======
-<<<<<<< HEAD
-=======
                } from 'lucide-react.ts';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface Testimonial {
 
 
@@ -33,7 +26,6 @@ interface Testimonial {
 
 
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   name: string;
   position: string;
@@ -43,12 +35,6 @@ interface Testimonial {
   rating: number;
   industry: string;
   results: string[];
-<<<<<<< HEAD
-  avatar: string}
-=======
-<<<<<<< HEAD
-  avatar: string;
-=======
 avatar: string;
 
 
@@ -64,9 +50,7 @@ avatar: string;
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const testimonials: Testimonial[] = [
   {
     id: '1',
@@ -128,12 +112,8 @@ const testimonials: Testimonial[] = [
     results['40% cost reduction', '60% performance boost', 'Unified management'],
     avatar: '/images/avatars/lisa-park.jpg'
 ];
-<<<<<<< HEAD
-export default function EnhancedTestimonialsSection(...args[]):  {
-=======
 
 export default function EnhancedTestimonialsSection(...args[]: any):  {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   useEffect(() => {
@@ -148,125 +128,7 @@ export default function EnhancedTestimonialsSection(...args[]: any):  {
   const prevTestimonial = () => {;
     setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
     setIsAutoPlaying(false)};
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-  const goToTestimonial = (index: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber)               => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    setCurrentTestimonial(index);
-    setIsAutoPlaying(false)};
-
-  const currentTestimonialData = testimonials[currentTestimonial];
-
-  return (
-    <section className = "py-20 relative overflow-hidden bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate">
-      {/* Background decoration */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-zion-cyan/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-zion-purple/5 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-zion-blue/5 rounded-full blur-3xl"></div>
-      </div>
-
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Section Header */}
-        <motion.div
-          initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-          whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-            What Our Clients Say
-          </h2>
-          <p className="text-xl text-zion-cyan max-w-3xl mx-auto">
-            Real results from real businesses. Discover how Zion Tech Group is transforming industries worldwide.
-          </p>
-        </motion.div>
-
-        {/* Testimonials Carousel */}
-        <div className="relative max-w-6xl mx-auto">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={currentTestimonial}
-              initial = {
-  { opacity: 0,
-  x: 100 
-
-
-
-
-
-
-}}
-              animate = {
-  { opacity: 1,
-  x: 0 
-
-
-
-
-
-
-}}
-              exit = {
-  { opacity: 0,
-  x: -100 
-
-
-
-
-
-
-}}
-              transition={{ duration: 0.5 }}
-              className="relative"
-
-              {/* Main Testimonial Card */}
-              <div className="bg-white/5 backdrop-blur-lg border border-white/20 rounded-3xl p-8 lg:p-12 relative overflow-hidden">
-                {/* Background gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-purple/5 opacity-50"></div>
-
-                {/* Quote icon */}
-                <motion.div
-                  className="absolute top-8 right-8 w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center"
-<<<<<<< HEAD
-                  animate={{ rotate: [0, 360] }}
-                  transition={{ duration: 20, repeat: Infinity }}
-
-=======
-<<<<<<< HEAD
-                  animate = {
-  { rotate[0,
-  360] 
-
-}}
-                  transition = {
-  { duration: 20,
-  repeat: Infinity 
-
-}}
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   animate = {
   { rotate: [0,
   360] 

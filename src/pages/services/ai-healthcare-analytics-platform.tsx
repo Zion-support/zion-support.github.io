@@ -1,25 +1,8 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-=======
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion              } from 'framer-motion.ts';
-import { SEO              } from '@/components/SEO';
-import { Heart,
-  Brain,
-  Activity,
-  Shield,
-  Zap,
-  CheckCircle,
-=======
 import React from 'react.ts';
 import { motion               } from 'framer-motion.ts';
 import { SEO               } from '@/components/SEO';
 import { Heart, 
   Brain, 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Activity, 
   Heart, 
   Brain, 
@@ -34,36 +17,8 @@ import { Heart,
   Search,
   BarChart3,
   TrendingUp,
-<<<<<<< HEAD
-  AlertTriangle,
-  Lightbulb,
-  PieChart,
-  LineChart,
-  Eye,
-  Settings,
-  Filter,
-  Globe,
-  Database,
-  DollarSign,
-  Star,
-  Play,
-  Stethoscope,
-  Microscope,
-  Pill,
-  Hospital,
-  UserCheck,
-  FileText,
-  Monitor,
-  Smartphone
-} from 'lucide-react';
-import { Link } from 'react-router-dom';
-=======
   AlertTriangle
-<<<<<<< HEAD
-export default function AIHealthcareAnalyticsPlatform(...args: any[]): any {
-=======
               } from 'lucide-react.ts';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 export default function AIHealthcareAnalyticsPlatform() {
   const features = [
@@ -291,13 +246,8 @@ export default function AIHealthcareAnalyticsPlatform() {
             </p>
           </motion.div>
 
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-=======
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -309,20 +259,6 @@ export default function AIHealthcareAnalyticsPlatform() {
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-xl flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
-<<<<<<< HEAD
-                
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-400 mb-4">{feature.description}</p>
-                
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-=======
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>
@@ -493,7 +429,6 @@ export default function AIHealthcareAnalyticsPlatform() {
                 </div>
                 <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>
                 <p className="text-gray-300 text-lg">{useCase.description}</p>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               </motion.div>
             ))}
           </div>
@@ -518,13 +453,8 @@ export default function AIHealthcareAnalyticsPlatform() {
             </p>
           </motion.div>
 
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {complianceFeatures.map((feature, index) => (
-=======
           <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-6">
             {complianceStandards.map((standard, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={feature}
                 initial={{ opacity: 0, y: 20 }}
@@ -559,13 +489,8 @@ export default function AIHealthcareAnalyticsPlatform() {
             </p>
           </motion.div>
 
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
-=======
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {pricingPlans.map((plan, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={plan.name}
                 initial={{ opacity: 0, y: 20 }}

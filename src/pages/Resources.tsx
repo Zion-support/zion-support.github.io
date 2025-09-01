@@ -1,127 +1,7 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import {
-=======
 import React from 'react.ts';
 import { Link              } from 'react-router-dom.ts';
 import { motion              } from 'framer-motion.ts';
 import {
-<<<<<<< HEAD
-  FileText,
-  Code,
-  Cpu,
-  HelpCircle,
-  MessageCircle,
-  BookOpen,
-  Users,
-  PenTool,
-  Video,
-  Download,
-  ExternalLink,
-  Search,
-  Filter,
-  Star,
-  Clock,
-  TrendingUp,
-  Zap,
-  Brain,
-  Server,
-  Rocket,
-  Shield,
-  Cloud,
-  Atom,
-  Sparkles,
-  Building,
-  ShoppingCart
-export default function Resources(...args: any[]): any {
-  const resourceCategories = [
-    {
-      title: 'Documentation',
-      icon: FileText,
-      description: 'Technical documentation and guides',
-      color: 'from-blue-500 to-cyan-600',
-      resources: [
-        { name: 'API Documentation', href: '/api', description: 'Complete API reference and examples', icon: Code, badge: 'Popular' },
-        { name: 'Developer Guide', href: '/documentation', description: 'Getting started and development tutorials', icon: Cpu, badge: 'New' },
-        { name: 'Integration Guides', href: '/docs/integrations', description: 'Third-party integrations and APIs', icon: ExternalLink, badge: 'Updated' },
-        { name: 'Best Practices', href: '/docs/best-practices', description: 'Development and deployment best practices', icon: Star, badge: 'Featured' },
-        { name: 'Architecture Overview', href: '/docs/architecture', description: 'System architecture and design patterns', icon: Server, badge: 'Technical' },
-        { name: 'Security Guidelines', href: '/docs/security', description: 'Security best practices and compliance', icon: Shield, badge: 'Critical' }
-      ]
-    },
-    {
-      title: 'Training & Education',
-      icon: BookOpen,
-      description: 'Learning resources and training programs',
-      color: 'from-green-500 to-emerald-600',
-      resources: [
-        { name: 'Video Tutorials', href: '/training', description: 'Step-by-step video guides', icon: Video, badge: 'Popular' },
-        { name: 'Webinars', href: '/webinars', description: 'Live and recorded webinars', icon: Users, badge: 'Live' },
-        { name: 'Certification Programs', href: '/training/certification', description: 'Professional certification courses', icon: Star, badge: 'Premium' },
-        { name: 'Workshops', href: '/training/workshops', description: 'Hands-on training sessions', icon: Cpu, badge: 'Interactive' },
-        { name: 'Learning Paths', href: '/training/paths', description: 'Structured learning journeys', icon: TrendingUp, badge: 'Guided' },
-        { name: 'Knowledge Base', href: '/help', description: 'Comprehensive help articles', icon: HelpCircle, badge: 'Self-Service' }
-      ]
-    },
-    {
-      title: 'AI & ML Resources',
-      icon: Brain,
-      description: 'Artificial intelligence and machine learning resources',
-      color: 'from-purple-500 to-pink-600',
-      resources: [
-        { name: 'AI Model Library', href: '/resources/ai-models', description: 'Pre-trained AI models and datasets', icon: Brain, badge: 'New' },
-        { name: 'ML Tutorials', href: '/resources/ml-tutorials', description: 'Machine learning fundamentals', icon: BookOpen, badge: 'Educational' },
-        { name: 'AI Use Cases', href: '/resources/ai-use-cases', description: 'Real-world AI implementation examples', icon: Sparkles, badge: 'Practical' },
-        { name: 'Model Training Guide', href: '/resources/model-training', description: 'Custom model training tutorials', icon: TrendingUp, badge: 'Advanced' },
-        { name: 'AI Ethics & Governance', href: '/resources/ai-ethics', description: 'AI ethics and responsible AI practices', icon: Shield, badge: 'Important' },
-        { name: 'AI Research Papers', href: '/resources/research', description: 'Latest AI research and publications', icon: FileText, badge: 'Academic' }
-      ]
-    },
-    {
-      title: 'Developer Tools',
-      icon: Cpu,
-      description: 'Development tools and utilities',
-      color: 'from-orange-500 to-red-600',
-      resources: [
-        { name: 'SDK Downloads', href: '/resources/sdk', description: 'Software development kits', icon: Download, badge: 'Free' },
-        { name: 'Code Samples', href: '/resources/code-samples', description: 'Ready-to-use code examples', icon: Code, badge: 'Practical' },
-        { name: 'Development Templates', href: '/resources/templates', description: 'Project templates and boilerplates', icon: Zap, badge: 'Time-Saving' },
-        { name: 'Testing Tools', href: '/resources/testing', description: 'Testing and debugging utilities', icon: Shield, badge: 'Quality' },
-        { name: 'Performance Tools', href: '/resources/performance', description: 'Performance monitoring and optimization', icon: TrendingUp, badge: 'Optimization' },
-        { name: 'Deployment Guides', href: '/resources/deployment', description: 'Deployment and DevOps guides', icon: Rocket, badge: 'Operations' }
-      ]
-    },
-    {
-      title: 'Industry Resources',
-      icon: Server,
-      description: 'Industry-specific resources and insights',
-      color: 'from-indigo-500 to-purple-600',
-      resources: [
-        { name: 'Healthcare Solutions', href: '/resources/healthcare', description: 'Healthcare industry resources', icon: Shield, badge: 'Industry' },
-        { name: 'Financial Services', href: '/resources/financial', description: 'Financial industry insights', icon: TrendingUp, badge: 'Industry' },
-        { name: 'Manufacturing', href: '/resources/manufacturing', description: 'Manufacturing industry guides', icon: Server, badge: 'Industry' },
-        { name: 'Government', href: '/resources/government', description: 'Government sector resources', icon: Building, badge: 'Industry' },
-        { name: 'Education', href: '/resources/education', description: 'Education sector solutions', icon: BookOpen, badge: 'Industry' },
-        { name: 'Retail', href: '/resources/retail', description: 'Retail industry insights', icon: ShoppingCart, badge: 'Industry' }
-      ]
-    },
-    {
-      title: 'Support & Community',
-      icon: HelpCircle,
-      description: 'Support resources and community engagement',
-      color: 'from-cyan-500 to-blue-600',
-      resources: [
-        { name: 'Help Center', href: '/help', description: 'Comprehensive help and support', icon: HelpCircle, badge: '24/7' },
-        { name: 'Community Forum', href: '/community', description: 'User community discussions', icon: Users, badge: 'Community' },
-        { name: 'FAQ', href: '/faq', description: 'Frequently asked questions', icon: MessageCircle, badge: 'Quick' },
-        { name: 'Support Tickets', href: '/support', description: 'Submit support requests', icon: HelpCircle, badge: 'Direct' },
-        { name: 'Live Chat', href: '/support/chat', description: 'Real-time support chat', icon: MessageCircle, badge: 'Live' },
-        { name: 'Status Page', href: '/status', description: 'Service status and updates', icon: TrendingUp, badge: 'Real-time' }
-      ]
-
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   BookOpen,
   FileText,
   Video,
@@ -312,79 +192,6 @@ const Resources: React.FC = (): JSX.Element => {;
       ]
     },
     {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      id: 7,
-      title: 'Digital Transformation Workshop: Complete Guide',
-      description: 'Step-by-step guide to successful digital transformation implementation.',
-      category: 'webinars',
-      type: 'Workshop Recording',
-      author: 'Digital Transformation Team',
-      date: '2024-12-20',
-      duration: '120 minutes',
-      views: 2800,
-      rating: 4.7,
-      image: '/resources/digital-transformation-workshop.jpg',
-      tags['Digital Transformation', 'Workshop', 'Implementation', 'Guide'],
-      featured: false,
-      fileSize: '680 MB',
-      fileType: 'MP4',
-      downloadUrl: 'https://ziontechgroup.com/resources/digital-transformation-workshop.mp4'
-    },
-    {
-      id: 8,
-      title: 'Healthcare AI Solutions: Patient Outcomes Case Study',
-      description: 'How AI-powered diagnostic tools improved patient outcomes by 40%.',
-      category: 'case-studies',
-      type: 'Case Study',
-      author: 'Healthcare Team',
-      date: '2024-12-18',
-      readTime: '12 min read',
-      downloads: 1890,
-      rating: 4.8,
-      image: '/resources/healthcare-ai-case.jpg',
-      tags['Healthcare', 'AI', 'Patient Outcomes', 'Diagnostics'],
-      featured: false,
-      fileSize: '2.8 MB',
-      fileType: 'PDF',
-      downloadUrl: 'https://ziontechgroup.com/resources/healthcare-ai-case.pdf';
-    };
-  ];
-
-  const filteredResources = resources.filter(resource => {;
-    const matchesSearch = resource.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                         resource.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                         resource.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    return matchesCategory && matchesSearch});
-
-  const featuredResources = resources.filter(resource => resource.featured);
-  const regularResources = filteredResources.filter(resource => !resource.featured);
-
-  const formatDate = (dateString: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
-    const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    });
-  };
-
-  const getResourceIcon = (type: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
-    switch (type) {
-      case 'White Paper':;
-      case 'Research Paper':;
-        return FileText;
-      case 'Case Study':
-        return BarChart3;
-      case 'Webinar Recording':
-      case 'Workshop Recording':
-        return Video;
-      default:
-        return FileText}
-  };
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       id: 'pricing-guide-2025',
       title: 'Pricing Guide 2025',
       icon: DollarSign,
@@ -552,14 +359,9 @@ const Resources: React.FC = (): JSX.Element => {;
               <h2 className="text-3xl font-bold text-white mb-4">Featured Resources</h2>
               <p className="text-zion-slate-light">Our most popular and valuable resources</p>
             </motion.div>
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">;
-              {featuredResources.map((resource, index)  => {;
-=======
 
             <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">;
               {featuredResources.map((resource, index)               => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 const ResourceIcon = getResourceIcon(resource.type);
                 return (
                   <motion.article
@@ -655,55 +457,9 @@ const Resources: React.FC = (): JSX.Element => {;
               Discover our most popular and valuable resources to accelerate your success
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {resourceCategories.filter(cat => cat.featured).map((category, index) => (
-=======
 
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">;
-            {regularResources.map((resource, index)               => {;
-              const ResourceIcon = getResourceIcon(resource.type);
-              return (
-                <motion.article
-                  key = {resource.id}
-                  initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-                  animate = {
-  { opacity: 1,
-  y: 0 
-
-}}
-                  transition = {
-  { duration: 0.5,
-  delay: index * 0.1 
-
-}}
-                  className="group"
-                >
-                  <div className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 h-full">
-                    {/* Resource Image Placeholder */}
-                    <div className="h-40 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 flex items-center justify-center">
-                      <ResourceIcon className="w-12 h-12 text-zion-cyan" />
-                    </div>
-
-                    <div className="p-6 flex-1">
-                      <div className="flex items-center space-x-4 text-sm text-zion-slate-light mb-3">
-                        <span className="flex items-center">
-                          <Calendar className="w-4 h-4 mr-2" />
-                          {formatDate(resource.date)}
-                        </span>
-                        <span className="flex items-center">
-                          <Clock className="w-4 h-4 mr-2" />
-                          {resource.readTime || resource.duration}
-                        </span>
-=======
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {resourceCategories.filter(cat              => cat.featured).map((category, index) => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={category.id}
                 initial = {
@@ -794,14 +550,9 @@ const Resources: React.FC = (): JSX.Element => {;
               Never miss valuable knowledge from Zion Tech Group.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {resourceCategories.map((category, index) => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
             {resourceCategories.map((category, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={category.id}
                 id={category.id}
@@ -873,14 +624,9 @@ const Resources: React.FC = (): JSX.Element => {;
               Specialized tools and platforms to support your development journey
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {additionalResources.map((resource, index) => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
             {additionalResources.map((resource, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={resource.id}
                 id={resource.id}

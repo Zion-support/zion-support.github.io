@@ -1,51 +1,7 @@
-<<<<<<< HEAD
-
-import React from 'react';
-import { motion } from 'framer-motion';
-import { BarChart3, CheckCircle, Star, TrendingUp, Users, Zap } from 'lucide-react';
-
-export default function ServicesComparisonPage() {
-  const services = [
-    {
-      name: 'AI Business Intelligence',
-      category: 'AI & Analytics',
-      features: ['Machine Learning', 'Data Visualization', 'Predictive Analytics', 'Real-time Insights'],
-      pricing: 'Custom',
-      rating: 4.9,
-      users: '500+',
-      icon: BarChart3
-    },
-    {
-      name: 'Digital Twin Platform',
-      category: 'IoT & Simulation',
-      features: ['Real-time Monitoring', 'Predictive Maintenance', '3D Visualization', 'API Integration'],
-      pricing: 'From $2,500/month',
-      rating: 4.8,
-      users: '200+',
-      icon: Zap
-    },
-    {
-      name: 'Cybersecurity Suite',
-      category: 'Security',
-      features: ['Threat Detection', 'Incident Response', 'Compliance Monitoring', '24/7 Support'],
-      pricing: 'From $1,800/month',
-      rating: 4.9,
-      users: '300+',
-      icon: Star
-    }
-  ];
-
-=======
-<<<<<<< HEAD
-import React from 'react.ts';
-import { SEO               } from '../components/SEO';
-=======
 import React from 'react.ts';
 import { SEO              } from '../components/SEO';
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default function ServicesComparisonPage(...args[]: any):  {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <div className="min-h-screen bg-slate-900 text-white pt-20">
       <div className="container mx-auto px-4 py-12">

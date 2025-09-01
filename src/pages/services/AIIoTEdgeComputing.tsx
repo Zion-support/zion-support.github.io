@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-import { Cpu, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Wifi, TrendingUp, Zap, Target, Clock, Shield, Globe } from 'lucide-react';
-
-export default function AIIoTEdgeComputing() {
-=======
 import { Cpu, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Wifi, TrendingUp, Zap, Target, Clock, Shield, Globe export default function AIIoTEdgeComputing(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const features = [
     'AI-powered edge computing and processing',
     'Real-time IoT device management and monitoring',

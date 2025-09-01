@@ -1,184 +1,7 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { 
-  Truck, 
-  TrendingUp, 
-  BarChart3, 
-  Settings, 
-  Users, 
-  Shield, 
-  ArrowRight, 
-  CheckCircle, 
-  Play, 
-  Target, 
-  Activity, 
-  Database, 
-  Calculator, 
-  PieChart, 
-  Globe, 
-  Clock, 
-  Zap, 
-  Eye, 
-  Brain 
-} from 'lucide-react';
-import { Link } from 'react-router-dom';
-
-export default function AISupplyChainOptimization() {
-  const features = [
-    {
-      icon: Brain,
-      title: "AI-Powered Forecasting",
-      description: "Predict demand patterns and optimize inventory levels with machine learning."
-    },
-    {
-      icon: TrendingUp,
-      title: "Route Optimization",
-      description: "Optimize delivery routes and reduce transportation costs with AI algorithms."
-    },
-    {
-      icon: BarChart3,
-      title: "Real-time Analytics",
-      description: "Monitor supply chain performance with live dashboards and insights."
-    },
-    {
-      icon: Users,
-      title: "Supplier Management",
-      description: "Manage supplier relationships and performance with intelligent scoring."
-    },
-    {
-      icon: Shield,
-      title: "Risk Management",
-      description: "Identify and mitigate supply chain risks with predictive analytics."
-    },
-    {
-      icon: Database,
-      title: "Inventory Optimization",
-      description: "Optimize stock levels and reduce carrying costs with AI insights."
-    }
-  ];
-
-  const optimizationAreas = [
-    {
-      title: "Demand Forecasting",
-      description: "AI-powered demand prediction and planning optimization.",
-      icon: Brain,
-      benefits: ["Machine learning models", "Seasonal analysis", "Trend prediction"]
-    },
-    {
-      title: "Inventory Management",
-      description: "Smart inventory optimization and stock level management.",
-      icon: Database,
-      benefits: ["Safety stock optimization", "Reorder point calculation", "ABC analysis"]
-    },
-    {
-      title: "Transportation",
-      description: "Route optimization and transportation cost reduction.",
-      icon: Truck,
-      benefits: ["Route planning", "Load optimization", "Cost reduction"]
-    },
-    {
-      title: "Supplier Optimization",
-      description: "Supplier performance management and selection optimization.",
-      icon: Users,
-      benefits: ["Performance scoring", "Risk assessment", "Cost optimization"]
-    },
-    {
-      title: "Warehouse Operations",
-      description: "Warehouse layout and process optimization.",
-      icon: Settings,
-      benefits: ["Layout optimization", "Process automation", "Space utilization"]
-    },
-    {
-      title: "Risk Management",
-      description: "Supply chain risk identification and mitigation strategies.",
-      icon: Shield,
-      benefits: ["Risk assessment", "Mitigation planning", "Contingency strategies"]
-    }
-  ];
-
-  const aiCapabilities = [
-    {
-      title: "Machine Learning",
-      description: "Advanced ML algorithms for pattern recognition and prediction.",
-      icon: Brain,
-      features: ["Pattern recognition", "Predictive modeling", "Continuous learning"]
-    },
-    {
-      title: "Predictive Analytics",
-      description: "Forecast future trends and optimize decision-making.",
-      icon: TrendingUp,
-      features: ["Trend analysis", "Scenario planning", "Risk prediction"]
-    },
-    {
-      title: "Real-time Processing",
-      description: "Instant data processing and decision-making capabilities.",
-      icon: Zap,
-      features: ["Live data streams", "Instant insights", "Real-time optimization"]
-    },
-    {
-      title: "Natural Language Processing",
-      description: "Process and analyze unstructured supply chain data.",
-      icon: Eye,
-      features: ["Document analysis", "Sentiment analysis", "Data extraction"]
-    },
-    {
-      title: "Computer Vision",
-      description: "Visual inspection and quality control automation.",
-      icon: Eye,
-      features: ["Quality inspection", "Damage detection", "Process monitoring"]
-    },
-    {
-      title: "Optimization Algorithms",
-      description: "Advanced algorithms for complex optimization problems.",
-      icon: Calculator,
-      features: ["Linear programming", "Genetic algorithms", "Heuristic optimization"]
-    }
-  ];
-
-  const benefits = [
-    "15-25% reduction in supply chain costs",
-    "30-40% improvement in delivery performance",
-    "20-30% reduction in inventory carrying costs",
-    "Improved supplier performance and relationships",
-    "Enhanced risk management and resilience",
-    "Better customer satisfaction and service levels"
-  ];
-
-  const implementationSteps = [
-    {
-      step: "01",
-      title: "Assessment",
-      description: "Evaluate current supply chain performance and identify optimization opportunities."
-    },
-    {
-      step: "02",
-      title: "Strategy",
-      description: "Develop comprehensive AI optimization strategy and implementation roadmap."
-    },
-    {
-      step: "03",
-      title: "Implementation",
-      description: "Deploy AI tools and establish optimization processes and workflows."
-    },
-    {
-      step: "04",
-      title: "Optimization",
-      description: "Continuously monitor, optimize, and improve supply chain performance."
-    }
-  ];
-=======
-<<<<<<< HEAD
-import React from 'react.ts';
-import { Helmet              } from 'react-helmet-async.ts';
-import { Truck, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart, Globe, Clock, Zap, Eye, Brain import { Link              } from 'react-router-dom.ts';
-=======
 import React from 'react.ts';
 import { Helmet               } from 'react-helmet-async.ts';
 import { Truck, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart, Globe, Clock, Zap, Eye, Brain               } from 'lucide-react.ts';
 import { Link               } from 'react-router-dom.ts';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   return (
     <>
@@ -240,12 +63,6 @@ import { Link               } from 'react-router-dom.ts';
               </p>
             </div>
 
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300 group">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-=======
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
@@ -277,16 +94,10 @@ import { Link               } from 'react-router-dom.ts';
                   icon: Database,
                   title: "Inventory Optimization",
                   description: "Optimize stock levels and reduce carrying costs with AI insights."
-<<<<<<< HEAD
-
-              ].map((feature, index)              => (
-=======
                 }
               ].map((feature, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -309,12 +120,6 @@ import { Link               } from 'react-router-dom.ts';
               </p>
             </div>
 
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {optimizationAreas.map((area, index) => (
-                <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300 group">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-=======
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
@@ -352,16 +157,10 @@ import { Link               } from 'react-router-dom.ts';
                   description: "Supply chain risk identification and mitigation strategies.",
                   icon: Shield,
                   benefits: ["Risk assessment", "Mitigation planning", "Contingency strategies"]
-<<<<<<< HEAD
-
-              ].map((area, index)              => (
-=======
                 }
               ].map((area, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                     <area.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{area.title}</h3>
@@ -392,12 +191,6 @@ import { Link               } from 'react-router-dom.ts';
               </p>
             </div>
 
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {aiCapabilities.map((capability, index) => (
-                <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300 group">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-=======
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
@@ -435,16 +228,10 @@ import { Link               } from 'react-router-dom.ts';
                   description: "Advanced algorithms for complex optimization problems.",
                   icon: Calculator,
                   features: ["Linear programming", "Genetic algorithms", "Heuristic optimization"]
-<<<<<<< HEAD
-
-              ].map((capability, index)              => (
-=======
                 }
               ].map((capability, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                     <capability.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{capability.title}</h3>
@@ -495,11 +282,7 @@ import { Link               } from 'react-router-dom.ts';
                     { metric: "30-40%", label: "Delivery Performance", description: "Improvement" },
                     { metric: "20-30%", label: "Inventory Costs", description: "Reduction" },
                     { metric: "90%+", label: "Visibility", description: "Supply chain transparency" }
-<<<<<<< HEAD
-                  ].map((item, index) => (
-=======
                   ].map((item, index)               => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                     <div key={index} className="text-center p-4 bg-slate-700/50 rounded-lg">
                       <div className="text-2xl font-bold text-blue-400 mb-1">{item.metric}</div>
                       <div className="text-sm text-slate-300">{item.label}</div>
@@ -524,10 +307,6 @@ import { Link               } from 'react-router-dom.ts';
               </p>
             </div>
 
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {implementationSteps.map((step, index) => (
-=======
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
@@ -549,14 +328,8 @@ import { Link               } from 'react-router-dom.ts';
                   step: "04",
                   title: "Optimization",
                   description: "Continuously monitor, optimize, and improve supply chain performance."
-<<<<<<< HEAD
-
-              ].map((step, index)              => (
-=======
                 }
               ].map((step, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{step.step}</span>

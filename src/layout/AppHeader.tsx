@@ -1,28 +1,15 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Star, TrendingUp, Award, Settings, Phone, Mail, MapPin, Building, Bot, Atom } from 'lucide-react';
-import { ThemeToggle } from '../components/ThemeToggle';
-import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
-<<<<<<< HEAD
-import { Sidebar } from '../components/Sidebar';
-import { EnhancedSearch } from '../components/EnhancedSearch';
-=======
 import React, { useState, useEffect } from 'react.ts';
 import { Link              } from 'react-router-dom.ts';
-<<<<<<< HEAD
-import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight, PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText import { motion, AnimatePresence              } from 'framer-motion.ts';
-=======
 import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, Code, Truck, Building, ShoppingCart, BookOpen, MessageCircle, HelpCircle              } from 'lucide-react.ts';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight, PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ThemeToggle              } from '../components/ThemeToggle';
 import { ZionLoadingSpinner              } from '../components/ui/EnhancedLoadingSpinner';
 import { Sidebar              } from '../components/Sidebar';
 import { EnhancedSearch              } from '../components/EnhancedSearch';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-=======
 import { motion, AnimatePresence } from 'framer-motion';
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 
 export function AppHeader(...args: any[]): any {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -30,10 +17,6 @@ export function AppHeader(...args: any[]): any {
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
-<<<<<<< HEAD
-  const [hoveredNav, setHoveredNav] = useState<any>(null);
-=======
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,12 +27,7 @@ export function AppHeader(...args: any[]): any {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-<<<<<<< HEAD
   const handleSearch = async (e: React.FormEvent) => {
-=======
-<<<<<<< HEAD
-  const handleSearch = async (e: anyanyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)              => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     e.preventDefault();
     if (searchQuery.trim()) {
       setIsSearching(true);
@@ -259,41 +237,6 @@ export function AppHeader(...args: any[]): any {
   ];
 
   return (
-<<<<<<< HEAD
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled 
-        ? 'bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-gray-200/50 dark:border-slate-700/50' 
-        : 'bg-transparent'
-    }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center">
-                <Zap className="w-6 h-6 text-white" />
-              </div>
-              <span className="text-xl font-bold text-gray-900 dark:text-white">
-                Zion Tech Group
-              </span>
-            </Link>
-          </div>
-
-          {/* Desktop Navigation */}
-<<<<<<< HEAD
-          <nav className="hidden lg:flex items-center space-x-8">
-            {mainNavigation.map((item) => (
-              <div key={item.name} className="relative">
-                {item.hasDropdown ? (
-                  <div
-                    className="flex items-center space-x-1 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 cursor-pointer transition-colors duration-200"
-                    onMouseEnter={() => setServicesDropdownOpen(true)}
-                    onMouseLeave={() => setServicesDropdownOpen(false)}
-                  >
-                    <span className="font-medium">{item.name}</span>
-                    <ChevronDown className="w-4 h-4" />
-                  </div>
-=======
           <nav className="hidden lg: anyanyanyanyanyanyanyanyanyanyanyanyanyflex items-center space-x-8">
             {/* Main Navigation */}
             {mainNavigation.map((item)              => (
@@ -303,7 +246,6 @@ export function AppHeader(...args: any[]): any {
                 className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
 
                 {item.name}
-=======
   // Group services by category for better organization
   const servicesByCategory = services.reduce((acc, service) => {
     if (!acc[service.category]) {
@@ -366,21 +308,9 @@ export function AppHeader(...args: any[]): any {
                     </p>
                   </div>
                 </div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               </Link>
             </div>
 
-<<<<<<< HEAD
-            {/* Services Dropdown */}
-            <div className="relative">
-              <button
-                onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
-                className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
-
-                <span>Services</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${servicesDropdownOpen ? 'rotate-180' : ''}`} />
-              </button>
-=======
             {/* Desktop Navigation */}
             <nav className="hidden lg: anyanyanyanyanyanyanyanyanyanyanyanyanyflex items-center space-x-1">
               {navigation.slice(0, 6).map((item)              => (
@@ -395,7 +325,6 @@ export function AppHeader(...args: any[]): any {
                   )}
                 </Link>
               ))}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
               {/* Services Dropdown */}
               <div className="relative group">
@@ -410,30 +339,6 @@ export function AppHeader(...args: any[]): any {
                 </button>
                 
                 {servicesDropdownOpen && (
-<<<<<<< HEAD
-                  <motion.div
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0.2 }}
-                    className="absolute top-full left-0 mt-2 w-screen max-w-6xl bg-zion-slate-dark/95 backdrop-blur-md border border-cyan-400/20 rounded-xl shadow-2xl shadow-cyan-500/20 p-6"
-
-                    <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 xl:grid-cols-3 gap-6">
-                      {servicesCategories.map((category)              => (
-                        <div key={category.title} className="space-y-3">
-                          <div className="flex items-center space-x-2">
-                            <category.icon className={`w-5 h-5 text-cyan-400`} />
-                            <h3 className="font-semibold text-white">{category.title}</h3>
-                          </div>
-                          <div className="space-y-2">
-                            {category.services.map((service) => (
-                              <Link
-                                key={service.name}
-                                to={service.href}
-                                className="block p-3 rounded-lg hover:bg-cyan-400/10 transition-colors duration-200 group"
-
-                                <div className="font-medium text-gray-200 group-hover:text-cyan-400 transition-colors duration-200">
-=======
                   <div 
                     className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 border border-cyan-400/20 rounded-xl shadow-2xl backdrop-blur-xl animate-fade-in"
                     onMouseEnter={() => setServicesDropdownOpen(true)}
@@ -455,7 +360,6 @@ export function AppHeader(...args: any[]): any {
                               </div>
                               <div className="ml-4 flex-1">
                                 <div className="text-white font-medium group-hover:text-cyan-400 transition-colors">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                                   {service.name}
                                 </div>
                                 <div className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
@@ -497,28 +401,6 @@ export function AppHeader(...args: any[]): any {
                             </Link>
                           ))}
                         </div>
-<<<<<<< HEAD
-                      ))}
-                    </div>
-
-                    {/* Quick Links Section */}
-                    <div className="mt-6 pt-6 border-t border-cyan-400/20">
-                      <h3 className="text-lg font-semibold text-white mb-4">Quick Access</h3>
-                      <div className="grid grid-cols-2 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-3">
-                        {quickLinks.map((link)              => (
-                          <Link
-                            key={link.name}
-                            to={link.href}
-                            className="flex items-center space-x-2 p-3 rounded-lg hover:bg-cyan-400/10 transition-colors duration-200 group"
-
-                            <link.icon className="w-4 h-4 text-cyan-400" />
-                            <span className="text-gray-300 group-hover:text-cyan-400 transition-colors duration-200">
-                              {link.name}
-                            </span>
-                          </Link>
-                        ))}
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                       </div>
 
                       <div className="mt-6 pt-4 border-t border-slate-700/50">
@@ -592,7 +474,6 @@ export function AppHeader(...args: any[]): any {
               >
                 {mobileMenuOpen ? (
                   <X className="w-6 h-6" />
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 ) : (
                   <Link
                     to={item.href}
@@ -605,7 +486,6 @@ export function AppHeader(...args: any[]): any {
               </div>
             ))}
           </nav>
-=======
     <>
       <header role="banner" className={`sticky top-0 z-50 w-full transition-all duration-300 ${
         scrolled 
@@ -630,7 +510,6 @@ export function AppHeader(...args: any[]): any {
                 </div>
               </Link>
             </div>
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8">

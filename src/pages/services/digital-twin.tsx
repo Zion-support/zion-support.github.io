@@ -1,17 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react.ts';
-import { Helmet              } from 'react-helmet-async.ts';
-import { Cpu, Eye, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database import { Link              } from 'react-router-dom.ts';
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import React from 'react.ts';
 import { Helmet               } from 'react-helmet-async.ts';
 import { Cpu, Eye, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database               } from 'lucide-react.ts';
 import { Link               } from 'react-router-dom.ts';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default function DigitalTwin(...args: []):  {
 =======
 import React from 'react';
@@ -20,7 +10,6 @@ import { Cpu, Eye, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, D
 import { Link } from 'react-router-dom';
 
 export default function DigitalTwin() {
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   return (
     <>
       <Helmet>
@@ -75,16 +64,10 @@ export default function DigitalTwin() {
                 real-time monitoring, simulation, and optimization.
               </p>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-=======
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 =======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
               {[
                 {
                   icon: Cpu,
@@ -115,13 +98,6 @@ export default function DigitalTwin() {
                   icon: Globe,
                   title: "IoT Integration",
                   description: "Seamlessly connect with IoT sensors and devices for real-time data."
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-              ].map((feature, index)              => (
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((feature, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
@@ -135,24 +111,8 @@ export default function DigitalTwin() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-        {/* Applications Section */}
-        <section className="py-20 bg-slate-800/30">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Digital Twin Applications
-              </h2>
-              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Discover how digital twin technology can revolutionize different industries and operations.
-              </p>
-            </div>
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-=======
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               {[
                 {
                   title: "Manufacturing",
@@ -189,16 +149,8 @@ export default function DigitalTwin() {
                   description: "Building management, energy efficiency, and maintenance optimization.",
                   icon: Activity,
                   benefits: ["Building management", "Energy efficiency", "Maintenance optimization"]
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-              ].map((application, index)              => (
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((application, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4">
                     <application.icon className="w-6 h-6 text-white" />
@@ -270,7 +222,6 @@ export default function DigitalTwin() {
         </section>
 =======
 
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
         {/* Benefits Section */}
         <section className="py-20 bg-slate-800/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

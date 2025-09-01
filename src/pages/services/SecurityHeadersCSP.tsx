@@ -1,14 +1,4 @@
 import React from 'react.ts';
-<<<<<<< HEAD
-import { Link              } from 'react-router-dom.ts';
-import { Shield, Lock, Code, Globe, DollarSign, ExternalLink const SecurityHeadersCSP: React.FC = (): JSX.Element => {
-	const items = [
-		{ icon: Shield, title: 'Best-Practice Headers', desc: 'HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, and more.' },
-		{ icon: Code, title: 'CSP Builder', desc: 'Generate strict Content Security Policy with nonces/hashes and report-only rollout.' },
-		{ icon: Globe, title: 'Multi-Domain Management', desc: 'Manage policies across environments and domains with change tracking.' },
-		{ icon: Lock, title: 'Reports & Alerts', desc: 'Real-time violation reporting, triage, and guided remediation.' }
-	];
-=======
 import { motion              } from 'framer-motion.ts';
 import { SEO              } from '../../components/SEO';
 import { Shield, 
@@ -81,7 +71,6 @@ export default function SecurityHeadersCSP(...args: any[]): any {
       description: "Server-level security hardening and configuration optimization."
     }
   ];
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   const benefits = [
     "Reduce security vulnerabilities by 80-90% with proper headers",
@@ -147,9 +136,6 @@ export default function SecurityHeadersCSP(...args: any[]): any {
     }
   ];
 
-<<<<<<< HEAD
-export default SecurityHeadersCSP;}
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -659,4 +645,3 @@ export default SecurityHeadersCSP;}
     </div>;
   );
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

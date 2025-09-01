@@ -2,6 +2,17 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Calendar, 
+<<<<<<< HEAD
+=======
+import React, { useState } from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Link              } from 'react-router-dom.ts';
+import { Calendar,
+  Clock,
+  MapPin,
+  Users,
+  Video,
+>>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
   Clock, 
   MapPin, 
   Users, 
@@ -32,6 +43,10 @@ export default function Events() {
     { id: 'awards', name: 'Awards & Recognition', icon: Award }
   ];
 
+<<<<<<< HEAD
+=======
+    return matchesType && matchesCategory && matchesStatus && matchesSearch;
+>>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
   const timeFilters = [
     { id: 'upcoming', name: 'Upcoming' },
     { id: 'past', name: 'Past Events' },
@@ -210,6 +225,15 @@ export default function Events() {
     });
   };
 
+<<<<<<< HEAD
+=======
+  const getStatusBadge = (status: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+    if (status === 'upcoming') {
+      return <span className="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Upcoming</span>;
+    } else {
+      return <span className="px-3 py-1 bg-gray-500/20 text-gray-400 text-xs rounded-full border border-gray-500/30">Past</span>;
+    }
+>>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
   const isUpcoming = (dateString: string) => {
     return new Date(dateString) >= new Date();
   };
@@ -235,6 +259,27 @@ export default function Events() {
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
+      {/* Filters Section */}
+      <section className="py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6">
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+              {/* Search */}
+              <div className="md:col-span-2">
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-4 h-4" />
+                  <input
+                    type="text"
+                    placeholder="Search events..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 text-white placeholder-zion-slate-light rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                  />
+                </div>
+              </div>
+>>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
       {/* Search and Filter Section */}
       <section className="py-8 px-4 sm:px-6 lg:px-8 bg-zion-slate-darker">
         <div className="max-w-7xl mx-auto">
@@ -249,8 +294,47 @@ export default function Events() {
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-zion-slate-dark border border-zion-purple/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-1 focus:ring-zion-cyan"
               />
+<<<<<<< HEAD
+=======
             </div>
 
+            {/* Time Filter */}
+            <div className="flex flex-wrap gap-2">
+              {timeFilters.map((filter) => (
+                <button
+                  key={filter.id}
+                  onClick={() => setTimeFilter(filter.id)}
+                  className={`px-4 py-2 rounded-lg border transition-all duration-300 ${
+                    timeFilter === filter.id
+                      ? 'border-zion-cyan bg-zion-cyan/20 text-zion-cyan'
+                      : 'border-zion-purple/20 text-zion-slate-light hover:border-zion-cyan/40 hover:text-zion-cyan'
+                  }`}
+                >
+                  {filter.name}
+                </button>
+              ))}
+            </div>
+
+            {/* Category Filter */}
+            <div className="flex flex-wrap gap-2">
+              {categories.map((category) => (
+                <button
+                  key={category.id}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`flex items-center space-x-2 px-4 py-2 rounded-lg border transition-all duration-300 ${
+                    selectedCategory === category.id
+                      ? 'border-zion-cyan bg-zion-cyan/20 text-zion-cyan'
+                      : 'border-zion-purple/20 text-zion-slate-light hover:border-zion-cyan/40 hover:text-zion-cyan'
+                  }`}
+                >
+                  <category.icon className="w-4 h-4" />
+                  <span>{category.name}</span>
+                </button>
+              ))}
+>>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
+            </div>
+
+<<<<<<< HEAD
             {/* Time Filter */}
             <div className="flex flex-wrap gap-2">
               {timeFilters.map((filter) => (
@@ -289,6 +373,12 @@ export default function Events() {
         </div>
       </section>
 
+=======
+      {/* Upcoming Events */}
+      {upcomingEvents.length > 0 && (
+        <section className="py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+>>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
       {/* Featured Events */}
       {featuredEvents.length > 0 && (
         <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -341,10 +431,109 @@ export default function Events() {
                     
                     <div className="space-y-3 mb-4">
                       <div className="flex items-center space-x-2 text-sm text-zion-slate-light">
+<<<<<<< HEAD
+=======
                         <Calendar className="w-4 h-4" />
                         <span>{formatDate(event.date)}</span>
                       </div>
                       <div className="flex items-center space-x-2 text-sm text-zion-slate-light">
+                        <Clock className="w-4 h-4" />
+                        <span>{event.time}</span>
+                      </div>
+                      <div className="flex items-center space-x-2 text-sm text-zion-slate-light">
+                        <MapPin className="w-4 h-4" />
+                        <span>{event.location}</span>
+                      </div>
+                      <div className="flex items-center space-x-2 text-sm text-zion-slate-light">
+                        <Users className="w-4 h-4" />
+                        <span>{event.attendees}</span>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center justify-between">
+                      <span className="text-zion-cyan font-semibold">{event.price}</span>
+                      <button className="bg-zion-cyan hover:bg-zion-cyan/80 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300">
+                        Register Now
+                      </button>
+                    </div>
+                  </div>
+                </motion.article>
+              ))}
+            </div>
+          </div>
+
+      {/* Past Events */}
+      {pastEvents.length > 0 && (
+        <section className="py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="mb-12"
+            >
+              <h2 className="text-3xl font-bold text-white mb-4">Past Events</h2>
+              <p className="text-zion-slate-light">Missed an event? Check out our past events and stay updated</p>
+            </motion.div>
+      {/* Regular Events */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zion-slate-darker">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-zion-cyan mb-4">
+              All Events
+            </h2>
+            <p className="text-xl text-zion-slate-light">
+              Browse our complete calendar of events, webinars, and workshops
+            </p>
+          </motion.div>
+
+          {regularEvents.length > 0 ? (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {regularEvents.map((event, index) => (
+                <motion.article
+                  key={event.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-zion-slate-dark rounded-xl overflow-hidden border border-zion-purple/20 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/10"
+                >
+                  <div className="h-40 bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 flex items-center justify-center">
+                    <Brain className="w-12 h-12 text-zion-purple" />
+                  </div>
+                  <div className="p-6">
+                    <div className="flex items-center space-x-4 mb-3">
+                      <span className="px-3 py-1 bg-zion-purple/20 text-zion-purple text-sm rounded-full">
+                        {event.type}
+                      </span>
+                      <span className={`px-3 py-1 text-sm rounded-full ${
+                        isUpcoming(event.date) 
+                          ? 'bg-green-500/20 text-green-400' 
+                          : 'bg-zion-slate-light/20 text-zion-slate-light'
+                      }`}>
+                        {isUpcoming(event.date) ? 'Upcoming' : 'Past'}
+                      </span>
+                    </div>
+                    <h3 className="text-lg font-bold text-white mb-3 hover:text-zion-cyan transition-colors line-clamp-2">
+                      {event.title}
+                    </h3>
+                    <p className="text-zion-slate-light mb-4 line-clamp-3 text-sm">
+                      {event.description}
+                    </p>
+                    
+                    <div className="space-y-2 mb-4">
+                      <div className="flex items-center space-x-2 text-sm text-zion-slate-light">
+>>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
+                        <Calendar className="w-4 h-4" />
+                        <span>{formatDate(event.date)}</span>
+                      </div>
+                      <div className="flex items-center space-x-2 text-sm text-zion-slate-light">
+<<<<<<< HEAD
                         <Clock className="w-4 h-4" />
                         <span>{event.time}</span>
                       </div>
@@ -428,6 +617,8 @@ export default function Events() {
                         <span>{formatDate(event.date)}</span>
                       </div>
                       <div className="flex items-center space-x-2 text-sm text-zion-slate-light">
+=======
+>>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
                         <MapPin className="w-4 h-4" />
                         <span>{event.location}</span>
                       </div>
@@ -492,3 +683,7 @@ export default function Events() {
     </div>
   );
 }
+<<<<<<< HEAD
+=======
+}
+>>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409

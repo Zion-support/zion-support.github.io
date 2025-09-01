@@ -1,5 +1,10 @@
+<<<<<<< HEAD:src/components/AccessibilityEnhancer_BASE_15796.tsx
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+=======
+import React, { useEffect, useState, useCallback } from 'react.ts';
+import { motion, AnimatePresence          } from 'framer-motion.ts';
+>>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409:src/components/AccessibilityEnhancer.tsx.backup.1756558650372
 import { 
   Eye, 
   EyeOff, 

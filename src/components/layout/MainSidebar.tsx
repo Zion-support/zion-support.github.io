@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 <<<<<<< HEAD
@@ -31,6 +32,10 @@ import { Home,
 =======
 <<<<<<< HEAD
 >>>>>>> 29f254fe9be1bd5b31fe3bfec5a570a9a2c707f8
+=======
+import React, { useState } from 'react.ts';
+import { Link, useLocation               } from 'react-router-dom.ts';
+>>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
 import { 
   Menu, 
   X, 
@@ -80,6 +85,7 @@ import {
   Network,
   Palette,
   Video,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -148,6 +154,8 @@ interface MainSidebarProps extends React.PropsWithChildren<{}> {
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 =======
 >>>>>>> 29f254fe9be1bd5b31fe3bfec5a570a9a2c707f8
+=======
+>>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
   PenTool,
   Atom,
   Server,
@@ -163,15 +171,16 @@ interface MainSidebarProps extends React.PropsWithChildren<{}> {
   MapPin,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   Users
 <<<<<<< HEAD
 } from 'lucide-react';
 =======
+=======
+>>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
  
 } from 'lucide-react.ts';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-=======
   Building2,
   TestTube,
   Newspaper,
@@ -185,7 +194,6 @@ interface MainSidebarProps extends React.PropsWithChildren<{}> {
   Truck
 } from 'lucide-react';
 
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 interface SidebarItem {
 
 
@@ -222,9 +230,6 @@ interface SidebarItem {
 
 
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 interface NavigationSection {
 =======
@@ -281,20 +286,14 @@ interface SidebarItem {
 }
 <<<<<<< HEAD
 
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 export function MainSidebar() {
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export function MainSidebar(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [isOpen, setIsOpen] = useState(false);
   const [expandedSections, setExpandedSections] = useState<any>(['services']);
   const location = useLocation();
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 =======
 <<<<<<< HEAD
@@ -303,11 +302,11 @@ export function MainSidebar() {
   const [expandedSections, setExpandedSections] = useState<string[]>(['services']);
   const location = useLocation();
 >>>>>>> 29f254fe9be1bd5b31fe3bfec5a570a9a2c707f8
-  const toggleSection = (section: string) => {
 =======
+>>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
+  const toggleSection = (section: string) => {
 
   const toggleSection = (section: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setExpandedSections(prev => 
       prev.includes(section) 
         ? prev.filter(s => s !== section)
@@ -394,6 +393,7 @@ export function MainSidebar() {
       ]
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -520,6 +520,10 @@ export function MainSidebar() {
 >>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 =======
 >>>>>>> 29f254fe9be1bd5b31fe3bfec5a570a9a2c707f8
+=======
+      title: 'Resources',
+      items: [
+>>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
         {
           name: 'Quantum Computing',
           href: '/services/quantum-computing',

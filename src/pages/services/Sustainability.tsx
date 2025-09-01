@@ -17,38 +17,11 @@ export default function Sustainability(...args: []):  {
       description: 'Solar, wind, and other renewable energy integration',
       color: 'from-yellow-500 to-orange-500'
     },
-<<<<<<< HEAD
-    {
-      icon: Recycle,
-      title: 'Circular Economy',
-      description: 'Waste reduction and resource optimization strategies',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      icon: BarChart3,
-      title: 'Carbon Tracking',
-      description: 'Real-time monitoring and reporting of carbon footprint',
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      icon: Shield,
-      title: 'Environmental Compliance',
-      description: 'Regulatory compliance and sustainability certifications',
-      color: 'from-red-500 to-pink-500'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Sustainable Growth',
-      description: 'Business growth strategies that prioritize environmental responsibility',
-      color: 'from-indigo-500 to-purple-500'
-    };
-=======;
     {;
       icon: Globe,;
       title: 'Carbon Neutral',;
       description: 'Achieve net-zero emissions through smart technology';
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const services = [
@@ -70,20 +43,11 @@ export default function Sustainability(...args: []):  {
       price: 'From $15,000',
       features: ['System design', 'Installation', 'Grid integration', 'Maintenance']
     },
-<<<<<<< HEAD
-    {
-      title: 'Sustainability Reporting',
-      description: 'ESG reporting and sustainability metrics dashboard',
-      price: 'From $5,000',
-      features: ['Data collection', 'Report generation', 'Stakeholder communication', 'Compliance']
-    };
-=======;
     {;
       title: 'Carbon Footprint Analysis',;
       description: 'Comprehensive environmental impact assessment',;
       icon: Globe;
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const solutions = [
@@ -96,16 +60,7 @@ export default function Sustainability(...args: []):  {
   ];
 
   return (
-<<<<<<< HEAD
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Sustainability Services - Zion Tech Group"
-        description="Transform your business with sustainable technology solutions. From green IT to renewable energy, we help you reduce environmental impact while improving efficiency."
-      />
-      
-=======
     <div className = "min-h-screen bg-futuristic">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-emerald-600/20"></div>
@@ -139,30 +94,12 @@ export default function Sustainability(...args: []):  {
                 <Globe className="w-10 h-10 text-white" />
               </div>
             </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Sustainable
               <span className="block bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
                 Technology
               </span>
             </h1>
-<<<<<<< HEAD
-
-            <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-              Build a greener tomorrow with sustainable technology solutions.
-              Reduce environmental impact while maintaining performance and efficiency.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-futuristic px-8 py-4 text-lg">
-                Go Green with Tech
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </button>
-              <button className="btn-outline px-8 py-4 text-lg">
-=======
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
               Build a greener future with sustainable technology solutions. Reduce environmental impact, 
               lower costs, and create positive change for your business and the planet.
@@ -180,7 +117,6 @@ export default function Sustainability(...args: []):  {
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-slate-600 text-white font-semibold rounded-lg hover:border-slate-500 hover:bg-slate-800/50 transition-all duration-300"
               >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 Learn More
               </motion.button>
             </div>
@@ -228,24 +164,6 @@ export default function Sustainability(...args: []):  {
             {features.map((feature, index)               => (
               <motion.div
                 key={feature.title}
-<<<<<<< HEAD
-                initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-                whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-                transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-
-}}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300"
-=======
                 initial = {
   { opacity: 0,
   y: 20 
@@ -278,7 +196,6 @@ export default function Sustainability(...args: []):  {
 }}
                 viewport={{ once: true }}
                 className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               >
                 <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>
                   <feature.icon className="w-6 h-6 text-white" />
@@ -331,24 +248,6 @@ export default function Sustainability(...args: []):  {
             {services.map((service, index)               => (
               <motion.div
                 key={service.title}
-<<<<<<< HEAD
-                initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-                whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-                transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-
-}}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300"
-=======
                 initial = {
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
@@ -381,7 +280,6 @@ export default function Sustainability(...args: []):  {
 }}
                 viewport={{ once: true }}
                 className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               >
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-slate-300 mb-4">{service.description}</p>
@@ -491,35 +389,6 @@ export default function Sustainability(...args: []):  {
 }}
             transition={{ duration: 0.6 }}
           >
-<<<<<<< HEAD
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Go Green?
-            </h2>
-            <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Let's discuss how sustainable technology can reduce your environmental impact, 
-              lower costs, and create a positive impact for your business and the planet.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300"
-              >
-                Schedule Consultation
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-slate-600 text-white font-semibold rounded-lg hover:border-slate-500 hover:bg-slate-800/50 transition-all duration-300"
-              >
-                View Case Studies
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-=======
             <div className="absolute inset-0 bg-black/20"></div>
             <div className="relative z-10">
               <h2 className="text-4xl font-bold text-white mb-6">
@@ -541,6 +410,5 @@ export default function Sustainability(...args: []):  {
         </div>;
       </section>;
     </div>;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   );
 }

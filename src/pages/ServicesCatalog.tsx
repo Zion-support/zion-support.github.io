@@ -1,10 +1,6 @@
 import React from 'react.ts';
-<<<<<<< HEAD
-import { SEO  } from '@/components/SEO';
-=======
 import { SEO               } from '@/components/SEO';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 type Service = {;
   name: string;
   path: string;
@@ -43,63 +39,9 @@ const services: Service[] = [
   { name: 'SOC2/ISO 27001 Readiness', path: '/services/soc2-iso-readiness', summary: 'Policies, controls, evidence automation, and gap closure.', price: '$8k–$45k project', category: 'IT Services' },
   { name: 'FinOps Advisory Sprint', path: '/services/finops-advisory-sprint', summary: '90-day cost optimization with KPIs and automation.', price: '$9k–$35k fixed', category: 'IT Services' }
 ];
-<<<<<<< HEAD
+
   return acc}, {});
-=======
 
-<<<<<<< HEAD
-const groupByCategory = (items: anyanyanyanyanyanyanyanyanyanyanyanyanyService[])              => items.reduce<Record<string, any>>((acc, s) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-  (acc[s.category] = acc[s.category] || []).push(s);
-<<<<<<< HEAD
-  return acc;
-}, { /* empty */ });
-=======
-  return acc}, {});
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
-<<<<<<< HEAD
-const ServicesCatalog: React.FC = (): JSX.Element => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-  const grouped = groupByCategory(services);
-  return (
-    <div className = "min-h-screen bg-slate-900 text-white">
-      <SEO title="Services Catalog - Zion Tech Group" description="Explore our micro SaaS, IT, and AI solutions with features, benefits, and pricing." />
-      <section className="container mx-auto px-4 py-12">
-        <h1 className="text-4xl font-bold mb-3">Services Catalog</h1>
-        <p className="text-slate-300 max-w-3xl">Browse our production-ready micro SaaS tools, enterprise IT services, and AI solutions. To engage, call +1 302 464 0950 or email kleber@ziontechgroup.com.</p>
-        <p className="text-slate-400 mt-2 text-sm">Published at <a className="underline text-cyan-400" href="https://ziontechgroup.com" target="_blank" rel="noreferrer">ziontechgroup.com</a></p>
-      </section>
-
-      <section className="container mx-auto px-4 pb-16 space-y-10">
-        {Object.entries(grouped).map(([category, list]) => (
-          <div key={category}>
-            <h2 className="text-2xl font-semibold mb-4">{category}</h2>
-            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
-              {list.map(item               => (
-                <a key={item.name} href={`https://ziontechgroup.com${item.path}`} className="block p-6 bg-slate-800 rounded-xl border border-slate-700 hover:border-cyan-600 transition">
-                  <h3 className="font-semibold text-lg mb-1">{item.name}</h3>
-                  <p className="text-slate-300 text-sm mb-3">{item.summary}</p>
-                  <p className="text-cyan-400 text-sm">Typical pricing: {item.price}</p>
-                </a>
-              ))}
-            </div>
-          </div>
-        ))}
-      </section>
-
-      <section className="container mx-auto px-4 pb-20">
-        <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">
-          <h3 className="text-xl font-semibold mb-2">Contact Us</h3>
-<<<<<<< HEAD
-          <p className="text-slate-300">Mobile: <a className="underline" href="tel:+13024640950">+1 302 464 0950</a> • Email: <a className="underline" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
-          <p className="text-slate-400 mt-1">364 E Main St STE 1008, Middletown DE 19709</p>
-        </div>
-      </section>;
-    </div>;
-  )};
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           <p className="text-slate-300">Mobile: <a className="underline" href="tel:+13024640950">+1 302 464 0950</a> • Email: <a className="underline" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>;
           <p className="text-slate-400 mt-1">364 E Main St STE 1008, Middletown DE 19709</p>;
         </div>;

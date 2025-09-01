@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -17,6 +18,9 @@ interface Props {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
+=======
+import React, { Component, ErrorInfo, ReactNode } from 'react.ts';
+>>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
   showDetails?: boolean;
   enableReporting?: boolean;
   customErrorPage?: boolean;
@@ -26,11 +30,76 @@ interface State {
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
+<<<<<<< HEAD
   errorId: string;
   isReporting: boolean;
   reported: boolean;
 }
 
+=======
+  retryCount: number;
+  isRecovering: boolean;
+  showErrorDetails: boolean;
+  errorId: string;
+}
+
+import { AlertTriangle, RefreshCw, Home, ArrowLeft  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+} from 'lucide-react.ts';
+
+interface Props extends React.PropsWithChildren<{}> {
+  children: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReactNode;
+  fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo)               => void;
+}
+
+interface State {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  hasError: boolean;
+  error?: Error;
+  errorInfo?: ErrorInfo;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+>>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
 export class ErrorBoundary extends Component<Props, State> {
   private retryCount = 0;
   private maxRetries = 3;
@@ -66,6 +135,7 @@ export class ErrorBoundary extends Component<Props, State> {
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
 
+<<<<<<< HEAD
     // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
@@ -116,12 +186,74 @@ export class ErrorBoundary extends Component<Props, State> {
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       this.setState({ reported: true, isReporting: false });
+=======
+
+      // // // // // // // console.log('Error logged:', errorData);
+
+      // Example: Send to external service
+      // fetch('/api/errors', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify(errorData)
+      // });
+    } catch (logError) {
+      // // // // // // // console.error('Failed to log error:', logError);
+    // Auto-recovery logic
+    if (autoRecover && retryCount < maxRetries) {
+      this.setState(prev => ({ 
+        retryCount: prev.retryCount + 1,
+        isRecovering: true 
+      }));
+
+      // Attempt recovery after a delay
+      setTimeout(() => {
+        this.setState({ 
+          hasError: false, 
+          error: null, 
+          errorInfo: null,
+          isRecovering: false 
+        });
+      }, 2000 + (retryCount * 1000)); // Exponential backoff
+    }
+
+    // Send error to analytics/monitoring service
+    this.reportError(error, errorInfo);
+  }
+
+  private reportError = (error: Error, errorInfo: ErrorInfo) => {
+    try {
+      // This would typically send to your error reporting service
+      // Example: Sentry, LogRocket, Bugsnag, etc.
+      const errorReport = {
+        error: {
+          name: error.name,
+          message: error.message,
+          stack: error.stack,
+          componentStack: errorInfo.componentStack
+        },
+        timestamp: new Date().toISOString(),
+        url: window.location.href,
+        userAgent: navigator.userAgent,
+        errorId: this.state.errorId
+      };
+
+      // Send to your error reporting endpoint
+      fetch('/api/error-report', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(errorReport)
+      }).catch(() => {
+        // Fallback: log to console if reporting fails
+        console.log('Error report:', errorReport);
+      });
+>>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
     } catch (reportingError) {
       console.error('Failed to report error:', reportingError);
       this.setState({ isReporting: false });
     }
   };
 
+<<<<<<< HEAD
   private handleRetry = () => {
     if (this.retryCount < this.maxRetries) {
       this.retryCount++;
@@ -132,6 +264,50 @@ export class ErrorBoundary extends Component<Props, State> {
         errorId: '',
         reported: false
       });
+=======
+  private resetError = () => {
+    this.setState({
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      retryCount: 0,
+      isRecovering: false,
+      showErrorDetails: false
+    });
+  };
+
+User Agent: ${navigator.userAgent}
+      `.trim();
+
+      navigator.clipboard.writeText(errorText).then(()               => {
+        // Show success feedback
+        const button = document.querySelector('[data-copy-button]') as HTMLButtonElement;
+        if (button) {
+          const originalText = button.innerHTML;
+          button.innerHTML = '<CheckCircle className="w-4 h-4" /> Copied!';
+          button.classList.add('text-green-600');
+          setTimeout(() => {
+            button.innerHTML = originalText;
+            button.classList.remove('text-green-600');
+          }, 2000);
+
+      }).catch(() => {
+        // Fallback for older browsers
+        const textArea = document.createElement('textarea');
+        textArea.value = errorText;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+      });
+
+    try {
+      await navigator.clipboard.writeText(errorText);
+      // Show temporary success message
+      setTimeout(() => this.setState({ reportSent: false }), 2000);
+    } catch (err) {
+      console.error('Failed to copy error details:', err);
+>>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
     }
   };
 
@@ -139,7 +315,12 @@ export class ErrorBoundary extends Component<Props, State> {
     window.location.reload();
   };
 
+<<<<<<< HEAD
   private handleGoHome = () => {
+=======
+  // Navigate home
+  private goHome = () => {
+>>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
     window.location.href = '/';
   };
 
@@ -378,4 +559,57 @@ export class ErrorBoundary extends Component<Props, State> {
   }
 }
 
+<<<<<<< HEAD
 export default ErrorBoundary;
+=======
+// Hook for functional components to handle errors
+export const useErrorHandler = () => {
+  const [error, setError] = React.useState<Error | null>(null);
+
+  const handleError = React.useCallback((error: Error) => {
+    setError(error);
+    console.error('Error caught by useErrorHandler:', error);
+  }, []);
+
+  const clearError = React.useCallback(() => {
+    setError(null);
+  }, []);
+
+  return { error, handleError, clearError };
+};
+
+// Higher-order component for error handling
+export const withErrorBoundary = <P extends object>(
+  Component: React.ComponentType<P>,
+  errorBoundaryProps?: Partial<Props>
+) => {
+  const WrappedComponent = (props: P) => (
+    <ErrorBoundary {...errorBoundaryProps}>
+      <Component {...props} />
+    </ErrorBoundary>
+  );
+
+  WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`;
+  return WrappedComponent;
+};
+
+    // // // // // // // console.error('Error caught by useErrorHandler:', error, errorInfo);
+
+    // You can add custom error handling logic here
+    // For example, sending to an error reporting service
+
+    // Re-throw the error to trigger error boundaries
+    throw error;
+  }, []);
+}}}}}}}}}}}}}}}}
+// Global error handler for unhandled errors
+if (typeof window !== 'undefined') {
+  window.addEventListener('error', (event) => {
+    console.error('Unhandled error: anyanyanyanyanyanyanyanyanyanyanyanyanyany', event.error);
+  });
+
+  window.addEventListener('unhandledrejection', (event)               => {
+    console.error('Unhandled promise rejection:', event.reason);
+  });
+}
+>>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409

@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-=======
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
-<<<<<<< HEAD
-import { Heart, Brain, Shield, Zap, Target, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink, Activity, Users, Clock, DollarSign, Database, Lock, BarChart3, TrendingUp const AIHealthcareAnalyticsPlatform: React.FC = (): JSX.Element => {
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import { 
   Heart, 
   Activity, 
@@ -328,12 +320,8 @@ import {
   CloudHail10,
   CloudSnow10,
   CloudSleet10
-<<<<<<< HEAD
-} from 'lucide-react';
-=======
              } from 'lucide-react.ts';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const AIHealthcareAnalyticsPlatform = () => {
   const features = [
     {
@@ -525,37 +513,12 @@ const AIHealthcareAnalyticsPlatform = () => {
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-      {/* Key Metrics Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {keyMetrics.map((item, index) => (
-=======
 
-<<<<<<< HEAD
-      {/* Key Benefits */}
-      <section className="py-16 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Transform Healthcare Delivery
-            </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Our AI platform delivers measurable improvements in patient care and operational efficiency
-            </p>
-          </div>
-
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index)              => (
-=======
       {/* Key Metrics Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
             {keyMetrics.map((item, index)              => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -586,15 +549,9 @@ const AIHealthcareAnalyticsPlatform = () => {
               Our platform combines cutting-edge AI with healthcare best practices
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-=======
           
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             {features.map((feature, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -628,14 +585,9 @@ const AIHealthcareAnalyticsPlatform = () => {
               See real results with our AI-powered healthcare analytics platform
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
-=======
           
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
@@ -666,14 +618,9 @@ const AIHealthcareAnalyticsPlatform = () => {
               Tailored solutions for various healthcare organizations and specialties
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
-=======
           
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {useCases.map((useCase, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -704,14 +651,9 @@ const AIHealthcareAnalyticsPlatform = () => {
               Meet all major healthcare compliance and regulatory requirements
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            {complianceStandards.map((standard, index) => (
-=======
           
           <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 lg:grid-cols-6 gap-4">
             {complianceStandards.map((standard, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -740,23 +682,10 @@ const AIHealthcareAnalyticsPlatform = () => {
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
               Choose the plan that fits your healthcare organization and scale as you grow
             </p>
-<<<<<<< HEAD
-          </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
-=======
-<<<<<<< HEAD
-          </div>
-
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index)              => (
-=======
           </motion.div>
           
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {pricing.map((plan, index)              => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -808,58 +737,10 @@ const AIHealthcareAnalyticsPlatform = () => {
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
               Connect with your existing EHR systems and healthcare platforms
             </p>
-<<<<<<< HEAD
-          </motion.div>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-            {integrations.map((integration, index) => (
-=======
-<<<<<<< HEAD
-          </div>
-
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {useCases.map((useCase, index)              => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800 rounded-xl p-6 border border-slate-700"
-
-                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
-                <p className="text-slate-300 mb-4">{useCase.description}</p>
-                <ul className="space-y-2">
-                  {useCase.metrics.map((metric, metricIndex) => (
-                    <li key={metricIndex} className="flex items-center text-slate-300">
-                      <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
-                      {metric}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Integrations */}
-      <section className="py-16 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Seamless EHR Integrations
-            </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Connect with your existing electronic health record systems and healthcare platforms
-            </p>
-          </div>
-
-=======
           </motion.div>
           
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 lg:grid-cols-6 gap-6">
             {integrations.map((integration, index)              => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}

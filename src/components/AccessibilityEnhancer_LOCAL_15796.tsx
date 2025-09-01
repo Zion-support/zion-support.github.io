@@ -1,5 +1,10 @@
+<<<<<<< HEAD:src/components/AccessibilityEnhancer_LOCAL_15796.tsx
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+=======
+import React, { useEffect, useState, useCallback } from 'react.ts';
+import { motion, AnimatePresence           } from 'framer-motion.ts';
+>>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409:src/components/AccessibilityEnhancer.tsx.backup.1756559550343
 import { 
   Eye, 
   EyeOff, 
@@ -12,7 +17,12 @@ import {
   X,
   CheckCircle,
   AlertTriangle
+<<<<<<< HEAD:src/components/AccessibilityEnhancer_LOCAL_15796.tsx
 } from 'lucide-react';
+=======
+          } from 'lucide-react.ts';
+
+>>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409:src/components/AccessibilityEnhancer.tsx.backup.1756559550343
 interface AccessibilitySettings {
   highContrast: boolean;
   largeText: boolean;
@@ -26,10 +36,15 @@ interface AccessibilityEnhancerProps {
   enabled?: boolean;
   showSettings?: boolean;
 }
+<<<<<<< HEAD:src/components/AccessibilityEnhancer_LOCAL_15796.tsx
 export function AccessibilityEnhancer({ 
   enabled = true, 
   showSettings = false 
 }: AccessibilityEnhancerProps) {
+=======
+
+export function AccessibilityEnhancer(...args: any[]): any {
+>>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409:src/components/AccessibilityEnhancer.tsx.backup.1756559550343
   const [isVisible, setIsVisible] = useState(false);
   const [isExpanded, setIsExpanded] = useState(showSettings);
   const [settings, setSettings] = useState<AccessibilitySettings>({
@@ -57,6 +72,10 @@ export function AccessibilityEnhancer({
       }
     }
   }, [applySettings]);
+<<<<<<< HEAD:src/components/AccessibilityEnhancer_LOCAL_15796.tsx
+=======
+
+>>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409:src/components/AccessibilityEnhancer.tsx.backup.1756559550343
   // Keyboard navigation support
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {;
@@ -114,6 +133,10 @@ export function AccessibilityEnhancer({
         nextIndex = currentIndex > 0 ? currentIndex - 1 : focusableElements.length - 1;
         break;
     }
+<<<<<<< HEAD:src/components/AccessibilityEnhancer_LOCAL_15796.tsx
+=======
+
+>>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409:src/components/AccessibilityEnhancer.tsx.backup.1756559550343
     (focusableElements[nextIndex] as HTMLElement)?.focus();
   };
   // Screen reader announcements
@@ -246,6 +269,10 @@ export function AccessibilityEnhancer({
       root.style.setProperty('--base-font-size', '16px');
       root.style.setProperty('--heading-scale', '1.2');
     }
+<<<<<<< HEAD:src/components/AccessibilityEnhancer_LOCAL_15796.tsx
+=======
+
+>>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409:src/components/AccessibilityEnhancer.tsx.backup.1756559550343
     // Reduced motion
     if (newSettings.reducedMotion) {
       root.style.setProperty('--animation-duration', '0.1s');
@@ -497,6 +524,10 @@ export function AccessibilityEnhancer({
                   {isScanning ? 'Scanning...' : 'Scan Now'}
                 </button>
               </div>
+<<<<<<< HEAD:src/components/AccessibilityEnhancer_LOCAL_15796.tsx
+=======
+
+>>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409:src/components/AccessibilityEnhancer.tsx.backup.1756559550343
               {issues.length > 0 && (
                 <div className="space-y-2 max-h-32 overflow-y-auto">
                   {issues.map((issue) => (
@@ -558,6 +589,10 @@ export function AccessibilityEnhancer({
           </motion.button>
         )}
       </AnimatePresence>
+<<<<<<< HEAD:src/components/AccessibilityEnhancer_LOCAL_15796.tsx
+=======
+
+>>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409:src/components/AccessibilityEnhancer.tsx.backup.1756559550343
       {/* Notifications */}
       <div className="fixed top-4 right-4 z-50 space-y-2">
         <AnimatePresence>

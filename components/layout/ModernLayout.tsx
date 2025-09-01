@@ -1,16 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
-<<<<<<< HEAD
-import React from 'react.ts';
-import Head from 'next/head.ts';
-import ModernHeader from "./ModernHeader";
-import ModernFooter from "./ModernFooter";
-=======
 import React from 'react.ts';
 import { Helmet              } from 'react-helmet-async.ts';
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import ModernHeader from "./ModernHeader";
 import ModernFooter from "./ModernFooter";
 

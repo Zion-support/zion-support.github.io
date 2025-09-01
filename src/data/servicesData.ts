@@ -1,4 +1,21 @@
 export interface InnovativeMicroSaasService {
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
   id: string;
   title: string;
   description: string;

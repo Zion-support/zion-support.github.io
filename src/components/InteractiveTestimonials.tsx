@@ -1,35 +1,5 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-=======
 import React, { useState } from 'react.ts';
 import { motion, AnimatePresence               } from 'framer-motion.ts';
-<<<<<<< HEAD
-import { Star, Quote, ChevronLeft, ChevronRight, Play, Pause interface Testimonial {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  id: number;
-  name: string;
-  role: string;
-  company: string;
-  content: string;
-  rating: number;
-  avatar: string;
-  category: string;
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import {
   Star,
   Quote,
@@ -40,9 +10,6 @@ import {
   Users,
   Award,
   TrendingUp
-<<<<<<< HEAD
-} from 'lucide-react';
-=======
  
  
  
@@ -59,103 +26,6 @@ import {
  
 } from 'lucide-react.ts';
 
-<<<<<<< HEAD
-export const InteractiveTestimonials: React.FC = (): JSX.Element => {;
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(true);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
-  const testimonials = [
-    {
-      id: 1,
-      name: 'Dr. Sarah Chen',
-      role: 'Chief Technology Officer',
-      comp: 'MedTech Innovations',
-      avatar: '👩‍⚕️',
-      rating: 5,
-      quote: 'Zion Tech Group revolutionized our healthcare platform with AI-powered diagnostics. We\'ve seen a 45% improvement in diagnostic accuracy and 60% reduction in processing time.',
-      metrics: {
-        accuracy: '45% improvement',
-        time: '60% reduction',
-        satisfaction: '98% client satisfaction'
-      },
-      industry: 'Healthcare',
-      projectDuration: '6 months'
-    },
-    {
-      id: 2,
-      name: 'Marcus Rodriguez',
-      role: 'VP of Engineering',
-      comp: 'FinFlow Solutions',
-      avatar: '👨‍💼',
-      rating: 5,
-      quote: 'The cybersecurity implementation exceeded our expectations. We achieved SOC 2 compliance in record time and our security posture has never been stronger.',
-      metrics: {
-        compliance: 'SOC 2 achieved',
-        security: 'Zero breaches',
-        uptime: '99.99% uptime'
-      },
-      industry: 'Financial Services',
-      projectDuration: '4 months'
-    },
-    {
-      id: 3,
-      name: 'Jennifer Kim',
-      role: 'Founder & CEO',
-      comp: 'EcoSmart Retail',
-      avatar: '👩‍💻',
-      rating: 5,
-      quote: 'From concept to launch in just 10 weeks! The team\'s expertise in e-commerce and AI personalization helped us achieve 300% better conversion rates.',
-      metrics: {
-        conversion: '300% improvement',
-        launch: '10 weeks',
-        roi: '400% ROI'
-      },
-      industry: 'E-commerce',
-      projectDuration: '10 weeks'
-    },
-    {
-      id: 4,
-      name: 'David Thompson',
-      role: 'Operations Director',
-      comp: 'Global Manufacturing Co.',
-      avatar: '👨‍🏭',
-      rating: 5,
-      quote: 'The IoT and predictive maintenance solutions have transformed our operations. We\'ve reduced downtime by 70% and increased productivity by 40%.',
-      metrics: {
-        downtime: '70% reduction',
-        productivity: '40% increase',
-        savings: '$2M annual savings'
-      },
-      industry: 'Manufacturing',
-      projectDuration: '8 months';
-    };
-  ];
-
-  const nextTestimonial = () => {;
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length)};
-
-  const previousTestimonial = () => {;
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)};
-
-  const goToTestimonial = (index: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber)                => {;
-    setCurrentIndex(index)};
-
-  const togglePlayPause = () => {;
-    setIsPlaying(!isPlaying)};
-
-  // Auto-advance testimonials
-  React.useEffect(() => {
-    if (!isPlaying) return;
-    
-    const interval = setInterval(() => {;
-      nextTestimonial()}, 5000);
-
-    return () => clearInterval(interval)}, [isPlaying, currentIndex]);
-
-  const currentTestimonial = testimonials[currentIndex];
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const testimonials = [
   {
     id: 1,
@@ -214,12 +84,8 @@ const testimonials = [
   };
 ];
 const categories = ["All", "AI & Infrastructure", "Quantum Computing", "AI Research", "Manufacturing IoT", "Cybersecurity"];
-<<<<<<< HEAD
-export function InteractiveTestimonials() {
-=======
 
 export function InteractiveTestimonials(...args: any[]): any {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [selectedTestimonial, setSelectedTestimonial] = useState(0);
   const filteredTestimonials = selectedCategory === "All" ;
@@ -236,13 +102,8 @@ export function InteractiveTestimonials(...args: any[]): any {
       prev === 0 ? filteredTestimonials.length - 1 : prev - 1;
     );
   };
-<<<<<<< HEAD
-  const goToTestimonial = (index: number) => {
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const goToTestimonial = (index: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber)               => {
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setCurrentIndex(index);
   };
   const togglePlayPause = () => {
@@ -281,79 +142,7 @@ export function InteractiveTestimonials(...args: any[]): any {
             across industries with our innovative technology solutions.
           </p>
         </motion.div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-        {/* Category Filter */}
-        <motion.div
-          className="flex flex-wrap justify-center gap-3 mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-
-          <button
-            onClick={() => setSelectedCategory(null)}
-            className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-              selectedCategory === null
-                ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg shadow-cyan-500/25'
-                : 'bg-white/10 text-gray-300 hover: anyanyanyanyanyanyanyanyanyanyanyanyanyanybg-white/20 border border-white/20'
-            }`}
-
-            All Categories
-          </button>
-          {categories.map((category)               => (
-            <button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-                selectedCategory === category
-                  ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg shadow-cyan-500/25'
-                  : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20'
-              }`}
-
-              {category}
-            </button>
-          ))}
-        </motion.div>
-
-        {/* Testimonials Carousel */}
-        <div className="relative">
-=======
-<<<<<<< HEAD
-        {/* Main Testimonial Display */}
-        <div className="relative mb-12">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={currentTestimonial.id}
-              initial = {
-  { opacity: 0,
-  x: 100 
-
-}}
-              animate = {
-  { opacity: 1,
-  x: 0 
-
-}}
-              exit = {
-  { opacity: 0,
-  x: -100 
-
-}}
-              transition={{ duration: 0.5 }}
-<<<<<<< HEAD
-
-              <div className="glass rounded-3xl p-8 md:p-12 border border-white/20 backdrop-blur-sm">
-                {/* Quote Icon */}
-                <div className="flex justify-center mb-8">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center">
-                    <Quote className="w-8 h-8 text-white" />
-                  </div>
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               className="bg-white rounded-3xl shadow-2xl p-12 max-w-4xl mx-auto"
             >
               <div className="text-center mb-8">
@@ -385,14 +174,9 @@ export function InteractiveTestimonials(...args: any[]): any {
                   "{currentTestimonial.quote}"
                 </p>
               </blockquote>
-<<<<<<< HEAD
-              <div className="grid md: grid-cols-3 gap-6">
-                {Object.entries(currentTestimonial.metrics).map(([key, value])  => (
-=======
 
               <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
                 {Object.entries(currentTestimonial.metrics).map(([key, value])                => (
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   <div key={key} className="text-center p-4 bg-blue-50 rounded-xl">
                     <div className="text-2xl font-bold text-blue-600 mb-1">
                       {value}

@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   Brain, 
+=======
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Link              } from 'react-router-dom.ts';
+import { Brain, 
+>>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
   BarChart3, 
   TrendingUp, 
   Zap, 
@@ -9,6 +16,7 @@ import {
   Users, 
   CheckCircle, 
   ArrowRight,
+<<<<<<< HEAD
   Database,
   PieChart,
   LineChart,
@@ -18,6 +26,20 @@ import {
   Star
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+=======
+  Users,
+  Globe,
+  Star,
+  MessageCircle,
+  Phone,
+  Mail,
+  ShoppingCart,
+  DollarSign,
+  Heart,
+  Factory
+             } from 'lucide-react.ts';
+import { SEO              } from '../../components/SEO';
+>>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
 
 export default function AIBusinessIntelligence() {
   const features = [
@@ -107,12 +129,23 @@ export default function AIBusinessIntelligence() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
+<<<<<<< HEAD
             <div className="flex justify-center mb-6">
               <div className="p-3 bg-white/20 rounded-full">
                 <Brain className="h-8 w-8 text-white" />
               </div>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
+=======
+            <div className="flex items-center justify-center space-x-3 mb-6">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center">
+                <Brain className="w-8 h-8 text-white" />
+              </div>
+              <span className="text-cyan-400 font-medium">AI-Powered Solutions</span>
+            </div>
+            
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+>>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
               AI Business Intelligence
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-blue-100">
@@ -154,9 +187,15 @@ export default function AIBusinessIntelligence() {
               Our AI-powered platform provides comprehensive business intelligence capabilities to help you make better decisions.
             </p>
           </motion.div>
+<<<<<<< HEAD
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
+=======
+          
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index)              => (
+>>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -181,8 +220,62 @@ export default function AIBusinessIntelligence() {
       </section>
 
       {/* Benefits Section */}
+<<<<<<< HEAD
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+=======
+      <section className="py-20 bg-slate-800/50">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-4xl font-bold text-white mb-6">Why Choose AI-Powered BI?</h2>
+              <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+                Traditional business intelligence tools are limited by manual processes and static reports. 
+                Our AI-powered solutions provide dynamic, intelligent insights that adapt to your business needs.
+              </p>
+              
+              <div className="space-y-4">
+                {benefits.map((benefit, index) => (
+                  <motion.div
+                    key={benefit}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="flex items-center space-x-3"
+                  >
+                    <CheckCircle className="w-5 h-5 text-purple-400" />
+                    <span className="text-gray-300">{benefit}</span>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="relative"
+            >
+              <div className="w-full h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl border border-purple-400/30 flex items-center justify-center">
+                <div className="text-center">
+                  <BarChart3 className="w-20 h-20 text-purple-400 mx-auto mb-4" />
+                  <h3 className="text-2xl font-bold text-white mb-2">AI Analytics Dashboard</h3>
+                  <p className="text-gray-300">Real-time insights at your fingertips</p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+>>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -197,9 +290,15 @@ export default function AIBusinessIntelligence() {
               Experience the benefits of AI-powered business intelligence that drives real results.
             </p>
           </motion.div>
+<<<<<<< HEAD
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {benefits.map((benefit, index) => (
+=======
+          
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {useCases.map((useCase, index)              => (
+>>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -255,12 +354,132 @@ export default function AIBusinessIntelligence() {
                 viewport={{ once: true }}
                 className="bg-gray-50 p-8 rounded-xl border border-gray-200"
               >
+<<<<<<< HEAD
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   {useCase.title}
                 </h3>
                 <p className="text-gray-600">
                   {useCase.description}
                 </p>
+=======
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium">
+                      Most Popular
+                    </span>
+                  </div>
+                  <h3 className="text-2xl font-semibold text-white">{useCase.industry}</h3>
+                </div>
+                <div className="space-y-2">
+                  {useCase.applications.map((application) => (
+                    <div key={application} className="flex items-center space-x-2">
+                      <CheckCircle className="w-4 h-4 text-purple-400" />
+                      <span className="text-gray-300 text-sm">{application}</span>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Technologies Section */}
+      <section className="py-20 bg-slate-800/50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">Cutting-Edge Technologies</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We leverage the latest AI and machine learning technologies to deliver powerful, 
+              scalable business intelligence solutions.
+            </p>
+          </motion.div>
+          
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-6">
+            {technologies.map((tech, index)              => (
+              <motion.div
+                key={tech}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="text-center p-4 bg-slate-700/50 rounded-lg border border-slate-600/50 hover:border-purple-400/50 transition-all duration-300"
+              >
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <Cpu className="w-6 h-6 text-white" />
+                </div>
+                <span className="text-white text-sm font-medium">{tech}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">Implementation Process</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our proven implementation methodology ensures successful deployment of AI business intelligence 
+              solutions with minimal disruption to your operations.
+            </p>
+          </motion.div>
+          
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {process.map((step, index)              => (
+              <motion.div
+                key={step.step}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="text-center relative"
+              >
+                <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
+                  {step.step}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{step.title}</h3>
+                <p className="text-gray-300">{step.description}</p>
+                
+                {index < process.length - 1 && (
+                  <div className="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 transform translate-x-1/2"></div>
+                )}
+
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <div className="flex items-baseline justify-center mb-2">
+                    <span className="text-4xl font-bold text-white">{plan.price}</span>
+                    <span className="text-gray-400 ml-1">{plan.period}</span>
+                  </div>
+                  <p className="text-gray-300">{plan.description}</p>
+                </div>
+
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-blue-400 flex-shrink-0" />
+                      <span className="text-gray-300">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                  plan.popular
+                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700'
+                    : 'border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'
+                }`}>
+                  {plan.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
+                </button>
+>>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
               </motion.div>
             ))}
           </div>
