@@ -2,8 +2,11 @@
   "name": "zion-tech-group",
   "version": "0.1.0",
   "private": true,
-  "packageManager": "yarn@1.22.22",
-  "type": "module",
+  "version": "0.0.0",
+  "type": "commonjs",
+  "bin": {
+    "deploy-zion-ipfs": "scripts/deploy-zion-ipfs.js"
+  },
   "scripts": {
     "pm2:start": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && pm2 start ecosystem.config.cjs --update-env",
     "pm2:stop": "pm2 stop ecosystem.config.cjs || true",
