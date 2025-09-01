@@ -443,27 +443,38 @@ const Homepage2025: React.FC = () => {
               <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
                 Join hundreds of companies already leveraging our cutting-edge technology solutions to stay ahead of the competition.
               </p>
-              
-              <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <motion.button 
-                  className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center gap-2 justify-center"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <CheckCircle className="w-5 h-5" />
-                  Start Free Trial
-                </motion.button>
-                
-                <motion.button 
-                  className="px-10 py-5 border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-black transition-all duration-300 transform hover:scale-105 flex items-center gap-2 justify-center"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <Users className="w-5 h-5" />
-                  Schedule Demo
-                </motion.button>
-              </div>
-            </motion.div>
+            </div>
+            <div>
+              <h4 className="text-white font-semibold mb-4">Services</h4>
+              <ul className="text-gray-400 text-sm space-y-2">
+                <li><a href="#services" className="hover:text-cyan-400 transition-colors">Micro SAAS</a></li>
+                <li><a href="#ai" className="hover:text-cyan-400 transition-colors">AI Services</a></li>
+                <li><a href="#automation" className="hover:text-cyan-400 transition-colors">AI Automation</a></li>
+                <li><a href="#quantum" className="hover:text-cyan-400 transition-colors">Quantum Security</a></li>
+                <li><a href="#it" className="hover:text-cyan-400 transition-colors">IT Solutions</a></li>
+                <li><a href="#emerging" className="hover:text-cyan-400 transition-colors">Emerging Tech</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-white font-semibold mb-4">Company</h4>
+              <ul className="text-gray-400 text-sm space-y-2">
+                <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors">About Us</a></li>
+                <li><a href="#contact" className="hover:text-cyan-400 transition-colors">Contact</a></li>
+                <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors">Careers</a></li>
+                <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors">Blog</a></li>
+                <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors">News</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-white font-semibold mb-4">Connect</h4>
+              <ul className="text-gray-400 text-sm space-y-2">
+                <li><a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">+1 302 464 0950</a></li>
+                <li><a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">kleber@ziontechgroup.com</a></li>
+                <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors">Website</a></li>
+                <li><a href="https://www.linkedin.com/company/zion-tech-group" className="hover:text-cyan-400 transition-colors">LinkedIn</a></li>
+                <li><a href="https://twitter.com/ziontechgroup" className="hover:text-cyan-400 transition-colors">Twitter</a></li>
+              </ul>
+            </div>
           </div>
           
           <div className="border-t border-white/10 pt-8 text-center">

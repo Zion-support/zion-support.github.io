@@ -41,10 +41,9 @@ export default function Header() {
         { name: 'Case Studies', href: '/case-studies' },
         { name: 'Cloud Platform', href: '/cloud-platform' },
         { name: 'AI Assistant', href: '/ai-assistant' },
-        { name: 'Analytics', href: '/analytics' },
-        { name: 'Automation', href: '/automation' },
-        { name: 'Docs', href: '/docs' },
-        { name: 'Market Pricing', href: '/market-pricing' }
+        { name: 'Micro SaaS', href: '/micro-saas' },
+        { name: 'Resources', href: '/resources' },
+        { name: 'Support', href: '/support' }
       ]
     },
     { name: 'Pricing', href: '/pricing' },
