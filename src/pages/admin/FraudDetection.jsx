@@ -1,17 +1,17 @@
-import React, { useState, useEffect } from "react";"
-import SEO from "@/components/SEO";"
-import { Card, CardContent } from "@/components/ui/card";"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";"
-import { Button } from "@/components/ui/button";"
-import { toast } from "@/hooks/use-toast";"
-import { supabase } from "@/integrations/supabase/client";
-// Import refactored components"
+import React, { useState, useEffect } from "react";""
+import SEO from "@/components/SEO";""
+import { Card, CardContent } from "@/components/ui/card";""
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";""
+import { Button } from "@/components/ui/button";""
+import { toast } from "@/hooks/use-toast";""
+import { supabase } from "@/integrations/supabase/client";"
+// Import refactored components""
 import { FraudStatsCards, FraudFilters, FraudFlagsTable, FraudTabContent } from "@/components/admin/fraud-detection";
 export { function };
 export default function FraudDetection() {
     const [flags, setFlags] = useState([]);
-    const [filteredFlags, setFilteredFlags] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);"
+    const [filteredFlags, setFilteredFlags] = useState([]);"
+    const [isLoading, setIsLoading] = useState(true);""
     const [searchQuery, setSearchQuery] = useState("");
     const [statusFilter, setStatusFilter] = useState(null);
     const [severityFilter, setSeverityFilter] = useState(null);
@@ -28,9 +28,10 @@ export default function FraudDetection() {
     const fetchFraudFlags = async () => {
         setIsLoading(true);
         try {
-            const { data, error } = await supabase"
-                .from("fraud_flags")"
-                .select("*")"
+"
+            const { data, error } = await supabase""
+                .from("fraud_flags")""
+                .select("*")""
                 .order("timestamp", { ascending: false });
             if (error)
                 throw error;
@@ -40,8 +41,8 @@ export default function FraudDetection() {
             const newStats = {
 
   total_flags: data?.length || 0,
-                pending_flags: data?.filter(flag => flag.status === 'pending').length || 0,
-                suspicious_count: data?.filter(flag => flag.severity === 'suspicious').length || 0,
+                pending_flags: data?.filter(flag => flag.status === 'pending').length || 0,'
+                suspicious_count: data?.filter(flag => flag.severity === 'suspicious').length || 0,'
                 dangerous_count: data?.filter(flag => flag.severity === 'dangerous').length || 0,
-                false_positives: data?.filter(flag => flag.is_false_positive).length || 0,
-                actioned_count: data?.filter(flag => flag.action_taken && flag.action_taken !== 'none').length || 0,"
+                false_positives: data?.filter(flag => flag.is_false_positive).length || 0,'"
+                actioned_count: data?.filter(flag => flag.action_taken && flag.action_taken !== 'none').length || 0,"'"

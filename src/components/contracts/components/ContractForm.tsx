@@ -13,6 +13,7 @@ interface ContractFormProps {
   onDeployOptionsChange?: (options: DeploymentOptions) => void}
 
 export function ContractForm({
+
   talent,
   clientName,
   initialValues,
@@ -21,6 +22,7 @@ export function ContractForm({
   deployOptions,
   onDeployOptionsChange
 }: ContractFormProps) {
+
   // const [isGenerating, setIsGenerating] = useState(false); // Removed
   const { toast } = useToast();
 
@@ -28,15 +30,16 @@ export function ContractForm({
   // Update form when initialValues change
   useEffect(() => {
     if (initialValues) {
+
       Object.keys(initialValues).forEach((key) => {
-        
+
         form.setValue(typedKey, initialValues[typedKey])})}
   }, [initialValues, form]);
   
   // Track form values for template saving
   useEffect(() => {
     if (onFormValuesChange) {
-      
+
       });
       
       return () => subscription.unsubscribe()}
@@ -45,14 +48,15 @@ export function ContractForm({
   
     form.setValue("manualMilestones", transformedAIMilestones);
     
-    // If payment terms isn't already set to milestone, update it
+    // If payment terms isn't already set to milestone, update it"
     if (form.getValues("paymentTerms") !== "milestone") {
+"
       form.setValue("paymentTerms", "milestone")}
     
     toast({
+"
       title: "Milestones Generated",
-      description: `${milestones.length} milestones have been suggested and added to the form. Please review and adjust payment amounts.`,
-    })};
+      description: `${milestones.length} milestones have been suggested and added to the form. Please review and adjust payment amounts.`})};
   
   // const onSubmit = async (values: ContractFormValues) => { // Removed onSubmit
   //   // setIsGenerating(true); // Removed
@@ -60,20 +64,23 @@ export function ContractForm({
   //   //   
   //   //   onContractGenerated(contract);
   //   // } catch (error) {
+"
   //   //   console.error("Error generating contract:", error);
   //   //   toast({
-  //   //     title: "Contract Generation Failed",
-  //   //     description: error instanceof Error ? error.message : "Something went wrong. Please try again.",
+"
+  //   //     title: "Contract Generation Failed","
+  //   //     description: error instanceof Error ? error.message : "Something went wrong. Please try again.","
   //   //     variant: "destructive",
   //   //   });
   //   // } finally {
+
   //   //   // setIsGenerating(false); // Removed
   //   // }
   // };
   
-  return (
+  return()
     <>
-      <DialogHeader>
+      <DialogHeader>"
         <DialogTitle className="text-xl">Contract Builder</DialogTitle>
         <DialogDescription>
           Create a professional contract for your project with {talent.full_name}
@@ -81,7 +88,7 @@ export function ContractForm({
       </DialogHeader>
     
       <Form {...form}>
-        {/* Removed form.handleSubmit(onSubmit) from here, form submission will be handled by parent */}
+        {/* Removed form.handleSubmit(onSubmit) from here, form submission will be handled by parent */}"
         <form className="space-y-6">
           <ProjectDetailsFields form={form} 
            />
@@ -95,25 +102,25 @@ export function ContractForm({
            />
           
           {/* Removed internal submit button */}
-          {/* <Button
-            type="submit" 
+          {/* <Button"
+            type="submit" "
             className="w-full bg-zion-purple hover:bg-zion-purple-dark"
             // disabled={isGenerating} // Removed
           >
             {isGenerating ? ( // Removed
-              <>
+              <>"
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                 Generating Contract...
               </>
-            ) : (
+            ) : ("
               "Generate Contract"
             )}
           </Button> */}
         </form>
       </Form>
-      
+      "
       <DialogFooter className="gap-2 flex-wrap mt-4">
-        <Button 
+        <Button "
           variant="outline" 
           onClick={() => form.reset()}
           // disabled={isGenerating} // Removed
@@ -123,3 +130,4 @@ export function ContractForm({
       </DialogFooter>
     </>
   )}
+'"`

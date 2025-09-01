@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react';'
 import AdminLayout from '@/components/admin/AdminLayout';
 import {
 
@@ -6,17 +6,17 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-  TableBody,
-  TableCell} from '@/components/ui/table';
-import { Input } from '@/components/ui/input';
-import { Switch } from '@/components/ui/switch';
-const initialProducts = ['
-  { id: 1, name: 'Alpha', category: 'Software', status: 'pending' },
-  { id: 2, name: 'Beta', category: 'Hardware', status: 'approved' },
+  TableBody,'
+  TableCell} from '@/components/ui/table';'
+import { Input } from '@/components/ui/input';'
+import { Switch } from '@/components/ui/switch';'
+const initialProducts = [''
+  { id: 1, name: 'Alpha', category: 'Software', status: 'pending' },'
+  { id: 2, name: 'Beta', category: 'Hardware', status: 'approved' },'
   { id: 3, name: 'Gamma', category: 'Service', status: 'rejected' },
 ];
 export default function ProductsAdminPage() {
-
+'
   const [search, setSearch] = useState('');
   const [products, setProducts] = useState(initialProducts);
   const filtered = products.filter(p =>
@@ -29,7 +29,7 @@ export default function ProductsAdminPage() {
         p.id === id
           ? {
 
-              ...p,
+              ...p,'
               status: p.status === 'approved' ? 'rejected' : 'approved'}
           : p
       )
@@ -37,24 +37,24 @@ export default function ProductsAdminPage() {
   };
   return()
     <AdminLayout>
-      <div className="space-y-4">"
-        <div className="flex items-center justify-between">"
-          <h1 className="text-2xl font-bold">Products</h1>
-          <Input"
+      <div className="space-y-4">""
+        <div className="flex items-center justify-between">""
+          <h1 className="text-2xl font-bold">Products</h1>"
+          <Input""
             placeholder="Search products..."
-            value={search}
-            onChange={e => setSearch(e.target.value)}"
+            value={search}"
+            onChange={e => setSearch(e.target.value)}""
             className="max-w-xs"
-          />
-        </div>"
+          />"
+        </div>""
         <div className="rounded-md border">
           <Table>
             <TableHeader>
               <TableRow>
                 <TableHead>ID</TableHead>
                 <TableHead>Name</TableHead>
-                <TableHead>Category</TableHead>
-                <TableHead>Status</TableHead>"
+                <TableHead>Category</TableHead>"
+                <TableHead>Status</TableHead>""
                 <TableHead className="text-center">Approve</TableHead>
               </TableRow>
             </TableHeader>
@@ -63,10 +63,10 @@ export default function ProductsAdminPage() {
                 <TableRow key={p.id}>
                   <TableCell>{p.id}</TableCell>
                   <TableCell>{p.name}</TableCell>
-                  <TableCell>{p.category}</TableCell>
-                  <TableCell>{p.status}</TableCell>"
-                  <TableCell className="text-center">
-                    <Switch'
+                  <TableCell>{p.category}</TableCell>"
+                  <TableCell>{p.status}</TableCell>""
+                  <TableCell className="text-center">'
+                    <Switch''
                       checked={p.status === 'approved'}
                       onCheckedChange={() => toggleApproval(p.id)}
                     />
@@ -79,5 +79,5 @@ export default function ProductsAdminPage() {
       </div>
     </AdminLayout>
   );
-}
-'"
+}'"
+'"'"

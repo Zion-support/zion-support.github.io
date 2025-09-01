@@ -67,10 +67,13 @@ export interface SerializedOrder {
 }
 
 export function serializeOrder(row: OrderRow | null | undefined): SerializedOrder | null {
+
   if (!row) {
+
     return null;
   }
   return {
+
     orderId: row.id,
     date: row.created_at,
     total: row.total,
@@ -80,13 +83,15 @@ export function serializeOrder(row: OrderRow | null | undefined): SerializedOrde
     trackingStatus: row.tracking_status,
     trackingEvents: row.tracking_events || [],
     items: row.items || [],
-    shippingAddress: row.shipping_address || null,
-  };
+    shippingAddress: row.shipping_address || null};
 }
 
 export function serializeOrders(rows: OrderRow[] | null | undefined): SerializedOrder[] {
+
   if (!rows) {
+
     return [];
   }
   return rows.map(row => serializeOrder(row)).filter(order => order !== null) as SerializedOrder[];
 }
+'

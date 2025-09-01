@@ -1,11 +1,11 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';'
 export function AnimatedBackground({ className = '', variant = 'grid' }) {
 
     const canvasRef = useRef(null);
     useEffect(() => {
         const canvas = canvasRef.current;
         if (!canvas)
-            return;
+            return;'
         const ctx = canvas.getContext('2d');
         if (!ctx)
             return;
@@ -15,7 +15,7 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight};
         const initParticles = () => {
-            particles = [];
+            particles = [];'
             const particleCount = variant === 'particles' ? 100 : 50;
             for (let i = 0; i < particleCount; i++) {
 
@@ -30,7 +30,7 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
         };
         const drawGrid = () => {
             const gridSize = 40;
-            const offset = (Date.now() * 0.001) % gridSize;
+            const offset = (Date.now() * 0.001) % gridSize;'
             ctx.strokeStyle = 'rgba(139, 21, 233, 0.1);
             ctx.lineWidth = 1;
             // Vertical lines
@@ -76,8 +76,8 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
                     if (distance < 100) {
 
                         ctx.beginPath();
-                        ctx.moveTo(particle.x, particle.y);
-                        ctx.lineTo(otherParticle.x, otherParticle.y);`
+                        ctx.moveTo(particle.x, particle.y);`
+                        ctx.lineTo(otherParticle.x, otherParticle.y);``
                         ctx.strokeStyle = `rgba(139, 21, 233, ${0.1 * (1 - distance / 100)})`;
                         ctx.lineWidth = 1;
                         ctx.stroke()}
@@ -85,7 +85,7 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
         const drawWaves = () => {
             const time = Date.now() * 0.001;
             const amplitude = 50;
-            const frequency = 0.01;
+            const frequency = 0.01;'
             ctx.strokeStyle = 'rgba(34, 221, 210, 0.3);
             ctx.lineWidth = 2;
             // Draw multiple wave layers
@@ -109,8 +109,8 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
         const drawMatrix = () => {
             const time = Date.now() * 0.001;
             const fontSize = 14;
-            const columns = Math.floor(canvas.width / fontSize);
-            ctx.fillStyle = 'rgba(34, 221, 210, 0.8);`
+            const columns = Math.floor(canvas.width / fontSize);'`
+            ctx.fillStyle = 'rgba(34, 221, 210, 0.8);``
             ctx.font = `${fontSize}px monospace`;
             for (let i = 0; i < columns; i++) {
 
@@ -122,34 +122,34 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
         const animate = () => {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             switch (variant) {
-
+'
                 case 'grid':
                     drawGrid();
-                    break;
+                    break;'
                 case 'particles':
                     drawParticles();
-                    break;
+                    break;'
                 case 'waves':
                     drawWaves();
-                    break;
+                    break;'
                 case 'matrix':
                     drawMatrix();
                     break}
             animationFrameId = requestAnimationFrame(animate)};
         resizeCanvas();
         initParticles();
-        animate();
+        animate();'
         window.addEventListener('resize', resizeCanvas);
         return () => {
-
+'
             window.removeEventListener('resize', resizeCanvas);
             cancelAnimationFrame(animationFrameId);
-        };
-    }, [variant]);`
+        };`
+    }, [variant]);``
     return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none z-0 ${className}`} style = {
 
   {
-
+'
             background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%,
   #0f172a 100%);
         
@@ -160,40 +160,46 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
 
 
 }}/>);
-}
-// Neon glow effect component'
+}'
+// Neon glow effect component''
 export function NeonGlow({ children, className = '', glowColor = '#8c15e9' }) {
 `
+``
     return (<div className={`relative ${className}`} style={{
 `
-            textShadow: `0 0 10px ${glowColor}, 0 0 20px ${glowColor}, 0 0 30px ${glowColor}`,`
+``
+            textShadow: `0 0 10px ${glowColor}, 0 0 20px ${glowColor}, 0 0 30px ${glowColor}`,``
             filter: `drop-shadow(0 0 10px ${glowColor})`
         }}>
       {children}
-    </div>)}
-// Floating particles component'
+    </div>)}'
+// Floating particles component''
 export function FloatingParticles({ count = 20, className = '' }) {
 `
+``
     return (<div className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`}>
       {Array.from({ length: count }).map((_, i) => (<div key={i} className="absolute w-1 h-1 bg-zion-cyan rounded-full animate-pulse" style={{
 `
-                left: `${Math.random() * 100}%`,`
-                top: `${Math.random() * 100}%`,`
-                animationDelay: `${Math.random() * 2}s`,`
+``
+                left: `${Math.random() * 100}%`,``
+                top: `${Math.random() * 100}%`,``
+                animationDelay: `${Math.random() * 2}s`,``
                 animationDuration: `${2 + Math.random() * 2}s`}}/>))}
-    </div>)}
-// Gradient border component'
+    </div>)}'
+// Gradient border component''
 export function GradientBorder({ children, className = '', borderWidth = '2px' }) {
 `
+``
     return (<div className={`relative ${className}`} style = {
 
   {
 `
+``
             background: `linear-gradient(45deg, #8c15e9, #22ddd2, #8c15e9)`,
-            padding: borderWidth,
-            borderRadius: 'inherit'}}>"
+            padding: borderWidth,'"
+            borderRadius: 'inherit'}}>""
       <div className="bg-zion-blue-dark rounded-[inherit] h-full w-full">
         {children}
       </div>
-    </div>)}
-'"`
+    </div>)}'"`
+'"`'"`

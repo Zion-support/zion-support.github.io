@@ -1,11 +1,13 @@
 
 
 describe ('UserExperienceOptimizer', () => {
+'
   it ('renders without crashing', () => {
-    render (<UserExperienceOptimizer  />) ;
+    render (<UserExperienceOptimizer  />) ;'
     expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
-
+'
   it ('displays expected content', () => {
     render (<UserExperienceOptimizer  />) ;
     // Add specific test assertions based on component content
   }) }) ;
+'

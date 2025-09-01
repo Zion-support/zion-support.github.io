@@ -13,16 +13,16 @@ import {
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    message: '',
+'
+    name: '','
+    email: '','
+    company: '','
+    phone: '','
+    message: '','
     service: 'general'});
 
   
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);'
   const [submitStatus, setSubmitStatus] = useState('idle');
 
   
@@ -34,17 +34,17 @@ export default function Contact() {
 
     // Simulate form submission
     try {
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await new Promise(resolve => setTimeout(resolve, 2000));'
       setSubmitStatus('success');
       setFormData({
-
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        message: '',
+'
+        name: '','
+        email: '','
+        company: '','
+        phone: '','
+        message: '','
         service: 'general'})} catch (error) {
-
+'
       setSubmitStatus('error')} finally {
 
       setIsSubmitting(false)}
@@ -59,100 +59,100 @@ export default function Contact() {
         {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}"
-          className="text-center text-white mb-16"
-        >"
+          animate={{ opacity: 1, y: 0 }}"
+          transition={{ duration: 0.8 }}""
+          className="text-center text-white mb-16""
+        >""
           <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-            Get In Touch
-          </h1>"
-          <p className="text-xl md:text-2xl max-w-3xl mx-auto text-gray-300 leading-relaxed">
+            Get In Touch"
+          </h1>""
+          <p className="text-xl md:text-2xl max-w-3xl mx-auto text-gray-300 leading-relaxed">'
             Ready to transform your business? Let's discuss how our cutting-edge
             AI and technology solutions can drive your success.
           </p>
-        </motion.div>
-"
+        </motion.div>"
+""
         <div className="grid lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
           {/* Contact Information */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}"
+            animate={{ opacity: 1, x: 0 }}"
+            transition={{ duration: 0.8, delay: 0.2 }}""
             className="space-y-8"
-          >
-            <div>"
+          >"
+            <div>""
               <h2 className="text-3xl font-bold text-white mb-6">
-                Contact Information
-              </h2>"
-              <p className="text-gray-300 text-lg mb-8">
+                Contact Information"
+              </h2>""
+              <p className="text-gray-300 text-lg mb-8">'
                 We're here to help you navigate the future of technology. Reach
                 out to us for personalized solutions and expert guidance.
               </p>
-            </div>
-"
-            <div className="space-y-6">"
-              <div className="flex items-start space-x-4">"
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">"
-                  <Phone className="w-6 h-6 text-white"  />                </div>
-                <div>"
-                  <h3 className="text-white font-semibold text-lg">Phone</h3>"
-                  <p className="text-gray-300">+1 302 464 0950</p>"
+            </div>"
+""
+            <div className="space-y-6">""
+              <div className="flex items-start space-x-4">""
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">""
+                  <Phone className="w-6 h-6 text-white"  />                </div>"
+                <div>""
+                  <h3 className="text-white font-semibold text-lg">Phone</h3>""
+                  <p className="text-gray-300">+1 302 464 0950</p>""
                   <p className="text-gray-400 text-sm">Mon-Fri 9AM-6PM EST</p>
                 </div>
-              </div>
-"
-              <div className="flex items-start space-x-4">"
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">"
-                  <Mail className="w-6 h-6 text-white"  />                </div>
-                <div>"
-                  <h3 className="text-white font-semibold text-lg">Email</h3>"
-                  <p className="text-gray-300">kleber@ziontechgroup.com</p>"
-                  <p className="text-gray-400 text-sm">
+              </div>"
+""
+              <div className="flex items-start space-x-4">""
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">""
+                  <Mail className="w-6 h-6 text-white"  />                </div>"
+                <div>""
+                  <h3 className="text-white font-semibold text-lg">Email</h3>""
+                  <p className="text-gray-300">kleber@ziontechgroup.com</p>""
+                  <p className="text-gray-400 text-sm">'
                     We'll respond within 24 hours
                   </p>
                 </div>
-              </div>
-"
-              <div className="flex items-start space-x-4">"
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0">"
-                  <MapPin className="w-6 h-6 text-white"  />                </div>
-                <div>"
-                  <h3 className="text-white font-semibold text-lg">Address</h3>"
-                  <p className="text-gray-300">364 E Main St STE 1008</p>"
-                  <p className="text-gray-300">Middletown, DE 19709</p>"
+              </div>"
+""
+              <div className="flex items-start space-x-4">""
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0">""
+                  <MapPin className="w-6 h-6 text-white"  />                </div>"
+                <div>""
+                  <h3 className="text-white font-semibold text-lg">Address</h3>""
+                  <p className="text-gray-300">364 E Main St STE 1008</p>""
+                  <p className="text-gray-300">Middletown, DE 19709</p>""
                   <p className="text-gray-400 text-sm">United States</p>
                 </div>
-              </div>
-"
-              <div className="flex items-start space-x-4">"
-                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-500 rounded-lg flex items-center justify-center flex-shrink-0">"
-                  <Clock className="w-6 h-6 text-white"  />                </div>
-                <div>"
+              </div>"
+""
+              <div className="flex items-start space-x-4">""
+                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-500 rounded-lg flex items-center justify-center flex-shrink-0">""
+                  <Clock className="w-6 h-6 text-white"  />                </div>"
+                <div>""
                   <h3 className="text-white font-semibold text-lg">
-                    Business Hours
-                  </h3>"
+                    Business Hours"
+                  </h3>""
                   <p className="text-gray-300">
-                    Monday - Friday: 9:00 AM - 6:00 PM EST
-                  </p>"
+                    Monday - Friday: 9:00 AM - 6:00 PM EST"
+                  </p>""
                   <p className="text-gray-300">
-                    Saturday: 10:00 AM - 2:00 PM EST
-                  </p>"
+                    Saturday: 10:00 AM - 2:00 PM EST"
+                  </p>""
                   <p className="text-gray-400 text-sm">Sunday: Closed</p>
                 </div>
               </div>
             </div>
-
-            {/* Quick Contact Options */}"
-            <div className="pt-6 border-t border-gray-700">"
+"
+            {/* Quick Contact Options */}""
+            <div className="pt-6 border-t border-gray-700">""
               <h3 className="text-white font-semibold text-lg mb-4">
-                Quick Contact Options
-              </h3>"
-              <div className="space-y-3">"
-                <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 px-6 rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 flex items-center justify-center space-x-2">"
+                Quick Contact Options"
+              </h3>""
+              <div className="space-y-3">""
+                <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 px-6 rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 flex items-center justify-center space-x-2">""
                   <Phone className="w-5 h-5"  />
-                  <span>Call Now</span>
-                </button>"
-                <button className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 px-6 rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-200 flex items-center justify-center space-x-2">"
+                  <span>Call Now</span>"
+                </button>""
+                <button className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 px-6 rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-200 flex items-center justify-center space-x-2">""
                   <Mail className="w-5 h-5"  />                  <span>Send Email</span>
                 </button>
               </div>
@@ -162,111 +162,111 @@ export default function Contact() {
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}"
-            className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20"
-          >"
+            animate={{ opacity: 1, x: 0 }}"
+            transition={{ duration: 0.8, delay: 0.4 }}""
+            className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20""
+          >""
             <h2 className="text-3xl font-bold text-white mb-6">
               Send us a Message
-            </h2>
-"
-            <form onSubmit={handleSubmit} className="space-y-6">"
+            </h2>"
+""
+            <form onSubmit={handleSubmit} className="space-y-6">""
               <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <label"
-                    htmlFor="name"
-                    className="block text-white font-medium mb-2"
-                  >"
+                <div>"
+                  <label""
+                    htmlFor="name""
+                    className="block text-white font-medium mb-2""
+                  >""
                     <User className="w-4 h-4 inline mr-2"  />                    Full Name *
-                  </label>
-                  <input"
-                    type="text"
-                    id="name"
+                  </label>"
+                  <input""
+                    type="text""
+                    id="name""
                     name="name"
                     value={formData.name}
-                    onChange={handleInputChange}
-                    required"
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+                    onChange={handleInputChange}"
+                    required""
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent""
                     placeholder="Enter your full name"
                   />
                 </div>
 
-                <div>
-                  <label"
-                    htmlFor="email"
-                    className="block text-white font-medium mb-2"
-                  >"
+                <div>"
+                  <label""
+                    htmlFor="email""
+                    className="block text-white font-medium mb-2""
+                  >""
                     <Mail className="w-4 h-4 inline mr-2"  />                    Email Address *
-                  </label>
-                  <input"
-                    type="email"
-                    id="email"
+                  </label>"
+                  <input""
+                    type="email""
+                    id="email""
                     name="email"
                     value={formData.email}
-                    onChange={handleInputChange}
-                    required"
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+                    onChange={handleInputChange}"
+                    required""
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent""
                     placeholder="Enter your email"
                   />
                 </div>
-              </div>
-"
+              </div>"
+""
               <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <label"
-                    htmlFor="company"
-                    className="block text-white font-medium mb-2"
-                  >"
+                <div>"
+                  <label""
+                    htmlFor="company""
+                    className="block text-white font-medium mb-2""
+                  >""
                     <Building className="w-4 h-4 inline mr-2"  />                    Company
-                  </label>
-                  <input"
-                    type="text"
-                    id="company"
+                  </label>"
+                  <input""
+                    type="text""
+                    id="company""
                     name="company"
-                    value={formData.company}
-                    onChange={handleInputChange}"
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+                    value={formData.company}"
+                    onChange={handleInputChange}""
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent""
                     placeholder="Enter company name"
                   />
                 </div>
 
-                <div>
-                  <label"
-                    htmlFor="phone"
-                    className="block text-white font-medium mb-2"
-                  >"
+                <div>"
+                  <label""
+                    htmlFor="phone""
+                    className="block text-white font-medium mb-2""
+                  >""
                     <Phone className="w-4 h-4 inline mr-2"  />                    Phone Number
-                  </label>
-                  <input"
-                    type="tel"
-                    id="phone"
+                  </label>"
+                  <input""
+                    type="tel""
+                    id="phone""
                     name="phone"
-                    value={formData.phone}
-                    onChange={handleInputChange}"
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+                    value={formData.phone}"
+                    onChange={handleInputChange}""
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent""
                     placeholder="Enter phone number"
                   />
                 </div>
               </div>
 
-              <div>
-                <label"
-                  htmlFor="service"
+              <div>"
+                <label""
+                  htmlFor="service""
                   className="block text-white font-medium mb-2"
                 >
                   Service of Interest
-                </label>
-                <select"
-                  id="service"
+                </label>"
+                <select""
+                  id="service""
                   name="service"
-                  value={formData.service}
-                  onChange={handleInputChange}"
+                  value={formData.service}"
+                  onChange={handleInputChange}""
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
                 >
                   {serviceOptions.map(option => (
                     <option
-                      key={option.value}
-                      value={option.value}"
+                      key={option.value}"
+                      value={option.value}""
                       className="bg-gray-800 text-white"
                     >
                       {option.label}
@@ -274,67 +274,67 @@ export default function Contact() {
                 </select>
               </div>
 
-              <div>
-                <label"
-                  htmlFor="message"
-                  className="block text-white font-medium mb-2"
-                >"
+              <div>"
+                <label""
+                  htmlFor="message""
+                  className="block text-white font-medium mb-2""
+                >""
                   <MessageSquare className="w-4 h-4 inline mr-2"  />                  Message *
-                </label>
-                <textarea"
-                  id="message"
+                </label>"
+                <textarea""
+                  id="message""
                   name="message"
                   value={formData.message}
                   onChange={handleInputChange}
-                  required
-                  rows={5}"
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent resize-none"
+                  required"
+                  rows={5}""
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent resize-none""
                   placeholder="Tell us about your project or inquiry..."
                 />
               </div>
 
-              {/* Submit Status */}
+              {/* Submit Status */}'
               {submitStatus === 'success' && (
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}"
-                  className="bg-green-500/20 border border-green-500/50 rounded-lg p-4 flex items-center space-x-3"
-                >"
-                  <CheckCircle className="w-6 h-6 text-green-400"  />"
-                  <span className="text-green-400">
+                  initial={{ opacity: 0, scale: 0.9 }}"
+                  animate={{ opacity: 1, scale: 1 }}""
+                  className="bg-green-500/20 border border-green-500/50 rounded-lg p-4 flex items-center space-x-3""
+                >""
+                  <CheckCircle className="w-6 h-6 text-green-400"  />""
+                  <span className="text-green-400">'
                     Message sent successfully! We'll get back to you soon.
                   </span>                </motion.div>
               )}
-
+'
               {submitStatus === 'error' && (
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}"
-                  className="bg-red-500/20 border border-red-500/50 rounded-lg p-4 flex items-center space-x-3"
-                >"
-                  <AlertCircle className="w-6 h-6 text-red-400"  />"
+                  initial={{ opacity: 0, scale: 0.9 }}"
+                  animate={{ opacity: 1, scale: 1 }}""
+                  className="bg-red-500/20 border border-red-500/50 rounded-lg p-4 flex items-center space-x-3""
+                >""
+                  <AlertCircle className="w-6 h-6 text-red-400"  />""
                   <span className="text-red-400">
                     Failed to send message. Please try again.
                   </span>                </motion.div>
               )}
-
-              <button"
+"
+              <button""
                 type="submit"
                 disabled={!isFormValid || isSubmitting}
                 className={`w-full py-4 px-6 rounded-lg font-semibold text-lg transition-all duration-200 flex items-center justify-center space-x-2 ${
-
-                  isFormValid && !isSubmitting'
-                    ? 'bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white transform hover:-translate-y-1 shadow-lg hover:shadow-xl''
-                    : 'bg-gray-600 text-gray-400 cursor-not-allowed'`
+'
+                  isFormValid && !isSubmitting''
+                    ? 'bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white transform hover:-translate-y-1 shadow-lg hover:shadow-xl'''`
+                    : 'bg-gray-600 text-gray-400 cursor-not-allowed'``
                 }`}
               >
-                {isSubmitting ? (
-                  <>"
+                {isSubmitting ? ("
+                  <>""
                     <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-white"></div>
                     <span>Sending...</span>
                   </>
-                ) : (
-                  <>"
+                ) : ("
+                  <>""
                     <Send className="w-6 h-6"  />                    <span>Send Message</span>
                   </>
                 )}
@@ -346,45 +346,45 @@ export default function Contact() {
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}"
-          className="mt-24 text-center"
-        >"
+          animate={{ opacity: 1, y: 0 }}"
+          transition={{ duration: 0.8, delay: 0.6 }}""
+          className="mt-24 text-center""
+        >""
           <h2 className="text-3xl font-bold text-white mb-8">
-            Why Choose Zion Tech Group?
-          </h2>"
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">"
-            <div className="text-center">"
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">"
-                <Rocket className="w-8 h-8 text-white"  />
-              </div>"
+            Why Choose Zion Tech Group?"
+          </h2>""
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">""
+            <div className="text-center">""
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">""
+                <Rocket className="w-8 h-8 text-white"  />"
+              </div>""
               <h3 className="text-white font-semibold text-xl mb-2">
-                Innovation First
-              </h3>"
+                Innovation First"
+              </h3>""
               <p className="text-gray-300">
                 Cutting-edge AI and quantum computing solutions that drive
                 business transformation.
-              </p>
-            </div>"
-            <div className="text-center">"
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">"
-                <CheckCircle className="w-8 h-8 text-white"  />
-              </div>"
+              </p>"
+            </div>""
+            <div className="text-center">""
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">""
+                <CheckCircle className="w-8 h-8 text-white"  />"
+              </div>""
               <h3 className="text-white font-semibold text-xl mb-2">
-                Proven Results
-              </h3>"
+                Proven Results"
+              </h3>""
               <p className="text-gray-300">
                 Track record of successful implementations and measurable
                 business outcomes.
-              </p>
-            </div>"
-            <div className="text-center">"
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">"
-                <User className="w-8 h-8 text-white"  />
-              </div>"
+              </p>"
+            </div>""
+            <div className="text-center">""
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">""
+                <User className="w-8 h-8 text-white"  />"
+              </div>""
               <h3 className="text-white font-semibold text-xl mb-2">
-                Expert Team
-              </h3>"
+                Expert Team"
+              </h3>""
               <p className="text-gray-300">
                 Experienced professionals dedicated to your success and growth.
               </p>            </div>
@@ -392,5 +392,5 @@ export default function Contact() {
         </motion.div>
       </div>
     </div>
-  )}
-'"`
+  )}'"`
+'"`'"`

@@ -1,35 +1,7 @@
-<<<<<<< HEAD
-import {
-
-  Search,
-  Filter,
-  Star,
-  Clock,
-  Globe,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  TrendingUp,
-  Shield,
-  Cloud,
-  Brain,
-  Database,
-  Code,
-  Zap,
-  Heart,
-  DollarSign,
-  Link,
-  Users,
-  CheckCircle'
-} from 'lucide-react';
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 export default function EnhancedServicesPage(...args[]):  {
 
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');'
+  const [selectedCategory, setSelectedCategory] = useState('all');'
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
 
   
@@ -44,7 +16,7 @@ export default function EnhancedServicesPage(...args[]):  {
         return < Code className = "w - 5 h - 5" />}};
                 onClick = {
 
-(): > window.open(CONTACT_INFO.website,;
+(): > window.open(CONTACT_INFO.website,;'
   '_blank')
 
 
@@ -52,19 +24,19 @@ export default function EnhancedServicesPage(...args[]):  {
 
 
 
-}
-              >"
+}"
+              >""
                 <ExternalLink className="w-5 h-5 mr-2"  />                Visit Website
               </Button>
-            </div>
-"
-            <div className="mt-12 p-6 bg-zion-blue-dark rounded-lg border border-zion-blue-light">"
-              <h3 className="text-xl font-bold text-white mb-4">Special Enterprise Offerings</h3>"
+            </div>"
+""
+            <div className="mt-12 p-6 bg-zion-blue-dark rounded-lg border border-zion-blue-light">""
+              <h3 className="text-xl font-bold text-white mb-4">Special Enterprise Offerings</h3>""
               <p className="text-zion-slate-light mb-4">
                 For enterprise clients, we offer custom solution development, dedicated support teams, and comprehensive implementation services.
-              </p>
-              <Button"
-                className="bg-zion-purple hover:bg-zion-purple-dark text-white"'
+              </p>"
+              <Button"'"
+                className="bg-zion-purple hover:bg-zion-purple-dark text-white"''
                 onClick={() => window.open(`mailto:${CONTACT_INFO.email}?subject=Enterprise%20Inquiry`,_self')}
 
                 Request Enterprise Consultation
@@ -73,5 +45,5 @@ export default function EnhancedServicesPage(...args[]):  {
           </div>;
         </div>;
       </section>;
-    </div>;) }
-'"`
+    </div>;) }'"`
+'"`'"`

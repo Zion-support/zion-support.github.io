@@ -2,12 +2,12 @@
 
 const AuthRoutes = () => {
   return()
-    <Routes>"
-      <Route path="/login" element={<Login  />} />"
+    <Routes>""
+      <Route path="/login" element={<Login  />} />""
       <Route path="/signup" element={<Signup  />} />
 
-      {/* Protected routes that require authentication */}
-      <Route"
+      {/* Protected routes that require authentication */}"
+      <Route""
         path="/profile"
         element={
 
@@ -16,8 +16,8 @@ const AuthRoutes = () => {
           </ProtectedRoute>
 
       />
-
-      <Route"
+"
+      <Route""
         path="/dashboard"
         element={
 
@@ -26,8 +26,8 @@ const AuthRoutes = () => {
           </ProtectedRoute>
 
       />
-
-      <Route"
+"
+      <Route""
         path="/settings"
         element={;          <ProtectedRoute>;
             <div>Settings</div>;
@@ -35,5 +35,5 @@ const AuthRoutes = () => {
       />;
     </Routes>;
   )};
-
-export default AuthRoutes}}}'"
+"
+export default AuthRoutes}}}'"'"

@@ -1,6 +1,5 @@
 
 export default function GenericPage() {
-
   const { '*': slug } = useParams();
   
   
@@ -10,34 +9,34 @@ export default function GenericPage() {
     <main
       style={{
 
-        padding: 20,
+        padding: 20,'
         fontFamily: 'sans-serif',
         lineHeight: 1.6,
-        maxWidth: 900,
+        maxWidth: 900,'
         margin: '0 auto'}}
     >      <Helmet>
         <title>{title} | Zion Tech Group</title>
         <meta
-          name="description"`
-          content={`Information about ${title} at Zion Tech Group.`}
-        />"
-        <link rel="canonical" href={canonical} />
-      </Helmet>"
-      <nav style={{ marginBottom: 16 }} aria-label="Breadcrumbs">'"
+          name="description"``
+          content={`Information about ${title} at Zion Tech Group.`}"
+        />""
+        <link rel="canonical" href={canonical} />"
+      </Helmet>"'"
+      <nav style={{ marginBottom: 16 }} aria-label="Breadcrumbs">'"'"
         <Link to="/" style={{ color: '#2563eb' }}>
           Home
         </Link>
         <span
           style={{
-
-            margin: '0 8px',
+'
+            margin: '0 8px','
             color: '#9ca3af'}}
         >
           /
         </span>
         <span>{title}</span>
       </nav>
-      <h1 style={{ marginBottom: 8 }}>{title}</h1>
+      <h1 style={{ marginBottom: 8 }}>{title}</h1>'
       <p style={{ color: '#374151' }}>
         This page is under active development. If you were expecting specific
         information, please contact us and we will prioritize it.
@@ -45,9 +44,9 @@ export default function GenericPage() {
       <section
         style={{
 
-          marginTop: 16,
-          padding: '12px 16px',
-          background: '#f9fafb',
+          marginTop: 16,'
+          padding: '12px 16px','
+          background: '#f9fafb','
           border: '1px solid #e5e7eb',
           borderRadius: 8}}
       >
@@ -58,8 +57,8 @@ export default function GenericPage() {
 
           <li > Cloud, DevOps, data, and cybersecurity services</li>
         </ul>
-        <p style={{ marginTop: 8 }}>
-          Have questions about {title.toLowerCase()}?{' '}'"
+        <p style={{ marginTop: 8 }}>'"
+          Have questions about {title.toLowerCase()}?{' '}'"'"
           <Link to="/contact" style={{ color: '#2563eb' }}>
             Contact us
           </Link>
@@ -67,5 +66,5 @@ export default function GenericPage() {
         </p>
       </section>
     </main>
-  )}
-'"`
+  )}'"`
+'"`'"`

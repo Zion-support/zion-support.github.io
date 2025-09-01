@@ -1,4 +1,5 @@
 export default function handler(req: {
+
     method?: string;
-    body?: any;
+    body?: unknown;
 }, res: any): Promise<void>;

@@ -1,5 +1,5 @@
-import { useEffect, useState, useRef, ReactNode } from "react";
-import { cn } from "@/lib/utils";
+import { useEffect, useState, useRef, ReactNode } from "react";"
+import { cn } from "@/lib/utils";"
 import { Skeleton } from "@/components/ui/skeleton";
 
 interface LazyLoadProps {
@@ -11,32 +11,36 @@ interface LazyLoadProps {
 }
 
 export function LazyLoad({
-  height = "200px",
+"
+  height = "200px","
   width = "100%",
   children,
   loadingComponent,
-  className,
-}: LazyLoadProps) {
+  className}: LazyLoadProps) {
+
   const [isVisible, setIsVisible] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const currentRef = containerRef.current; // Store current ref value
-    const observer = new IntersectionObserver(
+    const observer = new IntersectionObserver()
       (entries) => {
+
         if (entries[0].isIntersecting) {
+
           setIsVisible(true);
           observer.disconnect();
         }
       },
       {
+"
         rootMargin: "200px", 
-        threshold: 0.1,
-      }
+        threshold: 0.1}
     );
 
     if (currentRef) {
+
       observer.observe(currentRef);
     }
 
@@ -49,6 +53,7 @@ export function LazyLoad({
 
   useEffect(() => {
     if (isVisible) {
+
       const timer = setTimeout(() => {
         setIsLoaded(true);
       }, 500);
@@ -59,15 +64,15 @@ export function LazyLoad({
 
   const defaultLoadingComponent = (
     <Skeleton
-      style={{ height, width }}
+      style={{ height, width }}"
       className="rounded-md bg-zion-blue-light/20"
     />
   );
 
-  return (
+  return()
     <div
-      ref={containerRef}
-      className={cn("transition-opacity duration-500", 
+      ref={containerRef}"
+      className={cn("transition-opacity duration-500", "
         isLoaded ? "opacity-100" : "opacity-0",
         className
       )}
@@ -83,3 +88,4 @@ export function LazyLoad({
     </div>
   );
 }
+"

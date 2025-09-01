@@ -1,11 +1,13 @@
 
 
 describe ('MicroSaasServices', () => {
+'
   it ('renders without crashing', () => {
-    render (<MicroSaasServices  />) ;
+    render (<MicroSaasServices  />) ;'
     expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
-
+'
   it ('displays expected content', () => {
     render (<MicroSaasServices  />) ;
     // Add specific test assertions based on component content
   }) }) ;
+'

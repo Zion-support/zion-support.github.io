@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react';'
 import type { ForumPost } from '@/types/community';
 interface CategoryPageProps {
     initialPosts: ForumPost[];
@@ -8,12 +8,16 @@ interface CategoryPageProps {
 }
 declare const CategoryPage: React.FC<CategoryPageProps>;
 export declare const getServerSideProps: ({ req, params }: {
-    req: any;
+
+    req: unknown;
     params?: {
+
         slug?: string;
     };
 }) => Promise<{
+
     props: {
+
         initialPosts: ForumPost[];
         initialNextCursor: string;
         hasSession: boolean;
@@ -21,3 +25,4 @@ export declare const getServerSideProps: ({ req, params }: {
     };
 }>;
 export default CategoryPage;
+'

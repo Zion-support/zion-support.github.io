@@ -67,10 +67,9 @@ import {
   
   // Handle scroll to show/hide scroll to top button
   React.useEffect(() => {
-    
     };
-
-    window.addEventListener('scroll', handleScroll);
+'
+    window.addEventListener('scroll', handleScroll);'
     return () => window.removeEventListener('scroll', handleScroll)}, []);
 
   // Toggle section expansion (for mobile)
@@ -87,131 +86,131 @@ import {
   };
 
   return()
-    <footer className="bg-zion-blue-dark border-t border-zion-purple/30">
-      {/* Main Footer Content */}"
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">"
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Company Info */}"
-          <div className="space-y-4">"
-            <div className="flex items-center space-x-2">"
-              <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">"
-                <Zap className="w-6 h-6 text-white"  />
-              </div>"
+    <footer className="bg-zion-blue-dark border-t border-zion-purple/30">"
+      {/* Main Footer Content */}""
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">""
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
+          {/* Company Info */}""
+          <div className="space-y-4">""
+            <div className="flex items-center space-x-2">""
+              <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">""
+                <Zap className="w-6 h-6 text-white"  />"
+              </div>""
               <span className="text-xl font-bold text-white">
                 Zion Tech Group
-              </span>
-            </div>"
+              </span>"
+            </div>""
             <p className="text-zion-slate-light text-sm leading-relaxed">
               Leading provider of innovative AI, IT, and Micro SAAS solutions.
               Transforming businesses through cutting-edge technology and expert
-              consulting.
-            </p>"
-            <div className="flex space-x-4">
-              <a"
-                href="https://linkedin.com/company/ziontechgroup"
-                className="text-zion-slate-light hover:text-zion-cyan transition-colors"
-              >"
+              consulting."
+            </p>""
+            <div className="flex space-x-4">"
+              <a""
+                href="https://linkedin.com/company/ziontechgroup""
+                className="text-zion-slate-light hover:text-zion-cyan transition-colors""
+              >""
                 <Linkedin className="w-5 h-5"  />
-              </a>
-              <a"
-                href="https://twitter.com/ziontechgroup"
-                className="text-zion-slate-light hover:text-zion-cyan transition-colors"
-              >"
+              </a>"
+              <a""
+                href="https://twitter.com/ziontechgroup""
+                className="text-zion-slate-light hover:text-zion-cyan transition-colors""
+              >""
                 <Twitter className="w-5 h-5"  />
-              </a>
-              <a"
-                href="https://facebook.com/ziontechgroup"
-                className="text-zion-slate-light hover:text-zion-cyan transition-colors"
-              >"
+              </a>"
+              <a""
+                href="https://facebook.com/ziontechgroup""
+                className="text-zion-slate-light hover:text-zion-cyan transition-colors""
+              >""
                 <Facebook className="w-5 h-5"  />
-              </a>
-              <a"
-                href="https://instagram.com/ziontechgroup"
-                className="text-zion-slate-light hover:text-zion-cyan transition-colors"
-              >"
+              </a>"
+              <a""
+                href="https://instagram.com/ziontechgroup""
+                className="text-zion-slate-light hover:text-zion-cyan transition-colors""
+              >""
                 <Instagram className="w-5 h-5"  />
-              </a>
-              <a"
-                href="https://youtube.com/ziontechgroup"
-                className="text-zion-slate-light hover:text-zion-cyan transition-colors"
-              >"
+              </a>"
+              <a""
+                href="https://youtube.com/ziontechgroup""
+                className="text-zion-slate-light hover:text-zion-cyan transition-colors""
+              >""
                 <Youtube className="w-5 h-5"  />
-              </a>
-              <a"
-                href="https://github.com/ziontechgroup"
-                className="text-zion-slate-light hover:text-zion-cyan transition-colors"
-              >"
+              </a>"
+              <a""
+                href="https://github.com/ziontechgroup""
+                className="text-zion-slate-light hover:text-zion-cyan transition-colors""
+              >""
                 <Github className="w-5 h-5"  />
               </a>
             </div>
           </div>
-
-          {/* Services */}"
-          <div className="space-y-4">"
-            <h3 className="text-zion-cyan font-semibold text-lg flex items-center">"
+"
+          {/* Services */}""
+          <div className="space-y-4">""
+            <h3 className="text-zion-cyan font-semibold text-lg flex items-center">""
               <Zap className="w-5 h-5 mr-2"  />
-              Services
-            </h3>"
+              Services"
+            </h3>""
             <ul className="space-y-2 text-sm">
-              <li>
-                <Link"
-                  to="/ai-services"
+              <li>"
+                <Link""
+                  to="/ai-services""
                   className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                 >
                   AI Services
                 </Link>
               </li>
-              <li>
-                <Link"
-                  to="/it-services"
+              <li>"
+                <Link""
+                  to="/it-services""
                   className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                 >
                   IT Services
                 </Link>
               </li>
-              <li>
-                <Link"
-                  to="/micro-saas"
+              <li>"
+                <Link""
+                  to="/micro-saas""
                   className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                 >
                   Micro SAAS
                 </Link>
               </li>
-              <li>
-                <Link"
-                  to="/cloud-devops"
+              <li>"
+                <Link""
+                  to="/cloud-devops""
                   className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                 >
                   Cloud & DevOps
                 </Link>
               </li>
-              <li>
-                <Link"
-                  to="/cybersecurity"
+              <li>"
+                <Link""
+                  to="/cybersecurity""
                   className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                 >
                   Cybersecurity
                 </Link>
               </li>
-              <li>
-                <Link"
-                  to="/quantum-computing"
+              <li>"
+                <Link""
+                  to="/quantum-computing""
                   className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                 >
                   Quantum Computing
                 </Link>
               </li>
-              <li>
-                <Link"
-                  to="/blockchain"
+              <li>"
+                <Link""
+                  to="/blockchain""
                   className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                 >
                   Blockchain Solutions
                 </Link>
               </li>
-              <li>
-                <Link"
-                  to="/digital-transformation"
+              <li>"
+                <Link""
+                  to="/digital-transformation""
                   className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                 >
                   Digital Transformation
@@ -219,73 +218,73 @@ import {
               </li>
             </ul>
           </div>
-
-          {/* Solutions */}"
-          <div className="space-y-4">"
-            <h3 className="text-zion-cyan font-semibold text-lg flex items-center">"
+"
+          {/* Solutions */}""
+          <div className="space-y-4">""
+            <h3 className="text-zion-cyan font-semibold text-lg flex items-center">""
               <Brain className="w-5 h-5 mr-2"  />
-              Solutions
-            </h3>"
+              Solutions"
+            </h3>""
             <ul className="space-y-2 text-sm">
-              <li>
-                <Link"
-                  to="/enterprise"
+              <li>"
+                <Link""
+                  to="/enterprise""
                   className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                 >
                   Enterprise Solutions
                 </Link>
               </li>
-              <li>
-                <Link"
-                  to="/healthcare"
+              <li>"
+                <Link""
+                  to="/healthcare""
                   className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                 >
                   Healthcare Tech
                 </Link>
               </li>
-              <li>
-                <Link"
-                  to="/financial"
+              <li>"
+                <Link""
+                  to="/financial""
                   className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                 >
                   Financial Solutions
                 </Link>
               </li>
-              <li>
-                <Link"
-                  to="/manufacturing"
+              <li>"
+                <Link""
+                  to="/manufacturing""
                   className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                 >
                   Manufacturing
                 </Link>
               </li>
-              <li>
-                <Link"
-                  to="/retail"
+              <li>"
+                <Link""
+                  to="/retail""
                   className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                 >
                   Retail Solutions
                 </Link>
               </li>
-              <li>
-                <Link"
-                  to="/government"
+              <li>"
+                <Link""
+                  to="/government""
                   className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                 >
                   Government
                 </Link>
               </li>
-              <li>
-                <Link"
-                  to="/education"
+              <li>"
+                <Link""
+                  to="/education""
                   className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                 >
                   Education
                 </Link>
               </li>
-              <li>
-                <Link"
-                  to="/startup"
+              <li>"
+                <Link""
+                  to="/startup""
                   className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                 >
                   Startup Solutions
@@ -293,65 +292,65 @@ import {
               </li>
             </ul>
           </div>
-
-          {/* Company & Resources */}"
-          <div className="space-y-4">"
-            <h3 className="text-zion-cyan font-semibold text-lg flex items-center">"
+"
+          {/* Company & Resources */}""
+          <div className="space-y-4">""
+            <h3 className="text-zion-cyan font-semibold text-lg flex items-center">""
               <Building2 className="w-5 h-5 mr-2" />
-              Company
-            </h3>"
+              Company"
+            </h3>""
             <ul className="space-y-2 text-sm">
-              <li>
-                <Link"
-                  to="/about"
+              <li>"
+                <Link""
+                  to="/about""
                   className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                 >
                   About Us
                 </Link>
               </li>
-              <li>
-                <Link"
-                  to="/team"
+              <li>"
+                <Link""
+                  to="/team""
                   className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                 >
                   Our Team
                 </Link>
               </li>
-              <li>
-                <Link"
-                  to="/careers"
+              <li>"
+                <Link""
+                  to="/careers""
                   className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                 >
                   Careers
                 </Link>
               </li>
-              <li>
-                <Link"
-                  to="/partners"
+              <li>"
+                <Link""
+                  to="/partners""
                   className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                 >
                   Partners
                 </Link>
               </li>
-              <li>
-                <Link"
-                  to="/news"
+              <li>"
+                <Link""
+                  to="/news""
                   className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                 >
                   News
                 </Link>
               </li>
-              <li>
-                <Link"
-                  to="/events"
+              <li>"
+                <Link""
+                  to="/events""
                   className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                 >
                   Events
                 </Link>
               </li>
-              <li>
-                <Link"
-                  to="/contact"
+              <li>"
+                <Link""
+                  to="/contact""
                   className="text-zion-slate-light hover:text-zion-cyan transition-colors"
                 >
                   Contact
@@ -360,38 +359,38 @@ import {
             </ul>
           </div>
         </div>
-
-        {/* Contact Information */}"
-        <div className="mt-12 pt-8 border-t border-zion-purple/20">"
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">"
-            <div className="flex items-center space-x-3">"
-              <div className="w-10 h-10 bg-zion-purple/20 rounded-lg flex items-center justify-center">"
+"
+        {/* Contact Information */}""
+        <div className="mt-12 pt-8 border-t border-zion-purple/20">""
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">""
+            <div className="flex items-center space-x-3">""
+              <div className="w-10 h-10 bg-zion-purple/20 rounded-lg flex items-center justify-center">""
                 <Phone className="w-5 h-5 text-zion-cyan"  />
-              </div>
-              <div>"
-                <p className="text-zion-slate-light text-sm">Phone</p>"
+              </div>"
+              <div>""
+                <p className="text-zion-slate-light text-sm">Phone</p>""
                 <p className="text-white font-medium">+1 302 464 0950</p>
               </div>
-            </div>
-"
-            <div className="flex items-center space-x-3">"
-              <div className="w-10 h-10 bg-zion-purple/20 rounded-lg flex items-center justify-center">"
+            </div>"
+""
+            <div className="flex items-center space-x-3">""
+              <div className="w-10 h-10 bg-zion-purple/20 rounded-lg flex items-center justify-center">""
                 <Mail className="w-5 h-5 text-zion-cyan"  />
-              </div>
-              <div>"
-                <p className="text-zion-slate-light text-sm">Email</p>"
+              </div>"
+              <div>""
+                <p className="text-zion-slate-light text-sm">Email</p>""
                 <p className="text-white font-medium">
                   kleber@ziontechgroup.com
                 </p>
               </div>
-            </div>
-"
-            <div className="flex items-center space-x-3">"
-              <div className="w-10 h-10 bg-zion-purple/20 rounded-lg flex items-center justify-center">"
+            </div>"
+""
+            <div className="flex items-center space-x-3">""
+              <div className="w-10 h-10 bg-zion-purple/20 rounded-lg flex items-center justify-center">""
                 <MapPin className="w-5 h-5 text-zion-cyan"  />
-              </div>
-              <div>"
-                <p className="text-zion-slate-light text-sm">Address</p>"
+              </div>"
+              <div>""
+                <p className="text-zion-slate-light text-sm">Address</p>""
                 <p className="text-white font-medium">
                   364 E Main St STE 1008
                   <br />
@@ -401,40 +400,40 @@ import {
             </div>
           </div>
         </div>
-
-        {/* Additional Links */}"
-        <div className="mt-8 pt-6 border-t border-zion-purple/20">"
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-sm">
-            <div>"
-              <h4 className="text-zion-cyan font-medium mb-3">Resources</h4>"
+"
+        {/* Additional Links */}""
+        <div className="mt-8 pt-6 border-t border-zion-purple/20">""
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-sm">"
+            <div>""
+              <h4 className="text-zion-cyan font-medium mb-3">Resources</h4>""
               <ul className="space-y-2 text-zion-slate-light">
-                <li>
-                  <Link"
-                    to="/blog"
+                <li>"
+                  <Link""
+                    to="/blog""
                     className="hover:text-zion-cyan transition-colors"
                   >
                     Blog
                   </Link>
                 </li>
-                <li>
-                  <Link"
-                    to="/docs"
+                <li>"
+                  <Link""
+                    to="/docs""
                     className="hover:text-zion-cyan transition-colors"
                   >
                     Documentation
                   </Link>
                 </li>
-                <li>
-                  <Link"
-                    to="/white-papers"
+                <li>"
+                  <Link""
+                    to="/white-papers""
                     className="hover:text-zion-cyan transition-colors"
                   >
                     White Papers
                   </Link>
                 </li>
-                <li>
-                  <Link"
-                    to="/webinars"
+                <li>"
+                  <Link""
+                    to="/webinars""
                     className="hover:text-zion-cyan transition-colors"
                   >
                     Webinars
@@ -442,37 +441,37 @@ import {
                 </li>
               </ul>
             </div>
-
-            <div>"
-              <h4 className="text-zion-cyan font-medium mb-3">Support</h4>"
+"
+            <div>""
+              <h4 className="text-zion-cyan font-medium mb-3">Support</h4>""
               <ul className="space-y-2 text-zion-slate-light">
-                <li>
-                  <Link"
-                    to="/help"
+                <li>"
+                  <Link""
+                    to="/help""
                     className="hover:text-zion-cyan transition-colors"
                   >
                     Help Center
                   </Link>
                 </li>
-                <li>
-                  <Link"
-                    to="/contact"
+                <li>"
+                  <Link""
+                    to="/contact""
                     className="hover:text-zion-cyan transition-colors"
                   >
                     Contact Support
                   </Link>
                 </li>
-                <li>
-                  <Link"
-                    to="/training"
+                <li>"
+                  <Link""
+                    to="/training""
                     className="hover:text-zion-cyan transition-colors"
                   >
                     Training
                   </Link>
                 </li>
-                <li>
-                  <Link"
-                    to="/faq"
+                <li>"
+                  <Link""
+                    to="/faq""
                     className="hover:text-zion-cyan transition-colors"
                   >
                     FAQ
@@ -480,37 +479,37 @@ import {
                 </li>
               </ul>
             </div>
-
-            <div>"
-              <h4 className="text-zion-cyan font-medium mb-3">Legal</h4>"
+"
+            <div>""
+              <h4 className="text-zion-cyan font-medium mb-3">Legal</h4>""
               <ul className="space-y-2 text-zion-slate-light">
-                <li>
-                  <Link"
-                    to="/privacy"
+                <li>"
+                  <Link""
+                    to="/privacy""
                     className="hover:text-zion-cyan transition-colors"
                   >
                     Privacy Policy
                   </Link>
                 </li>
-                <li>
-                  <Link"
-                    to="/terms"
+                <li>"
+                  <Link""
+                    to="/terms""
                     className="hover:text-zion-cyan transition-colors"
                   >
                     Terms of Service
                   </Link>
                 </li>
-                <li>
-                  <Link"
-                    to="/security"
+                <li>"
+                  <Link""
+                    to="/security""
                     className="hover:text-zion-cyan transition-colors"
                   >
                     Security
                   </Link>
                 </li>
-                <li>
-                  <Link"
-                    to="/compliance"
+                <li>"
+                  <Link""
+                    to="/compliance""
                     className="hover:text-zion-cyan transition-colors"
                   >
                     Compliance
@@ -518,37 +517,37 @@ import {
                 </li>
               </ul>
             </div>
-
-            <div>"
-              <h4 className="text-zion-cyan font-medium mb-3">Connect</h4>"
+"
+            <div>""
+              <h4 className="text-zion-cyan font-medium mb-3">Connect</h4>""
               <ul className="space-y-2 text-zion-slate-light">
-                <li>
-                  <Link"
-                    to="/marketplace"
+                <li>"
+                  <Link""
+                    to="/marketplace""
                     className="hover:text-zion-cyan transition-colors"
                   >
                     Marketplace
                   </Link>
                 </li>
-                <li>
-                  <Link"
-                    to="/talent"
+                <li>"
+                  <Link""
+                    to="/talent""
                     className="hover:text-zion-cyan transition-colors"
                   >
                     Talent Network
                   </Link>
                 </li>
-                <li>
-                  <Link"
-                    to="/community"
+                <li>"
+                  <Link""
+                    to="/community""
                     className="hover:text-zion-cyan transition-colors"
                   >
                     Community
                   </Link>
                 </li>
-                <li>
-                  <Link"
-                    to="/research-development"
+                <li>"
+                  <Link""
+                    to="/research-development""
                     className="hover:text-zion-cyan transition-colors"
                   >
                     R&D
@@ -559,34 +558,34 @@ import {
           </div>
         </div>
       </div>
-
-      {/* Bottom Footer */}"
-      <div className="bg-zion-blue-darker border-t border-zion-purple/20">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">"
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">"
+"
+      {/* Bottom Footer */}""
+      <div className="bg-zion-blue-darker border-t border-zion-purple/20">""
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">""
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">""
             <div className="flex items-center space-x-4 text-sm text-zion-slate-light">
               <span>
-                &copy; {currentYear} Zion Tech Group. All rights reserved.
-              </span>"
-              <span className="hidden md:inline">•</span>"
+                &copy; {currentYear} Zion Tech Group. All rights reserved."
+              </span>""
+              <span className="hidden md:inline">•</span>""
               <span className="hidden md:inline">Empowering Innovation</span>
-            </div>
-"
-            <div className="flex items-center space-x-6 text-sm">
-              <Link"
-                to="/sitemap"
+            </div>"
+""
+            <div className="flex items-center space-x-6 text-sm">"
+              <Link""
+                to="/sitemap""
                 className="text-zion-slate-light hover:text-zion-cyan transition-colors"
               >
                 Sitemap
-              </Link>
-              <Link"
-                to="/accessibility"
+              </Link>"
+              <Link""
+                to="/accessibility""
                 className="text-zion-slate-light hover:text-zion-cyan transition-colors"
               >
                 Accessibility
-              </Link>
-              <Link"
-                to="/status"
+              </Link>"
+              <Link""
+                to="/status""
                 className="text-zion-slate-light hover:text-zion-cyan transition-colors"
               >
                 System Status
@@ -597,13 +596,13 @@ import {
       </div>
 
       {/* Back to Top Button */}
-      <button
-        onClick={scrollToTop}"
-        className="fixed bottom-6 right-6 w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full shadow-lg shadow-zion-purple/25 hover:shadow-xl hover:shadow-zion-purple/40 transition-all duration-300 hover:-translate-y-1 flex items-center justify-center text-white"
-        aria-label="Back to top"
-      >"
+      <button"
+        onClick={scrollToTop}""
+        className="fixed bottom-6 right-6 w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full shadow-lg shadow-zion-purple/25 hover:shadow-xl hover:shadow-zion-purple/40 transition-all duration-300 hover:-translate-y-1 flex items-center justify-center text-white""
+        aria-label="Back to top""
+      >""
         <ArrowUp className="w-5 h-5"  />
       </button>
     </footer>
-  )}
-'"
+  )}'"
+'"'"

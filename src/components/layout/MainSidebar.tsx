@@ -1,4 +1,5 @@
 import {
+
   Menu, 
   X, 
   ChevronDown, 
@@ -41,11 +42,10 @@ import {
   Phone,
   Mail,
   MapPin,
-  Users'
+  Users''
 } from 'lucide-react';
 
 interface SidebarItem {
-
   name: string;
   href: string;
   icon: React.ComponentType<any>;
@@ -54,245 +54,245 @@ interface SidebarItem {
   description?: string;
 
 export function MainSidebar() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);'
   const [expandedSections, setExpandedSections] = useState<string[]>(['services'])};
   const navigation: SidebarItem[] = [
     {
-
+'
       title: 'Main',
-      items[;
-        { name: 'Home', href: '/', icon: Home },
-        { name: 'About', href: '/about', icon: Building },
-        { name: 'Services', href: '/services', icon: Briefcase },
-        { name: 'Solutions', href: '/solutions', icon: Target },
-        { name: 'AI Solutions', href: '/ai-solutions', icon: Brain },
-        { name: 'Case Studies', href: '/case-studies', icon: FileText },
-        { name: 'Research', href: '/research-development', icon: TestTube },
-        { name: 'Events', href: '/events', icon: Video },
-        { name: 'News', href: '/news', icon: Newspaper },
-        { name: 'Contact', href: '/contact', icon: Mail },
+      items[;'
+        { name: 'Home', href: '/', icon: Home },'
+        { name: 'About', href: '/about', icon: Building },'
+        { name: 'Services', href: '/services', icon: Briefcase },'
+        { name: 'Solutions', href: '/solutions', icon: Target },'
+        { name: 'AI Solutions', href: '/ai-solutions', icon: Brain },'
+        { name: 'Case Studies', href: '/case-studies', icon: FileText },'
+        { name: 'Research', href: '/research-development', icon: TestTube },'
+        { name: 'Events', href: '/events', icon: Video },'
+        { name: 'News', href: '/news', icon: Newspaper },'
+        { name: 'Contact', href: '/contact', icon: Mail },'
         { name: 'Blog', href: '/blog', icon: FileText },
       ]
     },;
     {
-
-      name: 'Core Services',
+'
+      name: 'Core Services','
       href: '#',
       icon: Target,
       children: [
         {
-
-          name: 'Cloud & DevOps',
+'
+          name: 'Cloud & DevOps','
           href: '/services/cloud-devops',
-          icon: Cloud,
+          icon: Cloud,'
           description: 'Infrastructure & Automation'
         },
         {
-
-          name: 'Digital Twin',
+'
+          name: 'Digital Twin','
           href: '/services/digital-twin',
-          icon: Globe,
+          icon: Globe,'
           description: 'Simulation & Monitoring'
         },
         {
-
-          name: 'Data Analytics',
+'
+          name: 'Data Analytics','
           href: '/services/data-analytics',
-          icon: BarChart3,
+          icon: BarChart3,'
           description: 'Business Intelligence'
         },
         {
-
-          name: 'IT Infrastructure',
+'
+          name: 'IT Infrastructure','
           href: '/services/it-infrastructure',
-          icon: Server,
+          icon: Server,'
           description: 'Hardware & Network'
         }
       ]
     },
     {
-
-      name: 'AI Products',
+'
+      name: 'AI Products','
       href: '#',
       icon: Brain,
       children: [
         {
-
-          name: 'AI Sales Copilot',
+'
+          name: 'AI Sales Copilot','
           href: '/services/ai-sales-copilot',
-          icon: Users,
+          icon: Users,'
           description: 'Sales Intelligence'
         },
         {
-
-          name: 'AI Compliance Assistant',
+'
+          name: 'AI Compliance Assistant','
           href: '/services/ai-compliance-assistant',
-          icon: Shield,
+          icon: Shield,'
           description: 'Regulatory Compliance'
         },
         {
-
-          name: 'AI Auto Email Responder',
+'
+          name: 'AI Auto Email Responder','
           href: '/services/ai-auto-email-responder',
-          icon: MessageCircle,
+          icon: MessageCircle,'
           description: 'Email Automation'
         },
         {
-
-          name: 'LLM Content Studio',
+'
+          name: 'LLM Content Studio','
           href: '/services/llm-content-studio',
-          icon: PenTool,
+          icon: PenTool,'
           description: 'Content Creation'
         }
       ]
     },
     {
-
-      name: 'Emerging Tech',
+'
+      name: 'Emerging Tech','
       href: '#',
       icon: Rocket,
       children: [
         {
-
-          name: 'Quantum Computing',
+'
+          name: 'Quantum Computing','
           href: '/services/quantum-computing',
-          icon: Atom,
+          icon: Atom,'
           description: 'Next-gen Computing'
         },
         {
-
-          name: 'AI Cybersecurity',
+'
+          name: 'AI Cybersecurity','
           href: '/services/ai-cybersecurity',
-          icon: Lock,
+          icon: Lock,'
           description: 'Intelligent Security'
         },
         {
-
-          name: 'IoT Edge Computing',
+'
+          name: 'IoT Edge Computing','
           href: '/services/iot-edge-computing',
-          icon: Smartphone,
+          icon: Smartphone,'
           description: 'Connected Ecosystems'
         },
         {
-
-          name: 'AI Content Creation',
+'
+          name: 'AI Content Creation','
           href: '/services/ai-content-creation',
-          icon: Video,
+          icon: Video,'
           description: 'Creative AI'
         }
       ]
     },
     {
-
-      name: 'Business Solutions',
+'
+      name: 'Business Solutions','
       href: '#',
       icon: Briefcase,
       children: [
         {
-
-          name: 'Marketplace',
+'
+          name: 'Marketplace','
           href: '/marketplace',
-          icon: ShoppingCart,
+          icon: ShoppingCart,'
           description: 'Product & Service Hub'
         },
         {
-
-          name: 'Talent Solutions',
+'
+          name: 'Talent Solutions','
           href: '/talent',
-          icon: Users,
+          icon: Users,'
           description: 'HR & Recruitment'
         },
         {
-
-          name: 'Equipment Services',
+'
+          name: 'Equipment Services','
           href: '/equipment',
-          icon: Server,
+          icon: Server,'
           description: 'Hardware Solutions'
         },
         {
-
-          name: 'Request Quote',
+'
+          name: 'Request Quote','
           href: '/request-quote',
-          icon: MessageCircle,
+          icon: MessageCircle,'
           description: 'Get Pricing'
         }
       ]
     },
     {
-
-      name: 'Company',
+'
+      name: 'Company','
       href: '#',
       icon: Info,
       children: [
         {
-
-          name: 'About Us',
+'
+          name: 'About Us','
           href: '/about',
-          icon: Info,
+          icon: Info,'
           description: 'Our Story'
         },
         {
-
-          name: 'Team',
+'
+          name: 'Team','
           href: '/team',
-          icon: Users,
+          icon: Users,'
           description: 'Meet Our Team'
         },
         {
-
-          name: 'Careers',
+'
+          name: 'Careers','
           href: '/careers',
-          icon: Briefcase,
+          icon: Briefcase,'
           description: 'Join Us'
         },
         {
-
-          name: 'Partners',
+'
+          name: 'Partners','
           href: '/partners',
-          icon: Users,
+          icon: Users,'
           description: 'Partnerships'
         }
       ]
     },
     {
-
-      name: 'Resources',
+'
+      name: 'Resources','
       href: '#',
       icon: BookOpen,
       children: [
         {
-
-          name: 'Blog',
+'
+          name: 'Blog','
           href: '/blog',
-          icon: FileText,
+          icon: FileText,'
           description: 'Latest Insights'
         },
         {
-
-          name: 'FAQ',
+'
+          name: 'FAQ','
           href: '/faq',
-          icon: HelpCircle,
+          icon: HelpCircle,'
           description: 'Common Questions'
         },
         {
-
-          name: 'Help Center',
+'
+          name: 'Help Center','
           href: '/help',
-          icon: MessageCircle,
+          icon: MessageCircle,'
           description: 'Support Resources'
         },
         {
-
-          name: 'Documentation',
+'
+          name: 'Documentation','
           href: '/docs',
-          icon: BookOpen,
+          icon: BookOpen,'
           description: 'Technical Docs'
         }
       ]
     },
     {
-
-      name: 'Contact',
+'
+      name: 'Contact','
       href: '/contact',
       icon: Phone
     }
@@ -308,47 +308,47 @@ export function MainSidebar() {
             <button
               onClick={(: unknown toggleSection(item.name.toLowerCase())}
               className={`w-full flex items-center justify-between px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${
-
-                level === 0 '
-                  ? 'text-slate-300 hover:text-white hover:bg-slate-700/50' '
-                  : 'text-slate-400 hover:text-slate-300'`
-              }`}
-            >"
-              <div className="flex items-center space-x-3">"
+'
+                level === 0 ''
+                  ? 'text-slate-300 hover:text-white hover:bg-slate-700/50' ''`
+                  : 'text-slate-400 hover:text-slate-300'``
+              }`}"
+            >""
+              <div className="flex items-center space-x-3">""
                 <item.icon className="w-4 h-4" />
-                <span>{item.name}</span>
-                {isFeatured && ("
+                <span>{item.name}</span>"
+                {isFeatured && (""
                   <Star className="w-3 h-3 text-yellow-400"  />
                 )}
-              </div>
-              {isExpanded ? ("
-                <ChevronDown className="w-4 h-4"  />
-              ) : ("
+              </div>"
+              {isExpanded ? (""
+                <ChevronDown className="w-4 h-4"  />"
+              ) : (""
                 <ChevronRight className="w-4 h-4"  />              )}
             </button>
-            
-            {isExpanded && ("
+            "
+            {isExpanded && (""
               <div className="ml-6 mt-2 space-y-1">
                 {item.children!.map(child => renderSidebarItem(child, level + 1))}
               </div>
             )}
           </div>
         ) : 
-          <Link
-            to={item.href}`
+          <Link`
+            to={item.href}``
             className={`flex items-center space-x-3 px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${
-
-              isActive'
-                ? 'text-cyan-400 bg-cyan-400/10 border border-cyan-400/20'
-                : level === 0'
-                ? 'text-slate-300 hover:text-white hover:bg-slate-700/50''
-                : 'text-slate-400 hover:text-slate-300'`
+'
+              isActive''
+                ? 'text-cyan-400 bg-cyan-400/10 border border-cyan-400/20''
+                : level === 0''
+                ? 'text-slate-300 hover:text-white hover:bg-slate-700/50'''`
+                : 'text-slate-400 hover:text-slate-300'``
             }`}
-            onClick={() => setIsOpen(false)}
-          >"
+            onClick={() => setIsOpen(false)}"
+          >""
             <item.icon className="w-4 h-4" />
-            <span>{item.name}</span>
-            {isFeatured && ("
+            <span>{item.name}</span>"
+            {isFeatured && (""
               <Star className="w-3 h-3 text-yellow-400"  />            )}
           </Link>
         )}
@@ -358,46 +358,46 @@ export function MainSidebar() {
   return()
     <>
       {/* Mobile menu button */}
-      <button
-        onClick={() => setIsOpen(!isOpen)}"
-        className="lg:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
-      >"
+      <button"
+        onClick={() => setIsOpen(!isOpen)}""
+        className="lg:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors""
+      >""
         {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}      </button>
-
-      {/* Sidebar */}`
+`
+      {/* Sidebar */}``
       <div className={`
-        fixed inset-y-0 left-0 z-50 w-80 bg-slate-900/95 border-r border-slate-700/50 backdrop-blur-xl
-        transform transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:inset-0'
-        ${isOpen ? 'translate-x-0' : '-translate-x-full'}`
-      `}>"
-        <div className="flex flex-col h-full">
-          {/* Header */}"
-          <div className="flex items-center justify-between p-4 border-b border-slate-700/50">"
+        fixed inset-y-0 left-0 z-50 w-80 bg-slate-900/95 border-r border-slate-700/50 backdrop-blur-xl'
+        transform transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:inset-0''`
+        ${isOpen ? 'translate-x-0' : '-translate-x-full'}`"`
+      `}>""
+        <div className="flex flex-col h-full">"
+          {/* Header */}""
+          <div className="flex items-center justify-between p-4 border-b border-slate-700/50">""
             <h2 className="text-lg font-semibold text-white">Navigation</h2>
-            <button
-              onClick={() => setIsOpen(false)}"
-              className="lg:hidden p-1 rounded text-slate-400 hover:text-white hover:bg-slate-800"
-            >"
+            <button"
+              onClick={() => setIsOpen(false)}""
+              className="lg:hidden p-1 rounded text-slate-400 hover:text-white hover:bg-slate-800""
+            >""
               <X className="w-5 h-5"  />            </button>
           </div>
-
-          {/* Navigation */}"
+"
+          {/* Navigation */}""
           <nav className="flex-1 overflow-y-auto p-4 space-y-2">
             {navigation.map(item => renderSidebarItem(item))}
           </nav>
-
-          {/* Footer */}"
-          <div className="p-4 border-t border-slate-700/50">"
-            <div className="text-xs text-slate-400 space-y-2">"
-              <div className="flex items-center space-x-2">"
+"
+          {/* Footer */}""
+          <div className="p-4 border-t border-slate-700/50">""
+            <div className="text-xs text-slate-400 space-y-2">""
+              <div className="flex items-center space-x-2">""
                 <Phone className="w-3 h-3"  />
-                <span>+1 302 464 0950</span>
-              </div>"
-              <div className="flex items-center space-x-2">"
+                <span>+1 302 464 0950</span>"
+              </div>""
+              <div className="flex items-center space-x-2">""
                 <Mail className="w-3 h-3"  />
-                <span>kleber@ziontechgroup.com</span>
-              </div>"
-              <div className="flex items-center space-x-2">"
+                <span>kleber@ziontechgroup.com</span>"
+              </div>""
+              <div className="flex items-center space-x-2">""
                 <MapPin className="w-3 h-3"  />                <span>Middletown DE 19709</span>
               </div>
             </div>
@@ -406,8 +406,8 @@ export function MainSidebar() {
       </div>
 
       {/* Overlay */}
-      {isOpen && (
-        <div"
+      {isOpen && ("
+        <div""
           className="fixed inset-0 z-40 bg-black/50 lg:hidden"
           onClick={( setIsOpen(false)}
         />
@@ -419,5 +419,5 @@ export function MainSidebar() {
         </div>;
       </div>;
     </>
-  )}
-'"`
+  )}'"`
+'"`'"`

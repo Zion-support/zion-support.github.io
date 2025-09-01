@@ -8,20 +8,20 @@ export const getApiUrl = () => {
     (_b = (_a = import.meta) === null || _a === void 0 ? void 0 : _a.env) !==
       null && _b !== void 0
       ? _b
-      : process.env;
+      : process.env;'
   return env.VITE_API_URL || env.API_URL || '';
-};
-export const loadWishlistFromDB = createAsyncThunk('
+};'
+export const loadWishlistFromDB = createAsyncThunk(''
   'wishlist/loadFromDB',
   async userId => {
 
-    const res = await fetch(`${getApiUrl()}/wishlist?userId=${userId}`);
+    const res = await fetch(`${getApiUrl()}/wishlist?userId=${userId}`);'
     if (!res.ok) throw new Error('Failed to load');
     return await res.json();
   }
 );
 const wishlistSlice = createSlice({
-
+'
   name: 'wishlist',
   initialState,
   reducers: {
@@ -47,5 +47,5 @@ const wishlistSlice = createSlice({
   }});
 export const { addToWishlist, removeFromWishlist } = wishlistSlice.actions;
 export { wishlistSlice };
-export default wishlistSlice.reducer;
-'`
+export default wishlistSlice.reducer;'`
+'`'`

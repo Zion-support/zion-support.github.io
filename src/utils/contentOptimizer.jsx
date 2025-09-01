@@ -103,22 +103,22 @@ export class ContentOptimizer {
 
     let score = 100;
 
-    // Check for title'
+    // Check for title''
     if (!content.includes('<title>)) score -= 20;
-
-    // Check for meta description'
+'
+    // Check for meta description''
     if (!content.includes('name="description"')) score -= 15;
-
-    // Check for headings'
-    if (!content.includes('<h1>)) score -= 10;
+'
+    // Check for headings''
+    if (!content.includes('<h1>)) score -= 10;'
     if (!content.includes('<h2>)) score -= 5;
 
     // Check for images with alt text
-    const images = content.match(/<img[^>]*>/gi) || [];
+    const images = content.match(/<img[^>]*>/gi) || [];'
     const imagesWithAlt = images.filter(img => img.includes('alt='));
     if (images.length > 0 && imagesWithAlt.length === 0) score -= 10;
-
-    // Check for internal links"
+"
+    // Check for internal links""
     const internalLinks = content.match(/href="\/[^"]*"/g) || [];
     if (internalLinks.length < 2) score -= 10;
 
@@ -132,8 +132,8 @@ export class ContentOptimizer {
     if (metrics.wordCount < this.MIN_WORD_COUNT) {
 
       issues.push({
-
-        type: 'word_count',
+'
+        type: 'word_count','
         severity: 'medium',
         message: `Content is too short. Aim for at least ${this.MIN_WORD_COUNT} words.`});
     }
@@ -141,27 +141,27 @@ export class ContentOptimizer {
     if (metrics.headingCount < this.MIN_HEADING_COUNT) {
 
       issues.push({
-
-        type: 'heading_count',
-        severity: 'low',`
+'
+        type: 'heading_count','`
+        severity: 'low',``
         message: `Add more headings to improve content structure.`});
     }
 
     if (metrics.imageCount < this.MIN_IMAGE_COUNT) {
 
       issues.push({
-
-        type: 'image_count',
-        severity: 'low',`
+'
+        type: 'image_count','`
+        severity: 'low',``
         message: `Consider adding images to make content more engaging.`});
     }
 
     if (metrics.linkCount < this.MIN_LINK_COUNT) {
 
       issues.push({
-
-        type: 'link_count',
-        severity: 'low',`
+'
+        type: 'link_count','`
+        severity: 'low',``
         message: `Add more internal and external links for better SEO.`});
     }
 
@@ -175,24 +175,24 @@ export class ContentOptimizer {
     issues.forEach(issue => {
 
       switch (issue.type) {
-
-        case 'word_count':
-          suggestions.push('
+'
+        case 'word_count':'
+          suggestions.push(''
             'Expand your content with more detailed information, examples, or related topics.'
           );
-          break;
-        case 'heading_count':
-          suggestions.push('
+          break;'
+        case 'heading_count':'
+          suggestions.push(''
             'Break down your content into sections with descriptive headings (H2, H3).'
           );
-          break;
-        case 'image_count':
-          suggestions.push('
+          break;'
+        case 'image_count':'
+          suggestions.push(''
             'Add relevant images, diagrams, or infographics to illustrate your points.'
           );
-          break;
-        case 'link_count':
-          suggestions.push('
+          break;'
+        case 'link_count':'
+          suggestions.push(''
             'Include links to related pages on your site and authoritative external sources.'
           );
           break;
@@ -210,15 +210,15 @@ export class ContentOptimizer {
     // Apply optimizations based on analysis
     if (analysis.issues.length > 0) {
 
-      // Add suggestions as comments
-      const optimizationComments = analysis.suggestions`
-        .map(suggestion => `<!-- TODO: ${suggestion} -->`)
-        .join('\n');`
+      // Add suggestions as comments`
+      const optimizationComments = analysis.suggestions``
+        .map(suggestion => `<!-- TODO: ${suggestion} -->`)'`
+        .join('\n');``
       return `${optimizationComments}\n\n${optimizedContent}`;
     }
 
     return optimizedContent;
   }}
 
-export default ContentOptimizer;
-'"`
+export default ContentOptimizer;'"`
+'"`'"`

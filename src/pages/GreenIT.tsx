@@ -171,43 +171,43 @@ import {
   BatteryEmpty as BatteryEmpty10} from 'lucide-react';
 
 export default function GreenIT() {
-  const [expandedSection, setExpandedSection] = useState<string | null>(null);
+  const [expandedSection, setExpandedSection] = useState<string | null>(null);'
   const [selectedCategory, setSelectedCategory] = useState('all')};
 
   
   return()
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO"
-        title="Green IT Solutions - Zion Tech Group"
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
+      <SEO""
+        title="Green IT Solutions - Zion Tech Group""
         description="Transform your technology infrastructure with our sustainable Green IT solutions. Reduce energy consumption, lower costs, and minimize environmental impact."
       />
-
-      {/* Hero Section */}"
-      <section className="relative py-20 overflow-hidden">"
+"
+      {/* Hero Section */}""
+      <section className="relative py-20 overflow-hidden">""
         <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-blue-500/10 to-purple-500/10"></div>"        <div className="container mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}"
-            className="text-center"
-          >"
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-2xl mb-6">"
-              <Leaf className="w-10 h-10 text-green-400"  />
-            </div>"
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">"
-              <span className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                Green IT'
+            animate={{ opacity: 1, y: 0 }}"
+            transition={{ duration: 0.8 }}""
+            className="text-center""
+          >""
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-2xl mb-6">""
+              <Leaf className="w-10 h-10 text-green-400"  />"
+            </div>""
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">""
+              <span className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">'
+                Green IT''
               </span>{' '}
-              Solutions
+              Solutions"
             </h1>"            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Transform your technology infrastructure with sustainable
               solutions that reduce energy consumption, lower costs, and
-              minimize environmental impact.
-            </p>"
-            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">"
+              minimize environmental impact."
+            </p>""
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">""
               <button className="px-8 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105">
-                Get Green IT Assessment
-              </button>"
+                Get Green IT Assessment"
+              </button>""
               <button className="px-8 py-3 border border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-200">
                 View Case Studies
               </button>
@@ -215,187 +215,187 @@ export default function GreenIT() {
           </motion.div>
         </div>
       </section>
-
-      {/* Environmental Impact */}"
-      <section className="py-20">"
+"
+      {/* Environmental Impact */}""
+      <section className="py-20">""
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}"
-            className="text-center mb-16"
-          >"
+            whileInView={{ opacity: 1, y: 0 }}"
+            transition={{ duration: 0.8 }}""
+            className="text-center mb-16""
+          >""
             <h2 className="text-4xl font-bold text-white mb-4">
-              Our Environmental Impact
-            </h2>"
+              Our Environmental Impact"
+            </h2>""
             <p className="text-xl text-gray-300">
               Real results from implementing sustainable technology solutions
             </p>
-          </motion.div>
-"
+          </motion.div>"
+""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {environmentalImpact.map((impact, index) => (
               <motion.div
                 key={impact.label}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}"
-                className="text-center"
-              >"
-                <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-2xl mb-6">"
-                  <impact.icon className="w-10 h-10 text-green-400" />
-                </div>"
+                whileInView={{ opacity: 1, y: 0 }}"
+                transition={{ duration: 0.8, delay: index * 0.1 }}""
+                className="text-center""
+              >""
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-2xl mb-6">""
+                  <impact.icon className="w-10 h-10 text-green-400" />"
+                </div>""
                 <div className="text-4xl font-bold text-white mb-2">
-                  {impact.metric}
-                </div>"
+                  {impact.metric}"
+                </div>""
                 <div className="text-lg font-semibold text-green-400 mb-2">
-                  {impact.label}
-                </div>"
+                  {impact.label}"
+                </div>""
                 <p className="text-gray-300 text-sm">{impact.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-
-      {/* Green IT Solutions */}"
-      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">"
+"
+      {/* Green IT Solutions */}""
+      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">""
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}"
-            className="text-center mb-16"
-          >"
+            whileInView={{ opacity: 1, y: 0 }}"
+            transition={{ duration: 0.8 }}""
+            className="text-center mb-16""
+          >""
             <h2 className="text-4xl font-bold text-white mb-4">
-              Green IT Solutions
-            </h2>"
+              Green IT Solutions"
+            </h2>""
             <p className="text-xl text-gray-300">
               Comprehensive sustainable technology solutions for your
               organization
             </p>
           </motion.div>
-
-          {/* Category Filter */}"
+"
+          {/* Category Filter */}""
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {categories.map(category => (
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
-
-                  selectedCategory === category.id'
-                    ? 'bg-gradient-to-r from-green-400 to-blue-500 text-white''
-                    : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50'`
+'
+                  selectedCategory === category.id''
+                    ? 'bg-gradient-to-r from-green-400 to-blue-500 text-white'''`
+                    : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50'``
                 }`}
               >
                 {category.name} ({category.count}) </button>) ) }
-          </div>
-"
+          </div>"
+""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredSolutions.map((solution, index) => (
               <motion.div
                 key={solution.id}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}"
-                className="group"
-              >"
-                <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl border border-slate-600/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105 overflow-hidden">"
-                  <div className="p-6">"
-                    <div className="flex items-center gap-3 mb-4">
-                      <span`
+                whileInView={{ opacity: 1, y: 0 }}"
+                transition={{ duration: 0.8, delay: index * 0.1 }}""
+                className="group""
+              >""
+                <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl border border-slate-600/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105 overflow-hidden">""
+                  <div className="p-6">""
+                    <div className="flex items-center gap-3 mb-4">`
+                      <span``
                         className={`px-3 py-1 rounded-full text-xs font-medium ${
-
-                          solution.category === 'energy''
-                            ? 'bg-green-500/20 text-green-400''
-                            : solution.category === 'hardware''
-                              ? 'bg-blue-500/20 text-blue-400''
-                              : solution.category === 'software''
-                                ? 'bg-purple-500/20 text-purple-400''
-                                : 'bg-orange-500/20 text-orange-400'`
+'
+                          solution.category === 'energy'''
+                            ? 'bg-green-500/20 text-green-400'''
+                            : solution.category === 'hardware'''
+                              ? 'bg-blue-500/20 text-blue-400'''
+                              : solution.category === 'software'''
+                                ? 'bg-purple-500/20 text-purple-400'''`
+                                : 'bg-orange-500/20 text-orange-400'``
                         }`}
                       >
                         {categories.find(c => c.id === solution.category)?.name}
                       </span>
-                    </div>
-"
-                    <div className="flex items-center gap-3 mb-4">"
-                      <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-xl">"
-                        <solution.icon className="w-6 h-6 text-green-400" />
-                      </div>"
+                    </div>"
+""
+                    <div className="flex items-center gap-3 mb-4">""
+                      <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-xl">""
+                        <solution.icon className="w-6 h-6 text-green-400" />"
+                      </div>""
                       <h3 className="text-xl font-bold text-white group-hover:text-green-400 transition-colors duration-200">
                         {solution.name}
                       </h3>
-                    </div>
-"
+                    </div>"
+""
                     <p className="text-gray-300 text-sm mb-4 leading-relaxed">
                       {solution.description}
-                    </p>
-"
-                    <div className="grid grid-cols-2 gap-4 mb-4 text-sm">
-                      <div>"
-                        <div className="text-gray-400">Savings</div>"
+                    </p>"
+""
+                    <div className="grid grid-cols-2 gap-4 mb-4 text-sm">"
+                      <div>""
+                        <div className="text-gray-400">Savings</div>""
                         <div className="text-green-400 font-medium">
                           {solution.savings}
                         </div>
-                      </div>
-                      <div>"
-                        <div className="text-gray-400">Timeline</div>"
+                      </div>"
+                      <div>""
+                        <div className="text-gray-400">Timeline</div>""
                         <div className="text-blue-400 font-medium">
                           {solution.implementation}
                         </div>
-                      </div>
-                      <div>"
-                        <div className="text-gray-400">Starting from</div>"
+                      </div>"
+                      <div>""
+                        <div className="text-gray-400">Starting from</div>""
                         <div className="text-purple-400 font-medium">
                           {solution.pricing}
                         </div>
                       </div>
                     </div>
 
-                    <button
-                      onClick={() => toggleSection(solution.id)}"
+                    <button"
+                      onClick={() => toggleSection(solution.id)}""
                       className="w-full px-4 py-2 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105"
-                    >
-                      {expandedSection === solution.id'
-                        ? 'Show Less''
+                    >'
+                      {expandedSection === solution.id''
+                        ? 'Show Less'''
                         : 'Learn More'}
                     </button>
 
                     {expandedSection === solution.id && (
                       <motion.div
-                        initial={{ opacity: 0, height: 0 }}
+                        initial={{ opacity: 0, height: 0 }}'
                         animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.3 }}"
-                        className="mt-4 pt-4 border-t border-slate-600/50"
-                      >"
-                        <div className="mb-4">"
+                        exit={{ opacity: 0, height: 0 }}"
+                        transition={{ duration: 0.3 }}""
+                        className="mt-4 pt-4 border-t border-slate-600/50""
+                      >""
+                        <div className="mb-4">""
                           <h4 className="text-sm font-semibold text-white mb-2">
-                            Key Features:
-                          </h4>"
+                            Key Features:"
+                          </h4>""
                           <ul className="space-y-1">
                             {solution.features.map((feature, featureIndex) => (
-                              <li
-                                key={featureIndex}"
-                                className="flex items-center text-gray-300 text-sm"
-                              >"
+                              <li"
+                                key={featureIndex}""
+                                className="flex items-center text-gray-300 text-sm""
+                              >""
                                 <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0"  />                                {feature}
                               </li>) ) }
                           </ul>
-                        </div>
-"
-                        <div className="mb-4">"
+                        </div>"
+""
+                        <div className="mb-4">""
                           <h4 className="text-sm font-semibold text-white mb-2">
-                            Benefits:
-                          </h4>"
+                            Benefits:"
+                          </h4>""
                           <ul className="space-y-1">
                             {solution.benefits.map((benefit, benefitIndex) => (
-                              <li
-                                key={benefitIndex}"
-                                className="flex items-center text-gray-300 text-sm"
-                              >"
+                              <li"
+                                key={benefitIndex}""
+                                className="flex items-center text-gray-300 text-sm""
+                              >""
                                 <Star className="w-3 h-3 text-blue-400 mr-2 flex-shrink-0"  />                                {benefit}
                               </li>) ) }
                           </ul>
@@ -407,124 +407,124 @@ export default function GreenIT() {
           </div>
         </div>
       </section>
-
-      {/* Certifications */}"
-      <section className="py-20">"
+"
+      {/* Certifications */}""
+      <section className="py-20">""
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}"
-            className="text-center mb-16"
-          >"
+            whileInView={{ opacity: 1, y: 0 }}"
+            transition={{ duration: 0.8 }}""
+            className="text-center mb-16""
+          >""
             <h2 className="text-4xl font-bold text-white mb-4">
-              Our Certifications
-            </h2>"
+              Our Certifications"
+            </h2>""
             <p className="text-xl text-gray-300">
               Recognized for our commitment to environmental sustainability
             </p>
-          </motion.div>
-"
+          </motion.div>"
+""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {certifications.map((cert, index) => (
               <motion.div
                 key={cert.name}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}"
+                whileInView={{ opacity: 1, y: 0 }}"
+                transition={{ duration: 0.8, delay: index * 0.1 }}""
                 className="text-center"
-              >
-                <div`
-                  className={`inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r ${cert.color} rounded-2xl mb-6`}
-                >"
-                  <cert.icon className="w-10 h-10 text-white" />
-                </div>"
+              >`
+                <div``
+                  className={`inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r ${cert.color} rounded-2xl mb-6`}"
+                >""
+                  <cert.icon className="w-10 h-10 text-white" />"
+                </div>""
                 <h3 className="text-lg font-bold text-white mb-2">
-                  {cert.name}
-                </h3>"
+                  {cert.name}"
+                </h3>""
                 <p className="text-gray-300 text-sm">{cert.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-
-      {/* Case Studies */}"
-      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">"
+"
+      {/* Case Studies */}""
+      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">""
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}"
-            className="text-center mb-16"
-          >"
+            whileInView={{ opacity: 1, y: 0 }}"
+            transition={{ duration: 0.8 }}""
+            className="text-center mb-16""
+          >""
             <h2 className="text-4xl font-bold text-white mb-4">
-              Success Stories
-            </h2>"
+              Success Stories"
+            </h2>""
             <p className="text-xl text-gray-300">
               Real results from organizations implementing our Green IT
               solutions
             </p>
-          </motion.div>
-"
+          </motion.div>"
+""
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {caseStudies.map((study, index) => (
               <motion.div
                 key={study.title}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}"
-                className="group"
-              >"
-                <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl border border-slate-600/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105 p-6">"
-                  <div className="flex items-center gap-3 mb-4">"
+                whileInView={{ opacity: 1, y: 0 }}"
+                transition={{ duration: 0.8, delay: index * 0.1 }}""
+                className="group""
+              >""
+                <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl border border-slate-600/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105 p-6">""
+                  <div className="flex items-center gap-3 mb-4">""
                     <span className="px-3 py-1 rounded-full text-xs font-medium bg-blue-500/20 text-blue-400">
                       {study.industry}
                     </span>
-                  </div>
-"
+                  </div>"
+""
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors duration-200">
                     {study.title}
-                  </h3>
-"
-                  <div className="mb-4">"
+                  </h3>"
+""
+                  <div className="mb-4">""
                     <h4 className="text-sm font-semibold text-white mb-2">
-                      Challenge:
-                    </h4>"
+                      Challenge:"
+                    </h4>""
                     <p className="text-gray-300 text-sm">{study.challenge}</p>
-                  </div>
-"
-                  <div className="mb-4">"
+                  </div>"
+""
+                  <div className="mb-4">""
                     <h4 className="text-sm font-semibold text-white mb-2">
-                      Solution:
-                    </h4>"
+                      Solution:"
+                    </h4>""
                     <p className="text-gray-300 text-sm">{study.solution}</p>
-                  </div>
-"
-                  <div className="mb-4">"
+                  </div>"
+""
+                  <div className="mb-4">""
                     <h4 className="text-sm font-semibold text-white mb-2">
-                      Results:
-                    </h4>"
+                      Results:"
+                    </h4>""
                     <ul className="space-y-1">
                       {study.results.map((result, resultIndex) => (
-                        <li
-                          key={resultIndex}"
-                          className="flex items-center text-gray-300 text-sm"
-                        >"
+                        <li"
+                          key={resultIndex}""
+                          className="flex items-center text-gray-300 text-sm""
+                        >""
                           <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0"  />                          {result}
                         </li>) ) }
                     </ul>
-                  </div>
-"
-                  <div className="grid grid-cols-2 gap-4 text-sm">
-                    <div>"
-                      <div className="text-gray-400">Annual Savings</div>"
+                  </div>"
+""
+                  <div className="grid grid-cols-2 gap-4 text-sm">"
+                    <div>""
+                      <div className="text-gray-400">Annual Savings</div>""
                       <div className="text-green-400 font-medium">
                         {study.savings}
                       </div>
-                    </div>
-                    <div>"
-                      <div className="text-gray-400">Implementation</div>"
+                    </div>"
+                    <div>""
+                      <div className="text-gray-400">Implementation</div>""
                       <div className="text-blue-400 font-medium">
                         {study.timeline}
                       </div>
@@ -535,37 +535,37 @@ export default function GreenIT() {
           </div>
         </div>
       </section>
-
-      {/* Call to Action */}"
-      <section className="py-20">"
+"
+      {/* Call to Action */}""
+      <section className="py-20">""
         <div className="container mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >"
+            transition={{ duration: 0.8 }}"
+          >""
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Go Green?
-            </h2>"
+              Ready to Go Green?"
+            </h2>""
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Start your sustainability journey today. Our Green IT experts will
               assess your current infrastructure and provide a customized plan
               to reduce costs and environmental impact.
-            </p>
-"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+            </p>"
+""
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
               <button className="px-8 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105">
                 Schedule Green IT Assessment
-              </button>
-              <a"
-                href="mailto:greenit@ziontechgroup.com"
+              </button>"
+              <a""
+                href="mailto:greenit@ziontechgroup.com""
                 className="px-8 py-3 border border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-200"
               >
                 Contact Green IT Team
               </a>
-            </div>
-"
-            <div className="mt-8 text-center">"
+            </div>"
+""
+            <div className="mt-8 text-center">""
               <p className="text-gray-400 text-sm">
                 Get a free sustainability assessment and customized Green IT
                 roadmap
@@ -574,5 +574,5 @@ export default function GreenIT() {
           </motion.div>
         </div>
       </section>
-    </div>) }
-'"`
+    </div>) }'"`
+'"`'"`

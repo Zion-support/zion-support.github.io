@@ -1,29 +1,30 @@
-import React, { useState, useRef, useEffect } from "react";"
-import { Button } from "@/components/ui/button";"
-import { Input } from "@/components/ui/input";"
-import { ScrollArea } from "@/components/ui/scroll-area";"
-import { toast } from "@/components/ui/use-toast";"
-import { apiClient } from "@/utils/apiClient";"
-import { cn } from "@/lib/utils";"
-import { ChatMessage } from "./ChatMessage";"
-import { QuickReplyButton } from "./QuickReplyButton";"
-import { Send, Loader2 } from "lucide-react";"
+import React, { useState, useRef, useEffect } from "react";""
+import { Button } from "@/components/ui/button";""
+import { Input } from "@/components/ui/input";""
+import { ScrollArea } from "@/components/ui/scroll-area";""
+import { toast } from "@/components/ui/use-toast";""
+import { apiClient } from "@/utils/apiClient";""
+import { cn } from "@/lib/utils";""
+import { ChatMessage } from "./ChatMessage";""
+import { QuickReplyButton } from "./QuickReplyButton";""
+import { Send, Loader2 } from "lucide-react";""
 import { useTheme } from "@/hooks/useTheme";
-// Define suggested quick replies
-const QUICK_REPLIES = ["
-    { id: "hire", text: "How do I hire?" },"
-    { id: "match", text: "How do I get matched?" },"
+// Define suggested quick replies"
+const QUICK_REPLIES = [""
+    { id: "hire", text: "How do I hire?" },""
+    { id: "match", text: "How do I get matched?" },""
     { id: "billing", text: "Billing help" },
 ];
 export function ChatBotPanel() {
     const [messages, setMessages] = useState([
         {
 "
-            id: "welcome","
-            content: "Hi! How can I help you?","
+""
+            id: "welcome",""
+            content: "Hi! How can I help you?",""
             sender: "bot",
-            timestamp: new Date()},
-    ]);"
+            timestamp: new Date()},"
+    ]);""
     const [inputValue, setInputValue] = useState("");
     const [isLoading, setIsLoading] = useState(false);
     const [failedAttempts, setFailedAttempts] = useState(0);
@@ -48,11 +49,11 @@ export function ChatBotPanel() {
             return;
         const userMessage = {
 
-            id: `user-${Date.now()}`,
-            content: text,"
+            id: `user-${Date.now()}`,"
+            content: text,""
             sender: "user",
-            timestamp: new Date()};
-        setMessages((prev) => [...prev, userMessage]);"
+            timestamp: new Date()};"
+        setMessages((prev) => [...prev, userMessage]);""
         setInputValue("");
         setIsLoading(true);
         try {
@@ -60,8 +61,9 @@ export function ChatBotPanel() {
             const response = await sendToAIAssistant(text);
             const botMessage = {
 `
-                id: `bot-${Date.now()}`,"
-                content: response.message || "Sorry, I couldn't process your request. Please try again.","
+`"`
+                id: `bot-${Date.now()}`,""
+                content: response.message || "Sorry, I couldn't process your request. Please try again.",""
                 sender: "bot",
                 timestamp: new Date()};
             setMessages((prev) => [...prev, botMessage]);
@@ -81,11 +83,13 @@ export function ChatBotPanel() {
         }
         catch (error) {
 "
+""
             // console.error("Error in AI chat:", error);
             toast({
 "
-                variant: "destructive","
-                title: "Communication Error","
+""
+                variant: "destructive",""
+                title: "Communication Error","'"
                 description: "We're having trouble connecting to our support service."});
             setFailedAttempts((prev) => prev + 1);
             if (failedAttempts >= 2) {
@@ -100,22 +104,26 @@ export function ChatBotPanel() {
 
         try {
 "
+""
             const response = await apiClient("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
 "
+""
                 method: "POST",
                 headers: {
 "
+""
                     "Content-Type": "application/json"},
                 body: JSON.stringify({
 "
+""
                     messages[{ role: "user", content: message }];
                 }),;
             });
             if (!response.ok) {
 
                 return {
-
-                    success: false,"
+"
+                    success: false,"'"
                     message: "I'm having trouble connecting to my knowledge base right now."
                 }}
             const data = await response.json();
@@ -126,18 +134,20 @@ export function ChatBotPanel() {
             }}
         catch (error) {
 "
+""
             // console.error("Error in AI chat:", error);
             return {
-
-                success: false,"
+"
+                success: false,"'"
                 message: "I'm experiencing technical difficulties. Please try again later."
             }}
     };
     const suggestEscalation = () => {
         const escalationMessage = {
 `
-            id: `bot-escalation-${Date.now()}`,"
-            content: "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?","
+`"`
+            id: `bot-escalation-${Date.now()}`,"'"
+            content: "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?",""
             sender: "bot",
             timestamp: new Date()};
         setMessages((prev) => [...prev, escalationMessage]);
@@ -145,8 +155,8 @@ export function ChatBotPanel() {
         logSupportEscalation()};
     const logSupportEscalation = async () => {
         try {
-            // Send the conversation to the backend for logging
-            // This would be implemented in a real system"
+            // Send the conversation to the backend for logging"
+            // This would be implemented in a real system""
             // console.log("Support escalation triggered", {
 
                 conversationHistory: messages.map(m => ({
@@ -158,6 +168,7 @@ export function ChatBotPanel() {
             })}
         catch (error) {
 "
+""
             // console.error("Failed to log support escalation:", error)}
     };
     const handleEscalateToLiveAgent = () => {
@@ -165,15 +176,17 @@ export function ChatBotPanel() {
             ...prev,
             {
 `
-                id: `user-${Date.now()}`,"
-                content: "I'd like to speak with a human agent","
+`"`
+                id: `user-${Date.now()}`,"'"
+                content: "I'd like to speak with a human agent",""
                 sender: "user",
                 timestamp: new Date()
             },
             {
 `
-                id: `bot-${Date.now()}`,"
-                content: "I'm connecting you with a support agent. Please note that our support hours are Monday to Friday, 9AM to 6PM EST. If you're messaging outside these hours, a team member will follow up with you as soon as possible.","
+`"`
+                id: `bot-${Date.now()}`,"'"
+                content: "I'm connecting you with a support agent. Please note that our support hours are Monday to Friday, 9AM to 6PM EST. If you're messaging outside these hours, a team member will follow up with you as soon as possible.",""
                 sender: "bot",
                 timestamp: new Date()
             }
@@ -181,64 +194,69 @@ export function ChatBotPanel() {
         // In a real implementation, this would trigger a live chat request
         toast({
 "
-            title: "Support request submitted","
+""
+            title: "Support request submitted",""
             description: "A support agent will be with you shortly."})};
     const handleEmailSupport = () => {
         setMessages((prev) => [
             ...prev,
             {
 `
-                id: `user-${Date.now()}`,"
-                content: "I'd like to email support","
+`"`
+                id: `user-${Date.now()}`,"'"
+                content: "I'd like to email support",""
                 sender: "user",
                 timestamp: new Date()
             },
             {
 `
-                id: `bot-${Date.now()}`,"
-                content: "Please send your question to support@ziontechgroup.com. Our team will get back to you within 24 hours.","
+`"`
+                id: `bot-${Date.now()}`,""
+                content: "Please send your question to support@ziontechgroup.com. Our team will get back to you within 24 hours.",""
                 sender: "bot",
                 timestamp: new Date()
-            }
-        ])};"
-    return (<div className="flex flex-col h-full">"
-      <ScrollArea className="flex-1 p-4" ref={scrollAreaRef}>"
-        <div className="flex flex-col gap-4">"
-          {messages.map((message) => (<ChatMessage key={message.id} message={message.content} isUser={message.sender === "user"} timestamp={message.timestamp}/>))}
-          "
-          {isLoading && (<div className="flex items-center justify-center py-2">"
+            }"
+        ])};""
+    return (<div className="flex flex-col h-full">""
+      <ScrollArea className="flex-1 p-4" ref={scrollAreaRef}>""
+        <div className="flex flex-col gap-4">""
+          {messages.map((message) => (<ChatMessage key={message.id} message={message.content} isUser={message.sender === "user"} timestamp={message.timestamp}/>))}"
+          ""
+          {isLoading && (<div className="flex items-center justify-center py-2">""
               <Loader2 className="h-5 w-5 animate-spin text-zion-purple"/>
             </div>)}
         </div>
-      </ScrollArea>
-      "
+      </ScrollArea>"
+      ""
       {messages.length === 1 && (<div className="px-4 py-3">
           <p className = {
 "
-  cn("text-sm mb-2","
+""
+  cn("text-sm mb-2",""
   theme === "dark" ? "text-gray-300" : "text-gray-600")
 
 }>
-            Suggested questions:
-          </p>"
+            Suggested questions:"
+          </p>""
           <div className="flex flex-wrap gap-2">
             {QUICK_REPLIES.map((reply) => (<QuickReplyButton key={reply.id} text={reply.text} onClick={() => handleQuickReply(reply.text)}/>))}
           </div>
-        </div>)}
-      "
+        </div>)}"
+      ""
       {failedAttempts >= 3 && (<div className="px-4 py-3 border-t border-zion-purple/10">
           <p className = {
 "
-  cn("text-sm mb-2 font-medium","
+""
+  cn("text-sm mb-2 font-medium",""
   theme === "dark" ? "text-gray-300" : "text-gray-600")
 
 }>
-            Need more help?
-          </p>"
-          <div className="flex gap-2">"
+            Need more help?"
+          </p>""
+          <div className="flex gap-2">""
             <Button onClick={handleEscalateToLiveAgent} size="sm" className="bg-zion-purple hover:bg-zion-purple-light text-white">
-              Chat with Live Agent
-            </Button>"
+              Chat with Live Agent"
+            </Button>""
             <Button onClick={handleEmailSupport} size="sm" variant="outline">
               Email Support
             </Button>
@@ -247,26 +265,28 @@ export function ChatBotPanel() {
       
       <div className = {
 "
-  cn("p-4 border-t","
+""
+  cn("p-4 border-t",""
   theme === "dark" ? "border-zion-blue-light" : "border-gray-200")
 
 }>
         <form onSubmit={(e) => {
-
-            e.preventDefault();"
-            handleSendMessage()}} className="flex items-center gap-2">"
+"
+            e.preventDefault();""
+            handleSendMessage()}} className="flex items-center gap-2">""
           <Input ref={inputRef} value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder="Type your question..." className = {
 "
-  cn("flex-1","
-  theme === "dark"
-            ? "bg-zion-blue border-zion-blue-light focus-visible:ring-zion-purple"
+""
+  cn("flex-1",""
+  theme === "dark""
+            ? "bg-zion-blue border-zion-blue-light focus-visible:ring-zion-purple""
             : "bg-white border-gray-200")
-
-}/>"
-          <Button type="submit" size="icon" disabled={isLoading || !inputValue.trim()} className="bg-zion-cyan hover:bg-zion-cyan/80 text-white">"
+"
+}/>""
+          <Button type="submit" size="icon" disabled={isLoading || !inputValue.trim()} className="bg-zion-cyan hover:bg-zion-cyan/80 text-white">""
             <Send className="h-4 w-4"/>
           </Button>
         </form>
       </div>
-    </div>)}
-'"`
+    </div>)}'"`
+'"`'"`

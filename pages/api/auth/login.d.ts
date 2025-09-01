@@ -1,6 +1,6 @@
 type Req = {
     method?: string;
-    body?: any;
+    body?: unknown;
 };
 type Res = {
     statusCode?: number;
@@ -8,6 +8,7 @@ type Res = {
     end: (data?: any) => void;
 };
 interface JsonRes extends Res {
+
     status: (code: number) => JsonRes;
     json: (data: any) => void;
 }

@@ -9,6 +9,7 @@ export interface Listing {
   tags: string[];
   images: string[];
 seller: {
+
     id: string;
     name: string;
     rating: number;
@@ -22,7 +23,7 @@ seller: {
 ;export interface ProductListing extends Listing {
 
   brand?: string;
-  model?: string;
+  model?: string;'
   condition: 'new' | 'used' | 'refurbished';
   warranty?: string;
   shipping: {
@@ -30,14 +31,9 @@ seller: {
     cost: number;
     method: string;
     estimatedDays: number}}
-<<<<<<< HEAD
-;
-export interface ServiceListing extends Listing {
-
-=======
 ;export interface ServiceListing extends Listing {
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+''
   serviceType: 'consulting' | 'development' | 'maintenance' | 'training' | 'support';
   duration?: string;
   availability: string[];
@@ -59,12 +55,13 @@ export interface ServiceListing extends Listing {
   id: string;
   title: string;
   price: number;
-  quantity: number;
+  quantity: number;'
   type: 'product' | 'service' | 'talent';
   image?: string}
 ;export interface WishlistItem {
   id: string;
   userId: string;
-  listingId: string;
+  listingId: string;'
   type: 'product' | 'service' | 'talent';
   addedAt: string}
+'

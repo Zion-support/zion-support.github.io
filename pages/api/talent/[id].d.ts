@@ -1,6 +1,7 @@
 interface Req {
     method?: string;
     query?: {
+
         id?: string;
     };
 }

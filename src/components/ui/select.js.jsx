@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react';'
 export function SelectItem({ children, className = '', value, ...props }) {
 
   return()
@@ -7,8 +7,8 @@ export function SelectItem({ children, className = '', value, ...props }) {
         relative flex w-full cursor-pointer select-none items-center 
         rounded-sm px-3 py-2 text-sm text-white outline-none 
         hover:bg-zion-blue/20 focus:bg-zion-blue/20 
-        focus:text-white transition-colors
-        ${className}`
+        focus:text-white transition-colors`
+        ${className}``
       `}
       data-value={value}
       {...props}
@@ -16,5 +16,5 @@ export function SelectItem({ children, className = '', value, ...props }) {
       {children}
     </div>
   );
-}
-'`
+}'`
+'`'`

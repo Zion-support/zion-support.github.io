@@ -1,6 +1,6 @@
 interface Req {
     method?: string;
-    body?: any;
+    body?: unknown;
 }
 interface JsonRes {
     status: (code: number) => JsonRes;

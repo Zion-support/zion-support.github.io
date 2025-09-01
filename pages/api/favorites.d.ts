@@ -1,7 +1,7 @@
 type Req = {
     method?: string;
-    body?: any;
-    query?: any;
+    body?: unknown;
+    query?: unknown;
 };
 interface JsonRes {
     statusCode?: number;

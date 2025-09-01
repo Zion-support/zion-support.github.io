@@ -1,16 +1,20 @@
-import React, { useEffect, useState } from 'react';
-import Head from 'next/head';
-import { useRouter } from 'next/router';
-import { MessageSquare } from 'lucide-react';
-import PostCard from '@/components/community/PostCard';
-import { EmptyState } from '@/components/ui/empty-state';
+import React, { useEffect, useState } from 'react';'
+import Head from 'next/head';'
+import { useRouter } from 'next/router';'
+import { MessageSquare } from 'lucide-react';'
+import PostCard from '@/components/community/PostCard';'
+import { EmptyState } from '@/components/ui/empty-state';'
 import type { ForumPost } from '@/types/community';
 
 const POSTS_QUERY = `
   query Posts($slug: String!, $cursor: String) {
+
     Posts(where: { category: $slug }, after: $cursor) {
+
       edges {
+
         node {
+
           id
           title
           excerpt
@@ -18,11 +22,12 @@ const POSTS_QUERY = `
         cursor
       }
       pageInfo {
+
         hasNextPage
         endCursor
       }
     }
-  }
+  }`
 `;
 
 export default function CategoryPage() {
@@ -34,16 +39,18 @@ export default function CategoryPage() {
   const [loading, setLoading] = useState(false);
 
   const loadPosts = async (after: string | null = null) => {
+
     if (!slug) return;
-    setLoading(true);
+    setLoading(true);'
     const res = await fetch('/api/graphql', {
-      method: 'POST',
+'
+      method: 'POST','
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ query: POSTS_QUERY, variables: { slug, cursor: after } }),
-    });
+      body: JSON.stringify({ query: POSTS_QUERY, variables: { slug, cursor: after } })});
     const json = await res.json();
     const result = json.data?.Posts;
     if (result) {
+
       const newPosts = result.edges.map((e: any) => e.node) as ForumPost[];
       setPosts((prev) => (after ? [...prev, ...newPosts] : newPosts));
       setCursor(result.pageInfo.endCursor);
@@ -56,37 +63,38 @@ export default function CategoryPage() {
     setPosts([]);
     setCursor(null);
     if (slug) {
+
       loadPosts(null);
     }
   }, [slug]);
 
-  return (
+  return()
     <>
-      <Head>
+      <Head>`
         <title>{`${slug} Forum – ZionAI`}</title>
       </Head>
       <main className="container py-8">
-        {posts.length > 0 ? (
+        {posts.length > 0 ? ("
           <div className="space-y-4">
             {posts.map((post) => (
               <PostCard key={post.id} post={post} />
             ))}
-            {hasMore && (
+            {hasMore && ("
               <div className="text-center mt-6">
-                <button
+                <button"
                   className="text-zion-purple underline"
                   onClick={() => loadPosts(cursor)}
                   disabled={loading}
-                >
+                >'
                   {loading ? 'Loading...' : 'Load More'}
                 </button>
               </div>
             )}
           </div>
         ) : !loading ? (
-          <EmptyState
-            icon={<MessageSquare className="h-10 w-10 text-zion-purple" />}
-            title="No posts yet"
+          <EmptyState"
+            icon={<MessageSquare className="h-10 w-10 text-zion-purple" />}"
+            title="No posts yet""
             description="Be the first to post"
           />
         ) : null}
@@ -94,3 +102,4 @@ export default function CategoryPage() {
     </>
   );
 }
+'"`

@@ -7,19 +7,19 @@ var __rest = (this && this.__rest) || function (s, e) {
         for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
 
             if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
-                t[p[i]] = s[p[i]]}
-    return t};"
+                t[p[i]] = s[p[i]]}"
+    return t};""
 import { jsx as _jsx } from "react/jsx-runtime";
 import React from 'react';
-
+'
 const Badge = ({ children, className = '', variant = 'default' }) => {
-
+'
   const baseClasses = 'inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors';
   const variantClasses = {
-
-  default: 'border-transparent bg-primary text-primary-foreground',
-    secondary: 'border-transparent bg-secondary text-secondary-foreground',
-    destructive: 'border-transparent bg-destructive text-destructive-foreground',
+'
+  default: 'border-transparent bg-primary text-primary-foreground','
+    secondary: 'border-transparent bg-secondary text-secondary-foreground','
+    destructive: 'border-transparent bg-destructive text-destructive-foreground','
   outline: 'text-foreground'
   
 
@@ -28,18 +28,18 @@ const Badge = ({ children, className = '', variant = 'default' }) => {
 
 
 
-};
-  '
+};'
+  ''
 import React from 'react';
-
+'
 const Badge = ({ children, className = '', variant = 'default' }) => {
-
+'
   const baseClasses = 'inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors';
   const variantClasses = {
-
-    default: 'border-transparent bg-primary text-primary-foreground',
-    secondary: 'border-transparent bg-secondary text-secondary-foreground',
-    destructive: 'border-transparent bg-destructive text-destructive-foreground',
+'
+    default: 'border-transparent bg-primary text-primary-foreground','
+    secondary: 'border-transparent bg-secondary text-secondary-foreground','
+    destructive: 'border-transparent bg-destructive text-destructive-foreground','
     outline: 'text-foreground'
   };
   
@@ -50,5 +50,5 @@ const Badge = ({ children, className = '', variant = 'default' }) => {
   );
 };
 ;
-export { Badge };
-'"`
+export { Badge };'"`
+'"`'"`

@@ -7,3 +7,4 @@ export function ServiceDetails({ country }) {
 
         const dataCenters = {
 "
+""

@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react';'
+import { motion } from 'framer-motion';'
 import { ExclamationTriangleIcon, ArrowPathIcon, HomeIcon, DocumentTextIcon, BugAntIcon } from '@heroicons/react/24/outline';
 class EnhancedErrorBoundary extends Component {
 
@@ -26,8 +26,8 @@ class EnhancedErrorBoundary extends Component {
         }}
     componentDidCatch(error, errorInfo) {
 
-        this.setState({ errorInfo });
-        // Log error to console'
+        this.setState({ errorInfo });'
+        // Log error to console''
         // // // // // // // // console.error('Error caught by boundary:', error, errorInfo);
         // Call custom error handler if provided
         if (this.props.onError) {
@@ -64,19 +64,19 @@ class EnhancedErrorBoundary extends Component {
                 width: window.innerWidth,
                 height: window.innerHeight
 
-        };
-        // Log to console for development'
+        };'
+        // Log to console for development''
         if (process.env.NODE_ENV === 'development') {
-
-            console.group('Error Report');
-            // // // // // // // // console.log('Error ID:', errorReport.id);
+'
+            console.group('Error Report');'
+            // // // // // // // // console.log('Error ID:', errorReport.id);'
             // // // // // // // // console.log('Error Details:', errorReport);
             console.groupEnd();
 
         // In production, you would send this to your error reporting service
         // Example: Sentry.captureException(error, { extra: errorReport });
-
-            // console.log('Error ID:', errorReport.id);
+'
+            // console.log('Error ID:', errorReport.id);'
             // console.log('Error Details:', errorReport);
             console.groupEnd()}
         // In production, you would send this to your error reporting service
@@ -91,13 +91,14 @@ class EnhancedErrorBoundary extends Component {
             showStackTrace: false
         })};
     handleGoHome = () => {
-
+'
         window.location.href = '/'};
     handleReportIssue = () => {
         const errorInfo = this.state.errorInfo;
         if (error && errorInfo) {
 `
-            const issueUrl = `https://github.com/ziontechgroup/zion-website/issues/new?title=Error: ${encodeURIComponent(error.message)}&body=${encodeURIComponent(issueBody)}`;
+``
+            const issueUrl = `https://github.com/ziontechgroup/zion-website/issues/new?title=Error: ${encodeURIComponent(error.message)}&body=${encodeURIComponent(issueBody)}`;'
             window.open(issueUrl,_blank')}
     };
                 return this.props.fallback}
@@ -111,34 +112,34 @@ class EnhancedErrorBoundary extends Component {
 }} animate = {
 
   { opacity: 1,
-  scale: 1 
-"
-}} className="max-w-2xl w-full bg-white dark:bg-slate-800 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700 overflow-hidden">
-            {/* Header */}"
-            <div className="bg-gradient-to-r from-red-500 to-pink-500 p-6 text-white">"
-              <div className="flex items-center space-x-3">"
-                <ExclamationTriangleIcon className="w-8 h-8"/>
-                <div>"
-                  <h1 className="text-2xl font-bold">Something went wrong</h1>'"
+  scale: 1 "
+""
+}} className="max-w-2xl w-full bg-white dark:bg-slate-800 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700 overflow-hidden">"
+            {/* Header */}""
+            <div className="bg-gradient-to-r from-red-500 to-pink-500 p-6 text-white">""
+              <div className="flex items-center space-x-3">""
+                <ExclamationTriangleIcon className="w-8 h-8"/>"
+                <div>"'"
+                  <h1 className="text-2xl font-bold">Something went wrong</h1>'"'"
                   <p className="text-red-100">We've encountered an unexpected error</p>
-
-    // Add global error handler'
-    window.addEventListener('error', handleError);
+'
+    // Add global error handler''
+    window.addEventListener('error', handleError);'
     window.addEventListener('unhandledrejection', (event) => {
-
+'
       handleError(event.reason, { componentStack: 'Promise rejection' });
     });
 
     return () => {
-
-      window.removeEventListener('error', handleError);
+'
+      window.removeEventListener('error', handleError);'
       window.removeEventListener('unhandledrejection', handleError);
     };
   }, []);
 
   if (hasError) {
-
-    const defaultFallback = ("
+"
+    const defaultFallback = (""
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-red-100">
         <motion.div
           initial = {
@@ -161,43 +162,43 @@ class EnhancedErrorBoundary extends Component {
 
 
 
-
-}}"
-          className="max-w-md mx-auto text-center p-8 bg-white rounded-xl shadow-lg"
-        >"
-          <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">"
-            <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
+"
+}}""
+          className="max-w-md mx-auto text-center p-8 bg-white rounded-xl shadow-lg""
+        >""
+          <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">""
+            <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">""
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
             </svg>
-          </div>
-          "
-          <h1 className="text-2xl font-bold text-gray-900 mb-2">Something went wrong</h1>"
-          <p className="text-gray-600 mb-6">
+          </div>"
+          ""
+          <h1 className="text-2xl font-bold text-gray-900 mb-2">Something went wrong</h1>""
+          <p className="text-gray-600 mb-6">'
             We're sorry, but something unexpected happened. Please try refreshing the page.
-          </p>
-          "
+          </p>"
+          ""
           <div className="space-y-3">
-            <button
-              onClick={() => window.location.reload()}"
+            <button"
+              onClick={() => window.location.reload()}""
               className="w-full bg-red-600 text-white py-2 px-4 rounded-lg hover:bg-red-700 transition-colors"
             >
               Refresh Page
             </button>
             
-            <button
-              onClick={() => window.history.back()}"
+            <button"
+              onClick={() => window.history.back()}""
               className="w-full bg-gray-200 text-gray-800 py-2 px-4 rounded-lg hover:bg-gray-300 transition-colors"
             >
               Go Back
             </button>
-          </div>
-          '
-          {process.env.NODE_ENV === 'development' && error && ("
-            <details className="mt-6 text-left">"
+          </div>'
+          ''"
+          {process.env.NODE_ENV === 'development' && error && (""
+            <details className="mt-6 text-left">""
               <summary className="cursor-pointer text-sm text-gray-600 hover:text-gray-800">
-                Error Details (Development)
-              </summary>"
-              <div className="mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto">"
+                Error Details (Development)"
+              </summary>""
+              <div className="mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto">""
                 <div className="mb-2">
                   <strong>Error:</strong> {error.toString()}
         </div>)}
@@ -205,8 +206,8 @@ class EnhancedErrorBoundary extends Component {
 }
                 </div>
                 {errorInfo && errorInfo.componentStack && (
-                  <div>
-                    <strong>Component Stack:</strong>"
+                  <div>"
+                    <strong>Component Stack:</strong>""
                     <pre className="whitespace-pre-wrap mt-1">{errorInfo.componentStack}</pre>
                   </div>
                 )}
@@ -224,5 +225,5 @@ class EnhancedErrorBoundary extends Component {
 };
 ;
 export { EnhancedErrorBoundary };
-export default EnhancedErrorBoundary;
-}}}}}}}}}}}}}'"`
+export default EnhancedErrorBoundary;'"`
+}}}}}}}}}}}}}'"`'"`

@@ -1,13 +1,13 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import React, { useState, useEffect, useRef } from 'react';'
+import { motion, useInView } from 'framer-motion';'
 import { EnhancedLoading } from './EnhancedLoading';
 const LazyWrapper = ({
 
   children,
-  threshold = 0.1,
-  className = '',
-  loadingVariant = 'default',
-  loadingText = 'Loading...',
+  threshold = 0.1,'
+  className = '','
+  loadingVariant = 'default','
+  loadingText = 'Loading...','
   loadingSize = 'md'}) => {
 
   const [isLoaded, setIsLoaded] = useState(false);
@@ -38,8 +38,8 @@ const LazyWrapper = ({
     );
   }
   if (!isLoaded) {
-
-    return()`
+`
+    return()``
       <div className={`min-h-[200px] ${className}`}>
         <EnhancedLoading
           variant={loadingVariant}
@@ -60,5 +60,5 @@ const LazyWrapper = ({
     </motion.div>
   );
 };
-export default LazyWrapper;
-'`
+export default LazyWrapper;'`
+'`'`

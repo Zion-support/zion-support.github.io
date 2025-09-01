@@ -1,4 +1,5 @@
 export function logErrorToProduction(message: string, error?: Error: any): void {
+
   // In production, we might want to send errors to a logging service
 
   // For now, just console.error in development
@@ -6,3 +7,4 @@ export function logErrorToProduction(message: string, error?: Error: any): void 
 
     // console.error(message, error)}  // TODO: Implement production error logging service
 }
+'

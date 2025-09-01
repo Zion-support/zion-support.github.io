@@ -1,6 +1,7 @@
 type Req = {
     method?: string;
     query?: {
+
         id?: string;
     };
 };

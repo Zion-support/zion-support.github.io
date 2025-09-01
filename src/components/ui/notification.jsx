@@ -1,4 +1,4 @@
-import React, { useState, createContext, useContext, useCallback } from 'react';
+import React, { useState, createContext, useContext, useCallback } from 'react';'
 import { motion, AnimatePresence } from 'framer-motion';
 import {
 
@@ -6,8 +6,8 @@ import {
   CheckCircle,
   AlertTriangle,
   Info,
-  AlertCircle,
-  Bell} from 'lucide-react';
+  AlertCircle,'
+  Bell} from 'lucide-react';'
 import { Button } from './button';
 // Context
 const NotificationContext = createContext(null);
@@ -15,8 +15,8 @@ const NotificationContext = createContext(null);
 export function useNotifications() {
   const context = useContext(NotificationContext);
   if (!context) {
-
-    throw new Error('
+'
+    throw new Error(''
       'useNotifications must be used within a NotificationProvider'
     );
   }
@@ -25,7 +25,7 @@ export function useNotifications() {
 export function NotificationProvider({
 
   children,
-  maxNotifications = 5,
+  maxNotifications = 5,'
   position = 'top-right'}) {
 
   const [notifications, setNotifications] = useState([]);
@@ -80,20 +80,20 @@ function NotificationContainer({ position }) {
   const getPositionClasses = pos => {
 
     switch (pos) {
-
-      case 'top-right':'
-        return 'top-4 right-4';
-      case 'top-left':'
-        return 'top-4 left-4';
-      case 'bottom-right':'
-        return 'bottom-4 right-4';
-      case 'bottom-left':'
-        return 'bottom-4 left-4';
-      case 'top-center':'
-        return 'top-4 left-1/2 transform -translate-x-1/2';
-      case 'bottom-center':'
-        return 'bottom-4 left-1/2 transform -translate-x-1/2';
-      default:'
+'
+      case 'top-right':''
+        return 'top-4 right-4';'
+      case 'top-left':''
+        return 'top-4 left-4';'
+      case 'bottom-right':''
+        return 'bottom-4 right-4';'
+      case 'bottom-left':''
+        return 'bottom-4 left-4';'
+      case 'top-center':''
+        return 'top-4 left-1/2 transform -translate-x-1/2';'
+      case 'bottom-center':''
+        return 'bottom-4 left-1/2 transform -translate-x-1/2';'
+      default:''
         return 'top-4 right-4';
     }
   };
@@ -104,26 +104,26 @@ function NotificationContainer({ position }) {
     >
       {/* Header with clear all button */}
       {notifications.length > 1 && (
-        <div className="flex items-center justify-between mb-2">"
-          <div className="flex items-center gap-2">"
-            <Bell className="w-4 h-4 text-zion-cyan" />"
+        <div className="flex items-center justify-between mb-2">""
+          <div className="flex items-center gap-2">""
+            <Bell className="w-4 h-4 text-zion-cyan" />""
             <span className="text-zinc-300 text-sm font-medium">
               {notifications.length} notifications
             </span>
-          </div>
-          <Button"
-            size="sm"
-            variant="ghost"
-            onClick={clearAll}"
+          </div>"
+          <Button""
+            size="sm""
+            variant="ghost""
+            onClick={clearAll}""
             className="text-zinc-400 hover:text-zion-cyan text-xs"
           >
             Clear all
           </Button>
         </div>
       )}
-
-      {/* Notifications */}"
-      <div className="space-y-2">"
+"
+      {/* Notifications */}""
+      <div className="space-y-2">""
         <AnimatePresence mode="popLayout">
           {notifications.map(notification => (
             <NotificationItem
@@ -142,48 +142,48 @@ function NotificationItem({ notification }) {
   const getIcon = type => {
 
     switch (type) {
-
-      case 'success':"
-        return <CheckCircle className="w-5 h-5 text-green-400" />;
-      case 'error':"
-        return <AlertCircle className="w-5 h-5 text-red-400" />;
-      case 'warning':"
-        return <AlertTriangle className="w-5 h-5 text-yellow-400" />;
-      case 'info':"
-        return <Info className="w-5 h-5 text-blue-400" />;
-      default:"
+'"
+      case 'success':""
+        return <CheckCircle className="w-5 h-5 text-green-400" />;'"
+      case 'error':""
+        return <AlertCircle className="w-5 h-5 text-red-400" />;'"
+      case 'warning':""
+        return <AlertTriangle className="w-5 h-5 text-yellow-400" />;'"
+      case 'info':""
+        return <Info className="w-5 h-5 text-blue-400" />;"
+      default:""
         return <Info className="w-5 h-5 text-blue-400" />;
     }
   };
   const getTypeClasses = type => {
 
     switch (type) {
-
-      case 'success':'
-        return 'border-green-500/30 bg-green-500/10';
-      case 'error':'
-        return 'border-red-500/30 bg-red-500/10';
-      case 'warning':'
-        return 'border-yellow-500/30 bg-yellow-500/10';
-      case 'info':'
-        return 'border-blue-500/30 bg-blue-500/10';
-      default:'
+'
+      case 'success':''
+        return 'border-green-500/30 bg-green-500/10';'
+      case 'error':''
+        return 'border-red-500/30 bg-red-500/10';'
+      case 'warning':''
+        return 'border-yellow-500/30 bg-yellow-500/10';'
+      case 'info':''
+        return 'border-blue-500/30 bg-blue-500/10';'
+      default:''
         return 'border-zion-blue-light/30 bg-zion-blue/10';
     }
   };
   const getProgressColor = type => {
 
     switch (type) {
-
-      case 'success':'
-        return 'bg-green-400';
-      case 'error':'
-        return 'bg-red-400';
-      case 'warning':'
-        return 'bg-yellow-400';
-      case 'info':'
-        return 'bg-blue-400';
-      default:'
+'
+      case 'success':''
+        return 'bg-green-400';'
+      case 'error':''
+        return 'bg-red-400';'
+      case 'warning':''
+        return 'bg-yellow-400';'
+      case 'info':''
+        return 'bg-blue-400';'
+      default:''
         return 'bg-zion-cyan';
     }
   };
@@ -194,48 +194,48 @@ function NotificationItem({ notification }) {
       animate={{ opacity: 1, x: 0, scale: 1 }}
       exit={{ opacity: 0, x: 300, scale: 0.8 }}
       transition={{
-
+'
         type: 'spring',
         stiffness: 500,
-        damping: 30,
-        opacity: { duration: 0.2 }}}`
+        damping: 30,`
+        opacity: { duration: 0.2 }}}``
       className={`relative overflow-hidden border rounded-xl p-4 backdrop-blur-sm ${getTypeClasses(notification.type)}`}
     >
       {/* Progress Bar */}
-      {notification.duration && notification.duration > 0 && (
-        <motion.div`
-          className={`absolute top-0 left-0 h-1 ${getProgressColor(notification.type)}`}
-          initial={{ width: '100%' }}
+      {notification.duration && notification.duration > 0 && (`
+        <motion.div``
+          className={`absolute top-0 left-0 h-1 ${getProgressColor(notification.type)}`}'
+          initial={{ width: '100%' }}'
           animate={{ width: '0%' }}
           transition={{
 
-            duration: notification.duration / 1000,
+            duration: notification.duration / 1000,'
             ease: 'linear'}}
         />
-      )}
-"
-      <div className="flex items-start gap-3">
-        {/* Icon */}"
+      )}"
+""
+      <div className="flex items-start gap-3">"
+        {/* Icon */}""
         <div className="flex-shrink-0 mt-0.5">{getIcon(notification.type)}</div>
-
-        {/* Content */}"
-        <div className="flex-1 min-w-0">"
+"
+        {/* Content */}""
+        <div className="flex-1 min-w-0">""
           <h4 className="text-white font-medium text-sm mb-1">
             {notification.title}
-          </h4>
-          {notification.message && ("
+          </h4>"
+          {notification.message && (""
             <p className="text-zinc-300 text-sm leading-relaxed">
               {notification.message}
             </p>
           )}
 
-          {/* Action Button */}
-          {notification.action && ("
-            <div className="mt-3">
-              <Button"
-                size="sm"
-                variant="ghost"
-                onClick={notification.action.onClick}"
+          {/* Action Button */}"
+          {notification.action && (""
+            <div className="mt-3">"
+              <Button""
+                size="sm""
+                variant="ghost""
+                onClick={notification.action.onClick}""
                 className="text-zion-cyan hover:text-zion-cyan-light hover:bg-zion-cyan/10 text-xs"
               >
                 {notification.action.label}
@@ -246,16 +246,16 @@ function NotificationItem({ notification }) {
 
         {/* Dismiss Button */}
         {notification.dismissible && (
-          <button
-            onClick={() => removeNotification(notification.id)}"
-            className="flex-shrink-0 p-1 rounded hover:bg-white/10 transition-colors duration-200"
-          >"
+          <button"
+            onClick={() => removeNotification(notification.id)}""
+            className="flex-shrink-0 p-1 rounded hover:bg-white/10 transition-colors duration-200""
+          >""
             <X className="w-4 h-4 text-zinc-400 hover:text-white" />
           </button>
         )}
       </div>
-
-      {/* Timestamp */}"
+"
+      {/* Timestamp */}""
       <div className="mt-2 text-xs text-zinc-400">
         {notification.timestamp.toLocaleTimeString()}
       </div>
@@ -264,7 +264,7 @@ function NotificationItem({ notification }) {
 }
 // Convenience functions for quick notifications
 export function showInfo(title, message, options) {
-
+'
   return { type: 'info', title, message, ...options };
-}
-'"`
+}'"`
+'"`'"`

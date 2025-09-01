@@ -1,6 +1,6 @@
-import { useEffect, useState, useCallback } from 'react'; // Added useCallback
-import { supabase } from '@/integrations/supabase/client';
-import { useAuth } from '@/hooks/useAuth';
+import { useEffect, useState, useCallback } from 'react'; // Added useCallback'
+import { supabase } from '@/integrations/supabase/client';'
+import { useAuth } from '@/hooks/useAuth';'
 import type { PointsLedgerEntry } from '@/types/points';
 
 export function usePoints() {
@@ -11,6 +11,7 @@ export function usePoints() {
 
   const fetchLedger = useCallback(async () => { // Wrapped in useCallback
     if (!user?.id) {
+
       setLedger([]);
       setBalance(0);
       setLoading(false);
@@ -18,18 +19,20 @@ export function usePoints() {
     }
 
     setLoading(true);
-    const { data, error } = await supabase
-      .from('points_ledger')
-      .select('*')
-      .eq('user_id', user.id)
+    const { data, error } = await supabase'
+      .from('points_ledger')'
+      .select('*')'
+      .eq('user_id', user.id)'
       .order('created_at', { ascending: false });
 
     if (!error && data) {
+
       const entries = data as PointsLedgerEntry[];
       setLedger(entries);
       const total = entries.reduce((sum, e) => sum + e.delta, 0);
       setBalance(total);
     } else if (error) {
+
       console.error("Error fetching ledger:", error);
       setLedger([]); // Clear ledger on error
       setBalance(0);  // Clear balance on error
@@ -45,3 +48,4 @@ export function usePoints() {
 
   return { ledger, balance, loading, fetchLedger };
 }
+'"

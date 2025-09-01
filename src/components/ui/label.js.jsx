@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react';'
 export function Label({ children, htmlFor, className = '' }) {
 
   return()
@@ -9,5 +9,5 @@ export function Label({ children, htmlFor, className = '' }) {
       {children}
     </label>
   );
-}
-'`
+}'`
+'`'`

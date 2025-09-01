@@ -1,19 +1,20 @@
 import React from 'react.ts';
 export class TestingSystem {
   static async testUserInteraction()
-    element: HTMLElement,
+    element: HTMLElement,'
     action: 'click' | 'type' | 'hover'
   ) {
 
     switch (action) {
-
+'
       case 'click':
         element.click();
-        break;
+        break;'
       case 'type': // Handle typing
-        break;
+        break;'
       case 'hover': // Handle hover
         break;
     }
   }
 }
+'

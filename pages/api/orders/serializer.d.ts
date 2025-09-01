@@ -8,9 +8,10 @@ export interface OrderRow {
     tracking_status?: string;
     tracking_events?: any[];
     items?: any[];
-    shipping_address?: any;
+    shipping_address?: unknown;
 }
 export declare function serializeOrder(row: OrderRow): {
+
     orderId: string;
     date: string;
     total: number;
@@ -20,9 +21,10 @@ export declare function serializeOrder(row: OrderRow): {
     trackingStatus: string;
     trackingEvents: any[];
     items: any[];
-    shippingAddress: any;
+    shippingAddress: unknown;
 };
 export declare function serializeOrders(rows: OrderRow[]): {
+
     orderId: string;
     date: string;
     total: number;
@@ -32,5 +34,5 @@ export declare function serializeOrders(rows: OrderRow[]): {
     trackingStatus: string;
     trackingEvents: any[];
     items: any[];
-    shippingAddress: any;
+    shippingAddress: unknown;
 }[];

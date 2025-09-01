@@ -4,7 +4,6 @@ export default FuturisticAnimatedBackground;
 
   
   useEffect ( () => {
-    
     if (!canvas) return;
 
     
@@ -16,21 +15,15 @@ export default FuturisticAnimatedBackground;
       canvas.height = window.innerHeight};
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
-
-    // Add enhanced grid background'
-<<<<<<< HEAD
-    
-    
-    if (gridCtx) {
-=======
-    const gridCanvas = document.createElement('canvas');'
+'
+    // Add enhanced grid background''
+    const gridCanvas = document.createElement('canvas');''
     const gridCtx = gridCanvas.getContext('2d');    if (gridCtx) {
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       gridCanvas.width = canvas.width;
       gridCanvas.height = canvas.height;
-      
-      // Draw enhanced grid'
+      '
+      // Draw enhanced grid''
       gridCtx.strokeStyle = 'rgba(6, 182, 212, 0.1);
       gridCtx.lineWidth = 1;
       
@@ -84,8 +77,8 @@ export default FuturisticAnimatedBackground;
 
     // Update and draw particles
     const animate = (...args: unknown[]): unknown => {;      time += 0.01;
-
-      // Clear canvas with fade effect'
+'
+      // Clear canvas with fade effect''
       ctx.fillStyle = 'rgba(2, 6, 23, 0.1);
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -97,7 +90,6 @@ export default FuturisticAnimatedBackground;
       // Update and draw particles
       for (let i = particles.length - 1; i >= 0; i--) {
 
-        
         // Update position
         particle.x += particle.vx;
         particle.y += particle.vy;
@@ -127,8 +119,8 @@ export default FuturisticAnimatedBackground;
         ctx.beginPath () ;
         ctx.arc (particle.x, particle.y, size, 0, Math.PI * 2) ;
         ctx.fill () ;
-
-      // Draw grid pattern'
+'
+      // Draw grid pattern''
       ctx.strokeStyle = 'rgba(56, 189, 248, 0.1);
       ctx.lineWidth = 1;
       ctx.globalAlpha = 0.3;
@@ -152,7 +144,7 @@ export default FuturisticAnimatedBackground;
         ctx.stroke();
 
       // Draw floating geometric shapes
-      ctx.globalAlpha = 0.1;
+      ctx.globalAlpha = 0.1;'
       ctx.strokeStyle = 'rgba(168, 85, 247, 0.5);
       ctx.lineWidth = 2;
 
@@ -172,27 +164,21 @@ export default FuturisticAnimatedBackground;
       ctx.restore () ;
 
       // Floating circle
-      
-<<<<<<< HEAD
-
-      ctx.strokeStyle = 'rgba(56, 189, 248, 0.5);
-=======
+      '
 '      ctx.strokeStyle = 'rgba(56, 189, 248, 0.5)';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ctx.beginPath();
       ctx.arc(circleX, circleY, circleSize, 0, Math.PI * 2);
       ctx.stroke();
 
       // Reset global alpha
       ctx.globalAlpha = 1;
-
-      // Draw energy waves'
+'
+      // Draw energy waves''
       ctx.strokeStyle = 'rgba(56, 189, 248, 0.2);
       ctx.lineWidth = 3;
 
       for (let i = 0; i < 3; i++) {
 
-        
         ctx.beginPath () ;
         ctx.moveTo (waveOffset - 100, waveY) ;
         ctx.lineTo (waveOffset, waveY + 20) ;
@@ -203,7 +189,7 @@ export default FuturisticAnimatedBackground;
     animate () ;
 
     return () => {
-
+'
       window.removeEventListener('resize', resizeCanvas);
       cancelAnimationFrame(animationId)}}, []) ;
   return()
@@ -211,12 +197,12 @@ export default FuturisticAnimatedBackground;
       ref = {canvasRef}
       className="fixed inset - 0 w - full h - full pointer - events - none z - 0"
       style = {
-
+'
   { background: 'radial-gradient(1200px 600px at 10% -10%, rgba(56,189,248,0.05), transparent 60%), radial-gradient(900px 500px at 110% 10%, rgba(168,85,247,0.03),;
   ;
   transparent 60%);
 ;
 }};
     />;) };
-
-export default FuturisticAnimatedBackground}}}}}}'"`
+'"`
+export default FuturisticAnimatedBackground}}}}}}'"`'"`

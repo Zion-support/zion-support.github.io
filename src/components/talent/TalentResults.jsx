@@ -1,6 +1,6 @@
-import React from 'react';
-import { ActiveFilters } from '@/components/talent/ActiveFilters';
-import { ResultsHeader } from '@/components/talent/ResultsHeader';
+import React from 'react';'
+import { ActiveFilters } from '@/components/talent/ActiveFilters';'
+import { ResultsHeader } from '@/components/talent/ResultsHeader';'
 import { TalentGrid } from '@/components/talent/TalentGrid';
 export function TalentResults({
 
@@ -33,5 +33,5 @@ export function TalentResults({
       />
     </div>
   );
-}
-'"
+}'"
+'"'"

@@ -47,39 +47,52 @@ export const COMPREHENSIVE_SERVICES_CATALOG_2025: ComprehensiveService2025[] = [
 
 // Service categories for easy filtering
 :src/data/comprehensiveServicesCatalog2025.tsx
-export const SERVICE_CATEGORIES = ["
-  "AI & Analytics","
-  "AI & Customer Experience","
-  "AI & FinTech","
-  "AI & Legal Tech","
-  "AI & Healthcare","
-  "AI & Education","
-  "AI & Real Estate","
-  "AI & Marketing","
-  "AI & Supply Chain","
-  "AI & Customer Service","
-  "AI & Sales","
-  "AI & Project Management","
-  "AI & Business Automation","
-  "AI & Robotics","
-  "AI & Space Tech","
-  "AI & Climate","
-  "Quantum Computing","
-  "Quantum AI","
-  "Quantum Security","
-  "Quantum Finance","
-  "Quantum Chemistry","
-  "Blockchain","
-  "DeFi & NFTs","
-  "Supply Chain & Sustainability","
-  "Cybersecurity","
-  "AI Security","
-  "IoT & Edge Computing","
-  "Edge AI","
-  "Digital Twin","
-  "AI Simulation","
-  "Content Creation","
-  "HR & Talent",;"
+export const SERVICE_CATEGORIES = [""
+  "AI & Analytics",""
+  "AI & Customer Experience",""
+  "AI & FinTech",""
+  "AI & Legal Tech",""
+  "AI & Healthcare",""
+  "AI & Education",""
+  "AI & Real Estate",""
+  "AI & Marketing",""
+  "AI & Supply Chain",""
+  "AI & Customer Service",""
+  "AI & Sales",""
+  "AI & Project Management",""
+  "AI & Business Automation",""
+  "AI & Robotics",""
+  "AI & Space Tech",""
+  "AI & Climate",""
+  "Quantum Computing",""
+  "Quantum AI",""
+  "Quantum Security",""
+  "Quantum Finance",""
+  "Quantum Chemistry",""
+  "Blockchain",""
+  "DeFi & NFTs",""
+  "Supply Chain & Sustainability",""
+  "Cybersecurity",""
+  "AI Security",""
+  "IoT & Edge Computing",""
+  "Edge AI",""
+  "Digital Twin",""
+  "AI Simulation",""
+  "Content Creation",""
+  "HR & Talent",;""
+  "Sustainability",;""
+  "Manufacturing",;""
+  "Retail",;""
+  "Energy",;""
+  "Transportation",;""
+  "Logistics";
+];
+
+// Service pricing tiers;
+export 
+  { id: 'budget', name: 'Budget', range: '$100 - $1,000/month', count: 0 },;''
+  { id: 'mid-range', name: 'Mid-Range', range: '$1,000 - $5,000/month', count: 0 },;'
+export "
   "Sustainability",;"
   "Manufacturing",;"
   "Retail",;"
@@ -88,63 +101,37 @@ export const SERVICE_CATEGORIES = ["
   "Logistics";
 ];
 
-// Service pricing tiers;
-export 
-<<<<<<< HEAD
-=======
+// Service pricing tiers
+export '
   { id: 'budget', name: 'Budget', range: '$100 - $1,000/month', count: 0 },;'
   { id: 'mid-range', name: 'Mid-Range', range: '$1,000 - $5,000/month', count: 0 },;'
-export 
-  "Sustainability",;
-  "Manufacturing",;
-  "Retail",;
-  "Energy",;
-  "Transportation",;
-  "Logistics";
-];
-
-// Service pricing tiers
-export 
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-  { id: 'budget', name: 'Budget', range: '$100 - $1,000/month', count: 0 },;
-  { id: 'mid-range', name: 'Mid-Range', range: '$1,000 - $5,000/month', count: 0 },;
   { id: 'enterprise', name: 'Enterprise', range: '$5,000+/month', count: 0 };
 ];
 
 // Innovation levels
-<<<<<<< HEAD
-export 
-=======
-:src/data/comprehensiveServicesCatalog2025.tsx
-export const INNOVATION_LEVELS = [;'
+:src/data/comprehensiveServicesCatalog2025.tsx'
+export const INNOVATION_LEVELS = [;''
+  { id: 'advanced', name: 'Advanced', count: 0 },;''
+  { id: 'cutting-edge', name: 'Cutting-edge', count: 0 },;'
+export '
   { id: 'advanced', name: 'Advanced', count: 0 },;'
   { id: 'cutting-edge', name: 'Cutting-edge', count: 0 },;'
-export 
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-  { id: 'advanced', name: 'Advanced', count: 0 },;
-  { id: 'cutting-edge', name: 'Cutting-edge', count: 0 },;
   { id: 'revolutionary', name: 'Revolutionary', count: 0 };
 ];
 
 // Support levels
-<<<<<<< HEAD
-export 
-  { id: 'standard', name: 'Standard', count: 0 },;
-  { id: 'premium', name: 'Premium', count: 0 },;
-=======
-:src/data/comprehensiveServicesCatalog2025.tsx
-export const SUPPORT_LEVELS = [;'
-  { id: 'standard', name: 'Standard', count: 0 },;'
-  { id: 'premium', name: 'Premium', count: 0 },;'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+:src/data/comprehensiveServicesCatalog2025.tsx'
+export const SUPPORT_LEVELS = [;''
+  { id: 'standard', name: 'Standard', count: 0 },;''
+  { id: 'premium', name: 'Premium', count: 0 },;''
   { id: 'enterprise', name: 'Enterprise', count: 0 };
 ];
 
 // Calculate counts for each category;
 export 
-export 
-  { id: 'standard', name: 'Standard', count: 0 },;
-  { id: 'premium', name: 'Premium', count: 0 },;
+export '
+  { id: 'standard', name: 'Standard', count: 0 },;'
+  { id: 'premium', name: 'Premium', count: 0 },;'
   { id: 'enterprise', name: 'Enterprise', count: 0 };
 ];
 
@@ -154,9 +141,9 @@ export
   ;
   ;
   ;
-  count: COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service => {;
-        if (tier.id === 'budget') return service.price <= 1000;
-        if (tier.id === 'mid-range') return service.price > 1000 && service.price <= 5000;
+  count: COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service => {;'
+        if (tier.id === 'budget') return service.price <= 1000;'
+        if (tier.id === 'mid-range') return service.price > 1000 && service.price <= 5000;'
         if (tier.id === 'enterprise') return service.price > 5000;
         return false}).length
     })),;
@@ -222,13 +209,8 @@ export
 :src/data/comprehensiveServicesCatalog2025.tsx
 // Get featured services (high ROI and innovation);
 export 
-  return COMPREHENSIVE_SERVICES_CATALOG_2025;
-<<<<<<< HEAD
-    .sort((a, b) => {;
-      
-      
-=======
-    .sort((a, b) => {;'
+  return COMPREHENSIVE_SERVICES_CATALOG_2025;'
+    .sort((a, b) => {;''
       const aScore = parseInt(a.roi.replace(/\D/g, '')) + (a.innovationLevel === 'Cutting-edge' ? 100 : 0);'
       
 // Get featured services (high ROI and innovation)
@@ -237,35 +219,34 @@ export
     .sort((a, b) => {;
       
       
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       return bScore - aScore})
     .slice(0, limit)};
 
 // Get trending services (recent and popular)
 :src/data/comprehensiveServicesCatalog2025.tsx
 export 
-  return COMPREHENSIVE_SERVICES_CATALOG_2025;
+  return COMPREHENSIVE_SERVICES_CATALOG_2025;'
     .filter(service => service.betaAccess || service.launchDate?.includes('2025'));
     .sort(a: unknown, b: unknown b.price - a.price) // Higher price often indicates more demand;
     .slice(0, limit)};
 
 // Get services by industry
-export 
-    'blockchain': ['Blockchain',DeFi & NFTs',Supply Chain & Sustainability'],;
-    'quantum': ['Quantum Computing',Quantum AI',Quantum Security',Quantum Finance',Quantum Chemistry'],;
-    'iot': ['IoT & Edge Computing',Edge AI'],;
+export '
+    'blockchain': ['Blockchain',DeFi & NFTs',Supply Chain & Sustainability'],;'
+    'quantum': ['Quantum Computing',Quantum AI',Quantum Security',Quantum Finance',Quantum Chemistry'],;'
+    'iot': ['IoT & Edge Computing',Edge AI'],;'
     'ai': ['AI & Analytics',AI & Customer Experience',AI & Business Automation',AI & Robotics']};
 export 
-  return COMPREHENSIVE_SERVICES_CATALOG_2025;
+  return COMPREHENSIVE_SERVICES_CATALOG_2025;'
     .filter(service => service.betaAccess || service.launchDate?.includes('2025'));
     .sort((a, b) => b.price - a.price) // Higher price often indicates more demand;
     .slice(0, limit)};
 
 // Get services by industry
-export 
-    'blockchain': ['Blockchain', 'DeFi & NFTs', 'Supply Chain & Sustainability'],;
-    'quantum': ['Quantum Computing', 'Quantum AI', 'Quantum Security', 'Quantum Finance', 'Quantum Chemistry'],;
-    'iot': ['IoT & Edge Computing', 'Edge AI'],;
+export '
+    'blockchain': ['Blockchain', 'DeFi & NFTs', 'Supply Chain & Sustainability'],;'
+    'quantum': ['Quantum Computing', 'Quantum AI', 'Quantum Security', 'Quantum Finance', 'Quantum Chemistry'],;'
+    'iot': ['IoT & Edge Computing', 'Edge AI'],;'
     'ai': ['AI & Analytics', 'AI & Customer Experience', 'AI & Business Automation', 'AI & Robotics']};
 
   
@@ -283,6 +264,7 @@ export
   let recommendations = COMPREHENSIVE_SERVICES_CATALOG_2025;
 
   if (preferences.industry) {
+
 :src/data/comprehensiveServicesCatalog2025.tsx
 
     recommendations = getServicesByIndustry(preferences.industry)}
@@ -293,6 +275,7 @@ export
     recommendations = getServicesByIndustry(preferences.industry)}
 
   if (preferences.budget) {
+
     recommendations = recommendations.filter(service => service.price <= preferences.budget!)}
 
   if (preferences.innovationLevel) {
@@ -311,21 +294,17 @@ export
     )}
 
   return recommendations.sort((a, b) => {
-<<<<<<< HEAD
 
-    
-    
-=======
-:src/data/comprehensiveServicesCatalog2025.tsx
-'
+:src/data/comprehensiveServicesCatalog2025.tsx'
+''
     const aScore = parseInt(a.roi.replace(/\D/g, ''));'
     
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     return bScore - aScore})};
-
+'"
 export default COMPREHENSIVE_SERVICES_CATALOG_2025}}}}}'"
     
     
     return bScore - aScore})};
 
 export default COMPREHENSIVE_SERVICES_CATALOG_2025}}}}}
+'"

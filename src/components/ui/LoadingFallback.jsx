@@ -1,10 +1,11 @@
-import { motion } from "framer-motion";"
+import { motion } from "framer-motion";""
 import { Loader2 export function LoadingFallback({ message = "Loading...", size = "md", className = "" }) {
 
     const sizeClasses = {
 "
-  sm: "w-6 h-6","
-        md: "w-8 h-8","
+""
+  sm: "w-6 h-6",""
+        md: "w-8 h-8",""
   lg: "w-12 h-12"
     
 
@@ -16,8 +17,9 @@ import { Loader2 export function LoadingFallback({ message = "Loading...", size 
 };
     const textSizes = {
 "
-  sm: "text-sm","
-        md: "text-base","
+""
+  sm: "text-sm",""
+        md: "text-base",""
   lg: "text-lg"
     
 
@@ -29,28 +31,28 @@ import { Loader2 export function LoadingFallback({ message = "Loading...", size 
 };
     return (<div className={`flex flex-col items-center justify-center p-8 space-y-4 ${className}`}>
       <motion.div animate={{ rotate: 360 }} transition = {
-
-  { duration: 1, repeat: Infinity,"
+"
+  { duration: 1, repeat: Infinity,""
   ease: "linear" 
 
 
 
 
 
-
-}}>`
-        <Loader2 className={`${sizeClasses[size]} text-zion-cyan`}/>
-      </motion.div>
 `
+}}>``
+        <Loader2 className={`${sizeClasses[size]} text-zion-cyan`}/>
+      </motion.div>`
+``
       <motion.p className={`${textSizes[size]} text-zion-slate-light font-medium`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }}>
         {message}
       </motion.p>
-
-      {/* Animated dots */}"
+"
+      {/* Animated dots */}""
       <motion.div className="flex space-x-1">
         {[0, 1,
-  2].map((index) => (<motion.div key={index
-"
+  2].map((index) => (<motion.div key={index"
+""
 } className="w-2 h-2 bg-zion-cyan rounded-full" animate = {
 
   {
@@ -84,12 +86,13 @@ import { Loader2 export function LoadingFallback({ message = "Loading...", size 
     </div>)};
 export function PageLoadingFallback() {
 "
-    return (<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple flex items-center justify-center">"
-      <div className="text-center">"
-        <LoadingFallback message="Loading Zion Tech Group..." size="lg"/>"
+""
+    return (<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple flex items-center justify-center">""
+      <div className="text-center">""
+        <LoadingFallback message="Loading Zion Tech Group..." size="lg"/>""
         <motion.div className="mt-8 text-zion-slate-light text-sm" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1 }}>
           Connecting to the future of tech...
         </motion.div>
       </div>
-    </div>)}
-"`
+    </div>)}"`
+"`"`

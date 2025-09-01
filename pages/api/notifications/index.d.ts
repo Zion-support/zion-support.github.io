@@ -1,9 +1,10 @@
 interface Req {
     method?: string;
     query?: {
+
         userId?: string;
     };
-    body?: any;
+    body?: unknown;
 }
 interface JsonRes {
     status: (code: number) => JsonRes;

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';'
 const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) => {
 
     const canvasRef = useRef(null);
@@ -6,7 +6,7 @@ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) =
     useEffect(() => {
         const canvas = canvasRef.current;
         if (!canvas)
-            return;
+            return;'
         const ctx = canvas.getContext('2d');
         if (!ctx)
             return;
@@ -14,10 +14,10 @@ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) =
         canvas.height = window.innerHeight;
         const particles = [];
         const colors = {
-
-  quantum['#00ffff',#ff00ff',#ffff00',#00ff00'],;
-            neon['#ff0080',#8000ff',#00ffff',#ffff00'],;
-            holographic['#ff6b6b',#4ecdc4',#45b7d1',;
+'
+  quantum['#00ffff',#ff00ff',#ffff00',#00ff00'],;'
+            neon['#ff0080',#8000ff',#00ffff',#ffff00'],;'
+            holographic['#ff6b6b',#4ecdc4',#45b7d1',;'
   '#96ceb4']
         
 
@@ -54,7 +54,7 @@ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) =
                     particle.y = 0;
                 // Draw particle
                 ctx.beginPath();
-                ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+                ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);'
                 ctx.fillStyle = `${particle.color}${Math.floor(particle.opacity * 255).toString(16).padStart(2,0')}`;
                 ctx.fill();
                 // Draw connections
@@ -67,32 +67,32 @@ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) =
                     if (distance < 150) {
 
                         ctx.beginPath();
-                        ctx.moveTo(particle.x, particle.y);
-                        ctx.lineTo(otherParticle.x, otherParticle.y);'`
+                        ctx.moveTo(particle.x, particle.y);'`
+                        ctx.lineTo(otherParticle.x, otherParticle.y);'`'`
                         ctx.strokeStyle = `${particle.color}${Math.floor((1 - distance / 150) * 0.3 * 255).toString(16).padStart(2,0')}`;
                         ctx.lineWidth = 1;
                         ctx.stroke()}
-                })});
-            // Add quantum effects'
+                })});'
+            // Add quantum effects''
             if (theme === 'quantum') {
 
-                ctx.save();
+                ctx.save();'
                 ctx.globalCompositeOperation = 'screen';
                 // Quantum wave effect
                 for (let i = 0; i < 5; i++) {
 
                     const time = Date.now() * 0.001;
                     const wave = Math.sin(time + i) * 100;
-                    ctx.beginPath();
-                    ctx.arc(canvas.width / 2, canvas.height / 2, 100 + wave, 0, Math.PI * 2);`
+                    ctx.beginPath();`
+                    ctx.arc(canvas.width / 2, canvas.height / 2, 100 + wave, 0, Math.PI * 2);``
                     ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 * intensity})`;
                     ctx.lineWidth = 2;
                     ctx.stroke()}
-                ctx.restore()}
-            // Add neon effects'
+                ctx.restore()}'
+            // Add neon effects''
             if (theme === 'neon') {
 
-                ctx.save();
+                ctx.save();'
                 ctx.shadowColor = '#ff0080';
                 ctx.shadowBlur = 20;
                 particles.forEach(particle => {
@@ -105,27 +105,27 @@ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) =
                         ctx.lineWidth = 1;
                         ctx.stroke()}
                 });
-                ctx.restore()}
-            // Add holographic effects'
+                ctx.restore()}'
+            // Add holographic effects''
             if (theme === 'holographic') {
 
-                ctx.save();
+                ctx.save();'
                 ctx.globalCompositeOperation = 'overlay';
                 // Holographic grid
                 const gridSize = 50;
                 for (let x = 0; x < canvas.width; x += gridSize) {
 
                     ctx.beginPath();
-                    ctx.moveTo(x, 0);
-                    ctx.lineTo(x, canvas.height);`
+                    ctx.moveTo(x, 0);`
+                    ctx.lineTo(x, canvas.height);``
                     ctx.strokeStyle = `rgba(255, 255, 255, ${0.1 * intensity})`;
                     ctx.lineWidth = 0.5;
                     ctx.stroke()}
                 for (let y = 0; y < canvas.height; y += gridSize) {
 
                     ctx.beginPath();
-                    ctx.moveTo(0, y);
-                    ctx.lineTo(canvas.width, y);`
+                    ctx.moveTo(0, y);`
+                    ctx.lineTo(canvas.width, y);``
                     ctx.strokeStyle = `rgba(255, 255, 255, ${0.1 * intensity})`;
                     ctx.lineWidth = 0.5;
                     ctx.stroke()}
@@ -134,22 +134,22 @@ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) =
         animate();
         const handleResize = () => {
             canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight};
+            canvas.height = window.innerHeight};'
         window.addEventListener('resize', handleResize);
         return () => {
             if (animationRef.current) {
 
-                cancelAnimationFrame(animationRef.current)}
+                cancelAnimationFrame(animationRef.current)}'
             window.removeEventListener('resize', handleResize)}}, [intensity, theme]);
     return (<canvas ref={canvasRef} className="fixed inset-0 pointer-events-none z-0" style = {
 
   {
 
-            opacity: intensity,
+            opacity: intensity,'
   filter: theme === 'quantum' ? 'blur(0.5px)' : 'none'
         
 
 }}/>)};
 export { UltraFuturisticBackground2034 };
-export default UltraFuturisticBackground2034;
-'"`
+export default UltraFuturisticBackground2034;'"`
+'"`'"`

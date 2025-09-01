@@ -1,11 +1,13 @@
 
 
 describe ('ServicesGrid', () => {
+'
   it ('renders without crashing', () => {
-    render (<ServicesGrid  />) ;
+    render (<ServicesGrid  />) ;'
     expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
-
+'
   it ('displays expected content', () => {
     render (<ServicesGrid  />) ;
     // Add specific test assertions based on component content
   }) }) ;
+'

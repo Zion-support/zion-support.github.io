@@ -1,31 +1,16 @@
-<<<<<<< HEAD
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App.tsx';
 import './index.css';
 
-function renderApp(): void {
-  
-  if (!rootElement) return;
-
+const rootElement = document.getElementById('root');
+if (rootElement) {
   ReactDOM.createRoot(rootElement).render(
     <React.StrictMode>
       <BrowserRouter>
-        <HelmetProvider>
-          <ErrorBoundary>
-            <App  />
-          </ErrorBoundary>
-        </HelmetProvider>
+        <App />
       </BrowserRouter>
     </React.StrictMode>
-  )}
-
-renderApp();
-=======
-
-
-root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <App  />
-    </BrowserRouter>
-  </React.StrictMode>
-);
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+  );
+}

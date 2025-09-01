@@ -39,13 +39,11 @@ export
 
 :src/hooks/useAccessibility.tsx
     
-=======
-'
-  highContrast: window.matchMedia('(prefers-contrast: high)'),'
-      reducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)'),'
+''
+  highContrast: window.matchMedia('(prefers-contrast: high)'),''
+      reducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)'),''
       largeText: window.matchMedia('(prefers-reduced-motion: reduce)'),;
     
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   ;
@@ -59,33 +57,33 @@ export
       isLargeText: false, // Would need to check font size preferences
       isScreenReader: false // Would need to detect screen reader usage
     }}, []);
-
-  // Keyboard navigation'
+'
+  // Keyboard navigation''
           navigateFocus('forward', currentElement)}
         break;
-
+'
       case 'Escape':;
         // Close modals, dropdowns, etc.
         closeActiveElements();
         break;
-
-      case 'Enter':;
-      case ' ':;
-        // Activate buttons, links, etc.'
+'
+      case 'Enter':;'
+      case ' ':;'
+        // Activate buttons, links, etc.''
         if (currentElement.tagName = == 'BUTTON' || currentElement.tagName === 'A') {;
           event.preventDefault();
           currentElement.click()}
         break;
-
-      case 'ArrowUp':;
-      case 'ArrowDown':;
-        // Navigate through lists, dropdowns, etc.'
+'
+      case 'ArrowUp':;'
+      case 'ArrowDown':;'
+        // Navigate through lists, dropdowns, etc.''
         navigateVertical(key === 'ArrowUp' ? 'up' : 'down', currentElement);
         break;
-
-      case 'ArrowLeft':;
-      case 'ArrowRight':;
-        // Navigate through horizontal lists, tabs, etc.'
+'
+      case 'ArrowLeft':;'
+      case 'ArrowRight':;'
+        // Navigate through horizontal lists, tabs, etc.''
         navigateHorizontal(key === 'ArrowLeft' ? 'left' : 'right', currentElement);
         break}
   }, [enableKeyboardNavigation]);
@@ -95,13 +93,13 @@ export
 ;
     // Focus the new element;
     element.focus();
-
-    // Add focus indicator'
+'
+    // Add focus indicator''
     element.classList.add('focus-visible');
 
     // Remove focus indicator after animation
     setTimeout(() => {
-
+'
       element.classList.remove('focus-visible')}, 2000)}, [enableFocusManagement]);
 
   // Focus trap for modals
@@ -120,52 +118,52 @@ export
 
   // Get all focusable elements
 :src/hooks/useAccessibility.tsx
-  
-      'input:not([disabled]),;
-      'select:not([disabled]),;
-      'textarea:not([disabled]),;
-      'a[href]',;
-      '[tabindex]:not([tabindex="-1"]),;'"
-      '[contenteditable="true"]';
-    ].join(',);
-=======
-      'button:not([disabled])',;'
+  '
+      'input:not([disabled]),;'
+      'select:not([disabled]),;'
+      'textarea:not([disabled]),;'
+      'a[href]',;'
+      '[tabindex]:not([tabindex="-1"]),;'"'"
+      '[contenteditable="true"]';'
+    ].join(',);'
+      'button:not([disabled])',;''
+      'input:not([disabled])',;''
+      'select:not([disabled])',;''
+      'textarea:not([disabled])',;''
+      'a[href]',;''"
+      '[tabindex]:not([tabindex="-1"])',;'"'"
+      '[contenteditable="true"]';'
+  '
       'input:not([disabled])',;'
       'select:not([disabled])',;'
       'textarea:not([disabled])',;'
-      'a[href]',;'
+      'a[href]',;'"
       '[tabindex]:not([tabindex="-1"])',;'"
       '[contenteditable="true"]';'
-  
-      'input:not([disabled])',;
-      'select:not([disabled])',;
-      'textarea:not([disabled])',;
-      'a[href]',;
-      '[tabindex]:not([tabindex="-1"])',;
-      '[contenteditable="true"]';
     ].join(', ');
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     return Array.from(container.querySelectorAll(selector)) as HTMLElement[]}, []);
-
-  // Navigate focus'
+'
+  // Navigate focus''
     if (direction = == 'forward') {;
 :src/hooks/useAccessibility.tsx
       nextIndex = currentIndex < focusableElements.length - 1 ? currentIndex + 1 : 0} else {
 
       nextIndex = currentIndex > 0 ? currentIndex - 1 : focusableElements.length - 1}
       nextIndex = currentIndex < focusableElements.length - 1 ? currentIndex + 1 : 0} else {
+
       nextIndex = currentIndex > 0 ? currentIndex - 1 : focusableElements.length - 1}
 
     manageFocus(focusableElements[nextIndex])}, [getFocusableElements, manageFocus]);
-
-  // Vertical navigation'
+'
+  // Vertical navigation''
     if (direction = == 'up') {;
 :src/hooks/useAccessibility.tsx
       nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1} else {
 
       nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0}
       nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1} else {
+
       nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0}
 
     
@@ -173,14 +171,15 @@ export
 
       manageFocus(nextElement)}
   }, [manageFocus]);
-
-  // Horizontal navigation'
+'
+  // Horizontal navigation''
     if (direction = == 'left') {;
 :src/hooks/useAccessibility.tsx
       nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1} else {
 
       nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0}
       nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1} else {
+
       nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0}
 
     
@@ -194,39 +193,32 @@ export
   
     // Close modals, dropdowns, etc.;
     
-activeElements.forEach(element:  > {;
+activeElements.forEach(element:  > {;'
       element.classList.remove('active')});
   
     // Close modals, dropdowns, etc.;
     
-activeElements.forEach(element:  > {;
+activeElements.forEach(element:  > {;'
       element.classList.remove('active')});
 
     // Remove focus trap
     removeFocusTrap()}, [removeFocusTrap]);
 
-:src/hooks/useAccessibility.tsx
+:src/hooks/useAccessibility.tsx'
   // Screen reader announcements'
   
-    if (!enableScreenReaderSupport) return;
-<<<<<<< HEAD
-
-    
-    announcement.setAttribute('aria-live', priority);
-    announcement.setAttribute('aria-atomic',true');
-=======
-'
-    const announcement = document.createElement('div');'
-    announcement.setAttribute('aria-live', priority);'
+    if (!enableScreenReaderSupport) return;'
+''
+    const announcement = document.createElement('div');''
+    announcement.setAttribute('aria-live', priority);''
     announcement.setAttribute('aria-atomic', 'true');'
   // Screen reader announcements
   
     if (!enableScreenReaderSupport) return;
 
-    
-    announcement.setAttribute('aria-live', priority);
-    announcement.setAttribute('aria-atomic', 'true');
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+    '
+    announcement.setAttribute('aria-live', priority);'
+    announcement.setAttribute('aria-atomic', 'true');'
     announcement.className = 'sr-only';
     announcement.textContent = message;
 
@@ -234,95 +226,92 @@ activeElements.forEach(element:  > {;
 
     // Remove after announcement
     setTimeout(: unknown {
+
       document.body.removeChild(announcement)}, 1000)}, [enableScreenReaderSupport]);
 
   // High contrast mode
 :src/hooks/useAccessibility.tsx
   
     if (!enableHighContrast) return;
-
+'
     document.documentElement.classList.toggle('high-contrast');
-    
+    '
     // Announce change to screen reader'
   
     if (!enableHighContrast) return;
-
+'
     document.documentElement.classList.toggle('high-contrast');
     
-    // Announce change to screen reader
+    // Announce change to screen reader'
     announceToScreenReader(`High contrast mode ${isEnabled ? 'enabled' : 'disabled'}`);
-
-    // Save preference'
+'
+    // Save preference''
     localStorage.setItem('highContrast', isEnabled.toString())}, [enableHighContrast, announceToScreenReader]);
 
   // Reduced motion mode
 :src/hooks/useAccessibility.tsx
   
     if (!enableReducedMotion) return;
-
+'
     document.documentElement.classList.toggle('reduced-motion');
-    
+    '`
     // Announce change to screen reader'`
   
     if (!enableReducedMotion) return;
-
+'
     document.documentElement.classList.toggle('reduced-motion');
     
-    // Announce change to screen reader
+    // Announce change to screen reader'`
     announceToScreenReader(`Reduced motion mode ${isEnabled ? 'enabled' : 'disabled'}`);
-
-    // Save preference'
+'
+    // Save preference''
     localStorage.setItem('reducedMotion', isEnabled.toString())}, [enableReducedMotion, announceToScreenReader]);
 
   // Large text mode
 :src/hooks/useAccessibility.tsx
   
     if (!enableLargeText) return;
-
+'
     document.documentElement.classList.toggle('large-text');
-    
+    '`
     // Announce change to screen reader'`
   
     if (!enableLargeText) return;
-
+'
     document.documentElement.classList.toggle('large-text');
     
-    // Announce change to screen reader
+    // Announce change to screen reader'`
     announceToScreenReader(`Large text mode ${isEnabled ? 'enabled' : 'disabled'}`);
-
-    // Save preference'
+'
+    // Save preference''
     localStorage.setItem('largeText', isEnabled.toString())}, [enableLargeText, announceToScreenReader]);
 
   // Initialize accessibility features
   useEffect(() => {
-:src/hooks/useAccessibility.tsx
+:src/hooks/useAccessibility.tsx'
     // Load saved preferences'
     
     
-    
-<<<<<<< HEAD
-
-=======
-'
-    if (highContrast) document.documentElement.classList.add('high-contrast');'
+    '
+''
+    if (highContrast) document.documentElement.classList.add('high-contrast');''
     if (reducedMotion) document.documentElement.classList.add('reduced-motion');'
     // Load saved preferences
     
     
-    
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-    if (highContrast) document.documentElement.classList.add('high-contrast');
-    if (reducedMotion) document.documentElement.classList.add('reduced-motion');
+    '
+    if (highContrast) document.documentElement.classList.add('high-contrast');'
+    if (reducedMotion) document.documentElement.classList.add('reduced-motion');'
     if (largeText) document.documentElement.classList.add('large-text');
 
     // Add keyboard event listener
     if (enableKeyboardNavigation) {
-
+'
       document.addEventListener('keydown', handleKeyboardNavigation)}
 
     // Cleanup
     return () => {
-
+'
       document.removeEventListener('keydown', handleKeyboardNavigation)}}, [enableKeyboardNavigation, handleKeyboardNavigation]);
 
   return {
@@ -339,5 +328,5 @@ activeElements.forEach(element:  > {;
     navigateFocus,
     navigateVertical,
     navigateHorizontal
-  }};
-'"`
+  }};'"`
+'"`'"`

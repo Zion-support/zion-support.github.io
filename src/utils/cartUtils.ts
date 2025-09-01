@@ -41,7 +41,6 @@ export
 export 
   newItems.forEach(newItem => {
 
-    
     if (existingIndex >= 0 && merged[existingIndex]) {
 
       merged[existingIndex].quantity += newItem.quantity} else {
@@ -49,5 +48,5 @@ export
       merged.push(newItem)}
   });
 
-  return merged};
-'`
+  return merged};'
+'`'`

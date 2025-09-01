@@ -1,6 +1,6 @@
-import { Client } from '@elastic/elasticsearch';
-import { generateSearchSuggestions } from '@/data/marketplaceData';
-const cloudId = process.env.ELASTIC_CLOUD_ID || '';
+import { Client } from '@elastic/elasticsearch';'
+import { generateSearchSuggestions } from '@/data/marketplaceData';'
+const cloudId = process.env.ELASTIC_CLOUD_ID || '';'
 const apiKey = process.env.ELASTIC_API_KEY || '';
 function getClient() {
     if (!cloudId || !apiKey)
@@ -8,29 +8,37 @@ function getClient() {
     return new Client({ cloud: { id: cloudId }, auth: { apiKey } });
 }
 export default async function handler(req, res) {
+'
     if (req.method !== 'GET') {
+
         res.status(405).end();
         return;
-    }
+    }'
     const q = req.query?.q?.toString() || '';
     if (!q) {
+
         res.status(200).json([]);
         return;
     }
     const client = getClient();
     if (client) {
+
         try {
             const esRes = await client.search({
+'
                 index: 'listings',
                 suggest: {
+'
                     'item-suggest': {
-                        prefix: q,
+
+                        prefix: q,'
                         completion: { field: 'suggest', size: 5 }
                     }
                 }
-            });
+            });'
             const options = (esRes.suggest?.['item-suggest']?.[0]?.options || []);
             const suggestions = options.map(opt => ({
+
                 text: opt._source.title,
                 type: opt._source.type
             }));
@@ -38,6 +46,7 @@ export default async function handler(req, res) {
             return;
         }
         catch (err) {
+'
             console.error('Elasticsearch suggest error:', err);
         }
     }
@@ -47,3 +56,4 @@ export default async function handler(req, res) {
         .slice(0, 5);
     res.status(200).json(fallback);
 }
+'
