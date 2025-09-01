@@ -1737,6 +1737,102 @@ export default function HomePage({ pageLinks }: HomePageProps) {
             </div>
           </section>
 
+          {/* Advanced Automation Systems */}
+          <section className="mx-auto max-w-7xl px-6 pb-16">
+            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">⚙️ Advanced Automation & Orchestration Systems</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-cyan-400 mb-4 text-center">🧠 AI Content Factory</h3>
+                <ul className="text-white/80 text-sm space-y-2 mb-4">
+                  <li>• Autonomous content generation</li>
+                  <li>• AI-powered research</li>
+                  <li>• Trend analysis</li>
+                  <li>• Content optimization</li>
+                  <li>• Quality assurance</li>
+                </ul>
+                <Link href="/ai-content-factory-report.md" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                  View Report →
+                </Link>
+              </div>
+
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-fuchsia-400 mb-4 text-center">🔧 Self-Healing Systems</h3>
+                <ul className="text-white/80 text-sm space-y-2 mb-4">
+                  <li>• Automated error recovery</li>
+                  <li>• Build failure prevention</li>
+                  <li>• Dependency management</li>
+                  <li>• Performance optimization</li>
+                  <li>• Continuous monitoring</li>
+                </ul>
+                <Link href="/self-healing-orchestrator.cjs" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                  View System →
+                </Link>
+              </div>
+
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-green-400 mb-4 text-center">📊 Intelligent Monitoring</h3>
+                <ul className="text-white/80 text-sm space-y-2 mb-4">
+                  <li>• Real-time analytics</li>
+                  <li>• Predictive maintenance</li>
+                  <li>• Health dashboards</li>
+                  <li>• Performance metrics</li>
+                  <li>• Automated alerts</li>
+                </ul>
+                <Link href="/app-monitoring-report.md" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                  View Report →
+                </Link>
+              </div>
+            </div>
+          </section>
+
+          {/* GitHub Actions & CI/CD */}
+          <section className="mx-auto max-w-7xl px-6 pb-16">
+            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">🚀 GitHub Actions & CI/CD Automation</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-cyan-400 mb-4 text-center">⚡ Smart CI/CD</h3>
+                <ul className="text-white/80 text-sm space-y-2 mb-4">
+                  <li>• Intelligent build orchestration</li>
+                  <li>• Automated testing</li>
+                  <li>• Quality gates</li>
+                  <li>• Performance validation</li>
+                  <li>• Zero-downtime deployment</li>
+                </ul>
+                <Link href="/GITHUB_ACTIONS_IMPROVEMENTS.md" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                  View Guide →
+                </Link>
+              </div>
+
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-fuchsia-400 mb-4 text-center">🔧 Build Recovery</h3>
+                <ul className="text-white/80 text-sm space-y-2 mb-4">
+                  <li>• Automatic failure recovery</li>
+                  <li>• Build optimization</li>
+                  <li>• Dependency resolution</li>
+                  <li>• Performance monitoring</li>
+                  <li>• Health checks</li>
+                </ul>
+                <Link href="/GITHUB_ACTIONS_FIX_SUMMARY.md" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                  View Summary →
+                </Link>
+              </div>
+
+              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                <h3 className="text-xl font-bold text-green-400 mb-4 text-center">📈 Performance Analytics</h3>
+                <ul className="text-white/80 text-sm space-y-2 mb-4">
+                  <li>• Build time optimization</li>
+                  <li>• Resource utilization</li>
+                  <li>• Success rate tracking</li>
+                  <li>• Bottleneck identification</li>
+                  <li>• Continuous improvement</li>
+                </ul>
+                <Link href="/performance-weekly-report.md" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                  View Report →
+                </Link>
+              </div>
+            </div>
+          </section>
+
           {/* Latest Autonomous Content */}
           <section className="mx-auto max-w-7xl px-6 pb-14">
             <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Latest Autonomous Content</h2>
