@@ -1,423 +1,61 @@
 import React, { useState } from 'react';
-export default React.memo (function RequestQuote () {
-import { 
-import { motion } from 'framer - motion';
-import { SEO } from '../components / SEO';
+import { Link } from 'react-router-dom';
+import { ArrowRight, CheckCircle, Star, Target, Lightbulb, Users, Zap, Shield, Brain, Cloud, Cpu, Heart, PenTool } from 'lucide-react';
 
-
-  Calculator, 
-  FileText, 
-  Clock, 
-  CheckCircle, 
-  AlertCircle,
-  Building2,
-  Users,
-  Globe,
-  Shield,
-  Zap,
-  Database,
-  Cloud,
-  Bot,
-  Smartphone,
-  Monitor,
-  Server,
-  Lock,
-  BarChart3,
-  Settings,
-  Palette,
-  Code,
-  Target,
-  TrendingUp,
-  Award,
-  Star,
-  ChevronDown,
-  ChevronUp,
-  Mail,
-  Phone,
-  MapPin,
-  Calendar,
-  DollarSign,
-  Package,
-  Truck,
-  Headphones
-} from 'lucide - react';
-
-  const [formData, setFormData] = useState ({
-    companyName: '',
-    contactName: '',
+export default function RequestQuote() {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
     email: '',
     phone: '',
-    companySize: '',
+    company: '',
     industry: '',
-    projectType: '',
+    serviceInterest: '',
     budget: '',
     timeline: '',
-    description: '',
-    services: [] as string[],
-    urgency: 'medium',
-    preferredContact: 'email'
-  }) ;
+    description: ''
+  });
 
-  const [formStep, setFormStep] = useState (1) ;
-  const [expandedService, setExpandedService] = useState < string | null> (null) ;
-  const [isSubmitting, setSubmitting] = useState (false) ;
-  const [submitted, setSubmitted] = useState (false) ;
+  const [selectedServices, setSelectedServices] = useState<string[]>([]);
 
-  const companySizes = [
-    '1 - 10 employees',
-    '11 - 50 employees',
-    '51 - 200 employees',
-    '201 - 500 employees',
-    '500 + employees'
-  ];
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
 
-  const industries = [
-    'Technology',
-    'Healthcare',
-    'Finance',
-    'Manufacturing',
-    'Retail',
-    'Education',
-    'Real Estate',
-    'Consulting',
-    'Non - profit',
-    'Other'
-  ];
+  const handleServiceToggle = (service: string) => {
+    setSelectedServices(prev => 
+      prev.includes(service) 
+        ? prev.filter(s => s !== service)
+        : [...prev, service]
+    );
+  };
 
-  const projectTypes = [
-    'New Development',
-    'System Upgrade',
-    'Integration',
-    'Consulting',
-    'Support & Maintenance',
-    'Training',
-    'Other'
-  ];
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission
+    console.log('Form submitted:', { ...formData, selectedServices });
+  };
 
-  const budgets = [
-    'Under $10,000',
-    '$10,000 - $25,000',
-    '$25,000 - $50,000',
-    '$50,000 - $100,000',
-    '$100,000 - $250,000',
-    '$250,000+'
-  ];
-
-  const timelines = [
-    'ASAP',
-    '1 - 2 weeks',
-    '1 - 2 months',
-    '3 - 6 months',
-    '6 + months',
-    'Flexible'
-  ];
-
-  const urgencyLevels = [
-    { value: 'low', label: 'Low', description: 'No immediate deadline', color: 'text - green - 400' },
-    { value: 'medium', label: 'Medium', description: 'Standard timeline', color: 'text - yellow - 400' },
-    { value: 'high', label: 'High', description: 'Urgent deadline', color: 'text - orange - 400' },
-    { value: 'critical', label: 'Critical', description: 'Emergency situation', color: 'text - red - 400' }
-  ];
-
-  const contactMethods = [
-    { value: 'email', label: 'Email', icon: Mail, description: 'Best for detailed responses' },
-    { value: 'phone', label: 'Phone Call', icon: Phone, description: 'Best for immediate discussion' },
-    { value: 'video', label: 'Video Call', icon: Users, description: 'Best for complex discussions' }
-  ];
-
-  const services = [
-    {
-      id: 'ai - ml',
-      name: 'AI & Machine Learning',
-      icon: Bot,
-      description: 'Custom AI solutions, ML models, and intelligent automation',
-      features: [
-        'Custom AI model development',
-        'Machine learning pipelines',
-        'Natural language processing',
-        'Computer vision solutions',
-        'Predictive analytics',
-        'AI - powered automation'
-      ],
-      pricing: 'Starting from $25,000',
-      timeline: '4 - 12 weeks',
-      category: 'AI Services'
-    },
-    {
-      id: 'cloud - devops',
-      name: 'Cloud & DevOps',
-      icon: Cloud,
-      description: 'Cloud infrastructure, CI / CD pipelines, and infrastructure automation',
-      features: [
-        'AWS / Azure / GCP setup',
-        'Kubernetes orchestration',
-        'CI / CD pipeline development',
-        'Infrastructure as Code',
-        'Monitoring & logging',
-        'Security & compliance'
-      ],
-      pricing: 'Starting from $15,000',
-      timeline: '2 - 8 weeks',
-      category: 'IT Services'
-    },
-    {
-      id: 'web - development',
-      name: 'Web Development',
-      icon: Monitor,
-      description: 'Modern web applications, e - commerce, and custom web solutions',
-      features: [
-        'React / Next.js applications',
-        'E - commerce platforms',
-        'Custom web portals',
-        'API development',
-        'Performance optimization',
-        'SEO & accessibility'
-      ],
-      pricing: 'Starting from $10,000',
-      timeline: '3 - 10 weeks',
-      category: 'IT Services'
-    },
-    {
-      id: 'mobile - apps',
-      name: 'Mobile Applications',
-      icon: Smartphone,
-      description: 'iOS and Android apps with cross - platform solutions',
-      features: [
-        'Native iOS development',
-        'Native Android development',
-        'React Native apps',
-        'Flutter applications',
-        'App store optimization',
-        'Push notifications'
-      ],
-      pricing: 'Starting from $20,000',
-      timeline: '6 - 16 weeks',
-      category: 'IT Services'
-    },
-    {
-      id: 'data - analytics',
-      name: 'Data & Analytics',
-      icon: BarChart3,
-      description: 'Data warehousing, business intelligence, and advanced analytics',
-      features: [
-        'Data warehouse design',
-        'ETL pipeline development',
-        'Business intelligence dashboards',
-        'Advanced analytics',
-        'Data visualization',
-        'Predictive modeling'
-      ],
-      pricing: 'Starting from $18,000',
-      timeline: '4 - 12 weeks',
-      category: 'AI Services'
-    },
-    {
-      id: 'cybersecurity',
-      name: 'Cybersecurity',
-      icon: Shield,
-      description: 'Security audits, compliance, and threat protection',
-      features: [
-        'Security assessments',
-        'Penetration testing',
-        'Compliance frameworks',
-        'Threat detection',
-        'Incident response',
-        'Security training'
-      ],
-      pricing: 'Starting from $12,000',
-      timeline: '2 - 6 weeks',
-      category: 'Security'
-    },
-    {
-      id: 'micro - saas',
-      name: 'Micro SaaS Solutions',
-      icon: Package,
-      description: 'Custom SaaS applications and business automation tools',
-      features: [
-        'Custom SaaS platforms',
-        'Business process automation',
-        'Workflow management',
-        'User management systems',
-        'Subscription billing',
-        'Analytics & reporting'
-      ],
-      pricing: 'Starting from $30,000',
-      timeline: '8 - 20 weeks',
-      category: 'Micro SaaS'
-    },
-    {
-      id: 'integration',
-      name: 'System Integration',
-      icon: Settings,
-      description: 'API development, third - party integrations, and data synchronization',
-      features: [
-        'API development',
-        'Third - party integrations',
-        'Data synchronization',
-        'Webhook implementation',
-        'Custom connectors',
-        'Integration testing'
-      ],
-      pricing: 'Starting from $15,000',
-      timeline: '3 - 8 weeks',
-      category: 'IT Services'
-    }
+  const popularServices = [
+    { icon: Brain, name: "AI Business Intelligence", description: "Transform data into actionable insights" },
+    { icon: Heart, name: "AI Healthcare Platform", description: "Revolutionize healthcare delivery" },
+    { icon: PenTool, name: "AI Content Creation", description: "Generate content at scale" },
+    { icon: Shield, name: "AI Cybersecurity", description: "Next-generation security protection" },
+    { icon: Cpu, name: "IoT Edge Computing", description: "Real-time data processing" },
+    { icon: Cloud, name: "Cloud DevOps", description: "Accelerate development operations" }
   ];
 
   const benefits = [
-    {
-      icon: Calculator,
-      title: 'Transparent Pricing',
-      description: 'Clear, upfront pricing with no hidden fees'
-    },
-    {
-      icon: Clock,
-      title: 'Fast Response',
-      description: 'Get a detailed quote within 24 - 48 hours'
-    },
-    {
-      icon: FileText,
-      title: 'Detailed Proposals',
-      description: 'Comprehensive project breakdowns and timelines'
-    },
-    {
-      icon: CheckCircle,
-      title: 'Quality Guarantee',
-      description: 'We stand behind our work with satisfaction guarantees'
-    }
+    "Free consultation and assessment",
+    "Customized solution design",
+    "Competitive pricing",
+    "Expert implementation team",
+    "Ongoing support and optimization",
+    "ROI-focused approach"
   ];
-
-  const handleInputChange = useCallback ( (field: string, value: string | string[]) => {
-    setFormData (prev => ({
-      ...prev,
-      [field]: value
-    }) ) ;
-  };
-
-  const toggleService = (serviceId: string) => {
-    setFormData (prev => ({
-      ...prev,
-      services: prev.services.includes (serviceId) ? prev.services.filter (id => id !== serviceId) : [...prev.services, serviceId]
-    }) ) ;
-  };
-
-  const toggleServiceExpansion = (serviceId: string) => {
-    setExpandedService (expandedService === serviceId ? null : serviceId) ;
-  };
-
-  const nextStep = (...args: unknown[]): unknown => {
-    if (formStep < 3) {
-      setFormStep (formStep + 1) ;
-    }
-  };
-
-  const prevStep = (...args: unknown[]): unknown => {
-    if (formStep > 1) {
-      setFormStep (formStep - 1) ;
-    }
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {;
-    e.preventDefault () ;
-    setSubmitting (true) ;
-    
-    // Simulate API call
-    await new Promise (resolve => setTimeout (resolve, 2000) ) ;
-    
-    setSubmitting (false) ;
-    setSubmitted (true) ;
-  };
-
-  const resetForm = () => {
-    setFormData ({
-      companyName: '',
-      contactName: '',
-      email: '',
-      phone: '',
-      companySize: '',
-      industry: '',
-      projectType: '',
-      budget: '',
-      timeline: '',
-      description: '',
-      services: [],
-      urgency: 'medium',
-      preferredContact: 'email'
-    }) ;
-    setFormStep (1) ;
-    setSubmitted (false) ;
-  };
-
-  if (submitted) {
-    return (<div role="button" className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900 flex items - center justify - center">
-        <SEO 
-          title="Quote Requested - Zion Tech Group"
-          description="Thank you for your quote request. We'll get back to you soon with a detailed proposal."
-        />
-        
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="text - center max - w-2xl mx - auto px - 6"
-        >
-          <div role="button" className="inline - flex items - center justify - center w - 20 h - 20 bg - gradient - to - r from - green - 500 / 20 to - blue - 500 / 20 rounded - full mb - 8">
-            <CheckCircle className="w - 10 h - 10 text - green - 400" />
-          </div>
-          
-          <h1 className="text - 4xl font - bold text - white mb - 6">
-            Quote Request Submitted!
-          </h1>
-          
-          <p className="text - xl text - gray - 300 mb - 8 leading - relaxed">
-            Thank you for your interest in Zion Tech Group. Our team has received your 
-            request and will review it carefully. You can expect a detailed proposal 
-            within 24 - 48 hours.
-          </p>
-          
-          <div role="button" className="bg - gradient - to - br from - slate - 800 / 50 to - slate - 700 / 50 rounded - xl p - 6 border border - slate - 600 / 50 mb - 8">
-            <h3 className="text - lg font - semibold text - white mb - 4">What happens next?</h3>
-            <div role="button" className="space - y-3 text - left">
-              <div role="button" className="flex items - start">
-                <div role="button" className="w - 6 h - 6 bg - green - 500 / 20 text - green - 400 rounded - full flex items - center justify - center text - sm font - bold mr - 3 mt - 0.5">1</div>
-                <div>
-                  <div role="button" className="text - white font - medium">Initial Review</div>
-                  <div role="button" className="text - gray - 300 text - sm">Our team reviews your requirements and project scope</div>
-                </div>
-              </div>
-              <div role="button" className="flex items - start">
-                <div role="button" className="w - 6 h - 6 bg - blue - 500 / 20 text - blue - 400 rounded - full flex items - center justify - center text - sm font - bold mr - 3 mt - 0.5">2</div>
-                <div>
-                  <div role="button" className="text - white font - medium">Detailed Proposal</div>
-                  <div role="button" className="text - gray - 300 text - sm">We'll send you a comprehensive proposal with pricing and timeline</div>
-                </div>
-              </div>
-              <div role="button" className="flex items - start">
-                <div role="button" className="w - 6 h - 6 bg - purple - 500 / 20 text - purple - 400 rounded - full flex items - center justify - center text - sm font - bold mr - 3 mt - 0.5">3</div>
-                <div>
-                  <div role="button" className="text - white font - medium">Follow - up Call</div>
-                  <div role="button" className="text - gray - 300 text - sm">Schedule a call to discuss the proposal and answer questions</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div role="button" className="flex flex - col sm:flex - row gap - 4 justify - center">
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={resetForm}
-              className="px - 8 py - 3 bg - gradient - to - r from - green - 400 to - blue - 500 text - white font - semibold rounded - lg hover:from - green - 500 hover:to - blue - 600 transition - all duration - 200 hover:scale - 105"
-            >
-              Request Another Quote
-            </button>
-            <a
-              href="mailto:info@ziontechgroup.com"
-              className="px - 8 py - 3 border border - green - 400 text - green - 400 font - semibold rounded - lg hover:bg - green - 400 hover:text - white transition - all duration - 200"
-            >
-              Contact Us
-            </a>
-          </div>
-        </motion.div>
-      </div>) ;
-  }
 
   return (<div role="button" className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
       <SEO 
@@ -426,496 +64,288 @@ import { SEO } from '../components / SEO';
       />
       
       {/* Hero Section */}
-      <section className="relative py - 20 overflow - hidden">
-        <div role="button" className="absolute inset - 0 bg - gradient - to - r from - green - 500 / 10 via - blue - 500 / 10 to - purple - 500 / 10"></div>
-        <div role="button" className="container mx - auto px - 6 relative z - 10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text - center"
-          >
-            <div role="button" className="inline - flex items - center justify - center w - 20 h - 20 bg - gradient - to - r from - green - 500 / 20 to - blue - 500 / 20 rounded - 2xl mb - 6">
-              <Calculator className="w - 10 h - 10 text - green - 400" />
+      <section className="relative overflow-hidden py-20 lg:py-32">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full px-4 py-2 mb-6">
+              <Target className="w-5 h-5 text-cyan-400" />
+              <span className="text-cyan-300 text-sm font-medium">Get Your Quote</span>
             </div>
-            <h1 className="text - 5xl md:text - 6xl font - bold text - white mb - 6">
-              Get Your < span className="bg - gradient - to - r from - green - 400 via - blue - 500 to - purple - 600 bg - clip - text text - transparent">Custom Quote</span>
-            </h1>
-            <p className="text - xl text - gray - 300 max - w-3xl mx - auto leading - relaxed">
-              Tell us about your project and we'll provide a detailed quote with pricing, 
-              timeline, and implementation plan tailored to your specific needs.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Benefits */}
-      <section className="py - 16">
-        <div role="button" className="container mx - auto px - 6">
-          <div role="button" className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">
-            {benefits.map ( (benefit, index) => (<motion.div
-                key={benefit.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="text - center"
-              >
-                <div role="button" className="inline - flex items - center justify - center w - 16 h - 16 bg - gradient - to - r from - blue - 500 / 20 to - purple - 500 / 20 rounded - xl mb - 4">
-                  <benefit.icon className="w - 8 h - 8 text - blue - 400" />
-                </div>
-                <h3 className="text - lg font - bold text - white mb - 2">{benefit.title}</h3>
-                <p className="text - gray - 300 text - sm">{benefit.description}</p>
-              </motion.div>) ) }
-          </div>
-        </div>
-      </section>
-
-      {/* Main Form Section */}
-      <section className="py - 20">
-        <div role="button" className="container mx - auto px - 6">
-          <div role="button" className="max - w-6xl mx - auto">
-            <div role="button" className="grid grid - cols - 1 lg:grid - cols - 3 gap - 12">
-              {/* Form */}
-              <div role="button" className="lg:col - span - 2">
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8 }}
-                  className="bg - gradient - to - br from - slate - 800 / 50 to - slate - 700 / 50 rounded - 2xl border border - slate - 600 / 50 p - 8"
-                >
-                  {/* Progress Steps */}
-                  <div role="button" className="flex items - center justify - between mb - 8">
-                    {[1, 2, 3].map ( (step) => (<div role="button" key={step} className="flex items - center">
-                        <div role="button" className={`w - 10 h - 10 rounded - full flex items - center justify - center font - bold text - sm ${
-                          formStep >= step 
-                            ? 'bg - gradient - to - r from - green - 400 to - blue - 500 text - white' 
-                            : 'bg - slate - 700 text - gray - 400'
-                        }`}>
-                          {step}
-                        </div>
-                        {step < 3 && (<div role="button" className={`w - 16 h - 1 mx - 2 ${
-                            formStep > step ? 'bg - gradient - to - r from - green - 400 to - blue - 500' : 'bg - slate - 700'
-                          }`}></div>) }
-                      </div>) ) }
-                  </div>
-
-                  <form onSubmit={handleSubmit}>
-                    {/* Step 1: Basic Information */}
-                    {formStep === 1 && (<motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5 }}
-                        className="space - y-6"
-                      >
-                        <h3 className="text - 2xl font - bold text - white mb - 6">Basic Information</h3>
-                        
-                        <div role="button" className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">
-                          <div>
-                            <label className="block text - white font - medium mb - 2">Company Name *</label>
-                            <input
-                              type="text"
-                              required
-                              value={formData.companyName}
-                              onChange={ (e) => handleInputChange ('companyName', e.target.value) }
-                              className="w - full px - 4 py - 3 bg - slate - 800 / 50 border border - slate - 600 / 50 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - green - 400 focus:ring - 2 focus:ring - green - 400 / 20 transition - all duration - 200"
-                              placeholder="Your company name"
-                            />
-                          </div>
-                          
-                          <div>
-                            <label className="block text - white font - medium mb - 2">Contact Name *</label>
-                            <input
-                              type="text"
-                              required
-                              value={formData.contactName}
-                              onChange={ (e) => handleInputChange ('contactName', e.target.value) }
-                              className="w - full px - 4 py - 3 bg - slate - 800 / 50 border border - slate - 600 / 50 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - green - 400 focus:ring - 2 focus:ring - green - 400 / 20 transition - all duration - 200"
-                              placeholder="Your full name"
-                            />
-                          </div>
-                        </div>
-
-                        <div role="button" className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">
-                          <div>
-                            <label className="block text - white font - medium mb - 2">Email *</label>
-                            <input
-                              type="email"
-                              required
-                              value={formData.email}
-                              onChange={ (e) => handleInputChange ('email', e.target.value) }
-                              className="w - full px - 4 py - 3 bg - slate - 800 / 50 border border - slate - 600 / 50 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - green - 400 focus:ring - 2 focus:ring - green - 400 / 20 transition - all duration - 200"
-                              placeholder="your.email@company.com"
-                            />
-                          </div>
-                          
-                          <div>
-                            <label className="block text - white font - medium mb - 2">Phone</label>
-                            <input
-                              type="tel"
-                              value={formData.phone}
-                              onChange={ (e) => handleInputChange ('phone', e.target.value) }
-                              className="w - full px - 4 py - 3 bg - slate - 800 / 50 border border - slate - 600 / 50 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - green - 400 focus:ring - 2 focus:ring - green - 400 / 20 transition - all duration - 200"
-                              placeholder="+1 (555) 123 - 4567"
-                            />
-                          </div>
-                        </div>
-
-                        <div role="button" className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">
-                          <div>
-                            <label className="block text - white font - medium mb - 2">Company Size</label>
-                            <select
-                              value={formData.companySize}
-                              onChange={ (e) => handleInputChange ('companySize', e.target.value) }
-                              className="w - full px - 4 py - 3 bg - slate - 800 / 50 border border - slate - 600 / 50 rounded - lg text - white focus:outline - none focus:border - green - 400 focus:ring - 2 focus:ring - green - 400 / 20 transition - all duration - 200"
-                            >
-                              <option value="">Select company size</option>
-                              {companySizes.map ( (size) => (<option key={size} value={size}>{size}</option>) ) }
-                            </select>
-                          </div>
-                          
-                          <div>
-                            <label className="block text - white font - medium mb - 2">Industry</label>
-                            <select
-                              value={formData.industry}
-                              onChange={ (e) => handleInputChange ('industry', e.target.value) }
-                              className="w - full px - 4 py - 3 bg - slate - 800 / 50 border border - slate - 600 / 50 rounded - lg text - white focus:outline - none focus:border - green - 400 focus:ring - 2 focus:ring - green - 400 / 20 transition - all duration - 200"
-                            >
-                              <option value="">Select industry</option>
-                              {industries.map ( (industry) => (<option key={industry} value={industry}>{industry}</option>) ) }
-                            </select>
-                          </div>
-                        </div>
-                      </motion.div>) }
-
-                    {/* Step 2: Project Details */}
-                    {formStep === 2 && (<motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5 }}
-                        className="space - y-6"
-                      >
-                        <h3 className="text - 2xl font - bold text - white mb - 6">Project Details</h3>
-                        
-                        <div role="button" className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">
-                          <div>
-                            <label className="block text - white font - medium mb - 2">Project Type</label>
-                            <select
-                              value={formData.projectType}
-                              onChange={ (e) => handleInputChange ('projectType', e.target.value) }
-                              className="w - full px - 4 py - 3 bg - slate - 800 / 50 border border - slate - 600 / 50 rounded - lg text - white focus:outline - none focus:border - green - 400 focus:ring - 2 focus:ring - green - 400 / 20 transition - all duration - 200"
-                            >
-                              <option value="">Select project type</option>
-                              {projectTypes.map ( (type) => (<option key={type} value={type}>{type}</option>) ) }
-                            </select>
-                          </div>
-                          
-                          <div>
-                            <label className="block text - white font - medium mb - 2">Budget Range</label>
-                            <select
-                              value={formData.budget}
-                              onChange={ (e) => handleInputChange ('budget', e.target.value) }
-                              className="w - full px - 4 py - 3 bg - slate - 800 / 50 border border - slate - 600 / 50 rounded - lg text - white focus:outline - none focus:border - green - 400 focus:ring - 2 focus:ring - green - 400 / 20 transition - all duration - 200"
-                            >
-                              <option value="">Select budget range</option>
-                              {budgets.map ( (budget) => (<option key={budget} value={budget}>{budget}</option>) ) }
-                            </select>
-                          </div>
-                        </div>
-
-                        <div role="button" className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">
-                          <div>
-                            <label className="block text - white font - medium mb - 2">Timeline</label>
-                            <select
-                              value={formData.timeline}
-                              onChange={ (e) => handleInputChange ('timeline', e.target.value) }
-                              className="w - full px - 4 py - 3 bg - slate - 800 / 50 border border - slate - 600 / 50 rounded - lg text - white focus:outline - none focus:border - green - 400 focus:ring - 2 focus:ring - green - 400 / 20 transition - all duration - 200"
-                            >
-                              <option value="">Select timeline</option>
-                              {timelines.map ( (timeline) => (<option key={timeline} value={timeline}>{timeline}</option>) ) }
-                            </select>
-                          </div>
-                          
-                          <div>
-                            <label className="block text - white font - medium mb - 2">Urgency Level</label>
-                            <select
-                              value={formData.urgency}
-                              onChange={ (e) => handleInputChange ('urgency', e.target.value) }
-                              className="w - full px - 4 py - 3 bg - slate - 800 / 50 border border - slate - 600 / 50 rounded - lg text - white focus:outline - none focus:border - green - 400 focus:ring - 2 focus:ring - green - 400 / 20 transition - all duration - 200"
-                            >
-                              {urgencyLevels.map ( (level) => (<option key={level.value} value={level.value}>
-                                  {level.label} - {level.description}
-                                </option>) ) }
-                            </select>
-                          </div>
-                        </div>
-
-                        <div>
-                          <label className="block text - white font - medium mb - 2">Project Description *</label>
-                          <textarea
-                            required
-                            rows={4}
-                            value={formData.description}
-                            onChange={ (e) => handleInputChange ('description', e.target.value) }
-                            className="w - full px - 4 py - 3 bg - slate - 800 / 50 border border - slate - 600 / 50 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:border - green - 400 focus:ring - 2 focus:ring - green - 400 / 20 transition - all duration - 200"
-                            placeholder="Describe your project requirements, goals, and any specific features you need..."
-                          />
-                        </div>
-                      </motion.div>) }
-
-                    {/* Step 3: Services & Preferences */}
-                    {formStep === 3 && (<motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5 }}
-                        className="space - y-6"
-                      >
-                        <h3 className="text - 2xl font - bold text - white mb - 6">Services & Preferences</h3>
-                        
-                        <div>
-                          <label className="block text - white font - medium mb - 4">Select Services (Optional) </label>
-                          <div role="button" className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">
-                            {services.map ( (service) => (<div role="button" key={service.id} className="relative">
-                                <input
-                                  type="checkbox"
-                                  id={service.id}
-                                  checked={formData.services.includes (service.id) }
-                                  onChange={ () => toggleService (service.id) }
-                                  className="sr - only"
-                                />
-                                <label
-                                  htmlFor={service.id}
-                                  className={`block p - 4 rounded - lg border - 2 cursor - pointer transition - all duration - 200 ${
-                                    formData.services.includes (service.id) ? 'border - green - 400 bg - green - 400 / 10'
-                                      : 'border - slate - 600 hover:border - slate - 500 bg - slate - 800 / 30'
-                                  }`}
-                                >
-                                  <div role="button" className="flex items - start">
-                                    <div role="button" className="flex - shrink - 0">
-                                      <service.icon className="w - 6 h - 6 text - blue - 400" />
-                                    </div>
-                                    <div role="button" className="ml - 3 flex - 1">
-                                      <div role="button" className="text - white font - medium">{service.name}</div>
-                                      <div role="button" className="text - gray - 300 text - sm mt - 1">{service.description}</div>
-                                      <div role="button" className="text - green - 400 text - sm mt - 2">{service.pricing}</div>
-                                    </div>
-                                  </div>
-                                </label>
-                              </div>) ) }
-                          </div>
-                        </div>
-
-                        <div>
-                          <label className="block text - white font - medium mb - 4">Preferred Contact Method</label>
-                          <div role="button" className="grid grid - cols - 1 md:grid - cols - 3 gap - 4">
-                            {contactMethods.map ( (method) => (<div role="button" key={method.value} className="relative">
-                                <input
-                                  type="radio"
-                                  id={method.value}
-                                  name="preferredContact"
-                                  value={method.value}
-                                  checked={formData.preferredContact === method.value}
-                                  onChange={ (e) => handleInputChange ('preferredContact', e.target.value) }
-                                  className="sr - only"
-                                />
-                                <label
-                                  htmlFor={method.value}
-                                  className={`block p - 4 rounded - lg border - 2 cursor - pointer transition - all duration - 200 ${
-                                    formData.preferredContact === method.value
-                                      ? 'border - green - 400 bg - green - 400 / 10'
-                                      : 'border - slate - 600 hover:border - slate - 500 bg - slate - 800 / 30'
-                                  }`}
-                                >
-                                  <div role="button" className="text - center">
-                                    <method.icon className="w - 8 h - 8 text - blue - 400 mx - auto mb - 2" />
-                                    <div role="button" className="text - white font - medium">{method.label}</div>
-                                    <div role="button" className="text - gray - 300 text - sm mt - 1">{method.description}</div>
-                                  </div>
-                                </label>
-                              </div>) ) }
-                          </div>
-                        </div>
-                      </motion.div>) }
-
-                    {/* Navigation Buttons */}
-                    <div role="button" className="flex justify - between mt - 8">
-                      {formStep > 1 && (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="button"
-                          onClick={prevStep}
-                          className="px - 6 py - 3 border border - slate - 600 text - gray - 300 font - semibold rounded - lg hover:border - slate - 500 hover:text - white transition - all duration - 200"
-                        >
-                          Previous
-                        </button>) }
-                      
-                      <div role="button" className="ml - auto">
-                        {formStep < 3 ? (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="button"
-                            onClick={nextStep}
-                            className="px - 8 py - 3 bg - gradient - to - r from - green - 400 to - blue - 500 text - white font - semibold rounded - lg hover:from - green - 500 hover:to - blue - 600 transition - all duration - 200 hover:scale - 105"
-                          >
-                            Next Step
-                          </button>) : (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="submit"
-                            disabled={isSubmitting}
-                            className="px - 8 py - 3 bg - gradient - to - r from - green - 400 to - blue - 500 text - white font - semibold rounded - lg hover:from - green - 500 hover:to - blue - 600 transition - all duration - 200 hover:scale - 105 disabled:opacity - 50 disabled:cursor - not - allowed"
-                          >
-                            {isSubmitting ? 'Submitting...' : 'Submit Quote Request'}
-                          </button>) }
-                      </div>
-                    </div>
-                  </form>
-                </motion.div>
-              </div>
-
-              {/* Services Sidebar */}
-              <div role="button" className="lg:col - span - 1">
-                <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8 }}
-                  className="space - y-6"
-                >
-                  <div role="button" className="bg - gradient - to - br from - slate - 800 / 50 to - slate - 700 / 50 rounded - 2xl border border - slate - 600 / 50 p - 6">
-                    <h3 className="text - xl font - bold text - white mb - 4">Our Services</h3>
-                    <p className="text - gray - 300 text - sm mb - 4">
-                      Explore our comprehensive range of technology services and solutions.
-                    </p>
-                    
-                    <div role="button" className="space - y-3">
-                      {services.map ( (service) => (<div role="button" key={service.id} className="border border - slate - 600 / 50 rounded - lg overflow - hidden">
-                          <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => toggleServiceExpansion (service.id) }
-                            className="w - full p - 3 text - left hover:bg - slate - 700 / 50 transition - colors duration - 200"
-                          >
-                            <div role="button" className="flex items - center justify - between">
-                              <div role="button" className="flex items - center">
-                                <service.icon className="w - 5 h - 5 text - blue - 400 mr - 3" />
-                                <span className="text - white font - medium text - sm">{service.name}</span>
-                              </div>
-                              {expandedService === service.id ? (<ChevronUp className="w - 4 h - 4 text - gray - 400" />) : (<ChevronDown className="w - 4 h - 4 text - gray - 400" />) }
-                            </div>
-                          </button>
-                          
-                          {expandedService === service.id && (<motion.div
-                              initial={{ opacity: 0, height: 0 }}
-                              animate={{ opacity: 1, height: 'auto' }}
-                              exit={{ opacity: 0, height: 0 }}
-                              transition={{ duration: 0.3 }}
-                              className="px - 3 pb - 3 border - t border - slate - 600 / 50"
-                            >
-                              <p className="text - gray - 300 text - sm mt - 3 mb - 3">{service.description}</p>
-                              <div role="button" className="space - y-2">
-                                {service.features.map ( (feature, index) => (<div role="button" key={index} className="flex items - center text - gray - 300 text - sm">
-                                    <CheckCircle className="w - 3 h - 3 text - green - 400 mr - 2 flex - shrink - 0" />
-                                    {feature}
-                                  </div>) ) }
-                              </div>
-                              <div role="button" className="mt - 3 pt - 3 border - t border - slate - 600 / 50">
-                                <div role="button" className="flex items - center justify - between text - sm">
-                                  <span className="text - gray - 400">Starting from:</span>
-                                  <span className="text - green - 400 font - medium">{service.pricing}</span>
-                                </div>
-                                <div role="button" className="flex items - center justify - between text - sm mt - 1">
-                                  <span className="text - gray - 400">Timeline:</span>
-                                  <span className="text - blue - 400 font - medium">{service.timeline}</span>
-                                </div>
-                              </div>
-                            </motion.div>) }
-                        </div>) ) }
-                    </div>
-                  </div>
-
-                  <div role="button" className="bg - gradient - to - br from - slate - 800 / 50 to - slate - 700 / 50 rounded - 2xl border border - slate - 600 / 50 p - 6">
-                    <h3 className="text - xl font - bold text - white mb - 4">Why Choose Us?</h3>
-                    <div role="button" className="space - y-3">
-                      <div role="button" className="flex items - start">
-                        <Award className="w - 5 h - 5 text - yellow - 400 mr - 3 mt - 0.5 flex - shrink - 0" />
-                        <div>
-                          <div role="button" className="text - white font - medium text - sm">Expert Team</div>
-                          <div role="button" className="text - gray - 300 text - xs">Certified professionals with years of experience</div>
-                        </div>
-                      </div>
-                      <div role="button" className="flex items - start">
-                        <Star className="w - 5 h - 5 text - blue - 400 mr - 3 mt - 0.5 flex - shrink - 0" />
-                        <div>
-                          <div role="button" className="text - white font - medium text - sm">Quality Guarantee</div>
-                          <div role="button" className="text - gray - 300 text - xs">We stand behind our work 100%</div>
-                        </div>
-                      </div>
-                      <div role="button" className="flex items - start">
-                        <TrendingUp className="w - 5 h - 5 text - green - 400 mr - 3 mt - 0.5 flex - shrink - 0" />
-                        <div>
-                          <div role="button" className="text - white font - medium text - sm">Proven Results</div>
-                          <div role="button" className="text - gray - 300 text - xs">Track record of successful projects</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Information */}
-      <section className="py - 20 bg - gradient - to - r from - slate - 800 / 50 to - slate - 700 / 50">
-        <div role="button" className="container mx - auto px - 6 text - center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text - 4xl font - bold text - white mb - 6">
-              Need Immediate Assistance?
-            </h2>
-            <p className="text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto">
-              Our team is here to help. Contact us directly for urgent inquiries 
-              or to discuss your project in detail.
-            </p>
             
-            <div role="button" className="grid grid - cols - 1 md:grid - cols - 3 gap - 8 max - w-4xl mx - auto">
-              <div role="button" className="text - center">
-                <div role="button" className="inline - flex items - center justify - center w - 16 h - 16 bg - gradient - to - r from - blue - 500 / 20 to - purple - 500 / 20 rounded - xl mb - 4">
-                  <Mail className="w - 8 h - 8 text - blue - 400" />
-                </div>
-                <h3 className="text - lg font - bold text - white mb - 2">Email Us</h3>
-                <p className="text - gray - 300 text - sm mb - 3">Get a quick response</p>
-                <a
-                  href="mailto:info@ziontechgroup.com"
-                  className="text - green - 400 hover:text - green - 300 transition - colors duration - 200"
-                >
-                  info@ziontechgroup.com
-                </a>
-              </div>
-              
-              <div role="button" className="text - center">
-                <div role="button" className="inline - flex items - center justify - center w - 16 h - 16 bg - gradient - to - r from - green - 500 / 20 to - blue - 500 / 20 rounded - xl mb - 4">
-                  <Phone className="w - 8 h - 8 text - green - 400" />
-                </div>
-                <h3 className="text - lg font - bold text - white mb - 2">Call Us</h3>
-                <p className="text - gray - 300 text - sm mb - 3">Speak with an expert</p>
-                <a
-                  href="tel:+13024640950"
-                  className="text - green - 400 hover:text - green - 300 transition - colors duration - 200"
-                >
-                  +1 (302) 464 - 0950
-                </a>
-              </div>
-              
-              <div role="button" className="text - center">
-                <div role="button" className="inline - flex items - center justify - center w - 16 h - 16 bg - gradient - to - r from - purple - 500 / 20 to - pink - 500 / 20 rounded - xl mb - 4">
-                  <Headphones className="w - 8 h - 8 text - purple - 400" />
-                </div>
-                <h3 className="text - lg font - bold text - white mb - 2">Live Chat</h3>
-                <p className="text - gray - 300 text - sm mb - 3">Instant support</p>
-                <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" className="text - green - 400 hover:text - green - 300 transition - colors duration - 200">
-                  Start Chat
-                </button>
-              </div>
-            </div>
-          </motion.div>
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
+              Request Your
+              <span className="block bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+                Custom Quote
+              </span>
+            </h1>
+            
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Ready to transform your business? Get a personalized quote for our cutting-edge technology solutions. 
+              Our experts will work with you to design the perfect solution for your needs.
+            </p>
+          </div>
         </div>
       </section>
-    </div>) };
-            </div>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </div>;) ;
+
+      {/* Form Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            {/* Form */}
+            <div className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8">
+              <h2 className="text-3xl font-bold text-white mb-6">Tell Us About Your Project</h2>
+              
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">First Name *</label>
+                    <input
+                      type="text"
+                      name="firstName"
+                      value={formData.firstName}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      placeholder="Enter your first name"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">Last Name *</label>
+                    <input
+                      type="text"
+                      name="lastName"
+                      value={formData.lastName}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      placeholder="Enter your last name"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">Email *</label>
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      placeholder="Enter your email"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">Phone</label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      placeholder="Enter your phone number"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">Company *</label>
+                    <input
+                      type="text"
+                      name="company"
+                      value={formData.company}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      placeholder="Enter your company name"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">Industry</label>
+                    <select
+                      name="industry"
+                      value={formData.industry}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    >
+                      <option value="">Select your industry</option>
+                      <option value="technology">Technology</option>
+                      <option value="healthcare">Healthcare</option>
+                      <option value="finance">Finance</option>
+                      <option value="manufacturing">Manufacturing</option>
+                      <option value="retail">Retail</option>
+                      <option value="education">Education</option>
+                      <option value="government">Government</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">Primary Service Interest</label>
+                  <select
+                    name="serviceInterest"
+                    value={formData.serviceInterest}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  >
+                    <option value="">Select primary service</option>
+                    <option value="ai-business-intelligence">AI Business Intelligence</option>
+                    <option value="ai-healthcare">AI Healthcare Platform</option>
+                    <option value="ai-content-creation">AI Content Creation</option>
+                    <option value="ai-cybersecurity">AI Cybersecurity</option>
+                    <option value="iot-edge-computing">IoT Edge Computing</option>
+                    <option value="cloud-devops">Cloud DevOps</option>
+                    <option value="digital-twin">Digital Twin Platform</option>
+                    <option value="quantum-computing">Quantum Computing</option>
+                    <option value="micro-saas">Micro SaaS Solutions</option>
+                    <option value="custom">Custom Solution</option>
+                  </select>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">Budget Range</label>
+                    <select
+                      name="budget"
+                      value={formData.budget}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    >
+                      <option value="">Select budget range</option>
+                      <option value="under-10k">Under $10,000</option>
+                      <option value="10k-50k">$10,000 - $50,000</option>
+                      <option value="50k-100k">$50,000 - $100,000</option>
+                      <option value="100k-500k">$100,000 - $500,000</option>
+                      <option value="over-500k">Over $500,000</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">Timeline</label>
+                    <select
+                      name="timeline"
+                      value={formData.timeline}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    >
+                      <option value="">Select timeline</option>
+                      <option value="asap">ASAP</option>
+                      <option value="1-3-months">1-3 months</option>
+                      <option value="3-6-months">3-6 months</option>
+                      <option value="6-12-months">6-12 months</option>
+                      <option value="over-12-months">Over 12 months</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">Project Description</label>
+                  <textarea
+                    name="description"
+                    value={formData.description}
+                    onChange={handleInputChange}
+                    rows={4}
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    placeholder="Describe your project requirements, goals, and any specific challenges you're facing..."
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+                >
+                  Submit Quote Request
+                  <ArrowRight className="w-5 h-5 ml-2 inline" />
+                </button>
+              </form>
+            </div>
+
+            {/* Information Sidebar */}
+            <div className="space-y-8">
+              {/* Popular Services */}
+              <div className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6">
+                <h3 className="text-2xl font-bold text-white mb-6">Popular Services</h3>
+                <div className="space-y-4">
+                  {popularServices.map((service, index) => (
+                    <div key={index} className="flex items-start gap-3 p-3 rounded-lg hover:bg-slate-700/30 transition-colors">
+                      <div className="p-2 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg">
+                        <service.icon className="w-5 h-5 text-white" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-white mb-1">{service.name}</h4>
+                        <p className="text-sm text-gray-400">{service.description}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Benefits */}
+              <div className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6">
+                <h3 className="text-2xl font-bold text-white mb-6">Why Choose Us?</h3>
+                <div className="space-y-3">
+                  {benefits.map((benefit, index) => (
+                    <div key={index} className="flex items-center gap-3">
+                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                      <span className="text-gray-300">{benefit}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Contact Info */}
+              <div className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6">
+                <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3 text-gray-300">
+                    <Zap className="w-5 h-5 text-cyan-400" />
+                    <span>+1 302 464 0950</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-300">
+                    <Users className="w-5 h-5 text-cyan-400" />
+                    <span>kleber@ziontechgroup.com</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-300">
+                    <Target className="w-5 h-5 text-cyan-400" />
+                    <span>364 E Main St STE 1008, Middletown DE 19709</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-cyan-900/50 via-blue-900/50 to-purple-900/50">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+            Ready to Get Started?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Our team is ready to help you transform your business with cutting-edge technology solutions.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+            >
+              Contact Our Team
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+            <Link
+              to="/services"
+              className="inline-flex items-center gap-2 px-8 py-4 border border-cyan-500/30 text-cyan-300 hover:bg-cyan-500/10 font-semibold rounded-lg transition-all duration-300"
+            >
+              View All Services
+            </Link>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
 }
