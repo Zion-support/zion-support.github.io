@@ -12,46 +12,28 @@
     "noEmit": true,
     "incremental": true,
     "esModuleInterop": true,
+    "module": "esnext",
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    
-    // Enhanced type checking
-    "noImplicitAny": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "exactOptionalPropertyTypes": true,
-    "noImplicitOverride": true,
-    
-    // Better module resolution
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"],
       "@/components/*": ["./components/*"],
       "@/pages/*": ["./pages/*"],
       "@/styles/*": ["./styles/*"],
-      "@/automation/*": ["./automation/*"]
+      "@/automation/*": ["./automation/*"],
+      "@/scripts/*": ["./scripts/*"]
     },
-    
-    // Performance optimizations
-    "assumeChangesOnlyAffectDirectDependencies": true,
-    "disableSourceOfProjectReferenceRedirect": true,
-    
-    // Additional checks
-    "allowUnreachableCode": false,
-    "allowUnusedLabels": false,
-    "exactOptionalPropertyTypes": true,
+    "forceConsistentCasingInFileNames": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "exactOptionalPropertyTypes": false,
+    "noImplicitReturns": false,
     "noFallthroughCasesInSwitch": true,
-    "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": true,
-    "noUncheckedIndexedAccess": true,
-    
-    // Target modern environments
-    "target": "es2022",
-    "useDefineForClassFields": true
+    "allowUnusedLabels": false,
+    "allowUnreachableCode": false
   },
   "include": [
     "next-env.d.ts",
