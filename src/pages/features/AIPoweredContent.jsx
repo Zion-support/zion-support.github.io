@@ -18,6 +18,8 @@ export default function AIPoweredContent() {
     };
     const { markAiExplored } = useAdvancedOnboardingStatus();
     useEffect(() => {
+    // TODO: Add dependencies if needed
+
         markAiExplored();
     }, [markAiExplored]);
     return (<>
@@ -57,5 +59,5 @@ export default function AIPoweredContent() {
         </div>
       </main>
       <Footer />
-    </>);
-}
+    </>
+})

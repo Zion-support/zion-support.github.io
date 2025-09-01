@@ -16,6 +16,8 @@ export default function IntegrationsFeature() {
     };
     const { markSlackConnected } = useAdvancedOnboardingStatus();
     useEffect(() => {
+    // TODO: Add dependencies if needed
+
         markSlackConnected();
     }, [markSlackConnected]);
     return (<>
@@ -55,5 +57,5 @@ export default function IntegrationsFeature() {
         </div>
       </main>
       <Footer />
-    </>);
-}
+    </>
+})

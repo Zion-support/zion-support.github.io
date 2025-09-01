@@ -50,5 +50,5 @@ export default function InstantMessaging() {
         </div>
       </main>
       <Footer />
-    </>);
-}
+    </>
+})

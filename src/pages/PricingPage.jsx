@@ -285,7 +285,7 @@ export default function PricingPage() {
                 icon: <TrendingUp className="h-8 w-8"/>,
                 title: "Proven ROI",
                 description: "Average 300% ROI within 6 months"
-            }
+})
         ].map((benefit, index) => (<Card key={index} className="bg-zion-blue-dark border-zion-blue-light text-white">
                 <CardHeader className="text-center">
                   <div className="mx-auto w-16 h-16 bg-zion-purple rounded-full flex items-center justify-center mb-4">

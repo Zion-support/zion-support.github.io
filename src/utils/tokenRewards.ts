@@ -43,3 +43,6 @@ export async function rewardOnboarding(...args: any[]): any {
           amount: 100})})}
   }
 }
+
+
+export default earnTokensForAction;

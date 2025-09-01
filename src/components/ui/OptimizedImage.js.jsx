@@ -9,6 +9,66 @@ export function OptimizedImage({ src, alt, width, height, className, placeholder
     const observerRef = useRef(null);
     // Intersection Observer for lazy loading
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+
+
+
+}, []);, []);
+  // TODO: Add dependencies if needed
+
+  // TODO: Add dependencies if needed
+
+  // TODO: Add dependencies if needed
+
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+
+
+}, []);, []);
+  // TODO: Add dependencies if needed
+
+  // TODO: Add dependencies if needed
+
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+
+}, []);, []);
+  // TODO: Add dependencies if needed
+
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (priority || !imgRef.current)
             return;
         observerRef.current = new IntersectionObserver(([entry]) => {

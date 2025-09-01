@@ -197,7 +197,7 @@ const EnterpriseSolutions = () => {
                 title: '24/7 Support',
                 description: 'Round-the-clock support with dedicated account managers.',
                 icon: Users
-            }
+})
         ].map((benefit, index) => {
             const Icon = benefit.icon;
             return (<div key={index} className="text-center">

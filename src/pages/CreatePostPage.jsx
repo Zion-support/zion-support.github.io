@@ -23,8 +23,7 @@ export default function CreatePostPage() {
             });
             // Redirect to the forum category
             navigate(`/community/category/${values.categoryId}`);
-        }
-        catch (error) {
+  } catch (error) {
             toast({
                 title: "Error",
                 description: "There was a problem creating your post",

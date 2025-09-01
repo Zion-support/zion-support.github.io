@@ -246,11 +246,10 @@ export const seoOptimizer = new SEOOptimizer();
         } else if (titleLength > 0) {
           score += 10;
           newRecommendations.push('Optimize title length (30-60 characters)');
-        }
+})
       } else {
         newRecommendations.push('Add a title tag');
-      }
-      
+})
       // Check meta description
       const metaMatch = content.match(/<meta[^>]*name="description"[^>]*content="([^"]*)"[^>]*>/i);
       if (metaMatch) {
@@ -260,11 +259,10 @@ export const seoOptimizer = new SEOOptimizer();
         } else if (metaLength > 0) {
           score += 10;
           newRecommendations.push('Optimize meta description length (120-160 characters)');
-        }
+})
       } else {
         newRecommendations.push('Add a meta description');
-      }
-      
+})
       // Check headings
       const h2Count = (content.match(/<h2[^>]*>/gi) || []).length;
       if (h1Count > 0 && h2Count > 0) {
@@ -274,8 +272,7 @@ export const seoOptimizer = new SEOOptimizer();
         newRecommendations.push('Add more heading structure (H1, H2, H3)');
       } else {
         newRecommendations.push('Add heading structure to your content');
-      }
-      
+})
       // Check images with alt text
       const imagesWithAlt = images.filter(img => img.includes('alt='));
       if (images.length > 0) {
@@ -284,9 +281,8 @@ export const seoOptimizer = new SEOOptimizer();
         } else {
           score += 10;
           newRecommendations.push('Add alt text to all images');
-        }
-      }
-      
+})
+})
       // Check internal links
       const internalLinks = content.match(/href="/[^"]*"/g) || [];
       if (internalLinks.length >= 2) {
@@ -296,15 +292,14 @@ export const seoOptimizer = new SEOOptimizer();
         newRecommendations.push('Add more internal links');
       } else {
         newRecommendations.push('Add internal links to related pages');
-      }
-      
+})
       setSeoScore(score);
       setRecommendations(newRecommendations);
       setIsAnalyzing(false);
       
       if (onOptimize) {
         onOptimize({ score, recommendations: newRecommendations });
-      }
+})
     }, 2000);
   };
 

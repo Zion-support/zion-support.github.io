@@ -79,7 +79,7 @@ function displayFatalError(message) {
 
 try {
     renderApp();
-} catch (error) {
+  } catch (error) {
     console.error('Global error caught in main.jsx:', error);
     displayFatalError(error.message);
 }

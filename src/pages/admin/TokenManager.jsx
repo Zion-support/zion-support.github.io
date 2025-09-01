@@ -16,6 +16,66 @@ export default function TokenManager() {
     const [amount, setAmount] = useState(0);
     const isAdmin = user?.userType === 'admin';
     useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+
+
+
+}, []);, []);
+  // TODO: Add dependencies if needed
+
+  // TODO: Add dependencies if needed
+
+  // TODO: Add dependencies if needed
+
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+
+
+}, []);, []);
+  // TODO: Add dependencies if needed
+
+  // TODO: Add dependencies if needed
+
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  
+  return () => {
+    // Cleanup function
+  };
+
+}, []);, []);
+  // TODO: Add dependencies if needed
+
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
         if (isAdmin)
             fetchTransactions()}, [isAdmin]);
     const fetchTransactions = async () => {
