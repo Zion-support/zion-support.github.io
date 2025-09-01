@@ -314,24 +314,10 @@ export default function HomePage({ latestUpdates = [] }: HomePageProps) {
                 <h3 className="text-lg font-semibold text-amber-400 mb-2">Privacy</h3>
                 <p className="text-white/70 text-sm">Our data practices</p>
               </Link>
-            </div>
-          </section>
-
-          {/* Comprehensive Directory & Quick Links */}
-          <section className="mx-auto max-w-7xl px-6 pb-16">
-            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">🗂️ Comprehensive Directory & Quick Links</h2>
-            <div className="grid grid-cols-1 gap-10">
-              <div>
-                <h3 className="text-xl font-semibold text-white/90 mb-4">Key Pages</h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                  <Link href="/about" className="group rounded-xl border border-white/15 bg-white/5 p-4 hover:border-cyan-400/30 transition-all">About</Link>
-                  <Link href="/services" className="group rounded-xl border border-white/15 bg-white/5 p-4 hover:border-fuchsia-400/30 transition-all">Services</Link>
-                  <Link href="/resources" className="group rounded-xl border border-white/15 bg-white/5 p-4 hover:border-blue-400/30 transition-all">Resources</Link>
-                  <Link href="/case-studies" className="group rounded-xl border border-white/15 bg-white/5 p-4 hover:border-yellow-400/30 transition-all">Case Studies</Link>
-                  <Link href="/blog" className="group rounded-xl border border-white/15 bg-white/5 p-4 hover:border-purple-400/30 transition-all">Blog</Link>
-                  <Link href="/contact" className="group rounded-xl border border-white/15 bg-white/5 p-4 hover:border-green-400/30 transition-all">Contact</Link>
-                  <Link href="/privacy" className="group rounded-xl border border-white/15 bg-white/5 p-4 hover:border-red-400/30 transition-all">Privacy</Link>
-                  <Link href="/reports/updates/update-2025-08-15-0406" className="group rounded-xl border border-white/15 bg-white/5 p-4 hover:border-indigo-400/30 transition-all">Latest Report</Link>
+              
+              <Link href="/reports/updates" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-indigo-400/30 transition-all duration-300 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-indigo-400 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-xl">📈</span>
                 </div>
               </div>
 
@@ -402,7 +388,7 @@ export default function HomePage({ latestUpdates = [] }: HomePageProps) {
                   <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/ULTIMATE_REDUNDANCY_AUTOMATION_README.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">Automation README</a></li>
                   <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/EXPONENTIAL_GROWTH_AUTOMATION.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">Growth Automation</a></li>
                 </ul>
-                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/PERFORMANCE.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                <Link href="/blog/performance-optimization" className="text-green-400 hover:text-green-300 text-sm font-semibold">
                   View Performance Guide →
                 </a>
               </div>
@@ -504,7 +490,7 @@ export default function HomePage({ latestUpdates = [] }: HomePageProps) {
                   <li>• Health monitoring</li>
                   <li>• Self-healing infrastructure</li>
                 </ul>
-                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/README_ULTIMATE_REDUNDANCY.md" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                <Link href="/case-studies" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
                   Learn More →
                 </a>
               </div>
@@ -518,7 +504,7 @@ export default function HomePage({ latestUpdates = [] }: HomePageProps) {
                   <li>• Error prevention</li>
                   <li>• Predictive analytics</li>
                 </ul>
-                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/README_COMPREHENSIVE_REDUNDANCY.md" target="_blank" rel="noopener noreferrer" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                <Link href="/services" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
                   Learn More →
                 </a>
               </div>
@@ -532,7 +518,7 @@ export default function HomePage({ latestUpdates = [] }: HomePageProps) {
                   <li>• Error recovery</li>
                   <li>• Deployment automation</li>
                 </ul>
-                <a href="https://github.com/Zion-Holdings/zion.app/blob/main/README_PM2_REDUNDANCY_COMPLETE.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                <Link href="/services" className="text-green-400 hover:text-green-300 text-sm font-semibold">
                   Learn More →
                 </a>
               </div>
