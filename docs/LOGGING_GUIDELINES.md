@@ -186,5 +186,40 @@ The following environment variables control various aspects of logging and error
 -   `NEXT_PUBLIC_DATADOG_SITE`: Datadog site (e.g., `datadoghq.com`, `datadoghq.eu`). Defaults to `datadoghq.com`.
 -   `NEXT_PUBLIC_DATADOG_SERVICE_NAME`: Service name for frontend logs in Datadog. Defaults to `zion-frontend`.
 
-**LogRocket (Frontend):**
--   `NEXT_PUBLIC_LOGROCKET_APP_ID`: Your LogRocket application ID.
+## One-Stop Log Collection
+
+For convenience you can run the full log collection and summary process in one step:
+
+```bash
+npm run logs:auto
+```
+
+This runs the enhanced log collector followed by the summary analyzer so you always have up-to-date reports in the `logs` directory.
+
+## Log Maintenance
+
+To prevent the `logs/` directory from growing indefinitely, you can purge old log files based on their modification date:
+
+```bash
+npm run logs:purge
+```
+
+This command deletes any `.log` files older than 30 days (configurable via the `LOG_RETENTION_DAYS` environment variable) from the `logs/` folder and its subdirectories.
+
+## Bug Log Summary
+
+Python utilities are available for manual log inspection. After running `main_app.py` or any script that uses `bug_logger.py`, you can generate a quick overview of the collected bug reports:
+
+```bash
+python bug_log_summary.py
+```
+
+This script reads `logs/bug/bug_log.json` (or the path set in `BUG_LOG_FILE`) and prints the number of entries per severity along with the most frequent error messages.
+
+Alternatively, use the provided npm scripts:
+
+```bash
+npm run bug:demo      # generate example bug entries
+npm run bug:summary   # print the summary report
+```
+

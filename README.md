@@ -67,7 +67,10 @@ Ensure all variables marked as required in `.env.example` or in specific documen
 - **Analyze Logs** - `npm run logs:summary` scans collected logs and reports missing translation keys
 - **CSV Log Summary** - `npm run logs:summary:csv` outputs a CSV report of error counts per log file
 - **Health Check** - `npm run logs:health` prints a quick system status report
-- **Automated Alerts** - `npm run logs:alerts` enables real-time log monitoring and sends alerts to the configured webhook
+- You can skip external connectivity tests by setting `DISABLE_EXTERNAL_SERVICE_CHECKS=true` when running
+  the health check (useful for offline environments)
+- **Demo Bug Logger** - `npm run bug:demo` generates sample bug reports
+- **Bug Log Summary** - `npm run bug:summary` shows a quick breakdown of logged bugs
 - **Missing Key Log** - Any translation keys not found at runtime are appended to `logs/missing-keys.log`
 - **Bug Logging** - Run `python3 main_app.py` to generate sample bug logs in `logs/bug/bug_log.json`. Use `python3 bug_logger.py --summary` to view a summary of logged issues.
 
