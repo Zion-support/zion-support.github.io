@@ -69,11 +69,86 @@ import {
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
+<<<<<<< HEAD
   // Handle scroll to show/hide scroll to top button
   React.useEffect(() => {
     const handleScroll = () => {
       setShowScrollTop(window.scrollY > 400);
     };
+
+  const footerSections = [
+    {
+      title: 'Company',
+      icon: Building,
+      links: [
+        { name: 'About Us', path: '/about', icon: Users },
+        { name: 'Our Story', path: '/about/story', icon: FileText },
+        { name: 'Team', path: '/about/team', icon: Users },
+        { name: 'Careers', path: '/careers', icon: Briefcase },
+        { name: 'Partners', path: '/partners', icon: Network },
+        { name: 'Press', path: '/press', icon: Newspaper },
+        { name: 'Contact', path: '/contact', icon: Phone }
+      ]
+    },
+    {
+      title: 'AI & Quantum Solutions',
+      icon: Brain,
+      links: [
+        { name: 'AI Solutions Overview', path: '/services/ai-solutions', icon: Brain },
+        { name: 'Quantum Computing', path: '/services/quantum-computing', icon: Atom },
+        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: TrendingUp },
+        { name: 'AI Sales Copilot', path: '/services/ai-sales-copilot', icon: Users },
+        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: TrendingUp },
+        { name: 'AI Healthcare Platform', path: '/services/ai-healthcare-platform', icon: Heart },
+        { name: 'AI Project Management', path: '/services/ai-project-management', icon: Target },
+        { name: 'Quantum AI Hybrid Platform', path: '/services/ai-quantum-hybrid-platform', icon: Atom },
+        { name: 'New Services 2025', path: '/new-services-2025', icon: Star },
+        { name: 'Enhanced Services 2025', path: '/enhanced-new-services-2025', icon: Star }
+      ]
+    },
+    {
+      title: 'Advanced Technology',
+      icon: Cpu,
+      links: [
+        { name: 'Cybersecurity Platform', path: '/services/ai-cybersecurity-platform', icon: Shield },
+        { name: 'Quantum AI Trading', path: '/services/quantum-ai-trading-platform', icon: Atom },
+        { name: 'Space Technology', path: '/services/space-tech', icon: Rocket },
+        { name: 'Digital Twin', path: '/services/digital-twin', icon: Eye },
+        { name: 'IoT Edge Computing', path: '/services/iot-edge-computing', icon: Activity },
+        { name: 'Green IT Solutions', path: '/services/green-it', icon: Heart },
+        { name: 'Zero Trust Network', path: '/services/zero-trust-network-access', icon: Lock },
+        { name: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Cloud }
+      ]
+    },
+    {
+      title: 'Core Services',
+      icon: Zap,
+      links: [
+        { name: 'Digital Transformation', path: '/services/digital-transformation', icon: Rocket },
+        { name: 'Data Analytics', path: '/services/data-analytics', icon: TrendingUp },
+        { name: 'API Development', path: '/services/api-development', icon: Code },
+        { name: 'Database Solutions', path: '/services/database-solutions', icon: Database },
+        { name: 'Network Infrastructure', path: '/services/network-infrastructure', icon: Network },
+        { name: 'Server Management', path: '/services/server-management', icon: Server },
+        { name: 'Training & Education', path: '/training', icon: GraduationCap },
+        { name: 'Support & Helpdesk', path: '/support', icon: HelpCircle }
+      ]
+    },
+    {
+      title: 'Resources',
+      icon: FileText,
+      links: [
+        { name: 'Blog', path: '/blog', icon: FileText },
+        { name: 'Case Studies', path: '/case-studies', icon: FileText },
+        { name: 'Research & Development', path: '/research-development', icon: Activity },
+        { name: 'Documentation', path: '/docs', icon: FileText },
+        { name: 'API Reference', path: '/api', icon: Code },
+        { name: 'Developer Portal', path: '/developer', icon: Code },
+        { name: 'Sitemap', path: '/sitemap', icon: Map },
+        { name: 'Comprehensive Sitemap', path: '/comprehensive-sitemap', icon: Map }
+      ]
+    }
+  ];
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
