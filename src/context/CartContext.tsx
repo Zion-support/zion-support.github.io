@@ -1,73 +1,50 @@
+import React, { createContext, useContext, useState, ReactNode } from 'react';
 
-interface CartState { items: CartItem[]}
-
-const initialState: CartState = { items: [] };
-
-function cartReducer(state: CartState, action: CartAction): CartState {
-  switch(action.type) {
-    case 'ADD_ITEM': {
-      
-      let items;
-      if(existing) {
-        items = state.items.map(i =>
-          i.id === action.payload.id
-            ? { ...i, quantity: i.quantity + action.payload.quantity }
-            : i
-        )} else {
-        items = [...state.items, action.payload]}
-      return { items }}
-    case 'REMOVE_ITEM':
-      return { items: state.items.filter(i => i.id !== action.payload) };
-    case 'CLEAR_CART':
-      return { items: [] };
-    case 'SET_ITEMS':
-      return { items: action.payload };
-    default:
-      return state}
+export interface CartItem {
+  id: string;
+  quantity: number;
 }
 
+export interface CartContextType {
+  items: CartItem[];
+  addItem: (item: CartItem) => void;
+  removeItem: (id: string) => void;
+  clear: () => void;
+}
+
+const CartContext = createContext<CartContextType>({
+  items: [],
+  addItem: () => {},
+  removeItem: () => {},
+  clear: () => {},
+});
+
 export function useCart(): CartContextType {
-  
-  if(!ctx) throw new Error('useCart must be used within a CartProvider');
-  return ctx}
+  return useContext(CartContext);
+}
 
-export function CartProvider({ children }: { children: React.ReactNode }) {
-  const [state, dispatch] = useReducer(cartReducer, initialState);
-  const { user } = useAuth();
+export function CartProvider({ children }: { children: ReactNode }) {
+  const [items, setItems] = useState<CartItem[]>([]);
 
-  useEffect(() => {
-    if(!user) {
-      
-      if(stored) {
-        try {
-          
-          if(items.length) {
-            dispatch({ type: 'SET_ITEMS', payload: items })}
-        } catch {
-          /* ignore */
-        }
+  const addItem = (item: CartItem) => {
+    setItems(prev => {
+      const existing = prev.find(i => i.id === item.id);
+      if (existing) {
+        return prev.map(i => i.id === item.id ? { ...i, quantity: i.quantity + item.quantity } : i);
       }
-      return}
-
-    if(storedGuest) {
-      try {
-        
-        mergeGuestCart(items).catch(err => console.error('Cart merge failed', err));
-        dispatch({ type: 'SET_ITEMS', payload: items });
-        safeStorage.removeItem(GUEST_CART_KEY)} catch {
-        /* ignore */
-      }
-    }
-  }, [user]);
-
-  useEffect(() => {
-    if(!user) {
-      safeStorage.setItem(GUEST_CART_KEY, JSON.stringify(state.items))}
-  }, [state.items, user]);
-
-  const value: CartContextType = {
-    items: state.items,
-    dispatch,
+      return [...prev, item];
+    });
   };
 
-  return <CartContext.Provider value={value}>{children}</CartContext.Provider>}
+  const removeItem = (id: string) => {
+    setItems(prev => prev.filter(i => i.id !== id));
+  };
+
+  const clear = () => setItems([]);
+
+  return (
+    <CartContext.Provider value={{ items, addItem, removeItem, clear }}>
+      {children}
+    </CartContext.Provider>
+  );
+}
