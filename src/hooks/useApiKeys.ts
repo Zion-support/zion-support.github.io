@@ -43,7 +43,9 @@ export function useApiKeys() {
     // (where import.meta.env is injected by Vite) and in Node environments
     // such as tests or server side rendering.
     const env = (import.meta as any)?.env ?? process.env;
-    const url = env.VITE_SUPABASE_URL || env.SUPABASE_URL;
+    const url =
+      env.NEXT_PUBLIC_SUPABASE_URL ||
+      env.SUPABASE_URL;
     return `${url}/functions/v1/api-key-manager`;
   };
 
