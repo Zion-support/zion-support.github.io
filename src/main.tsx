@@ -20,7 +20,6 @@ if (!rootElement) throw new Error('Failed to find the root element');
 import { AnalyticsProvider } from './context/AnalyticsContext';
 import { initGA } from './lib/gtag';
 import { ErrorBoundary } from './components/ErrorBoundary';
-import { AppLayout } from '@/layout/AppLayout';
 
 // Initialize a React Query client with global error handling
 const queryClient = new QueryClient({
@@ -47,9 +46,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
                 <AnalyticsProvider>
                   <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
                     <ErrorBoundary>
-                      <AppLayout>
-                        <App />
-                      </AppLayout>
+                      <App />
                       <LanguageDetectionPopup />
                     </ErrorBoundary>
                   </LanguageProvider>
