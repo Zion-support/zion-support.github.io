@@ -131,18 +131,16 @@ export default function FrontLanding() {
 
             {/* Quick Links */}
             <div className="mx-auto mt-8 flex max-w-3xl flex-wrap justify-center gap-2">
-                             {[
-                 ['Automation Hub', '/automation'],
-                 ['SEO Audit', '/reports/seo'],
-                 ['AI Trends', '/reports/ai-trends'],
-                 ['Redirect Healer', '/.netlify/functions/redirect-healer'],
-                 ['Sitemap Prioritizer', '/.netlify/functions/sitemap-prioritizer'],
-                 ['Orphan Page Linker', '/.netlify/functions/orphan-page-linker-runner'],
-                 ['Embed Health Report', '/reports/embeds'],
-                 ['Newsroom', '/newsroom'],
-                 ['Site Health', '/site-health'],
-               ].map(([label, href]) => (
-<Link key={label as string} href={href as string}>
+              {[
+                ['Automation Hub', '/automation'],
+                ['SEO Audit', '/reports/seo'],
+                ['AI Trends', '/reports/ai-trends'],
+                ['Competitive Intelligence', '/reports/competitive-intel'],
+                ['Performance Budget', '/reports/performance-budget'],
+                ['Newsroom', '/newsroom'],
+                ['Site Health', '/site-health'],
+              ].map(([label, href]) => (
+                <Link key={label as string} href={href as string}>
                   <a className="rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs text-white/80 backdrop-blur hover:bg-white/10">{label as string}</a>
                 </Link>
               ))}
@@ -247,17 +245,13 @@ export default function FrontLanding() {
   <div className="text-base font-semibold">AI Trends Radar</div>
   <div className="mt-1 text-sm text-white/75">Signals powering strategy</div>
   <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>
-            <Link href="/reports/ux"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
-  <div className="text-base font-semibold">UX Heuristics Auditor</div>
-  <div className="mt-1 text-sm text-white/75">Titles, meta, and H1 checks</div>
+            <Link href="/reports/competitive-intel"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
+  <div className="text-base font-semibold">Competitive Intelligence</div>
+  <div className="mt-1 text-sm text-white/75">Market signals & headlines</div>
   <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>
-            <Link href="/reports/roadmap"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
-  <div className="text-base font-semibold">Roadmap (auto)</div>
-  <div className="mt-1 text-sm text-white/75">Synthesized from TODO & changes</div>
-  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>
-            <Link href="/reports/content-gaps"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
-  <div className="text-base font-semibold">Content Gap Finder</div>
-  <div className="mt-1 text-sm text-white/75">Suggests new topics</div>
+            <Link href="/reports/performance-budget"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
+  <div className="text-base font-semibold">Performance Budget</div>
+  <div className="mt-1 text-sm text-white/75">Largest assets & risks</div>
   <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>
             <Link href="/newsroom"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
   <div className="text-base font-semibold">Newsroom</div>
@@ -351,23 +345,22 @@ export default function FrontLanding() {
               <div className="mt-3 text-xs text-cyan-300/90">View logs via Netlify →</div>
             </a>
             <a
-              href="https://github.com/Zion-Holdings/zion.app/tree/main/automation"
-              target="_blank" rel="noopener"
+              href="/reports/competitive-intel"
               className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover"
             >
               <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-              <div className="text-lg font-semibold">Local Orchestrators</div>
-              <p className="mt-1 text-sm text-white/75">Node-based orchestrators that can run on any scheduler or platform.</p>
-              <div className="mt-3 text-xs text-cyan-300/90">Browse orchestration scripts ↗</div>
+              <div className="text-lg font-semibold">Competitive Intelligence Radar</div>
+              <p className="mt-1 text-sm text-white/75">Auto-summarized competitor headlines and shifts.</p>
+              <div className="mt-3 text-xs text-cyan-300/90">Open report →</div>
             </a>
             <a
-              href="/automation"
+              href="/reports/performance-budget"
               className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover"
             >
               <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-              <div className="text-lg font-semibold">Autonomous Cloud Orchestrator</div>
-              <p className="mt-1 text-sm text-white/75">End-to-end agents launching factories and syncing safe diffs to main.</p>
-              <div className="mt-3 text-xs text-cyan-300/90">Open Automation Hub →</div>
+              <div className="text-lg font-semibold">Performance Budget Watcher</div>
+              <p className="mt-1 text-sm text-white/75">Monitors asset sizes; flags budget risks.</p>
+              <div className="mt-3 text-xs text-cyan-300/90">Open report →</div>
             </a>
             <a
               href="/.netlify/functions/internal-link-graph-runner"
