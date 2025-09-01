@@ -16,9 +16,8 @@ export default function TalentDetail() {
 
   if (isLoading) return <Spinner />;
 
-  if (!data) {
-    return <NotFound />;
-  }
+  if (isLoading) return <Spinner />;
+  if (!data) return <NotFound />;
 
   return <TalentProfile {...data} />;
 }
