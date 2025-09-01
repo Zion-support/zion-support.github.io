@@ -1,9 +1,9 @@
 {
-  "timestamp": "2025-08-29T17:56:47.531Z",
+  "timestamp": "2025-08-29T14:07:10.492Z",
   "summary": {
     "total": 6,
-    "passed": 6,
-    "failed": 0
+    "passed": 5,
+    "failed": 1
   },
   "results": {
     "unit": {
@@ -11,8 +11,8 @@
       "results": "No unit tests found\n"
     },
     "integration": {
-      "status": "success",
-      "results": "No integration tests found\n"
+      "status": "failure",
+      "results": "Command failed: npm run build"
     },
     "e2e": {
       "status": "success",
@@ -31,5 +31,5 @@
       "results": "Coverage generation failed\n"
     }
   },
-  "qualityGates": true
+  "qualityGates": false
 }
