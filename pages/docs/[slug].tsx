@@ -1,50 +1,103 @@
+import React from 'react';
+import Head from 'next/head';
 import fs from 'fs';
 import path from 'path';
-import React from 'react';
-import ReactMarkdown from 'react-markdown';
-import type { GetStaticPaths, GetStaticProps } from 'next';
-import type { ParsedUrlQuery } from 'querystring';
+import Link from 'next/link';
 
-interface DocProps {
-  content: string | null;
-}
-
-interface DocPageParams extends ParsedUrlQuery {
-  slug: string;
-}
-
-const Doc: React.FC<DocProps> = ({ content }) => {
-  if (!content) {
-    return <div>Document not found</div>;
-  }
-  return (
-    <main className="prose dark:prose-invert max-w-3xl mx-auto py-8">
-      <ReactMarkdown>{content}</ReactMarkdown>
-    </main>
-  );
+type DocProps = {
+  title: string;
+  html: string;
 };
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const dir = path.join(process.cwd(), 'docs', 'gitbook');
-  const files = fs
-    .readdirSync(dir)
-    .filter((f) => f.endsWith('.md') && f !== 'README.md' && f !== 'SUMMARY.md');
-  const paths = files.map((f) => ({ params: { slug: f.replace(/\.md$/, '') } }));
+const slugToFile: Record<string, string> = {
+  'ultimate-redundancy': 'README_ULTIMATE_REDUNDANCY.md',
+  'comprehensive-redundancy': 'README_COMPREHENSIVE_REDUNDANCY.md',
+  'pm2-redundancy-complete': 'README_PM2_REDUNDANCY_COMPLETE.md',
+  'performance': 'PERFORMANCE.md',
+  'security': '',
+  'testing': ''
+};
+
+export async function getStaticPaths() {
+  const paths = Object.keys(slugToFile).map((slug) => ({ params: { slug } }));
   return { paths, fallback: false };
-};
+}
 
-export const getStaticProps: GetStaticProps<DocProps, DocPageParams> = async ({ params }: { params: DocPageParams }) => {
-  // params is now typed as DocPageParams, so params.slug is a string
-  // However, if fallback: 'blocking' or fallback: true is used, params might be initially undefined
-  // or some params might be missing during the first render.
-  // Given fallback: false in getStaticPaths, params and params.slug should always be defined here.
-  const slug = params.slug;
-  const filePath = path.join(process.cwd(), 'docs', 'gitbook', `${slug}.md`);
-  if (!fs.existsSync(filePath)) {
-    return { notFound: true };
+function markdownToHtml(markdown: string): string {
+  // Minimal markdown handling to keep dependencies light
+  let html = markdown
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+  // headings
+  html = html.replace(/^# (.*)$/gm, '<h1>$1</h1>');
+  html = html.replace(/^## (.*)$/gm, '<h2>$1</h2>');
+  html = html.replace(/^### (.*)$/gm, '<h3>$1</h3>');
+  // bold & italics
+  html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+  html = html.replace(/\*(.*?)\*/g, '<em>$1</em>');
+  // code blocks
+  html = html.replace(/```[\s\S]*?```/g, (block) => {
+    const code = block.replace(/```/g, '');
+    return `<pre><code>${code.trim()}</code></pre>`;
+  });
+  // inline code
+  html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
+  // links
+  html = html.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" class="text-cyan-400">$1</a>');
+  // paragraphs
+  html = html.replace(/^(?!<h\d|<pre|<ul|<li|<p|<blockquote)(.+)$/gm, '<p>$1</p>');
+  return html;
+}
+
+export async function getStaticProps({ params }: { params: { slug: string } }) {
+  const { slug } = params;
+  const fileName = slugToFile[slug] || '';
+
+  let title = 'Documentation';
+  let html = '';
+
+  if (fileName) {
+    const filePath = path.join(process.cwd(), fileName);
+    if (fs.existsSync(filePath)) {
+      const md = fs.readFileSync(filePath, 'utf8');
+      title = md.split('\n')[0]?.replace(/^#\s*/, '') || title;
+      html = markdownToHtml(md);
+    }
   }
-  const content = fs.readFileSync(filePath, 'utf8');
-  return { props: { content } };
-};
 
-export default Doc;
+  if (!html) {
+    if (slug === 'security') {
+      title = 'Security & Compliance';
+      html = markdownToHtml(`# Security & Compliance\n\n- Automated security scanning\n- Vulnerability assessments\n- Compliance monitoring\n- Threat detection & response\n- Zero-trust architecture`);
+    } else if (slug === 'testing') {
+      title = 'Testing & Quality Assurance';
+      html = markdownToHtml(`# Testing & Quality\n\n- Automated testing suites\n- Performance & security testing\n- Continuous validation\n- Quality gates in CI/CD`);
+    } else {
+      title = 'Documentation';
+      html = markdownToHtml(`# Documentation\n\nContent coming soon.`);
+    }
+  }
+
+  return { props: { title, html } };
+}
+
+export default function DocPage({ title, html }: DocProps) {
+  return (
+    <>
+      <Head>
+        <title>{title} — Zion Tech Group</title>
+        <meta name="description" content={`${title} documentation`} />
+      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
+        <main className="container mx-auto px-6 py-12">
+          <div className="mb-8">
+            <Link href="/" className="text-cyan-400">← Back to Home</Link>
+          </div>
+          <article className="prose prose-invert max-w-3xl" dangerouslySetInnerHTML={{ __html: html }} />
+        </main>
+      </div>
+    </>
+  );
+}
+

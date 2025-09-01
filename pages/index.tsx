@@ -360,7 +360,7 @@ export default function HomePage({ latestUpdates = [] }: HomePageProps) {
                   <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/DEPLOYMENT.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">Deployment</a> — Setup</li>
                   <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">Contributing</a> — Workflow</li>
                 </ul>
-                <Link href="/privacy" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                <Link href="/docs/security" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
                   View Security Guide →
                 </Link>
               </div>
@@ -374,7 +374,7 @@ export default function HomePage({ latestUpdates = [] }: HomePageProps) {
                   <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/README_GITHUB_ACTIONS.md" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">GitHub Actions</a></li>
                   <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/README_CONTINUOUS_OPERATION.md" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">Continuous Operation</a></li>
                 </ul>
-                <Link href="/resources" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                <Link href="/docs/testing" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
                   View Testing Guide →
                 </Link>
               </div>
@@ -388,7 +388,7 @@ export default function HomePage({ latestUpdates = [] }: HomePageProps) {
                   <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/ULTIMATE_REDUNDANCY_AUTOMATION_README.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">Automation README</a></li>
                   <li>• <a href="https://github.com/Zion-Holdings/zion.app/blob/main/EXPONENTIAL_GROWTH_AUTOMATION.md" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">Growth Automation</a></li>
                 </ul>
-                <Link href="/blog/performance-optimization" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                <Link href="/docs/performance" className="text-green-400 hover:text-green-300 text-sm font-semibold">
                   View Performance Guide →
                 </a>
               </div>
@@ -490,7 +490,7 @@ export default function HomePage({ latestUpdates = [] }: HomePageProps) {
                   <li>• Health monitoring</li>
                   <li>• Self-healing infrastructure</li>
                 </ul>
-                <Link href="/case-studies" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
+                <Link href="/docs/ultimate-redundancy" className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold">
                   Learn More →
                 </a>
               </div>
@@ -504,7 +504,7 @@ export default function HomePage({ latestUpdates = [] }: HomePageProps) {
                   <li>• Error prevention</li>
                   <li>• Predictive analytics</li>
                 </ul>
-                <Link href="/services" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
+                <Link href="/docs/comprehensive-redundancy" className="text-fuchsia-400 hover:text-fuchsia-300 text-sm font-semibold">
                   Learn More →
                 </a>
               </div>
@@ -518,7 +518,7 @@ export default function HomePage({ latestUpdates = [] }: HomePageProps) {
                   <li>• Error recovery</li>
                   <li>• Deployment automation</li>
                 </ul>
-                <Link href="/services" className="text-green-400 hover:text-green-300 text-sm font-semibold">
+                <Link href="/docs/pm2-redundancy-complete" className="text-green-400 hover:text-green-300 text-sm font-semibold">
                   Learn More →
                 </a>
               </div>
