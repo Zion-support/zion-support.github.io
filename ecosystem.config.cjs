@@ -5,6 +5,7 @@ module.exports = {
       name: 'zion-website',
       script: 'npm',
       args: 'run dev',
+      cwd: '/workspace',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -15,18 +16,13 @@ module.exports = {
       },
       env_production: {
         NODE_ENV: 'production',
-        NODE_OPTIONS: '--max-old-space-size=6144 --openssl-legacy-provider'
+        PORT: 3000
       },
-      error_file: './logs/zion-website-error.log',
+      log_file: './logs/zion-website.log',
       out_file: './logs/zion-website-out.log',
-      log_file: './logs/zion-website-combined.log',
-      time: true,
+      error_file: './logs/zion-website-error.log',
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
-      merge_logs: true,
-      max_restarts: 10,
-      min_uptime: '10s',
-      restart_delay: 5000,
-      pmx: true
+      merge_logs: true
     },
 
     // Error monitoring and detection
