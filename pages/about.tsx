@@ -1,8 +1,13 @@
-export default function About() {
+import React from 'react';
+import EnhancedLayout from '../components/layout/EnhancedLayout';
+
+export default function AboutPage() {
   return (
-    <div>
-      <h1 className="text-2xl font-bold">About</h1>
-      <p className="text-gray-600 dark:text-gray-300">Zion AI Marketplace connects top-tier talent with teams.</p>
-    </div>
+    <EnhancedLayout>
+      <div className="space-y-4">
+        <h1 className="text-2xl font-semibold">About</h1>
+        <p className="opacity-70 text-sm">This page was auto-stubbed and is ready for content.</p>
+      </div>
+    </EnhancedLayout>
   );
 }

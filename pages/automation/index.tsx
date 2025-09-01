@@ -1,8 +1,13 @@
-export default function AutomationIndex() {
+import React from 'react';
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+
+export default function AutomationPage() {
   return (
-    <div>
-      <h1 className="text-2xl font-bold">Automation</h1>
-      <p className="text-gray-600 dark:text-gray-300">Automation dashboard placeholder.</p>
-    </div>
+    <EnhancedLayout>
+      <div className="space-y-4">
+        <h1 className="text-2xl font-semibold">Automation</h1>
+        <p className="opacity-70 text-sm">This page was auto-stubbed and is ready for content.</p>
+      </div>
+    </EnhancedLayout>
   );
 }

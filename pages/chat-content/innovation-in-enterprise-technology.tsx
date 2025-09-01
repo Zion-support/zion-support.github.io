@@ -1,1 +1,13 @@
-export default function ChatContentH() { return <div className="text-gray-600 dark:text-gray-300">Content coming soon.</div>; }
+import React from 'react';
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+
+export default function InnovationInEnterpriseTechnologyPage() {
+  return (
+    <EnhancedLayout>
+      <div className="space-y-4">
+        <h1 className="text-2xl font-semibold">Innovation In Enterprise Technology</h1>
+        <p className="opacity-70 text-sm">This page was auto-stubbed and is ready for content.</p>
+      </div>
+    </EnhancedLayout>
+  );
+}

@@ -1,60 +1,108 @@
+import React from 'react';
+import fs from 'fs';
+import path from 'path';
 import Link from 'next/link';
+import EnhancedLayout from '../components/layout/EnhancedLayout';
 
-export default function Home() {
+export type IndexPageProps = {
+  routes: string[];
+};
+
+function isPageFile(fileName: string): boolean {
+  return fileName.endsWith('.tsx') || fileName.endsWith('.jsx');
+}
+
+function toRoutePath(filePath: string): string | null {
+  // Normalize path from pages/...
+  const rel = filePath.replace(/\\/g, '/');
+  if (rel.startsWith('api/')) return null;
+  const base = rel.replace(/\.(tsx|jsx)$/i, '');
+  if (base === 'index') return '/';
+  if (base === '_app' || base === '_document' || base === '404') return null;
+  // Skip dynamic routes with brackets for this list
+  if (base.includes('[')) return null;
+  // Convert directory index like blog/index -> /blog
+  return '/' + base.replace(/\/index$/, '');
+}
+
+function walkPagesDir(dir: string, acc: string[] = [], root = dir): string[] {
+  const entries = fs.readdirSync(dir, { withFileTypes: true });
+  for (const entry of entries) {
+    if (entry.name.startsWith('.')) continue;
+    const full = path.join(dir, entry.name);
+    const relFromPages = path.relative(root, full);
+    if (entry.isDirectory()) {
+      if (entry.name === 'api') continue;
+      walkPagesDir(full, acc, root);
+    } else if (entry.isFile() && isPageFile(entry.name)) {
+      const route = toRoutePath(relFromPages);
+      if (route && route !== '/') acc.push(route);
+    }
+  }
+  return acc;
+}
+
+export async function getStaticProps() {
+  const pagesDir = path.join(process.cwd(), 'pages');
+  let routes: string[] = [];
+  try {
+    routes = walkPagesDir(pagesDir);
+  } catch (e) {
+    routes = [];
+  }
+  routes = Array.from(new Set(routes)).sort((a, b) => a.localeCompare(b));
+  return { props: { routes } };
+}
+
+export default function HomeIndex({ routes }: IndexPageProps) {
   return (
-    <div className="space-y-8">
-      <div className="space-y-4">
-        <h1 className="text-2xl font-bold">Zion AI Marketplace</h1>
-        <p className="text-gray-600 dark:text-gray-300">Discover and hire top AI talent.</p>
-        <Link href="/talent" className="enhanced-button enhanced-button-primary inline-block">Browse Talent</Link>
-      </div>
+    <EnhancedLayout>
+      <div className="space-y-10">
+        {/* Hero */}
+        <section className="rounded-2xl p-8 bg-gradient-to-r from-neon-blue to-neon-purple text-black dark:text-white">
+          <h1 className="text-3xl md:text-4xl font-bold">Zion AI Marketplace</h1>
+          <p className="mt-2 text-sm md:text-base opacity-90">Discover expert talent, post jobs, and hire faster with AI-powered matching.</p>
+          <div className="mt-4 flex flex-wrap gap-3">
+            <Link href="/dashboard/client"><a className="px-4 py-2 rounded-lg bg-white/90 text-black text-sm font-medium">Post a job</a></Link>
+            <Link href="/dashboard/talent"><a className="px-4 py-2 rounded-lg border border-white/60 text-white text-sm font-medium">Find work</a></Link>
+          </div>
+        </section>
 
-      <section className="rounded-2xl border border-blue-200 dark:border-blue-900/50 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-blue-950/30 dark:via-gray-900 dark:to-purple-950/30 p-6">
-        <h2 className="text-xl font-semibold mb-2">Autonomous Cloud Automations</h2>
-        <p className="text-gray-700 dark:text-gray-300 mb-4">Always-on agents generate insights and pulse reports with zero human intervention.</p>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          <div className="rounded-xl border border-gray-200 dark:border-gray-800 p-4">
-            <h3 className="font-medium">Autonomous Talent Insights</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-300">Trending skills, top-rated, most-booked talent — refreshed automatically.</p>
-            <div className="mt-3 flex gap-3">
-              <Link href="/automations" className="text-blue-600 hover:underline text-sm">View dashboard</Link>
-              <a href="/automations/talent-insights/latest.json" className="text-blue-600 hover:underline text-sm" target="_blank" rel="noreferrer">Latest JSON</a>
+        {/* Autonomous Cloud Automations */}
+        <section>
+          <h2 className="text-xl font-semibold mb-4">Autonomous Cloud Automations</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="rounded-xl border border-gray-200 dark:border-gray-800 p-5 bg-white/70 dark:bg-black/40">
+              <h3 className="font-semibold">Visual Snapshot Auditor</h3>
+              <p className="mt-1 text-sm opacity-80">Hourly UI screenshots of key routes with reports.</p>
+              <Link href="/automation-reports/visual-report.json"><a className="mt-3 inline-block text-sm px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700">View latest report</a></Link>
+            </div>
+            <div className="rounded-xl border border-gray-200 dark:border-gray-800 p-5 bg-white/70 dark:bg-black/40">
+              <h3 className="font-semibold">Dead Code Reporter</h3>
+              <p className="mt-1 text-sm opacity-80">Flags unused pages and components regularly.</p>
+              <Link href="/automation-reports/dead-code-report.json"><a className="mt-3 inline-block text-sm px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700">View latest report</a></Link>
+            </div>
+            <div className="rounded-xl border border-gray-200 dark:border-gray-800 p-5 bg-white/70 dark:bg-black/40">
+              <h3 className="font-semibold">Image Optimizer</h3>
+              <p className="mt-1 text-sm opacity-80">Optimizes images in public/ and PRs the savings.</p>
+              <Link href="/automation-reports/image-optimizer-report.json"><a className="mt-3 inline-block text-sm px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700">View latest report</a></Link>
             </div>
           </div>
-          <div className="rounded-xl border border-gray-200 dark:border-gray-800 p-4">
-            <h3 className="font-medium">Marketplace Pulse</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-300">Live pulse of average rates, availability mix, and regions across the marketplace.</p>
-            <div className="mt-3 flex gap-3">
-              <Link href="/automations" className="text-blue-600 hover:underline text-sm">View dashboard</Link>
-              <a href="/automations/pulse/latest.json" className="text-blue-600 hover:underline text-sm" target="_blank" rel="noreferrer">Latest JSON</a>
-            </div>
+        </section>
+
+        {/* Links to all pages */}
+        <section>
+          <h2 className="text-xl font-semibold mb-4">All Pages</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+            <Link href="/"><a className="text-sm underline">/</a></Link>
+            {routes.map((route) => (
+              <Link key={route} href={route}>
+                <a className="text-sm underline break-all">{route}</a>
+              </Link>
+            ))}
           </div>
-          <div className="rounded-xl border border-gray-200 dark:border-gray-800 p-4">
-            <h3 className="font-medium">Role Intelligence</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-300">Top candidates per high-demand roles based on skills and performance signals.</p>
-            <div className="mt-3 flex gap-3">
-              <Link href="/automations" className="text-blue-600 hover:underline text-sm">View dashboard</Link>
-              <a href="/automations/role-intel/latest.json" className="text-blue-600 hover:underline text-sm" target="_blank" rel="noreferrer">Latest JSON</a>
-            </div>
-          </div>
-          <div className="rounded-xl border border-gray-200 dark:border-gray-800 p-4">
-            <h3 className="font-medium">Rate Distribution</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-300">Visualize rate buckets to quickly align budgets with talent bands.</p>
-            <div className="mt-3 flex gap-3">
-              <Link href="/automations" className="text-blue-600 hover:underline text-sm">View dashboard</Link>
-              <a href="/automations/rate-distribution/latest.json" className="text-blue-600 hover:underline text-sm" target="_blank" rel="noreferrer">Latest JSON</a>
-            </div>
-          </div>
-          <div className="rounded-xl border border-gray-200 dark:border-gray-800 p-4">
-            <h3 className="font-medium">Trends (Delta)</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-300">Track changes in rates, availability, and regions between runs.</p>
-            <div className="mt-3 flex gap-3">
-              <Link href="/automations" className="text-blue-600 hover:underline text-sm">View dashboard</Link>
-              <a href="/automations/trends/latest.json" className="text-blue-600 hover:underline text-sm" target="_blank" rel="noreferrer">Latest JSON</a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </EnhancedLayout>
   );
 }
