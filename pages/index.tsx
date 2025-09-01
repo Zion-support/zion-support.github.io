@@ -51,7 +51,7 @@ export default function HomePage() {
                 <div className="text-sm text-yellow-200">Uptime</div>
               </div>
               <div className="bg-white/10 backdrop-blur-xl rounded-xl px-6 py-3 border border-white/20">
-                <span className="text-purple-400 font-bold">50+</span> Redundancy Systems
+                <span className="text-fuchsia-400 font-bold">20+</span> Dynamic Pages
               </div>
               <div className="bg-white/10 backdrop-blur-xl rounded-xl px-6 py-3 border border-white/20">
                 <span className="text-orange-400 font-bold">24/7</span> Monitoring
@@ -80,6 +80,9 @@ export default function HomePage() {
               </Link>
               <Link href="/case-studies" className="px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-600 hover:to-orange-700 rounded-lg text-white font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
                 Case Studies
+              </Link>
+              <Link href="/reports" className="px-8 py-4 bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700 rounded-lg text-white font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+                Reports
               </Link>
               <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 rounded-lg text-white font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
                 Get Started
@@ -792,6 +795,14 @@ export default function HomePage() {
                 <p className="text-white/70 text-sm">Latest insights</p>
                 <div className="mt-3 text-purple-400 text-xs font-semibold group-hover:translate-x-1 transition-transform duration-300">Read Blog →</div>
               </Link>
+
+              <Link href="/reports" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-amber-400/30 transition-all duration-300 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-amber-400 to-yellow-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-xl">📰</span>
+                </div>
+                <h3 className="text-lg font-semibold text-amber-400 mb-2">Reports</h3>
+                <p className="text-white/70 text-sm">Autonomous updates</p>
+              </Link>
               
               <Link href="/contact" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-green-400/30 transition-all duration-300 text-center hover:scale-105">
                 <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-emerald-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -979,6 +990,14 @@ export default function HomePage() {
                 <h3 className="text-lg font-semibold">The Future of Work</h3>
                 <p className="mt-1 text-sm text-white/75">Humans and AI building together.</p>
                 <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Read <span aria-hidden>→</span></div>
+              </Link>
+
+              <Link href="/privacy" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-slate-400/30 transition-all duration-300 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-slate-400 to-slate-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-xl">⚖️</span>
+                </div>
+                <h3 className="text-lg font-semibold text-slate-300 mb-2">Privacy</h3>
+                <p className="text-white/70 text-sm">Your data & trust</p>
               </Link>
             </div>
           </section>
