@@ -1,23 +1,148 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import {
-  Brain, Zap, Target, BarChart3, Users, TrendingUp,
-  MessageSquare, Mail, Phone, MapPin, ArrowRight,
-  Star, CheckCircle, Rocket, Globe, Shield, Cpu,
-  Building, Award, Lock, Server, Network, Monitor
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
+  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,
+  ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network
 } from 'lucide-react';
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
+import EnhancedContactForm from '../components/EnhancedContactForm';
+import SEOHead from '../components/SEOHead';
+import { ToastContainer, useToast } from '../components/ui/Toast';
+import { Service, Feature, Stat, UpdateItem } from '../types';
 
 export default function HomePage() {
+  const [currentFeature, setCurrentFeature] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const { toasts, removeToast } = useToast();
+
+  useEffect(() => {
+    setIsVisible(true);
+    
+    // Auto-rotate features
+    const interval = setInterval(() => {
+      setCurrentFeature((prev) => (prev + 1) % 6);
+    }, 5000);
+    
+    return () => clearInterval(interval);
+  }, []);
+
+  const features: Feature[] = [
+    {
+      icon: Brain,
+      title: "AI Autonomous Ecosystem",
+      description: "Revolutionary autonomous AI solutions that adapt and evolve",
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      icon: Atom,
+      title: "Quantum AI Neural Networks",
+      description: "Quantum-powered AI with advanced consciousness capabilities",
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      icon: Shield,
+      title: "Quantum Cybersecurity",
+      description: "Quantum-resistant security with AI-powered threat detection",
+      color: "from-red-500 to-orange-500"
+    },
+    {
+      icon: Rocket,
+      title: "Space Resource Intelligence",
+      description: "AI-powered space resource discovery and optimization",
+      color: "from-indigo-500 to-purple-500"
+    },
+    {
+      icon: Cpu,
+      title: "Autonomous DevOps",
+      description: "AI-powered DevOps optimization and automation",
+      color: "from-emerald-500 to-teal-500"
+    },
+    {
+      icon: Database,
+      title: "Edge Computing Orchestration",
+      description: "Advanced edge computing optimization platform",
+      color: "from-yellow-500 to-orange-500"
+    }
+  ];
+
+  const services: Service[] = [
+    {
+      title: "AI & Machine Learning",
+      description: "Custom AI solutions, neural networks, and autonomous systems",
+      icon: Brain,
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "Quantum Computing",
+      description: "Quantum algorithms, cryptography, and quantum AI integration",
+      icon: Atom,
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      title: "Cybersecurity",
+      description: "Advanced threat detection, quantum-resistant encryption",
+      icon: Shield,
+      color: "from-red-500 to-orange-500"
+    },
+    {
+      title: "Cloud Infrastructure",
+      description: "Scalable cloud solutions, edge computing, and DevOps",
+      icon: Cloud,
+      color: "from-emerald-500 to-teal-500"
+    },
+    {
+      title: "Data Analytics",
+      description: "Big data processing, predictive analytics, and insights",
+      icon: BarChart3,
+      color: "from-indigo-500 to-purple-500"
+    },
+    {
+      title: "Digital Transformation",
+      description: "End-to-end digital transformation and modernization",
+      icon: Rocket,
+      color: "from-yellow-500 to-orange-500"
+    }
+  ];
+
+  const stats: Stat[] = [
+    { number: "500+", label: "Projects Delivered", icon: CheckCircle },
+    { number: "50+", label: "Enterprise Clients", icon: Users },
+    { number: "99.9%", label: "Uptime Guarantee", icon: Shield },
+    { number: "24/7", label: "Support Available", icon: Clock }
+  ];
+
+  const updates: UpdateItem[] = [
+    {
+      title: "Autonomous Update — 2025: 08: 15: 0508",
+      href: "/reports/updates/update-2025-08-15-0508",
+      description: "Freshly published by autonomous agents.",
+      date: "2025-08-15"
+    },
+    {
+      title: "Autonomous Update — 2025: 08: 15: 0507",
+      href: "/reports/updates/update-2025-08-15-0507",
+      description: "Freshly published by autonomous agents.",
+      date: "2025-08-15"
+    },
+    {
+      title: "Autonomous Update — 2025: 08: 15: 0457",
+      href: "/reports/updates/update-2025-08-15-0457",
+      description: "Freshly published by autonomous agents.",
+      date: "2025-08-15"
+    }
+  ];
+
   return (
-    <>
-      <Head>
-        <title>Zion Tech Group | Revolutionary Quantum AI & Autonomous Systems</title>
-        <meta name="description" content="Zion Tech Group leads the future with revolutionary quantum AI solutions, autonomous systems, and cutting-edge technology platforms. Transform your business with next-generation technology." />
-        <meta name="keywords" content="Zion Tech Group, quantum AI, autonomous systems, technology solutions, AI innovation, quantum computing" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
+      <SEOHead
+        title="Zion Tech Group — Leading-Edge Technology Solutions & Autonomous Innovation Platform"
+        description="Zion Tech Group delivers cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions. Leading the future of autonomous innovation."
+        keywords="AI, quantum computing, cybersecurity, digital transformation, autonomous systems, technology solutions"
+        url="https://ziontechgroup.com"
+        type="website"
+      />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Navigation */}
@@ -75,6 +200,47 @@ export default function HomePage() {
                 </div>
               </main>
             </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Latest Updates Section */}
+      <section className="py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+              Latest Autonomous Updates
+            </h2>
+            <p className="text-xl text-white/70 max-w-3xl mx-auto">
+              Stay updated with our latest innovations and autonomous system developments
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {updates.map((update, index) => (
+              <motion.a
+                key={update.href}
+                href={update.href}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105"
+              >
+                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+                <h3 className="text-lg font-semibold text-white">{update.title}</h3>
+                <p className="mt-1 text-sm text-white/75">{update.description}</p>
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300">
+                  Open <span aria-hidden>→</span>
+                </div>
+              </motion.a>
+            ))}
           </div>
         </div>
 
@@ -137,80 +303,10 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* CTA Section */}
-        <div className="bg-purple-600">
-          <div className="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
-              <span className="block">Ready to Transform Your Business?</span>
-            </h2>
-            <p className="mt-4 text-lg leading-6 text-purple-100">
-              Join the quantum revolution and discover how Zion Tech Group can accelerate your success.
-            </p>
-            <Link href="/contact" className="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-purple-600 bg-white hover:bg-gray-50 sm:w-auto">
-              Contact Us Today
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </div>
-        </div>
+      <EnhancedFooter />
 
-        {/* Footer */}
-        <footer className="bg-black/40">
-          <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-            <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-              <div className="space-y-8 xl:col-span-1">
-                <h3 className="text-2xl font-bold text-white">Zion Tech Group</h3>
-                <p className="text-gray-300 text-base">
-                  Leading the future with revolutionary quantum AI solutions and autonomous systems.
-                </p>
-              </div>
-              <div className="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
-                <div className="md:grid md:grid-cols-2 md:gap-8">
-                  <div>
-                    <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Solutions</h3>
-                    <ul className="mt-4 space-y-4">
-                      <li>
-                        <Link href="/zion-tech-group" className="text-base text-gray-300 hover:text-white">
-                          Quantum AI
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/zion-tech-group" className="text-base text-gray-300 hover:text-white">
-                          Autonomous Systems
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/zion-tech-group" className="text-base text-gray-300 hover:text-white">
-                          Technology Platforms
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="mt-12 md:mt-0">
-                    <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Company</h3>
-                    <ul className="mt-4 space-y-4">
-                      <li>
-                        <Link href="/zion-tech-group" className="text-base text-gray-300 hover:text-white">
-                          About
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/contact" className="text-base text-gray-300 hover:text-white">
-                          Contact
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="mt-12 border-t border-gray-700 pt-8">
-              <p className="text-base text-gray-400 xl:text-center">
-                &copy; 2025 Zion Tech Group. All rights reserved.
-              </p>
-            </div>
-          </div>
-        </footer>
-      </div>
-    </>
+      {/* Toast Container */}
+      <ToastContainer toasts={toasts} onRemove={removeToast} />
+    </div>
   );
 }
