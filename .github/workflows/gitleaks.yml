@@ -29,7 +29,12 @@ jobs:
     - name: Clean git state
       run: 'git config --global user.name "github-actions[bot]"
 
-        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+  gitleaks:
+    name: Run Gitleaks
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
         git rebase --abort 2>/dev/null || true
 

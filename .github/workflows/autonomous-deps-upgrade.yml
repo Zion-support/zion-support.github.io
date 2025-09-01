@@ -1,8 +1,11 @@
 name: WORKFLOW_NAME_PLACEHOLDER
 'on':
   workflow_dispatch: {}
-  schedule:
-  - cron: '*/30 * * * *'
+
+permissions:
+  contents: write
+  pull-requests: write
+
 concurrency:
   group: workflow-workflow_name_placeholder-${{ github.ref }}
   cancel-in-progress: true
@@ -29,7 +32,11 @@ jobs:
     - name: Clean git state
       run: 'git config --global user.name "github-actions[bot]"
 
-        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
 
         git rebase --abort 2>/dev/null || true
 

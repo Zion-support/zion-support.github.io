@@ -6,6 +6,8 @@ name: WORKFLOW_NAME_PLACEHOLDER
 concurrency:
   group: workflow-workflow_name_placeholder-${{ github.ref }}
   cancel-in-progress: true
+
+  pull-requests: write
 permissions:
   contents: write
   actions: read

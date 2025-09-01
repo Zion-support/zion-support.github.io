@@ -6,6 +6,7 @@ name: Rapid Git Sync (15m)
 concurrency:
   group: workflow-rapid-git-sync-15m-${{ github.ref }}
   cancel-in-progress: true
+
 permissions:
   contents: write
   actions: read
@@ -29,9 +30,17 @@ jobs:
     - name: Clean git state
       run: 'git config --global user.name "github-actions[bot]"
 
-        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+  sync:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-        git rebase --abort 2>/dev/null || true
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
 
         rm -rf .git/rebase-merge .git/rebase-apply 2>/dev/null || true
 

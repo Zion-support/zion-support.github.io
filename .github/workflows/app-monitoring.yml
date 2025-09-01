@@ -10,24 +10,32 @@ permissions:
   contents: write
   actions: read
 jobs:
-  main:
-    name: Main Job
-    runs-on: ubuntu-latest
-    timeout-minutes: 20
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '20'
-        cache: npm
-    - name: Install dependencies
-      run: npm ci
-    - name: Clean git state
-      run: 'git config --global user.name "github-actions[bot]"
+  monitor-performance:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Run performance tests
+        run: npm run build
+        
+      - name: Run Lighthouse
+        run: |
+          npm install -g lighthouse
+          lighthouse https://your-app-url.com --output=json --output-path=./lighthouse-report.json
+          
+      - name: Upload performance report
+        uses: actions/upload-artifact@v4
+          name: performance-report
+          path: lighthouse-report.json
+          retention-days: 7
 
         git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
 

@@ -6,6 +6,7 @@ name: WORKFLOW_NAME_PLACEHOLDER
 concurrency:
   group: workflow-workflow_name_placeholder-${{ github.ref }}
   cancel-in-progress: true
+
 permissions:
   contents: write
   actions: read
@@ -29,7 +30,28 @@ jobs:
     - name: Clean git state
       run: 'git config --global user.name "github-actions[bot]"
 
-        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+  auto-heal:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20"
+          cache: 'npm'
+      - name: Install dependencies
+        run: "npm ci
+      - name: Run CI healers
+        run: |
+          npm run ci:heal || true
+      - name: Create Pull Request
+        id: cpr
+          token: ${{ secrets.GITHUB_TOKEN }}"
+          commit-message: "chore(ci-heal): attempt automated fix after CI failure"
+          title: "chore(ci-heal): automated fixes after CI failure"
+          body: "|
+            Automated attempt to heal CI after a failure.
 
         git rebase --abort 2>/dev/null || true
 
