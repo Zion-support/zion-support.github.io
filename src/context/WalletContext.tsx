@@ -162,6 +162,30 @@ export const WalletProvider: React.FC<{ children: ReactNode }> = ({ children }) 
         }));
       }
     } else {
+      // AppKit already initialized. This block might be hit if dependencies change (e.g. projectId)
+      // but AppKit instance was somehow preserved. Ensure state is consistent.
+      console.log('WalletContext: AppKit already initialized. Ensuring state consistency. ID:', rawProjectId);
+      setWallet(prev => ({
+        ...prev,
+        isWalletSystemAvailable: true,
+      }));
+    }
+  }, [isProjectIdValid, rawProjectId, targetNetwork]); // Added targetNetwork
+
+  const [wallet, setWallet] = useState<WalletState>({
+    ...initialWalletState,
+    // Explicitly set based on project ID validity initial check.
+    // The useEffect below will further refine this if the project ID is valid and AppKit initializes.
+    isWalletSystemAvailable: !!isProjectIdValid, // Ensure boolean
+  });
+
+  // Removed commented out useAppKit related code and console logs.
+
+  const updateWalletState = useCallback(async () => {
+    const currentAppKit = appKitRef.current;
+
+    if (!currentAppKit) {
+      // If appKit is not available (e.g., invalid project ID), ensure state reflects this
       setWallet(prev => ({
         ...initialWalletState,
         isConnected: false, // Ensure disconnected if kit says so

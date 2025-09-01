@@ -25,10 +25,10 @@ export default function WishlistPage() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         id: item.id,
-        name: item.title || 'Item',
-        price: item.price || 0,
-        quantity: 1,
-      }),
+        title: item.title || 'Item', // Changed name to title
+        price: item.price || 0
+        // quantity: 1 // Removed quantity
+      }
     });
     const items = await res.json();
     dispatch({ type: 'SET_ITEMS', payload: items });

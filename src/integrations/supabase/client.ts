@@ -55,7 +55,14 @@ export const safeFetch: typeof fetch = async (input, init) => {
   let lastError: Error | null = null;
   let delay = INITIAL_RETRY_DELAY;
 
-  for (let attempt = 0; attempt < RETRY_COUNT; attempt++) {
+  if (!fetchHeaders.has('apikey')) {
+    fetchHeaders.set('apikey', effectiveAnonKey); // Use effectiveAnonKey
+  }
+
+  const maxRetries = 3;
+  let lastError: any;
+
+  for (let i = 0; i < maxRetries; i++) {
     try {
       const response = await api({
         url,

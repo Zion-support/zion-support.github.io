@@ -29,12 +29,18 @@ export default function CardForm({ amount, onSuccess }: Props) {
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || 'Failed to create payment');
 
-      const result = await stripe.confirmCardPayment(data.clientSecret, {
-        payment_method: {
-          card: elements.getElement(CardElement)!,
-          billing_details: {
-            email: (user && typeof user !== 'boolean' ? user.email : undefined),
-            name: (user && typeof user !== 'boolean' && user.user_metadata ? user.user_metadata.full_name : undefined),
+      const result = await stripe.confirmCardPayment(
+        data.clientSecret,
+        {
+          payment_method: {
+            card: elements.getElement(CardElement)!,
+            billing_details: {
+              email: (user && typeof user !== 'boolean' ? user.email : undefined),
+              name:
+                user && typeof user !== 'boolean'
+                  ? user.displayName
+                  : undefined,
+            },
           },
         },
       });

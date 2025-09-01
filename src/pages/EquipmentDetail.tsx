@@ -225,28 +225,12 @@ export default function EquipmentDetail() {
 
   const handleAddToCart = async () => {
     setIsAdding(true);
-    try {
-      const res = await fetch('/api/cart/add', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          id: equipment.id,
-          name: equipment.name,
-          price: equipment.price,
-          quantity,
-        }),
-      });
-      const items: CartItem[] = await res.json();
-      dispatch({ type: 'SET_ITEMS', payload: items });
-      toast({
-        title: 'Added to cart',
-        description: `${quantity}x ${equipment.name} added to your cart.`,
-      });
-    } catch {
-      toast({ title: 'Error', description: 'Could not add to cart.' });
-    } finally {
-      setIsAdding(false);
-    }
+    dispatch({
+      type: 'ADD_ITEM',
+      payload: { id: equipment.id, title: equipment.name, price: equipment.price } // quantity removed
+    });
+    toast.success(`${quantity}× ${equipment.name} added`);
+    setTimeout(() => setIsAdding(false), 800);
   };
 
   const handleBuyNow = async () => {
@@ -256,42 +240,11 @@ export default function EquipmentDetail() {
       return;
     }
 
-    setIsAdding(true);
-    try {
-      const response = await fetch('/api/checkout_sessions', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ productId: id }),
-      });
-      const { sessionId } = await response.json();
-      const stripe = await getStripe();
-      if (stripe && sessionId) {
-        await stripe.redirectToCheckout({ sessionId });
-      }
-    } catch (err) {
-      toast({ title: 'Payment error', description: 'Could not start checkout.' });
-    } finally {
-      setIsAdding(false);
-    }
-  };
-
-  const pageUrl = `https://app.ziontechgroup.com/equipment/${equipment.id}`;
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'Product',
-    name: equipment.name,
-    description: equipment.description,
-    image: equipment.images,
-    brand: equipment.brand,
-    offers: {
-      '@type': 'Offer',
-      priceCurrency: equipment.currency,
-      price: equipment.price,
-      availability: equipment.inStock
-        ? 'https://schema.org/InStock'
-        : 'https://schema.org/OutOfStock',
-      url: pageUrl
-    }
+    dispatch({
+      type: 'ADD_ITEM',
+      payload: { id: equipment.id, title: equipment.name, price: equipment.price } // quantity removed
+    });
+    router.push('/checkout');
   };
 
   return (

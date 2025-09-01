@@ -120,103 +120,163 @@ import { Link } from "react-router-dom";
     { title: 'Quantum Computing Demo', date: 'Dec 25, 2024', time: '3:00 PM', type: 'Demo', icon: Atom };
   ];
 
-  const quickActions = [;
-    { name: 'Add New Service', icon: Plus, href: '/services', color: 'from - green - 500 to - emerald - 500' },;
-    { name: 'View Analytics', icon: BarChart3, href: '/analytics', color: 'from - blue - 500 to - indigo - 500' },;
-    { name: 'Security Settings', icon: Shield, href: '/security', color: 'from - red - 500 to - orange - 500' },;
-    { name: 'Support Request', icon: HelpCircle, href: '/help', color: 'from - purple - 500 to - pink - 500' },;
-    { name: 'Billing & Plans', icon: DollarSign, href: '/pricing', color: 'from - yellow-500 to - orange - 500' },;
-    { name: 'API Documentation', icon: Code, href: '/api - docs', color: 'from - gray - 500 to - slate - 500' };
-  ];
-
-  const getStatusColor = (status: string) => {
-    switch(status) {;
-      case "Completed":;
-        return "bg-green - 100 text-green - 800";
-      case "In Progress":;
-        return "bg-blue - 100 text-blue - 800";
-      case "Planning":;
-        return "bg-yellow-100 text-yellow-800";
-      default:;
-        return "bg-gray - 100 text-gray - 800"}
+  const handleTestNotification = async () => {
+    if (!user || !user.id) {
+      toast({ title: "Error", description: "User ID not found.", variant: "destructive" });
+      return;
+    }
+    const result = await createTestNotification(user.id);
+    if (result.success) {
+      toast({
+        title: "Test notification created",
+        description: "Check your notification center",
+      });
+    } else {
+      toast({
+        title: "Error creating test notification",
+        description: "Something went wrong",
+        variant: "destructive",
+      });
+    }
   };
 
-  const getPriorityColor = (priority: string) => {
-    switch(priority) {;
-      case "High":;
-        return "bg-red - 100 text-red - 800";
-      case "Medium":;
-        return "bg-yellow-100 text-yellow-800";
-      case "Low":;
-        return "bg-green - 100 text-green - 800";
-      default:;
-        return "bg-gray - 100 text-gray - 800"}
-  };
+  return (
+    <>
+      <Header />
+      <div className="min-h-screen bg-zion-blue">
+        <div className="container mx-auto px-4 py-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* Left Sidebar - User Profile */}
+            <div className="lg:col-span-1">
+              <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-24 h-24 rounded-full bg-zion-purple flex items-center justify-center text-2xl font-bold text-white mb-4">
+                    {(user.displayName || 'User').split(' ').map(name => name[0]).join('')}
+                  </div>
+                  <h2 className="text-xl font-bold text-white">{user.displayName || 'User'}</h2>
+                  <p className="text-zion-slate-light mb-2">{user.email}</p>
+                  
+                  <Badge 
+                    className="bg-zion-purple text-white mb-4"
+                  >
+                    {user.userType ? user.userType.charAt(0).toUpperCase() + user.userType.slice(1) : "New User"}
+                  </Badge>
+                  
+                  <Button
+                    id="profile-link"
+                    className="w-full flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
+                    onClick={() => window.location.href = "/profile"}
+                  >
+                    <UserCheck size={16} />
+                    Edit Profile
+                  </Button>
+                </div>
+              </div>
+              
+              {/* Stats & Metrics */}
+              <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">
+                <h3 className="text-lg font-bold text-white mb-4">Your Activity</h3>
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center">
+                    <span className="text-zion-slate-light">Profile Completion</span>
+                    <span className="text-zion-cyan font-medium">65%</span>
+                  </div>
+                  <div className="w-full bg-zion-blue rounded-full h-2">
+                    <div className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" style={{ width: "65%" }}></div>
+                  </div>
+                  
+                  <div className="flex justify-between items-center">
+                    <span className="text-zion-slate-light">Community Points</span>
+                    <span className="text-zion-cyan font-medium">125</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-zion-slate-light">ZION$ Balance</span>
+                    <span className="text-zion-cyan font-medium">
+                      <Link href="/wallet" className="hover:underline">View Wallet</Link>
+                    </span>
+                  </div>
+                  
+                  <div className="flex justify-between items-center">
+                    <span className="text-zion-slate-light">Badges Earned</span>
+                    <span className="text-zion-cyan font-medium">3/12</span>
+                  </div>
+                  
+                  {/* Test notification buttons */}
+                  <div className="flex flex-col gap-2 mt-4">
+                    <Button 
+                      className="w-full flex items-center justify-center gap-2"
+                      variant="outline"
+                      onClick={handleTestNotification}
+                    >
+                      <Send size={16} className="text-zion-cyan" />
+                      Send Test Notification
+                    </Button>
 
-  return (<div className="min - h-screen bg-gradient - to - br from - slate - 50 via - blue - 50 to - indigo -50">
-      {/* Header */}
-      <div className="bg-zion - blue - dark border-b border-zion - purple / 20 px-6 py-4">
-        <div className="flex items - center justify -between">
-          <div>
-            <h1 className="text-2xl font - bold text-white">Dashboard</h1>
-            <p className="text-zion - slate -light">Welcome back ! Here's what's happening today.</p>
-          </div>
-          <div className="flex items - center gap-4">
-            <button     className="relative p - 2 text-zion - slate - light hover:text-white transition -colors">
-              <Bell className="h-6 w-6" />
-              <span className="absolute top - 0 right - 0 w-2 h-2 bg-red - 500 rounded-full"></span>
-            </button>
-            <button     className="p - 2 text-zion - slate - light hover:text-white transition -colors">
-              <Settings className="h-6 w-6" />
-            </button > import { BarChart3, Users, TrendingUp, Shield, Cloud, Brain, Zap, Star, Activity, DollarSign, Clock, CheckCircle, AlertCircle, Settings, Bell, Search, Filter, Download, Eye, Edit, Trash2, Plus, ArrowRight, Calendar, Target, Award, Rocket, Globe, Server, Database, Network, Lock, Heart, ShoppingCart, MessageCircle, HelpCircle, FileText, Video, TestTube, Leaf, Atom, Satellite, Cpu, Building, Truck, Mail, Phone, MapPin  } from 'lucide-react';
+                    <Button 
+                      className="w-full flex items-center justify-center gap-2"
+                      variant="outline"
+                      onClick={async () => {
+                        if (!user || !user.id) {
+                          toast({ title: "Error", description: "User ID not found.", variant: "destructive" });
+                          return;
+                        }
+                        await createOnboardingNotification({
+                          userId: user.id,
+                          missingMilestone: 'profile_completed',
+                          userRole: user.userType === 'employer' || user.userType === 'buyer' ? 'client' : 'talent'
+                        });
+                        toast({
+                          title: "Onboarding notification sent",
+                          description: "Check your notification center"
+                        });
+                      }}
+                    >
+                      <Settings size={16} className="text-zion-purple" />
+                      Send Onboarding Nudge
+                    </Button>
 
-  const stats = [{ name: 'Active Services', value: '12', icon: Zap, change: '+2', changeType: 'positive', color: 'from - blue - 500 to - cyan - 500' },;
-    { name: 'AI Solutions', value: '8', icon: Brain, change: '+3', changeType: 'positive', color: 'from - purple - 500 to - pink - 500' },;
-    { name: 'Cloud Services', value: '5', icon: Cloud, change: '+1', changeType: 'positive', color: 'from - indigo - 500 to - blue - 500' },;
-    { name: 'Security Score', value: '98%', icon: Shield, change: '+2%', changeType: 'positive', color: 'from - green - 500 to - emerald - 500' },;
-    { name: 'Monthly Usage', value: '2.4TB', icon: Database, change: '+15%', changeType: 'positive', color: 'from - orange - 500 to - red - 500' },;
-    { name: 'Response Time', value: '45ms', icon: Activity, change: '-12ms', changeType: 'negative', color: 'from - teal - 500 to - green - 500' }
-  ];
-
-  const recentServices = [{ name: 'AI Business Intelligence', status: 'Active', lastUsed: '2 hours ago', usage: '85%', icon: Brain, color: 'from - blue - 500 to - indigo - 500' },;
-    { name: 'Cloud DevOps Platform', status: 'Active', lastUsed: '1 day ago', usage: '92%', icon: Cloud, color: 'from - indigo - 500 to - blue - 500' },;
-    { name: 'AI Cybersecurity Suite', status: 'Active', lastUsed: '3 days ago', usage: '78%', icon: Shield, color: 'from - red - 500 to - orange - 500' },;
-    { name: 'Quantum Computing Lab', status: 'Active', lastUsed: '1 week ago', usage: '45%', icon: Atom, color: 'from - purple - 500 to - indigo - 500' },;
-    { name: 'IoT Edge Platform', status: 'Active', lastUsed: '2 weeks ago', usage: '67%', icon: Network, color: 'from - cyan - 500 to - blue - 500' }
-  ];
-
-  const upcomingEvents = [{ title: 'AI Strategy Workshop', date: 'Dec 15, 2024', time: '10:00 AM', type: 'Workshop', icon: Brain },;
-    { title: 'Security Audit Review', date: 'Dec 18, 2024', time: '2:00 PM', type: 'Review', icon: Shield },;
-    { title: 'Cloud Migration Planning', date: 'Dec 22, 2024', time: '11:00 AM', type: 'Planning', icon: Cloud },;
-    { title: 'Quantum Computing Demo', date: 'Dec 25, 2024', time: '3:00 PM', type: 'Demo', icon: Atom }
-  ];
-
-  const quickActions = [{ name: 'Add New Service', icon: Plus, href: '/services', color: 'from - green - 500 to - emerald - 500' },;
-    { name: 'View Analytics', icon: BarChart3, href: '/analytics', color: 'from - blue - 500 to - indigo - 500' },;
-    { name: 'Security Settings', icon: Shield, href: '/security', color: 'from - red - 500 to - orange - 500' },;
-    { name: 'Support Request', icon: HelpCircle, href: '/help', color: 'from - purple - 500 to - pink - 500' },;
-    { name: 'Billing & Plans', icon: DollarSign, href: '/pricing', color: 'from - yellow-500 to - orange - 500' },;
-    { name: 'API Documentation', icon: Code, href: '/api - docs', color: 'from - gray - 500 to - slate - 500' }
-  ];
-
-  return (<div className="min - h-screen bg-gradient - to - br from - slate - 50 via - blue - 50 to - indigo -50">
-      {/* Header */}
-      <div className="bg-white border-b border-gray -200">
-        <div className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex items - center justify -between">
-            <div>
-              <h1 className="text-3xl font - bold text-gray -900">Dashboard</h1>
-              <p className="text-gray - 600 mt-1">Welcome back ! Here's what's happening with your services.</p>
-            </div>
-            <div className="flex items - center space - x-4">
-              <button     className="p - 2 text-gray - 400 hover:text-gray - 600 transition -colors">
-                <Bell className="h-6 w-6" />
-              </button>
-              <button     className="p - 2 text-gray - 400 hover:text-gray - 600 transition -colors">
-                <Settings className="h-6 w-6" />
-              </button>
-              <div className="w-10 h-10 bg-gradient - to - r from - blue - 500 to - purple - 500 rounded-full flex items - center justify - center text-white font -semibold">
-                ZT
+                    <Button 
+                      className="w-full flex items-center justify-center gap-2"
+                      variant="outline"
+                      onClick={async () => {
+                        if (!user || !user.id) {
+                          toast({ title: "Error", description: "User ID not found.", variant: "destructive" });
+                          return;
+                        }
+                        await createSystemNotification({
+                          userId: user.id,
+                          title: "New Feature Available!",
+                          message: "We've added a new notification center to help you stay updated with important information.",
+                          actionUrl: "/notifications",
+                          actionText: "Explore Now"
+                        });
+                        toast({
+                          title: "System notification sent",
+                          description: "Check your notification center"
+                        });
+                      }}
+                    >
+                      <Bell size={16} className="text-yellow-500" />
+                      Send System Alert
+                    </Button>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Notifications */}
+              <div className="bg-zion-blue-dark rounded-xl p-6">
+                <h3 className="text-lg font-bold text-white mb-4 flex items-center">
+                  <Bell size={18} className="mr-2 text-zion-cyan" />
+                  Recent Notifications
+                </h3>
+                <div className="space-y-4">
+                  <Link href="/notifications" className="block" id="notifications-link">
+                    <Button variant="outline" className="w-full">
+                      <Bell className="mr-2 h-4 w-4" />
+                      View All Notifications
+                    </Button>
+                  </Link>
+                </div>
               </div>
             </div>
             
@@ -237,31 +297,15 @@ import { Link } from "react-router-dom";
                     </Button>
                   </div>
                 </div>
-                <span className={`text-sm font - medium ${stat.changeType === "positive" ? "text-green - 400" : "text-red - 400"
-                }`}>
-                  {stat.change}
-                </span>
-              </div>
-              <h3 className="text-2xl font - bold text-white mb-1">{stat.value}</h3>
-              <p className="text-zion - slate - light text-sm">{stat.title}</p>
-      <div className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Stats Grid */}
-        <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-6 mb-8">
-          {stats.map ( (stat, index) => (<motion.div
-              key={stat.name}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-white rounded-xl shadow-sm border border-gray - 200 p - 6 hover:shadow-md transition -shadow"
-            >
-              <div className="flex items - center justify -between">
-                <div>
-                  <p className="text-sm font - medium text-gray -600">{stat.name}</p>
-                  <p className="text-2xl font - bold text-gray - 900 mt-1">{stat.value}</p>
-                  <div className={`flex items - center mt-2 text-sm ${stat.changeType === 'positive' ? 'text-green - 600' : 'text-red - 600'
-                  }`}>
-                    <span>{stat.change}</span>
-                    <span className="ml-1">from last month</span>
+                
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 mb-6">
+                  <div className="p-4 rounded-lg bg-gradient-to-br from-zion-blue to-zion-purple/30 border border-zion-blue-light">
+                    <h3 className="text-lg font-medium text-white">Welcome, {(user.displayName || 'User').split(' ')[0]}</h3>
+                    <p className="text-zion-slate-light mt-1">Your journey on Zion has just begun!</p>
+                  </div>
+                  <div className="p-4 rounded-lg bg-gradient-to-br from-zion-blue to-zion-cyan/30 border border-zion-blue-light">
+                    <h3 className="text-lg font-medium text-white">Getting Started</h3>
+                    <p className="text-zion-slate-light mt-1">Complete your profile to unlock all features.</p>
                   </div>
                 </div>
                 <div className={`p - 3 rounded-lg bg-gradient - to - r ${stat.color}`}>

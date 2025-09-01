@@ -3,18 +3,9 @@ import { useTranslation } from 'react-i18next';
 import { useForm } from 'react-hook-form';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Input } from '@/components/ui/input';
-import { safeStorage } from '@/utils/safeStorage';
-import { Button } from '@/components/ui/button';
-import { getStripe } from '@/utils/getStripe';
-import { PointsBadge } from '@/components/loyalty/PointsBadge';
-import {
-  Form,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormMessage,
-} from '@/components/ui/form';
+import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form';
+import { ControllerRenderProps } from 'react-hook-form'; // Added import
+import { useAuth } from '@/hooks/useAuth';
 
 interface CartItem {
   id: string;
@@ -96,87 +87,47 @@ export default function Checkout() {
         <h1 className="text-3xl font-bold">{t('checkout.title')}</h1>
         <PointsBadge />
       </div>
-      <div className="grid gap-6">
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-            <FormField name="name" control={form.control} render={({ field }) => (
-              <FormItem>
-                <FormLabel>{t('checkout.name')}</FormLabel>
-                <FormControl>
-                  <Input {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )} />
-            <FormField name="email" control={form.control} render={({ field }) => (
-              <FormItem>
-                <FormLabel>{t('checkout.email')}</FormLabel>
-                <FormControl>
-                  <Input type="email" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )} />
-            <FormField name="address" control={form.control} render={({ field }) => (
-              <FormItem>
-                <FormLabel>{t('checkout.address')}</FormLabel>
-                <FormControl>
-                  <Input {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )} />
-            <FormField name="city" control={form.control} render={({ field }) => (
-              <FormItem>
-                <FormLabel>{t('checkout.city')}</FormLabel>
-                <FormControl>
-                  <Input {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )} />
-            <FormField name="country" control={form.control} render={({ field }) => (
-              <FormItem>
-                <FormLabel>{t('checkout.country')}</FormLabel>
-                <FormControl>
-                  <Input {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )} />
-            <CheckoutShippingOptions
-              toAddress={{
-                name: watchAddr[0],
-                address: watchAddr[1],
-                city: watchAddr[2],
-                country: watchAddr[3],
-              }}
-              onSelect={setShippingRate}
-            />
-            <div className="border-t pt-4">
-              <div className="flex justify-between font-semibold mb-4">
-                <span>{t('checkout.subtotal')}</span>
-                <span>${subtotal.toFixed(2)}</span>
-              </div>
-              {shippingRate && (
-                <div className="flex justify-between font-semibold mb-4">
-                  <span>Shipping</span>
-                  <span>{parseFloat(shippingRate.rate).toFixed(2)} {shippingRate.currency}</span>
-                </div>
-              )}
-              {shippingRate?.tax && (
-                <div className="flex justify-between font-semibold mb-4">
-                  <span>Duties &amp; Taxes</span>
-                  <span>{parseFloat(shippingRate.tax).toFixed(2)} {shippingRate.currency}</span>
-                </div>
-              )}
-              <div className="flex justify-between font-semibold mb-4">
-                <span>Total</span>
-                <span>{total.toFixed(2)}</span>
-              </div>
-              <Button className="w-full" type="submit">
-                {t('checkout.pay')}
-              </Button>
+      <Form {...form}>
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+          <FormField name="name" control={form.control} render={({ field }: { field: ControllerRenderProps<CheckoutFormData, "name"> }) => (
+            <FormItem>
+              <FormLabel>Name</FormLabel>
+              <FormControl><Input {...field} /></FormControl>
+              <FormMessage />
+            </FormItem>
+          )} />
+          <FormField name="email" control={form.control} render={({ field }: { field: ControllerRenderProps<CheckoutFormData, "email"> }) => (
+            <FormItem>
+              <FormLabel>Email</FormLabel>
+              <FormControl><Input type="email" {...field} /></FormControl>
+              <FormMessage />
+            </FormItem>
+          )} />
+          <FormField name="address" control={form.control} render={({ field }: { field: ControllerRenderProps<CheckoutFormData, "address"> }) => (
+            <FormItem>
+              <FormLabel>Address</FormLabel>
+              <FormControl><Input {...field} /></FormControl>
+              <FormMessage />
+            </FormItem>
+          )} />
+          <FormField name="city" control={form.control} render={({ field }: { field: ControllerRenderProps<CheckoutFormData, "city"> }) => (
+            <FormItem>
+              <FormLabel>City</FormLabel>
+              <FormControl><Input {...field} /></FormControl>
+              <FormMessage />
+            </FormItem>
+          )} />
+          <FormField name="country" control={form.control} render={({ field }: { field: ControllerRenderProps<CheckoutFormData, "country"> }) => (
+            <FormItem>
+              <FormLabel>Country</FormLabel>
+              <FormControl><Input {...field} /></FormControl>
+              <FormMessage />
+            </FormItem>
+          )} />
+          {intent ? (
+            <div className="space-y-2 text-center">
+              <p className="font-semibold">Payment Successful!</p>
+              <p>Confirmation ID: {intent.id}</p>
             </div>
           </form>
         </Form>

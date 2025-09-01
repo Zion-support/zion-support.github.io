@@ -60,12 +60,13 @@ export function useWallet() {
   }, [user?.id]); // Dependency for fetchTransactions
 
   async function earnTokens(amount: number, reason?: string) {
-    if(!user?.id) return;
-    // This is an optimistic update, actual logic might involve backend call
-    setWallet(prev => prev ? { ...prev, balance: prev.balance + amount } : { balance: amount, user_id: user.id, id: crypto.randomUUID(), updated_at: new Date().toISOString() });
-    setTransactions(prev => [{
+    if (!user?.id) return;
+    const currentUserId = user.id; // Added line
+    setWallet(prev => prev ? { ...prev, balance: prev.balance + amount } : prev);
+    setTransactions(prev => [
+      {
         id: crypto.randomUUID(),
-        user_id: user.id,
+        user_id: currentUserId, // Replaced user.id
         amount,
         transaction_type: 'earn',
         reason: reason || null,
@@ -77,16 +78,16 @@ export function useWallet() {
   }
 
   async function spendTokens(amount: number, reason?: string) {
-    if(!user?.id) return;
-    // This is an optimistic update
+    if (!user?.id) return;
+    const currentUserId = user.id; // Added line
     setWallet(prev =>
       prev ? { ...prev, balance: Math.max(0, prev.balance - amount) } : null // Or handle case where wallet might not exist yet
     );
     setTransactions(prev => [{
         id: crypto.randomUUID(),
-        user_id: user.id,
-        amount: -amount, // Typically represent spending as negative delta or use a specific column
-        transaction_type: 'burn', // or 'spend'
+        user_id: currentUserId, // Replaced user.id
+        amount,
+        transaction_type: 'burn',
         reason: reason || null,
         created_at: new Date().toISOString(),
       },

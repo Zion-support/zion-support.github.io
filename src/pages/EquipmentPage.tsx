@@ -106,13 +106,14 @@ export default function EquipmentPage() {
   }, [equipment]); // Added equipment to dependency array
 
   const handleRecommendations = async () => {
-    if (!user) {
-      router.push('/login?next=/equipment&reco=1');
+    if (!user || !user.id) { // Guard for user and user.id
+      toast({ title: "Authentication Error", description: "Please log in to get personalized recommendations.", variant: "destructive" });
+      navigate('/login?next=/equipment&reco=1'); // Still navigate if not logged in, or let toast be enough
       return;
     }
     try {
       // Ensure data is correctly typed or cast if necessary
-      const data: ProductListing[] = await fetchRecommendations({ userId: user.id });
+      const data: ProductListing[] = await fetchRecommendations({ userId: user.id }); // user.id is now string
       setEquipment(data); // data should be ProductListing[]
       toast({ title: 'Showing personalized recommendations' });
     } catch (err: any) { // Typed error

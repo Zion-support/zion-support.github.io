@@ -2,8 +2,8 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import * as z from "zod";
+import { useForm, ControllerRenderProps } from "react-hook-form"; // Added ControllerRenderProps
+import { z } from "zod";
 import { LockKeyhole } from "lucide-react";
 
 import { supabase } from "@/integrations/supabase/client";
@@ -173,7 +173,7 @@ export default function UpdatePassword() {
                     <FormField
                       control={form.control}
                       name="password"
-                      render={({ field }) => (
+                      render={({ field }: { field: ControllerRenderProps<UpdatePasswordFormValues, "password"> }) => (
                         <FormItem>
                           <FormLabel className="text-zion-slate-light">New Password</FormLabel>
                           <FormControl>
@@ -193,7 +193,7 @@ export default function UpdatePassword() {
                     <FormField
                       control={form.control}
                       name="confirmPassword"
-                      render={({ field }) => (
+                      render={({ field }: { field: ControllerRenderProps<UpdatePasswordFormValues, "confirmPassword"> }) => (
                         <FormItem>
                           <FormLabel className="text-zion-slate-light">Confirm Password</FormLabel>
                           <FormControl>

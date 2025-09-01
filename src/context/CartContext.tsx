@@ -44,17 +44,30 @@ export function useCart(): CartContextType {
 export function CartProvider({ children }: { children: React.ReactNode }) {
   const [state, dispatch] = useReducer(cartReducer, initialState);
 
-  useEffect(() => {
-    getCart().then(items => {
-      if (items.length) {
-        dispatch({ type: 'SET_ITEMS', payload: items as CartItem[] });
-      }
-    });
-  }, []);
-
-  useEffect(() => {
-    saveCart(state.items);
-  }, [state.items]);
+  const dispatch = (action: CartAction) => {
+    switch (action.type) {
+      case 'ADD_ITEM':
+        reduxDispatch(
+          addItem({ // addItem from cartSlice expects { id, title, price }
+            id: action.payload.id,
+            title: action.payload.title, // action.payload is now { id, title, price, quantity? }
+            price: action.payload.price,
+          })
+        );
+        break;
+      case 'REMOVE_ITEM':
+        reduxDispatch(removeItem(action.payload));
+        break;
+      case 'CLEAR_CART':
+        reduxDispatch(clear());
+        break;
+      case 'SET_ITEMS':
+        reduxDispatch(setItems(action.payload));
+        break;
+      default:
+        break;
+    }
+  };
 
   const value: CartContextType = {
     items: state.items,

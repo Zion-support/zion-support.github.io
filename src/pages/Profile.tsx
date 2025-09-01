@@ -1,19 +1,12 @@
-import { useEffect, useState } from 'react';
-import {
-  Tabs,
-  TabsList,
-  TabsTrigger,
-  TabsContent,
-} from '@/components/ui/tabs';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Button } from '@/components/ui/button';
-import { Checkbox } from '@/components/ui/checkbox';
-import {
-  Avatar,
-  AvatarImage,
-  AvatarFallback,
-} from '@/components/ui/avatar';
+import { useState } from 'react';
+import type { GetServerSideProps } from 'next';
+// Removed GetServerSidePropsContext, NextApiRequestCookies from 'next'
+// Removed ParsedUrlQuery from 'querystring' as it's not directly used if context is simplified
+import { ProfileForm, ProfileValues } from '@/components/profile/ProfileForm';
+import { PointsBadge } from '@/components/loyalty/PointsBadge';
+import type { Order } from '@/hooks/useOrders';
+import Link from 'next/link';
+import type { IncomingMessage, IncomingHttpHeaders } from 'http'; // For req type
 
 interface User {
   id: string;
@@ -28,12 +21,21 @@ export default function Profile() {
   const [user, setUser] = useState<User | null>(null);
   const [avatarPreview, setAvatarPreview] = useState<string>('');
 
-  useEffect(() => {
-    fetch('/api/users/me')
-      .then(res => res.json())
-      .then(setUser)
-      .catch(() => {});
-  }, []);
+// Define a minimal context type focusing on what's used
+interface MySimpleServerSidePropsContext {
+  req: { headers: IncomingHttpHeaders }; // req.headers.cookie is used
+  // Add other context properties if they were used by the function:
+  // res?: ServerResponse; // from 'http'
+  // query?: ParsedUrlQuery; // from 'querystring'
+  // params?: ParsedUrlQuery;
+  // resolvedUrl?: string;
+  // locale?: string;
+  // locales?: string[];
+  // defaultLocale?: string;
+}
+
+export default function Profile({ user: initialUser, orders }: ProfileProps) {
+  const [user, setUser] = useState(initialUser);
 
   const handleSave = async () => {
     if (!user) return;
@@ -155,3 +157,25 @@ export default function Profile() {
     </div>
   );
 }
+
+export const getServerSideProps: GetServerSideProps<ProfileProps> = async (context: MySimpleServerSidePropsContext) => {
+  const { req } = context;
+  const base = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+  const [userRes, ordersRes] = await Promise.all([
+    fetch(`${base}/api/users/me`, { headers: { cookie: req.headers.cookie || '' } }),
+    fetch(`${base}/api/orders?user_id=me`, { headers: { cookie: req.headers.cookie || '' } })
+  ]);
+
+  if (userRes.status === 401) {
+    return { redirect: { destination: '/login', permanent: false } };
+  }
+
+  const user = await userRes.json();
+  let orders: Order[] = [];
+  if (ordersRes.ok) {
+    orders = await ordersRes.json();
+    orders = orders.slice(0, 3);
+  }
+
+  return { props: { user, orders } };
+};
