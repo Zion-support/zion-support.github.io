@@ -1,209 +1,265 @@
 import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 
 export default function AutomationPage() {
   return (
     <>
       <Head>
-        <title>Automation Systems | Zion Tech Group</title>
-        <meta name="description" content="Explore Zion Tech Group's autonomous automation systems that power our intelligent infrastructure and content generation." />
-        <meta property="og:title" content="Automation Systems | Zion Tech Group" />
-        <meta property="og:description" content="Explore Zion Tech Group's autonomous automation systems that power our intelligent infrastructure and content generation." />
+        <title>Automation — Zion Tech Group</title>
+        <meta name="description" content="Discover Zion Tech Group's autonomous automation systems and intelligent technology solutions." />
       </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
           <div className="max-w-6xl mx-auto">
-            <header className="text-center mb-16">
-              <nav className="mb-6 text-left">
-                <a href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                  ← Back to Home
-                </a>
-              </nav>
+            <section className="text-center mb-16">
               <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
-                Autonomous Automation Systems
+                Autonomous Automation
               </h1>
-              <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                Discover how our AI-powered automation systems work 24/7 to maintain, 
-                optimize, and enhance our technology infrastructure
+              <p className="text-xl text-white/80 max-w-4xl mx-auto">
+                Experience the future of technology with our self-running, self-improving autonomous systems.
               </p>
-            </header>
+            </section>
 
+            {/* Hero Section */}
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-8 text-center text-white">System Overview</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div className="bg-gradient-to-br from-white/10 to-white/5 p-6 rounded-xl border border-white/10">
-                  <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4">
-                    <svg className="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3 text-cyan-400">Content Generation</h3>
-                  <p className="text-white/80">
-                    AI systems automatically create, optimize, and publish content across all platforms
+              <div className="bg-white/10 rounded-3xl p-12 border border-white/20 text-center">
+                <div className="text-6xl mb-6">🤖</div>
+                <h2 className="text-3xl font-bold mb-6 text-cyan-400">
+                  Technology That Works While You Sleep
+                </h2>
+                <p className="text-lg text-white/80 max-w-3xl mx-auto mb-8">
+                  Our autonomous systems operate 24/7, continuously monitoring, optimizing, and 
+                  improving your technology infrastructure without human intervention.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Link href="/reports" className="bg-gradient-to-r from-cyan-500 to-fuchsia-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-fuchsia-600 transition-all">
+                    View Live Reports
+                  </Link>
+                  <Link href="/automation-health" className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all">
+                    System Health
+                  </Link>
+                </div>
+              </div>
+            </section>
+
+            {/* Core Automation Features */}
+            <section className="mb-16">
+              <h2 className="text-3xl font-bold mb-12 text-center text-fuchsia-400">Core Automation Features</h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="bg-white/10 rounded-2xl p-6 border border-white/20">
+                  <div className="text-3xl mb-4">🔄</div>
+                  <h3 className="text-xl font-bold mb-3 text-cyan-400">Continuous Deployment</h3>
+                  <p className="text-white/70">
+                    Automated CI/CD pipelines that deploy updates safely and efficiently, 
+                    with zero-downtime deployments and automatic rollbacks.
                   </p>
                 </div>
-
-                <div className="bg-gradient-to-br from-white/10 to-white/5 p-6 rounded-xl border border-white/10">
-                  <div className="w-12 h-12 bg-fuchsia-500/20 rounded-lg flex items-center justify-center mb-4">
-                    <svg className="w-6 h-6 text-fuchsia-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3 text-fuchsia-400">Quality Assurance</h3>
-                  <p className="text-white/80">
-                    Continuous monitoring and testing ensure optimal performance and reliability
+                
+                <div className="bg-white/10 rounded-2xl p-6 border border-white/20">
+                  <div className="text-3xl mb-4">🔍</div>
+                  <h3 className="text-xl font-bold mb-3 text-fuchsia-400">Intelligent Monitoring</h3>
+                  <p className="text-white/70">
+                    AI-powered monitoring that detects issues before they become problems, 
+                    with predictive analytics and automated alerting.
                   </p>
                 </div>
-
-                <div className="bg-gradient-to-br from-white/10 to-white/5 p-6 rounded-xl border border-white/10">
-                  <div className="w-12 h-12 bg-indigo-500/20 rounded-lg flex items-center justify-center mb-4">
-                    <svg className="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3 text-indigo-400">Self-Healing</h3>
-                  <p className="text-white/80">
-                    Systems automatically detect and resolve issues without human intervention
+                
+                <div className="bg-white/10 rounded-2xl p-6 border border-white/20">
+                  <div className="text-3xl mb-4">🛡️</div>
+                  <h3 className="text-xl font-bold mb-3 text-green-400">Security Automation</h3>
+                  <p className="text-white/70">
+                    Automated security scanning, threat detection, and response systems 
+                    that protect your infrastructure 24/7.
                   </p>
                 </div>
-
-                <div className="bg-gradient-to-br from-white/10 to-white/5 p-6 rounded-xl border border-white/10">
-                  <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mb-4">
-                    <svg className="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3 text-green-400">Analytics & Insights</h3>
-                  <p className="text-white/80">
-                    Real-time data analysis provides actionable insights for continuous improvement
+                
+                <div className="bg-white/10 rounded-2xl p-6 border border-white/20">
+                  <div className="text-3xl mb-4">📊</div>
+                  <h3 className="text-xl font-bold mb-3 text-yellow-400">Performance Optimization</h3>
+                  <p className="text-white/70">
+                    Continuous performance monitoring and automatic optimization that 
+                    ensures your systems run at peak efficiency.
                   </p>
                 </div>
-
-                <div className="bg-gradient-to-br from-white/10 to-white/5 p-6 rounded-xl border border-white/10">
-                  <div className="w-12 h-12 bg-yellow-500/20 rounded-lg flex items-center justify-center mb-4">
-                    <svg className="w-6 h-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3 text-yellow-400">Security Monitoring</h3>
-                  <p className="text-white/80">
-                    24/7 threat detection and automated security response systems
+                
+                <div className="bg-white/10 rounded-2xl p-6 border border-white/20">
+                  <div className="text-3xl mb-4">📝</div>
+                  <h3 className="text-xl font-bold mb-3 text-blue-400">Content Generation</h3>
+                  <p className="text-white/70">
+                    AI-powered content creation that generates reports, documentation, 
+                    and updates automatically.
                   </p>
                 </div>
-
-                <div className="bg-gradient-to-br from-white/10 to-white/5 p-6 rounded-xl border border-white/10">
-                  <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4">
-                    <svg className="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3 text-purple-400">Global Sync</h3>
-                  <p className="text-white/80">
-                    Multi-region synchronization ensures consistent performance worldwide
+                
+                <div className="bg-white/10 rounded-2xl p-6 border border-white/20">
+                  <div className="text-3xl mb-4">🔧</div>
+                  <h3 className="text-xl font-bold mb-3 text-purple-400">Self-Healing</h3>
+                  <p className="text-white/70">
+                    Systems that automatically detect and resolve issues, restart failed 
+                    services, and maintain optimal performance.
                   </p>
                 </div>
               </div>
             </section>
 
+            {/* Automation Statistics */}
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-8 text-center text-white">Automation Statistics</h2>
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
-                <div className="bg-gradient-to-br from-cyan-500/20 to-fuchsia-500/20 p-6 rounded-xl border border-cyan-400/30">
+              <h2 className="text-3xl font-bold mb-12 text-center text-green-400">Automation Impact</h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div className="bg-white/10 rounded-2xl p-6 border border-white/20 text-center">
                   <div className="text-4xl font-bold text-cyan-400 mb-2">227</div>
-                  <div className="text-white/80">Active Automations</div>
+                  <div className="text-white/70">Active Automations</div>
                 </div>
-                <div className="bg-gradient-to-br from-cyan-500/20 to-fuchsia-500/20 p-6 rounded-xl border border-cyan-400/30">
-                  <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
-                  <div className="text-white/80">Uptime</div>
+                
+                <div className="bg-white/10 rounded-2xl p-6 border border-white/20 text-center">
+                  <div className="text-4xl font-bold text-fuchsia-400 mb-2">99.9%</div>
+                  <div className="text-white/70">Uptime</div>
                 </div>
-                <div className="bg-gradient-to-br from-cyan-500/20 to-fuchsia-500/20 p-6 rounded-xl border border-cyan-400/30">
-                  <div className="text-4xl font-bold text-cyan-400 mb-2">24/7</div>
-                  <div className="text-white/80">Operation</div>
+                
+                <div className="bg-white/10 rounded-2xl p-6 border border-white/20 text-center">
+                  <div className="text-4xl font-bold text-green-400 mb-2">24/7</div>
+                  <div className="text-white/70">Operation</div>
                 </div>
-                <div className="bg-gradient-to-br from-cyan-500/20 to-fuchsia-500/20 p-6 rounded-xl border border-cyan-400/30">
-                  <div className="text-4xl font-bold text-cyan-400 mb-2">47s</div>
-                  <div className="text-white/80">Avg Response Time</div>
+                
+                <div className="bg-white/10 rounded-2xl p-6 border border-white/20 text-center">
+                  <div className="text-4xl font-bold text-yellow-400 mb-2">0</div>
+                  <div className="text-white/70">Manual Interventions</div>
                 </div>
               </div>
             </section>
 
+            {/* How It Works */}
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-8 text-center text-white">How It Works</h2>
+              <h2 className="text-3xl font-bold mb-12 text-center text-blue-400">How It Works</h2>
+              
               <div className="space-y-8">
-                <div className="flex items-start space-x-6">
-                  <div className="w-12 h-12 bg-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
-                    1
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold mb-3 text-cyan-400">Continuous Monitoring</h3>
+                <div className="flex items-center space-x-6">
+                  <div className="text-4xl font-bold text-cyan-400">1</div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold mb-2">Continuous Monitoring</h3>
                     <p className="text-white/80">
-                      Our autonomous systems continuously monitor all aspects of our infrastructure, 
-                      from performance metrics to security threats, ensuring nothing goes unnoticed.
+                      Our autonomous systems continuously monitor all aspects of your technology 
+                      infrastructure, collecting data on performance, security, and reliability.
                     </p>
                   </div>
                 </div>
-
-                <div className="flex items-start space-x-6">
-                  <div className="w-12 h-12 bg-fuchsia-500 rounded-full flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
-                    2
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold mb-3 text-fuchsia-400">Intelligent Analysis</h3>
+                
+                <div className="flex items-center space-x-6">
+                  <div className="text-4xl font-bold text-fuchsia-400">2</div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold mb-2">Intelligent Analysis</h3>
                     <p className="text-white/80">
-                      AI algorithms analyze data in real-time, identifying patterns, anomalies, 
-                      and opportunities for optimization across all systems.
+                      Advanced AI algorithms analyze the collected data to identify patterns, 
+                      predict potential issues, and determine optimal solutions.
                     </p>
                   </div>
                 </div>
-
-                <div className="flex items-start space-x-6">
-                  <div className="w-12 h-12 bg-indigo-500 rounded-full flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
-                    3
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold mb-3 text-indigo-400">Automated Action</h3>
+                
+                <div className="flex items-center space-x-6">
+                  <div className="text-4xl font-bold text-green-400">3</div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold mb-2">Automated Action</h3>
                     <p className="text-white/80">
-                      Systems automatically execute optimized actions, from content generation 
-                      to infrastructure scaling, without requiring human intervention.
+                      The system automatically implements the best solutions, whether that's 
+                      deploying updates, optimizing performance, or resolving security threats.
                     </p>
                   </div>
                 </div>
-
-                <div className="flex items-start space-x-6">
-                  <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
-                    4
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold mb-3 text-green-400">Learning & Evolution</h3>
+                
+                <div className="flex items-center space-x-6">
+                  <div className="text-4xl font-bold text-yellow-400">4</div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold mb-2">Continuous Learning</h3>
                     <p className="text-white/80">
-                      Every action and outcome is analyzed to improve future performance, 
-                      creating a continuously evolving and more intelligent system.
+                      Every action and outcome is analyzed to improve future decision-making, 
+                      creating a system that gets smarter and more efficient over time.
                     </p>
                   </div>
                 </div>
               </div>
             </section>
 
+            {/* Use Cases */}
+            <section className="mb-16">
+              <h2 className="text-3xl font-bold mb-12 text-center text-purple-400">Use Cases</h2>
+              
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div className="bg-white/10 rounded-2xl p-8 border border-white/20">
+                  <h3 className="text-2xl font-bold mb-4 text-cyan-400">E-commerce Platforms</h3>
+                  <p className="text-white/80 mb-4">
+                    Automatically scale infrastructure during traffic spikes, optimize 
+                    performance for conversions, and maintain 99.9% uptime during peak seasons.
+                  </p>
+                  <ul className="space-y-2 text-white/70">
+                    <li>• Automatic traffic scaling</li>
+                    <li>• Performance optimization</li>
+                    <li>• Security monitoring</li>
+                    <li>• Content updates</li>
+                  </ul>
+                </div>
+                
+                <div className="bg-white/10 rounded-2xl p-8 border border-white/20">
+                  <h3 className="text-2xl font-bold mb-4 text-fuchsia-400">Financial Services</h3>
+                  <p className="text-white/80 mb-4">
+                    Ensure compliance, security, and performance for critical financial 
+                    applications with automated monitoring and response systems.
+                  </p>
+                  <ul className="space-y-2 text-white/70">
+                    <li>• Compliance monitoring</li>
+                    <li>• Security automation</li>
+                    <li>• Performance tracking</li>
+                    <li>• Audit logging</li>
+                  </ul>
+                </div>
+                
+                <div className="bg-white/10 rounded-2xl p-8 border border-white/20">
+                  <h3 className="text-2xl font-bold mb-4 text-green-400">Healthcare Systems</h3>
+                  <p className="text-white/80 mb-4">
+                    Maintain critical healthcare infrastructure with automated backups, 
+                    security monitoring, and performance optimization.
+                  </p>
+                  <ul className="space-y-2 text-white/70">
+                    <li>• HIPAA compliance</li>
+                    <li>• Automated backups</li>
+                    <li>• Security monitoring</li>
+                    <li>• Performance optimization</li>
+                  </ul>
+                </div>
+                
+                <div className="bg-white/10 rounded-2xl p-8 border border-white/20">
+                  <h3 className="text-2xl font-bold mb-4 text-yellow-400">Content Platforms</h3>
+                  <p className="text-white/80 mb-4">
+                    Automatically generate, optimize, and distribute content while 
+                    maintaining optimal performance and user experience.
+                  </p>
+                  <ul className="space-y-2 text-white/70">
+                    <li>• Content generation</li>
+                    <li>• SEO optimization</li>
+                    <li>• Performance monitoring</li>
+                    <li>• User experience tracking</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            {/* Call to Action */}
             <section className="text-center">
-              <h2 className="text-3xl font-bold mb-6 text-white">Experience the Future</h2>
+              <h2 className="text-3xl font-bold mb-6 text-cyan-400">Ready to Automate?</h2>
               <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
-                Our autonomous automation systems are just the beginning. Discover how 
-                AI-powered automation can transform your business and operations.
+                Experience the power of autonomous technology and transform your 
+                operations with intelligent automation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="/contact" 
-                  className="bg-gradient-to-r from-cyan-500 to-fuchsia-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-fuchsia-600 transition-all"
-                >
+                <Link href="/contact" className="bg-gradient-to-r from-cyan-500 to-fuchsia-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-fuchsia-600 transition-all">
                   Get Started
-                </a>
-                <a 
-                  href="/reports/updates/update-2025-08-15-0406" 
-                  className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all"
-                >
-                  View Latest Report
-                </a>
+                </Link>
+                <Link href="/reports" className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all">
+                  View Demo
+                </Link>
               </div>
             </section>
           </div>
