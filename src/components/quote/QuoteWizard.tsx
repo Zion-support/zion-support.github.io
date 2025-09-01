@@ -5,8 +5,9 @@ import { Loader2 } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
-import { useRequestQuoteWizard } from '@/context';
-import { fetchServices, ServiceItem } from '@/api/services';
+import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert';
+import Skeleton from '@/components/ui/skeleton';
+import { useToast } from '@/hooks/use-toast';
 
 const WIZARD_STEPS: WizardStep[] = ['Services', 'Details', 'Success'];
 

@@ -29,166 +29,11 @@ export default function Page() {
     },
   ];
 
-  const subCategories = {
-    'ai - ml': [{
-        name: 'Natural Language Processing',
-        description: 'Text analysis, language models, and conversational AI',
-        icon: Brain,
-        services: 12,
-        talent: 8,
-        equipment: 3,
-      },
-      {
-        name: 'Computer Vision',
-        description: 'Image recognition, object detection, and visual AI',
-        icon: Eye,
-        services: 9,
-        talent: 6,
-        equipment: 4,
-      },
-      {
-        name: 'Machine Learning Platforms',
-        description: 'ML model training, deployment, and management',
-        icon: Cpu,
-        services: 15,
-        talent: 12,
-        equipment: 7,
-      },
-      {
-        name: 'AI Consulting',
-        description: 'Strategic AI implementation and optimization',
-        icon: Target,
-        services: 8,
-        talent: 5,
-        equipment: 1,
-      },
-    ],
-    cloud: [{
-        name: 'Cloud Migration',
-        description: 'Legacy system migration and cloud transformation',
-        icon: Rocket,
-        services: 11,
-        talent: 7,
-        equipment: 2,
-      },
-      {
-        name: 'DevOps & CI / CD',
-        description: 'Automated deployment and infrastructure management',
-        icon: Zap,
-        services: 14,
-        talent: 9,
-        equipment: 3,
-      },
-      {
-        name: 'Serverless Computing',
-        description: 'Event - driven and serverless architecture',
-        icon: Cloud,
-        services: 7,
-        talent: 4,
-        equipment: 1,
-      },
-    ],
-    cybersecurity: [{
-        name: 'Threat Detection',
-        description: 'Advanced threat detection and response systems',
-        icon: Shield,
-        services: 13,
-        talent: 8,
-        equipment: 5,
-      },
-      {
-        name: 'Compliance & Governance',
-        description: 'Security compliance and policy management',
-        icon: Lock,
-        services: 9,
-        talent: 6,
-        equipment: 2,
-      },
-      {
-        name: 'Penetration Testing',
-        description: 'Security assessment and vulnerability testing',
-        icon: Target,
-        services: 6,
-        talent: 4,
-        equipment: 3,
-      },
-    ],
-    data: [{
-        name: 'Business Intelligence',
-        description: 'Data visualization and business analytics',
-        icon: BarChart3,
-        services: 18,
-        talent: 11,
-        equipment: 4,
-      },
-      {
-        name: 'Big Data Processing',
-        description: 'Large - scale data processing and analytics',
-        icon: Database,
-        services: 12,
-        talent: 8,
-        equipment: 6,
-      },
-      {
-        name: 'Data Engineering',
-        description: 'Data pipeline and ETL process development',
-        icon: Settings,
-        services: 11,
-        talent: 7,
-        equipment: 3,
-      },
-    ],
-    development: [{
-        name: 'Web Development',
-        description: 'Modern web applications and frontend development',
-        icon: Globe,
-        services: 16,
-        talent: 12,
-        equipment: 2,
-      },
-      {
-        name: 'Mobile Development',
-        description: 'iOS and Android mobile applications',
-        icon: Smartphone,
-        services: 13,
-        talent: 9,
-        equipment: 3,
-      },
-      {
-        name: 'Backend Development',
-        description: 'Server - side development and API design',
-        icon: Code,
-        services: 12,
-        talent: 8,
-        equipment: 1,
-      },
-    ],
-    iot: [{
-        name: 'IoT Device Management',
-        description: 'IoT device connectivity and management',
-        icon: Network,
-        services: 8,
-        talent: 5,
-        equipment: 7,
-      },
-      {
-        name: 'Edge Computing',
-        description: 'Edge processing and real - time analytics',
-        icon: Cpu,
-        services: 9,
-        talent: 6,
-        equipment: 4,
-      },
-      {
-        name: 'Smart Cities',
-        description: 'Urban IoT solutions and smart infrastructure',
-        icon: Globe,
-        services: 6,
-        talent: 4,
-        equipment: 5,
-      },
-    ],
-  };
+import { useEffect, useState } from "react";
+import { CategoriesSection } from "@/components/CategoriesSection";
+import { GradientHeading } from "@/components/GradientHeading";
+import LoaderOverlay from "@/components/LoaderOverlay"; // Assuming a loading spinner component exists
+import { ErrorBoundary } from "@/components/GlobalErrorBoundary"; // Import ErrorBoundary
 
   const filteredCategories = categories.filter(category => {
     const matchesSearch = category.name.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
@@ -228,20 +73,10 @@ export default function Page() {
           </div>
         </section>
 
-        {/* Search and Filters */}
-        <section className="py-8 px-4">
-          <div  className="max - w-7xl mx -auto">
-            <div  className="bg-slate - 800 / 50 backdrop - blur - sm rounded-xl p - 6 border border-slate -700 / 50">
-              {/* Search Bar */}
-              <div  className="relative mb-6">
-                <Search className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text-gray - 400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search categories..."
-                  value={searchQuery}
-                  onChange={e => setSearchQuery (e.target.value) }
-                  className="w-full pl - 10 pr - 4 py-3 bg-slate - 700 / 50 border border-slate - 600 / 50 rounded-lg text-white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border-transparent"
-                />
+          <ErrorBoundary fallback={<p className="text-red-500 text-center">Could not load content. Please try again later.</p>}>
+            {isLoading && (
+              <div className="flex justify-center items-center h-64">
+                <LoaderOverlay />
               </div>
 
               {/* Category Filters */}

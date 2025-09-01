@@ -6,6 +6,7 @@ import { FilterSidebar } from "@/components/talent/FilterSidebar";
 import { TalentResults } from "@/components/talent/TalentResults";
 import { TalentSkeleton } from "@/components/talent/TalentSkeleton";
 import { ErrorBanner } from "@/components/talent/ErrorBanner";
+import { ErrorBoundary } from "@/components/GlobalErrorBoundary"; // Import ErrorBoundary
 import { useTalentDirectory } from "@/hooks/useTalentDirectory";
 import { SORT_OPTIONS } from "@/data/sortOptions";
 import { X } from "lucide-react";

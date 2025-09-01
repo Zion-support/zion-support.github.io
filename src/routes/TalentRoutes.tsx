@@ -1,7 +1,7 @@
 import React, { Suspense, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 import { ProtectedRoute } from "../components/ProtectedRoute";
-import ErrorBoundary from "@/components/ErrorBoundary";
+import { ErrorBoundary } from "@/components/GlobalErrorBoundary";
 import TalentDirectory from "../pages/TalentDirectory";
 import TalentsPage from "../pages/TalentsPage";
 import MoreTalentsPage from "../pages/MoreTalentsPage";

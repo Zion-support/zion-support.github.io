@@ -67,7 +67,7 @@ const MarketplaceListingPage: React.FC<ListingPageProps> = ({ product, error }) 
         openGraph={{
           title: product.name,
           description: product.description ?? undefined,
-          image: (product as any).imageUrl ?? product.images?.[0]?.url ?? undefined,
+          images: (product as any).imageUrl ?? product.images?.[0]?.url ?? undefined,
         }}
       />
       <main className="prose dark:prose-invert max-w-3xl mx-auto py-8 px-4">

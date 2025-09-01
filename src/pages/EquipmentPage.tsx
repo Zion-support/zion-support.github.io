@@ -2,8 +2,15 @@ import { DynamicListingPage } from "@/components/DynamicListingPage";
 import { ProductListing } from "@/types/listings";
 import { useEffect, useState } from "react";
 import { generateRandomEquipment } from "@/utils/generateRandomEquipment";
-
-const API_BASE = '/api';
+import { Button } from "@/components/ui/button";
+import { Loader2, Sparkles } from "lucide-react";
+import { toast } from "@/hooks/use-toast";
+import { useAuth } from "@/hooks/useAuth";
+import { useNavigate, useLocation } from "react-router-dom";
+import useSWRMutation from "swr/mutation";
+import Skeleton from "@/components/ui/skeleton";
+import { useDelayedError } from '@/hooks/useDelayedError';
+import { ErrorBoundary } from "@/components/GlobalErrorBoundary"; // Import ErrorBoundary
 
 // The EQUIPMENT_LISTINGS constant has been removed as it was commented out
 // and the page primarily relies on API calls and dynamic data generation.
