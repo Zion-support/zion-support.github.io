@@ -1,270 +1,220 @@
-# PM2 Automation System
+# PM2 Error Fixing Automation System
 
-This document describes the PM2 automation system that has replaced GitHub Actions for CI/CD, dependency management, and security monitoring.
+This PM2 automation system continuously monitors your project for errors and automatically fixes common issues to prevent build failures and maintain code quality.
 
-## Overview
+## 🎯 What It Does
 
-The PM2 automation system provides the following functionality that was previously handled by GitHub Actions:
+The system consists of 5 automated services that work together to:
 
-- **CI/CD Pipeline**: Automated building, testing, and deployment
-- **Dependency Management**: Automated dependency updates and security audits
-- **Security Monitoring**: Regular security checks and vulnerability scanning
-- **Process Management**: Application monitoring and auto-restart capabilities
+1. **Monitor for errors** - Continuously checks build, lint, and TypeScript errors
+2. **Fix syntax issues** - Automatically resolves common syntax errors and merge conflicts
+3. **Maintain build health** - Ensures dependencies and build assets are healthy
+4. **Resolve merge conflicts** - Intelligently resolves Git merge conflicts
+5. **Self-healing** - Automatically restarts services and triggers fixes when issues are detected
 
-## Prerequisites
-
-- Node.js 18+ installed
-- PM2 installed globally: `npm install -g pm2`
-- Yarn package manager (the project uses yarn)
-
-## Installation
-
-1. Ensure PM2 is installed globally:
-
-   ```bash
-   npm install -g pm2
-   ```
-
-2. The automation scripts are located in the `scripts/` directory:
-   - `pm2-automation.js` - Main automation script
-   - `pm2-cron.sh` - Cron job script for scheduled tasks
-
-3. Make scripts executable:
-   ```bash
-   chmod +x scripts/pm2-automation.js scripts/pm2-cron.sh
-   ```
-
-## Configuration
-
-### PM2 Ecosystem Configuration
-
-The `ecosystem.config.js` file contains PM2 configuration for:
-
-- Application startup and monitoring
-- Environment-specific settings
-- Deployment automation
-
-### Automation Scripts
-
-The main automation script (`scripts/pm2-automation.js`) provides the following commands:
-
-#### CI Process
+## 🚀 Quick Start
 
 ```bash
-node scripts/pm2-automation.js ci
-```
+# Start the entire automation system
+./start-pm2-automation.sh
 
-- Installs dependencies
-- Runs linting (non-blocking)
-- Runs type checking (non-blocking)
-- Builds the project
-- Runs tests if available (non-blocking)
-
-#### Deployment Process
-
-```bash
-node scripts/pm2-automation.js deploy
-```
-
-- Installs dependencies
-- Builds the project
-- Verifies build output
-- Prepares for deployment
-
-#### Dependency Updates
-
-```bash
-node scripts/pm2-automation.js deps
-```
-
-- Checks for outdated packages
-- Runs security audit
-- Updates dependencies
-- Rebuilds and verifies the project
-- Runs quality checks (non-blocking)
-
-#### Security Checks
-
-```bash
-node scripts/pm2-automation.js security
-```
-
-- Installs dependencies
-- Runs security audit
-- Checks for outdated packages
-
-#### Start Monitoring
-
-```bash
-node scripts/pm2-automation.js deploy
-```
-
-- Starts PM2 monitoring
-- Provides monitoring dashboard access
-
-## Scheduled Automation
-
-The `scripts/pm2-cron.sh` script can be used with cron to automate tasks:
-
-### Cron Configuration
-
-Add the following to your crontab (`crontab -e`):
-
-```bash
-# Run dependency updates every Monday at 2 AM
-0 2 * * 1 /workspace/scripts/pm2-cron.sh
-
-# Run security checks every Monday at 2 AM
-0 2 * * 1 /workspace/scripts/pm2-cron.sh
-
-# Run CI checks daily at 6 AM
-0 6 * * * /workspace/scripts/pm2-cron.sh
-
-# Run deployment checks daily at 8 AM
-0 8 * * * /workspace/scripts/pm2-cron.sh
-```
-
-### Manual Cron Execution
-
-You can also run the cron script manually:
-
-```bash
-bash scripts/pm2-cron.sh
-```
-
-## PM2 Commands
-
-### Basic PM2 Operations
-
-```bash
-# Start the application
-pm2 start ecosystem.config.js
-
-# Monitor applications
-pm2 monit
-
-# View logs
-pm2 logs
-
-# View status
+# View all services status
 pm2 status
 
-# Restart application
-pm2 restart bolt-zion-app
-
-# Stop application
-pm2 stop bolt-zion-app
-
-# Delete application from PM2
-pm2 delete bolt-zion-app
-```
-
-### PM2 Monitoring
-
-```bash
-# Real-time monitoring dashboard
+# Monitor all services in real-time
 pm2 monit
 
-# View detailed information
-pm2 show bolt-zion-app
-
-# View logs for specific app
-pm2 logs bolt-zion-app
-
-# View logs with timestamps
-pm2 logs bolt-zion-app --timestamp
-```
-
-## Logs and Monitoring
-
-### Automation Logs
-
-All automation tasks log to `pm2-automation.log` in the workspace root.
-
-### PM2 Logs
-
-PM2 logs are stored in `~/.pm2/logs/` and can be viewed with:
-
-```bash
+# View logs from all services
 pm2 logs
 ```
 
-### Monitoring Dashboard
+## 🔧 Services Overview
 
-Access the PM2 monitoring dashboard:
+### 1. Error Monitor (`error-monitor`)
+- **Frequency**: Every 5 minutes
+- **Purpose**: Detects build, lint, and TypeScript errors
+- **Actions**: Triggers appropriate fix services when errors are found
+- **Logs**: `./logs/error-monitor.log`
 
+### 2. Syntax Fixer (`syntax-fixer`)
+- **Frequency**: Every 10 minutes (or when triggered by error monitor)
+- **Purpose**: Fixes common syntax errors automatically
+- **Fixes**:
+  - Unterminated strings in JSX/React components
+  - Malformed lazy import statements
+  - Object property syntax errors
+  - Missing semicolons and quotes
+- **Logs**: `./logs/syntax-fixer.log`
+
+### 3. Build Health Check (`build-health-check`)
+- **Frequency**: Every 15 minutes
+- **Purpose**: Monitors overall project build health
+- **Checks**:
+  - Dependencies health (`node_modules` status)
+  - Configuration file validity
+  - Build asset generation
+- **Auto-fixes**: Reinstalls dependencies when needed
+- **Logs**: `./logs/build-health.log`
+
+### 4. Merge Conflict Resolver (`merge-conflict-resolver`)
+- **Frequency**: Every 30 minutes
+- **Purpose**: Automatically resolves Git merge conflicts
+- **Strategy**: Smart merging with backup creation
+- **Features**:
+  - Creates backups before resolving conflicts
+  - Intelligent conflict resolution based on content type
+  - Handles imports, object properties, and code blocks
+- **Logs**: `./logs/merge-resolver.log`
+
+### 5. Main Application (`zion-app`)
+- **Purpose**: Your main application server
+- **Features**: Auto-restart, memory management, health monitoring
+- **Logs**: `./logs/app-combined.log`
+
+## 📊 Monitoring & Reports
+
+All services generate detailed reports in the `./logs/` directory:
+
+- `error-report.json` - Latest error detection results
+- `syntax-fixes.json` - Syntax fixes applied
+- `build-health-report.json` - Build health status
+- `merge-conflicts-resolved.json` - Merge conflict resolution results
+
+## 🔧 Manual Operations
+
+### Restart Specific Services
 ```bash
-pm2 monit
+pm2 restart error-monitor        # Restart error monitoring
+pm2 restart syntax-fixer         # Restart syntax fixer
+pm2 restart build-health-check   # Restart build health checker
+pm2 restart merge-conflict-resolver # Restart merge conflict resolver
 ```
 
-## Troubleshooting
+### Trigger Immediate Fixes
+```bash
+pm2 restart syntax-fixer         # Trigger immediate syntax fixing
+pm2 restart merge-conflict-resolver # Trigger immediate conflict resolution
+```
 
-### Common Issues
+### View Service Logs
+```bash
+pm2 logs error-monitor           # View error monitor logs
+pm2 logs syntax-fixer           # View syntax fixer logs
+pm2 logs build-health-check     # View build health logs
+pm2 logs merge-conflict-resolver # View merge resolver logs
+```
 
-1. **PM2 not found**: Ensure PM2 is installed globally
+### Stop/Start All Services
+```bash
+pm2 stop all                    # Stop all services
+pm2 start ecosystem.config.js   # Start all services
+pm2 restart all                 # Restart all services
+```
 
-   ```bash
-   npm install -g pm2
-   ```
+## 🛠️ Configuration
 
-2. **Permission denied**: Make scripts executable
+### Adjusting Check Frequencies
 
-   ```bash
-   chmod +x scripts/pm2-automation.js scripts/pm2-cron.sh
-   ```
+Edit `ecosystem.config.js` and modify the `cron_restart` values:
 
-3. **Yarn issues**: Ensure yarn is properly installed and configured
+```javascript
+cron_restart: '*/5 * * * *'   // Every 5 minutes
+cron_restart: '*/10 * * * *'  // Every 10 minutes
+cron_restart: '*/15 * * * *'  // Every 15 minutes
+cron_restart: '*/30 * * * *'  // Every 30 minutes
+```
 
-4. **Build failures**: Check the build logs and ensure all dependencies are installed
+### Memory Limits
 
-### Debugging
+Adjust `max_memory_restart` in `ecosystem.config.js` for each service:
 
-1. Check automation logs:
+```javascript
+max_memory_restart: '1G'      // Main app
+max_memory_restart: '500M'    // Error monitor
+max_memory_restart: '300M'    // Health check
+```
 
-   ```bash
-   tail -f pm2-automation.log
-   ```
+## 🚨 Troubleshooting
 
-2. Check PM2 logs:
+### Service Won't Start
+```bash
+pm2 delete all                  # Remove all processes
+./start-pm2-automation.sh       # Restart from scratch
+```
 
-   ```bash
-   pm2 logs bolt-zion-app
-   ```
+### High Memory Usage
+```bash
+pm2 monit                       # Monitor memory usage
+pm2 restart [service-name]      # Restart specific service
+```
 
-3. Check PM2 status:
-   ```bash
-   pm2 status
-   ```
+### Logs Not Rotating
+```bash
+pm2 install pm2-logrotate       # Reinstall log rotation
+pm2 set pm2-logrotate:max_size 10M
+```
 
-## Migration from GitHub Actions
+### Check System Status
+```bash
+pm2 status                      # Overall status
+pm2 info [service-name]         # Detailed service info
+pm2 describe [service-name]     # Service configuration
+```
 
-This PM2 automation system replaces the following GitHub Actions workflows:
+## 🔄 Backup & Recovery
 
-- `ci.yml` → `node scripts/pm2-automation.js ci`
-- `deploy.yml` → `node scripts/pm2-automation.js deploy`
-- `dependencies.yml` → `node scripts/pm2-automation.js deps`
-- `security.yml` → `node scripts/pm2-automation.js security`
+- **Merge conflict backups**: `./backups/merge-conflicts/`
+- **PM2 configuration**: Saved automatically with `pm2 save`
+- **Log files**: Rotated automatically (7 days retention)
 
-### Benefits of PM2 Automation
+### Restore from Backup
+```bash
+# If automated fixes cause issues, restore from backup
+cp ./backups/merge-conflicts/[backup-file] [original-file]
+```
 
-- **Faster execution**: No need to wait for GitHub Actions runners
-- **Local control**: Full control over the automation environment
-- **Cost effective**: No GitHub Actions minutes consumed
-- **Real-time monitoring**: Immediate feedback and monitoring
-- **Customizable**: Easy to modify and extend automation logic
+## 📈 Performance Impact
 
-## Security Considerations
+The automation system is designed to be lightweight:
 
-- The automation scripts run with the same permissions as the user executing them
-- Ensure proper access controls on the automation scripts
-- Monitor logs for any suspicious activity
-- Regularly update dependencies to address security vulnerabilities
+- **CPU Usage**: Minimal (runs only during scheduled checks)
+- **Memory Usage**: ~100-500MB total for all services
+- **Disk Usage**: Log rotation keeps disk usage minimal
+- **Network**: No external network calls
 
-## Support
+## 🔐 Security Considerations
 
-For issues with the PM2 automation system:
+- Scripts only modify files within the project directory
+- Backups are created before making changes
+- No external dependencies or network requests
+- All operations are logged for audit trail
 
-1. Check the logs in `pm2-automation.log`
-2. Review PM2 logs with `pm2 logs`
-3. Verify script permissions and dependencies
-4. Check the troubleshooting section above
+## 📞 Support
+
+- **Check logs**: `./logs/` directory for detailed information
+- **View status**: `pm2 status` for current service status
+- **Monitor real-time**: `pm2 monit` for live monitoring
+- **Service details**: `pm2 describe [service-name]` for configuration
+
+## 🎯 Common Issues Fixed Automatically
+
+1. **Syntax Errors**:
+   - Unterminated strings
+   - Malformed imports
+   - Missing quotes/semicolons
+
+2. **Merge Conflicts**:
+   - Git merge markers
+   - Duplicate imports
+   - Conflicting code blocks
+
+3. **Build Issues**:
+   - Missing dependencies
+   - Invalid configuration files
+   - Build asset problems
+
+4. **Type Errors**:
+   - TypeScript compilation issues
+   - Missing type definitions
+
+This system ensures your project maintains high quality and builds successfully by automatically detecting and fixing common development issues before they become problems.
