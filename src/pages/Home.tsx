@@ -89,6 +89,30 @@ const serviceCategories = [
     href: "/services/ai-customer-success-platform",
     count: 5,
     color: "from-yellow-500 to-orange-600"
+  },
+  {
+    name: "Energy Optimization",
+    description: "AI-powered energy management and sustainability solutions",
+    icon: "⚡",
+    href: "/services/ai-energy-optimization-platform",
+    count: 3,
+    color: "from-green-500 to-blue-600"
+  },
+  {
+    name: "Predictive Maintenance",
+    description: "Intelligent equipment monitoring and maintenance optimization",
+    icon: "🔧",
+    href: "/services/ai-predictive-maintenance-platform",
+    count: 4,
+    color: "from-orange-500 to-red-600"
+  },
+  {
+    name: "Fraud Detection",
+    description: "Advanced AI-powered fraud prevention and security",
+    icon: "🛡️",
+    href: "/services/ai-fraud-detection-platform",
+    count: 3,
+    color: "from-red-500 to-pink-600"
   }
 ];
 
@@ -98,6 +122,64 @@ export default function Home() {
   useEffect(() => {
     setIsVisible(true);
   }, []);
+
+  const stats = [
+    {
+      value: "500+",
+      label: "Global Clients",
+      description: "Trusted by businesses worldwide",
+      icon: Target
+    },
+    {
+      value: "99.9%",
+      label: "Uptime",
+      description: "Reliable infrastructure",
+      icon: Shield
+    },
+    {
+      value: "24/7",
+      label: "Support",
+      description: "Always here to help",
+      icon: Star
+    },
+    {
+      value: "60+",
+      label: "Services",
+      description: "Comprehensive solutions",
+      icon: Rocket
+    }
+  ];
+
+  const features = [
+    {
+      title: "AI-Powered Solutions",
+      description: "Cutting-edge artificial intelligence and machine learning solutions",
+      icon: Brain,
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "Cybersecurity Excellence",
+      description: "Advanced security solutions protecting your digital assets",
+      icon: Shield,
+      color: "from-red-500 to-orange-500"
+    },
+    {
+      title: "Cloud & DevOps",
+      description: "Scalable cloud infrastructure and efficient development operations",
+      icon: Zap,
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      title: "Digital Transformation",
+      description: "End-to-end digital transformation services for modern businesses",
+      icon: Rocket,
+      color: "from-green-500 to-emerald-500"
+    }
+  ];
+
+  if (isLoading) {
+    return <LoadingFallback message="Loading Zion Tech Group..." />;
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -240,10 +322,138 @@ export default function Home() {
               </div>
             </motion.div>
 
-            {/* Cloud & DevOps */}
-            <motion.div 
-              initial={{ x: 30, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-slate-700/50 p-6 hover:border-cyan-400/50 transition-all duration-300"
+                >
+                  <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-4`}>
+                    <feature.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                  <p className="text-gray-300 text-sm">{feature.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Additional Sections */}
+        <Suspense fallback={<LoadingFallback message="Loading features..." />}>
+          <FeatureHighlights />
+        </Suspense>
+
+        <Suspense fallback={<LoadingFallback message="Loading tech solutions..." />}>
+          <TechSolutionsSection />
+        </Suspense>
+
+        <Suspense fallback={<LoadingFallback message="Loading case studies..." />}>
+          <CaseStudiesSection />
+        </Suspense>
+
+        <Suspense fallback={<LoadingFallback message="Loading team expertise..." />}>
+          <TeamExpertiseSection />
+        </Suspense>
+
+        <Suspense fallback={<LoadingFallback message="Loading global presence..." />}>
+          <GlobalPresenceSection />
+        </Suspense>
+
+        <Suspense fallback={<LoadingFallback message="Loading innovation..." />}>
+          <InnovationResearchSection />
+        </Suspense>
+
+        <Suspense fallback={<LoadingFallback message="Loading success stories..." />}>
+          <ClientSuccessStoriesSection />
+        </Suspense>
+
+        <Suspense fallback={<LoadingFallback message="Loading technology stack..." />}>
+          <TechnologyStackSection />
+        </Suspense>
+
+        <Suspense fallback={<LoadingFallback message="Loading security..." />}>
+          <SecurityComplianceSection />
+        </Suspense>
+
+        <Suspense fallback={<LoadingFallback message="Loading AI services..." />}>
+          <AIServicesShowcase />
+        </Suspense>
+
+        <Suspense fallback={<LoadingFallback message="Loading testimonials..." />}>
+          <InteractiveTestimonials />
+        </Suspense>
+
+        <Suspense fallback={<LoadingFallback message="Loading services showcase..." />}>
+          <ServicesShowcase />
+        </Suspense>
+
+        {/* Comprehensive Services Showcase 2026 */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+          <div className="max-w-6xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Discover Our Complete Suite of
+                <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+                  {' '}AI-Powered Services 2026
+                </span>
+              </h2>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                From energy optimization to fraud detection, explore our comprehensive collection of innovative 
+                micro SAAS services designed to transform every aspect of your business operations.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
+                  <div className="text-3xl mb-3">⚡</div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Energy Optimization</h3>
+                  <p className="text-slate-400 text-sm">Reduce costs by 25-40% with AI-powered energy management</p>
+                </div>
+                <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
+                  <div className="text-3xl mb-3">🔧</div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Predictive Maintenance</h3>
+                  <p className="text-slate-400 text-sm">Cut downtime by 70% with intelligent equipment monitoring</p>
+                </div>
+                <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
+                  <div className="text-3xl mb-3">🛡️</div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Fraud Detection</h3>
+                  <p className="text-slate-400 text-sm">Reduce fraud losses by 80% with advanced AI detection</p>
+                </div>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/comprehensive-services-showcase-2026"
+                  className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25"
+                >
+                  Explore All Services
+                  <ArrowRight className="w-5 h-5 ml-2 inline" />
+                </Link>
+                <Link
+                  to="/contact"
+                  className="px-8 py-4 bg-slate-700/50 hover:bg-slate-600/50 text-white font-semibold rounded-lg transition-all duration-300 border border-slate-600 hover:border-slate-500"
+                >
+                  Get Custom Quote
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
               className="group"

@@ -28,84 +28,21 @@ const Terms = React.lazy(() => import('./pages/Terms'));
 const Cookies = React.lazy(() => import('./pages/Cookies'));
 const Partners = React.lazy(() => import('./pages/Partners'));
 const Pricing = React.lazy(() => import('./pages/Pricing'));
-const RequestQuote = React.lazy(() => import('./pages/RequestQuote'));
-const ComprehensiveServicesShowcase2026 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2026'));
-const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
+const SearchPage = React.lazy(() => import('./pages/SearchPage'));
+const EnhancedContact = React.lazy(() => import('./components/EnhancedContact'));
 
-// Lazy load pages for better performance
-const HomePage = lazy(() =>
-  import('./pages/HomePage').then(module => ({ default: module.HomePage }))
-);
-const ServicesPage = lazy(() =>
-  import('./pages/ServicesPage').then(module => ({
-    default: module.ServicesPage,
-  }))
-);
-const SolutionsPage = lazy(() =>
-  import('./pages/SolutionsPage').then(module => ({
-    default: module.SolutionsPage,
-  }))
-);
-const AboutPage = lazy(() =>
-  import('./pages/AboutPage').then(module => ({ default: module.AboutPage }))
-);
-const ContactPage = lazy(() =>
-  import('./pages/ContactPage').then(module => ({
-    default: module.ContactPage,
-  }))
-);
-const BlogPage = lazy(() =>
-  import('./pages/BlogPage').then(module => ({ default: module.BlogPage }))
-);
-const NotFoundPage = lazy(() =>
-  import('./pages/NotFoundPage').then(module => ({
-    default: module.NotFoundPage,
-  }))
-);
-const ComprehensiveServicesPage = lazy(() =>
-  import('./pages/ComprehensiveServicesPage').then(module => ({
-    default: module.ComprehensiveServicesPage,
-  }))
-);
-const Sitemap = lazy(() =>
-  import('./pages/Sitemap').then(module => ({ default: module.default }))
-);
-const ComprehensiveSitemap = lazy(() =>
-  import('./pages/ComprehensiveSitemap').then(module => ({
-    default: module.ComprehensiveSitemap,
-  }))
-);
-const Support = lazy(() =>
-  import('./pages/Support').then(module => ({ default: module.default }))
-);
-const Training = lazy(() =>
-  import('./pages/Training').then(module => ({ default: module.default }))
-);
-const Helpdesk = lazy(() =>
-  import('./pages/Helpdesk').then(module => ({ default: module.default }))
-);
-const RevolutionaryServicesPage = lazy(() =>
-  import('./pages/RevolutionaryServicesPage').then(module => ({
-    default: module.RevolutionaryServicesPage,
-  }))
-);
-const NewServicesShowcase2025 = lazy(() =>
-  import('./pages/NewServicesShowcase2025').then(module => ({
-    default: module.NewServicesShowcase2025,
-  }))
-);
-const EnhancedNewServices2025 = lazy(() =>
-  import('./pages/EnhancedNewServices2025').then(module => ({
-    default: module.EnhancedNewServices2025,
-  }))
-);
-const PricingPage = lazy(() =>
-  import('./pages/PricingPage').then(module => ({
-    default: module.PricingPage,
-  }))
-);
+// Enhanced components
+const Community = React.lazy(() => import('./pages/Community'));
+const Demo = React.lazy(() => import('./pages/Demo'));
 
-// New AI service pages
+// Import real pages
+const Careers = React.lazy(() => import('./pages/Careers'));
+const Marketplace = React.lazy(() => import('./pages/Marketplace'));
+const ComprehensivePricingGuide2026 = React.lazy(() => import('./pages/ComprehensivePricingGuide2026'));
+const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
+const RevolutionaryServices2030 = React.lazy(() => import('./pages/RevolutionaryServices2030'));
+const ComprehensivePricingGuide2025 = React.lazy(() => import('./pages/ComprehensivePricingGuide2025'));
+const ScheduleDemo = React.lazy(() => import('./pages/ScheduleDemo'));
 const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const AIHealthcarePlatform = React.lazy(() => import('./pages/services/AIHealthcarePlatform'));
 const AIContentCreation = React.lazy(() => import('./pages/services/AIContentCreation'));
@@ -153,6 +90,16 @@ const Marketplace = () => (
 const AIRealEstateAnalytics = React.lazy(() => import('./pages/services/AIRealEstateAnalytics'));
 const AILogisticsOptimization = React.lazy(() => import('./pages/services/AILogisticsOptimization'));
 const AICybersecurityThreatIntelligence = React.lazy(() => import('./pages/services/AICybersecurityThreatIntelligence'));
+
+// New comprehensive services showcase 2026
+const ComprehensiveServicesShowcase2026 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2026'));
+
+// New innovative micro SAAS services
+const AIEnergyOptimizationPlatform = React.lazy(() => import('./pages/services/AIEnergyOptimizationPlatform'));
+const AISupplyChainRiskManagement = React.lazy(() => import('./pages/services/AISupplyChainRiskManagement'));
+const AIPredictiveMaintenancePlatform = React.lazy(() => import('./pages/services/AIPredictiveMaintenancePlatform'));
+const AIFraudDetectionPlatform = React.lazy(() => import('./pages/services/AIFraudDetectionPlatform'));
+const AICustomerExperienceOptimization = React.lazy(() => import('./pages/services/AICustomerExperienceOptimization'));
 
 function App() {
   return (
@@ -211,15 +158,20 @@ function App() {
                 <Route path="/comprehensive-ai-services-showcase-2025" element={<ComprehensiveAIServicesShowcase2025 />} />
                 
                 {/* New innovative micro SAAS services */}
-                <Route path="/services/ai-real-estate-analytics" element={<AIRealEstateAnalytics />} />
-                <Route path="/services/ai-logistics-optimization" element={<AILogisticsOptimization />} />
-                <Route path="/services/ai-cybersecurity-threat-intelligence" element={<AICybersecurityThreatIntelligence />} />
+                <Route path="/services/ai-energy-optimization-platform" element={<AIEnergyOptimizationPlatform />} />
+                <Route path="/services/ai-supply-chain-risk-management" element={<AISupplyChainRiskManagement />} />
+                <Route path="/services/ai-predictive-maintenance-platform" element={<AIPredictiveMaintenancePlatform />} />
+                <Route path="/services/ai-fraud-detection-platform" element={<AIFraudDetectionPlatform />} />
+                <Route path="/services/ai-customer-experience-optimization" element={<AICustomerExperienceOptimization />} />
                 
                 {/* Emerging Tech 2030 */}
                 <Route path="/emerging-tech-2030" element={<EmergingTech2030 />} />
                 
                 {/* New comprehensive pricing guide 2026 */}
                 <Route path="/comprehensive-pricing-guide-2026" element={<ComprehensivePricingGuide2026 />} />
+                
+                {/* New comprehensive services showcase 2026 */}
+                <Route path="/comprehensive-services-showcase-2026" element={<ComprehensiveServicesShowcase2026 />} />
                 
                 {/* New comprehensive pricing guide 2027 */}
                 <Route path="/comprehensive-pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
