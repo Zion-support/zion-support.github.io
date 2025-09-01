@@ -10,6 +10,7 @@ const axiosPath = fileURLToPath(new URL('./src/lib/axios.ts', import.meta.url))
 export default defineConfig({
   plugins: [
     react(),
+    visualizer({ open: true, filename: 'bundle-stats.html' }),
     {
       name: 'mock-api',
       configureServer(server) {
