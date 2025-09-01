@@ -2,13 +2,13 @@
 
 // React stubs
 declare module 'react' {
-  export type FC<P = any> = (props: P) => JSX.Element;
+  export type FC<P = any> = (props: P) => any;
   export type ReactNode = any;
   export interface ChangeEvent<T = any> { target: T }
   export interface FormEvent<T = any> {}
   export interface KeyboardEvent<T = any> {}
-  export interface RefObject<T> { current: T | null }
-  export type RefCallback<T> = (value: T | null) => void;
+  export interface RefObject<T> { current: T }
+  export type RefCallback<T> = (value: T) => void;
   export type Ref<T> = RefObject<T> | RefCallback<T> | null;
   export type LegacyRef<T> = Ref<T>;
   export function useRef<T = any>(initial: T): { current: T };
@@ -23,8 +23,7 @@ declare module 'react/jsx-runtime' {
 
 declare namespace JSX {
   interface Element {
-    type: any;
-    props: any;
+    [key: string]: any;
   }
   interface IntrinsicElements {
     [elemName: string]: any;
@@ -38,7 +37,7 @@ declare module 'react-dom' {
 }
 
 declare module 'react-router-dom' {
-  export function useNavigate(): (path: string) => void;
+  export function useNavigate(): any;
   export const Link: any;
   export const Routes: any;
   export const Navigate: any;

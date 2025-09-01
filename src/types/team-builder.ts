@@ -4,14 +4,12 @@ export interface TalentProfile {
   skills: string[];
   hourlyRate: number;
   availability: string;
-  experience: number;
 }
 
 export interface RecommendedRole {
-  id: string;
   title: string;
-  description: string;
-  skills: string[];
+  count: number;
+  requiredSkills: string[];
   weeklyHours: number;
   hourlyRateRange: {
     min: number;
@@ -22,7 +20,6 @@ export interface RecommendedRole {
 }
 
 export interface TeamRecommendation {
-
   id?: string; // Optional: if we save recommendations
   projectBriefId?: string; // Link to the project brief
   recommendationSummary: string; // e.g., "1 Product Manager, 2 Fullstack Engineers, 1 DevOps, 1 QA"
@@ -47,7 +44,6 @@ export interface TeamRecommendation {
 
 // Optional: For "Invite to Team"
 export interface TeamInvite {
-
   id?: string;
   teamRecommendationId?: string;
   talentId: string;
