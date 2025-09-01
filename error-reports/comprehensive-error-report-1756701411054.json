@@ -17,7 +17,5 @@
     }
   },
   "errorSummary": {},
-  "recommendations": [
-    "Fix build errors to ensure project compiles correctly"
-  ]
+  "recommendations": ["Fix build errors to ensure project compiles correctly"]
 }

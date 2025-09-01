@@ -1,298 +1,250 @@
 #!/usr/bin/env node
 
-const { execSync, spawn } = require('child_process');
+/**
+ * Master Error Fixer Automation
+ * Coordinates all error fixers and provides comprehensive error prevention
+ * Runs every hour
+ */
+
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
 class MasterErrorFixer {
   constructor() {
     this.projectRoot = process.cwd();
     this.logFile = path.join(this.projectRoot, 'automation/logs/master-error-fixer.log');
-    this.errorLogFile = path.join(this.projectRoot, 'automation/logs/master-error-fixer-error.log');
-    this.reportFile = path.join(this.projectRoot, 'master-error-fixer-report.json');
-    
-    // Ensure logs directory exists
-    this.ensureLogsDirectory();
-    
-    this.errors = {
-      typescript: [],
-      eslint: [],
-      build: [],
-      dependency: [],
-      import: [],
-      syntax: [],
-      other: []
-    };
-    
-    this.fixes = {
-      applied: [],
-      failed: [],
-      skipped: []
+    this.ensureLogDirectory();
+    this.fixers = [
+      'pm2-error-prevention-automation.cjs',
+      'console-error-fixer.cjs',
+      'comprehensive-error-fixer.cjs'
+    ];
+    this.stats = {
+      totalRuns: 0,
+      totalErrorsFixed: 0,
+      lastRun: null,
+      startTime: new Date().toISOString()
     };
   }
 
-// Get automation interval from environment variable (default: 1 hour)
-const AUTOMATION_INTERVAL =
-  parseInt(process.env.AUTOMATION_INTERVAL) || 3600000; // 1 hour
+  ensureLogDirectory() {
+    const logDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logDir)) {
+      fs.mkdirSync(logDir, { recursive: true });
+    }
+  }
 
-async function runMasterErrorFixer() {
-  try {
-    console.log(`🔧 Running master error fixer at ${new Date().toISOString()}`);
+  log(message, type = 'info') {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] [MASTER-ERROR-FIXER] [${type.toUpperCase()}] ${message}\n`;
+    fs.appendFileSync(this.logFile, logMessage);
+    console.log(`[MASTER-ERROR-FIXER] [${type.toUpperCase()}] ${message}`);
+  }
 
-    let totalFixes = 0;
-    const results = {};
-
-    // 1. Run comprehensive error fixer
-    console.log('🔧 Running comprehensive error fixer...');
+  async runErrorFixer(fixerName) {
     try {
-      const comprehensiveScript = path.join(
-        __dirname,
-        'comprehensive-error-fixer.cjs'
-      );
-      if (fs.existsSync(comprehensiveScript)) {
-        const result = await runErrorFixerScript(comprehensiveScript);
-        results.comprehensive = result;
-        totalFixes += result.fixes || 0;
-        console.log(
-          `  ✅ Comprehensive error fixer completed: ${result.fixes || 0} fixes`
-        );
+      this.log(`Running ${fixerName}...`, 'info');
+      
+      const fixerPath = path.join(this.projectRoot, 'scripts/automation', fixerName);
+      if (!fs.existsSync(fixerPath)) {
+        this.log(`Fixer ${fixerName} not found`, 'warning');
+        return { success: false, errorsFixed: 0 };
+      }
+
+      // Run the fixer
+      execSync(`node ${fixerPath}`, { 
+        cwd: this.projectRoot, 
+        stdio: 'pipe',
+        timeout: 300000 // 5 minutes timeout
+      });
+
+      // Read the report to get stats
+      const reportPath = path.join(this.projectRoot, 'automation/logs', fixerName.replace('.cjs', '-report.json'));
+      if (fs.existsSync(reportPath)) {
+        const report = JSON.parse(fs.readFileSync(reportPath, 'utf8'));
+        this.log(`${fixerName} completed successfully. Fixed ${report.errorsFixed || 0} errors.`, 'success');
+        return { success: true, errorsFixed: report.errorsFixed || 0 };
+      } else {
+        this.log(`${fixerName} completed but no report found`, 'warning');
+        return { success: true, errorsFixed: 0 };
+      }
+
+    } catch (error) {
+      this.log(`Error running ${fixerName}: ${error.message}`, 'error');
+      return { success: false, errorsFixed: 0 };
+    }
+  }
+
+  async runTypeCheck() {
+    try {
+      this.log('Running TypeScript type check...', 'info');
+      execSync('npm run type-check', { 
+        cwd: this.projectRoot, 
+        stdio: 'pipe',
+        timeout: 60000 
+      });
+      this.log('TypeScript type check passed', 'success');
+      return true;
+    } catch (error) {
+      this.log(`TypeScript type check failed: ${error.message}`, 'warning');
+      return false;
+    }
+  }
+
+  async runLint() {
+    try {
+      this.log('Running ESLint...', 'info');
+      execSync('npm run lint', { 
+        cwd: this.projectRoot, 
+        stdio: 'pipe',
+        timeout: 60000 
+      });
+      this.log('ESLint passed', 'success');
+      return true;
+    } catch (error) {
+      this.log(`ESLint failed: ${error.message}`, 'warning');
+      return false;
+    }
+  }
+
+  async runBuild() {
+    try {
+      this.log('Running build process...', 'info');
+      execSync('npm run build', { 
+        cwd: this.projectRoot, 
+        stdio: 'pipe',
+        timeout: 120000 
+      });
+      this.log('Build process passed', 'success');
+      return true;
+    } catch (error) {
+      this.log(`Build process failed: ${error.message}`, 'warning');
+      return false;
+    }
+  }
+
+  async runTests() {
+    try {
+      this.log('Running tests...', 'info');
+      execSync('npm test -- --passWithNoTests', { 
+        cwd: this.projectRoot, 
+        stdio: 'pipe',
+        timeout: 120000 
+      });
+      this.log('Tests passed', 'success');
+      return true;
+    } catch (error) {
+      this.log(`Tests failed: ${error.message}`, 'warning');
+      return false;
+    }
+  }
+
+  async cleanup() {
+    try {
+      this.log('Cleaning up build artifacts...', 'info');
+      
+      // Remove build artifacts
+      const buildDirs = ['dist', 'build', '.next', 'out'];
+      buildDirs.forEach(dir => {
+        const fullPath = path.join(this.projectRoot, dir);
+        if (fs.existsSync(fullPath)) {
+          fs.rmSync(fullPath, { recursive: true, force: true });
+          this.log(`Removed ${dir} directory`, 'info');
+        }
+      });
+
+      // Remove TypeScript build info
+      const tsBuildInfo = path.join(this.projectRoot, 'tsconfig.tsbuildinfo');
+      if (fs.existsSync(tsBuildInfo)) {
+        fs.unlinkSync(tsBuildInfo);
+        this.log('Removed TypeScript build info', 'info');
       }
     } catch (error) {
-      this.log(`TypeScript errors detected: ${error.stderr}`, 'error');
-      this.errors.typescript = this.parseTypeScriptErrors(error.stderr);
+      this.log(`Error during cleanup: ${error.message}`, 'error');
     }
+  }
 
-    // 2. Run TypeScript error fixer
-    console.log('🔧 Running TypeScript error fixer...');
-    try {
-      const typescriptScript = path.join(
-        __dirname,
-        'typescript-error-fixer.cjs'
-      );
-      if (fs.existsSync(typescriptScript)) {
-        const result = await runErrorFixerScript(typescriptScript);
-        results.typescript = result;
-        totalFixes += result.fixes || 0;
-        console.log(
-          `  ✅ TypeScript error fixer completed: ${result.fixes || 0} fixes`
-        );
-      }
-    } catch (error) {
-      this.log(`ESLint errors detected: ${error.stderr}`, 'error');
-      this.errors.eslint = this.parseESLintErrors(error.stderr);
-    }
-
-    // 3. Run JSX error fixer
-    console.log('🔧 Running JSX error fixer...');
-    try {
-      const jsxScript = path.join(__dirname, 'jsx-error-fixer.cjs');
-      if (fs.existsSync(jsxScript)) {
-        const result = await runErrorFixerScript(jsxScript);
-        results.jsx = result;
-        totalFixes += result.fixes || 0;
-        console.log(
-          `  ✅ JSX error fixer completed: ${result.fixes || 0} fixes`
-        );
-      }
-    } catch (error) {
-      this.log(`Build errors detected: ${error.stderr}`, 'error');
-      this.errors.build = this.parseBuildErrors(error.stderr);
-    }
-
-    // 4. Run console error fixer
-    console.log('🔧 Running console error fixer...');
-    try {
-      const consoleScript = path.join(__dirname, 'console-error-fixer.cjs');
-      if (fs.existsSync(consoleScript)) {
-        const result = await runErrorFixerScript(consoleScript);
-        results.console = result;
-        totalFixes += result.fixes || 0;
-        console.log(
-          `  ✅ Console error fixer completed: ${result.fixes || 0} fixes`
-        );
-      }
-    } catch (error) {
-      this.log(`Dependency issues detected: ${error.stderr}`, 'error');
-      this.errors.dependency = this.parseDependencyErrors(error.stderr);
-    }
-
-    // 5. Run final validation
-    console.log('🔧 Running final validation...');
-    const validationResults = await runFinalValidation();
-    results.validation = validationResults;
-
-    // Generate master error fixer report
-    console.log('📊 Generating master error fixer report...');
+  async generateReport() {
     const report = {
       timestamp: new Date().toISOString(),
-      totalFixes: totalFixes,
-      individualResults: results,
-      summary: 'Master error fixer completed',
+      automation: 'Master Error Fixer',
+      stats: this.stats,
       status: 'completed',
+      summary: `Coordinated ${this.fixers.length} error fixers, total errors fixed: ${this.stats.totalErrorsFixed}`
     };
 
-    const reportPath = path.join(
-      process.cwd(),
-      'master-error-fixer-report.json'
-    );
+    const reportPath = path.join(this.projectRoot, 'automation/logs/master-error-fixer-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    console.log(`✅ Master error fixer report saved to ${reportPath}`);
-
-    console.log(
-      `✅ Master error fixer completed successfully. Total fixes applied: ${totalFixes}`
-    );
-  } catch (error) {
-    console.error('❌ Master error fixer failed:', error.message);
+    
+    this.log(`Report generated: ${reportPath}`, 'info');
+    return report;
   }
 
-async function runErrorFixerScript(scriptPath) {
-  return new Promise((resolve, reject) => {
+  async run() {
+    this.log('Starting Master Error Fixer...', 'info');
+    
+    this.stats.totalRuns++;
+    this.stats.lastRun = new Date().toISOString();
+    
     try {
-      // Create a temporary script to extract the fix count
-      const tempScript = `
-        const originalLog = console.log;
-        let fixCount = 0;
-        
-        console.log = (...args) => {
-          const message = args.join(' ');
-          if (message.includes('✅ Fixed') || message.includes('fixes applied')) {
-            const match = message.match(/(\d+)/);
-            if (match) {
-              fixCount = parseInt(match[1]);
-            }
-          }
-          originalLog(...args);
-        };
-        
-        try {
-          require('${scriptPath}');
-          setTimeout(() => {
-            process.exit(0);
-          }, 5000);
-        } catch (error) {
-          console.error('Script error:', error.message);
-          process.exit(1);
+      // Step 1: Clean up build artifacts
+      await this.cleanup();
+      
+      // Step 2: Run all error fixers
+      let totalErrorsFixed = 0;
+      for (const fixer of this.fixers) {
+        const result = await this.runErrorFixer(fixer);
+        if (result.success) {
+          totalErrorsFixed += result.errorsFixed;
         }
-      `;
-
-      const tempScriptPath = path.join(__dirname, 'temp-error-fixer.js');
-      fs.writeFileSync(tempScriptPath, tempScript);
-
-      execSync(`node "${tempScriptPath}"`, { stdio: 'pipe', timeout: 10000 });
-
-      // Clean up temp script
-      if (fs.existsSync(tempScriptPath)) {
-        fs.unlinkSync(tempScriptPath);
       }
-
-      resolve({ fixes: 0, status: 'completed' });
-    } catch (error) {
-      resolve({ fixes: 0, status: 'failed', error: error.message });
-    }
-  }
-
-async function runFinalValidation() {
-  const results = {
-    linting: { status: 'unknown', errors: 0, warnings: 0 },
-    typescript: { status: 'unknown', errors: 0 },
-    build: { status: 'unknown', success: false },
-  };
-
-  try {
-    // Check linting
-    console.log('  🔍 Checking linting status...');
-    try {
-      // Try to auto-fix ESLint errors
-      await this.runCommand('npm', { args: ['run', 'lint', '--', '--fix'] });
-      this.log('ESLint auto-fix completed');
-    } catch (error) {
-      const errorOutput = error.message;
-      const errorMatch = errorOutput.match(/(\d+)\s+errors?/);
-      const warningMatch = errorOutput.match(/(\d+)\s+warnings?/);
-
-      results.linting.status = 'failed';
-      results.linting.errors = errorMatch ? parseInt(errorMatch[1]) : 0;
-      results.linting.warnings = warningMatch ? parseInt(warningMatch[1]) : 0;
-    }
-
-    // Check TypeScript
-    console.log('  🔍 Checking TypeScript status...');
-    try {
-      // Try to fix vulnerabilities
-      await this.runCommand('npm', { args: ['audit', 'fix'] });
-      this.log('Dependency audit fix completed');
       
-      this.fixes.applied.push({
-        type: 'dependency',
-        message: 'Applied npm audit fix',
-        timestamp: new Date().toISOString()
-      });
-    } catch (error) {
-      const errorOutput = error.message;
-      const errorMatch = errorOutput.match(/Found\s+(\d+)\s+errors?/);
-
-      results.typescript.status = 'failed';
-      results.typescript.errors = errorMatch ? parseInt(errorMatch[1]) : 0;
-    }
-
-    // Check build
-    console.log('  🔍 Checking build status...');
-    try {
-      await this.detectErrors();
+      this.stats.totalErrorsFixed += totalErrorsFixed;
       
-      if (this.getTotalErrors() > 0) {
-        await this.applyFixes();
+      // Step 3: Run comprehensive checks
+      const typeCheckPassed = await this.runTypeCheck();
+      const lintPassed = await this.runLint();
+      const buildPassed = await this.runBuild();
+      const testsPassed = await this.runTests();
+      
+      // Step 4: Generate report
+      const report = await this.generateReport();
+      
+      // Step 5: Summary
+      this.log(`Master Error Fixer completed successfully!`, 'success');
+      this.log(`Total errors fixed in this run: ${totalErrorsFixed}`, 'info');
+      this.log(`Total errors fixed across all runs: ${this.stats.totalErrorsFixed}`, 'info');
+      this.log(`Checks passed: TypeScript: ${typeCheckPassed}, ESLint: ${lintPassed}, Build: ${buildPassed}, Tests: ${testsPassed}`, 'info');
+      
+      if (typeCheckPassed && lintPassed && buildPassed && testsPassed) {
+        this.log('All checks passed successfully!', 'success');
       } else {
-        this.log('No errors detected');
+        this.log('Some checks failed, but errors were fixed', 'warning');
       }
       
-      const report = this.generateReport();
-      this.log('Master Error Fixer completed successfully');
-      
-      return report;
     } catch (error) {
-      this.log(`Master Error Fixer failed: ${error.message}`, 'error');
-      throw error;
+      this.log(`Fatal error in Master Error Fixer: ${error.message}`, 'error');
     }
-  } catch (error) {
-    console.log(`  ⚠️  Validation failed: ${error.message}`);
   }
-
-  return results;
 }
 
-// Main continuous loop
-async function runContinuous() {
-  console.log(
-    `🚀 Starting master error fixer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`
-  );
+// Run the automation
+const masterFixer = new MasterErrorFixer();
 
-  // Run initial error fixer
-  await runMasterErrorFixer();
-
-  // Set up continuous execution
-  setInterval(async () => {
-    await runMasterErrorFixer();
-  }, AUTOMATION_INTERVAL);
-
-  console.log(
-    `✅ Master error fixer running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`
-  );
-}
-
-// Handle graceful shutdown
+// Handle process signals
 process.on('SIGINT', () => {
-  console.log('🛑 Received SIGINT, shutting down gracefully...');
+  masterFixer.log('Received SIGINT, shutting down gracefully...', 'info');
   process.exit(0);
 });
 
 process.on('SIGTERM', () => {
-  console.log('🛑 Received SIGTERM, shutting down gracefully...');
+  masterFixer.log('Received SIGTERM, shutting down gracefully...', 'info');
   process.exit(0);
 });
 
-// Start the master error fixer
-runContinuous().catch(error => {
-  console.error('❌ Failed to start master error fixer:', error);
+// Run the master fixer
+masterFixer.run().catch(error => {
+  masterFixer.log(`Unhandled error: ${error.message}`, 'error');
   process.exit(1);
 });

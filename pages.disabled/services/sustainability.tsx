@@ -383,11 +383,7 @@ export default function Sustainability(...args: []):  {}
 <<<<<<< HEAD:pages.disabled/services/sustainability.tsx
 <<<<<<< HEAD:pages.disabled/services/sustainability.tsx
               Sustainability Solutions
-<<<<<<<< HEAD:pages.disabled/services/sustainability.tsx
-            </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto&quot;>
-              Discover how sustainable technology can transform various aspects of your business
-========
+<=
             </h2>"
 =======
               Sustainability Solutions"
@@ -395,8 +391,7 @@ export default function Sustainability(...args: []):  {}
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/sustainability.tsx
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               Discover how sustainable technology can transform various aspects of your business 
->>>>>>>> main:backup-pages/src-pages/services/sustainability.tsx
-              and create positive environmental impact
+>              and create positive environmental impact
             </p>
           </motion.div>"
 =======

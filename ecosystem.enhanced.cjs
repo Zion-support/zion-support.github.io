@@ -4,20 +4,25 @@ module.exports = {
     {
       name: 'zion-app',
       script: 'npm',
-      args: 'start',
+      args: 'run dev',
       cwd: './',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production',
+        NODE_ENV: 'development',
         PORT: 3000,
       },
       env_production: {
         NODE_ENV: 'production',
         PORT: 3000,
       },
+      log_file: './logs/zion-app.log',
+      error_file: './logs/zion-app-error.log',
+      out_file: './logs/zion-app-out.log',
+      merge_logs: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
     },
 
     // AI-Powered Code Analyzer - Intelligent code analysis and auto-fixing

@@ -14,6 +14,8 @@ const Login = lazy(() => import('./pages/Login.tsx'));
 const FAQ = lazy(() => import('./pages/FAQ.tsx'));
 const Careers = lazy(() => import('./pages/Careers.tsx'));
 const Sitemap = lazy(() => import('./pages/Sitemap.jsx'));
+const Privacy = lazy(() => import('./pages/Privacy.tsx'));
+const Terms = lazy(() => import('./pages/Terms.tsx'));
 
 // Services pages
 const ComprehensivePricing = lazy(() => 
@@ -25,6 +27,26 @@ const ComprehensiveServicesShowcase2026 = lazy(() =>
 const ComprehensiveMarketingPage2026 = lazy(() => 
   import('./pages/ComprehensiveMarketingPage2026.tsx')
 );
+
+// Marketplace pages
+const Marketplace = lazy(() => import('./pages/Marketplace.tsx'));
+
+// Support pages
+const SystemStatus = lazy(() => import('./pages/SystemStatus.tsx'));
+const Accessibility = lazy(() => import('./pages/Accessibility.tsx'));
+
+// Documentation pages
+const Documentation = lazy(() => import('./pages/Documentation.tsx'));
+const Webinars = lazy(() => import('./pages/Webinars.tsx'));
+const Training = lazy(() => import('./pages/Training.tsx'));
+const Research = lazy(() => import('./pages/Research.tsx'));
+
+// Search and categories
+const Search = lazy(() => import('./pages/Search.tsx'));
+const Categories = lazy(() => import('./pages/Categories.tsx'));
+
+// API Playground
+const ApiPlayground = lazy(() => import('./pages/ApiPlayground.tsx'));
 
 // Loading component
 const LoadingSpinner = () => (
@@ -96,12 +118,34 @@ function App() {
               <Route path="/faq" element={<FAQ />} />
               <Route path="/careers" element={<Careers />} />
               <Route path="/sitemap" element={<Sitemap />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/terms" element={<Terms />} />
               <Route path="/pricing" element={<ComprehensivePricing />} />
 
               {/* Services routes */}
               <Route path="/services" element={<ServicesPage />} />
               <Route path="/comprehensive-services-showcase-2026" element={<ComprehensiveServicesShowcase2026 />} />
               <Route path="/comprehensive-marketing-2026" element={<ComprehensiveMarketingPage2026 />} />
+
+              {/* Marketplace routes */}
+              <Route path="/marketplace" element={<Marketplace />} />
+
+              {/* Support routes */}
+              <Route path="/system-status" element={<SystemStatus />} />
+              <Route path="/accessibility" element={<Accessibility />} />
+
+              {/* Documentation routes */}
+              <Route path="/documentation" element={<Documentation />} />
+              <Route path="/webinars" element={<Webinars />} />
+              <Route path="/training" element={<Training />} />
+              <Route path="/research" element={<Research />} />
+
+              {/* Search and categories */}
+              <Route path="/search" element={<Search />} />
+              <Route path="/categories" element={<Categories />} />
+
+              {/* API Playground */}
+              <Route path="/api-playground" element={<ApiPlayground />} />
 
               {/* Catch-all route for 404 */}
               <Route

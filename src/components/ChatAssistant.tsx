@@ -1,370 +1,296 @@
-import React, { useState, useRef, useEffect } from 'react';''
-import { motion, AnimatePresence  } from 'framer-motion';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 
-import {}
-  MessageCircle, 
-  X, 
-  Send, 
-
-  MessageCircle,
-  X,
-  Send,
-  Bot,
-  User,
-  Sparkles,
-  Settings,
-  Mic,
-  MicOff,
-  Paperclip,
-  Download,
-  RefreshCw,
-  Zap,
-  Brain,
-  Lightbulb,
-  TrendingUp,
-  Shield,
-  Clock,
-  CheckCircle,
-  AlertCircle,
-  Loader2,
-  ChevronDown,
-  ChevronUp,
-  Minimize2,
-  Maximize2,
-  Volume2,
-  VolumeX,
-  Star;
-} from 'lucide-react';
-
-interface Message {}
-  id: string;
-  text: string;'
-  sender: 'user' | 'assistant';
-  timestamp: Date;
-
-  isTyping?: boolean;
-  attachments?: Array<{}
-'
-''
-'''
-    type: 'image' | 'file' | 'video';
-    url: string;
-    name: string;
-    size?: string}[];  metadata?: {}
-    confidence?: number;
-    sources?: string[];
-    suggestions?: string[];
-    actionRequired?: boolean}}
-
-interface ChatAssistantProps extends React.PropsWithChildren<{}> {}
-  enabled?: boolean;'
-  position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left';'
+interface ChatAssistantProps {
+  enabled?: boolean;
+  position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left';
   theme?: 'light' | 'dark' | 'auto';
-  language?: string;
   maxMessages?: number;
   enableVoice?: boolean;
   enableFileUpload?: boolean;
   enableSuggestions?: boolean;
 }
 
-export const ChatAssistant: React.FC<ChatAssistantProps> = ({}
-  enabled = true,'
-  position = 'bottom-right','
-  theme = 'auto','
-  language = 'en',
-  maxMessages = 100,
-  enableVoice = true,
-  enableFileUpload = true,
-  enableSuggestions = true;
-}) => {}
+interface Message {
+  id: string;
+  type: 'user' | 'assistant';
+  content: string;
+  timestamp: Date;
+  metadata?: {
+    suggestions?: string[];
+    files?: string[];
+  };
+}
+
+export const ChatAssistant: React.FC<ChatAssistantProps> = ({
+  enabled = true,
+  position = 'bottom-right',
+  theme = 'auto',
+  maxMessages = 50
+}) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isMinimized, setIsMinimized] = useState(false);'
-  const [messages, setMessages] = useState<Message[]>([]);''
-'''
+  const [isMinimized, setIsMinimized] = useState(false);
+  const [messages, setMessages] = useState<Message[]>([]);
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
-  const [isListening, setIsListening] = useState(false);
-  const messagesEndRef: any = useRef<HTMLDivElement>(null);
-  const inputRef: any = useRef<HTMLInputElement>(null);
+  const [currentTheme, setCurrentTheme] = useState(theme);
 
-  const scrollToBottom: any = () => {}
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  // Auto-scroll to bottom when new messages arrive
+  const scrollToBottom = useCallback(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
+  }, []);
 
-  useEffect(() => {}
-'
-    if (theme === 'auto') {}
-'
-      setCurrentTheme(mediaQuery.matches ? 'dark' : 'light')};'
-      ''
-      mediaQuery.addEventListener('change', handleChange);'
-      return () => mediaQuery.removeEventListener('change', handleChange)} else {}
-      setCurrentTheme(theme)}
-  }, [theme]) ;
-  // Initialize with welcome message;
-  useEffect ( () => {}
-    if (messages.length === 0) {}
-      const welcomeMessage: Message = {}
-'
-''
-'''
-        id: 'welcome','''
-        type: 'assistant','''
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages, scrollToBottom]);
+
+  // Theme management
+  useEffect(() => {
+    if (theme === 'auto') {
+      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+      setCurrentTheme(mediaQuery.matches ? 'dark' : 'light');
+
+      const handleChange = (e: MediaQueryListEvent) => {
+        setCurrentTheme(e.matches ? 'dark' : 'light');
+      };
+
+      mediaQuery.addEventListener('change', handleChange);
+      return () => mediaQuery.removeEventListener('change', handleChange);
+    } else {
+      setCurrentTheme(theme);
+    }
+  }, [theme]);
+
+  // Initialize with welcome message
+  useEffect(() => {
+    if (enabled && messages.length === 0) {
+      const welcomeMessage: Message = {
+        id: 'welcome',
+        type: 'assistant',
         content: 'Hello! I\'m your AI assistant. How can I help you today?',
         timestamp: new Date(),
-        metadata: {}
-'
-''
-'''
-          suggestions: [''''
-            'Tell me about your services',How can I get started?',What are your pricing options?'
+        metadata: {
+          suggestions: [
+            'Tell me about your services',
+            'Help me with pricing',
+            'Schedule a consultation',
+            'Technical support'
           ]
         }
       };
-      setMessages ([welcomeMessage]) }
-  }, []) ;
+      setMessages([welcomeMessage]);
+    }
+  }, [enabled, messages.length]);
 
-    const userMessage: Message = {}
-      id: Date.now().toString(),'
+  const handleSendMessage = async () => {
+    if (!inputValue.trim()) return;
+
+    const userMessage: Message = {
+      id: Date.now().toString(),
       type: 'user',
-      content: content.trim () ,
-      timestamp: new Date () };'
-''
-    setMessages(prev => [...prev, userMessage]);'''
+      content: inputValue,
+      timestamp: new Date()
+    };
+
+    setMessages(prev => [...prev, userMessage]);
     setInputValue('');
     setIsTyping(true);
 
-    // Simulate AI response;
-    setTimeout ( () => {}
-      const aiMessage: Message = {}
-        id: (Date.now() + 1).toString(),'
-        type: 'assistant','
-        content: `I understand you're asking about "${content.trim()}". Let me help you with that.`,
+    // Simulate AI response
+    setTimeout(() => {
+      const aiMessage: Message = {
+        id: (Date.now() + 1).toString(),
+        type: 'assistant',
+        content: `I understand you're asking about "${inputValue}". Let me help you with that. This is a simulated response - in a real implementation, this would connect to an AI service.`,
         timestamp: new Date(),
-        metadata: {}
-          confidence: 0.95,'
-          suggestions: [''
-            'Would you like more details?',Can I help with something else?',Let me know if you have questions!'
+        metadata: {
+          suggestions: [
+            'Tell me more',
+            'How does this work?',
+            'What are the next steps?',
+            'Contact support'
           ]
         }
       };
 
-      setMessages(prev => [...prev, aiResponse]);
+      setMessages(prev => [...prev, aiMessage]);
       setIsTyping(false);
     }, 1500);
   };
 
-  const getAIResponse: any = (input: string): string => {}
-    const responses: any = ["I'd be happy to help you with that! Can you provide more details about your specific needs?",
-      "That's a great question! Our team specializes in AI, cybersecurity, and cloud solutions.Which area interests you most?",
-      "Thank you for reaching out! I can connect you with one of our experts to discuss your requirements in detail.",
-      "Based on your query, I recommend exploring our comprehensive service offerings.Would you like me to guide you through them?",
-      "Excellent! We have extensive experience in that area.Let me provide you with some relevant information and next steps."""
-    ];
-    return responses[Math.floor(Math.random() * responses.length)];
-  };
-
-  const handleKeyPress: any = (e: React.KeyboardEvent) => {}
-    if(e.key === 'Enter' && !e.shiftKey) {}
+  const handleKeyPress = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
       handleSendMessage();
     }
-  };'
-''
-  '''
-      case 'top-right':''''
-        return 'top-4 right-4';'''
-      case 'top-left':''''
-        return 'top-4 left-4';'''
-      default:''''
-        return 'bottom-4 right-4'}
-  }};`
-  if (!enabled) return null;``
-```
-  return()````
-    <div className={`fixed ${getPositionClasses()} z-50`}>
+  };
 
+  const toggleChat = () => {
+    setIsOpen(!isOpen);
+    setIsMinimized(false);
+  };
+
+  const minimizeChat = () => {
+    setIsMinimized(true);
+  };
+
+  const closeChat = () => {
+    setIsOpen(false);
+    setIsMinimized(false);
+  };
+
+  const handleSuggestionClick = (suggestion: string) => {
+    setInputValue(suggestion);
+    inputRef.current?.focus();
+  };
+
+  if (!enabled) return null;
+
+  const positionClasses = {
+    'bottom-right': 'bottom-4 right-4',
+    'bottom-left': 'bottom-4 left-4',
+    'top-right': 'top-4 right-4',
+    'top-left': 'top-4 left-4'
+  };
+
+  const themeClasses = {
+    light: 'bg-white text-gray-900 border-gray-200',
+    dark: 'bg-gray-900 text-white border-gray-700'
+  };
+
+  return (
+    <div className={`fixed ${positionClasses[position]} z-50`}>
       {/* Chat Toggle Button */}
-      {!isOpen && (<motion.button;
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          onClick={toggleChat}`
-``
-          className={`w-14 h-14 rounded-full flex items-center justify-center transition-all duration-200 ${getThemeClasses()}`}
-"""
-        >""""
-          <MessageCircle className="w-6 h-6"  />        </motion.button>
-      )}`
-``
-  return (<div className={`fixed ${positionClasses[position]} z-50`}>
+      {!isOpen && (
+        <button
+          onClick={toggleChat}
+          className={`w-14 h-14 rounded-full shadow-lg transition-all duration-300 hover:scale-110 ${
+            currentTheme === 'dark' ? 'bg-blue-600 hover:bg-blue-700' : 'bg-blue-500 hover:bg-blue-600'
+          } text-white flex items-center justify-center`}
+          aria-label="Open chat"
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+          </svg>
+        </button>
+      )}
+
       {/* Chat Window */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div;
-            initial={{ opacity: 0, scale: 0.8, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.8, y: 20 }}
-            transition={{ duration: 0.2 }}`
-``
-            className={`w-80 h-96 rounded-lg border ${getThemeClasses()} flex flex-col`}
-          >"""
-            {/* Header */}""""
-            <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">""""
-              <div className="flex items-center space-x-2">""""
-                <Bot className="w-5 h-5 text-blue-500"  />"                <span className="font-semibold">AI Assistant</span>"""
-              </div>""""
-              <div className="flex items-center space-x-2">
-                <button"""
-                  onClick={toggleMinimize}""""
-                  className="p-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded"""
-"""
-                >""""
-                  {isMinimized ? <Maximize2 className="w-4 h-4" /> : <Minimize2 className="w-4 h-4" />}
-                </button>
-                <button;
-                  onClick={toggleChat}"""
-""""
-                  className="p-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded"""
-"""
-                >""""
-                  <X className="w-4 h-4"  />                </button>
+      {isOpen && (
+        <div className={`w-80 h-96 rounded-lg shadow-2xl border transition-all duration-300 ${
+          isMinimized ? 'h-16' : 'h-96'
+        } ${themeClasses[currentTheme]}`}>
+          {/* Header */}
+          <div className="flex items-center justify-between p-4 border-b">
+            <div className="flex items-center space-x-2">
+              <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                <span className="text-white text-sm font-bold">AI</span>
               </div>
+              <span className="font-semibold">AI Assistant</span>
             </div>
+            <div className="flex items-center space-x-2">
+              <button
+                onClick={minimizeChat}
+                className="p-1 hover:bg-gray-200 dark:hover:bg-gray-700 rounded"
+                aria-label="Minimize chat"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <button
+                onClick={closeChat}
+                className="p-1 hover:bg-gray-200 dark:hover:bg-gray-700 rounded"
+                aria-label="Close chat"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+          </div>
 
-            {/* Messages */}
-            {!isMinimized && ("""
-              <>""""
-                <div className="flex-1 overflow-y-auto p-4 space-y-4">
-                  {messages.map((message) => (
-                    <div;
-                      key={message.id}'`
-'`'`
-                      className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
-                    >`
-                      <div``
-                        className={`max-w-xs px-3 py-2 rounded-lg ${}
-'
-                          message.type === 'user'''
-                            ? 'bg-blue-500 text-white'''`
-                            : 'bg-gray-100 dark:bg-gray-800'``
-                        }`}"""
-                      >""""
-                        <p className="text-sm">{message.content}</p>"""
-                        {message.metadata?.suggestions && (""""
-                          <div className="mt-2 space-y-1">
-                            {message.metadata.suggestions.map((suggestion, index) => (
-                              <button;
-                                key={index}"""
-                                onClick={() => handleSendMessage(suggestion)}""""
-                                className="block w-full text-left text-xs text-blue-600 dark:text-blue-400 hover:underline"""
-                              >
-                                {suggestion}
-                              </button>
-                            ))}
-                          </div>
-                        )}
-                      </div>
-                    </div>
-                  ))}"""
-                  {isTyping && (""""
-                    <div className="flex justify-start">""""
-                      <div className="bg-gray-100 dark:bg-gray-800 px-3 py-2 rounded-lg">""""
-                        <div className="flex space-x-1">"'"""
-                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>'"'"""
-                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>'"'"""
-                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
-
+          {/* Messages */}
+          {!isMinimized && (
+            <>
+              <div className="flex-1 p-4 overflow-y-auto h-64">
+                {messages.map((message) => (
+                  <div
+                    key={message.id}
+                    className={`mb-4 ${
+                      message.type === 'user' ? 'text-right' : 'text-left'
+                    }`}
+                  >
+                    <div
+                      className={`inline-block max-w-xs px-4 py-2 rounded-lg ${
+                        message.type === 'user'
+                          ? 'bg-blue-500 text-white'
+                          : 'bg-gray-200 dark:bg-gray-700'
+                      }`}
+                    >
+                      <p className="text-sm">{message.content}</p>
+                      {message.metadata?.suggestions && (
+                        <div className="mt-2 space-y-1">
+                          {message.metadata.suggestions.map((suggestion, index) => (
+                            <button
+                              key={index}
+                              onClick={() => handleSuggestionClick(suggestion)}
+                              className="block w-full text-left text-xs text-blue-600 dark:text-blue-400 hover:underline"
+                            >
+                              {suggestion}
+                            </button>
+                          ))}
                         </div>
-                      </div>
-                    </div>) }"""
-                  <div role="button" ref={messagesEndRef} />
-                </div>
-
-"""
-                {/* Input */}""""
-                <div className="p-4 border-t border-gray-200 dark:border-gray-700">""""
-                  <div className="flex space-x-2">
-
-                    <input"""
-                      ref={inputRef}""""
-                      type="text"""
-                      value={inputValue}
-                      onChange={(e) => setInputValue(e.target.value)}
-"""
-                      onKeyPress={handleKeyPress}""""
-                      placeholder="Type your message...""""
-                      className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-transparent"""
-                    />
-                    <button;
-                      onClick={() => handleSendMessage(inputValue)}"""
-                      disabled={!inputValue.trim() || isTyping}""""
-                      className="px-3 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed"""
-"""
-                    >""""
-                      <Send className="w-4 h-4"  />                    </button>
-                  </div>
-                </div>
-              ))}
-
-              {isTyping && (
-                <div className="flex justify-start">
-                  <div className="bg-white/10 text-gray-100 rounded-lg p-3">
-                    <div className="flex space-x-1">
-                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
-                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                      )}
+                    </div>
+                    <div className="text-xs text-gray-500 mt-1">
+                      {message.timestamp.toLocaleTimeString()}
                     </div>
                   </div>
-                </div>
-              )}
-              <div ref={messagesEndRef} />
-            </div>
-""
-            {/* Input */}"""
-            <div className="p-4 border-t border-white/10">"""
-              <div className="flex items-center gap-2">"""
-                <div className="flex-1 relative">
-                  <input;
+                ))}
+                {isTyping && (
+                  <div className="text-left mb-4">
+                    <div className="inline-block bg-gray-200 dark:bg-gray-700 px-4 py-2 rounded-lg">
+                      <div className="flex space-x-1">
+                        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
+                        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+                        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+                <div ref={messagesEndRef} />
+              </div>
+
+              {/* Input */}
+              <div className="p-4 border-t">
+                <div className="flex space-x-2">
+                  <input
                     ref={inputRef}
-                    type="text"""
+                    type="text"
                     value={inputValue}
                     onChange={(e) => setInputValue(e.target.value)}
                     onKeyPress={handleKeyPress}
-                    placeholder="Type your message..."""
-                    className="w-full bg-white/10 border border-white/20 rounded-lg px-3 py-2 text-white text-sm placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400"""
+                    placeholder="Type your message..."
+                    className="flex-1 px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-600"
                   />
-                </div>
-
-                {enableFileUpload && (
-                  <button className="text-gray-400 hover:text-white transition-colors p-2">
-                    <Paperclip className="w-4 h-4" />
-                  </button>
-                )}
-
-                {enableVoice && (
-                  <button;
-                    onClick={toggleVoice}
-                    className={`transition-colors p-2 ${isListening ? 'text-red-400' : 'text-gray-400 hover:text-white'
-                    }`}
+                  <button
+                    onClick={handleSendMessage}
+                    disabled={!inputValue.trim()}
+                    className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    {isListening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                    </svg>
                   </button>
-                )}
-
-                <button;
-                  onClick={handleSendMessage}
-                  disabled={!inputValue.trim()}
-                  className="bg-cyan-500 hover:bg-cyan-600 disabled:opacity-50 disabled:cursor-not-allowed text-white p-2 rounded-lg transition-colors"""
-                >
-                  <Send className="w-4 h-4" />
-                </button>
+                </div>
               </div>
-            </div>
-          </motion.div>
-        )}'"`
-      </AnimatePresence>'"`'"`
-    </div>) };'"`'"`'"`
-'"`'"`'"`
-'"`'"`
+            </>
+          )}
+        </div>
+      )}
+    </div>
+  );
+};

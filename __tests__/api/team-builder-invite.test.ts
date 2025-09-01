@@ -51,11 +51,16 @@ describe('/api/team-builder/invite API Endpoint', () => {
     });
     await inviteHandler(req, res);
     expect(res._getStatusCode()).toBe(400);
-    expect(res._getJSONData().error).toBe('Missing required fields: talentId and roleTitle are required.');
+    expect(res._getJSONData().error).toBe(
+      'Missing required fields: talentId and roleTitle are required.'
+    );
   });
 
   it('should return 500 if Supabase insert fails', async () => {
-    mockSingle.mockResolvedValueOnce({ error: { message: 'Insert failed' }, data: null });
+    mockSingle.mockResolvedValueOnce({
+      error: { message: 'Insert failed' },
+      data: null,
+    });
 
     const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
       method: 'POST' as RequestMethod,
@@ -75,27 +80,40 @@ describe('/api/team-builder/invite API Endpoint', () => {
     });
     await inviteHandler(req, res);
     expect(res._getStatusCode()).toBe(500);
-    expect(res._getJSONData().error).toBe('Failed to create team invite: No data returned.');
+    expect(res._getJSONData().error).toBe(
+      'Failed to create team invite: No data returned.'
+    );
   });
 
   it('should return 201 with invite data on successful insert', async () => {
-    const mockInvite: Partial<TeamInvite> = { id: 'invite-123', talent_id: 'talent1', role_title: 'Developer', status: 'pending' };
+    const mockInvite: Partial<TeamInvite> = {
+      id: 'invite-123',
+      talent_id: 'talent1',
+      role_title: 'Developer',
+      status: 'pending',
+    };
     mockSingle.mockResolvedValueOnce({ data: mockInvite, error: null });
 
     const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
       method: 'POST' as RequestMethod,
-      body: { talentId: 'talent1', roleTitle: 'Developer', projectBriefId: 'brief1' },
+      body: {
+        talentId: 'talent1',
+        roleTitle: 'Developer',
+        projectBriefId: 'brief1',
+      },
     });
     await inviteHandler(req, res);
     expect(res._getStatusCode()).toBe(201);
     expect(res._getJSONData()).toEqual(mockInvite);
     expect(supabase.from).toHaveBeenCalledWith('team_invites');
-    expect(mockInsert).toHaveBeenCalledWith(expect.objectContaining({
-      talent_id: 'talent1',
-      role_title: 'Developer',
-      project_brief_id: 'brief1',
-      status: 'pending',
-    }));
+    expect(mockInsert).toHaveBeenCalledWith(
+      expect.objectContaining({
+        talent_id: 'talent1',
+        role_title: 'Developer',
+        project_brief_id: 'brief1',
+        status: 'pending',
+      })
+    );
     expect(mockSelect).toHaveBeenCalled();
     expect(mockSingle).toHaveBeenCalled();
   });

@@ -1,4 +1,4 @@
 
 ;
-export function Toaster(...args[]):  {}
-  return <HotToaster  />}
+export function Toaster(...args[]):  {};
+  return <HotToaster  />};

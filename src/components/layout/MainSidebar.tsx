@@ -1,482 +1,336 @@
-import {}
-  Menu, 
-  X, 
-  ChevronDown, 
-  ChevronRight,
-  Home,
-  Zap,
-  Brain,
-  Shield,
-  Cloud,
-  Cpu,
-  Users,
-  ShoppingCart,
-  BookOpen,
-  MessageCircle,
-  HelpCircle,
-  DollarSign,
-  Star,
-  Target,
-  TrendingUp,
-  Award,
-  Settings,
-  Globe,
-  Rocket,
-  Heart,
-  Lock,
-  Database,
-  Network,
-  Palette,
-  Video,
-  PenTool,
-  Atom,
-  Server,
-  Smartphone,
-  BarChart3,
-  Search,
-  FileText,
-  Calendar,
-  Briefcase,
-  Info,
-  Phone,
-  Mail,
-  MapPin,
-  Users''''
-} from 'lucide-react';
-interface SidebarItem {}
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { ; Menu,; X,; ChevronDown,; ChevronRight,; Home,; Zap,; Brain,; Shield,; Cloud,; Cpu,; Users,; ShoppingCart,; BookOpen,; MessageCircle,; HelpCircle,; DollarSign,; Star,; Target,; TrendingUp,; Award,; Settings,; Globe,; Rocket,; Heart,; Lock,; Database,; Network,; Palette,; Video,; PenTool,; Atom,; Server,; Smartphone,; BarChart3,; Search,; FileText,; Calendar,; Briefcase,; Info,; Phone,; Mail,; MapPin,; Building,; TestTube,; Newspaper,; Mail as MailIcon,; Phone as PhoneIcon,; MapPin as MapPinIcon; } from 'lucide-react';
+;
+interface SidebarItem {;
   name: string;
   href: string;
   icon: React.ComponentType<any>;
   children?: SidebarItem[];
   featured?: boolean;
   description?: string;
-export function MainSidebar(function MainSidebar(function MainSidebar() {): any {): any {}
-  const [isOpen, setIsOpen] = useState(false);'
-  const [expandedSections, setExpandedSections] = useState<string[]>(['services'])};
-  const navigation: SidebarItem[] = []
-    {}
-'
-      title: 'Main',
-      items[;'
-        { name: 'Home', href: '/', icon: Home },'
-        { name: 'About', href: '/about', icon: Building },'
-        { name: 'Services', href: '/services', icon: Briefcase },'
-        { name: 'Solutions', href: '/solutions', icon: Target },'
-        { name: 'AI Solutions', href: '/ai-solutions', icon: Brain },'
-        { name: 'Case Studies', href: '/case-studies', icon: FileText },'
-        { name: 'Research', href: '/research-development', icon: TestTube },'
-        { name: 'Events', href: '/events', icon: Video },'
-        { name: 'News', href: '/news', icon: Newspaper },'
-        { name: 'Contact', href: '/contact', icon: Mail },'
-        { name: 'Blog', href: '/blog', icon: FileText }
-      ]
+};
+export function MainSidebar() {;
+  const [isOpen, setIsOpen] = useState(false);
+  const [expandedSections, setExpandedSections] = useState<string[]>(['services']);
+  const location = useLocation();
+;
+  const navigation: SidebarItem[] = [;
+    {;
+      title: 'Main',;
+      items: [;
+        { name: 'Home', href: '/', icon: Home },;
+        { name: 'About', href: '/about', icon: Building },;
+        { name: 'Services', href: '/services', icon: Briefcase },;
+        { name: 'Solutions', href: '/solutions', icon: Target },;
+        { name: 'AI Solutions', href: '/ai-solutions', icon: Brain },;
+        { name: 'Case Studies', href: '/case-studies', icon: FileText },;
+        { name: 'Research', href: '/research-development', icon: TestTube },;
+        { name: 'Events', href: '/events', icon: Video },;
+        { name: 'News', href: '/news', icon: Newspaper },;
+        { name: 'Contact', href: '/contact', icon: Mail },;
+        { name: 'Blog', href: '/blog', icon: FileText };
+      ];
     },;
-    {}
-'
-''
-'''
-      name: 'Core Services','''
-      href: '#',
-      icon: Target,
-      children: []
-        {}
-'
-''
-'''
-          name: 'Cloud & DevOps','''
-          href: '/services/cloud-devops',''
-          icon: Cloud,'''
-          description: 'Infrastructure & Automation'
-        },
-        {}
-'
-''
-'''
-          name: 'Digital Twin','''
-          href: '/services/digital-twin',''
-          icon: Globe,'''
-          description: 'Simulation & Monitoring'
-        },
-        {}
-'
-''
-'''
-          name: 'Data Analytics','''
-          href: '/services/data-analytics',''
-          icon: BarChart3,'''
-          description: 'Business Intelligence'
-        },
-        {}
-'
-''
-'''
-          name: 'IT Infrastructure','''
-          href: '/services/it-infrastructure',''
-          icon: Server,'''
-          description: 'Hardware & Network'
-        }
-      ]
-    },
-    {}
-'
-''
-'''
-      name: 'AI Products','''
-      href: '#',
-      icon: Brain,
-      children: []
-        {}
-'
-''
-'''
-          name: 'AI Sales Copilot','''
-          href: '/services/ai-sales-copilot',''
-          icon: Users,'''
-          description: 'Sales Intelligence'
-        },
-        {}
-'
-''
-'''
-          name: 'AI Compliance Assistant','''
-          href: '/services/ai-compliance-assistant',''
-          icon: Shield,'''
-          description: 'Regulatory Compliance'
-        },
-        {}
-'
-''
-'''
-          name: 'AI Auto Email Responder','''
-          href: '/services/ai-auto-email-responder',''
-          icon: MessageCircle,'''
-          description: 'Email Automation'
-        },
-        {}
-'
-''
-'''
-          name: 'LLM Content Studio','''
-          href: '/services/llm-content-studio',''
-          icon: PenTool,'''
-          description: 'Content Creation'
-        }
-      ]
-    },
-    {}
-'
-''
-'''
-      name: 'Emerging Tech','''
-      href: '#',
-      icon: Rocket,
-      children: []
-        {}
-'
-''
-'''
-          name: 'Quantum Computing','''
-          href: '/services/quantum-computing',''
-          icon: Atom,'''
-          description: 'Next-gen Computing'
-        },
-        {}
-'
-''
-'''
-          name: 'AI Cybersecurity','''
-          href: '/services/ai-cybersecurity',''
-          icon: Lock,'''
-          description: 'Intelligent Security'
-        },
-        {}
-'
-''
-'''
-          name: 'IoT Edge Computing','''
-          href: '/services/iot-edge-computing',''
-          icon: Smartphone,'''
-          description: 'Connected Ecosystems'
-        },
-        {}
-'
-''
-'''
-          name: 'AI Content Creation','''
-          href: '/services/ai-content-creation',''
-          icon: Video,'''
-          description: 'Creative AI'
-        }
-      ]
-    },
-    {}
-'
-''
-'''
-      name: 'Business Solutions','''
-      href: '#',
-      icon: Briefcase,
-      children: []
-        {}
-'
-''
-'''
-          name: 'Marketplace','''
-          href: '/marketplace',''
-          icon: ShoppingCart,'''
-          description: 'Product & Service Hub'
-        },
-        {}
-'
-''
-'''
-          name: 'Talent Solutions','''
-          href: '/talent',''
-          icon: Users,'''
-          description: 'HR & Recruitment'
-        },
-        {}
-'
-''
-'''
-          name: 'Equipment Services','''
-          href: '/equipment',''
-          icon: Server,'''
-          description: 'Hardware Solutions'
-        },
-        {}
-'
-''
-'''
-          name: 'Request Quote','''
-          href: '/request-quote',''
-          icon: MessageCircle,'''
-          description: 'Get Pricing'
-        }
-      ]
-    },
-    {}
-'
-''
-'''
-      name: 'Company','''
-      href: '#',
-      icon: Info,
-      children: []
-        {}
-'
-''
-'''
-          name: 'About Us','''
-          href: '/about',''
-          icon: Info,'''
-          description: 'Our Story'
-        },
-        {}
-'
-''
-'''
-          name: 'Team','''
-          href: '/team',''
-          icon: Users,'''
-          description: 'Meet Our Team'
-        },
-        {}
-'
-''
-'''
-          name: 'Careers','''
-          href: '/careers',''
-          icon: Briefcase,'''
-          description: 'Join Us'
-        },
-        {}
-'
-''
-'''
-          name: 'Partners','''
-          href: '/partners',''
-          icon: Users,'''
-          description: 'Partnerships'
-        }
-      ]
-    },
-    {}
-'
-''
-'''
-      name: 'Resources','''
-      href: '#',
-      icon: BookOpen,
-      children: []
-        {}
-'
-''
-'''
-          name: 'Blog','''
-          href: '/blog',''
-          icon: FileText,'''
-          description: 'Latest Insights'
-        },
-        {}
-'
-''
-'''
-          name: 'FAQ','''
-          href: '/faq',''
-          icon: HelpCircle,'''
-          description: 'Common Questions'
-        },
-        {}
-'
-''
-'''
-          name: 'Help Center','''
-          href: '/help',''
-          icon: MessageCircle,'''
-          description: 'Support Resources'
-        },
-        {}
-'
-''
-'''
-          name: 'Documentation','''
-          href: '/docs',''
-          icon: BookOpen,'''
-          description: 'Technical Docs'
-        }
-      ]
-    },
-    {}
-'
-''
-'''
-      name: 'Contact','''
-      href: '/contact',
-      icon: Phone;
-    }
+    {;
+      title: 'Core Services',;
+      items: [;
+        {;
+          name: 'Cloud & DevOps',;
+          href: '/services/cloud-devops',;
+          icon: Cloud,;
+          description: 'Infrastructure & Automation';
+        },;
+        {;
+          name: 'Digital Twin',;
+          href: '/services/digital-twin',;
+          icon: Globe,;
+          description: 'Digital Simulation';
+        },;
+        {;
+          name: 'IoT Edge Computing',;
+          href: '/services/iot-edge',;
+          icon: Smartphone,;
+          description: 'Connected Devices';
+        },;
+        {;
+          name: 'Data Analytics',;
+          href: '/services/data-analytics',;
+          icon: BarChart3,;
+          description: 'Business Intelligence';
+        },;
+        {;
+          name: 'IT Infrastructure',;
+          href: '/services/it-infrastructure',;
+          icon: Server,;
+          description: 'System Management';
+        };
+      ];
+    },;
+    {;
+      title: 'Specialized Services',;
+      items: [;
+        {;
+          name: 'AI & Machine Learning',;
+          href: '/services/ai',;
+          icon: Brain,;
+          description: 'Intelligent Solutions';
+        },;
+        {;
+          name: 'Cybersecurity',;
+          href: '/services/cybersecurity',;
+          icon: Shield,;
+          description: 'Security & Protection';
+        },;
+        {;
+          name: 'Blockchain Solutions',;
+          href: '/services/blockchain',;
+          icon: Lock,;
+          description: 'Distributed Technology';
+        },;
+        {;
+          name: 'Quantum Computing',;
+          href: '/services/quantum',;
+          icon: Atom,;
+          description: 'Next-Gen Computing';
+        },;
+        {;
+          name: 'Space Technology',;
+          href: '/services/space-tech',;
+          icon: Rocket,;
+          description: 'Aerospace Solutions';
+        };
+      ];
+    },;
+    {;
+      title: 'Solutions',;
+      items: [;
+        {;
+          name: 'Enterprise',;
+          href: '/solutions/enterprise',;
+          icon: Building,;
+          description: 'Large Scale Solutions';
+        },;
+        {;
+          name: 'Healthcare',;
+          href: '/solutions/healthcare',;
+          icon: Heart,;
+          description: 'Medical Technology';
+        },;
+        {;
+          name: 'Financial',;
+          href: '/solutions/financial',;
+          icon: DollarSign,;
+          description: 'FinTech Solutions';
+        },;
+        {;
+          name: 'Manufacturing',;
+          href: '/solutions/manufacturing',;
+          icon: Cpu,;
+          description: 'Industrial Tech';
+        },;
+        {;
+          name: 'Retail',;
+          href: '/solutions/retail',;
+          icon: ShoppingCart,;
+          description: 'E-commerce Solutions';
+        };
+      ];
+    },;
+    {;
+      title: 'Resources',;
+      items: [;
+        {;
+          name: 'Blog',;
+          href: '/blog',;
+          icon: FileText,;
+          description: 'Latest Insights';
+        },;
+        {;
+          name: 'Webinars',;
+          href: '/webinars',;
+          icon: Video,;
+          description: 'Educational Content';
+        },;
+        {;
+          name: 'Training',;
+          href: '/training',;
+          icon: BookOpen,;
+          description: 'Learning Resources';
+        },;
+        {;
+          name: 'White Papers',;
+          href: '/white-papers',;
+          icon: FileText,;
+          description: 'Research Papers';
+        },;
+        {;
+          name: 'Case Studies',;
+          href: '/case-studies',;
+          icon: Award,;
+          description: 'Success Stories';
+        };
+      ];
+    },;
+    {;
+      title: 'Support',;
+      items: [;
+        {;
+          name: 'Help Center',;
+          href: '/help',;
+          icon: HelpCircle,;
+          description: 'Get Support';
+        },;
+        {;
+          name: 'Documentation',;
+          href: '/docs',;
+          icon: FileText,;
+          description: 'Technical Docs';
+        },;
+        {;
+          name: 'FAQ',;
+          href: '/faq',;
+          icon: HelpCircle,;
+          description: 'Common Questions';
+        },;
+        {;
+          name: 'Contact Support',;
+          href: '/support',;
+          icon: MessageCircle,;
+          description: 'Get Help';
+        };
+      ];
+    };
   ];
-    return ()      <div key={item.name} className="mb-1">
-        {hasChildren ? (
-          <div>
-            <button;
-              onClick={(: unknown toggleSection(item.name.toLowerCase())}
-                level === 0 '
-                  ? 'text-slate-300 hover:text-white hover:bg-slate-700/50' '
-                  : 'text-slate-400 hover:text-slate-300'`
-              }`}
-            >"""
-              <div className="flex items-center space-x-3">"""
-              className={`w-full flex items-center justify-between px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${}
-'
-                level === 0 ''
-                  ? 'text-slate-300 hover:text-white hover:bg-slate-700/50' ''`
-                  : 'text-slate-400 hover:text-slate-300'``
-              }`}"""
-            >""""
-              <div className="flex items-center space-x-3">""""
-                <item.icon className="w-4 h-4" />
-                <span>{item.name}</span>"""
-                {isFeatured && (""""
-                  <Star className="w-3 h-3 text-yellow-400"  />
-                )}
-              </div>"""
-              {isExpanded ? (""""
-                <ChevronDown className="w-4 h-4"  />"""
-              ) : (""""
-                <ChevronRight className="w-4 h-4"  />              )}
-            </button>
-            {isExpanded && ("""
-            """
-            {isExpanded && (""""
-              <div className="ml-6 mt-2 space-y-1">
-                {item.children!.map(child => renderSidebarItem(child, level + 1))}
-              </div>
-            )}
-          </div>
-        ) : any;
-          <Link`
-            to={item.href}``
-            className={`flex items-center space-x-3 px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${}
-'
-              isActive''
-                ? 'text-cyan-400 bg-cyan-400/10 border border-cyan-400/20''
-                : level === 0''
-                ? 'text-slate-300 hover:text-white hover:bg-slate-700/50'''`
-                : 'text-slate-400 hover:text-slate-300'``
-            }`}
-            onClick={() => setIsOpen(false)}"""
-          >""""
-            <item.icon className="w-4 h-4" />
-            <span>{item.name}</span>"""
-            {isFeatured && (""""
-              <Star className="w-3 h-3 text-yellow-400"  />            )}
-          </Link>
-        )}
-      </div>
-    )};
-  return ()
-    <>
-      {/* Mobile menu button */}
-      <button"""
-        onClick={() => setIsOpen(!isOpen)}""""
-        className="lg:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors""""
-      >""""
-        {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}      </button>
-`
-      {/* Sidebar */}``
-      <div className={`
-        fixed inset-y-0 left-0 z-50 w-80 bg-slate-900/95 border-r border-slate-700/50 backdrop-blur-xl'
-        transform transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:inset-0''`
-        ${isOpen ? 'translate-x-0' : '-translate-x-full'}`"`
-      `}>""""
-        <div className="flex flex-col h-full">"""
-          {/* Header */}""""
-          <div className="flex items-center justify-between p-4 border-b border-slate-700/50">""""
-            <h2 className="text-lg font-semibold text-white">Navigation</h2>
-            <button"""
-              onClick={() => setIsOpen(false)}""""
-              className="lg:hidden p-1 rounded text-slate-400 hover:text-white hover:bg-slate-800""""
-            >""""
-              <X className="w-5 h-5"  />            </button>
-          </div>
-"""
-          {/* Navigation */}""""
-          <nav className="flex-1 overflow-y-auto p-4 space-y-2">
-            {navigation.map(item => renderSidebarItem(item))}
-          </nav>
-"""
-          {/* Footer */}""""
-          <div className="p-4 border-t border-slate-700/50">""""
-            <div className="text-xs text-slate-400 space-y-2">""""
-              <div className="flex items-center space-x-2">""""
-                <Phone className="w-3 h-3"  />
-                <span>+1 302 464 0950</span>"""
-              </div>""""
-              <div className="flex items-center space-x-2">""""
-                <Mail className="w-3 h-3"  />
-                <span>kleber@ziontechgroup.com</span>"""
-              </div>""""
-              <div className="flex items-center space-x-2">""""
-                <MapPin className="w-3 h-3"  />                <span>Middletown DE 19709</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* Overlay */}
-      {isOpen && ("""
-        <div""""
-          className="fixed inset-0 z-40 bg-black/50 lg:hidden"""
-          onClick={( setIsOpen(false)}
-        />
-      )}
-    </>
-  )};
+;
+  const toggleSection = (sectionTitle: string) => {;
+    setExpandedSections(prev =>;
+      prev.includes(sectionTitle);
+        ? prev.filter(title => title !== sectionTitle);
+        : [...prev, sectionTitle];
+    );
+  };
+;
+  const isActive = (href: string) => {;
+    return location.pathname === href || location.pathname.startsWith(href + '/');
+  };
+;
+  return (;
+    <>;
+      {/* Mobile Toggle Button */};
+      <button;
+        onClick={() => setIsOpen(!isOpen)};
+        className="lg:hidden fixed top-4 left-4 z-50 p-2 bg-zion-blue-dark border border-zion-purple/30 rounded-lg text-zion-cyan hover:bg-zion-purple/10 transition-colors";"
+      >";"
+        {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />};
+      </button>;
+      {/* Sidebar */};
+      <div;
+        className={`fixed inset-y-0 left-0 z-40 w-64 bg-zion-blue-dark border-r border-zion-purple/30 transform transition-transform duration-300 ease-in-out lg:translate-x-0 ${;
+          isOpen ? 'translate-x-0' : '-translate-x-full';
+        }`};"
+      >";"
+        <div className="flex flex-col h-full">;"
+          {/* Header */}";"
+          <div className="p-6 border-b border-zion-purple/20">";"
+            <div className="flex items-center space-x-3">";"
+              <div className="w-8 h-8 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-lg flex items-center justify-center">";"
+                <Zap className="w-5 h-5 text-white" />;"
+              </div>";"
+              <span className="text-xl font-bold text-white">Zion Tech</span>;
+            </div>;
+          </div>;"
+          {/* Navigation */}";"
+          <nav className="flex-1 overflow-y-auto p-6">";"
+            <div className="space-y-6">;"
+              {navigation.map((section) => (";"
+                <div key={section.title} className="space-y-3">;
+                  <button;"
+                    onClick={() => toggleSection(section.title)}";"
+                    className="w-full flex items-center justify-between text-sm font-semibold text-zion-cyan hover:text-zion-cyan-light transition-colors";
+                  >;
+                    <span>{section.title}</span>;
+                    <ChevronDown;
+                      className={`w-4 h-4 transition-transform ${;
+                        expandedSections.includes(section.title) ? 'rotate-180' : '';
+                      }`};
+                    />;
+                  </button>;"
+                  {expandedSections.includes(section.title) && (";"
+                    <div className="ml-4 space-y-2">;
+                      {section.items.map((item) => (;
+                        <Link;
+                          key={item.href};
+                          to={item.href};
+                          className={`block p-3 rounded-lg transition-all duration-200 group ${;
+                            isActive(item.href);
+                              ? 'bg-zion-cyan/20 border border-zion-cyan/30 text-zion-cyan';
+                              : 'text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10';
+                          }`};"
+                        >";"
+                          <div className="flex items-center space-x-3">";"
+                            <item.icon className="w-4 h-4" />";"
+                            <div className="flex-1 min-w-0">";"
+                              <div className="font-medium">{item.name}</div>;"
+                              {item.description && (";"
+                                <div className="text-xs text-zion-slate-light group-hover:text-zion-cyan/70">;
+                                  {item.description};
+                                </div>;
+                              )};
+                            </div>;"
+                            {isActive(item.href) && (";"
+                              <ChevronRight className="w-4 h-4 text-zion-cyan" />;
+                            )};
+                          </div>;
+                        </Link>;
+                      ))};
+                    </div>;
+                  )};
+                </div>;
+              ))};
+            </div>;
+          </nav>;"
+          {/* Footer */}";"
+          <div className="p-6 border-t border-zion-purple/20">";"
+            <div className="space-y-4">;"
+              {/* Quick Actions */}";"
+              <div className="space-y-2">;"
+                <Link";"
+                  to="/request-quote";"
+                  className="block w-full p-3 bg-gradient-to-r from-zion-purple to-zion-cyan text-white text-center rounded-lg hover:from-zion-purple-light hover:to-zion-cyan-light transition-all duration-300 font-medium";
+                >;
+                  Get Quote;
+                </Link>;"
+                <Link";"
+                  to="/contact";"
+                  className="block w-full p-3 border border-zion-purple/30 text-zion-cyan text-center rounded-lg hover:bg-zion-purple/10 transition-colors";
+                >;
+                  Contact Us;
+                </Link>;
+              </div>;"
+              {/* Contact Info */}";"
+              <div className="space-y-2 text-xs text-zion-slate-light">";"
+                <div className="flex items-center space-x-2">";"
+                  <MailIcon className="w-3 h-3" />;
+                  <span>info@ziontechgroup.com</span>;"
+                </div>";"
+                <div className="flex items-center space-x-2">";"
+                  <PhoneIcon className="w-3 h-3" />;
+                  <span>+1 (555) 123-4567</span>;
+                </div>;
+              </div>;
             </div>;
           </div>;
         </div>;
       </div>;
-    </>
-  )}'"`
-'"`'"`
+      {/* Overlay for mobile */};
+      {isOpen && (;"
+        <div";"
+          className="lg:hidden fixed inset-0 bg-black/50 z-30";
+          onClick={() => setIsOpen(false)};
+        />;
+      )};
+    </>;
+  );
+};"
+";"
