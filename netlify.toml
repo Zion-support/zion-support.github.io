@@ -278,15 +278,7 @@ schedule = "*/2 * * * *" # every 2 minutes
 
 [[scheduled.functions]]
   name = "a11y-audit-runner"
-  schedule = "*/20 * * * *"}
-  
-[[scheduled.functions]]
-  name = "dependency-licenses-audit"
-  schedule = "*/30 * * * *" # every 30 minutes
-
-[[scheduled.functions]]
-  name = "tech-debt-dashboard"
-  schedule = "*/10 * * * *" # every 10 minutes
+  schedule = "*/20 * * * *"
 
 [[scheduled.functions]]
   name = "todo-summary-runner"
@@ -322,9 +314,14 @@ schedule = "*/2 * * * *" # every 2 minutes
   schedule = "*/10 * * * *"
 
 [[scheduled.functions]]
-  name = "internal-link-graph-runner"
-  schedule = "*/30 * * * *"
+  name = "deps-auto-upgrade-runner"
+  schedule = "7 */12 * * *"
+
+# New content quality automations
+[[scheduled.functions]]
+  name = "duplicate-content-detector"
+  schedule = "0 2 * * *" # daily at 02:00 UTC
 
 [[scheduled.functions]]
-  name = "roadmap-auto-generator"
-  schedule = "*/20 * * * *"
+  name = "unused-media-auditor"
+  schedule = "0 3 * * *" # daily at 03:00 UTC

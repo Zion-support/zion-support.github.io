@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-08-11T23:09:28.427Z",
+  "generatedAt": "2025-08-11T23:11:06.916Z",
   "functions": [
     "a11y-audit-runner",
     "ai-changelog-runner",
@@ -31,6 +31,7 @@
     "docs-knowledge-sync",
     "docs-link-checker-runner",
     "docs-search-index-runner",
+    "duplicate-content-detector",
     "external-link-check-runner",
     "fast-front-promoter",
     "fast-orchestrator",
@@ -100,7 +101,7 @@
     "ui-evolution-runner",
     "ultrafast-front-orchestrator",
     "ultrafast-orchestrator",
-    "user-journey-simulator",
+    "unused-media-auditor",
     "website-search-index-runner"
   ]
 }
