@@ -482,42 +482,14 @@ export default function ServicesIndexPage() {
                 if (!categoryServices || categoryServices.length === 0) return null;
 
                 return (
-                  <div key={category} className="border border-gray-800 rounded-2xl p-8 bg-black/50 backdrop-blur-sm">
-                    <h3 className="text-2xl font-bold mb-6 text-white flex items-center gap-3">
-                      <span className="text-3xl">
-                        {category === 'AI & Data' && '🧠'}
-                        {category === 'Developer Tools' && '⚙️'}
-                        {category === 'Cloud & FinOps' && '☁️'}
-                        {category === 'Observability' && '📊'}
-                        {category === 'Quality & Monitoring' && '🔍'}
-                        {category === 'Quantum Computing' && '⚛️'}
-                        {category === 'Space Technology' && '🚀'}
-                        {category === 'Metaverse' && '🌐'}
-                        {category === 'Cybersecurity' && '🛡️'}
-                        {category === 'Supply Chain' && '📦'}
-                        {category === 'Financial Services' && '💰'}
-                        {category === 'Healthcare' && '🏥'}
-                        {category === 'Manufacturing' && '🏭'}
-                        {category === 'Retail' && '🛍️'}
-                        {category === 'Education' && '🎓'}
-                        {category === 'Government' && '🏛️'}
-                        {category === 'Energy' && '⚡'}
-                        {category === 'Transportation' && '🚗'}
-                      </span>
-                      {category}
-                      <span className="text-sm text-gray-400 bg-gray-800 px-3 py-1 rounded-full">
-                        {categoryServices.length} services
-                      </span>
-                    </h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                      {categoryServices.slice(0, 6).map((service: any, index: number) => (
-                        <UltraFuturisticServiceCard2026
-                          key={`${service.id || service.name}-${index}`}
-                          service={service}
-                          variant="default"
-                          theme="cyber"
-                        />
-                      ))}
+                  <Card key={service.id || service.name} className="p-6 bg-black/50 border border-gray-700/60 hover:border-cyan-500/50 transition-colors shadow-lg/10">
+                    <div className="text-sm text-gray-400 mb-1">{service.category || 'Service'}</div>
+                    <h3 className="text-white text-xl font-semibold mb-2">{service.name}</h3>
+                    <p className="text-gray-300/90 line-clamp-3 mb-3">{service.tagline || service.description}</p>
+                    <div className="text-gray-100 font-bold mb-4">{service.price}<span className="text-sm text-gray-400 font-medium">{service.period}</span></div>
+                    <div className="flex gap-3">
+                      <Link href={service.link || `/${slug}`} className="px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium shadow-glow hover:shadow-glow-lg">View</Link>
+                      <Link href={service.link || `/${slug}`} className="px-4 py-2 rounded-lg border border-gray-600 text-gray-200 hover:border-cyan-500/70">Learn</Link>
                     </div>
                     {categoryServices.length > 6 && (
                       <div className="text-center mt-6">
