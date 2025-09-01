@@ -1,8 +1,7 @@
-export default React.memo (function Layout (...args[]) :  {
+export default React.memo(function Layout (...args[]) :  {
 
 interface LayoutProps {
   // Add your props here
-
 
 const navigation: NavItem[] = [;
   { label: 'Home', href: '/' },
@@ -31,12 +30,10 @@ export default function Layout(...args[]):  {
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState<any>(null);
-  
-  
-  
-    setSidebarDropdownOpen (sidebarDropdownOpen === label ? null : label) };
-  return()
-    <div className = "min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+
+    setSidebarDropdownOpen(sidebarDropdownOpen === label ? null : label) };
+  return ()
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
       {/* Header */}"
       <header className="bg-white/10 backdrop-blur-sm border-b border-white/20">"
         <div className="container mx-auto px-4 py-4">"
@@ -77,9 +74,7 @@ export default function Layout(...args[]):  {
       {/* Main Content */}"
       <div className="flex">;
         {/* Sidebar */}
-<aside className: {`fixed left-0 top-16 h-full w-64 bg-background border-r transform transition-transform duration-300 ease-in-out z-40 ${
-
-          sidebarOpen ? 'translate-x-0' : '-translate-x-full'`
+<aside className: {`fixed left-0 top-16 h-full w-64 bg-background border-r transform transition-transform duration-300 ease-in-out z-40 ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'`
         } md:translate-x-0`}>"
           <div className="p-4">"
             <nav className="space-y-2">
@@ -95,9 +90,7 @@ export default function Layout(...args[]):  {
                           {item.icon && <item.icon className="w-4 h-4" />}
                           <span>{item.label}</span>
                         </span>`
-                        <ChevronRight className={`w-4 h-4 transition-transform ${
-
-                          sidebarDropdownOpen === item.label ? 'rotate-90' : ''`
+                        <ChevronRight className={`w-4 h-4 transition-transform ${sidebarDropdownOpen === item.label ? 'rotate-90' : ''`
                         }`}  />                      </button>
                       {sidebarDropdownOpen === item.label && (;"
                         <div className="ml-4 mt-2 space-y-1">

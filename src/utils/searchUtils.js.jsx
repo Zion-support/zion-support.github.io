@@ -16,24 +16,23 @@ export default {
 export default for;
 export default for;
 
-
 /**
  * Highlight search terms in text with HTML mark tags
  */
 export const highlightSearchTerms = (text, searchTerm) => {
 
-    if (!searchTerm.trim())
+    if(!searchTerm.trim())
         return text;
     const escaped = searchTerm.replace(/[.*+?^${}()|[\]\\]/g,\\$&');
     const regex = new RegExp(`(${escaped})`,gi');
     return text.replace(regex,<mark class="bg-yellow-200 text-black px-1 rounded">$1</mark>);
 };
 /**
- * Check if a text contains the search term (case-insensitive)
+ * Check if a text contains the search term(case-insensitive)
  */
 export const matchesSearchTerm = (text, searchTerm) => {
 
-    if (!text || !searchTerm.trim())
+    if(!text || !searchTerm.trim())
         return false;
     return text.toLowerCase().includes(searchTerm.toLowerCase());
 };
@@ -46,30 +45,30 @@ export const calculateRelevanceScore = (result, searchTerm) => {
     const title = result.title.toLowerCase () ;
     const description = result.description.toLowerCase () ;
     // Exact title match gets highest score
-    if (title === term) score += 100;
+    if(title === term) score += 100;
     // Title starts with search term
-    else if (title.startsWith (term) ) score += 80;
+    else if(title.startsWith (term) ) score += 80;
     // Title contains search term
-    else if (title.includes (term) ) score += 60;
+    else if(title.includes (term) ) score += 60;
     // Description contains search term
-    if (description.includes (term) ) score += 30;
+    if(description.includes (term) ) score += 30;
     // Tag matches
-    if (result.tags?.some(tag => tag.toLowerCase().includes(term))) {
+    if(result.tags?.some(tag => tag.toLowerCase().includes(term))) {
 
         score += 20;
     }
     // Category match
-    if (result.category?.toLowerCase().includes(term)) {
+    if(result.category?.toLowerCase().includes(term)) {
 
         score += 15;
     }
     // Boost score based on rating
-    if (result.rating) {
+    if(result.rating) {
 
         score += result.rating * 2;
     }
     // Recent content gets slight boost
-    if (result.date) {
+    if(result.date) {
 
         const dateScore = Math.max(0, 10 - (Date.now() - new Date(result.date).getTime()) / (1000 * 60 * 60 * 24 * 30));
         score += dateScore;
@@ -79,7 +78,7 @@ export const calculateRelevanceScore = (result, searchTerm) => {
 /**
  * Sort search results based on sort option
  */
-    switch (sortBy) {
+    switch(sortBy) {
 
         case 'price_asc':
             return sortedResults.sort((a, b) => (a.price ?? 0) - (b.price ?? 0));
@@ -108,17 +107,17 @@ export const calculateRelevanceScore = (result, searchTerm) => {
  * Filter search results based on active filters
  */
     // Filter by type
-    if (filters.types.length > 0) {
+    if(filters.types.length > 0) {
 
         filteredResults = filteredResults.filter(result => filters.types.includes(result.type));
     }
     // Filter by category
-    if (filters.category) {
+    if(filters.category) {
 
         filteredResults = filteredResults.filter(result => result.category?.toLowerCase() === filters.category.toLowerCase());
     }
     // Filter by price range
-    if (filters.minPrice > 0 || filters.maxPrice < 10000) {
+    if(filters.minPrice > 0 || filters.maxPrice < 10000) {
 
         filteredResults = filteredResults.filter(result => {
 
@@ -127,7 +126,7 @@ export const calculateRelevanceScore = (result, searchTerm) => {
         }) ;
     }
     // Filter by minimum rating
-    if (filters.minRating > 0) {
+    if(filters.minRating > 0) {
 
         filteredResults = filteredResults.filter(result => (result.rating ?? 0) >= filters.minRating);
     }
@@ -141,7 +140,7 @@ export const generateDynamicSuggestions = (query, recentSearches = [], available
     const suggestions = [];
     const lowerQuery = query.toLowerCase () ;
     // Add exact query as first suggestion
-    if (query.trim()) {
+    if(query.trim()) {
 
         suggestions.push({
 
@@ -189,7 +188,7 @@ export const generateDynamicSuggestions = (query, recentSearches = [], available
             id: `recent-${search}`
         }) ;
     }) ;
-    return suggestions.slice (0, 8) ; // Limit to 8 suggestions
+    return suggestions.slice(0, 8) ; // Limit to 8 suggestions
 };
 /**
  * Calculate search metrics for analytics
@@ -206,16 +205,16 @@ export const calculateSearchMetrics = (results, searchTime) => {
             categoryCount.set(result.category, (categoryCount.get(result.category) || 0) + 1);
         }
     }) ;
-    const topCategories = Array.from (categoryCount.entries () ) .map ( ([category, count]) => ({ category, count }) ) .sort ( (a, b) => b.count - a.count) .slice (0, 5) ;
+    const topCategories = Array.from(categoryCount.entries () ) .map(([category, count]) => ({ category, count }) ) .sort((a, b) => b.count - a.count) .slice(0, 5) ;
     // Calculate average price
-    const pricesResults = results.filter (r => r.price && r.price > 0) ;
+    const pricesResults = results.filter(r => r.price && r.price > 0) ;
     const averagePrice = pricesResults.length > 0
-        ? pricesResults.reduce ( (sum, r) => sum + (r.price || 0) , 0) / pricesResults.length
+        ? pricesResults.reduce((sum, r) => sum + (r.price || 0) , 0) / pricesResults.length
         : 0;
     // Calculate average rating
-    const ratedResults = results.filter (r => r.rating && r.rating > 0) ;
+    const ratedResults = results.filter(r => r.rating && r.rating > 0) ;
     const averageRating = ratedResults.length > 0
-        ? ratedResults.reduce ( (sum, r) => sum + (r.rating || 0) , 0) / ratedResults.length
+        ? ratedResults.reduce((sum, r) => sum + (r.rating || 0) , 0) / ratedResults.length
         : 0;
     return {
 
@@ -257,7 +256,7 @@ export const formatSearchQuery = (query) => {
     return query.trim().replace(/\s+/g,);
 };
 /**
- * Check if filters are active (not default values)
+ * Check if filters are active(not default values)
  */
 export const hasActiveFilters = (filters) => {
 
@@ -274,15 +273,15 @@ export const hasActiveFilters = (filters) => {
 export const getActiveFilterCount = (filters) => {
 
     let count = 0;
-    if (filters.types.length > 0)
+    if(filters.types.length > 0)
         count += filters.types.length;
-    if (filters.category)
+    if(filters.category)
         count += 1;
-    if (filters.minPrice > 0 || filters.maxPrice < 10000)
+    if(filters.minPrice > 0 || filters.maxPrice < 10000)
         count += 1;
-    if (filters.minRating > 0)
+    if(filters.minRating > 0)
         count += 1;
-    if (filters.sort !== 'relevance')
+    if(filters.sort !== 'relevance')
         count += 1;
     return count;
 };

@@ -1,32 +1,7 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Activity, Server, Shield, Users, TrendingUp, BarChart3, PieChart, LineChart, TrendingDown, Clock3, RefreshCw, Loader2 } from 'lucide-react';
-import { useAnalytics } from "../hooks/useAnalytics";
-export const EnterpriseDashboard = () => {
-    const { trackEvent } = useAnalytics({
-
-        enableTracking: true,
-        enableUserBehaviorTracking: true
-    });
-    const [activeTab, setActiveTab] = useState('overview');
-    const [refreshInterval, setRefreshInterval] = useState(30000); // 30 seconds
-    const [isRefreshing, setIsRefreshing] = useState(false);
-    const [dateRange, setDateRange] = useState('24h');
-    const [searchQuery, setSearchQuery] = useState('');
-    const [filterStatus, setFilterStatus] = useState('all');
-    // Mock data - in production, this would come from real-time APIs
-    const [systemMetrics] = useState([
-        {
-
-            id: 'cpu',
-            name: 'CPU Usage',
-            value: 45,
-            unit: '%',
-            status: 'healthy',
-            trend: 'stable',
-            change: 2,
-            threshold: { warning: 70, critical: 90 },
-            lastUpdated: new Date () },
+import { motion, AnimatePresence  } from 'framer-motion';
+export default function Page() {
+,
         {
 
             id: 'memory',
@@ -61,8 +36,7 @@ export const EnterpriseDashboard = () => {
             threshold: { warning: 100, critical: 150 },
             lastUpdated: new Date () }
     ]) ;
-    const [serviceStatuses] = useState ([
-        {
+    const [serviceStatuses] = useState([{
 
             id: 'web-server',
             name: 'Web Server',
@@ -98,9 +72,8 @@ export const EnterpriseDashboard = () => {
             responseTime: 2,
             errorRate: 0.001
         }
-    ]) ;
-    const [securityAlerts] = useState ([
-        {
+    ]);
+    const [securityAlerts] = useState([{
 
             id: 'alert-1',
             severity: 'medium',
@@ -125,8 +98,7 @@ export const EnterpriseDashboard = () => {
             source: 'Access Control System'
         }
     ]) ;
-    const [userActivities] = useState ([
-        {
+    const [userActivities] = useState([{
 
             id: 'activity-1',
             userId: 'user-123',
@@ -152,12 +124,12 @@ export const EnterpriseDashboard = () => {
         }
     ]) ;
     // Refresh data
-    const refreshData = useCallback (async () => {
-        setIsRefreshing (true) ;
+    const refreshData = useCallback(async () => {
+        setIsRefreshing(true) ;
         try {
             // Simulate API call
             await new Promise(resolve => setTimeout(resolve, 1000));
-            // Update timestamps (simplified for demo)
+            // Update timestamps(simplified for demo)
             const now = new Date();
             // console.log('Data refreshed at:', now.toLocaleTimeString());
             trackEvent('enterprise_dashboard',data_refreshed',manual', null, {
@@ -165,7 +137,7 @@ export const EnterpriseDashboard = () => {
                 tab: activeTab,
                 dateRange
             }) }
-        catch (error) {
+        catch(error) {
 
             // console.error('Failed to refresh data:', error);
             trackEvent('enterprise_dashboard',refresh_failed',error', null, {
@@ -182,17 +154,17 @@ export const EnterpriseDashboard = () => {
         return () => clearInterval(interval)}, [refreshInterval, refreshData]);
     // Filtered data
     const filtered = securityAlerts;
-        if (filterStatus !== 'all') {
+        if(filterStatus !== 'all') {
 
             filtered = filtered.filter(alert => alert.status === filterStatus)}
-        if (searchQuery) {
+        if(searchQuery) {
 
             filtered = filtered.filter(alert => alert.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 alert.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 alert.type.toLowerCase().includes(searchQuery.toLowerCase()))}
         return filtered}, [securityAlerts, filterStatus, searchQuery]);
     const filtered = userActivities;
-        if (searchQuery) {
+        if(searchQuery) {
 
             filtered = filtered.filter(activity => activity.userName.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 activity.action.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -201,7 +173,7 @@ export const EnterpriseDashboard = () => {
     // Get status color
     const getStatusColor = (status) => {
 
-        switch (status) {
+        switch(status) {
 
             case 'healthy':'
             case 'online':'
@@ -223,7 +195,7 @@ export const EnterpriseDashboard = () => {
     // Get severity color
     const getSeverityColor = (severity) => {
 
-        switch (severity) {
+        switch(severity) {
 
             case 'critical':'
                 return 'text-red-600 bg-red-100 dark:text-red-400 dark:bg-red-900/30';

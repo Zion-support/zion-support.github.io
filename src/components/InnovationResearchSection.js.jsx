@@ -1,95 +1,7 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Lightbulb, TestTube, Brain, Atom, Target, Award, ArrowRight, TrendingUp, Users, Star, Globe, Shield, Cpu, Network } from 'lucide-react';
-const researchAreas = [
-    {
-
-        id: 1,
-        title: "Artificial Intelligence & Machine Learning","
-        icon: <Brain className="w-8 h-8"/>,"
-        color: "from-zion-purple to-zion-purple-dark","
-        description: "Advanced AI research in computer vision, natural language processing, and autonomous systems",
-        projects: 25,
-        researchers: 18,
-        publications: 12,
-        patents: 8,"
-        funding: "$2.5M","
-        status: "Active",
-        highlights[;"
-            "Computer Vision Breakthroughs","
-            "NLP Model Optimization","
-            "Autonomous Systems Research","
-            "AI Ethics & Governance"
-        ],;"
-        technologies["TensorFlow", "PyTorch", "OpenAI", "Custom Frameworks"],;"
-        partners["MIT", "Stanford", "Google Research", "Microsoft Research"];
-    },;
-    {
-
-        id: 2,"
-        title: "Quantum Computing & Cryptography","
-        icon: <Atom className="w-8 h-8"/>,"
-        color: "from-zion-cyan to-zion-blue","
-        description: "Pioneering research in quantum algorithms, quantum-safe cryptography, and quantum machine learning",
-        projects: 18,
-        researchers: 12,
-        publications: 8,
-        patents: 5,"
-        funding: "$1.8M","
-        status: "Active",
-        highlights[;"
-            "Quantum Algorithm Development","
-            "Post-Quantum Cryptography","
-            "Quantum Machine Learning","
-            "Quantum Error Correction"
-        ],;"
-        technologies["Qiskit", "Cirq", "Custom Quantum Simulators", "Cryptographic Libraries"],;"
-        partners["IBM Quantum", "Google Quantum", "MIT Lincoln Lab", "NIST"];
-    },;
-    {
-
-        id: 3,"
-        title: "Blockchain & Distributed Systems","
-        icon: <Network className="w-8 h-8"/>,"
-        color: "from-zion-cyan-light to-zion-cyan","
-        description: "Research in blockchain scalability, consensus mechanisms, and decentralized applications",
-        projects: 22,
-        researchers: 15,
-        publications: 10,
-        patents: 6,"
-        funding: "$2.1M","
-        status: "Active",
-        highlights[;"
-            "Scalability Solutions","
-            "Consensus Mechanisms","
-            "DeFi Protocols","
-            "Cross-Chain Interoperability"
-        ],;"
-        technologies["Ethereum", "Polkadot", "Solana", "Custom Blockchains"],;"
-        partners["Ethereum Foundation", "Polkadot Network", "Cardano", "Chainlink"];
-    },;
-    {
-
-        id: 4,"
-        title: "Cybersecurity & Privacy","
-        icon: <Shield className="w-8 h-8"/>,"
-        color: "from-zion-purple-light to-zion-purple","
-        description: "Advanced research in threat detection, privacy-preserving technologies, and secure systems",
-        projects: 20,
-        researchers: 14,
-        publications: 9,
-        patents: 7,"
-        funding: "$1.9M","
-        status: "Active",
-        highlights[;"
-            "Threat Intelligence","
-            "Zero-Knowledge Proofs","
-            "Secure Multi-Party Computation","
-            "Privacy-Preserving ML"
-        ],;"
-        technologies["Custom Security Tools", "Privacy Frameworks", "Threat Detection", "Encryption"],;"
-        partners["DARPA", "NSA", "CISA", "Academic Institutions"];
-    },;
+import { motion, AnimatePresence  } from 'framer-motion';
+export default function Page() {
+,;
     {
 
         id: 5,"
@@ -143,8 +55,7 @@ const innovationStats = ["
     { icon: <TrendingUp className="w-6 h-6"/>, value: "$10M+", label: "Research Funding" },"
     { icon: <Star className="w-6 h-6"/>, value: "15+", label: "Industry Partners" }
 ];
-const researchLabs = [
-    {
+const researchLabs = [{
 "
         name: "AI Research Lab","
         location: "San Francisco","
@@ -181,8 +92,8 @@ const researchLabs = [
         researchers: 5
     }
 ];
-    const [selectedResearch, setSelectedResearch] = useState (null) ;
-    const [hoveredLab, setHoveredLab] = useState (null) ;
+    const [selectedResearch, setSelectedResearch] = useState(null);
+    const [hoveredLab, setHoveredLab] = useState(null);
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -239,8 +150,7 @@ const researchLabs = [
           </h2>"
           <p className="text-zion-slate-light text-lg md:text-xl max-w-4xl mx-auto leading-relaxed mb-8">
             At Zion Tech Group, we push the boundaries of technology through cutting-edge research, 
-            innovative solutions, and collaborative partnerships with leading institutions worldwide.
-          </p>
+            innovative solutions, and collaborative partnerships with leading institutions worldwide.</p>
 
           {/* Innovation stats */}"
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">
@@ -345,7 +255,7 @@ const researchLabs = [
                           <span>{highlight}</span>
                         </div>))}"
                       {area.highlights.length > 2 && (<div className="text-zion-cyan/60 text-xs">
-                          +{area.highlights.length - 2} more areas
+                          +{area.highlights.length-2} more areas
                         </div>) }
                     </div>
                   </div>
@@ -502,8 +412,7 @@ const researchLabs = [
               </h3>"
               <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
                 Collaborate with leading researchers, access cutting-edge facilities, and contribute to 
-                breakthrough technologies that will shape the future.
-              </p>"
+                breakthrough technologies that will shape the future.</p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"
                 <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
                   Research Opportunities

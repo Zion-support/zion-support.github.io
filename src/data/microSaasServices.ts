@@ -34,13 +34,12 @@ author: {
 };
   images: string[];
   createdAt: string};
-export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
-  // AI & Machine Learning Services
+export const MICRO_SAAS_SERVICES: MicroSaasService[] = [// AI & Machine Learning Services
   {
 
     id: "ai-chatbot-builder","
     title: "AI Chatbot Builder Pro","
-    description: "No-code AI chatbot creation platform with advanced NLP, multi-language support, and seamless integrations. Perfect for customer service, sales, and support automation.","
+    description: "No-code AI chatbot creation platform with advanced NLP, multi-language support, and seamless integrations.Perfect for customer service, sales, and support automation.","
     category: "AI Services","
     subcategory: "Chatbots & Conversational AI",
     price: 99,"
@@ -49,8 +48,8 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     features[;"
       "Drag & drop chatbot builder","
       "Advanced NLP processing","
-      "Multi-language support (50+ languages)","
-      "CRM integrations (Salesforce, HubSpot)","
+      "Multi-language support(50+ languages)","
+      "CRM integrations(Salesforce, HubSpot)","
       "Analytics dashboard","
       "Custom branding","
       "API access","
@@ -87,7 +86,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
 "
     id: "ai-content-generator","
     title: "AI Content Generator Suite","
-    description: "Advanced AI-powered content creation platform for blogs, social media, marketing copy, and product descriptions. Includes SEO optimization and brand voice customization.","
+    description: "Advanced AI-powered content creation platform for blogs, social media, marketing copy, and product descriptions.Includes SEO optimization and brand voice customization.","
     category: "AI Services","
     subcategory: "Content Creation",
     price: 79,"
@@ -329,7 +328,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     currency: "$","
     pricingModel: "monthly",
     features[;"
-      "Multiple LLM models (GPT-4, Claude, Gemini)","
+      "Multiple LLM models(GPT-4, Claude, Gemini)","
       "Content creation & editing","
       "Style transfer","
       "Multi-language support","

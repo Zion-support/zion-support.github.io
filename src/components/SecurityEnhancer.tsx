@@ -1,9 +1,6 @@
-import {
-<<<<<<< HEAD
-import { motion, AnimatePresence } from 'framer - motion';
+import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
 
- * SecurityEnhancer function
- * @param {*} params - Function parameters
+ params - Function parameters
  * @returns {*} Function return value
  */
 function SecurityEnhancer () {
@@ -81,8 +78,8 @@ export function SecurityEnhancer() {
   const [searchTerm, setSearchTerm] = useState('');
 
   // Initialize security monitoring
-  useEffect ( () => {
-    if (isVisible) {
+  useEffect(() => {
+    if(isVisible) {
 
       initializeSecurityMonitoring();
       runSecurityScan()}
@@ -121,7 +118,7 @@ export function SecurityEnhancer() {
 
     // Remove existing CSP meta tag if present
     
-    if (existingCSP) {
+    if(existingCSP) {
 
       existingCSP.remove()}
     document.head.appendChild(cspMeta);
@@ -140,16 +137,15 @@ export function SecurityEnhancer() {
 
     securityMetaTags.forEach(tag => {
 
-      
       metaTag.name = tag.name;
       metaTag.content = tag.content;
       document.head.appendChild (metaTag) }) }, []) ;
 
   // Setup security event listeners
   
-    Element.prototype.innerHTML = function (value: string) {
+    Element.prototype.innerHTML = function(value: string) {
 
-      if ('
+      if('
         typeof value === 'string' &&'
         (value.includes('<script>) || value.includes('javascript:'))
       ) {
@@ -157,33 +153,32 @@ export function SecurityEnhancer() {
         logSecurityEvent('
           'warning',Potential XSS attempt detected',DOM Manipulation',medium'
         )}
-      return originalInnerHTML.call (this, value) };
+      return originalInnerHTML.call(this, value) };
 
     // Monitor for suspicious network requests
     
-    window.fetch = function (input: RequestInfo | URL, init?: RequestInit) {
+    window.fetch = function(input: RequestInfo | URL, init?: RequestInit) {
 
-      
-      if (url.includes('javascript:') || url.includes('data:text/html')) {
+      if(url.includes('javascript:') || url.includes('data:text/html')) {
 
         logSecurityEvent('
           'error',Suspicious fetch request blocked',Network Request',high'
         );
         return Promise.reject(new Error('Suspicious request blocked'))}
-      return originalFetch.call (this, input, init) };
+      return originalFetch.call(this, input, init) };
 
     // Monitor for console access attempts
     
-    console.log = function (...args: any[]) {
+    console.log = function(...args: any[]) {
 
-      if ('
+      if('
         args.some(arg => typeof arg === 'string' && arg.includes('password'))
       ) {
 
         logSecurityEvent('
           'warning',Potential sensitive data logging detected',Console Access',medium'
         )}
-      return originalConsoleLog.apply (this, args) }}, []) ;
+      return originalConsoleLog.apply(this, args) }}, []) ;
 
   // Log security events
   
@@ -194,7 +189,7 @@ export function SecurityEnhancer() {
 
   // Check security status
   
-      setSecurityStatus(status)} catch (error) {
+      setSecurityStatus(status)} catch(error) {
 
       // console.error('Failed to check security status:', error)}
   }, []) ;
@@ -220,7 +215,7 @@ export function SecurityEnhancer() {
       // Log scan completion
       logSecurityEvent('
         'success',Security scan completed successfully',Security Scanner',low'
-      )} catch (error) {
+      )} catch(error) {
       logSecurityEvent('
         'error',Security scan failed',Security Scanner',high'
       )} finally {
@@ -229,8 +224,7 @@ export function SecurityEnhancer() {
   }, [logSecurityEvent]) ;
 
   // Filter events
-  
-    
+
     return matchesSearch && matchesFilter}) ;
 
   // Get status icon
@@ -260,7 +254,7 @@ export function SecurityEnhancer() {
       default:'
         return 'border-gray-500 bg-gray-50 dark:bg-gray-900/20'}  };
 
-  return()
+  return ()
     <>
       {/* Floating Action Button */}
       <motion.button"
@@ -269,7 +263,7 @@ export function SecurityEnhancer() {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}"
         title="Security Panel"
-        aria-label="Open security panel"
+        
       >"
         <Shield className="w-6 h-6"  />      </motion.button>
 
@@ -281,7 +275,7 @@ export function SecurityEnhancer() {
             exit={{ opacity: 0, x: 300 }}"
             className="fixed top-0 right-0 h-full w-96 bg-white dark:bg-gray-900 shadow-2xl z-40 overflow-y-auto"
             role="dialog"
-            aria-label="Security monitoring and settings"
+            
           >"
             <div className="p-6">
               {/* Header */}"
@@ -305,7 +299,7 @@ export function SecurityEnhancer() {
                   <button
                     onClick={() => setIsVisible(false)}"
                     className="p-1 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
-                    aria-label="Close security panel"
+                    
                   >"
                     <X className="w-5 h-5"  />                  </button>
                 </div>
@@ -419,9 +413,7 @@ export function SecurityEnhancer() {
                             prev.includes(type)
                               ? prev.filter(t => t !== type)
                               : [...prev, type]
-                          )}}`                        className={`px-2 py-1 text-xs rounded ${
-
-                          activeFilters.includes(type)
+                          )}}`                        className={`px-2 py-1 text-xs rounded ${activeFilters.includes(type)
                             ? 'bg-zion-blue text-white''
                             : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300'`
                         }`}

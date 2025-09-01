@@ -42,12 +42,11 @@ export interface EmergingTechService2028 {
   uptime: string;
 }
 
-export const EMERGING_TECH_SERVICES_2028: EmergingTechService2028[] = [
-  // Space Technology Solutions
+export const EMERGING_TECH_SERVICES_2028: EmergingTechService2028[] = [// Space Technology Solutions
   {
     id: "space-technology-platform",
     title: "Space Technology Innovation Platform",
-    description: "Cutting-edge platform for space technology development, satellite management, and space data analytics. Enables organizations to leverage space-based technologies for Earth observation and communication.",
+    description: "Cutting-edge platform for space technology development, satellite management, and space data analytics.Enables organizations to leverage space-based technologies for Earth observation and communication.",
     category: "Space Technology",
     subcategory: "Satellite Management",
     price: 5999,
@@ -65,8 +64,7 @@ export const EMERGING_TECH_SERVICES_2028: EmergingTechService2028[] = [
       "Launch vehicle integration",
       "Ground station management"
     ],
-    benefits: [
-      "Access to space-based technologies",
+    benefits: ["Access to space-based technologies",
       "Real-time Earth observation data",
       "Global communication capabilities",
       "Advanced weather forecasting",
@@ -109,14 +107,13 @@ export const EMERGING_TECH_SERVICES_2028: EmergingTechService2028[] = [
   {
     id: "autonomous-vehicle-platform",
     title: "Autonomous Vehicle Management Platform",
-    description: "Comprehensive platform for managing autonomous vehicle fleets, including self-driving cars, drones, and robotic systems. Provides safety monitoring, route optimization, and fleet management capabilities.",
+    description: "Comprehensive platform for managing autonomous vehicle fleets, including self-driving cars, drones, and robotic systems.Provides safety monitoring, route optimization, and fleet management capabilities.",
     category: "Autonomous Systems",
     subcategory: "Vehicle Management",
     price: 3499,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "Autonomous fleet management",
+    features: ["Autonomous fleet management",
       "Real-time safety monitoring",
       "Route optimization algorithms",
       "Predictive maintenance",
@@ -127,8 +124,7 @@ export const EMERGING_TECH_SERVICES_2028: EmergingTechService2028[] = [
       "Regulatory compliance",
       "Mobile fleet app"
     ],
-    benefits: [
-      "Reduce transportation costs by 60%",
+    benefits: ["Reduce transportation costs by 60%",
       "Improve safety by 90%",
       "24/7 autonomous operation",
       "Optimized route planning",
@@ -171,14 +167,13 @@ export const EMERGING_TECH_SERVICES_2028: EmergingTechService2028[] = [
   {
     id: "ai-drug-discovery-platform",
     title: "AI-Powered Drug Discovery Platform",
-    description: "Revolutionary platform that uses artificial intelligence to accelerate drug discovery and development. Reduces drug development time by 70% and costs by 60%.",
+    description: "Revolutionary platform that uses artificial intelligence to accelerate drug discovery and development.Reduces drug development time by 70% and costs by 60%.",
     category: "Healthcare",
     subcategory: "Drug Discovery",
     price: 7999,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "AI molecular modeling",
+    features: ["AI molecular modeling",
       "Virtual screening",
       "Drug target identification",
       "Clinical trial optimization",
@@ -189,8 +184,7 @@ export const EMERGING_TECH_SERVICES_2028: EmergingTechService2028[] = [
       "Regulatory compliance",
       "Research collaboration tools"
     ],
-    benefits: [
-      "Reduce drug development time by 70%",
+    benefits: ["Reduce drug development time by 70%",
       "Lower development costs by 60%",
       "Improve success rates by 40%",
       "Accelerate time to market",
@@ -233,14 +227,13 @@ export const EMERGING_TECH_SERVICES_2028: EmergingTechService2028[] = [
   {
     id: "quantum-internet-infrastructure",
     title: "Quantum Internet Infrastructure Platform",
-    description: "Next-generation quantum internet infrastructure that provides ultra-secure communication using quantum entanglement. Enables unhackable communication networks and quantum computing access.",
+    description: "Next-generation quantum internet infrastructure that provides ultra-secure communication using quantum entanglement.Enables unhackable communication networks and quantum computing access.",
     category: "Quantum Technology",
     subcategory: "Internet Infrastructure",
     price: 8999,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "Quantum key distribution",
+    features: ["Quantum key distribution",
       "Quantum entanglement networks",
       "Quantum repeaters",
       "Quantum memory systems",
@@ -251,8 +244,7 @@ export const EMERGING_TECH_SERVICES_2028: EmergingTechService2028[] = [
       "Quantum network monitoring",
       "Quantum cryptography"
     ],
-    benefits: [
-      "Unhackable communication",
+    benefits: ["Unhackable communication",
       "Quantum advantage in networking",
       "Future-proof infrastructure",
       "Ultra-secure data transmission",
@@ -295,14 +287,13 @@ export const EMERGING_TECH_SERVICES_2028: EmergingTechService2028[] = [
   {
     id: "ai-climate-modeling-platform",
     title: "AI-Powered Climate Modeling Platform",
-    description: "Advanced climate modeling platform that uses artificial intelligence to predict climate patterns, extreme weather events, and environmental changes. Helps organizations prepare for climate-related challenges.",
+    description: "Advanced climate modeling platform that uses artificial intelligence to predict climate patterns, extreme weather events, and environmental changes.Helps organizations prepare for climate-related challenges.",
     category: "Environmental Technology",
     subcategory: "Climate Modeling",
     price: 2799,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "AI climate prediction models",
+    features: ["AI climate prediction models",
       "Extreme weather forecasting",
       "Sea level rise modeling",
       "Carbon footprint analysis",
@@ -313,8 +304,7 @@ export const EMERGING_TECH_SERVICES_2028: EmergingTechService2028[] = [
       "Real-time climate monitoring",
       "Policy impact modeling"
     ],
-    benefits: [
-      "Accurate climate predictions",
+    benefits: ["Accurate climate predictions",
       "Early warning systems",
       "Risk mitigation strategies",
       "Sustainability planning",
@@ -357,14 +347,13 @@ export const EMERGING_TECH_SERVICES_2028: EmergingTechService2028[] = [
   {
     id: "autonomous-manufacturing-platform",
     title: "Autonomous Manufacturing Platform",
-    description: "Revolutionary manufacturing platform that uses AI and robotics to create fully autonomous production lines. Reduces manufacturing costs by 50% while improving quality and efficiency.",
+    description: "Revolutionary manufacturing platform that uses AI and robotics to create fully autonomous production lines.Reduces manufacturing costs by 50% while improving quality and efficiency.",
     category: "Manufacturing",
     subcategory: "Autonomous Systems",
     price: 4299,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "Autonomous production lines",
+    features: ["Autonomous production lines",
       "AI quality control",
       "Predictive maintenance",
       "Supply chain automation",
@@ -375,8 +364,7 @@ export const EMERGING_TECH_SERVICES_2028: EmergingTechService2028[] = [
       "Quality assurance",
       "Mobile monitoring app"
     ],
-    benefits: [
-      "Reduce manufacturing costs by 50%",
+    benefits: ["Reduce manufacturing costs by 50%",
       "Improve product quality by 90%",
       "24/7 autonomous production",
       "Zero defect manufacturing",
@@ -419,14 +407,13 @@ export const EMERGING_TECH_SERVICES_2028: EmergingTechService2028[] = [
   {
     id: "ai-education-platform",
     title: "AI-Powered Personalized Education Platform",
-    description: "Revolutionary education platform that uses AI to provide personalized learning experiences for students. Adapts to individual learning styles and provides real-time feedback and assessment.",
+    description: "Revolutionary education platform that uses AI to provide personalized learning experiences for students.Adapts to individual learning styles and provides real-time feedback and assessment.",
     category: "Education Technology",
     subcategory: "Personalized Learning",
     price: 899,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "Personalized learning paths",
+    features: ["Personalized learning paths",
       "AI tutoring systems",
       "Adaptive assessments",
       "Real-time feedback",
@@ -437,8 +424,7 @@ export const EMERGING_TECH_SERVICES_2028: EmergingTechService2028[] = [
       "Mobile learning apps",
       "Parent-teacher communication"
     ],
-    benefits: [
-      "Improve learning outcomes by 40%",
+    benefits: ["Improve learning outcomes by 40%",
       "Reduce learning time by 30%",
       "Personalized education for all",
       "Real-time progress monitoring",
@@ -481,14 +467,13 @@ export const EMERGING_TECH_SERVICES_2028: EmergingTechService2028[] = [
   {
     id: "quantum-machine-learning",
     title: "Quantum Machine Learning Platform",
-    description: "Cutting-edge platform that combines quantum computing with machine learning to solve complex problems that are impossible for classical computers. Provides quantum advantage in AI applications.",
+    description: "Cutting-edge platform that combines quantum computing with machine learning to solve complex problems that are impossible for classical computers.Provides quantum advantage in AI applications.",
     category: "Quantum AI",
     subcategory: "Machine Learning",
     price: 6999,
     currency: "$",
     pricingModel: "monthly",
-    features: [
-      "Quantum neural networks",
+    features: ["Quantum neural networks",
       "Quantum optimization algorithms",
       "Quantum feature selection",
       "Quantum clustering",
@@ -499,8 +484,7 @@ export const EMERGING_TECH_SERVICES_2028: EmergingTechService2028[] = [
       "Quantum inference engines",
       "Research collaboration tools"
     ],
-    benefits: [
-      "Solve previously impossible problems",
+    benefits: ["Solve previously impossible problems",
       "Exponential speedup for ML tasks",
       "Quantum advantage in AI",
       "Future-proof ML capabilities",

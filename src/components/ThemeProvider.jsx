@@ -25,7 +25,7 @@ export const ThemeProvider = ({ children }) => {
     theme,
     setTheme};
 
-  return()
+  return ()
     <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
   );
 };
@@ -38,8 +38,8 @@ export const ThemeProvider = ({ children }) => {
     return (<ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>) ;
   };
 
-  const context = React.useContext (ThemeContext) ;
-  if (context === null) {
+  const context = React.useContext(ThemeContext) ;
+  if(context === null) {
 
     throw new Error('useTheme must be used within a ThemeProvider');
   }

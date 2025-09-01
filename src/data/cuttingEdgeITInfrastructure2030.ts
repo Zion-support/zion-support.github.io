@@ -2,13 +2,12 @@
 // Cutting Edge IT Infrastructure Services 2030 - Zion Tech Group
 // Advanced infrastructure solutions for modern enterprises
 ;
-export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
-  // Zero-Trust Network Access Platform
+export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [// Zero-Trust Network Access Platform
   {
 
     id: "zero-trust-network-access-platform","
     title: "Zero-Trust Network Access Platform","
-    description: "Revolutionary zero-trust network access platform that provides secure, identity-based access to applications and resources. Eliminates traditional VPN vulnerabilities and provides 99.9% security uptime.","
+    description: "Revolutionary zero-trust network access platform that provides secure, identity-based access to applications and resources.Eliminates traditional VPN vulnerabilities and provides 99.9% security uptime.","
     category: "IT Infrastructure","
     subcategory: "Network Security",
     price: 12999,"
@@ -40,7 +39,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
 "
     id: "edge-computing-orchestration-platform","
     title: "Edge Computing Orchestration Platform","
-    description: "Advanced edge computing orchestration platform that manages distributed computing resources across edge locations. Reduces latency by 80% and improves application performance by 60%.","
+    description: "Advanced edge computing orchestration platform that manages distributed computing resources across edge locations.Reduces latency by 80% and improves application performance by 60%.","
     category: "IT Infrastructure","
     subcategory: "Edge Computing",
     price: 15999,"
@@ -72,7 +71,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
 "
     id: "quantum-safe-cryptography-infrastructure","
     title: "Quantum-Safe Cryptography Infrastructure","
-    description: "Future-proof quantum-safe cryptography infrastructure that protects against quantum computing attacks. Implements post-quantum cryptographic algorithms with 256-bit security.","
+    description: "Future-proof quantum-safe cryptography infrastructure that protects against quantum computing attacks.Implements post-quantum cryptographic algorithms with 256-bit security.","
     category: "IT Infrastructure","
     subcategory: "Cryptography",
     price: 19999,"
@@ -104,7 +103,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
 "
     id: "autonomous-data-center-management","
     title: "Autonomous Data Center Management","
-    description: "AI-powered autonomous data center management platform that optimizes operations, predicts failures, and reduces energy consumption. Achieves 40% energy savings and 99.99% uptime.","
+    description: "AI-powered autonomous data center management platform that optimizes operations, predicts failures, and reduces energy consumption.Achieves 40% energy savings and 99.99% uptime.","
     category: "IT Infrastructure","
     subcategory: "Data Center Management",
     price: 24999,"
@@ -136,7 +135,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
 "
     id: "software-defined-network-fabric","
     title: "Software-Defined Network Fabric","
-    description: "Revolutionary software-defined network fabric that provides programmable, scalable, and secure networking infrastructure. Reduces network complexity by 70% and improves agility by 80%.","
+    description: "Revolutionary software-defined network fabric that provides programmable, scalable, and secure networking infrastructure.Reduces network complexity by 70% and improves agility by 80%.","
     category: "IT Infrastructure","
     subcategory: "Software-Defined Networking",
     price: 17999,"
@@ -168,7 +167,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
 "
     id: "hyperconverged-infrastructure-platform","
     title: "Hyperconverged Infrastructure Platform","
-    description: "Next-generation hyperconverged infrastructure platform that integrates compute, storage, and networking into a single, scalable solution. Reduces infrastructure costs by 50% and simplifies management.","
+    description: "Next-generation hyperconverged infrastructure platform that integrates compute, storage, and networking into a single, scalable solution.Reduces infrastructure costs by 50% and simplifies management.","
     category: "IT Infrastructure","
     subcategory: "Hyperconverged Infrastructure",
     price: 21999,"
@@ -200,7 +199,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
 "
     id: "intelligent-cloud-cost-optimization","
     title: "Intelligent Cloud Cost Optimization","
-    description: "AI-powered cloud cost optimization platform that automatically identifies cost-saving opportunities and optimizes resource allocation. Reduces cloud costs by 30-40% while maintaining performance.","
+    description: "AI-powered cloud cost optimization platform that automatically identifies cost-saving opportunities and optimizes resource allocation.Reduces cloud costs by 30-40% while maintaining performance.","
     category: "IT Infrastructure","
     subcategory: "Cloud Optimization",
     price: 8999,"

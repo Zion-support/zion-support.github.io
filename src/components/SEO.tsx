@@ -7,7 +7,7 @@
  * @param {*} params - Function parameters
  * @returns {*} Function return value
  */
-function SEO ({
+function SEO({
 
 interface SEOProps {
 =======
@@ -54,7 +54,7 @@ type SEOProps = {
 export function SEO({
 
   title = 'Zion Tech Group - AI-Powered Enterprise Solutions & Cybersecurity',
-  description = "Transform your business with Zion Tech Group's cutting-edge AI solutions, cybersecurity platforms, and enterprise technology services. Leading the future of digital transformation.",
+  description = "Transform your business with Zion Tech Group's cutting-edge AI solutions, cybersecurity platforms, and enterprise technology services.Leading the future of digital transformation.",
   keywords = 'AI solutions, cybersecurity, enterprise technology, quantum computing, healthcare AI, supply chain optimization, Zion Tech Group',
   image = '/images/zion-tech-group-og.jpg',
   url = 'https://ziontechgroup.com',
@@ -66,13 +66,11 @@ export function SEO({
   tags = [],
   canonical}: SEOProps) {
 
-  
-  
   // Structured data for organization
   
   // Structured data for website
   
-  return()
+  return ()
 =======
 };
 
@@ -82,8 +80,7 @@ export function SEO({
   url = 'https://ziontechgroup.com',
   image = '/og-image.jpg'
 }: SEOProps) {
-  return (
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+  return (>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     <Helmet>
       <title>{title}</title>
 <<<<<<< HEAD
@@ -117,14 +114,14 @@ export function SEO({
             justify - content: center;
             color: white;
 <<<<<<< HEAD
-            text - align: center;
+            text-align: center;
           }
 
           /* Optimize font loading */
           @font - face {
             font - family: 'Orbitron';
             font - display: swap;
-            src: url ('/fonts / orbitron - v16 - latin - 400.woff2') format ('woff2') ;
+            src: url('/fonts / orbitron - v16 - latin - 400.woff2') format('woff2') ;
             font - weight: 400;
             font - style: normal;
           }
@@ -132,7 +129,7 @@ export function SEO({
           @font - face {
             font - family: 'Orbitron';
             font - display: swap;
-            src: url ('/fonts / orbitron - v16 - latin - 600.woff2') format ('woff2') ;
+            src: url('/fonts / orbitron - v16 - latin - 600.woff2') format('woff2') ;
             font - weight: 600;
             font - style: normal;
           }
@@ -144,7 +141,7 @@ export function SEO({
           }
 
 =======
-            text - align: center}
+            text-align: center}
           
           /* Optimize font loading */
           @font-face {
@@ -171,7 +168,7 @@ export function SEO({
           
 >>>>>>> main
           /* Optimize animations */
-          @media (prefers-reduced-motion: reduce) {
+          @media(prefers-reduced-motion: reduce) {
 
             *, *::before, *::after {
 
@@ -186,24 +183,22 @@ export function SEO({
       <script>`
         {`
           // Performance monitoring'
-          if ('performance' in window) {
+          if('performance' in window) {
 
             window.addEventListener('load', () => {
 
-              
-              if (navigation) {
+              if(navigation) {
 <<<<<<< HEAD
                 const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-                console.log ('Page load time:', loadTime + 'ms') ;
+                console.log('Page load time:', loadTime + 'ms') ;
 
 =======
 
-                
                 // console.log('Page load time:', loadTime + 'ms');
                 
 >>>>>>> main
                 // Send to analytics if available
-                if (window.gtag) {
+                if(window.gtag) {
 
                   window.gtag('event',timing_complete', {
 
@@ -215,19 +210,19 @@ export function SEO({
           }
 
           // Core Web Vitals monitoring
-          if ('web - vital' in window) {
-              getCLS (console.log) ;
-              getFID (console.log) ;
-              getFCP (console.log) ;
-              getLCP (console.log) ;
-              getTTFB (console.log) ;
+          if('web - vital' in window) {
+              getCLS(console.log) ;
+              getFID(console.log) ;
+              getFCP(console.log) ;
+              getLCP(console.log) ;
+              getTTFB(console.log) ;
             }) ;
           }
 =======
             }) }
           
           // Core Web Vitals monitoring'
-          if ('web-vital' in window) {
+          if('web-vital' in window) {
 
             import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
 

@@ -4,10 +4,9 @@
  * @param {*} params - Function parameters
  * @returns {*} Function return value
  */
-function CategoriesSection ({ showTitle = true }: CategoriesSectionProps) {
+function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
 
-const categories = [
-  {
+const categories = [{
     title: "AI Services",
     description: "Cutting - edge AI solutions, chatbots, and machine learning",
     icon: "🤖",
@@ -37,8 +36,7 @@ const categories = [
   },
 ];
 
-const specialServices = [
-  {
+const specialServices = [{
     title: "IT Onsite Services",
     link: "/it - onsite - services"
   },
@@ -59,7 +57,6 @@ const specialServices = [
 interface CategoriesSectionProps {
   // Add your props here
 
-
   showTitle?: boolean}
 ;
 
@@ -79,9 +76,9 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
       </div>
 <<<<<<< HEAD
 
-      <div className="container mx - auto px - 4 relative z - 10">
+      <div className="container mx - auto px-4 relative z -10">
         {showTitle && (<motion.div
-            className="text - center mb - 16"
+            className="text-center mb-16"
 =======
       "
       <div className="container mx-auto px-4 relative z-10">
@@ -104,7 +101,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
 <<<<<<< HEAD
 
         <motion.div
-          className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 4 gap - 6"
+          className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 4 gap-6"
           variants={containerVariants}
 =======
         
@@ -116,7 +113,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {categories.map ( (category, index) => (<motion.div
+          {categories.map((category, index) => (<motion.div
               key={category.title}
               variants={itemVariants}"
               className="group block"
@@ -137,7 +134,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
 <<<<<<< HEAD
 
         <motion.div
-          className="mt - 12"
+          className="mt-12"
 =======
         
         <motion.div "
@@ -168,10 +165,10 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             className="group inline-flex items-center gap-3 text-zion-cyan border-b-2 border-zion-cyan hover:border-zion-cyan-light transition-colors text-lg font-medium py-2"
 
 <<<<<<< HEAD
-            View All Services < ArrowRight className="w - 5 h - 5 ml - 2 group - hover:translate - x-1 transition - transform" />
+            View All Services < ArrowRight className="w-5 h-5 ml-2 group - hover:translate - x-1 transition -transform" />
 
         <motion.div
-          className="mt - 12 flex justify - center"
+          className="mt-12 flex justify -center"
 =======
             View All Services"
             <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"  />        
@@ -186,7 +183,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
 <<<<<<< HEAD
           <Link
             to="/categories"
-            className="text - cyan - 400 border - b border - cyan - 400 hover:border - cyan - 300 transition - colors flex items - center gap - 2"
+            className="text-cyan - 400 border-b border-cyan - 400 hover:border-cyan - 300 transition - colors flex items - center gap-2"
 =======
           <Link "
             to="/categories"

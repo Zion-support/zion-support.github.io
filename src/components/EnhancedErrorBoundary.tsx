@@ -1,43 +1,7 @@
-import {
-<<<<<<< HEAD
-import { motion } from 'framer - motion';
-=======
->>>>>>> main
+import { <<<<<<< HEAD import { motion  } from 'framer-motion';
 
-  AlertTriangle,
-  RefreshCw,
-  Home,
-  ArrowLeft,
-  Bug,
-  Send} from 'lucide-react';
-interface State {
-
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string | null;
-  isReporting: boolean;
-  reportSent: boolean;
-export class EnhancedErrorBoundary extends Component<Props, State> {
-
-  constructor(props: Props) {
-
-    super(props);
-    this.state = {
-
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: null,
-      isReporting: false,
-      reportSent: false}}
-  static getDerivedStateFromError(error: Error): Partial<State> {
-
-    return {
-
-      hasError: true,
-      error,
-      errorId: `error-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`}}
+export default function Page() {
+-${Math.random().toString(36).substr(2, 9)}`}}
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
 
     this.setState({ errorInfo });
@@ -46,18 +10,16 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
     // console.error('Error caught by boundary:', error, errorInfo);
 
     // Call custom error handler if provided
-    if (this.props.onError) {
+    if(this.props.onError) {
 
       this.props.onError(error, errorInfo)}
 
     // Send error to error reporting service
-    this.reportError (error, errorInfo) }
+    this.reportError(error, errorInfo) }
   private async reportError(error: Error, errorInfo: ErrorInfo) {
 
     try {
-      // You can integrate with services like Sentry, LogRocket, etc.
-      
-<<<<<<< HEAD
+      // You can integrate with services like Sentry, LogRocket, etc.<<<<<<< HEAD
       // Send to your error reporting endpoint'
       await fetch('/api/error-report', {
 
@@ -68,7 +30,7 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
         method: 'POST','
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(errorReport)})} catch (reportError) {
+        body: JSON.stringify(errorReport)})} catch(reportError) {
 
       // console.error('Failed to report error:', reportError)}  }
 
@@ -95,8 +57,8 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
       this.setState({ reportSent: true });
 
       // Reset report status after 3 seconds
-      setTimeout ( () => {
-        this.setState ({ reportSent: false }) }, 3000) } catch (error) {
+      setTimeout(() => {
+        this.setState({ reportSent: false }) }, 3000) } catch(error) {
 
       // console.error('Failed to report error:', error)} finally {
 
@@ -119,27 +81,27 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
 
     window.location.href = '/'};
   private handleCopyError = async : unknown {
-    if (this.state.error) {
+    if(this.state.error) {
 `
       
       try {
-        await navigator.clipboard.writeText (errorText) ;
+        await navigator.clipboard.writeText(errorText) ;
         // You could show a toast notification here
-      } catch (err) {
+      } catch(err) {
 
         // console.error('Failed to copy error details:', err)}    }
   };
 
   private toggleDetails = () => {
-    this.setState (prev => ({ showDetails: !prev.showDetails }) ) };
+    this.setState(prev => ({ showDetails: !prev.showDetails }) ) };
   render () {
-    if (this.state.hasError) {
+    if(this.state.hasError) {
 
       // Custom fallback UI
-      if (this.props.fallback) {
+      if(this.props.fallback) {
 
         return this.props.fallback}
-      return()
+      return ()
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -171,11 +133,10 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
               transition={{ delay: 0.4 }}"
               className="text-gray-300 mb-6 text-lg"
             >
-              We're sorry, but something unexpected happened. Our team has been
-              notified and is working to fix this issue.
-            </motion.p>
+              We're sorry, but something unexpected happened.Our team has been
+              notified and is working to fix this issue.</motion.p>
 
-            {/* Error Details (Collapsible) */}
+            {/* Error Details(Collapsible) */}
             <motion.details
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}

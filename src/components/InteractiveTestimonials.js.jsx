@@ -1,31 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-
-  Quote,
-  Star,
-  ChevronLeft,
-  ChevronRight,
-  Play,
-  Pause,
-  MessageCircle,
-  ThumbsUp,
-  Share2} from 'lucide-react';
-const testimonials = [
-  {
-
-    id: '1',
-    name: 'Sarah Chen',
-    role: 'CTO',
-    comp: 'TechFlow Solutions',
-    avatar: 'SC',
-    rating: 5,
-    content:'
-      "Zion Tech Group transformed our AI infrastructure completely. The integration was seamless, and the results exceeded our expectations. We've seen a 300% improvement in our AI model performance.",
-    category: 'AI Infrastructure',
-    date: '2 weeks ago',
-    likes: 127,
-    verified: true},
+import { motion, AnimatePresence  } from 'framer-motion';
+import { Quote, Star, ChevronLeft, ChevronRight, Play, Pause, MessageCircle, ThumbsUp, Share2  } from 'lucide-react';
+,
   {
 
     id: '2',
@@ -35,7 +11,7 @@ const testimonials = [
     avatar: 'MR',
     rating: 5,
     content:'
-      'The talent matching algorithm is incredible. We found our lead AI engineer in just 3 days, and the quality was outstanding. Zion has become our go-to platform for all tech talent needs.',
+      'The talent matching algorithm is incredible.We found our lead AI engineer in just 3 days, and the quality was outstanding.Zion has become our go-to platform for all tech talent needs.',
     category: 'Talent Matching',
     date: '1 month ago',
     likes: 89,
@@ -43,13 +19,13 @@ const testimonials = [
   {
 
     id: '3',
-    name: 'Dr. Emily Watson',
+    name: 'Dr.Emily Watson',
     role: 'Research Director',
     comp: 'Quantum Labs',
     avatar: 'EW',
     rating: 5,
     content:'"
-      "Working with Zion's AI services has accelerated our research by months. The platform's capabilities and the team's expertise are unmatched in the industry.",
+      "Working with Zion's AI services has accelerated our research by months.The platform's capabilities and the team's expertise are unmatched in the industry.",
     category: 'Research & Development',
     date: '3 weeks ago',
     likes: 156,
@@ -63,7 +39,7 @@ const testimonials = [
     avatar: 'AT',
     rating: 5,
     content:'
-      'As a startup, we needed cost-effective AI solutions. Zion delivered enterprise-grade tools at startup prices. The ROI was immediate and substantial.',
+      'As a startup, we needed cost-effective AI solutions.Zion delivered enterprise-grade tools at startup prices.The ROI was immediate and substantial.',
     category: 'Startup Solutions',
     date: '1 week ago',
     likes: 73,
@@ -77,7 +53,7 @@ const testimonials = [
     avatar: 'LP',
     rating: 5,
     content:'"
-      "The global network and 24/7 support are game-changers. We operate in multiple time zones, and Zion's support team is always available when we need them.",
+      "The global network and 24/7 support are game-changers.We operate in multiple time zones, and Zion's support team is always available when we need them.",
     category: 'Global Operations',
     date: '2 months ago',
     likes: 94,
@@ -98,7 +74,7 @@ export function InteractiveTestimonials() {
           testimonial => testimonial.category === selectedCategory
         );
   useEffect(() => {
-    if (!isAutoPlaying) return;
+    if(!isAutoPlaying) return;
     const interval = setInterval(() => {
       setCurrentIndex(prev => (prev + 1) % filteredTestimonials.length);
     }, 5000);
@@ -118,7 +94,7 @@ export function InteractiveTestimonials() {
     setLikedTestimonials(prev => {
 
       const newSet = new Set(prev);
-      if (newSet.has(testimonialId)) {
+      if(newSet.has(testimonialId)) {
 
         newSet.delete(testimonialId);
       } else {
@@ -209,9 +185,7 @@ export function InteractiveTestimonials() {
             <motion.button
               key={category}
               onClick={() => setSelectedCategory(category)}`
-              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-
-                selectedCategory === category'
+              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${selectedCategory === category'
                   ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg shadow-blue-500/25''
                   : 'bg-white/10 text-zion-slate-light hover:bg-white/20 border border-white/20'`
               }`}
@@ -295,9 +269,7 @@ export function InteractiveTestimonials() {
                     onClick={() =>
                       toggleLike(filteredTestimonials[currentIndex]?.id || '')
                     }`
-                    className={`flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-300 ${
-
-                      likedTestimonials.has('
+                    className={`flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-300 ${likedTestimonials.has('
                         filteredTestimonials[currentIndex]?.id || ''
                       )
                         ? 'bg-red-500/20 text-red-400 border border-red-500/30''
@@ -361,9 +333,7 @@ export function InteractiveTestimonials() {
               <motion.button
                 key={index}
                 onClick={() => setCurrentIndex(index)}`
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-
-                  index === currentIndex'
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex'
                     ? 'bg-gradient-to-r from-blue-500 to-purple-500''
                     : 'bg-white/20 hover:bg-white/40'`
                 }`}

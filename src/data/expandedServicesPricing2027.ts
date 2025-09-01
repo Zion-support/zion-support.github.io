@@ -76,9 +76,8 @@ starter: {
     website: string;
     address: string}}
 
-// 1. CYBERSECURITY SERVICES PRICING;
-export const cybersecurityPricing: ExpandedServicePricing[] = [
-  {
+// 1.CYBERSECURITY SERVICES PRICING;
+export const cybersecurityPricing: ExpandedServicePricing[] = [{
 
     serviceId: 'quantum-threat-hunter',
     serviceName: 'Quantum Threat Hunter',
@@ -95,7 +94,7 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
           'Quantum-resistant encryption',Real-time threat detection',Basic incident response',Standard compliance reporting',Email support',Up to 100 endpoints'
         ],;
         limitations[;
-          'Limited threat intelligence feeds',Basic analytics dashboard',Standard response time (4 hours),Limited customization options'
+          'Limited threat intelligence feeds',Basic analytics dashboard',Standard response time(4 hours),Limited customization options'
         ],;
         bestFor[;
           'Mid-size enterprises',Financial institutions',Healthcare organizations',Government agencies'
@@ -109,10 +108,10 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
         currency: 'USD',
         billingCycle: 'monthly',
         features[;
-          'All Starter features',Advanced threat hunting',Automated incident response',Enhanced compliance automation',Priority support (2 hour response),Up to 1000 endpoints',Custom threat intelligence feeds',Advanced analytics dashboard'
+          'All Starter features',Advanced threat hunting',Automated incident response',Enhanced compliance automation',Priority support(2 hour response),Up to 1000 endpoints',Custom threat intelligence feeds',Advanced analytics dashboard'
         ],;
         limitations[;
-          'Limited to single region',Standard SLA (99.9%),Basic API access'
+          'Limited to single region',Standard SLA(99.9%),Basic API access'
         ],;
         bestFor[;
           'Large enterprises',Multi-location businesses',High-security environments',Compliance-focused organizations'
@@ -126,7 +125,7 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
         currency: 'USD',
         billingCycle: 'monthly',
         features[;
-          'All Professional features',Unlimited endpoints',Global threat intelligence',Custom AI models',24/7 dedicated support',Premium SLA (99.99%),Full API access',Custom integrations',White-label options',Dedicated security team'
+          'All Professional features',Unlimited endpoints',Global threat intelligence',Custom AI models',24/7 dedicated support',Premium SLA(99.99%),Full API access',Custom integrations',White-label options',Dedicated security team'
         ],;
         limitations[;
           'Requires enterprise infrastructure',Custom implementation timeline'
@@ -311,9 +310,8 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
 
 ];
 
-// 2. DATA ANALYTICS SERVICES PRICING;
-export const dataAnalyticsPricing: ExpandedServicePricing[] = [
-  {
+// 2.DATA ANALYTICS SERVICES PRICING;
+export const dataAnalyticsPricing: ExpandedServicePricing[] = [{
 
     serviceId: 'predictive-insights-engine',
     serviceName: 'Predictive Insights Engine',
@@ -430,9 +428,8 @@ export const dataAnalyticsPricing: ExpandedServicePricing[] = [
 
 ];
 
-// 3. CLOUD & DEVOPS SERVICES PRICING;
-export const cloudDevOpsPricing: ExpandedServicePricing[] = [
-  {
+// 3.CLOUD & DEVOPS SERVICES PRICING;
+export const cloudDevOpsPricing: ExpandedServicePricing[] = [{
 
     serviceId: 'multi-cloud-orchestrator',
     serviceName: 'Multi-Cloud Orchestrator',
@@ -549,9 +546,8 @@ export const cloudDevOpsPricing: ExpandedServicePricing[] = [
 
 ];
 
-// 4. IOT & EDGE COMPUTING SERVICES PRICING;
-export const iotEdgePricing: ExpandedServicePricing[] = [
-  {
+// 4.IOT & EDGE COMPUTING SERVICES PRICING;
+export const iotEdgePricing: ExpandedServicePricing[] = [{
 
     serviceId: 'industrial-iot-intelligence',
     serviceName: 'Industrial IoT Intelligence Platform',
@@ -668,9 +664,8 @@ export const iotEdgePricing: ExpandedServicePricing[] = [
 
 ];
 
-// 5. FINANCIAL TECHNOLOGY SERVICES PRICING;
-export const finTechPricing: ExpandedServicePricing[] = [
-  {
+// 5.FINANCIAL TECHNOLOGY SERVICES PRICING;
+export const finTechPricing: ExpandedServicePricing[] = [{
 
     serviceId: 'quantum-financial-modeling',
     serviceName: 'Quantum Financial Modeling Platform',
@@ -787,9 +782,8 @@ export const finTechPricing: ExpandedServicePricing[] = [
 
 ];
 
-// 6. HEALTHCARE TECHNOLOGY SERVICES PRICING;
-export const healthcarePricing: ExpandedServicePricing[] = [
-  {
+// 6.HEALTHCARE TECHNOLOGY SERVICES PRICING;
+export const healthcarePricing: ExpandedServicePricing[] = [{
 
     serviceId: 'ai-diagnostic-assistant',
     serviceName: 'AI Diagnostic Assistant',

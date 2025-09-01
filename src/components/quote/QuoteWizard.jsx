@@ -9,13 +9,11 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert';
-import Skeleton from '@/components/ui/skeleton';
-import { useToast } from '@/hooks/use-toast';
-const WIZARD_STEPS = [1, 2, 3];
-function StepIndicator({ step }) {
+ from '@/hooks/use-toast';
+) {
 
   const progress = (step / WIZARD_STEPS.length) * 100;
-  return()
+  return ()
     <div className="space-y-1">
       <div"
         data-testid="step-indicator"
@@ -42,7 +40,7 @@ export function QuoteWizard({ category }) {
   const delayedError = useDelayedError(error);
   const { toast } = useToast();
   useEffect(() => {
-    if (delayedError) {
+    if(delayedError) {
 
       toast({
 
@@ -53,7 +51,7 @@ export function QuoteWizard({ category }) {
   // Use isLoading from SWR for a more direct loading state
   const loading = isLoading;
   const selectedItem = useMemo(() => {
-    if (!data || !selectedItemId) return null;
+    if(!data || !selectedItemId) return null;
     return data.find(item => item.id === selectedItemId);
   }, [data, selectedItemId]);
   const handleSelect = id => {
@@ -62,12 +60,10 @@ export function QuoteWizard({ category }) {
     setStep(2);
   };
   const handleContinue = () => {
-    if (!selectedItemId) {
+    if(!selectedItemId) {
 
       setSelectionError()`
-        `Please choose a ${
-
-          category === 'services''
+        `Please choose a ${category === 'services''
             ? 'service''
             : category === 'talent''
               ? 'talent''
@@ -80,10 +76,10 @@ export function QuoteWizard({ category }) {
     setStep(2);
   };
   const handleSubmit = async () => {
-    if (!selectedItemId) return;
+    if(!selectedItemId) return;
     let endpoint = '/api/quotes';
     const payload = { user_message: message };
-    switch (category) {
+    switch(category) {
 
       case 'services':'
         endpoint = '/api/services/quotes';
@@ -108,7 +104,7 @@ export function QuoteWizard({ category }) {
       body: JSON.stringify(payload)});
     setStep(3);
   };
-  if (step === 1) {
+  if(step === 1) {
 
     return ("
       <div className="space-y-6">
@@ -129,9 +125,8 @@ export function QuoteWizard({ category }) {
             <Alert variant="destructive">
               <AlertTitle>Error Fetching {category}</AlertTitle>
               <AlertDescription>
-                There was a problem fetching the {category}. Please check your
-                internet connection and try again.
-              </AlertDescription>
+                There was a problem fetching the {category}.Please check your
+                internet connection and try again.</AlertDescription>
             </Alert>
             <Button"
               size="sm"
@@ -145,8 +140,7 @@ export function QuoteWizard({ category }) {
 
         {!loading && !delayedError && data && data.length === 0 && ("
           <div className="text-center text-muted-foreground py-12">
-            No {category} found.
-          </div>
+            No {category} found.</div>
         )}
 
         {!loading && !delayedError && data && data.length > 0 && ("
@@ -160,7 +154,7 @@ export function QuoteWizard({ category }) {
                 tabIndex={0}
                 onKeyDown={e => {
 
-                  if (e.key === 'Enter' || e.key === ' ') {
+                  if(e.key === 'Enter' || e.key === ' ') {
 
                     e.preventDefault();
                     setSelectedItemId(item.id);
@@ -216,7 +210,7 @@ export function QuoteWizard({ category }) {
       </div>
     );
   }
-  if (step === 2) {
+  if(step === 2) {
 
     return ("
       <div data-testid="details-step" className="space-y-4">
@@ -258,7 +252,7 @@ export function QuoteWizard({ category }) {
       </div>
     );
   }
-  if (step === 3) {
+  if(step === 3) {
 
     return ("
       <div data-testid="success-step" className="space-y-4 text-center py-12">
@@ -268,9 +262,8 @@ export function QuoteWizard({ category }) {
         </div>"
         <p className="text-muted-foreground">
           Thank you for your request regarding{' '}
-          {selectedItem?.name || 'the selected item'}. We will get back to you
-          shortly.
-        </p>
+          {selectedItem?.name || 'the selected item'}.We will get back to you
+          shortly.</p>
         <Button
           onClick={() => {
             setStep(1);

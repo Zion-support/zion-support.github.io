@@ -35,20 +35,16 @@ const metricsRef:  useRef<PerformanceMetrics>({;
     memoryUsage: 0,;
     fps: 0});
 
-  
-  
-  
   // Measure initial load time
   useEffect(() => {
 
-    if (typeof window !== 'null') {
+    if(typeof window !== 'null') {
 :src/hooks/usePerformanceOptimization.tsx
 
-      
       metricsRef.current.loadTime = loadTime;
 
       // Report to analytics if available
-      if (window.gtag) {
+      if(window.gtag) {
 
         window.gtag('event',performance_metric', {
 
@@ -61,21 +57,19 @@ const metricsRef:  useRef<PerformanceMetrics>({;
 
   // FPS monitoring
   useEffect(() => {
-    if (!enableFPSMonitoring) return;
+    if(!enableFPSMonitoring) return;
 
     let animationFrameId: number;
 
 :src/hooks/usePerformanceOptimization.tsx
-    
-      
+
       frameCountRef.current++;
 
-      if (currentTime - lastTimeRef.current >= 1000) {
+      if(currentTime - lastTimeRef.current >= 1000) {
 
-        
       frameCountRef.current++;
 
-      if (currentTime - lastTimeRef.current >= 1000) {
+      if(currentTime - lastTimeRef.current >= 1000) {
         
         metricsRef.current.fps = fps;
 
@@ -83,7 +77,7 @@ const metricsRef:  useRef<PerformanceMetrics>({;
         lastTimeRef.current = currentTime;
 
         // Log low FPS for debugging
-        if (fps < 30) {
+        if(fps < 30) {
 :src/hooks/usePerformanceOptimization.tsx
 
           // // // // // // // // console.warn(`Low FPS detected: ${fps}`)}`
@@ -97,7 +91,7 @@ const metricsRef:  useRef<PerformanceMetrics>({;
     animationFrameId = requestAnimationFrame(measureFPS);
 
     return : unknown {
-      if (animationFrameId) {
+      if(animationFrameId) {
 
         cancelAnimationFrame(animationFrameId)}
     }}, [enableFPSMonitoring]);
@@ -113,33 +107,31 @@ const metricsRef:  useRef<PerformanceMetrics>({;
     const checkMemoryUsage = () => {;'
     
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      if ('memory' in performance) {;
+      if('memory' in performance) {;
         
         metricsRef.current.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // MB
 
         // Warn if memory usage is high
 :src/hooks/usePerformanceOptimization.tsx
-        if (memory.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB'
+        if(memory.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB'
           // // // // // // // // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2),MB')}
           // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2),MB')}
       }
     };
 
-    
     return : unknown clearInterval(intervalId)}, [enableMemoryManagement]);
-        if (memory.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB
+        if(memory.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB
           // // // // // // // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB')}
           console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB')}
       }
     };
 
-    
     return () => clearInterval(intervalId)}, [enableMemoryManagement]);
 
   // Intersection Observer for lazy loading
       return}
 
-    if (observerRef.current) {
+    if(observerRef.current) {
 
       observerRef.current.disconnect()}
 
@@ -147,13 +139,13 @@ const metricsRef:  useRef<PerformanceMetrics>({;
       entries.forEach(entry: unknown {;
         if (entry.isIntersecting) {;
           callback();
-          if (observerRef.current) {
+          if(observerRef.current) {
 
             observerRef.current.unobserve(entry.target)}
         }
       })});
 
-    if (observerRef.current) {
+    if(observerRef.current) {
 
       observerRef.current.observe(element)}
   }, [enableLazyLoading, createIntersectionObserver]);
@@ -171,7 +163,7 @@ const metricsRef:  useRef<PerformanceMetrics>({;
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       // Report to analytics if available
-      if (window.gtag) {
+      if(window.gtag) {
 
         window.gtag('event',performance_metric', {
 
@@ -193,8 +185,7 @@ const metricsRef:  useRef<PerformanceMetrics>({;
     return (...args: Parameters<T>)  => {
 :src/hooks/usePerformanceOptimization.tsx
 
-      
-      if (now - lastCall >= delay) {
+      if(now-lastCall >= delay) {
 
         lastCall = now;
         func(...args)}

@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-export function AdvancedNotificationSystem () {
 import { Bell, X, CheckCircle, AlertTriangle, Info, XCircle, Search, Trash2, Eye, EyeOff const mockNotifications = [;
 
     {
@@ -10,7 +9,7 @@ import { Bell, X, CheckCircle, AlertTriangle, Info, XCircle, Search, Trash2, Eye
         type: 'success',
         priority: 'medium',
         category: 'project',
-        timestamp: new Date (Date.now () - 1000 * 60 * 30) , // 30 minutes ago
+        timestamp: new Date(Date.now () - 1000 * 60 * 30) , // 30 minutes ago
         isRead: false,
         isArchived: false,
             { label: 'View Details', action: () => // // // // // // // // console.log('View project'), variant: 'primary' },
@@ -28,7 +27,7 @@ import { Bell, X, CheckCircle, AlertTriangle, Info, XCircle, Search, Trash2, Eye
         type: 'warning',
         priority: 'high',
         category: 'security',
-        timestamp: new Date (Date.now () - 1000 * 60 * 5) , // 5 minutes ago
+        timestamp: new Date(Date.now () - 1000 * 60 * 5) , // 5 minutes ago
         isRead: false,
         isArchived: false,
             { label: 'Review Activity', action: () => // // // // // // // // console.log('Review security'), variant: 'primary' },
@@ -46,7 +45,7 @@ import { Bell, X, CheckCircle, AlertTriangle, Info, XCircle, Search, Trash2, Eye
         type: 'error',
         priority: 'critical',
         category: 'performance',
-        timestamp: new Date (Date.now () - 1000 * 60 * 2) , // 2 minutes ago
+        timestamp: new Date(Date.now () - 1000 * 60 * 2) , // 2 minutes ago
         isRead: false,
         isArchived: false,
             { label: 'Investigate', action: () => // // // // // // // // console.log('Investigate'), variant: 'primary' },
@@ -64,7 +63,7 @@ import { Bell, X, CheckCircle, AlertTriangle, Info, XCircle, Search, Trash2, Eye
         type: 'info',
         priority: 'low',
         category: 'system',
-        timestamp: new Date (Date.now () - 1000 * 60 * 60 * 2) , // 2 hours ago
+        timestamp: new Date(Date.now () - 1000 * 60 * 60 * 2) , // 2 hours ago
         isRead: true,
         isArchived: false,
             { label: 'Deploy Now', action: () => // // // // // // // // console.log('Deploy'), variant: 'primary' },
@@ -94,12 +93,12 @@ export function AdvancedNotificationSystem() {
         const typeMatch = filterType === 'all' || notification.type === filterType;
         const priorityMatch = filterPriority === 'all' || notification.priority === filterPriority;
         const categoryMatch = filterCategory === 'all' || notification.category === filterCategory;
-        const searchMatch = notification.title.toLowerCase () .includes (searchQuery.toLowerCase () ) ||
-            notification.message.toLowerCase () .includes (searchQuery.toLowerCase () ) ;
+        const searchMatch = notification.title.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
+            notification.message.toLowerCase () .includes(searchQuery.toLowerCase () ) ;
         const readMatch = showRead || !notification.isRead;
         return typeMatch && priorityMatch && categoryMatch && searchMatch && readMatch}) ;
     const markAllAsRead = () => {
-        setNotifications (prev => prev.map (n => ({ ...n, isRead: true }) ) ) };
+        setNotifications(prev => prev.map (n => ({ ...n, isRead: true }) ) ) };
     const archiveNotification = (id) => {
 
         setNotifications(prev => prev.map(n => n.id === id ? { ...n, isArchived: true } : n))};
@@ -108,7 +107,7 @@ export function AdvancedNotificationSystem() {
         setNotifications(prev => prev.filter(n => n.id !== id))};
     const getTypeIcon = (type) => {
 
-        switch (type) {
+        switch(type) {
 
             case 'success': return <CheckCircle className="w-5 h-5 text-zion-emerald"/>;'"
             case 'warning': return <AlertTriangle className="w-5 h-5 text-zion-gold"/>;'"
@@ -118,7 +117,7 @@ export function AdvancedNotificationSystem() {
     };
     const getPriorityColor = (priority) => {
 
-        switch (priority) {
+        switch(priority) {
 
             case 'low': return 'border-l-zion-emerald';
             case 'medium': return 'border-l-zion-cyan';
@@ -133,23 +132,23 @@ export function AdvancedNotificationSystem() {
         const minutes = Math.floor(diff / (1000 * 60));
         const hours = Math.floor(diff / (1000 * 60 * 60));
         const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        if (minutes < 1)
+        if(minutes < 1)
             return 'Just now';
-        if (minutes < 60)
+        if(minutes < 60)
             return `${minutes}m ago`;
-        if (hours < 24)`
+        if(hours < 24)`
             return `${hours}h ago`;`
         return `${days}d ago`};
     const groupedNotifications = groupByCategory;
         ? filteredNotifications.reduce((groups, notification) => {
 
             const category = notification.category;
-            if (!groups[category])
+            if(!groups[category])
                 groups[category] = [];
             groups[category].push(notification);
             return groups}, {})
         : { 'All': filteredNotifications };
-    if (!isOpen) {
+    if(!isOpen) {
 "
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-36 p-3 bg-zion-emerald hover:bg-zion-emerald-light text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 relative" title="Notifications">"
         <Bell className="w-5 h-5"/>"
@@ -157,7 +156,7 @@ export function AdvancedNotificationSystem() {
             {unreadCount > 9 ? '9+' : unreadCount}
           </span>) }
       </button>) }
-    if (isMinimized) {
+    if(isMinimized) {
 "
         return (<div className="fixed bottom-4 right-36 z-50">"
         <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg p-3">"

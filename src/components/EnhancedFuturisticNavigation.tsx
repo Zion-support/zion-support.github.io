@@ -1,245 +1,12 @@
 <<<<<<< HEAD
-import {
-<<<<<<< HEAD
-import { motion, AnimatePresence } from 'framer - motion';
-=======
->>>>>>> main
+import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
+export default function Page() {
+, [location.pathname]) ;
 
-  Menu,
-  X,
-  Search,
-  User,
-  Bell,
-  ChevronDown,
-  Brain,
-  Shield,
-  Cloud,
-  Zap,
-  Globe,
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  Code,
-  Rocket,
-  Users,
-  BarChart3,
-  FileImage,
-  TrendingUp,
-  MessageCircle,
-  Video,
-  FileText,
-  Heart,
-  PanelLeft,
-  ShoppingCart,
-  Settings,
-  HelpCircle,
-  BookOpen,
-  Briefcase,
-  Award,
-  Target,
-  Lightbulb,
-  ShieldCheck,
-  Server,
-  Smartphone,
-  Monitor,
-  Wifi,
-  Bluetooth,
-  Satellite,
-  Atom,
-  Dna,
-  Microscope,
-  Flask,
-  TestTube,
-  Syringe,
-  Stethoscope,
-  HeartPulse,
-  BrainCircuit,
-  Eye,
-  Ear,
-  Hand,
-  Foot,
-  Bone,
-  Tooth,
-  Pill,
-  Bandage,
-  Thermometer,
-  Scale,
-  Calculator,
-  ChartBar,
-  PieChart,
-  LineChart,
-  Activity,
-  TrendingDown,
-  Minus,
-  Plus,
-  Equal,
-  Divide,
-  Percent,
-  DollarSign,
-  Euro,
-  Pound,
-  Yen,
-  Bitcoin,
-  Ethereum,
-  CreditCard,
-  Wallet,
-  Banknote,
-  Coins,
-  PiggyBank,
-  Safe,
-  Vault,
-  LockKeyhole,
-  Key,
-  Fingerprint,
-  QrCode,
-  Barcode,
-  Scan,
-  Camera,
-  VideoOff,
-  Mic,
-  MicOff,
-  Volume2,
-  VolumeX,
-  Play,
-  Pause,
-  Stop,
-  SkipBack,
-  SkipForward,
-  Rewind,
-  FastForward,
-  Shuffle,
-  Repeat,
-  Repeat1,
-  Shuffle2,
-  SkipBack2,
-  SkipForward2,
-  PlayCircle,
-  PauseCircle,
-  StopCircle,
-  SkipBackCircle,
-  SkipForwardCircle,
-  RewindCircle,
-  FastForwardCircle,
-  ShuffleCircle,
-  RepeatCircle,
-  Repeat1Circle,
-  Shuffle2Circle,
-  SkipBack2Circle,
-  SkipForward2Circle,
-  PlaySquare,
-  PauseSquare,
-  StopSquare,
-  SkipBackSquare,
-  SkipForwardSquare,
-  RewindSquare,
-  FastForwardSquare,
-  ShuffleSquare,
-  RepeatSquare,
-  Repeat1Square,
-  Shuffle2Square,
-  SkipBack2Square,
-  SkipForward2Square,
-  PlayTriangle,
-  PauseTriangle,
-  StopTriangle,
-  SkipBackTriangle,
-  SkipForwardTriangle,
-  RewindTriangle,
-  FastForwardTriangle,
-  ShuffleTriangle,
-  RepeatTriangle,
-  Repeat1Triangle,
-  Shuffle2Triangle,
-  SkipBack2Triangle,
-  SkipForward2Triangle,
-  PlayOctagon,
-  PauseOctagon,
-  StopOctagon,
-  SkipBackOctagon,
-  SkipForwardOctagon,
-  RewindOctagon,
-  FastForwardOctagon,
-  ShuffleOctagon,
-  RepeatOctagon,
-  Repeat1Octagon,
-  Shuffle2Octagon,
-  SkipBack2Octagon,
-  SkipForward2Octagon,
-  PlayDodecagon,
-  PauseDodecagon,
-  StopDodecagon,
-  SkipBackDodecagon,
-  SkipForwardDodecagon,
-  RewindDodecagon,
-  FastForwardDodecagon,
-  ShuffleDodecagon,
-  RepeatDodecagon,
-  Repeat1Dodecagon,
-  Shuffle2Dodecagon,
-  SkipBack2Dodecagon,
-  SkipForward2Dodecagon,
-  Home,
-  Info,
-  Phone,
-  Mail,
-  MapPin,
-  Star,
-  Crown,
-  Gem,
-  Sparkles,
-  Flame,
-  Thunder,
-  Lightning,
-  Sun,
-  Moon,
-  Planet,
-  Galaxy,
-  Universe,
-  Infinity,
-  Alpha,
-  Beta,
-  Gamma,
-  Delta,
-  Epsilon,
-  Zeta,
-  Eta,
-  Theta,
-  Iota,
-  Kappa,
-  Lambda,
-  Mu,
-  Nu,
-  Xi,
-  Omicron,
-  Pi,
-  Rho,
-  Sigma,
-  Tau,
-  Upsilon,
-  Phi,
-  Chi,
-  Psi,
-  Omega'
- } from 'lucide-react';
+      window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim () ) }`}};
 
-    
-      setScrolled(window.scrollY > 20)};
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll)}, []);
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown) };
 
-  useEffect ( () => {
-    setMobileMenuOpen (false) ;
-    setActiveDropdown (null) }, [location.pathname]) ;
-
-      window.location.href = `/search?q=${encodeURIComponent (searchQuery.trim () ) }`}};
-
-  
-    setActiveDropdown (activeDropdown === dropdown ? null : dropdown) };
-
-  
         { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator', icon: Brain, description: 'Advanced AI consciousness research platform' },
         { name: 'Quantum Emotion Processor', href: '/ai-services/quantum-emotion', icon: Heart, description: 'Quantum-powered emotional intelligence' },
         { name: 'AI Autonomous Systems', href: '/ai-services/autonomous-systems', icon: Cpu, description: 'Self-managing AI infrastructure' },
@@ -347,12 +114,10 @@ import { motion, AnimatePresence } from 'framer - motion';
       isMain: true};
   ];
 
-  return()
+  return ()
     <>
       {/* Desktop Navigation */}`
-      <nav className={`hidden lg:block fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-
-        scrolled'
+      <nav className={`hidden lg:block fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled'
           ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10''
           : 'bg-transparent'`
       }`}>
@@ -381,23 +146,17 @@ import { motion, AnimatePresence } from 'framer - motion';
                   {item.dropdown ? (
                     <button
                       onClick={() => toggleDropdown(item.name)}`
-                      className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${
-
-                        location.pathname === item.href'
+                      className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${location.pathname === item.href'
                           ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25''
                           : 'text-gray-300 hover:text-white hover:bg-zion-slate-light/30'`
                       }`}
 "
                       {item.icon && <item.icon className="w-4 h-4" />}
                       <span>{item.name}</span>`
-                      <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${
-
-                        activeDropdown === item.name ? 'rotate-180' : ''`
+                      <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${activeDropdown === item.name ? 'rotate-180' : ''`
                       }`}  />
                     </button>;) : (;
-                    <Link to={item.href}`                      className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${
-
-                        location.pathname === item.href'
+                    <Link to={item.href}`                      className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${location.pathname === item.href'
                           ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25''
                           : 'text-gray-300 hover:text-white hover:bg-zion-slate-light/30'`
                       }`}
@@ -489,9 +248,7 @@ import { motion, AnimatePresence } from 'framer - motion';
 
       {/* Mobile Navigation */}"
       <nav className="lg:hidden fixed top-0 left-0 right-0 z-50">;`
-        <div className={`transition-all duration-500 ${
-
-          scrolled'
+        <div className={`transition-all duration-500 ${scrolled'
             ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10''
             : 'bg-transparent'`
         }`}>"
@@ -569,9 +326,7 @@ import { motion, AnimatePresence } from 'framer - motion';
                         <div>
                           <button
                             onClick={() => toggleDropdown(item.name)}`
-                            className={`w-full text-left px-4 py-3 rounded-lg font-medium transition-all duration-300 flex items-center justify-between ${
-
-                              location.pathname === item.href'
+                            className={`w-full text-left px-4 py-3 rounded-lg font-medium transition-all duration-300 flex items-center justify-between ${location.pathname === item.href'
                                 ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white''
                                 : 'text-gray-300 hover:text-white hover:bg-zion-slate-light/30'`
                             }`}
@@ -580,9 +335,7 @@ import { motion, AnimatePresence } from 'framer - motion';
                               {item.icon && <item.icon className="w-4 h-4" />}
                               <span>{item.name}</span>
                             </div>`
-                            <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
-
-                              activeDropdown === item.name ? 'rotate-180' : ''`
+                            <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${activeDropdown === item.name ? 'rotate-180' : ''`
                             }`}  />                          </button>
 
                           {/* Mobile Dropdown */}
@@ -609,7 +362,7 @@ import { motion, AnimatePresence } from 'framer - motion';
                                 transition={{ duration: 0.3 }}"
                                 className="ml-6 mt-2 space-y-1 overflow-hidden"
 
-                                {item.dropdown.map ( (dropdownItem) => (;
+                                {item.dropdown.map((dropdownItem) => (;
                                   <Link
                                     key={dropdownItem.name}
                                     to={dropdownItem.href}"
@@ -622,9 +375,7 @@ import { motion, AnimatePresence } from 'framer - motion';
                         </div>) : (;
                         <Link
                           to={item.href}`
-                          className={`block px-4 py-3 rounded-lg font-medium transition-all duration-300 ${
-
-                            location.pathname === item.href'
+                          className={`block px-4 py-3 rounded-lg font-medium transition-all duration-300 ${location.pathname === item.href'
                               ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white''
                               : 'text-gray-300 hover:text-white hover:bg-zion-slate-light/30'`
                           }`}
@@ -643,9 +394,9 @@ import { motion, AnimatePresence } from 'framer - motion';
                     <div className="text-zion-cyan font-semibold mb-2">Contact Us</div>"
                     <div className="text-sm text-gray-400 space-y-1">
                       <div>+1 302 464 0950</div>
-                      <div role="button" > kleber@ziontechgroup.com</div>
-                      <div role="button" > 364 E Main St STE 1008</div>
-                      <div role="button" > Middletown DE 19709</div>
+                      <div  > kleber@ziontechgroup.com</div>
+                      <div  > 364 E Main St STE 1008</div>
+                      <div  > Middletown DE 19709</div>
                     </div>
                   </div>
                 </div>

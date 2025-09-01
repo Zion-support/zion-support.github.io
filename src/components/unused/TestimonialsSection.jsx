@@ -1,48 +1,7 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { StarIcon } from '@heroicons/react/24/solid';
-export function TestimonialsSection() {
-    const testimonials = [
-        {
-
-            name: "Sarah Johnson","
-            role: "CTO","
-            comp: "TechFlow Solutions","
-            content: "Zion Tech Group transformed our entire infrastructure. Their AI solutions increased our efficiency by 300% and reduced costs significantly.",
-            rating: 5,"
-            avatar: "SJ"
-        },
-        {
-"
-            name: "Michael Chen","
-            role: "VP of Engineering","
-            comp: "InnovateCorp","
-            content: "The team's expertise in cloud migration was exceptional. They completed our transition in half the expected time with zero downtime.",
-            rating: 5,"
-            avatar: "MC"
-        },
-        {
-"
-            name: "Emily Rodriguez","
-            role: "Director of IT","
-            comp: "Global Manufacturing Inc.","
-            content: "Their cybersecurity solutions gave us peace of mind. We're now SOC 2 compliant and have a robust security posture.",
-            rating: 5,"
-            avatar: "ER"
-        },
-        {
-"
-            name: "David Thompson","
-            role: "CEO","
-            comp: "StartupXYZ","
-            content: "Zion Tech Group helped us build a scalable SaaS platform from scratch. Their microservices approach was game-changing.",
-            rating: 5,"
-            avatar: "DT"
-
-    ];
-    const containerVariants = {
-
-        hidden: { opacity: 0 },
+import { motion  } from 'framer-motion';
+export default function Page() {
+,
         visible: {
 
             opacity: 1,
@@ -94,10 +53,6 @@ export function TestimonialsSection() {
 =======
   y: 0 
 
-
-
-
-
 "
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">"
 >>>>>>> main
@@ -105,9 +60,8 @@ export function TestimonialsSection() {
             What Our Clients Say
           </h2>"
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Don't just take our word for it. Here's what industry leaders have to say
-            about their experience working with Zion Tech Group.
-          </p>
+            Don't just take our word for it.Here's what industry leaders have to say
+            about their experience working with Zion Tech Group.</p>
         </motion.div>
 
         {/* Testimonials Grid */}"
@@ -161,10 +115,6 @@ export function TestimonialsSection() {
               <div className="text-3xl font-bold text-zion-cyan mb-2">98%</div>
 =======
   delay: 0.5 
-
-
-
-
 
 "
 }} className="mt-16 text-center">"

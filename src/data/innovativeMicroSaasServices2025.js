@@ -1,5 +1,4 @@
-export const innovativeMicroSaasServices2025 = [
-  {
+export const innovativeMicroSaasServices2025 = [{
 
     id: 1,
     name: 'Quantum AI Fusion Platform',
@@ -28,7 +27,7 @@ export const innovativeMicroSaasServices2025 = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'},
-    marketPrice: '$25,000/month (Industry average: $50,000/month),
+    marketPrice: '$25,000/month(Industry average: $50,000/month),
     competitors: ['
       'IBM Quantum',Google Quantum AI',Microsoft Azure Quantum',Amazon Braket',
     ],
@@ -75,7 +74,7 @@ export const innovativeMicroSaasServices2025 = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'},
-    marketPrice: '$15,000/month (Industry average: $30,000/month),
+    marketPrice: '$15,000/month(Industry average: $30,000/month),
     competitors: ['Intel Loihi',IBM TrueNorth',BrainChip',SynSense'],
     roi: '400% ROI within 8 months',
     setupTime: '3-4 weeks',
@@ -120,7 +119,7 @@ export const innovativeMicroSaasServices2025 = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'},
-    marketPrice: '$8,000/month (Industry average: $15,000/month),
+    marketPrice: '$8,000/month(Industry average: $15,000/month),
     competitors: ['
       'OpenMined',TensorFlow Federated',PySyft',IBM Federated Learning',
     ],
@@ -165,7 +164,7 @@ export const innovativeMicroSaasServices2025 = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'},
-    marketPrice: '$12,000/month (Industry average: $25,000/month),
+    marketPrice: '$12,000/month(Industry average: $25,000/month),
     competitors: ['
       'AWS Greengrass',Azure IoT Edge',Google Cloud IoT',EdgeX Foundry',
     ],
@@ -212,7 +211,7 @@ export const innovativeMicroSaasServices2025 = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'},
-    marketPrice: '$6,000/month (Industry average: $12,000/month),
+    marketPrice: '$6,000/month(Industry average: $12,000/month),
     competitors: ['
       'IBM AI Fairness 360',Google What-If Tool',Microsoft Responsible AI',Accenture AI Ethics',
     ],
@@ -259,7 +258,7 @@ export const innovativeMicroSaasServices2025 = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'},
-    marketPrice: '$18,000/month (Industry average: $35,000/month),
+    marketPrice: '$18,000/month(Industry average: $35,000/month),
     competitors: ['Ocean Protocol',SingularityNET',Fetch.ai',Numerai'],
     roi: '450% ROI within 10 months',
     setupTime: '4-5 weeks',
@@ -304,7 +303,7 @@ export const innovativeMicroSaasServices2025 = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'},
-    marketPrice: '$10,000/month (Industry average: $20,000/month),
+    marketPrice: '$10,000/month(Industry average: $20,000/month),
     competitors: ['
       'NIST PQC',IBM Quantum Safe',Microsoft Post-Quantum',Google Post-Quantum',
     ],
@@ -349,7 +348,7 @@ export const innovativeMicroSaasServices2025 = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'},
-    marketPrice: '$7,000/month (Industry average: $15,000/month),
+    marketPrice: '$7,000/month(Industry average: $15,000/month),
     competitors: ['
       'GitLab',GitHub Actions',Jenkins',CircleCI',Travis CI',
     ],
@@ -396,7 +395,7 @@ export const innovativeMicroSaasServices2025 = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'},
-    marketPrice: '$5,000/month (Industry average: $10,000/month),
+    marketPrice: '$5,000/month(Industry average: $10,000/month),
     competitors: ['Synthetic Data Vault',Mostly AI',Datomize',Hazy'],
     roi: '400% ROI within 4 months',
     setupTime: '1-2 weeks',
@@ -441,7 +440,7 @@ export const innovativeMicroSaasServices2025 = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'},
-    marketPrice: '$9,000/month (Industry average: $18,000/month),
+    marketPrice: '$9,000/month(Industry average: $18,000/month),
     competitors: ['
       'Intercom',Zendesk',HubSpot',Salesforce',Adobe Experience Cloud',
     ],

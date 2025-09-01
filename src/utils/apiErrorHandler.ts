@@ -11,7 +11,7 @@
     description: message});
   // Log error for debugging
 
-  if (process.env.NODE_ENV === 'development') {
+  if(process.env.NODE_ENV === 'development') {
 
     // console.error('API Error:', error)}
 };

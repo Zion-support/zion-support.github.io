@@ -1,30 +1,19 @@
 
-import { useState } from "react";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { LogIn, User, Eye, EyeOff } from "lucide-react";
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { LogIn, User, Eye, EyeOff  } from 'lucide-react';
 
-import { useAuth } from "@/hooks/useAuth";
-import { toast } from "@/hooks/use-toast";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
-import { Alert, AlertDescription } from "@/components/ui/alert";
-import { Link } from "react-router-dom";
+import { useAuth } from '@/hooks/useAuth';
+import { toast } from '@/hooks/use-toast';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage, } from '@/components/ui/form';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import { Link  } from 'react-router-dom';
 
-// Form validation schema
-const loginSchema = z.object({
-  email: z.string().email("Please enter a valid email").min(1, "Email is required"),
-  password: z.string().min(6, "Password must be at least 6 characters"),
-});
+);
 
 type LoginFormValues = z.infer<typeof loginSchema>;
 
@@ -41,13 +30,13 @@ export function LoginForm() {
     },
   });
 
-  const onSubmit = async (data: LoginFormValues) => {
-    if (isSubmitting) return;
+  const onSubmit = async(data: LoginFormValues) => {
+    if(isSubmitting) return;
 
     try {
       setIsSubmitting(true);
       const result = await login(data.email, data.password);
-      if (result.error) {
+      if(result.error) {
         form.setError("root", { message: result.error }); // Keep this for form-level error display
         toast.error(result.error); // Add this line to show a toast notification
       }
@@ -56,8 +45,7 @@ export function LoginForm() {
     }
   };
 
-  return (
-    <Form {...form}>
+  return (<Form {...form}>
       {form.formState.errors.root && (
         <Alert variant="destructive" className="mb-4">
           <AlertDescription>{form.formState.errors.root.message}</AlertDescription>
@@ -66,7 +54,7 @@ export function LoginForm() {
       <form
         onSubmit={form.handleSubmit(onSubmit, (errors) => {
           const firstError = Object.keys(errors)[0] as keyof LoginFormValues;
-          if (firstError) {
+          if(firstError) {
             form.setFocus(firstError);
           }
         })}
@@ -83,7 +71,7 @@ export function LoginForm() {
                 <div className="relative">
                   <Input
                     placeholder="you@example.com"
-                    aria-label="Email address"
+                    
                     aria-invalid={!!form.formState.errors.email}
                     className="bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple"
                     {...field}
@@ -109,7 +97,7 @@ export function LoginForm() {
                   <Input
                     type={showPassword ? "text" : "password"}
                     placeholder="Enter password"
-                    aria-label="Password"
+                    
                     aria-invalid={!!form.formState.errors.password}
                     className="bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple"
                     {...field}

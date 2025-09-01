@@ -1,33 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import {
-
-  Zap,
-  Star,
-  ArrowRight,
-  CheckCircle,
-  TrendingUp,
-  Shield,
-  Code,
-  Users} from 'lucide-react';
-import { getFeaturedMicroSaasServices } from '@/data/microSaasServices';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-export function MicroSaasServicesSection() {
-  const featuredServices = getFeaturedMicroSaasServices().slice(0, 3);
-  const ServiceCard = ({ service }) => (
-    <div className="group relative bg-gradient-to-br from-zion-blue-dark/50 to-zion-slate-dark/50 border border-zion-blue-light/20 rounded-xl p-6 hover:border-zion-purple/50 transition-all duration-500 hover:scale-[1.02] hover:shadow-xl hover:shadow-zion-purple/20">
-      {/* Featured Badge */}"
-      <div className="absolute -top-2 -right-2 bg-gradient-to-r from-zion-purple to-zion-cyan text-white text-xs font-bold px-3 py-1 rounded-full">
-        Featured
-      </div>
-
-      {/* Service Icon */}"
-      <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">"
-        <Zap className="w-8 h-8 text-white" />
-      </div>
-
-      {/* Service Info */}"
+import { Link  } from 'react-router-dom';
+export default function Page() {
+"
       <div className="space-y-3">"
         <h3 className="text-lg font-bold text-white group-hover:text-zion-cyan transition-colors">
           {service.title}
@@ -92,7 +66,7 @@ export function MicroSaasServicesSection() {
   return ("
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark relative overflow-hidden">
       {/* Animated background pattern */}'"
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30" />
+      <div className="absolute inset-0 bg-[url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30" />
 "
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}"
@@ -107,10 +81,8 @@ export function MicroSaasServicesSection() {
             Micro SAAS Solutions
           </h2>"
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
-            Transform your business with our cutting-edge micro SAAS services.
-            From AI-powered automation to enterprise IT solutions, we provide
-            innovative tools that drive growth and efficiency.
-          </p>
+            Transform your business with our cutting-edge micro SAAS services.From AI-powered automation to enterprise IT solutions, we provide
+            innovative tools that drive growth and efficiency.</p>
         </div>
 
         {/* Featured Services Grid */}"
@@ -160,9 +132,8 @@ export function MicroSaasServicesSection() {
             </h3>"
             <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
               Explore our complete range of micro SAAS services and find the
-              perfect solution for your business needs. Our team is ready to
-              help you implement and optimize these tools.
-            </p>"
+              perfect solution for your business needs.Our team is ready to
+              help you implement and optimize these tools.</p>"
             <div className="flex flex-wrap justify-center gap-4">
               <Button
                 asChild"

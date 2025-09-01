@@ -10,9 +10,9 @@ export function FooterNewsletter() {
     setIsSubscribed(true);
     setEmail('');
   };
-  if (isSubscribed) {
+  if(isSubscribed) {
 
-    return()
+    return ()
       <div className="text-green-400 text-sm">Thank you for subscribing!</div>
     );
   }

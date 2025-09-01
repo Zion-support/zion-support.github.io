@@ -1,56 +1,7 @@
 import React from 'react';
-import { Building2, Users, Globe, Shield, Award, ArrowRight, Phone, Mail, Calendar, CheckCircle } from 'lucide-react';
-;
-export const EnterpriseCallToAction = () => {
-  const enterpriseBenefits = ['
-    'Customized solutions tailored to your business needs',Dedicated account manager and support team',Priority response times and escalation procedures',Comprehensive reporting and analytics',Strategic IT consulting and roadmap planning',Compliance and regulatory support',Vendor management and procurement assistance',Training and change management programs'
-  ];
-
-  const contactMethods = [
-    {
-
-      icon: Phone,
-      title: 'Call Us',
-      description: 'Speak directly with our enterprise team',
-      action: '+1 (555) 123-4567',
-      link: 'tel:+15551234567',
-      color: 'blue'
-    },
-    {
-
-      icon: Mail,
-      title: 'Email Us',
-      description: 'Send us your requirements and questions',
-      action: 'enterprise@zion.com',
-      link: 'mailto:enterprise@zion.com',
-      color: 'green'
-    },
-    {
-
-      icon: Calendar,
-      title: 'Schedule Meeting',
-      description: 'Book a consultation with our experts',
-      action: 'Book Consultation',
-      link: '#consultation',
-      color: 'purple'
-
-  ];
-
-  return()
-    <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-slate-900">"
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}"
-        <div className="text-center mb-16">"
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Enterprise Solutions
-          </h2>"
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            For large organizations requiring enterprise-grade IT services, we provide customized solutions,
-            dedicated support teams, and strategic consulting to drive your digital transformation.
-          </p>
-        </div>
-
-        {/* Enterprise Features */}"
+import { Building2, Users, Globe, Shield, Award, ArrowRight, Phone, Mail, Calendar, CheckCircle  } from 'lucide-react';
+export default function Page() {
+"
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           {enterpriseFeatures.map((feature, index) => ("
             <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">"
@@ -105,8 +56,7 @@ export const EnterpriseCallToAction = () => {
           </h3>"
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
             Join hundreds of enterprise organizations that trust Zion with their critical IT operations.'
-            Let's discuss how we can help you achieve your technology goals.
-          </p>
+            Let's discuss how we can help you achieve your technology goals.</p>
 "
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
             <a"
@@ -192,8 +142,7 @@ export const EnterpriseCallToAction = () => {
             </h3>"
             <p className="text-gray-300 mb-6">
               Contact our enterprise team today to discuss your requirements and explore how Zion can help
-              you achieve your technology objectives.
-            </p>"
+              you achieve your technology objectives.</p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
                 href="#enterprise-contact"

@@ -1,73 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChart3, TrendingUp, Zap const ContentQualityAnalyzer = () => {
-<<<<<<< HEAD
-import { motion } from 'framer - motion';
-
-    const [isOpen, setIsOpen] = useState (false) ;
-    const [isAnalyzing, setIsAnalyzing] = useState (false) ;
-    const [contentIssues, setContentIssues] = useState ([]) ;
-    const [report, setReport] = useState (null) ;
-    const [selectedFilter, setSelectedFilter] = useState ('all') ;
-    const [searchTerm, setSearchTerm] = useState ('') ;
-=======
-    const [isOpen, setIsOpen] = useState(false);
-    const [isAnalyzing, setIsAnalyzing] = useState(false);
-    const [contentIssues, setContentIssues] = useState([]);
-    const [report, setReport] = useState(null);
-    const [selectedFilter, setSelectedFilter] = useState('all');
-    const [searchTerm, setSearchTerm] = useState('');
->>>>>>> main
-    // Sample data based on the analysis report
-    const sampleIssues = [
-        {
-
-            id: '1',
-            pageUrl: 'https://ziontechgroup.com/_next/static/chunks/polyfills-42372ed130431b0a.js',
-            pageTitle: 'Missing',
-            issueType: 'missing_title',
-            severity: 'high',
-            description: 'Short or missing title, No headings found, Missing meta description, Meta description too short',
-            recommendation: 'Add proper page title, headings, and meta description for better SEO',
-            status: 'open'
-        },
-        {
-
-            id: '2',
-            pageUrl: 'https://ziontechgroup.com/_next/static/chunks/webpack-e219339f62a4a96e.js',
-            pageTitle: 'Missing',
-            issueType: 'missing_meta',
-            severity: 'high',
-            description: 'Short or missing title, No headings found, Missing meta description, Meta description too short',
-            recommendation: 'Add proper page title, headings, and meta description for better SEO',
-            status: 'open'
-        },
-        {
-
-            id: '3',
-            pageUrl: 'https://ziontechgroup.com/about/',
-            pageTitle: 'About',
-            issueType: 'minimal_content',
-            severity: 'medium',
-            description: 'Suspiciously small HTML content',
-            recommendation: 'Add more meaningful content, headings, and images to improve user experience',
-            status: 'open'
-        },
-        {
-
-            id: '4',
-            pageUrl: 'https://ziontechgroup.com/services/',
-            pageTitle: 'Services',
-            issueType: 'no_headings',
-            severity: 'medium',
-            description: 'No headings found',
-            recommendation: 'Add proper heading structure (H1, H2, H3) for better content organization and SEO',
-            status: 'open'
-
-    ];
-    useEffect ( () => {
-        setContentIssues (sampleIssues) ;
-        generateReport (sampleIssues) }, []) ;
+import { motion  } from 'framer-motion';
+export default function Page() {
+, []) ;
     const generateReport = (issues) => {
 
         const totalPages = 79; // From analysis report
@@ -87,13 +21,13 @@ import { motion } from 'framer - motion';
             pagesWithMetaDescriptions: 32, // Sample data
             lastUpdated: new Date () }) };
     const startAnalysis = async () => {
-        setIsAnalyzing (true) ;
+        setIsAnalyzing(true) ;
         // Simulate content analysis
-        await new Promise (resolve => setTimeout (resolve, 3000) ) ;
-        setIsAnalyzing (false) };
+        await new Promise(resolve => setTimeout (resolve, 3000) ) ;
+        setIsAnalyzing(false) };
     const getSeverityIcon = (severity) => {
 
-        switch (severity) {
+        switch(severity) {
 
             case 'high':
                 return <AlertTriangle className="w-4 h-4 text-red-400"/>;
@@ -106,7 +40,7 @@ import { motion } from 'framer - motion';
     };
     const getSeverityColor = (severity) => {
 
-        switch (severity) {
+        switch(severity) {
 
             case 'high':'
                 return 'text-red-400';
@@ -119,7 +53,7 @@ import { motion } from 'framer - motion';
     };
     const getStatusColor = (status) => {
 
-        switch (status) {
+        switch(status) {
 
             case 'resolved':'
                 return 'text-green-400';
@@ -137,7 +71,7 @@ import { motion } from 'framer - motion';
         return matchesFilter && matchesSearch});
     const getIssueTypeLabel = (type) => {
 
-        switch (type) {
+        switch(type) {
 
             case 'missing_title':'
                 return 'Missing Title';
@@ -174,10 +108,6 @@ import { motion } from 'framer - motion';
 
   { scale: 0.9,
   opacity: 0
-
-
-
-
 
 "
 }} className="bg-gray-900 rounded-2xl shadow-2xl w-full max-w-7xl max-h-[90vh] overflow-hidden" onClick={(e) => e.stopPropagation()}>

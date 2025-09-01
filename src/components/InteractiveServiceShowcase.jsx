@@ -1,26 +1,14 @@
 import React, { useState } from 'react';
 <<<<<<< HEAD
 export default InteractiveServiceShowcase;
-import { motion, AnimatePresence } from 'framer - motion';
+import { motion, AnimatePresence  } from 'framer-motion';
 
-=======
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
->>>>>>> main
-const InteractiveServiceShowcase = () => {
-
-    const [activeCategory, setActiveCategory] = useState('all');
-    const [hoveredService, setHoveredService] = useState(null);
-    const categories = ['
-        { id: 'all', name: 'All Services', icon: '🚀', count: 35 },
-        { id: 'ai', name: 'AI & ML', icon: '🤖', count: 13 },
-        { id: 'quantum', name: 'Quantum', icon: '🔮', count: 5 },
-        { id: 'cloud', name: 'Cloud', icon: '☁️', count: 8 },
+export default function Page() {
+,
         { id: 'security', name: 'Security', icon: '🛡️', count: 6 },
         { id: 'automation', name: 'Automation', icon: '⚡', count: 3 }
     ];
-    const services = [
-        {
+    const services = [{
 
             id: 'ai-strategy',
             title: 'AI Strategy Consulting',
@@ -122,7 +110,7 @@ const InteractiveServiceShowcase = () => {
     ];
     const filteredServices = activeCategory === 'all'
         ? services
-        : services.filter (service => service.category === activeCategory) ;
+        : services.filter(service => service.category === activeCategory) ;
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -165,7 +153,6 @@ const InteractiveServiceShowcase = () => {
                 duration: 0.3,"
                 ease: "easeOut"
 
-
     };"
     return (<section className="py-24 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">;"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -179,11 +166,6 @@ const InteractiveServiceShowcase = () => {
 
   { opacity: 1,
   y: 0
-
-
-
-
-
 
 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>"
           <h2 className="text-5xl md:text-6xl font-black text-white mb-6">
@@ -262,7 +244,7 @@ const InteractiveServiceShowcase = () => {
                             {feature}
                           </div>))}"
                         {service.features.length > 3 && (<div className="text-zion-cyan/60 text-xs">
-                            +{service.features.length - 3} more features
+                            +{service.features.length-3} more features
                           </div>) }
                       </div>
 
@@ -296,11 +278,6 @@ const InteractiveServiceShowcase = () => {
 
   { duration: 0.8,
   delay: 0.2
-
-
-
-
-
 
 }}>"
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-blue/10 backdrop-blur-md p-12 rounded-3xl border border-zion-cyan/20">"

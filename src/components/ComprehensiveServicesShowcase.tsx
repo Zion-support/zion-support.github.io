@@ -1,72 +1,7 @@
 <<<<<<< HEAD
-import {
-<<<<<<< HEAD
-import { EMERGING_TECH_SERVICES_2025 } from "../data / emergingTechServices2025";
-import { EXPANDED_INNOVATIVE_SERVICES_2025 } from "../data / expandedInnovativeServices2025";
-import { motion } from 'framer - motion';
-=======
->>>>>>> main
+import { <<<<<<< HEAD import { EMERGING_TECH_SERVICES_2025 } from '../data/emergingTechServices2025';
 
-  Brain,
-  Cpu,
-  Cloud,
-  Shield,
-  Rocket,
-  Zap,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Users,
-  Target,
-  Award,
-  Globe,
-  Settings,
-  Database,
-  Network,
-  Lock,
-  Eye,
-  TrendingUp,
-  Clock,
-  DollarSign,
-  Phone,
-  Mail,
-  ExternalLink,
-  Search'
-} from 'lucide-react';
-interface Service {
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  subcategory: string;
-  price: number;
-  currency: string;
-  pricingModel: string;
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
-  tags: string[];
-  estimatedDelivery: string;
-  supportLevel: string;
-  marketPrice: string;
-  roi: string;
-  innovationLevel: string;
-contactInfo: {
-
-    phone: string;
-    email: string;
-    website: string
-};
-  technicalSpecs?: {
-
-    technology: string[];
-    integrations: string[];
-    apiEndpoints: number;
-    uptime: string;
-    security: string[]}}
+export default function Page() {
 <<<<<<< HEAD
 const ComprehensiveServicesShowcase: React.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -78,8 +13,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;'
   const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<string>('all');'  const [searchTerm, setSearchTerm] = useState<string>('');
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   // Combine all services
-  const allServices: Service[] = [
-    ...EXPANDED_INNOVATIVE_SERVICES_2025,
+  const allServices: Service[] = [...EXPANDED_INNOVATIVE_SERVICES_2025,
     ...EMERGING_TECH_SERVICES_2025
   ];
   // Get unique categories'
@@ -87,8 +21,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;'
     return cats}, [allServices]) ;
   // Get unique innovation levels
 <<<<<<< HEAD
-  
-    
+
     return levels}, [allServices]);
 =======
   const innovationLevels = useMemo(() => {;'
@@ -137,7 +70,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;'
       case 'Autonomous Vehicles & Fleet Management':"
         return <Rocket className="h-6 w-6"  />;
       default:"
-        return <Star className = "h-6 w-6"  />};
+        return <Star className="h-6 w-6"  />};
 <<<<<<< HEAD
   };
         return 'bg-gradient-to-r from-gray-600 to-slate-600'}
@@ -146,7 +79,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;'
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   };
   return ("
-    <div className = "min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100">
+    <div className="min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100">
       {/* Hero Section */}"
       <section className="relative bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-cyan text-white py-20">"
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">"
@@ -156,8 +89,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;'
             </h1>"
             <p className="text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed">
               Discover our comprehensive portfolio of cutting-edge micro SAAS services,
-              AI solutions, and emerging technology platforms designed to transform your business.
-            </p>"
+              AI solutions, and emerging technology platforms designed to transform your business.</p>"
             <div className="flex flex-wrap justify-center gap-4">
               <Link"
                 to="/contact"
@@ -281,11 +213,6 @@ const ComprehensiveServicesShowcase: React.FC = () => {;'
   { duration: 0.5,
   delay: index * 0.1
 
-
-
-
-
-
 }}"
                 className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
 
@@ -297,7 +224,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;'
                         {getCategoryIcon(service.category)}
                       </div>
                       <div>
-                        <span className={`inline - block px - 3 py - 1 rounded - full text - xs font - medium text - white ${getInnovationLevelColor (service.innovationLevel) }`}>
+                        <span className={`inline - block px-3 py-1 rounded-full text-xs font - medium text-white ${getInnovationLevelColor(service.innovationLevel) }`}>
                           {service.innovationLevel}
                         </span>
                       </div>
@@ -348,7 +275,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;'
                       ))}
                       {service.features.length > 5 && ("
                         <div className="text-sm text-zion-cyan font-medium">
-                          +{service.features.length - 5} more features
+                          +{service.features.length-5} more features
                         </div>) }
                     </div>
                   </div>
@@ -401,7 +328,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;'
                 onClick={() => {;
                   setSelectedCategory('all');
                   setSelectedInnovationLevel('all');
-                  setSearchTerm('')}}"                className = "text-zion-cyan hover:text-zion-cyan-light font-medium"
+                  setSearchTerm('')}}"                className="text-zion-cyan hover:text-zion-cyan-light font-medium"
               >
                 Clear all filters
               </button>
@@ -415,9 +342,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;'
             Ready to Transform Your Business?
           </h2>"
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-            Our innovative technology solutions are designed to give you a competitive edge.
-            Contact us today to discuss how we can help you achieve your goals.
-          </p>"
+            Our innovative technology solutions are designed to give you a competitive edge.Contact us today to discuss how we can help you achieve your goals.</p>"
           <div className="flex flex-wrap justify-center gap-4">
             <Link"
               to="/contact"

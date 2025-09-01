@@ -1,9 +1,9 @@
 
 <<<<<<< HEAD
-  return twMerge (clsx (inputs) ) ;
+  return twMerge(clsx (inputs) ) ;
 }
 =======
-export function cn(...args: any[]): any {
+export default function cn() {
 
   return twMerge(clsx(inputs))}
 >>>>>>> main

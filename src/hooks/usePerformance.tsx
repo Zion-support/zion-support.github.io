@@ -56,52 +56,45 @@ export function usePerformance(options: PerformanceOptions = {}) {
       // // // // // // // // console.warn('PerformanceObserver not supported');
       return;
 
-    // First Contentful Paint (FCP)
-    
-      
-      if (fcpEntry) {
+    // First Contentful Paint(FCP)
+
+      if(fcpEntry) {
 
         setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }))});
-    // Largest Contentful Paint (LCP)
-    
-      
-      if (lcpEntry) {
+    // Largest Contentful Paint(LCP)
+
+      if(lcpEntry) {
 
         setMetrics(prev => ({ ...prev, lcp: lcpEntry.startTime }))});
-    // First Input Delay (FID)
-    
-      
-      if (fidEntry && 'processingStart' in fidEntry) {
+    // First Input Delay(FID)
+
+      if(fidEntry && 'processingStart' in fidEntry) {
 
         setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }))});
-    // Cumulative Layout Shift (CLS)
+    // Cumulative Layout Shift(CLS)
     
-      for (const entry of list.getEntries()) {
+      for(const entry of list.getEntries()) {
 
-        
       // // // // // // // console.warn('PerformanceObserver not supported');
       return;
 
-    // First Contentful Paint (FCP)
-    
-      
-      if (fcpEntry) {
+    // First Contentful Paint(FCP)
+
+      if(fcpEntry) {
         setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }))});
-    // Largest Contentful Paint (LCP)
-    
-      
-      if (lcpEntry) {
+    // Largest Contentful Paint(LCP)
+
+      if(lcpEntry) {
         setMetrics(prev => ({ ...prev, lcp: lcpEntry.startTime }))});
-    // First Input Delay (FID)
-    
-      
-      if (fidEntry && 'processingStart' in fidEntry) {
+    // First Input Delay(FID)
+
+      if(fidEntry && 'processingStart' in fidEntry) {
         setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }))});
-    // Cumulative Layout Shift (CLS)
+    // Cumulative Layout Shift(CLS)
     
-      for (const entry of list.getEntries()) {
+      for(const entry of list.getEntries()) {
         
-        if (!layoutShiftEntry.hadRecentInput) {
+        if(!layoutShiftEntry.hadRecentInput) {
 
           clsValue += layoutShiftEntry.value;
 
@@ -126,30 +119,23 @@ export function usePerformance(options: PerformanceOptions = {}) {
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });'
       fidObserver.observe({ entryTypes: ['first-input'] });'
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      clsObserver.observe({ entryTypes: ['layout-shift'] })} catch (error) {
+      clsObserver.observe({ entryTypes: ['layout-shift'] })} catch(error) {
 
       // // // // // // // // console.warn('Error setting up performance observers:', error)}
       fcpObserver.observe({ entryTypes: ['paint'] });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
       fidObserver.observe({ entryTypes: ['first-input'] });
-      clsObserver.observe({ entryTypes: ['layout-shift'] })} catch (error) {
+      clsObserver.observe({ entryTypes: ['layout-shift'] })} catch(error) {
       // // // // // // // console.warn('Error setting up performance observers:', error)}
     // Navigation timing metrics
-  
-  
+
   // Get navigation timing metrics
 :src/hooks/usePerformance.tsx
-  
-    
-    if (navigationEntry) {
 
-      
-      
-      
-    if (navigationEntry) {
-      
-      
-      
+    if(navigationEntry) {
+
+    if(navigationEntry) {
+
       setMetrics(prev => ({
 
         ...prev,
@@ -170,33 +156,29 @@ export function usePerformance(options: PerformanceOptions = {}) {
 :src/hooks/usePerformance.tsx
 '
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      longTaskObserver.observe({ entryTypes: ['longtask'] })} catch (error) {
+      longTaskObserver.observe({ entryTypes: ['longtask'] })} catch(error) {
 
       // // // // // // // // console.warn('Error setting up long task observer:', error)}
     return : unknown longTaskObserver.disconnect();
-      if (logToConsole) {
+      if(logToConsole) {
 
         // console.log('Navigation Timing:', { ttfb, domLoad, windowLoad })}
-      longTaskObserver.observe({ entryTypes: ['longtask'] })} catch (error) {
+      longTaskObserver.observe({ entryTypes: ['longtask'] })} catch(error) {
       // // // // // // // console.warn('Error setting up long task observer:', error)}
     return () => longTaskObserver.disconnect();
-      if (logToConsole) {
+      if(logToConsole) {
         console.log('Navigation Timing:', { ttfb, domLoad, windowLoad })}
     }
   }, [enableNavigationTiming, logToConsole]);
 
   // Get resource timing metrics
 :src/hooks/usePerformance.tsx
-  
-    
-    
-    if (slowResources.length > 0 && logToConsole) {
+
+    if(slowResources.length > 0 && logToConsole) {
 
       // console.warn('Slow resources detected:', slowResources)}
-  
-    
-    
-    if (slowResources.length > 0 && logToConsole) {
+
+    if(slowResources.length > 0 && logToConsole) {
       console.warn('Slow resources detected:', slowResources)}
 
     return resources}, [enableResourceTiming, logToConsole]);
@@ -208,28 +190,26 @@ export function usePerformance(options: PerformanceOptions = {}) {
     try {
       observerRef.current = new PerformanceObserver((list) => {
 
-        
     // First Contentful Paint
     try {
       observerRef.current = new PerformanceObserver((list) => {
         
         entries.forEach((entry) => {
 
-          if (entry.name === 'first-contentful-paint') {
+          if(entry.name === 'first-contentful-paint') {
 :src/hooks/usePerformance.tsx
 
-            
             setMetrics(prev => ({ ...prev, fcp }));
-            if (logToConsole) // console.log('FCP:', fcp)}
+            if(logToConsole) // console.log('FCP:', fcp)}
         })});
-      observerRef.current.observe({ entryTypes: ['paint'] })} catch (e) {
+      observerRef.current.observe({ entryTypes: ['paint'] })} catch(e) {
 
       // console.warn('FCP monitoring not supported')}
             
             setMetrics(prev => ({ ...prev, fcp }));
-            if (logToConsole) console.log('FCP:', fcp)}
+            if(logToConsole) console.log('FCP:', fcp)}
         })});
-      observerRef.current.observe({ entryTypes: ['paint'] })} catch (e) {
+      observerRef.current.observe({ entryTypes: ['paint'] })} catch(e) {
       console.warn('FCP monitoring not supported')}
 
     // Largest Contentful Paint
@@ -237,25 +217,21 @@ export function usePerformance(options: PerformanceOptions = {}) {
       lcpObserverRef.current = new PerformanceObserver((list) => {
 :src/hooks/usePerformance.tsx
 
-        
-        
-        if (lastEntry) {
+        if(lastEntry) {
 
-          
           setMetrics(prev => ({ ...prev, lcp }));
-          if (logToConsole) // console.log('LCP:', lcp)}
+          if(logToConsole) // console.log('LCP:', lcp)}
       });
-      lcpObserverRef.current.observe({ entryTypes: ['largest-contentful-paint'] })} catch (e) {
+      lcpObserverRef.current.observe({ entryTypes: ['largest-contentful-paint'] })} catch(e) {
 
       // console.warn('LCP monitoring not supported')}
-        
-        
-        if (lastEntry) {
+
+        if(lastEntry) {
           
           setMetrics(prev => ({ ...prev, lcp }));
-          if (logToConsole) console.log('LCP:', lcp)}
+          if(logToConsole) console.log('LCP:', lcp)}
       });
-      lcpObserverRef.current.observe({ entryTypes: ['largest-contentful-paint'] })} catch (e) {
+      lcpObserverRef.current.observe({ entryTypes: ['largest-contentful-paint'] })} catch(e) {
       console.warn('LCP monitoring not supported')}
 
     // Cumulative Layout Shift
@@ -263,16 +239,16 @@ export function usePerformance(options: PerformanceOptions = {}) {
       clsObserverRef.current = new PerformanceObserver((list) => {
 
         let clsValue = 0;
-        for (const entry of list.getEntries()) {
+        for(const entry of list.getEntries()) {
 
-          if (!entry.hadRecentInput) {
+          if(!entry.hadRecentInput) {
 :src/hooks/usePerformance.tsx
 
             clsValue += (entry as any).value}
         }
         setMetrics(prev => ({ ...prev, cls: clsValue }));
-        if (logToConsole) // console.log('CLS:', clsValue)});
-      clsObserverRef.current.observe({ entryTypes: ['layout-shift'] })} catch (e) {
+        if(logToConsole) // console.log('CLS:', clsValue)});
+      clsObserverRef.current.observe({ entryTypes: ['layout-shift'] })} catch(e) {
 
       // console.warn('CLS monitoring not supported')}
   }, [enableWebVitals, logToConsole]);
@@ -282,12 +258,11 @@ export function usePerformance(options: PerformanceOptions = {}) {
     let firstInputTime: number | null = null;
     let firstInputDelay: number | null = null;
 
-    
             clsValue += (entry as any).value}
         }
         setMetrics(prev => ({ ...prev, cls: clsValue }));
-        if (logToConsole) console.log('CLS:', clsValue)});
-      clsObserverRef.current.observe({ entryTypes: ['layout-shift'] })} catch (e) {
+        if(logToConsole) console.log('CLS:', clsValue)});
+      clsObserverRef.current.observe({ entryTypes: ['layout-shift'] })} catch(e) {
       console.warn('CLS monitoring not supported')}
   }, [enableWebVitals, logToConsole]);
 
@@ -296,12 +271,11 @@ export function usePerformance(options: PerformanceOptions = {}) {
     let firstInputTime: number | null = null;
     let firstInputDelay: number | null = null;
 
-    
       firstInputTime = performance.now();
       firstInputDelay = firstInputTime - (performance.timeOrigin || 0);
 
       setMetrics(prev => ({ ...prev, fid: firstInputDelay }));
-      if (logToConsole) // console.log('FID:', firstInputDelay);
+      if(logToConsole) // console.log('FID:', firstInputDelay);
 
 :src/hooks/usePerformance.tsx
       // Remove listeners after first input'
@@ -344,7 +318,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
     
     // Get initial metrics after page load'
 >>>>>>> main
-    if (document.readyState === 'complete') {
+    if(document.readyState === 'complete') {
 
       getNavigationTiming();
 :src/hooks/usePerformance.tsx
@@ -360,7 +334,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
         getResourceTiming()})}
 
     // Monitor DOM content loaded'
-    if (document.readyState === 'loading') {
+    if(document.readyState === 'loading') {
 <<<<<<< HEAD
 
 =======
@@ -386,7 +360,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
   // Stop monitoring
   
 >>>>>>> main
-    if (observerRef.current) {
+    if(observerRef.current) {
 
       observerRef.current.disconnect();
 <<<<<<< HEAD
@@ -397,7 +371,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
       observerRef.current = null}
     
 >>>>>>> main
-    if (lcpObserverRef.current) {
+    if(lcpObserverRef.current) {
 
       lcpObserverRef.current.disconnect();
 <<<<<<< HEAD
@@ -408,7 +382,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
       lcpObserverRef.current = null}
     
 >>>>>>> main
-    if (clsObserverRef.current) {
+    if(clsObserverRef.current) {
 
       clsObserverRef.current.disconnect();
       clsObserverRef.current = null}
@@ -423,11 +397,11 @@ export function usePerformance(options: PerformanceOptions = {}) {
 :src/hooks/usePerformance.tsx
   
 >>>>>>> main
-    // FCP scoring (0-100)
-    if (metrics.fcp !== null) {
+    // FCP scoring(0-100)
+    if(metrics.fcp !== null) {
 
-      if (metrics.fcp < 1800) score -= 0;
-      else if (metrics.fcp < 3000) score -= 10;
+      if(metrics.fcp < 1800) score -= 0;
+      else if(metrics.fcp < 3000) score -= 10;
 <<<<<<< HEAD
       else score -= 25;
     }
@@ -436,11 +410,11 @@ export function usePerformance(options: PerformanceOptions = {}) {
       else score -= 25}
     
 >>>>>>> main
-    // LCP scoring (0-100)
-    if (metrics.lcp !== null) {
+    // LCP scoring(0-100)
+    if(metrics.lcp !== null) {
 
-      if (metrics.lcp < 2500) score -= 0;
-      else if (metrics.lcp < 4000) score -= 10;
+      if(metrics.lcp < 2500) score -= 0;
+      else if(metrics.lcp < 4000) score -= 10;
 <<<<<<< HEAD
       else score -= 25;
     }
@@ -449,11 +423,11 @@ export function usePerformance(options: PerformanceOptions = {}) {
       else score -= 25}
     
 >>>>>>> main
-    // FID scoring (0-100)
-    if (metrics.fid !== null) {
+    // FID scoring(0-100)
+    if(metrics.fid !== null) {
 
-      if (metrics.fid < 100) score -= 0;
-      else if (metrics.fid < 300) score -= 10;
+      if(metrics.fid < 100) score -= 0;
+      else if(metrics.fid < 300) score -= 10;
 <<<<<<< HEAD
       else score -= 25;
     }
@@ -462,11 +436,11 @@ export function usePerformance(options: PerformanceOptions = {}) {
       else score -= 25}
     
 >>>>>>> main
-    // CLS scoring (0-100)
-    if (metrics.cls !== null) {
+    // CLS scoring(0-100)
+    if(metrics.cls !== null) {
 
-      if (metrics.cls < 0.1) score -= 0;
-      else if (metrics.cls < 0.25) score -= 10;
+      if(metrics.cls < 0.1) score -= 0;
+      else if(metrics.cls < 0.25) score -= 10;
 <<<<<<< HEAD
       else score -= 25;
     }
@@ -481,18 +455,14 @@ export function usePerformance(options: PerformanceOptions = {}) {
 
   // Send metrics to analytics
 :src/hooks/usePerformance.tsx
-  
-    
-    
+
     // Example: Send to Google Analytics
-    if (window.gtag) {
+    if(window.gtag) {
 
       window.gtag('event',performance_metrics', analyticsData)}
-  
-    
-    
+
     // Example: Send to Google Analytics
-    if (window.gtag) {
+    if(window.gtag) {
       window.gtag('event', 'performance_metrics', analyticsData)}
 
     // Example: Send to custom endpoint'
@@ -549,8 +519,7 @@ export function useRenderTime(...args: unknown[]): unknown {
   
   const [renderTime, setRenderTime] = useState<typeof 0>(0);
   useEffect(: unknown {
-    
-    
+
       // // // // // // // console.warn(`Error observing ${eventName}:`, error)}
     return () => observer.disconnect()}, [eventName, callback]);
 
@@ -559,8 +528,7 @@ export function useRenderTime() {
   
   const [renderTime, setRenderTime] = useState(0);
   useEffect(() => {
-    
-    
+
     setRenderTime(time);
     renderStart.current = renderEnd});
   return renderTime}
@@ -577,12 +545,11 @@ export function useComponentPerformance(componentName: string) {
     setMountTime(startTime.current);
 
     return : unknown {
-      
-      
+
       setRenderTime(totalTime);
       
       // Log slow components
-      if (totalTime > 16) { // 16ms = 60fps threshold`
+      if(totalTime > 16) { // 16ms = 60fps threshold`
         // console.warn(`Slow component render: ${componentName} took ${totalTime.toFixed(2)}ms`)}
     }}, [componentName]);
   
@@ -591,12 +558,11 @@ export function useComponentPerformance(componentName: string) {
     setMountTime(startTime.current);
 
     return () => {
-      
-      
+
       setRenderTime(totalTime);
 
       // Log slow components
-      if (totalTime > 16) { // 16ms = 60fps threshold
+      if(totalTime > 16) { // 16ms = 60fps threshold
         console.warn(`Slow component render: ${componentName} took ${totalTime.toFixed(2)}ms`)}
     }}, [componentName]);
 
@@ -607,17 +573,16 @@ export function useAPIPerformance(...args: unknown[]): unknown {
   const [apiMetrics, setApiMetrics] = useState<Map<string, number[]>>(new Map());
 
 :src/hooks/usePerformance.tsx
-  
-      
+
       newMap.set(endpoint, [...existing, duration]);
       return newMap})}, []);
 
 :src/hooks/usePerformance.tsx
   
-    if (!metrics || metrics.length === 0) return 0;
+    if(!metrics || metrics.length === 0) return 0;
     return metrics.reduce(sum: unknown, time: unknown sum + time, 0) / metrics.length}, [apiMetrics]);
   
-    if (!metrics || metrics.length === 0) return 0;
+    if(!metrics || metrics.length === 0) return 0;
     return metrics.reduce((sum, time) => sum + time, 0) / metrics.length}, [apiMetrics]);
 
   const getSlowAPIs = useCallback((threshold: number = 1000) => {
@@ -626,14 +591,13 @@ export function useAPIPerformance(...args: unknown[]): unknown {
     apiMetrics.forEach((times, endpoint) => {
 :src/hooks/usePerformance.tsx
 
-      
-      if (average > threshold) {
+      if(average > threshold) {
 
         slowAPIs.push({ endpoint, average })}
     });
     return slowAPIs.sort(a: unknown, b: unknown b.average - a.average)}, [apiMetrics]);
       
-      if (average > threshold) {
+      if(average > threshold) {
         slowAPIs.push({ endpoint, average })}
     });
     return slowAPIs.sort((a, b) => b.average - a.average)}, [apiMetrics]);

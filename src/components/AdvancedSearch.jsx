@@ -22,17 +22,17 @@ export function AdvancedSearch() {
     const [showSuggestions, setShowSuggestions] = useState(false);
     const searchRef = useRef(null);
     const categories = ['AI & ML',DevOps',Mobile',Web3',Data Science',Security',Frontend',Backend'];
-    useEffect ( () => {
+    useEffect(() => {
         const handleClickOutside = (event) => {
 
-            if (searchRef.current && !searchRef.current.contains(event.target)) {
+            if(searchRef.current && !searchRef.current.contains(event.target)) {
 
                 setShowSuggestions(false)}
         };
         document.addEventListener('mousedown', handleClickOutside);
         return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
     useEffect(() => {
-        if (query.trim()) {
+        if(query.trim()) {
 
             const filtered = mockSuggestions;
                 .filter(suggestion => suggestion.text.toLowerCase().includes(query.toLowerCase()) ||
@@ -58,10 +58,10 @@ export function AdvancedSearch() {
             ? prev.filter(f => f !== category)
             [...prev, category])};
     const clearFilters = () => {
-        setSelectedFilters ([]) };
+        setSelectedFilters([]) };
     const getSuggestionIcon = (type) => {
 
-        switch (type) {
+        switch(type) {
 
             case 'service': return <Star className="w-4 h-4 text-zion-cyan"/>;'"
             case 'technology': return <Sparkles className="w-4 h-4 text-zion-purple"/>;'"
@@ -71,7 +71,7 @@ export function AdvancedSearch() {
     };
     const getSuggestionColor = (type) => {
 
-        switch (type) {
+        switch(type) {
 
             case 'service': return 'bg-zion-cyan/10 border-zion-cyan/20';
             case 'technology': return 'bg-zion-purple/10 border-zion-purple/20';

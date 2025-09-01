@@ -2,7 +2,6 @@
 interface AppHeaderProps {
   // Add your props here
 
-
   onSidebarToggle?: : unknown void;
   isSidebarOpen?: boolean;
 export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
@@ -24,9 +23,9 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)}, []);
 
-  const handleSearch = async (e: React.FormEvent) => {
+  const handleSearch = async(e: React.FormEvent) => {
 
-    e.preventDefault();    if (searchQuery.trim()) {
+    e.preventDefault();    if(searchQuery.trim()) {
 
       setIsSearching(true);
       try {
@@ -37,11 +36,9 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
     }
   };
 
-  
   // Organized Services Categories
 <<<<<<< HEAD
-  const servicesCategories = [
-    {
+  const servicesCategories = [{
       title: 'AI & Machine Learning',
       icon: Brain,
       color: 'from-purple-500 to-cyan-500',
@@ -143,8 +140,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
       title: 'Cloud & Infrastructure',
       icon: Cloud,
       color: 'from-blue-500 to-cyan-500',
-      services: [
-        {
+      services: [{
           name: 'Cloud & DevOps',
           href: '/services/cloud-devops',
           icon: Cloud,
@@ -185,8 +181,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
       title: 'Security & Compliance',
       icon: Shield,
       color: 'from-red-500 to-orange-500',
-      services: [
-        {
+      services: [{
           name: 'AI Cybersecurity Suite',
           href: '/services/ai-cybersecurity-suite',
           icon: Shield,
@@ -220,8 +215,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
       title: 'Emerging Technologies',
       icon: Atom,
       color: 'from-indigo-500 to-purple-500',
-      services: [
-        {
+      services: [{
           name: 'Quantum Computing',
           href: '/services/quantum-computing',
           icon: Atom,
@@ -255,8 +249,7 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
       title: 'Micro SaaS Solutions',
       icon: ShoppingCart,
       color: 'from-orange-500 to-red-500',
-      services: [
-        {
+      services: [{
           name: 'Micro SaaS Products',
           href: '/services/micro-saas',
           icon: ShoppingCart,
@@ -288,38 +281,29 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
     }
   ];
 =======
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      // Close other dropdowns'      if (nav.name === 'Services') {
+
+      // Close other dropdowns'      if(nav.name === 'Services') {
 >>>>>>> main
 
         setServicesDropdownOpen(true);
         setSolutionsDropdownOpen(false);
         setCompanyDropdownOpen(false);
-        setResourcesDropdownOpen(false)} else if (nav.name === 'Solutions') {
+        setResourcesDropdownOpen(false)} else if(nav.name === 'Solutions') {
 
         setSolutionsDropdownOpen(true);
         setServicesDropdownOpen(false);
         setCompanyDropdownOpen(false);
-        setResourcesDropdownOpen(false)} else if (nav.name === 'Pricing') {
+        setResourcesDropdownOpen(false)} else if(nav.name === 'Pricing') {
         // Use the same dropdown state as solutions for pricing
         setSolutionsDropdownOpen(true);
         setServicesDropdownOpen(false);
         setCompanyDropdownOpen(false);
-        setResourcesDropdownOpen(false)} else if (nav.name === 'Company') {
+        setResourcesDropdownOpen(false)} else if(nav.name === 'Company') {
 
         setCompanyDropdownOpen(true);
         setServicesDropdownOpen(false);
         setSolutionsDropdownOpen(false);
-        setResourcesDropdownOpen(false)} else if (nav.name === 'Resources') {
+        setResourcesDropdownOpen(false)} else if(nav.name === 'Resources') {
         setResourcesDropdownOpen(true);
         setServicesDropdownOpen(false);
         setSolutionsDropdownOpen(false);
@@ -339,10 +323,9 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
     setResourcesDropdownOpen(false);
     setActiveNav(null)};
 
-  return()
+  return ()
     <>`
-      <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-<<<<<<< HEAD
+      <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${<<<<<<< HEAD
         scrolled
           ? 'bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20 shadow-2xl shadow-cyan-400/10'
           : 'bg-slate-900/80 backdrop-blur-md border-b border-slate-700/20'
@@ -388,15 +371,15 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
                       <button
                         onClick={() => {
 
-                          if (item.name === 'Services') {
+                          if(item.name === 'Services') {
 
                             setServicesDropdownOpen(!servicesDropdownOpen);
                             setSolutionsDropdownOpen(false);
-                            setResourcesDropdownOpen(false)} else if (item.name === 'Solutions') {
+                            setResourcesDropdownOpen(false)} else if(item.name === 'Solutions') {
 
                             setSolutionsDropdownOpen(!solutionsDropdownOpen);
                             setServicesDropdownOpen(false);
-                            setResourcesDropdownOpen(false)} else if (item.name === 'Resources') {
+                            setResourcesDropdownOpen(false)} else if(item.name === 'Resources') {
 
                             setResourcesDropdownOpen(!resourcesDropdownOpen);
                             setServicesDropdownOpen(false);
@@ -731,15 +714,14 @@ export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
                   <div>
                     <button
                       onClick={() => {
-                        if (activeDropdown === item.name) {
+                        if(activeDropdown === item.name) {
                           setActiveDropdown(null)} else {
                           setActiveDropdown(item.name)}
                       }}
                       className="w-full text-left flex items-center justify-between px-3 py-2 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800 rounded-md"
                     >
                       {item.name}
-                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                        activeDropdown === item.name ? 'rotate-180' : ''
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item.name ? 'rotate-180' : ''
                       }`}  />
                     </button>
                     {activeDropdown === item.name && (

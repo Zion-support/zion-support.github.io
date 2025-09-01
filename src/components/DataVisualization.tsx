@@ -1,47 +1,7 @@
 <<<<<<< HEAD
-import {
-<<<<<<< HEAD
-import { motion, AnimatePresence } from 'framer - motion';
-=======
->>>>>>> main
+import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
 
-  BarChart3,
-  PieChart,
-  TrendingUp,
-  Activity,
-  Users,
-  DollarSign,
-  Calendar,
-  Target,
-  ArrowUp,
-  ArrowDown,
-  Minus,
-  Eye,
-  Download,
-  Share2,
-  RefreshCw'
- } from 'lucide-react';
-
-interface ChartData {
-  labels: string[];
-datasets: {
-
-    label: string;
-    data: number[];
-    backgroundColor: string[];
-    borderColor: string[];
-    borderWidth: number
-}[]}
-
-interface MetricCard {
-  title: string;
-  value: string | number;
-  change: number;
-  changeType: 'increase' | 'decrease' | 'neutral';
-  icon: React.ReactNode;
-  color: string
-}
-
+export default function Page() {
 interface DataVisualizationProps extends React.PropsWithChildren<{}> {
 
   title?: string;
@@ -76,18 +36,17 @@ title:  "Data Analytics Dashboard",;
     }]
   }) ;
 
-  const [metrics, setMetrics] = useState<any> ([
-    {
+  const [metrics, setMetrics] = useState<any> ([{
 
       title: 'Total Revenue',
       value: '$2.4M',
       change: 12.5,
       changeType: 'increase',"
 <<<<<<< HEAD
-      icon: <DollarSign className = "w-5 h-5"  />,
+      icon: <DollarSign className="w-5 h-5"  />,
       color: 'text-green-400'
 =======
-      icon: <DollarSign className = "w-5 h-5"  />,'      color: 'text-green-400'
+      icon: <DollarSign className="w-5 h-5"  />,'      color: 'text-green-400'
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     },
     {
@@ -128,15 +87,15 @@ title:  "Data Analytics Dashboard",;
 
   // Simulate data refresh
   
-    setIsLoading (true) ;    // Simulate API call
-    await new Promise (resolve => setTimeout (resolve, 1000) ) ;
+    setIsLoading(true) ;    // Simulate API call
+    await new Promise(resolve => setTimeout (resolve, 1000) ) ;
 
     // Update chart data with new random values
-setChartData (prev:  > ({;
+setChartData(prev:  > ({;
       ...prev,;
       datasets: [{;
         ...prev.datasets[0],;
-        data: prev.datasets[0].data.map ( () => Math.floor (Math.random () * 100) + 20) }]}) ) ;
+        data: prev.datasets[0].data.map ( () => Math.floor(Math.random () * 100) + 20) }]}) ) ;
     // Update metrics with new random values
     setMetrics(prev => prev.map(metric => ({
 
@@ -148,7 +107,7 @@ setChartData (prev:  > ({;
                  Math.random() > 0.3 ? 'decrease' : 'neutral'
     })));
 
-    setIsLoading (false) };
+    setIsLoading(false) };
 
   // Get change icon and color'
   labels: ['AI Services',Cloud Solutions',Security',Consulting',Development'],

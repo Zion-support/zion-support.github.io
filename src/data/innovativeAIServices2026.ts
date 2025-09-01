@@ -44,8 +44,7 @@ const zionContact: ServiceContact = {
 };
 
 // Innovative AI Services 2026
-export const innovativeAIServices2026: AIService2026[] = [
-  {
+export const innovativeAIServices2026: AIService2026[] = [{
     id: 1,
     name: "AI-Powered Autonomous Business Operations Platform",
     category: "Business Process Automation",
@@ -64,8 +63,7 @@ export const innovativeAIServices2026: AIService2026[] = [
       "Performance optimization",
       "Intelligent routing"
     ],
-    benefits: [
-      "80% reduction in manual processes",
+    benefits: ["80% reduction in manual processes",
       "60% improvement in operational efficiency",
       "24/7 autonomous operation",
       "Real-time optimization",
@@ -85,15 +83,13 @@ export const innovativeAIServices2026: AIService2026[] = [
     innovationLevel: "Revolutionary",
     marketSize: "$42.8 billion",
     growthRate: "45.2% annually",
-    useCases: [
-      "Process automation",
+    useCases: ["Process automation",
       "Decision making",
       "Workflow optimization",
       "Performance monitoring",
       "Resource allocation"
     ],
-    technologies: [
-      "Machine Learning",
+    technologies: ["Machine Learning",
       "Deep Learning",
       "Reinforcement Learning",
       "Natural Language Processing",
@@ -110,8 +106,7 @@ export const innovativeAIServices2026: AIService2026[] = [
     price: 2499,
     pricingModel: "monthly per user",
     userLimit: "Up to 25 users",
-    features: [
-      "Brain signal processing",
+    features: ["Brain signal processing",
       "Neural pattern recognition",
       "Real-time communication",
       "Medical diagnostics",
@@ -120,8 +115,7 @@ export const innovativeAIServices2026: AIService2026[] = [
       "Safety protocols",
       "Performance analytics"
     ],
-    benefits: [
-      "Revolutionary communication methods",
+    benefits: ["Revolutionary communication methods",
       "Enhanced accessibility",
       "Medical breakthroughs",
       "Research acceleration",
@@ -141,15 +135,13 @@ export const innovativeAIServices2026: AIService2026[] = [
     innovationLevel: "Revolutionary",
     marketSize: "$3.2 billion",
     growthRate: "78.9% annually",
-    useCases: [
-      "Medical diagnostics",
+    useCases: ["Medical diagnostics",
       "Accessibility assistance",
       "Research applications",
       "Human augmentation",
       "Communication enhancement"
     ],
-    technologies: [
-      "Neural signal processing",
+    technologies: ["Neural signal processing",
       "Machine Learning",
       "Real-time processing",
       "Medical imaging",
@@ -166,8 +158,7 @@ export const innovativeAIServices2026: AIService2026[] = [
     price: 1999,
     pricingModel: "monthly per organization",
     userLimit: "Up to 100 researchers",
-    features: [
-      "Quantum ML algorithms",
+    features: ["Quantum ML algorithms",
       "Hybrid quantum-classical processing",
       "Drug discovery optimization",
       "Materials science modeling",
@@ -176,8 +167,7 @@ export const innovativeAIServices2026: AIService2026[] = [
       "Performance analytics",
       "Quantum error correction"
     ],
-    benefits: [
-      "1000x faster computation",
+    benefits: ["1000x faster computation",
       "Breakthrough discoveries",
       "Competitive advantage",
       "Innovation acceleration",
@@ -197,15 +187,13 @@ export const innovativeAIServices2026: AIService2026[] = [
     innovationLevel: "Revolutionary",
     marketSize: "$12.4 billion",
     growthRate: "58.7% annually",
-    useCases: [
-      "Drug discovery",
+    useCases: ["Drug discovery",
       "Materials optimization",
       "Financial modeling",
       "Climate modeling",
       "Scientific research"
     ],
-    technologies: [
-      "Quantum computing",
+    technologies: ["Quantum computing",
       "Machine Learning",
       "Quantum algorithms",
       "Hybrid computing",
@@ -222,8 +210,7 @@ export const innovativeAIServices2026: AIService2026[] = [
     price: 1799,
     pricingModel: "monthly per organization",
     userLimit: "Up to 50 researchers",
-    features: [
-      "AI gene design",
+    features: ["AI gene design",
       "Biological simulation",
       "CRISPR optimization",
       "Protein engineering",
@@ -232,8 +219,7 @@ export const innovativeAIServices2026: AIService2026[] = [
       "Regulatory compliance",
       "Research collaboration"
     ],
-    benefits: [
-      "90% faster research cycles",
+    benefits: ["90% faster research cycles",
       "Improved accuracy",
       "Enhanced safety",
       "Cost optimization",
@@ -253,15 +239,13 @@ export const innovativeAIServices2026: AIService2026[] = [
     innovationLevel: "Revolutionary",
     marketSize: "$15.8 billion",
     growthRate: "52.3% annually",
-    useCases: [
-      "Drug development",
+    useCases: ["Drug development",
       "Agricultural improvement",
       "Industrial biotechnology",
       "Medical research",
       "Environmental solutions"
     ],
-    technologies: [
-      "Machine Learning",
+    technologies: ["Machine Learning",
       "Computational biology",
       "Gene editing tools",
       "Simulation software",
@@ -278,8 +262,7 @@ export const innovativeAIServices2026: AIService2026[] = [
     price: 1599,
     pricingModel: "monthly per organization",
     userLimit: "Up to 75 space professionals",
-    features: [
-      "Satellite optimization",
+    features: ["Satellite optimization",
       "Mission planning",
       "Space debris tracking",
       "Astronomical data analysis",
@@ -288,8 +271,7 @@ export const innovativeAIServices2026: AIService2026[] = [
       "Performance analytics",
       "Real-time monitoring"
     ],
-    benefits: [
-      "Optimized mission success",
+    benefits: ["Optimized mission success",
       "Reduced launch costs",
       "Enhanced satellite lifespan",
       "Improved space safety",
@@ -309,15 +291,13 @@ export const innovativeAIServices2026: AIService2026[] = [
     innovationLevel: "Advanced",
     marketSize: "$8.9 billion",
     growthRate: "42.8% annually",
-    useCases: [
-      "Satellite operations",
+    useCases: ["Satellite operations",
       "Mission planning",
       "Space research",
       "Launch optimization",
       "Safety monitoring"
     ],
-    technologies: [
-      "Machine Learning",
+    technologies: ["Machine Learning",
       "Real-time processing",
       "Predictive analytics",
       "IoT sensors",
@@ -334,8 +314,7 @@ export const innovativeAIServices2026: AIService2026[] = [
     price: 399,
     pricingModel: "monthly per organization",
     userLimit: "Up to 100 environmental professionals",
-    features: [
-      "Climate pattern analysis",
+    features: ["Climate pattern analysis",
       "Environmental monitoring",
       "Predictive modeling",
       "Sustainability metrics",
@@ -344,8 +323,7 @@ export const innovativeAIServices2026: AIService2026[] = [
       "Reporting automation",
       "Real-time alerts"
     ],
-    benefits: [
-      "Accurate climate predictions",
+    benefits: ["Accurate climate predictions",
       "Improved sustainability",
       "Risk mitigation",
       "Cost optimization",
@@ -365,15 +343,13 @@ export const innovativeAIServices2026: AIService2026[] = [
     innovationLevel: "Advanced",
     marketSize: "$18.7 billion",
     growthRate: "38.9% annually",
-    useCases: [
-      "Climate monitoring",
+    useCases: ["Climate monitoring",
       "Environmental assessment",
       "Sustainability planning",
       "Risk management",
       "Policy development"
     ],
-    technologies: [
-      "Machine Learning",
+    technologies: ["Machine Learning",
       "Predictive Analytics",
       "IoT sensors",
       "Satellite imagery",
@@ -390,8 +366,7 @@ export const innovativeAIServices2026: AIService2026[] = [
     price: 899,
     pricingModel: "monthly per vehicle",
     userLimit: "Up to 1000 vehicles",
-    features: [
-      "Autonomous navigation",
+    features: ["Autonomous navigation",
       "Traffic optimization",
       "Fleet management",
       "Safety monitoring",
@@ -400,8 +375,7 @@ export const innovativeAIServices2026: AIService2026[] = [
       "Real-time tracking",
       "Predictive maintenance"
     ],
-    benefits: [
-      "Improved safety",
+    benefits: ["Improved safety",
       "Traffic optimization",
       "Cost reduction",
       "Enhanced efficiency",
@@ -421,15 +395,13 @@ export const innovativeAIServices2026: AIService2026[] = [
     innovationLevel: "Advanced",
     marketSize: "$54.2 billion",
     growthRate: "48.7% annually",
-    useCases: [
-      "Autonomous driving",
+    useCases: ["Autonomous driving",
       "Traffic management",
       "Fleet optimization",
       "Safety monitoring",
       "Logistics optimization"
     ],
-    technologies: [
-      "Computer Vision",
+    technologies: ["Computer Vision",
       "Machine Learning",
       "Sensor fusion",
       "Real-time processing",
@@ -446,8 +418,7 @@ export const innovativeAIServices2026: AIService2026[] = [
     price: 699,
     pricingModel: "monthly per asset",
     userLimit: "Up to 1000 users per asset",
-    features: [
-      "3D asset modeling",
+    features: ["3D asset modeling",
       "Real-time simulation",
       "Virtual reality integration",
       "Augmented reality",
@@ -456,8 +427,7 @@ export const innovativeAIServices2026: AIService2026[] = [
       "Scenario testing",
       "Analytics dashboard"
     ],
-    benefits: [
-      "Enhanced collaboration",
+    benefits: ["Enhanced collaboration",
       "Improved decision making",
       "Cost optimization",
       "Risk mitigation",
@@ -477,15 +447,13 @@ export const innovativeAIServices2026: AIService2026[] = [
     innovationLevel: "Advanced",
     marketSize: "$28.9 billion",
     growthRate: "52.4% annually",
-    useCases: [
-      "Virtual collaboration",
+    useCases: ["Virtual collaboration",
       "Training and simulation",
       "Product design",
       "Remote work",
       "Entertainment"
     ],
-    technologies: [
-      "3D modeling",
+    technologies: ["3D modeling",
       "Virtual Reality",
       "Augmented Reality",
       "Real-time rendering",
@@ -502,8 +470,7 @@ export const innovativeAIServices2026: AIService2026[] = [
     price: 299,
     pricingModel: "monthly per user",
     userLimit: "Up to 100 blockchain developers",
-    features: [
-      "AI DeFi optimization",
+    features: ["AI DeFi optimization",
       "Smart contract analysis",
       "NFT management",
       "Blockchain analytics",
@@ -512,8 +479,7 @@ export const innovativeAIServices2026: AIService2026[] = [
       "Compliance tracking",
       "Real-time insights"
     ],
-    benefits: [
-      "Optimized DeFi returns",
+    benefits: ["Optimized DeFi returns",
       "Enhanced security",
       "Better performance",
       "Cost optimization",
@@ -533,15 +499,13 @@ export const innovativeAIServices2026: AIService2026[] = [
     innovationLevel: "Advanced",
     marketSize: "$19.8 billion",
     growthRate: "67.3% annually",
-    useCases: [
-      "DeFi optimization",
+    useCases: ["DeFi optimization",
       "NFT management",
       "Smart contract analysis",
       "Security monitoring",
       "Compliance tracking"
     ],
-    technologies: [
-      "Blockchain",
+    technologies: ["Blockchain",
       "Machine Learning",
       "Smart contracts",
       "Cryptography",
@@ -558,8 +522,7 @@ export const innovativeAIServices2026: AIService2026[] = [
     price: 899,
     pricingModel: "monthly per organization",
     userLimit: "Unlimited security professionals",
-    features: [
-      "AI threat detection",
+    features: ["AI threat detection",
       "Automated response",
       "Behavioral analysis",
       "Threat intelligence",
@@ -568,8 +531,7 @@ export const innovativeAIServices2026: AIService2026[] = [
       "Security automation",
       "24/7 monitoring"
     ],
-    benefits: [
-      "99.9% threat detection",
+    benefits: ["99.9% threat detection",
       "90% faster response",
       "Reduced security costs",
       "Improved compliance",
@@ -589,15 +551,13 @@ export const innovativeAIServices2026: AIService2026[] = [
     innovationLevel: "Advanced",
     marketSize: "$45.2 billion",
     growthRate: "38.9% annually",
-    useCases: [
-      "Threat detection",
+    useCases: ["Threat detection",
       "Incident response",
       "Vulnerability management",
       "Compliance monitoring",
       "Security automation"
     ],
-    technologies: [
-      "Machine Learning",
+    technologies: ["Machine Learning",
       "Behavioral analytics",
       "Threat intelligence",
       "Automation",

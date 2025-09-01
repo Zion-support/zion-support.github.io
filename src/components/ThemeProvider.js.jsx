@@ -1,8 +1,7 @@
 "use client";"
 import * as React from "react";
-export const ThemeProvider ({ children }) {
+export const ThemeProvider({ children }) {
 export const useTheme = () => {
-
 
 "use client";
 const initialState = {
@@ -26,7 +25,7 @@ export const ThemeProvider({ children }) {
     </ThemeContext.Provider>)}
 export const useTheme = () => {
     const context = useContext(ThemeProviderContext);
-    if (context === null)"
+    if(context === null)"
         throw new Error("useTheme must be used within a ThemeProvider");
     return context};
 "

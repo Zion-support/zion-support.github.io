@@ -1,13 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { Home, Search, ArrowRight, AlertTriangle } from 'lucide-react';
-const NotFound = () => {
-    const popularPages = ['
-        { path: '/', label: 'Home', description: 'Main landing page' },
-        { path: '/services', label: 'Services', description: 'All our services' },
-        { path: '/about', label: 'About Us', description: 'Learn about Zion Tech Group' },
-        { path: '/contact', label: 'Contact', description: 'Get in touch with us' },
+import { Link  } from 'react-router-dom';
+export default function Page() {
+,
         { path: '/blog', label: 'Blog', description: 'Latest insights and news' },
         { path: '/careers', label: 'Careers', description: 'Join our team' }
     ];
@@ -54,9 +48,7 @@ const NotFound = () => {
           Page Not Found
         </h2>"
         <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-          The page you're looking for doesn't exist or has been moved. 
-          Let us help you find what you need.
-        </p>
+          The page you're looking for doesn't exist or has been moved.Let us help you find what you need.</p>
 
         {/* Search Section */}"
         <motion.div className="mb-12" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}>"

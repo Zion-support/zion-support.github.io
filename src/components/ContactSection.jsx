@@ -1,27 +1,13 @@
 import React from 'react';
 <<<<<<< HEAD
-import { Mail, Phone, MapPin, Clock, MessageSquare, ArrowRight, Globe, Shield, Users export function ContactSection () {
-
-=======
-import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Clock, MessageSquare, ArrowRight, Globe, Shield, Users export function ContactSection() {
->>>>>>> main
-    const contactMethods = [
-        {
-
-            icon: <Mail className="w-6 h-6"/>,"
-            title: "Email Us","
-            description: "Get in touch via email for general inquiries","
-            contact: "hello@ziontechgroup.com","
-            link: "mailto:hello@ziontechgroup.com","
-            color: "from-zion-cyan to-zion-blue"
-        },
+import { Mail, Phone, MapPin, Clock, MessageSquare, ArrowRight, Globe, Shield, Users export function ContactSection () { ======= import { Link  } from 'react-router-dom';
+,
         {
 "
             icon: <Phone className="w-6 h-6"/>,"
             title: "Call Us","
             description: "Speak directly with our team","
-            contact: "+1 (302) 464-0950","
+            contact: "+1(302) 464-0950","
             link: "tel:+13024640950","
             color: "from-zion-purple to-zion-cyan"
         },
@@ -35,8 +21,7 @@ import { Mail, Phone, MapPin, Clock, MessageSquare, ArrowRight, Globe, Shield, U
             color: "from-zion-blue to-zion-purple"
 
     ];
-    const officeLocations = [
-        {
+    const officeLocations = [{
 "
             city: "Wilmington, DE","
             country: "United States","
@@ -58,8 +43,7 @@ import { Mail, Phone, MapPin, Clock, MessageSquare, ArrowRight, Globe, Shield, U
             icon: <MapPin className="w-5 h-5"/>
 
     ];
-    const supportFeatures = [
-        {
+    const supportFeatures = [{
 "
             icon: <Clock className="w-6 h-6"/>,"
             title: "24/7 Support","
@@ -93,8 +77,7 @@ import { Mail, Phone, MapPin, Clock, MessageSquare, ArrowRight, Globe, Shield, U
           </h2>"
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
             Ready to transform your business with cutting-edge technology?'
-            Let's discuss how Zion Tech Group can help you achieve your goals.
-          </p>
+            Let's discuss how Zion Tech Group can help you achieve your goals.</p>
         </div>
 "
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
@@ -187,8 +170,7 @@ import { Mail, Phone, MapPin, Clock, MessageSquare, ArrowRight, Globe, Shield, U
           <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>"
           <p className="text-zion-slate-light mb-8 max-w-2xl mx-auto">
             Contact us today to discuss your technology needs and discover how
-            Zion Tech Group can help transform your business.
-          </p>"
+            Zion Tech Group can help transform your business.</p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             <Link to="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-lg font-semibold hover:shadow-neon-lg hover:scale-105 transition-all duration-300 transform">
               Contact Us Now"

@@ -2,14 +2,14 @@ import React, { memo, useEffect, useState } from 'react';
 <<<<<<< HEAD
 export default PerformanceOptimizedHero;
 
-const HeroStats = memo ( ({ stats }) => (<div className="grid grid - cols - 1 md:grid - cols - 4 gap - 8 max - w-6xl mx - auto">
-    {stats.map ( (stat, index) => (<div key={index} className="text - center animate - fade - in - up group" style={{ animationDelay: `${index * 0.2}s` }} role="region" aria - label={`${stat.label} statistics`}>
-        <div className="relative mb - 4">
-          <div className="text - 5xl mb - 2 group - hover:scale - 110 transition - transform duration - 300" role="img" aria - label={stat.label}>
+const HeroStats = memo(({ stats }) => (<div className="grid grid - cols - 1 md:grid - cols - 4 gap-8 max - w-6xl mx -auto">
+    {stats.map((stat, index) => (<div key={index} className="text-center animate - fade - in -up group" style={{ animationDelay: `${index * 0.2}s` }} role="region" aria-label={`${stat.label} statistics`}>
+        <div className="relative mb-4">
+          <div className="text-5xl mb-2 group - hover:scale - 110 transition - transform duration -300" role="img" aria-label={stat.label}>
 =======
-import { Link } from 'react-router-dom';
-const HeroStats = memo(({ stats }) => (<div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto">"
-    {stats.map((stat, index) => (<div key={index} className="text-center animate-fade-in-up group" style={{ animationDelay: `${index * 0.2}s` }} role="region" aria-label={`${stat.label} statistics`}>"
+import { Link  } from 'react-router-dom';
+export default function Page() {
+} role="region" aria-label={`${stat.label} statistics`}>"
         <div className="relative mb-4">"
           <div className="text-5xl mb-2 group-hover:scale-110 transition-transform duration-300" role="img" aria-label={stat.label}>
 >>>>>>> main
@@ -38,7 +38,7 @@ const PerformanceOptimizedHero = memo(() => {
         { number: "24/7", label: "IT Support", icon: "🔧", color: "from-purple-400 to-pink-400" },"
         { number: "Global", label: "Service Coverage", icon: "🌍", color: "from-green-400 to-teal-400" }
     ];
-    if (!isVisible) {
+    if(!isVisible) {
 "
         return (<section className="relative py-20 px-4 overflow-hidden min-h-[600px] flex items-center justify-center">"
         <div className="text-center">"
@@ -46,7 +46,7 @@ const PerformanceOptimizedHero = memo(() => {
           <p className="text-cyan-400 text-lg font-medium">Loading Zion Tech Group...</p>
         </div>
       </section>)}"
-    return (<section className="relative py-20 px-4 overflow-hidden" role="banner" aria-label="Zion Tech Group Hero Section">
+    return (<section className="relative py-20 px-4 overflow-hidden" role="banner" >
       {/* Optimized Background Elements */}"
       <div className="absolute inset-0 futuristic-bg">"
         <div className="absolute top-0 left-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse animate-quantum-float" aria-hidden="true"></div>"
@@ -81,14 +81,13 @@ const PerformanceOptimizedHero = memo(() => {
 "
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
             Discover cutting-edge AI services, Micro SAAS solutions, and comprehensive IT services
-            designed to propel your business into the future.
-          </p>
+            designed to propel your business into the future.</p>
 "
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">"
-            <Link to="/services" className="quantum-button text-lg px-8 py-4 inline-block" aria-label="Explore our services">
+            <Link to="/services" className="quantum-button text-lg px-8 py-4 inline-block" >
               Explore Services
             </Link>"
-            <Link to="/contact" className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 neon-border animate-neon-border-glow inline-block" aria-label="Get free consultation">
+            <Link to="/contact" className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 neon-border animate-neon-border-glow inline-block" >
               Get Free Consultation
             </Link>
           </div>

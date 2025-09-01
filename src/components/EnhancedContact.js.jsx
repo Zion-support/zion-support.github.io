@@ -1,52 +1,7 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/Textarea';
-import {
-
-  Mail,
-  Phone,
-  MapPin,
-  Clock,
-  Send,
-  CheckCircle,
-  Building,
-  Users,
-  Globe} from 'lucide-react';
-export const EnhancedContact = () => {
-  const [formData, setFormData] = useState({
-
-    name: '',
-    email: '',
-    comp: '',
-    phone: '',
-    service: '',
-    message: ''});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const contactMethods = [
-    {
-
-      icon: Mail,
-      title: 'Email Us',
-      description: 'Send us a detailed message',
-      action: 'kleber@ziontechgroup.com',
-      href: 'mailto:kleber@ziontechgroup.com'},
-    {
-
-      icon: Phone,
-      title: 'Call Us',
-      description: 'Speak with our team directly',
-      action: '+1 302 464 0950',
-      href: 'tel:+13024640950'},
-    {
-
-      icon: MapPin,
-      title: 'Visit Us',
-      description: 'Our office location',
-      action: '364 E Main St STE 1008, Middletown DE 19709',
-      href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709'},
+import { motion  } from 'framer-motion';
+export default function Page() {
+,
     {
 
       icon: Clock,
@@ -126,9 +81,9 @@ export const EnhancedContact = () => {
         message: ''});
     }, 3000);
   };
-  if (isSubmitted) {
+  if(isSubmitted) {
 
-    return()
+    return ()
       <motion.div"
         className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white flex items-center justify-center"
         initial={{ opacity: 0, scale: 0.9 }}
@@ -139,9 +94,8 @@ export const EnhancedContact = () => {
           <CheckCircle className="h-24 w-24 text-green-400 mx-auto mb-6" />"
           <h1 className="text-3xl font-bold text-white mb-4">Thank You!</h1>"
           <p className="text-xl text-gray-300 mb-6">
-            Your message has been sent successfully. We'll get back to you
-            within 24 hours.
-          </p>
+            Your message has been sent successfully.We'll get back to you
+            within 24 hours.</p>
           <Button
             onClick={() => setIsSubmitted(false)}"
             className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700"
@@ -177,8 +131,7 @@ export const EnhancedContact = () => {
             variants={itemVariants}
           >
             Ready to transform your business? Let's discuss how our technology
-            solutions can drive your success.
-          </motion.p>
+            solutions can drive your success.</motion.p>
         </motion.div>
       </section>
 
@@ -407,8 +360,7 @@ export const EnhancedContact = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Leading technology solutions provider helping businesses innovate
               and grow through cutting-edge AI, cloud services, and digital
-              transformation.
-            </p>
+              transformation.</p>
           </motion.div>
 
           <motion.div"

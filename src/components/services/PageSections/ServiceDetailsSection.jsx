@@ -11,7 +11,7 @@ import { Check, Clock, Users, Shield, Star, ArrowRight, ChevronDown, ChevronUp e
 
   const getComplexityColor = (complexity) => {
 
-    switch (complexity.toLowerCase()) {
+    switch(complexity.toLowerCase()) {
 
       case 'low':'
         return 'text-green-600 bg-green-100';
@@ -23,7 +23,7 @@ import { Check, Clock, Users, Shield, Star, ArrowRight, ChevronDown, ChevronUp e
         return 'text-gray-600 bg-gray-100'}
   };
 
-  return()
+  return ()
     <section className="py-20 bg-white">"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}"
@@ -33,8 +33,7 @@ import { Check, Clock, Users, Shield, Star, ArrowRight, ChevronDown, ChevronUp e
           </h2>"
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Get detailed information about our IT services, including features, requirements,
-            timelines, and estimated costs.
-          </p>
+            timelines, and estimated costs.</p>
         </div>
 
         {/* Services Grid */}"
@@ -175,8 +174,7 @@ import { Check, Clock, Users, Shield, Star, ArrowRight, ChevronDown, ChevronUp e
               Need a Custom Solution?
             </h3>"
             <p className="text-blue-100 mb-6">
-              Our team can tailor  service to meet your specific business requirements.
-            </p>"
+              Our team can tailor  service to meet your specific business requirements.</p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
                 href="#contact"

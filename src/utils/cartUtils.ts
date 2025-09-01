@@ -10,7 +10,7 @@ export const calculateCartTotal = (items: CartItem[]): number => {
   return items.reduce((total, item) => total + item.price * item.quantity, 0)};
 
 export 
-  if (existingItem) {
+  if(existingItem) {
 
     return cart.map(cartItem =>
       cartItem.id === item.id
@@ -19,7 +19,6 @@ export
     )}
 
   return [...cart, item]};
-
 
 export 
 };
@@ -41,7 +40,6 @@ export
 export 
   newItems.forEach(newItem => {
 
-    
     if (existingIndex >= 0 && merged[existingIndex]) {
 
       merged[existingIndex].quantity += newItem.quantity} else {

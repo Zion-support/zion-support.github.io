@@ -1,35 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-export function AdvancedAnalytics() {
-    const [analyticsData, setAnalyticsData] = useState({
-
-        visitors: 0,
-        conversions: 0,
-        revenue: 0,
-        bounceRate: 0,
-        avgSessionDuration: 0,
-        topPages[],;
-        trafficSources[],;
-        deviceTypes[];
-    });
-    const [timeRange, setTimeRange] = useState('7d');
-    const [isLoading, setIsLoading] = useState(true);
-    useEffect(() => {
-        // Simulate API call
-        const fetchData = async () => {
-            setIsLoading(true);
-            await new Promise(resolve => setTimeout(resolve, 1500));
-            setAnalyticsData({
-
-                visitors: Math.floor(Math.random() * 10000) + 5000,
-                conversions: Math.floor(Math.random() * 500) + 100,
-                revenue: Math.floor(Math.random() * 50000) + 10000,
-                bounceRate: Math.random() * 30 + 20,
-                avgSessionDuration: Math.floor(Math.random() * 300) + 120,
-                topPages[;
-                    { page: '/', views: Math.floor(Math.random() * 5000) + 2000 },
-                    { page: '/services', views: Math.floor(Math.random() * 3000) + 1500 },
-                    { page: '/contact', views: Math.floor(Math.random() * 2000) + 1000 },
+import { motion  } from 'framer-motion';
+export default function Page() {
+,
                     { page: '/about', views: Math.floor(Math.random() * 1500) + 800 },
                     { page: '/pricing', views: Math.floor(Math.random() * 1000) + 500 }
                 ],;
@@ -45,13 +17,13 @@ export function AdvancedAnalytics() {
                     { device: 'Tablet', percentage: 5 }
                 ]
             }) ;
-            setIsLoading (false) };
+            setIsLoading(false) };
         fetchData () }, [timeRange]) ;
     const formatNumber = (num) => {
 
-        if (num >= 1000000)
+        if(num >= 1000000)
             return (num / 1000000).toFixed(1) + 'M';
-        if (num >= 1000)
+        if(num >= 1000)
             return (num / 1000).toFixed(1) + 'K';
         return num.toString()};
     const formatCurrency = (num) => {
@@ -60,8 +32,8 @@ export function AdvancedAnalytics() {
 
             style: 'currency',
             currency: 'USD'
-        }) .format (num) };
-    if (isLoading) {
+        }) .format(num) };
+    if(isLoading) {
 
         return (<div className="flex items-center justify-center h-64">"
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan"></div>

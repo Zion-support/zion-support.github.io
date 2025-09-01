@@ -1,12 +1,11 @@
 import React from 'react';
 export function TestimonialsSection() {
-    const testimonials = [
-        {
+    const testimonials = [{
 
             name: 'Sarah Johnson',
             role: 'CTO',
             comp: 'TechCorp Inc.',
-            content: 'Zion Tech Group transformed our entire IT infrastructure. Their AI solutions helped us reduce operational costs by 40% while improving efficiency.',
+            content: 'Zion Tech Group transformed our entire IT infrastructure.Their AI solutions helped us reduce operational costs by 40% while improving efficiency.',
             rating: 5,
             avatar: '👩‍💼'
         },
@@ -15,7 +14,7 @@ export function TestimonialsSection() {
             name: 'Michael Chen',
             role: 'VP of Engineering',
             comp: 'InnovateLabs',
-            content: 'The cybersecurity implementation was seamless and comprehensive. We feel much more secure knowing our systems are protected by Zion Tech Group.',
+            content: 'The cybersecurity implementation was seamless and comprehensive.We feel much more secure knowing our systems are protected by Zion Tech Group.',
             rating: 5,
             avatar: '👨‍💻'
         },
@@ -24,7 +23,7 @@ export function TestimonialsSection() {
             name: 'Emily Rodriguez',
             role: 'Operations Director',
             comp: 'Global Solutions',
-            content: 'Their cloud migration expertise saved us months of planning and implementation time. The results exceeded our expectations.',
+            content: 'Their cloud migration expertise saved us months of planning and implementation time.The results exceeded our expectations.',
             rating: 5,
             avatar: '👩‍🔬'
 

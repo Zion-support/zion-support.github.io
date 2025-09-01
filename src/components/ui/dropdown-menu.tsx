@@ -15,9 +15,9 @@ const DropdownMenu({ children }) {
 }
 export function DropdownMenuTrigger({ children, asChild = false }) {;
     const context = useContext(DropdownMenuContext);
-    if (!context)
+    if(!context)
         throw new Error('DropdownMenuTrigger must be used within DropdownMenu');
-    if (asChild) {
+    if(asChild) {
       </div>)}
     return (<div onClick={() => context.setIsOpen(!context.isOpen)}>
       {children}
@@ -33,8 +33,8 @@ export function DropdownMenuContent(...args[]):  {;
 }
 export function DropdownMenuContent({ children, align = 'start', className = '' }) {;
     const context = useContext(DropdownMenuContext);
-    if (!context)
+    if(!context)
         throw new Error('DropdownMenuContent must be used within DropdownMenu');
-    if (!context.isOpen)
+    if(!context.isOpen)
         return null;
     const alignClasses = {

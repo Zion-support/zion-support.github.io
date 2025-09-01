@@ -1,13 +1,9 @@
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";"
-import { AspectRatio } from "@/components/ui/aspect-ratio";"
-import { Badge } from "@/components/ui/badge";"
-import { Star import { cn } from "@/lib/utils";
-export function ProfileHero({ name, title, avatarUrl, coverImageUrl, location, rating, reviewCount, aiScore, profileType }) {
-"
-    return (<div className="w-full overflow-hidden">"
-      <div className="relative">"
-        <AspectRatio ratio={3 / 1} className="bg-zion-blue-light">"
-          {coverImageUrl ? (<img loading="lazy" src={coverImageUrl} alt={`${name} cover`} className="w-full h-full object-cover"/>) : (<div className="w-full h-full bg-gradient-to-r from-zion-blue via-zion-blue-light to-zion-blue-dark"/>)}
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';"
+import { AspectRatio } from '@/components/ui/aspect-ratio';"
+import { Badge } from '@/components/ui/badge';"
+import { Star import { cn } from '@/lib/utils';
+export default function Page() {
+ cover`} className="w-full h-full object-cover"/>) : (<div className="w-full h-full bg-gradient-to-r from-zion-blue via-zion-blue-light to-zion-blue-dark"/>)}
         </AspectRatio>
 "
         <div className="container px-4 md:px-6">"

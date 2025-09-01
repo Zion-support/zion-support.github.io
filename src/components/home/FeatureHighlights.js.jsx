@@ -1,17 +1,7 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Brain, Globe, Shield, Users, TrendingUp, CheckCircle, ArrowRight, Star, Award } from 'lucide-react';
-const highlights = [
-    {
-
-        icon: Brain,
-        title: 'AI-Powered Intelligence',
-        description: 'Advanced machine learning algorithms that continuously learn and adapt to provide smarter solutions.',
-        features['Predictive Analytics',Smart Recommendations',Automated Workflows'],;
-        color: 'from-zion-purple to-zion-purple-dark',
-        bgColor: 'bg-zion-purple/10',
-        borderColor: 'border-zion-purple/20'
-    },
+import { motion  } from 'framer-motion';
+import { Brain, Globe, Shield, Users, TrendingUp, CheckCircle, ArrowRight, Star, Award  } from 'lucide-react';
+,
     {
 
         icon: Globe,

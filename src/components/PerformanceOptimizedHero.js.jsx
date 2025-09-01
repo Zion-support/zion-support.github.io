@@ -1,12 +1,7 @@
 import React, { memo, useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-const HeroStats = memo(({ stats }) => (
-  <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
-    {stats.map((stat, index) => (
-      <div
-        key={index}"
-        className="text-center animate-fade-in-up group"
-        style={{ animationDelay: `${index * 0.2}s` }}"
+import { Link  } from 'react-router-dom';
+export default function Page() {
+}"
         role="region"`
         aria-label={`${stat.label} statistics`}
       >"
@@ -43,8 +38,7 @@ const PerformanceOptimizedHero = memo(() => {
       clearTimeout(loadTimer);
     };
   }, []);
-  const stats = [
-    {
+  const stats = [{
 
       number: '100+',
       label: 'AI Services',
@@ -69,7 +63,7 @@ const PerformanceOptimizedHero = memo(() => {
       icon: '🌍',
       color: 'from-green-400 to-teal-400'},
   ];
-  if (!isVisible) {
+  if(!isVisible) {
 
     return ("
       <section className="relative py-20 px-4 overflow-hidden min-h-[600px] flex items-center justify-center">"
@@ -82,11 +76,11 @@ const PerformanceOptimizedHero = memo(() => {
       </section>
     );
   }
-  return()
+  return ()
     <section"
       className="relative py-20 px-4 overflow-hidden"
       role="banner"
-      aria-label="Zion Tech Group Hero Section"
+      
     >
       {/* Optimized Background Elements */}"
       <div className="absolute inset-0 futuristic-bg">
@@ -143,21 +137,20 @@ const PerformanceOptimizedHero = memo(() => {
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
             Discover cutting-edge AI services, Micro SAAS solutions, and
             comprehensive IT services designed to propel your business into the
-            future.
-          </p>
+            future.</p>
 "
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <Link"
               to="/services"
               className="quantum-button text-lg px-8 py-4 inline-block"
-              aria-label="Explore our services"
+              
             >
               Explore Services
             </Link>
             <Link"
               to="/contact"
               className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 neon-border animate-neon-border-glow inline-block"
-              aria-label="Get free consultation"
+              
             >
               Get Free Consultation
             </Link>

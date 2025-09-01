@@ -1,23 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import {
+import { Link  } from 'react-router-dom';
 
-  Award,
-  Users,
-  Globe,
-  Target,
-  TrendingUp,
-  Shield,
-  CheckCircle,
-  ArrowRight
-    const achievements = [
-        { number: "10+", label: "Years of Experience", icon: <Award className="w-6 h-6"/> },"
-        { number: "500+", label: "Projects Delivered", icon: <Target className="w-6 h-6"/> },"
-        { number: "50+", label: "Enterprise Clients", icon: <Users className="w-6 h-6"/> },"
-        { number: "25+", label: "Countries Served", icon: <Globe className="w-6 h-6"/> }
+export default function Page() {
     ];
-    const values = [
-        {
+    const values = [{
 "
             title: "Innovation First","
             description: "We push the boundaries of what's possible, constantly exploring emerging technologies and novel approaches.","
@@ -26,7 +12,7 @@ import {
         {
 "
             title: "Client Success","
-            description: "Your success is our success. We measure our achievements by the impact we create for your business.","
+            description: "Your success is our success.We measure our achievements by the impact we create for your business.","
             icon: <Target className="w-8 h-8"/>
         },
         {
@@ -59,20 +45,16 @@ import {
             <p className="text-lg text-zion-slate-light mb-6 leading-relaxed">
               Founded in 2015, Zion Tech Group has emerged as a leading force in the technology
               industry, pioneering innovative solutions that transform how businesses operate in
-              the digital age.
-            </p>
+              the digital age.</p>
 "
             <p className="text-lg text-zion-slate-light mb-6 leading-relaxed">
               Our mission is to democratize cutting-edge technology, making advanced AI,
-              quantum computing, and autonomous systems accessible to organizations of all sizes.
-              We believe that innovation should drive progress, not complexity.
-            </p>
+              quantum computing, and autonomous systems accessible to organizations of all sizes.We believe that innovation should drive progress, not complexity.</p>
 "
             <p className="text-lg text-zion-slate-light mb-8 leading-relaxed">
               Today, we serve clients across 25+ countries, from startups to Fortune 500
               companies, helping them navigate the complexities of digital transformation
-              and emerge stronger, more efficient, and future - ready.
-            </p>
+              and emerge stronger, more efficient, and future - ready.</p>
 
             <Link"
               to="/about"

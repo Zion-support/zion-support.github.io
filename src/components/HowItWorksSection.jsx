@@ -1,25 +1,9 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-<<<<<<< HEAD
-import { motion, AnimatePresence } from 'framer - motion';
-=======
->>>>>>> main
+import { motion, AnimatePresence  } from 'framer-motion';
+import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
+ from 'lucide-react';
 
-  Search,
-  Users,
-  FileText,
-  Rocket,
-  CheckCircle,
-  Clock,
-  Target,
-  TrendingUp,
-  Award,
-  Zap,
-  Shield} from 'lucide-react';
-
-const steps = [
-  {
+const steps = [{
 
     icon: <Search className="w-8 h-8" />,
     title: 'Discover',
@@ -86,8 +70,7 @@ const steps = [
     success: '100% client retention'},
 ];
 ;
-const stats = [
-  {
+const stats = [{
 "
     icon: <Clock className="w-6 h-6" />,
     value: '3x Faster',
@@ -197,8 +180,7 @@ export function HowItWorksSection() {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             From discovery to delivery, our streamlined process ensures you get
-            the right micro SAAS solution quickly and efficiently.
-          </motion.p>
+            the right micro SAAS solution quickly and efficiently.</motion.p>
         </motion.div>
 
         {/* Steps Grid */}

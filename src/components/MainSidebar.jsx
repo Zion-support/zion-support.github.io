@@ -1,21 +1,9 @@
 import React from 'react';
 <<<<<<< HEAD
 import { cn } from '@/lib / utils';
-import { Home, ShoppingCart, Users, Settings, FileText, HelpCircle, Code, BarChart3, Briefcase, Leaf, Building, Mail, Calendar, Globe, Zap export function MainSidebar () {
-
-    const location = useLocation () ;
-=======
-import { Link, useLocation } from 'react-router-dom';
+import { Home, ShoppingCart, Users, Settings, FileText, HelpCircle, Code, BarChart3, Briefcase, Leaf, Building, Mail, Calendar, Globe, Zap export function MainSidebar () { const location = useLocation () ; ======= import { Link, useLocation  } from 'react-router-dom';
 import { cn } from '@/lib/utils';
-import { Home, ShoppingCart, Users, Settings, FileText, HelpCircle, Code, BarChart3, Briefcase, Leaf, Building, Mail, Calendar, Globe, Zap export function MainSidebar() {
-    const location = useLocation();
->>>>>>> main
-    const sidebarSections = [
-        {
-
-            title: 'Main',
-            items[;
-                { key: 'home', href: '/', icon: <Home className="w-4 h-4"/>, label: 'Home' },"
+,"
                 { key: 'marketplace', href: '/marketplace', icon: <ShoppingCart className="w-4 h-4"/>, label: 'Marketplace' },"
                 { key: 'services', href: '/services', icon: <Settings className="w-4 h-4"/>, label: 'Services' },"
                 { key: 'talent', href: '/talent', icon: <Users className="w-4 h-4"/>, label: 'Talent' },"
@@ -55,7 +43,7 @@ import { Home, ShoppingCart, Users, Settings, FileText, HelpCircle, Code, BarCha
     ];
     const isActive = (href) => {
 
-        if (href === '/') {
+        if(href === '/') {
 
             return location.pathname === '/'}
         return location.pathname.startsWith(href)};"
@@ -84,11 +72,6 @@ import { Home, ShoppingCart, Users, Settings, FileText, HelpCircle, Code, BarCha
   isActive(item.href)"
                     ? "bg-zion-purple/20 text-zion-cyan"
                     : "text-zion-slate-light hover:bg-zion-purple/10 hover:text-zion-cyan")
-
-
-
-
-
 
 }>
                     {item.icon}

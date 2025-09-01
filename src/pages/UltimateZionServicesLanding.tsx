@@ -1,6 +1,6 @@
-import React from 'react.ts';
+import React from 'react';
 export default UltimateZionServicesLanding;
-import UltimateZionServicesShowcase from '../components / UltimateZionServicesShowcase';
+import UltimateZionServicesShowcase from '../components/UltimateZionServicesShowcase';
 
 const UltimateZionServicesLanding: React.FC = () : JSX.Element => {;
   return (;

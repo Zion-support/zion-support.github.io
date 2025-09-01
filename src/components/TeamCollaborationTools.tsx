@@ -1,118 +1,7 @@
 <<<<<<< HEAD
-import {
-<<<<<<< HEAD
-import { motion, AnimatePresence } from 'framer - motion';
-=======
->>>>>>> main
+import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
 
-  Users,
-  MessageCircle,
-  FileText,
-  Calendar,
-  CheckCircle,
-  Clock,
-  AlertCircle,
-  Plus,
-  Search,
-  Filter,
-  Download,
-  Share2,
-  Edit,
-  Trash2,
-  Eye,
-  Star,
-  Award,
-  Zap,
-  Brain,
-  Cloud,
-  Shield,
-  Globe,
-  Database,
-  Server,
-  Lock,
-  Unlock,
-  Wifi,
-  Smartphone,
-  Monitor,
-  Tablet,
-  Video,
-  Phone,
-  Mail,
-  Send,
-  Paperclip,
-  Image,
-  File,
-  Folder,
-  Tag,
-  UserPlus,
-  Settings,
-  Bell,
-  Heart,
-  ThumbsUp,
-  ThumbsDown,
-  Reply,
-  Forward,
-  Archive,
-  Pin,
-  Bookmark,
-  Link,
-  Copy,
-  MoreHorizontal,
-  ChevronDown,
-  ChevronUp,
-  ArrowRight,
-  ArrowLeft,
-  RefreshCw,
-  TrendingUp,
-  Activity,
-  Target,
-  BarChart3,
-  PieChart'
- } from 'lucide-react';
-
-interface TeamMember {
-  id: string;
-  name: string;
-  role: string;
-  department: string;
-  avatar: string;
-  status: 'online' | 'away' | 'busy' | 'offline';
-  lastSeen: string;
-  skills: string[];
-  projects: string[];
-  availability: 'available' | 'busy' | 'unavailable'}
-
-interface Project {
-  id: string;
-  name: string;
-  description: string;
-  status: 'planning' | 'active' | 'review' | 'completed' | 'on-hold';
-  priority: 'low' | 'medium' | 'high' | 'critical';
-  progress: number;
-  startDate: string;
-  endDate: string;
-  teamMembers: string[];
-  tasks: Task[];
-  budget: number;
-  client: string;
-  tags: string[]
-}
-
-interface Task {
-  id: string;
-  title: string;
-  description: string;
-  status: 'todo' | 'in-progress' | 'review' | 'completed';
-  priority: 'low' | 'medium' | 'high' | 'critical';
-  assignee: string;
-  dueDate: string;
-  estimatedHours: number;
-  actualHours: number;
-  dependencies: string[];
-  tags: string[];
-  comments: Comment[]
-}
-
+export default function Page() {
 interface Comment {
   id: string;
   author: string;
@@ -182,9 +71,8 @@ showProjects:  true,;
   const [selectedStatus, setSelectedStatus] = useState<any>('all');
 
   // Sample data
-  useEffect ( () => {
-    const sampleFiles: FileItem[] = [
-      {
+  useEffect(() => {
+    const sampleFiles: FileItem[] = [{
 
         id: '1',
         name: 'AI_Platform_Architecture.pdf',
@@ -228,13 +116,13 @@ showProjects:  true,;
 
     ];
 
-    setTeamMembers (sampleTeamMembers) ;
-    setProjects (sampleProjects) ;
-    setMessages (sampleMessages) ;
-    setFiles (sampleFiles) }, []) ;
+    setTeamMembers(sampleTeamMembers) ;
+    setProjects(sampleProjects) ;
+    setMessages(sampleMessages) ;
+    setFiles(sampleFiles) }, []) ;
 
   // Get status color and icon'
-      default: return { color: 'text-zinc-400 bg-zinc-400/20', icon: <div className = "w-2 h-2 bg-zinc-400 rounded-full"></div> }}};
+      default: return { color: 'text-zinc-400 bg-zinc-400/20', icon: <div className="w-2 h-2 bg-zinc-400 rounded-full"></div> }}};
   // Get project status color'
       default: return 'text-zinc-400 bg-zinc-400/20'}
   };
@@ -244,7 +132,7 @@ showProjects:  true,;
   };
 
   // Get file type icon"
-      default: return <File className = "w-5 h-5"  />}};
+      default: return <File className="w-5 h-5"  />}};
   // Format file size
           existingReaction.count += 1} else {
 
@@ -253,7 +141,7 @@ showProjects:  true,;
       return msg}) ) };
 
   return ("
-    <div className = "w-full max-w-7xl mx-auto p-6">
+    <div className="w-full max-w-7xl mx-auto p-6">
       {/* Header */}"
       <div className="text-center mb-8">"
         <h1 className="text-4xl font-bold text-white mb-4">Team Collaboration Tools</h1>"
@@ -279,9 +167,7 @@ showProjects:  true,;
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id as )}
-              className={`flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-medium transition-all duration-300 ${
-
-                activeTab === tab.id'
+              className={`flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-medium transition-all duration-300 ${activeTab === tab.id'
                   ? 'bg-zion-cyan text-white''
                   : 'text-zinc-400 hover:text-white hover:bg-zinc-800/50'`
               }`}
@@ -306,11 +192,6 @@ showProjects:  true,;
   { opacity: 1,
   y: 0
 
-
-
-
-
-
 }}"
           className="space-y-6"
 
@@ -327,11 +208,6 @@ showProjects:  true,;
 
   { opacity: 1,
   y: 0
-
-
-
-
-
 
 }}"
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
@@ -449,13 +325,11 @@ showProjects:  true,;
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusDisplay(member.status).color}`}>
                     {member.status.charAt(0).toUpperCase() + member.status.slice(1)}
                   </span>`
-                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-
-                    member.availability === 'available' ? 'text-green-400 bg-green-400/20' :'
+                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${member.availability === 'available' ? 'text-green-400 bg-green-400/20' :'
                     member.availability === 'busy' ? 'text-yellow-400 bg-yellow-400/20' :'
                     'text-red-400 bg-red-400/20'`
                   }`}>
-                    {member.availability.charAt (0) .toUpperCase () + member.availability.slice (1) }
+                    {member.availability.charAt(0) .toUpperCase () + member.availability.slice(1) }
                   </span>
                 </div>;
 
@@ -473,7 +347,7 @@ showProjects:  true,;
                     ))}
                     {member.skills.length > 3 && ("
                       <span className="px-2 py-1 bg-zinc-800/50 text-zinc-400 text-xs rounded-full">
-                        +{member.skills.length - 3} more
+                        +{member.skills.length-3} more
                       </span>) }
                   </div>
                 </div>
@@ -523,11 +397,6 @@ showProjects:  true,;
   { opacity: 1,
   y: 0
 
-
-
-
-
-
 }}"
           className="space-y-6"
 
@@ -544,11 +413,6 @@ showProjects:  true,;
 
   { opacity: 1,
   y: 0
-
-
-
-
-
 
 }}"
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
@@ -691,11 +555,6 @@ showProjects:  true,;
   { duration: 1,
   delay: index * 0.1
 
-
-
-
-
-
 }}"
                       className="h-2 bg-zion-cyan rounded-full"
                     />
@@ -760,11 +619,6 @@ showProjects:  true,;
   { opacity: 1,
   y: 0
 
-
-
-
-
-
 }}"
           className="space-y-6"
 
@@ -781,11 +635,6 @@ showProjects:  true,;
 
   { opacity: 1,
   y: 0
-
-
-
-
-
 
 }}"
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
@@ -857,9 +706,7 @@ showProjects:  true,;
 
 }}
                 transition={{ delay: index * 0.1 }}`
-                className={`p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300 ${
-
-                  !message.isRead ? 'border-zion-cyan/50 bg-zion-cyan/5' : ''`
+                className={`p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300 ${!message.isRead ? 'border-zion-cyan/50 bg-zion-cyan/5' : ''`
                 }`}
 "
                 <div className="flex items-start gap-4">"
@@ -888,11 +735,6 @@ showProjects:  true,;
 
   () => handleMessageReaction(message.id,
   reaction.type)
-
-
-
-
-
 
 }"
                           className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full hover:bg-zinc-700/50 transition-colors"
@@ -954,11 +796,6 @@ showProjects:  true,;
   { opacity: 1,
   y: 0
 
-
-
-
-
-
 }}"
           className="space-y-6"
 
@@ -975,11 +812,6 @@ showProjects:  true,;
 
   { opacity: 1,
   y: 0
-
-
-
-
-
 
 }}"
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"

@@ -1,36 +1,13 @@
-import { useState, useEffect } from "react";
-import { format } from "date-fns";
-import { List, RefreshCw } from "lucide-react";
-import { useApiKeys, type ApiLog } from "@/hooks/useApiKeys";
-
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Badge } from "@/components/ui/badge";
-
-export function ApiLogs() {
-  const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
-  const [pageSize, setPageSize] = useState(25);
-  const [currentPage, setCurrentPage] = useState(0);
-  
-  useEffect(() => {
-    fetchApiLogs(pageSize, currentPage * pageSize);
-  }, [pageSize, currentPage, fetchApiLogs]); // Added fetchApiLogs
-  
-  const handleRefresh = () => {
-    fetchApiLogs(pageSize, currentPage * pageSize);
-  };
-  
-  const formatTimestamp = (timestamp: string) => {
-    return format(new Date(timestamp), 'yyyy-MM-dd HH:mm:ss');
-  };
+import { useState, useEffect } from 'react';
+export default function Page() {
+;
   
   const getStatusBadge = (statusCode: number) => {
-    if (statusCode >= 200 && statusCode < 300) {
+    if(statusCode >= 200 && statusCode < 300) {
       return <Badge className="bg-green-700">Success</Badge>;
-    } else if (statusCode >= 400 && statusCode < 500) {
+    } else if(statusCode >= 400 && statusCode < 500) {
       return <Badge className="bg-amber-700">Client Error</Badge>;
-    } else if (statusCode >= 500) {
+    } else if(statusCode >= 500) {
       return <Badge className="bg-red-700">Server Error</Badge>;
     } else {
       return <Badge className="bg-blue-700">Other</Badge>;
@@ -41,15 +18,13 @@ export function ApiLogs() {
   const hasNextPage = currentPage < totalPages - 1;
   const hasPrevPage = currentPage > 0;
 
-  return (
-    <Card className="bg-zinc-900 border-zinc-800 text-white">
+  return (<Card className="bg-zinc-900 border-zinc-800 text-white">
       <CardHeader>
         <CardTitle className="text-xl flex items-center">
           <List className="mr-2" size={20} /> API Request Logs
         </CardTitle>
         <CardDescription className="text-zinc-400">
-          View logs of requests made using your API keys.
-        </CardDescription>
+          View logs of requests made using your API keys.</CardDescription>
       </CardHeader>
       
       <CardContent>
@@ -110,8 +85,7 @@ export function ApiLogs() {
                       <List className="opacity-30 mb-3" size={24} />
                       <span className="text-zinc-500">No API logs found.</span>
                       <span className="text-sm text-zinc-600 mt-1">
-                        Logs will appear here when you make API requests.
-                      </span>
+                        Logs will appear here when you make API requests.</span>
                     </div>
                   </td>
                 </tr>

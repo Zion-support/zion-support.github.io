@@ -1,40 +1,9 @@
 <<<<<<< HEAD
-import {
-<<<<<<< HEAD
-import { motion } from 'framer - motion';
-=======
->>>>>>> main
-
-  Brain,
-  Shield,
-  Rocket,
-  Lock,
-  Cpu,
-  Code,
-  Users,
-  Globe,
-  Heart,
-  TrendingUp,
-  Zap,
-  Database,
-  Network,
-  Server,
-  Cloud,
-  FileText,
-  BarChart3,
-  MessageCircle,
-  Phone,
-  Mail,
-  MapPin,
-  ArrowRight,
-  Star,
-  CheckCircle,
-  Clock'
- } from 'lucide-react';
+import { <<<<<<< HEAD import { motion  } from 'framer-motion';
+ from 'lucide-react';
 
 export function ServicesOverview(...args[]):  {
 
-  
       icon: Heart,;
       color: 'from-zion-pink to-zion-purple',;
       description: 'Healthcare artificial intelligence solutions',;
@@ -43,8 +12,8 @@ export function ServicesOverview(...args[]):  {
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
-  return()
-    <div className = "py-20 bg-futuristic relative overflow-hidden">
+  return ()
+    <div className="py-20 bg-futuristic relative overflow-hidden">
       {/* Background effects */}"
       <div className="absolute inset-0 opacity-10">"
         <div className="cyber-grid w-full h-full"></div>
@@ -74,10 +43,8 @@ export function ServicesOverview(...args[]):  {
             <span className="text-white">Services Portfolio</span>
           </h1>"
           <p className="text-xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">
-            Discover our complete range of innovative micro SAAS services, IT solutions, and AI platforms.
-            From cutting - edge quantum computing to practical business applications, we provide the technology
-            solutions your business needs to thrive in the digital age.
-          </p>
+            Discover our complete range of innovative micro SAAS services, IT solutions, and AI platforms.From cutting - edge quantum computing to practical business applications, we provide the technology
+            solutions your business needs to thrive in the digital age.</p>
         </motion.div>
 
         {/* Service Categories Grid */}"
@@ -204,9 +171,7 @@ export function ServicesOverview(...args[]):  {
                 <div className="space-y-3 mb-4">"
                   <div className="flex items-center justify-between text-sm">"
                     <span className="text-zion-cyan font-medium">{service.category}</span>`
-                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-
-                      service.innovationLevel === 'Cutting-edge''
+                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${service.innovationLevel === 'Cutting-edge''
                         ? 'bg-zion-cyan/20 text-zion-cyan''
                         : 'bg-zion-purple/20 text-zion-purple'`
                     }`}>
@@ -263,8 +228,7 @@ export function ServicesOverview(...args[]):  {
             </h2>"
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
               Get in touch with our technology experts to discuss your specific needs and discover
-              how our innovative solutions can drive your business forward.
-            </p>
+              how our innovative solutions can drive your business forward.</p>
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Link"

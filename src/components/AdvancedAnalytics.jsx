@@ -1,38 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-export function AdvancedAnalytics() {
-  const [analyticsData, setAnalyticsData] = useState({
-
-<<<<<<< HEAD
-  const [analyticsData, setAnalyticsData] = useState ({
-=======
->>>>>>> main
-    visitors: 0,
-    conversions: 0,
-    revenue: 0,
-    bounceRate: 0,
-    avgSessionDuration: 0,
-    topPages: [],
-    trafficSources: [],
-    deviceTypes: []});
-  const [timeRange, setTimeRange] = useState('7d');
-  const [isLoading, setIsLoading] = useState(true);
-  useEffect(() => {
-    // Simulate API call
-    const fetchData = async () => {
-      setIsLoading(true);
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      setAnalyticsData({
-
-        visitors: Math.floor(Math.random() * 10000) + 5000,
-        conversions: Math.floor(Math.random() * 500) + 100,
-        revenue: Math.floor(Math.random() * 50000) + 10000,
-        bounceRate: Math.random() * 30 + 20,
-        avgSessionDuration: Math.floor(Math.random() * 300) + 120,
-        topPages: ['
-          { page: '/', views: Math.floor(Math.random() * 5000) + 2000 },
-          { page: '/services', views: Math.floor(Math.random() * 3000) + 1500 },
-          { page: '/contact', views: Math.floor(Math.random() * 2000) + 1000 },
+import { motion  } from 'framer-motion';
+export default function Page() {
+,
           { page: '/about', views: Math.floor(Math.random() * 1500) + 800 },
           { page: '/pricing', views: Math.floor(Math.random() * 1000) + 500 },
         ],
@@ -53,8 +22,8 @@ export function AdvancedAnalytics() {
   }, [timeRange]);
   const formatNumber = num => {
 
-    if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
-    if (num >= 1000) return (num / 1000).toFixed(1) + 'K';
+    if(num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
+    if(num >= 1000) return (num / 1000).toFixed(1) + 'K';
     return num.toString();
   };
   const formatCurrency = num => {
@@ -64,9 +33,9 @@ export function AdvancedAnalytics() {
       style: 'currency',
       currency: 'USD'}).format(num);
   };
-  if (isLoading) {
+  if(isLoading) {
 
-    return()
+    return ()
       <div className="flex items-center justify-center h-64">"
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan"></div>
       </div>
@@ -89,9 +58,7 @@ export function AdvancedAnalytics() {
             <button
               key={range}
               onClick={() => setTimeRange(range)}
-              className={`px-4 py-2 rounded-lg transition-colors ${
-
-                timeRange === range'
+              className={`px-4 py-2 rounded-lg transition-colors ${timeRange === range'
                   ? 'bg-zion-cyan text-white''
                   : 'bg-zion-slate/10 text-zion-slate-light hover:bg-zion-slate/20'`
               }`}
@@ -182,9 +149,7 @@ export function AdvancedAnalytics() {
               >"
                 <div className="flex items-center space-x-3">
                   <div`
-                    className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${
-
-                      index === 0'
+                    className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${index === 0'
                         ? 'bg-yellow-500 text-black'
                         : index === 1'
                           ? 'bg-gray-400 text-black'

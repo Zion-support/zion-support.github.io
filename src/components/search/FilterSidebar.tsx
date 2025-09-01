@@ -31,7 +31,7 @@ export function FilterSidebar({
   onClose
 }: FilterSidebarProps) {
 
-  return()
+  return ()
     <>
       {/* Mobile overlay */}
       {isOpen && (
@@ -96,10 +96,6 @@ export function FilterSidebar({
                         className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-blue-light/30 rounded focus: ring-zion-cyan focus: ring-2"
                       />
 =======
-
-
-
-
 
 }"
                         className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-blue-light/30 rounded focus:ring-zion-cyan focus:ring-2"

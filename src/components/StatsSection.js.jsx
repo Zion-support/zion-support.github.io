@@ -1,7 +1,6 @@
 import React from 'react';
 export function StatsSection() {
-  const stats = [
-    {
+  const stats = [{
 
       number: '500+',
       label: 'Happy Clients',
@@ -44,7 +43,7 @@ export function StatsSection() {
       icon: '🏆',
       color: 'from-red-500 to-pink-500'},
   ];
-  return()
+  return ()
     <section className="py-16 bg-white">"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
         <div className="text-center mb-12">"

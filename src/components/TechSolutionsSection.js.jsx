@@ -1,83 +1,7 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Brain, Cloud, Shield, Database, Globe, Smartphone, Cpu, Lock, TrendingUp, Users, ArrowRight, CheckCircle, Star } from 'lucide-react';
-const solutions = [
-    {
-
-        id: 'ai-ml',
-        title: 'AI & Machine Learning',
-        description: 'Cutting-edge artificial intelligence and machine learning solutions',
-        icon: <Brain className="w-8 h-8"/>,
-        color: 'from-zion-purple to-zion-purple-dark',
-        bgColor: 'from-zion-purple/20 to-zion-purple-dark/20',
-        features[;
-            'Custom AI model development',Natural language processing',Computer vision solutions',Predictive analytics',Automated decision making'
-        ],;
-        benefits[;
-            'Increase efficiency by 300%',Reduce operational costs by 40%',Improve accuracy by 95%'
-        ],;
-        useCases['Healthcare',Finance',Retail',Manufacturing'],;
-        rating: 4.9,
-        projects: 150,
-        category: 'Emerging Tech'
-    },
-    {
-
-        id: 'cloud-infrastructure',
-        title: 'Cloud Infrastructure',
-        description: 'Scalable and secure cloud solutions for modern businesses',"
-        icon: <Cloud className="w-8 h-8"/>,
-        color: 'from-zion-cyan to-zion-blue',
-        bgColor: 'from-zion-cyan/20 to-zion-blue/20',
-        features[;
-            'Multi-cloud architecture',Auto-scaling solutions',Disaster recovery',Performance optimization',Cost management'
-        ],;
-        benefits[;
-            'Reduce infrastructure costs by 60%',Improve uptime to 99.99%',Scale resources automatically'
-        ],;
-        useCases['E-commerce',SaaS',Enterprise',Startups'],;
-        rating: 4.8,
-        projects: 200,
-        category: 'Infrastructure'
-    },
-    {
-
-        id: 'cybersecurity',
-        title: 'Cybersecurity',
-        description: 'Comprehensive security solutions to protect your digital assets',"
-        icon: <Shield className="w-8 h-8"/>,
-        color: 'from-zion-cyan-light to-zion-cyan',
-        bgColor: 'from-zion-cyan-light/20 to-zion-cyan/20',
-        features[;
-            'Threat detection & response',Vulnerability assessment',Identity & access management',Data encryption',Compliance management'
-        ],;
-        benefits[;
-            'Prevent 99.9% of cyber attacks',Meet industry compliance standards',Protect customer data integrity'
-        ],;
-        useCases['Banking',Healthcare',Government',Education'],;
-        rating: 4.9,
-        projects: 120,
-        category: 'Security'
-    },
-    {
-
-        id: 'data-analytics',
-        title: 'Data Analytics',
-        description: 'Transform raw data into actionable business insights',"
-        icon: <Database className="w-8 h-8"/>,
-        color: 'from-zion-purple-light to-zion-purple',
-        bgColor: 'from-zion-purple-light/20 to-zion-purple/20',
-        features[;
-            'Real-time data processing',Advanced reporting dashboards',Predictive modeling',Data visualization',Business intelligence'
-        ],;
-        benefits[;
-            'Make data-driven decisions',Identify new business opportunities',Optimize operational processes'
-        ],;
-        useCases['Marketing',Operations',Sales',Research'],;
-        rating: 4.7,
-        projects: 180,
-        category: 'Analytics'
-    },
+import { motion, AnimatePresence  } from 'framer-motion';
+export default function Page() {
+,
     {
 
         id: 'iot-solutions',
@@ -125,8 +49,8 @@ const industries = ['"
     { name: 'Education', icon: <Users className="w-5 h-5"/>, projects: 60 },"
     { name: 'Government', icon: <Lock className="w-5 h-5"/>, projects: 45 }
 ];
-    const [selectedSolution, setSelectedSolution] = useState (null) ;
-    const [hoveredSolution, setHoveredSolution] = useState (null) ;
+    const [selectedSolution, setSelectedSolution] = useState(null);
+    const [hoveredSolution, setHoveredSolution] = useState(null);
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -200,8 +124,7 @@ const industries = ['"
           </h2>"
           <p className="text-zion-slate-light text-lg md:text-xl max-w-4xl mx-auto leading-relaxed mb-8">
             Discover our comprehensive suite of cutting-edge technology solutions designed to transform your business 
-            and drive innovation across all industries.
-          </p>
+            and drive innovation across all industries.</p>
 
           {/* Industry stats */}"
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">
@@ -278,7 +201,7 @@ const industries = ['"
                       <span>{feature}</span>
                     </div>))}"
                   {solution.features.length > 3 && (<div className="text-zion-cyan/60 text-xs text-center">
-                      +{solution.features.length - 3} more features
+                      +{solution.features.length-3} more features
                     </div>) }
                 </div>
 
@@ -371,8 +294,7 @@ const industries = ['"
                 Ready to Transform Your Business?
               </h3>"
               <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
-                Let our technology experts help you implement the right solutions for your business needs.
-              </p>"
+                Let our technology experts help you implement the right solutions for your business needs.</p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"
                 <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
                   Schedule Consultation

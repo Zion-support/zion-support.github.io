@@ -1,48 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Menu, 
-  X, 
-  ChevronDown, 
-  Search, 
-  User, 
-  Bell,
-  Settings,
-  LogOut,
-  Globe,
-  Sun,
-  Moon
-} from 'lucide-react';
-
-interface NavigationItem {
-  id: string;
-  label: string;
-  href: string;
-  children?: NavigationItem[];
-}
-
-const ModernNavigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [isDarkMode, setIsDarkMode] = useState(true);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const navigationItems: NavigationItem[] = [
-    {
-      id: 'services',
-      label: 'Services',
-      href: '#services',
-      children: [
-        { id: 'ai', label: 'AI & Machine Learning', href: '#ai-services' },
+import { motion, AnimatePresence  } from 'framer-motion';
+export default function Page() {
+,
         { id: 'cybersecurity', label: 'Cybersecurity', href: '#cybersecurity' },
         { id: 'cloud', label: 'Cloud Infrastructure', href: '#cloud' },
         { id: 'quantum', label: 'Quantum Computing', href: '#quantum' },
@@ -53,8 +12,7 @@ const ModernNavigation: React.FC = () => {
       id: 'solutions',
       label: 'Solutions',
       href: '#solutions',
-      children: [
-        { id: 'enterprise', label: 'Enterprise', href: '#enterprise' },
+      children: [{ id: 'enterprise', label: 'Enterprise', href: '#enterprise' },
         { id: 'startup', label: 'Startup', href: '#startup' },
         { id: 'healthcare', label: 'Healthcare', href: '#healthcare' },
         { id: 'finance', label: 'Financial Services', href: '#finance' },
@@ -65,8 +23,7 @@ const ModernNavigation: React.FC = () => {
       id: 'company',
       label: 'Company',
       href: '#company',
-      children: [
-        { id: 'about', label: 'About Us', href: '#about' },
+      children: [{ id: 'about', label: 'About Us', href: '#about' },
         { id: 'team', label: 'Our Team', href: '#team' },
         { id: 'careers', label: 'Careers', href: '#careers' },
         { id: 'news', label: 'News & Updates', href: '#news' },
@@ -77,8 +34,7 @@ const ModernNavigation: React.FC = () => {
       id: 'resources',
       label: 'Resources',
       href: '#resources',
-      children: [
-        { id: 'blog', label: 'Blog', href: '#blog' },
+      children: [{ id: 'blog', label: 'Blog', href: '#blog' },
         { id: 'whitepapers', label: 'White Papers', href: '#whitepapers' },
         { id: 'webinars', label: 'Webinars', href: '#webinars' },
         { id: 'case-studies', label: 'Case Studies', href: '#case-studies' },
@@ -100,9 +56,7 @@ const ModernNavigation: React.FC = () => {
     // Here you would typically update the global theme context
   };
 
-  return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
+  return (<nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled 
         ? 'bg-gray-900/95 backdrop-blur-md border-b border-gray-700' 
         : 'bg-transparent'
     }`}>
@@ -134,8 +88,7 @@ const ModernNavigation: React.FC = () => {
                   className="flex items-center space-x-1 text-gray-300 hover:text-white transition-colors duration-200 py-2"
                 >
                   <span>{item.label}</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                    activeDropdown === item.id ? 'rotate-180' : ''
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item.id ? 'rotate-180' : ''
                   }`} />
                 </button>
 
@@ -250,8 +203,7 @@ const ModernNavigation: React.FC = () => {
                     className="flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-200 py-2"
                   >
                     <span>{item.label}</span>
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                      activeDropdown === item.id ? 'rotate-180' : ''
+                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item.id ? 'rotate-180' : ''
                     }`} />
                   </button>
                   

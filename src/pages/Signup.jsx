@@ -1,49 +1,6 @@
-import { Link, Navigate, useNavigate } from 'react - router - dom';
-import { useForm } from 'react - hook - form';
-import { useState } from 'react';
-import React, { useState } from 'react';
-import { Alert, AlertDescription } from '@/components / ui / alert';
-import { Button } from '@/components / ui / button';
-import { Checkbox } from '@/components / ui / checkbox';
-import { Input } from '@/components / ui / input';
-import { PasswordStrengthMeter } from '@/components / PasswordStrengthMeter';
-import { register } from '@/services / auth';
-import { toast } from '@/hooks / use - toast';
-import { useAuth } from '@/hooks / useAuth';
-import { zodResolver } from '@hookform / resolvers / zod';
-export default function Signup () {
-import {
-import {
-import { z } from 'zod';
-
-  User,
-  Mail,
-  Lock,
-  Eye,
-  EyeOff,
-  Facebook,
-  Twitter,
-  Loader2,
-} from 'lucide - react';
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from '@/components / ui / form';
-// Form validation schema
-const signupSchema = z
-  .object ({
-    displayName: z.string () .min (2, 'Name must be at least 2 characters') ,
-    email: z.string () .email ('Please enter a valid email') ,
-    password: z
-      .string () .min (8, 'Password must be at least 8 characters') .regex (/[A - Z]/, 'Password must contain at least one uppercase letter') .regex (/[a - z]/, 'Password must contain at least one lowercase letter') .regex (/[0 - 9]/, 'Password must contain at least one number') ,
-    confirmPassword: z.string () ,
-    termsAccepted: z.boolean () .refine (val => val === true, {
-      message: 'You must accept the terms and conditions',
-    }) ,
-  }) .refine (data => data.password === data.confirmPassword, {
+import { Link, Navigate, useNavigate  } from 'react-router-dom';
+export default function Page() {
+) .refine(data => data.password === data.confirmPassword, {
     message: 'Passwords do not match',
     path: ['confirmPassword'],
   }) ;
@@ -57,14 +14,14 @@ const signupSchema = z
     user,
   } = useAuth () ;
   const navigate = useNavigate () ;
-  const [showPassword, setShowPassword] = useState (false) ;
-  const [showConfirmPassword, setShowConfirmPassword] = useState (false) ;
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   // Track confirm password locally to prevent it from clearing on blur
-  const [confirmPasswordValue, setConfirmPasswordValue] = useState ('') ;
-  const passwordValue = form.watch ('password') ;
-  const [isSubmitting, setIsSubmitting] = useState (false) ;
+  const [confirmPasswordValue, setConfirmPasswordValue] = useState('');
+  const passwordValue = form.watch('password') ;
+  const [isSubmitting, setIsSubmitting] = useState(false);
   // Initialize react - hook - form
-  const form = useForm ({
+  const form = useForm({
     resolver: zodResolver (signupSchema) ,
     defaultValues: {
       displayName: '',
@@ -76,73 +33,71 @@ const signupSchema = z
   }) ;
   // Form submission handler
   const onSubmit = async data => {
-    if (isSubmitting) return; // Prevent multiple submissions
-    setIsSubmitting (true) ;
+    if(isSubmitting) return; // Prevent multiple submissions
+    setIsSubmitting(true) ;
     try {
-      const { res, data: resData } = await register (data.displayName,
+      const { res, data: resData } = await register(data.displayName,
         data.email,
         data.password) ;
       // Handle duplicate email error from API
-      if (res.status === 409 && resData?.code === 'EMAIL_EXISTS') {
-        form.setError ('email', { message: resData.message }) ;
-        toast.error ('Email already registered – please login.') ;
+      if(res.status === 409 && resData?.code === 'EMAIL_EXISTS') {
+        form.setError('email', { message: resData.message }) ;
+        toast.error('Email already registered – please login.') ;
         return;
       }
       // Check for successful response
-      if (res.ok && resData.token && resData.user) {
+      if(res.ok && resData.token && resData.user) {
         // Successful registration
-        safeStorage.setItem ('authToken', resData.token) ;
-        setUser (resData.user) ;
-        setTokens ({
+        safeStorage.setItem('authToken', resData.token) ;
+        setUser(resData.user) ;
+        setTokens({
           accessToken: resData.token,
           refreshToken: resData.refreshToken || null,
         }) ;
         // Handle email verification required case
-        if (resData?.emailVerificationRequired) {
-          setShowVerificationMessage (true) ;
+        if(resData?.emailVerificationRequired) {
+          setShowVerificationMessage(true) ;
           // Do not proceed to set session or navigate
-        } else if (resData?.session) {
+        } else if(resData?.session) {
           // Set the session directly if verification is not required
-          const { error: sessionError } = await supabase.auth.setSession (resData.session) ;
-          if (sessionError) {
-            console.error ('Error setting session:', sessionError) ;
-            form.setError ('root', {
+          const { error: sessionError } = await supabase.auth.setSession(resData.session) ;
+          if(sessionError) {
+            console.error('Error setting session:', sessionError) ;
+            form.setError('root', {
               message:
                 sessionError.message ||
-                'Failed to set session. Please try logging in.',
+                'Failed to set session.Please try logging in.',
             }) ;
-            toast.error (sessionError.message ||
-                'Failed to set session. Please try logging in.') ;
+            toast.error(sessionError.message ||
+                'Failed to set session.Please try logging in.') ;
             return;
           }
           // The onAuthStateChange listener in AuthProvider should now handle
-          // updating user state and navigating if necessary for other cases.
-          // For direct signup with session, we can navigate.
-          toast.success ('Welcome to ZionAI 🎉') ;
-          navigate ('/dashboard') ;
+          // updating user state and navigating if necessary for other cases.// For direct signup with session, we can navigate.toast.success('Welcome to ZionAI 🎉') ;
+          navigate('/dashboard') ;
         } else {
           // This case might indicate an unexpected response from the API
-          console.error ('Registration response did not include session or emailVerificationRequired flag.',
+          console.error('Registration response did not include session or emailVerificationRequired flag.',
             resData) ;
-          form.setError ('root', {
+          form.setError('root', {
             message:
-              'Registration complete, but an unexpected issue occurred. Please try logging in.',
+              'Registration complete, but an unexpected issue occurred.Please try logging in.',
           }) ;
-          toast.error ('Registration complete, but an unexpected issue occurred. Please try logging in manually.') ;
+          toast.error('Registration complete, but an unexpected issue occurred.Please try logging in manually.') ;
           // Potentially navigate to login or show a more specific error
           return;
         }
-        // Subscribe user to Mailchimp if opted in (only if registration is fully complete, not pending verification) if (data.newsletterOptIn &&
+        // Subscribe user to Mailchimp if opted in(only if registration is fully complete, not pending verification) if(data.newsletterOptIn &&
           mailchimpService &&
           !resData?.emailVerificationRequired) {
           try {
-            await mailchimpService.addSubscriber ({
+            await mailchimpService.addSubscriber({
               email: data.email,
               mergeFields: { FNAME: data.displayName },
             }) ;
-            await mailchimpService.sendWelcomeEmail (data.email, 'NEW10') ;
-          } catch (err) {
-            console.error ('Mailchimp subscription failed', err) ;
+            await mailchimpService.sendWelcomeEmail(data.email, 'NEW10') ;
+          } catch(err) {
+            console.error('Mailchimp subscription failed', err) ;
             // Non - critical error, don't block user flow
           }
         }
@@ -150,57 +105,57 @@ const signupSchema = z
         // If emailVerificationRequired, no toast / navigation here, message is shown
       }
       try {
-      } catch (err) {
+      } catch(err) {
         const message = err.message ?? 'Registration failed';
-        form.setError ('root', { message }) ;
-        toast.error (message) ;
+        form.setError('root', { message }) ;
+        toast.error(message) ;
       } finally {
-        setIsSubmitting (false) ;
+        setIsSubmitting(false) ;
       }
     } finally {
     }
     const onInvalid = errors => {
-      const firstError = Object.keys (errors) [0];
-      if (firstError) {
-        form.setFocus (firstError) ;
+      const firstError = Object.keys(errors) [0];
+      if(firstError) {
+        form.setFocus(firstError) ;
       }
     };
     // Redirect if user is already logged in and has completed profile
-    if (isAuthenticated && user?.profileComplete) {
+    if(isAuthenticated && user?.profileComplete) {
       return < Navigate to="/" />;
     }
     // Redirect to onboarding if user is authenticated but hasn't completed profile
-    if (isAuthenticated && !user?.profileComplete) {
+    if(isAuthenticated && !user?.profileComplete) {
       return < Navigate to="/onboarding" />;
     }
     return (<>
-        <div className="flex min - h-screen bg - zion - blue">
-          <div className="flex - 1 flex flex - col justify - center px - 4 py - 12 sm:px - 6 lg:flex - none lg:px - 20 xl:px - 24">
-            <div className="mx - auto w - full max - w-sm lg:w - 96">
-              <div className="text - center mb - 10">
-                <h2 className="text - 3xl font - bold tracking - tight text - white">
+        <div className="flex min - h-screen bg-zion -blue">
+          <div className="flex - 1 flex flex - col justify - center px-4 py-12 sm:px-6 lg:flex - none lg:px-20 xl:px-24">
+            <div className="mx - auto w-full max - w-sm lg:w-96">
+              <div className="text-center mb-10">
+                <h2 className="text-3xl font - bold tracking - tight text-white">
                   Create your account
                 </h2>
-                <p className="mt - 2 text - sm text - zion - slate - light">
+                <p className="mt-2 text-sm text-zion - slate -light">
                   Already have an account?{' '}
                   <Link
                     to="/login"
-                    className="font - medium text - zion - cyan hover:text - zion - cyan - light"
+                    className="font - medium text-zion - cyan hover:text-zion - cyan -light"
                   >
                     Sign in
                   </Link>
                 </p>
               </div>
 
-              <div className="bg - zion - blue - dark rounded - lg p - 6">
+              <div className="bg-zion - blue - dark rounded-lg p -6">
                 <Form {...form}>
-                  {form.formState.errors.root && (<Alert variant="destructive" className="mb - 4">
+                  {form.formState.errors.root && (<Alert variant="destructive" className="mb-4">
                       <AlertDescription>
                         {form.formState.errors.root.message}
                       </AlertDescription>
                     </Alert>) }
                   <form
-                    onSubmit={form.handleSubmit (onSubmit, onInvalid) }
+                    onSubmit={form.handleSubmit(onSubmit, onInvalid) }
                     className="space - y-6"
                     noValidate
                   >
@@ -208,22 +163,22 @@ const signupSchema = z
                       control={form.control}
                       name="displayName"
                       render={ ({ field }) => (<FormItem>
-                          <FormLabel className="text - zion - slate - light">
+                          <FormLabel className="text-zion - slate -light">
                             Full Name
                           </FormLabel>
                           <FormControl>
                             <div className="relative">
                               <Input
                                 placeholder="John Doe"
-                                className="bg - zion - blue pl - 10 placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple"
+                                className="bg-zion - blue pl - 10 placeholder:text-zion - slate border-zion - blue - light focus:border-zion -purple"
                                 {...field}
-                                aria - autocomplete="none"
+                                aria-autocomplete="none"
                                 autoComplete="off"
                               />
-                              <User className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text - zion - slate h - 4 w - 4" />
+                              <User className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text-zion - slate h-4 w-4" />
                             </div>
                           </FormControl>
-                          <FormMessage className="text - red - 400" />
+                          <FormMessage className="text-red -400" />
                         </FormItem>) }
                     />
 
@@ -231,23 +186,23 @@ const signupSchema = z
                       control={form.control}
                       name="email"
                       render={ ({ field }) => (<FormItem>
-                          <FormLabel className="text - zion - slate - light">
+                          <FormLabel className="text-zion - slate -light">
                             Email address
                           </FormLabel>
                           <FormControl>
                             <div className="relative">
                               <Input
                                 placeholder="you@example.com"
-                                className="bg - zion - blue pl - 10 placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple"
+                                className="bg-zion - blue pl - 10 placeholder:text-zion - slate border-zion - blue - light focus:border-zion -purple"
                                 {...field}
                                 autoComplete="off"
-                                aria - autocomplete="none"
+                                aria-autocomplete="none"
                                 type="email"
                               />
-                              <Mail className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text - zion - slate h - 4 w - 4" />
+                              <Mail className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text-zion - slate h-4 w-4" />
                             </div>
                           </FormControl>
-                          <FormMessage className="text - red - 400" />
+                          <FormMessage className="text-red -400" />
                         </FormItem>) }
                     />
 
@@ -255,7 +210,7 @@ const signupSchema = z
                       control={form.control}
                       name="password"
                       render={ ({ field }) => (<FormItem>
-                          <FormLabel className="text - zion - slate - light">
+                          <FormLabel className="text-zion - slate -light">
                             Password
                           </FormLabel>
                           <FormControl>
@@ -263,20 +218,20 @@ const signupSchema = z
                               <Input
                                 type={showPassword ? 'text' : 'password'}
                                 placeholder="••••••••"
-                                className="bg - zion - blue pl - 10 border - zion - blue - light focus:border - zion - purple"
+                                className="bg-zion - blue pl - 10 border-zion - blue - light focus:border-zion -purple"
                                 {...field}
-                                autoComplete="new - password"
+                                autoComplete="new-password"
                               />
-                              <Lock className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text - zion - slate h - 4 w - 4" />
+                              <Lock className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text-zion - slate h-4 w-4" />
                               <Button
                                 type="button"
                                 variant="ghost"
                                 size="sm"
-                                className="absolute right - 1 top - 1/2 transform - translate - y-1 / 2 text - zion - slate h - 8 hover:text - zion - cyan"
-                                onClick={ () => setShowPassword (!showPassword) }
+                                className="absolute right - 1 top - 1/2 transform - translate - y-1 / 2 text-zion - slate h-8 hover:text-zion -cyan"
+                                onClick={ () => setShowPassword(!showPassword) }
                               >
-                                {showPassword ? (<EyeOff className="h - 4 w - 4" />) : (<Eye className="h - 4 w - 4" />) }
-                                <span className="sr - only">
+                                {showPassword ? (<EyeOff className="h-4 w-4" />) : (<Eye className="h-4 w-4" />) }
+                                <span className="sr -only">
                                   {showPassword
                                     ? 'Hide password'
                                     : 'Show password'}
@@ -284,7 +239,7 @@ const signupSchema = z
                               </Button>
                             </div>
                           </FormControl>
-                          <FormMessage className="text - red - 400" />
+                          <FormMessage className="text-red -400" />
                         </FormItem>) }
                     />
 
@@ -292,7 +247,7 @@ const signupSchema = z
                       control={form.control}
                       name="confirmPassword"
                       render={ ({ field }) => (<FormItem>
-                          <FormLabel className="text - zion - slate - light">
+                          <FormLabel className="text-zion - slate -light">
                             Confirm Password
                           </FormLabel>
                           <FormControl>
@@ -300,29 +255,29 @@ const signupSchema = z
                               <Input
                                 type={showConfirmPassword ? 'text' : 'password'}
                                 placeholder="••••••••"
-                                className="bg - zion - blue pl - 10 border - zion - blue - light focus:border - zion - purple"
+                                className="bg-zion - blue pl - 10 border-zion - blue - light focus:border-zion -purple"
                                 value={confirmPasswordValue}
                                 onChange={e => {
-                                  field.onChange (e) ;
-                                  setConfirmPasswordValue (e.target.value) ;
+                                  field.onChange(e) ;
+                                  setConfirmPasswordValue(e.target.value) ;
                                 }}
                                 onBlur={e => {
                                   field.onBlur () ;
-                                  setConfirmPasswordValue (e.target.value) ;
+                                  setConfirmPasswordValue(e.target.value) ;
                                 }}
-                                autoComplete="new - password"
+                                autoComplete="new-password"
                               />
-                              <Lock className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text - zion - slate h - 4 w - 4" />
+                              <Lock className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text-zion - slate h-4 w-4" />
                               <Button
                                 type="button"
                                 variant="ghost"
                                 size="sm"
-                                className="absolute right - 1 top - 1/2 transform - translate - y-1 / 2 text - zion - slate h - 8 hover:text - zion - cyan"
+                                className="absolute right - 1 top - 1/2 transform - translate - y-1 / 2 text-zion - slate h-8 hover:text-zion -cyan"
                                 onClick={ () =>
-                                  setShowConfirmPassword (!showConfirmPassword) }
+                                  setShowConfirmPassword(!showConfirmPassword) }
                               >
-                                {showConfirmPassword ? (<EyeOff className="h - 4 w - 4" />) : (<Eye className="h - 4 w - 4" />) }
-                                <span className="sr - only">
+                                {showConfirmPassword ? (<EyeOff className="h-4 w-4" />) : (<Eye className="h-4 w-4" />) }
+                                <span className="sr -only">
                                   {showConfirmPassword
                                     ? 'Hide password'
                                     : 'Show password'}
@@ -330,7 +285,7 @@ const signupSchema = z
                               </Button>
                             </div>
                           </FormControl>
-                          <FormMessage className="text - red - 400" />
+                          <FormMessage className="text-red -400" />
                         </FormItem>) }
                     />
 
@@ -344,68 +299,68 @@ const signupSchema = z
                             <Checkbox
                               checked={field.value}
                               onCheckedChange={field.onChange}
-                              className="data-[state = checked]:bg - zion - purple data-[state = checked]:border - zion - purple"
+                              className="data-[state = checked]:bg-zion - purple data-[state = checked]:border-zion -purple"
                             />
                           </FormControl>
-                          <div className="space - y-1 leading - none">
-                            <FormLabel className="text - sm text - zion - slate - light">
+                          <div className="space - y-1 leading -none">
+                            <FormLabel className="text-sm text-zion - slate -light">
                               I agree to the{' '}
                               <a
                                 href="/terms"
-                                className="text - zion - cyan hover:text - zion - cyan - light"
+                                className="text-zion - cyan hover:text-zion - cyan -light"
                               >
                                 Terms of Service
                               </a>{' '}
                               and{' '}
                               <a
                                 href="/privacy"
-                                className="text - zion - cyan hover:text - zion - cyan - light"
+                                className="text-zion - cyan hover:text-zion - cyan -light"
                               >
                                 Privacy Policy
                               </a>
                             </FormLabel>
-                            <FormMessage className="text - red - 400" />
+                            <FormMessage className="text-red -400" />
                           </div>
                         </FormItem>) }
                     />
 
                     <Button
                       type="submit"
-                      className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white"
+                      className="w-full bg-gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text-white"
                       disabled={isSubmitting}
                     >
                       {isSubmitting ? (<>
-                          <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />
+                          <Loader2 className="mr-2 h-4 w-4 animate -spin" />
                           Creating Account...
                         </>) : ('Create Account') }
                     </Button>
                   </form>
                 </Form>
 
-                <div className="mt - 6">
+                <div className="mt-6">
                   <div className="relative">
-                    <div className="absolute inset - 0 flex items - center">
-                      <div className="w - full border - t border - zion - blue - light" />
+                    <div className="absolute inset - 0 flex items -center">
+                      <div className="w-full border-t border-zion - blue -light" />
                     </div>
-                    <div className="relative flex justify - center text - sm">
-                      <span className="px - 2 bg - zion - blue - dark text - zion - slate - light">
+                    <div className="relative flex justify - center text-sm">
+                      <span className="px-2 bg-zion - blue - dark text-zion - slate -light">
                         Or continue with
                       </span>
                     </div>
                   </div>
 
-                  <div className="mt - 6 grid grid - cols - 3 gap - 3">
+                  <div className="mt-6 grid grid - cols - 3 gap-3">
                     <Button
                       type="button"
                       variant="outline"
-                      className="w - full border border - zion - blue - light bg - zion - blue - dark text - white hover:bg - zion - blue hover:text - zion - cyan"
+                      className="w-full border border-zion - blue - light bg-zion - blue - dark text-white hover:bg-zion - blue hover:text-zion -cyan"
                       onClick={ () => loginWithGoogle () }
                       disabled={isSubmitting}
                     >
-                      <span className="sr - only">Sign in with Google</span>
+                      <span className="sr -only">Sign in with Google</span>
                       <svg
-                        className="h - 5 w - 5"
-                        aria - hidden="true"
+                        className="h-5 w-5"
+                        aria-hidden="true"
                         fill="currentColor"
                         viewBox="0 0 24 24"
                       >
@@ -430,39 +385,38 @@ const signupSchema = z
                     <Button
                       type="button"
                       variant="outline"
-                      className="w - full border border - zion - blue - light bg - zion - blue - dark text - white hover:bg - zion - blue hover:text - zion - cyan"
+                      className="w-full border border-zion - blue - light bg-zion - blue - dark text-white hover:bg-zion - blue hover:text-zion -cyan"
                       onClick={ () => loginWithFacebook () }
                       disabled={isSubmitting}
                     >
-                      <span className="sr - only">Sign in with Facebook</span>
-                      <Facebook className="h - 5 w - 5" />
+                      <span className="sr -only">Sign in with Facebook</span>
+                      <Facebook className="h-5 w-5" />
                     </Button>
                     <Button
                       type="button"
                       variant="outline"
-                      className="w - full border border - zion - blue - light bg - zion - blue - dark text - white hover:bg - zion - blue hover:text - zion - cyan"
+                      className="w-full border border-zion - blue - light bg-zion - blue - dark text-white hover:bg-zion - blue hover:text-zion -cyan"
                       onClick={ () => loginWithTwitter () }
                       disabled={isSubmitting}
                     >
-                      <span className="sr - only">Sign in with Twitter</span>
-                      <Twitter className="h - 5 w - 5" />
+                      <span className="sr -only">Sign in with Twitter</span>
+                      <Twitter className="h-5 w-5" />
                     </Button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="hidden lg:block relative w - 0 flex - 1">
-            <div className="absolute inset - 0 h - full w - full object - cover bg - gradient - to - br from - zion - blue - dark via - zion - cyan to - zion - purple opacity - 80">
-              <div className="flex flex - col justify - center items - center h - full px - 8">
-                <div className="max - w-md text - center">
-                  <h3 className="text - 3xl font - bold text - white mb - 4">
+          <div className="hidden lg:block relative w-0 flex -1">
+            <div className="absolute inset - 0 h-full w-full object - cover bg-gradient - to - br from - zion - blue - dark via - zion - cyan to - zion - purple opacity -80">
+              <div className="flex flex - col justify - center items - center h-full px-8">
+                <div className="max - w-md text-center">
+                  <h3 className="text-3xl font - bold text-white mb-4">
                     Join the Future of AI Marketplace
                   </h3>
-                  <p className="text - lg text - white / 80">
+                  <p className="text-lg text-white / 80">
                     Create your profile, showcase your AI services, find jobs,
-                    and connect with professionals worldwide.
-                  </p>
+                    and connect with professionals worldwide.</p>
                 </div>
               </div>
             </div>

@@ -1,32 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
-import { ArrowRight } from "lucide-react";
-export function ServicesShowcase() {
-    const featuredServices = COMPREHENSIVE_SERVICES.slice(0, 6);"
-    return (<section className="py-20 relative">
-      {/* Background accent */}"
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zion-purple/5 to-transparent"/>
-      "
-      <div className="container mx-auto px-4 relative z-10">
-        {/* Header */}"
-        <div className="text-center mb-16">"
-          <h2 className="text-4xl font-bold tracking-tight mb-4">"
-            <NeonText color="#00ffff" glowIntensity="high">
-              Micro SAAS Services
-            </NeonText>
-          </h2>"
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Discover our comprehensive suite of micro SAAS solutions designed to accelerate your business growth and digital transformation.
-          </p>
-        </div>
-
-        {/* Featured Services Grid */}"
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">"
-          {featuredServices.map((service, index) => (<FuturisticCard key={index} glowColor={service.glowColor} intensity="medium" className="h-full group hover:scale-105 transition-transform duration-300">"
+import { Link  } from 'react-router-dom';
+export default function Page() {
+ glowColor={service.glowColor} intensity="medium" className="h-full group hover:scale-105 transition-transform duration-300">"
               <CardHeader className="pb-4">"
                 <div className="flex justify-between items-start mb-4">"
                   <div className="p-3 rounded-lg bg-black/20 backdrop-blur-sm">
@@ -140,8 +115,7 @@ export function ServicesShowcase() {
             </h3>"
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
               Join thousands of businesses already leveraging our micro SAAS services to accelerate growth, 
-              improve efficiency, and stay ahead of the competition.
-            </p>"
+              improve efficiency, and stay ahead of the competition.</p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Button asChild size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">"
                 <Link to="/services">

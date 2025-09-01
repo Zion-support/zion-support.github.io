@@ -1,25 +1,13 @@
 <<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer - motion.ts';
-=======
-<<<<<<< HEAD
->>>>>>> main
+import React, { useState } from 'react';
+import { motion  } from 'framer-motion';
 
-interface NewsletterFormData {
-  email: string;
-  firstName: string;
-  interests: string[];
-  frequency: 'weekly' | 'monthly' | 'quarterly'}
-
-
-  { id: 'ai-solutions', label: 'AI Solutions', icon: Zap },;
-  { id: 'cloud-services', label: 'Cloud Services', icon: Shield },;
-  { id: 'cybersecurity', label: 'Cybersecurity', icon: Shield },;
+export default function Page() {
+,;
   { id: 'digital-transformation', label: 'Digital Transformation', icon: Zap },;
   { id: 'it-consulting', label: 'IT Consulting', icon: Gift },;
   { id: 'industry-insights', label: 'Industry Insights', icon: Zap };
 ];
-
 
   { value: 'weekly', label: 'Weekly', description: 'Stay updated with latest trends' },;
   { value: 'monthly', label: 'Monthly', description: 'Monthly digest of insights' },;
@@ -32,22 +20,21 @@ interface NewsletterFormData {
   const [status, setStatus] = useState<any>('idle');
   const [errors, setErrors] = useState<Partial<NewsletterFormData>>({});
 
-  
     const newErrors: Partial < NewsletterFormData> = {};
-    if (!formData.email) {
+    if(!formData.email) {
 
-      newErrors.email = 'Email is required'} else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = 'Email is required'} else if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
 
       newErrors.email = 'Please enter a valid email address'}
 
-    if (!formData.firstName) {
+    if(!formData.firstName) {
 
       newErrors.firstName = 'First name is required'}
 
-    if (formData.interests.length = == 0) {;
+    if(formData.interests.length = == 0) {;
       newErrors.interests = 'Please select at least one interest'}
-    setErrors (newErrors) ;
-    return Object.keys (newErrors) .length === 0};
+    setErrors(newErrors) ;
+    return Object.keys(newErrors) .length === 0};
 
       return}
 
@@ -55,15 +42,15 @@ interface NewsletterFormData {
 
     try {
       // Simulate API call
-      await new Promise (resolve => setTimeout (resolve, 2000) ) ;
+      await new Promise(resolve => setTimeout (resolve, 2000) ) ;
 
       // Here you would typically send the data to your newsletter service'
       // // // // // // // // console.log('Newsletter subscription:', formData);
 
 <<<<<<< HEAD
-      console.log ('Newsletter subscription: ', formData) ;
+      console.log('Newsletter subscription: ', formData) ;
 
-      setStatus ('success') ;
+      setStatus('success') ;
 =======
       // console.log('Newsletter subscription: ', formData);
       '
@@ -82,25 +69,24 @@ interface NewsletterFormData {
       // // // // // // // // console.error('Newsletter subscription error:', error);
 <<<<<<< HEAD
     }
-        setStatus('idle')}, 3000)} catch (error) {
+        setStatus('idle')}, 3000)} catch(error) {
 
       setStatus('error');
 =======
-    }'        setStatus('idle')}, 3000)} catch (error) {
+    }'        setStatus('idle')}, 3000)} catch(error) {
 '
       setStatus('error');'
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       // console.error('Newsletter subscription error:', error)}
   };
 
-      setErrors (prev => ({ ...prev, interests: null }) ) }
+      setErrors(prev => ({ ...prev, interests: null }) ) }
   };
 
-  
-    setFormData (prev => ({ ...prev, [field]: value }) ) ;
+    setFormData(prev => ({ ...prev, [field]: value }) ) ;
 
     // Clear error when user starts typing
-    if (errors[field]) {
+    if(errors[field]) {
 
       setErrors(prev => ({ ...prev, [field]: null }));
 <<<<<<< HEAD
@@ -111,9 +97,9 @@ interface NewsletterFormData {
     }  };
 '
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-  if (status = == 'success') {
+  if(status = == 'success') {
 
-    return()
+    return ()
       <motion.div
         initial = {
 
@@ -133,15 +119,14 @@ interface NewsletterFormData {
           Welcome to the Zion Tech Group Community!
         </h3>"
         <p className="text-green-700 dark:text-green-300 mb-4">
-          Thank you for subscribing to our newsletter. You'll receive our next update in your inbox.
-        </p>"
+          Thank you for subscribing to our newsletter.You'll receive our next update in your inbox.</p>"
         <div className="flex items-center justify-center gap-2 text-sm text-green-600 dark:text-green-400">;"
           <Mail className="h-4 w-4"  />;
           <span>Check your email for a confirmation message</span>;
         </div>;
       </motion.div>;) }
   return ("
-    <div className = "bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 rounded-2xl p-8 border border-slate-200 dark:border-slate-700">"
+    <div className="bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 rounded-2xl p-8 border border-slate-200 dark:border-slate-700">"
       <div className="text-center mb-8">
         <motion.div
           initial={{ scale: 0 }}
@@ -150,11 +135,6 @@ interface NewsletterFormData {
 "
   { delay: 0.1, type: "spring",
   bounce: 0.4
-
-
-
-
-
 
 }}"
           className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mb-4"
@@ -196,8 +176,7 @@ interface NewsletterFormData {
           transition={{ delay: 0.3 }}"
           className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto"
 
-          Get exclusive access to the latest AI trends, technology insights, and industry updates delivered directly to your inbox.
-        </motion.p>
+          Get exclusive access to the latest AI trends, technology insights, and industry updates delivered directly to your inbox.</motion.p>
       </div>
 
       <motion.form
@@ -232,15 +211,8 @@ interface NewsletterFormData {
   (e) => handleInputChange('firstName',
   e.target.value)
 
-
-
-
-
-
 }
-              className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
-
-                errors.firstName'
+              className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${errors.firstName'
                   ? 'border-red-300 bg-red-50 dark:bg-red-900/20''
                   : 'border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800'`
               }`}"
@@ -265,15 +237,8 @@ interface NewsletterFormData {
   (e) => handleInputChange('email',
   e.target.value)
 
-
-
-
-
-
 }`
-              className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
-
-                errors.email'
+              className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${errors.email'
                   ? 'border-red-300 bg-red-50 dark:bg-red-900/20''
                   : 'border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800'`
               }`}"
@@ -293,15 +258,12 @@ interface NewsletterFormData {
           </label>;"
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">;
             {interests.map((interest) => {;
-              
-              
-              return()                <motion.button
+
+              return ()                <motion.button
                   key = {interest.id}"
                   type="button"
                   onClick={() => handleInterestToggle(interest.id)}`
-                  className={`p-3 rounded-lg border-2 transition-all duration-200 flex items-center gap-2 ${
-
-                    isSelected'
+                  className={`p-3 rounded-lg border-2 transition-all duration-200 flex items-center gap-2 ${isSelected'
                       ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300''
                       : 'border-slate-300 dark:border-slate-600 hover:border-blue-300 dark:hover:border-blue-600'`
                   }`}
@@ -313,7 +275,7 @@ interface NewsletterFormData {
               )})}
           </div>
           {errors.interests && ("
-            <p className = "mt-2 text-sm text-red-600 dark:text-red-400 flex items-center gap-1">"
+            <p className="mt-2 text-sm text-red-600 dark:text-red-400 flex items-center gap-1">"
               <AlertCircle className="h-4 w-4"  />              {errors.interests}
             </p>) }
         </div>
@@ -327,9 +289,7 @@ interface NewsletterFormData {
             {frequencies.map((freq)  => (
               <label
                 key={freq.value}`
-                className={`relative flex flex-col p-4 border-2 rounded-lg cursor-pointer transition-all duration-200 ${
-
-                  formData.frequency === freq.value'
+                className={`relative flex flex-col p-4 border-2 rounded-lg cursor-pointer transition-all duration-200 ${formData.frequency === freq.value'
                     ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20''
                     : 'border-slate-300 dark:border-slate-600 hover:border-blue-300 dark:hover:border-blue-600'`
                 }`}
@@ -344,25 +304,16 @@ interface NewsletterFormData {
   (e) => handleInputChange('frequency',
   e.target.value)
 
-
-
-
-
-
 }"
                   className="sr-only"
                 />`
-                <span className={`text-sm font-medium ${
-
-                  formData.frequency === freq.value'
+                <span className={`text-sm font-medium ${formData.frequency === freq.value'
                     ? 'text-blue-700 dark:text-blue-300''
                     : 'text-slate-700 dark:text-slate-300'`
                 }`}>
                   {freq.label}
                 </span>`
-                <span className={`text-xs mt-1 ${
-
-                  formData.frequency === freq.value'
+                <span className={`text-xs mt-1 ${formData.frequency === freq.value'
                     ? 'text-blue-600 dark:text-blue-400''
                     : 'text-slate-500 dark:text-slate-400'`
                 }`}>
@@ -376,9 +327,7 @@ interface NewsletterFormData {
         <motion.button"
           type="submit"'
           disabled={status === 'loading'}`
-className: {`w-full py-4 px-6 rounded-lg font-semibold text-white transition-all duration-200 flex items-center justify-center gap-2 ${
-
-            status === 'loading''
+className: {`w-full py-4 px-6 rounded-lg font-semibold text-white transition-all duration-200 flex items-center justify-center gap-2 ${status === 'loading''
               ? 'bg-slate-400 cursor-not-allowed''
               : 'bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 shadow-lg hover:shadow-xl'`
           }`}
@@ -410,23 +359,17 @@ className: {`w-full py-4 px-6 rounded-lg font-semibold text-white transition-all
   { opacity: 1,
   y: 0
 
-
-
-
-
-
 }}"
             className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg"
 "
             <p className="text-red-700 dark:text-red-300 text-sm flex items-center gap-2">"
-              <AlertCircle className="h-4 w-4"  />              Something went wrong. Please try again later.
-            </p>
+              <AlertCircle className="h-4 w-4"  />              Something went wrong.Please try again later.</p>
           </motion.div>;) }
 
         {/* Privacy Notice */}"
         <p className="text-xs text-slate-500 dark:text-slate-400 text-center">
-          By subscribing, you agree to receive marketing emails from Zion Tech Group. ;
-          You can unsubscribe at any time. We respect your privacy and will never share your information.;
+          By subscribing, you agree to receive marketing emails from Zion Tech Group.;
+          You can unsubscribe at any time.We respect your privacy and will never share your information.;
         </p>;
       </motion.form>;
     </div>;) };

@@ -1,6 +1,6 @@
 <<<<<<< HEAD
-import { Link } from 'react - router - dom';
-import React, { useState } from 'react';
+import { Link  } from 'react-router-dom';
+ from 'react';
 export default UltimateServicesShowcase;
 export default UltimateServicesShowcase;
 export default UltimateServicesShowcase;
@@ -8,33 +8,13 @@ export default UltimateServicesShowcase;
 export default UltimateServicesShowcase;
 export default UltimateServicesShowcase;
 export default UltimateServicesShowcase;
-export default UltimateServicesShowcase;
-export function UltimateServicesShowcase (...args[]) :  {
-import {
-import { enterpriseITInfrastructureServices2025 } from "../../data / 2025 - enterprise - it - infrastructure - services";
-import { innovativeMicroSaasSolutions2025 } from "../../data / 2025 - innovative - micro - saas - solutions";
-import { motion } from 'framer - motion';
-import { ultimateInnovativeServices2025 } from "../../data / 2025 - ultimate - innovative - services - expansion";
+export default function UltimateServicesShowcase(...args[]) :  {
+import { enterpriseITInfrastructureServices2025 } from '../../data / 2025 - enterprise - it - infrastructure -services';
+import { innovativeMicroSaasSolutions2025 } from '../../data / 2025 - innovative - micro - saas -solutions';
+import { motion  } from 'framer-motion';
+import { ultimateInnovativeServices2025 } from '../../data / 2025 - ultimate - innovative - services -expansion';
 
-  Brain,
-  Cloud,
-  Shield,
-  Globe,
-  Code,
-  BarChart3,
-  Users,
-  ShoppingCart,
-  MessageSquare,
-  FileText,
-  Settings,
-  Zap,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin
- } from 'lucide - react';
+ from 'lucide - react';
 
 // Import the new services
 
@@ -148,14 +128,11 @@ export function UltimateServicesShowcase(...args[]):  {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedService, setSelectedService] = useState<any>(null);
 
-  
     ...ultimateInnovativeServices2025,;
     ...enterpriseITInfrastructureServices2025,;
     ...innovativeMicroSaasSolutions2025;
   ];
 
-  
-  
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       transition: {
@@ -178,7 +155,7 @@ export function UltimateServicesShowcase(...args[]):  {
         duration: 0.6,;"
         ease: "easeOut"}}};
   return ("
-    <section className = "py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">"
+    <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div"
@@ -205,9 +182,7 @@ export function UltimateServicesShowcase(...args[]):  {
             <span className="text-white">Services Showcase</span>
           </h1>"
           <p className="text-xl text-zion-gray-light max-w-4xl mx-auto leading-relaxed">
-            Discover our revolutionary AI, IT infrastructure, and micro SAAS solutions that are transforming industries worldwide.
-            Each service is backed by cutting - edge technology and proven results.
-          </p>
+            Discover our revolutionary AI, IT infrastructure, and micro SAAS solutions that are transforming industries worldwide.Each service is backed by cutting - edge technology and proven results.</p>
 
           {/* Contact Information */}"
           <div className="mt-8 flex flex-wrap justify-center gap-6 text-zion-gray-light">"
@@ -249,22 +224,18 @@ export function UltimateServicesShowcase(...args[]):  {
         >
           <button'
             onClick={() => setSelectedCategory('all')}
-            className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-
-              selectedCategory === 'all''
+            className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${selectedCategory === 'all''
                 ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-lg shadow-zion-cyan/25''
                 : 'bg-zion-slate-light text-zion-gray-light hover: bg-zion-slate hover:text-white'`
             }`}
 
-            All Services ({allServices.length})
+            All Services({allServices.length})
           </button>
           {categories.map((category)  => (
             <button
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}`
-              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-
-                selectedCategory === category.id'
+              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${selectedCategory === category.id'
                   ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-lg shadow-zion-cyan/25''
                   : 'bg-zion-slate-light text-zion-gray-light hover:bg-zion-slate hover:text-white'`
               }`}
@@ -280,7 +251,7 @@ export function UltimateServicesShowcase(...args[]):  {
           initial="hidden"
           animate="visible"
 
-          {filteredServices.map ( (service) => (<motion.div
+          {filteredServices.map((service) => (<motion.div
               key={service.id}
               variants={itemVariants}"
               className="group relative"
@@ -398,8 +369,7 @@ export function UltimateServicesShowcase(...args[]):  {
               Ready to Transform Your Business?
             </h2>"
             <p className="text-zion-gray-light text-lg mb-6 max-w-2xl mx-auto">
-              Join hundreds of companies already using our innovative solutions to gain competitive advantages and achieve breakthrough results.
-            </p>"
+              Join hundreds of companies already using our innovative solutions to gain competitive advantages and achieve breakthrough results.</p>"
             <div className="flex flex-wrap justify-center gap-4">
               <Link"
                 to="/contact"

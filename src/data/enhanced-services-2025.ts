@@ -31,8 +31,7 @@ pricing: {
     email: string;
     address: string;
     website: string}};
-export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [
-  // AI-Powered Autonomous Services
+export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [// AI-Powered Autonomous Services
   {
 
     id: "ai-autonomous-business-manager","
@@ -90,17 +89,16 @@ export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [
   website: 'https://ziontechgroup.com'};
 ;
 >>>>>>> main
-export const enhancedServices2025: EnhancedService[] = [
-    {
+export const enhancedServices2025: EnhancedService[] = [{
 
         id: 'ai-powered-code-review-assistant',
         name: 'AI-Powered Code Review Assistant',
         tagline: 'Automated code quality, security scanning, and best-practice guidance',
-        description: 'Analyzes pull requests to flag security risks, style issues, and performance regressions. Posts actionable comments, gates CI on severity rules, and learns from team decisions.',
+        description: 'Analyzes pull requests to flag security risks, style issues, and performance regressions.Posts actionable comments, gates CI on severity rules, and learns from team decisions.',
         category: 'micro-saas',
         pricing: { monthly: '$199/month', yearly: '$1,999/year', enterprise: 'Custom', setup: '$299 one-time' },
         features: ['
-            'OWASP and supply‑chain risk checks',PR auto-comments with code snippets',Custom policy rules and severity gates',Multi-language static analysis + ML insights',CI/CD integrations (GitHub, GitLab, Bitbucket)
+            'OWASP and supply‑chain risk checks',PR auto-comments with code snippets',Custom policy rules and severity gates',Multi-language static analysis + ML insights',CI/CD integrations(GitHub, GitLab, Bitbucket)
         ],
         benefits: ['
             'Cut review time 40–60%',Catch critical issues pre-merge',Standardize engineering quality',Reduce technical debt'
@@ -468,7 +466,7 @@ export const enhancedServices2025: EnhancedService[] = [
       setup: '$299 one-time'},
     features = ['
 <<<<<<< HEAD
-      'Automated security vulnerability detection',Code quality scoring and metrics',Best practice recommendations',Integration with GitHub/GitLab/Bitbucket',Custom rule configuration',Team performance analytics',Automated PR comments',Compliance checking (SOC2, HIPAA),Performance impact analysis',Multi-language support'
+      'Automated security vulnerability detection',Code quality scoring and metrics',Best practice recommendations',Integration with GitHub/GitLab/Bitbucket',Custom rule configuration',Team performance analytics',Automated PR comments',Compliance checking(SOC2, HIPAA),Performance impact analysis',Multi-language support'
 =======
       'Automated security vulnerability detection','
       'Code quality scoring and metrics','
@@ -477,7 +475,7 @@ export const enhancedServices2025: EnhancedService[] = [
       'Custom rule configuration','
       'Team performance analytics','
       'Automated PR comments','
-      'Compliance checking (SOC2, HIPAA)','
+      'Compliance checking(SOC2, HIPAA)','
       'Performance impact analysis','      'Multi-language support'
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     ],

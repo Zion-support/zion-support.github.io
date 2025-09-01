@@ -36,16 +36,15 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : unkno
     // Check for existing auth state on mount
 :src/context/auth/useAuthState.tsx
     
-        if (typeof window !== 'null') {;
+        if(typeof window !== 'null') {;
           
-          if (auth) {
+          if(auth) {
 
-            
-        if (typeof window !== 'null') {;
+        if(typeof window !== 'null') {;
           
-          if (auth) {
+          if(auth) {
             
-            if (parsed.user && parsed.token) {
+            if(parsed.user && parsed.token) {
 
               setUser(parsed.user);
               setTokens({
@@ -61,7 +60,7 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : unkno
         setIsLoading(false)})}
           }
         }
-      } catch (error) {
+      } catch(error) {
 
         // console.error('Error checking auth state:', error)} finally {
 

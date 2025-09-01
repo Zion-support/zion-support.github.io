@@ -1,48 +1,7 @@
 import React from 'react';
-import {
-
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle} from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Link } from 'react-router-dom';
-import { FuturisticCard, NeonText } from '@/components/ui/FuturisticBackground';
-import {
-
-  Phone,
-  Mail,
-  MapPin,
-  Globe,
-  Clock,
-  Users,
-  Shield,
-  Zap,
-  ExternalLink} from 'lucide-react';
-export function ContactInfo() {
-  const compStats = [
-    {
-
-      label: 'Years Experience',
-      value: '10+',
-      icon: <Clock className="h-6 w-6 text-zion-cyan" />},
-    {
-
-      label: 'Team Members',
-      value: '50+',"
-      icon: <Users className="h-6 w-6 text-zion-purple" />},
-    {
-
-      label: 'Projects Completed',
-      value: '500+',"
-      icon: <Shield className="h-6 w-6 text-zion-cyan" />},
-    {
-
-      label: 'Client Satisfaction',
-      value: '98%',"
-      icon: <Zap className="h-6 w-6 text-zion-purple" />},
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+export default function Page() {
+,
   ];
   return ("
     <section className="py-20 relative">
@@ -59,8 +18,7 @@ export function ContactInfo() {
           </h2>"
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Ready to transform your business? Our team of experts is here to
-            help you succeed with cutting-edge technology solutions.
-          </p>
+            help you succeed with cutting-edge technology solutions.</p>
         </div>
 
         {/* Contact Methods Grid */}"
@@ -160,8 +118,7 @@ export function ContactInfo() {
             </h3>"
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
               Whether you need a quick consultation or want to discuss a major
-              project, our team is ready to help you achieve your goals.
-            </p>"
+              project, our team is ready to help you achieve your goals.</p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 asChild"

@@ -1,29 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
-import {
-
-  BarChart3,
-  TrendingUp,
-  Brain,
-  Zap,
-  Target,
-  AlertTriangle,
-  Download,
-  RefreshCw,
-  X,
-  Maximize2,
-  Minimize2,
-  Calendar,
-  Activity} from 'lucide-react';
-const mockModels = [
-  {
-
-    id: 'model-1',
-    name: 'Customer Lifetime Value Predictor',
-    accuracy: 94.2,
-    lastTrained: '2024-01-10T00:00:00.000Z',
-    status: 'active',
-    predictions: 15420,
-    category: 'Customer Analytics'},
+import { BarChart3, TrendingUp, Brain, Zap, Target, AlertTriangle, Download, RefreshCw, X, Maximize2, Minimize2, Calendar, Activity  } from 'lucide-react';
+,
   {
 
     id: 'model-2',
@@ -74,7 +51,7 @@ export function AdvancedBusinessIntelligence() {
     setIsRefreshing(false);
   };
   useEffect(() => {
-    if (autoRefresh) {
+    if(autoRefresh) {
 
       const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
       return () => clearInterval(interval);
@@ -82,7 +59,7 @@ export function AdvancedBusinessIntelligence() {
   }, [autoRefresh]);
   const getTrendIcon = trend => {
 
-    switch (trend) {
+    switch(trend) {
 
       case 'up':
         return <TrendingUp className="w-4 h-4 text-green-500" />;
@@ -94,7 +71,7 @@ export function AdvancedBusinessIntelligence() {
   };
   const getPriorityColor = priority => {
 
-    switch (priority) {
+    switch(priority) {
 
       case 'high':'
         return 'border-red-500 bg-red-50 dark:bg-red-900/20';
@@ -106,7 +83,7 @@ export function AdvancedBusinessIntelligence() {
   };
   const getInsightIcon = type => {
 
-    switch (type) {
+    switch(type) {
 
       case 'prediction':"
         return <Brain className="w-5 h-5 text-blue-500" />;
@@ -122,7 +99,7 @@ export function AdvancedBusinessIntelligence() {
   };
   const formatValue = (value, unit) => {
 
-    if (unit === 'USD') {
+    if(unit === 'USD') {
 
       return new Intl.NumberFormat('en-US', {
 
@@ -131,15 +108,15 @@ export function AdvancedBusinessIntelligence() {
         minimumFractionDigits: 0,
         maximumFractionDigits: 0}).format(value);
     }
-    if (unit === '%') {
+    if(unit === '%') {
 
       return `${value.toFixed(1)}%`;
     }
     return new Intl.NumberFormat('en-US').format(value);
   };
-  if (!isOpen) {
+  if(!isOpen) {
 
-    return()
+    return ()
       <button
         onClick={() => setIsOpen(true)}"
         className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-40"
@@ -149,7 +126,7 @@ export function AdvancedBusinessIntelligence() {
       </button>
     );
   }
-  if (isMinimized) {
+  if(isMinimized) {
 
     return ("
       <div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50">"
@@ -168,7 +145,7 @@ export function AdvancedBusinessIntelligence() {
       </div>
     );
   }
-  return()
+  return ()
     <div'`
       className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1200px] h-[800px]'}`}
       ref={containerRef}
@@ -289,13 +266,11 @@ export function AdvancedBusinessIntelligence() {
         ].map(tab => {
 
           const Icon = tab.icon;
-          return()
+          return ()
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}`
-              className={`flex items-center gap-2 px-6 py-3 border-b-2 transition-colors ${
-
-                activeTab === tab.id'
+              className={`flex items-center gap-2 px-6 py-3 border-b-2 transition-colors ${activeTab === tab.id'
                   ? 'border-zion-purple text-zion-purple bg-zion-purple/5''
                   : 'border-transparent text-zion-slate-light hover:text-zion-slate hover:bg-zion-slate-light/20'`
               }`}
@@ -329,9 +304,7 @@ export function AdvancedBusinessIntelligence() {
                   </div>"
                   <div className="flex items-center justify-between text-sm">
                     <span`
-                      className={`font-medium ${
-
-                        metric.trend === 'up''
+                      className={`font-medium ${metric.trend === 'up''
                           ? 'text-green-600''
                           : metric.trend === 'down''
                             ? 'text-red-600''
@@ -367,8 +340,7 @@ export function AdvancedBusinessIntelligence() {
                 Quick Actions
               </h3>"
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                {[
-                  {
+                {[{
 
                     label: 'Generate Report',
                     icon: Download,
@@ -387,7 +359,7 @@ export function AdvancedBusinessIntelligence() {
                 ].map((item, index) => {
 
                   const Icon = item.icon;
-                  return()
+                  return ()
                     <button
                       key={index}
                       onClick={item.action}"
@@ -418,9 +390,7 @@ export function AdvancedBusinessIntelligence() {
                         {insight.title}
                       </h3>
                       <span`
-                        className={`px-2 py-1 rounded-full text-xs font-medium ${
-
-                          insight.impact === 'high''
+                        className={`px-2 py-1 rounded-full text-xs font-medium ${insight.impact === 'high''
                             ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300''
                             : insight.impact === 'medium''
                               ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300''
@@ -472,9 +442,7 @@ export function AdvancedBusinessIntelligence() {
                     {model.name}
                   </h3>
                   <span`
-                    className={`px-3 py-1 rounded-full text-sm font-medium ${
-
-                      model.status === 'active''
+                    className={`px-3 py-1 rounded-full text-sm font-medium ${model.status === 'active''
                         ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300''
                         : model.status === 'training''
                           ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300''

@@ -1,33 +1,14 @@
 import { TalentCard } from '@/components/talent/TalentCard';
-import { TalentSkeleton } from '@/components/talent/TalentSkeleton';
-export function TalentGrid({
 
-  talents,
-  isLoading,
-  onTalentClick,
-  isAuthenticated,
-  viewProfile,
-  clearFilters,
-  handleBook,
-  handleMessage}) {
-
-  const handleMessageInternal = talent => {
-
-    if (handleMessage) {
-
-      handleMessage(talent);
-    } else {
-
-      onTalentClick(talent.id);
-    }
-  };
-  if (isLoading) {
+export default function Page() {
+;
+  if(isLoading) {
 
     return <TalentSkeleton />;
   }
-  if (!talents || talents.length === 0) {
+  if(!talents || talents.length === 0) {
 
-    return()
+    return ()
       <div className="py-8 text-center bg-zion-blue-dark rounded-lg border border-zion-blue-light p-6">"
         <p className="text-zion-slate-light mb-4">
           No talents found matching your criteria

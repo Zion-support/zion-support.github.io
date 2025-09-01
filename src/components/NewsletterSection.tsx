@@ -14,10 +14,10 @@
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
-  if (isSubscribed) {
+  if(isSubscribed) {
 
     return ("
-      <section className = "py-20 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800">"
+      <section className="py-20 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800">"
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div
             initial = {
@@ -41,12 +41,11 @@
             <h2 className="text-3xl font-bold text-white mb-4">Welcome to the Zion Tech Group Community!</h2>"
 <<<<<<< HEAD
             <p className="text-gray-300 text-lg mb-6">
-              You're now subscribed to our newsletter. We'll keep you updated with the latest technology insights,
+              You're now subscribed to our newsletter.We'll keep you updated with the latest technology insights,
 =======
-            <p className="text-gray-300 text-lg mb-6">'              You're now subscribed to our newsletter. We'll keep you updated with the latest technology insights,
+            <p className="text-gray-300 text-lg mb-6">'              You're now subscribed to our newsletter.We'll keep you updated with the latest technology insights,
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-              service announcements, and exclusive content.
-            </p>
+              service announcements, and exclusive content.</p>
             <button
               onClick={() => setIsSubscribed(false)}"
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
@@ -57,7 +56,7 @@
         </div>;
       </section>;) }
   return ("
-    <section className = "py-20 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800">"
+    <section className="py-20 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800">"
       <div className="max-w-7xl mx-auto px-6">"
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Content */}
@@ -80,9 +79,7 @@
               Stay Ahead with Zion Tech Group
             </h2>"
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Get exclusive access to the latest technology insights, service updates, and industry trends.
-              Join thousands of professionals who trust us to keep them informed.
-            </p>
+              Get exclusive access to the latest technology insights, service updates, and industry trends.Join thousands of professionals who trust us to keep them informed.</p>
 "
             <div className="space-y-4 mb-8">
               {benefits.map((benefit, index) => (
@@ -104,11 +101,6 @@
 
   { duration: 0.5,
   delay: index * 0.1
-
-
-
-
-
 
 }}"
                   className="flex items-start"

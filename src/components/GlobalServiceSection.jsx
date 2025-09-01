@@ -1,8 +1,7 @@
 import React from 'react';
 import { Globe, Clock, Users, Shield, Zap, CheckCircle export const GlobalServiceSection = () => {
 
-  const globalServices = [
-    {
+  const globalServices = [{
 
       icon: Globe,
       title: "Global Coverage","
@@ -54,8 +53,7 @@ import { Globe, Clock, Users, Shield, Zap, CheckCircle export const GlobalServic
             Global Service Excellence
           </h2>"
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Our global network ensures consistent, high-quality IT services wherever your business operates.
-          </p>
+            Our global network ensures consistent, high-quality IT services wherever your business operates.</p>
         </div>
 "
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -87,8 +85,7 @@ import { Globe, Clock, Users, Shield, Zap, CheckCircle export const GlobalServic
               Ready to Experience Global Service Excellence?
             </h3>"
             <p className="text-gray-300 mb-6">
-              Join organizations worldwide that trust Zion Tech Group for their global IT service needs.
-            </p>"
+              Join organizations worldwide that trust Zion Tech Group for their global IT service needs.</p>"
             <button className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
               Get Started Today
             </button>

@@ -47,8 +47,7 @@ const zionContact = {
 
 =======
 >>>>>>> main
-export const specializedHealthcareAIServices2025: HealthcareAIService[] = [
-  {
+export const specializedHealthcareAIServices2025: HealthcareAIService[] = [{
 
     id: 1,"
     name: "MedAI Diagnostics Pro","
@@ -59,7 +58,7 @@ export const specializedHealthcareAIServices2025: HealthcareAIService[] = [
     pricingModel: "monthly",
     features[;"
       "AI-powered medical image analysis","
-      "Multi-modality support (X-ray, MRI, CT, ultrasound)","
+      "Multi-modality support(X-ray, MRI, CT, ultrasound)","
       "Disease detection algorithms","
       "Clinical decision support","
       "Automated reporting","

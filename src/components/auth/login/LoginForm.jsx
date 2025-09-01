@@ -3,76 +3,38 @@ import React, { useState } from 'react';
 =======
 >>>>>>> main
 import { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { useNavigate } from 'react-router-dom';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
-import { LogIn, User, Eye, EyeOff } from 'lucide-react';
-import { useAuth } from '@/hooks/useAuth';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import {
-
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage} from '@/components/ui/form';
-import { Link } from 'react-router-dom';
-
-// Form validation schema;
-const loginSchema = z.object({
-
-  email: z
-    .string()
-    .email('Please enter a valid email')
-    .min(1,Email is required'),
-  password: z.string().min(6,Password must be at least 6 characters')});
-
-function LoginForm() {
-  const { login, isLoading } = useAuth();
-  const navigate = useNavigate();
-  const [showPassword, setShowPassword] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const form = useForm({
-
-    resolver: zodResolver(loginSchema),
-    defaultValues: {
-
-      email: '',
-      password: ''}});
+export default function Page() {
+);
 
   const onSubmit = async data => {
 
-    if (isSubmitting) return;
+    if(isSubmitting) return;
 
     try {
       setIsSubmitting(true);
       const result = await login(data.email, data.password);
 
-      if (result.success) {
+      if(result.success) {
 
         navigate('/');
       } else {
 
         form.setError('root', {
 
-          message: 'Login failed. Please check your credentials.'});
+          message: 'Login failed.Please check your credentials.'});
       }
-    } catch (error) {
+    } catch(error) {
 
       form.setError('root', {
 
-        message: 'An error occurred. Please try again.'});
+        message: 'An error occurred.Please try again.'});
     } finally {
 
       setIsSubmitting(false);
     }
   };
 
-  return()
+  return ()
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}

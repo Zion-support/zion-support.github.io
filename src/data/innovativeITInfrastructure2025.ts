@@ -33,8 +33,7 @@ contactInfo: {
   competitors?: string[];
   marketSize?: string}
 ;
-export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureService[] = [
-  // Next-Generation Cloud Infrastructure
+export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureService[] = [// Next-Generation Cloud Infrastructure
   {
 
     id: "next-gen-cloud-infrastructure","
@@ -323,7 +322,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
     ],;
     benefits[;"
       "10x faster than 4G","
-      "Ultra-low latency (1ms)","
+      "Ultra-low latency(1ms)","
       "Massive IoT device support","
       "Network slicing for different use cases","
       "Future-ready infrastructure"

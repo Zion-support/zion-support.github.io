@@ -1,10 +1,7 @@
 <<<<<<< HEAD
-import {
-<<<<<<< HEAD
-import { motion } from 'framer - motion';
+import { <<<<<<< HEAD import { motion  } from 'framer-motion';
 
- * SecurityComplianceSection function
- * @param {*} params - Function parameters
+ params - Function parameters
  * @returns {*} Function return value
  */
 function SecurityComplianceSection () {
@@ -25,8 +22,7 @@ function SecurityComplianceSection () {
 
       benefits['Firewall protection',IDS/IPS systems',DDoS mitigation',VPN solutions']};
   ];
-const securityFeatures = [
-  {
+const securityFeatures = [{
 
     title: "SOC 2 Type II Compliance","
     description: "Annual third-party audits ensuring data security, availability, and confidentiality","
@@ -74,25 +70,24 @@ const securityFeatures = [
     color: "from-teal-500 to-green-600"};
 ];
 ;
-const complianceFeatures = [
-  {
+const complianceFeatures = [{
 "
     category: "Data Protection",
     features: ["
       "Automated data classification","
       "Real-time threat detection","
       "Automated incident response","
-      "Data loss prevention (DLP)"
+      "Data loss prevention(DLP)"
     ]
   },
   {
 "
     category: "Access Control",
     features: ["
-      "Multi-factor authentication (MFA)","
-      "Role-based access control (RBAC)","
+      "Multi-factor authentication(MFA)","
+      "Role-based access control(RBAC)","
       "Privileged access management","
-      "Single sign-on (SSO) integration"
+      "Single sign-on(SSO) integration"
     ]
   },
   {
@@ -110,14 +105,14 @@ const complianceFeatures = [
 ];
 
 <<<<<<< HEAD
-  return (<section className = "py - 20 bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
-      <div className="max - w-7xl mx - auto px - 6">
+  return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
+      <div className="max - w-7xl mx - auto px-6">
         <motion.div
-          className="text - center mb - 16"
+          className="text-center mb-16"
 =======
 export function SecurityComplianceSection() {
   return ("
-    <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
+    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <div className="max-w-7xl mx-auto px-6">
         <motion.div "
           className="text-center mb-16"
@@ -141,9 +136,7 @@ export function SecurityComplianceSection() {
             Security & Compliance
           </h2>"
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Enterprise-grade security with industry-leading compliance certifications.
-            Your data and systems are protected by the highest security standards.
-          </p>
+            Enterprise-grade security with industry-leading compliance certifications.Your data and systems are protected by the highest security standards.</p>
         </motion.div>
 
           initial = {
@@ -206,9 +199,7 @@ export function SecurityComplianceSection() {
                   <h3 className="text-lg font-bold text-white mb-2">{feature.title}</h3>"
                   <p className="text-gray-400 text-sm mb-3">{feature.description}</p>"
                   <div className="inline-flex items-center gap-2 px-3 py-1 bg-slate-700 rounded-full">`
-                    <div className={`w-2 h-2 rounded-full ${
-
-                      feature.status === 'Certified' ? 'bg-green-400' :'
+                    <div className={`w-2 h-2 rounded-full ${feature.status === 'Certified' ? 'bg-green-400' :'
                       feature.status === 'Compliant' ? 'bg-blue-400' : 'bg-purple-400'`
                     }`}></div>"
                     <span className="text-gray-300 text-sm font-medium">{feature.status}</span>
@@ -221,7 +212,7 @@ export function SecurityComplianceSection() {
         {/* Compliance Features */}
 <<<<<<< HEAD
         <motion.div
-          className="mb - 16"
+          className="mb-16"
 =======
         <motion.div "
           className="mb-16"
@@ -251,9 +242,9 @@ export function SecurityComplianceSection() {
           </h3>
 <<<<<<< HEAD
 
-          <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">
-            {complianceFeatures.map ( (category, index) => (<div key={category.category} className="bg - slate - 800 border border - slate - 700 rounded - xl p - 6">
-                <h4 className="text - xl font - bold text - white mb - 4 text - center">
+          <div className="grid grid - cols - 1 md:grid - cols - 3 gap-8">
+            {complianceFeatures.map((category, index) => (<div key={category.category} className="bg-slate - 800 border border-slate - 700 rounded-xl p -6">
+                <h4 className="text-xl font - bold text-white mb-4 text-center">
 =======
           "
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -278,7 +269,7 @@ export function SecurityComplianceSection() {
         {/* Security Metrics */}
 <<<<<<< HEAD
         <motion.div
-          className="mb - 16"
+          className="mb-16"
 =======
         <motion.div "
           className="mb-16"
@@ -315,7 +306,7 @@ export function SecurityComplianceSection() {
               </div>;"
               <div className="text-center">;"
                 <div className="text-4xl font-bold text-green-400 mb-2">&lt;1s</div>"
-                <div className = "text-gray-400 text-sm">Response Time</div>
+                <div className="text-gray-400 text-sm">Response Time</div>
               </div>"
               <div className="text-center">"
                 <div className="text-4xl font-bold text-purple-400 mb-2">24/7</div>"
@@ -332,7 +323,7 @@ export function SecurityComplianceSection() {
         {/* Call to Action */}
 <<<<<<< HEAD
         <motion.div
-          className="text - center"
+          className="text-center"
 =======
         <motion.div "
           className="text-center"
@@ -362,9 +353,7 @@ export function SecurityComplianceSection() {
               Secure Your Business Today
             </h3>"
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-              Get enterprise-grade security and compliance without the complexity.
-              Our experts handle everything while you focus on your business.
-            </p>"
+              Get enterprise-grade security and compliance without the complexity.Our experts handle everything while you focus on your business.</p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
                 Security Assessment"

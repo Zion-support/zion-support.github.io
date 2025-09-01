@@ -50,11 +50,9 @@ const zionContact = {
 <<<<<<< HEAD
 };
 
-export const innovativeAIServices2030: AIService[] = [
-=======
+export const innovativeAIServices2030: AIService[] = [=======
 // Innovative AI Services 2030
-export const innovativeAIServices2030: InnovativeAIService[] = [
->>>>>>> main
+export const innovativeAIServices2030: InnovativeAIService[] = [>>>>>>> main
   {
 "
     id: "ai-voice-cloning-platform","

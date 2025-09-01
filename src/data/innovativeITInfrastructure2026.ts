@@ -44,8 +44,7 @@ const zionContact: ServiceContact = {
 };
 
 // Innovative IT Infrastructure Services 2026
-export const innovativeITInfrastructure2026: ITInfrastructureService2026[] = [
-  {
+export const innovativeITInfrastructure2026: ITInfrastructureService2026[] = [{
     id: 1,
     name: "AI-Powered Cloud Infrastructure Optimization Platform",
     category: "Cloud Infrastructure",
@@ -64,8 +63,7 @@ export const innovativeITInfrastructure2026: ITInfrastructureService2026[] = [
       "Real-time analytics",
       "Predictive maintenance"
     ],
-    benefits: [
-      "40% reduction in cloud costs",
+    benefits: ["40% reduction in cloud costs",
       "50% improvement in performance",
       "Automated optimization",
       "Better resource utilization",
@@ -85,15 +83,13 @@ export const innovativeITInfrastructure2026: ITInfrastructureService2026[] = [
     innovationLevel: "Advanced",
     marketSize: "$178.9 billion",
     growthRate: "28.7% annually",
-    useCases: [
-      "Cloud cost optimization",
+    useCases: ["Cloud cost optimization",
       "Performance monitoring",
       "Resource management",
       "Security compliance",
       "Multi-cloud operations"
     ],
-    technologies: [
-      "Machine Learning",
+    technologies: ["Machine Learning",
       "Cloud computing",
       "Containerization",
       "Orchestration",
@@ -110,8 +106,7 @@ export const innovativeITInfrastructure2026: ITInfrastructureService2026[] = [
     price: 449,
     pricingModel: "monthly per edge node",
     userLimit: "Up to 1000 devices per node",
-    features: [
-      "Edge node management",
+    features: ["Edge node management",
       "5G network integration",
       "Real-time processing",
       "IoT device management",
@@ -120,8 +115,7 @@ export const innovativeITInfrastructure2026: ITInfrastructureService2026[] = [
       "Performance monitoring",
       "Scalable architecture"
     ],
-    benefits: [
-      "Ultra-low latency",
+    benefits: ["Ultra-low latency",
       "High bandwidth",
       "Reduced data transfer costs",
       "Improved reliability",
@@ -141,15 +135,13 @@ export const innovativeITInfrastructure2026: ITInfrastructureService2026[] = [
     innovationLevel: "Advanced",
     marketSize: "$43.4 billion",
     growthRate: "37.8% annually",
-    useCases: [
-      "IoT applications",
+    useCases: ["IoT applications",
       "Real-time analytics",
       "Autonomous systems",
       "Smart city infrastructure",
       "Industrial automation"
     ],
-    technologies: [
-      "Edge computing",
+    technologies: ["Edge computing",
       "5G networks",
       "IoT protocols",
       "Real-time processing",
@@ -166,8 +158,7 @@ export const innovativeITInfrastructure2026: ITInfrastructureService2026[] = [
     price: 999,
     pricingModel: "monthly per data center",
     userLimit: "Unlimited data center staff",
-    features: [
-      "AI automation",
+    features: ["AI automation",
       "Energy optimization",
       "Predictive maintenance",
       "Capacity planning",
@@ -176,8 +167,7 @@ export const innovativeITInfrastructure2026: ITInfrastructureService2026[] = [
       "Disaster recovery",
       "Real-time alerts"
     ],
-    benefits: [
-      "30% reduction in energy costs",
+    benefits: ["30% reduction in energy costs",
       "50% improvement in uptime",
       "Automated operations",
       "Better resource utilization",
@@ -197,15 +187,13 @@ export const innovativeITInfrastructure2026: ITInfrastructureService2026[] = [
     innovationLevel: "Advanced",
     marketSize: "$89.7 billion",
     growthRate: "31.2% annually",
-    useCases: [
-      "Data center automation",
+    useCases: ["Data center automation",
       "Energy management",
       "Predictive maintenance",
       "Capacity planning",
       "Disaster recovery"
     ],
-    technologies: [
-      "Machine Learning",
+    technologies: ["Machine Learning",
       "IoT sensors",
       "Automation",
       "Real-time monitoring",
@@ -222,8 +210,7 @@ export const innovativeITInfrastructure2026: ITInfrastructureService2026[] = [
     price: 599,
     pricingModel: "monthly per user",
     userLimit: "Up to 5000 users",
-    features: [
-      "Zero-trust architecture",
+    features: ["Zero-trust architecture",
       "Micro-segmentation",
       "Continuous verification",
       "Threat detection",
@@ -232,8 +219,7 @@ export const innovativeITInfrastructure2026: ITInfrastructureService2026[] = [
       "Compliance reporting",
       "Security analytics"
     ],
-    benefits: [
-      "Enhanced security posture",
+    benefits: ["Enhanced security posture",
       "Reduced attack surface",
       "Better access control",
       "Improved compliance",
@@ -253,15 +239,13 @@ export const innovativeITInfrastructure2026: ITInfrastructureService2026[] = [
     innovationLevel: "Advanced",
     marketSize: "$38.9 billion",
     growthRate: "34.7% annually",
-    useCases: [
-      "Network security",
+    useCases: ["Network security",
       "Access control",
       "Threat prevention",
       "Compliance management",
       "Security monitoring"
     ],
-    technologies: [
-      "Zero-trust architecture",
+    technologies: ["Zero-trust architecture",
       "Network segmentation",
       "Identity verification",
       "Threat intelligence",
@@ -278,8 +262,7 @@ export const innovativeITInfrastructure2026: ITInfrastructureService2026[] = [
     price: 349,
     pricingModel: "monthly per developer",
     userLimit: "Up to 200 developers",
-    features: [
-      "AI-powered automation",
+    features: ["AI-powered automation",
       "CI/CD pipelines",
       "Automated testing",
       "Deployment automation",
@@ -288,8 +271,7 @@ export const innovativeITInfrastructure2026: ITInfrastructureService2026[] = [
       "Collaboration tools",
       "Analytics dashboard"
     ],
-    benefits: [
-      "80% faster deployments",
+    benefits: ["80% faster deployments",
       "Reduced manual errors",
       "Improved code quality",
       "Better collaboration",
@@ -309,15 +291,13 @@ export const innovativeITInfrastructure2026: ITInfrastructureService2026[] = [
     innovationLevel: "Advanced",
     marketSize: "$25.6 billion",
     growthRate: "29.8% annually",
-    useCases: [
-      "Software development",
+    useCases: ["Software development",
       "Automated testing",
       "Continuous deployment",
       "Performance monitoring",
       "Security scanning"
     ],
-    technologies: [
-      "Machine Learning",
+    technologies: ["Machine Learning",
       "Automation",
       "Containerization",
       "Orchestration",
@@ -334,8 +314,7 @@ export const innovativeITInfrastructure2026: ITInfrastructureService2026[] = [
     price: 699,
     pricingModel: "monthly per organization",
     userLimit: "Unlimited cloud users",
-    features: [
-      "Multi-cloud management",
+    features: ["Multi-cloud management",
       "Hybrid cloud support",
       "Unified governance",
       "Cost optimization",
@@ -344,8 +323,7 @@ export const innovativeITInfrastructure2026: ITInfrastructureService2026[] = [
       "Performance analytics",
       "Automated operations"
     ],
-    benefits: [
-      "Unified cloud management",
+    benefits: ["Unified cloud management",
       "Reduced complexity",
       "Better cost control",
       "Enhanced security",
@@ -365,15 +343,13 @@ export const innovativeITInfrastructure2026: ITInfrastructureService2026[] = [
     innovationLevel: "Advanced",
     marketSize: "$67.3 billion",
     growthRate: "32.1% annually",
-    useCases: [
-      "Multi-cloud management",
+    useCases: ["Multi-cloud management",
       "Hybrid cloud operations",
       "Cloud governance",
       "Cost optimization",
       "Security management"
     ],
-    technologies: [
-      "Cloud computing",
+    technologies: ["Cloud computing",
       "Containerization",
       "Orchestration",
       "Automation",
@@ -390,8 +366,7 @@ export const innovativeITInfrastructure2026: ITInfrastructureService2026[] = [
     price: 249,
     pricingModel: "monthly per network",
     userLimit: "Up to 1000 network devices",
-    features: [
-      "AI performance monitoring",
+    features: ["AI performance monitoring",
       "Predictive analytics",
       "Real-time alerts",
       "Network optimization",
@@ -400,8 +375,7 @@ export const innovativeITInfrastructure2026: ITInfrastructureService2026[] = [
       "Automated troubleshooting",
       "Capacity planning"
     ],
-    benefits: [
-      "Proactive issue detection",
+    benefits: ["Proactive issue detection",
       "Improved network performance",
       "Reduced downtime",
       "Better capacity planning",
@@ -421,15 +395,13 @@ export const innovativeITInfrastructure2026: ITInfrastructureService2026[] = [
     innovationLevel: "Advanced",
     marketSize: "$31.8 billion",
     growthRate: "28.9% annually",
-    useCases: [
-      "Network monitoring",
+    useCases: ["Network monitoring",
       "Performance optimization",
       "Issue detection",
       "Capacity planning",
       "Troubleshooting"
     ],
-    technologies: [
-      "Machine Learning",
+    technologies: ["Machine Learning",
       "Network monitoring",
       "Predictive analytics",
       "Real-time processing",
@@ -446,8 +418,7 @@ export const innovativeITInfrastructure2026: ITInfrastructureService2026[] = [
     price: 399,
     pricingModel: "monthly per organization",
     userLimit: "Up to 500 IT professionals",
-    features: [
-      "Energy optimization",
+    features: ["Energy optimization",
       "Carbon footprint tracking",
       "Sustainable practices",
       "Green procurement",
@@ -456,8 +427,7 @@ export const innovativeITInfrastructure2026: ITInfrastructureService2026[] = [
       "Performance analytics",
       "Sustainability metrics"
     ],
-    benefits: [
-      "Reduced environmental impact",
+    benefits: ["Reduced environmental impact",
       "Lower energy costs",
       "Improved sustainability",
       "Enhanced brand reputation",
@@ -477,15 +447,13 @@ export const innovativeITInfrastructure2026: ITInfrastructureService2026[] = [
     innovationLevel: "Advanced",
     marketSize: "$22.4 billion",
     growthRate: "35.7% annually",
-    useCases: [
-      "Energy optimization",
+    useCases: ["Energy optimization",
       "Sustainability tracking",
       "Green procurement",
       "Compliance reporting",
       "Environmental impact reduction"
     ],
-    technologies: [
-      "IoT sensors",
+    technologies: ["IoT sensors",
       "Energy monitoring",
       "Analytics",
       "Automation",
@@ -502,8 +470,7 @@ export const innovativeITInfrastructure2026: ITInfrastructureService2026[] = [
     price: 799,
     pricingModel: "monthly per organization",
     userLimit: "Unlimited users per organization",
-    features: [
-      "AI-powered backup",
+    features: ["AI-powered backup",
       "Automated recovery",
       "Business continuity",
       "Real-time monitoring",
@@ -512,8 +479,7 @@ export const innovativeITInfrastructure2026: ITInfrastructureService2026[] = [
       "Performance analytics",
       "Automated testing"
     ],
-    benefits: [
-      "99.9% uptime guarantee",
+    benefits: ["99.9% uptime guarantee",
       "Automated recovery",
       "Reduced downtime",
       "Better data protection",
@@ -533,15 +499,13 @@ export const innovativeITInfrastructure2026: ITInfrastructureService2026[] = [
     innovationLevel: "Advanced",
     marketSize: "$18.9 billion",
     growthRate: "31.4% annually",
-    useCases: [
-      "Data backup",
+    useCases: ["Data backup",
       "Disaster recovery",
       "Business continuity",
       "Compliance management",
       "Performance monitoring"
     ],
-    technologies: [
-      "Machine Learning",
+    technologies: ["Machine Learning",
       "Automation",
       "Real-time monitoring",
       "Cloud computing",
@@ -558,8 +522,7 @@ export const innovativeITInfrastructure2026: ITInfrastructureService2026[] = [
     price: 199,
     pricingModel: "monthly per asset",
     userLimit: "Up to 10000 assets",
-    features: [
-      "AI asset tracking",
+    features: ["AI asset tracking",
       "Lifecycle management",
       "Cost optimization",
       "Predictive maintenance",
@@ -568,8 +531,7 @@ export const innovativeITInfrastructure2026: ITInfrastructureService2026[] = [
       "Performance analytics",
       "Automated reporting"
     ],
-    benefits: [
-      "Better asset visibility",
+    benefits: ["Better asset visibility",
       "Reduced costs",
       "Improved compliance",
       "Optimized lifecycle",
@@ -589,15 +551,13 @@ export const innovativeITInfrastructure2026: ITInfrastructureService2026[] = [
     innovationLevel: "Advanced",
     marketSize: "$15.7 billion",
     growthRate: "27.8% annually",
-    useCases: [
-      "Asset tracking",
+    useCases: ["Asset tracking",
       "Lifecycle management",
       "Cost optimization",
       "Compliance management",
       "Performance monitoring"
     ],
-    technologies: [
-      "Machine Learning",
+    technologies: ["Machine Learning",
       "IoT tracking",
       "Automation",
       "Analytics",

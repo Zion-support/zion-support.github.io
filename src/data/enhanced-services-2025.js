@@ -1,5 +1,4 @@
-export const enhancedServices2025 = [
-  {
+export const enhancedServices2025 = [{
 
     id: 1,
     title: "AI & Machine Learning Solutions","

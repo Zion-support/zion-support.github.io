@@ -1,52 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation  } from 'react-router-dom';
 
-import { motion } from 'framer-motion';
-import {
+export default function Page() {
+;
 
-  Menu,
-  X,
-  ChevronDown,
-  Brain,
-  Zap,
-  Lock,
-  Rocket,
-  Sun,
-  Moon,
-  Cloud,
-  Users,
-  Database,
-  Shield} from 'lucide-react';
-
-export function AppHeader() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState(null);
-  const [isDarkMode, setIsDarkMode] = useState(false);
-  const location = useLocation();
-
-  // Handle scroll effect
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  // Close mobile menu when route changes
-  useEffect(() => {
-    setMobileMenuOpen(false);
-    setActiveDropdown(null);
-  }, [location.pathname]);
-
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-    // In a real app, this would toggle the theme
-  };
-
-  const navigationItems = [
-    { name: 'Home', path: '/', icon: null },
+  const navigationItems = [{ name: 'Home', path: '/', icon: null },
     {
       name: 'Services',
       path: '/services',
@@ -89,8 +47,7 @@ export function AppHeader() {
       name: 'Resources', 
       path: '#', 
       icon: null,
-      dropdown: [
-        {
+      dropdown: [{
           name: 'Blog & Insights',
           path: '/blog',
           icon: Users,
@@ -120,16 +77,14 @@ export function AppHeader() {
   ];
 
   const isActiveRoute = path => {
-    if (path === '/') {
+    if(path === '/') {
       return location.pathname === '/';
     }
     return location.pathname.startsWith(path);
   };
 
-  return (
-    <motion.header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
+  return (<motion.header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
           ? 'bg-black/95 backdrop-blur-xl border-b border-zion-cyan/30 shadow-2xl shadow-zion-cyan/10'
           : 'bg-black/80 backdrop-blur-md border-b border-zion-cyan/20'
       }`}
@@ -172,8 +127,7 @@ export function AppHeader() {
                 ) : (
                   <Link
                     to={item.path}
-                    className={`text-white hover:text-zion-cyan transition-colors ${
-                      isActiveRoute(item.path) ? 'text-zion-cyan' : ''
+                    className={`text-white hover:text-zion-cyan transition-colors ${isActiveRoute(item.path) ? 'text-zion-cyan' : ''
                     }`}
                   >
                     {item.name}

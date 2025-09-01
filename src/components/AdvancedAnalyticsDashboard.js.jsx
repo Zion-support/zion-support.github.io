@@ -1,65 +1,9 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import {
-
-  TrendingUp,
-  TrendingDown,
-  Users,
-  DollarSign,
-  Target,
-  BarChart3,
-  PieChart,
-  Activity,
-  Star,
-  ArrowUpRight,
-  ArrowDownRight,
-  Shield,
-  Brain,
-  Rocket} from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
-import { Button } from './ui/button';
-import { Badge } from './ui/badge';
-const AdvancedAnalyticsDashboard = () => {
-
-  const [timeRange, setTimeRange] = useState('30d');
-  const [selectedMetric, setSelectedMetric] = useState('overview');
-  // Mock data - in real app this would come from API
-  const metrics = [
-    {
-
-      title: 'Total Revenue',
-      value: '$2.4M',
-      change: 12.5,
-      changeType: 'increase',
-      icon: <DollarSign className="w-6 h-6" />,
-      color: 'from-green-500 to-emerald-600'},
-    {
-
-      title: 'Active Clients',
-      value: '1,247',
-      change: 8.2,
-      changeType: 'increase',"
-      icon: <Users className="w-6 h-6" />,
-      color: 'from-blue-500 to-cyan-600'},
-    {
-
-      title: 'Service Performance',
-      value: '94.2%',
-      change: 2.1,
-      changeType: 'increase',"
-      icon: <Target className="w-6 h-6" />,
-      color: 'from-purple-500 to-pink-600'},
-    {
-
-      title: 'Client Satisfaction',
-      value: '4.8/5',
-      change: 0.3,
-      changeType: 'increase',"
-      icon: <Star className="w-6 h-6" />,
-      color: 'from-yellow-500 to-orange-600'},
+import { motion  } from 'framer-motion';
+export default function Page() {
+,
   ];
-  const servicePerformance = [
-    {
+  const servicePerformance = [{
 
       name: 'AI CRM Platform',
       performance: 96,
@@ -109,7 +53,7 @@ const AdvancedAnalyticsDashboard = () => {
   ];
   const getStatusIcon = status => {
 
-    switch (status) {
+    switch(status) {
 
       case 'trending':"
         return <TrendingUp className="w-4 h-4 text-green-500" />;
@@ -123,7 +67,7 @@ const AdvancedAnalyticsDashboard = () => {
   };
   const getStatusColor = status => {
 
-    switch (status) {
+    switch(status) {
 
       case 'trending':'
         return 'bg-green-100 text-green-800';
@@ -428,8 +372,7 @@ const AdvancedAnalyticsDashboard = () => {
           <p className="text-xl mb-6 max-w-2xl mx-auto">
             Access comprehensive analytics, custom reports, and real-time
             insights to optimize your business performance and make data-driven
-            decisions.
-          </p>"
+            decisions.</p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button"
               className="bg-white text-zion-purple hover:bg-zion-slate-light"

@@ -1,9 +1,6 @@
 import React, { Suspense, lazy, memo, useMemo, useCallback } from 'react';
-import { LoadingSpinner } from "./ui/loading-spinner";
-// Lazy load heavy components'
-const LazyExpensiveComponent = lazy(() => import('./ExpensiveComponent'));
-// Memoized component for expensive calculations
-const MemoizedDataGrid = memo(({ data, onItemClick }) => {
+import { LoadingSpinner } from './ui/loading-spinner';
+) => {
 
     const processedData = useMemo(() => {
         return data.map(item => ({
@@ -124,7 +121,7 @@ export function PerformanceOptimizations() {
 
             id: i,`
             title: `Item ${i + 1}`,
-            value: Math.floor (Math.random () * 1000) ,
+            value: Math.floor(Math.random () * 1000) ,
           }) ) }
           itemHeight={60}
           containerHeight={400}

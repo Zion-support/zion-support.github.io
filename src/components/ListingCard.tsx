@@ -1,23 +1,7 @@
 
-import { cn } from "@/lib/utils";
-import { Badge } from "@/components/ui/badge";
-import { Link } from "react-router-dom";
-import TrustScoreBadge from "@/components/TrustScoreBadge"; // Assuming TrustScoreBadge is in @/components
-
-interface ListingCardProps {
-  id?: string;
-  title: string;
-  description: string;
-  image?: string;
-  category: string;
-  tags?: string[];
-  author?: string;
-  authorImage?: string;
-  className?: string;
-  profileType?: 'service' | 'talent';
-  trustScore?: number | null;
-  trustScoreAnalysis?: string | null;
-}
+import { cn } from '@/lib/utils';
+import { Badge } from '@/components/ui/badge';
+import { Link  } from 'react-router-dom';
 
 export function ListingCard({ 
   id,
@@ -37,8 +21,7 @@ export function ListingCard({
   // In a real app, this would be a proper ID from the database
   const profileId = id || (profileType === 'service' ? 'service-provider-1' : 'talent-1');
 
-  return (
-    <Link
+  return (<Link
       to={`/profile/${profileId}`}
       tabIndex={0}
       className={cn(

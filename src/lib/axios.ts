@@ -21,7 +21,7 @@ class InterceptorManager<V_FULFILL = unknown, R_FULFILL = unknown, E_REJECT = un
   }
 }
 
-// T for response data type, D for request data type (for POST)
+// T for response data type, D for request data type(for POST)
 export interface AxiosInstance {
   interceptors: { 
     response: InterceptorManager<{ data: unknown; status: number }, { data: unknown; status: number }, AxiosError> 
@@ -44,7 +44,7 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
         ? '?' + new URLSearchParams(init.params as Record<string, string>).toString() // URLSearchParams expects string values
         : '';
       const opts = { ...init } as RequestInit & { _originalData?: any };
-      delete (opts as any).params;
+      delete(opts as any).params;
       // For GET, _originalData is not applicable, but we ensure consistent shape for init in request function
       return request(baseURL + url + params, 'GET', opts);
     },
@@ -82,7 +82,7 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
     const authToken = cookies['authToken'];
 
     const finalHeaders = { ...init.headers }; // Start with headers from init
-    if (authToken) {
+    if(authToken) {
       finalHeaders['Authorization'] = `Bearer ${authToken}`;
     }
 
@@ -97,20 +97,17 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
 
       const result = { data: responseData, status: response.status, headers: response.headers };
 
-      if (response.ok) {
+      if(response.ok) {
         document.dispatchEvent(new CustomEvent('globalLoading', { detail: { isLoading: false } }));
         let res: any = result;
-        for (const handler of instance.interceptors.response.handlers) {
-          if (handler.fulfilled) {
+        for(const handler of instance.interceptors.response.handlers) {
+          if(handler.fulfilled) {
             res = await handler.fulfilled(res);
           }
         }
         return res;
       } else {
-        // Error case, will be caught by the global error interceptor after this.
-        // The interceptor will set isLoading to false.
-        const error: any = Object.assign(
-          new Error(responseData?.message || responseData?.error || 'Request failed'),
+        // Error case, will be caught by the global error interceptor after this.// The interceptor will set isLoading to false.const error: any = Object.assign(new Error(responseData?.message || responseData?.error || 'Request failed'),
           {
             response: result,
             config: {
@@ -123,18 +120,13 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
         );
         throw error; // This throw will be caught by the instance.interceptors.response.use
       }
-    } catch (networkOrThrownError: any) {
-      // This catches fetch network errors (e.g., no connection)
-      // OR errors deliberately thrown from the 'else' block above.
+    } catch(networkOrThrownError: any) {
+      // This catches fetch network errors(e.g., no connection)
+      // OR errors deliberately thrown from the 'else' block above.// If it's NOT an error we've already augmented(i.e., it's a raw network error from fetch)
+      if(!networkOrThrownError.response && !networkOrThrownError.config) {
+        // Only dispatch loading false here for raw network errors.// For errors thrown from 'else' (HTTP errors), the interceptor handles it.document.dispatchEvent(new CustomEvent('globalLoading', { detail: { isLoading: false } }));
 
-      // If it's NOT an error we've already augmented (i.e., it's a raw network error from fetch)
-      if (!networkOrThrownError.response && !networkOrThrownError.config) {
-        // Only dispatch loading false here for raw network errors.
-        // For errors thrown from 'else' (HTTP errors), the interceptor handles it.
-        document.dispatchEvent(new CustomEvent('globalLoading', { detail: { isLoading: false } }));
-
-        const constructedError: any = Object.assign(
-          new Error(networkOrThrownError.message || 'Network request failed'),
+        const constructedError: any = Object.assign(new Error(networkOrThrownError.message || 'Network request failed'),
           {
             response: null,
             config: {
@@ -145,12 +137,10 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
             }
           }
         );
-        // Throwing is preferred to keep error handling centralized in interceptors.
-        throw constructedError;
+        // Throwing is preferred to keep error handling centralized in interceptors.throw constructedError;
       }
-      // If it's an error already thrown from the 'else' block (HTTP error) or already constructed,
-      // it will be processed by the interceptors. isLoading is handled by the interceptor for these.
-      throw networkOrThrownError;
+      // If it's an error already thrown from the 'else' block(HTTP error) or already constructed,
+      // it will be processed by the interceptors.isLoading is handled by the interceptor for these.throw networkOrThrownError;
     }
   }
 
@@ -158,42 +148,41 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
   instance.interceptors.response.use(undefined, async (error: any) => {
     console.log("Global error interceptor caught (axios.ts):", error);
 
-    // 1. Set Loading False via event
+    // 1.Set Loading False via event
     document.dispatchEvent(new CustomEvent('globalLoading', { detail: { isLoading: false } }));
 
-    // 2. Extract Message
-    let displayMessage = "An unexpected error occurred. Please try again.";
-    if (error.response?.data?.error) {
+    // 2.Extract Message
+    let displayMessage = "An unexpected error occurred.Please try again.";
+    if(error.response?.data?.error) {
       displayMessage = error.response.data.error;
-    } else if (error.response?.data?.message) {
+    } else if(error.response?.data?.message) {
       displayMessage = error.response.data.message;
-    } else if (error.message) { // For network errors or errors without response.data
+    } else if(error.message) { // For network errors or errors without response.data
       displayMessage = error.message;
     }
 
     // Refine message for specific scenarios
-    if (!error.response) { // True network error (fetch failed to connect or error constructed in catch)
-      displayMessage = "Network error. Please check your connection and try again.";
-    } else if (error.response?.status === 0 ) {
-      displayMessage = "Network error. Please check your connection and try again.";
-    } else if (error.response?.status === 503 && error.response?.data?.error?.includes('Network error. Please try again later.')) {
+    if(!error.response) { // True network error(fetch failed to connect or error constructed in catch)
+      displayMessage = "Network error.Please check your connection and try again.";
+    } else if(error.response?.status === 0 ) {
+      displayMessage = "Network error.Please check your connection and try again.";
+    } else if(error.response?.status === 503 && error.response?.data?.error?.includes('Network error.Please try again later.')) {
       displayMessage = error.response.data.error;
-    } else if (error.response?.status === 500) {
-        displayMessage = "A server error occurred. Please try again later.";
-    } else if (error.response?.status === 401) {
-        displayMessage = "Authentication failed. Please log in again.";
-    } else if (error.response?.status === 403) {
+    } else if(error.response?.status === 500) {
+        displayMessage = "A server error occurred.Please try again later.";
+    } else if(error.response?.status === 401) {
+        displayMessage = "Authentication failed.Please log in again.";
+    } else if(error.response?.status === 403) {
         displayMessage = "You do not have permission to perform this action.";
     }
     // Add more specific status code messages if needed
 
-    // 3. Show Error Modal via event
+    // 3.Show Error Modal via event
     document.dispatchEvent(new CustomEvent('globalError', {
       detail: { message: displayMessage, retryConfig: error.config }
     }));
 
-    // 4. IMPORTANT: Rethrow the error so other handlers or the original caller can catch it.
-    throw error;
+    // 4.IMPORTANT: Rethrow the error so other handlers or the original caller can catch it.throw error;
   });
 
   return instance;

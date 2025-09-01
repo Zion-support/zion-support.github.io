@@ -34,8 +34,7 @@ export interface HealthcareAIService2028 {
   regulatoryCompliance?: string[]}
 
 export const SPECIALIZED_HEALTHCARE_AI_SERVICES_2028: HealthcareAIService2028[] =
-  [
-    // AI-Powered Medical Imaging Analysis
+  [// AI-Powered Medical Imaging Analysis
     {
 
       id: 'ai-medical-imaging-analysis-2028',

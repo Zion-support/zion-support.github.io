@@ -1,32 +1,6 @@
 import { useState, useMemo, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown } from 'lucide-react';
-import { useVirtualScroll } from "../hooks/useVirtualScroll";"
-import { useAnalytics } from "../hooks/useAnalytics";
-export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = '', onRowClick, onSelectionChange, onExport }) => {
-
-    const { trackEvent } = useAnalytics({
-
-        enableTracking: true,
-        enableUserBehaviorTracking: true
-    });
-    // State management'
-    const [searchQuery, setSearchQuery] = useState('');
-    const [sortConfig, setSortConfig] = useState(null);
-    const [filters, setFilters] = useState([]);
-    const [selectedItems, setSelectedItems] = useState(new Set());
-    const [currentPage, setCurrentPage] = useState(1);
-    const [showFilters, setShowFilters] = useState(false);
-    // Process data based on search, filters, and sorting
-    const processedData = useMemo(() => {
-        let result = [...data];
-        // Apply search
-        if (searchQuery.trim()) {
-
-            result = result.filter(item => columns.some(col => {
-
-                const value = String(item[col.key]).toLowerCase();
-                return value.includes(searchQuery.toLowerCase())}))}
+export default function Page() {
+))}
         // Apply filters
         filters.forEach(filter => {
 
@@ -34,7 +8,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
 
                 const value = String(item[filter.key]).toLowerCase();
                 const filterValue = filter.value.toLowerCase();
-                switch (filter.operator) {
+                switch(filter.operator) {
 
                     case 'contains':
                         return value.includes(filterValue);
@@ -55,15 +29,15 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                         return true}
             })});
         // Apply sorting
-        if (sortConfig) {
+        if(sortConfig) {
 
             result.sort((a, b) => {
 
                 const aVal = a[sortConfig.key];
                 const bVal = b[sortConfig.key];
-                if (aVal < bVal)
+                if(aVal < bVal)
                     return sortConfig.direction === 'asc' ? -1 : 1;
-                if (aVal > bVal)
+                if(aVal > bVal)
                     return sortConfig.direction === 'asc' ? 1 : -1;
                 return 0})}
         return result}, [data, searchQuery, filters, sortConfig, columns]);
@@ -82,7 +56,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
     // Handle sorting
     const handleSort = useCallback((key) => {
 
-        if (!enableSorting)
+        if(!enableSorting)
             return;
         setSortConfig(prev => {
 
@@ -99,7 +73,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
         setFilters(prev => {
 
             const newFilters = prev.filter(f => f.key !== key);
-            if (value.trim()) {
+            if(value.trim()) {
 
                 newFilters.push({ key, value, operator })}
             return newFilters});
@@ -109,7 +83,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
 
         const itemKey = String(item.id || JSON.stringify(item));
         const newSelection = new Set(selectedItems);
-        if (checked) {
+        if(checked) {
 
             newSelection.add(itemKey)}
         else {
@@ -120,7 +94,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
     // Handle select all
     const handleSelectAll = useCallback((checked) => {
 
-        if (checked) {
+        if(checked) {
 
             const allKeys = new Set(paginatedData.map(item => String(item.id || JSON.stringify(item))));
             setSelectedItems(allKeys);
@@ -132,7 +106,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
     }, [paginatedData, onSelectionChange]);
     // Export data
     const handleExport = useCallback(() => {
-        if (onExport) {
+        if(onExport) {
 
             onExport(processedData)}
         else {
@@ -163,7 +137,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
     // Get sort icon
     const getSortIcon = (key) => {
 
-        if (!enableSorting || sortConfig?.key !== key) {
+        if(!enableSorting || sortConfig?.key !== key) {
 "
             return <ArrowUpDown className="w-4 h-4 text-gray-400"/>}
         return sortConfig.direction === 'asc'"
@@ -173,7 +147,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
     const renderCell = (column, item, index) => {
 
         const value = item[column.key];
-        if (column.render) {
+        if(column.render) {
 
             return column.render(value, item, index)}'`
         return (<span className={`truncate ${column.align === 'center' ? 'text-center' : column.align === 'right' ? 'text-right' : 'text-left'}`}>
@@ -263,7 +237,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                   <span className="font-medium text-gray-700 dark:text-gray-300 text-sm">
                     {column.header}
                   </span>
-                  {column.sortable !== false && getSortIcon (column.key) }
+                  {column.sortable !== false && getSortIcon(column.key) }
                 </button>
               </div>))}
             "

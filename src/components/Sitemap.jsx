@@ -3,19 +3,9 @@ import React from 'react';
 export default Sitemap;
 
 =======
-import { Link } from 'react-router-dom';
->>>>>>> main
-const Sitemap = () => {
-    const sitemapData = {
-
-  main[;
-            { path: '/', label: 'Home',
-  description: 'Welcome to Zion Tech Group'
-
-},
-            { path: '/about', label: 'About Us', description: 'Learn about our comp and mission' },
-            { path: '/contact', label: 'Contact', description: 'Get in touch with our team' },
-            { path: '/careers', label: 'Careers', description: 'Join our innovative team' },
+import { Link  } from 'react-router-dom';
+export default function Page() {
+,
             { path: '/blog', label: 'Blog', description: 'Latest insights and technology trends' }
         ],;
         services[;

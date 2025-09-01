@@ -7,13 +7,12 @@ import { Shield, Users, Award, Star, TrendingUp, Globe export const CommunityTru
     { icon: Shield, value: 'SOC 2', label: 'Certified', color: 'text-purple-400' }
   ];
 
-  const testimonials = [
-    {
+  const testimonials = [{
 
       name: 'Sarah Chen',
       role: 'IT Director',
       comp: 'TechCorp Inc.',
-      content: 'Zion mobile app has transformed how our team manages IT assets in the field. The offline capability is a game-changer.',
+      content: 'Zion mobile app has transformed how our team manages IT assets in the field.The offline capability is a game-changer.',
       rating: 5,
       avatar: '👩‍💼'
     },
@@ -22,7 +21,7 @@ import { Shield, Users, Award, Star, TrendingUp, Globe export const CommunityTru
       name: 'Marcus Rodriguez',
       role: 'Systems Administrator',
       comp: 'Global Solutions',
-      content: 'Intuitive interface and powerful features. Our asset tracking accuracy improved by 95% since switching to Zion.',
+      content: 'Intuitive interface and powerful features.Our asset tracking accuracy improved by 95% since switching to Zion.',
       rating: 5,
       avatar: '👨‍💻'
     },
@@ -44,8 +43,7 @@ import { Shield, Users, Award, Star, TrendingUp, Globe export const CommunityTru
     { name: 'HIPAA Ready', icon: '🏥', description: 'Healthcare data standards' }
   ];
 
-  const features = [
-    {
+  const features = [{
 
       icon: Shield,
       title: 'Enterprise Security',
@@ -65,7 +63,7 @@ import { Shield, Users, Award, Star, TrendingUp, Globe export const CommunityTru
 
   ];
 
-  return()
+  return ()
     <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-slate-900">"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}"
@@ -74,8 +72,7 @@ import { Shield, Users, Award, Star, TrendingUp, Globe export const CommunityTru
             Trusted by IT Professionals Worldwide
           </h2>"
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Join thousands of IT teams who rely on Zion mobile for secure, reliable, and efficient asset management.
-          </p>
+            Join thousands of IT teams who rely on Zion mobile for secure, reliable, and efficient asset management.</p>
         </div>
 
         {/* Stats */}"
@@ -165,8 +162,7 @@ import { Shield, Users, Award, Star, TrendingUp, Globe export const CommunityTru
               Join the Zion Community
             </h3>"
             <p className="text-gray-300 max-w-2xl mx-auto">
-              Experience the same level of trust and reliability that has made Zion the preferred choice for IT asset management.
-            </p>
+              Experience the same level of trust and reliability that has made Zion the preferred choice for IT asset management.</p>
           </div>
 "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">"
@@ -200,8 +196,7 @@ import { Shield, Users, Award, Star, TrendingUp, Globe export const CommunityTru
               Ready to Experience Zion Mobile?
             </h3>"
             <p className="text-blue-100 mb-6">
-              Join thousands of IT professionals who trust Zion for their asset management needs.
-            </p>"
+              Join thousands of IT professionals who trust Zion for their asset management needs.</p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
                 href="#download"

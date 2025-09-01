@@ -1,22 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { ExternalLink, Github, Eye, X, ChevronLeft, ChevronRight, Star, Users, Calendar } from 'lucide-react';
-const portfolioProjects = [
-    {
-
-        id: '1',
-        title: 'AI-Powered E-commerce Platform',
-        description: 'A next-generation e-commerce solution with AI-driven product recommendations, dynamic pricing, and intelligent inventory management.',
-        category: 'AI & ML',
-        technologies['React',Node.js',TensorFlow',MongoDB',AWS'],;
-        image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
-        liveUrl: 'https://example.com',
-        githubUrl: 'https://github.com',
-        rating: 4.9,
-        users: 2500,
-        completionDate: '2024-01',
-        featured: true,
-        tags['Machine Learning',E-commerce',Real-time',Scalable'];
-    },;
+import { ExternalLink, Github, Eye, X, ChevronLeft, ChevronRight, Star, Users, Calendar  } from 'lucide-react';
+,;
     {
 
         id: '2',
@@ -113,28 +97,28 @@ export function InteractivePortfolio() {
         setSelectedProject(project);
         setIsModalOpen(true)};
     const closeModal = () => {
-        setIsModalOpen (false) ;
-        setSelectedProject (null) ;
-        setCurrentImageIndex (0) };
+        setIsModalOpen(false) ;
+        setSelectedProject(null) ;
+        setCurrentImageIndex(0) };
     const nextImage = () => {
-        if (selectedProject) {
+        if(selectedProject) {
 
             setCurrentImageIndex((prev) => (prev + 1) % 1); // Only one image per project for now
         }
     };
     const prevImage = () => {
-        if (selectedProject) {
+        if(selectedProject) {
 
             setCurrentImageIndex((prev) => (prev - 1 + 1) % 1)}
     };
     const handleKeyPress = (e) => {
 
-        if (e.key === 'Escape') {
+        if(e.key === 'Escape') {
 
             closeModal()}
     };
-    useEffect ( () => {
-        if (isModalOpen) {
+    useEffect(() => {
+        if(isModalOpen) {
 
             document.body.style.overflow = 'hidden'}
         else {
@@ -228,7 +212,7 @@ export function InteractivePortfolio() {
                         {tech}
                       </span>))}"
                     {project.technologies.length > 3 && (<span className="px-2 py-1 bg-zion-slate-light/20 text-zion-slate text-xs rounded">
-                        +{project.technologies.length - 3}
+                        +{project.technologies.length-3}
                       </span>) }
                   </div>
 

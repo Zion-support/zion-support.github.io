@@ -1,7 +1,6 @@
 import React from 'react';
 import { ClipboardList, Search, Settings, CheckCircle, Users, Headphones, FileText, Star, Clock export const ServiceProcessSteps = () => {
-  const processSteps = [
-    {
+  const processSteps = [{
 
       step: 1,
       title: 'Discovery & Assessment',

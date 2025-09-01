@@ -1,19 +1,13 @@
 import React from "react";"
-import { Link, useLocation } from "react-router-dom";"
-import { Home, Search, MessageSquare, User, MessageCircle, ShoppingCart import { useCart } from "@/context/CartContext";"
-import { cn } from "@/lib/utils";"
-import { useAuth } from "@/hooks/useAuth";"
-import { useFavorites } from "@/hooks/useFavorites";
-export function MobileBottomNav({ unreadCount = 0 }) {
-
-    const location = useLocation();
-    const { user } = useAuth();
-    const isAuthenticated = !!user;
-    const { count: favoritesCount } = useFavorites();
-    const { items } = useCart();
+import { Link, useLocation  } from 'react-router-dom';"
+import { Home, Search, MessageSquare, User, MessageCircle, ShoppingCart import { useCart } from '@/context/CartContext';"
+import { cn } from '@/lib/utils';"
+import { useAuth } from '@/hooks/useAuth';"
+import { useFavorites } from '@/hooks/useFavorites';
+export default function Page() {
+ = useCart();
     const cartCount = items.reduce((sum, i) => sum + i.quantity, 0);
-    const navItems = [
-        {
+    const navItems = [{
 "
             name: "Home","
             href: "/",
@@ -76,10 +70,6 @@ export function MobileBottomNav({ unreadCount = 0 }) {
             <div className="relative">
               <item.icon className="h-5 w-5 mb-1"/>
 =======
-
-
-
-
 
 }>"
             <div className="relative">"

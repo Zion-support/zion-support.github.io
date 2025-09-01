@@ -1,10 +1,9 @@
 <<<<<<< HEAD
-import { motion } from 'framer - motion';
+import { motion  } from 'framer-motion';
 
-=======
-import { motion } from 'framer-motion';
->>>>>>> main
-const EnhancedLoading = ({ variant = 'spinner', size = 'md', text, className = '' }) => {
+export default function Page() {
+ from 'framer-motion';
+) => {
 
     const sizeClasses = {
 

@@ -72,7 +72,7 @@ export default ContentOptimizer;
     const words = textContent.split(/\s+/).filter(w => w.length > 0);
     const syllables = this.countSyllables(textContent);
 
-    if (sentences.length === 0 || words.length === 0) return 0;
+    if(sentences.length === 0 || words.length === 0) return 0;
 
     // Flesch Reading Ease formula
     const score =
@@ -109,28 +109,28 @@ export default ContentOptimizer;
     let score = 100;
 
     // Check for title'
-    if (!content.includes('<title>)) score -= 20;
+    if(!content.includes('<title>)) score -= 20;
 
     // Check for meta description'
-    if (!content.includes('name="description"')) score -= 15;
+    if(!content.includes('name="description"')) score -= 15;
 
     // Check for headings'
-    if (!content.includes('<h1>)) score -= 10;
-    if (!content.includes('<h2>)) score -= 5;
+    if(!content.includes('<h1>)) score -= 10;
+    if(!content.includes('<h2>)) score -= 5;
 
     // Check for images with alt text
     const images = content.match(/<img[^>]*>/gi) || [];
     const imagesWithAlt = images.filter(img => img.includes('alt='));
-    if (images.length > 0 && imagesWithAlt.length === 0) score -= 10;
+    if(images.length > 0 && imagesWithAlt.length === 0) score -= 10;
 
 <<<<<<< HEAD
     // Check for internal links
-    const internalLinks = content.match (/href="/[^"]*"/g) || [];
+    const internalLinks = content.match(/href="/[^"]*"/g) || [];
 =======
     // Check for internal links"
     const internalLinks = content.match(/href="\/[^"]*"/g) || [];
 >>>>>>> main
-    if (internalLinks.length < 2) score -= 10;
+    if(internalLinks.length < 2) score -= 10;
 
     return Math.max(0, score);
   }
@@ -139,16 +139,16 @@ export default ContentOptimizer;
 
     const issues = [];
 
-    if (metrics.wordCount < this.MIN_WORD_COUNT) {
+    if(metrics.wordCount < this.MIN_WORD_COUNT) {
 
       issues.push({
 
         type: 'word_count',
         severity: 'medium',
-        message: `Content is too short. Aim for at least ${this.MIN_WORD_COUNT} words.`});
+        message: `Content is too short.Aim for at least ${this.MIN_WORD_COUNT} words.`});
     }
 
-    if (metrics.headingCount < this.MIN_HEADING_COUNT) {
+    if(metrics.headingCount < this.MIN_HEADING_COUNT) {
 
       issues.push({
 
@@ -157,7 +157,7 @@ export default ContentOptimizer;
         message: `Add more headings to improve content structure.`});
     }
 
-    if (metrics.imageCount < this.MIN_IMAGE_COUNT) {
+    if(metrics.imageCount < this.MIN_IMAGE_COUNT) {
 
       issues.push({
 
@@ -166,7 +166,7 @@ export default ContentOptimizer;
         message: `Consider adding images to make content more engaging.`});
     }
 
-    if (metrics.linkCount < this.MIN_LINK_COUNT) {
+    if(metrics.linkCount < this.MIN_LINK_COUNT) {
 
       issues.push({
 
@@ -218,7 +218,7 @@ export default ContentOptimizer;
     const optimizedContent = content;
 
     // Apply optimizations based on analysis
-    if (analysis.issues.length > 0) {
+    if(analysis.issues.length > 0) {
 
       // Add suggestions as comments
       const optimizationComments = analysis.suggestions`

@@ -1,18 +1,7 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { cn } from '@/lib/utils';
-import { Home, ShoppingCart, Users, Settings, FileText, HelpCircle, Code, BarChart3, Briefcase, Leaf, Building, Mail, Calendar, Globe, Zap } from 'lucide-react';
-export function MainSidebar() {
-    const location = useLocation();
-    const sidebarSections = [
-        {
-
-            title: 'Main',
-            items[;
-                { key: 'home', href: '/', icon: <Home className="w-4 h-4"/>, label: 'Home' },"
-                { key: 'marketplace', href: '/marketplace', icon: <ShoppingCart className="w-4 h-4"/>, label: 'Marketplace' },"
-                { key: 'services', href: '/services', icon: <Settings className="w-4 h-4"/>, label: 'Services' },"
-                { key: 'talent', href: '/talent', icon: <Users className="w-4 h-4"/>, label: 'Talent' },"
+import { Link, useLocation  } from 'react-router-dom';
+export default function Page() {
+,"
                 { key: 'equipment', href: '/equipment', icon: <BarChart3 className="w-4 h-4"/>, label: 'Equipment' },
             ]
         },;
@@ -49,7 +38,7 @@ export function MainSidebar() {
     ];
     const isActive = (href) => {
 
-        if (href === '/') {
+        if(href === '/') {
 
             return location.pathname === '/'}
         return location.pathname.startsWith(href)};"

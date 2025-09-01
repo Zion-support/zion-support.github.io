@@ -1,19 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import TrustScoreBadge from '../TrustScoreBadge'; // Adjust path based on your actual components folder structure
-
-describe('TrustScoreBadge Component', () => {
-  it('renders correctly with a given score and tooltip', () => {
-    const score = 85;
-    const tooltipText = 'User has high engagement and positive feedback.';
-    render(<TrustScoreBadge score={score} tooltipText={tooltipText} />);
-
-    // Check if score is displayed
-    expect(screen.getByText(`Zion Trust Score: ${score}/100`)).toBeInTheDocument();
-
-    // Check if the tooltip text is applied as a title attribute
-    const badgeElement = screen.getByText(`Zion Trust Score: ${score}/100`).closest('div');
+export default function Page() {
+/100`).closest('div');
     expect(badgeElement).toHaveAttribute('title', `Detailed analysis: ${tooltipText}`);
   });
 
@@ -53,10 +41,8 @@ describe('TrustScoreBadge Component', () => {
     it('applies yellow color for score equal to 85 (boundary check with > 70)', () => {
       render(<TrustScoreBadge score={85} />);
       const scoreSpan = screen.getByText('Zion Trust Score: 85/100');
-      // Based on current logic: score > 85 is green, score > 70 is yellow. So 85 falls into yellow.
-      expect(scoreSpan).toHaveClass('text-yellow-600');
+      // Based on current logic: score > 85 is green, score > 70 is yellow.So 85 falls into yellow.expect(scoreSpan).toHaveClass('text-yellow-600');
     });
-
 
     it('applies red color for scores <= 70', () => {
       render(<TrustScoreBadge score={65} />);

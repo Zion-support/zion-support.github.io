@@ -12,7 +12,6 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [accentColor, setAccentColor] = useState('#0ea5e9');
 
-  
     // Add modern font loading'
 <<<<<<< HEAD
     
@@ -24,7 +23,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     fontLink.rel = 'preload';'
     fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap';'    fontLink.as = 'style';
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-    document.head.appendChild (fontLink) ;
+    document.head.appendChild(fontLink) ;
 
     // Apply modern typography
     
@@ -35,14 +34,12 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     root.style.setProperty('--font-weight-semibold',600');
     root.style.setProperty('--font-weight-bold',700')}, [enabled]);
 
-  
-    
     // Modern color palette
     
     // Apply CSS custom properties
     Object.entries(colors).forEach(([key, value]) => {
 
-      if (typeof value === 'string') {
+      if(typeof value === 'string') {
 
         root.style.setProperty(`--color-${key}`, value)} else {
 
@@ -55,41 +52,31 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     root.style.setProperty('--color-primary-light', `${accentColor}20`);'`
     root.style.setProperty('--color-primary-dark', `${accentColor}80`)}, [enabled, accentColor]);
 
-  
-    
-    // Modern spacing scale (4px base unit)
+    // Modern spacing scale(4px base unit)
     
     Object.entries(spacing).forEach(([key, value]) => {
 `
       root.style.setProperty(`--spacing-${key}`, value)})}, [enabled]);
 
-  
-    
     // Modern shadow system
     
     Object.entries(shadows).forEach(([key, value]) => {
 `
       root.style.setProperty(`--shadow-${key}`, value)})}, [enabled]);
 
-  
-    
     // Modern transition system
     
     Object.entries(transitions).forEach(([key, value]) => {
 `
       root.style.setProperty(`--transition-${key}`, value)})}, [enabled]);
 
-  
-    
     // Modern border radius system
     
     Object.entries(radius).forEach(([key, value]) => {
 `
       root.style.setProperty(`--radius-${key}`, value)})}, [enabled]);
 
-  
-    
-    if (isDarkMode) {
+    if(isDarkMode) {
 
       root.classList.add('dark');
       root.style.setProperty('--bg-primary',#0f172a');
@@ -106,17 +93,16 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
       root.style.setProperty('--border-color',#e2e8f0')}
   }, [enabled, isDarkMode]) ;
 
-  
     // Add modern button styles'"
 <<<<<<< HEAD
     
     buttons.forEach((button) => {
 
 =======
-    const buttons = document.querySelectorAll('button, .btn, [role="button"]');    buttons.forEach((button) => {
+    const buttons = document.querySelectorAll('button, .btn, []');    buttons.forEach((button) => {
 '
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      if (!button.classList.contains('modern-enhanced')) {
+      if(!button.classList.contains('modern-enhanced')) {
 
         button.classList.add('modern-enhanced');`
         button.style.cssText += `
@@ -136,7 +122,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     const cards = document.querySelectorAll('.card, [class*="card"], [class*="Card"]');    cards.forEach((card) => {
 '
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      if (!card.classList.contains('modern-enhanced')) {
+      if(!card.classList.contains('modern-enhanced')) {
 
         card.classList.add('modern-enhanced');`
         card.style.cssText += `
@@ -146,8 +132,8 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
           border: 1px solid var(--border-color);`
         `}
     }) }, [enabled]) ;
-  useEffect ( () => {
-    if (!enabled) return;
+  useEffect(() => {
+    if(!enabled) return;
 
     enhanceTypography () ;
     enhanceColorScheme () ;
@@ -156,7 +142,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     enhanceTransitions () ;
     enhanceBorderRadius () ;
     enhanceDarkMode () ;
-    enhanceComponents () }, [    enabled,
+    enhanceComponents () }, [enabled,
     enhanceTypography,
     enhanceColorScheme,
     enhanceSpacing,

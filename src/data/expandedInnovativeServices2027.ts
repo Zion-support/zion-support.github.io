@@ -53,9 +53,8 @@ pricingTiers: {
   launchDate: string;
   status: 'active' | 'beta' | 'coming-soon'}
 
-// 1. ADVANCED CYBERSECURITY & THREAT INTELLIGENCE;
-export const advancedCybersecurityServices: ExpandedService2027[] = [
-  {
+// 1.ADVANCED CYBERSECURITY & THREAT INTELLIGENCE;
+export const advancedCybersecurityServices: ExpandedService2027[] = [{
 
     id: 'quantum-threat-hunter',
     name: 'Quantum Threat Hunter',
@@ -185,9 +184,8 @@ export const advancedCybersecurityServices: ExpandedService2027[] = [
 
 ];
 
-// 2. ADVANCED DATA ANALYTICS & BUSINESS INTELLIGENCE;
-export const advancedDataAnalyticsServices: ExpandedService2027[] = [
-  {
+// 2.ADVANCED DATA ANALYTICS & BUSINESS INTELLIGENCE;
+export const advancedDataAnalyticsServices: ExpandedService2027[] = [{
 
     id: 'predictive-insights-engine',
     name: 'Predictive Insights Engine',
@@ -317,9 +315,8 @@ export const advancedDataAnalyticsServices: ExpandedService2027[] = [
 
 ];
 
-// 3. ADVANCED CLOUD & DEVOPS SOLUTIONS;
-export const advancedCloudDevOpsServices: ExpandedService2027[] = [
-  {
+// 3.ADVANCED CLOUD & DEVOPS SOLUTIONS;
+export const advancedCloudDevOpsServices: ExpandedService2027[] = [{
 
     id: 'multi-cloud-orchestrator',
     name: 'Multi-Cloud Orchestrator',
@@ -449,9 +446,8 @@ export const advancedCloudDevOpsServices: ExpandedService2027[] = [
 
 ];
 
-// 4. ADVANCED IOT & EDGE COMPUTING;
-export const advancedIoTServices: ExpandedService2027[] = [
-  {
+// 4.ADVANCED IOT & EDGE COMPUTING;
+export const advancedIoTServices: ExpandedService2027[] = [{
 
     id: 'industrial-iot-intelligence',
     name: 'Industrial IoT Intelligence Platform',
@@ -581,9 +577,8 @@ export const advancedIoTServices: ExpandedService2027[] = [
 
 ];
 
-// 5. ADVANCED FINANCIAL TECHNOLOGY;
-export const advancedFinTechServices: ExpandedService2027[] = [
-  {
+// 5.ADVANCED FINANCIAL TECHNOLOGY;
+export const advancedFinTechServices: ExpandedService2027[] = [{
 
     id: 'quantum-financial-modeling',
     name: 'Quantum Financial Modeling Platform',
@@ -713,9 +708,8 @@ export const advancedFinTechServices: ExpandedService2027[] = [
 
 ];
 
-// 6. ADVANCED HEALTHCARE TECHNOLOGY;
-export const advancedHealthcareServices: ExpandedService2027[] = [
-  {
+// 6.ADVANCED HEALTHCARE TECHNOLOGY;
+export const advancedHealthcareServices: ExpandedService2027[] = [{
 
     id: 'ai-diagnostic-assistant',
     name: 'AI Diagnostic Assistant',
@@ -866,7 +860,7 @@ export
 
 // Helper function to get services by category
 export 
-  if (category === 'All') {;
+  if(category === 'All') {;
 =======
   'All',;'
   'Cybersecurity',;'
@@ -877,7 +871,7 @@ export
 ];
 
 // Helper function to get services by category
-export const getExpandedServicesByCategory = (category: string): ExpandedService2027[] => {;'  if (category === 'All') {;
+export const getExpandedServicesByCategory = (category: string): ExpandedService2027[] => {;'  if(category === 'All') {;
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     return ALL_EXPANDED_SERVICES_2027;
 

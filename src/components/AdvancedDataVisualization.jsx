@@ -2,18 +2,18 @@ import React, { useState, useRef, useEffect } from 'react';
 import { BarChart3, RefreshCw, X, Maximize2, Minimize2 const mockChartData = [;
 <<<<<<< HEAD
 
-    { id: '1', name: 'Q1 Revenue', value: 1250000, category: 'Revenue', timestamp: new Date ('2024 - 01 - 01') },
-    { id: '2', name: 'Q2 Revenue', value: 1580000, category: 'Revenue', timestamp: new Date ('2024 - 04 - 01') },
-    { id: '3', name: 'Q3 Revenue', value: 1420000, category: 'Revenue', timestamp: new Date ('2024 - 07 - 01') },
-    { id: '4', name: 'Q4 Revenue', value: 1890000, category: 'Revenue', timestamp: new Date ('2024 - 10 - 01') },
-    { id: '5', name: 'Q1 Users', value: 45000, category: 'Users', timestamp: new Date ('2024 - 01 - 01') },
-    { id: '6', name: 'Q2 Users', value: 62000, category: 'Users', timestamp: new Date ('2024 - 04 - 01') },
-    { id: '7', name: 'Q3 Users', value: 58000, category: 'Users', timestamp: new Date ('2024 - 07 - 01') },
-    { id: '8', name: 'Q4 Users', value: 75000, category: 'Users', timestamp: new Date ('2024 - 10 - 01') },
-    { id: '9', name: 'Q1 Conversion', value: 3.2, category: 'Conversion', timestamp: new Date ('2024 - 01 - 01') },
-    { id: '10', name: 'Q2 Conversion', value: 3.8, category: 'Conversion', timestamp: new Date ('2024 - 04 - 01') },
-    { id: '11', name: 'Q3 Conversion', value: 3.5, category: 'Conversion', timestamp: new Date ('2024 - 07 - 01') },
-    { id: '12', name: 'Q4 Conversion', value: 4.1, category: 'Conversion', timestamp: new Date ('2024 - 10 - 01') }
+    { id: '1', name: 'Q1 Revenue', value: 1250000, category: 'Revenue', timestamp: new Date('2024 - 01 - 01') },
+    { id: '2', name: 'Q2 Revenue', value: 1580000, category: 'Revenue', timestamp: new Date('2024 - 04 - 01') },
+    { id: '3', name: 'Q3 Revenue', value: 1420000, category: 'Revenue', timestamp: new Date('2024 - 07 - 01') },
+    { id: '4', name: 'Q4 Revenue', value: 1890000, category: 'Revenue', timestamp: new Date('2024 - 10 - 01') },
+    { id: '5', name: 'Q1 Users', value: 45000, category: 'Users', timestamp: new Date('2024 - 01 - 01') },
+    { id: '6', name: 'Q2 Users', value: 62000, category: 'Users', timestamp: new Date('2024 - 04 - 01') },
+    { id: '7', name: 'Q3 Users', value: 58000, category: 'Users', timestamp: new Date('2024 - 07 - 01') },
+    { id: '8', name: 'Q4 Users', value: 75000, category: 'Users', timestamp: new Date('2024 - 10 - 01') },
+    { id: '9', name: 'Q1 Conversion', value: 3.2, category: 'Conversion', timestamp: new Date('2024 - 01 - 01') },
+    { id: '10', name: 'Q2 Conversion', value: 3.8, category: 'Conversion', timestamp: new Date('2024 - 04 - 01') },
+    { id: '11', name: 'Q3 Conversion', value: 3.5, category: 'Conversion', timestamp: new Date('2024 - 07 - 01') },
+    { id: '12', name: 'Q4 Conversion', value: 4.1, category: 'Conversion', timestamp: new Date('2024 - 10 - 01') }
 =======
     { id: '1', name: 'Q1 Revenue', value: 1250000, category: 'Revenue', timestamp: new Date('2024-01-01') },
     { id: '2', name: 'Q2 Revenue', value: 1580000, category: 'Revenue', timestamp: new Date('2024-04-01') },
@@ -55,29 +55,29 @@ export function AdvancedDataVisualization() {
     const categories = ['all', ...Array.from(new Set(data.map(item => item.category)))];
     const filteredData = data.filter(item => selectedCategory === 'all' || item.category === selectedCategory);
     const refreshData = async () => {
-        setIsRefreshing (true) ;
+        setIsRefreshing(true) ;
         // Simulate data refresh
         setTimeout(() => {
             const newData = data.map(item => ({
 
                 ...item,
                 value: item.value + Math.floor (Math.random () * 100000 - 50000) }) ) ;
-            setData (newData) ;
-            setIsRefreshing (false) }, 1000) };
-    useEffect ( () => {
-        if (autoRefresh) {
+            setData(newData) ;
+            setIsRefreshing(false) }, 1000) };
+    useEffect(() => {
+        if(autoRefresh) {
 
             const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
         // // // // // // // // console.log(`Downloading chart as ${format}`);
     };
-            return () => clearInterval (interval) }
+            return () => clearInterval(interval) }
     }, [autoRefresh]) ;
     const downloadChart = (format) => {
 
         // Simulate chart download`
         // console.log(`Downloading chart as ${format}`)};
     const renderChart = () => {
-        switch (selectedChartType) {
+        switch(selectedChartType) {
 
             case 'bar':
                 return renderBarChart();
@@ -93,7 +93,7 @@ export function AdvancedDataVisualization() {
                 return renderBarChart () }
     };
     const renderBarChart = () => {
-        const maxValue = Math.max (...filteredData.map (item => item.value) ) ;
+        const maxValue = Math.max(...filteredData.map (item => item.value) ) ;
         const colors = colorPalettes[selectedColorPalette];
         return (<div className="h-80 flex items-end justify-center gap-4 p-6">"
         {filteredData.map((item, index) => (<div key={item.id} className="flex flex-col items-center">"
@@ -116,15 +116,11 @@ export function AdvancedDataVisualization() {
           <polyline fill="none" stroke={colors[0]} strokeWidth="3" points = {
 
   filteredData.map((item,`
-  index) => `${(index / (filteredData.length - 1)) * 800
-
-
-
-
+  index) => `${(index / (filteredData.length-1)) * 800
 
 '`
 },${280 - (item.value / maxValue) * 280}`).join(' ')}/>"
-          {filteredData.map((item, index) => (<circle key={item.id} cx={(index / (filteredData.length - 1)) * 800} cy={280 - (item.value / maxValue) * 280} r="6" fill={colors[0]} className="cursor-pointer hover:r-8 transition-all duration-200"/>))}
+          {filteredData.map((item, index) => (<circle key={item.id} cx={(index / (filteredData.length-1)) * 800} cy={280 - (item.value / maxValue) * 280} r="6" fill={colors[0]} className="cursor-pointer hover:r-8 transition-all duration-200"/>))}
         </svg>"
         <div className="absolute bottom-0 left-0 right-0 flex justify-between text-xs text-zion-slate-light">
           {filteredData.map(item => (<span key={item.id}>{item.name}</span>))}
@@ -149,10 +145,6 @@ export function AdvancedDataVisualization() {
                         borderTopColor: colors[index % colors.length],`
   transform: `rotate(${prevAngle
 
-
-
-
-
 `
 }deg)`,`
                         clipPath: `polygon(50% 50%, 50% 0%, ${50 + Math.cos((angle * Math.PI) / 180) * 50}% ${50 + Math.sin((angle * Math.PI) / 180) * 50}%)``
@@ -175,12 +167,8 @@ export function AdvancedDataVisualization() {
   `M 0,
   ${280
 
-
-
-
-
 '`
-} ${filteredData.map((item, index) => `L ${(index / (filteredData.length - 1)) * 800},${280 - (item.value / maxValue) * 280}`).join(' ')} L 800,${280} Z`}/>
+} ${filteredData.map((item, index) => `L ${(index / (filteredData.length-1)) * 800},${280 - (item.value / maxValue) * 280}`).join(' ')} L 800,${280} Z`}/>
         </svg>"
         <div className="absolute bottom-0 left-0 right-0 flex justify-between text-xs text-zion-slate-light">
           {filteredData.map(item => (<span key={item.id}>{item.name}</span>))}
@@ -191,18 +179,18 @@ export function AdvancedDataVisualization() {
         const colors = colorPalettes[selectedColorPalette];"
         return (<div className="h-80 p-6 relative">"
         <svg className="w-full h-full">"
-          {filteredData.map((item, index) => (<circle key={item.id} cx={(index / (filteredData.length - 1)) * 800} cy={280 - (item.value / maxValue) * 280} r="8" fill={colors[index % colors.length]} className="cursor-pointer hover:r-12 transition-all duration-200"/>))}
+          {filteredData.map((item, index) => (<circle key={item.id} cx={(index / (filteredData.length-1)) * 800} cy={280 - (item.value / maxValue) * 280} r="8" fill={colors[index % colors.length]} className="cursor-pointer hover:r-12 transition-all duration-200"/>))}
         </svg>"
         <div className="absolute bottom-0 left-0 right-0 flex justify-between text-xs text-zion-slate-light">
           {filteredData.map(item => (<span key={item.id}>{item.name}</span>))}
         </div>
       </div>) };
-    if (!isOpen) {
+    if(!isOpen) {
 "
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-68 p-3 bg-zion-cyan hover:bg-zion-cyan-light text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50" title="Advanced Data Visualization">"
         <BarChart3 className="w-5 h-5"/>
       </button>)}
-    if (isMinimized) {
+    if(isMinimized) {
 "
         return (<div className="fixed bottom-4 right-68 z-50">"
         <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg p-3">"
@@ -287,24 +275,24 @@ export function AdvancedDataVisualization() {
             {/* Chart Configuration */}
 <<<<<<< HEAD
             <div>
-              <h3 className="text - sm font - medium text - zion - slate mb - 3">Chart Settings</h3>
+              <h3 className="text-sm font - medium text-zion - slate mb-3">Chart Settings</h3>
               <div className="space - y-3">
-                <label className="flex items - center gap - 2">
-                  <input type="checkbox" checked={chartConfig.showLegend} onChange = { (e) => setChartConfig (prev => ({ ...prev,
+                <label className="flex items - center gap-2">
+                  <input type="checkbox" checked={chartConfig.showLegend} onChange = { (e) => setChartConfig(prev => ({ ...prev,
   showLegend: e.target.checked
 
-}) ) } className="rounded border - zion - slate - light text - zion - cyan focus:ring - zion - cyan"/>
-                  <span className="text - sm text - zion - slate">Show Legend</span>
+}) ) } className="rounded border-zion - slate - light text-zion - cyan focus:ring - zion -cyan"/>
+                  <span className="text-sm text-zion -slate">Show Legend</span>
                 </label>
-                <label className="flex items - center gap - 2">
-                  <input type="checkbox" checked={chartConfig.showGrid} onChange = { (e) => setChartConfig (prev => ({ ...prev,
+                <label className="flex items - center gap-2">
+                  <input type="checkbox" checked={chartConfig.showGrid} onChange = { (e) => setChartConfig(prev => ({ ...prev,
   showGrid: e.target.checked
 
-}) ) } className="rounded border - zion - slate - light text - zion - cyan focus:ring - zion - cyan"/>
-                  <span className="text - sm text - zion - slate">Show Grid</span>
+}) ) } className="rounded border-zion - slate - light text-zion - cyan focus:ring - zion -cyan"/>
+                  <span className="text-sm text-zion -slate">Show Grid</span>
                 </label>
-                <label className="flex items - center gap - 2">
-                  <input type="checkbox" checked={chartConfig.animate} onChange = { (e) => setChartConfig (prev => ({ ...prev,
+                <label className="flex items - center gap-2">
+                  <input type="checkbox" checked={chartConfig.animate} onChange = { (e) => setChartConfig(prev => ({ ...prev,
   animate: e.target.checked
 =======
             <div>"
@@ -316,10 +304,6 @@ export function AdvancedDataVisualization() {
   (e) => setChartConfig(prev => ({ ...prev,
   showLegend: e.target.checked 
 
-
-
-
-
 "
 }))} className="rounded border-zion-slate-light text-zion-cyan focus:ring-zion-cyan"/>"
                   <span className="text-sm text-zion-slate">Show Legend</span>
@@ -329,10 +313,6 @@ export function AdvancedDataVisualization() {
 
   (e) => setChartConfig(prev => ({ ...prev,
   showGrid: e.target.checked 
-
-
-
-
 
 "
 }))} className="rounded border-zion-slate-light text-zion-cyan focus:ring-zion-cyan"/>"
@@ -344,10 +324,6 @@ export function AdvancedDataVisualization() {
   (e) => setChartConfig(prev => ({ ...prev,
   animate: e.target.checked 
 >>>>>>> main
-
-
-
-
 
 "
 }))} className="rounded border-zion-slate-light text-zion-cyan focus:ring-zion-cyan"/>"

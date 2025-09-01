@@ -1,28 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group', image = '/images/zion-tech-group-og.jpg', url = window.location.href, type = 'website', structuredData }) => {
-
-    const siteName = 'Zion Tech Group';
-    const fullTitle = `${title} | ${siteName}`;
-    // Default structured data for organization
-    const defaultStructuredData = {
-
-  "@context": "https://schema.org","
-        "@type": "Organization","
-        "name": "Zion Tech Group","
-        "url": "https://ziontechgroup.com","
-        "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png","
-        "description": "Leading provider of AI-powered technology solutions and innovative micro SAAS services","
-        "address": {
-"
-            "@type": "PostalAddress","
-            "streetAddress": "364 E Main St STE 1008","
-            "addressLocality": "Middletown","
-            "addressRegion": "DE","
-            "postalCode": "19709","
-  "addressCountry": "US"
-
-},"
+export default function Page() {
+,"
         "contactPoint": {
 "
             "@type": "ContactPoint","

@@ -1,73 +1,9 @@
 import React, { useState } from 'react';
 import { innovativeServices2025 } from '../data/innovativeServices2025';
-import { ULTIMATE_INNOVATIVE_SERVICES_2027 } from '../data/ultimateInnovativeServices2027';
-import { motion } from 'framer-motion';
-import {
-<<<<<<< HEAD
-import { innovativeServices2025 } from '../data / innovativeServices2025';
-import { motion } from 'framer - motion';
-import { ULTIMATE_INNOVATIVE_SERVICES_2027 } from '../data / ultimateInnovativeServices2027';
-=======
->>>>>>> main
+export default function Page() {
+);
 
-  Brain,
-  Cloud,
-  Shield,
-  Users,
-  Zap,
-  Atom,
-  TrendingUp,
-  Star,
-  ArrowRight,
-  CheckCircle,
-  Phone,
-  Mail,
-  MapPin} from 'lucide-react';
-
-const EnhancedComprehensiveServicesShowcase = () => {
-
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedService, setSelectedService] = useState(null);
-
-  // Transform services for the showcase
-  const transformedServices = [
-    ...innovativeServices2025.map(service => ({
-
-      ...service,
-      category: service.category,
-      price: service.price,
-      description: service.description,
-      features: service.features,
-      benefits: service.benefits,
-      icon: service.icon,
-      color: service.color,
-      badge: service.badge})),
-    ...ULTIMATE_INNOVATIVE_SERVICES_2027.map(service => ({
-
-      ...service,
-      category: service.category || 'Innovation',
-      price: service.price || '$2,999',
-      description:'
-        service.description || service.tagline || 'Revolutionary service',
-      features: service.features || [],
-      benefits: service.benefits || [],
-      icon: service.icon || '🚀',
-      color: service.color || 'from-purple-600 to-indigo-700',
-      badge: service.badge || 'New'})),
-  ];
-
-  const filteredServices = transformedServices.filter(service => {
-
-    const matchesSearch =
-      service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      service.category.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
-
-  const serviceCategories = [
-    {
+  const serviceCategories = [{
 
       id: 'AI & Innovation Services',
       name: 'AI & Innovation Services',
@@ -138,7 +74,7 @@ const EnhancedComprehensiveServicesShowcase = () => {
     setSelectedService(null);
   };
 
-  return()
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Header Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">"
@@ -212,9 +148,7 @@ const EnhancedComprehensiveServicesShowcase = () => {
               <button
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-
-                  activeCategory === category.id'
+                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${activeCategory === category.id'
                     ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white''
                     : 'bg-white/10 backdrop-blur-lg border border-white/20 text-gray-300 hover:bg-white/20'`
                 }`}

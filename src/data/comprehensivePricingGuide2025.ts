@@ -27,8 +27,7 @@ export interface ServicePricing {
     address: string;
     website: string;
     address: string}};
-;export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
-  {
+;export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [{
 
     id: "ai-business-intelligence-platform","
     title: "AI Business Intelligence Platform","
@@ -45,7 +44,7 @@ export interface ServicePricing {
         features: ["
           "AI-powered data analysis","
           "Basic dashboard creation","
-          "Data integration (5 sources)","
+          "Data integration(5 sources)","
           "Email support","
           "Mobile app access"
         ],"
@@ -64,7 +63,7 @@ export interface ServicePricing {
           "Custom dashboards","
           "API access","
           "Priority support","
-          "Data integration (15 sources)"
+          "Data integration(15 sources)"
         ],"
         bestFor: "Growing businesses and teams",
         popular: true
@@ -99,8 +98,7 @@ export interface ServicePricing {
     title: "Quantum AI Optimization Platform","
     description: "Revolutionary platform combining quantum computing with AI to solve complex optimization problems in real-time.","
     category: "Quantum Computing",
-    pricingTiers: [
-      {
+    pricingTiers: [{
 "
         id: "starter","
         name: "Starter",
@@ -162,8 +160,7 @@ export interface ServicePricing {
     title: "AI-Powered Cybersecurity Platform","
     description: "Advanced cybersecurity platform using AI to detect and prevent threats in real-time with automated response capabilities.","
     category: "Cybersecurity",
-    pricingTiers: [
-      {
+    pricingTiers: [{
 "
         id: "starter","
         name: "Starter",
@@ -225,8 +222,7 @@ export interface ServicePricing {
     title: "AI-Powered Content Generation Platform","
     description: "Comprehensive content creation platform that generates high-quality, SEO-optimized content using advanced AI models.","
     category: "AI & Analytics",
-    pricingTiers: [
-      {
+    pricingTiers: [{
 "
         id: "starter","
         name: "Starter",
@@ -288,8 +284,7 @@ export interface ServicePricing {
     title: "AI-Powered Video Analytics Platform","
     description: "Advanced video analysis platform that uses AI to extract insights, detect objects, and analyze behavior patterns in video content.","
     category: "AI & Analytics",
-    pricingTiers: [
-      {
+    pricingTiers: [{
 "
         id: "starter","
         name: "Starter",
@@ -351,8 +346,7 @@ export interface ServicePricing {
     title: "Blockchain Supply Chain Platform","
     description: "Transparent and secure supply chain management platform using blockchain technology for end-to-end traceability and verification.","
     category: "Blockchain & Web3",
-    pricingTiers: [
-      {
+    pricingTiers: [{
 "
         id: "starter","
         name: "Starter",
@@ -414,8 +408,7 @@ export interface ServicePricing {
     title: "AI-Powered Financial Trading Platform","
     description: "Intelligent trading platform that uses AI algorithms to analyze market data, predict trends, and execute trades automatically.","
     category: "AI & Analytics",
-    pricingTiers: [
-      {
+    pricingTiers: [{
 "
         id: "starter","
         name: "Starter",
@@ -477,8 +470,7 @@ export interface ServicePricing {
     title: "AI-Powered Healthcare Diagnostics Platform","
     description: "Advanced healthcare platform that uses AI to analyze medical images, predict diagnoses, and assist healthcare professionals.","
     category: "AI & Analytics",
-    pricingTiers: [
-      {
+    pricingTiers: [{
 "
         id: "starter","
         name: "Starter",
@@ -540,8 +532,7 @@ export interface ServicePricing {
     title: "Quantum Machine Learning Platform","
     description: "Revolutionary platform that combines quantum computing with machine learning to solve complex problems in various industries.","
     category: "Quantum Computing",
-    pricingTiers: [
-      {
+    pricingTiers: [{
 "
         id: "starter","
         name: "Starter",
@@ -603,8 +594,7 @@ export interface ServicePricing {
     title: "AI-Powered Marketing Automation Platform","
     description: "Intelligent marketing platform that automates campaigns, personalizes content, and optimizes customer engagement using AI.","
     category: "Marketing & Sales",
-    pricingTiers: [
-      {
+    pricingTiers: [{
 "
         id: "starter","
         name: "Starter",
@@ -662,8 +652,7 @@ export interface ServicePricing {
   }
 ];
 
-export const comprehensivePricingGuide2025: ServicePricing[] = [
-  {
+export const comprehensivePricingGuide2025: ServicePricing[] = [{
 
     id: 'ai-autonomous-business-manager',
     title: 'AI Autonomous Business Manager',
@@ -677,13 +666,13 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
         billing: 'month',
         description: 'Perfect for small to medium businesses starting their AI journey',
         features: ['
-          'Basic autonomous decision making',Core business process automation',Standard reporting and analytics',Email and chat support',Basic integrations (5 systems),Monthly performance reviews'
+          'Basic autonomous decision making',Core business process automation',Standard reporting and analytics',Email and chat support',Basic integrations(5 systems),Monthly performance reviews'
         ],
         benefits: ['
           'Reduce operational costs by 25-35%',Improve decision accuracy by 60%',Basic business monitoring',Standard compliance features'
         ],
         bestFor: ['
-          'Small businesses (10-50 employees),Companies new to AI automation',Basic process optimization needs'
+          'Small businesses(10-50 employees),Companies new to AI automation',Basic process optimization needs'
         ]
       },
       {
@@ -693,13 +682,13 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
         billing: 'month',
         description: 'Advanced features for growing businesses with complex operations',
         features: ['
-          'Advanced autonomous decision making',Predictive business modeling',Real-time resource optimization',Advanced risk assessment',Multi-department integration',Priority support',Advanced integrations (15 systems),Weekly performance reviews'
+          'Advanced autonomous decision making',Predictive business modeling',Real-time resource optimization',Advanced risk assessment',Multi-department integration',Priority support',Advanced integrations(15 systems),Weekly performance reviews'
         ],
         benefits: ['
           'Reduce operational costs by 40-60%',Improve decision accuracy by 85%',24/7 business monitoring',Advanced compliance features',Multi-location support'
         ],
         bestFor: ['
-          'Medium businesses (50-200 employees),Multi-location operations',Complex business processes'
+          'Medium businesses(50-200 employees),Multi-location operations',Complex business processes'
         ],
         popular: true
       },
@@ -710,13 +699,13 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
         billing: 'month',
         description: 'Full-scale enterprise solution with custom AI models and dedicated support',
         features: ['
-          'Custom AI model development',Full autonomous business management',Advanced predictive analytics',Custom integrations (unlimited),Dedicated account manager',24/7 phone support',Custom compliance features',Advanced security features',API access and customization'
+          'Custom AI model development',Full autonomous business management',Advanced predictive analytics',Custom integrations(unlimited),Dedicated account manager',24/7 phone support',Custom compliance features',Advanced security features',API access and customization'
         ],
         benefits: ['
           'Reduce operational costs by 60-80%',Improve decision accuracy by 95%',Full business transformation',Custom AI solutions',Enterprise-grade security'
         ],
         bestFor: ['
-          'Large enterprises (200+ employees),Multi-national operations',Custom AI requirements'
+          'Large enterprises(200+ employees),Multi-national operations',Custom AI requirements'
         ]
       }
     ],
@@ -750,8 +739,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
     title: 'AI Content Optimization Suite Pro',
     description: 'Comprehensive content optimization platform using advanced AI to improve SEO, readability, engagement, and conversion across all digital platforms.',
     category: 'Micro SaaS',
-    pricingTiers: [
-      {
+    pricingTiers: [{
 
         name: 'Basic',
         price: '$99',
@@ -831,8 +819,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
     title: 'Zero Trust Network Architecture',
     description: 'Comprehensive zero trust security implementation with continuous verification, adaptive access control, and advanced threat detection.',
     category: 'Cybersecurity',
-    pricingTiers: [
-      {
+    pricingTiers: [{
 
         name: 'Assessment',
         price: '$5,000',
@@ -872,7 +859,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
         billing: 'project',
         description: 'Enterprise-grade solution with custom features and extended support',
         features: ['
-          'Custom zero trust implementation',Advanced threat detection',Custom integrations',Extended support (12 months),Custom compliance features',Advanced analytics',Custom security policies',Dedicated security team'
+          'Custom zero trust implementation',Advanced threat detection',Custom integrations',Extended support(12 months),Custom compliance features',Advanced analytics',Custom security policies',Dedicated security team'
         ],
         benefits: ['
           'Custom security solution',Maximum security protection',Extended support period',Custom compliance features'
@@ -912,8 +899,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
     title: 'Cloud FinOps Optimizer',
     description: 'Intelligent cloud cost optimization platform that automates financial operations, cost allocation, and resource optimization across multi-cloud environments.',
     category: 'Cloud & DevOps',
-    pricingTiers: [
-      {
+    pricingTiers: [{
 
         name: 'Starter',
         price: '$299',

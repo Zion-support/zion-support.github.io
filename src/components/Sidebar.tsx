@@ -1,75 +1,12 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import {
-  Menu,
-  X,
-  Home,
-  Settings,
-  Brain,
-  Cloud,
-  Shield,
-  Rocket,
-  Heart,
-  Globe,
-  ShoppingCart,
-  BookOpen,
-  MessageCircle,
-  HelpCircle,
-  DollarSign,
-  Gauge,
-  Workflow,
-  Atom,
-  Star,
-  Building,
-  ChevronRight,
-  Users,
-  Briefcase,
-  FileText,
-  Calendar,
-  TrendingUp,
-  Award,
-  Zap,
-  Lock,
-  Cpu,
-  Database,
-  Smartphone,
-  Target,
-  BarChart3,
-  Search,
-  PhoneCall,
-  Mail,
-  ExternalLink,
-  ChevronDown,
-  Plus,
-  Scale,
-  GraduationCap,
-  Package,
-  User
-} from 'lucide-react';
+import { Link, useLocation  } from 'react-router-dom';
 
-interface SidebarItem {
-  id: string;
-  title: string;
-  icon: React.ComponentType<any>;
-  links: Array<{
-    name: string;
-    href: string;
-    icon: React.ComponentType<any>;
-    description: string;
-  }>;
-}
-
-interface SidebarProps {
-  isOpen: boolean;
-  onToggle: () => void;
-}
-
-export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
+export default function Page() {
+) => {
   const location = useLocation();
   const [expandedSections, setExpandedSections] = useState<string[]>(['main', 'services']);
 
-  const navigation: SidebarItem[] = [
-    {
+  const navigation: SidebarItem[] = [{
       id: 'main',
       title: 'Main Navigation',
       icon: Home,
@@ -84,8 +21,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
       id: 'services',
       title: 'Our Services',
       icon: Rocket,
-      links: [
-        { name: 'AI Solutions', href: '/services/ai', icon: Brain, description: 'Artificial Intelligence' },
+      links: [{ name: 'AI Solutions', href: '/services/ai', icon: Brain, description: 'Artificial Intelligence' },
         { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, description: 'Security services' },
         { name: 'Cloud Services', href: '/services/cloud', icon: Cloud, description: 'Cloud solutions' },
         { name: 'Digital Transformation', href: '/services/digital', icon: Workflow, description: 'Digital solutions' }
@@ -101,8 +37,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
     );
   };
 
-  return (
-    <>
+  return (<>
       {/* Mobile overlay */}
       {isOpen && (
         <div
@@ -113,8 +48,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
 
       {/* Sidebar */}
       <div
-        className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 lg:translate-x-0 ${
-          isOpen ? 'translate-x-0' : '-translate-x-full'
+        className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 lg:translate-x-0 ${isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
         <div className="flex items-center justify-between p-4 border-b">
@@ -139,8 +73,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
                   <span className="font-medium">{section.title}</span>
                 </div>
                 <ChevronRight
-                  className={`w-4 h-4 transition-transform ${
-                    expandedSections.includes(section.id) ? 'rotate-90' : ''
+                  className={`w-4 h-4 transition-transform ${expandedSections.includes(section.id) ? 'rotate-90' : ''
                   }`}
                 />
               </button>
@@ -151,8 +84,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
                     <Link
                       key={link.href}
                       to={link.href}
-                      className={`flex items-center space-x-2 p-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md ${
-                        location.pathname === link.href ? 'bg-blue-50 text-blue-600' : ''
+                      className={`flex items-center space-x-2 p-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md ${location.pathname === link.href ? 'bg-blue-50 text-blue-600' : ''
                       }`}
                     >
                       <link.icon className="w-4 h-4" />

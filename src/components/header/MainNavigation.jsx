@@ -1,31 +1,7 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { cn } from '@/lib/utils';
-import { NavLink } from 'react-router-dom';
-import {
+import { Link  } from 'react-router-dom';
 
-  ChevronDown,
-  Zap,
-  Brain,
-  Shield,
-  Users,
-  HardDrive,
-  TrendingUp} from 'lucide-react';
-
-export function MainNavigation({ className }) {
-
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
-  return ('
-    <nav className={cn('hidden md:flex items-center space-x-6', className)}>
-      <NavLink
-        to="/"
-        className={({ isActive }) =>
-          cn('
-            'text-sm font-medium transition-colors hover:text-primary',
-            isActive ? 'text-zion-cyan' : 'text-muted-foreground'
-          )
-        }
+export default function Page() {
       >
         Home
       </NavLink>

@@ -1,7 +1,6 @@
 
 <<<<<<< HEAD
-  const blogPosts = [
-    {
+  const blogPosts = [{
       id: '1',
       title: 'The Future of AI in Technology',
       excerpt: 'Exploring how artificial intelligence is reshaping the technology landscape...',
@@ -12,7 +11,6 @@
 =======
 export function BlogSection(...args[]):  {
 
-  
 >>>>>>> main
       id: '2',;
       title: 'Building Scalable Web Applications',;
@@ -20,8 +18,8 @@ export function BlogSection(...args[]):  {
       date: '2024-01-10',;
       readTime: '12 min read'};  ];
 
-  return()
-    <section className = "py-16">"
+  return ()
+    <section className="py-16">"
       <div className="container mx-auto px-4">"
         <div className="flex justify-between items-center mb-8">"
           <h2 className="text-3xl font-bold text-white">Latest from Our Blog</h2>"

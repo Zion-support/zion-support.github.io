@@ -1,10 +1,7 @@
 <<<<<<< HEAD
-import {
-<<<<<<< HEAD
-import { motion, AnimatePresence } from 'framer - motion';
+import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
 
- * InteractiveTestimonials function
- * @param {*} params - Function parameters
+ params - Function parameters
  * @returns {*} Function return value
  */
 function InteractiveTestimonials () {
@@ -22,8 +19,7 @@ function InteractiveTestimonials () {
   TrendingUp'
 } from 'lucide-react';
 
-const testimonials = [
-  {
+const testimonials = [{
 
     id: 1,
     name: "Sarah Johnson","
@@ -31,7 +27,7 @@ const testimonials = [
     company: "TechCorp Solutions","
     avatar: "👩‍💼",
     rating: 5,"
-    content: "Zion Tech Group transformed our entire IT infrastructure. Their AI-powered solutions reduced our operational costs by 40% and improved system reliability to 99.9%. The team's expertise in quantum computing and blockchain integration is unmatched.","
+    content: "Zion Tech Group transformed our entire IT infrastructure.Their AI-powered solutions reduced our operational costs by 40% and improved system reliability to 99.9%. The team's expertise in quantum computing and blockchain integration is unmatched.","
     category: "AI & Infrastructure","
     results: ["40% cost reduction", "99.9% uptime", "3x faster deployment"]
   },
@@ -43,19 +39,19 @@ const testimonials = [
     company: "FinTech Pro","
     avatar: "👨‍💻",
     rating: 5,"
-    content: "The quantum neural network platform they built for us revolutionized our trading algorithms. We're seeing 25% better prediction accuracy and processing speeds that are 10x faster than traditional systems. Game-changing technology.","
+    content: "The quantum neural network platform they built for us revolutionized our trading algorithms.We're seeing 25% better prediction accuracy and processing speeds that are 10x faster than traditional systems.Game-changing technology.","
     category: "Quantum Computing","
     results: ["25% better accuracy", "10x faster processing", "Real-time analytics"]
   },
   {
 
     id: 3,"
-    name: "Dr. Emily Rodriguez","
+    name: "Dr.Emily Rodriguez","
     position: "Research Director, BioTech Innovations","
     company: "BioTech Innovations","
     avatar: "👩‍🔬",
     rating: 5,"
-    content: "Their AI-powered research assistant has accelerated our drug discovery process by 60%. The platform's ability to analyze complex biological data and generate insights has been invaluable to our breakthrough research.","
+    content: "Their AI-powered research assistant has accelerated our drug discovery process by 60%.The platform's ability to analyze complex biological data and generate insights has been invaluable to our breakthrough research.","
     category: "AI Research","
     results: ["60% faster discovery", "Advanced analytics", "Breakthrough insights"]
   },
@@ -67,7 +63,7 @@ const testimonials = [
     company: "Manufacturing Plus","
     avatar: "👨‍🏭",
     rating: 5,"
-    content: "The autonomous business operations platform streamlined our entire manufacturing process. We've seen a 35% increase in efficiency and 50% reduction in downtime. The IoT integration and real-time monitoring are exceptional.","
+    content: "The autonomous business operations platform streamlined our entire manufacturing process.We've seen a 35% increase in efficiency and 50% reduction in downtime.The IoT integration and real-time monitoring are exceptional.","
     category: "Manufacturing IoT","
     results: ["35% efficiency gain", "50% less downtime", "Real-time monitoring"]
   },
@@ -79,7 +75,7 @@ const testimonials = [
     company: "SecureNet",;"
     avatar: "👩‍💻",;
     rating: 5,;'"
-    content: "Their zero-trust security architecture and SOC 2 compliance automation have made our security posture bulletproof. We've achieved 100% compliance with all industry standards and zero security incidents.",;"
+    content: "Their zero-trust security architecture and SOC 2 compliance automation have made our security posture bulletproof.We've achieved 100% compliance with all industry standards and zero security incidents.",;"
     category: "Cybersecurity",;"
     results: ["100% compliance", "Zero incidents", "Automated security"]};
 ];
@@ -93,27 +89,24 @@ export function InteractiveTestimonials() {
   const [selectedTestimonial, setSelectedTestimonial] = useState(0);
 "
   const filteredTestimonials = selectedCategory === "All" ;    ? testimonials ;
-    : testimonials.filter (t => t.category === selectedCategory) ;
+    : testimonials.filter(t => t.category === selectedCategory) ;
 
-  
-  
-    setSelectedTestimonial ( (prev) => ;
-      prev === filteredTestimonials.length - 1 ? 0 : prev + 1;) };
+    setSelectedTestimonial((prev) => ;
+      prev === filteredTestimonials.length-1 ? 0 : prev + 1;) };
 
-  
-    setSelectedTestimonial ( (prev) => ;
+    setSelectedTestimonial((prev) => ;
 <<<<<<< HEAD
-      prev === 0 ? filteredTestimonials.length - 1 : prev - 1;) ;
+      prev === 0 ? filteredTestimonials.length-1 : prev - 1;) ;
   };
 
-  return (<section className = "py - 20 bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
-      <div role="button" className="max - w-7xl mx - auto px - 6">
+  return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
+      <div  className="max - w-7xl mx - auto px-6">
         <motion.div
-          className="text - center mb - 16"
+          className="text-center mb-16"
 =======
-      prev === 0 ? filteredTestimonials.length - 1 : prev - 1;) };
+      prev === 0 ? filteredTestimonials.length-1 : prev - 1;) };
   return ("
-    <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
+    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <div className="max-w-7xl mx-auto px-6">
         <motion.div "
           className="text-center mb-16"
@@ -137,9 +130,8 @@ export function InteractiveTestimonials() {
             Client Success Stories
           </h2>"
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Real stories from real clients. Discover how we've transformed businesses
-            across industries with our innovative technology solutions.
-          </p>
+            Real stories from real clients.Discover how we've transformed businesses
+            across industries with our innovative technology solutions.</p>
         </motion.div>
 
         {/* Category Filter */}
@@ -150,12 +142,10 @@ export function InteractiveTestimonials() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          {categories.map ( (category) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={category}
+          {categories.map ( (category) => (<button      key={category}
               onClick={ () => {
-                setSelectedCategory (category) ;
-                setSelectedTestimonial (0) }}              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-
-                selectedCategory === category'
+                setSelectedCategory(category) ;
+                setSelectedTestimonial(0) }}              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${selectedCategory === category'
                   ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/25''
                   : 'bg-slate-700 text-gray-300 hover:bg-slate-600 hover:text-white'`
               }`}
@@ -228,9 +218,7 @@ export function InteractiveTestimonials() {
               <button
                 key={index}
                 onClick={() => goToTestimonial(index)}`
-                className={`w-3 h-3 rounded-full transition-all duration-200 ${
-
-                  index === currentIndex ? 'bg-blue-600 w-8' : 'bg-gray-300'`
+                className={`w-3 h-3 rounded-full transition-all duration-200 ${index === currentIndex ? 'bg-blue-600 w-8' : 'bg-gray-300'`
                 }`}
               />) ) }
           </div>
@@ -267,7 +255,7 @@ export function InteractiveTestimonials() {
         {/* Category Filter */}
 <<<<<<< HEAD
         <motion.div
-          className="flex flex - wrap justify - center gap - 3 mb - 12"
+          className="flex flex - wrap justify - center gap-3 mb-12"
 =======
         <motion.div "
           className="flex flex-wrap justify-center gap-3 mb-12"
@@ -293,8 +281,7 @@ export function InteractiveTestimonials() {
             </h3>"
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
               Let's discuss how we can transform your business with innovative
-              technology solutions tailored to your specific needs.
-            </p>"
+              technology solutions tailored to your specific needs.</p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
                 Start Your Project"

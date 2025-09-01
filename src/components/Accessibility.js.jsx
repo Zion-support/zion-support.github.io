@@ -1,45 +1,7 @@
 import React, { useState, useEffect, createContext, useContext } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
+import { motion, AnimatePresence  } from 'framer-motion';
 
-  Eye,
-  EyeOff,
-  Volume2,
-  VolumeX,
-  Keyboard,
-  Accessibility,
-  X} from 'lucide-react';
-import { Button } from '../ui/button';
-const AccessibilityContext = createContext(null);
-export const useAccessibility = () => {
-  const context = useContext(AccessibilityContext);
-  if (!context) {
-
-    throw new Error('
-      'useAccessibility must be used within an AccessibilityProvider'
-    );
-  }
-  return context;
-};
-// Accessibility Provider Component
-export const AccessibilityProvider = ({ children }) => {
-
-  const [highContrast, setHighContrast] = useState(false);
-  const [reducedMotion, setReducedMotion] = useState(false);
-  const [fontSize, setFontSize] = useState('medium');
-  const [colorBlindMode, setColorBlindMode] = useState('none');
-  // Load settings from localStorage
-  useEffect(() => {
-
-    const savedSettings = localStorage.getItem('zion-accessibility-settings');
-    if (savedSettings) {
-
-      const settings = JSON.parse(savedSettings);
-      setHighContrast(settings.highContrast || false);
-      setReducedMotion(settings.reducedMotion || false);
-      setFontSize(settings.fontSize || 'medium');
-      setColorBlindMode(settings.colorBlindMode || 'none');
-    }
+export default function Page() {
   }, []);
   // Save settings to localStorage
   useEffect(() => {
@@ -58,7 +20,7 @@ export const AccessibilityProvider = ({ children }) => {
   useEffect(() => {
     const root = document.documentElement;
     // High contrast mode
-    if (highContrast) {
+    if(highContrast) {
 
       root.classList.add('high-contrast');
     } else {
@@ -66,7 +28,7 @@ export const AccessibilityProvider = ({ children }) => {
       root.classList.remove('high-contrast');
     }
     // Reduced motion
-    if (reducedMotion) {
+    if(reducedMotion) {
 
       root.classList.add('reduced-motion');
     } else {
@@ -97,7 +59,7 @@ export const AccessibilityProvider = ({ children }) => {
     toggleReducedMotion,
     setFontSize,
     setColorBlindMode};
-  return()
+  return ()
     <AccessibilityContext.Provider value={value}>
       {children}
     </AccessibilityContext.Provider>
@@ -154,7 +116,7 @@ export const AccessibilityPanel = () => {
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isOpen, toggleHighContrast, toggleReducedMotion]);
-  return()
+  return ()
     <>
       {/* Floating Accessibility Button */}
       <motion.button
@@ -162,7 +124,7 @@ export const AccessibilityPanel = () => {
         whileTap={{ scale: 0.9 }}
         onClick={() => setIsOpen(true)}
         className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center hover:shadow-2xl hover:shadow-zion-cyan/40 transition-all duration-300"
-        aria-label="Open Accessibility Settings"
+        
       >"
         <Accessibility className="w-6 h-6" />
       </motion.button>
@@ -346,8 +308,7 @@ export const AccessibilityPanel = () => {
               <div className="mt-6 pt-4 border-t border-zion-cyan/20">"
                 <p className="text-xs text-zion-slate-light text-center">
                   These settings are saved locally and will persist across
-                  sessions.
-                </p>
+                  sessions.</p>
               </div>
             </motion.div>
           </motion.div>
@@ -369,27 +330,27 @@ export const SkipToContent = () => (
 export const useFocusTrap = isActive => {
 
   useEffect(() => {
-    if (!isActive) return;
+    if(!isActive) return;
     const focusableElements ='"
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"]);
     const container = document.activeElement?.closest('[data-focus-trap]');
-    if (!container) return;
+    if(!container) return;
     const firstFocusableElement = focusableContent[0];
-    const lastFocusableElement = focusableContent[focusableContent.length - 1];
+    const lastFocusableElement = focusableContent[focusableContent.length-1];
     const handleTabKey = e => {
 
-      if (e.key === 'Tab') {
+      if(e.key === 'Tab') {
 
-        if (e.shiftKey) {
+        if(e.shiftKey) {
 
-          if (document.activeElement === firstFocusableElement) {
+          if(document.activeElement === firstFocusableElement) {
 
             e.preventDefault();
             lastFocusableElement.focus();
           }
         } else {
 
-          if (document.activeElement === lastFocusableElement) {
+          if(document.activeElement === lastFocusableElement) {
 
             e.preventDefault();
             firstFocusableElement.focus();

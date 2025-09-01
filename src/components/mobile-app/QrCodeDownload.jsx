@@ -13,7 +13,6 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
       icon: '🍎',
   description: 'Download for iPhone and iPad'
 
-
 },
     android: {
 
@@ -25,24 +24,24 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
 
   };
 
-  const handleCopyLink = async (url) => {
+  const handleCopyLink = async(url) => {
 
     try {
       await navigator.clipboard.writeText(url);
       setCopied(true);
       // // // // // // // // console.error('Failed to copy: ', err);
     }
-      setTimeout(() => setCopied(false), 2000)} catch (err) {
+      setTimeout(() => setCopied(false), 2000)} catch(err) {
 
       // console.error('Failed to copy: ', err)}
   };
 
-  const handleShare = async (platform) => {
+  const handleShare = async(platform) => {
 
     const { url, name } = downloadLinks[platform];
     const text = `Download ${name} - Zion IT Asset Management App: ${url}`;
 
-    if (navigator.share) {
+    if(navigator.share) {
 
       try {
         await navigator.share({
@@ -57,7 +56,7 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
       // Fallback for browsers that don't support Web Share API
       handleCopyLink(url);
 
-        })} catch (err) {
+        })} catch(err) {
 
         // console.error('Error sharing:', err)}
     } else {
@@ -68,7 +67,7 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
 
   const currentPlatform = downloadLinks[activeTab];
 
-  return()
+  return ()
     <section className="py-20 bg-gradient-to-br from-slate-900 to-blue-900">"
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">"
         <div className="text-center mb-16">"
@@ -76,8 +75,7 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
             Quick Download Access
           </h2>"
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Scan the QR code with your mobile device or use the direct download links below.
-            Get Zion mobile app in seconds!
+            Scan the QR code with your mobile device or use the direct download links below.Get Zion mobile app in seconds!
           </p>
         </div>
 "
@@ -117,9 +115,7 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
                   <button
                     key={platform}
                     onClick={() => setActiveTab(platform)}`
-                    className={`flex-1 flex items-center justify-center space-x-2 px-4 py-3 rounded-xl font-medium transition-all duration-300 ${
-
-                      activeTab === platform'
+                    className={`flex-1 flex items-center justify-center space-x-2 px-4 py-3 rounded-xl font-medium transition-all duration-300 ${activeTab === platform'
                         ? 'bg-blue-600 text-white shadow-lg''
                         : 'text-gray-300 hover:text-white hover:bg-white/10'`
                     }`}
@@ -234,8 +230,7 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
               Having Trouble?
             </h3>"
             <p className="text-gray-300 mb-4">
-              If you're experiencing issues with the download or QR code, our support team is here to help.
-            </p>"
+              If you're experiencing issues with the download or QR code, our support team is here to help.</p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
                 href="#support"

@@ -1,43 +1,6 @@
 <<<<<<< HEAD
-import {
-<<<<<<< HEAD
-import { motion, AnimatePresence } from 'framer - motion';
-=======
->>>>>>> main
-
-  BarChart3,
-  LineChart,
-  PieChart,
-  TrendingUp,
-  Users,
-  DollarSign,
-  Activity,
-  Target,
-  Zap,
-  Globe,
-  Smartphone,
-  Monitor,
-  Database,
-  Cloud,
-  Shield,
-  Cpu,
-  HardDrive,
-  Network,
-  Wifi,
-  Settings,
-  RefreshCw,
-  Download,
-  Share2,
-  Filter,
-  Search,
-  Calendar,
-  Clock,
-  Eye,
-  EyeOff,
-  Maximize2,
-  Minimize2,
-  Info,
-  X} from 'lucide-react';
+import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
+ from 'lucide-react';
 
 interface AnalyticsData {
 
@@ -66,7 +29,6 @@ interface ChartData {
 interface AdvancedAnalyticsDashboardProps {
   // Add your props here
 
-
   enabled?: boolean;
   showRealTime?: boolean;
   refreshInterval?: number;
@@ -90,17 +52,13 @@ export function AdvancedAnalyticsDashboard({
   const [isLoading, setIsLoading] = useState(false);
   const [showAdvancedMetrics, setShowAdvancedMetrics] = useState(false);
 
-  
-  
   // Generate sample analytics data
-  
-    
+
     const newData: AnalyticsData[] = [];
     categories.forEach(category => {
 
       metrics[category as keyof typeof metrics].forEach(metric => {
 
-        
         const change = (Math.random() - 0.5) * 20;        newData.push({
 
           id: `${category}-${metric}`,
@@ -118,51 +76,46 @@ export function AdvancedAnalyticsDashboard({
                 ? '$''
                 : ''})})});
 
-    setAnalyticsData (newData) }, []) ;
+    setAnalyticsData(newData) }, []) ;
 
   // Refresh data
   
-    setTimeout ( () => {
+    setTimeout(() => {
       generateAnalyticsData () ;
-      setIsLoading (false) }, 1000) }, [generateAnalyticsData]) ;
+      setIsLoading(false) }, 1000) }, [generateAnalyticsData]) ;
 
   // Export data
   
     } else {
 
-      
-      
-      
-      
       a.href = url;'`
       a.download = `analytics-${selectedTimeframe}-${new Date().toISOString().split('T')[0]}.csv`;
       a.click();
       window.URL.revokeObjectURL(url)}
   }, [analyticsData, selectedTimeframe, onDataExport]) ;
   // Setup real - time updates
-  useEffect ( () => {
-    if (showRealTime && isOpen) {
+  useEffect(() => {
+    if(showRealTime && isOpen) {
 
       generateAnalyticsData();
       intervalRef.current = setInterval(generateAnalyticsData, refreshInterval);
 
       return () => {
-        if (intervalRef.current) {
+        if(intervalRef.current) {
 
           clearInterval(intervalRef.current)}
       }}
   }, [showRealTime, isOpen, refreshInterval, generateAnalyticsData]) ;
   // Initial data load
-  useEffect ( () => {
-    if (isOpen) {
+  useEffect(() => {
+    if(isOpen) {
 
       generateAnalyticsData()}
   }, [isOpen, generateAnalyticsData]) ;
 
   // Get trend icon and color'
-  
-    
-    return()`      <div className={`flex items-center space-x-1 ${colors[trend]}`}>
+
+    return ()`      <div className={`flex items-center space-x-1 ${colors[trend]}`}>
         {icons[trend]}"
         <span className="text-sm font-medium">
           {change > 0 ? '+' : ''}
@@ -184,9 +137,9 @@ export function AdvancedAnalyticsDashboard({
 
   // Filter data by selected metrics
   
-  if (!enabled) return null;
+  if(!enabled) return null;
 
-  return()
+  return ()
     <>
       {/* Floating Analytics Button */}
       <motion.button
@@ -212,9 +165,7 @@ export function AdvancedAnalyticsDashboard({
             exit={{ opacity: 0 }}
           >
             <motion.div`
-              className={`bg-white dark:bg-gray-900 rounded-2xl shadow-2xl overflow-hidden ${
-
-                isFullscreen ? 'w-full h-full' : 'w-full max-w-7xl max-h-[90vh]'`
+              className={`bg-white dark:bg-gray-900 rounded-2xl shadow-2xl overflow-hidden ${isFullscreen ? 'w-full h-full' : 'w-full max-w-7xl max-h-[90vh]'`
               }`}
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
@@ -277,9 +228,7 @@ export function AdvancedAnalyticsDashboard({
                         <button
                           key={timeframe}
                           onClick={() => setSelectedTimeframe(timeframe)}`
-                          className={`px-3 py-1 text-sm rounded-md transition-colors ${
-
-                            selectedTimeframe === timeframe'
+                          className={`px-3 py-1 text-sm rounded-md transition-colors ${selectedTimeframe === timeframe'
                               ? 'bg-blue-600 text-white''
                               : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600'`
                           }`}
@@ -305,9 +254,7 @@ export function AdvancedAnalyticsDashboard({
                               prev.includes(metric)
                                 ? prev.filter(m => m !== metric)
                                 : [...prev, metric]
-                            )}}`                          className={`px-3 py-1 text-sm rounded-full transition-colors ${
-
-                            selectedMetrics.includes(metric)
+                            )}}`                          className={`px-3 py-1 text-sm rounded-full transition-colors ${selectedMetrics.includes(metric)
                               ? 'bg-green-600 text-white''
                               : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'`
                           }`}
@@ -373,7 +320,7 @@ export function AdvancedAnalyticsDashboard({
                                 </p>
                               </div>
                             </div>
-                            {getTrendDisplay (item.trend, item.change) }
+                            {getTrendDisplay(item.trend, item.change) }
                           </div>
 
                           {item.target && ("
@@ -459,9 +406,7 @@ export function AdvancedAnalyticsDashboard({
                                 </td>"
                                 <td className="px-6 py-4 whitespace-nowrap">
                                   <div`
-                                    className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${
-
-                                      item.trend === 'up''
+                                    className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${item.trend === 'up''
                                         ? 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400''
                                         : item.trend === 'down''
                                           ? 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400''

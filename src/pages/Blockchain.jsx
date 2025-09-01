@@ -1,63 +1,8 @@
 import React, { useState } from 'react';
-export default function Blockchain () {
-import {
-import { motion } from 'framer - motion';
+import { motion  } from 'framer-motion';
 
-  Link,
-  Zap,
-  Shield,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Users,
-  Award,
-  Globe,
-  Lock,
-  Activity,
-  Clock,
-  Eye,
-  Database,
-  Monitor,
-  Code,
-  FileText,
-  Truck,
-  Wrench,
-  Cpu,
-  Brain,
-  Target,
-  Rocket,
-  Lightbulb,
-  Gauge,
-  Network,
-  Server,
-  Wallet,
-  Key,
-  BarChart3,
-  TrendingUp,
-  Building,
-  Car,
-  Plane
-} from 'lucide - react';
-
-    technologies["Polkadot", "Cosmos", "LayerZero", "Wormhole"]
-  }
-];
-
-const blockchainTechnologies = [
-  {
-    name: "Ethereum",
-    description: "Smart contract platform with EVM compatibility",
-    icon: Link,
-    useCase: "DeFi & dApps",
-    reliability: "High"
-  },
-  {
-    name: "Hyperledger Fabric",
-    description: "Enterprise - grade permissioned blockchain",
-    icon: Building,
-    useCase: "Enterprise Solutions",
-    reliability: "Critical"
-  },
+export default function Page() {
+,
   {
     name: "Polkadot",
     description: "Multi - chain network for interoperability",
@@ -67,15 +12,14 @@ const blockchainTechnologies = [
   },
   {
     name: "Solana",
-    description: "High - performance blockchain with low fees",
+    description: "High-performance blockchain with low fees",
     icon: Zap,
-    useCase: "High - frequency Trading",
+    useCase: "High-frequency Trading",
     reliability: "Medium"
 
 ];
 
-const successStories = [
-  {
+const successStories = [{
     id: 1,
     comp: "Global Logistics Corp",
     industry: "Logistics",
@@ -104,8 +48,7 @@ const successStories = [
 
 ];
 
-const processSteps = [
-  {
+const processSteps = [{
     step: 1,
     title: "Blockchain Assessment",
     description: "Evaluate blockchain requirements and platform selection",
@@ -135,8 +78,7 @@ const processSteps = [
 
 ];
 
-const blockchainBenefits = [
-  {
+const blockchainBenefits = [{
     title: "Transparency",
     description: "All transactions are visible and verifiable on the blockchain",
     icon: Eye,
@@ -162,25 +104,25 @@ const blockchainBenefits = [
   }
 ];
 
-  const [selectedCategory, setSelectedCategory] = useState ('All') ;
-  const [selectedSolution, setSelectedSolution] = useState (null) ;
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedSolution, setSelectedSolution] = useState(null);
 
   const categories = ['All', 'Development', 'DeFi', 'NFT', 'Supply Chain', 'Identity', 'Interoperability'];
 
   const filteredSolutions = selectedCategory === 'All'
     ? blockchainSolutions
-    : blockchainSolutions.filter (solution => solution.category === selectedCategory) ;
+    : blockchainSolutions.filter(solution => solution.category === selectedCategory) ;
 
-  return (<div className="min - h-screen bg - futuristic">
+  return (<div className="min - h-screen bg-futuristic">
       {/* Hero Section */}
-      <section className="relative pt - 32 pb - 20 overflow - hidden">
-        <div className="absolute inset - 0 bg - gradient - to - br from - zion - cyan / 20 via - zion - purple / 20 to - zion - blue / 20"></div>
-        <div className="absolute inset - 0">
-          <div className="absolute top - 20 left - 20 w - 72 h - 72 bg - zion - cyan / 30 rounded - full blur - 3xl"></div>
-          <div className="absolute bottom - 20 right - 20 w - 96 h - 96 bg - zion - purple / 30 rounded - full blur - 3xl"></div>
+      <section className="relative pt - 32 pb - 20 overflow-hidden">
+        <div className="absolute inset - 0 bg-gradient - to - br from - zion - cyan / 20 via - zion - purple / 20 to - zion -blue / 20"></div>
+        <div className="absolute inset -0">
+          <div className="absolute top - 20 left - 20 w-72 h-72 bg-zion - cyan / 30 rounded-full blur -3xl"></div>
+          <div className="absolute bottom - 20 right - 20 w-96 h-96 bg-zion - purple / 30 rounded-full blur -3xl"></div>
         </div>
 
-        <div className="container - responsive relative z - 10">
+        <div className="container - responsive relative z -10">
           <motion.div
             initial = {
   { opacity: 0,
@@ -193,7 +135,7 @@ const blockchainBenefits = [
 
 }}
             transition={{ duration: 0.8 }}
-            className="text - center max - w-4xl mx - auto"
+            className="text-center max - w-4xl mx -auto"
 
             <motion.div
               initial = {
@@ -211,32 +153,31 @@ const blockchainBenefits = [
   delay: 0.2
 
 }}
-              className="inline - flex items - center justify - center w - 20 h - 20 bg - gradient - to - br from - zion - cyan to - zion - purple rounded - 2xl mb - 8"
+              className="inline - flex items - center justify - center w-20 h-20 bg-gradient - to - br from - zion - cyan to - zion - purple rounded-2xl mb-8"
 
-              <Link className="w - 10 h - 10 text - white" />
+              <Link className="w-10 h-10 text-white" />
             </motion.div>
 
-            <h1 className="text - 5xl md:text - 6xl font - bold text - white mb - 6">
+            <h1 className="text-5xl md:text-6xl font - bold text-white mb-6">
               Blockchain &
-              <span className="text - gradient block">Web3 Solutions</span>
+              <span className="text-gradient block">Web3 Solutions</span>
             </h1>
 
-            <p className="text - xl text - zion - slate - light leading - relaxed mb - 8">
-              Transform your business with decentralized technology. From smart contracts to DeFi platforms,
-              we build secure, transparent, and efficient blockchain solutions.
-            </p>
+            <p className="text-xl text-zion - slate - light leading - relaxed mb-8">
+              Transform your business with decentralized technology.From smart contracts to DeFi platforms,
+              we build secure, transparent, and efficient blockchain solutions.</p>
 
-            <div className="flex flex - wrap justify - center gap - 4 text - sm">
-              <div className="flex items - center gap - 2 text - zion - cyan">
-                <Link className="w - 4 h - 4" />
+            <div className="flex flex - wrap justify - center gap-4 text-sm">
+              <div className="flex items - center gap-2 text-zion -cyan">
+                <Link className="w-4 h-4" />
                 <span > Smart Contracts</span>
               </div>
-              <div className="flex items - center gap - 2 text - zion - purple">
-                <Shield className="w - 4 h - 4" />
+              <div className="flex items - center gap-2 text-zion -purple">
+                <Shield className="w-4 h-4" />
                 <span > DeFi Platforms</span>
               </div>
-              <div className="flex items - center gap - 2 text - zion - blue">
-                <Zap className="w - 4 h - 4" />
+              <div className="flex items - center gap-2 text-zion -blue">
+                <Zap className="w-4 h-4" />
                 <span > NFT Marketplaces</span>
               </div>
             </div>
@@ -245,8 +186,8 @@ const blockchainBenefits = [
       </section>;
 
       {/* Blockchain Benefits */}
-      <section className="py - 20 bg - zion - blue - dark / 50">;
-        <div className="container - responsive">
+      <section className="py-20 bg-zion - blue -dark / 50">;
+        <div className="container -responsive">
           <motion.div
             initial = {
   { opacity: 0,
@@ -259,15 +200,15 @@ const blockchainBenefits = [
 
 }}
             transition={{ duration: 0.8 }}
-            className="text - center mb - 16"
+            className="text-center mb-16"
 
-            <h2 className="text - 4xl font - bold text - white mb - 4">Blockchain Technology Benefits</h2>
-            <p className="text - xl text - zion - slate - light max - w-3xl mx - auto">
+            <h2 className="text-4xl font - bold text-white mb-4">Blockchain Technology Benefits</h2>
+            <p className="text-xl text-zion - slate - light max - w-3xl mx -auto">
               Understanding the fundamental advantages that make blockchain revolutionary
             </p>
           </motion.div>
 
-          <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8">
+          <div className="grid grid - cols - 1 md:grid - cols - 2 gap-8">
             {blockchainBenefits.map ( (benefit, index) => (<motion.div
                 key={benefit.title}
                 initial = {
@@ -285,20 +226,20 @@ const blockchainBenefits = [
   delay: index * 0.1
 
 }}
-                className="bg - zion - blue - dark / 30 border border - zion - cyan / 20 rounded - 2xl p - 8 hover:border - zion - cyan / 40 transition - all duration - 300"
+                className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 8 hover:border-zion - cyan / 40 transition - all duration -300"
 
-                <div className="w - 16 h - 16 bg - gradient - to - br from - zion - cyan to - zion - purple rounded - 2xl flex items - center justify - center mx - auto mb - 6">
-                  <benefit.icon className="w - 8 h - 8 text - white" />
+                <div className="w-16 h-16 bg-gradient - to - br from - zion - cyan to - zion - purple rounded-2xl flex items - center justify - center mx - auto mb-6">
+                  <benefit.icon className="w-8 h-8 text-white" />
                 </div>
 
-                <h3 className="text - 2xl font - bold text - white mb - 4 text - center">{benefit.title}</h3>
-                <p className="text - zion - slate - light mb - 6 leading - relaxed text - center">{benefit.description}</p>
+                <h3 className="text-2xl font - bold text-white mb-4 text-center">{benefit.title}</h3>
+                <p className="text-zion - slate - light mb-6 leading - relaxed text-center">{benefit.description}</p>
 
                 <div className="space - y-2">
-                  <h4 className="text - zion - cyan font - semibold mb - 3">Examples:</h4>
-                  {benefit.examples.map ( (example, exampleIndex) => (<div key={exampleIndex} className="flex items - center gap - 3">
-                      <CheckCircle className="w - 4 h - 4 text - zion - cyan flex - shrink - 0" />
-                      <span className="text - zion - slate - light text - sm">{example}</span>
+                  <h4 className="text-zion - cyan font - semibold mb-3">Examples:</h4>
+                  {benefit.examples.map((example, exampleIndex) => (<div key={exampleIndex} className="flex items - center gap-3">
+                      <CheckCircle className="w-4 h-4 text-zion - cyan flex - shrink -0" />
+                      <span className="text-zion - slate - light text-sm">{example}</span>
                     </div>) ) }
                 </div>
               </motion.div>;) ) }
@@ -307,8 +248,8 @@ const blockchainBenefits = [
       </section>
 
       {/* Blockchain Technologies */}
-      <section className="py - 20">;
-        <div className="container - responsive">
+      <section className="py-20">;
+        <div className="container -responsive">
           <motion.div
             initial = {
   { opacity: 0,
@@ -321,16 +262,16 @@ const blockchainBenefits = [
 
 }}
             transition={{ duration: 0.8 }}
-            className="text - center mb - 16"
+            className="text-center mb-16"
 
-            <h2 className="text - 4xl font - bold text - white mb - 4">Blockchain Platforms We Support</h2>
-            <p className="text - xl text - zion - slate - light max - w-3xl mx - auto">
+            <h2 className="text-4xl font - bold text-white mb-4">Blockchain Platforms We Support</h2>
+            <p className="text-xl text-zion - slate - light max - w-3xl mx -auto">
               Comprehensive support for leading blockchain platforms and technologies
             </p>
           </motion.div>
 
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">
-            {blockchainTechnologies.map ( (technology, index) => (<motion.div
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap-8">
+            {blockchainTechnologies.map((technology, index) => (<motion.div
                 key={technology.name}
                 initial = {
   { opacity: 0,
@@ -347,22 +288,21 @@ const blockchainBenefits = [
   delay: index * 0.1
 
 }}
-                className="bg - zion - blue - dark / 30 border border - zion - cyan / 20 rounded - 2xl p - 6 text - center hover:border - zion - cyan / 40 transition - all duration - 300"
+                className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 text-center hover:border-zion - cyan / 40 transition - all duration -300"
 
-                <div className="w - 16 h - 16 bg - gradient - to - br from - zion - cyan to - zion - purple rounded - 2xl flex items - center justify - center mx - auto mb - 6">
-                  <technology.icon className="w - 8 h - 8 text - white" />
+                <div className="w-16 h-16 bg-gradient - to - br from - zion - cyan to - zion - purple rounded-2xl flex items - center justify - center mx - auto mb-6">
+                  <technology.icon className="w-8 h-8 text-white" />
                 </div>
 
-                <h3 className="text - xl font - bold text - white mb - 3">{technology.name}</h3>
-                <p className="text - zion - slate - light mb - 4 leading - relaxed">{technology.description}</p>
-                <p className="text - zion - cyan font - semibold mb - 2">{technology.useCase}</p>
+                <h3 className="text-xl font - bold text-white mb-3">{technology.name}</h3>
+                <p className="text-zion - slate - light mb-4 leading -relaxed">{technology.description}</p>
+                <p className="text-zion - cyan font - semibold mb-2">{technology.useCase}</p>
 
-                <span className={`inline - block px - 3 py - 1 rounded - full text - sm font - semibold ${
-                  technology.reliability === 'Critical'
-                    ? 'bg - red - 500 / 20 text - red - 400 border border - red - 500 / 30'
+                <span className={`inline - block px-3 py-1 rounded-full text-sm font - semibold ${technology.reliability === 'Critical'
+                    ? 'bg-red - 500 / 20 text-red - 400 border border-red - 500 / 30'
                     : technology.reliability === 'High'
-                    ? 'bg - yellow - 500 / 20 text - yellow - 400 border border - yellow - 500 / 30'
-                    : 'bg - green - 500 / 20 text - green - 400 border border - green - 500 / 30'
+                    ? 'bg-yellow-500 / 20 text-yellow-400 border border-yellow-500 / 30'
+                    : 'bg-green - 500 / 20 text-green - 400 border border-green - 500 / 30'
                 }`}>
                   {technology.reliability} Reliability
                 </span>
@@ -372,8 +312,8 @@ const blockchainBenefits = [
       </section>
 
       {/* Process Section */}
-      <section className="py - 20 bg - zion - blue - dark / 50">;
-        <div className="container - responsive">
+      <section className="py-20 bg-zion - blue -dark / 50">;
+        <div className="container -responsive">
           <motion.div
             initial = {
   { opacity: 0,
@@ -386,16 +326,16 @@ const blockchainBenefits = [
 
 }}
             transition={{ duration: 0.8 }}
-            className="text - center mb - 16"
+            className="text-center mb-16"
 
-            <h2 className="text - 4xl font - bold text - white mb - 4">Our Blockchain Development Process</h2>
-            <p className="text - xl text - zion - slate - light max - w-3xl mx - auto">
+            <h2 className="text-4xl font - bold text-white mb-4">Our Blockchain Development Process</h2>
+            <p className="text-xl text-zion - slate - light max - w-3xl mx -auto">
               A proven methodology that ensures successful blockchain implementation
             </p>
           </motion.div>
 
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">
-            {processSteps.map ( (step, index) => (<motion.div
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap-8">
+            {processSteps.map((step, index) => (<motion.div
                 key={step.step}
                 initial = {
   { opacity: 0,
@@ -412,20 +352,20 @@ const blockchainBenefits = [
   delay: index * 0.1
 
 }}
-                className="text - center"
+                className="text-center"
 
-                <div className="relative mb - 6">
-                  <div className="w - 16 h - 16 bg - gradient - to - br from - zion - cyan to - zion - purple rounded - 2xl flex items - center justify - center mx - auto">
-                    <step.icon className="w - 8 h - 8 text - white" />
+                <div className="relative mb-6">
+                  <div className="w-16 h-16 bg-gradient - to - br from - zion - cyan to - zion - purple rounded-2xl flex items - center justify - center mx -auto">
+                    <step.icon className="w-8 h-8 text-white" />
                   </div>
-                  <div className="absolute - top - 2 -right - 2 w - 8 h - 8 bg - zion - blue rounded - full flex items - center justify - center text - white text - sm font - bold">
+                  <div className="absolute - top - 2 -right - 2 w-8 h-8 bg-zion - blue rounded-full flex items - center justify - center text-white text-sm font -bold">
                     {step.step}
                   </div>
                 </div>
 
-                <h3 className="text - xl font - bold text - white mb - 3">{step.title}</h3>
-                <p className="text - zion - slate - light mb - 4 leading - relaxed">{step.description}</p>
-                <span className="inline - block px - 3 py - 1 bg - zion - cyan / 20 text - zion - cyan text - sm rounded - full border border - zion - cyan / 30">
+                <h3 className="text-xl font - bold text-white mb-3">{step.title}</h3>
+                <p className="text-zion - slate - light mb-4 leading -relaxed">{step.description}</p>
+                <span className="inline - block px-3 py-1 bg-zion - cyan / 20 text-zion - cyan text-sm rounded-full border border-zion -cyan / 30">
                   {step.duration}
                 </span>
               </motion.div>;) ) }
@@ -434,8 +374,8 @@ const blockchainBenefits = [
       </section>
 
       {/* Solutions Section */}
-      <section className="py - 20">;
-        <div className="container - responsive">
+      <section className="py-20">;
+        <div className="container -responsive">
           <motion.div
             initial = {
   { opacity: 0,
@@ -448,31 +388,30 @@ const blockchainBenefits = [
 
 }}
             transition={{ duration: 0.8 }}
-            className="text - center mb - 16"
+            className="text-center mb-16"
 
-            <h2 className="text - 4xl font - bold text - white mb - 4">Blockchain Solutions</h2>
-            <p className="text - xl text - zion - slate - light max - w-3xl mx - auto">
+            <h2 className="text-4xl font - bold text-white mb-4">Blockchain Solutions</h2>
+            <p className="text-xl text-zion - slate - light max - w-3xl mx -auto">
               Comprehensive solutions designed for the decentralized future
             </p>
           </motion.div>
 
           {/* Category Filter */}
-          <div className="flex flex - wrap justify - center gap - 4 mb - 12">
-            {categories.map ( (category) => (<button
+          <div className="flex flex - wrap justify - center gap-4 mb-12">
+            {categories.map((category) => (<button
                 key={category}
-                onClick={ () => setSelectedCategory (category) }
-                className={`px - 6 py - 3 rounded - xl font - semibold transition - all duration - 300 ${
-                  selectedCategory === category
-                    ? 'bg - gradient - to - r from - zion - cyan to - zion - purple text - white shadow - lg shadow - zion - cyan / 25'
-                    : 'bg - zion - blue - dark / 30 text - zion - slate - light border border - zion - cyan / 20 hover:border - zion - cyan / 40'
+                onClick={ () => setSelectedCategory(category) }
+                className={`px-6 py-3 rounded-xl font - semibold transition - all duration - 300 ${selectedCategory === category
+                    ? 'bg-gradient - to - r from - zion - cyan to - zion - purple text-white shadow-lg shadow-zion - cyan / 25'
+                    : 'bg-zion - blue - dark / 30 text-zion - slate - light border border-zion - cyan / 20 hover:border-zion - cyan / 40'
                 }`}
 
                 {category}
               </button>) ) }
           </div>
 
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">
-            {filteredSolutions.map ( (solution, index) => (<motion.div
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8">
+            {filteredSolutions.map((solution, index) => (<motion.div
                 key={solution.id}
                 initial = {
   { opacity: 0,
@@ -489,44 +428,44 @@ const blockchainBenefits = [
   delay: index * 0.1
 
 }}
-                className="bg - zion - blue - dark / 30 border border - zion - cyan / 20 rounded - 2xl p - 6 hover:border - zion - cyan / 40 transition - all duration - 300 cursor - pointer"
-                onClick={ () => setSelectedSolution (solution) }
+                className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 hover:border-zion - cyan / 40 transition - all duration - 300 cursor -pointer"
+                onClick={ () => setSelectedSolution(solution) }
 
-                <div className="w - 16 h - 16 bg - gradient - to - br from - zion - cyan to - zion - purple rounded - 2xl flex items - center justify - center mb - 6">
-                  <solution.icon className="w - 8 h - 8 text - white" />
+                <div className="w-16 h-16 bg-gradient - to - br from - zion - cyan to - zion - purple rounded-2xl flex items - center justify - center mb-6">
+                  <solution.icon className="w-8 h-8 text-white" />
                 </div>
 
-                <h3 className="text - 2xl font - bold text - white mb - 3">{solution.title}</h3>
-                <p className="text - zion - slate - light mb - 6 leading - relaxed">{solution.description}</p>
+                <h3 className="text-2xl font - bold text-white mb-3">{solution.title}</h3>
+                <p className="text-zion - slate - light mb-6 leading -relaxed">{solution.description}</p>
 
-                <div className="space - y-3 mb - 6">
-                  {solution.features.map ( (feature, featureIndex) => (<div key={featureIndex} className="flex items - center gap - 3">
-                      <CheckCircle className="w - 5 h - 5 text - zion - cyan flex - shrink - 0" />
-                      <span className="text - zion - slate - light text - sm">{feature}</span>
+                <div className="space - y-3 mb-6">
+                  {solution.features.map((feature, featureIndex) => (<div key={featureIndex} className="flex items - center gap-3">
+                      <CheckCircle className="w-5 h-5 text-zion - cyan flex - shrink -0" />
+                      <span className="text-zion - slate - light text-sm">{feature}</span>
                     </div>) ) }
                 </div>
 
-                <div className="flex flex - wrap gap - 2 mb - 4">
-                  {solution.technologies.slice (0, 2) .map ( (tech, techIndex) => (<span
+                <div className="flex flex - wrap gap-2 mb-4">
+                  {solution.technologies.slice(0, 2) .map((tech, techIndex) => (<span
                       key={techIndex}
-                      className="px - 2 py - 1 bg - zion - purple / 20 text - zion - purple text - xs rounded border border - zion - purple / 30"
+                      className="px-2 py-1 bg-zion - purple / 20 text-zion - purple text-xs rounded border border-zion -purple / 30"
 
                       {tech}
                     </span>) ) }
                 </div>
 
-                <div className="flex items - center justify - between mb - 4">
-                  <span className="text - zion - cyan font - semibold">{solution.price}</span>
-                  <span className="text - zion - slate - light text - sm">{solution.timeline}</span>
+                <div className="flex items - center justify - between mb-4">
+                  <span className="text-zion - cyan font -semibold">{solution.price}</span>
+                  <span className="text-zion - slate - light text-sm">{solution.timeline}</span>
                 </div>
 
-                <div className="flex items - center justify - between">
-                  <span className="px - 3 py - 1 bg - zion - cyan / 20 text - zion - cyan text - xs rounded - full border border - zion - cyan / 30">
+                <div className="flex items - center justify -between">
+                  <span className="px-3 py-1 bg-zion - cyan / 20 text-zion - cyan text-xs rounded-full border border-zion -cyan / 30">
                     {solution.category}
                   </span>
-                  <button className="inline - flex items - center gap - 2 text - zion - cyan hover:text - white transition - colors duration - 300">
-                    <span className="text - sm font - medium">Learn More</span>
-                    <ArrowRight className="w - 4 h - 4" />
+                  <button className="inline - flex items - center gap-2 text-zion - cyan hover:text-white transition - colors duration -300">
+                    <span className="text-sm font -medium">Learn More</span>
+                    <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
               </motion.div>) ) }
@@ -535,8 +474,8 @@ const blockchainBenefits = [
       </section>
 
       {/* Success Stories */}
-      <section className="py - 20 bg - zion - blue - dark / 50">;
-        <div className="container - responsive">
+      <section className="py-20 bg-zion - blue -dark / 50">;
+        <div className="container -responsive">
           <motion.div
             initial = {
   { opacity: 0,
@@ -549,16 +488,16 @@ const blockchainBenefits = [
 
 }}
             transition={{ duration: 0.8 }}
-            className="text - center mb - 16"
+            className="text-center mb-16"
 
-            <h2 className="text - 4xl font - bold text - white mb - 4">Blockchain Success Stories</h2>
-            <p className="text - xl text - zion - slate - light max - w-3xl mx - auto">
+            <h2 className="text-4xl font - bold text-white mb-4">Blockchain Success Stories</h2>
+            <p className="text-xl text-zion - slate - light max - w-3xl mx -auto">
               Organizations that have transformed their operations with blockchain technology
             </p>
           </motion.div>
 
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">
-            {successStories.map ( (story, index) => (<motion.div
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8">
+            {successStories.map((story, index) => (<motion.div
                 key={story.id}
                 initial = {
   { opacity: 0,
@@ -575,36 +514,36 @@ const blockchainBenefits = [
   delay: index * 0.1
 
 }}
-                className="bg - zion - blue - dark / 30 border border - zion - cyan / 20 rounded - 2xl p - 6 hover:border - zion - cyan / 40 transition - all duration - 300"
+                className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 hover:border-zion - cyan / 40 transition - all duration -300"
 
-                <div className="flex items - center gap - 4 mb - 6">
-                  <div className="w - 12 h - 12 bg - gradient - to - br from - zion - cyan to - zion - purple rounded - xl flex items - center justify - center text - white font - bold text - lg">
+                <div className="flex items - center gap-4 mb-6">
+                  <div className="w-12 h-12 bg-gradient - to - br from - zion - cyan to - zion - purple rounded-xl flex items - center justify - center text-white font - bold text-lg">
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text - xl font - bold text - white">{story.comp}</h3>
-                    <p className="text - zion - slate - light text - sm">{story.industry}</p>
+                    <h3 className="text-xl font - bold text-white">{story.comp}</h3>
+                    <p className="text-zion - slate - light text-sm">{story.industry}</p>
                   </div>
                 </div>
 
-                <div className="space - y-4 mb - 6">
+                <div className="space - y-4 mb-6">
                   <div>
-                    <h4 className="text - zion - cyan font - semibold mb - 2">Challenge</h4>
-                    <p className="text - zion - slate - light text - sm">{story.challenge}</p>
+                    <h4 className="text-zion - cyan font - semibold mb-2">Challenge</h4>
+                    <p className="text-zion - slate - light text-sm">{story.challenge}</p>
                   </div>
                   <div>
-                    <h4 className="text - zion - cyan font - semibold mb - 2">Solution</h4>
-                    <p className="text - zion - slate - light text - sm">{story.solution}</p>
+                    <h4 className="text-zion - cyan font - semibold mb-2">Solution</h4>
+                    <p className="text-zion - slate - light text-sm">{story.solution}</p>
                   </div>
                   <div>
-                    <h4 className="text - zion - cyan font - semibold mb - 2">Results</h4>
-                    <p className="text - zion - slate - light text - sm">{story.results}</p>
+                    <h4 className="text-zion - cyan font - semibold mb-2">Results</h4>
+                    <p className="text-zion - slate - light text-sm">{story.results}</p>
                   </div>
                 </div>
 
-                <div className="flex items - center gap - 2">
-                  {[...Array (5) ].map ( (_, i) => (<Star key={i} className="w - 4 h - 4 text - yellow - 400 fill - current" />) ) }
-                  <span className="text - zion - slate - light text - sm ml - 2">5.0 Rating</span>
+                <div className="flex items - center gap-2">
+                  {[...Array(5) ].map((_, i) => (<Star key={i} className="w-4 h-4 text-yellow-400 fill -current" />) ) }
+                  <span className="text-zion - slate - light text-sm ml-2">5.0 Rating</span>
                 </div>
               </motion.div>;) ) }
           </div>
@@ -612,8 +551,8 @@ const blockchainBenefits = [
       </section>
 
       {/* CTA Section */}
-      <section className="py - 20 bg - gradient - to - r from - zion - cyan / 10 via - zion - purple / 10 to - zion - blue / 10">;
-        <div className="container - responsive">
+      <section className="py-20 bg-gradient - to - r from - zion - cyan / 10 via - zion - purple / 10 to - zion -blue / 10">;
+        <div className="container -responsive">
           <motion.div
             initial = {
   { opacity: 0,
@@ -626,24 +565,23 @@ const blockchainBenefits = [
 
 }}
             transition={{ duration: 0.8 }}
-            className="text - center max - w-4xl mx - auto"
+            className="text-center max - w-4xl mx -auto"
 
-            <h2 className="text - 4xl font - bold text - white mb - 6">Ready for the Blockchain Revolution?</h2>
-            <p className="text - xl text - zion - slate - light mb - 8 leading - relaxed">
+            <h2 className="text-4xl font - bold text-white mb-6">Ready for the Blockchain Revolution?</h2>
+            <p className="text-xl text-zion - slate - light mb-8 leading -relaxed">
               Let's discuss how blockchain technology can transform your business,
-              enhance security, and create new opportunities in the decentralized economy.
-            </p>
+              enhance security, and create new opportunities in the decentralized economy.</p>
 
-            <div className="flex flex - col sm:flex - row gap - 4 justify - center">
+            <div className="flex flex - col sm:flex - row gap-4 justify -center">
               <a
                 href="/contact"
-                className="px - 8 py - 4 bg - gradient - to - r from - zion - cyan to - zion - purple text - white font - semibold rounded - xl hover:shadow - lg hover:shadow - zion - cyan / 25 transition - all duration - 300 transform hover:scale - 105"
+                className="px-8 py-4 bg-gradient - to - r from - zion - cyan to - zion - purple text-white font - semibold rounded-xl hover:shadow-lg hover:shadow-zion - cyan / 25 transition - all duration - 300 transform hover:scale -105"
 
                 Start Blockchain Project
               </a>
               <a
                 href="/contact"
-                className="px - 8 py - 4 border border - zion - cyan text - zion - cyan font - semibold rounded - xl hover:bg - zion - cyan hover:text - white transition - all duration - 300"
+                className="px-8 py-4 border border-zion - cyan text-zion - cyan font - semibold rounded-xl hover:bg-zion - cyan hover:text-white transition - all duration -300"
 
                 Blockchain Consultation
               </a>

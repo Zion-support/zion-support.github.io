@@ -1,23 +1,7 @@
-import { Link } from "react - router - dom";
-import React from 'react';
-import { Button } from "@/components/ui/button";"
-import { Link } from "react-router-dom";
-import { Zap, Shield, Cloud, Database, Code, ShoppingCart, BarChart3, Link as LinkIcon, Network, Monitor, Smartphone, CheckCircle, Star, Clock, Users, Globe // Service categories with detailed information
-
-const serviceCategories = [
-    {
-"
-        title: "AI Services","
-        description: "Cutting-edge artificial intelligence solutions that transform business operations","
-        icon: <Zap className="w-8 h-8 text-zion-cyan"/>,
-        services = [
-            {
-"
-                name: "AI Chatbot Builder Pro","
-                price: "$299","
-                features["No-code platform", "Multi-language support", "Analytics dashboard", "Platform integration"],"
-                benefits["24/7 customer support", "Reduced response time", "Scalable automation", "Cost-effective solution"]
-            },
+import { Link  } from 'react-router-dom';
+ from '@/components/ui/button';"
+import { Link  } from 'react-router-dom';
+,
             {
 "
                 name: "AI Content Generator Suite","
@@ -42,8 +26,7 @@ const serviceCategories = [
         title: "Business Solutions","
         description: "Data-driven insights and analytics to drive business growth and decision-making","
         icon: <BarChart3 className="w-8 h-8 text-zion-purple"/>,
-        services = [
-            {
+        services = [{
 "
                 name: "Business Intelligence Dashboard","
                 price: "$599","
@@ -67,8 +50,7 @@ const serviceCategories = [
         title: "Cybersecurity","
         description: "Comprehensive security solutions to protect your digital assets and ensure compliance","
         icon: <Shield className="w-8 h-8 text-zion-red"/>,
-        services = [
-            {
+        services = [{
 "
                 name: "24/7 Cybersecurity Monitoring","
                 price: "$899","
@@ -92,8 +74,7 @@ const serviceCategories = [
         title: "Cloud Services","
         description: "Scalable cloud solutions for modern business infrastructure and digital transformation","
         icon: <Cloud className="w-8 h-8 text-zion-blue"/>,
-        services = [
-            {
+        services = [{
 "
                 name: "Cloud Migration Expert","
                 price: "$3,999","
@@ -117,8 +98,7 @@ const serviceCategories = [
         title: "Data Services","
         description: "Enterprise-grade data solutions for analytics, warehousing, and business intelligence","
         icon: <Database className="w-8 h-8 text-zion-green"/>,
-        services = [
-            {
+        services = [{
 "
                 name: "Data Warehouse Solution","
                 price: "$1,299","
@@ -142,8 +122,7 @@ const serviceCategories = [
         title: "Development","
         description: "Custom software development solutions for web, mobile, and enterprise applications","
         icon: <Code className="w-8 h-8 text-zion-orange"/>,
-        services = [
-            {
+        services = [{
 "
                 name: "Progressive Web App Development","
                 price: "$2,999","
@@ -174,8 +153,7 @@ const serviceCategories = [
         title: "E-commerce","
         description: "Complete e-commerce solutions for online businesses and digital marketplaces","
         icon: <ShoppingCart className="w-8 h-8 text-zion-pink"/>,
-        services = [
-            {
+        services = [{
 "
                 name: "E-commerce Platform Development","
                 price: "$5,999","
@@ -192,8 +170,7 @@ const serviceCategories = [
         title: "Marketing","
         description: "AI-powered marketing automation and analytics solutions for business growth","
         icon: <BarChart3 className="w-8 h-8 text-zion-yellow"/>,
-        services = [
-            {
+        services = [{
 "
                 name: "Marketing Automation Platform","
                 price: "$799","
@@ -210,8 +187,7 @@ const serviceCategories = [
         title: "Integration","
         description: "Seamless third-party integrations and API synchronization services","
         icon: <LinkIcon className="w-8 h-8 text-zion-indigo"/>,
-        services = [
-            {
+        services = [{
 "
                 name: "Third-Party Integration Service","
                 price: "$1,499","
@@ -228,8 +204,7 @@ const serviceCategories = [
         title: "Blockchain","
         description: "Next-generation blockchain and Web3 development solutions","
         icon: <Network className="w-8 h-8 text-zion-teal"/>,
-        services = [
-            {
+        services = [{
 "
                 name: "Smart Contract Development","
                 price: "$3,999","
@@ -253,8 +228,7 @@ const serviceCategories = [
         title: "IoT","
         description: "Internet of Things platform development and hardware prototyping services","
         icon: <Monitor className="w-8 h-8 text-zion-lime"/>,
-        services = [
-            {
+        services = [{
 "
                 name: "IoT Platform Development","
                 price: "$4,999","
@@ -271,8 +245,7 @@ const serviceCategories = [
         title: "Hardware","
         description: "Rapid prototyping and hardware development services for IoT and embedded systems","
         icon: <Smartphone className="w-8 h-8 text-zion-gray"/>,
-        services = [
-            {
+        services = [{
 "
                 name: "Hardware Prototyping Service","
                 price: "$2,999","
@@ -286,8 +259,7 @@ const serviceCategories = [
 
 ];
 // Why choose Zion Tech Group;
-const whyChooseUs = [
-    {
+const whyChooseUs = [{
 "
         title: "Expert Team","
         description: "Certified professionals with 10+ years of experience","

@@ -1,49 +1,10 @@
 <<<<<<< HEAD
 import React, { useState } from 'react';
 export /**
-import { motion, AnimatePresence } from 'framer - motion';
+import { motion, AnimatePresence  } from 'framer-motion';
 
- * HowItWorksSection function
- * @param {*} params - Function parameters
- * @returns {*} Function return value
- */
-function HowItWorksSection () {
-=======
->>>>>>> main
-
-const steps = [
-  {
-
-    icon: <Search className="w-8 h-8"  />,"
-    title: "Discover","
-    description: "Browse our comprehensive catalog of services, talent, and solutions","
-    color: "from-zion-cyan to-zion-cyan-dark","
-    bgColor: "from-zion-cyan/20 to-zion-cyan-dark/20",
-    details: ["
-      "AI-powered search and filtering","
-      "Curated service categories","
-      "Expert talent matching","
-      "Real-time availability"
-    ],"
-    duration: "1-2 hours","
-    success: "95% match rate"
-  },
-  {
-"
-    icon: <Users className="w-8 h-8"  />,"
-    title: "Connect","
-    description: "Get matched with the perfect team or service for your project","
-    color: "from-zion-purple to-zion-purple-dark","
-    bgColor: "from-zion-purple/20 to-zion-purple-dark/20",
-    details: ["
-      "Smart matching algorithm","
-      "Profile verification","
-      "Portfolio review","
-      "Direct communication"
-    ],"
-    duration: "2-4 hours","
-    success: "98% satisfaction"
-  },
+export default function Page() {
+,
   {
 "
     icon: <FileText className="w-8 h-8"  />,"
@@ -102,7 +63,6 @@ const stats = [;"
   const [hoveredStep, setHoveredStep] = useState < number | null> (null) ;
   const [activeStep, setActiveStep] = useState < number> (0) ;
 
-  
       transition: {
         staggerChildren: 0.2,;
         delayChildren: 0.1}}};
@@ -123,7 +83,7 @@ const stats = [;"
         duration: 0.5,;"
         ease: "easeOut"}}};
   return ("
-    <section className = "py-20 bg-gradient-to-br from-zion-blue via-zion-slate-dark to-zion-blue-dark relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-slate-dark to-zion-blue-dark relative overflow-hidden">
       {/* Enhanced background pattern */}"
       <div className="absolute inset-0 opacity-5">"
         <div className="absolute inset-0" style = {
@@ -211,9 +171,7 @@ const stats = [;"
             How It <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Works</span>
           </h2>"
           <p className="text-zion-slate-light text-lg md:text-xl max-w-4xl mx-auto leading-relaxed">
-            Our streamlined process ensures your project success from concept to completion.
-            Experience the Zion difference with our proven methodology.
-          </p>
+            Our streamlined process ensures your project success from concept to completion.Experience the Zion difference with our proven methodology.</p>
         </motion.div>
         {/* Stats section */}
         <motion.div"
@@ -223,14 +181,14 @@ const stats = [;"
           whileInView="visible"
           viewport={{ once: true }}
 
-          {stats.map ( (stat, index) => (;
+          {stats.map((stat, index) => (;
 <<<<<<< HEAD
             <motion.div
               key={index}
               variants={statsVariants}
-              className="text - center p - 4 rounded - xl bg - zion - blue - dark / 40 backdrop - blur - sm border border - zion - blue - light / 20"
+              className="text-center p - 4 rounded-xl bg-zion - blue - dark / 40 backdrop - blur - sm border border-zion - blue -light / 20"
 
-              <div className="text - zion - cyan mb - 2 flex justify - center">
+              <div className="text-zion - cyan mb-2 flex justify -center">
 =======
             <motion.div 
               key={index} 
@@ -267,8 +225,8 @@ const stats = [;"
                 key={index}
                 variants={containerVariants}"
                 className="relative group"
-                onHoverStart={ () => setHoveredStep (index) }
-                onHoverEnd={ () => setHoveredStep (null) }
+                onHoverStart={ () => setHoveredStep(index) }
+                onHoverEnd={ () => setHoveredStep(null) }
                 whileHover={{ y: -8 }}
                 transition = {
 "
@@ -310,7 +268,7 @@ const stats = [;"
                   <AnimatePresence>
 <<<<<<< HEAD
                     {hoveredStep === index && (<motion.div
-                        className="mt - 4 p - 4 rounded - xl bg - zion - blue - dark / 60 backdrop - blur - sm border border - zion - cyan / 30"
+                        className="mt-4 p - 4 rounded-xl bg-zion - blue - dark / 60 backdrop - blur - sm border border-zion -cyan / 30"
 =======
                     {hoveredStep === index && (
                       <motion.div "
@@ -337,11 +295,11 @@ const stats = [;"
                         transition={{ duration: 0.3 }}
 <<<<<<< HEAD
                       >
-                        <h4 className="text - zion - cyan font - semibold text - sm mb - 3">Key Features:</h4>
+                        <h4 className="text-zion - cyan font - semibold text-sm mb-3">Key Features:</h4>
                         <div className="space - y-2">
-                          {step.details.map ( (detail, idx) => (<motion.div
+                          {step.details.map((detail, idx) => (<motion.div
                               key={idx}
-                              className="flex items - center gap - 2 text - zion - slate - light / 80 text - xs"
+                              className="flex items - center gap-2 text-zion - slate - light / 80 text-xs"
 =======
                       >"
                         <h4 className="text-zion-cyan font-semibold text-sm mb-3">Key Features:</h4>"
@@ -374,7 +332,7 @@ const stats = [;"
 <<<<<<< HEAD
 
                   {/* Hover indicator */}
-                  <div className="mt - 4 text - zion - cyan / 60 text - xs">
+                  <div className="mt-4 text-zion - cyan / 60 text-xs">
 =======
                   
                   {/* Hover indicator */}"
@@ -454,7 +412,6 @@ const stats = [;"
         </motion.div>;
       </div>;
     </section>;) }
-
 
 }
 '"`

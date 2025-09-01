@@ -1,116 +1,6 @@
-import { Brain, Cloud, Zap, Shield, TrendingUp, Users, Globe, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink } from 'lucide - react';
-import React from 'react';
-<<<<<<< HEAD
-import { CONTACT_INFO } from '@/data / comprehensiveServices';
-export function ServicesBenefitsShowcase () {
-import { Button } from "./ui / button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui / card";
-
-=======
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";"
-import { Button } from "./ui/button";
-import { Brain, Cloud, Zap, Shield, TrendingUp, Users, Globe, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink } from 'lucide-react';
-import { CONTACT_INFO } from '@/data/comprehensiveServices';
-export function ServicesBenefitsShowcase() {
->>>>>>> main
-    const serviceBenefits = [
-        {
-"
-            category: "AI Services","
-            icon: <Brain className="w-12 h-12"/>,"
-            color: "from-purple-500 to-indigo-600","
-            description: "Transform your business with cutting-edge artificial intelligence and machine learning solutions",
-            benefits[;"
-                "Advanced AI algorithms and models","
-                "Real-time data processing and insights","
-                "Scalable machine learning infrastructure","
-                "Custom AI model development","
-                "Natural language processing capabilities","
-                "Computer vision and image recognition","
-                "Predictive analytics and forecasting","
-                "AI-powered automation workflows"
-            ],;
-            useCases[;"
-                "Customer service chatbots","
-                "Predictive maintenance systems","
-                "Fraud detection and prevention","
-                "Content generation and optimization","
-                "Recommendation engines","
-                "Process automation","
-                "Data analysis and insights","
-                "Intelligent document processing"
-            ],;"
-            marketPosition: "Industry-leading AI solutions with proven ROI","
-            startingPrice: "$299","
-            implementationTime: "1-6 weeks","
-            support: "24/7 expert support included"
-        },
-        {
-"
-            category: "IT Services","
-            icon: <Cloud className="w-12 h-12"/>,"
-            color: "from-cyan-500 to-blue-600","
-            description: "Enterprise-grade IT infrastructure and consulting services for modern businesses",
-            benefits[;"
-                "Cloud migration and optimization","
-                "Cybersecurity and compliance","
-                "DevOps automation and CI/CD","
-                "Infrastructure as code","
-                "24/7 monitoring and support","
-                "Disaster recovery planning","
-                "Performance optimization","
-                "Scalable architecture design"
-            ],;
-            useCases[;"
-                "Digital transformation initiatives","
-                "Cloud infrastructure setup","
-                "Security audits and compliance","
-                "Application modernization","
-                "Data center consolidation","
-                "Business continuity planning","
-                "Performance monitoring","
-                "Cost optimization strategies"
-            ],;"
-            marketPosition: "Trusted IT partner for enterprise transformation","
-            startingPrice: "$4,499","
-            implementationTime: "2-6 weeks","
-            support: "24/7 dedicated support team"
-        },
-        {
-"
-            category: "Micro SAAS","
-            icon: <Zap className="w-12 h-12"/>,"
-            color: "from-emerald-500 to-green-600","
-            description: "Specialized software-as-a-service solutions designed for specific business needs",
-            benefits[;"
-                "Ready-to-use business applications","
-                "Cloud-based accessibility","
-                "Automatic updates and maintenance","
-                "Scalable user management","
-                "API integrations","
-                "Customizable workflows","
-                "Real-time collaboration","
-                "Mobile-first design"
-            ],;
-            useCases[;"
-                "Inventory management","
-                "Project management","
-                "Customer support automation","
-                "HR and employee management","
-                "Financial analytics","
-                "Supply chain optimization","
-                "Marketing automation","
-                "Sales pipeline management"
-            ],;"
-            marketPosition: "Affordable, scalable solutions for growing businesses","
-            startingPrice: "$199","
-            implementationTime: "Immediate - 3 weeks","
-            support: "Business hours support with priority options"
-
-    ];
-    const industryStats = ["
-        { metric: "95%", label: "Client Satisfaction Rate" },"
-        { metric: "24/7", label: "Support Availability" },"
+import { Brain, Cloud, Zap, Shield, TrendingUp, Users, Globe, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink  } from 'lucide-react';
+export default function Page() {
+,"
         { metric: "50+", label: "Countries Served" },"
         { metric: "10+", label: "Years Experience" }
     ];"
@@ -123,8 +13,7 @@ export function ServicesBenefitsShowcase() {
           </h2>"
           <p className="text-xl text-slate-300 max-w-4xl mx-auto">
             Discover the unique advantages and proven benefits that make our services the preferred choice
-            for businesses worldwide. From cutting - edge AI to enterprise IT solutions, we deliver results.
-          </p>
+            for businesses worldwide.From cutting - edge AI to enterprise IT solutions, we deliver results.</p>
         </div>
 
         {/* Industry Statistics */}"
@@ -273,8 +162,7 @@ export function ServicesBenefitsShowcase() {
             Ready to Experience the Benefits?
           </h3>"
           <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-            Join hundreds of satisfied clients who have transformed their businesses with our innovative solutions.
-          </p>"
+            Join hundreds of satisfied clients who have transformed their businesses with our innovative solutions.</p>"
           <div className="flex flex-wrap justify-center gap-4">"
             <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700">"
               <Phone className="w-4 h-4 mr-2"/>

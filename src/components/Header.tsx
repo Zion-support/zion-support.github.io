@@ -5,7 +5,7 @@ import {
  * @param {*} params - Function parameters
  * @returns {*} Function return value
  */
-function Header ({ className }: HeaderProps) {
+function Header({ className }: HeaderProps) {
 
   Menu,
   X,
@@ -82,7 +82,6 @@ function Header ({ className }: HeaderProps) {
 interface HeaderProps {
   // Add your props here
 
-
   className?: string;
 
 export function Header({ className }: HeaderProps) {
@@ -94,25 +93,20 @@ export function Header({ className }: HeaderProps) {
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');
   const [searchQuery, setSearchQuery] = useState('');
 
-  
-  useEffect ( () => {
+  useEffect(() => {
     
     };
-
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)}, []);
 
-  
     // You can add theme switching logic here
   }}};
 
-  
     // Add search logic here'
     // console.log('Searching for:', searchQuery)};
 
-  
-  return()
+  return ()
     <header 
       className={cn()
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
@@ -152,7 +146,7 @@ export function Header({ className }: HeaderProps) {
             <button
               onClick={() => setIsSearchOpen(!isSearchOpen)}"
               className="p-2 text-gray-300 hover:text-blue-400 transition-colors"
-              aria-label="Search"
+              
             >"
               <Search className="w-5 h-5"  />
             </button>
@@ -161,7 +155,7 @@ export function Header({ className }: HeaderProps) {
             <button
               onClick={toggleTheme}"
               className="p-2 text-gray-300 hover:text-blue-400 transition-colors"
-              aria-label="Toggle theme"
+              
             >'"
               {theme === 'dark' ? <Sun className="w-5 h-5"  /> : <Moon className="w-5 h-5"  />}
             </button>
@@ -232,7 +226,7 @@ export function Header({ className }: HeaderProps) {
                         className="flex items-center space-x-3 px-4 py-2 text-gray-300 hover:text-red-400 hover:bg-gray-800 transition-colors w-full text-left"
                         onClick={() => {
                           // Add logout logic here
-                          setIsUserMenuOpen (false) }}
+                          setIsUserMenuOpen(false) }}
                       >"
                         <LogOut className="w-4 h-4"  />
                         <span>Logout</span>
@@ -246,7 +240,7 @@ export function Header({ className }: HeaderProps) {
             <button
               onClick={toggleMobileMenu}"
               className="lg:hidden p-2 text-gray-300 hover:text-blue-400 transition-colors"
-              aria-label="Toggle mobile menu"
+              
             >"
               {isMobileMenuOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
             </button>
@@ -457,7 +451,7 @@ export function Header({ className }: HeaderProps) {
               <div className="pt-4 border-t border-gray-700 space-y-3">"
                 <div className="flex items-center space-x-3 text-gray-300">"
                   <Phone className="w-4 h-4"  />"
-                  <span className="text-sm">+1 (555) 123-4567</span>
+                  <span className="text-sm">+1(555) 123-4567</span>
                 </div>"
                 <div className="flex items-center space-x-3 text-gray-300">"
                   <Mail className="w-4 h-4"  />"

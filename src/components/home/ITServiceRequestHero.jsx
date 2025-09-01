@@ -1,32 +1,7 @@
 import React, { useState } from 'react';
 import { GradientHeading } from '@/components/GradientHeading';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { Clock, Globe, Shield, Zap, MapPin, ArrowRight } from 'lucide-react';
-export function ITServiceRequestHero() {
-
-  const [location, setLocation] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const navigate = useNavigate();
-
-  const handleSubmit = e => {
-
-    e.preventDefault();
-    if (!location.trim()) return;
-
-    setIsSubmitting(true);
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
-      navigate(`/it-onsite-services?location=${encodeURIComponent(location)}`);
-    }, 1000);
-  };
-
-  const containerVariants = {
-
-    hidden: { opacity: 0, y: 20 },
+export default function Page() {
+,
     visible: {
 
       opacity: 1,
@@ -56,7 +31,7 @@ export function ITServiceRequestHero() {
     { icon: Zap, text: 'Fast Response', color: 'text-zion-purple-light' },
   ];
 
-  return()
+  return ()
     <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple py-20 md:py-28 border-b border-zion-purple/20 relative overflow-hidden">
       {/* Background decorative elements */}"
       <div className="absolute inset-0 opacity-10">"
@@ -89,9 +64,8 @@ export function ITServiceRequestHero() {
 "
             <p className="text-lg md:text-xl text-zion-slate-light mb-8 max-w-lg leading-relaxed">
               Request professional technicians anywhere in the world, anytime
-              you need them. Fast, reliable, and secure IT solutions for your
-              business.
-            </p>
+              you need them.Fast, reliable, and secure IT solutions for your
+              business.</p>
 
             {/* Feature highlights */}"
             <div className="space-y-4 mb-8">"

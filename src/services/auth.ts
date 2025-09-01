@@ -20,7 +20,7 @@ export async function forgotPassword(email: string) {
   });
   const data = await res.json().catch(() => ({})); // Gracefully handle non-JSON responses
 
-  if (!res.ok) {
+  if(!res.ok) {
     // Throw an error with the message from the backend if available, or a generic one
     throw new Error(data?.message || `Error ${res.status}: Failed to send reset link`);
   }
@@ -40,7 +40,7 @@ export async function resetPassword(uid: string, token: string, newPassword: str
   });
   const data = await res.json().catch(() => ({}));
 
-  if (!res.ok) {
+  if(!res.ok) {
     // Throw an error with the message from the backend if available, or a generic one
     throw new Error(data?.message || `Error ${res.status}: Failed to reset password`);
   }

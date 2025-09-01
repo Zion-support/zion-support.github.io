@@ -1,41 +1,7 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { CpuChipIcon, CloudIcon, ShieldCheckIcon, LightBulbIcon, RocketLaunchIcon, ChartBarIcon } from '@heroicons/react/24/outline';
-export function ServicesShowcase() {
-    const services = [
-        {
-
-            icon: CpuChipIcon,
-            title: "AI & Machine Learning","
-            description: "Advanced AI solutions for automation, decision-making, and predictive analytics","
-            color: "from-zion-cyan to-zion-blue","
-            href: "/ai-solutions"
-        },
-        {
-
-            icon: CloudIcon,"
-            title: "Cloud & DevOps","
-            description: "Scalable cloud infrastructure and automated deployment pipelines","
-            color: "from-zion-purple to-zion-cyan","
-            href: "/cloud-devops"
-        },
-        {
-
-            icon: ShieldCheckIcon,"
-            title: "Cybersecurity","
-            description: "Comprehensive security solutions for threat detection and prevention","
-            color: "from-zion-purple to-zion-blue","
-            href: "/cybersecurity"
-        },
-        {
-
-            icon: LightBulbIcon,"
-            title: "Digital Transformation","
-            description: "End-to-end digital strategy and implementation services","
-            color: "from-zion-cyan to-zion-purple","
-            href: "/digital-transformation"
-        },
+import { motion  } from 'framer-motion';
+export default function Page() {
+,
         {
 
             icon: RocketLaunchIcon,"
@@ -107,10 +73,6 @@ export function ServicesShowcase() {
 =======
   y: 0 
 
-
-
-
-
 "
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">"
 >>>>>>> main
@@ -119,8 +81,7 @@ export function ServicesShowcase() {
           </h2>"
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
             Comprehensive technology solutions designed to accelerate your business growth
-            and digital transformation journey.
-          </p>
+            and digital transformation journey.</p>
         </motion.div>
 
         {/* Services Grid */}"
@@ -173,10 +134,6 @@ export function ServicesShowcase() {
 }} className="text-center mt-16">
 =======
   delay: 0.5 
-
-
-
-
 
 "
 }} className="text-center mt-16">"

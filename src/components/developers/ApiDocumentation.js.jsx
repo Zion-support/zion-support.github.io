@@ -1,79 +1,16 @@
 import { useState } from 'react';
-import { BookOpen, Terminal } from 'lucide-react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import {
-
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle} from '@/components/ui/card';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import { Badge } from '@/components/ui/badge';
-import CodeBlock from './CodeBlock';
-export function ApiDocumentation() {
-  return()
-    <Card className="bg-zinc-900 border-zinc-800 text-white">
-      <CardHeader>"
-        <CardTitle className="text-xl flex items-center">"
-          <BookOpen className="mr-2" size={20} /> API Documentation
-        </CardTitle>"
-        <CardDescription className="text-zinc-400">
-          Reference documentation for integrating with the Zion Marketplace API.
-        </CardDescription>
-      </CardHeader>
-
-      <CardContent>"
-        <Alert className="bg-blue-900/30 border-blue-800 mb-6">"
-          <Terminal className="h-4 w-4" />
-          <AlertDescription>
-            Make sure to include your API key in all requests as a Bearer token
-            in the Authorization header.
-          </AlertDescription>
-        </Alert>
-"
-        <Tabs defaultValue="jobs" className="space-y-4">"
-          <TabsList className="bg-zinc-800 border-zinc-700">"
-            <TabsTrigger value="jobs">Jobs</TabsTrigger>"
-            <TabsTrigger value="talent">Talent</TabsTrigger>"
-            <TabsTrigger value="quotes">Quotes</TabsTrigger>"
-            <TabsTrigger value="webhooks">Webhooks</TabsTrigger>"
-            <TabsTrigger value="errors">Errors</TabsTrigger>
-          </TabsList>
-"
-          <TabsContent value="jobs" className="space-y-6">
-            <EndpointSection"
-              method="GET"
-              endpoint="/api/jobs"
-              description="List all available jobs with optional filtering."
-              note="
-              params={[
-                {
-
-                  name: 'page',
-                  type: 'integer',
-                  description: 'Page number for pagination (default: 1)},
-                {
-
-                  name: 'limit',
-                  type: 'integer',
-                  description:'
-                    'Number of results per page (default: 20, max: 100)},
-                {
-
-                  name: 'category',
-                  type: 'string',
-                  description: 'Filter by job category'},
+export default function Page() {
+,
                 {
 
                   name: 'skills',
                   type: 'string[]',
-                  description: 'Filter by required skills (comma-separated)},
+                  description: 'Filter by required skills(comma-separated)},
                 {
 
                   name: 'status',
                   type: 'string',
-                  description: 'Filter by job status (new, active, closed)},
+                  description: 'Filter by job status(new, active, closed)},
               ]}
               codeExamples={{
 "
@@ -86,7 +23,6 @@ export function ApiDocumentation() {
   headers: {
 
     'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'
-  
 
 }
 });
@@ -98,7 +34,6 @@ const data = await response.json();`
 headers = {
 
   'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'
-
 
 }
 
@@ -118,8 +53,7 @@ print(data)`}}
 `
                 success: `{
 "
-  "data"[
-    {
+  "data"[{
 "
       "id": "job_abc123","
       "title": "Senior React Developer","
@@ -131,7 +65,6 @@ print(data)`}}
         "min": 5000,"
         "max": 10000,"
   "currency": "USD"
-      
 
 },"
       "status": "active","
@@ -154,8 +87,7 @@ print(data)`}}
               endpoint="/api/jobs/:id"
               description="Get detailed information about a specific job."
               note="
-              params={[
-                {
+              params={[{
 
                   name: 'id',
                   type: 'string',
@@ -187,7 +119,6 @@ headers = {
 
   'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'
 
-
 }
 
 job_id = 'job_abc123'
@@ -214,7 +145,6 @@ print(data)`}}
       "min": 5000,"
       "max": 10000,"
   "currency": "USD"
-    
 
 },"
     "status": "active","
@@ -231,8 +161,7 @@ print(data)`}}
               endpoint="/api/jobs"
               description="Create a new job listing."
               note="Requires jobs:write scope"
-              params={[
-                {
+              params={[{
 
                   name: 'title',
                   type: 'string',
@@ -270,12 +199,12 @@ print(data)`}}
 
                   name: 'budget.currency',
                   type: 'string',
-                  description: 'Currency code (default: USD)},
+                  description: 'Currency code(default: USD)},
                 {
 
                   name: 'deadline',
                   type: 'string',
-                  description: 'Job deadline (ISO date string)},
+                  description: 'Job deadline(ISO date string)},
               ]}
               codeExamples={{
 "`
@@ -293,7 +222,6 @@ print(data)`}}
       "min": 5000,"
       "max": 10000,"
   "currency": "USD"
-    
 
 },"
     "deadline": "2025-06-30T23:59:59Z"'`
@@ -330,7 +258,6 @@ headers = {
 
   'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'
 
-
 }
 
 payload = {
@@ -338,7 +265,6 @@ payload = {
   'title': 'Senior React Developer',description': 'We need an experienced React developer...',category': 'development',skills'['react',typescript',node.js'],budget': {
 
         'min': 5000,max': 10000,currency': 'USD'
-    
 
 },deadline': '2025-06-30T23:59:59Z'
 }
@@ -367,7 +293,6 @@ print(data)`}}
       "min": 5000,"
       "max": 10000,"
   "currency": "USD"
-    
 
 },"
     "status": "new","
@@ -385,23 +310,22 @@ print(data)`}}
               endpoint="/api/talent"
               description="List talent profiles with optional filtering."
               note="
-              params={[
-                {
+              params={[{
 
                   name: 'page',
                   type: 'integer',
-                  description: 'Page number for pagination (default: 1)},
+                  description: 'Page number for pagination(default: 1)},
                 {
 
                   name: 'limit',
                   type: 'integer',
                   description:'
-                    'Number of results per page (default: 20, max: 100)},
+                    'Number of results per page(default: 20, max: 100)},
                 {
 
                   name: 'skills',
                   type: 'string[]',
-                  description: 'Filter by skills (comma-separated)},
+                  description: 'Filter by skills(comma-separated)},
                 {
 
                   name: 'availability',
@@ -419,7 +343,6 @@ print(data)`}}
   headers: {
 
     'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'
-  
 
 }
 });
@@ -431,7 +354,6 @@ const data = await response.json();`
 headers = {
 
   'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'
-
 
 }
 
@@ -452,8 +374,7 @@ print(data)`}}
 `
                 success: `{
 "
-  "data"[
-    {
+  "data"[{
 "
       "id": "talent_abc123","
       "display_name": "Jane Smith","
@@ -462,7 +383,6 @@ print(data)`}}
       "availability": "available","
       "average_rating": 4.8,"
   "rating_count": 15
-    
 
 },
     // More talent profiles...
@@ -481,8 +401,7 @@ print(data)`}}
               endpoint="/api/talent/:id"
               description="Get detailed information about a specific talent profile."
               note="
-              params={[
-                {
+              params={[{
 
                   name: 'id',
                   type: 'string',
@@ -514,7 +433,6 @@ headers = {
 
   'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'
 
-
 }
 
 talent_id = 'talent_abc123'
@@ -539,20 +457,17 @@ print(data)`}}
     "availability": "available","
     "average_rating": 4.8,"
     "rating_count": 15,"
-    "portfolio"[
-      {
+    "portfolio"[{
 "
         "id": "proj_123","
         "title": "E-commerce Platform","
         "description": "Built a modern e-commerce platform using React...","
         "technologies"["react", "redux", "node.js"],"
   "image_url": "https://example.com/portfolio/123.jpg"
-      
 
 }
     ],"
-    "certifications"[
-      {
+    "certifications"[{
 "
         "name": "AWS Certified Developer","
         "issuing_organization": "Amazon Web Services","
@@ -570,8 +485,7 @@ print(data)`}}
               endpoint="/api/quotes"
               description="Create a quote request for a talent."
               note="Requires quotes:write scope"
-              params={[
-                {
+              params={[{
 
                   name: 'talent_id',
                   type: 'string',
@@ -672,13 +586,11 @@ headers = {
 
   'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'
 
-
 }
 
 payload = {
 
   'talent_id': 'talent_abc123',project_name': 'E-commerce Website Redesign',project_summary': 'Redesign our outdated e-commerce website with modern UI',project_description': 'Our current website is 5 years old and needs a complete overhaul...',timeline': '2-3 months',budget_min': 8000,budget_max': 12000,requester_name': 'John Doe',requester_email': 'john@example.com'
-
 
 }
 
@@ -710,7 +622,6 @@ print(data)`}}
     "requester_email": "john@example.com","
     "status": "new","
   "created_at": "2025-05-16T14:30:15Z"
-  
 
 }`
 }`}}
@@ -721,24 +632,23 @@ print(data)`}}
               endpoint="/api/quotes"'"
               description="List quote requests that you've created."
               note="
-              params={[
-                {
+              params={[{
 
                   name: 'page',
                   type: 'integer',
-                  description: 'Page number for pagination (default: 1)},
+                  description: 'Page number for pagination(default: 1)},
                 {
 
                   name: 'limit',
                   type: 'integer',
                   description:'
-                    'Number of results per page (default: 20, max: 100)},
+                    'Number of results per page(default: 20, max: 100)},
                 {
 
                   name: 'status',
                   type: 'string',
                   description:'
-                    'Filter by status (new, viewed, replied, archived)},
+                    'Filter by status(new, viewed, replied, archived)},
               ]}
               codeExamples={{
 "`
@@ -751,7 +661,6 @@ print(data)`}}
   headers: {
 
     'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'
-  
 
 }
 });
@@ -763,7 +672,6 @@ const data = await response.json();`
 headers = {
 
   'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'
-
 
 }
 
@@ -778,8 +686,7 @@ print(data)`}}
 `
                 success: `{
 "
-  "data"[
-    {
+  "data"[{
 "
       "id": "quote_def456","
       "talent_id": "talent_abc123","
@@ -790,7 +697,6 @@ print(data)`}}
       "created_at": "2025-05-16T14:30:15Z","
       "viewed_at": null,"
   "replied_at": null
-    
 
 },
     // More quotes...
@@ -810,23 +716,21 @@ print(data)`}}
               <h3 className="text-lg font-semibold mb-2">Webhook Events</h3>"
               <p className="text-zinc-400 mb-4">
                 The Zion API can send webhook notifications when certain events
-                occur in your account. You can configure webhooks in the
-                Webhooks tab of the Developer Dashboard.
-              </p>
+                occur in your account.You can configure webhooks in the
+                Webhooks tab of the Developer Dashboard.</p>
 "
               <h4 className="text-md font-semibold mt-6 mb-2">
                 Authentication
               </h4>"
               <p className="text-zinc-400 mb-4">
                 When you create a webhook, you can optionally provide a secret
-                key. If a secret is provided, each webhook request will include
+                key.If a secret is provided, each webhook request will include
                 a signature in the"
                 <code className="bg-zinc-800 px-1 py-0.5 rounded">
                   X-Zion-Signature'
                 </code>{' '}
-                header. This signature is an HMAC SHA-256 hash of the request
-                body using your webhook secret as the key.
-              </p>
+                header.This signature is an HMAC SHA-256 hash of the request
+                body using your webhook secret as the key.</p>
 
               <CodeBlock'`
                 code={`import crypto from 'crypto';
@@ -853,7 +757,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
   const payload = req.body.toString();
   const webhookSecret = process.env.WEBHOOK_SECRET;
   
-  if (!verifyWebhookSignature(payload, signature, webhookSecret)) {
+  if(!verifyWebhookSignature(payload, signature, webhookSecret)) {
 
     return res.status(401).send('Invalid signature')}
   
@@ -936,7 +840,6 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
     "applied_at": "2025-05-16T15:28:30Z","
     "status": "new","
   "match_score": 85
-  
 
 }`
 }`}"
@@ -951,11 +854,10 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
               <h3 className="text-lg font-semibold mb-2">Error Responses</h3>"
               <p className="text-zinc-400 mb-4">
                 The Zion API uses conventional HTTP status codes to indicate the
-                success or failure of an API request. In general, codes in the
+                success or failure of an API request.In general, codes in the
                 2xx range indicate success, codes in the 4xx range indicate an
                 error with the provided information, and codes in the 5xx range
-                indicate an error with our servers.
-              </p>
+                indicate an error with our servers.</p>
 "
               <table className="w-full border-collapse mt-4">
                 <thead>"
@@ -980,8 +882,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
                       </code>
                     </td>"
                     <td className="py-2 px-4">
-                      The resource was successfully created.
-                    </td>
+                      The resource was successfully created.</td>
                   </tr>"
                   <tr className="border-b border-zinc-800">"
                     <td className="py-2 px-4">"
@@ -990,8 +891,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
                       </code>
                     </td>"
                     <td className="py-2 px-4">
-                      The request was invalid or cannot be otherwise served.
-                    </td>
+                      The request was invalid or cannot be otherwise served.</td>
                   </tr>"
                   <tr className="border-b border-zinc-800">"
                     <td className="py-2 px-4">"
@@ -1000,8 +900,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
                       </code>
                     </td>"
                     <td className="py-2 px-4">
-                      Authentication credentials were missing or invalid.
-                    </td>
+                      Authentication credentials were missing or invalid.</td>
                   </tr>"
                   <tr className="border-b border-zinc-800">"
                     <td className="py-2 px-4">"
@@ -1011,8 +910,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
                     </td>"
                     <td className="py-2 px-4">
                       The request is understood, but it has been refused or
-                      access is not allowed.
-                    </td>
+                      access is not allowed.</td>
                   </tr>"
                   <tr className="border-b border-zinc-800">"
                     <td className="py-2 px-4">"
@@ -1021,8 +919,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
                       </code>
                     </td>"
                     <td className="py-2 px-4">
-                      The requested resource does not exist.
-                    </td>
+                      The requested resource does not exist.</td>
                   </tr>"
                   <tr className="border-b border-zinc-800">"
                     <td className="py-2 px-4">"
@@ -1032,8 +929,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
                     </td>"
                     <td className="py-2 px-4">
                       The request was well-formed but was unable to be followed
-                      due to semantic errors.
-                    </td>
+                      due to semantic errors.</td>
                   </tr>"
                   <tr className="border-b border-zinc-800">"
                     <td className="py-2 px-4">"
@@ -1042,8 +938,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
                       </code>
                     </td>"
                     <td className="py-2 px-4">
-                      The request was rejected due to rate limiting.
-                    </td>
+                      The request was rejected due to rate limiting.</td>
                   </tr>"
                   <tr className="border-b border-zinc-800">"
                     <td className="py-2 px-4">"
@@ -1052,8 +947,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
                       </code>
                     </td>"
                     <td className="py-2 px-4">
-                      Something went wrong on our end.
-                    </td>
+                      Something went wrong on our end.</td>
                   </tr>
                 </tbody>
               </table>
@@ -1073,12 +967,10 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
 "
     "code": "invalid_request","
     "message": "The request was invalid","
-    "details"[
-      {
+    "details"[{
 "
         "field": "project_name","
   "message": "Project name is required"
-      
 
 }
     ]
@@ -1090,14 +982,13 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
               <h4 className="text-md font-semibold mt-6 mb-2">Rate Limiting</h4>"
               <p className="text-zinc-400 mb-4">
                 The Zion API implements rate limiting to protect our
-                infrastructure and ensure fair usage. Rate limits are applied on
-                a per-API key basis. If you exceed the rate limits, you will'
+                infrastructure and ensure fair usage.Rate limits are applied on
+                a per-API key basis.If you exceed the rate limits, you will'
                 receive a{' '}"
                 <code className="bg-zinc-800 px-1 py-0.5 rounded">
                   429 Too M Requests'
                 </code>{' '}
-                response.
-              </p>
+                response.</p>
 "
               <p className="text-zinc-400 mb-2">
                 Rate limit information is included in the response headers:
@@ -1189,7 +1080,7 @@ function EndpointSection({
                   key={index}
                   className={
 
-                    index < params.length - 1 ? 'border-b border-zinc-800' : ''
+                    index < params.length-1 ? 'border-b border-zinc-800' : ''
                   }
                 >"
                   <td className="py-2 font-mono text-sm">
@@ -1215,9 +1106,7 @@ function EndpointSection({
               {Object.keys(codeExamples).map(lang => (
                 <button
                   key={lang}`
-                  className={`px-3 py-1 text-xs font-medium ${
-
-                    activeTab === lang'
+                  className={`px-3 py-1 text-xs font-medium ${activeTab === lang'
                       ? 'bg-zinc-700 text-white''
                       : 'text-zinc-400 hover:bg-zinc-800'`
                   }`}

@@ -1,71 +1,22 @@
-import {
-<<<<<<< HEAD
-import { motion, AnimatePresence } from 'framer - motion';
-=======
->>>>>>> main
+import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
 
-  Eye,
-  EyeOff,
-  Volume2,
-  VolumeX,
-  Type,
-  Contrast,
-  ZoomIn,  ZoomOut,
-  Accessibility,
-  Keyboard,
-  MousePointer,
-  Smartphone} from 'lucide-react';
-
-interface AccessibilitySettings {
-
-  highContrast: boolean;
-  largeText: boolean;
-  reducedMotion: boolean;
-  screenReader: boolean;
-  keyboardNavigation: boolean;
-  focusIndicators: boolean;
-  zoomLevel: number;
-  const [isVisible, setIsVisible] = useState (false) ;
-
-  const [settings, setSettings] = useState<AccessibilitySettings>({
-
-    highContrast: false,
-    largeText: false,
-    reducedMotion: false,
-    screenReader: false,
-    keyboardNavigation: false,
-    focusIndicator: true,
-    zoomLevel: 100});
-
-  const [currentFocus, setCurrentFocus] = useState < HTMLElement | null> (null) ;
-
-  // Apply accessibility settings
-  
-      setSettings(updatedSettings);
-
-      // Apply high contrast
-      if (updatedSettings.highContrast) {
-
-        document.documentElement.classList.add('high-contrast')} else {
-
-        document.documentElement.classList.remove('high-contrast')}
-
+export default function Page() {
       // Apply large text
-      if (updatedSettings.largeText) {
+      if(updatedSettings.largeText) {
 
         document.documentElement.classList.add('large-text')} else {
 
         document.documentElement.classList.remove('large-text')}
 
       // Apply reduced motion
-      if (updatedSettings.reducedMotion) {
+      if(updatedSettings.reducedMotion) {
 
         document.documentElement.classList.add('reduced-motion')} else {
 
         document.documentElement.classList.remove('reduced-motion')}
 
     // Color blindness simulation
-    if (newSettings.colorBlindness !== 'none') {
+    if(newSettings.colorBlindness !== 'none') {
       root.classList.add(`color-blind-${newSettings.colorBlindness}`)} else {
       root.classList.remove('color-blind-protanopia',color-blind-deuteranopia',color-blind-tritanopia')}
 
@@ -80,19 +31,16 @@ interface AccessibilitySettings {
   // Load saved settings
   useEffect(() => {
 
-    
-    if (savedSettings) {
+    if(savedSettings) {
 
-      
       setSettings(parsedSettings);
       applySettings(parsedSettings)}
   }, [enabled, applySettings]);
   // Screen reader announcements
-  
-    
+
     announcement.setAttribute('aria-live',polite');
     announcement.setAttribute('aria-atomic',true');
-    announcement.className = 'sr-only';
+    announcement.className="sr-only";
     announcement.textContent = message;
     
     document.body.appendChild(announcement);
@@ -102,11 +50,9 @@ interface AccessibilitySettings {
 
   // Keyboard navigation enhancement
   useEffect(() => {
-    if (!enabled || !settings.keyboardNavigation) return;
+    if(!enabled || !settings.keyboardNavigation) return;
 
-    
-      
-      switch (event.key) {
+      switch(event.key) {
 
         case 'ArrowDown':'
         case 'ArrowRight':
@@ -121,7 +67,7 @@ interface AccessibilitySettings {
           (focusableElements[prevIndex] as HTMLElement)?.focus();
           break;
 =======
-            currentIndex <= 0 ? focusableElements.length - 1 : currentIndex - 1;          (focusableElements[prevIndex] as HTMLElement)?.focus();
+            currentIndex <= 0 ? focusableElements.length-1 : currentIndex - 1;          (focusableElements[prevIndex] as HTMLElement)?.focus();
           break;'
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         case 'Home':
@@ -131,7 +77,7 @@ interface AccessibilitySettings {
         case 'End':
           event.preventDefault();
           (
-            focusableElements[focusableElements.length - 1] as HTMLElement
+            focusableElements[focusableElements.length-1] as HTMLElement
           )?.focus();
           break}
     };
@@ -140,18 +86,17 @@ interface AccessibilitySettings {
     return () => document.removeEventListener('keydown', handleKeyDown)}, [settings.keyboardNavigation]);
 
   // Enhanced focus management
-  useEffect ( () => {
+  useEffect(() => {
     
-      setCurrentFocus (target) ;
+      setCurrentFocus(target) ;
 
-      if (settings.focusIndicator) {
+      if(settings.focusIndicator) {
 
         target.style.outline = '3px solid #3b82f6';
         target.style.outlineOffset = '2px'}
     };
 
-    
-      if (settings.focusIndicator) {
+      if(settings.focusIndicator) {
 
         target.style.outline = '';
         target.style.outlineOffset = '';
@@ -176,7 +121,7 @@ interface AccessibilitySettings {
   
         announcement.setAttribute('aria-live',polite');
         announcement.setAttribute('aria-atomic',true');
-        announcement.className = 'sr-only';
+        announcement.className="sr-only";
         announcement.textContent = message;
         document.body.appendChild(announcement);
 
@@ -190,13 +135,13 @@ interface AccessibilitySettings {
   
       applySettings({ [key]: newValue });
 
-      if (key === 'highContrast') {
+      if(key === 'highContrast') {
 
         announceToScreenReader()
           newValue'
             ? 'High contrast mode enabled''
             : 'High contrast mode disabled'
-        )} else if (key === 'largeText') {
+        )} else if(key === 'largeText') {
 
         announceToScreenReader('
           newValue ? 'Large text mode enabled' : 'Large text mode disabled'
@@ -212,7 +157,7 @@ interface AccessibilitySettings {
     [settings.zoomLevel, applySettings, announceToScreenReader]
   );
 
-  return()
+  return ()
     <>
       {/* Accessibility Toggle Button */}
       <motion.button
@@ -222,7 +167,7 @@ interface AccessibilitySettings {
         whileTap={{ scale: 0.9 }}
         onClick={() => setIsVisible(!isVisible)}"
         className="fixed top-4 right-4 z-50 p-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
-        aria-label="Toggle accessibility options"
+        
         title="Accessibility Options"
       >"
         <Accessibility className="w-5 h-5"  />      </motion.button>
@@ -243,7 +188,7 @@ interface AccessibilitySettings {
               <button
                 onClick={() => setIsVisible(false)}"
                 className="p-1 hover:bg-white/20 rounded transition-colors"
-                aria-label="Close accessibility panel"
+                
               >"
                 <EyeOff className="w-4 h-4"  />              </button>
             </div>
@@ -264,16 +209,12 @@ interface AccessibilitySettings {
                     </span>                  </div>
                   <button'
                     onClick={() => toggleSetting('highContrast')}`
-                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-
-                      settings.highContrast ? 'bg-blue-600' : 'bg-slate-300'`
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.highContrast ? 'bg-blue-600' : 'bg-slate-300'`
                     }`}'`
                     aria-label={`${settings.highContrast ? 'Disable' : 'Enable'} high contrast mode`}
                   >
                     <span`
-                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-
-                        settings.highContrast'
+                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.highContrast'
                           ? 'translate-x-6''
                           : 'translate-x-1'`
                       }`}
@@ -289,16 +230,12 @@ interface AccessibilitySettings {
                     </span>                  </div>
                   <button'
                     onClick={() => toggleSetting('largeText')}`
-                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-
-                      settings.largeText ? 'bg-blue-600' : 'bg-slate-300'`
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.largeText ? 'bg-blue-600' : 'bg-slate-300'`
                     }`}'`
                     aria-label={`${settings.largeText ? 'Disable' : 'Enable'} large text mode`}
                   >
                     <span`
-                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-
-                        settings.largeText ? 'translate-x-6' : 'translate-x-1'`
+                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.largeText ? 'translate-x-6' : 'translate-x-1'`
                       }`}
                     />
                   </button>
@@ -312,16 +249,12 @@ interface AccessibilitySettings {
                     </span>                  </div>
                   <button'
                     onClick={() => toggleSetting('focusIndicator')}`
-                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-
-                      settings.focusIndicator ? 'bg-blue-600' : 'bg-slate-300'`
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.focusIndicator ? 'bg-blue-600' : 'bg-slate-300'`
                     }`}'`
                     aria-label={`${settings.focusIndicator ? 'Disable' : 'Enable'} focus indicator`}
                   >
                     <span`
-                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-
-                        settings.focusIndicator'
+                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.focusIndicator'
                           ? 'translate-x-6''
                           : 'translate-x-1'`
                       }`}
@@ -344,18 +277,14 @@ interface AccessibilitySettings {
                     </span>                  </div>
                   <button'
                     onClick={() => toggleSetting('keyboardNavigation')}`
-                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-
-                      settings.keyboardNavigation'
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.keyboardNavigation'
                         ? 'bg-blue-600''
                         : 'bg-slate-300'`
                     }`}'`
                     aria-label={`${settings.keyboardNavigation ? 'Disable' : 'Enable'} keyboard navigation`}
                   >
                     <span`
-                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-
-                        settings.keyboardNavigation'
+                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.keyboardNavigation'
                           ? 'translate-x-6''
                           : 'translate-x-1'`
                       }`}
@@ -371,16 +300,12 @@ interface AccessibilitySettings {
                     </span>                  </div>
                   <button'
                     onClick={() => toggleSetting('reducedMotion')}`
-                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-
-                      settings.reducedMotion ? 'bg-blue-600' : 'bg-slate-300'`
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.reducedMotion ? 'bg-blue-600' : 'bg-slate-300'`
                     }`}'`
                     aria-label={`${settings.reducedMotion ? 'Disable' : 'Enable'} reduced motion`}
                   >
                     <span`
-                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-
-                        settings.reducedMotion'
+                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.reducedMotion'
                           ? 'translate-x-6''
                           : 'translate-x-1'`
                       }`}
@@ -410,13 +335,13 @@ interface AccessibilitySettings {
                     <button'
                       onClick={() => adjustZoom('out')}"
                       className="p-2 rounded-lg bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"
-                      aria-label="Zoom out"
+                      
                     >"
                       <ZoomOut className="w-4 h-4"  />                    </button>
                     <button'
                       onClick={() => adjustZoom('in')}"
                       className="p-2 rounded-lg bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"
-                      aria-label="Zoom in"
+                      
                     >"
                       <ZoomIn className="w-4 h-4"  />                    </button>
                   </div>
@@ -434,7 +359,7 @@ interface AccessibilitySettings {
                       ))}
                       {accessibilityIssues.length > 3 && (
                         <div className="text-white/60 text-xs text-center">
-                          +{accessibilityIssues.length - 3} more issues
+                          +{accessibilityIssues.length-3} more issues
                         </div>
                       )}
                     </div>
@@ -464,16 +389,12 @@ interface AccessibilitySettings {
                   </div>
                   <button'
                     onClick={() => toggleSetting('screenReader')}`
-                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-
-                      settings.screenReader ? 'bg-blue-600' : 'bg-slate-300'`
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.screenReader ? 'bg-blue-600' : 'bg-slate-300'`
                     }`}'`
                     aria-label={`${settings.screenReader ? 'Disable' : 'Enable'} enhanced screen reader support`}
                   >
                     <span`
-                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-
-                        settings.screenReader'
+                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.screenReader'
                           ? 'translate-x-6''
                           : 'translate-x-1'`
                       }`}

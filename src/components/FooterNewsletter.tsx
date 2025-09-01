@@ -1,13 +1,13 @@
 
 <<<<<<< HEAD
-      // // // // // // // console.error ('Newsletter subscription failed:', error) ;
+      // // // // // // // console.error('Newsletter subscription failed:', error) ;
     } finally {
-      setIsSubmitting (false) ;
+      setIsSubmitting(false) ;
 =======
       // // // // // // // // console.error('Newsletter subscription failed:', error)} finally {
       setIsSubmitting(false);
 
-      setTimeout(() => setIsSubmitted(false), 3000)} catch (error) {
+      setTimeout(() => setIsSubmitted(false), 3000)} catch(error) {
 >>>>>>> main
 
       // console.error('Newsletter subscription failed:', error)} finally {
@@ -15,8 +15,8 @@
       setIsSubmitting(false)}
   };
 
-  return()
-    <div className = "bg-gradient-to-r from-zion-cyan/10 to-blue-500/10 border border-zion-cyan/20 rounded-xl p-6">"
+  return ()
+    <div className="bg-gradient-to-r from-zion-cyan/10 to-blue-500/10 border border-zion-cyan/20 rounded-xl p-6">"
       <div className="text-center">"
         <div className="flex justify-center mb-4">"
           <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-blue-500 rounded-full flex items-center justify-center">"
@@ -27,8 +27,7 @@
           Stay Updated
         </h3>"
         <p className="text-gray-300 mb-6 max-w-md mx-auto">
-          Get the latest insights on AI technology, cybersecurity trends, and IT solutions delivered to your inbox.
-        </p>
+          Get the latest insights on AI technology, cybersecurity trends, and IT solutions delivered to your inbox.</p>
 
         {isSubmitted ? ("
           <div className="flex items-center justify-center gap-2 text-green-400">"
@@ -63,7 +62,7 @@
         )}
 "
         <p className="text-xs text-gray-400 mt-4">;
-          We respect your privacy. Unsubscribe at any time.;
+          We respect your privacy.Unsubscribe at any time.;
         </p>;
       </div>;
     </div>;) };

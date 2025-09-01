@@ -20,10 +20,10 @@ const Skeleton: React.FC < SkeletonProps> = ({
 
   const baseClasses = `${height} ${width} bg-gray-200 dark:bg-gray-700 ${rounded ? 'rounded' : ''}`;`
   
-  if (!animated) {
+  if(!animated) {
 
     return <div className={classes} />}  
-  return()
+  return ()
     <motion.div
       className={classes}
       animate={{
@@ -48,7 +48,6 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
   className = '' 
 }) => {
 
-  
         '
       case 'card':
         return ("
@@ -118,7 +117,7 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
       default:
         return < Skeleton />}  };
 
-  return()`
+  return ()`
     <div className={`animate-pulse ${className}`}>
       {renderSkeleton()}
     </div>

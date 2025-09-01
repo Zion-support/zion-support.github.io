@@ -1,26 +1,12 @@
 <<<<<<< HEAD
-import { useNavigate } from 'react - router - dom';
-import { useNavigate } from 'react - router - dom';
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { useNavigate  } from 'react-router-dom';
+import { useNavigate  } from 'react-router-dom';
+ from 'react';
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useDebounce } from '@/hooks / useDebounce';
-export function EnhancedSearch ({
-export function EnhancedSearch ({
-import { motion, AnimatePresence } from 'framer - motion';
-import { motion, AnimatePresence } from 'framer - motion';
-=======
-<<<<<<< HEAD
->>>>>>> main
+ from 'framer-motion';
+import { motion, AnimatePresence  } from 'framer-motion';
 
-interface SearchResult {
-  id: string;
-  title: string;
-  description: string;
-  url: string;
-  type: 'service' | 'page' | 'blog' | 'case-study' | 'article' | 'ai-suggestion';
-  category: string;
-  tags: string[];
-  relevance: number}
   icon?: React.ComponentType < any>}
 
 =======
@@ -36,14 +22,12 @@ interface SearchSuggestion {
 interface EnhancedSearchProps {
   // Add your props here
 
-
   className?: string;
   placeholder?: string;
   onSearch?: (query: string) => void;
   variant?: 'default' | 'futuristic' | 'minimal'}
 ;
-const searchData: SearchResult[] = [
-  // Services
+const searchData: SearchResult[] = [// Services
   {
 
     id: 'ai-solutions',
@@ -100,7 +84,7 @@ const searchData: SearchResult[] = [
     tags: ['Contact',Support',Consultation',Help'],
     relevance: 80
   },
-  // Blog posts (example)
+  // Blog posts(example)
   {
 
     id: 'ai-trends-2025',
@@ -113,7 +97,6 @@ const searchData: SearchResult[] = [
     relevance: 75
 
 ];
-
 
   { id: 'cloud-devops', name: 'Cloud & DevOps', icon: Globe, color: 'from-blue-500 to-purple-600' },;
   { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-600' },;
@@ -149,7 +132,7 @@ export function EnhancedSearch({
     category: [],
     tags: []
   }) ;
-  const [showFilters, setShowFilters] = useState (false) ;
+  const [showFilters, setShowFilters] = useState(false);
   const [recentSearches, setRecentSearches] = useState < string[]> ([]) ;
 
 // Mock suggestions
@@ -187,97 +170,92 @@ export function EnhancedSearch({
   const navigate = useNavigate () ;
 
   // Handle keyboard navigation
-  useEffect ( () => {
+  useEffect(() => {
     const handleKeyDown = (event: anyKeyboardEvent) => {
-      if (event.key === 'Escape') {
-        setIsOpen (false) ;
-        setSelectedIndex (-1) ;
-      } else if (event.key === 'ArrowDown') {
+      if(event.key === 'Escape') {
+        setIsOpen(false) ;
+        setSelectedIndex(-1) ;
+      } else if(event.key === 'ArrowDown') {
         event.preventDefault () ;
-        setSelectedIndex (prev =>
-          prev < results.length - 1 ? prev + 1 : prev) ;
-      } else if (event.key === 'ArrowUp') {
+        setSelectedIndex(prev =>
+          prev < results.length-1 ? prev + 1 : prev) ;
+      } else if(event.key === 'ArrowUp') {
         event.preventDefault () ;
-        setSelectedIndex (prev => prev > 0 ? prev - 1 : -1) ;
-      } else if (event.key === 'Enter' && selectedIndex >= 0) {
+        setSelectedIndex(prev => prev > 0 ? prev - 1 : -1) ;
+      } else if(event.key === 'Enter' && selectedIndex >= 0) {
         event.preventDefault () ;
 =======
-  
-  
-  
-  
+
   // Handle keyboard navigation
   useEffect(() => {
     
-        setSelectedIndex(-1)} else if (event.key === 'ArrowDown') {
+        setSelectedIndex(-1)} else if(event.key === 'ArrowDown') {
 
         event.preventDefault();
         setSelectedIndex(prev => 
-          prev < results.length - 1 ? prev + 1 : prev
-        )} else if (event.key === 'ArrowUp') {
+          prev < results.length-1 ? prev + 1 : prev
+        )} else if(event.key === 'ArrowUp') {
 
         event.preventDefault();
-        setSelectedIndex(prev => prev > 0 ? prev - 1 : -1)} else if (event.key === 'Enter' && selectedIndex >= 0) {
+        setSelectedIndex(prev => prev > 0 ? prev - 1 : -1)} else if(event.key === 'Enter' && selectedIndex >= 0) {
 
         event.preventDefault();
 >>>>>>> main
-        if (results[selectedIndex]) {
+        if(results[selectedIndex]) {
 
           handleResultClick(results[selectedIndex])}      }
     };
 
-    if (isOpen) {
+    if(isOpen) {
 
       document.addEventListener('keydown', handleKeyDown)}
     return () => document.removeEventListener('keydown', handleKeyDown)}, [isOpen, results, selectedIndex]);
   // Search functionality
   useEffect(() => {
-    if (debouncedQuery.trim().length < 2) {
+    if(debouncedQuery.trim().length < 2) {
 
       setResults([]);
       return}
 
 <<<<<<< HEAD
     const searchResults = searchData
-      .filter (item => {
-        const matchesQuery = item.title.toLowerCase () .includes (debouncedQuery.toLowerCase () ) ||;
-                           item.description.toLowerCase () .includes (debouncedQuery.toLowerCase () ) ||;
-                           item.tags.some (tag => tag.toLowerCase () .includes (debouncedQuery.toLowerCase () ) ) ;
+      .filter(item => {
+        const matchesQuery = item.title.toLowerCase () .includes(debouncedQuery.toLowerCase () ) ||;
+                           item.description.toLowerCase () .includes(debouncedQuery.toLowerCase () ) ||;
+                           item.tags.some(tag => tag.toLowerCase () .includes(debouncedQuery.toLowerCase () ) ) ;
 
-        const matchesFilters = filters.type.length === 0 || filters.type.includes (item.type) &&;
-                              filters.category.length === 0 || filters.category.includes (item.category) &&;
-                              filters.tags.length === 0 || filters.tags.some (tag => item.tags.includes (tag) ) ;
+        const matchesFilters = filters.type.length === 0 || filters.type.includes(item.type) &&;
+                              filters.category.length === 0 || filters.category.includes(item.category) &&;
+                              filters.tags.length === 0 || filters.tags.some(tag => item.tags.includes (tag) ) ;
 
 =======
     
       .filter(item => {
 
-        
                            item.description.toLowerCase().includes(debouncedQuery.toLowerCase()) ||;
                            item.tags.some(tag => tag.toLowerCase().includes(debouncedQuery.toLowerCase()));
-        
-        
-                              filters.category.length === 0 || filters.category.includes (item.category) &&;
-                              filters.tags.length === 0 || filters.tags.some (tag => item.tags.includes (tag) ) ;        
->>>>>>> main
-        return matchesQuery && matchesFilters}) .sort ( (a, b) => b.relevance - a.relevance) .slice (0, 10) ;
 
-    setResults (searchResults) }, [debouncedQuery, filters]) ;
+                              filters.category.length === 0 || filters.category.includes(item.category) &&;
+                              filters.tags.length === 0 || filters.tags.some(tag => item.tags.includes (tag) ) ;        
+>>>>>>> main
+        return matchesQuery && matchesFilters}) .sort((a, b) => b.relevance - a.relevance) .slice(0, 10) ;
+
+    setResults(searchResults) }, [debouncedQuery, filters]) ;
 
   // Handle click outside
   useEffect(() => {
     
-        setRecentSearches (JSON.parse (saved) ) } catch (error) {
+        setRecentSearches(JSON.parse (saved) ) } catch(error) {
 
         // console.error('Failed to parse recent searches:', error)}    }
   }, []) ;
 
   // Handle click outside
-  useEffect ( () => {
+  useEffect(() => {
     
-      if (searchRef.current && !searchRef.current.contains (event.target as Node) ) {;
-        setIsOpen (false) ;
-        setSelectedIndex (-1) ;
+      if(searchRef.current && !searchRef.current.contains (event.target as Node) ) {;
+        setIsOpen(false) ;
+        setSelectedIndex(-1) ;
 <<<<<<< HEAD
       }
     };
@@ -291,14 +269,13 @@ export function EnhancedSearch({
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
 
   // Handle keyboard navigation
-  useEffect ( () => {
+  useEffect(() => {
         inputRef.current?.focus () }
     };
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown)}, []);
 
-  
       // Add to recent searches;
       
 <<<<<<< HEAD
@@ -313,17 +290,16 @@ export function EnhancedSearch({
       setQuery('')}
   }, [recentSearches]);
 
-  
-    handleSearch (result.title) ;
-    router (result.url) ;
-    const handleKeyDown = (event: KeyboardEvent) => {;      if (!isOpen) return;
+    handleSearch(result.title) ;
+    router(result.url) ;
+    const handleKeyDown = (event: KeyboardEvent) => {;      if(!isOpen) return;
 
-      switch (event.key) {
+      switch(event.key) {
 
         case 'ArrowDown':
           event.preventDefault();
           setSelectedIndex(prev = > ;
-            prev < results.length - 1 ? prev + 1 : prev;
+            prev < results.length-1 ? prev + 1 : prev;
           );
           break;
         case 'ArrowUp':;
@@ -332,67 +308,58 @@ export function EnhancedSearch({
           break;
         case 'Enter':;
           event.preventDefault () ;
-          if (selectedIndex >= 0 && results[selectedIndex]) {
+          if(selectedIndex >= 0 && results[selectedIndex]) {
 
-            handleResultClick(results[selectedIndex])} else if (query.trim()) {
+            handleResultClick(results[selectedIndex])} else if(query.trim()) {
 
             handleSearch()}
           break;
         case 'Escape':;
-          setIsOpen (false) ;
-          setSelectedIndex (-1) ;
+          setIsOpen(false) ;
+          setSelectedIndex(-1) ;
           break}
     };
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown)}, [isOpen, results, selectedIndex, query]);
 
-  
-    if (!query.trim () ) return;
-    setIsLoading (true) ;
+    if(!query.trim () ) return;
+    setIsLoading(true) ;
 
     // Simulate API call delay
-    await new Promise (resolve => setTimeout (resolve, 300) ) ;
+    await new Promise(resolve => setTimeout (resolve, 300) ) ;
 
     // Filter search results based on query and filters
-    
-      
-                          result.description.toLowerCase () .includes (query.toLowerCase () ) ||;
-                          result.tags.some (tag => tag.toLowerCase () .includes (query.toLowerCase () ) ) ;
 
-      const matchesFilters = (filters.type.length === 0 || filters.type.includes (result.type) ) &&; (filters.category.length === 0 || filters.category.includes (result.category) ) &&; (filters.tags.length === 0 || filters.tags.some (tag => result.tags.includes (tag) ) ) ;
+                          result.description.toLowerCase () .includes(query.toLowerCase () ) ||;
+                          result.tags.some(tag => tag.toLowerCase () .includes(query.toLowerCase () ) ) ;
+
+      const matchesFilters = (filters.type.length === 0 || filters.type.includes(result.type) ) &&; (filters.category.length === 0 || filters.category.includes(result.category) ) &&; (filters.tags.length === 0 || filters.tags.some(tag => result.tags.includes (tag) ) ) ;
 
       return matchesQuery && matchesFilters}) ;
 
-  
     setIsOpen(false);
     setQuery('')};
 
-  
     onSearch?.(suggestion.text)};
 
-  
-    setFilters ({ type[], category[], tags[] }) };
+    setFilters({ type[], category[], tags[] }) };
 
-  
-setFilters (prev: > ({;
+setFilters(prev: > ({;
       ...prev,;
       [filterType]: prev[filterType].includes (value) ;
-        ? prev[filterType].filter (v => v !== value) ;
+        ? prev[filterType].filter(v => v !== value) ;
         : [...prev[filterType], value]}) ) };
 
-  
-    setFilters ({ type: [], category: [], tags: [] }) };
+    setFilters({ type: [], category: [], tags: [] }) };
 
-  
-    switch (type) {;
+    switch(type) {;
       case 'service': return <Code className="h-4 w-4"  />;'"
       case 'page': return <Globe className="h-4 w-4"  />;'"
       case 'blog': return <TrendingUp className="h-4 w-4"  />;'"
       case 'case-study': return <Building className="h-4 w-4"  />}
   };
 
-  
     setResults([]);
 =======
 '
@@ -401,14 +368,13 @@ setFilters (prev: > ({;
     setIsOpen(false);
     setSelectedIndex(-1)};
 
-  
       case 'minimal':'
         return 'bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700';
       default:'
         return 'bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-lg'}
   };
 
-  return()
+  return ()
     <div ref = {searchRef} className={`relative ${className}`}>`
       <div className={`relative rounded-xl ${getVariantStyles()}`}>"
         <div className="flex items-center px-4 py-3">"
@@ -432,8 +398,7 @@ setFilters (prev: > ({;
         </div>;"
       default: return <Search className="h-4 w-4"  />};
 
-  
-    switch (variant) {;
+    switch(variant) {;
       case 'futuristic':;
         return 'bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/20 hover:border-purple-500/40 focus-within:border-purple-500 focus-within:ring-2 focus-within:ring-purple-500/20';
       case 'minimal':'
@@ -441,7 +406,7 @@ setFilters (prev: > ({;
       default:'
         return 'bg-white border border-gray-300 hover:border-gray-400 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-500/20'}  };
 
-  return()`
+  return ()`
     <div ref = {searchRef} className={`relative ${className}`}>
       {/* Search Input */}`
       <div className={`relative flex items-center rounded-xl transition-all duration-300 ${getVariantClasses()}`}>"
@@ -481,11 +446,6 @@ setFilters (prev: > ({;
 
   { opacity: 0,
   y: -10
-
-
-
-
-
 
 }}"
             className="absolute top-full left-0 right-0 mt-2 bg-white border border-gray-200 rounded-xl shadow-xl z-50 max-h-96 overflow-hidden"
@@ -527,11 +487,6 @@ setFilters (prev: > ({;
   { height: 0,
   opacity: 0
 
-
-
-
-
-
 }}"
                   className="border-b border-gray-200 overflow-hidden"
                 >"
@@ -548,20 +503,13 @@ setFilters (prev: > ({;
   () => toggleFilter('type',
   type)
 
-
-
-
-
-
 }`
-                            className={`px-3 py-1 text-xs rounded-full transition-colors ${
-
-                              filters.type.includes(type)
+                            className={`px-3 py-1 text-xs rounded-full transition-colors ${filters.type.includes(type)
                                 ? 'bg-blue-500 text-white''
                                 : 'bg-gray-100 text-gray-600 hover:bg-gray-200'`
                             }`}
                           >
-                            {type.charAt (0) .toUpperCase () + type.slice (1) }
+                            {type.charAt(0) .toUpperCase () + type.slice(1) }
                           </button>) ) }
                       </div>
                     </div>
@@ -578,15 +526,8 @@ setFilters (prev: > ({;
   () => toggleFilter('category',
   category.name)
 
-
-
-
-
-
 }`
-                            className={`px-3 py-1 text-xs rounded-full transition-colors ${
-
-                              filters.category.includes(category.name)
+                            className={`px-3 py-1 text-xs rounded-full transition-colors ${filters.category.includes(category.name)
                                 ? 'bg-blue-500 text-white''
                                 : 'bg-gray-100 text-gray-600 hover:bg-gray-200'`
                             }`}
@@ -615,7 +556,7 @@ setFilters (prev: > ({;
                             key={index};
                             onClick={() => {;
                               setQuery(search);
-                              handleSearch()}}"                            className = "w-full text-left p-2 text-sm text-gray-600 hover:bg-gray-50 rounded-lg transition-colors"
+                              handleSearch()}}"                            className="w-full text-left p-2 text-sm text-gray-600 hover:bg-gray-50 rounded-lg transition-colors"
                           >
                             {search}
                           </button>) ) }
@@ -633,7 +574,7 @@ setFilters (prev: > ({;
                           key={index};
                           onClick={() => {;
                             setQuery(search);
-                            handleSearch()}}"                          className = "px-3 py-1 text-sm bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200 transition-colors"
+                            handleSearch()}}"                          className="px-3 py-1 text-sm bg-gray-100 text-gray-600 rounded-full hover:bg-gray-200 transition-colors"
                         >
                           {search}
                         </button>) ) }
@@ -651,9 +592,7 @@ setFilters (prev: > ({;
                     <button
                       key={result.id}
                       onClick={() => handleResultClick(result)}`
-                      className={`w-full text-left p-3 hover:bg-gray-50 rounded-lg transition-colors group ${
-
-                        index === selectedIndex ? 'bg-blue-50' : ''`
+                      className={`w-full text-left p-3 hover:bg-gray-50 rounded-lg transition-colors group ${index === selectedIndex ? 'bg-blue-50' : ''`
                       }`}
                     >"
                       <div className="flex items-start gap-3">"

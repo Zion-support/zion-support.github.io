@@ -1,29 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-export const AccessibilityPanel = ({ isOpen, onToggle }) => {
+import { motion, AnimatePresence  } from 'framer-motion';
 
-    const [settings, setSettings] = useState({
-
-        highContrast: false,
-        fontSize: 100,
-        colorBlindness: 'none',
-        reducedMotion: false,
-        screenReader: false,
-        keyboardNavigation: false,
-        focusIndicator: true,
-        colorBlindness: 'none'
-    });
-    const [accessibilityScore, setAccessibilityScore] = useState(85);
-    const [activeTab, setActiveTab] = useState('general');
-    useEffect(() => {
-        // Load saved settings from localStorage'
-        const savedSettings = localStorage.getItem('accessibility-settings');
-        if (savedSettings) {
-
-            try {
-                const parsed = JSON.parse(savedSettings);
-                setSettings(prev => ({ ...prev, ...parsed }))}
-            catch (error) {
+export default function Page() {
+            catch(error) {
 
                 // console.error('Failed to parse accessibility settings:', error)}
         }
@@ -37,7 +16,7 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
 
         const root = document.documentElement;
         // High contrast
-        if (newSettings.highContrast) {
+        if(newSettings.highContrast) {
 
             root.style.setProperty('--high-contrast',1');
             root.classList.add('high-contrast')}
@@ -48,14 +27,14 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
         // Font size'
         root.style.setProperty('--font-size', `${newSettings.fontSize}%`);
         // Reduced motion
-        if (newSettings.reducedMotion) {
+        if(newSettings.reducedMotion) {
 
             root.classList.add('reduced-motion')}
         else {
 
             root.style.setProperty('--reduced-motion',no-preference')}
         // Apply focus indicator
-        if (settings.focusIndicator) {
+        if(settings.focusIndicator) {
 
             root.style.setProperty('--focus-visible',auto')}
         else {
@@ -63,11 +42,11 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
             root.style.setProperty('--focus-visible',none')}
         // Color blindness'
         root.classList.remove('protanopia',deuteranopia',tritanopia');
-        if (newSettings.colorBlindness !== 'none') {
+        if(newSettings.colorBlindness !== 'none') {
 
             root.classList.add(newSettings.colorBlindness)}
         // Focus indicator
-        if (newSettings.focusIndicator) {
+        if(newSettings.focusIndicator) {
 
             root.classList.add('focus-visible')}
         else {
@@ -87,7 +66,6 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
             keyboardNavigation: false,
             focusIndicator: true,
   colorBlindness: 'none'
-        
 
 };
         setSettings(defaultSettings)};
@@ -99,25 +77,25 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
     ];
     const getScoreColor = (score) => {
 
-        if (score >= 90)
+        if(score >= 90)
             return 'text-green-400';
-        if (score >= 70)
+        if(score >= 70)
             return 'text-yellow-400';
         return 'text-red-400'};
     const getScoreLabel = (score) => {
 
-        if (score >= 90)
+        if(score >= 90)
             return 'Excellent';
-        if (score >= 70)
+        if(score >= 70)
             return 'Good';
-        if (score >= 50)
+        if(score >= 50)
             return 'Needs Improvement';
         return 'Poor'};
-    if (!isVisible)
+    if(!isVisible)
         return null;
     return (<>
       {/* Toggle Button */}
-      <button onClick={onToggle} className="fixed bottom-4 left-4 z-50 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-blue-300" aria-label="Toggle accessibility panel" title="Accessibility Settings">"
+      <button onClick={onToggle} className="fixed bottom-4 left-4 z-50 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-blue-300"  title="Accessibility Settings">"
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"/>
         </svg>
@@ -145,7 +123,7 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
             <div className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white p-4">"
               <div className="flex items-center justify-between">"
                 <h2 className="text-lg font-semibold">Accessibility Settings</h2>"
-                <button onClick={onToggle} className="text-white/80 hover:text-white transition-colors" aria-label="Close accessibility panel">"
+                <button onClick={onToggle} className="text-white/80 hover:text-white transition-colors" >"
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"/>
                   </svg>
@@ -256,9 +234,9 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
 "
 } className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">"
                         <option value="none">None</option>"
-                        <option value="protanopia">Protanopia (Red-Blind)</option>"
-                        <option value="deuteranopia">Deuteranopia (Green-Blind)</option>"
-                        <option value="tritanopia">Tritanopia (Blue-Blind)</option>
+                        <option value="protanopia">Protanopia(Red-Blind)</option>"
+                        <option value="deuteranopia">Deuteranopia(Green-Blind)</option>"
+                        <option value="tritanopia">Tritanopia(Blue-Blind)</option>
                       </select>
                     </div>
 

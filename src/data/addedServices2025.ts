@@ -11,8 +11,7 @@ export type AddedService = {
   href: string; // external or internal URL
 };
 
-export const ADDED_SERVICES_2025: AddedService[] = [
-  {
+export const ADDED_SERVICES_2025: AddedService[] = [{
     id: 'ai-sales-email-copilot',
     title: 'AI Sales Email Copilot',
     description: 'Personalizes outreach, drafts replies, and updates CRM with context-aware follow-ups.',
@@ -23,10 +22,9 @@ export const ADDED_SERVICES_2025: AddedService[] = [
       'Auto-draft and personalize emails',
       'Inbox triage and reply suggestions',
       'Salesforce/HubSpot sync',
-      'Compliance guardrails (PII/PHI redaction)'
+      'Compliance guardrails(PII/PHI redaction)'
     ],
-    benefits: [
-      'Increase reply rate 20–40%',
+    benefits: ['Increase reply rate 20–40%',
       'Save 5–8 hours per rep weekly'
     ],
     ctaLabel: 'Start 14‑day Trial',
@@ -39,14 +37,12 @@ export const ADDED_SERVICES_2025: AddedService[] = [
     category: 'AI Solutions',
     price: '$2,999',
     billing: 'month',
-    features: [
-      'Vector + keyword hybrid search',
+    features: ['Vector + keyword hybrid search',
       'Source citations and grounding',
       'SSO/Okta and row‑level permissions',
       'Plugins: Confluence, Google Drive, SharePoint'
     ],
-    benefits: [
-      'Deflect internal tickets 15–30%',
+    benefits: ['Deflect internal tickets 15–30%',
       'Accelerate onboarding and support'
     ],
     ctaLabel: 'Book Demo',
@@ -59,14 +55,12 @@ export const ADDED_SERVICES_2025: AddedService[] = [
     category: 'Micro SaaS',
     price: '$69',
     billing: 'month',
-    features: [
-      'Accurate transcription',
+    features: ['Accurate transcription',
       'Action item and owner extraction',
       'Calendar integration',
       'CRM/PM sync'
     ],
-    benefits: [
-      'Reduce manual note time by 90%',
+    benefits: ['Reduce manual note time by 90%',
       'Improve accountability and follow‑through'
     ],
     ctaLabel: 'Start Now',
@@ -79,14 +73,12 @@ export const ADDED_SERVICES_2025: AddedService[] = [
     category: 'Cloud & DevOps',
     price: '$1,999',
     billing: 'month',
-    features: [
-      'Automated rightsizing and scheduling',
+    features: ['Automated rightsizing and scheduling',
       'RI/SP recommendations',
       'Unused resource detection',
       'Budget alerts and governance'
     ],
-    benefits: [
-      'Cut monthly cloud spend 15–35%',
+    benefits: ['Cut monthly cloud spend 15–35%',
       'Prevent surprise overages'
     ],
     ctaLabel: 'Get Assessment',
@@ -99,14 +91,12 @@ export const ADDED_SERVICES_2025: AddedService[] = [
     category: 'Cybersecurity',
     price: '$4,000',
     billing: 'project',
-    features: [
-      'Pre‑built policy library',
+    features: ['Pre‑built policy library',
       'Automated evidence collection',
       'Vendor risk tracking',
       'Continuous control monitoring'
     ],
-    benefits: [
-      'Accelerate audit readiness',
+    benefits: ['Accelerate audit readiness',
       'Reduce manual effort 50%+'
     ],
     ctaLabel: 'Request Quote',
@@ -119,14 +109,12 @@ export const ADDED_SERVICES_2025: AddedService[] = [
     category: 'Cybersecurity',
     price: '$1,499',
     billing: 'month',
-    features: [
-      'SharePoint/OneDrive exposure scan',
+    features: ['SharePoint/OneDrive exposure scan',
       'Conditional Access review',
       'Phishing simulation and training',
       'Automated hardening playbooks'
     ],
-    benefits: [
-      'Reduce breach risk significantly',
+    benefits: ['Reduce breach risk significantly',
       'Meet compliance requirements'
     ],
     ctaLabel: 'Schedule Assessment',
@@ -139,14 +127,12 @@ export const ADDED_SERVICES_2025: AddedService[] = [
     category: 'Cloud & DevOps',
     price: '$8,000',
     billing: 'project',
-    features: [
-      'CI/CD pipeline design',
+    features: ['CI/CD pipeline design',
       'Automated tests and linting',
       'Deploy previews and canary',
       'Observability integration'
     ],
-    benefits: [
-      'Ship faster with confidence',
+    benefits: ['Ship faster with confidence',
       'Reduce change failure rate'
     ],
     ctaLabel: 'Get Proposal',
@@ -159,14 +145,12 @@ export const ADDED_SERVICES_2025: AddedService[] = [
     category: 'Data & Analytics',
     price: '$12,000',
     billing: 'project',
-    features: [
-      'Column‑level lineage',
+    features: ['Column‑level lineage',
       'Quality rules and SLAs',
       'Access policies and anonymization',
       'dbt/Great Expectations integration'
     ],
-    benefits: [
-      'Trustworthy analytics',
+    benefits: ['Trustworthy analytics',
       'Faster root‑cause analysis'
     ],
     ctaLabel: 'Talk to Data Team',
@@ -179,14 +163,12 @@ export const ADDED_SERVICES_2025: AddedService[] = [
     category: 'AI Solutions',
     price: '$299',
     billing: 'month',
-    features: [
-      'Automated PR review comments',
+    features: ['Automated PR review comments',
       'Test case generation hints',
       'Security and secret scanning',
       'Code search with embeddings'
     ],
-    benefits: [
-      'Higher code quality',
+    benefits: ['Higher code quality',
       'Fewer regressions and faster PRs'
     ],
     ctaLabel: 'Try Copilot',
@@ -199,14 +181,12 @@ export const ADDED_SERVICES_2025: AddedService[] = [
     category: 'AI Solutions',
     price: '$399',
     billing: 'month',
-    features: [
-      'Zendesk/Freshdesk connectors',
+    features: ['Zendesk/Freshdesk connectors',
       'Escalation to human with context',
       'Analytics and feedback loops',
       'Multilingual responses'
     ],
-    benefits: [
-      'Reduce support load 20–50%',
+    benefits: ['Reduce support load 20–50%',
       'Improve CSAT/NPS'
     ],
     ctaLabel: 'Launch Bot',
@@ -219,14 +199,12 @@ export const ADDED_SERVICES_2025: AddedService[] = [
     category: 'Micro SaaS',
     price: '$99',
     billing: 'month',
-    features: [
-      'Templates tuned for conversion',
+    features: ['Templates tuned for conversion',
       'A/B testing support',
       'SEO meta and schema automation',
       'Image and copy generation'
     ],
-    benefits: [
-      'Ship pages in minutes',
+    benefits: ['Ship pages in minutes',
       'Increase lead conversion'
     ],
     ctaLabel: 'Generate a Page',
@@ -239,14 +217,12 @@ export const ADDED_SERVICES_2025: AddedService[] = [
     category: 'IT Services',
     price: '$125',
     billing: 'hour',
-    features: [
-      'EKS/AKS/GKE setup and hardening',
+    features: ['EKS/AKS/GKE setup and hardening',
       'Terraform modules and GitOps',
       'Prometheus/Grafana/Alerting',
       'Runbooks and incident response'
     ],
-    benefits: [
-      'Resilient infra with best practices',
+    benefits: ['Resilient infra with best practices',
       'Lower downtime and faster MTTR'
     ],
     ctaLabel: 'Engage SRE Team',
@@ -259,14 +235,12 @@ export const ADDED_SERVICES_2025: AddedService[] = [
     category: 'AI Solutions',
     price: '$15,000',
     billing: 'project',
-    features: [
-      'MLflow/Weights & Biases integration',
+    features: ['MLflow/Weights & Biases integration',
       'Feature store and model registry',
       'CI/CD for models',
       'Monitoring and drift detection'
     ],
-    benefits: [
-      'Shorter time‑to‑production',
+    benefits: ['Shorter time‑to‑production',
       'Better governance and reproducibility'
     ],
     ctaLabel: 'Plan Your Platform',
@@ -279,14 +253,12 @@ export const ADDED_SERVICES_2025: AddedService[] = [
     category: 'Data & Analytics',
     price: '$9,000',
     billing: 'project',
-    features: [
-      'dbt models and tests',
+    features: ['dbt models and tests',
       'DuckDB or warehouse targets',
       'Superset/Metabase dashboards',
       'Data contracts and docs'
     ],
-    benefits: [
-      'Lower analytics spend',
+    benefits: ['Lower analytics spend',
       'Maintainable data models'
     ],
     ctaLabel: 'Get a BI Sprint',

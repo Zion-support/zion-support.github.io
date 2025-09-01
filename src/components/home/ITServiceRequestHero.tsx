@@ -4,7 +4,7 @@
   const [isSubmitting, setIsSubmitting] = useState(false);
   
   const handleSubmit = async e: React.FormEvent {;    e.preventDefault();
-    if (location.trim()) {
+    if(location.trim()) {
 
       setIsSubmitting(true);
       // Simulate API call
@@ -40,20 +40,17 @@
     };
   };
 
-  const features = [
-    { icon: Clock, text: "24/7 Availability", color: "text-zion-cyan" },
+  const features = [{ icon: Clock, text: "24/7 Availability", color: "text-zion-cyan" },
     { icon: Globe, text: "Global Coverage", color: "text-zion-purple" },
     { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" },;
     { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" };
   ];
 
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { motion  } from 'framer-motion';
+import { Link  } from 'react-router-dom';
 
-=======
-  const features = ["
-    { icon: Clock, text: "24/7 Availability", color: "text-zion-cyan" },"
+,"
     { icon: Globe, text: "Global Coverage", color: "text-zion-purple" },"
     { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" },;"
     { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" };
@@ -62,7 +59,7 @@ import { Link } from 'react-router-dom';
 >>>>>>> main
 export function ITServiceRequestHero() {
   return ("
-    <section className = "py-20 bg-gradient-to-br from-blue-900 via-slate-900 to-purple-900 relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-blue-900 via-slate-900 to-purple-900 relative overflow-hidden">
       {/* Background Elements */}"
       <div className="absolute inset-0">"
         <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>"
@@ -93,8 +90,7 @@ export function ITServiceRequestHero() {
 "
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl leading-relaxed">
               Get professional IT technicians anywhere in the world, anytime you need them.'
-              From emergency repairs to scheduled maintenance, we're there when you need us most.
-            </p>
+              From emergency repairs to scheduled maintenance, we're there when you need us most.</p>
 "
             <div className="space-y-4 mb-8">"
               <div className="flex items-center gap-3">"

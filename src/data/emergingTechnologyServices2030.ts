@@ -2,13 +2,12 @@
 // Emerging Technology Services 2030 - Zion Tech Group
 // Next-generation technology solutions for the future
 ;
-export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
-  // Quantum Internet Infrastructure
+export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [// Quantum Internet Infrastructure
   {
 
     id: "quantum-internet-infrastructure","
     title: "Quantum Internet Infrastructure","
-    description: "Revolutionary quantum internet infrastructure that enables ultra-secure communication using quantum entanglement. Provides unbreakable encryption and quantum teleportation capabilities.","
+    description: "Revolutionary quantum internet infrastructure that enables ultra-secure communication using quantum entanglement.Provides unbreakable encryption and quantum teleportation capabilities.","
     category: "Emerging Technology","
     subcategory: "Quantum Internet",
     price: 29999,"
@@ -40,7 +39,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
 "
     id: "neuromorphic-computing-platform","
     title: "Neuromorphic Computing Platform","
-    description: "Advanced neuromorphic computing platform that mimics the human brain's neural structure for ultra-efficient AI processing. Achieves 1000x better energy efficiency than traditional computing.","
+    description: "Advanced neuromorphic computing platform that mimics the human brain's neural structure for ultra-efficient AI processing.Achieves 1000x better energy efficiency than traditional computing.","
     category: "Emerging Technology","
     subcategory: "Neuromorphic Computing",
     price: 24999,"
@@ -72,7 +71,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
 "
     id: "dna-data-storage-platform","
     title: "DNA Data Storage Platform","
-    description: "Revolutionary DNA data storage platform that encodes digital information into synthetic DNA molecules. Provides ultra-dense storage with 1 billion times more capacity than traditional methods.","
+    description: "Revolutionary DNA data storage platform that encodes digital information into synthetic DNA molecules.Provides ultra-dense storage with 1 billion times more capacity than traditional methods.","
     category: "Emerging Technology","
     subcategory: "DNA Storage",
     price: 19999,"
@@ -104,7 +103,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
 "
     id: "fusion-energy-management-platform","
     title: "Fusion Energy Management Platform","
-    description: "Advanced fusion energy management platform that optimizes fusion reactor operations and energy distribution. Enables clean, unlimited energy with zero carbon emissions.","
+    description: "Advanced fusion energy management platform that optimizes fusion reactor operations and energy distribution.Enables clean, unlimited energy with zero carbon emissions.","
     category: "Emerging Technology","
     subcategory: "Fusion Energy",
     price: 34999,"
@@ -136,7 +135,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
 "
     id: "holographic-display-technology","
     title: "Holographic Display Technology","
-    description: "Revolutionary holographic display technology that creates true 3D holographic images without special glasses. Enables immersive experiences for entertainment, education, and business applications.","
+    description: "Revolutionary holographic display technology that creates true 3D holographic images without special glasses.Enables immersive experiences for entertainment, education, and business applications.","
     category: "Emerging Technology","
     subcategory: "Holographic Displays",
     price: 15999,"
@@ -168,7 +167,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
 "
     id: "biometric-authentication-platform","
     title: "Biometric Authentication Platform","
-    description: "Advanced biometric authentication platform that uses multiple biometric factors for ultra-secure identity verification. Provides 99.99% accuracy with zero false positives.","
+    description: "Advanced biometric authentication platform that uses multiple biometric factors for ultra-secure identity verification.Provides 99.99% accuracy with zero false positives.","
     category: "Emerging Technology","
     subcategory: "Biometric Security",
     price: 11999,"
@@ -200,7 +199,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
 "
     id: "autonomous-drone-fleet-management","
     title: "Autonomous Drone Fleet Management","
-    description: "Intelligent autonomous drone fleet management platform that coordinates multiple drones for delivery, surveillance, and inspection tasks. Reduces operational costs by 60% and improves efficiency by 80%.","
+    description: "Intelligent autonomous drone fleet management platform that coordinates multiple drones for delivery, surveillance, and inspection tasks.Reduces operational costs by 60% and improves efficiency by 80%.","
     category: "Emerging Technology","
     subcategory: "Autonomous Systems",
     price: 17999,"

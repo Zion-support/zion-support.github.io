@@ -1,22 +1,6 @@
 <<<<<<< HEAD
-import {
-<<<<<<< HEAD
-import { motion, AnimatePresence } from 'framer - motion';
-=======
->>>>>>> main
-
-  Mail,
-  Phone,
-  MapPin,
-  Send,
-  CheckCircle,
-  AlertCircle,
-  CheckCircle,
-  Clock,
-  MessageSquare,
-  Building,
-  Globe'
- } from 'lucide-react';
+import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
+ from 'lucide-react';
 
 interface ContactFormData {
   name: string;
@@ -43,10 +27,9 @@ export function EnhancedContact(...args[]):  {
   }) ;
 
   const [errors, setErrors] = useState<any> ({}) ;
-  const [isSubmitting, setIsSubmitting] = useState (false) ;
-  const [isSubmitted, setIsSubmitted] = useState (false) ;
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  
     { value: 'cloud-infrastructure', label: 'Cloud Infrastructure' },;
     { value: 'cybersecurity', label: 'Cybersecurity' },;
     { value: 'digital-transformation', label: 'Digital Transformation' },;
@@ -55,24 +38,23 @@ export function EnhancedContact(...args[]):  {
     { value: 'green-it', label: 'Green IT Solutions' };
   ];
 
-  
     const newErrors: ContactFormErrors = {};
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
-    if (!formData.name.trim()) {
+    if(!formData.name.trim()) {
 
       newErrors.name = 'Name is required'}
 
-    if (!formData.email.trim()) {
+    if(!formData.email.trim()) {
 
-      newErrors.email = 'Email is required'} else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = 'Email is required'} else if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
 
       newErrors.email = 'Please enter a valid email address'}
 
-    if (!formData.message.trim()) {
+    if(!formData.message.trim()) {
 
-      newErrors.message = 'Message is required'} else if (formData.message.length < 10) {
+      newErrors.message = 'Message is required'} else if(formData.message.length < 10) {
 
       newErrors.message = 'Message must be at least 10 characters long'};
 ;
@@ -84,10 +66,10 @@ export function EnhancedContact(...args[]):  {
       setIsSubmitting(false);
 <<<<<<< HEAD
     }
-      })} catch (error) {
+      })} catch(error) {
 
 =======
-    }      })} catch (error) {
+    }      })} catch(error) {
 '
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       // console.error('Error submitting form:', error)} finally {
@@ -95,16 +77,15 @@ export function EnhancedContact(...args[]):  {
       setIsSubmitting(false)}
   };
 
-  
     {;
       icon: Clock,;
       title: 'Business Hours',;
       value: 'Mon-Fri: 9AM-6PM EST',;
       description: 'Available during these hours'};  ];
 
-  if (isSubmitted) {
+  if(isSubmitted) {
 
-    return()
+    return ()
       <motion.div
         initial = {
 
@@ -133,11 +114,6 @@ export function EnhancedContact(...args[]):  {
   { delay: 0.2,"
   type: "spring" 
 >>>>>>> main
-
-
-
-
-
 
 }}"
             className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6"
@@ -179,8 +155,7 @@ export function EnhancedContact(...args[]):  {
             transition={{ delay: 0.4 }}"
             className="text-zion-slate-light mb-8"
           >
-            Thank you for reaching out to us. We'll get back to you within 24 hours.
-          </motion.p>
+            Thank you for reaching out to us.We'll get back to you within 24 hours.</motion.p>
 
           <motion.button
             initial = {
@@ -204,7 +179,7 @@ export function EnhancedContact(...args[]):  {
         </div>;
       </motion.div>;) }
   return ("
-    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light py-20">"
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light py-20">"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -219,11 +194,6 @@ export function EnhancedContact(...args[]):  {
   { opacity: 1,
   y: 0
 
-
-
-
-
-
 }}"
           className="text-center mb-16"
         >"
@@ -232,8 +202,7 @@ export function EnhancedContact(...args[]):  {
           </h1>"
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
             Ready to transform your business? Let's discuss how our AI-powered solutions
-            can help you achieve your goals.
-          </p>
+            can help you achieve your goals.</p>
         </motion.div>
 "
         <div className="grid lg:grid-cols-2 gap-12">
@@ -358,15 +327,8 @@ export function EnhancedContact(...args[]):  {
   (e) => handleInputChange('name',
   e.target.value)
 
-
-
-
-
-
 }
-                  className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan ${
-
-                    errors.name'
+                  className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan ${errors.name'
                       ? 'border-red-500 focus:ring-red-500''
                       : 'border-zion-slate-light focus:border-zion-cyan'`
                   } text-white placeholder-zion-slate-light`}"
@@ -391,11 +353,6 @@ export function EnhancedContact(...args[]):  {
 
   { opacity: 0,
   y: -10
-
-
-
-
-
 
 }}"
                       className="text-red-400 text-sm mt-1 flex items-center"
@@ -424,15 +381,8 @@ export function EnhancedContact(...args[]):  {
   (e) => handleInputChange('email',
   e.target.value)
 
-
-
-
-
-
 }`
-                  className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan ${
-
-                    errors.email'
+                  className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan ${errors.email'
                       ? 'border-red-500 focus:ring-red-500''
                       : 'border-zion-slate-light focus:border-zion-cyan'`
                   } text-white placeholder-zion-slate-light`}"
@@ -457,11 +407,6 @@ export function EnhancedContact(...args[]):  {
 
   { opacity: 0,
   y: -10
-
-
-
-
-
 
 }}"
                       className="text-red-400 text-sm mt-1 flex items-center"
@@ -491,11 +436,6 @@ export function EnhancedContact(...args[]):  {
   (e) => handleInputChange('phone',
   e.target.value)
 
-
-
-
-
-
 }"
                     className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white placeholder-zion-slate-light"
                     placeholder="Enter your phone number"
@@ -512,11 +452,6 @@ export function EnhancedContact(...args[]):  {
 
   (e) => handleInputChange('company',
   e.target.value)
-
-
-
-
-
 
 }"
                     className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white placeholder-zion-slate-light"
@@ -538,15 +473,10 @@ export function EnhancedContact(...args[]):  {
   (e) => handleInputChange('service',
   e.target.value)
 
-
-
-
-
-
 }"
                   className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white"
                 >
-                  {services.map (service  => (<option key={service.value} value={service.value}>
+                  {services.map(service  => (<option key={service.value} value={service.value}>
                       {service.label}
                     </option>) ) }
                 </select>
@@ -566,15 +496,8 @@ export function EnhancedContact(...args[]):  {
   (e) => handleInputChange('message',
   e.target.value)
 
-
-
-
-
-
 }`
-                  className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan resize-none ${
-
-                    errors.message'
+                  className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan resize-none ${errors.message'
                       ? 'border-red-500 focus:ring-red-500''
                       : 'border-zion-slate-light focus:border-zion-cyan'`
                   } text-white placeholder-zion-slate-light`}"
@@ -599,11 +522,6 @@ export function EnhancedContact(...args[]):  {
 
   { opacity: 0,
   y: -10
-
-
-
-
-
 
 }}"
                       className="text-red-400 text-sm mt-1 flex items-center"

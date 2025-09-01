@@ -1,40 +1,25 @@
-import { useState } from "react";"
-import { useForm } from "react-hook-form";"
-import { useNavigate } from "react-router-dom";"
-import { zodResolver } from "@hookform/resolvers/zod";"
-import { z } from "zod";"
-import { LogIn, User, Eye, EyeOff } from "lucide-react";"
-import { useAuth } from "@/hooks/useAuth";"
-import { Button } from "@/components/ui/button";"
-import { Input } from "@/components/ui/input";"
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";"
-import { Link } from "react-router-dom";"
-import { LoadingOverlay } from "@/components/LoadingOverlay";
-// Form validation schema;
-const loginSchema = z.object({
-"
-    email: z.string().email("Please enter a valid email").min(1, "Email is required"),"
-    password: z.string().min(6, "Password must be at least 6 characters")});
-function LoginForm() {
-    const { login, isLoading } = useAuth();
-    const navigate = useNavigate();
-    const [showPassword, setShowPassword] = useState(false);
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const form = useForm({
+import { useState } from 'react';"
+import { useForm } from 'react-hook-form';"
+import { useNavigate  } from 'react-router-dom';"
+import { zodResolver } from '@hookform/resolvers/zod';"
+import { z } from 'zod';"
+import { LogIn, User, Eye, EyeOff  } from 'lucide-react';"
+import { useAuth } from '@/hooks/useAuth';"
+import { Button } from '@/components/ui/button';"
+import { Input } from '@/components/ui/input';"
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';"
+import { Link  } from 'react-router-dom';"
+import { LoadingOverlay } from '@/components/LoadingOverlay';
+export default function Page() {
+);
+    const onSubmit = async(data) => {
 
-        resolver: zodResolver(loginSchema),
-        defaultValues: {
-"
-            email: "","
-            password: ""}});
-    const onSubmit = async (data) => {
-
-        if (isSubmitting)
+        if(isSubmitting)
             return;
         try {
             setIsSubmitting(true);
             const { error } = await login(data.email, data.password);
-            if (error) {
+            if(error) {
 "
                 form.setError("root", { message: error })}
             else {

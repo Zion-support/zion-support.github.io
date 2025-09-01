@@ -1,11 +1,8 @@
 <<<<<<< HEAD
-import {
-<<<<<<< HEAD
-import { innovativeServices2025 } from '../data / innovativeServices2025';
-import { motion, AnimatePresence } from 'framer - motion';
+import { <<<<<<< HEAD import { innovativeServices2025 } from '../data/innovativeServices2025';
+import { motion, AnimatePresence  } from 'framer-motion';
 
- * EnhancedHeader function
- * @param {*} params - Function parameters
+ params - Function parameters
  * @returns {*} Function return value
  */
 function EnhancedHeader () {
@@ -89,14 +86,14 @@ export function EnhancedHeader() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)}, []);
 
-  const handleSearch = async (e: React.FormEvent) => {
+  const handleSearch = async(e: React.FormEvent) => {
 
-    e.preventDefault();    if (searchQuery.trim()) {
+    e.preventDefault();    if(searchQuery.trim()) {
 
       setIsSearching(true);
       try {
-        await new Promise (resolve => setTimeout (resolve, 1000) ) ;
-        window.location.href = `/search?q=${encodeURIComponent (searchQuery.trim () ) }`} finally {
+        await new Promise(resolve => setTimeout (resolve, 1000) ) ;
+        window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim () ) }`} finally {
 
         setIsSearching(false)}    }
   };
@@ -107,14 +104,12 @@ export function EnhancedHeader() {
   
   // Service categories for mega menu
   
-  return()    <>
+  return ()    <>
       {/* Matrix Rain Background */}
-      <div role="button" className="matrix - rain"></div>
+      <div  className="matrix -rain"></div>
       {/* Enhanced Header */}
       <motion.header`
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-
-          scrolled'
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled'
             ? 'bg-black/95 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl''
             : 'bg-transparent'`
         }`}
@@ -151,9 +146,7 @@ export function EnhancedHeader() {
                 <Link
                   key={item.name}
                   to={item.href}`
-                  className={`nav-link font-medium transition-all duration-300 ${
-
-                    item.current'
+                  className={`nav-link font-medium transition-all duration-300 ${item.current'
                       ? 'text-cyan-400 border-b-2 border-cyan-400''
                       : 'text-gray-300 hover:text-cyan-400'`
                   }`}
@@ -179,8 +172,8 @@ export function EnhancedHeader() {
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: -20, scale: 0.95 }}
                       transition={{ duration: 0.3 }}
-                      onMouseEnter={ () => setServicesDropdownOpen (true) }
-                      onMouseLeave={ () => setServicesDropdownOpen (false) }
+                      onMouseEnter={ () => setServicesDropdownOpen(true) }
+                      onMouseLeave={ () => setServicesDropdownOpen(false) }
                     >
                       {/* Featured Services */}"
                       <div className="mb-8">"
@@ -207,9 +200,7 @@ export function EnhancedHeader() {
                                 </p>
                                 {service.badge && (
                                   <span`
-                                    className={`inline-block px-3 py-1 text-xs font-medium rounded-full ${
-
-                                      service.badge === 'New''
+                                    className={`inline-block px-3 py-1 text-xs font-medium rounded-full ${service.badge === 'New''
                                         ? 'bg-green-500/20 text-green-400''
                                         : service.badge === 'Popular''
                                           ? 'bg-blue-500/20 text-blue-400''
@@ -253,9 +244,7 @@ export function EnhancedHeader() {
                                   </span>
                                   {service.badge && (
                                     <span`
-                                      className={`ml-auto px-2 py-1 text-xs font-medium rounded-full ${
-
-                                        service.badge === 'New''
+                                      className={`ml-auto px-2 py-1 text-xs font-medium rounded-full ${service.badge === 'New''
                                           ? 'bg-green-500/20 text-green-400''
                                           : service.badge === 'Popular''
                                             ? 'bg-blue-500/20 text-blue-400''
@@ -306,9 +295,7 @@ export function EnhancedHeader() {
                 <Link
                   key={item.name}
                   to={item.href}`
-                  className={`nav-link font-medium transition-all duration-300 ${
-
-                    item.current'
+                  className={`nav-link font-medium transition-all duration-300 ${item.current'
                       ? 'text-cyan-400 border-b-2 border-cyan-400''
                       : 'text-gray-300 hover:text-cyan-400'`
                   }`}
@@ -412,9 +399,7 @@ export function EnhancedHeader() {
                       key={item.name}
                       to={item.href}
                       onClick={() => setMobileMenuOpen(false)}`
-                      className={`block py-2 text-lg font-medium transition-colors ${
-
-                        item.current'
+                      className={`block py-2 text-lg font-medium transition-colors ${item.current'
                           ? 'text-cyan-400''
                           : 'text-gray-300 hover:text-cyan-400'`
                       }`}

@@ -1,16 +1,10 @@
-import { useState, useEffect } from "react";
-import { Star } from "lucide-react";
-import { ReviewStats } from "@/components/reviews/ReviewStats";
-import { ReviewsList } from "@/components/reviews/ReviewsList";
-import { useReviews } from "@/hooks/useReviews";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-
-interface ProfileRatingsProps {
-  userId: string;
-  averageRating?: number;
-  ratingCount?: number;
-}
+import { useState, useEffect } from 'react';
+import { Star  } from 'lucide-react';
+import { ReviewStats } from '@/components/reviews/ReviewStats';
+import { ReviewsList } from '@/components/reviews/ReviewsList';
+import { useReviews } from '@/hooks/useReviews';
+import { Button } from '@/components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: ProfileRatingsProps) {
   const { reviews, isLoading, fetchUserReviews, reportReview } = useReviews();
@@ -18,11 +12,11 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
   
   // Calculate rating distribution
   useEffect(() => {
-    if (reviews.length > 0) {
+    if(reviews.length > 0) {
       const distribution: Record<number, number> = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
       
       reviews.forEach((review) => {
-        if (review.rating >= 1 && review.rating <= 5) {
+        if(review.rating >= 1 && review.rating <= 5) {
           distribution[review.rating] = (distribution[review.rating] || 0) + 1;
         }
       });
@@ -36,8 +30,7 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
     fetchUserReviews(userId);
   }, [userId, fetchUserReviews]); // Added fetchUserReviews
   
-  return (
-    <div className="space-y-6">
+  return (<div className="space-y-6">
       <div className="flex flex-col md:flex-row gap-6">
         <div className="md:w-1/3">
           <ReviewStats

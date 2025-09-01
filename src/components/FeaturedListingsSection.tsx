@@ -1,22 +1,20 @@
 <<<<<<< HEAD
-import { Link  } from 'react - router - dom.ts';
-import { Link } from 'react - router - dom';
+import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom';
+ from 'react';
 import React, { useState } from 'react';
-import React, { useState } from 'react.ts';
 export /**
-import { motion } from 'framer - motion';
-import { motion, AnimatePresence  } from 'framer - motion.ts';
+import { motion  } from 'framer-motion';
+import { motion, AnimatePresence  } from 'framer-motion';
 
- * FeaturedListingsSection function
- * @param {*} params - Function parameters
+ params - Function parameters
  * @returns {*} Function return value
  */
 function FeaturedListingsSection () {
 =======
 >>>>>>> main
 
-const featuredListings = [
-  {
+const featuredListings = [{
 
     id: 1,
     title: "AI-Powered E-commerce Platform","
@@ -76,14 +74,14 @@ const featuredListings = [
 ];
 
 <<<<<<< HEAD
-  return (<section className = "py - 20 bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
-      <div className="max - w-7xl mx - auto px - 6">
+  return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
+      <div className="max - w-7xl mx - auto px-6">
         <motion.div
-          className="text - center mb - 16"
+          className="text-center mb-16"
 =======
 export function FeaturedListingsSection() {
   return ("
-    <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
+    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <div className="max-w-7xl mx-auto px-6">
         <motion.div "
           className="text-center mb-16"
@@ -126,10 +124,10 @@ export function FeaturedListingsSection() {
                 <img
                   src={listing.image}
                   alt={listing.title}
-                  className="w - full h - 48 object - cover"
+                  className="w-full h-48 object -cover"
                 />
-                <div className="absolute top - 3 left - 3">
-                  <span className="px - 3 py - 1 bg - blue - 600 text - white text - xs font - semibold rounded - full">
+                <div className="absolute top - 3 left -3">
+                  <span className="px-3 py-1 bg-blue - 600 text-white text-xs font - semibold rounded-full">
 =======
                 <img 
                   src={listing.image} 
@@ -190,7 +188,7 @@ export function FeaturedListingsSection() {
 
 <<<<<<< HEAD
         <motion.div
-          className="mt - 16 text - center"
+          className="mt-16 text-center"
 =======
         <motion.div "
           className="mt-16 text-center"

@@ -1,6 +1,5 @@
 // Enhanced Micro SAAS Services for 2025;
-export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
-  // AI-Powered Development & DevOps Services
+export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [// AI-Powered Development & DevOps Services
   {
 
     id: "ai-code-review-assistant","
@@ -679,7 +678,6 @@ export const SERVICE_PRICING_TIERS = {
     name: "Basic","
     features: ["Core functionality", "Basic support", "Standard integrations", "Community forum"],"
   priceRange: "$19 - $99/month"
-
 
 },
   professional: {

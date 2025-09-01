@@ -2,19 +2,19 @@ import React, { useEffect, useRef } from 'react';
 export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medium', colorScheme = 'multi' }) => {
 
 <<<<<<< HEAD
-    const canvasRef = useRef (null) ;
+    const canvasRef = useRef(null) ;
     const animationRef = useRef () ;
-    useEffect ( () => {
+    useEffect(() => {
 =======
     const canvasRef = useRef(null);
     const animationRef = useRef();
     useEffect(() => {
 >>>>>>> main
         const canvas = canvasRef.current;
-        if (!canvas)
+        if(!canvas)
             return;
         const ctx = canvas.getContext('2d');
-        if (!ctx)
+        if(!ctx)
             return;
         // Set canvas size
         const resizeCanvas = () => {
@@ -28,7 +28,7 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
         const colors = colorSchemes[colorScheme];
         const particleCount = intensity === 'low' ? 50 : intensity === 'medium' ? 100 : 200;
         // Initialize particles
-        for (let i = 0; i < particleCount; i++) {
+        for(let i = 0; i < particleCount; i++) {
 
             particles.push({
 
@@ -50,17 +50,17 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
             ctx.fillStyle = 'rgba(0, 0, 0, 0.1);
             ctx.fillRect(0, 0, canvas.width, canvas.height);
             // Draw grid
-            ctx.strokeStyle = `rgba (0, 255, 255, ${gridOpacity}) `;
+            ctx.strokeStyle = `rgba(0, 255, 255, ${gridOpacity}) `;
             ctx.lineWidth = 1;
             // Vertical lines
-            for (let x = 0; x < canvas.width; x += gridSize) {
+            for(let x = 0; x < canvas.width; x += gridSize) {
 
                 ctx.beginPath();
                 ctx.moveTo(x, 0);
                 ctx.lineTo(x, canvas.height);
                 ctx.stroke()}
             // Horizontal lines
-            for (let y = 0; y < canvas.height; y += gridSize) {
+            for(let y = 0; y < canvas.height; y += gridSize) {
 
                 ctx.beginPath();
                 ctx.moveTo(0, y);
@@ -73,15 +73,15 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
                 particle.x += particle.vx;
                 particle.y += particle.vy;
                 // Bounce off edges
-                if (particle.x <= 0 || particle.x >= canvas.width) {
+                if(particle.x <= 0 || particle.x >= canvas.width) {
 
                     particle.vx *= -1}
-                if (particle.y <= 0 || particle.y >= canvas.height) {
+                if(particle.y <= 0 || particle.y >= canvas.height) {
 
                     particle.vy *= -1}
                 // Update life
                 particle.life--;
-                if (particle.life <= 0) {
+                if(particle.life <= 0) {
 
                     particle.life = particle.maxLife;
                     particle.x = Math.random () * canvas.width;
@@ -103,12 +103,12 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
             // Draw connecting lines between nearby particles`
             ctx.strokeStyle = `rgba(0, 255, 255, ${gridOpacity * 0.5})`;
             ctx.lineWidth = 0.5;
-            for (let i = 0; i < particles.length; i++) {
+            for(let i = 0; i < particles.length; i++) {
 
-                for (let j = i + 1; j < particles.length; j++) {
+                for(let j = i + 1; j < particles.length; j++) {
 
                     const distance = Math.sqrt(dx * dx + dy * dy);
-                    if (distance < 100) {
+                    if(distance < 100) {
 
                         const alpha = (1 - distance / 100) * gridOpacity * 0.5;`
                         ctx.strokeStyle = `rgba(0, 255, 255, ${alpha})`;
@@ -120,7 +120,7 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
             }
             // Draw floating orbs
             const time = Date.now () * 0.001;
-            for (let i = 0; i < 3; i++) {
+            for(let i = 0; i < 3; i++) {
 
                 const x = Math.sin(time * 0.5 + i) * canvas.width * 0.3 + canvas.width * 0.5;
                 const y = Math.cos(time * 0.3 + i) * canvas.height * 0.3 + canvas.height * 0.5;
@@ -146,11 +146,11 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
             scanGradient.addColorStop(0.5,rgba(0, 255, 255, 0.3));
             scanGradient.addColorStop(1,transparent');
             ctx.fillStyle = scanGradient;
-            ctx.fillRect (0, scanY - 2, canvas.width, 4) ;
-            animationRef.current = requestAnimationFrame (animate) };
+            ctx.fillRect(0, scanY - 2, canvas.width, 4) ;
+            animationRef.current = requestAnimationFrame(animate) };
         animate () ;
         return () => {
-            if (animationRef.current) {
+            if(animationRef.current) {
 
                 cancelAnimationFrame(animationRef.current)}
             window.removeEventListener('resize', resizeCanvas)}}, [intensity, colorScheme]);`

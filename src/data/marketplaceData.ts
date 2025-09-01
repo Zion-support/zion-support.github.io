@@ -21,8 +21,7 @@ seller: {
   deliveryTime: string;
   warranty: string}
 ;
-export const marketplaceItems: MarketplaceItem[] = [
-  {
+export const marketplaceItems: MarketplaceItem[] = [{
 
     id: 'ai-server-cluster',
     title: 'AI-Powered Server Cluster',

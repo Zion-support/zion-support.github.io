@@ -1,43 +1,7 @@
 <<<<<<< HEAD
-import { Link  } from 'react - router - dom.ts';
-import React, { useState, useEffect, memo } from 'react.ts';
-export default EnhancedHeroSection;
-import { ArrowRight,
-import { motion, AnimatePresence  } from 'framer - motion.ts';
-=======
-<<<<<<< HEAD
-import { ArrowRight, 
->>>>>>> main
+import { Link  } from 'react-router-dom';
 
-  Play,
-  Star,
-  CheckCircle,
-  ChevronLeft,
-  ChevronRight,
-  Zap,
-  Shield,
-  Globe,
-  Brain,
-  Rocket,
-  Target,
-  TrendingUp'
- } from 'lucide-react'} from 'lucide-react';
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-interface HeroSlide {
-  title: string;
-  subtitle: string;
-  description: string;
-  image: string;
-  cta: string;
-  path: string;
-  features: string[];
-  gradient: string;
-<<<<<<< HEAD
-  icon: React.ComponentType < any>;
-  stats: { label: string; value: string; icon: React.ComponentType < any>
-}[]}
+export default function Page() {
 =======
   icon: React.ComponentType<any>;
   stats: { label: string; value: string; icon: React.ComponentType<any> }[];
@@ -48,12 +12,11 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
 
   const [currentSlide, setCurrentSlide] = useState(0);  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-  const heroSlides: HeroSlide[] = [
-    {
+  const heroSlides: HeroSlide[] = [{
 
       title: "AI-Powered Business Solutions","
       subtitle: "Transform your business with cutting-edge artificial intelligence","
-      description: "Leverage the power of AI to automate processes, gain insights, and drive innovation across your organization. Our solutions are designed to scale with your business needs.","
+      description: "Leverage the power of AI to automate processes, gain insights, and drive innovation across your organization.Our solutions are designed to scale with your business needs.","
       image: "/images/hero-ai-solutions.jpg","
       cta: "Explore AI Solutions","
       path: "/services/ai-business-intelligence","
@@ -103,19 +66,16 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
   ];
 
   useEffect(() => {
-    if (!isAutoPlaying) return;
+    if(!isAutoPlaying) return;
 
-    
-      setCurrentSlide ( (prev) => (prev + 1) % heroSlides.length) }, 6000) ;
-    return () => clearInterval (interval) }, [isAutoPlaying, heroSlides.length]) ;
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length) }, 6000) ;
+    return () => clearInterval(interval) }, [isAutoPlaying, heroSlides.length]) ;
 
-  
-    setCurrentSlide ( (prev) => (prev + 1) % heroSlides.length) ;
-    setIsAutoPlaying (false) };
+    setCurrentSlide((prev) => (prev + 1) % heroSlides.length) ;
+    setIsAutoPlaying(false) };
 
-  
-    setCurrentSlide ( (prev) => (prev - 1 + heroSlides.length) % heroSlides.length) ;
-    setIsAutoPlaying (false) };
+    setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length) ;
+    setIsAutoPlaying(false) };
             scale: [1, 1.1, 1]
           }}
           transition={{ duration: 20, repeat: Infinity }}
@@ -382,9 +342,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
               <motion.button
                 key={index}
                 onClick={() => goToSlide(index)}`
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-
-                  index === currentSlide'
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide'
                     ? 'bg-zion-cyan w-8''
                     : 'bg-white/30 hover:bg-white/50'`
                 }`}
@@ -432,11 +390,6 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
 
   { duration: 2,
   repeat: Infinity
-
-
-
-
-
 
 }};"
             className="w-1 h-3 bg-zion-cyan rounded-full mt-2";

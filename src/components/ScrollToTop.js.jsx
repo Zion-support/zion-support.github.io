@@ -4,11 +4,10 @@ export default ScrollToTop;
 export default ScrollToTop;
 export function ScrollToTop = () => {
 
-
-        const [isVisible, setIsVisible] = useState (false) ;
-        useEffect ( () => {
+        const [isVisible, setIsVisible] = useState(false);
+        useEffect(() => {
             const toggleVisibility = () => {
-                if (window.pageYOffset > 300) {
+                if(window.pageYOffset > 300) {
 
                     setIsVisible(true)}
                 else {
@@ -22,7 +21,7 @@ export function ScrollToTop = () => {
 
                 top: 0,
                 behavior: 'smooth'})};
-        return (className = "fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center z-50");
+        return (className="fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center z-50");
         aria - label;"
         "Back to top";
         initial = {};
@@ -52,7 +51,7 @@ whileHover = {};
         y;
     -2,
         boxShadow;"
-    "0 20px 25px -5px rgba(59, 130, 246, 0.3), 0 10px 10px -5px rgba(59, 130, 246, 0.2)"}
+    "0 20px 25px-5px rgba(59, 130, 246, 0.3), 0 10px 10px-5px rgba(59, 130, 246, 0.2)"}
 whileTap = {};
 {
 
@@ -69,7 +68,7 @@ transition = {};
         <svg className="w-6 h-6"/>
             ,
                 <>"
-      {isVisible && (<button onClick={scrollToTop} className="fixed bottom-8 right-8 z-50 w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" aria-label="Scroll to top">"
+      {isVisible && (<button onClick={scrollToTop} className="fixed bottom-8 right-8 z-50 w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" >"
           <svg className="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18"/>
           </svg>

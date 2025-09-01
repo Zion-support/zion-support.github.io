@@ -1,7 +1,7 @@
 import React from 'react';
 const LoginErrorFallback = ({ error, resetErrorBoundary }) => {
 
-  return()
+  return ()
     <div className="min-h-screen bg-background flex items-center justify-center p-4">"
       <div className="max-w-md w-full space-y-8">"
         <div className="text-center">"
@@ -9,8 +9,7 @@ const LoginErrorFallback = ({ error, resetErrorBoundary }) => {
             Something went wrong
           </h2>"
           <p className="text-muted-foreground mb-6">
-            We encountered an error while loading the login page. Please try again.
-          </p>
+            We encountered an error while loading the login page.Please try again.</p>
           {error && ("
             <details className="text-left mb-6">"
               <summary className="cursor-pointer text-sm text-muted-foreground">

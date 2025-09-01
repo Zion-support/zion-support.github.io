@@ -1,36 +1,6 @@
 import React, { useState, useRef } from 'react';
-import { Workflow, Brain, Settings, X, Maximize2, Minimize2, Search, CheckCircle, BarChart3, TrendingUp, Target, Activity, Users, FileText, AlertTriangle, Lightbulb, DollarSign, PieChart, MoreVertical, Edit3, Server, Play, Loader } from 'lucide-react';
-const mockBusinessProcesses = [
-    {
+import { Workflow, Brain, Settings, X, Maximize2, Minimize2, Search, CheckCircle, BarChart3, TrendingUp, Target, Activity, Users, FileText, AlertTriangle, Lightbulb, DollarSign, PieChart, MoreVertical, Edit3, Server, Play, Loader  } from 'lucide-react';
 
-        id: 'bp-001',
-        name: 'Invoice Processing & Approval',
-        description: 'Automated invoice processing with AI-powered validation and approval workflows',
-        category: 'finance',
-        status: 'active',
-        priority: 'high',
-        automationLevel: 'fully-automated',
-        aiInsights[;
-            'Pattern detected: 15% of invoices require manual review',Optimization opportunity: Reduce approval time by 40%',Cost savings potential: $12,000/month through automation'
-        ],;
-        efficiency: 92,
-        costSavings: 12000,
-        timeReduction: 65,
-        stakeholders['Finance Team',AP Department',Vendors'],;
-        lastExecuted: new Date('2024-01-15T10:30:00Z'),
-        nextExecution: new Date('2024-01-16T09:00:00Z'),
-        executionHistory[;
-            {
-
-                id: 'exec-001',
-                timestamp: new Date('2024-01-15T10:30:00Z'),
-                status: 'success',
-                duration: 45,
-                aiDecisions['Auto-approved 85% of invoices',Flagged 3 suspicious entries'],;
-                manualInterventions: 2,
-                cost: 150,
-                efficiency: 94
-            }
         ],;
         rules[;
             {
@@ -159,7 +129,7 @@ export function AdvancedAIBusinessProcessAutomation() {
     const containerRef = useRef(null);
     const getStatusColor = (status) => {
 
-        switch (status) {
+        switch(status) {
 
             case 'active': return 'text-green-500 bg-green-100 dark:bg-green-900/20';
             case 'paused': return 'text-yellow-500 bg-yellow-100 dark:bg-yellow-900/20';
@@ -170,7 +140,7 @@ export function AdvancedAIBusinessProcessAutomation() {
     };
     const getPriorityColor = (priority) => {
 
-        switch (priority) {
+        switch(priority) {
 
             case 'critical': return 'text-red-600 bg-red-100 dark:bg-red-900/20';
             case 'high': return 'text-orange-600 bg-orange-100 dark:bg-orange-900/20';
@@ -180,7 +150,7 @@ export function AdvancedAIBusinessProcessAutomation() {
     };
     const getAutomationLevelColor = (level) => {
 
-        switch (level) {
+        switch(level) {
 
             case 'fully-automated': return 'text-green-600 bg-green-100 dark:bg-green-900/20';
             case 'semi-automated': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/20';
@@ -189,7 +159,7 @@ export function AdvancedAIBusinessProcessAutomation() {
     };
     const getCategoryIcon = (category) => {
 
-        switch (category) {
+        switch(category) {
 '"
             case 'finance': return <DollarSign className="w-4 h-4"/>;'"
             case 'hr': return <Users className="w-4 h-4"/>;'"
@@ -202,12 +172,12 @@ export function AdvancedAIBusinessProcessAutomation() {
     const formatPercentage = (value) => {
 
         return `${value}%`};
-    const executeProcess = async (processId) => {
+    const executeProcess = async(processId) => {
 
         setIsExecuting(true);
         // Simulate process execution
-        await new Promise (resolve => setTimeout (resolve, 2000) ) ;
-        setIsExecuting (false) ;
+        await new Promise(resolve => setTimeout (resolve, 2000) ) ;
+        setIsExecuting(false) ;
         // Update process status
         setBusinessProcesses(prev => prev.map(p => p.id === processId'
             ? { ...p, lastExecuted: new Date(), status: 'active' }
@@ -217,7 +187,7 @@ export function AdvancedAIBusinessProcessAutomation() {
         const matchesSearch = process.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
             process.description.toLowerCase().includes(searchQuery.toLowerCase());
         return matchesCategory && matchesStatus && matchesSearch});
-    if (!isOpen) {
+    if(!isOpen) {
 "
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-blue to-zion-purple text-white p-4 rounded-full shadow-2xl hover:shadow-zion-blue/50 transition-all duration-300 z-50 group">"
         <div className="flex items-center gap-3">"
@@ -228,7 +198,7 @@ export function AdvancedAIBusinessProcessAutomation() {
           NEW
         </div>
       </button>) }
-    if (isMinimized) {
+    if(isMinimized) {
 "
         return (<div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50">"
         <div className="flex items-center gap-3 p-3">"

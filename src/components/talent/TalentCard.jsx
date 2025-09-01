@@ -1,37 +1,14 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
-import { MapPin, Clock, CheckCircle2 } from 'lucide-react';
-import { FavoriteButton } from '@/components/FavoriteButton';
-import { useNavigate } from 'react-router-dom';
 
-const TalentCardComponent = ({
-
-  talent,
-  onBook,
-  onMessage,
-  isAuthenticated}) => {
-
-  const navigate = useNavigate();
-
-  const handleMessage = e => {
-
-    e.preventDefault();
-    e.stopPropagation();
-    if (onMessage) {
-
-      onMessage(talent);
-    } else {
-
-      navigate(`/messages?talentId=${talent.id}`);
-    }
+export default function Page() {
   };
 
   const handleBook = e => {
 
     e.preventDefault();
     e.stopPropagation();
-    if (onBook) {
+    if(onBook) {
 
       onBook(talent);
     }
@@ -45,7 +22,7 @@ const TalentCardComponent = ({
   // Extract skills - limit to 5 for display
   const skills = talent.skills?.slice(0, 5) || [];
 
-  return()
+  return ()
     <Card
       className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple"
       onClick={handleViewProfile}

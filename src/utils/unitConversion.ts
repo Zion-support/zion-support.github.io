@@ -12,16 +12,13 @@ export function kgToLbs(kg: number): number {
 export function lbsToKg(lbs: number): number {
   return lbs / 2.20462}
 
-export function formatDimensions(
-  widthCm: number,
+export function formatDimensions(widthCm: number,
   heightCm: number,
   depthCm: number,
   unit: UnitSystem
 ): string {
-  if (unit === 'imperial') {
-    
-    
-    
+  if(unit === 'imperial') {
+
     return `${w} x ${h} x ${d} in`}
   return `${widthCm} x ${heightCm} x ${depthCm} cm`}
 

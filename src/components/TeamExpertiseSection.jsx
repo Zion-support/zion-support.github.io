@@ -1,81 +1,9 @@
 import React, { useState } from 'react';
 <<<<<<< HEAD
-export function TeamExpertiseSection () {
-import { motion, AnimatePresence } from 'framer - motion';
+import { motion, AnimatePresence  } from 'framer-motion';
 
-=======
-import { motion, AnimatePresence } from 'framer-motion';
-import { Users, Award, Star, Globe, CheckCircle, ArrowRight, Linkedin, Github, Mail, Shield, Zap, Brain, Cloud, Database } from 'lucide-react';
->>>>>>> main
-const teamMembers = [
-    {
-
-        id: 1,
-        name: "Dr. Sarah Chen","
-        role: "Chief Technology Officer","
-        expertise: "AI & Machine Learning","
-        experience: "15+ years","
-        avatar: "/avatars/sarah-chen.jpg","
-        bio: "Leading expert in artificial intelligence with PhD from MIT. Specializes in computer vision and natural language processing.","
-        skills["Machine Learning", "Computer Vision", "Deep Learning", "Python", "TensorFlow"],"
-        achievements["50+ AI Projects", "15 Research Papers", "AI Innovation Award 2023"],
-        rating: 4.9,
-        projects: 45,"
-        location: "San Francisco, CA","
-        linkedin: "https://linkedin.com/in/sarah-chen","
-        github: "https://github.com/sarahchen-ai"
-    },
-    {
-
-        id: 2,"
-        name: "Michael Rodriguez","
-        role: "Senior Software Architect","
-        expertise: "Cloud & Infrastructure","
-        experience: "12+ years","
-        avatar: "/avatars/michael-rodriguez.jpg","
-        bio: "Cloud infrastructure specialist with extensive experience in AWS, Azure, and Google Cloud. Expert in scalable architecture design.","
-        skills["AWS", "Docker", "Kubernetes", "Microservices", "DevOps"],"
-        achievements["100+ Cloud Projects", "AWS Solutions Architect", "DevOps Excellence Award"],
-        rating: 4.8,
-        projects: 78,"
-        location: "Austin, TX","
-        linkedin: "https://linkedin.com/in/michael-rodriguez","
-        github: "https://github.com/mrodriguez-cloud"
-    },
-    {
-
-        id: 3,"
-        name: "Emily Thompson","
-        role: "Lead Frontend Developer","
-        expertise: "Web & Mobile Development","
-        experience: "10+ years","
-        avatar: "/avatars/emily-thompson.jpg","
-        bio: "Frontend specialist with expertise in React, React Native, and modern web technologies. Passionate about user experience design.","
-        skills["React", "React Native", "TypeScript", "UI/UX", "Performance"],"
-        achievements["80+ Web Apps", "Mobile App Store Featured", "UX Design Award"],
-        rating: 4.9,
-        projects: 92,"
-        location: "New York, NY","
-        linkedin: "https://linkedin.com/in/emily-thompson","
-        github: "https://github.com/emilythompson-dev"
-    },
-    {
-
-        id: 4,"
-        name: "David Kim","
-        role: "Data Science Lead","
-        expertise: "Data Analytics & BI","
-        experience: "13+ years","
-        avatar: "/avatars/david-kim.jpg","
-        bio: "Data science expert specializing in big data analytics, business intelligence, and predictive modeling for enterprise clients.","
-        skills["Python", "SQL", "Tableau", "Apache Spark", "Machine Learning"],"
-        achievements["60+ Analytics Projects", "Data Science Certification", "BI Innovation Award"],
-        rating: 4.8,
-        projects: 67,"
-        location: "Seattle, WA","
-        linkedin: "https://linkedin.com/in/david-kim","
-        github: "https://github.com/davidkim-data"
-    },
+export default function Page() {
+,
     {
 
         id: 5,"
@@ -111,8 +39,7 @@ const teamMembers = [
         github: "https://github.com/alexjohnson-devops"
     }
 ];
-const expertiseAreas = [
-    {
+const expertiseAreas = [{
 "
         name: "Artificial Intelligence","
         icon: <Brain className="w-8 h-8"/>,"
@@ -179,8 +106,8 @@ const stats = ["
     { icon: <Star className="w-6 h-6"/>, value: "4.9/5", label: "Average Rating" },"
     { icon: <Globe className="w-6 h-6"/>, value: "25+", label: "Countries Served" }
 ];
-    const [selectedMember, setSelectedMember] = useState (null) ;
-    const [hoveredExpertise, setHoveredExpertise] = useState (null) ;
+    const [selectedMember, setSelectedMember] = useState(null);
+    const [hoveredExpertise, setHoveredExpertise] = useState(null);
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -233,10 +160,10 @@ const stats = ["
 
 <<<<<<< HEAD
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-          <h2 className="text - 4xl md:text - 5xl lg:text - 6xl font - bold text - white mb - 6">
-            Meet Our < span className="bg - gradient - to - r from - zion - cyan to - zion - purple bg - clip - text text - transparent">Expert Team</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font - bold text-white mb-6">
+            Meet Our < span className="bg-gradient - to - r from - zion - cyan to - zion - purple bg-clip - text text-transparent">Expert Team</span>
           </h2>
-          <p className="text - zion - slate - light text - lg md:text - xl max - w-4xl mx - auto leading - relaxed mb - 8">
+          <p className="text-zion - slate - light text-lg md:text-xl max - w-4xl mx - auto leading - relaxed mb-8">
             Our world - class team of technology experts brings together decades of experience
 =======
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>"
@@ -246,8 +173,7 @@ const stats = ["
           <p className="text-zion-slate-light text-lg md:text-xl max-w-4xl mx-auto leading-relaxed mb-8">
             Our world-class team of technology experts brings together decades of experience 
 >>>>>>> main
-            across all major technology domains. Get to know the minds behind our success.
-          </p>
+            across all major technology domains.Get to know the minds behind our success.</p>
 
           {/* Stats */}"
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
@@ -267,8 +193,8 @@ const stats = ["
 <<<<<<< HEAD
   delay: index * 0.1
 
-}} className="text - center p - 4 rounded - xl bg - zion - blue - dark / 40 backdrop - blur - sm border border - zion - blue - light / 20">
-                <div className="text - zion - cyan mb - 2 flex justify - center">
+}} className="text-center p - 4 rounded-xl bg-zion - blue - dark / 40 backdrop - blur - sm border border-zion - blue -light / 20">
+                <div className="text-zion - cyan mb-2 flex justify -center">
 =======
   delay: index * 0.1 
 "
@@ -305,8 +231,8 @@ const stats = ["
           </h3>
 <<<<<<< HEAD
 
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">
-            {expertiseAreas.map ( (area, index) => (<motion.div key={index} initial = {
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-6">
+            {expertiseAreas.map((area, index) => (<motion.div key={index} initial = {
 =======
           "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -327,20 +253,20 @@ const stats = ["
 <<<<<<< HEAD
   delay: index * 0.1
 
-}} onHoverStart={ () => setHoveredExpertise (index) } onHoverEnd={ () => setHoveredExpertise (null) } whileHover={{ y: -4 }} className="p - 6 rounded - 2xl bg - gradient - to - br from - zion - blue - dark / 80 to - zion - blue - dark / 40 backdrop - blur - sm border border - zion - blue - light / 30 hover:border - zion - cyan / 50 transition - all duration - 300 hover:shadow - lg hover:shadow - zion - cyan / 20">
-                <div className={`inline - flex items - center justify - center w - 16 h - 16 rounded - 2xl bg - gradient - to - br ${area.color} mb - 4 shadow - lg`}>
-                  <div className="text - white">
+}} onHoverStart={ () => setHoveredExpertise(index) } onHoverEnd={ () => setHoveredExpertise(null) } whileHover={{ y: -4 }} className="p - 6 rounded-2xl bg-gradient - to - br from - zion - blue - dark / 80 to - zion - blue - dark / 40 backdrop - blur - sm border border-zion - blue - light / 30 hover:border-zion - cyan / 50 transition - all duration - 300 hover:shadow-lg hover:shadow-zion -cyan / 20">
+                <div className={`inline - flex items - center justify - center w-16 h-16 rounded-2xl bg-gradient - to - br ${area.color} mb-4 shadow-lg`}>
+                  <div className="text-white">
                     {area.icon}
                   </div>
                 </div>
 
-                <h4 className="text - xl font - bold text - white mb - 3">{area.name}</h4>
-                <p className="text - zion - slate - light text - sm mb - 4 leading - relaxed">{area.description}</p>
+                <h4 className="text-xl font - bold text-white mb-3">{area.name}</h4>
+                <p className="text-zion - slate - light text-sm mb-4 leading -relaxed">{area.description}</p>
 
-                <div className="grid grid - cols - 3 gap - 4 text - center">
+                <div className="grid grid - cols - 3 gap-4 text-center">
                   <div>
-                    <div className="text - zion - cyan font - bold text - lg">{area.experts}</div>
-                    <div className="text - zion - slate - light text - xs">Experts</div>
+                    <div className="text-zion - cyan font - bold text-lg">{area.experts}</div>
+                    <div className="text-zion - slate - light text-xs">Experts</div>
 =======
   delay: index * 0.1 
 "
@@ -395,22 +321,22 @@ const stats = ["
           </h3>
 <<<<<<< HEAD
 
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">
-            {teamMembers.map ( (member, index) => (<motion.div key={member.id} variants={itemVariants} whileHover={{ y: -8 }} transition = {
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8">
+            {teamMembers.map((member, index) => (<motion.div key={member.id} variants={itemVariants} whileHover={{ y: -8 }} transition = {
   { type: "spring",
   stiffness: 300
 
 }} className="relative">
-                <div className="h - full p - 6 rounded - 2xl bg - gradient - to - br from - zion - blue - dark / 80 to - zion - blue - dark / 40 backdrop - blur - sm border border - zion - blue - light / 30 hover:border - zion - cyan / 50 transition - all duration - 300 hover:shadow - 2xl hover:shadow - zion - cyan / 20 group cursor - pointer" onClick={ () => setSelectedMember (selectedMember === member.id ? null : member.id) }>
+                <div className="h-full p - 6 rounded-2xl bg-gradient - to - br from - zion - blue - dark / 80 to - zion - blue - dark / 40 backdrop - blur - sm border border-zion - blue - light / 30 hover:border-zion - cyan / 50 transition - all duration - 300 hover:shadow-2xl hover:shadow-zion - cyan / 20 group cursor -pointer" onClick={ () => setSelectedMember(selectedMember === member.id ? null : member.id) }>
                   {/* Header */}
-                  <div className="text - center mb - 6">
-                    <div className="inline - flex items - center justify - center w - 20 h - 20 rounded - 2xl bg - gradient - to - br from - zion - cyan to - zion - purple mb - 4 shadow - lg group - hover:shadow - xl transition - all duration - 300">
-                      <span className="text - white font - bold text - 2xl">
-                        {member.name.charAt (0) }
+                  <div className="text-center mb-6">
+                    <div className="inline - flex items - center justify - center w-20 h-20 rounded-2xl bg-gradient - to - br from - zion - cyan to - zion - purple mb-4 shadow-lg group - hover:shadow-xl transition - all duration -300">
+                      <span className="text-white font - bold text-2xl">
+                        {member.name.charAt(0) }
                       </span>
                     </div>
 
-                    <h4 className="text - xl font - bold text - white mb - 2 group - hover:text - zion - cyan transition - colors">
+                    <h4 className="text-xl font - bold text-white mb-2 group - hover:text-zion - cyan transition -colors">
 =======
           "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -457,7 +383,7 @@ const stats = ["
                           {skill}
                         </span>))}"
                       {member.skills.length > 3 && (<span className="text-zion-cyan/60 text-xs">
-                          +{member.skills.length - 3} more
+                          +{member.skills.length-3} more
                         </span>) }
                     </div>
                   </div>
@@ -489,11 +415,11 @@ const stats = ["
 
 <<<<<<< HEAD
 }} transition={{ duration: 0.3 }}>
-                        <p className="text - zion - slate - light text - sm mb - 4 leading - relaxed">{member.bio}</p>
+                        <p className="text-zion - slate - light text-sm mb-4 leading -relaxed">{member.bio}</p>
 
-                        <h5 className="text - zion - cyan font - semibold text - sm mb - 2">Achievements:</h5>
-                        <div className="space - y-1 mb - 4">
-                          {member.achievements.map ( (achievement, idx) => (<motion.div key={idx} className="flex items - center gap - 2 text - zion - slate - light / 80 text - xs" initial = {
+                        <h5 className="text-zion - cyan font - semibold text-sm mb-2">Achievements:</h5>
+                        <div className="space - y-1 mb-4">
+                          {member.achievements.map((achievement, idx) => (<motion.div key={idx} className="flex items - center gap-2 text-zion - slate - light / 80 text-xs" initial = {
 =======
 }} transition={{ duration: 0.3 }}>"
                         <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">{member.bio}</p>
@@ -568,8 +494,7 @@ const stats = ["
                 Ready to Work with Our Experts?
               </h3>"
               <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
-                Our team is ready to bring your vision to life. Let's discuss how we can help you achieve your technology goals.
-              </p>"
+                Our team is ready to bring your vision to life.Let's discuss how we can help you achieve your technology goals.</p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"
                 <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
                   Schedule Consultation

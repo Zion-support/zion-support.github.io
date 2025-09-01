@@ -1,60 +1,7 @@
-import {
-<<<<<<< HEAD
-import { motion, AnimatePresence } from 'framer - motion';
-=======
->>>>>>> main
+import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
 
-  Calendar,
-  Clock,
-  CheckCircle,
-  Circle,
-  AlertCircle,
-  Play,
-  Pause,
-  StopCircle,
-  Users,
-  Target,
-  TrendingUp,
-  FileText,
-  MessageSquare,
-  Link,
-  Download,
-  Share2,
-  Filter,
-  Search,
-  Plus,
-  Edit,
-  Trash2,
-  Eye,
-  Settings'
- } from 'lucide-react';
-
-interface Project {
-  id: string;
-  name: string;
-  description: string;
-  status: 'planning' | 'active' | 'on-hold' | 'completed' | 'cancelled';
-  priority: 'low' | 'medium' | 'high' | 'critical';
-  startDate: string;
-  endDate: string;
-  progress: number;
-  team: string[];
-  client: string;
-  budget: number;
-  tags: string[];
-  milestones: Milestone[]
-}
-
-interface Milestone {
-  id: string;
-  title: string;
-  description: string;
-  dueDate: string;
-  status: 'pending' | 'in-progress' | 'completed' | 'overdue';
-  assignee: string;
-  priority: 'low' | 'medium' | 'high'}
-
-interface ProjectManagementTimelineProps extends React.PropsWithChildren<{}> {
+export default function Page() {
+> {
 
   showFilters?: boolean;
   showStats?: boolean;
@@ -75,9 +22,8 @@ showFilters:  true,;
   const [editingProject, setEditingProject] = useState<any>(null);
 
   // Sample project data
-  useEffect ( () => {
-    const sampleProjects: Project[] = [
-      {
+  useEffect(() => {
+    const sampleProjects: Project[] = [{
 
         id: '1',
         name: 'AI-Powered Customer Analytics Platform',
@@ -198,22 +144,22 @@ showFilters:  true,;
 
     ];
 
-    setProjects (sampleProjects) ;
-    setFilteredProjects (sampleProjects) }, []) ;
+    setProjects(sampleProjects) ;
+    setFilteredProjects(sampleProjects) }, []) ;
 
   // Filter projects
   useEffect(() => {
     let filtered = projects;
 
-    if (selectedStatus !== 'all') {
+    if(selectedStatus !== 'all') {
 
       filtered = filtered.filter(p => p.status === selectedStatus)}
 
-    if (selectedPriority !== 'all') {
+    if(selectedPriority !== 'all') {
 
       filtered = filtered.filter(p => p.priority === selectedPriority)}
 
-    if (searchQuery) {
+    if(searchQuery) {
 
       filtered = filtered.filter(p =>
         p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -228,7 +174,7 @@ showFilters:  true,;
         p.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
       )}
 
-    setFilteredProjects (filtered.slice (0, maxProjects) ) }, [projects, selectedStatus, selectedPriority, searchQuery, maxProjects]) ;
+    setFilteredProjects(filtered.slice (0, maxProjects) ) }, [projects, selectedStatus, selectedPriority, searchQuery, maxProjects]) ;
 
   // Calculate project stats
   const projectStats = {

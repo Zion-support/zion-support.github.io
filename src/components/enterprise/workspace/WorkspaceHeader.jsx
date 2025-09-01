@@ -1,23 +1,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Bell, Users, Settings } from 'lucide-react';
-export function WorkspaceHeader({ comp }) {
-
-  return()
-    <div className="space-y-6">"
-      <div className="flex items-center justify-between">"
-        <div className="flex items-center gap-4">"
-          <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center border border-border">
-            <img"
-              loading="lazy"'
-              src={company.logoUrl || '/placeholder.svg'}
-              alt={company.name}"
-              className="max-h-10 max-w-10"
-            />
-          </div>
-          <div>"
-            <h1 className="text-3xl font-bold tracking-tight">
-              {company.name} Workspace
+export default function Page() {
+ Workspace
             </h1>"
             <p className="text-muted-foreground">
               {company.plan} Plan · {company.teamSize} team members
@@ -26,13 +10,13 @@ export function WorkspaceHeader({ comp }) {
         </div>
 "
         <div className="flex items-center gap-2">"
-          <Button variant="outline" size="icon" aria-label="Notifications">"
+          <Button variant="outline" size="icon" >"
             <Bell className="h-4 w-4" />
           </Button>"
-          <Button variant="outline" size="icon" aria-label="Team members">"
+          <Button variant="outline" size="icon" >"
             <Users className="h-4 w-4" />
           </Button>"
-          <Button variant="outline" size="icon" aria-label="Workspace settings">"
+          <Button variant="outline" size="icon" >"
             <Settings className="h-4 w-4" />
           </Button>
         </div>

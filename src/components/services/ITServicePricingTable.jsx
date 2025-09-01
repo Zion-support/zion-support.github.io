@@ -3,8 +3,7 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
 
   const [billingCycle, setBillingCycle] = useState('monthly');
 
-  const plans = [
-    {
+  const plans = [{
 
       name: 'Basic Support',
       description: 'Essential IT support for small businesses',
@@ -24,7 +23,7 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
       description: 'Comprehensive IT support with on-site capabilities',
       price: billingCycle === 'monthly' ? 599 : 5990,
       features[;
-        'Everything in Basic',On-site Support (2 visits/month),Hardware Installation',Network Security Monitoring',Phone & Email Support',Weekly Reports',Up to 100 Users',Emergency Response (4hr)
+        'Everything in Basic',On-site Support(2 visits/month),Hardware Installation',Network Security Monitoring',Phone & Email Support',Weekly Reports',Up to 100 Users',Emergency Response(4hr)
       ],;
       notIncluded[;
         'Unlimited On-site Visits',Dedicated Technician',Advanced Analytics'
@@ -38,7 +37,7 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
       description: 'Full-service IT support for large organizations',
       price: billingCycle === 'monthly' ? 1299 : 12990,
       features[;
-        'Everything in Professional',Unlimited On-site Support',Dedicated IT Technician',Advanced Security Suite',Real-time Monitoring',Daily Reports',Unlimited Users',Emergency Response (2hr),Strategic IT Planning',Compliance Support'
+        'Everything in Professional',Unlimited On-site Support',Dedicated IT Technician',Advanced Security Suite',Real-time Monitoring',Daily Reports',Unlimited Users',Emergency Response(2hr),Strategic IT Planning',Compliance Support'
       ],;
       notIncluded[;
         'Custom Development',Hardware Procurement'
@@ -48,8 +47,7 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
 
   ];
 
-  const additionalServices = [
-    {
+  const additionalServices = [{
 
       name: 'Hardware Installation',
       price: 150,
@@ -71,11 +69,11 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
 
       name: 'Training Sessions',
       price: 200,
-      description: 'Staff IT training (per session)
+      description: 'Staff IT training(per session)
 
   ];
 
-  return()
+  return ()
     <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}"
@@ -84,8 +82,7 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
             Transparent Pricing
           </h2>"
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Choose the IT support plan that fits your business needs. All plans include our core services with flexible options for growth.
-          </p>
+            Choose the IT support plan that fits your business needs.All plans include our core services with flexible options for growth.</p>
 
           {/* Billing Toggle */}"
           <div className="flex items-center justify-center mt-8">
@@ -97,9 +94,7 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
               className="mx-4 relative inline-flex h-6 w-11 items-center rounded-full bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
 
               <span`
-                className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-
-                  billingCycle === 'yearly' ? 'translate-x-6' : 'translate-x-1'`
+                className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${billingCycle === 'yearly' ? 'translate-x-6' : 'translate-x-1'`
                 }`}
               />
             </button>'`
@@ -115,9 +110,7 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
           {plans.map((plan, index) => (
             <div
               key={index}`
-              className={`relative bg-white rounded-2xl shadow-xl border-2 transition-all duration-300 hover:shadow-2xl ${
-
-                plan.popular'
+              className={`relative bg-white rounded-2xl shadow-xl border-2 transition-all duration-300 hover:shadow-2xl ${plan.popular'
                   ? 'border-blue-500 scale-105''
                   : 'border-gray-200 hover:border-gray-300'`
               }`}
@@ -171,9 +164,7 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
                 </div>
 
                 <button`
-                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-
-                    plan.popular'
+                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${plan.popular'
                       ? 'bg-blue-600 text-white hover:bg-blue-700''
                       : 'bg-gray-100 text-gray-900 hover:bg-gray-200'`
                   }`}
@@ -215,24 +206,21 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
                 Can I change my plan at  time?
               </h4>"
               <p className="text-gray-600">
-                Yes, you can upgrade or downgrade your plan at  time. Changes take effect at the start of your next billing cycle.
-              </p>
+                Yes, you can upgrade or downgrade your plan at  time.Changes take effect at the start of your next billing cycle.</p>
             </div>"
             <div className="bg-white rounded-xl p-6 shadow-lg">"
               <h4 className="text-lg font-semibold text-gray-900 mb-2">
                 What's included in emergency response?
               </h4>"
               <p className="text-gray-600">
-                Emergency response includes immediate remote support and on-site visits within the specified response time for critical issues.
-              </p>
+                Emergency response includes immediate remote support and on-site visits within the specified response time for critical issues.</p>
             </div>"
             <div className="bg-white rounded-xl p-6 shadow-lg">"
               <h4 className="text-lg font-semibold text-gray-900 mb-2">
                 Do you offer custom solutions?
               </h4>"
               <p className="text-gray-600">
-                Yes, we can customize our services to meet your specific business requirements. Contact us for a consultation.
-              </p>
+                Yes, we can customize our services to meet your specific business requirements.Contact us for a consultation.</p>
             </div>
           </div>
         </div>
@@ -244,8 +232,7 @@ import { Check, X, Star, Clock, Users, Shield export const ITServicePricingTable
               Ready to Get Started?
             </h3>"
             <p className="text-blue-100 mb-6">
-              Contact our team to discuss your IT support needs and get a customized quote.
-            </p>"
+              Contact our team to discuss your IT support needs and get a customized quote.</p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
                 href="#contact"

@@ -5,7 +5,6 @@ import { HelmetProvider } from 'react-helmet-async';
 import { ErrorBoundary } from 'react-error-boundary';
 import App from './App';
 import './index.css';
-import { registerServiceWorker } from './utils/serviceWorker';
 
 function ErrorFallback({ error }: { error: Error }) {
   return (
@@ -40,8 +39,3 @@ root.render(
     </BrowserRouter>
   </React.StrictMode>
 );
-
-// Register service worker
-registerServiceWorker().catch(error => {
-  console.warn('Service worker registration failed:', error);
-});

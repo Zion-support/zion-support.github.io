@@ -1,5 +1,4 @@
-;export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
-  // AI-Powered Micro SAAS Services
+;export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [// AI-Powered Micro SAAS Services
   {
 "
     id: "ai-autonomous-code-reviewer","

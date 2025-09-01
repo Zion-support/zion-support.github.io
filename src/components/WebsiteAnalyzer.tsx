@@ -1,93 +1,24 @@
 <<<<<<< HEAD
-import React, { useState, useEffect } from 'react.ts';
+import React, { useState, useEffect } from 'react';
 export const WebsiteAnalyzer: React.FC = () : JSX.Element => {
 export default WebsiteAnalyzer;
-import { CheckCircle,
-import { LinkChecker, LinkInfo, PageInfo  } from '../utils / linkChecker';
-=======
-<<<<<<< HEAD
-import { CheckCircle, 
->>>>>>> main
+import { CheckCircle, import { LinkChecker, LinkInfo, PageInfo } from '../utils / linkChecker';
 
-  XCircle,
-  AlertTriangle,
-  ExternalLink,
-  Search,
-  FileText,
-  Link as LinkIcon,
-  Download,
-  RefreshCw'
- } from 'lucide-react.ts';
-
-interface AnalysisResult {
-summary: {
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-    totalLinks: number;
-    brokenLinks: number;
-    missingPages: number;
-<<<<<<< HEAD
-    externalLinks: number;
-
-};
-  pages: PageInfo[];
-=======
-    externalLinks: number};  pages: PageInfo[];
->>>>>>> main
-  brokenLinks: LinkInfo[];
-  missingPages: string[]}
-
-export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
-
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [analysisResult, setAnalysisResult] = useState<any>(null);
-  const [currentPage, setCurrentPage] = useState('');
-  const [progress, setProgress] = useState(0);
-
-<<<<<<< HEAD
-  const analyzeWebsite = async () => {
-    setIsAnalyzing (true) ;
-    setProgress (0) ;
-
-    const linkChecker = new LinkChecker ('https://ziontechgroup.com') ;
-    const results: PageInfo[] = [];
-=======
-  
-  
-    setProgress(0);
-    '
-    const linkChecker = new LinkChecker('https://ziontechgroup.com');    const results: PageInfo[] = [];
->>>>>>> main
-    const allBrokenLinks: LinkInfo[] = [];
-    const allMissingPages: string[] = [];
-
-    try {
-      for (let i = 0; i < pagesToAnalyze.length; i++) {
-
-        
-        setCurrentPage (page) ;
-        setProgress ( (i / pagesToAnalyze.length) * 100) ;
-
-        try {
-          // Simulate page content analysis (in real implementation, this would fetch actual page content) 
-          
-          results.push (pageResult) } catch (error) {
+export default function Page() {
+ catch(error) {
 `
           // console.error(`Error analyzing ${page}:`, error)}
 
         // Add delay to prevent overwhelming the server
-        await new Promise (resolve => setTimeout (resolve, 100) ) }
+        await new Promise(resolve => setTimeout (resolve, 100) ) }
 
-      
-      
-      
       setAnalysisResult({
 
         summary,
         pages: results,
         brokenLinks,
         missingPages
-      }) } catch (error) {
+      }) } catch(error) {
 
       // console.error('Analysis failed:', error)} finally {
 
@@ -96,11 +27,6 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
       setCurrentPage('')}
   };
 
-  
-    
-    
-    
-    
 <<<<<<< HEAD
     a.href = url;
     a.download = 'zion-website-analysis.json';
@@ -112,7 +38,6 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
     document.body.removeChild(a);
     URL.revokeObjectURL(url)};
 
-  
       case 'broken':"
         return <XCircle className="w-4 h-4 text-red-500"  />;
       case 'missing':"
@@ -123,7 +48,6 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
         return <AlertTriangle className="w-4 h-4 text-gray-500"  />}
   };
 
-  
       case 'broken':'
         return 'text-red-600 bg-red-100';
       case 'missing':'
@@ -204,11 +128,11 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
               </div>
 <<<<<<< HEAD
 
-              <div role="button" className="bg - green - 50 p - 4 rounded - lg border border - green - 200">
-                <div role="button" className="flex items - center">
-                  <CheckCircle className="w - 8 h - 8 text - green - 600 mr - 3" />
+              <div  className="bg-green - 50 p - 4 rounded-lg border border-green -200">
+                <div  className="flex items -center">
+                  <CheckCircle className="w-8 h-8 text-green - 600 mr-3" />
                   <div>
-                    <p className="text - 2xl font - bold text - green - 900">
+                    <p className="text-2xl font - bold text-green -900">
 =======
               "
               <div className="bg-green-50 p-4 rounded-lg border border-green-200">"
@@ -224,22 +148,22 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
               </div>
 <<<<<<< HEAD
 
-              <div role="button" className="bg - red - 50 p - 4 rounded - lg border border - red - 200">
-                <div role="button" className="flex items - center">
-                  <XCircle className="w - 8 h - 8 text - red - 600 mr - 3" />
+              <div  className="bg-red - 50 p - 4 rounded-lg border border-red -200">
+                <div  className="flex items -center">
+                  <XCircle className="w-8 h-8 text-red - 600 mr-3" />
                   <div>
-                    <p className="text - 2xl font - bold text - red - 900">{analysisResult.summary.brokenLinks}</p>
-                    <p className="text - sm text - red - 700">Broken Links</p>
+                    <p className="text-2xl font - bold text-red -900">{analysisResult.summary.brokenLinks}</p>
+                    <p className="text-sm text-red -700">Broken Links</p>
                   </div>
                 </div>
               </div>
 
-              <div role="button" className="bg - yellow - 50 p - 4 rounded - lg border border - yellow - 200">
-                <div role="button" className="flex items - center">
-                  <AlertTriangle className="w - 8 h - 8 text - yellow - 600 mr - 3" />
+              <div  className="bg-yellow-50 p - 4 rounded-lg border border-yellow-200">
+                <div  className="flex items -center">
+                  <AlertTriangle className="w-8 h-8 text-yellow-600 mr-3" />
                   <div>
-                    <p className="text - 2xl font - bold text - yellow - 900">{analysisResult.summary.missingPages}</p>
-                    <p className="text - sm text - yellow - 700">Missing Pages</p>
+                    <p className="text-2xl font - bold text-yellow-900">{analysisResult.summary.missingPages}</p>
+                    <p className="text-sm text-yellow-700">Missing Pages</p>
 =======
               "
               <div className="bg-red-50 p-4 rounded-lg border border-red-200">"
@@ -323,7 +247,7 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
                           </div>
                         ))}
                         {page.links.length > 6 && ("
-                          <p className="text-xs text-gray-500">... and {page.links.length - 6} more</p>
+                          <p className="text-xs text-gray-500">... and {page.links.length-6} more</p>
                         )}
                       </div>
                     )}

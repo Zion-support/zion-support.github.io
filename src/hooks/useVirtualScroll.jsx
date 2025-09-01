@@ -1,32 +1,7 @@
 import React, { useState } from 'react';
 import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
-export const useVirtualScroll = (items, options) => {
-
-    const { itemHeight, overscan = 5, containerHeight = 400, enableSmoothScrolling = true, enableInfiniteScroll = false, threshold = 100 } = options;
-    const containerRef = useRef(null);
-    const scrollTimeoutRef = useRef(null);
-    const rafRef = useRef(null);
-    const [state, setState] = useState({
-
-        startIndex: 0,
-        endIndex: 0,
-        visibleItems[],;
-        scrollTop: 0,
-        containerHeight,
-        totalHeight: items.length * itemHeight,
-        isScrolling: false
-    });
-    // Calculate virtual scroll parameters
-    const visibleCount = Math.ceil(containerHeight / itemHeight);
-        const startIndex = Math.max(0, Math.floor(state.scrollTop / itemHeight) - overscan);
-        const endIndex = Math.min(items.length - 1, Math.floor(state.scrollTop / containerHeight) + visibleCount + overscan);
-        return {
-
-            startIndex,
-            endIndex,
-            visibleCount,
-            offsetY: startIndex * itemHeight
-        }}, [state.scrollTop, containerHeight, itemHeight, overscan, items.length]);
+export default function Page() {
+, [state.scrollTop, containerHeight, itemHeight, overscan, items.length]);
     // Update virtual items when parameters change
     useEffect(() => {
         const { startIndex, endIndex } = virtualScrollParams;
@@ -44,7 +19,7 @@ export const useVirtualScroll = (items, options) => {
         const target = event.target;
         const scrollTop = target.scrollTop;
         // Cancel previous RAF
-        if (rafRef.current) {
+        if(rafRef.current) {
 
             cancelAnimationFrame(rafRef.current)}
         // Use RAF for smooth scrolling
@@ -56,14 +31,14 @@ export const useVirtualScroll = (items, options) => {
                 isScrolling: true
             }));
             // Clear scrolling state after delay
-            if (scrollTimeoutRef.current) {
+            if(scrollTimeoutRef.current) {
 
                 clearTimeout(scrollTimeoutRef.current)}
             scrollTimeoutRef.current = setTimeout(() => {
                 setState(prev => ({ ...prev, isScrolling: false }))}, 150)})}, []);
     // Scroll to specific index
     const scrollTop;
-        switch (align) {
+        switch(align) {
 
             case 'start':
                 scrollTop = index * itemHeight;
@@ -77,7 +52,7 @@ export const useVirtualScroll = (items, options) => {
             default:
                 scrollTop = index * itemHeight}
         scrollTop = Math.max(0, Math.min(scrollTop, state.totalHeight - containerHeight));
-        if (enableSmoothScrolling) {
+        if(enableSmoothScrolling) {
 
             containerRef.current.scrollTo({
 
@@ -95,7 +70,7 @@ export const useVirtualScroll = (items, options) => {
     // Scroll to bottom
     const scrollToBottom = useCallback(() => {
 
-        scrollToIndex(items.length - 1,end')}, [scrollToIndex, items.length]);
+        scrollToIndex(items.length-1,end')}, [scrollToIndex, items.length]);
     // Get current scroll position
     const getScrollTop = useCallback(() => {
         return containerRef.current?.scrollTop || 0}, []);
@@ -112,11 +87,11 @@ export const useVirtualScroll = (items, options) => {
         return index >= state.startIndex && index <= state.endIndex}, [state.startIndex, state.endIndex]);
     // Infinite scroll detection
     useEffect(() => {
-        if (!enableInfiniteScroll || !containerRef.current)
+        if(!enableInfiniteScroll || !containerRef.current)
             return;
         const handleScrollEnd = () => {
             const { scrollTop, scrollHeight, clientHeight } = containerRef.current;
-            if (scrollHeight - scrollTop - clientHeight < threshold) {
+            if(scrollHeight - scrollTop - clientHeight < threshold) {
 
                 // Trigger infinite scroll event'
                 const event = new CustomEvent('virtualScrollEnd', {
@@ -133,10 +108,10 @@ export const useVirtualScroll = (items, options) => {
     // Cleanup on unmount
     useEffect(() => {
         return () => {
-            if (rafRef.current) {
+            if(rafRef.current) {
 
                 cancelAnimationFrame(rafRef.current)}
-            if (scrollTimeoutRef.current) {
+            if(scrollTimeoutRef.current) {
 
                 clearTimeout(scrollTimeoutRef.current)}
         }}, []);
@@ -150,7 +125,6 @@ export const useVirtualScroll = (items, options) => {
             overflow: 'auto',
             position: 'relative',
   willChange: state.isScrolling ? 'scroll-position' : 'auto'
-
 
 },
         onScroll: handleScroll
@@ -166,9 +140,6 @@ export const useVirtualScroll = (items, options) => {
 
 <<<<<<< HEAD
 =======
-
-
-
 
 `
 >>>>>>> main
@@ -195,7 +166,7 @@ export const useVirtualScrollWithSearch = (items, searchQuery, searchFields, opt
     const [searchResults, setSearchResults] = useState({ indices[], highlights: new Map() });
     // Filter items based on search query
     useEffect(() => {
-        if (!searchQuery.trim()) {
+        if(!searchQuery.trim()) {
 
             setFilteredItems(items);
             setSearchResults({ indices[], highlights: new Map() });
@@ -210,19 +181,19 @@ export const useVirtualScrollWithSearch = (items, searchQuery, searchFields, opt
             searchFields.forEach(field => {
 
                 const value = String(item[field]).toLowerCase();
-                if (value.includes(query)) {
+                if(value.includes(query)) {
 
                     isMatch = true;
                     // Find highlight positions
                     const highlightPositions = [];
                     let pos = value.indexOf(query);
-                    while (pos !== -1) {
+                    while(pos !== -1) {
 
                         highlightPositions.push(pos);
                         pos = value.indexOf(query, pos + 1)}`
                     itemHighlights.push(...highlightPositions.map(p => `${String(field)}:${p}`))}
             });
-            if (isMatch) {
+            if(isMatch) {
 
                 results.push(item);
                 indices.push(index);
@@ -259,7 +230,7 @@ export const useDynamicVirtualScroll = (items, getItemHeight, options) => {
     const getCumulativeHeight = useCallback((index) => {
 
         let cumulative = 0;
-        for (let i = 0; i < index; i++) {
+        for(let i = 0; i < index; i++) {
 
             cumulative += itemHeights.get(i) || 0}
         return cumulative}, [itemHeights]);
@@ -267,14 +238,14 @@ export const useDynamicVirtualScroll = (items, getItemHeight, options) => {
     const findIndexFromScrollTop = useCallback((scrollTop) => {
 
         let cumulative = 0;
-        for (let i = 0; i < items.length; i++) {
+        for(let i = 0; i < items.length; i++) {
 
             const height = itemHeights.get(i) || 0;
-            if (cumulative + height > scrollTop) {
+            if(cumulative + height > scrollTop) {
 
                 return i}
             cumulative += height}
-        return items.length - 1}, [items.length, itemHeights]);
+        return items.length-1}, [items.length, itemHeights]);
     // Enhanced virtual scroll state
     const [state, setState] = useState({
 
@@ -289,7 +260,7 @@ export const useDynamicVirtualScroll = (items, getItemHeight, options) => {
     // Update virtual items based on scroll position
     useEffect(() => {
         const startIndex = Math.max(0, findIndexFromScrollTop(state.scrollTop) - (options.overscan || 5));
-        const endIndex = Math.min(items.length - 1, findIndexFromScrollTop(state.scrollTop + state.containerHeight) + (options.overscan || 5));
+        const endIndex = Math.min(items.length-1, findIndexFromScrollTop(state.scrollTop + state.containerHeight) + (options.overscan || 5));
         setState(prev => ({
 
             ...prev,

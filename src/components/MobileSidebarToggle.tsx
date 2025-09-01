@@ -8,13 +8,11 @@
     setExpandedSections(newExpanded)};
 
 >>>>>>> main
-      newExpanded.delete (section) } else {
-      newExpanded.add (section) }
-    setExpandedSections (newExpanded) };
+      newExpanded.delete(section) } else {
+      newExpanded.add(section) }
+    setExpandedSections(newExpanded) };
 
-  
-  const navigationSections = [
-    {
+  const navigationSections = [{
 
       title: "Main",
       icon: Home,
@@ -67,7 +65,7 @@
     { name: "Book Demo", href: "/demo", icon: Users, variant: "secondary" },;"    { name: "Support", href: "/support", icon: HelpCircle, variant: "secondary" };
   ];
 
-  return()
+  return ()
     <>
       {/* Mobile Menu Button */}
       <motion.button
@@ -100,11 +98,6 @@
 
   { duration: 0.3,
   ease: 'easeOut'
-
-
-
-
-
 
 }}"
               className="fixed left-0 top-0 h-full w-80 bg-zion-slate-dark/95 backdrop-blur-xl border-r border-zion-cyan/20 z-50 lg:hidden overflow-y-auto"
@@ -159,9 +152,7 @@
                         <Link
                           to={action.href}
                           onClick={() => setIsOpen(false)}
-                          className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-300 group ${
-
-                            action.variant === 'primary''
+                          className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-300 group ${action.variant === 'primary''
                               ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white hover:from-zion-cyan/90 hover:to-zion-blue/90 shadow-lg shadow-zion-cyan/25''
                               : 'bg-zion-slate-dark/50 text-zion-slate-light hover:text-white hover:bg-zion-cyan/10 border border-zion-cyan/20 hover:border-zion-cyan/40'`
                           }`}
@@ -212,7 +203,7 @@
                       </button>
 
                       <AnimatePresence>
-                        {expandedSections.has (section.title) && (<motion.div
+                        {expandedSections.has(section.title) && (<motion.div
                             initial = {
 
   { opacity: 0,
@@ -234,7 +225,7 @@
                             transition={{ duration: 0.3 }}"
                             className="ml-7 mt-2 space-y-1"
 
-                            {section.items.map ( (item, itemIndex) => (;
+                            {section.items.map((item, itemIndex) => (;
                               <motion.div
                                 key={item.name}
                                 initial = {
@@ -259,9 +250,7 @@
                                 <Link
                                   to={item.href}
                                   onClick={() => setIsOpen(false)}`
-                                  className={`flex items-center space-x-3 p-2 rounded-lg transition-all duration-300 group ${
-
-                                    isActive(item.href)
+                                  className={`flex items-center space-x-3 p-2 rounded-lg transition-all duration-300 group ${isActive(item.href)
                                       ? 'text-zion-cyan bg-zion-cyan/10 border border-zion-cyan/30''
                                       : 'text-zion-slate-light hover:text-white hover:bg-zion-cyan/5'`
                                   }`}

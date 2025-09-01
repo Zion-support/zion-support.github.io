@@ -25,9 +25,6 @@ export
     enableReducedMotion = true,;
     enableLargeText = true} = options;
 
-  
-  
-  
   // Detect accessibility preferences
 :src/hooks/useAccessibility.tsx
   
@@ -72,14 +69,13 @@ export
         break;
 
       case 'Escape':;
-        // Close modals, dropdowns, etc.
-        closeActiveElements();
+        // Close modals, dropdowns, etc.closeActiveElements();
         break;
 
       case 'Enter':;
       case ' ':;
         // Activate buttons, links, etc.'
-        if (currentElement.tagName = == 'BUTTON' || currentElement.tagName === 'A') {;
+        if(currentElement.tagName = == 'BUTTON' || currentElement.tagName === 'A') {;
           event.preventDefault();
           currentElement.click()}
         break;
@@ -120,7 +116,7 @@ export
   // Remove focus trap
 :src/hooks/useAccessibility.tsx
   
-    if (focusTrapRef.current && lastFocusedElementRef.current) {;
+    if(focusTrapRef.current && lastFocusedElementRef.current) {;
       lastFocusedElementRef.current.focus();
       focusTrapRef.current = null;
       focusableElementsRef.current = []}}, []);
@@ -156,42 +152,40 @@ export
     return Array.from(container.querySelectorAll(selector)) as HTMLElement[]}, []);
 
   // Navigate focus'
-    if (direction = == 'forward') {;
+    if(direction = == 'forward') {;
 :src/hooks/useAccessibility.tsx
-      nextIndex = currentIndex < focusableElements.length - 1 ? currentIndex + 1 : 0} else {
+      nextIndex = currentIndex < focusableElements.length-1 ? currentIndex + 1 : 0} else {
 
-      nextIndex = currentIndex > 0 ? currentIndex - 1 : focusableElements.length - 1}
-      nextIndex = currentIndex < focusableElements.length - 1 ? currentIndex + 1 : 0} else {
-      nextIndex = currentIndex > 0 ? currentIndex - 1 : focusableElements.length - 1}
+      nextIndex = currentIndex > 0 ? currentIndex - 1 : focusableElements.length-1}
+      nextIndex = currentIndex < focusableElements.length-1 ? currentIndex + 1 : 0} else {
+      nextIndex = currentIndex > 0 ? currentIndex - 1 : focusableElements.length-1}
 
     manageFocus(focusableElements[nextIndex])}, [getFocusableElements, manageFocus]);
 
   // Vertical navigation'
-    if (direction = == 'up') {;
+    if(direction = == 'up') {;
 :src/hooks/useAccessibility.tsx
-      nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1} else {
+      nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length-1} else {
 
-      nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0}
-      nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1} else {
-      nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0}
+      nextIndex = currentIndex < items.length-1 ? currentIndex + 1 : 0}
+      nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length-1} else {
+      nextIndex = currentIndex < items.length-1 ? currentIndex + 1 : 0}
 
-    
-    if (nextElement) {
+    if(nextElement) {
 
       manageFocus(nextElement)}
   }, [manageFocus]);
 
   // Horizontal navigation'
-    if (direction = == 'left') {;
+    if(direction = == 'left') {;
 :src/hooks/useAccessibility.tsx
-      nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1} else {
+      nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length-1} else {
 
-      nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0}
-      nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1} else {
-      nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0}
+      nextIndex = currentIndex < items.length-1 ? currentIndex + 1 : 0}
+      nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length-1} else {
+      nextIndex = currentIndex < items.length-1 ? currentIndex + 1 : 0}
 
-    
-    if (nextElement) {
+    if(nextElement) {
 
       manageFocus(nextElement)}
   }, [manageFocus]);
@@ -215,10 +209,9 @@ activeElements.forEach(element:  > {;
 :src/hooks/useAccessibility.tsx
   // Screen reader announcements'
   
-    if (!enableScreenReaderSupport) return;
+    if(!enableScreenReaderSupport) return;
 <<<<<<< HEAD
 
-    
     announcement.setAttribute('aria-live', priority);
     announcement.setAttribute('aria-atomic',true');
 =======
@@ -228,13 +221,12 @@ activeElements.forEach(element:  > {;
     announcement.setAttribute('aria-atomic', 'true');'
   // Screen reader announcements
   
-    if (!enableScreenReaderSupport) return;
+    if(!enableScreenReaderSupport) return;
 
-    
     announcement.setAttribute('aria-live', priority);
     announcement.setAttribute('aria-atomic', 'true');
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-    announcement.className = 'sr-only';
+    announcement.className="sr-only";
     announcement.textContent = message;
 
     document.body.appendChild(announcement);
@@ -246,13 +238,13 @@ activeElements.forEach(element:  > {;
   // High contrast mode
 :src/hooks/useAccessibility.tsx
   
-    if (!enableHighContrast) return;
+    if(!enableHighContrast) return;
 
     document.documentElement.classList.toggle('high-contrast');
     
     // Announce change to screen reader'
   
-    if (!enableHighContrast) return;
+    if(!enableHighContrast) return;
 
     document.documentElement.classList.toggle('high-contrast');
     
@@ -265,13 +257,13 @@ activeElements.forEach(element:  > {;
   // Reduced motion mode
 :src/hooks/useAccessibility.tsx
   
-    if (!enableReducedMotion) return;
+    if(!enableReducedMotion) return;
 
     document.documentElement.classList.toggle('reduced-motion');
     
     // Announce change to screen reader'`
   
-    if (!enableReducedMotion) return;
+    if(!enableReducedMotion) return;
 
     document.documentElement.classList.toggle('reduced-motion');
     
@@ -284,13 +276,13 @@ activeElements.forEach(element:  > {;
   // Large text mode
 :src/hooks/useAccessibility.tsx
   
-    if (!enableLargeText) return;
+    if(!enableLargeText) return;
 
     document.documentElement.classList.toggle('large-text');
     
     // Announce change to screen reader'`
   
-    if (!enableLargeText) return;
+    if(!enableLargeText) return;
 
     document.documentElement.classList.toggle('large-text');
     
@@ -304,26 +296,22 @@ activeElements.forEach(element:  > {;
   useEffect(() => {
 :src/hooks/useAccessibility.tsx
     // Load saved preferences'
-    
-    
-    
+
 <<<<<<< HEAD
 
 =======
 '
-    if (highContrast) document.documentElement.classList.add('high-contrast');'
-    if (reducedMotion) document.documentElement.classList.add('reduced-motion');'
+    if(highContrast) document.documentElement.classList.add('high-contrast');'
+    if(reducedMotion) document.documentElement.classList.add('reduced-motion');'
     // Load saved preferences
-    
-    
-    
+
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-    if (highContrast) document.documentElement.classList.add('high-contrast');
-    if (reducedMotion) document.documentElement.classList.add('reduced-motion');
-    if (largeText) document.documentElement.classList.add('large-text');
+    if(highContrast) document.documentElement.classList.add('high-contrast');
+    if(reducedMotion) document.documentElement.classList.add('reduced-motion');
+    if(largeText) document.documentElement.classList.add('large-text');
 
     // Add keyboard event listener
-    if (enableKeyboardNavigation) {
+    if(enableKeyboardNavigation) {
 
       document.addEventListener('keydown', handleKeyboardNavigation)}
 

@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link  } from 'react-router-dom';
 import { Menu, X, Search, User, Briefcase, HardDrive, Users, Lightbulb import { Button } from '@/components/ui/button';
-const mobileMenuItems = ['
-    { name: 'Services', icon: <Briefcase className="w-5 h-5"/>, href: '/services' },"
+,"
     { name: 'Talent', icon: <Users className="w-5 h-5"/>, href: '/talent' },"
     { name: 'Equipment', icon: <HardDrive className="w-5 h-5"/>, href: '/equipment' },"
     { name: 'Innovation', icon: <Lightbulb className="w-5 h-5"/>, href: '/category/innovation' },
@@ -12,7 +11,7 @@ export function MobileNavigation() {
     const toggleMenu = () => {
         setIsOpen(!isOpen);
         // Prevent body scroll when menu is open
-        if (!isOpen) {
+        if(!isOpen) {
 
             document.body.style.overflow = 'hidden'}
         else {
@@ -24,7 +23,7 @@ export function MobileNavigation() {
         document.body.style.overflow = 'unset'};"
     return (<div className="lg:hidden">
       {/* Mobile menu button */}"
-      <Button variant="ghost" size="sm" onClick={toggleMenu} className="p-2 text-white hover:bg-zion-blue-dark" aria-label="Toggle mobile menu" aria-expanded={isOpen}>"
+      <Button variant="ghost" size="sm" onClick={toggleMenu} className="p-2 text-white hover:bg-zion-blue-dark"  aria-expanded={isOpen}>"
         {isOpen ? <X className="w-6 h-6"/> : <Menu className="w-6 h-6"/>}
       </Button>
 

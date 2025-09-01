@@ -38,8 +38,7 @@ contactInfo: {
   reviews: number;
   customers: number}
 ;
-export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
-  // AI-Powered IT Infrastructure Management
+export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [// AI-Powered IT Infrastructure Management
   {
 
     id: "ai-it-infrastructure-management","

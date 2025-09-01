@@ -1,67 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const LinkHealthMonitor = () => {
-<<<<<<< HEAD
-import { motion } from 'framer - motion';
-
-    const [isOpen, setIsOpen] = useState (false) ;
-    const [isMonitoring, setIsMonitoring] = useState (false) ;
-    const [linkStatuses, setLinkStatuses] = useState ([]) ;
-    const [report, setReport] = useState (null) ;
-    const [selectedFilter, setSelectedFilter] = useState ('all') ;
-=======
-    const [isOpen, setIsOpen] = useState(false);
-    const [isMonitoring, setIsMonitoring] = useState(false);
-    const [linkStatuses, setLinkStatuses] = useState([]);
-    const [report, setReport] = useState(null);
-    const [selectedFilter, setSelectedFilter] = useState('all');
->>>>>>> main
-    // Sample data based on the analysis report
-    const sampleLinks = [
-        {
-
-            url: 'https://linkedin.com/company/ziontechgroup',
-            status: 'broken',
-            statusCode: 404,
-            responseTime: 1200,
-            lastChecked: new Date(),
-            parentPage: 'Homepage',
-            linkText: 'LinkedIn'
-        },
-        {
-
-            url: 'https://twitter.com/ziontechgroup',
-            status: 'external',
-            statusCode: 200,
-            responseTime: 800,
-            lastChecked: new Date(),
-            parentPage: 'Homepage',
-            linkText: 'Twitter'
-        },
-        {
-
-            url: 'tel:+1 302 464 0950',
-            status: 'healthy',
-            statusCode: 200,
-            responseTime: 50,
-            lastChecked: new Date(),
-            parentPage: 'Contact',
-            linkText: 'Phone Number'
-        },
-        {
-
-            url: 'mailto:kleber@ziontechgroup.com',
-            status: 'healthy',
-            statusCode: 200,
-            responseTime: 50,
-            lastChecked: new Date(),
-            parentPage: 'Contact',
-            linkText: 'Email'
-
-    ];
-    useEffect ( () => {
-        setLinkStatuses (sampleLinks) ;
-        generateReport (sampleLinks) }, []) ;
+import { motion  } from 'framer-motion';
+export default function Page() {
+, []) ;
     const generateReport = (links) => {
 
         const totalLinks = links.length;
@@ -78,13 +18,13 @@ import { motion } from 'framer - motion';
             averageResponseTime: avgResponseTime,
             lastUpdated: new Date () }) };
     const startMonitoring = async () => {
-        setIsMonitoring (true) ;
+        setIsMonitoring(true) ;
         // Simulate link checking
-        await new Promise (resolve => setTimeout (resolve, 2000) ) ;
-        setIsMonitoring (false) };
+        await new Promise(resolve => setTimeout (resolve, 2000) ) ;
+        setIsMonitoring(false) };
     const getStatusIcon = (status) => {
 
-        switch (status) {
+        switch(status) {
 
             case 'healthy':
                 return <CheckCircle className="w-4 h-4 text-green-400"/>;
@@ -97,7 +37,7 @@ import { motion } from 'framer - motion';
     };
     const getStatusColor = (status) => {
 
-        switch (status) {
+        switch(status) {
 
             case 'healthy':'
                 return 'text-green-400';
@@ -135,10 +75,6 @@ import { motion } from 'framer - motion';
 
   { scale: 0.9,
   opacity: 0
-
-
-
-
 
 "
 }} className="bg-gray-900 rounded-2xl shadow-2xl w-full max-w-6xl max-h-[90vh] overflow-hidden" onClick={(e) => e.stopPropagation()}>

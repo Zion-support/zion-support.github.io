@@ -1,43 +1,17 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = true, enableScrollEffects = true, enableThemeToggle = true, enableResponsiveDesign = true}) => {
+import { motion, AnimatePresence  } from 'framer-motion';
 
-<<<<<<< HEAD
-    const [isVisible, setIsVisible] = useState (false) ;
-    const [currentTheme, setCurrentTheme] = useState ('auto') ;
-    const [showScrollToTop, setShowScrollToTop] = useState (false) ;
-    const [deviceType, setDeviceType] = useState ('desktop') ;
-    const scrollToTopRef = useRef (null) ;
-=======
-    const [isVisible, setIsVisible] = useState(false);
-    const [currentTheme, setCurrentTheme] = useState('auto');
-    const [showScrollToTop, setShowScrollToTop] = useState(false);
-    const [deviceType, setDeviceType] = useState('desktop');
-    const scrollToTopRef = useRef(null);
->>>>>>> main
-    // Detect device type
-    useEffect ( () => {
-        const updateDeviceType = () => {
-            const width = window.innerWidth;
-            if (width < 768) {
-
-                setDeviceType('mobile')}
-            else if (width < 1024) {
-
-                setDeviceType('tablet')}
-            else {
-
-                setDeviceType('desktop')}
+export default function Page() {
         };
         updateDeviceType();
         window.addEventListener('resize', updateDeviceType);
         return () => window.removeEventListener('resize', updateDeviceType)}, []);
     // Scroll effects
-    useEffect ( () => {
-        if (!enableScrollEffects) return;
+    useEffect(() => {
+        if(!enableScrollEffects) return;
         const handleScroll = () => {
             const scrollTop = window.pageYOffset;
-            setShowScrollToTop (scrollTop > 300) ;
+            setShowScrollToTop(scrollTop > 300) ;
             // Parallax effect for background elements
             const scrolled = window.pageYOffset;
             const parallaxElements = document.querySelectorAll('[data-parallax]');
@@ -52,7 +26,7 @@ import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet expo
 
                 const rect = element.getBoundingClientRect();
                 const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
-                if (isVisible) {
+                if(isVisible) {
 
                     element.classList.add('fade-in-visible')}
             })};
@@ -67,7 +41,7 @@ import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet expo
     const applyTheme = (theme) => {
 
         const root = document.documentElement;
-        if (theme === 'auto') {
+        if(theme === 'auto') {
 
             const prefersDark = window.matchMedia('(prefers-color-scheme: dark)).matches;
             root.classList.toggle('dark', prefersDark)}
@@ -78,10 +52,10 @@ import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet expo
         localStorage.setItem('theme', theme);
     };
     const themes = ['light',dark',auto'];
-        const currentIndex = themes.indexOf (currentTheme) ;
-        const nextTheme = themes[ (currentIndex + 1) % themes.length];
-        setCurrentTheme (nextTheme) ;
-        applyTheme (nextTheme) };
+        const currentIndex = themes.indexOf(currentTheme) ;
+        const nextTheme = themes[(currentIndex + 1) % themes.length];
+        setCurrentTheme(nextTheme) ;
+        applyTheme(nextTheme) };
     const scrollToTop = () => {
         window.scrollTo({
 
@@ -89,47 +63,47 @@ import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet expo
             behavior: 'smooth'})};
     // Add CSS animations to the document
     useEffect(() => {
-        if (!enableAnimations)
+        if(!enableAnimations)
             return;
         const style = document.createElement('style');`
         style.textContent = `
       .fade-in {
 
         opacity: 0;
-        transform: translateY (30px) ;
+        transform: translateY(30px) ;
         transition: opacity 0.6s ease - out, transform 0.6s ease - out}
 <<<<<<< HEAD
 
       .fade - in - visible {
         opacity: 1;
-        transform: translateY (0) }
+        transform: translateY(0) }
 
       .slide - in - left {
         opacity: 0;
-        transform: translateX (-50px) ;
+        transform: translateX(-50px) ;
         transition: opacity 0.6s ease - out, transform 0.6s ease - out}
 
       .slide - in - left - visible {
         opacity: 1;
-        transform: translateX (0) }
+        transform: translateX(0) }
 
       .slide - in - right {
         opacity: 0;
-        transform: translateX (50px) ;
+        transform: translateX(50px) ;
         transition: opacity 0.6s ease - out, transform 0.6s ease - out}
 
       .slide - in - right - visible {
         opacity: 1;
-        transform: translateX (0) }
+        transform: translateX(0) }
 
       .scale - in {
         opacity: 0;
-        transform: scale (0.8) ;
+        transform: scale(0.8) ;
         transition: opacity 0.6s ease - out, transform 0.6s ease - out}
 
       .scale - in - visible {
         opacity: 1;
-        transform: scale (1) }
+        transform: scale(1) }
 
       .bounce - in {
         animation: bounceIn 0.8s ease - out}
@@ -139,40 +113,40 @@ import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet expo
       .fade-in-visible {
 
         opacity: 1;
-        transform: translateY (0) }
+        transform: translateY(0) }
       
       .slide-in-left {
 
         opacity: 0;
-        transform: translateX (-50px) ;
+        transform: translateX(-50px) ;
         transition: opacity 0.6s ease - out, transform 0.6s ease - out}
       
       .slide-in-left-visible {
 
         opacity: 1;
-        transform: translateX (0) }
+        transform: translateX(0) }
       
       .slide-in-right {
 
         opacity: 0;
-        transform: translateX (50px) ;
+        transform: translateX(50px) ;
         transition: opacity 0.6s ease - out, transform 0.6s ease - out}
       
       .slide-in-right-visible {
 
         opacity: 1;
-        transform: translateX (0) }
+        transform: translateX(0) }
       
       .scale-in {
 
         opacity: 0;
-        transform: scale (0.8) ;
+        transform: scale(0.8) ;
         transition: opacity 0.6s ease - out, transform 0.6s ease - out}
       
       .scale-in-visible {
 
         opacity: 1;
-        transform: scale (1) }
+        transform: scale(1) }
       
       .bounce-in {
 
@@ -184,18 +158,18 @@ import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet expo
         0% {
 
           opacity: 0;
-          transform: scale (0.3) }
+          transform: scale(0.3) }
         50% {
 
           opacity: 1;
-          transform: scale (1.05) }
+          transform: scale(1.05) }
         70% {
 
           transform: scale(0.9)}
         100% {
 
           opacity: 1;
-          transform: scale (1) }
+          transform: scale(1) }
       }
 
       .floating {
@@ -238,33 +212,33 @@ import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet expo
 <<<<<<< HEAD
 
       .gradient - text {
-        background: linear - gradient (135deg, #667eea 0%, #764ba2 100%) ;
+        background: linear - gradient(135deg, #667eea 0%, #764ba2 100%) ;
         -webkit - background - clip: text;
-        -webkit - text - fill - color: transparent;
+        -webkit - text-fill - color: transparent;
         background - clip: text}
 
       .glass - effect {
-        background: rgba (255, 255, 255, 0.1) ;
-        backdrop - filter: blur (10px) ;
-        border: 1px solid rgba (255, 255, 255, 0.2) }
+        background: rgba(255, 255, 255, 0.1) ;
+        backdrop - filter: blur(10px) ;
+        border: 1px solid rgba(255, 255, 255, 0.2) }
 
       .glass - effect - dark {
-        background: rgba (0, 0, 0, 0.1) ;
-        backdrop - filter: blur (10px) ;
-        border: 1px solid rgba (255, 255, 255, 0.1) }
+        background: rgba(0, 0, 0, 0.1) ;
+        backdrop - filter: blur(10px) ;
+        border: 1px solid rgba(255, 255, 255, 0.1) }
 
       .hover - lift {
         transition: transform 0.3s ease, box - shadow 0.3s ease}
 
       .hover - lift:hover {
-        transform: translateY (-5px) ;
-        box - shadow: 0 20px 40px rgba (0, 0, 0, 0.1) }
+        transform: translateY(-5px) ;
+        box - shadow: 0 20px 40px rgba(0, 0, 0, 0.1) }
 
-      .text - shadow {
-        text - shadow: 2px 2px 4px rgba (0, 0, 0, 0.3) }
+      .text-shadow {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3) }
 
-      .text - shadow - light {
-        text - shadow: 1px 1px 2px rgba (0, 0, 0, 0.1) }
+      .text-shadow-light {
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1) }
 =======
       
       .gradient-text {
@@ -304,22 +278,22 @@ import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet expo
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1)}`
 >>>>>>> main
     `;
-        document.head.appendChild (style) ;
+        document.head.appendChild(style) ;
         return () => {
-            document.head.removeChild (style) }}, [enableAnimations]) ;
+            document.head.removeChild(style) }}, [enableAnimations]) ;
     // Add intersection observer for scroll animations
     useEffect(() => {
-        if (!enableScrollEffects)
+        if(!enableScrollEffects)
             return;
         const observer = new IntersectionObserver((entries) => {
 
             entries.forEach((entry) => {
 
-                if (entry.isIntersecting) {
+                if(entry.isIntersecting) {
 
                     const element = entry.target;
                     const animationType = element.getAttribute('data-animation');
-                    if (animationType) {
+                    if(animationType) {
 `
                         element.classList.add(`${animationType}-visible`)}
                 }
@@ -344,10 +318,6 @@ import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet expo
   { opacity: 1,
   scale: 1
 
-
-
-
-
 `
 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={toggleTheme} className="fixed top-6 right-6 z-50 p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700" title={`Current theme: ${currentTheme}`}>"
           <AnimatePresence mode="wait">'"
@@ -365,11 +335,6 @@ import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet expo
 
   { opacity: 0,
   rotate: 90
-
-
-
-
-
 
 }} transition={{ duration: 0.3 }}>"
                 <Sun className="w-5 h-5 text-yellow-500"/>
@@ -389,11 +354,6 @@ import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet expo
   { opacity: 0,
   rotate: 90
 
-
-
-
-
-
 }} transition={{ duration: 0.3 }}>"
                 <Moon className="w-5 h-5 text-blue-400"/>
               </motion.div>)}'"
@@ -412,11 +372,6 @@ import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet expo
   { opacity: 0,
   rotate: 90
 
-
-
-
-
-
 }} transition={{ duration: 0.3 }}>"
                 <Monitor className="w-5 h-5 text-gray-600 dark:text-gray-400"/>
               </motion.div>)}
@@ -433,10 +388,6 @@ import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet expo
 
   { opacity: 1,
   x: 0
-
-
-
-
 
 "
 }} className="fixed top-6 left-6 z-50 p-2 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700">"
@@ -465,10 +416,6 @@ import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet expo
   { opacity: 0,
   scale: 0
 
-
-
-
-
 "
 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={scrollToTop} className="fixed bottom-6 left-6 z-50 p-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300" title="Scroll to top">"
             <ArrowUp className="w-5 h-5"/>
@@ -485,10 +432,6 @@ import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet expo
 
   { opacity: 1,
   scale: 1
-
-
-
-
 
 "
 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={() => setIsVisible(!isVisible)} className="fixed bottom-6 right-6 z-50 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300" title="UI Enhancements">"
@@ -516,10 +459,6 @@ import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet expo
 "
   { type: "spring", damping: 25,
   stiffness: 300
-
-
-
-
 
 "
 }} className="fixed bottom-24 right-6 z-50 w-80 bg-white dark:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">

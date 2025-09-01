@@ -1,70 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import {
-
-  ArrowRight,
-  Users,
-  Briefcase,
-  Cpu,
-  Shield,
-  Zap,
-  Clock,
-  Rocket,
-  Target,
-  TrendingUp,
-  Award,
-  Globe} from 'lucide-react';
-
-export function FeatureCTAs() {
-  const features = [
-    {
-
-      title: 'AI-Powered Talent Matching',
-      description:'
-        'Connect with the perfect tech talent using our advanced AI algorithms',
-      icon: (
-        <Users className="h-10 w-10 p-2 rounded-md bg-blue-100 text-blue-700" />
-      ),
-      link: '/talent',
-      badge: 'Popular',
-      details:'
-        'Our AI-driven platform matches you with verified tech professionals based on skills, experience, and project requirements.'},
-    {
-
-      title: 'Micro SAAS Solutions',
-      description:'
-        'Access cutting-edge software solutions for every business need',
-      icon: ("
-        <Cpu className="h-10 w-10 p-2 rounded-md bg-green-100 text-green-700" />
-      ),
-      link: '/services',
-      badge: 'New',
-      details:'
-        'Discover innovative micro SAAS applications that can transform your business operations and boost productivity.'},
-    {
-
-      title: 'Enterprise IT Services',
-      description:'
-        'Comprehensive IT solutions for large-scale business transformation',
-      icon: ("
-        <Briefcase className="h-10 w-10 p-2 rounded-md bg-purple-100 text-purple-700" />
-      ),
-      link: '/enterprise',
-      badge: 'Enterprise',
-      details:'
-        'End-to-end IT services including infrastructure, security, cloud migration, and digital transformation.'},
-    {
-
-      title: 'Cybersecurity & Compliance',
-      description:'
-        'Protect your business with enterprise-grade security solutions',
-      icon: ("
-        <Shield className="h-10 w-10 p-2 rounded-md bg-red-100 text-red-700" />
-      ),
-      link: '/cybersecurity',
-      badge: 'Critical',
-      details:'
-        'Comprehensive security services including threat detection, compliance management, and incident response.'},
+import { Link  } from 'react-router-dom';
+export default function Page() {
+,
     {
 
       title: 'Quantum Computing Solutions',
@@ -90,8 +27,7 @@ export function FeatureCTAs() {
         'Automate screening, improve candidate matching, and enhance the hiring experience with our AI recruiting solution.'},
   ];
 
-  const ctaItems = [
-    {
+  const ctaItems = [{
 
       title: 'Find Talent',
       description: 'Connect with verified tech professionals',
@@ -137,8 +73,7 @@ export function FeatureCTAs() {
           </h2>"
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Discover comprehensive solutions designed to accelerate your
-            business growth and digital transformation.
-          </p>
+            business growth and digital transformation.</p>
         </div>
 "
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">

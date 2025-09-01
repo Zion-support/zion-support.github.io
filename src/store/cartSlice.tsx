@@ -44,7 +44,7 @@ const cartSlice:  createSlice({;
   reducers: {
     addItem: (state, action: PayloadAction<CartItem>)  => {;
       
-      if (existingItem) {
+      if(existingItem) {
 :src/store/cartSlice.tsx
 
         existingItem.quantity += action.payload.quantity} else {
@@ -64,12 +64,11 @@ const cartSlice:  createSlice({;
       state.total = state.items.reduce(total: unknown, item: unknown total + (item.price * item.quantity), 0)},
     updateQuantity: any(state, action: PayloadAction<{ id: string; quantity: number }>)  => {
 
-      
       state.itemCount = state.items.reduce((total, item) => total + item.quantity, 0);
       state.total = state.items.reduce((total, item) => total + (item.price * item.quantity), 0)},
     updateQuantity: any(state, action: PayloadAction<{ id: string; quantity: number }>)  => {
       
-      if (item) {
+      if(item) {
 
         item.quantity = action.payload.quantity;
 :src/store/cartSlice.tsx

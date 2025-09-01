@@ -3,25 +3,8 @@ import { Button } from '@/components / ui / button';
 import { Card, CardContent } from '@/components / ui / card';
 import { GradientHeading } from '@/components / GradientHeading';
 import { SEO } from '@/components / SEO';
-  import {
-export default function Careers () {
-
-    Tabs,
-    TabsContent,
-    TabsList,
-    TabsTrigger,
-  } from '@/components / ui / tabs';
-  // Sample job listings
-  const jobs = {
-    engineering: [
-      {
-        title: 'Senior Frontend Engineer',
-        location: 'Remote',
-        type: 'Full - time',
-        department: 'Engineering',
-        description:
-          'Join our frontend team to build beautiful, responsive, and accessible user interfaces for our AI - powered marketplace.',
-      },
+import { export default function Careers () { Tabs, TabsContent, TabsList, TabsTrigger, } from '@/components / ui / tabs';
+,
       {
         title: 'AI Research Engineer',
         location: 'San Francisco, CA',
@@ -39,8 +22,7 @@ export default function Careers () {
           'Develop end - to - end features across our platform, working with modern technologies like React, Node.js, and PostgreSQL.',
       },
     ],
-    product: [
-      {
+    product: [{
         title: 'Product Manager',
         location: 'New York, NY',
         type: 'Full - time',
@@ -57,8 +39,7 @@ export default function Careers () {
           'Create intuitive and engaging user experiences that make complex technology accessible to all users.',
       },
     ],
-    marketing: [
-      {
+    marketing: [{
         title: 'Growth Marketing Manager',
         location: 'Remote',
         type: 'Full - time',
@@ -75,8 +56,7 @@ export default function Careers () {
           'Develop compelling content that educates and inspires our audience about the future of AI and technology.',
       },
     ],
-    operations: [
-      {
+    operations: [{
         title: 'Community Manager',
         location: 'Remote',
         type: 'Full - time',
@@ -96,13 +76,12 @@ export default function Careers () {
   };
 
   // Benefits list
-  const benefits = [
-    {
+  const benefits = [{
       title: 'Flexible Work',
       description:
         'Remote - first culture with flexible hours to support your productivity and work - life balance.',
       icon: (<svg
-          className="w - 10 h - 10 text - zion - cyan"
+          className="w-10 h-10 text-zion -cyan"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -112,7 +91,7 @@ export default function Careers () {
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth={2}
-            d="M3 12l2 - 2m0 0l7 - 7 7 7M5 10v10a1 1 0 001 1h3m10 - 11l2 2m - 2-2v10a1 1 0 01 - 1 1h - 3m - 6 0a1 1 0 001 - 1v - 4a1 1 0 011 - 1h2a1 1 0 011 1v4a1 1 0 001 1m - 6 0h6"
+            d="M3 12l2 - 2m0 0l7 - 7 7 7M5 10v10a1 1 0 001 1h3m10 - 11l2 2m - 2-2v10a1 1 0 01 - 1 1h-3m - 6 0a1 1 0 001 - 1v - 4a1 1 0 011 - 1h2a1 1 0 011 1v4a1 1 0 001 1m - 6 0h6"
           />
         </svg>) ,
     },
@@ -121,7 +100,7 @@ export default function Careers () {
       description:
         'Comprehensive health coverage, mental health support, and wellness programs to keep you at your best.',
       icon: (<svg
-          className="w - 10 h - 10 text - zion - cyan"
+          className="w-10 h-10 text-zion -cyan"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -140,7 +119,7 @@ export default function Careers () {
       description:
         'Salary packages that recognize your value, plus equity options to share in our success.',
       icon: (<svg
-          className="w - 10 h - 10 text - zion - purple"
+          className="w-10 h-10 text-zion -purple"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -159,7 +138,7 @@ export default function Careers () {
       description:
         'Continuous learning opportunities, conference attendance, and career development support.',
       icon: (<svg
-          className="w - 10 h - 10 text - zion - cyan"
+          className="w-10 h-10 text-zion -cyan"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -178,7 +157,7 @@ export default function Careers () {
       description:
         'Collaborative environment with diverse perspectives and a culture of innovation and inclusion.',
       icon: (<svg
-          className="w - 10 h - 10 text - zion - cyan"
+          className="w-10 h-10 text-zion -cyan"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -194,44 +173,43 @@ export default function Careers () {
     },
   ];
 
-  return (<div className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
+  return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       <SEO
         title="Careers at Zion Tech Group - Join Our Team"
-        description="Join our mission to revolutionize technology. Explore exciting career opportunities in AI, engineering, product, and more."
+        description="Join our mission to revolutionize technology.Explore exciting career opportunities in AI, engineering, product, and more."
         keywords="careers, jobs, employment, Zion Tech Group, AI, technology"
       />
 
-      <div className="container mx - auto px - 4 py - 16">
+      <div className="container mx - auto px-4 py-16">
         {/* Hero Section */}
-        <div className="text - center mb - 16">
-          <GradientHeading className="text - 5xl md:text - 6xl mb - 6">
+        <div className="text-center mb-16">
+          <GradientHeading className="text-5xl md:text-6xl mb-6">
             Join Our Mission
           </GradientHeading>
-          <p className="text - xl text - gray - 300 max - w-3xl mx - auto">
-            Help us build the future of AI - powered technology solutions. We're
+          <p className="text-xl text-gray - 300 max - w-3xl mx -auto">
+            Help us build the future of AI - powered technology solutions.We're
             looking for passionate individuals who want to make a difference in
-            the world.
-          </p>
+            the world.</p>
         </div>
 
         {/* Benefits Section */}
-        <div className="mb - 16">
-          <h2 className="text - 3xl font - bold text - white text - center mb - 12">
+        <div className="mb-16">
+          <h2 className="text-3xl font - bold text-white text-center mb-12">
             Why Work With Us
           </h2>
-          <div className="grid md:grid - cols - 2 lg:grid - cols - 4 gap - 8">
+          <div className="grid md:grid - cols - 2 lg:grid - cols - 4 gap-8">
             {benefits.map ( (benefit, index) => (<Card
                 key={index}
-                className="bg - slate - 800 border - slate - 700 hover:border - slate - 600 transition - colors"
+                className="bg-slate - 800 border-slate - 700 hover:border-slate - 600 transition -colors"
               >
-                <CardContent className="p - 6 text - center">
-                  <div className="flex justify - center mb - 4">
+                <CardContent className="p - 6 text-center">
+                  <div className="flex justify - center mb-4">
                     {benefit.icon}
                   </div>
-                  <h3 className="text - xl font - semibold text - white mb - 2">
+                  <h3 className="text-xl font - semibold text-white mb-2">
                     {benefit.title}
                   </h3>
-                  <p className="text - gray - 300">{benefit.description}</p>
+                  <p className="text-gray -300">{benefit.description}</p>
                 </CardContent>
               </Card>) ) }
           </div>
@@ -239,42 +217,42 @@ export default function Careers () {
 
         {/* Job Listings */}
         <div>
-          <h2 className="text - 3xl font - bold text - white text - center mb - 12">
+          <h2 className="text-3xl font - bold text-white text-center mb-12">
             Open Positions
           </h2>
-          <Tabs defaultValue="engineering" className="w - full">
-            <TabsList className="grid w - full grid - cols - 4 bg - slate - 800">
-              <TabsTrigger value="engineering" className="text - white">
+          <Tabs defaultValue="engineering" className="w-full">
+            <TabsList className="grid w-full grid - cols - 4 bg-slate -800">
+              <TabsTrigger value="engineering" className="text-white">
                 Engineering
               </TabsTrigger>
-              <TabsTrigger value="product" className="text - white">
+              <TabsTrigger value="product" className="text-white">
                 Product
               </TabsTrigger>
-              <TabsTrigger value="marketing" className="text - white">
+              <TabsTrigger value="marketing" className="text-white">
                 Marketing
               </TabsTrigger>
-              <TabsTrigger value="operations" className="text - white">
+              <TabsTrigger value="operations" className="text-white">
                 Operations
               </TabsTrigger>
             </TabsList>
 
-            {Object.entries (jobs) .map ( ([department, departmentJobs]) => (<TabsContent
+            {Object.entries(jobs) .map(([department, departmentJobs]) => (<TabsContent
                 key={department}
                 value={department}
-                className="mt - 8"
+                className="mt-8"
               >
-                <div className="grid gap - 6">
-                  {departmentJobs.map ( (job, index) => (<Card
+                <div className="grid gap-6">
+                  {departmentJobs.map((job, index) => (<Card
                       key={index}
-                      className="bg - slate - 800 border - slate - 700 hover:border - slate - 600 transition - colors"
+                      className="bg-slate - 800 border-slate - 700 hover:border-slate - 600 transition -colors"
                     >
-                      <CardContent className="p - 6">
-                        <div className="flex justify - between items - start mb - 4">
+                      <CardContent className="p -6">
+                        <div className="flex justify - between items - start mb-4">
                           <div>
-                            <h3 className="text - xl font - semibold text - white mb - 2">
+                            <h3 className="text-xl font - semibold text-white mb-2">
                               {job.title}
                             </h3>
-                            <div className="flex items - center gap - 4 text - gray - 300 text - sm">
+                            <div className="flex items - center gap-4 text-gray - 300 text-sm">
                               <span>{job.location}</span>
                               <span>•</span>
                               <span>{job.type}</span>
@@ -282,11 +260,11 @@ export default function Careers () {
                               <span>{job.department}</span>
                             </div>
                           </div>
-                          <Button className="bg - zion - cyan hover:bg - zion - cyan - dark text - white">
+                          <Button className="bg-zion - cyan hover:bg-zion - cyan - dark text-white">
                             Apply Now
                           </Button>
                         </div>
-                        <p className="text - gray - 300">{job.description}</p>
+                        <p className="text-gray -300">{job.description}</p>
                       </CardContent>
                     </Card>) ) }
                 </div>
@@ -295,16 +273,15 @@ export default function Careers () {
         </div>
 
         {/* CTA Section */}
-        <div className="text - center mt - 16">
-          <h2 className="text - 3xl font - bold text - white mb - 6">
+        <div className="text-center mt-16">
+          <h2 className="text-3xl font - bold text-white mb-6">
             Don't See the Right Role?
           </h2>
-          <p className="text - gray - 300 mb - 8 max - w-2xl mx - auto">
-            We're always looking for talented individuals to join our team. Send
+          <p className="text-gray - 300 mb-8 max - w-2xl mx -auto">
+            We're always looking for talented individuals to join our team.Send
             us your resume and let's discuss how you can contribute to our
-            mission.
-          </p>
-          <Button className="bg - zion - cyan hover:bg - zion - cyan - dark text - white text - lg px - 8 py - 3">
+            mission.</p>
+          <Button className="bg-zion - cyan hover:bg-zion - cyan - dark text-white text-lg px-8 py-3">
             Send Resume
           </Button>
         </div>

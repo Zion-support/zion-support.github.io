@@ -1,29 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { safeStorage } from '@/utils/safeStorage';
-import { X, ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { useIsMobile } from '@/hooks/use-mobile';
-export const SmartAppBanner = ({
 
-  appName = 'Zion Marketplace',
-  appIconSrc,
-  appStoreUrl = '/download',
-  googlePlayUrl = '/download',
-  delay = 1500}) => {
-
-  const [isVisible, setIsVisible] = useState(false);
-  const isMobile = useIsMobile();
-  useEffect(() => {
-
-    // Only show banner on mobile devices and if it hasn't been dismissed'
-    if (isMobile && !safeStorage.getItem('smartBannerDismissed')) {
-
-      const timer = setTimeout(() => {
-        setIsVisible(true);
-      }, delay);
-      return () => clearTimeout(timer);
-    }
-  }, [isMobile, delay]);
+export default function Page() {
+, [isMobile, delay]);
   const dismissBanner = () => {
     setIsVisible(false);
     safeStorage.setItem('smartBannerDismissed',true');
@@ -34,7 +13,7 @@ export const SmartAppBanner = ({
     setIsVisible(true);
   };
   // Only render on mobile devices
-  if (!isMobile || !isVisible) {
+  if(!isMobile || !isVisible) {
 
     return process.env.NODE_ENV === 'development' ? (
       <div className="bg-zion-blue-dark p-2 text-xs text-center text-gray-300">
@@ -84,7 +63,7 @@ export const SmartAppBanner = ({
           <button
             onClick={dismissBanner}"
             className="text-gray-300"
-            aria-label="Dismiss"
+            
           >"
             <X className="h-5 w-5" />
           </button>

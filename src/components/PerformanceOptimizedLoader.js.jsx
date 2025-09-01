@@ -1,12 +1,11 @@
-import { motion } from 'framer-motion';
-export function PerformanceOptimizedLoader({ size = 'md', color = 'primary', text, fullScreen = false }) {
+import { motion  } from 'framer-motion';
+) {
 
     const sizeClasses = {
 
   sm: 'w-6 h-6',
         md: 'w-12 h-12',
   lg: 'w-16 h-16'
-    
 
 };
     const colorClasses = {
@@ -14,7 +13,6 @@ export function PerformanceOptimizedLoader({ size = 'md', color = 'primary', tex
   primary: 'text-zion-purple',
         secondary: 'text-zion-cyan',
   white: 'text-white'
-    
 
 };
     const spinnerVariants = {
@@ -57,7 +55,7 @@ export function PerformanceOptimizedLoader({ size = 'md', color = 'primary', tex
           {text}
         </motion.p>) }
     </div>) ;
-    if (fullScreen) {
+    if(fullScreen) {
 "
         return (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 bg-zion-blue-dark/95 backdrop-blur-sm flex items-center justify-center z-50">
         <LoaderContent />

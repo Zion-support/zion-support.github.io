@@ -24,8 +24,7 @@ declare module 'react-day-picker' {
   // Minimal placeholder for the DayPicker component used in the app
   // The actual library provides full typings but we stub them here so the
   // TypeScript compiler can understand the imports without requiring the real
-  // type definitions.
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  // type definitions.// eslint-disable-next-line @typescript-eslint/no-explicit-any
   export const DayPicker: any}
 declare module 'sonner';
 declare module 'lucide-react' {
@@ -258,7 +257,7 @@ declare module '@radix-ui/react-tooltip';
 declare module '@supabase/supabase-js';
 declare module 'class-variance-authority' {
   export function cva(...inputs: any[]): any
-  export type VariantProps<T extends (...args: any) => any> = any
+  export type VariantProps<T extends(...args: any) => any> = any
 }
 declare module 'clsx' {
   export type ClassValue = any;
@@ -342,9 +341,8 @@ declare module 'next/router' {
     /**
      * When using `getStaticPaths` with `fallback: true` or `'blocking'`, Next.js
      * exposes an `isFallback` boolean on the router during the build-time
-     * rendering phase. We include it here so TypeScript is aware of the
-     * property without pulling in the real Next.js type definitions.
-     */
+     * rendering phase.We include it here so TypeScript is aware of the
+     * property without pulling in the real Next.js type definitions.*/
     isFallback?: boolean
 main
   }

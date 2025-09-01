@@ -1,22 +1,8 @@
 import React from 'react';
-import {
+import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap  } from 'lucide-react';
+) {
 
-  Shield,
-  Lock,
-  Award,
-  Users,
-  Globe,
-  CheckCircle,
-  Star,
-  Zap} from 'lucide-react';
-export function TrustIndicators({
-
-  className,
-  showStats = true,
-  showCertifications = true}) {
-
-  const indicators = [
-    {
+  const indicators = [{
 
       icon: Shield,
       title: 'Enterprise Security',
@@ -53,7 +39,7 @@ export function TrustIndicators({
     { label: 'Projects', value: '$10M+', icon: Award },
     { label: 'Uptime', value: '99.9%', icon: Zap },
   ];
-  return()
+  return ()
     <section'
       className={`py-16 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark ${className || ''}`}
     >
@@ -66,8 +52,7 @@ export function TrustIndicators({
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
             Zion Tech Group maintains the highest standards of security,
             compliance, and reliability to ensure your business operations
-            remain secure and uninterrupted.
-          </p>
+            remain secure and uninterrupted.</p>
         </div>
 
         {/* Trust Indicators Grid */}"
@@ -149,7 +134,7 @@ export function TrustIndicators({
             ))}
           </div>"
           <p className="text-zion-slate-light mb-2">"
-            "Zion Tech Group has transformed how we source tech talent. The'"
+            "Zion Tech Group has transformed how we source tech talent.The'"
             platform's security and reliability give us complete confidence."
           </p>"
           <p className="text-white font-medium">

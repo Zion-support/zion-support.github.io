@@ -1,46 +1,6 @@
-import {
-<<<<<<< HEAD
-import { motion, AnimatePresence } from 'framer - motion';
-=======
->>>>>>> main
-
-  BarChart3,
-  TrendingUp,
-  Users,
-  Eye,
-  MousePointer,
-  Clock,  Globe,
-  Smartphone,
-  Monitor,
-  Tablet,
-  Download,
-  Upload,
-  Activity,
-  Zap,
-  AlertTriangle,
-  CheckCircle,
-  Info} from 'lucide-react';
-
-interface AnalyticsData {
-
-  pageViews: number;
-  uniqueVisitors: number;
-  sessionDuration: number;
-  bounceRate: number;
-  deviceTypes: {
-
-    desktop: number;
-    mobile: number;
-    tablet: number};
-  topPages: Array<{
-
-    path: string;
-    views: number;
-    title: string}[];  userEngagement: {
-
-    scrollDepth: number;
-    timeOnPage: number;
-    interactions: number};
+import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
+export default function Page() {
+;
   performance: {
 
     loadTime: number;
@@ -53,7 +13,6 @@ interface AnalyticsData {
 
 interface EnhancedAnalyticsProps {
   // Add your props here
-
 
   enabled?: boolean;
   showDashboard?: boolean;
@@ -74,19 +33,17 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   const [scrollDepth, setScrollDepth] = useState(0);
   const [timeOnPage, setTimeOnPage] = useState(0);
 
-  
-  
   // Initialize analytics
-  useEffect ( () => {
-    if (!enabled) return;
+  useEffect(() => {
+    if(!enabled) return;
 
-    // Initialize Google Analytics (if tracking ID provided)
-    if (trackingId && trackingId !== 'G-XXXXXXXXXX') {
+    // Initialize Google Analytics(if tracking ID provided)
+    if(trackingId && trackingId !== 'G-XXXXXXXXXX') {
 
       // Google Analytics 4 initialization'
       const script = document.createElement('script');      script.async = true;
       script.src = `https://www.googletagmanager.com / gtag / js?id=${trackingId}`;
-      document.head.appendChild (script) ;
+      document.head.appendChild(script) ;
 
       window.dataLayer = window.dataLayer || [];
       function gtag(...args: any[]) {
@@ -126,16 +83,16 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       timezone: Intl.DateTimeFormat().resolvedOptions().timeZone});
 
     return : unknown {
-      if (script) {
+      if(script) {
 
         document.head.removeChild(script)}
     }}, [enabled, trackingId]) ;
   // Track page changes
-  useEffect ( () => {
-    if (!enabled) return;
+  useEffect(() => {
+    if(!enabled) return;
 
     const handleRouteChange = (...args: unknown[]): unknown => {
-      const newPage = window.location.pathname;      if (newPage !== currentPage) {
+      const newPage = window.location.pathname;      if(newPage !== currentPage) {
 
         // Track page view'
         trackEvent('page_view', {
@@ -145,12 +102,12 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
           previous_page: currentPage,
           time_on_previous_page: timeOnPage});
 
-        setCurrentPage (newPage) ;
-        setTimeOnPage (0) ;
-        setScrollDepth (0) ;
-        setUserInteractions (0) }    };
+        setCurrentPage(newPage) ;
+        setTimeOnPage(0) ;
+        setScrollDepth(0) ;
+        setUserInteractions(0) }    };
 
-    // Listen for route changes (for SPA)
+    // Listen for route changes(for SPA)
     window.addEventListener('popstate', handleRouteChange);
 
     // Track initial page'
@@ -164,10 +121,9 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 
       window.removeEventListener('popstate', handleRouteChange)}}, [enabled, currentPage, timeOnPage]) ;
   // Track user interactions
-  useEffect ( () => {
-    if (!enabled) return;
+  useEffect(() => {
+    if(!enabled) return;
 
-    
       trackEvent('user_interaction', {
 
 =======
@@ -178,30 +134,27 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
         page_path: currentPage,
         timestamp: Date.now()})};
 
-    
-      
-      
-      if (scrollPercent > scrollDepth) {
+      if(scrollPercent > scrollDepth) {
 
         setScrollDepth(scrollPercent);
 
         // Track scroll milestones
-        if (scrollPercent >= 25 && scrollDepth < 25) {
+        if(scrollPercent >= 25 && scrollDepth < 25) {
 
           trackEvent('scroll_milestone', {
 
             milestone: 25,
-            page_path: currentPage})} else if (scrollPercent >= 50 && scrollDepth < 50) {
+            page_path: currentPage})} else if(scrollPercent >= 50 && scrollDepth < 50) {
 
           trackEvent('scroll_milestone', {
 
             milestone: 50,
-            page_path: currentPage})} else if (scrollPercent >= 75 && scrollDepth < 75) {
+            page_path: currentPage})} else if(scrollPercent >= 75 && scrollDepth < 75) {
 
           trackEvent('scroll_milestone', {
 
             milestone: 75,
-            page_path: currentPage})} else if (scrollPercent >= 90 && scrollDepth < 90) {
+            page_path: currentPage})} else if(scrollPercent >= 90 && scrollDepth < 90) {
 
           trackEvent('scroll_milestone', {
 
@@ -214,25 +167,20 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     window.addEventListener('scroll', trackScroll);
 
     // Update time on page every second
-    sessionRef.current = setInterval (trackTimeOnPage, 1000) ;
+    sessionRef.current = setInterval(trackTimeOnPage, 1000) ;
 
     return () => {
 
       document.removeEventListener('click', trackInteraction);
       window.removeEventListener('scroll', trackScroll);
-      if (sessionRef.current) {
+      if(sessionRef.current) {
 
         clearInterval(sessionRef.current)}
     }}, [enabled, currentPage, scrollDepth]) ;
   // Track performance metrics
-  useEffect ( () => {
-    if (!enabled) return;
+  useEffect(() => {
+    if(!enabled) return;
 
-    
-        
-        
-        
-        
 <<<<<<< HEAD
 
         trackEvent('performance_metrics', {
@@ -246,7 +194,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
           page_path: currentPage})}    };
 
     // Track performance after page load'
-    if (document.readyState === 'complete') {
+    if(document.readyState === 'complete') {
 
       trackPerformance()} else {
 
@@ -254,10 +202,9 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       return () => window.removeEventListener('load', trackPerformance)}
   }, [enabled, currentPage]) ;
   // Track session end
-  useEffect ( () => {
-    if (!enabled) return;
+  useEffect(() => {
+    if(!enabled) return;
 
-    
 <<<<<<< HEAD
 
       trackEvent('session_end', {
@@ -276,14 +223,14 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   // Track event function
   
       // Google Analytics 4
-      if (window.gtag) {
+      if(window.gtag) {
 
         window.gtag('event', eventName, parameters)}
 
       // Custom analytics tracking
       
-      // Send to analytics endpoint (if configured)
-      if (process.env.REACT_APP_ANALYTICS_ENDPOINT) {
+      // Send to analytics endpoint(if configured)
+      if(process.env.REACT_APP_ANALYTICS_ENDPOINT) {
 
         fetch(process.env.REACT_APP_ANALYTICS_ENDPOINT, {
 
@@ -311,8 +258,8 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     [enabled, currentPage, scrollDepth, timeOnPage, userInteractions]
   );
   // Initialize mock data for dashboard
-  useEffect ( () => {
-    if (showDashboard) {
+  useEffect(() => {
+    if(showDashboard) {
 
       setAnalyticsData({
 
@@ -346,9 +293,9 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
             fid: 50,
             cls: 0.05}}})}
   }, [showDashboard, scrollDepth, timeOnPage, userInteractions]) ;
-  if (!enabled) return null;
+  if(!enabled) return null;
 
-  return()
+  return ()
     <>
       {/* Analytics Toggle Button */}
       {showDashboard && (<motion.button
@@ -358,7 +305,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
           whileTap={{ scale: 0.9 }}
           onClick={() => setIsVisible(!isVisible)}
           className="fixed top-4 right-32 z-50 p-3 bg-green-600 text-white rounded-full shadow-lg hover:bg-green-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2"
-          aria-label="Toggle analytics dashboard"
+          
           title="Analytics Dashboard"
         >"
           <BarChart3 className="w-5 h-5" />
@@ -382,7 +329,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
               <button
                 onClick={() => setIsVisible(false)}"
                 className="p-1 hover:bg-white/20 rounded transition-colors"
-                aria-label="Close analytics dashboard"
+                
               >"
                 <Eye className="w-4 h-4"  />              </button>
             </div>
@@ -502,9 +449,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
                       FCP
                     </span>
                     <span`
-                      className={`text-sm font-medium ${
-
-                        analyticsData.performance.coreWebVitals.fcp <= 1800'
+                      className={`text-sm font-medium ${analyticsData.performance.coreWebVitals.fcp <= 1800'
                           ? 'text-green-600''
                           : 'text-yellow-600'`
                       }`}
@@ -517,9 +462,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
                       LCP
                     </span>
                     <span`
-                      className={`text-sm font-medium ${
-
-                        analyticsData.performance.coreWebVitals.lcp <= 2500'
+                      className={`text-sm font-medium ${analyticsData.performance.coreWebVitals.lcp <= 2500'
                           ? 'text-green-600''
                           : 'text-yellow-600'`
                       }`}

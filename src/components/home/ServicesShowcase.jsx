@@ -1,52 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
-import { ArrowRight, Star } from "lucide-react";
-import { FuturisticCard } from '@/components/ui/futuristic-card';
-import { NeonText } from '@/components/ui/neon-text';
-export function ServicesShowcase() {
-    const featuredServices = COMPREHENSIVE_SERVICES.slice(0, 6);
+import { Link  } from 'react-router-dom';
 
-    const emergingServices = [
-        {
-"
-            title: "AI Workflow Orchestrator","
-            description: "Intelligent process automation with AI-driven optimization","
-            category: "AI & Automation","
-            price: "$99/month","
-            icon: "🤖","
-            link: "/services/ai-workflow-orchestrator"
-        },
-        {
-"
-            title: "AI Data Governance Platform","
-            description: "Enterprise data protection and compliance automation","
-            category: "Data & Security","
-            price: "$149/month","
-            icon: "🛡️","
-            link: "/services/ai-data-governance-platform"
-        },
-        {
-"
-            title: "AI Customer Experience Analytics","
-            description: "Intelligent analytics and insights for data-driven decisions","
-            category: "Analytics","
-            price: "$99/month","
-            icon: "📊","
-            link: "/services/ai-customer-experience-analytics"
-        },
-        {
-"
-            title: "Cloud DevOps Platform","
-            description: "Streamlined cloud infrastructure and deployment automation","
-            category: "Cloud & DevOps","
-            price: "$299/month","
-            icon: "☁️","
-            link: "/services/cloud-devops"
-        }
+export default function Page() {
     ];"
     return (<section className="py-20 relative">
       {/* Background accent */}"
@@ -61,8 +16,7 @@ export function ServicesShowcase() {
             </NeonText>
           </h2>"
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Discover our comprehensive suite of micro SAAS solutions designed to accelerate your business growth and digital transformation.
-          </p>
+            Discover our comprehensive suite of micro SAAS solutions designed to accelerate your business growth and digital transformation.</p>
         </div>
 
         {/* Featured Services Grid */}"
@@ -183,8 +137,7 @@ export function ServicesShowcase() {
             </h3>"
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
               Join thousands of businesses already leveraging our micro SAAS services to accelerate growth,
-              improve efficiency, and stay ahead of the competition.
-            </p>"
+              improve efficiency, and stay ahead of the competition.</p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Button asChild size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">"
                 <Link to="/services">

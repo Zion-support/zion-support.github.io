@@ -1,43 +1,7 @@
 <<<<<<< HEAD
-import {
-<<<<<<< HEAD
-import { motion } from 'framer - motion';
-=======
->>>>>>> main
-
-  Phone,
-  Mail,
-  MapPin,
-  Globe,
-  Linkedin,
-  Twitter,
-  Facebook,
-  Instagram,
-  ArrowUp,
-  Heart,
-  Shield,
-  Zap,
-  Brain,
-  Cloud,
-  Server,
-  Rocket,
-  Users,
-  Briefcase,
-  FileText,
-  HelpCircle,
-  MessageCircle,
-  Zap as ZapIcon'
-} from 'lucide-react';
-export const FuturisticFooter: React.FC = () => {;
-  
-    window.scrollTo({ top: 0, behavior: 'smooth' })};
-  
-  const footerSections = [
-    {
-
-      title: "Services",
-      links[;"
-        { name: "AI & Machine Learning", href: "/ai-services" },"
+import { <<<<<<< HEAD import { motion  } from 'framer-motion';
+export default function Page() {
+,"
         { name: "Micro SAAS Solutions", href: "/micro-saas" },"
         { name: "IT Infrastructure", href: "/it-services" },"
         { name: "Emerging Technologies", href: "/emerging-tech" },"
@@ -97,7 +61,7 @@ export const FuturisticFooter: React.FC = () => {;
     { name: "Facebook", href: "https://facebook.com/ziontechgroup", icon: Facebook },;"    { name: "Instagram", href: "https://instagram.com/ziontechgroup", icon: Instagram };
   ];
   return ("
-    <footer className = "relative bg-gradient-to-b from-zion-slate-dark to-zion-slate-darker border-t border-zion-cyan/20">
+    <footer className="relative bg-gradient-to-b from-zion-slate-dark to-zion-slate-darker border-t border-zion-cyan/20">
       {/* Background Effects */}"
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zion-cyan/5 to-transparent" />"
       <div className="relative z-10">
@@ -129,8 +93,7 @@ export const FuturisticFooter: React.FC = () => {;
                 </div>"
                 <p className="text-zion-slate-light mb-6 leading-relaxed">
                   Leading the future of technology with cutting-edge AI solutions, innovative micro SAAS platforms,
-                  and next-generation IT infrastructure that transforms businesses and drives innovation.
-                </p>
+                  and next-generation IT infrastructure that transforms businesses and drives innovation.</p>
                 {/* Contact Information */}"
                 <div className="space-y-3">"
                   <div className="flex items-center space-x-3 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300">"
@@ -154,7 +117,7 @@ export const FuturisticFooter: React.FC = () => {;
               </motion.div>
             </div>
             {/* Footer Links */}
-            {footerSections.map ( (section, index) => (<div role="button" key={section.title}>
+            {footerSections.map ( (section, index) => (<div  key={section.title}>
                 <motion.div
                   initial = {
 
@@ -215,11 +178,6 @@ export const FuturisticFooter: React.FC = () => {;
 
   { duration: 0.6,
   delay: 0.4
-
-
-
-
-
 
 }}"
             className="border-t border-zion-slate/30 mt-12 pt-8"
@@ -283,7 +241,7 @@ export const FuturisticFooter: React.FC = () => {;
             <div className="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">;
               {/* Copyright */}"
               <div className="text-zion-slate-light text-sm">;
-                © {currentYear} ZION TECH GROUP. All rights reserved.;"
+                © {currentYear} ZION TECH GROUP.All rights reserved.;"
                 <span className="ml-2 flex items-center">;"
                   Made with <Heart className="w-4 h-4 mx-1 text-red-400"  /> for innovation;                </span>;
               </div>

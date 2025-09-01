@@ -1,24 +1,11 @@
-import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Sparkles, TrendingUp, Clock, Users, Briefcase } from 'lucide-react';
-import { Link } from 'react-router-dom';
-export function EnhancedSearchSection() {
-
-    const [searchQuery, setSearchQuery] = useState('');
-    const [isFocused, setIsFocused] = useState(false);
-    const [suggestions, setSuggestions] = useState([]);
-    const popularSearches = ['
-        'AI Engineers',Machine Learning',React Developers',Python Experts',Data Scientists',DevOps Engineers',UI/UX Designers',Blockchain Developers'
-    ];
-    const trendingServices = ['"
-        { name: 'AI Model Training', icon: _jsx(Sparkles, { className: "h-4 w-4" }), count: '2.3k' },"
-        { name: 'Cloud Migration', icon: _jsx(TrendingUp, { className: "h-4 w-4" }), count: '1.8k' },"
+import { jsx as _jsx, jsxs as _jsxs } from 'react/jsx-runtime';
+export default function Page() {
+,"
         { name: 'Cybersecurity Audit', icon: _jsx(Users, { className: "h-4 w-4" }), count: '1.5k' },"
         { name: 'Mobile App Development', icon: _jsx(Briefcase, { className: "h-4 w-4" }), count: '3.1k' }
     ];
     useEffect(() => {
-        if (searchQuery.length > 2) {
+        if(searchQuery.length > 2) {
 
             // Simulate AI-powered suggestions
             const filtered = popularSearches.filter(item => item.toLowerCase().includes(searchQuery.toLowerCase()));

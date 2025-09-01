@@ -67,8 +67,7 @@ const zionContact = {
 
 =======
 >>>>>>> main
-export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
-  {
+export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [{
 "
     id: "multi-cloud-orchestration-platform","
     title: "Zion Multi-Cloud Orchestration Platform","
@@ -370,7 +369,7 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
       marketPrice: "$299-599/month"
     },
     features[;"
-      "Function-as-a-Service (FaaS)","
+      "Function-as-a-Service(FaaS)","
       "Event-driven architecture","
       "Auto-scaling capabilities","
       "Pay-per-use pricing","

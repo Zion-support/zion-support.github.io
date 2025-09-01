@@ -1,14 +1,7 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { MessageCircle, Send, Bot, User, X, Minimize2, Maximize2, Loader2, Sparkles } from 'lucide-react';
-import { useAnalytics } from "../hooks/useAnalytics";'"
-export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI assistant. How can I help you today?", maxMessages = 50, enableSuggestions = true, enableContext = true, responseDelay = 1000 }) => {
-
-    const { trackEvent } = useAnalytics({
-
-        enableTracking: true,
-        enableUserBehaviorTracking: true
-    });
+import { motion, AnimatePresence  } from 'framer-motion';
+export default function Page() {
+);
     const [isOpen, setIsOpen] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);
     const [messages, setMessages] = useState([]);
@@ -18,7 +11,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
     const inputRef = useRef(null);
     // Initialize chatbot
     useEffect(() => {
-        if (isOpen && messages.length === 0) {
+        if(isOpen && messages.length === 0) {
 
             addBotMessage(welcomeMessage, {
 
@@ -57,7 +50,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
             // Keep only the last maxMessages
             return updated.slice(-maxMessages)});
         // Update conversation context
-        if (enableContext && message.content.length > 10) {
+        if(enableContext && message.content.length > 10) {
 
             // setConversationContext(prev => [...prev.slice(-4), message.content]); // This line was removed
         }
@@ -87,27 +80,27 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
         // Simple AI logic - in production, this would connect to a real AI service
         const input = userInput.toLowerCase();
         // Intent recognition'
-        if (input.includes('service') || input.includes('offer')) {
+        if(input.includes('service') || input.includes('offer')) {
 "
-            return "We offer a comprehensive range of services including AI & Machine Learning, Cybersecurity, Cloud Infrastructure, and Digital Transformation. What specific area are you interested in?"}
-        if (input.includes('quote') || input.includes('price') || input.includes('cost')) {
+            return "We offer a comprehensive range of services including AI & Machine Learning, Cybersecurity, Cloud Infrastructure, and Digital Transformation.What specific area are you interested in?"}
+        if(input.includes('quote') || input.includes('price') || input.includes('cost')) {
 '"
             return "I'd be happy to help you get a quote! Could you tell me more about your project requirements? This will help me provide a more accurate estimate."}
-        if (input.includes('contact') || input.includes('phone') || input.includes('email')) {
+        if(input.includes('contact') || input.includes('phone') || input.includes('email')) {
 "
-            return "You can reach us at:\n📧 kleber@ziontechgroup.com\n📞 +1 (302) 464-0950\n🌐 https://ziontechgroup.com\n\nWhen would be the best time to call you?"}
-        if (input.includes('technology') || input.includes('tech') || input.includes('stack')) {
+            return "You can reach us at:\n📧 kleber@ziontechgroup.com\n📞 +1(302) 464-0950\n🌐 https://ziontechgroup.com\n\nWhen would be the best time to call you?"}
+        if(input.includes('technology') || input.includes('tech') || input.includes('stack')) {
 "
-            return "We work with cutting-edge technologies including React, Node.js, Python, AWS, Azure, AI/ML frameworks, and more. What technology stack are you currently using?"}
-        if (input.includes('experience') || input.includes('portfolio') || input.includes('work')) {
+            return "We work with cutting-edge technologies including React, Node.js, Python, AWS, Azure, AI/ML frameworks, and more.What technology stack are you currently using?"}
+        if(input.includes('experience') || input.includes('portfolio') || input.includes('work')) {
 "
-            return "We have extensive experience across various industries including healthcare, finance, e-commerce, and enterprise solutions. Would you like me to share some case studies?"}
+            return "We have extensive experience across various industries including healthcare, finance, e-commerce, and enterprise solutions.Would you like me to share some case studies?"}
         // Default response with suggestions'"
-        return "I understand you're asking about '" + userInput + "'. Let me help you better. Could you provide more details about what you're looking for?"}, [responseDelay]);
+        return "I understand you're asking about '" + userInput + "'.Let me help you better.Could you provide more details about what you're looking for?"}, [responseDelay]);
     // Handle user input
     const handleUserInput = useCallback(async (input) => {
 
-        if (!input.trim())
+        if(!input.trim())
             return;
         // Add user message
         const userMessage = addMessage({
@@ -145,9 +138,9 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
                 userInput: input,
                 responseLength: response.length
             })}
-        catch (error) {
+        catch(error) {
             // Handle error'"
-            addBotMessage("I apologize, but I'm experiencing some technical difficulties. Please try again or contact our team directly.", {
+            addBotMessage("I apologize, but I'm experiencing some technical difficulties.Please try again or contact our team directly.", {
 
                 intent: 'error',
                 confidence: 0.8
@@ -211,7 +204,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
     </motion.div>);
     return (<>
       {/* Chatbot Toggle Button */}"
-      <motion.button onClick={toggleChatbot} className="fixed bottom-6 right-6 z-50 p-4 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-blue-300" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} aria-label="Open AI chatbot">"
+      <motion.button onClick={toggleChatbot} className="fixed bottom-6 right-6 z-50 p-4 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-blue-300" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} >"
         <MessageCircle className="w-6 h-6"/>"
         {messages.length > 0 && (<div className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">
             {Math.min(messages.length, 9)}
@@ -251,7 +244,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
                   <button onClick={toggleMinimize} className="p-1 hover:bg-white/20 rounded transition-colors" aria-label={isMinimized ? 'Maximize' : 'Minimize'}>"
                     {isMinimized ? <Maximize2 className="w-4 h-4"/> : <Minimize2 className="w-4 h-4"/>}
                   </button>"
-                  <button onClick={toggleChatbot} className="p-1 hover:bg-white/20 rounded transition-colors" aria-label="Close chatbot">"
+                  <button onClick={toggleChatbot} className="p-1 hover:bg-white/20 rounded transition-colors" >"
                     <X className="w-4 h-4"/>
                   </button>
                 </div>

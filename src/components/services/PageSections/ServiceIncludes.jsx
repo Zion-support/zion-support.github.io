@@ -1,7 +1,6 @@
 import React from 'react';
 import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe export const ServiceIncludes = () => {
-  const servicePackages = [
-    {
+  const servicePackages = [{
 
       name: 'Basic Package',
       description: 'Essential IT services for small businesses',
@@ -27,7 +26,7 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
       price: 'Starting at $599/month',
       popular: true,
       includes[;
-        'Everything in Basic Package',On-site Support (2 visits/month),Hardware Installation & Setup',Advanced Network Security',Weekly Performance Reports',Phone & Email Support',Up to 100 Users',Emergency Response (4hr),Network Optimization',Security Audits (Quarterly),User Training Sessions',Strategic IT Consulting'
+        'Everything in Basic Package',On-site Support(2 visits/month),Hardware Installation & Setup',Advanced Network Security',Weekly Performance Reports',Phone & Email Support',Up to 100 Users',Emergency Response(4hr),Network Optimization',Security Audits(Quarterly),User Training Sessions',Strategic IT Consulting'
       ],;
       notIncluded[;
         'Unlimited On-site Visits',Dedicated IT Manager',Custom Software Development',Hardware Procurement',Advanced Analytics'
@@ -46,7 +45,7 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
       price: 'Starting at $1,299/month',
       popular: false,
       includes[;
-        'Everything in Professional Package',Unlimited On-site Support',Dedicated IT Manager',Advanced Security Suite',Real-time Monitoring & Alerting',Daily Performance Reports',Unlimited Users',Emergency Response (2hr),Strategic IT Planning',Compliance Management',Custom Solutions Development',Advanced Analytics & Insights',Executive Reporting',Vendor Management',Technology Roadmap Planning'
+        'Everything in Professional Package',Unlimited On-site Support',Dedicated IT Manager',Advanced Security Suite',Real-time Monitoring & Alerting',Daily Performance Reports',Unlimited Users',Emergency Response(2hr),Strategic IT Planning',Compliance Management',Custom Solutions Development',Advanced Analytics & Insights',Executive Reporting',Vendor Management',Technology Roadmap Planning'
       ],;
       notIncluded[;
         'Custom Hardware Development',Third-party Software Licensing',Legal Compliance Services',Insurance Requirements'
@@ -60,8 +59,7 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
 
   ];
 
-  const additionalServices = [
-    {
+  const additionalServices = [{
 
       name: 'Hardware Installation',
       price: '$150/device',
@@ -105,7 +103,7 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
 
   ];
 
-  return()
+  return ()
     <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}"
@@ -114,9 +112,8 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
             What's Included in Your Service
           </h2>"
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Choose the service package that fits your business needs. All packages include our core services
-            with additional features and support levels.
-          </p>
+            Choose the service package that fits your business needs.All packages include our core services
+            with additional features and support levels.</p>
         </div>
 
         {/* Service Packages */}"
@@ -124,9 +121,7 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
           {servicePackages.map((pkg, index) => (
             <div
               key={index}
-              className={`relative bg-white rounded-3xl shadow-xl border-2 transition-all duration-300 hover:shadow-2xl ${
-
-                pkg.popular'
+              className={`relative bg-white rounded-3xl shadow-xl border-2 transition-all duration-300 hover:shadow-2xl ${pkg.popular'
                   ? 'border-blue-500 scale-105''
                   : 'border-gray-200 hover:border-gray-300'`
               }`}
@@ -194,9 +189,7 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
 
                 {/* CTA Button */}
                 <button`
-                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-
-                    pkg.popular'
+                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${pkg.popular'
                       ? 'bg-blue-600 text-white hover:bg-blue-700''
                       : 'bg-gray-100 text-gray-900 hover:bg-gray-200'`
                   }`}
@@ -246,8 +239,7 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
               </div>"
               <h4 className="text-xl font-semibold mb-2">Quality Guarantee</h4>"
               <p className="text-blue-100">
-                We guarantee the quality of our work. If you're not satisfied, we'll fix it at no additional cost.
-              </p>
+                We guarantee the quality of our work.If you're not satisfied, we'll fix it at no additional cost.</p>
             </div>"
             <div className="text-center">"
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">"
@@ -255,8 +247,7 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
               </div>"
               <h4 className="text-xl font-semibold mb-2">Response Time Guarantee</h4>"
               <p className="text-blue-100">
-                We commit to responding within the guaranteed timeframes for your service level.
-              </p>
+                We commit to responding within the guaranteed timeframes for your service level.</p>
             </div>"
             <div className="text-center">"
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">"
@@ -264,8 +255,7 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
               </div>"
               <h4 className="text-xl font-semibold mb-2">Security Guarantee</h4>"
               <p className="text-blue-100">
-                We maintain the highest security standards and protect your data throughout our engagement.
-              </p>
+                We maintain the highest security standards and protect your data throughout our engagement.</p>
             </div>
           </div>
         </div>
@@ -277,8 +267,7 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
               Need a Custom Solution?
             </h3>"
             <p className="text-gray-600 mb-6">
-              Our team can customize  service package to meet your specific business requirements.
-            </p>"
+              Our team can customize  service package to meet your specific business requirements.</p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a"
                 href="#contact"

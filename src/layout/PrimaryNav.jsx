@@ -1,47 +1,8 @@
 import React, { useState } from 'react';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
-import { Logo } from '@/components/header/Logo';
-import { PointsBadge } from '@/components/loyalty/PointsBadge';
-import { UserMenu } from '@/components/header/UserMenu';
-import { LanguageSelector } from '@/components/header/LanguageSelector';
-import { ModeToggle } from '@/components/ModeToggle';
-import { useAuth } from '@/hooks/useAuth';
-import { useIsMobile } from '@/hooks/use-mobile';
-import { useMessaging } from '@/context/MessagingContext';
-import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput';
-import { generateSearchSuggestions } from '@/data/marketplaceData';
-import { slugify } from '@/lib/slugify';
-import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation';
-import { MobileMenu } from '@/components/header/MobileMenu';
-import { MobileBottomNav } from '@/components/header/MobileBottomNav';
-import { Menu, X, ShoppingCart import { useTranslation } from 'react-i18next';
-import { useSelector } from 'react-redux';
-export function PrimaryNav() {
-    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-    const { user } = useAuth();
-    const isMobile = useIsMobile();
-    const { t } = useTranslation();
-    const router = useNavigate();
-    const [query, setQuery] = useState('');
-    const suggestions = generateSearchSuggestions();
-    let unreadCount = 0;
-    try {
-        const messaging = useMessaging();
-        unreadCount = messaging.unreadCount}
-    catch {
 
-        // context not available
-
-    const cartCount = useSelector((s) => s.cart.items.reduce((sum, i) => sum + i.quantity, 0));
-    const handleSubmit = (e) => {
-
-        e.preventDefault();
-        if (query.trim()) {
-
-            // // // // // // // // console.log('PrimaryNav search submit:', query);
-            navigate(`/search/${slugify(query)}`);
+export default function Page() {
+`);
             setQuery('');
 
             // console.log('PrimaryNav search submit:', query);`
@@ -52,7 +13,7 @@ export function PrimaryNav() {
         }
     };
     return (<>
-      <header className="sticky top-0 z-50 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md" role="navigation" aria-label="Primary" data-testid="header">"
+      <header className="sticky top-0 z-50 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md" role="navigation"  data-testid="header">"
         <div className="container flex flex-wrap items-center justify-between gap-2 min-h-16 px-4 sm:px-6">
           <Logo />
 
@@ -66,17 +27,17 @@ export function PrimaryNav() {
             {/* Search form with clamped width */}
             // // // // // // // // console.log('PrimaryNav search suggestion selected:', sugg);
             // Handle different suggestion types with proper navigation
-            if (sugg.id) {
+            if(sugg.id) {
 
                 // Product listings with IDs go to product detail page`
                 navigate(`/marketplace/listing/${sugg.id}`);
 
-            else if (sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
+            else if(sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
 
                 // Documentation suggestions navigate directly to their path
                 navigate(sugg.slug);
 
-            else if (sugg.type === 'blog' && sugg.slug) {
+            else if(sugg.type === 'blog' && sugg.slug) {
 
                 // Blog posts navigate to blog detail page`
                 navigate(`/blog/${sugg.slug}`);
@@ -93,10 +54,6 @@ export function PrimaryNav() {
 =======
   16rem)
 
-
-
-
-
 >>>>>>> main
 
 }}>
@@ -107,7 +64,7 @@ export function PrimaryNav() {
             // console.log('PrimaryNav search suggestion selected:',
   sugg);
             // Handle different suggestion types with proper navigation
-            if (sugg.id) {
+            if(sugg.id) {
 
                 // Product listings with IDs go to product detail page`
                 router(`/marketplace/listing/${sugg.id
@@ -115,17 +72,16 @@ export function PrimaryNav() {
 <<<<<<< HEAD
 =======
 
-
 `
 >>>>>>> main
 }`);
             }
-            else if (sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
+            else if(sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
 
                 // Documentation suggestions navigate directly to their path
                 router(sugg.slug);
             }
-            else if (sugg.type === 'blog' && sugg.slug) {
+            else if(sugg.type === 'blog' && sugg.slug) {
 
                 // Blog posts navigate to blog detail page`
                 router(`/blog/${sugg.slug}`);
@@ -137,7 +93,7 @@ export function PrimaryNav() {
             }
             setQuery('');
             // Track analytics event'
-            if (typeof window !== 'null' && window.gtag) {
+            if(typeof window !== 'null' && window.gtag) {
 
                 window.gtag('event',search_suggestion_click', {
 
@@ -153,7 +109,7 @@ export function PrimaryNav() {
               <PointsBadge />
               <HoverCard openDelay={100}>
                 <HoverCardTrigger asChild>"
-                  <Link href="/cart" className="relative p-1" aria-label = {
+                  <Link href="/cart" className="relative p-1" aria-label= {
 
   t('nav.cart',Cart')
 
@@ -161,10 +117,6 @@ export function PrimaryNav() {
 }>
                     <ShoppingCart aria-hidden="true" className="h-5 w-5 text-foreground hover:text-primary"/>
 =======
-
-
-
-
 
 }>"
                     <ShoppingCart aria-hidden="true" className="h-5 w-5 text-foreground hover:text-primary"/>"

@@ -6,7 +6,7 @@ export async function requestPasswordReset(email) {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ email })
   });
-  if (!res.ok) throw new Error('Failed to send reset code');
+  if(!res.ok) throw new Error('Failed to send reset code');
   return res.json().catch(() => ({}));
 }
 
@@ -16,7 +16,7 @@ export async function verifyResetCode(email, code) {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ email, code })
   });
-  if (!res.ok) throw new Error('Invalid code');
+  if(!res.ok) throw new Error('Invalid code');
   return res.json();
 }
 
@@ -27,6 +27,6 @@ export async function resetPassword(token, password) {
     body: JSON.stringify({ token, password })
   });
   const data = await res.json().catch(() => ({}));
-  if (!res.ok) throw new Error(data.message || 'Failed to reset password');
+  if(!res.ok) throw new Error(data.message || 'Failed to reset password');
   return data;
 }

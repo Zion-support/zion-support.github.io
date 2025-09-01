@@ -3,7 +3,7 @@ export class ContentQualityAnalyzer {
   static instance;
   analyzedPages = new Map();
   static getInstance() {
-    if (!ContentQualityAnalyzer.instance) {
+    if(!ContentQualityAnalyzer.instance) {
 
       ContentQualityAnalyzer.instance = new ContentQualityAnalyzer();
     }
@@ -20,7 +20,7 @@ export class ContentQualityAnalyzer {
 
     // Check if we already analyzed this page
     const existing = this.analyzedPages.get(pageUrl);
-    if (existing) {
+    if(existing) {
 
       return existing;
     }
@@ -71,7 +71,7 @@ export class ContentQualityAnalyzer {
   }
   calculateWordCount(content) {
 
-    if (!content) return 0;
+    if(!content) return 0;
     // Remove HTML tags and count words
     const cleanContent = content;
       .replace(/<[^>]*>/g,)
@@ -81,13 +81,13 @@ export class ContentQualityAnalyzer {
   }
   countHeadings(content) {
 
-    if (!content) return 0;
+    if(!content) return 0;
     const headingMatches = content.match(/<h[1-6][^>]*>/gi);
     return headingMatches ? headingMatches.length : 0;
   }
   checkStructuredData(content) {
 
-    if (!content) return false;
+    if(!content) return false;
     // Check for JSON-LD, microdata, or RDFa
     return ('
       content.includes('application/ld+json') ||'
@@ -97,10 +97,10 @@ export class ContentQualityAnalyzer {
   }
   calculateReadabilityScore(content) {
 
-    if (!content) return 0;
+    if(!content) return 0;
     const wordCount = this.calculateWordCount(content);
     const syllableCount = this.estimateSyllableCount(content);
-    if (wordCount === 0 || sentenceCount === 0) return 0;
+    if(wordCount === 0 || sentenceCount === 0) return 0;
     // Flesch Reading Ease formula
     const fleschScore =
       206.835 -
@@ -111,16 +111,16 @@ export class ContentQualityAnalyzer {
   }
   estimateSyllableCount(content) {
 
-    if (!content) return 0;
+    if(!content) return 0;
     // Simple syllable estimation
     const words = content;
       .toLowerCase()
       .replace(/[^a-z\s]/g,)
       .split(/\s+/);
     let syllableCount = 0;
-    for (const word of words) {
+    for(const word of words) {
 
-      if (word.length <= 3) {
+      if(word.length <= 3) {
 
         syllableCount += 1;
       } else {
@@ -136,37 +136,37 @@ export class ContentQualityAnalyzer {
 
     let score = 0;
     let maxScore = 0;
-    // Title optimization (0-20 points)
+    // Title optimization(0-20 points)
     maxScore += 20;
-    if (metrics.title.length >= 30 && metrics.title.length <= 60) {
+    if(metrics.title.length >= 30 && metrics.title.length <= 60) {
 
       score += 20;
-    } else if (metrics.title.length > 0) {
+    } else if(metrics.title.length > 0) {
 
       score += 10;
     }
-    // Content length (0-25 points)
+    // Content length(0-25 points)
     maxScore += 25;
-    if (metrics.wordCount >= 300) {
+    if(metrics.wordCount >= 300) {
 
       score += 25;
-    } else if (metrics.wordCount >= 150) {
+    } else if(metrics.wordCount >= 150) {
 
       score += 15;
-    } else if (metrics.wordCount >= 50) {
+    } else if(metrics.wordCount >= 50) {
 
       score += 5;
     }
-    // Heading structure (0-15 points)
+    // Heading structure(0-15 points)
     maxScore += 15;
-    if (metrics.headingCount >= 3) {
+    if(metrics.headingCount >= 3) {
 
       score += 15;
-    } else if (metrics.headingCount >= 1) {
+    } else if(metrics.headingCount >= 1) {
 
       score += 10;
     }
-    // Meta description (0-15 points)
+    // Meta description(0-15 points)
     maxScore += 15;
     if()
       metrics.metaDescriptionLength >= 120 &&
@@ -174,31 +174,31 @@ export class ContentQualityAnalyzer {
     ) {
 
       score += 15;
-    } else if (metrics.metaDescriptionLength > 0) {
+    } else if(metrics.metaDescriptionLength > 0) {
 
       score += 8;
     }
-    // Images (0-10 points)
+    // Images(0-10 points)
     maxScore += 10;
-    if (metrics.imageCount >= 2) {
+    if(metrics.imageCount >= 2) {
 
       score += 10;
-    } else if (metrics.imageCount >= 1) {
+    } else if(metrics.imageCount >= 1) {
 
       score += 5;
     }
-    // Internal links (0-10 points)
+    // Internal links(0-10 points)
     maxScore += 10;
-    if (metrics.linkCount >= 3) {
+    if(metrics.linkCount >= 3) {
 
       score += 10;
-    } else if (metrics.linkCount >= 1) {
+    } else if(metrics.linkCount >= 1) {
 
       score += 5;
     }
-    // Structured data (0-5 points)
+    // Structured data(0-5 points)
     maxScore += 5;
-    if (metrics.hasStructuredData) {
+    if(metrics.hasStructuredData) {
 
       score += 5;
     }
@@ -207,45 +207,45 @@ export class ContentQualityAnalyzer {
   identifyIssues(metrics) {
 
     const issues = [];
-    if (!metrics.title || metrics.title.length < 30) {
+    if(!metrics.title || metrics.title.length < 30) {
 
       issues.push('Title is too short (should be 30-60 characters));
-    } else if (metrics.title.length > 60) {
+    } else if(metrics.title.length > 60) {
 
       issues.push('Title is too long (should be 30-60 characters));
     }
-    if (metrics.wordCount < 300) {
+    if(metrics.wordCount < 300) {
 
       issues.push('Content is too short (should be at least 300 words));
     }
-    if (metrics.headingCount < 2) {
+    if(metrics.headingCount < 2) {
 
       issues.push('
         'Insufficient heading structure (should have at least 2 headings)
       );
     }
-    if (metrics.metaDescriptionLength < 120) {
+    if(metrics.metaDescriptionLength < 120) {
 
       issues.push('
         'Meta description is too short (should be 120-160 characters)
       );
-    } else if (metrics.metaDescriptionLength > 160) {
+    } else if(metrics.metaDescriptionLength > 160) {
 
       issues.push('
         'Meta description is too long (should be 120-160 characters)
       );
     }
-    if (metrics.imageCount === 0) {
+    if(metrics.imageCount === 0) {
 
       issues.push('No images found (consider adding relevant images));
     }
-    if (metrics.linkCount < 2) {
+    if(metrics.linkCount < 2) {
 
       issues.push('
         'Insufficient internal linking (should have at least 2 internal links)
       );
     }
-    if (!metrics.hasStructuredData) {
+    if(!metrics.hasStructuredData) {
 
       issues.push('
         'No structured data found (consider adding JSON-LD or microdata)
@@ -256,13 +256,13 @@ export class ContentQualityAnalyzer {
   generateRecommendations(issues) {
 
     const recommendations = [];
-    if (issues.some(issue => issue.includes('Content is too short'))) {
+    if(issues.some(issue => issue.includes('Content is too short'))) {
 
       recommendations.push('
         'Expand content with relevant information, examples, and detailed explanations'
       );
     }
-    if ('
+    if('
       issues.some(issue => issue.includes('Insufficient heading structure'))
     ) {
 
@@ -270,31 +270,31 @@ export class ContentQualityAnalyzer {
         'Add H1, H2, and H3 headings to improve content structure and SEO'
       );
     }
-    if (issues.some(issue => issue.includes('Meta description'))) {
+    if(issues.some(issue => issue.includes('Meta description'))) {
 
       recommendations.push('
         'Write compelling meta descriptions that accurately describe the page content'
       );
     }
-    if (issues.some(issue => issue.includes('No images'))) {
+    if(issues.some(issue => issue.includes('No images'))) {
 
       recommendations.push('
         'Add relevant images, diagrams, or infographics to enhance user engagement'
       );
     }
-    if (issues.some(issue => issue.includes('Insufficient internal linking'))) {
+    if(issues.some(issue => issue.includes('Insufficient internal linking'))) {
 
       recommendations.push('
         'Add internal links to related pages to improve navigation and SEO'
       );
     }
-    if (issues.some(issue => issue.includes('No structured data'))) {
+    if(issues.some(issue => issue.includes('No structured data'))) {
 
       recommendations.push('
         'Implement structured data markup for better search engine understanding'
       );
     }
-    if (issues.some(issue => issue.includes('Title'))) {
+    if(issues.some(issue => issue.includes('Title'))) {
 
       recommendations.push('
         'Optimize page titles with relevant keywords and compelling copy'
@@ -314,7 +314,7 @@ export class ContentQualityAnalyzer {
   generateReport() {
     const pageMetrics = Array.from(this.analyzedPages.values());
     const totalPages = pageMetrics.length;
-    if (totalPages === 0) {
+    if(totalPages === 0) {
 
       return {
 
@@ -366,20 +366,20 @@ export class ContentQualityAnalyzer {
       page => page.overallScore >= 60
     ).length;
     const poorPages = pageMetrics.filter(page => page.overallScore < 40).length;
-    let summary = `Analyzed ${totalPages} pages. `;
-    if (excellentPages > 0) {
+    let summary = `Analyzed ${totalPages} pages.`;
+    if(excellentPages > 0) {
 `
-      summary += `${excellentPages} pages have excellent content quality. `;
+      summary += `${excellentPages} pages have excellent content quality.`;
     }
-    if (goodPages > 0) {
+    if(goodPages > 0) {
 `
-      summary += `${goodPages} pages have good content quality. `;
+      summary += `${goodPages} pages have good content quality.`;
     }
-    if (poorPages > 0) {
+    if(poorPages > 0) {
 `
-      summary += `${poorPages} pages need significant improvement. `;
+      summary += `${poorPages} pages need significant improvement.`;
     }
-    if (topIssues.length > 0) {
+    if(topIssues.length > 0) {
 '`
       summary += `Top issues to address: ${topIssues.slice(0, 3).join(',)}.`;
     }

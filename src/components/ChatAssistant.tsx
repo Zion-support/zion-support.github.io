@@ -1,47 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-<<<<<<< HEAD
-import { motion, AnimatePresence } from 'framer - motion';
+import { motion, AnimatePresence  } from 'framer-motion';
 
-  MessageCircle,
-  X,
-  Send,
-=======
-  MessageCircle, 
-  X, 
-  Send, 
->>>>>>> main
-  Bot,
-  User,
-  Sparkles,
-  Settings,
-  Mic,
-  MicOff,
-  Paperclip,
-  MoreHorizontal
-} from 'lucide-react';
-
-interface Message {
-  id: string;
-  text: string;
-  sender: 'user' | 'assistant';
-  timestamp: Date;
-  isTyping?: boolean;
-  attachments?: Array<{
-    type: 'image' | 'file' | 'video';
-    url: string;
-    name: string;
-    size?: string;
-  }>;
-  metadata?: {
-    confidence?: number;
-    sources?: string[];
-    suggestions?: string[];
-    actionRequired?: boolean;
-  };
-}
-
+export default function Page() {
 interface ChatAssistantProps {
   children?: React.ReactNode;
   enabled?: boolean;
@@ -65,10 +25,9 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   enableSuggestions = true
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [messages, setMessages] = useState<Message[]>([
-    {
+  const [messages, setMessages] = useState<Message[]>([{
       id: '1',
-      text: 'Hello! I\'m your AI assistant. How can I help you today?',
+      text: 'Hello! I\'m your AI assistant.How can I help you today?',
       sender: 'assistant',
       timestamp: new Date()
     }
@@ -88,7 +47,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   }, [messages]);
 
   const handleSendMessage = async () => {
-    if (!inputValue.trim()) return;
+    if(!inputValue.trim()) return;
 
     const userMessage: Message = {
       id: Date.now().toString(),
@@ -120,18 +79,17 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   };
 
   const getAIResponse = (input: string): string => {
-    const responses = [
-      "I'd be happy to help you with that! Can you provide more details about your specific needs?",
-      "That's a great question! Our team specializes in AI, cybersecurity, and cloud solutions. Which area interests you most?",
+    const responses = ["I'd be happy to help you with that! Can you provide more details about your specific needs?",
+      "That's a great question! Our team specializes in AI, cybersecurity, and cloud solutions.Which area interests you most?",
       "Thank you for reaching out! I can connect you with one of our experts to discuss your requirements in detail.",
-      "Based on your query, I recommend exploring our comprehensive service offerings. Would you like me to guide you through them?",
-      "Excellent! We have extensive experience in that area. Let me provide you with some relevant information and next steps."
+      "Based on your query, I recommend exploring our comprehensive service offerings.Would you like me to guide you through them?",
+      "Excellent! We have extensive experience in that area.Let me provide you with some relevant information and next steps."
     ];
     return responses[Math.floor(Math.random() * responses.length)];
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
+    if(e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
       handleSendMessage();
     }
@@ -149,10 +107,9 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
     'top-left': 'top-4 left-4'
   };
 
-  if (!enabled) return null;
+  if(!enabled) return null;
 
-  return (
-    <div className={`fixed ${positionClasses[position]} z-50`}>
+  return (<div className={`fixed ${positionClasses[position]} z-50`}>
       {/* Chat Window */}
       <AnimatePresence>
         {isOpen && (
@@ -197,14 +154,12 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
                   key={message.id}
                   className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
                 >
-                  <div className={`max-w-[80%] ${
-                    message.sender === 'user' 
+                  <div className={`max-w-[80%] ${message.sender === 'user' 
                       ? 'bg-cyan-500 text-white' 
                       : 'bg-white/10 text-gray-100'
                   } rounded-lg p-3`}>
                     <p className="text-sm">{message.text}</p>
-                    <p className={`text-xs mt-1 ${
-                      message.sender === 'user' ? 'text-cyan-100' : 'text-gray-400'
+                    <p className={`text-xs mt-1 ${message.sender === 'user' ? 'text-cyan-100' : 'text-gray-400'
                     }`}>
                       {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                     </p>
@@ -250,8 +205,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
                 {enableVoice && (
                   <button 
                     onClick={toggleVoice}
-                    className={`transition-colors p-2 ${
-                      isListening ? 'text-red-400' : 'text-gray-400 hover:text-white'
+                    className={`transition-colors p-2 ${isListening ? 'text-red-400' : 'text-gray-400 hover:text-white'
                     }`}
                   >
                     {isListening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}

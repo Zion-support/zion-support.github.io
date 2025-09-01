@@ -16,13 +16,11 @@ export function useToast(...args[]):  {
 :src/hooks/use-toast.tsx
   const [toasts, setToasts] = useState<any>([]);
 
-  
-    
     const newToast: Toast = { id, title, description, variant, duration };
 
     setToasts(prev => [...prev, newToast]);
 
-    if (duration > 0) {
+    if(duration > 0) {
 
       setTimeout(() => {
         setToasts(prev => prev.filter(toast => toast.id !== id))}, duration)}
@@ -33,12 +31,10 @@ export function useToast(...args[]):  {
   
     setToasts(prev => prev.filter(toast => toast.id !== id))}, []);
 
-  
     setToasts([])}, []);
   
     setToasts(prev => prev.filter(toast => toast.id !== id))}, []);
 
-  
     setToasts([])}, []);
 
   return {

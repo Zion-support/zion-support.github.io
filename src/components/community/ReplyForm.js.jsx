@@ -1,22 +1,8 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
-export default function ReplyForm({
 
-  onSubmit,
-  placeholder = 'Write your reply...'}) {
-
-  const [content, setContent] = useState('');
-  const handleSubmit = e => {
-
-    e.preventDefault();
-    if (content.trim()) {
-
-      onSubmit(content);
-      setContent('');
-    }
-  };
-  return()
-    <form onSubmit={handleSubmit} className="mt-4">
+export default function Page() {
+ className="mt-4">
       <textarea
         value={content}
         onChange={e => setContent(e.target.value)}

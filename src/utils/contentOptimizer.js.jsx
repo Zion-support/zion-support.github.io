@@ -59,7 +59,7 @@ export class ContentOptimizer {
       .filter(s => s.trim().length > 0);
     const words = textContent.split(/\s+/).filter(w => w.length > 0);
     const syllables = this.countSyllables(textContent);
-    if (sentences.length === 0 || words.length === 0) return 0;
+    if(sentences.length === 0 || words.length === 0) return 0;
     // Flesch Reading Ease formula
     const score =
       206.835 -
@@ -90,55 +90,55 @@ export class ContentOptimizer {
 
     let score = 100;
     // Check for title'
-    if (!content.includes('<title>)) score -= 20;
+    if(!content.includes('<title>)) score -= 20;
     // Check for meta description'
-    if (!content.includes('name="description"')) score -= 15;
+    if(!content.includes('name="description"')) score -= 15;
     // Check for headings'
-    if (!content.includes('<h1>)) score -= 10;
-    if (!content.includes('<h2>)) score -= 5;
+    if(!content.includes('<h1>)) score -= 10;
+    if(!content.includes('<h2>)) score -= 5;
     // Check for images with alt text'
     const imagesWithAlt = images.filter(img => img.includes('alt='));
-    if (images.length > 0 && imagesWithAlt.length === 0) score -= 10;
+    if(images.length > 0 && imagesWithAlt.length === 0) score -= 10;
     // Check for internal links"
     const internalLinks = content.match(/href="\/[^"]*"/g) || [];
-    if (internalLinks.length < 2) score -= 10;
+    if(internalLinks.length < 2) score -= 10;
     return Math.max(0, score);
   }
   static identifyIssues(content, page, metrics) {
 
     const issues = [];
     // Check for missing headings
-    if (metrics.headingCount < this.MIN_HEADING_COUNT) {
+    if(metrics.headingCount < this.MIN_HEADING_COUNT) {
 
       issues.push({
 
         type: 'missing-headings',
         severity: 'high',
-        description: `Only ${metrics.headingCount} headings found. Minimum recommended: ${this.MIN_HEADING_COUNT}`,
+        description: `Only ${metrics.headingCount} headings found.Minimum recommended: ${this.MIN_HEADING_COUNT}`,
         location: 'Page structure'});
     }
     // Check for minimal content
-    if (metrics.wordCount < this.MIN_WORD_COUNT) {
+    if(metrics.wordCount < this.MIN_WORD_COUNT) {
 
       issues.push({
 
         type: 'minimal-content',
         severity: 'medium',`
-        description: `Only ${metrics.wordCount} words found. Minimum recommended: ${this.MIN_WORD_COUNT}`,
+        description: `Only ${metrics.wordCount} words found.Minimum recommended: ${this.MIN_WORD_COUNT}`,
         location: 'Content body'});
     }
     // Check for no images
-    if (metrics.imageCount === 0) {
+    if(metrics.imageCount === 0) {
 
       issues.push({
 
         type: 'no-images',
         severity: 'medium',
-        description: 'No images found. Images improve user engagement and SEO',
+        description: 'No images found.Images improve user engagement and SEO',
         location: 'Content body'});
     }
     // Check for poor structure
-    if (metrics.headingCount === 0 && metrics.wordCount > 100) {
+    if(metrics.headingCount === 0 && metrics.wordCount > 100) {
 
       issues.push({
 
@@ -153,7 +153,7 @@ export class ContentOptimizer {
     const missingKeywords = pageKeywords.filter()
       kw => !contentKeywords.includes(kw)
     );
-    if (missingKeywords.length > 0) {
+    if(missingKeywords.length > 0) {
 
       issues.push({
 
@@ -238,7 +238,7 @@ export class ContentOptimizer {
   }
   static extractContentKeywords(content) {
 
-    // Extract potential keywords from content (simplified)
+    // Extract potential keywords from content(simplified)
     const textContent = content.replace(/<[^>]*>/g,).toLowerCase();
     const words = textContent.split(/\s+/).filter(w => w.length > 3);
     // Count word frequency and return most common
@@ -353,7 +353,7 @@ export class ContentOptimizer {
 
     const baseDescription = baseDescriptions[contentType];
     const pageKeywords = this.extractPageKeywords(page).join(' ');`
-    return `${baseDescription} ${pageKeywords}. Transform your business with Zion Tech Group.`;
+    return `${baseDescription} ${pageKeywords}.Transform your business with Zion Tech Group.`;
   }
 }
 export const contentOptimizer = new ContentOptimizer();

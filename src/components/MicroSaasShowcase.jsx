@@ -1,16 +1,9 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Sparkles, ArrowRight, Star, TrendingUp, Users, Zap, Shield, BarChart3, Globe, Cpu, Database, Cloud export function MicroSaasShowcase() {
-
-<<<<<<< HEAD
-    const [activeCategory, setActiveCategory] = useState ('all') ;
-    const categories = [
-        { id: 'all', name: 'All Services', icon: <Sparkles className="h - 5 w - 5"/> },
-        { id: 'ai - ml', name: 'AI & ML', icon: <Cpu className="h - 5 w - 5"/> },
-        { id: 'security', name: 'Security', icon: <Shield className="h - 5 w - 5"/> },
-        { id: 'analytics', name: 'Analytics', icon: <BarChart3 className="h - 5 w - 5"/> },
-        { id: 'automation', name: 'Automation', icon: <Zap className="h - 5 w - 5"/> },
-        { id: 'cloud', name: 'Cloud', icon: <Cloud className="h - 5 w - 5"/> }
+import { Link  } from 'react-router-dom';
+export default function Page() {
+,
+        { id: 'automation', name: 'Automation', icon: <Zap className="h-5 w-5"/> },
+        { id: 'cloud', name: 'Cloud', icon: <Cloud className="h-5 w-5"/> }
 =======
     const [activeCategory, setActiveCategory] = useState('all');
     const categories = ['
@@ -22,8 +15,7 @@ import { Sparkles, ArrowRight, Star, TrendingUp, Users, Zap, Shield, BarChart3, 
         { id: 'cloud', name: 'Cloud', icon: <Cloud className="h-5 w-5"/> }
 >>>>>>> main
     ];
-    const microSaasServices = [
-        {
+    const microSaasServices = [{
 
             id: 'ai-content-optimizer',
             title: 'AI Content Optimizer Pro',
@@ -141,9 +133,7 @@ import { Sparkles, ArrowRight, Star, TrendingUp, Users, Zap, Shield, BarChart3, 
             <Sparkles className="h-8 w-8 text-zion-cyan"/>
           </div>"
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-            Transform your business with our curated collection of intelligent, innovative, and cost-effective micro SAAS services.
-            From AI-powered tools to enterprise security solutions.
-          </p>"
+            Transform your business with our curated collection of intelligent, innovative, and cost-effective micro SAAS services.From AI-powered tools to enterprise security solutions.</p>"
           <div className="flex items-center justify-center gap-4">"
             <div className="flex items-center gap-2 text-zion-slate-light">"
               <TrendingUp className="h-5 w-5 text-zion-cyan"/>

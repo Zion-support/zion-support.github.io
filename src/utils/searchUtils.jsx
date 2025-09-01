@@ -14,7 +14,7 @@ export default {
  */
 export const highlightSearchTerms = (text, searchTerm) => {
 
-    if (!searchTerm.trim())
+    if(!searchTerm.trim())
         return text;
     const escaped = searchTerm.replace(/[.*+?^${}()|[\]\\]/g,\\$&');
     const regex = new RegExp(`(${escaped})`,gi');
@@ -22,11 +22,11 @@ export const highlightSearchTerms = (text, searchTerm) => {
 };
 
 /**
- * Check if a text contains the search term (case-insensitive)
+ * Check if a text contains the search term(case-insensitive)
  */
 export const matchesSearchTerm = (text, searchTerm) => {
 
-    if (!text || !searchTerm.trim())
+    if(!text || !searchTerm.trim())
         return false;
     return text.toLowerCase().includes(searchTerm.toLowerCase());
 };
@@ -44,34 +44,34 @@ export const calculateRelevanceScore = (result, searchTerm) => {
     const description = result.description.toLowerCase();
 
     // Exact title match gets highest score
-    if (title === term)
+    if(title === term)
         score += 100;
     // Title starts with search term
-    else if (title.startsWith(term))
+    else if(title.startsWith(term))
         score += 80;
     // Title contains search term
-    else if (title.includes(term))
+    else if(title.includes(term))
         score += 60;
     // Description contains search term
-    if (description.includes(term))
+    if(description.includes(term))
         score += 30;
     // Tag matches
-    if (result.tags?.some(tag => tag.toLowerCase().includes(term))) {
+    if(result.tags?.some(tag => tag.toLowerCase().includes(term))) {
 
         score += 20;
     }
     // Category match
-    if (result.category?.toLowerCase().includes(term)) {
+    if(result.category?.toLowerCase().includes(term)) {
 
         score += 15;
     }
     // Boost score based on rating
-    if (result.rating) {
+    if(result.rating) {
 
         score += result.rating * 2;
     }
     // Recent content gets slight boost
-    if (result.date) {
+    if(result.date) {
 
         const dateScore = Math.max(0, 10 - (Date.now() - new Date(result.date).getTime()) / (1000 * 60 * 60 * 24 * 30));
         score += dateScore;
@@ -87,7 +87,7 @@ export const sortSearchResults = (results, sortBy, searchTerm) => {
 
     const sortedResults = [...results];
     
-    switch (sortBy) {
+    switch(sortBy) {
 
         case 'price_asc':
             return sortedResults.sort((a, b) => (a.price ?? 0) - (b.price ?? 0));
@@ -123,31 +123,31 @@ export const filterSearchResults = (results, filters) => {
     let filteredResults = [...results];
     
     // Filter by type
-    if (filters.types.length > 0) {
+    if(filters.types.length > 0) {
 
         filteredResults = filteredResults.filter(result => filters.types.includes(result.type));
     }
 
     // Filter by category
-    if (filters.category) {
+    if(filters.category) {
 
         filteredResults = filteredResults.filter(result => result.category?.toLowerCase() === filters.category.toLowerCase());
     }
 
     // Filter by price range
-    if (filters.minPrice !== undefined || filters.maxPrice !== undefined) {
+    if(filters.minPrice !== undefined || filters.maxPrice !== undefined) {
 
         filteredResults = filteredResults.filter(result => {
 
             const price = result.price ?? 0;
             if (filters.minPrice !== undefined && price < filters.minPrice) return false;
-            if (filters.maxPrice !== undefined && price > filters.maxPrice) return false;
+            if(filters.maxPrice !== undefined && price > filters.maxPrice) return false;
             return true;
         });
     }
 
     // Filter by rating
-    if (filters.minRating) {
+    if(filters.minRating) {
 
         filteredResults = filteredResults.filter(result => (result.rating ?? 0) >= filters.minRating);
     }
@@ -160,7 +160,7 @@ export const filterSearchResults = (results, filters) => {
  */'
 export const performSearch = (data, searchTerm, filters = {}, sortBy = 'relevance') => {
 
-    if (!searchTerm.trim()) {
+    if(!searchTerm.trim()) {
 
         return sortSearchResults(data, sortBy, searchTerm);
     }
@@ -188,7 +188,7 @@ export const getSearchSuggestions = (searchHistory = [], popularTerms = [], curr
     const suggestions = [];
 
     // Add matching search history
-    if (currentInput) {
+    if(currentInput) {
 
         const matchingHistory = searchHistory;
             .filter(term => term.toLowerCase().includes(currentInput.toLowerCase()))
@@ -197,7 +197,7 @@ export const getSearchSuggestions = (searchHistory = [], popularTerms = [], curr
     }
 
     // Add popular terms if no current input
-    if (!currentInput) {
+    if(!currentInput) {
 
         suggestions.push(...popularTerms.slice(0, 5));
     }
@@ -230,6 +230,5 @@ export default {
     getSearchSuggestions,
     debounceSearch
 };
-
 
 '"`

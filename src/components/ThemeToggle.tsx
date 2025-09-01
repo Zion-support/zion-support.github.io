@@ -5,7 +5,6 @@ type Theme = 'dark' | 'light' | 'system';
 interface ThemeToggleProps {
   // Add your props here
 
-
   className?: string}
 <<<<<<< HEAD
 
@@ -20,18 +19,18 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
   useEffect(() => {
     setMounted(true);
     
-    if (savedTheme) {
+    if(savedTheme) {
 
       setTheme(savedTheme)}
   }, []) ;
-  useEffect ( () => {
-    if (!mounted) return;
+  useEffect(() => {
+    if(!mounted) return;
 
 <<<<<<< HEAD
-      root.classList.toggle ('dark', theme === 'dark') ;
+      root.classList.toggle('dark', theme === 'dark') ;
     }
 
-    localStorage.setItem ('theme', theme) ;
+    localStorage.setItem('theme', theme) ;
   }, [theme, mounted]) ;
 
 =======
@@ -39,9 +38,9 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
     '
     localStorage.setItem('theme', theme)}, [theme, mounted]);
 >>>>>>> main
-  if (!mounted) {
+  if(!mounted) {
 
-    return()
+    return ()
       <div className="w-32 h-10 rounded-lg bg-gray-200 dark:bg-gray-700 animate-pulse" />
     )}
 
@@ -56,7 +55,7 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
       <button
         onClick={() => setIsOpen(!isOpen)}"
         className="flex items-center space-x-2 px-3 py-2 rounded-lg bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-        aria-label="Select theme"
+        
         aria-expanded={isOpen}"
         aria-haspopup="true"
       >
@@ -72,12 +71,10 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
             transition={{ duration: 0.15 }}"
             className="absolute top-full right-0 mt-2 w-32 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg z-50"
           >
-            {themes.map ( (themeOption) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={themeOption.value}
+            {themes.map((themeOption) => (<button      key={themeOption.value}
                 onClick={ () => {
-                  setTheme (themeOption.value) ;
-                  setIsOpen (false) }}                className={`w-full flex items-center space-x-2 px-3 py-2 text-left text-sm hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors ${
-
-                  theme === themeOption.value'
+                  setTheme(themeOption.value) ;
+                  setIsOpen(false) }}                className={`w-full flex items-center space-x-2 px-3 py-2 text-left text-sm hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors ${theme === themeOption.value'
                     ? 'bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400''
                     : 'text-gray-700 dark:text-gray-300'`
                 }`}
@@ -91,18 +88,16 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
     </div>) ;
 };
     const root = document.documentElement;
-    const systemTheme = window.matchMedia (' (prefers - color - scheme: dark) ') .matches ? 'dark' : 'light';
+    const systemTheme = window.matchMedia(' (prefers - color - scheme: dark) ') .matches ? 'dark' : 'light';
     const effectiveTheme = theme === 'system' ? systemTheme : theme;
 
-    root.classList.remove ('light', 'dark') ;
-    root.classList.add (effectiveTheme) ;
+    root.classList.remove('light', 'dark') ;
+    root.classList.add(effectiveTheme) ;
 
     // Update CSS custom properties for smooth transitions
 =======
     </div>) };
-    
-    
-    
+
 <<<<<<< HEAD
 
     root.classList.remove('light',dark');
@@ -113,7 +108,7 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
     
     // Update CSS custom properties for smooth transitions'
 >>>>>>> main
-    if (effectiveTheme === 'dark') {
+    if(effectiveTheme === 'dark') {
 
       root.style.setProperty('--zion-bg-primary',#0f172a');
       root.style.setProperty('--zion-bg-secondary',#1e293b');
@@ -132,13 +127,13 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
     { value: 'system', label: 'System theme', icon: Monitor }
   ];
 
-  if (!mounted) {
+  if(!mounted) {
 
-    return()`
+    return ()`
       <div className={`w-12 h-12 bg-gray-200 dark:bg-gray-700 rounded-lg animate-pulse ${className}`} />
     )}
 
-  return()`
+  return ()`
     <div className={`relative ${className}`}>
       <motion.div"
         className="flex items-center space-x-1 bg-white/10 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-1"
@@ -147,7 +142,7 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
         transition={{ duration: 0.3 }}
       >
 <<<<<<< HEAD
-        {themes.map ( (themeOption) => {
+        {themes.map((themeOption) => {
           const Icon = themeOption.icon;
           const isActive = theme === themeOption.value;
 
@@ -155,22 +150,18 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
 =======
         {themes.map((themeOption) => {
 
-          
-          
-          return()
+          return ()
             <motion.button
 >>>>>>> main
               key={themeOption.value}
               onClick={() => handleThemeChange(themeOption.value)}`
-              className={`relative p-2 rounded-lg transition-all duration-200 ${
-
-                isActive'
+              className={`relative p-2 rounded-lg transition-all duration-200 ${isActive'
                   ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg''
                   : 'text-gray-300 hover:text-white hover:bg-white/10'`
               }`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              aria - label={themeOption.label}
+              aria-label={themeOption.label}
               title={themeOption.label}
             >"
               <Icon className="w-4 h-4"  />              {isActive && (

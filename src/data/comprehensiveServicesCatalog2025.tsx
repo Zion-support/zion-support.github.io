@@ -39,8 +39,7 @@ contactInfo: {
   betaAccess?: boolean}
 
 // Combine all services into one comprehensive catalog;
-export const COMPREHENSIVE_SERVICES_CATALOG_2025: ComprehensiveService2025[] = [
-  ...INNOVATIVE_MICRO_SAAS_SERVICES_2025,
+export const COMPREHENSIVE_SERVICES_CATALOG_2025: ComprehensiveService2025[] = [...INNOVATIVE_MICRO_SAAS_SERVICES_2025,
   ...EXPANDED_INNOVATIVE_SERVICES_2025,
   ...EMERGING_TECH_SERVICES_2025
 ];
@@ -156,11 +155,10 @@ export
   ;
   count: COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service => {;
         if (tier.id === 'budget') return service.price <= 1000;
-        if (tier.id === 'mid-range') return service.price > 1000 && service.price <= 5000;
-        if (tier.id === 'enterprise') return service.price > 5000;
+        if(tier.id === 'mid-range') return service.price > 1000 && service.price <= 5000;
+        if(tier.id === 'enterprise') return service.price > 5000;
 <<<<<<< HEAD
         return false;
-
 
 }).length
 =======
@@ -227,28 +225,26 @@ export
   )};
 
 :src/data/comprehensiveServicesCatalog2025.tsx
-// Get featured services (high ROI and innovation);
+// Get featured services(high ROI and innovation);
 export 
   return COMPREHENSIVE_SERVICES_CATALOG_2025;
 <<<<<<< HEAD
     .sort((a, b) => {;
-      
-      
+
 =======
     .sort((a, b) => {;'
       const aScore = parseInt(a.roi.replace(/\D/g, '')) + (a.innovationLevel === 'Cutting-edge' ? 100 : 0);'
       
-// Get featured services (high ROI and innovation)
+// Get featured services(high ROI and innovation)
 export 
   return COMPREHENSIVE_SERVICES_CATALOG_2025;
     .sort((a, b) => {;
-      
-      
+
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       return bScore - aScore})
     .slice(0, limit)};
 
-// Get trending services (recent and popular)
+// Get trending services(recent and popular)
 :src/data/comprehensiveServicesCatalog2025.tsx
 export 
   return COMPREHENSIVE_SERVICES_CATALOG_2025;
@@ -275,7 +271,6 @@ export
     'iot': ['IoT & Edge Computing', 'Edge AI'],;
     'ai': ['AI & Analytics', 'AI & Customer Experience', 'AI & Business Automation', 'AI & Robotics']};
 
-  
   return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service =>
     categories.some(category => service.category.includes(category))
   )};
@@ -289,26 +284,26 @@ export
 
   let recommendations = COMPREHENSIVE_SERVICES_CATALOG_2025;
 
-  if (preferences.industry) {
+  if(preferences.industry) {
 :src/data/comprehensiveServicesCatalog2025.tsx
 
     recommendations = getServicesByIndustry(preferences.industry)}
 
-  if (preferences.budget) {
+  if(preferences.budget) {
 
     recommendations = recommendations.filter(service => service.price <= preferences.budget!)}
     recommendations = getServicesByIndustry(preferences.industry)}
 
-  if (preferences.budget) {
+  if(preferences.budget) {
     recommendations = recommendations.filter(service => service.price <= preferences.budget!)}
 
-  if (preferences.innovationLevel) {
+  if(preferences.innovationLevel) {
 
     recommendations = recommendations.filter(service =>
       service.innovationLevel.toLowerCase() === preferences.innovationLevel!.toLowerCase()
     )}
 
-  if (preferences.supportLevel) {
+  if(preferences.supportLevel) {
 
     recommendations = recommendations.filter(service =>
       service.supportLevel.toLowerCase() === preferences.supportLevel!.toLowerCase()
@@ -320,8 +315,6 @@ export
   return recommendations.sort((a, b) => {
 <<<<<<< HEAD
 
-    
-    
 =======
 :src/data/comprehensiveServicesCatalog2025.tsx
 '
@@ -331,8 +324,7 @@ export
     return bScore - aScore})};
 
 export default COMPREHENSIVE_SERVICES_CATALOG_2025}}}}}'"
-    
-    
+
     return bScore - aScore})};
 
 export default COMPREHENSIVE_SERVICES_CATALOG_2025}}}}}

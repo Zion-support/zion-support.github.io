@@ -1,47 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
-import {
-
-  MessageCircle,
-  Mic,
-  MicOff,
-  Send,
-  Bot,
-  User,
-  Sparkles,
-  X,
-  Minimize2,
-  Maximize2} from 'lucide-react';
-const mockAIResponses = ['
-  "I'd be happy to help you with that! Let me provide you with some information about our AI development services.","
-  "That's a great question! Our cloud infrastructure solutions are designed to scale with your business needs.","
-  "Based on your requirements, I'd recommend starting with our cybersecurity assessment package.",We have extensive experience in that area. Let me connect you with one of our specialists.',I can help you understand our pricing structure and find the best solution for your budget.',
-];
-export function AIChatAssistant() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isMinimized, setIsMinimized] = useState(false);
-  const [messages, setMessages] = useState([
-    {
-
-      id: '1',
-      type: 'assistant',
-      content:'"
-        "Hello! I'm Zion AI, your personal technology consultant. How can I help you today?",
-      timestamp: new Date()},
-  ]);
-  const [inputValue, setInputValue] = useState('');
-  const [isListening, setIsListening] = useState(false);
-  const [isTyping, setIsTyping] = useState(false);
-  const messagesEndRef = useRef(null);
-  const inputRef = useRef(null);
-  const scrollToBottom = () => {
-
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
-  useEffect(() => {
-    scrollToBottom();
-  }, [messages]);
+import { MessageCircle, Mic, MicOff, Send, Bot, User, Sparkles, X, Minimize2, Maximize2  } from 'lucide-react';
+export default function Page() {
+, [messages]);
   const handleSendMessage = async () => {
-    if (!inputValue.trim()) return;
+    if(!inputValue.trim()) return;
     const userMessage = {
 
       id: Date.now().toString(),
@@ -69,7 +31,7 @@ export function AIChatAssistant() {
     );
   };
   const handleVoiceInput = () => {
-    if (!isListening) {
+    if(!isListening) {
 
       setIsListening(true);
       // Simulate voice recognition
@@ -86,14 +48,14 @@ export function AIChatAssistant() {
   };
   const handleKeyPress = e => {
 
-    if (e.key === 'Enter' && !e.shiftKey) {
+    if(e.key === 'Enter' && !e.shiftKey) {
 
       e.preventDefault();
       handleSendMessage();
     }
   };
   const toggleChat = () => {
-    if (isOpen) {
+    if(isOpen) {
 
       setIsMinimized(!isMinimized);
     } else {
@@ -102,9 +64,9 @@ export function AIChatAssistant() {
       setIsMinimized(false);
     }
   };
-  if (!isOpen) {
+  if(!isOpen) {
 
-    return()
+    return ()
       <button
         onClick={toggleChat}"
         className="fixed bottom-4 right-4 p-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 group"
@@ -115,7 +77,7 @@ export function AIChatAssistant() {
       </button>
     );
   }
-  if (isMinimized) {
+  if(isMinimized) {
 
     return ("
       <div className="fixed bottom-4 right-4 z-50">"
@@ -177,9 +139,7 @@ export function AIChatAssistant() {
             )}
 
             <div`
-              className={`max-w-[80%] p-3 rounded-lg ${
-
-                message.type === 'user''
+              className={`max-w-[80%] p-3 rounded-lg ${message.type === 'user''
                   ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white''
                   : 'bg-zion-slate-light/10 text-zion-slate border border-zion-slate-light/20'`
               }`}
@@ -251,9 +211,7 @@ export function AIChatAssistant() {
 
           <button
             onClick={handleVoiceInput}`
-            className={`p-2 rounded-lg transition-all duration-200 ${
-
-              isListening'
+            className={`p-2 rounded-lg transition-all duration-200 ${isListening'
                 ? 'bg-red-500 text-white animate-pulse''
                 : 'bg-zion-slate-light/20 text-zion-slate hover:bg-zion-cyan hover:text-white'`
             }`}

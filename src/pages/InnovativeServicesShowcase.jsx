@@ -1,45 +1,20 @@
-import { Search, Star, Clock, Users, ArrowRight, CheckCircle, Phone, Mail, Globe, Zap, Shield, Brain, Cpu, TrendingUp, Rocket, Leaf, Eye, Network, Cube } from 'lucide - react';
-import React, { useState } from 'react';
-import { Badge } from '@/components / ui / badge';
-import { Button } from '@/components / ui / button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
-import { Input } from '@/components / ui / input';
-import { ADVANCED_AI_SERVICES } from "../data / advancedAIServices";
-import { INNOVATIVE_IT_INFRASTRUCTURE_SERVICES } from "../data / innovativeITInfrastructure";
-import { INNOVATIVE_MICRO_SAAS_SERVICES } from "../data / innovativeMicroSaasServices";
-import { IOT_EDGE_COMPUTING_SERVICES } from "../data / iotEdgeComputingServices";
-import SEOHead from "../components / SEOHead";
-
-// Import all service data
-const InnovativeServicesShowcase = () => {
-    const [searchTerm, setSearchTerm] = useState ('') ;
-    const [selectedCategory, setSelectedCategory] = useState ('all') ;
-    const [selectedSubcategory, setSelectedSubcategory] = useState ('all') ;
-    const [priceRange, setPriceRange] = useState ('all') ;
-    // SEO configuration
-    const seoConfig = {
-  title: "Innovative Services 2025 - Zion Tech Group",
-        description: "Discover cutting - edge AI, IT infrastructure, and micro SaaS services designed to transform your business. Explore our innovative technology solutions.",
-        keywords: "AI services, IT infrastructure, micro SaaS, innovative technology, business solutions",
-  url: "https://ziontechgroup.com / innovative - services"
-
-};
-    // Combine all services
-    const allServices = [
-        ...ADVANCED_AI_SERVICES,
-        ...INNOVATIVE_IT_INFRASTRUCTURE_SERVICES,
-        ...IOT_EDGE_COMPUTING_SERVICES,
-        ...INNOVATIVE_MICRO_SAAS_SERVICES
-    ];
-    const getSubcategoriesForCategory = (category) => {
-        if (category === 'all') return [];
-        return INNOVATIVE_SERVICE_SUBCATEGORIES_2025[category] || []};
+import { Search, Star, Clock, Users, ArrowRight, CheckCircle, Phone, Mail, Globe, Zap, Shield, Brain, Cpu, TrendingUp, Rocket, Leaf, Eye, Network, Cube  } from 'lucide-react';
+export default function Page() {
+ from '@/components / ui / badge';
+ from '@/components / ui / button';
+ from '@/components / ui / card';
+ from '@/components / ui / input';
+ from '../data/advancedAIServices';
+ from '../data/innovativeITInfrastructure';
+ from '../data/innovativeMicroSaasServices';
+ from '../data/iotEdgeComputingServices';
+;
     const getCategoryIcon = (category) => {
         const categoryIcons = {
-  'AI & Analytics': <Brain className="h - 5 w - 5"/>,
-            'Emerging Technology': <Rocket className="h - 5 w - 5"/>,
-            'Blockchain & Web3': <Cube className="h - 5 w - 5"/>,
-            'IoT & Edge Computing': <Network className="h - 5 w - 5"/>,
-            'Cybersecurity': <Shield className="h - 5 w - 5"/>,
-            'Metaverse & VR / AR': <Eye className="h - 5 w - 5"/>,
-            'Green Technology': <Leaf className="h - 5 w - 5"/>,
+  'AI & Analytics': <Brain className="h-5 w-5"/>,
+            'Emerging Technology': <Rocket className="h-5 w-5"/>,
+            'Blockchain & Web3': <Cube className="h-5 w-5"/>,
+            'IoT & Edge Computing': <Network className="h-5 w-5"/>,
+            'Cybersecurity': <Shield className="h-5 w-5"/>,
+            'Metaverse & VR / AR': <Eye className="h-5 w-5"/>,
+            'Green Technology': <Leaf className="h-5 w-5"/>,

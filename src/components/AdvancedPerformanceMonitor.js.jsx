@@ -1,33 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
-import {
-
-  Activity,
-  BarChart3,
-  TrendingUp,
-  Zap,
-  Database,
-  Network,
-  Cpu,
-  HardDrive,
-  X,
-  Maximize2,
-  Minimize2,
-  RefreshCw,
-  AlertTriangle,
-  CheckCircle,
-  Download} from 'lucide-react';
-const mockScalabilityMetrics = [
-  {
-
-    id: '1',
-    name: 'User Sessions',
-    current: 15420,
-    capacity: 20000,
-    utilization: 77.1,
-    growth: 12.3,
-    prediction: 25000,
-    category: 'User Load',
-    unit: 'sessions'},
+import { Activity, BarChart3, TrendingUp, Zap, Database, Network, Cpu, HardDrive, X, Maximize2, Minimize2, RefreshCw, AlertTriangle, CheckCircle, Download  } from 'lucide-react';
+,
   {
 
     id: '2',
@@ -88,7 +61,7 @@ export function AdvancedPerformanceMonitor() {
     setIsRefreshing(false);
   };
   useEffect(() => {
-    if (autoRefresh) {
+    if(autoRefresh) {
 
       const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
       return () => clearInterval(interval);
@@ -96,7 +69,7 @@ export function AdvancedPerformanceMonitor() {
   }, [autoRefresh]);
   const getStatusColor = status => {
 
-    switch (status) {
+    switch(status) {
 
       case 'critical':'
         return 'bg-red-500 text-white';
@@ -108,7 +81,7 @@ export function AdvancedPerformanceMonitor() {
   };
   const getSeverityColor = severity => {
 
-    switch (severity) {
+    switch(severity) {
 
       case 'critical':'
         return 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300';
@@ -122,7 +95,7 @@ export function AdvancedPerformanceMonitor() {
   };
   const getTrendIcon = trend => {
 
-    switch (trend) {
+    switch(trend) {
 
       case 'up':
         return <TrendingUp className="w-4 h-4 text-red-500" />;
@@ -134,7 +107,7 @@ export function AdvancedPerformanceMonitor() {
   };
   const getCategoryIcon = category => {
 
-    switch (category) {
+    switch(category) {
 
       case 'Processor':"
         return <Cpu className="w-5 h-5 text-blue-500" />;
@@ -152,13 +125,13 @@ export function AdvancedPerformanceMonitor() {
   };
   const getUtilizationColor = utilization => {
 
-    if (utilization >= 80) return 'text-red-600';
-    if (utilization >= 60) return 'text-yellow-600';
+    if(utilization >= 80) return 'text-red-600';
+    if(utilization >= 60) return 'text-yellow-600';
     return 'text-green-600';
   };
-  if (!isOpen) {
+  if(!isOpen) {
 
-    return()
+    return ()
       <button
         onClick={() => setIsOpen(true)}"
         className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-blue to-zion-cyan text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-40"
@@ -168,7 +141,7 @@ export function AdvancedPerformanceMonitor() {
       </button>
     );
   }
-  if (isMinimized) {
+  if(isMinimized) {
 
     return ("
       <div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50">"
@@ -187,7 +160,7 @@ export function AdvancedPerformanceMonitor() {
       </div>
     );
   }
-  return()
+  return ()
     <div'
       className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1400px] h-[900px]'}`}
       ref={containerRef}
@@ -309,13 +282,11 @@ export function AdvancedPerformanceMonitor() {
         ].map(tab => {
 
           const Icon = tab.icon;
-          return()
+          return ()
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}`
-              className={`flex items-center gap-2 px-6 py-3 border-b-2 transition-colors ${
-
-                activeTab === tab.id'
+              className={`flex items-center gap-2 px-6 py-3 border-b-2 transition-colors ${activeTab === tab.id'
                   ? 'border-zion-blue text-zion-blue bg-zion-blue/5''
                   : 'border-transparent text-zion-slate-light hover:text-zion-slate hover:bg-zion-slate-light/20'`
               }`}
@@ -357,9 +328,7 @@ export function AdvancedPerformanceMonitor() {
                   </div>"
                   <div className="flex items-center justify-between text-sm">
                     <span`
-                      className={`font-medium ${
-
-                        metric.trend === 'up''
+                      className={`font-medium ${metric.trend === 'up''
                           ? 'text-red-600''
                           : metric.trend === 'down''
                             ? 'text-green-600''
@@ -539,9 +508,7 @@ export function AdvancedPerformanceMonitor() {
                         {alert.severity}
                       </span>
                       <span`
-                        className={`px-2 py-1 rounded-full text-xs font-medium ${
-
-                          alert.status === 'active''
+                        className={`px-2 py-1 rounded-full text-xs font-medium ${alert.status === 'active''
                             ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300''
                             : alert.status === 'acknowledged''
                               ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300''

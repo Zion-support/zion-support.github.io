@@ -1,5 +1,4 @@
-export const INNOVATIVE_MICRO_SAAS_2025 = [
-    // AI-Powered Content Creation Suite
+export const INNOVATIVE_MICRO_SAAS_2025 = [// AI-Powered Content Creation Suite
     {
 
         id: "ai-content-creation-suite-2025","

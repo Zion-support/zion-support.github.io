@@ -1,4 +1,4 @@
-export function ServicesGrid(...args: any[]): any {
+export default function ServicesGrid() {
 
 <<<<<<< HEAD
 interface Service {
@@ -14,10 +14,10 @@ interface ServicesGridProps extends React.PropsWithChildren<{}> {
   services: Service[];
 }
 
-  return (<div className="grid grid - cols - 1 md: anygrid - cols - 2 gap - 8">
+  return (<div className="grid grid - cols - 1 md: anygrid - cols - 2 gap-8">
       {services.map ( (service, index) => (<motion.div
 =======
-  return()
+  return ()
     <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
       {services.map((service, index) => (
         <motion.div

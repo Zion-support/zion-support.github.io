@@ -1,49 +1,34 @@
-import { useEffect, useState } from "react";"
-import { Input } from "@/components/ui/input";"
-import { Card } from "@/components/ui/card";"
-import { Search } from "lucide-react";"
-import { ListingScoreCard } from "@/components/ListingScoreCard";"
-import { captureException } from "@/utils/sentry";"
-import { Skeleton } from "@/components/ui/skeleton";"
-import { useDebounce } from "@/hooks/useDebounce";"
-import { z } from "zod";
-const listingsSchema = z.array(listingSchema);
-export function ServiceTypeStep({ formData, updateFormData }) {
-"
-    const [searchQuery, setSearchQuery] = useState("");
-    const debouncedQuery = useDebounce(searchQuery, 300);
-    const [listings, setListings] = useState([]);
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState(null);
-    // Fetch services when the service type or query changes
-    useEffect(() => {
-        if (!formData.serviceType) {
+import { useEffect, useState } from 'react';"
+import { Input } from '@/components/ui/input';"
+import { Card } from '@/components/ui/card';"
+import { Search  } from 'lucide-react';"
+import { ListingScoreCard } from '@/components/ListingScoreCard';"
+import { captureException } from '@/utils/sentry';"
+import { Skeleton } from '@/components/ui/skeleton';"
+import { useDebounce } from '@/hooks/useDebounce';"
+import { z } from 'zod';
 
-            setListings([]);
-            return}
-        const fetchServices = async () => {
-            setLoading(true);
-            setError(null);
-            const url = `/api/public/services?category=${encodeURIComponent(formData.serviceType)}&q=${encodeURIComponent(debouncedQuery)}`;
+export default function Page() {
+`;
             const maxRetries = 3;
-            for (let attempt = 0; attempt < maxRetries; attempt++) {
+            for(let attempt = 0; attempt < maxRetries; attempt++) {
 
                 try {
                     const response = await fetch(url);
-                    if (!response.ok)
+                    if(!response.ok)
                         throw new Error('Failed to fetch');
                     const data = await response.json();
                     const parsed = listingsSchema.safeParse(data);
-                    if (!parsed.success)
+                    if(!parsed.success)
                         throw new Error('Invalid response');
                     setListings(parsed.data);
                     setError(null);
                     setLoading(false);
                     return}
-                catch (err) {
-                    if (attempt === maxRetries - 1) {
+                catch(err) {
+                    if(attempt === maxRetries - 1) {
 
-                        if (process.env.NODE_ENV === 'development') {
+                        if(process.env.NODE_ENV === 'development') {
 
                             // console.error('Failed to load services:', err)}
                         else {
@@ -74,9 +59,9 @@ export function ServiceTypeStep({ formData, updateFormData }) {
         if (formData.serviceType !== "") {
 
             const categoryMatch = item.category.toLowerCase() === formData.serviceType.toLowerCase();
-            if (!categoryMatch)
+            if(!categoryMatch)
                 return false}"
-        if (searchQuery.trim() === "")
+        if(searchQuery.trim() === "")
             return true;
         return item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
             item.category.toLowerCase().includes(searchQuery.toLowerCase())});"
@@ -125,8 +110,7 @@ export function ServiceTypeStep({ formData, updateFormData }) {
               </>) : filteredListings.length > 0 ? (filteredListings.map((item) => (<div key={item.id} onClick={() => handleItemSelect(item)} className={`cursor-pointer transition-all ${formData.specificItem?.id === item.id ? "ring-2 ring-zion-purple rounded-lg" : ""}`}>"
                   <ListingScoreCard title={item.title} category={item.category} aiScore={Math.floor(Math.random() * 30) + 70} rating={Math.floor(Math.random() * 2) + 3} reviewCount={Math.floor(Math.random() * 50) + 10} image={item.image} description="Sample listing description"/>"
                 </div>))) : (<div className="text-center py-8 text-zion-slate-light">
-                No items found. Please try a different search.
-              </div>
+                No items found.Please try a different search.</div>
             )}
           </div>
         </div>)}

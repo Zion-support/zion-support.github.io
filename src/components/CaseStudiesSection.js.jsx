@@ -1,29 +1,13 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { TrendingUp, Users, ArrowRight, Star, Building, Globe, Zap, Shield } from 'lucide-react';
-const caseStudies = [
-    {
+import { motion, AnimatePresence  } from 'framer-motion';
 
-        id: 'healthcare-ai',
-        title: 'Healthcare AI Revolution',
-        comp: 'MedTech Solutions',
-        industry: 'Healthcare',
-        icon: <Shield className="w-8 h-8"/>,
-        color: 'from-zion-cyan to-zion-blue',
-        bgColor: 'from-zion-cyan/20 to-zion-blue/20',
-        challenge: 'Needed to reduce diagnostic errors by 40% while improving patient outcomes',
-        solution: 'Implemented custom AI diagnostic system with real-time learning capabilities',
-        results[;
-            { metric: 'Diagnostic Accuracy', value: '+95%', improvement: 'Improved from 78% to 95%' },
-            { metric: 'Processing Time', value: '-70%', improvement: 'Reduced from 24 hours to 7 hours' },
-            { metric: 'Cost Savings', value: '$2.5M', improvement: 'Annual savings in operational costs' },
-            { metric: 'Patient Satisfaction', value: '+88%', improvement: 'Significant improvement in patient experience' }
+export default function Page() {
         ],;
         duration: '6 months',
         team: '8 experts',
         technologies['Machine Learning',Computer Vision',Cloud Infrastructure',Real-time Analytics'],;
-        testimonial: 'Zion Tech Group transformed our diagnostic capabilities. The AI system has become an invaluable tool for our medical professionals.',
-        author: 'Dr. Sarah Chen',
+        testimonial: 'Zion Tech Group transformed our diagnostic capabilities.The AI system has become an invaluable tool for our medical professionals.',
+        author: 'Dr.Sarah Chen',
         role: 'Chief Medical Officer',
         rating: 5,
         videoUrl: '/videos/healthcare-case-study.mp4',
@@ -49,7 +33,7 @@ const caseStudies = [
         duration: '8 months',
         team: '12 experts',
         technologies['Blockchain',Microservices',Advanced Security',Real-time Processing'],;
-        testimonial: 'The platform Zion built for us exceeded all expectations. It\'s not just a technical solution; it\'s a business enabler.',
+        testimonial: 'The platform Zion built for us exceeded all expectations.It\'s not just a technical solution; it\'s a business enabler.',
         author: 'Michael Rodriguez',
         role: 'CTO',
         rating: 5,
@@ -76,7 +60,7 @@ const caseStudies = [
         duration: '12 months',
         team: '15 experts',
         technologies['E-commerce Platform',Mobile Apps',IoT Integration',Data Analytics'],;
-        testimonial: 'Zion\'s digital transformation approach revolutionized our retail operations. We\'re now a truly modern, customer-centric organization.',
+        testimonial: 'Zion\'s digital transformation approach revolutionized our retail operations.We\'re now a truly modern, customer-centric organization.',
         author: 'Lisa Thompson',
         role: 'VP of Digital Strategy',
         rating: 5,
@@ -103,7 +87,7 @@ const caseStudies = [
         duration: '10 months',
         team: '10 experts',
         technologies['IoT Sensors',Predictive Analytics',Machine Learning',Cloud Platform'],;
-        testimonial: 'The IoT solution from Zion has transformed our manufacturing operations. We\'re now operating at peak efficiency with minimal downtime.',
+        testimonial: 'The IoT solution from Zion has transformed our manufacturing operations.We\'re now operating at peak efficiency with minimal downtime.',
         author: 'David Kim',
         role: 'Operations Director',
         rating: 5,
@@ -119,8 +103,8 @@ const industries = ['"
     { name: 'Education', count: 12, icon: <Users className="w-5 h-5"/> },"
     { name: 'Government', count: 8, icon: <Building className="w-5 h-5"/> }
 ];
-    const [selectedCase, setSelectedCase] = useState (null) ;
-    const [hoveredCase, setHoveredCase] = useState (null) ;
+    const [selectedCase, setSelectedCase] = useState(null);
+    const [hoveredCase, setHoveredCase] = useState(null);
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -176,9 +160,7 @@ const industries = ['"
             Success <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Stories</span>
           </h2>"
           <p className="text-zion-slate-light text-lg md:text-xl max-w-4xl mx-auto leading-relaxed mb-8">
-            Discover how we've helped organizations across industries achieve remarkable results. 
-            Our proven track record speaks for itself.
-          </p>
+            Discover how we've helped organizations across industries achieve remarkable results.Our proven track record speaks for itself.</p>
 
           {/* Industry stats */}"
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">
@@ -266,7 +248,7 @@ const industries = ['"
                         {tech}
                       </span>))}"
                     {caseStudy.technologies.length > 3 && (<span className="text-zion-cyan/60 text-xs">
-                        +{caseStudy.technologies.length - 3} more
+                        +{caseStudy.technologies.length-3} more
                       </span>) }
                   </div>
                 </div>
@@ -360,8 +342,7 @@ const industries = ['"
                 Ready to Write Your Success Story?
               </h3>"
               <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
-                Let us help you achieve similar results. Our proven methodology and expert team are ready to transform your business.
-              </p>"
+                Let us help you achieve similar results.Our proven methodology and expert team are ready to transform your business.</p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"
                 <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
                   Start Your Project

@@ -1,49 +1,7 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology Solutions', description = 'Leading provider of innovative technology solutions, AI-powered services, and digital transformation expertise. We help businesses thrive in the digital age.', keywords = ['AI solutions',technology consulting',digital transformation',cloud computing',cybersecurity',machine learning'], image = '/images/zion-tech-group-og.jpg', url = 'https://ziontechgroup.com', type = 'website', author = 'Zion Tech Group', publishedTime, modifiedTime, section = 'Technology Services', tags = ['AI',Technology',Digital Transformation'] }) => {
-
-<<<<<<< HEAD
-    useEffect ( () => {
-=======
-    useEffect(() => {
->>>>>>> main
-        // Add structured data to the page
-        const structuredData = {
-
-  '@context': 'https://schema.org',@type': type === 'article' ? 'Article' : 'Organization',
-            name: 'Zion Tech Group',
-            url: 'https://ziontechgroup.com',
-            logo: 'https://ziontechgroup.com/images/zion-tech-group-logo.png',
-            description: description,
-            address: {
-
-                '@type': 'PostalAddress',
-                streetAddress: '123 Technology Drive',
-                addressLocality: 'Wilmington',
-                addressRegion: 'DE',
-                postalCode: '19801',
-  addressCountry: 'US'
-
-},
-            contactPoint: {
-
-                '@type': 'ContactPoint',
-                telephone: '+1-302-464-0950',
-                email: 'info@ziontechgroup.com',
-                contactType: 'customer service',
-                availableLanguage: 'English'
-            },
-            sameAs[;
-                'https://linkedin.com/company/ziontechgroup',https://twitter.com/ziontechgroup',https://github.com/ziontechgroup'
-            ],;
-            ...(type === 'article' && {
-
-                headline: title,
-                author: {
-
-                    '@type': 'Person',
-                    name: author
-                },
+export default function Page() {
+,
                 publisher: {
 
                     '@type': 'Organization',
@@ -103,7 +61,7 @@ export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology
         };
         // Remove existing structured data'
         const existingScript = document.querySelector('script[type="application/ld+json"]');
-        if (existingScript) {
+        if(existingScript) {
 
             existingScript.remove()}
         // Add new structured data'
@@ -126,7 +84,7 @@ export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology
             const metaTag = document.createElement('meta');
             metaTag.name = meta.name;
             metaTag.content = meta.content;
-            document.head.appendChild (metaTag) }) ;
+            document.head.appendChild(metaTag) }) ;
         // Add resource hints
         const resourceHints = ['
             { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
@@ -139,22 +97,22 @@ export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology
             const link = document.createElement('link');
             link.rel = hint.rel;
             link.href = hint.href;
-            if (hint.crossorigin) link.crossOrigin = hint.crossorigin;
-            document.head.appendChild (link) }) ;
+            if(hint.crossorigin) link.crossOrigin = hint.crossorigin;
+            document.head.appendChild(link) }) ;
         return () => {
             // Cleanup on unmount'"
             const addedScript = document.querySelector('script[type="application/ld+json"]');
-            if (addedScript)
+            if(addedScript)
                 addedScript.remove();
             performanceMeta.forEach(meta => {
 "
                 const metaTag = document.querySelector(`meta[name="${meta.name}"]`);
-                if (metaTag)
+                if(metaTag)
                     metaTag.remove()});
             resourceHints.forEach(hint => {
 "`
                 const link = document.querySelector(`link[rel="${hint.rel}"][href="${hint.href}"]`);
-                if (link)
+                if(link)
                     link.remove()})}}, [title, description, keywords, image, url, type, author, publishedTime, modifiedTime, section, tags]);
     return (<Helmet>
       {/* Basic Meta Tags */}
@@ -163,11 +121,6 @@ export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology
       <meta name="keywords" content = {
 
   keywords.join(',);
-
-
-
-
-
 
 }/>;"
       <meta name="author" content={author}/>"

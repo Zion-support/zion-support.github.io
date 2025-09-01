@@ -1,17 +1,8 @@
 import React, { useState, useEffect, useRef, useCallback, useMemo } from "react"; // Added useMemo
-import { Search, X } from "lucide-react";
-import { Input } from "@/components/ui/input";
-import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions"; 
-import { SearchSuggestion } from "@/types/search";
-import debounce from 'lodash.debounce';
-
-interface EnhancedSearchInputProps {
-  value: string;
-  onChange: (value: string) => void;
-  onSelectSuggestion?: (value: string) => void;
-  placeholder?: string;
-  searchSuggestions: SearchSuggestion[];
-}
+import { Search, X  } from 'lucide-react';
+import { Input } from '@/components/ui/input';
+import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions'; 
+import { SearchSuggestion } from '@/types/search';
 
 export function EnhancedSearchInput({
   value,
@@ -26,9 +17,9 @@ export function EnhancedSearchInput({
   const inputRef = useRef<HTMLInputElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const debouncedFilterSuggestions = useMemo( // Changed from useCallback to useMemo
+  const debouncedFilterSuggestions = useMemo(// Changed from useCallback to useMemo
     () => debounce((currentValue: string, suggestions: SearchSuggestion[]) => {
-      if (!currentValue) {
+      if(!currentValue) {
         setFilteredSuggestions(suggestions.filter(s => s.type === 'recent'));
         return;
       }
@@ -40,7 +31,7 @@ export function EnhancedSearchInput({
       filtered.sort((a, b) => {
         const aStartsWith = a.text.toLowerCase().startsWith(currentValue.toLowerCase()) ? -1 : 0;
         const bStartsWith = b.text.toLowerCase().startsWith(currentValue.toLowerCase()) ? -1 : 0;
-        return aStartsWith - bStartsWith;
+        return aStartsWith-bStartsWith;
       });
 
       setFilteredSuggestions(filtered.slice(0, 8)); 
@@ -58,7 +49,7 @@ export function EnhancedSearchInput({
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
+      if(containerRef.current && !containerRef.current.contains(event.target as Node)) {
         setIsFocused(false);
       }
     }
@@ -69,7 +60,7 @@ export function EnhancedSearchInput({
 
   const handleSelectSuggestion = (suggestionText: string) => { // Renamed suggestion to suggestionText
     onChange(suggestionText);
-    if (onSelectSuggestion) {
+    if(onSelectSuggestion) {
       onSelectSuggestion(suggestionText);
     }
     setIsFocused(false);
@@ -78,8 +69,8 @@ export function EnhancedSearchInput({
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (!isFocused || filteredSuggestions.length === 0) {
-      if (e.key === 'Escape') { 
+    if(!isFocused || filteredSuggestions.length === 0) {
+      if(e.key === 'Escape') { 
         e.preventDefault();
         setIsFocused(false);
         setHighlightedIndex(-1);
@@ -88,7 +79,7 @@ export function EnhancedSearchInput({
       return;
     }
 
-    switch (e.key) {
+    switch(e.key) {
       case 'ArrowDown':
         e.preventDefault();
         setHighlightedIndex(prev => (prev + 1) % filteredSuggestions.length);
@@ -98,7 +89,7 @@ export function EnhancedSearchInput({
         setHighlightedIndex(prev => (prev - 1 + filteredSuggestions.length) % filteredSuggestions.length);
         break;
       case 'Enter':
-        if (highlightedIndex !== -1 && filteredSuggestions[highlightedIndex]) {
+        if(highlightedIndex !== -1 && filteredSuggestions[highlightedIndex]) {
           e.preventDefault();
           handleSelectSuggestion(filteredSuggestions[highlightedIndex].text);
         }
@@ -114,8 +105,7 @@ export function EnhancedSearchInput({
     }
   };
   
-  return (
-    <div
+  return (<div
       className="relative w-full"
       ref={containerRef}
       role="combobox"
@@ -145,7 +135,7 @@ export function EnhancedSearchInput({
           <button
             className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
             onClick={() => onChange('')}
-            aria-label="Clear search"
+            
           >
             <X className="h-4 w-4" />
           </button>

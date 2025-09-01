@@ -8,12 +8,12 @@ export interface TeamRecommendation {
   roles: RecommendedRole[];
   totalEstimatedRate: {
 
-    // Sum of (hourlyRateRange.avg * weeklyHours) for all roles;
+    // Sum of(hourlyRateRange.avg * weeklyHours) for all roles;
     min: number;
     max: number};
   totalWeeklyBurn: {
 
-    // Sum of (hourlyRateRange.avg * weeklyHours) for all roles - same as totalEstimatedRate for now
+    // Sum of(hourlyRateRange.avg * weeklyHours) for all roles - same as totalEstimatedRate for now
     min: number;
     max: number};
   totalProjectEstimate: {

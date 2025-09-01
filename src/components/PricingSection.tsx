@@ -13,8 +13,7 @@ function PricingSection () {
       icon: Shield};
 >>>>>>> main
   ];
-const pricingTiers = [
-  {
+const pricingTiers = [{
 
     name: "Starter","
     price: "$99","
@@ -68,14 +67,14 @@ const pricingTiers = [
     color: "from-green-500 to-emerald-500"};];
 
 <<<<<<< HEAD
-  return (<section className = "py - 20 bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
-      <div className="max - w-7xl mx - auto px - 6">
+  return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
+      <div className="max - w-7xl mx - auto px-6">
         <motion.div
-          className="text - center mb - 16"
+          className="text-center mb-16"
 =======
 export function PricingSection() {
   return ("
-    <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
+    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <div className="max-w-7xl mx-auto px-6">
         <motion.div "
           className="text-center mb-16"
@@ -99,9 +98,7 @@ export function PricingSection() {
             Transparent Pricing
           </h2>"
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Flexible pricing options designed to scale with your business.
-            Start small and grow with us.
-          </p>
+            Flexible pricing options designed to scale with your business.Start small and grow with us.</p>
         </motion.div>
 "
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -146,9 +143,7 @@ export function PricingSection() {
 
                 <Link"
                   to="/contact"`
-                  className={`block w-full text-center py-3 px-6 rounded-lg font-medium transition-colors duration-200 ${
-
-                    plan.popular'
+                  className={`block w-full text-center py-3 px-6 rounded-lg font-medium transition-colors duration-200 ${plan.popular'
                       ? 'bg-blue-600 hover:bg-blue-700 text-white''
                       : 'bg-gray-100 hover:bg-gray-200 text-gray-900'`
                   }`}
@@ -160,7 +155,7 @@ export function PricingSection() {
 
 <<<<<<< HEAD
         <motion.div
-          className="mt - 16 text - center"
+          className="mt-16 text-center"
 =======
         <motion.div "
           className="mt-16 text-center"
@@ -186,8 +181,7 @@ export function PricingSection() {
 }}
         >"
           <p className="text-gray-400 mb-6">
-            Need a custom solution? Contact us for a personalized quote.
-          </p>
+            Need a custom solution? Contact us for a personalized quote.</p>
           <Link"
             to="/contact"
             className="inline-flex items-center gap-2 px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-200"

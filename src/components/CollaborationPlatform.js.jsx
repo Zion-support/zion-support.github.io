@@ -1,27 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
-import {
-
-  Video,
-  VideoOff,
-  Mic,
-  MicOff,
-  Monitor,
-  Users,
-  MessageSquare,
-  X,
-  Maximize2,
-  Minimize2,
-  PhoneOff} from 'lucide-react';
-const mockParticipants = [
-  {
-
-    id: '1',
-    name: 'John Smith',
-    isVideoOn: true,
-    isAudioOn: true,
-    isScreenSharing: false,
-    isSpeaking: true,
-    avatar: '👨‍💼'},
+import { Video, VideoOff, Mic, MicOff, Monitor, Users, MessageSquare, X, Maximize2, Minimize2, PhoneOff  } from 'lucide-react';
+,
   {
 
     id: '2',
@@ -62,8 +41,7 @@ export function CollaborationPlatform() {
     isScreenSharing: false,
     isMuted: false});
   const [activeChat, setActiveChat] = useState(false);
-  const [chatMessages, setChatMessages] = useState([
-    {
+  const [chatMessages, setChatMessages] = useState([{
 
       id: '1',
       user: 'John Smith',
@@ -93,7 +71,7 @@ export function CollaborationPlatform() {
     setIsRecording(!isRecording);
   };
   const sendMessage = () => {
-    if (newMessage.trim()) {
+    if(newMessage.trim()) {
 
       const message = {
 
@@ -115,9 +93,9 @@ export function CollaborationPlatform() {
   const toggleChat = () => {
     setActiveChat(!activeChat);
   };
-  if (!isOpen) {
+  if(!isOpen) {
 
-    return()
+    return ()
       <button
         onClick={() => setIsOpen(true)}
         className="fixed bottom-4 right-20 p-3 bg-zion-purple hover:bg-zion-purple-light text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50"
@@ -127,7 +105,7 @@ export function CollaborationPlatform() {
       </button>
     );
   }
-  if (isMinimized) {
+  if(isMinimized) {
 
     return ("
       <div className="fixed bottom-4 right-20 z-50">"
@@ -148,7 +126,7 @@ export function CollaborationPlatform() {
       </div>
     );
   }
-  return()
+  return ()
     <div'`
       className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[800px] h-[600px]'}`}
       ref={containerRef}
@@ -170,9 +148,7 @@ export function CollaborationPlatform() {
         <div className="flex items-center gap-2">
           <button
             onClick={toggleRecording}`
-            className={`p-2 rounded-lg transition-all duration-200 ${
-
-              isRecording'
+            className={`p-2 rounded-lg transition-all duration-200 ${isRecording'
                 ? 'bg-red-500 text-white animate-pulse''
                 : 'bg-zion-slate-light/20 text-zion-slate hover:bg-zion-slate-light/30'`
             }`}
@@ -269,9 +245,7 @@ export function CollaborationPlatform() {
             <div className="flex items-center justify-center gap-4">
               <button
                 onClick={toggleVideo}`
-                className={`p-3 rounded-full transition-all duration-200 ${
-
-                  localUser.isVideoOn'
+                className={`p-3 rounded-full transition-all duration-200 ${localUser.isVideoOn'
                     ? 'bg-zion-slate-light/20 text-zion-slate hover:bg-zion-slate-light/30''
                     : 'bg-red-500 text-white'`
                 }`}
@@ -286,9 +260,7 @@ export function CollaborationPlatform() {
 
               <button
                 onClick={toggleAudio}`
-                className={`p-3 rounded-full transition-all duration-200 ${
-
-                  localUser.isAudioOn'
+                className={`p-3 rounded-full transition-all duration-200 ${localUser.isAudioOn'
                     ? 'bg-zion-slate-light/20 text-zion-slate hover:bg-zion-slate-light/30''
                     : 'bg-red-500 text-white'`
                 }`}
@@ -303,9 +275,7 @@ export function CollaborationPlatform() {
 
               <button
                 onClick={toggleScreenShare}`
-                className={`p-3 rounded-full transition-all duration-200 ${
-
-                  localUser.isScreenSharing'
+                className={`p-3 rounded-full transition-all duration-200 ${localUser.isScreenSharing'
                     ? 'bg-zion-cyan text-white''
                     : 'bg-zion-slate-light/20 text-zion-slate hover:bg-zion-slate-light/30'`
                 }`}
@@ -319,9 +289,7 @@ export function CollaborationPlatform() {
 
               <button
                 onClick={toggleChat}`
-                className={`p-3 rounded-full transition-all duration-200 ${
-
-                  activeChat'
+                className={`p-3 rounded-full transition-all duration-200 ${activeChat'
                     ? 'bg-zion-purple text-white''
                     : 'bg-zion-slate-light/20 text-zion-slate hover:bg-zion-slate-light/30'`
                 }`}"

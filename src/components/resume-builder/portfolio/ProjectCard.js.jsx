@@ -1,35 +1,6 @@
 import { useState } from 'react';
-import { Card, CardContent, CardFooter } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import {
 
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle} from '@/components/ui/alert-dialog';
-import { Edit, Trash2, Github, Link, FileText } from 'lucide-react';
-export function ProjectCard({ project, onEdit, onDelete }) {
-
-  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
-  const handleDelete = () => {
-    if (project.id) {
-
-      onDelete(project.id);
-    }
-    setDeleteDialogOpen(false);
-  };
-  return()
-    <Card className="h-full flex flex-col">"
-      <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">
-        {project.image_url ? (
-          <img"
-            loading="lazy"
-            src={project.image_url}
+export default function Page() {
             alt={project.title}"
             className="w-full h-full object-cover"
           />
@@ -69,10 +40,10 @@ export function ProjectCard({ project, onEdit, onDelete }) {
               href={project.github_url}"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="GitHub"
+              
               title="GitHub"
             >"
-              <Button variant="ghost" size="icon" aria-label="GitHub link">"
+              <Button variant="ghost" size="icon" >"
                 <Github className="h-4 w-4" />
               </Button>
             </a>
@@ -83,10 +54,10 @@ export function ProjectCard({ project, onEdit, onDelete }) {
               href={project.demo_url}"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Live demo"
+              
               title="Live demo"
             >"
-              <Button variant="ghost" size="icon" aria-label="Live demo link">"
+              <Button variant="ghost" size="icon" >"
                 <Link className="h-4 w-4" />
               </Button>
             </a>
@@ -98,7 +69,7 @@ export function ProjectCard({ project, onEdit, onDelete }) {
             variant="ghost"
             size="icon"
             onClick={() => onEdit(project)}"
-            aria-label="Edit project"
+            
           >"
             <Edit className="h-4 w-4" />
           </Button>
@@ -106,7 +77,7 @@ export function ProjectCard({ project, onEdit, onDelete }) {
             variant="ghost"
             size="icon"
             onClick={() => setDeleteDialogOpen(true)}"
-            aria-label="Delete project"
+            
           >"
             <Trash2 className="h-4 w-4" />
           </Button>
@@ -119,8 +90,7 @@ export function ProjectCard({ project, onEdit, onDelete }) {
             <AlertDialogTitle>Delete Project</AlertDialogTitle>
             <AlertDialogDescription>
               Are you sure you want to delete this project? This action cannot
-              be undone.
-            </AlertDialogDescription>
+              be undone.</AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
             <AlertDialogCancel>Cancel</AlertDialogCancel>

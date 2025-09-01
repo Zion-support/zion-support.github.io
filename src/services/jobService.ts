@@ -7,7 +7,7 @@ export async function createJob(...args: any[]): any {
     .single();
 
     const { data, error } = await supabase
-      .from ('jobs') .update (jobData) .eq ('id', jobId) .select () .single () ;
+      .from('jobs') .update(jobData) .eq('id', jobId) .select () .single () ;
 export async function updateJob(...args: any[]): any {
 
   const { data, error } = await supabase'
@@ -17,7 +17,7 @@ export async function updateJob(...args: any[]): any {
     .select()
     .single();
 
-  if (error) throw error;
+  if(error) throw error;
   return data}
 
 export async function getJobById(...args: any[]): any {
@@ -28,5 +28,5 @@ export async function getJobById(...args: any[]): any {
     .eq('id', jobId)
     .single();
 
-  if (error) throw error;
+  if(error) throw error;
   return data}

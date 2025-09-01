@@ -1,6 +1,5 @@
 
 
-
 export type ContractFormValues = z.infer<typeof formSchema>;
 
 interface ContractFormProps {
@@ -24,10 +23,9 @@ export function ContractForm({
   // const [isGenerating, setIsGenerating] = useState(false); // Removed
   const { toast } = useToast();
 
-  
   // Update form when initialValues change
   useEffect(() => {
-    if (initialValues) {
+    if(initialValues) {
       Object.keys(initialValues).forEach((key) => {
         
         form.setValue(typedKey, initialValues[typedKey])})}
@@ -35,35 +33,34 @@ export function ContractForm({
   
   // Track form values for template saving
   useEffect(() => {
-    if (onFormValuesChange) {
+    if(onFormValuesChange) {
       
       });
       
       return () => subscription.unsubscribe()}
   }, [form, onFormValuesChange]);
-  
-  
+
     form.setValue("manualMilestones", transformedAIMilestones);
     
     // If payment terms isn't already set to milestone, update it
-    if (form.getValues("paymentTerms") !== "milestone") {
+    if(form.getValues("paymentTerms") !== "milestone") {
       form.setValue("paymentTerms", "milestone")}
     
     toast({
       title: "Milestones Generated",
-      description: `${milestones.length} milestones have been suggested and added to the form. Please review and adjust payment amounts.`,
+      description: `${milestones.length} milestones have been suggested and added to the form.Please review and adjust payment amounts.`,
     })};
   
-  // const onSubmit = async (values: ContractFormValues) => { // Removed onSubmit
+  // const onSubmit = async(values: ContractFormValues) => { // Removed onSubmit
   //   // setIsGenerating(true); // Removed
   //   // try {
   //   //   
   //   //   onContractGenerated(contract);
-  //   // } catch (error) {
+  //   // } catch(error) {
   //   //   console.error("Error generating contract:", error);
   //   //   toast({
   //   //     title: "Contract Generation Failed",
-  //   //     description: error instanceof Error ? error.message : "Something went wrong. Please try again.",
+  //   //     description: error instanceof Error ? error.message : "Something went wrong.Please try again.",
   //   //     variant: "destructive",
   //   //   });
   //   // } finally {
@@ -71,8 +68,7 @@ export function ContractForm({
   //   // }
   // };
   
-  return (
-    <>
+  return (<>
       <DialogHeader>
         <DialogTitle className="text-xl">Contract Builder</DialogTitle>
         <DialogDescription>

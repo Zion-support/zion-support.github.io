@@ -1,66 +1,10 @@
 <<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react';
 export default PerformanceOptimizer;
-import {
+import { ======= <<<<<<< HEAD >>>>>>> main Activity, Zap, TrendingUp, AlertTriangle, CheckCircle, Clock, BarChart3, Settings  } from 'lucide-react';
 
-=======
-
-<<<<<<< HEAD
->>>>>>> main
-  Activity,
-  Zap,
-  TrendingUp,
-  AlertTriangle,
-  CheckCircle,
-  Clock,
-  BarChart3,
-  Settings} from 'lucide-react';
-
-interface PerformanceMetrics {
-  loadTime: number;
-  domContentLoaded: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
-  firstInputDelay: number;
-  timeToInteractive: number;
-  speedIndex: number}
-
-interface ResourceMetrics {
-  totalResources: number;
-  totalSize: number;
-  images: number;
-  scripts: number;
-  stylesheets: number;
-  fonts: number}
-
-interface OptimizationSuggestion {
-  id: string;
-  title: string;
-  description: string;
-  impact: 'high' | 'medium' | 'low';
-  category: 'images' | 'javascript' | 'css' | 'fonts' | 'caching' | 'server';
-  implemented: boolean;
-
-const PerformanceOptimizer: React.FC = () => {
-  const [metrics, setMetrics] = useState < PerformanceMetrics> ({
-    fcp: 0,
-    lcp: 0,
-    fid: 0,
-    cls: 0,
-
-    ttfb: 0,
-    score: 0});
-
-  const [suggestions, setSuggestions] = useState < OptimizationSuggestion[]> ([
-    {
-
-      id: 'image-optimization',
-      title: 'Optimize Images',
-      description: 'Convert images to WebP format and implement lazy loading',
-      impact: 'high',
-      category: 'images',
-      implemented: false},
+export default function Page() {
+,
     {
 
       id: 'code-splitting',
@@ -103,7 +47,7 @@ const PerformanceOptimizer: React.FC = () => {
       implemented: false},
   ]);
 
-  const [isMonitoring, setIsMonitoring] = useState (false) ;
+  const [isMonitoring, setIsMonitoring] = useState(false);
   const [history, setHistory] = useState < PerformanceMetrics[]> ([]) ;
 
   // Simulate performance monitoring
@@ -115,7 +59,6 @@ const PerformanceOptimizer: React.FC = () => {
     intervalRef.current = setInterval(() => {
       updateResourceMetrics()}, 5000)}, [])}, []);
 
-  
     const newResourceMetrics: ResourceMetrics = {
       totalResources: resources.length,
       totalSize: resources.reduce((acc, resource) => acc + (resource as any).transferSize || 0, 0),
@@ -126,36 +69,30 @@ const PerformanceOptimizer: React.FC = () => {
     };
     setResourceMetrics(newResourceMetrics)}, []);
 
-  
-    if (newMetrics.fcp > 1800) score -= 20;
-    if (newMetrics.lcp > 2500) score -= 25;
-    if (newMetrics.fid > 100) score -= 20;
-    if (newMetrics.cls > 0.1) score -= 15;
-    if (newMetrics.ttfb > 600) score -= 20;
+    if(newMetrics.fcp > 1800) score -= 20;
+    if(newMetrics.lcp > 2500) score -= 25;
+    if(newMetrics.fid > 100) score -= 20;
+    if(newMetrics.cls > 0.1) score -= 15;
+    if(newMetrics.ttfb > 600) score -= 20;
 
-    newMetrics.score = Math.max (0, score) ;
-    setMetrics (newMetrics) ;
-    setHistory (prev => [...prev.slice (-9) , newMetrics]) }, []) ;
+    newMetrics.score = Math.max(0, score) ;
+    setMetrics(newMetrics) ;
+    setHistory(prev => [...prev.slice (-9) , newMetrics]) }, []) ;
 
-  useEffect ( () => {
-    if (isMonitoring) {
+  useEffect(() => {
+    if(isMonitoring) {
 
-      
       return () => clearInterval(interval)}
 
-  
-    if (score >= 70) return 'text-yellow-500';
+    if(score >= 70) return 'text-yellow-500';
     return 'text-red-500'};
 
-  
-    if (score >= 70)"
+    if(score >= 70)"
       return <AlertTriangle className="w-5 h-5 text-yellow-500"  />;"
     return <AlertTriangle className="w-5 h-5 text-red-500"  />};
 
-  
   ) => {
 
-    
     return isGood ? 'text-green-500' : 'text-red-500'}};
 
   return ("
@@ -169,9 +106,7 @@ const PerformanceOptimizer: React.FC = () => {
         </div>
         <button
           onClick={() => setIsMonitoring(!isMonitoring)}
-          className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-
-            isMonitoring'
+          className={`px-4 py-2 rounded-lg font-medium transition-colors ${isMonitoring'
               ? 'bg-red-500 hover:bg-red-600 text-white''
               : 'bg-zion-cyan hover:bg-zion-cyan-dark text-white'`
           }`}
@@ -247,9 +182,7 @@ const PerformanceOptimizer: React.FC = () => {
           {suggestions.map(suggestion => (
             <div
               key={suggestion.id}`
-              className={`p-4 rounded-lg border transition-colors ${
-
-                suggestion.implemented'
+              className={`p-4 rounded-lg border transition-colors ${suggestion.implemented'
                   ? 'bg-green-500/10 border-green-500/30''
                   : 'bg-white/5 border-white/20'`
               }`}
@@ -261,9 +194,7 @@ const PerformanceOptimizer: React.FC = () => {
                       {suggestion.title}
                     </h4>
                     <span`
-                      className={`px-2 py-1 rounded text-xs font-medium ${
-
-                        suggestion.impact === 'high''
+                      className={`px-2 py-1 rounded text-xs font-medium ${suggestion.impact === 'high''
                           ? 'bg-red-500/20 text-red-300''
                           : suggestion.impact === 'medium''
                             ? 'bg-yellow-500/20 text-yellow-300''
@@ -284,9 +215,7 @@ const PerformanceOptimizer: React.FC = () => {
                 </div>
                 <button
                   onClick={() => toggleSuggestion(suggestion.id)}`
-                  className={`px-3 py-1 rounded text-sm font-medium transition-colors ${
-
-                    suggestion.implemented'
+                  className={`px-3 py-1 rounded text-sm font-medium transition-colors ${suggestion.implemented'
                       ? 'bg-green-500 hover:bg-green-600 text-white''
                       : 'bg-zion-cyan hover:bg-zion-cyan-dark text-white'`
                   }`}
@@ -327,9 +256,8 @@ const PerformanceOptimizer: React.FC = () => {
     </div>) ;
 =======
 const PerformanceOptimizer: React.FC<{ enabled?: boolean }> = ({ enabled = true }) => {
-  if (!enabled) return null;
-  return (
-    <div className="hidden" aria-hidden="true" />
+  if(!enabled) return null;
+  return (<div className="hidden" aria-hidden="true" />
   );
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 };

@@ -1,20 +1,7 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Code, Cloud, Zap, ArrowRight, Star, TrendingUp, Layers, GitBranch, Terminal, Monitor, Server, Brain } from 'lucide-react';
-const frontendTechnologies = [
-    {
-
-        name: "React","
-        category: "Frontend Framework","
-        logo: "/logos/react.svg","
-        description: "Modern component-based UI library for building interactive user interfaces","
-        version: "18.x","
-        expertise: "Expert",
-        projects: 150,
-        rating: 5,"
-        features["Hooks", "Context API", "Suspense", "Concurrent Features"],;"
-        alternatives["Vue.js", "Angular", "Svelte"];
-    },;
+import { motion, AnimatePresence  } from 'framer-motion';
+import { Code, Cloud, Zap, ArrowRight, Star, TrendingUp, Layers, GitBranch, Terminal, Monitor, Server, Brain  } from 'lucide-react';
+,;
     {
 "
         name: "Next.js","
@@ -55,8 +42,7 @@ const frontendTechnologies = [
         alternatives["Bootstrap", "Material-UI", "Chakra UI"];
     }
 ];
-const backendTechnologies = [
-    {
+const backendTechnologies = [{
 "
         name: "Node.js","
         category: "Runtime Environment","
@@ -109,8 +95,7 @@ const backendTechnologies = [
         alternatives["Memcached", "Hazelcast", "Apache Ignite"];
     }
 ];
-const cloudTechnologies = [
-    {
+const cloudTechnologies = [{
 "
         name: "AWS","
         category: "Cloud Platform","
@@ -163,8 +148,7 @@ const cloudTechnologies = [
         alternatives["CloudFormation", "Pulumi", "Ansible", "Chef"];
     }
 ];
-const aiTechnologies = [
-    {
+const aiTechnologies = [{
 "
         name: "TensorFlow","
         category: "Machine Learning","
@@ -217,8 +201,7 @@ const aiTechnologies = [
         alternatives["ModelScope", "Replicate", "Gradio", "Streamlit"];
     }
 ];
-const developmentTools = [
-    {
+const developmentTools = [{
 "
         name: "Git","
         category: "Version Control","
@@ -338,8 +321,7 @@ export function TechnologyStackSection() {
           </h2>"
           <p className="text-zion-slate-light text-lg md:text-xl max-w-4xl mx-auto leading-relaxed mb-8">
             Discover our comprehensive technology stack that powers innovative solutions across 
-            frontend, backend, cloud, AI, and development tools. Built for scale, performance, and reliability.
-          </p>
+            frontend, backend, cloud, AI, and development tools.Built for scale, performance, and reliability.</p>
 
           {/* Technology stats */}"
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">
@@ -473,7 +455,7 @@ export function TechnologyStackSection() {
                           {feature}
                         </span>))}"
                       {tech.features.length > 2 && (<span className="text-zion-cyan/60 text-xs">
-                          +{tech.features.length - 2} more
+                          +{tech.features.length-2} more
                         </span>) }
                     </div>
                   </div>
@@ -558,8 +540,7 @@ export function TechnologyStackSection() {
               </h3>"
               <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
                 Leverage our expertise in cutting-edge technologies to build scalable, 
-                performant, and innovative solutions that drive your business forward.
-              </p>"
+                performant, and innovative solutions that drive your business forward.</p>"
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"
                 <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
                   Start Your Project

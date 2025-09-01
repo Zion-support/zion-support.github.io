@@ -32,13 +32,13 @@ export class LinkChecker {
 
     try {
 
-      if (url.startsWith('http')) {
+      if(url.startsWith('http')) {
 
         return url}
-      if (url.startsWith('/')) {
+      if(url.startsWith('/')) {
 
         return `${this.baseUrl}${url}`}
-      if (url.startsWith('#')) {
+      if(url.startsWith('#')) {
 `
         return `${this.baseUrl}${basePage}${url}`}`
       return `${this.baseUrl}${basePage}/${url}`} catch {
@@ -53,9 +53,8 @@ export class LinkChecker {
     // Extract href attributes from anchor tags'
     const hrefRegex = /href=["']([^"']+)["']/g;    let match;
 
-    while ((match = hrefRegex.exec(pageContent)) !== null) {
+    while((match = hrefRegex.exec(pageContent)) !== null) {
 
-      
       if()
         url &&'
         !url.startsWith('javascript:') &&'
@@ -73,10 +72,9 @@ export class LinkChecker {
 
     // Extract src attributes from img, script, and link tags'"
     
-    while ((match = srcRegex.exec(pageContent)) !== null) {
+    while((match = srcRegex.exec(pageContent)) !== null) {
 
-      
-      if (url && !url.startsWith('data:') && !url.startsWith('blob:')) {
+      if(url && !url.startsWith('data:') && !url.startsWith('blob:')) {
 
         const normalizedUrl = this.normalizeUrl(url, pagePath);        links.push({
 
@@ -91,7 +89,6 @@ export class LinkChecker {
 
     try {
 
-      
       return response.ok} catch {
 
       return false}
@@ -102,17 +99,16 @@ export class LinkChecker {
 
     const links = this.extractLinks(pageContent, pagePath);    const checkedLinks: LinkInfo[] = [];
 
-    for (const link of links) {
+    for(const link of links) {
 
-      if (this.visitedUrls.has(link.url)) {
+      if(this.visitedUrls.has(link.url)) {
 
         continue}
       this.visitedUrls.add(link.url);
 
-      if (this.isInternalLink(link.url)) {
+      if(this.isInternalLink(link.url)) {
 
-        
-        if (exists) {
+        if(exists) {
 
           link.status = 'working'} else {
 <<<<<<< HEAD
@@ -138,7 +134,6 @@ export class LinkChecker {
   // Extract page title
   private extractPageTitle(content: string): string {
 
-    
     return titleMatch ? titleMatch[1].trim() : 'Untitled'}
   // Get analysis summary
   getSummary() {

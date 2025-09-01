@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { useInterviews } from "@/hooks/useInterviews";
-import { Interview } from "@/types/interview";
-import { format, isPast, parseISO } from "date-fns";
-import { Link } from "react-router-dom";
-import { Calendar, Clock, Video } from "lucide-react";
-import { Avatar } from "@/components/ui/avatar"; // Assuming AvatarImage and AvatarFallback are part of this or separate
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { useInterviews } from '@/hooks/useInterviews';
+import { Interview } from '@/types/interview';
+import { format, isPast, parseISO } from 'date-fns';
+import { Link  } from 'react-router-dom';
+import { Calendar, Clock, Video  } from 'lucide-react';
+import { Avatar } from '@/components/ui/avatar'; // Assuming AvatarImage and AvatarFallback are part of this or separate
 
 export function UpcomingInterviewsCard() {
   const { fetchInterviews } = useInterviews();
@@ -31,7 +31,7 @@ export function UpcomingInterviewsCard() {
           .slice(0, 3); 
         
         setUpcomingInterviews(upcoming);
-      } catch (error) {
+      } catch(error) {
         console.error("Error loading upcoming interviews:", error);
       } finally {
         setIsLoading(false);
@@ -41,9 +41,8 @@ export function UpcomingInterviewsCard() {
     loadInterviews();
   }, [fetchInterviews]); // Added fetchInterviews
 
-  if (isLoading) {
-    return (
-      <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
+  if(isLoading) {
+    return (<Card className="bg-zion-blue-dark/40 border-zion-blue-light">
         <CardHeader>
           <CardTitle className="text-lg flex items-center">
             <Video className="h-5 w-5 mr-2 text-zion-purple" />
@@ -67,9 +66,8 @@ export function UpcomingInterviewsCard() {
     );
   }
 
-  if (upcomingInterviews.length === 0) {
-    return (
-      <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
+  if(upcomingInterviews.length === 0) {
+    return (<Card className="bg-zion-blue-dark/40 border-zion-blue-light">
         <CardHeader>
           <CardTitle className="text-lg flex items-center">
             <Video className="h-5 w-5 mr-2 text-zion-purple" />
@@ -89,8 +87,7 @@ export function UpcomingInterviewsCard() {
     );
   }
 
-  return (
-    <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
+  return (<Card className="bg-zion-blue-dark/40 border-zion-blue-light">
       <CardHeader>
         <CardTitle className="text-lg flex items-center">
           <Video className="h-5 w-5 mr-2 text-zion-purple" />
@@ -109,8 +106,7 @@ export function UpcomingInterviewsCard() {
               interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&
               interviewDate.getTime() > now.getTime();
             
-            return (
-              <div key={interview.id} className="flex items-center gap-3">
+            return (<div key={interview.id} className="flex items-center gap-3">
                 <Avatar className="h-10 w-10 bg-zion-purple/10">
                   {/* Assuming AvatarImage and AvatarFallback are part of Avatar or imported separately */}
                   {/* For now, conditional rendering based on available image */}

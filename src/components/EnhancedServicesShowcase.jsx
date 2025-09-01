@@ -1,23 +1,9 @@
 import React, { useState } from 'react';
 <<<<<<< HEAD
 export default EnhancedServicesShowcase;
-import { enhancedServices2025 } from "../data / enhanced - services - 2025";
-import { motion } from 'framer - motion';
-
-=======
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { enhancedServices2025 } from "../data/enhanced-services-2025";
->>>>>>> main
-const EnhancedServicesShowcase = () => {
-
-    const [selectedCategory, setSelectedCategory] = useState('all');
-    const [searchTerm, setSearchTerm] = useState('');
-    const categories = ['
-        { id: 'all', name: 'All Services', icon: '🌟' },
-        { id: 'micro-saas', name: 'Micro SAAS', icon: '💻' },
-        { id: 'it-services', name: 'IT Services', icon: '🖥️' },
-        { id: 'ai-services', name: 'AI Services', icon: '🤖' },
+import { enhancedServices2025 } from '../data/enhanced - services -2025';
+export default function Page() {
+,
         { id: 'emerging-tech', name: 'Emerging Tech', icon: '🚀' }
     ];
     const filteredServices = enhancedServices2025.filter(service => {
@@ -88,8 +74,7 @@ const EnhancedServicesShowcase = () => {
 
 }}>
             Discover our extensive portfolio of innovative micro SAAS services, enterprise IT solutions,
-            cutting - edge AI services, and emerging technology solutions designed to transform your business.
-          </motion.p>
+            cutting - edge AI services, and emerging technology solutions designed to transform your business.</motion.p>
 
           {/* Contact Information */}"
           <motion.div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 mb-8 max-w-2xl mx-auto" initial = {
@@ -106,11 +91,6 @@ const EnhancedServicesShowcase = () => {
 
   { duration: 0.6,
   delay: 0.4
-
-
-
-
-
 
 }}>"
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">"
@@ -144,11 +124,6 @@ const EnhancedServicesShowcase = () => {
 
   { duration: 0.6,
   delay: 0.6
-
-
-
-
-
 
 }}>"
             <input type="text" placeholder="Search services..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="px-6 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 w-full md:w-80"/>"
@@ -277,17 +252,12 @@ const EnhancedServicesShowcase = () => {
   { duration: 0.6,
   delay: 0.2
 
-
-
-
-
-
 }}>
             Let's discuss how our innovative services can help drive your success and competitive advantage
           </motion.p>
 <<<<<<< HEAD
 
-          <motion.div className="flex flex - col sm:flex - row gap - 4 justify - center mb - 8" initial = {
+          <motion.div className="flex flex - col sm:flex - row gap-4 justify - center mb-8" initial = {
 =======
           "
           <motion.div className="flex flex-col sm:flex-row gap-4 justify-center mb-8" initial = {
@@ -305,11 +275,6 @@ const EnhancedServicesShowcase = () => {
 
   { duration: 0.6,
   delay: 0.4
-
-
-
-
-
 
 }}>"
             <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
@@ -334,11 +299,6 @@ const EnhancedServicesShowcase = () => {
 
   { duration: 0.6,
   delay: 0.6
-
-
-
-
-
 
 }}>"
             <h3 className="text-lg font-semibold text-white mb-4">Why Choose Zion Tech Group?</h3>"

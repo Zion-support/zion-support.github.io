@@ -1,75 +1,10 @@
 <<<<<<< HEAD
-import React, { useState } from 'react.ts';
+import React, { useState } from 'react';
 export default ComprehensiveNewServicesShowcase2025;
-export function ComprehensiveNewServicesShowcase2025 (...args: any[]) : any {
-import {
-import { comprehensiveNewServices2025 } from '../data / comprehensiveNewServices2025';
-import { motion } from 'framer - motion.ts';
-
-  Search,
-=======
-<<<<<<< HEAD
-import { Search,
->>>>>>> main
-  Filter,
-  Star,
-  TrendingUp,
-  Users,
-  Shield,
-  Zap,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  Globe,
-  CheckCircle,
-  DollarSign,
-  Clock,
-  Target,
-  Award,
-  Rocket,
-  Brain,
-  Atom,
-  Lock,
-  Heart,
-  GraduationCap,
-  BarChart3,
-  Satellite,
-  Cpu'
- } from 'lucide-react.ts';
-
-export function ComprehensiveNewServicesShowcase2025(...args: any[]): any {
-
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('featured');
-
-  
-  
-    .filter(service => {
-
-      
-      
-      return matchesSearch && matchesCategory})
-    .sort((a, b) => {
-
-      if (sortBy === 'featured') return b.featured ? 1 : -1;
-      if (sortBy === 'price-low') return parseFloat(a.pricing.monthly.replace(/[^0-9]/g,)) - parseFloat(b.pricing.monthly.replace(/[^0-9]/g,));
-      if (sortBy === 'price-high') return parseFloat(b.pricing.monthly.replace(/[^0-9]/g,)) - parseFloat(a.pricing.monthly.replace(/[^0-9]/g,));
-=======
-'
-      if (sortBy === 'featured') return b.featured ? 1 : -1;'
-      if (sortBy === 'price-low') return parseFloat(a.pricing.monthly.replace(/[^0-9]/g, '')) - parseFloat(b.pricing.monthly.replace(/[^0-9]/g, ''));'
-      if (sortBy === 'price-high') return parseFloat(b.pricing.monthly.replace(/[^0-9]/g, '')) - parseFloat(a.pricing.monthly.replace(/[^0-9]/g, ''));
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      return 0}) ;
-
-  
-    return categoryData ? categoryData.icon : Globe};
-
-  
-    return colors[category] || 'from-gray-500 to-gray-600'};
-  return()
+import { comprehensiveNewServices2025 } from '../data/comprehensiveNewServices2025';
+export default function Page() {
+;
+  return ()
     <div className="min-h-screen py-8 bg-gray-900">"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}"
@@ -83,9 +18,7 @@ export function ComprehensiveNewServicesShowcase2025(...args: any[]): any {
               Revolutionary New Services 2025
             </h1>"
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
-              Discover our cutting-edge micro SAAS services, IT solutions, and AI-powered platforms. 
-              Each service is designed to transform your business with innovative technology and proven ROI.
-            </p>
+              Discover our cutting-edge micro SAAS services, IT solutions, and AI-powered platforms.Each service is designed to transform your business with innovative technology and proven ROI.</p>
           </motion.div>
         </div>
 
@@ -114,9 +47,7 @@ export function ComprehensiveNewServicesShowcase2025(...args: any[]): any {
                 <button
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
-                  className={`flex items-center space-x-2 px-4 py-2 rounded-lg whitespace-nowrap transition-all duration-200 ${
-
-                    selectedCategory === category.id'
+                  className={`flex items-center space-x-2 px-4 py-2 rounded-lg whitespace-nowrap transition-all duration-200 ${selectedCategory === category.id'
                       ? 'bg-cyan-600 text-white''
                       : 'bg-gray-800 text-gray-300 hover:bg-gray-700'`
                   }`}
@@ -202,7 +133,7 @@ export function ComprehensiveNewServicesShowcase2025(...args: any[]): any {
                   ))}
                   {service.features.length > 3 && ("
                     <div className="text-xs text-gray-500">
-                      +{service.features.length - 3} more features
+                      +{service.features.length-3} more features
                     </div>) }
                 </div>
               </div>
@@ -280,9 +211,7 @@ export function ComprehensiveNewServicesShowcase2025(...args: any[]): any {
               Ready to Transform Your Business?
             </h2>"
             <p className="text-xl text-cyan-100 max-w-2xl mx-auto">
-              Our team of experts is ready to help you implement these cutting-edge solutions. 
-              Get in touch today to start your transformation journey.
-            </p>
+              Our team of experts is ready to help you implement these cutting-edge solutions.Get in touch today to start your transformation journey.</p>
           </div>
 "
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"

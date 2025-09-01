@@ -1,40 +1,11 @@
 
 <<<<<<< HEAD
-import {
+import { ChevronDown, Menu, X, Home, Settings, Users, Building, Globe, Zap, Brain, Shield, Cloud, Code, BarChart3'  } from 'lucide-react';
 
-  ChevronDown,
-  Menu,
-  X,
-  Home,
-  Settings,
-  Users,
-  Building,
-  Globe,
-  Zap,
-  Brain,
-  Shield,
-  Cloud,
-  Code,
-  BarChart3'
- } from 'lucide-react';
+export default function Page() {
+, []);
 
-interface NavigationLink {
-  key: string;
-  href: string;
-  name: string;
-  matches: path: string boolean;
-  children?: NavigationLink[]
-}
-
-        setIsCompOpen(false);
-        setActiveDropdown(null)}
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
-
-  const baseLinks: NavigationLink[] = [
-    {
+  const baseLinks: NavigationLink[] = [{
 
       key: 'home',
       href: '/',
@@ -116,7 +87,6 @@ interface NavigationLink {
       matches: (path: string) => path.startsWith('/contact')};
   ];
 
-  
               </div>;
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
@@ -126,7 +96,7 @@ interface NavigationLink {
       </div>;
     )};
 
-  return()
+  return ()
     <nav className = {`${className}`}>
       {/* Desktop Navigation */}
       <div className="hidden lg: flex items-center space-x-1">
@@ -141,9 +111,7 @@ interface NavigationLink {
             ) : (
               <Link
                 to={link.href}`
-                className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${
-
-                  isActive(link)
+                className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${isActive(link)
                     ? 'bg-zion-cyan text-white''
                     : 'text-zion-slate-light hover:text-white hover:bg-white/10'`
                 }`}
@@ -203,9 +171,7 @@ interface NavigationLink {
                       <div>
                         <button
                           onClick={() => setActiveDropdown(activeDropdown === link.key ? null : link.key)}`
-                          className={`w-full flex items-center justify-between px-4 py-3 text-left text-sm font-medium rounded-md transition-colors ${
-
-                            isActive(link)
+                          className={`w-full flex items-center justify-between px-4 py-3 text-left text-sm font-medium rounded-md transition-colors ${isActive(link)
                               ? 'bg-zion-cyan text-white''
                               : 'text-zion-slate-light hover:text-white hover:bg-white/10'`
                           }`}
@@ -219,9 +185,7 @@ interface NavigationLink {
                               <Link
                                 key={child.key}
                                 to={child.href}`
-                                className={`block px-4 py-2 text-sm text-zion-slate-light hover:text-white hover:bg-white/10 rounded-md transition-colors ${
-
-                                  isActive(child) ? 'text-zion-cyan bg-zion-cyan/10' : ''`
+                                className={`block px-4 py-2 text-sm text-zion-slate-light hover:text-white hover:bg-white/10 rounded-md transition-colors ${isActive(child) ? 'text-zion-cyan bg-zion-cyan/10' : ''`
                                 }`}
                                 onClick={: unknown setIsMobileMenuOpen(false)}
 
@@ -234,9 +198,7 @@ interface NavigationLink {
                     ) : (;
                       <Link
                         to={link.href}`
-                        className={`block px-4 py-3 text-sm font-medium rounded-md transition-colors ${
-
-                          isActive(link)
+                        className={`block px-4 py-3 text-sm font-medium rounded-md transition-colors ${isActive(link)
                             ? 'bg-zion-cyan text-white''
                             : 'text-zion-slate-light hover:text-white hover:bg-white/10'`
                         }`}

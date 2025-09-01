@@ -25,13 +25,12 @@ pricing: {
   status: 'active' | 'beta' | 'coming-soon';
   sla: string;
   support: string};
-export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
-  {
+export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [{
 
     id: 'enterprise-cloud-migration',
     title: 'Enterprise Cloud Migration & Strategy',
     description: 'Comprehensive cloud migration strategy and implementation for large enterprises',
-    longDescription: 'Transform your enterprise infrastructure with our proven cloud migration methodology. We handle everything from strategy planning to implementation and optimization.',
+    longDescription: 'Transform your enterprise infrastructure with our proven cloud migration methodology.We handle everything from strategy planning to implementation and optimization.',
     icon: 'Cloud',
     color: 'from-blue-500 to-cyan-600',
     category: 'cloud',
@@ -65,7 +64,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     id: 'enterprise-cybersecurity',
     title: 'Enterprise Cybersecurity Framework',
     description: 'Comprehensive cybersecurity framework and threat protection',
-    longDescription: 'Protect your enterprise with our comprehensive cybersecurity framework. Includes threat detection, incident response, compliance management, and security training.',
+    longDescription: 'Protect your enterprise with our comprehensive cybersecurity framework.Includes threat detection, incident response, compliance management, and security training.',
     icon: 'Shield',
     color: 'from-red-500 to-orange-600',
     category: 'security',
@@ -99,7 +98,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     id: 'digital-transformation',
     title: 'Digital Transformation Consulting',
     description: 'End-to-end digital transformation strategy and implementation',
-    longDescription: 'Lead your industry with our comprehensive digital transformation services. We help enterprises modernize processes, adopt new technologies, and create competitive advantages.',
+    longDescription: 'Lead your industry with our comprehensive digital transformation services.We help enterprises modernize processes, adopt new technologies, and create competitive advantages.',
     icon: 'Rocket',
     color: 'from-purple-500 to-pink-600',
     category: 'transformation',
@@ -133,7 +132,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     id: 'enterprise-data-analytics',
     title: 'Enterprise Data Analytics Platform',
     description: 'Advanced data analytics and business intelligence for enterprises',
-    longDescription: 'Unlock the power of your data with our enterprise analytics platform. Features real-time processing, predictive analytics, and automated insights generation.',
+    longDescription: 'Unlock the power of your data with our enterprise analytics platform.Features real-time processing, predictive analytics, and automated insights generation.',
     icon: 'BarChart3',
     color: 'from-green-500 to-emerald-600',
     category: 'analytics',
@@ -167,7 +166,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     id: 'enterprise-automation',
     title: 'Enterprise Process Automation',
     description: 'Intelligent process automation and workflow optimization',
-    longDescription: 'Automate complex business processes with our intelligent automation platform. Reduce manual work, improve accuracy, and increase operational efficiency.',
+    longDescription: 'Automate complex business processes with our intelligent automation platform.Reduce manual work, improve accuracy, and increase operational efficiency.',
     icon: 'Zap',
     color: 'from-yellow-500 to-orange-600',
     category: 'automation',
@@ -201,7 +200,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     id: 'enterprise-integration',
     title: 'Enterprise System Integration',
     description: 'Seamless integration of enterprise systems and applications',
-    longDescription: 'Connect your enterprise systems with our comprehensive integration platform. Enable data flow, automate processes, and create unified business operations.',
+    longDescription: 'Connect your enterprise systems with our comprehensive integration platform.Enable data flow, automate processes, and create unified business operations.',
     icon: 'Network',
     color: 'from-indigo-500 to-purple-600',
     category: 'integration',
@@ -235,7 +234,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     id: 'enterprise-infrastructure',
     title: 'Enterprise Infrastructure Modernization',
     description: 'Modernize and optimize enterprise infrastructure',
-    longDescription: 'Transform your enterprise infrastructure with modern technologies. Improve performance, reduce costs, and enhance security with our infrastructure modernization services.',
+    longDescription: 'Transform your enterprise infrastructure with modern technologies.Improve performance, reduce costs, and enhance security with our infrastructure modernization services.',
     icon: 'Server',
     color: 'from-gray-500 to-slate-600',
     category: 'infrastructure',
@@ -269,7 +268,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     id: 'enterprise-consulting',
     title: 'Strategic IT Consulting',
     description: 'Strategic IT consulting and technology advisory services',
-    longDescription: 'Get expert guidance on your technology strategy with our enterprise consulting services. We help you make informed decisions and optimize your IT investments.',
+    longDescription: 'Get expert guidance on your technology strategy with our enterprise consulting services.We help you make informed decisions and optimize your IT investments.',
     icon: 'Users',
     color: 'from-teal-500 to-cyan-600',
     category: 'consulting',
@@ -300,7 +299,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
 
 ];
 export 
-  if (category === 'All') {;
+  if(category === 'All') {;
     return ADVANCED_ENTERPRISE_SOLUTIONS_2025;
 
   return ADVANCED_ENTERPRISE_SOLUTIONS_2025.filter(solution => solution.category === category)};

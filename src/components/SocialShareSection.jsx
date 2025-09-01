@@ -1,6 +1,5 @@
 export function SocialShareSection() {
-  const socialPlatforms = [
-    { name: 'Twitter', icon: '🐦', url: 'https://twitter.com/ziontechgroup' },
+  const socialPlatforms = [{ name: 'Twitter', icon: '🐦', url: 'https://twitter.com/ziontechgroup' },
     {
 
       name: 'LinkedIn',
@@ -13,7 +12,7 @@ export function SocialShareSection() {
       icon: '📷',
       url: 'https://instagram.com/ziontechgroup'},
   ];
-  return()
+  return ()
     <section className="py-16 bg-white/5">"
       <div className="container mx-auto px-4 text-center">"
         <h2 className="text-3xl font-bold text-white mb-8">Follow Us</h2>"

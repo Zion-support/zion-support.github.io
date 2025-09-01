@@ -1,26 +1,12 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Card, CardContent } from '@/components/ui/card';
-import { Briefcase, Users, Check } from 'lucide-react';
-export function RolePicker({ onSelect }) {
-
-  const [selectedRole, setSelectedRole] = useState(null);
-  const { t } = useTranslation();
-  const handleSelect = role => {
-
-    setSelectedRole(role);
-    onSelect(role);
-  };
-  return()
-    <div className="space-y-4 px-4">'"
-      <h2 className="text-xl font-medium">{t('onboarding.title')}</h2>'"
+export default function Page() {
+</h2>'"
       <p className="text-muted-foreground">{t('onboarding.subtitle')}</p>
 "
       <div className="space-y-3 mt-6">
         <Card
-          className={`cursor-pointer transition-all ${
-
-            selectedRole === 'talent''
+          className={`cursor-pointer transition-all ${selectedRole === 'talent''
               ? 'border-primary bg-primary/5''
               : 'border-border hover:border-primary/40'`
           }`}
@@ -45,9 +31,7 @@ export function RolePicker({ onSelect }) {
         </Card>
 
         <Card`
-          className={`cursor-pointer transition-all ${
-
-            selectedRole === 'client''
+          className={`cursor-pointer transition-all ${selectedRole === 'client''
               ? 'border-primary bg-primary/5''
               : 'border-border hover:border-primary/40'`
           }`}

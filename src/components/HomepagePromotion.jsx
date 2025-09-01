@@ -1,62 +1,9 @@
 import React from 'react';
 <<<<<<< HEAD
-export function HomepagePromotion () {
-import { motion } from 'framer - motion';
+import { motion  } from 'framer-motion';
 
-=======
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-export function HomepagePromotion() {
->>>>>>> main
-    const featuredServices = [
-        {
-
-            id: "ai-content-generation","
-            title: "AI Content Generation Suite","
-            description: "Generate high-quality, SEO-optimized content in minutes, not hours","
-            price: "$399/month","
-            category: "AI & Content Marketing","
-            features["Multi-format content", "SEO optimization", "Brand voice customization", "Plagiarism detection"],;"
-            benefits["80% faster content creation", "45% better SEO rankings", "60% higher engagement"],;"
-            link: "/comprehensive-services-showcase"
-        },
-        {
-"
-            id: "edge-computing-iot","
-            title: "Edge Computing & IoT Platform","
-            description: "Process data closer to devices for ultra-low latency and real-time insights","
-            price: "$799/month","
-            category: "IT Infrastructure","
-            features["Distributed edge nodes", "Real-time processing", "IoT device management", "Edge AI capabilities"],;"
-            benefits["80% lower latency", "60% bandwidth cost reduction", "Enhanced security"],;"
-            link: "/comprehensive-services-showcase"
-        },
-        {
-"
-            id: "quantum-computing","
-            title: "Quantum Computing Applications","
-            description: "Solve previously intractable problems with quantum advantage","
-            price: "$3,999/month","
-            category: "Emerging Technology","
-            features["Quantum algorithms", "Optimization solvers", "Cryptography tools", "Scientific simulation"],;"
-            benefits["Exponential speedup", "Future-proof technology", "Competitive advantage"],;"
-            link: "/comprehensive-services-showcase"
-        },
-        {
-"
-            id: "zero-trust-security","
-            title: "Zero-Trust Security Architecture","
-            description: "Continuous verification and least-privilege access across all resources","
-            price: "$1,499/month","
-            category: "IT Infrastructure","
-            features["Identity verification", "Device trust scoring", "Network segmentation", "Continuous monitoring"],;"
-            benefits["90% fewer security breaches", "Enhanced compliance", "Simplified security management"],;"
-            link: "/comprehensive-services-showcase"
-
-    ];
-    const containerVariants = {
-
-        hidden: { opacity: 0 },
+export default function Page() {
+,
         visible: {
 
             opacity: 1,
@@ -79,7 +26,6 @@ export function HomepagePromotion() {
 
                 duration: 0.6
 
-
     };"
     return (<section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple relative overflow-hidden">;
       {/* Background Elements */}"
@@ -101,10 +47,6 @@ export function HomepagePromotion() {
 
   { opacity: 1,
   y: 0
-
-
-
-
 
 "
 }} transition={{ duration: 0.8 }} className="text-center mb-16">"
@@ -195,10 +137,6 @@ export function HomepagePromotion() {
   { opacity: 1,
   y: 0
 
-
-
-
-
 "
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center">"
           <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-2xl p-8 backdrop-blur-sm">"
@@ -206,9 +144,7 @@ export function HomepagePromotion() {
               Ready to Accelerate Your Digital Transformation?
             </h3>"
             <p className="text-zion-slate-light text-lg mb-6 max-w-2xl mx-auto">
-              Our team of technology experts is ready to help you implement the perfect solution.
-              Get a personalized consultation and quote today.
-            </p>
+              Our team of technology experts is ready to help you implement the perfect solution.Get a personalized consultation and quote today.</p>
 "
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">"
               <a href="mailto:kleber@ziontechgroup.com?subject=Digital Transformation Consultation" className="bg-zion-cyan hover:bg-zion-cyan-light text-zion-blue-dark font-bold py-3 px-8 rounded-lg text-lg transition-colors">

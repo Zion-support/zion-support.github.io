@@ -1,4 +1,4 @@
-export function Testimonials(...args: any[]): any {
+export default function Testimonials() {
 
 <<<<<<< HEAD
   interface Testimonial {
@@ -14,13 +14,13 @@ export function Testimonials(...args: any[]): any {
     testimonials: Testimonial[];
   }
 
-  return (<section className="py - 20 bg - gray - 800">
-      <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">
-        <div className="text - center mb - 16">
+  return (<section className="py-20 bg-gray -800">
+      <div className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
           <motion.h2
-            className="text - 4xl font - bold text - white mb - 4"
+            className="text-4xl font - bold text-white mb-4"
 =======
-  return()
+  return ()
     <section className="py-20 bg-gray-800">"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
         <div className="text-center mb-16">

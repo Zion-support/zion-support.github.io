@@ -1,61 +1,10 @@
 <<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 export const AdvancedReportingDashboard: React.FC < AdvancedReportingDashboardProps> = ({
-import {
-import { motion, AnimatePresence } from 'framer - motion';
+import { motion, AnimatePresence  } from 'framer-motion';
 
-  BarChart3,
-  TrendingUp,
-  Download,
-  Share2,
-=======
-import {
-  BarChart3, 
-  TrendingUp, 
-  Download, 
-  Share2, 
->>>>>>> main
-  Users,
-  DollarSign,
-  Activity,
-  Eye,
-  FileText,
-  Clock,
-  Star,
-  Search,
-  ChevronDown,
-  ChevronUp,
-  Shield,
-  Server} from 'lucide-react';
-  X'
-} from 'lucide-react';
-
-interface ReportData {
-  id: string;
-  title: string;
-  type: 'financial' | 'operational' | 'performance' | 'security' | 'customer' | 'technical';
-  category: string;
-  data;lastUpdated: string;
-  status: 'active' | 'archived' | 'draft';
-  priority: 'low' | 'medium' | 'high' | 'critical';
-  tags: string[];
-  description: string;
-  author: string;
-  views: number;
-  downloads: number;
-  rating: number
-}
-
-interface ReportMetrics {
-  totalReports: number;
-  activeReports: number;
-  totalViews: number;
-  totalDownloads: number;
-  averageRating: number;
-  topCategories: Array < any>;
-  recentActivity: Array < any>}
-
-interface AdvancedReportingDashboardProps extends React.PropsWithChildren<{}> {
+export default function Page() {
+> {
 
   showMetrics?: boolean;
   showFilters?: boolean;
@@ -82,9 +31,8 @@ showMetrics:  true,;
   const [sortOrder, setSortOrder] = useState<any>('desc');
 
   // Sample report data
-  useEffect ( () => {
-    const sampleReports: ReportData[] = [
-      {
+  useEffect(() => {
+    const sampleReports: ReportData[] = [{
 
         id: '1',
         title: 'Q4 Financial Performance Analysis',
@@ -253,26 +201,26 @@ showMetrics:  true,;
 
     ];
 
-    setReports (sampleReports) ;
-    setFilteredReports (sampleReports) }, []) ;
+    setReports(sampleReports) ;
+    setFilteredReports(sampleReports) }, []) ;
 
   // Filter and sort reports
   useEffect(() => {
     let filtered = reports;
 
-    if (selectedType !== 'all') {
+    if(selectedType !== 'all') {
 
       filtered = filtered.filter(r => r.type === selectedType)}
 
-    if (selectedCategory !== 'all') {
+    if(selectedCategory !== 'all') {
 
       filtered = filtered.filter(r => r.category === selectedCategory)}
 
-    if (selectedStatus !== 'all') {
+    if(selectedStatus !== 'all') {
 
       filtered = filtered.filter(r => r.status === selectedStatus)}
 
-    if (searchQuery) {
+    if(searchQuery) {
 
       filtered = filtered.filter(r =>
         r.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -290,7 +238,7 @@ showMetrics:  true,;
 
       let aValue: any, bValue: unknown;
 
-      switch (sortBy) {
+      switch(sortBy) {
 
         case 'date':
           aValue = new Date(a.lastUpdated).getTime();
@@ -323,12 +271,12 @@ showMetrics:  true,;
           aValue = 0;
           bValue = 0}
 
-      if (sortOrder = == 'asc') {;
+      if(sortOrder = == 'asc') {;
         return aValue > bValue ? 1 : -1} else {
 
         return aValue < bValue ? 1 : -1}
     }) ;
-    setFilteredReports (filtered.slice (0, maxReports) ) }, [reports, selectedType, selectedCategory, selectedStatus, searchQuery, sortBy, sortOrder, maxReports]) ;
+    setFilteredReports(filtered.slice (0, maxReports) ) }, [reports, selectedType, selectedCategory, selectedStatus, searchQuery, sortBy, sortOrder, maxReports]) ;
 
   // Calculate report metrics
   const reportMetrics = {

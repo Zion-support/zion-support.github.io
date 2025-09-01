@@ -1,36 +1,12 @@
 <<<<<<< HEAD
 import React, { useState } from 'react';
-import { comprehensiveMicroSaasServices2025 } from "../../data / 2025 - comprehensive - micro - saas - services";
-import { emergingTechInnovationServices2025 } from "../../data / 2025 - emerging - tech - innovations";
-import { enterpriseITInnovationServices2025 } from "../../data / 2025 - enterprise - it - innovations";
-import { expandedInnovativeServices2025 } from "../../data / 2025 - expanded - innovative - services";
-import { innovativeITAIServices2025 } from "../../data / 2025 - innovative - it - ai - services";
-import { motion } from 'framer - motion';
-
-=======
-import { motion } from 'framer-motion';
-import { comprehensiveMicroSaasServices2025 } from "../../data/2025-comprehensive-micro-saas-services";"
-import { innovativeITAIServices2025 } from "../../data/2025-innovative-it-ai-services";"
-import { expandedInnovativeServices2025 } from "../../data/2025-expanded-innovative-services";"
-import { emergingTechInnovationServices2025 } from "../../data/2025-emerging-tech-innovations";"
-import { enterpriseITInnovationServices2025 } from "../../data/2025-enterprise-it-innovations";
->>>>>>> main
-const ComprehensiveServicesShowcase = () => {
-
-    const [selectedCategory, setSelectedCategory] = useState('all');
-    const [selectedService, setSelectedService] = useState(null);
-    const allServices = [
-        ...comprehensiveMicroSaasServices2025,
-        ...innovativeITAIServices2025,
-        ...expandedInnovativeServices2025,
-        ...emergingTechInnovationServices2025,
-        ...enterpriseITInnovationServices2025
-    ];
-    const categories = ['
-        { id: 'all', name: 'All Services', count: allServices.length },
-        { id: 'ai-content-marketing', name: 'AI Content & Marketing', count: allServices.filter(s => s.category.includes('Content') || s.category.includes('Marketing')).length },
-        { id: 'ai-customer-service', name: 'AI Customer Service', count: allServices.filter(s => s.category.includes('Customer Service')).length },
-        { id: 'data-analytics-bi', name: 'Data Analytics & BI', count: allServices.filter(s => s.category.includes('Analytics') || s.category.includes('BI')).length },
+import { comprehensiveMicroSaasServices2025 } from '../../data / 2025 - comprehensive - micro - saas -services';
+export default function Page() {
+ from '../../data/2025-expanded-innovative-services';"
+import { emergingTechInnovationServices2025 } from '../../data/2025-emerging-tech-innovations';"
+import { enterpriseITInnovationServices2025 } from '../../data/2025-enterprise-it-innovations';
+export default function Page() {
+,
         { id: 'ai-sales-crm', name: 'AI Sales & CRM', count: allServices.filter(s => s.category.includes('Sales') || s.category.includes('CRM')).length },
         { id: 'ai-social-media', name: 'AI Social Media', count: allServices.filter(s => s.category.includes('Social Media')).length },
         { id: 'ai-supply-chain', name: 'AI Supply Chain', count: allServices.filter(s => s.category.includes('Supply Chain')).length },
@@ -74,7 +50,7 @@ const ComprehensiveServicesShowcase = () => {
         : allServices.filter(service => {
 
             const category = categories.find(c => c.id === selectedCategory);
-            if (!category)
+            if(!category)
                 return true;
             // Handle special category mappings
             const categoryMappings = {

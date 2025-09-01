@@ -1,6 +1,5 @@
 
 
-
 interface ImportMetaEnv {
   readonly VITE_APP_TITLE: string;
   readonly VITE_SUPABASE_URL: string;
@@ -23,8 +22,6 @@ declare module 'vitest/config' {
 
 declare module '@vitejs/plugin-react-swc' {
   import { Plugin } from 'vite';
-  export default function reactSWC(): Plugin;
-}
 
 declare module 'path' {
   export function resolve(...paths: string[]): string;
@@ -34,8 +31,6 @@ declare module 'path' {
 
 declare module 'lovable-tagger' {
   import { Plugin } from 'vite';
-  export function componentTagger(): Plugin;
-}
 
 // Add Node.js globals
 declare let __dirname: string;

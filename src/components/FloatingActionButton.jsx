@@ -1,37 +1,12 @@
 import React, { useState } from 'react';
 <<<<<<< HEAD
 export default FloatingActionButton;
-import { motion, AnimatePresence } from 'framer - motion';
+import { motion, AnimatePresence  } from 'framer-motion';
 
-=======
-import { motion, AnimatePresence } from 'framer-motion';
-import { Plus, X, MessageCircle, Phone, Mail } from 'lucide-react';
->>>>>>> main
-const FloatingActionButton = ({ className = '' }) => {
-
-  const [isOpen, setIsOpen] = useState(false);
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const actionItems = [
-    {
-
-      icon: MessageCircle,
-      label: 'Live Chat',
-      action: () => window.open('https://ziontechgroup.com/chat',_blank'),
-      color: 'bg-green-500 hover:bg-green-600'},
-    {
-
-      icon: Phone,
-      label: 'Call Us',
-      action: () => window.open('tel:+1-555-0123',_self'),
-      color: 'bg-blue-500 hover:bg-blue-600'},
-    {
-
-      icon: Mail,
-      label: 'Email',
-      action: () => window.open('mailto:info@ziontechgroup.com',_self'),
-      color: 'bg-purple-500 hover:bg-purple-600'},
+export default function Page() {
+,
   ];
-  return()
+  return ()
     <div className={`fixed bottom-6 right-6 z-50 ${className}`}>
       <AnimatePresence>
         {isOpen && (
@@ -39,7 +14,7 @@ const FloatingActionButton = ({ className = '' }) => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
-            className="absolute bottom - 16 right - 0 mb - 2 space - y-3"
+            className="absolute bottom - 16 right - 0 mb-2 space - y-3"
           >
             {actionItems.map((item, index) => (
               <motion.div

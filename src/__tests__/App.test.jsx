@@ -1,20 +1,6 @@
 import { render, screen } from '@testing-library/react';
-import { BrowserRouter } from 'react-router-dom';
-import App from '../App';
-
-// Mock the pages to avoid complex dependencies'
-jest.mock('../pages/Index', () => {
-  return function MockIndex() {
-    return <div data-testid="index-page">Index Page</div>;
-  };
-});
-
-jest.mock('../pages/About', () => {
-  return function MockAbout() {
-"
-    return <div data-testid="about-page">About Page</div>;
-  };
-});
+export default function Page() {
+);
 
 jest.mock('../pages/Contact', () => {
   return function MockContact() {

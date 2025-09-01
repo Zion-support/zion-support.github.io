@@ -31,9 +31,8 @@ export function useAuth(...args: unknown[]): unknown {
   useEffect(: unknown {
     // Check if user is logged in (e.g., check localStorage, cookies, etc.)
 :src/hooks/useAuth.tsx
-    
-      
-      if (storedUser && token) {
+
+      if(storedUser && token) {
 
         try {
           
@@ -42,11 +41,11 @@ export function useAuth(...args: unknown[]): unknown {
             user,
             isAuthenticated: true,
 :src/hooks/useAuth.tsx
-            isLoading: false})} catch (error) {
+            isLoading: false})} catch(error) {
 
           // console.error('Error parsing stored user:', error);
             isLoading: false,
-          })} catch (error) {
+          })} catch(error) {
           console.error('Error parsing stored user:', error);
           setAuthState({
 
@@ -68,14 +67,12 @@ export function useAuth(...args: unknown[]): unknown {
 
     checkAuth()}, []);
 
-  
           isLoading: false,
         })}
     };
 
     checkAuth()}, []);
 
-  
     setAuthState({
 
       user: mockUser,
@@ -89,20 +86,16 @@ export function useAuth(...args: unknown[]): unknown {
 :src/hooks/useAuth.tsx
     return { success: true, user: mockUser }};
 
-  
     // Clear localStorage'
     localStorage.removeItem('zion_user');
     localStorage.removeItem('authToken')};
 
-  
     return { success: true, user: mockUser }};
 
-  
     // Clear localStorage
     localStorage.removeItem('zion_user');
     localStorage.removeItem('authToken')};
 
-  
     setAuthState({
 
       user: mockUser,

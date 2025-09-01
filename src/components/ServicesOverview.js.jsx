@@ -1,24 +1,9 @@
-import { Link } from "react - router - dom";
-import { Zap, Shield, Cloud, Database, Code, ShoppingCart, BarChart3, Link as LinkIcon, Network, Monitor, Smartphone, CheckCircle, Star, Clock, Users, Globe } from "lucide - react";
-import React from 'react';
-import { Button } from "@/components/ui/button";"
-import { Link } from "react-router-dom";"
-import { Zap, Shield, Cloud, Database, Code, ShoppingCart, BarChart3, Link as LinkIcon, Network, Monitor, Smartphone, CheckCircle, Star, Clock, Users, Globe } from "lucide-react";
-// Service categories with detailed information
-const serviceCategories = [
-    {
-"
-        title: "AI Services","
-        description: "Cutting-edge artificial intelligence solutions that transform business operations","
-        icon: <Zap className="w-8 h-8 text-zion-cyan"/>,
-        services[;
-            {
-"
-                name: "AI Chatbot Builder Pro","
-                price: "$299","
-                features["No-code platform", "Multi-language support", "Analytics dashboard", "Platform integration"],;"
-                benefits["24/7 customer support", "Reduced response time", "Scalable automation", "Cost-effective solution"];
-            },;
+import { Link  } from 'react-router-dom';
+import { Zap, Shield, Cloud, Database, Code, ShoppingCart, BarChart3, Link as LinkIcon, Network, Monitor, Smartphone, CheckCircle, Star, Clock, Users, Globe  } from 'lucide-react';
+ from '@/components/ui/button';"
+import { Link  } from 'react-router-dom';"
+import { Zap, Shield, Cloud, Database, Code, ShoppingCart, BarChart3, Link as LinkIcon, Network, Monitor, Smartphone, CheckCircle, Star, Clock, Users, Globe  } from 'lucide-react';
+,;
             {
 "
                 name: "AI Content Generator Suite","
@@ -287,8 +272,7 @@ const serviceCategories = [
     }
 ];
 // Why choose Zion Tech Group;
-const whyChooseUs = [
-    {
+const whyChooseUs = [{
 "
         title: "Expert Team","
         description: "Certified professionals with 10+ years of experience","

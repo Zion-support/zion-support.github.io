@@ -42,7 +42,7 @@ const wishlistSlice:  createSlice({;
   reducers: {
     addToWishlist: (state, action: PayloadAction<WishlistItem>)  => {;
       
-      if (!existingItem) {
+      if(!existingItem) {
 
         state.items.push(action.payload);
         state.itemCount = state.items.length}

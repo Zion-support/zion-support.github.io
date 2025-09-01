@@ -1,13 +1,12 @@
 import React from 'react';
 <<<<<<< HEAD
-export function SecurityHeadersCompact ({ className }) {
-import { Shield, Lock, CheckCircle, AlertTriangle export function SecurityHeaders ({ className }) {
+export function SecurityHeadersCompact({ className }) {
+import { Shield, Lock, CheckCircle, AlertTriangle export function SecurityHeaders({ className }) {
 =======
 import { Shield, Lock, CheckCircle, AlertTriangle export function SecurityHeaders({ className }) {
 >>>>>>> main
 
-    const securityFeatures = [
-        {
+    const securityFeatures = [{
 
             icon: Shield,
             title: "SOC 2 Type II Certified","
@@ -56,8 +55,7 @@ import { Shield, Lock, CheckCircle, AlertTriangle export function SecurityHeader
           </h2>"
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
             Zion Tech Group maintains the highest standards of security and compliance
-            to protect your business data and ensure regulatory adherence.
-          </p>
+            to protect your business data and ensure regulatory adherence.</p>
         </div>
 
         {/* Security Features Grid */}"

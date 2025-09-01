@@ -1,32 +1,7 @@
 import React from 'react';
 import { GradientHeading } from '@/components/GradientHeading';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardFooter } from '@/components/ui/card';
-export const ServiceLandingTemplate = ({
 
-  title,
-  subtitle,
-  heroImage,
-  description,
-  benefits,
-  testimonials,
-  ctaText,
-  ctaLink}) => {
-
-  return()
-    <div className="bg-background text-white">"
-      <section className="bg-zion-blue py-16 px-4 text-center">"
-        <div className="container mx-auto">"
-          <GradientHeading level="h1" className="mb-4">
-            {title}
-          </GradientHeading>"
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            {subtitle}
-          </p>
-          {heroImage && (
-            <img"
-              loading="lazy"
-              src={heroImage}
+export default function Page() {
               alt={title}"
               className="mx-auto mt-8 rounded-lg shadow-xl max-w-3xl"
             />

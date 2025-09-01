@@ -1,23 +1,12 @@
-import { Button } from "@/components/ui/button";"
-import { GradientHeading } from "@/components/GradientHeading";"
-import { Link } from "react-router-dom";"
-import { useTranslation } from "react-i18next";"
-import { motion, useScroll, useTransform } from "framer-motion";"
-import { ArrowRight, Sparkles, Zap, Users, Star, TrendingUp, Shield } from "lucide-react";"
-import { useRef } from "react";
-export function HeroSection() {
-    const { t } = useTranslation();
-    const containerRef = useRef(null);
-    const { scrollYProgress } = useScroll({
-
-        target: containerRef,"
-        offset["start start", "end start"];
-    });"
-    const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
-    const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
-    const containerVariants = {
-
-        hidden: { opacity: 0 },
+import { Button } from '@/components/ui/button';"
+import { GradientHeading } from '@/components/GradientHeading';"
+import { Link  } from 'react-router-dom';"
+import { useTranslation } from 'react-i18next';"
+import { motion, useScroll, useTransform  } from 'framer-motion';"
+import { ArrowRight, Sparkles, Zap, Users, Star, TrendingUp, Shield  } from 'lucide-react';"
+import { useRef } from 'react';
+export default function Page() {
+,
         visible: {
 
             opacity: 1,
@@ -122,7 +111,7 @@ export function HeroSection() {
 
         {/* Enhanced subtitle with better spacing and animations */}"
         <motion.p variants={itemVariants} className="text-xl md:text-2xl lg:text-3xl text-zion-slate-light mb-16 max-w-5xl mx-auto leading-relaxed font-light">'"
-          {t('home.hero_subtitle') || "Discover the world's most advanced AI marketplace. Connect with top tech talent, cutting-edge services, and revolutionary equipment in one seamless platform."}
+          {t('home.hero_subtitle') || "Discover the world's most advanced AI marketplace.Connect with top tech talent, cutting-edge services, and revolutionary equipment in one seamless platform."}
         </motion.p>
 
         {/* Enhanced feature highlights with icons and animations */}"

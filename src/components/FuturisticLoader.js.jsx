@@ -16,10 +16,10 @@ export const FuturisticLoader = ({
     medium: 'text-lg',
     large: 'text-xl'};
   const renderLoader = () => {
-    switch (variant) {
+    switch(variant) {
 
       case 'matrix':
-        return()
+        return ()
           <div className="relative">
             {/* Matrix Rain Effect */}
             <div
@@ -160,7 +160,7 @@ export const FuturisticLoader = ({
           </div>
         );
       default:
-        return()`
+        return ()`
           <div className={`${sizeClasses[size]} relative`}>"
             <div className="absolute inset-0 rounded-full border-4 border-cyan-500/30 border-t-cyan-500 animate-spin"></div>
             <div"

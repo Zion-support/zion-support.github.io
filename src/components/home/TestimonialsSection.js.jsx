@@ -1,13 +1,12 @@
 import React from 'react';
 export function TestimonialsSection() {
-  const testimonials = [
-    {
+  const testimonials = [{
 
       name: 'Sarah Johnson',
       role: 'CTO',
       comp: 'TechCorp Inc.',
       content:'
-        'Zion Tech Group transformed our entire IT infrastructure. Their AI solutions helped us reduce operational costs by 40% while improving efficiency.',
+        'Zion Tech Group transformed our entire IT infrastructure.Their AI solutions helped us reduce operational costs by 40% while improving efficiency.',
       rating: 5,
       avatar: '👩‍💼'},
     {
@@ -16,7 +15,7 @@ export function TestimonialsSection() {
       role: 'VP of Engineering',
       comp: 'InnovateLabs',
       content:'
-        'The cybersecurity implementation was seamless and comprehensive. We feel much more secure knowing our systems are protected by Zion Tech Group.',
+        'The cybersecurity implementation was seamless and comprehensive.We feel much more secure knowing our systems are protected by Zion Tech Group.',
       rating: 5,
       avatar: '👨‍💻'},
     {
@@ -25,7 +24,7 @@ export function TestimonialsSection() {
       role: 'Operations Director',
       comp: 'Global Solutions',
       content:'
-        'Their cloud migration expertise saved us months of planning and implementation time. The results exceeded our expectations.',
+        'Their cloud migration expertise saved us months of planning and implementation time.The results exceeded our expectations.',
       rating: 5,
       avatar: '👩‍🔬'},
   ];
@@ -40,7 +39,7 @@ export function TestimonialsSection() {
       </span>
     ));
   };
-  return()
+  return ()
     <section className="py-16 bg-white">"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
         <div className="text-center mb-12">"

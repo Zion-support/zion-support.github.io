@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from 'react';
-export function InteractivePortfolio () {
 import { ExternalLink, Github, Eye, X, ChevronLeft, ChevronRight, Star, Users, Calendar const portfolioProjects = [;
 
     {
@@ -114,28 +113,28 @@ export function InteractivePortfolio() {
         setSelectedProject(project);
         setIsModalOpen(true)};
     const closeModal = () => {
-        setIsModalOpen (false) ;
-        setSelectedProject (null) ;
-        setCurrentImageIndex (0) };
+        setIsModalOpen(false) ;
+        setSelectedProject(null) ;
+        setCurrentImageIndex(0) };
     const nextImage = () => {
-        if (selectedProject) {
+        if(selectedProject) {
 
             setCurrentImageIndex((prev) => (prev + 1) % 1); // Only one image per project for now
 
     };
     const prevImage = () => {
-        if (selectedProject) {
+        if(selectedProject) {
 
             setCurrentImageIndex((prev) => (prev - 1 + 1) % 1)}
     };
     const handleKeyPress = (e) => {
 
-        if (e.key === 'Escape') {
+        if(e.key === 'Escape') {
 
             closeModal()}
     };
-    useEffect ( () => {
-        if (isModalOpen) {
+    useEffect(() => {
+        if(isModalOpen) {
 
             document.body.style.overflow = 'hidden'}
         else {
@@ -229,7 +228,7 @@ export function InteractivePortfolio() {
                         {tech}
                       </span>))}"
                     {project.technologies.length > 3 && (<span className="px-2 py-1 bg-zion-slate-light/20 text-zion-slate text-xs rounded">
-                        +{project.technologies.length - 3}
+                        +{project.technologies.length-3}
                       </span>) }
                   </div>
 

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { AlertTriangle, RefreshCw, Home, ArrowLeft } from 'lucide-react';
-import { Link, useNavigate } from 'react-router-dom';
-function ErrorFallback({ error, resetError }) {
+import { AlertTriangle, RefreshCw, Home, ArrowLeft  } from 'lucide-react';
+import { Link, useNavigate  } from 'react-router-dom';
+) {
 
     const navigate = useNavigate();
     return (<div className="min-h-screen bg-zion-blue-dark flex items-center justify-center p-4">"
@@ -13,8 +13,7 @@ function ErrorFallback({ error, resetError }) {
           </div>"
           <h1 className="text-2xl font-bold text-white mb-2">Oops! Something went wrong</h1>"
           <p className="text-zion-slate-light">
-            We encountered an unexpected error. Don't worry, our team has been notified.
-          </p>
+            We encountered an unexpected error.Don't worry, our team has been notified.</p>
         </div>
 '"
         {error && process.env.NODE_ENV === 'development' && (<details className="mb-6 text-left">"
@@ -60,11 +59,11 @@ export function ErrorBoundary({ children, fallback, onError }) {
 
             setHasError(true);
             setError(event.error);
-            if (onError) {
+            if(onError) {
 
                 onError(event.error, { componentStack: event.error?.stack })}
             // Log error to console in development'
-            if (process.env.NODE_ENV === 'development') {
+            if(process.env.NODE_ENV === 'development') {
 
                 // console.error('ErrorBoundary caught an error:', event.error)}
         };
@@ -72,11 +71,11 @@ export function ErrorBoundary({ children, fallback, onError }) {
 
             setHasError(true);
             setError(new Error(event.reason));
-            if (onError) {
+            if(onError) {
 
                 onError(new Error(event.reason), { componentStack: event.reason?.stack })}
             // Log error to console in development'
-            if (process.env.NODE_ENV === 'development') {
+            if(process.env.NODE_ENV === 'development') {
 
                 // console.error('ErrorBoundary caught an unhandled rejection:', event.reason)}
         };
@@ -89,9 +88,9 @@ export function ErrorBoundary({ children, fallback, onError }) {
     const resetError = () => {
         setHasError(false);
         setError(null)};
-    if (hasError) {
+    if(hasError) {
 
-        if (fallback) {
+        if(fallback) {
 
             return fallback}
         return (<ErrorFallback error={error || null} resetError={resetError}/>)}

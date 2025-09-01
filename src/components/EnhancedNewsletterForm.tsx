@@ -4,8 +4,7 @@ export function EnhancedNewsletterForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
 
-  
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       setErrorMsg("Please enter a valid email address.");
       return}
 
@@ -14,18 +13,17 @@ export function EnhancedNewsletterForm() {
 
     try {
       
-      if (res.ok) {
+      if(res.ok) {
         toast.success("Thanks for subscribing!");
         setEmail("")} else {
         
         toast.error(data.error || "Subscription failed")}
-    } catch (err: any) {
+    } catch(err: any) {
       toast.error(err.message || "Subscription failed")} finally {
       setIsSubmitting(false)}
   };
 
-  return (
-    <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">
+  return (<div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">
       <div className="flex items-center mb-4">
         <div className="p-2 bg-zion-purple/20 rounded-full text-zion-cyan mr-3">
           <Mail className="h-6 w-6"  />

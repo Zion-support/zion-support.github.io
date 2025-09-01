@@ -25,8 +25,7 @@ export type InnovativeService = {;
   startup?: boolean;
   smb?: boolean};
 ;
-export const innovativeServices2026: InnovativeService[] = [
-  // MICRO SAAS SERVICES
+export const innovativeServices2026: InnovativeService[] = [// MICRO SAAS SERVICES
   {
 
     id: 'ai-powered-customer-churn-predictor',
@@ -36,7 +35,7 @@ export const innovativeServices2026: InnovativeService[] = [
     price: '$299',
     billing: 'month',
     features[;
-      'Real-time churn risk scoring',Behavioral pattern analysis',Predictive analytics dashboard',Automated retention campaigns',CRM integration (Salesforce, HubSpot),Custom retention strategies',ROI tracking and reporting'
+      'Real-time churn risk scoring',Behavioral pattern analysis',Predictive analytics dashboard',Automated retention campaigns',CRM integration(Salesforce, HubSpot),Custom retention strategies',ROI tracking and reporting'
     ],;
     benefits[;
       'Reduce churn by up to 40%',Increase customer lifetime value',Optimize retention spend',Proactive customer success'
@@ -169,7 +168,7 @@ export const innovativeServices2026: InnovativeService[] = [
     price: '$1,299',
     billing: 'month',
     features[;
-      'Natural language processing',Multi-language support (50+ languages),Context-aware conversations',Seamless human handoff',Sentiment analysis',Knowledge base learning',24/7 availability'
+      'Natural language processing',Multi-language support(50+ languages),Context-aware conversations',Seamless human handoff',Sentiment analysis',Knowledge base learning',24/7 availability'
     ],;
     benefits[;
       'Reduce support costs by 60%',Improve customer satisfaction by 40%',Handle 10x more inquiries',Provide instant responses'

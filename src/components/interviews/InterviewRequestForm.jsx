@@ -1,23 +1,19 @@
 import React, { useState } from "react";"
-import { Button } from "@/components/ui/button";"
-import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";"
-import { Input } from "@/components/ui/input";"
-import { Textarea } from "@/components/ui/textarea";"
-import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";"
-import { Calendar } from "@/components/ui/calendar";"
-import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover";"
-import { cn } from "@/lib/utils";"
-import { zodResolver } from "@hookform/resolvers/zod";"
-import { useForm } from "react-hook-form";"
-import { z } from "zod";"
-import { format, addDays } from "date-fns";"
-import { CalendarIcon import { toast } from "@/components/ui/use-toast";"
-import { useInterviews } from "@/hooks/useInterviews";
-const formSchema = z.object({
-
-    date: z.date({
-"
-        required_error: "Please select a date for the interview."}).refine(date => date > new Date(), {
+import { Button } from '@/components/ui/button';"
+import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form';"
+import { Input } from '@/components/ui/input';"
+import { Textarea } from '@/components/ui/textarea';"
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@/components/ui/select';"
+import { Calendar } from '@/components/ui/calendar';"
+import { Popover, PopoverTrigger, PopoverContent } from '@/components/ui/popover';"
+import { cn } from '@/lib/utils';"
+import { zodResolver } from '@hookform/resolvers/zod';"
+import { useForm } from 'react-hook-form';"
+import { z } from 'zod';"
+import { format, addDays } from 'date-fns';"
+import { CalendarIcon import { toast } from '@/components/ui/use-toast';"
+import { useInterviews } from '@/hooks/useInterviews';
+).refine(date => date > new Date(), {
 "
         message: "Interview date must be in the future"
     }),"
@@ -43,7 +39,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
             meetingLink: ""}});
     async function onSubmit(values) {
 
-        if (!userDetails?.id) {
+        if(!userDetails?.id) {
 
             toast({
 "
@@ -75,13 +71,13 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                 title: "Interview requested",`
                 description: `Your interview request with ${talent.full_name} has been sent.`});
             onClose()}
-        catch (error) {
+        catch(error) {
 "
             // // // // // // // // console.error("Failed to schedule interview:", error);
             toast({
 "
                 title: "Failed to schedule interview","
-                description: "An error occurred while scheduling the interview. Please try again.","
+                description: "An error occurred while scheduling the interview.Please try again.","
                 variant: "destructive"})}
         finally {
 
@@ -129,10 +125,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                         {field.value ? (format(field.value, "PPP")) : (<span>Pick a date</span>)}
 =======
 
-
-
-
-
 }>"
                         {field.value ? (format(field.value, "PPP")) : (<span>Pick a date</span>)}"
 >>>>>>> main
@@ -148,9 +140,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
 
 <<<<<<< HEAD
 =======
-
-
-
 
 "
 >>>>>>> main
@@ -217,7 +206,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
         </div>
 '"
         {form.watch('platform') !== 'in-app' && (<FormField control={form.control} name="meetingLink" render={({ field }) => (<FormItem>
-                <FormLabel>Meeting Link (Optional)</FormLabel>
+                <FormLabel>Meeting Link(Optional)</FormLabel>
                 <FormControl>'`
                   <Input placeholder={`Add your ${form.watch('platform')} link here`} {...field}/>
                 </FormControl>
@@ -225,7 +214,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
               </FormItem>)}/>)}
 "
         <FormField control={form.control} name="notes" render={({ field }) => (<FormItem>
-              <FormLabel>Notes (Optional)</FormLabel>
+              <FormLabel>Notes(Optional)</FormLabel>
               <FormControl>'"
                 <Textarea placeholder="Share what you'd like to discuss in this interview" className="h-20" {...field}/>
               </FormControl>

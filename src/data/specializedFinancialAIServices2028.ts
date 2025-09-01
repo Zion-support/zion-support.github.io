@@ -34,8 +34,7 @@ export interface FinancialAIService2028 {
   regulatoryCompliance?: string[]}
 
 export const SPECIALIZED_FINANCIAL_AI_SERVICES_2028: FinancialAIService2028[] =
-  [
-    // AI-Powered Algorithmic Trading Platform
+  [// AI-Powered Algorithmic Trading Platform
     {
 
       id: 'ai-algorithmic-trading-platform-2028',

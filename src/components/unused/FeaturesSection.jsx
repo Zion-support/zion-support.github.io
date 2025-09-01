@@ -1,35 +1,6 @@
-import { motion } from 'framer-motion';
-import { CheckCircleIcon, ClockIcon, UserGroupIcon, ShieldCheckIcon, RocketLaunchIcon, CogIcon } from '@heroicons/react/24/outline';
-export function FeaturesSection() {
-    const features = [
-        {
-
-            icon: CheckCircleIcon,
-            title: "Proven Track Record","
-            description: "500+ successful projects delivered across various industries with measurable results","
-            color: "text-zion-cyan"
-        },
-        {
-
-            icon: ClockIcon,"
-            title: "Rapid Delivery","
-            description: "Fast turnaround times with agile methodologies and efficient development processes","
-            color: "text-zion-purple"
-        },
-        {
-
-            icon: UserGroupIcon,"
-            title: "Expert Team","
-            description: "Certified professionals with deep expertise in cutting-edge technologies","
-            color: "text-zion-cyan"
-        },
-        {
-
-            icon: ShieldCheckIcon,"
-            title: "Enterprise Security","
-            description: "SOC 2 compliant with industry-leading security practices and protocols","
-            color: "text-zion-purple"
-        },
+import { motion  } from 'framer-motion';
+export default function Page() {
+,
         {
 
             icon: RocketLaunchIcon,"
@@ -99,10 +70,6 @@ export function FeaturesSection() {
 =======
   y: 0 
 
-
-
-
-
 "
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">"
 >>>>>>> main
@@ -111,8 +78,7 @@ export function FeaturesSection() {
           </h2>"
           <p className="text-xl text-zion-slate max-w-3xl mx-auto">
             We combine cutting-edge technology with proven methodologies to deliver
-            exceptional results that drive your business forward.
-          </p>
+            exceptional results that drive your business forward.</p>
         </motion.div>
 
         {/* Features Grid */}"
@@ -157,10 +123,6 @@ export function FeaturesSection() {
 =======
   delay: 0.5 
 
-
-
-
-
 "
 }} className="mt-16 text-center">"
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 rounded-2xl p-8 border border-zion-cyan/20">"
@@ -170,8 +132,7 @@ export function FeaturesSection() {
             </h3>"
             <p className="text-zion-slate mb-6 max-w-2xl mx-auto">
               Join hundreds of satisfied clients who have transformed their businesses
-              with our innovative technology solutions.
-            </p>"
+              with our innovative technology solutions.</p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="px-6 py-3 bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple-light hover:to-zion-cyan-light text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg">
                 Get Started Today

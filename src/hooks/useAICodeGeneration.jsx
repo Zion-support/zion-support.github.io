@@ -1,34 +1,7 @@
 import { useState, useCallback, useRef, useEffect } from 'react';
-import { useAnalytics } from "./useAnalytics";
-export const useAICodeGeneration = () => {
-    const { trackEvent } = useAnalytics({
 
-        enableTracking: true,
-        enableUserBehaviorTracking: true
-    });
-    const [isGenerating, setIsGenerating] = useState(false);
-    const [isAnalyzing, setIsAnalyzing] = useState(false);
-    const [generatedCode, setGeneratedCode] = useState('');
-    const [codeAnalysis, setCodeAnalysis] = useState(null);
-    const [suggestions, setSuggestions] = useState([]);
-    const [history, setHistory] = useState([]);
-    const generationTimeoutRef = useRef(null);
-    // Generate code using AI
-    const generateCode = useCallback(async (prompt, options) => {
-
-        setIsGenerating(true);
-        try {
-            // Simulate AI processing - in production, this would call an AI service
-            await new Promise(resolve => setTimeout(resolve, 3000));
-            let generatedCode = '';
-            // Generate code based on options'
-            if (options.language === 'typescript' && options.framework === 'react') {
-
-                generatedCode = generateReactTypeScriptCode(prompt, options)}
-            else if (options.language === 'javascript' && options.framework === 'express') {
-
-                generatedCode = generateExpressCode(prompt, options)}
-            else if (options.language === 'python') {
+export default function Page() {
+            else if(options.language === 'python') {
 
                 generatedCode = generatePythonCode(prompt, options)}
             else {
@@ -76,7 +49,7 @@ export const useAICodeGeneration = () => {
             setIsGenerating(false);
 
             })}
-        catch (error) {
+        catch(error) {
 <<<<<<< HEAD
             // // console.error('Failed to generate code:', error);
             trackEvent('ai_code_generation', 'generation_failed', 'error', null, {
@@ -117,7 +90,6 @@ export const useAICodeGeneration = () => {
                 issues: analyzeCodeIssues(code,
   language)
 
-
 };
             setCodeAnalysis(analysis);
             setSuggestions(analysis.suggestions);
@@ -149,7 +121,7 @@ export const useAICodeGeneration = () => {
             setIsAnalyzing(false);
 
             })}
-        catch (error) {
+        catch(error) {
 <<<<<<< HEAD
             // // console.error('Failed to analyze code:', error);
             trackEvent('ai_code_analysis', 'analysis_failed', 'error', null, {
@@ -188,7 +160,7 @@ export const useAICodeGeneration = () => {
         })}, [trackEvent]);
     // Optimize existing code
     const optimizedCode = code;
-            switch (focus) {
+            switch(focus) {
 
                 case 'performance':
                     optimizedCode = optimizeForPerformance(code);
@@ -222,7 +194,7 @@ export const useAICodeGeneration = () => {
                     break}
             trackEvent('ai_code_generation',code_optimized', focus, optimizedCode.length);
             return optimizedCode}
-        catch (error) {
+        catch(error) {
 <<<<<<< HEAD
             // // console.error('Failed to optimize code:', error);
             trackEvent('ai_code_generation', 'optimization_failed', 'error', null, {
@@ -249,7 +221,7 @@ export const useAICodeGeneration = () => {
             // Simulate AI test generation - in production, this would call an AI service
             await new Promise(resolve => setTimeout(resolve, 2000));
             let testCode = '';
-            if (language === 'typescript' || language === 'javascript') {
+            if(language === 'typescript' || language === 'javascript') {
 <<<<<<< HEAD
             // // // // // // // // // console.error('Failed to generate tests:', error);
             trackEvent('ai_code_generation', 'test_generation_failed', 'error', undefined, {
@@ -270,7 +242,7 @@ export const useAICodeGeneration = () => {
             return '// Failed to generate tests';
 
                 testCode = generateJestTests(code)}
-            else if (language === 'python') {
+            else if(language === 'python') {
 
                 testCode = generatePytestTests(code)}
             else {
@@ -278,7 +250,7 @@ export const useAICodeGeneration = () => {
                 testCode = generateGenericTests(code, language)}
             trackEvent('ai_code_generation',tests_generated', language, testCode.length);
             return testCode}
-        catch (error) {
+        catch(error) {
 <<<<<<< HEAD
             // // console.error('Failed to generate tests:', error);
             trackEvent('ai_code_generation', 'test_generation_failed', 'error', null, {
@@ -305,7 +277,7 @@ export const useAICodeGeneration = () => {
             // Simulate AI documentation generation - in production, this would call an AI service
             await new Promise(resolve => setTimeout(resolve, 1500));
             let docs = '';
-            if (language === 'typescript' || language === 'javascript') {
+            if(language === 'typescript' || language === 'javascript') {
 <<<<<<< HEAD
             // // // // // // // // // console.error('Failed to generate documentation:', error);
             trackEvent('ai_code_generation', 'doc_generation_failed', 'error', undefined, {
@@ -326,7 +298,7 @@ export const useAICodeGeneration = () => {
             return '// Failed to generate documentation';
 
                 docs = generateJSDoc(code)}
-            else if (language === 'python') {
+            else if(language === 'python') {
 
                 docs = generatePythonDoc(code)}
             else {
@@ -334,7 +306,7 @@ export const useAICodeGeneration = () => {
                 docs = generateGenericDocs(code, language)}
             trackEvent('ai_code_generation',docs_generated', language, docs.length);
             return docs}
-        catch (error) {
+        catch(error) {
 <<<<<<< HEAD
             // // console.error('Failed to generate documentation:', error);
             trackEvent('ai_code_generation', 'doc_generation_failed', 'error', null, {
@@ -361,7 +333,7 @@ export const useAICodeGeneration = () => {
     // Export generated code'
     const exportContent = '';
         let filename = '';
-        if (format === 'json') {
+        if(format === 'json') {
 
             exportContent = JSON.stringify({
 
@@ -371,7 +343,7 @@ export const useAICodeGeneration = () => {
                 timestamp: new Date().toISOString()
             }, null, 2);
             filename = 'generated-code.json'}
-        else if (format === 'md') {
+        else if(format === 'md') {
 '`
             exportContent = `# Generated Code\n\n\`\`\`typescript\n${generatedCode}\n\`\`\`\n\n## Analysis\n\n${codeAnalysis ? JSON.stringify(codeAnalysis, null, 2) : 'No analysis available'}`;
             filename = 'generated-code.md'}
@@ -407,25 +379,16 @@ export const useAICodeGeneration = () => {
     const generateReactTypeScriptCode = (prompt, options) => {
 '`
         return `import React, { useState, useEffect, useCallback } from 'react';
-import { motion } from 'framer-motion';
+import { motion  } from 'framer-motion';
 
-interface ${options.style === 'oop' ? 'ComponentProps' : 'Props'} {
-
-  // TODO: Define props based on prompt: ${prompt}
-
-export const GeneratedComponent: React.FC<${options.style === 'oop' ? 'ComponentProps' : 'Props'}> = (props) => {
-
-  const [state, setState] = useState<any>(null);
-
-  useEffect(() => {
-    // TODO: Implement initialization logic
-  }, []);
+export default function Page() {
+, []);
 
   const handleAction = useCallback(() => {
     // TODO: Implement action handler
   }, []);
 
-  return()
+  return ()
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}"
@@ -537,11 +500,11 @@ if __name__ == "__main__":`
         const lines = code.split('\n').length;
         const functions = (code.match(/function|=>/g) || []).length;
         const avgFunctionLength = lines / Math.max(1, functions);
-        if (avgFunctionLength < 10)
+        if(avgFunctionLength < 10)
             return 9;
-        if (avgFunctionLength < 20)
+        if(avgFunctionLength < 20)
             return 7;
-        if (avgFunctionLength < 30)
+        if(avgFunctionLength < 30)
             return 5;
         return 3};
     const calculateSecurityScore = (code) => {
@@ -560,7 +523,7 @@ if __name__ == "__main__":`
 
         const suggestions = [];
         // Performance suggestions'
-        if (code.includes('setInterval') || code.includes('setTimeout')) {
+        if(code.includes('setInterval') || code.includes('setTimeout')) {
 
             suggestions.push({
 `
@@ -577,7 +540,7 @@ if __name__ == "__main__":`
                 alternatives['requestAnimationFrame',useEffect cleanup',AbortController']
             })}
         // Security suggestions'
-        if (code.includes('innerHTML') || code.includes('document.write')) {
+        if(code.includes('innerHTML') || code.includes('document.write')) {
 
             suggestions.push({
 `
@@ -594,7 +557,7 @@ if __name__ == "__main__":`
                 alternatives['textContent',createElement',DOMPurify']
             })}
         // Best practice suggestions'
-        if (code.includes('console.log')) {
+        if(code.includes('console.log')) {
 
             suggestions.push({
 `
@@ -614,7 +577,7 @@ if __name__ == "__main__":`
     const analyzeCodeIssues = (code, _language) => {
 
         const issues = [];
-        if (code.includes('TODO')) {
+        if(code.includes('TODO')) {
 
             issues.push({
 
@@ -622,7 +585,7 @@ if __name__ == "__main__":`
                 message: 'Code contains TODO comments that need implementation',
                 line: code.split('\n').findIndex(line => line.includes('TODO')) + 1
             })}
-        if (code.includes('')) {
+        if(code.includes('')) {
 
             issues.push({
 
@@ -636,7 +599,7 @@ if __name__ == "__main__":`
 
         return code'"
             .replace(/<div>/g,<div role="main">)'"
-            .replace(/<button>/g,<button aria-label="Action button">)'"
+            .replace(/<button>/g,<button >)'"
             .replace(/<img/g,<img alt="Description"')};
     // Helper functions for test generation
     const generateJestTests = (_code) => {
@@ -689,8 +652,7 @@ describe('Generated Code Tests', () => {
         return `/**
  * Generated Component
  *
- * This component was generated based on user requirements.
- *
+ * This component was generated based on user requirements.*
  * @component
  * @example
  * <GeneratedComponent />
@@ -721,14 +683,13 @@ def generated_function():;"
         return `/**
  * Generated ${language} Code
  *
- * This code was generated based on user requirements.
- *
+ * This code was generated based on user requirements.*
  * TODO: Add specific documentation based on code functionality`
  */`};
     // Cleanup timeout on unmount
     useEffect(() => {
         return () => {
-            if (generationTimeoutRef.current) {
+            if(generationTimeoutRef.current) {
 
                 clearTimeout(generationTimeoutRef.current)}
         }}, []);

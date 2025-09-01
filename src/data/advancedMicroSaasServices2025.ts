@@ -30,8 +30,7 @@ export interface AdvancedMicroSaasService {
     security: string[]};
   competitors?: string[];
   marketSize?: string}
-;export const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = [
-  // AI-Powered Financial Services
+;export const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = [// AI-Powered Financial Services
   {
 
     id: 'ai-credit-risk-assessment',

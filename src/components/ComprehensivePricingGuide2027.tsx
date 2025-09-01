@@ -1,60 +1,14 @@
 <<<<<<< HEAD
-import {
-<<<<<<< HEAD
-import { innovativeServices2027 } from "../data / innovativeServices2027";
-import { motion, AnimatePresence } from 'framer - motion';
-import { servicesCatalog } from "../data / servicesCatalog";
-=======
->>>>>>> main
+import { <<<<<<< HEAD import { innovativeServices2027 } from '../data/innovativeServices2027';
 
-  DollarSign,
-  TrendingUp,
-  Clock,
-  Users,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  ExternalLink,
-  Search,
-  Filter,
-  Download,
-  Phone,
-  Mail,
-  MapPin,
-  Calculator,
-  BarChart3,
-  Target,
-  Zap,
-  Shield,
-  Brain,
-  Rocket'
-} from 'lucide-react';
-
-export const ComprehensivePricingGuide2027: React.FC = () => {;
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<any>('All');
-  const [priceRange, setPriceRange] = useState<any>('All');
-=======
-export const ComprehensivePricingGuide2027: React.FC = () => {;'
-  const [searchQuery, setSearchQuery] = useState('');'
-  const [selectedCategory, setSelectedCategory] = useState<any>('All');'
-  const [priceRange, setPriceRange] = useState<any>('All');'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-  const [sortBy, setSortBy] = useState<any>('name');
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect ( () => {
-        }
-      },;
-      { threshold: 0.1 }
+export default function Page() {
     );
 <<<<<<< HEAD
 
-    
-    if (element) {
+    if(element) {
 =======
 '
-    const element = document.getElementById('comprehensive-pricing-guide');    if (element) {
+    const element = document.getElementById('comprehensive-pricing-guide');    if(element) {
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       observer.observe(element)}
@@ -70,38 +24,32 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
       href: service.href || '/contact'}) ) ;  ];
 
   // Filter services based on search and category
-  
-    
+
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          service.category.toLowerCase().includes(searchQuery.toLowerCase());
 
-    
-    
     return matchesSearch && matchesCategory && matchesPrice}) ;
 
   // Sort services
   
 <<<<<<< HEAD
-    switch (sortBy) {;
+    switch(sortBy) {;
       case 'name':;
         return a.title.localeCompare(b.title);
       case 'price':;
         return parseFloat(a.price.replace(/[^0-9.]/g,)) - parseFloat(b.price.replace(/[^0-9.]/g,));
 =======
-    switch (sortBy) {;'      case 'name':;
+    switch(sortBy) {;'      case 'name':;
         return a.title.localeCompare(b.title);'
       case 'price':;'
         return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));'
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       case 'category':;
-        return a.category.localeCompare (b.category) ;
+        return a.category.localeCompare(b.category) ;
       default:;
         return 0}
   });
 
-  
-  
-  
   ;
 =======
 '
@@ -117,23 +65,21 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
 };
 
 <<<<<<< HEAD
-  
-    
-    if (numPrice < 100) return 'Low';
-    if (numPrice < 1000) return 'Medium';
+
+    if(numPrice < 100) return 'Low';
+    if(numPrice < 1000) return 'Medium';
     return 'High'};
 
 =======
   const getPriceRange = (price: string) => {;'
     const numPrice = parseFloat(price.replace(/[^0-9.]/g, ''));'
-    if (numPrice < 100) return 'Low';'
-    if (numPrice < 1000) return 'Medium';'    return 'High'};
+    if(numPrice < 100) return 'Low';'
+    if(numPrice < 1000) return 'Medium';'    return 'High'};
 '
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       default: return 'text-white'}
   };
 
-  
       'Robotics & Automation': Cpu,;
       'AR/VR Solutions': Eye,;
       'Biotech Solutions': Dna,;
@@ -181,8 +127,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
 "
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Explore our complete portfolio of innovative services with transparent pricing,
-            detailed ROI analysis, and market insights to help you make informed decisions.
-          </p>
+            detailed ROI analysis, and market insights to help you make informed decisions.</p>
         </motion.div>
 
         {/* Search and Filters */}
@@ -203,11 +148,6 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
 
   { duration: 0.8,
   delay: 0.2
-
-
-
-
-
 
 }}"
           className="mb-12"
@@ -292,7 +232,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
   { duration: 0.8,
   delay: 0.4 }}"          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
-          {sortedServices.map ( (service, index) => (;
+          {sortedServices.map((service, index) => (;
             <motion.div
               key={`${service.source}-${service.id}`}
               initial = {
@@ -311,11 +251,6 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
 
   { duration: 0.6,
   delay: index * 0.05
-
-
-
-
-
 
 }}"
               className="group relative"
@@ -351,7 +286,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
                       ))}
                       {service.features.length > 3 && ("
                         <span className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded-full border border-zion-purple/30">
-                          +{service.features.length - 3}
+                          +{service.features.length-3}
                         </span>) }
                     </div>
                   </div>;) }
@@ -417,8 +352,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;'
             </h3>"
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
               Our team of experts is ready to provide personalized quotes and answer any questions
-              about our services. Get in touch for a detailed consultation.
-            </p>
+              about our services.Get in touch for a detailed consultation.</p>
 "
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">"
               <div className="flex items-center justify-center gap-3 text-zion-cyan">"

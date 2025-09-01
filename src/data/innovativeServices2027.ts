@@ -16,8 +16,7 @@ export interface InnovativeService2027 {
   launchDate: string;
   status: 'active' | 'beta' | 'coming-soon'
 };
-export const innovativeServices2027: InnovativeService2027[] = [
-  {
+export const innovativeServices2027: InnovativeService2027[] = [{
 
     id: 'quantum-ai-platform',
     name: 'Quantum AI Platform',
@@ -96,7 +95,7 @@ export
   'Neural Technology';
 ];
 export 
-  if (category === 'All') {;
+  if(category === 'All') {;
     return innovativeServices2027;
 
   return innovativeServices2027.filter(service => service.category === category)};

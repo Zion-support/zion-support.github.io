@@ -1,10 +1,7 @@
 <<<<<<< HEAD
-import {
-<<<<<<< HEAD
-import { motion } from 'framer - motion';
+import { <<<<<<< HEAD import { motion  } from 'framer-motion';
 
- * GlobalPresenceSection function
- * @param {*} params - Function parameters
+ params - Function parameters
  * @returns {*} Function return value
  */
 function GlobalPresenceSection () {
@@ -22,8 +19,7 @@ function GlobalPresenceSection () {
 
       established: '2022'};
   ];
-const globalOffices = [
-  {
+const globalOffices = [{
 
     city: "Middletown, DE","
     country: "United States","
@@ -55,18 +51,17 @@ const globalOffices = [
     description: "Canadian market and development center"};
 ];
 
-
 <<<<<<< HEAD
-  return (<section className = "py - 20 bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
-      <div className="max - w-7xl mx - auto px - 6">
+  return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
+      <div className="max - w-7xl mx - auto px-6">
         <motion.div
-          className="text - center mb - 16"
+          className="text-center mb-16"
 =======
 =======
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 export function GlobalPresenceSection() {
   return ("
-    <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
+    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <div className="max-w-7xl mx-auto px-6">
         <motion.div "
           className="text-center mb-16"
@@ -90,15 +85,13 @@ export function GlobalPresenceSection() {
             Global Presence
           </h2>"
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Serving clients worldwide with local expertise and global reach.
-            Our distributed team ensures 24 / 7 support and cultural understanding.
-          </p>
+            Serving clients worldwide with local expertise and global reach.Our distributed team ensures 24 / 7 support and cultural understanding.</p>
         </motion.div>
 
         {/* Global Statistics */}
 <<<<<<< HEAD
         <motion.div
-          className="grid grid - cols - 2 md:grid - cols - 4 gap - 8 mb - 16"
+          className="grid grid - cols - 2 md:grid - cols - 4 gap-8 mb-16"
 =======
         <motion.div "
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
@@ -151,7 +144,7 @@ export function GlobalPresenceSection() {
         {/* Global Offices */}
 <<<<<<< HEAD
         <motion.div
-          className="mb - 16";
+          className="mb-16";
 =======
         <motion.div "
           className="mb-16";
@@ -181,10 +174,10 @@ export function GlobalPresenceSection() {
           </h3>
 <<<<<<< HEAD
 
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">
-            {globalOffices.map ( (office, index) => (<motion.div
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap-8">
+            {globalOffices.map((office, index) => (<motion.div
                 key={office.city}
-                className="bg - slate - 800 border border - slate - 700 rounded - xl p - 6 text - center hover:border - blue - 500 / 50 transition - all duration - 300 hover:shadow - lg hover:shadow - blue - 500 / 25 group"
+                className="bg-slate - 800 border border-slate - 700 rounded-xl p - 6 text-center hover:border-blue - 500 / 50 transition - all duration - 300 hover:shadow-lg hover:shadow-blue -500 / 25 group"
 =======
           "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -218,15 +211,15 @@ export function GlobalPresenceSection() {
                 </div>
 <<<<<<< HEAD
 
-                <div className="mb - 2">
-                  <span className="px - 3 py - 1 bg - blue - 600 / 20 text - blue - 400 text - xs font - semibold rounded - full">
+                <div className="mb-2">
+                  <span className="px-3 py-1 bg-blue - 600 / 20 text-blue - 400 text-xs font - semibold rounded-full">
                     {office.type}
                   </span>
                 </div>
 
-                <h4 className="text - lg font - bold text - white mb - 1">{office.city}</h4>
-                <p className="text - gray - 400 text - sm mb - 3">{office.country}</p>
-                <p className="text - gray - 300 text - xs">{office.description}</p>
+                <h4 className="text-lg font - bold text-white mb-1">{office.city}</h4>
+                <p className="text-gray - 400 text-sm mb-3">{office.country}</p>
+                <p className="text-gray - 300 text-xs">{office.description}</p>
               </motion.div>) ) }
 =======
                 "
@@ -248,7 +241,7 @@ export function GlobalPresenceSection() {
         {/* Global Map Visualization */}
 <<<<<<< HEAD
         <motion.div
-          className="text - center mb - 12"
+          className="text-center mb-12"
 =======
         <motion.div "
           className="text-center mb-12"
@@ -274,12 +267,12 @@ export function GlobalPresenceSection() {
 }}
 <<<<<<< HEAD
         >
-          <div className="bg - slate - 800 border border - slate - 700 rounded - 2xl p - 8">
-            <div className="w - 24 h - 24 bg - gradient - to - br from - blue - 500 to - purple - 600 rounded - full flex items - center justify - center mx - auto mb - 6">
-              <span className="text - 4xl">🌍</span>
+          <div className="bg-slate - 800 border border-slate - 700 rounded-2xl p -8">
+            <div className="w-24 h-24 bg-gradient - to - br from - blue - 500 to - purple - 600 rounded-full flex items - center justify - center mx - auto mb-6">
+              <span className="text-4xl">🌍</span>
             </div>
-            <h3 className="text - 2xl font - bold text - white mb - 4">Worldwide Coverage</h3>
-            <p className="text - gray - 300 text - lg max - w-2xl mx - auto">
+            <h3 className="text-2xl font - bold text-white mb-4">Worldwide Coverage</h3>
+            <p className="text-gray - 300 text-lg max - w-2xl mx -auto">
               Our distributed team and cloud infrastructure ensure seamless service delivery
 =======
         >"
@@ -291,14 +284,13 @@ export function GlobalPresenceSection() {
             <p className="text-gray-300 text-lg max-w-2xl mx-auto">
               Our distributed team and cloud infrastructure ensure seamless service delivery 
 >>>>>>> main
-              across all time zones and regions, with local expertise and global capabilities.
-            </p>
+              across all time zones and regions, with local expertise and global capabilities.</p>
           </div>
         </motion.div>
 
 <<<<<<< HEAD
         <motion.div
-          className="text - center"
+          className="text-center"
 =======
         <motion.div "
           className="text-center"
@@ -329,8 +321,7 @@ export function GlobalPresenceSection() {
             </h3>"
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
               Whether you're expanding internationally or need local expertise,
-              our global presence ensures you get the support you need, when you need it.
-            </p>"
+              our global presence ensures you get the support you need, when you need it.</p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
                 Find Your Local Team"

@@ -1,66 +1,23 @@
 
 <<<<<<< HEAD
 =======
-import {
-  Smartphone, 
-  Tablet, 
-  Monitor, 
+import { Smartphone, Tablet, Monitor, >>>>>>> main Smartphone, Tablet, Monitor, Touch, Gesture, Swipe, Pinch, Rotate, X, CheckCircle, AlertTriangle, Info, Settings, ArrowUp, ArrowDown, ArrowLeft, ArrowRight'  } from 'lucide-react';
 
->>>>>>> main
-  Smartphone,
-  Tablet,
-  Monitor,
-  Touch,
-  Gesture,
-  Swipe,
-  Pinch,
-  Rotate,
-  X,
-  CheckCircle,
-  AlertTriangle,
-  Info,
-  Settings,
-  ArrowUp,
-  ArrowDown,
-  ArrowLeft,
-  ArrowRight'
-} from 'lucide-react';
-
-interface TouchGesture {
-
-  type: 'swipe' | 'pinch' | 'rotate' | 'tap' | 'longpress';
-  direction?: 'up' | 'down' | 'left' | 'right';
-  distance?: number;
-  duration?: number}
-
-interface MobileExperienceEnhancerProps {
-  enabled?: boolean;
-  showControls?: boolean}
-export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> = ({
-
-  enabled = true,
-  showGestures = false,
-  enableSwipeNavigation = true}) => {
-
-  const [isMobile, setIsMobile] = useState(false);
-  const [isTablet, setIsTablet] = useState(false);
-  const [deviceOrientation, setDeviceOrientation] = useState<'portrait' | 'landscape'>('portrait');
-  const [touchStart, setTouchStart] = useState<{ x: number; y: number; time: number } | null>(null);
+export default function Page() {
+ | null>(null);
   const [touchEnd, setTouchEnd] = useState<{ x: number; y: number; time: number } | null>(null);
   const [gestureHistory, setGestureHistory] = useState<TouchGesture[]>([]);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [showGestureGuide, setShowGestureGuide] = useState(false);
 
   // Detect device type and orientation
-  useEffect ( () => {
-    
-      
-      
-      setIsMobile (isMobileDevice) ;
-      setIsTablet (isTabletDevice) ;
+  useEffect(() => {
+
+      setIsMobile(isMobileDevice) ;
+      setIsTablet(isTabletDevice) ;
 
       // Set orientation
-      if (window.innerHeight > window.innerWidth) {
+      if(window.innerHeight > window.innerWidth) {
 
         setDeviceOrientation('portrait')} else {
 
@@ -87,7 +44,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
       window.removeEventListener('orientationchange', handleOrientationChange)}}, []) ;
   // Touch gesture handling
   useEffect(() => {
-    if (!enabled || !enableSwipeNavigation) return;
+    if(!enabled || !enableSwipeNavigation) return;
 
     const handleTouchStart = (e: TouchEvent) => {
 
@@ -98,18 +55,12 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
         time: Date.now () ,
       }) }};
 
-    
-      
-      
-      setTouchEnd (touchEndData) ;
+      setTouchEnd(touchEndData) ;
 
       // Calculate gesture
-      
-      
-      
-      
+
       // Minimum distance and time for gesture recognition
-      if (distance > 50 && deltaTime < 500) {
+      if(distance > 50 && deltaTime < 500) {
 
         let gesture: TouchGesture = {
 
@@ -118,27 +69,27 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
           duration: deltaTime,
         };
 
-        if (Math.abs(deltaX) > Math.abs(deltaY)) {
+        if(Math.abs(deltaX) > Math.abs(deltaY)) {
 
           // Horizontal swipe'
           gesture.direction = deltaX > 0 ? 'right' : 'left';
           
           // Handle horizontal navigation'
-          if (gesture.direction === 'left') {
+          if(gesture.direction === 'left') {
 
             // Swipe left - go forward
-            if (window.history.length > 1) {
+            if(window.history.length > 1) {
 
               window.history.forward();
 <<<<<<< HEAD
             }
-          } else if (gesture.direction === 'right') {
+          } else if(gesture.direction === 'right') {
 =======
-            }'          } else if (gesture.direction === 'right') {
+            }'          } else if(gesture.direction === 'right') {
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
             // Swipe right - go back
-            if (window.history.length > 1) {
+            if(window.history.length > 1) {
 
               window.history.back()}          }
         } else {
@@ -147,10 +98,10 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
           gesture.direction = deltaY > 0 ? 'down' : 'up';
           
           // Handle vertical gestures'
-          if (gesture.direction === 'up' && distance > 100) {
+          if(gesture.direction === 'up' && distance > 100) {
 
             // Swipe up - scroll to top'
-            window.scrollTo({ top: 0, behavior: 'smooth' })} else if (gesture.direction === 'down' && distance > 100) {
+            window.scrollTo({ top: 0, behavior: 'smooth' })} else if(gesture.direction === 'down' && distance > 100) {
 
             // Swipe down - scroll to bottom'
             window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })}        }
@@ -178,7 +129,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
       case 'search':
         // Trigger search functionality'
         
-        if (searchInput) {
+        if(searchInput) {
 
           searchInput.focus()}
 <<<<<<< HEAD
@@ -190,38 +141,38 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
         setShowMobileMenu(!showMobileMenu);
         break;
       case 'back':
-        if (window.history.length > 1) {
+        if(window.history.length > 1) {
 
           window.history.back()}
         break;
       case 'forward':
-        if (window.history.length > 1) {
+        if(window.history.length > 1) {
 
           window.history.forward()}
         break}  }, [showMobileMenu]);
 
   // Mobile - specific optimizations
-  useEffect ( () => {
-    if (!enabled || !isMobile) return;
+  useEffect(() => {
+    if(!enabled || !isMobile) return;
 
     // Add mobile-specific CSS classes'
     document.documentElement.classList.add('mobile-device');
     
     // Optimize viewport for mobile'"
     
-    if (viewport) {
+    if(viewport) {
 
 <<<<<<< HEAD
-    // Add touch - action CSS for better touch handling
-    const style = document.createElement ('style') ;
+    // Add touch-action CSS for better touch handling
+    const style = document.createElement('style') ;
     style.textContent = `
       .mobile - device * {
-        touch - action: manipulation;
+        touch-action: manipulation;
         -webkit - tap - highlight - color: transparent;
       }
 
       .mobile - device button,
-      .mobile - device [role="button"] {
+      .mobile - device [] {
         min - height: 44px;
         min - width: 44px;
       }
@@ -243,7 +194,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
         -webkit-tap-highlight-color: transparent}
       
       .mobile-device button,"
-      .mobile-device [role="button"] {
+      .mobile-device [] {
 
         min-height: 44px;
         min-width: 44px}
@@ -254,18 +205,18 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
 
         font-size: 16px}`    `;
 >>>>>>> main
-    document.head.appendChild (style) ;
+    document.head.appendChild(style) ;
 
     return () => {
 
       document.documentElement.classList.remove('mobile-device');
-      if (style.parentNode) {
+      if(style.parentNode) {
 
         style.parentNode.removeChild(style)}
     }}, [enabled, isMobile]) ;
-  if (!enabled) return null;
+  if(!enabled) return null;
 
-  return()
+  return ()
     <>
 
       {/* Mobile Navigation Bar */}
@@ -279,13 +230,13 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
               <button'
                 onClick={() => handleMobileNavigation('back')}"
                 className="p-2 rounded-lg bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"
-                aria-label="Go back"
+                
               >"
                 <ArrowLeft className="w-5 h-5"  />              </button>
               <button'
                 onClick={() => handleMobileNavigation('home')}"
                 className="p-2 rounded-lg bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"
-                aria-label="Go home"
+                
               >"
                 <Home className="w-5 h-5"  />              </button>
             </div>
@@ -294,13 +245,13 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
               <button'
                 onClick={() => handleMobileNavigation('search')}"
                 className="p-2 rounded-lg bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"
-                aria-label="Search"
+                
               >"
                 <Search className="w-5 h-5"  />              </button>
               <button'
                 onClick={() => handleMobileNavigation('menu')}"
                 className="p-2 rounded-lg bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"
-                aria-label="Menu"
+                
               >"
                 <Menu className="w-5 h-5"  />              </button>
             </div>
@@ -321,7 +272,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
               <button
                 onClick={() => setShowMobileMenu(false)}"
                 className="p-2 rounded-lg bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"
-                aria-label="Close menu"
+                
               >"
                 <X className="w-5 h-5"  />
               </button>
@@ -364,7 +315,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
           whileTap={{ scale: 0.9 }}
           onClick={() => setShowGestureGuide(!showGestureGuide)}"
           className="fixed bottom-6 right-6 z-50 p-4 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
-          aria-label="Show gesture guide"
+          
           title="Gesture Guide"
         >"
           <Touch className="w-6 h-6"  />        </motion.button>
@@ -439,8 +390,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
           </motion.div>) }
       </AnimatePresence>
 
-
-      {/* Device Info Indicator (Development Only) */}
+      {/* Device Info Indicator(Development Only) */}
       {process.env.NODE_ENV === 'development' && (isMobile || isTablet) && (
         <motion.div
           initial={{ opacity: 0, x: -100 }}
@@ -459,7 +409,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
         </motion.div>
       )}
 
-      {/* Gesture History (Development Only) */}
+      {/* Gesture History(Development Only) */}
       {process.env.NODE_ENV === 'development' && showGestures && gestureHistory.length > 0 && (
         <motion.div
           initial={{ opacity: 0, y: 100 }}

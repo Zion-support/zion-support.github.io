@@ -1,16 +1,8 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
-export function CartItem({ item, onRemove, onUpdateQuantity }) {
 
-  return()
-    <li className="flex items-center gap-4">
-      <img'
-        src={item.image || '/placeholder.svg'}
-        alt={item.name}"
-        className="w-16 h-16 object-cover rounded"
-      />"
-      <div className="flex-1">"
-        <p className="font-medium">{item.name}</p>"
+export default function Page() {
+</p>"
         <p className="text-sm text-muted-foreground">
           ${item.price.toFixed(2)}
         </p>

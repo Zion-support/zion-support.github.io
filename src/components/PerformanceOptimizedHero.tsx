@@ -1,62 +1,28 @@
 <<<<<<< HEAD
-import { Link } from 'react - router - dom';
-import React, { useState, useEffect, useCallback } from 'react';
-export default React.memo (PerformanceOptimizedHero) ;}}}</motion.div>}
-import {
-import { motion, AnimatePresence } from 'framer - motion';
+import { Link  } from 'react-router-dom';
+export default function Page() {
+</motion.div>}
+import { motion, AnimatePresence  } from 'framer-motion';
 
-  ArrowRight,
-  Play,
-  Star,
-  Shield,
-  Zap,
-  Brain,
-  Cloud,
-  CheckCircle,
-  TrendingUp,
-  Users,
-  Globe,
-  Rocket
-interface HeroProps {
-  title?: string;
-  subtitle?: string;
-  description?: string;
-  ctaText?: string;
-  ctaLink?: string;
-  features?: Array<{
-    icon: React.ComponentType < any>;
-    text: string;
-    color: string;
-  }>;
-
-const PerformanceOptimizedHero: React.FC < HeroProps> = ({
-  title = "Revolutionary AI & Technology Solutions",
-  subtitle = "2025 - 2026 Innovation Hub",
-  description = "Transform your business with cutting - edge AI, quantum computing, and next - generation technology solutions. Experience the future of digital transformation.",
-  ctaText = "Explore Our Services",
-  ctaLink = "/services",
-  features = [;
-    { icon: Brain, text: "AI - Powered Solutions", color: "from - purple - 500 to - pink - 500" },;
-    { icon: Cloud, text: "Cloud Infrastructure", color: "from - blue - 500 to - cyan - 500" },;
-    { icon: Shield, text: "Cybersecurity", color: "from - green - 500 to - emerald - 500" },;
-    { icon: Zap, text: "Digital Transformation", color: "from - yellow - 500 to - orange - 500" };
+export default function Page() {
+,;
+    { icon: Zap, text: "Digital Transformation", color: "from - yellow-500 to - orange - 500" };
   ];
 }) => {;
-  const [currentFeature, setCurrentFeature] = useState (0) ;
-  const [isVisible, setIsVisible] = useState (false) ;
+  const [currentFeature, setCurrentFeature] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
 
-  useEffect ( () => {
-    setIsVisible (true) ;
+  useEffect(() => {
+    setIsVisible(true) ;
 
-    const interval = setInterval ( () => {;
-      setCurrentFeature ( (prev) => (prev + 1) % features.length) ;
+    const interval = setInterval(() => {;
+      setCurrentFeature((prev) => (prev + 1) % features.length) ;
     }, 3000) ;
 =======
-  useEffect ( () => {
-    setIsVisible (true) ;
-    
-    
-      setCurrentFeature ( (prev) => (prev + 1) % features.length) }, 3000) ;
+  useEffect(() => {
+    setIsVisible(true) ;
+
+      setCurrentFeature((prev) => (prev + 1) % features.length) }, 3000) ;
 >>>>>>> main
 
     return () => clearInterval(interval)}, [features.length]);
@@ -79,14 +45,12 @@ const PerformanceOptimizedHero: React.FC < HeroProps> = ({
         duration: 0.8,;
         staggerChildren: 0.2}}};
 
-  
   ;
   y: 30 ;
 ;
 },;
     visible: { opacity: 1, y: 0 }};
 
-  
   ;
   scale: 0.8 ;
 ;
@@ -94,7 +58,7 @@ const PerformanceOptimizedHero: React.FC < HeroProps> = ({
     visible: { opacity: 1, scale: 1 }};
 
   return ("
-    <section className = "relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Animated background elements */}"
       <div className="absolute inset-0">"
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_50%)]" />"
@@ -159,9 +123,9 @@ const PerformanceOptimizedHero: React.FC < HeroProps> = ({
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto"
           variants={itemVariants}
 
-          {features.map ( (feature, index) => (<motion.div
+          {features.map((feature, index) => (<motion.div
               key={index}
-              className={`relative p - 6 rounded - 2xl bg - gradient - to - br ${feature.color} bg - opacity - 10 border border - white / 10 backdrop - blur - sm hover:scale - 105 transition - transform duration - 300`}
+              className={`relative p - 6 rounded-2xl bg-gradient - to - br ${feature.color} bg-opacity - 10 border border-white / 10 backdrop - blur - sm hover:scale - 105 transition - transform duration - 300`}
               variants={featureVariants}
               whileHover={{ y: -5 }}
 `

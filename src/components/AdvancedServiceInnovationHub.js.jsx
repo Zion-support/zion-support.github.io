@@ -1,75 +1,10 @@
 import React, { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
-import { Lightbulb, Rocket, Brain, Zap, TrendingUp, Star, Users, Globe, CheckCircle, Cpu, Atom, Satellite, Dna, Shield, Leaf } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";"
-import { Button } from "./ui/button";"
-import { Badge } from "./ui/badge";"
-import { Input } from "./ui/input";
-const AdvancedServiceInnovationHub = () => {
-
-    const [selectedCategory, setSelectedCategory] = useState('all');
-    const [selectedImpact, setSelectedImpact] = useState('all');
-    const [selectedStatus, setSelectedStatus] = useState('all');
-    const [searchTerm, setSearchTerm] = useState('');
-    const [viewMode, setViewMode] = useState('trends');
-    // Mock data - in real app this would come from API
-    const innovationTrends = [
-        {
-
-            id: 'quantum-supremacy',
-            title: 'Quantum Supremacy & Commercialization',
-            description: 'The transition from quantum research to practical commercial applications across industries.',
-            category: 'quantum',
-            impact: 'High',
-            timeline: '2025-2030',
-            adoption: 85,
-            investment: '$50B+',
-            keyPlayers['IBM',Google',Microsoft',Startups'],;
-            technologies['Quantum Computing',Quantum Algorithms',Quantum Software'],;
-            status: 'Emerging'
-        },
-        {
-
-            id: 'ai-consciousness',
-            title: 'AI Consciousness & General Intelligence',
-            description: 'Development of self-aware AI systems with human-like reasoning and consciousness.',
-            category: 'ai',
-            impact: 'High',
-            timeline: '2030-2040',
-            adoption: 45,
-            investment: '$100B+',
-            keyPlayers['OpenAI',Anthropic',Research Labs',Universities'],;
-            technologies['AI Consciousness',General AI',Neural Networks'],;
-            status: 'Emerging'
-        },
-        {
-
-            id: 'space-mining',
-            title: 'Space Mining & Resource Extraction',
-            description: 'Commercial extraction of valuable resources from asteroids and celestial bodies.',
-            category: 'space-tech',
-            impact: 'High',
-            timeline: '2030-2040',
-            adoption: 30,
-            investment: '$200B+',
-            keyPlayers['SpaceX',Blue Origin',Asteroid Mining Companies'],;
-            technologies['Space Robotics',Resource Processing',Space Logistics'],;
-            status: 'Emerging'
-        },
-        {
-
-            id: 'fusion-energy',
-            title: 'Fusion Energy Commercialization',
-            description: 'Breakthrough in controlled nuclear fusion for unlimited clean energy.',
-            category: 'green-tech',
-            impact: 'High',
-            timeline: '2030-2040',
-            adoption: 60,
-            investment: '$500B+',
-            keyPlayers['ITER',Private Fusion Companies',Government Labs'],;
-            technologies['Fusion Physics',Plasma Confinement',Energy Conversion'],;
-            status: 'Growing'
-        },
+import { motion  } from 'framer-motion';
+export default function Page() {
+ from './ui/badge';"
+import { Input } from './ui/input';
+export default function Page() {
+,
         {
 
             id: 'synthetic-biology',
@@ -107,7 +42,7 @@ const AdvancedServiceInnovationHub = () => {
             return matchesCategory && matchesImpact && matchesStatus && matchesSearch})}, [selectedCategory, selectedImpact, selectedStatus, searchTerm]);
     const getImpactColor = (impact) => {
 
-        switch (impact) {
+        switch(impact) {
 
             case 'High': return 'bg-red-100 text-red-800';
             case 'Medium': return 'bg-yellow-100 text-yellow-800';
@@ -116,7 +51,7 @@ const AdvancedServiceInnovationHub = () => {
     };
     const getStatusColor = (status) => {
 
-        switch (status) {
+        switch(status) {
 
             case 'Emerging': return 'bg-blue-100 text-blue-800';
             case 'Growing': return 'bg-green-100 text-green-800';
@@ -126,7 +61,7 @@ const AdvancedServiceInnovationHub = () => {
     };
     const getCategoryIcon = (category) => {
 
-        switch (category) {
+        switch(category) {
 '"
             case 'quantum': return <Atom className="w-5 h-5"/>;'"
             case 'ai': return <Brain className="w-5 h-5"/>;'"
@@ -267,7 +202,7 @@ const AdvancedServiceInnovationHub = () => {
                             <Badge className={getImpactColor(trend.impact)}>
                               {trend.impact} Impact
                             </Badge>
-                            <Badge className={getStatusColor (trend.status) }>
+                            <Badge className={getStatusColor(trend.status) }>
                               {trend.status}
                             </Badge>
                           </div>
@@ -538,7 +473,7 @@ const AdvancedServiceInnovationHub = () => {
             <CardContent>"
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>"
-                  <h4 className="font-semibold text-zion-slate-dark mb-3">Immediate Actions (0-2 years)</h4>"
+                  <h4 className="font-semibold text-zion-slate-dark mb-3">Immediate Actions(0-2 years)</h4>"
                   <ul className="space-y-2">"
                     <li className="text-sm text-zion-slate-light flex items-start gap-2">"
                       <CheckCircle className="w-4 h-4 text-green-500 mt-1 flex-shrink-0"/>
@@ -556,7 +491,7 @@ const AdvancedServiceInnovationHub = () => {
                 </div>
                 
                 <div>"
-                  <h4 className="font-semibold text-zion-slate-dark mb-3">Strategic Planning (2-5 years)</h4>"
+                  <h4 className="font-semibold text-zion-slate-dark mb-3">Strategic Planning(2-5 years)</h4>"
                   <ul className="space-y-2">"
                     <li className="text-sm text-zion-slate-light flex items-start gap-2">"
                       <CheckCircle className="w-4 h-4 text-blue-500 mt-1 flex-shrink-0"/>
@@ -593,8 +528,7 @@ const AdvancedServiceInnovationHub = () => {
           <h3 className="text-3xl font-bold mb-4">Ready to Shape the Future?</h3>"
           <p className="text-xl mb-6 max-w-2xl mx-auto">
             Our innovation hub provides the insights and strategies you need to stay ahead 
-            of emerging technologies and capitalize on future opportunities.
-          </p>"
+            of emerging technologies and capitalize on future opportunities.</p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick = {
 

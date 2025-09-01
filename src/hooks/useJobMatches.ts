@@ -1,45 +1,7 @@
-import { useState, useEffect, useCallback } from "react"; // Added useCallback
-import { supabase } from "@/integrations/supabase/client";
-import { toast } from "@/hooks/use-toast";
-import { JobMatch } from "@/types/jobs";
-
-export function useJobMatches(jobId: string) {
-  const [matches, setMatches] = useState<JobMatch[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [isProcessing, setIsProcessing] = useState(false);
-
-  const fetchMatches = useCallback(async () => { // Wrapped in useCallback
-    setIsLoading(true);
-    try {
-      const { data, error } = await supabase
-        .from("job_talent_matches")
-        .select(`
-          *,
-          talent_profile:talent_id(
-            id,
-            user_id,
-            full_name,
-            professional_title,
-            profile_picture_url,
-            hourly_rate,
-            bio,
-            years_experience,
-            key_projects,
-            skills
-          )
-        `)
-        .eq("job_id", jobId)
-        .order("match_score", { ascending: false });
-
-      if (error) throw error;
-      setMatches(data || []);
-    } catch (error) {
-      console.error("Error fetching job matches:", error);
-      toast({
-        title: "Error",
-        description: "Failed to load matched talents. Please try again later.",
-        variant: "destructive",
-      });
+import { useState, useEffect, useCallback } from 'react'; // Added useCallback
+import { supabase } from '@/integrations/supabase/client';
+export default function Page() {
+);
       setMatches([]); // Clear matches on error
     } finally {
       setIsLoading(false);
@@ -53,7 +15,7 @@ export function useJobMatches(jobId: string) {
         body: { jobId },
       });
       
-      if (response.error) throw new Error(response.error.message);
+      if(response.error) throw new Error(response.error.message);
       
       toast({
         title: "AI Matching Complete",
@@ -61,11 +23,11 @@ export function useJobMatches(jobId: string) {
       });
       
       await fetchMatches();
-    } catch (error) {
+    } catch(error) {
       console.error("Error triggering AI matching:", error);
       toast({
         title: "Matching Failed",
-        description: "Could not process talent matching. Please try again later.",
+        description: "Could not process talent matching.Please try again later.",
         variant: "destructive",
       });
     } finally {
@@ -74,7 +36,7 @@ export function useJobMatches(jobId: string) {
   };
 
   useEffect(() => {
-    if (jobId) { // Ensure jobId is present before fetching
+    if(jobId) { // Ensure jobId is present before fetching
       fetchMatches();
     }
   }, [jobId, fetchMatches]); // Added fetchMatches

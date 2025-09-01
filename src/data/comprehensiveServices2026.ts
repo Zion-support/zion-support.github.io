@@ -83,8 +83,7 @@ export interface AIService {
 }
 
 // Revolutionary Micro SAAS Services 2026;
-export const revolutionaryMicroSaasServices2026: MicroSaasService[] = [
-  {
+export const revolutionaryMicroSaasServices2026: MicroSaasService[] = [{
 
     id: 1,
     name: "QuantumFlow Pro","
@@ -654,8 +653,7 @@ export const revolutionaryMicroSaasServices2026: MicroSaasService[] = [
 ];
 
 // Revolutionary IT Infrastructure Services 2026;
-export const revolutionaryITInfrastructureServices2026: ITService[] = [
-  {
+export const revolutionaryITInfrastructureServices2026: ITService[] = [{
 
     id: 101,"
     name: "Quantum Cloud Infrastructure","
@@ -744,8 +742,7 @@ export const revolutionaryITInfrastructureServices2026: ITService[] = [
     compliance["GDPR", "HIPAA", "Industry 4.0"]}];
 
 // Revolutionary AI Services 2026;
-export const revolutionaryAIServices2026: AIService[] = [
-  {
+export const revolutionaryAIServices2026: AIService[] = [{
 
     id: 201,"
     name: "Autonomous AI Agents","

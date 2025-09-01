@@ -1,50 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import {
-
-  Mail,
-  Phone,
-  MapPin,
-  Clock,
-  MessageSquare,
-  ArrowRight,
-  Globe,
-  Shield,
-  Users} from 'lucide-react';
-export function ContactSection() {
-  const contactMethods = [
-    {
-
-      icon: <Mail className="w-6 h-6" />,
-      title: 'Email Us',
-      description: 'Get in touch via email for general inquiries',
-      contact: 'hello@ziontechgroup.com',
-      link: 'mailto:hello@ziontechgroup.com',
-      color: 'from-zion-cyan to-zion-blue'},
-    {
-"
-      icon: <Phone className="w-6 h-6" />,
-      title: 'Call Us',
-      description: 'Speak directly with our team',
-      contact: '+1 (302) 464-0950',
-      link: 'tel:+13024640950',
-      color: 'from-zion-purple to-zion-cyan'},
-    {
-"
-      icon: <MessageSquare className="w-6 h-6" />,
-      title: 'Live Chat',
-      description: 'Chat with our support team in real-time',
-      contact: 'Available 24/7',
-      link: '/chat',
-      color: 'from-zion-blue to-zion-purple'},
-  ];
-  const officeLocations = [
-    {
-
-      city: 'Wilmington, DE',
-      country: 'United States',
-      address: '1000 N Market St, Wilmington, DE 19801',"
-      icon: <MapPin className="w-5 h-5" />},
+import { Link  } from 'react-router-dom';
+export default function Page() {
+,
     {
 
       city: 'New York, NY',
@@ -58,8 +15,7 @@ export function ContactSection() {
       address: '1 Canary Wharf, London E14 5AB',"
       icon: <MapPin className="w-5 h-5" />},
   ];
-  const supportFeatures = [
-    {
+  const supportFeatures = [{
 "
       icon: <Clock className="w-6 h-6" />,
       title: '24/7 Support',
@@ -93,8 +49,7 @@ export function ContactSection() {
           </h2>"
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
             Ready to transform your business with cutting-edge technology? Let's
-            discuss how Zion Tech Group can help you achieve your goals.
-          </p>
+            discuss how Zion Tech Group can help you achieve your goals.</p>
         </div>
 "
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
@@ -233,8 +188,7 @@ export function ContactSection() {
           </h3>"
           <p className="text-zion-slate-light mb-8 max-w-2xl mx-auto">
             Contact us today to discuss your technology needs and discover how
-            Zion Tech Group can help transform your business.
-          </p>"
+            Zion Tech Group can help transform your business.</p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link"
               to="/contact"

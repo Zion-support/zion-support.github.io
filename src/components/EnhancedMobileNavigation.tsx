@@ -1,54 +1,12 @@
 <<<<<<< HEAD
-import { Link, useLocation } from 'react - router - dom';
-import React, { useState, useEffect, useRef } from 'react';
+import { Link, useLocation  } from 'react-router-dom';
+ from 'react';
 export const EnhancedMobileNavigation: React.FC = () => {
-import {
-import { motion, AnimatePresence } from 'framer - motion';
+import { motion, AnimatePresence  } from 'framer-motion';
 
-  Menu,
-  X,
-  ChevronDown,
-  Home,
-  Users,
-  Briefcase,
-  Phone,
-  Info,
-  Settings,
-  HelpCircle,
-=======
-import {
-  Menu, 
-  X, 
-  ChevronDown, 
-  ChevronRight,
-  Home,
-  Briefcase,
-  Users,
->>>>>>> main
-  FileText,
-  Phone,
-  Settings,
-  LogIn,
-  User,
-  Search,
-  Globe,
-  Zap,
-  Shield,
-  Brain,
-  TrendingUp,
-  Award,
-  BookOpen,
-  MessageCircle,
-  Mail,
-  MapPin,
-  Clock'
- } from 'lucide-react';
+ from 'lucide-react';
 
-interface NavigationItem {
-  label: string;
-  path: string;
-  icon: React.ComponentType<{ size?: number; className?: string 
-}>} from 'lucide-react';
+>} from 'lucide-react';
 
 interface NavigationItem {
 
@@ -70,8 +28,7 @@ interface NavigationItem {
 >>>>>>> main
   description?: string}
 ;
-const navigationItems: NavigationItem[] = [
-  {
+const navigationItems: NavigationItem[] = [{
 
     label: 'Home',
     path: '/',
@@ -161,26 +118,25 @@ export const EnhancedMobileNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
   const [activePath, setActivePath] = useState('/');
-  
-  
+
   useEffect(() => {
     setActivePath(location.pathname)}, [location]);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
 
-      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+      if(menuRef.current && !menuRef.current.contains(event.target as Node)) {
 
         setIsOpen(false)}
     };
 
 export default function EnhancedMobileNavigation() {
+
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   
-  const navigationItems: NavigationItem[] = [
-    {
+  const navigationItems: NavigationItem[] = [{
       label: 'Home',
       path: '/',
       icon: Home
@@ -222,7 +178,7 @@ export default function EnhancedMobileNavigation() {
 
   // Prevent body scroll when menu is open
   useEffect(() => {
-    if (isOpen) {
+    if(isOpen) {
 
       document.addEventListener('mousedown', handleClickOutside);
       document.body.style.overflow = 'hidden'}
@@ -235,35 +191,24 @@ export default function EnhancedMobileNavigation() {
 
     setExpandedItems(prev => {
 
-      const newSet = new Set(prev);      if (newSet.has(label)) {
+      const newSet = new Set(prev);      if(newSet.has(label)) {
 
         newSet.delete(label)} else {
 
         newSet.add(label)}
       return newSet})};
 
-  
     setExpandedItems(new Set())};
 
-  
-    if (path === '/') {};
+    if(path === '/') {};
 
-  
-    
-    
-    
-    return()      <div key = {item.label} className="w-full">
+    return ()      <div key = {item.label} className="w-full">
         <motion.div
           initial={false}
           animate = {
 
   { backgroundColor: isItemActive ? 'rgba(34, 221, 210,
   0.1)' : 'transparent' ;
-
-
-
-
-
 
 <<<<<<< HEAD
 }}
@@ -275,9 +220,7 @@ export default function EnhancedMobileNavigation() {
           <Link
             to={item.path}
             onClick={() => handleNavigation(item.path)}`
-            className={`flex items-center justify-between w-full p-4 text-left transition-all duration-200 ${
-
-              isItemActive'
+            className={`flex items-center justify-between w-full p-4 text-left transition-all duration-200 ${isItemActive'
                 ? 'text-zion-cyan border-l-2 border-zion-cyan''
                 : 'text-white hover:text-zion-cyan'`
             }`}
@@ -298,11 +241,8 @@ export default function EnhancedMobileNavigation() {
               <ChevronDown
 <<<<<<< HEAD
                 size={16}`
-                className={`transition-transform duration-200 ${
-
-=======
-                size={16}`                className={`transition-transform duration-200 ${
-'
+                className={`transition-transform duration-200 ${=======
+                size={16}`                className={`transition-transform duration-200 ${'
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   isExpanded ? 'rotate-180' : ''`
                 }`}
@@ -317,11 +257,8 @@ export default function EnhancedMobileNavigation() {
               <ChevronDown
 <<<<<<< HEAD
                 size={16}`
-                className={`transition-transform duration-200 ${
-
-=======
-                size={16}`                className={`transition-transform duration-200 ${
-'
+                className={`transition-transform duration-200 ${=======
+                size={16}`                className={`transition-transform duration-200 ${'
 >>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   isExpanded ? 'rotate-180' : ''`
                 }`}
@@ -354,11 +291,6 @@ export default function EnhancedMobileNavigation() {
   { duration: 0.3,
   ease: 'easeInOut'
 
-
-
-
-
-
 }}"
                 className="overflow-hidden"
 "
@@ -368,13 +300,12 @@ export default function EnhancedMobileNavigation() {
               </motion.div>;) };
           </AnimatePresence>;) };
       </div>;) };
-  return()
+  return ()
     <>
       {/* Mobile Menu Toggle */}
       <button
         onClick = {() => setIsOpen(true)}"
         className="lg:hidden p-2 text-white hover:text-zion-cyan transition-colors focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 rounded-lg"
-        aria-label="Open mobile navigation menu"
 
         <Menu size={24}   />
       </button>
@@ -398,11 +329,6 @@ export default function EnhancedMobileNavigation() {
   { duration: 0.3,
   ease: 'easeOut'
 
-
-
-
-
-
 }}"
               className="absolute right-0 top-0 h-full w-full max-w-sm bg-zion-slate-dark border-l border-zion-cyan/30 shadow-2xl"
 
@@ -420,7 +346,6 @@ export default function EnhancedMobileNavigation() {
                 <button
                   onClick={() => setIsOpen(false)}"
                   className="p-2 text-zion-slate-light hover:text-white transition-colors rounded-lg hover:bg-zion-slate-light/10"
-                  aria-label="Close mobile navigation menu"
 
                   <X size={24}   />
                 </button>
@@ -471,7 +396,7 @@ export default function EnhancedMobileNavigation() {
                     </div>"
                     <div className="flex items-center gap-3 text-zion-slate-light">
                       <Phone size={16}   />
-                      <span>+1 (555) 123-4567</span>
+                      <span>+1(555) 123-4567</span>
                     </div>"
                     <div className="flex items-center gap-3 text-zion-slate-light">
                       <MapPin size={16}   />

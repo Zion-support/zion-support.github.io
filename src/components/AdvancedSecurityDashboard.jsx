@@ -3,20 +3,8 @@ import React, { useState, useRef, useEffect } from 'react';
 export function AdvancedSecurityDashboard () {
 
 =======
-import { Shield, AlertTriangle, CheckCircle, Download, RefreshCw, X, Maximize2, Minimize2, Activity, BarChart3, TrendingUp, Users, Server, FileText, Bug } from 'lucide-react';
->>>>>>> main
-const mockThreatIntelligence = [
-    {
-
-        id: '1',
-        threatType: 'Ransomware Campaign',
-        description: 'Active ransomware campaign targeting healthcare organizations in the region.',
-        riskScore: 9.2,
-        affectedSystems['Windows Servers',File Shares',Backup Systems'],;
-        mitigationSteps['Update endpoint protection',Enable advanced threat protection',Review backup procedures'],;
-        lastSeen: '2024-01-15T09:00:00.000Z',
-        frequency: 15
-    },
+import { Shield, AlertTriangle, CheckCircle, Download, RefreshCw, X, Maximize2, Minimize2, Activity, BarChart3, TrendingUp, Users, Server, FileText, Bug  } from 'lucide-react';
+,
     {
 
         id: '2',
@@ -47,21 +35,21 @@ export function AdvancedSecurityDashboard() {
     const severities = ['all',critical',high',medium',low',info'];
     const filteredCompliance = selectedFramework === 'all'
         ? complianceRequirements
-        : complianceRequirements.filter (req => req.framework === selectedFramework) ;
+        : complianceRequirements.filter(req => req.framework === selectedFramework) ;
     const refreshData = async () => {
-        setIsRefreshing (true) ;
+        setIsRefreshing(true) ;
         // Simulate API call
-        await new Promise (resolve => setTimeout (resolve, 1500) ) ;
-        setIsRefreshing (false) };
-    useEffect ( () => {
-        if (autoRefresh) {
+        await new Promise(resolve => setTimeout (resolve, 1500) ) ;
+        setIsRefreshing(false) };
+    useEffect(() => {
+        if(autoRefresh) {
 
             const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
             return () => clearInterval(interval)}
     }, [autoRefresh]);
     const getSeverityColor = (severity) => {
 
-        switch (severity) {
+        switch(severity) {
 
             case 'critical':'
                 return 'bg-red-500 text-white';
@@ -76,7 +64,7 @@ export function AdvancedSecurityDashboard() {
     };
     const getStatusColor = (status) => {
 
-        switch (status) {
+        switch(status) {
 
             case 'compliant':'
                 return 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300';
@@ -89,7 +77,7 @@ export function AdvancedSecurityDashboard() {
     };
     const getRiskLevelColor = (riskLevel) => {
 
-        switch (riskLevel) {
+        switch(riskLevel) {
 
             case 'high':'
                 return 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300';
@@ -100,7 +88,7 @@ export function AdvancedSecurityDashboard() {
     };
     const getTrendIcon = (trend) => {
 
-        switch (trend) {
+        switch(trend) {
 
             case 'up':
                 return <TrendingUp className="w-4 h-4 text-green-500"/>;
@@ -111,7 +99,7 @@ export function AdvancedSecurityDashboard() {
     };
     const getEventIcon = (type) => {
 
-        switch (type) {
+        switch(type) {
 
             case 'threat':"
                 return <AlertTriangle className="w-5 h-5 text-red-500"/>;
@@ -124,12 +112,12 @@ export function AdvancedSecurityDashboard() {
             default:"
                 return <Server className="w-5 h-5 text-gray-500"/>}
     };
-    if (!isOpen) {
+    if(!isOpen) {
 "
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-red to-zion-orange text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-40" title="Open Security Dashboard">"
         <Shield className="w-6 h-6"/>
       </button>)}
-    if (isMinimized) {
+    if(isMinimized) {
 "
         return (<div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50">"
         <div className="flex items-center gap-2 p-3">"

@@ -22,7 +22,7 @@ const PWAUpdater: React.FC < PWAUpdaterProps> = ({
 
   useEffect(() => {
     // Check if service worker is supported'
-    if ('serviceWorker' in navigator) {
+    if('serviceWorker' in navigator) {
 
       // // // // // // // // console.log('Service worker not available');
       // Register service worker'
@@ -33,7 +33,7 @@ const PWAUpdater: React.FC < PWAUpdaterProps> = ({
           // console.log('Service Worker registered successfully:', reg);
           
           // Check for updates
-          if (autoCheck) {
+          if(autoCheck) {
 
             checkForUpdates(reg)}          
           // Listen for updates'
@@ -41,20 +41,20 @@ const PWAUpdater: React.FC < PWAUpdaterProps> = ({
 
             // console.log('Service Worker update found');
             
-            if (newWorker) {
+            if(newWorker) {
 
               newWorker.addEventListener('statechange', () => {
 
-                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                if(newWorker.state === 'installed' && navigator.serviceWorker.controller) {
 
                   setUpdateAvailable(true);
-                  if (showUpdatePrompt) {
+                  if(showUpdatePrompt) {
 
                     setShowPrompt(true)}
                 }
               }) }          });
           
-          // Listen for controller change (update applied)
+          // Listen for controller change(update applied)
           navigator.serviceWorker.addEventListener('controllerchange', () => {
 
             // console.log('Service Worker controller changed - update applied');
@@ -70,33 +70,30 @@ const PWAUpdater: React.FC < PWAUpdaterProps> = ({
 
           // console.error('Service Worker registration failed:', error)})}
   }, [autoCheck, showUpdatePrompt]) ;
-  useEffect ( () => {
-    if (autoCheck && registration) {
+  useEffect(() => {
+    if(autoCheck && registration) {
 
-      
       }, checkInterval);
       
       return () => clearInterval(interval)}
   }, [autoCheck, checkInterval, registration]) ;
 
-  
-      // console.log('Service Worker update check completed')} catch (error) {
+      // console.log('Service Worker update check completed')} catch(error) {
 
       // console.error('Service Worker update check failed:', error)}
   };
 
-  
-    setUpdating (true) ;
-    setShowPrompt (false) ;
+    setUpdating(true) ;
+    setShowPrompt(false) ;
 
     try {
       // Send message to service worker to skip waiting
-      if (registration.waiting) {
+      if(registration.waiting) {
 
         registration.waiting.postMessage({ type: 'SKIP_WAITING' })}
       // Reload the page to apply the update
-      setTimeout ( () => {
-        window.location.reload () }, 1000) } catch (error) {
+      setTimeout(() => {
+        window.location.reload () }, 1000) } catch(error) {
 
       // // // // // // // // console.error('Update failed:', error);
       setIsUpdating(false);
@@ -106,19 +103,18 @@ const PWAUpdater: React.FC < PWAUpdaterProps> = ({
       setShowPrompt(true)}
   };
 
-  
     // Auto - show again after 1 hour
-    setTimeout ( () => {
-      if (updateAvailable) {
+    setTimeout(() => {
+      if(updateAvailable) {
 
         setShowPrompt(true)}
     }, 3600000) };
 
   // Don't render anything if no update is available
-  if (!updateAvailable && !updating && !updateComplete) {
+  if(!updateAvailable && !updating && !updateComplete) {
 
     return null}
-  return()
+  return ()
     <>
       {/* Update Prompt */}
       <AnimatePresence>
@@ -136,8 +132,7 @@ const PWAUpdater: React.FC < PWAUpdaterProps> = ({
                 </div>"
                 <div className="flex-1">"
                   <h3 className="text-white font-semibold text-lg mb-2">Update Available</h3>"                  <p className="text-gray-300 text-sm mb-4">
-                    A new version of Zion Tech Group is available. Update now to get the latest features and improvements.
-                  </p>"
+                    A new version of Zion Tech Group is available.Update now to get the latest features and improvements.</p>"
                   <div className="flex gap-3">
                     <button
                       onClick={applyUpdate}"
@@ -184,7 +179,7 @@ const PWAUpdater: React.FC < PWAUpdaterProps> = ({
                 <div className="flex-1">"
                   <h3 className="text-white font-semibold text-lg mb-2">Updating...</h3>"
                   <p className="text-gray-300 text-sm mb-3">
-                    Applying the latest update. Please wait...
+                    Applying the latest update.Please wait...
                   </p>"
                   <div className="w-full bg-gray-700 rounded-full h-2 overflow-hidden">
                     <motion.div"
@@ -216,7 +211,7 @@ const PWAUpdater: React.FC < PWAUpdaterProps> = ({
                 </div>"
                 <div className="flex-1">"
                   <h3 className="text-white font-semibold text-lg mb-2">Update Complete!</h3>"                  <p className="text-gray-300 text-sm">
-                    Zion Tech Group has been updated to the latest version. Enjoy the new features!
+                    Zion Tech Group has been updated to the latest version.Enjoy the new features!
                   </p>
                 </div>
               </div>
