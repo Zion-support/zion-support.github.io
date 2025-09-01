@@ -55,7 +55,7 @@ export default function Careers() {
   ];
 
 
-  const locations = [
+  const locationFilters = [
     { id: 'all', name: 'All Locations', count: 12 },
     { id: 'remote', name: 'Remote', count: 8 },
     { id: 'middletown', name: 'Middletown, DE', count: 3 },
@@ -303,7 +303,7 @@ export default function Careers() {
                 onChange={(e) => setSelectedLocation(e.target.value)}
                 className="w-full px-4 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
               >
-                {locations.map((loc) => (
+                {locationFilters.map((loc) => (
                   <option key={loc.id} value={loc.id} className="bg-gray-800 text-white">
                     {loc.name} ({loc.count})
                   </option>
