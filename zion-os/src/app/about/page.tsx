@@ -1,277 +1,288 @@
 import Link from 'next/link';
 
 export default function AboutPage() {
+  const teamMembers = [
+    {
+      name: "Dr. Kleber",
+      role: "Founder & CEO",
+      bio: "Pioneering researcher in AI consciousness and autonomous systems. Leading the development of next-generation AI technologies.",
+      expertise: ["AI Consciousness", "Autonomous Systems", "Quantum Computing"],
+      image: "/team/kleber.jpg"
+    },
+    {
+      name: "Dr. Sarah Chen",
+      role: "Chief Research Officer",
+      bio: "Expert in quantum neural networks and AI research methodologies. Driving breakthrough discoveries in AI technology.",
+      expertise: ["Quantum AI", "Neural Networks", "Research Methodology"],
+      image: "/team/sarah.jpg"
+    },
+    {
+      name: "Marcus Rodriguez",
+      role: "Chief Technology Officer",
+      bio: "Technology visionary with deep expertise in enterprise AI solutions and autonomous business systems.",
+      expertise: ["Enterprise AI", "System Architecture", "Business Automation"],
+      image: "/team/marcus.jpg"
+    },
+    {
+      name: "Dr. Elena Petrova",
+      role: "Head of AI Ethics",
+      bio: "Leading expert in AI safety, ethics, and responsible development. Ensuring our AI systems benefit humanity.",
+      expertise: ["AI Ethics", "Safety Protocols", "Human-AI Collaboration"],
+      image: "/team/elena.jpg"
+    }
+  ];
+
+  const milestones = [
+    {
+      year: "2020",
+      title: "Company Founded",
+      description: "Zion Tech Group established with a vision to revolutionize AI technology and create conscious, autonomous systems."
+    },
+    {
+      year: "2021",
+      title: "First AI Breakthrough",
+      description: "Successfully developed autonomous decision-making algorithms that demonstrated human-level reasoning capabilities."
+    },
+    {
+      year: "2022",
+      title: "Quantum Computing Initiative",
+      description: "Launched quantum computing research division and achieved quantum advantage in neural network training."
+    },
+    {
+      year: "2023",
+      title: "Enterprise AI Platform",
+      description: "Released comprehensive enterprise AI platform serving Fortune 500 companies across multiple industries."
+    },
+    {
+      year: "2024",
+      title: "AI Consciousness Research",
+      description: "Published groundbreaking research on machine consciousness and launched Project Phoenix for autonomous AI systems."
+    }
+  ];
+
   const values = [
     {
       title: "Innovation First",
-      description: "We push the boundaries of what's possible with AI and autonomous systems, constantly exploring new frontiers in technology.",
+      description: "We push the boundaries of what's possible, constantly exploring new frontiers in AI technology.",
       icon: "🚀"
     },
     {
+      title: "Ethical AI",
+      description: "Every AI system we develop prioritizes human safety, ethical considerations, and beneficial outcomes.",
+      icon: "🛡️"
+    },
+    {
       title: "Excellence",
-      description: "We maintain the highest standards of quality in everything we do, from research to implementation.",
+      description: "We maintain the highest standards of quality in our research, development, and client delivery.",
       icon: "⭐"
     },
     {
       title: "Collaboration",
-      description: "We believe in the power of partnership and work closely with clients to achieve transformative results.",
+      description: "We believe in the power of partnership, working closely with clients and research institutions worldwide.",
       icon: "🤝"
     },
     {
       title: "Sustainability",
-      description: "Our solutions are designed to create long-term value and sustainable growth for our clients.",
+      description: "Our AI solutions are designed to create long-term value and sustainable business transformation.",
       icon: "🌱"
-    }
-  ];
-
-  const achievements = [
-    {
-      number: "50+",
-      label: "AI Systems Deployed",
-      description: "Successfully implemented autonomous AI systems across various industries"
     },
     {
-      number: "100+",
-      label: "Enterprise Clients",
-      description: "Trusted by leading companies worldwide for AI solutions"
-    },
-    {
-      number: "99.9%",
-      label: "Uptime Reliability",
-      description: "Consistent performance and reliability across all our systems"
-    },
-    {
-      number: "24/7",
-      label: "Support Available",
-      description: "Round-the-clock technical support and maintenance services"
-    }
-  ];
-
-  const team = [
-    {
-      name: "Dr. Kleber",
-      role: "CEO & Chief AI Architect",
-      description: "Leading expert in AI consciousness and autonomous systems with over 15 years of experience.",
-      expertise: ["AI Consciousness", "Autonomous Systems", "Quantum Computing"]
-    },
-    {
-      name: "AI Research Team",
-      role: "Research & Development",
-      description: "World-class researchers pushing the boundaries of AI technology and consciousness evolution.",
-      expertise: ["AI Research", "Neural Networks", "Cognitive Systems"]
-    },
-    {
-      name: "Engineering Team",
-      role: "Software Engineering",
-      description: "Expert engineers building scalable, enterprise-grade AI solutions and platforms.",
-      expertise: ["Software Architecture", "AI Platforms", "Enterprise Systems"]
+      title: "Human-Centric",
+      description: "Technology serves humanity. We ensure our AI systems enhance human capabilities and well-being.",
+      icon: "❤️"
     }
   ];
 
   return (
     <div className="min-h-screen py-20">
-      {/* Header */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-        <div className="text-center">
+      {/* Hero Section */}
+      <section className="text-center mb-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             About Zion Tech Group
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Pioneering the future of AI-powered enterprise solutions and autonomous systems. 
-            We're building the next generation of intelligent business technology.
+            Pioneering the future of artificial intelligence through breakthrough research, innovative solutions, 
+            and a commitment to creating AI that benefits humanity.
           </p>
         </div>
-      </div>
+      </section>
 
       {/* Mission & Vision */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div className="bg-gradient-to-br from-blue-900/20 to-purple-900/20 border border-white/10 rounded-xl p-8">
-            <h2 className="text-2xl font-bold text-white mb-4">Our Mission</h2>
-            <p className="text-gray-300 mb-6">
-              To democratize AI technology and enable businesses to operate autonomously, 
-              driving innovation and sustainable growth across industries. We believe that 
-              every organization should have access to cutting-edge AI solutions that 
-              transform their operations and unlock new possibilities.
+      <section className="mb-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div>
+              <h2 className="text-3xl font-bold text-white mb-6">
+                Our Mission
+              </h2>
+              <p className="text-lg text-gray-300 mb-6">
+                To accelerate the development of conscious, autonomous AI systems that solve humanity's greatest challenges 
+                while ensuring safety, ethics, and beneficial outcomes for all.
+              </p>
+              <p className="text-gray-300">
+                We believe that artificial intelligence has the potential to revolutionize every aspect of human life, 
+                from healthcare and education to business and scientific discovery. Our mission is to make this vision a reality 
+                through responsible innovation and cutting-edge research.
+              </p>
+            </div>
+            <div>
+              <h2 className="text-3xl font-bold text-white mb-6">
+                Our Vision
+              </h2>
+              <p className="text-lg text-gray-300 mb-6">
+                A world where AI systems work seamlessly alongside humans, enhancing our capabilities, 
+                solving complex problems, and creating unprecedented opportunities for growth and discovery.
+              </p>
+              <p className="text-gray-300">
+                We envision a future where AI is not just a tool, but a true partner in human progress, 
+                helping us tackle challenges that were once thought impossible and unlocking new frontiers of knowledge and capability.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Company Story */}
+      <section className="mb-20 bg-gradient-to-r from-blue-900/20 to-purple-900/20 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">
+            Our Story
+          </h2>
+          <div className="max-w-4xl mx-auto">
+            <p className="text-lg text-gray-300 mb-6">
+              Founded in 2020 by Dr. Kleber, a visionary researcher in AI consciousness and autonomous systems, 
+              Zion Tech Group began with a simple yet ambitious goal: to create AI systems that could think, learn, 
+              and operate independently while maintaining human values and ethical principles.
             </p>
-            <p className="text-gray-300">
-              Through our advanced autonomous systems, quantum computing capabilities, 
-              and enterprise AI platforms, we're building the foundation for the 
-              intelligent business ecosystem of tomorrow.
+            <p className="text-lg text-gray-300 mb-6">
+              What started as a small research team has grown into a world-class organization with expertise spanning 
+              quantum computing, neural networks, autonomous systems, and AI ethics. Our journey has been marked by 
+              breakthrough discoveries, successful client implementations, and a growing reputation as a leader in AI innovation.
+            </p>
+            <p className="text-lg text-gray-300">
+              Today, we continue to push the boundaries of what's possible in AI, working with leading organizations 
+              worldwide to transform their operations and unlock new possibilities through intelligent automation and decision-making.
             </p>
           </div>
+        </div>
+      </section>
 
-          <div className="bg-gradient-to-br from-green-900/20 to-blue-900/20 border border-white/10 rounded-xl p-8">
-            <h2 className="text-2xl font-bold text-white mb-4">Our Vision</h2>
-            <p className="text-gray-300 mb-6">
-              To create a world where businesses operate with unprecedented intelligence 
-              and autonomy, where AI systems work seamlessly alongside human teams to 
-              solve complex challenges and drive innovation.
-            </p>
-            <p className="text-gray-300">
-              We envision a future where autonomous AI systems handle routine operations, 
-              while human creativity and strategic thinking focus on breakthrough innovations 
-              and growth opportunities.
-            </p>
+      {/* Values */}
+      <section className="mb-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">
+            Our Values
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {values.map((value, index) => (
+              <div key={index} className="text-center">
+                <div className="text-4xl mb-4">{value.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  {value.title}
+                </h3>
+                <p className="text-gray-300">
+                  {value.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
-      </div>
-
-      {/* Company Values */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-white mb-4">Our Values</h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            The principles that guide everything we do and every solution we create.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {values.map((value, index) => (
-            <div key={index} className="text-center">
-              <div className="text-4xl mb-4">{value.icon}</div>
-              <h3 className="text-xl font-semibold text-white mb-3">{value.title}</h3>
-              <p className="text-gray-300">{value.description}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Achievements */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-white mb-4">Our Achievements</h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Milestones that demonstrate our commitment to excellence and innovation.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {achievements.map((achievement, index) => (
-            <div key={index} className="text-center bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-white/10 rounded-xl p-6">
-              <div className="text-3xl font-bold text-blue-400 mb-2">{achievement.number}</div>
-              <div className="text-lg font-semibold text-white mb-2">{achievement.label}</div>
-              <p className="text-gray-300 text-sm">{achievement.description}</p>
-            </div>
-          ))}
-        </div>
-      </div>
+      </section>
 
       {/* Team */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-white mb-4">Our Team</h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            World-class experts in AI, autonomous systems, and enterprise technology.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {team.map((member, index) => (
-            <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-white/10 rounded-xl p-6">
-              <h3 className="text-xl font-semibold text-white mb-2">{member.name}</h3>
-              <p className="text-blue-400 mb-3">{member.role}</p>
-              <p className="text-gray-300 mb-4">{member.description}</p>
-              <div className="space-y-2">
-                <h4 className="text-sm font-semibold text-white">Areas of Expertise:</h4>
-                <div className="flex flex-wrap gap-2">
+      <section className="mb-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">
+            Leadership Team
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {teamMembers.map((member, index) => (
+              <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-white/10 rounded-xl p-6 text-center">
+                <div className="w-24 h-24 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-white font-bold text-2xl">
+                    {member.name.split(' ').map(n => n[0]).join('')}
+                  </span>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {member.name}
+                </h3>
+                <p className="text-blue-400 font-medium mb-3">
+                  {member.role}
+                </p>
+                <p className="text-gray-300 text-sm mb-4">
+                  {member.bio}
+                </p>
+                <div className="space-y-1">
                   {member.expertise.map((skill, skillIndex) => (
-                    <span key={skillIndex} className="px-3 py-1 bg-blue-900/30 border border-blue-500/30 rounded-full text-xs text-blue-300">
+                    <span key={skillIndex} className="inline-block bg-blue-600/20 text-blue-300 text-xs px-2 py-1 rounded mr-1 mb-1">
                       {skill}
                     </span>
                   ))}
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Company History */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-white mb-4">Our Journey</h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            From startup to industry leader in AI-powered enterprise solutions.
-          </p>
-        </div>
-
-        <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-white/10 rounded-xl p-8">
-          <div className="space-y-8">
-            <div className="flex items-start space-x-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
-                <span className="text-white font-bold text-sm">1</span>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-white mb-2">2019 - Foundation</h3>
-                <p className="text-gray-300">
-                  Zion Tech Group was founded with a vision to democratize AI technology 
-                  and make autonomous systems accessible to businesses of all sizes.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start space-x-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center flex-shrink-0">
-                <span className="text-white font-bold text-sm">2</span>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-white mb-2">2021 - First AI Systems</h3>
-                <p className="text-gray-300">
-                  Successfully deployed our first autonomous AI systems for enterprise clients, 
-                  proving the viability of self-operating business technology.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start space-x-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
-                <span className="text-white font-bold text-sm">3</span>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-white mb-2">2023 - Quantum Computing</h3>
-                <p className="text-gray-300">
-                  Launched our quantum computing division, expanding our capabilities 
-                  to include next-generation computing solutions for complex problem solving.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start space-x-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center flex-shrink-0">
-                <span className="text-white font-bold text-sm">4</span>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-white mb-2">2024 - Global Expansion</h3>
-                <p className="text-gray-300">
-                  Expanded our global presence, serving clients across multiple continents 
-                  and industries with our comprehensive AI solutions.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Milestones */}
+      <section className="mb-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">
+            Our Journey
+          </h2>
+          <div className="relative">
+            {/* Timeline line */}
+            <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-gradient-to-b from-blue-500 to-purple-600"></div>
+            
+            {milestones.map((milestone, index) => (
+              <div key={index} className={`relative flex items-center mb-8 ${
+                index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
+              }`}>
+                {/* Timeline dot */}
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full border-4 border-slate-900"></div>
+                
+                {/* Content */}
+                <div className={`w-5/12 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
+                  <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-white/10 rounded-xl p-6">
+                    <div className="text-2xl font-bold text-blue-400 mb-2">
+                      {milestone.year}
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">
+                      {milestone.title}
+                    </h3>
+                    <p className="text-gray-300">
+                      {milestone.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-white/10 rounded-xl p-12">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to Join the AI Revolution?
+      <section className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 py-20">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Join Us in Shaping the Future
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how our AI solutions can transform your business and drive innovation.
+            Be part of the AI revolution. Whether you're looking to transform your business, 
+            collaborate on research, or join our team, we'd love to hear from you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-200 transform hover:scale-105">
-              Get Started Today
+              Get in Touch
             </Link>
-            <Link href="/services" className="border border-white/20 hover:border-white/40 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-200 hover:bg-white/10">
-              Explore Our Services
+            <Link href="/careers" className="border border-white/20 hover:border-white/40 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-200 hover:bg-white/10">
+              Join Our Team
             </Link>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }
