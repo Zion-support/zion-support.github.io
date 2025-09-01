@@ -1,5 +1,5 @@
-const { withSentry } = require('../withSentry.cjs');
-const { isValidEmail } = require('../emailUtils.cjs');
+const { withSentry } = require('./withSentry.cjs');
+const { isValidEmail } = require('./emailUtils.cjs');
 const fs = require('fs');
 const path = require('path');
 
@@ -13,9 +13,9 @@ async function handler(req, res) {
 
   try {
     const { email } = req.body || {};
-    if (!email) {
+    if (!isValidEmail(email)) {
       res.statusCode = 400;
-      res.json({ error: 'Email is required' });
+      res.json({ error: 'Invalid email' });
       return;
     }
 
@@ -39,4 +39,4 @@ async function handler(req, res) {
   }
 }
 
-module.exports = withErrorLogging(handler);
+module.exports = withSentry(handler);
