@@ -1,12 +1,20 @@
-import React from 'react';
+import type { NextPage } from 'next';
+import Head from 'next/head';
 
-const Component = () => {
+const NotFound404: NextPage = () => {
   return (
     <div>
-      <h1>Page Content</h1>
-      <p>This page is under construction.</p>
+      <Head>
+        <title>404 - Zion Tech Solutions</title>
+        <meta name="description" content="404 page" />
+      </Head>
+      
+      <main>
+        <h1>404</h1>
+        <p>This page is under construction.</p>
+      </main>
     </div>
   );
 };
 
-export default Component;
+export default NotFound404;

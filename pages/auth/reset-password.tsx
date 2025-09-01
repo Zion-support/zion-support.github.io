@@ -1,12 +1,20 @@
-import React from 'react';
+import type { NextPage } from 'next';
+import Head from 'next/head';
 
-const Component = () => {
+const ResetPassword: NextPage = () => {
   return (
     <div>
-      <h1>Page Content</h1>
-      <p>This page is under construction.</p>
+      <Head>
+        <title>ResetPassword - Zion Tech Solutions</title>
+        <meta name="description" content="ResetPassword page" />
+      </Head>
+      
+      <main>
+        <h1>ResetPassword</h1>
+        <p>This page is under construction.</p>
+      </main>
     </div>
   );
 };
 
-export default Component;
+export default ResetPassword;

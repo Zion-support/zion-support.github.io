@@ -1,12 +1,20 @@
-import React from 'react';
+import type { NextPage } from 'next';
+import Head from 'next/head';
 
-const Component = () => {
+const EmergingTechnologyTrends: NextPage = () => {
   return (
     <div>
-      <h1>Page Content</h1>
-      <p>This page is under construction.</p>
+      <Head>
+        <title>EmergingTechnologyTrends - Zion Tech Solutions</title>
+        <meta name="description" content="EmergingTechnologyTrends page" />
+      </Head>
+      
+      <main>
+        <h1>EmergingTechnologyTrends</h1>
+        <p>This page is under construction.</p>
+      </main>
     </div>
   );
 };
 
-export default Component;
+export default EmergingTechnologyTrends;
