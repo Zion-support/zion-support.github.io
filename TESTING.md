@@ -45,7 +45,7 @@ We aim for at least 80% test coverage across the codebase.
 1. Clone the repository:
    ```bash
    git clone https://github.com/Zion-Holdings/zion.app.git
-   cd zion-app
+   cd zion.app
    ```
 
 2. Install dependencies:
