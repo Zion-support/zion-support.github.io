@@ -69,9 +69,9 @@ const nextConfig = {
   // Build optimizations
   compress: true,
   
-  // Disable build-time checks temporarily (will re-enable after fixes)
+  // Loosen build-time checks to avoid blocking builds while automations fix code
   eslint: {
-    ignoreDuringBuilds: true, // Temporarily disable ESLint
+    ignoreDuringBuilds: true,
   },
   typescript: {
     ignoreBuildErrors: true, // Temporarily disable TypeScript
