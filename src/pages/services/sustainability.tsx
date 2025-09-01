@@ -1,61 +1,60 @@
-import React from 'react.ts';
-import { SEO  } from "../../components/SEO";
-import { motion  } from 'framer-motion.ts';
-import { Globe, Leaf, Zap, Shield, Database, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Activity, FileText, CheckCircle, Sun, Wind, Battery, Recycle  } from 'lucide-react';
+import React from 'react.ts&apos;;
+import { SEO  } from "../../components/SEO&quot;;
+import { motion  } from 'framer-motion.ts&apos;;
 
 export default function Sustainability(...args: []):  {
   const features = [
     {
       icon: Heart,
-      title: 'Eco-Friendly Solutions',
-      description: 'Reduce environmental impact with green technology'
+      title: 'Eco-Friendly Solutions&apos;,
+      description: 'Reduce environmental impact with green technology&apos;
     },
     {
       icon: Leaf,
-      title: 'Energy Efficiency',
-      description: 'Optimize power consumption and reduce carbon footprint'
+      title: 'Energy Efficiency&apos;,
+      description: 'Optimize power consumption and reduce carbon footprint&apos;
     },
     {
       icon: Zap,
-      title: 'Renewable Energy',
-      description: 'Integrate solar, wind, and sustainable power sources'
+      title: 'Renewable Energy&apos;,
+      description: 'Integrate solar, wind, and sustainable power sources&apos;
     },
     {
       icon: Globe,
-      title: 'Carbon Neutral',
-      description: 'Achieve net-zero emissions through smart technology';
+      title: 'Carbon Neutral&apos;,
+      description: 'Achieve net-zero emissions through smart technology&apos;;
     };
   ];
 
   const services = [
     {
-      title: 'Green IT Infrastructure',
-      description: 'Energy-efficient data centers and computing systems',
+      title: 'Green IT Infrastructure&apos;,
+      description: 'Energy-efficient data centers and computing systems&apos;,
       icon: Cpu
     },
     {
-      title: 'Sustainable Software',
-      description: 'Eco-friendly application development and optimization',
+      title: 'Sustainable Software&apos;,
+      description: 'Eco-friendly application development and optimization&apos;,
       icon: Database
     },
     {
-      title: 'Energy Monitoring',
-      description: 'Real-time tracking and optimization of power usage',
+      title: 'Energy Monitoring&apos;,
+      description: 'Real-time tracking and optimization of power usage&apos;,
       icon: BarChart3
     },
     {
-      title: 'Carbon Footprint Analysis',
-      description: 'Comprehensive environmental impact assessment',
+      title: 'Carbon Footprint Analysis&apos;,
+      description: 'Comprehensive environmental impact assessment&apos;,
       icon: Globe;
     };
   ];
 
   return (
-    <div className = "min-h-screen bg-futuristic">
+    <div className = "min-h-screen bg-futuristic&quot;>
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/20 via-slate-900 to-slate-900"></div>
-        <div className="container-responsive relative z-10">
+      <section className="relative pt-32 pb-20 overflow-hidden&quot;>
+        <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/20 via-slate-900 to-slate-900&quot;></div>
+        <div className="container-responsive relative z-10&quot;>
           <motion.div
             initial = {
   { opacity: 0,
@@ -68,29 +67,29 @@ export default function Sustainability(...args: []):  {
 
 }}
             transition={{ duration: 0.6 }}
-            className="text-center max-w-4xl mx-auto"
+            className="text-center max-w-4xl mx-auto&quot;
           >
-            <div className="inline-flex items-center space-x-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full px-4 py-2 mb-6">
-              <Heart className="w-5 h-5 text-emerald-400" />
-              <span className="text-emerald-400 font-medium">Green IT & Sustainability</span>
+            <div className="inline-flex items-center space-x-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full px-4 py-2 mb-6&quot;>
+              <Heart className="w-5 h-5 text-emerald-400&quot; />
+              <span className="text-emerald-400 font-medium&quot;>Green IT & Sustainability</span>
             </div>
 
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6&quot;>
               Technology for a
-              <span className="text-gradient"> Sustainable Future</span>
+              <span className="text-gradient&quot;> Sustainable Future</span>
             </h1>
 
-            <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto&quot;>
               Build a greener tomorrow with sustainable technology solutions.
               Reduce environmental impact while maintaining performance and efficiency.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-futuristic px-8 py-4 text-lg">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center&quot;>
+              <button className="btn-futuristic px-8 py-4 text-lg&quot;>
                 Go Green with Tech
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2&quot; />
               </button>
-              <button className="btn-outline px-8 py-4 text-lg">
+              <button className="btn-outline px-8 py-4 text-lg&quot;>
                 Learn More
               </button>
             </div>
@@ -99,8 +98,8 @@ export default function Sustainability(...args: []):  {
       </section>
 
       {/* Features Section */}
-      <section className="py-20">
-        <div className="container-responsive">
+      <section className="py-20&quot;>
+        <div className="container-responsive&quot;>
           <motion.div
             initial = {
   { opacity: 0,
@@ -114,17 +113,17 @@ export default function Sustainability(...args: []):  {
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-16&quot;
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
+            <h2 className="text-4xl font-bold text-white mb-4&quot;>
               Why Choose Sustainable Technology?
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto&quot;>
               Environmental responsibility meets technological innovation
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8&quot;>
             {features.map((feature, index)  => (
               <motion.div
                 key={feature.title}
@@ -144,13 +143,13 @@ export default function Sustainability(...args: []):  {
 
 }}
                 viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
+                className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group&quot;
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <feature.icon className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300&quot;>
+                  <feature.icon className="w-8 h-8 text-white&quot; />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-zion-slate-light">{feature.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3&quot;>{feature.title}</h3>
+                <p className="text-zion-slate-light&quot;>{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -158,8 +157,8 @@ export default function Sustainability(...args: []):  {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-white/5">
-        <div className="container-responsive">
+      <section className="py-20 bg-white/5&quot;>
+        <div className="container-responsive&quot;>
           <motion.div
             initial = {
   { opacity: 0,
@@ -173,17 +172,17 @@ export default function Sustainability(...args: []):  {
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-16&quot;
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
+            <h2 className="text-4xl font-bold text-white mb-4&quot;>
               Our Sustainability Services
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto&quot;>
               Comprehensive green technology solutions for eco-conscious businesses
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6&quot;>
             {services.map((service, index)  => (
               <motion.div
                 key={service.title}
@@ -203,15 +202,15 @@ export default function Sustainability(...args: []):  {
 
 }}
                 viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
+                className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group&quot;
               >
-                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                <p className="text-slate-300 mb-4">{service.description}</p>
-                <div className="text-2xl font-bold text-emerald-400 mb-4">{service.price}</div>
-                <ul className="space-y-2">
+                <h3 className="text-xl font-semibold text-white mb-3&quot;>{service.title}</h3>
+                <p className="text-slate-300 mb-4&quot;>{service.description}</p>
+                <div className="text-2xl font-bold text-emerald-400 mb-4&quot;>{service.price}</div>
+                <ul className="space-y-2&quot;>
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-slate-300">
-                      <div className="w-2 h-2 bg-emerald-400 rounded-full mr-3"></div>
+                    <li key={featureIndex} className="flex items-center text-sm text-slate-300&quot;>
+                      <div className="w-2 h-2 bg-emerald-400 rounded-full mr-3&quot;></div>
                       {feature}
                     </li>
                   ))}
@@ -219,7 +218,7 @@ export default function Sustainability(...args: []):  {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="w-full mt-6 px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300"
+                  className="w-full mt-6 px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300&quot;
                 >
                   Get Quote
                 </motion.button>
@@ -230,8 +229,8 @@ export default function Sustainability(...args: []):  {
       </section>
 
       {/* Solutions */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      <section className="py-20&quot;>
+        <div className="container mx-auto px-4&quot;>
           <motion.div
             initial = {
   { opacity: 0,
@@ -244,18 +243,18 @@ export default function Sustainability(...args: []):  {
 
 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-16&quot;
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
+            <h2 className="text-4xl font-bold text-white mb-4&quot;>
               Sustainability Solutions
             </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto&quot;>
               Discover how sustainable technology can transform various aspects of your business 
               and create positive environmental impact
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-8">
+          <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-8&quot;>
             {solutions.map((solution, index)  => (
               <motion.div
                 key={solution.name}
@@ -274,10 +273,10 @@ export default function Sustainability(...args: []):  {
   delay: index * 0.1 
 
 }}
-                className="text-center group"
+                className="text-center group&quot;
               >
-                <div className="w-16 h-16 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-700 transition-all duration-300">
-                  <solution.icon className="w-8 h-8 text-emerald-400" />
+                <div className="w-16 h-16 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-700 transition-all duration-300&quot;>
+                  <solution.icon className="w-8 h-8 text-emerald-400&quot; />
                 </div>
               </motion.div>
             ))}
@@ -286,8 +285,8 @@ export default function Sustainability(...args: []):  {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20">
-        <div className="container-responsive">
+      <section className="py-20&quot;>
+        <div className="container-responsive&quot;>
           <motion.div
             initial = {
   { opacity: 0,
@@ -301,21 +300,21 @@ export default function Sustainability(...args: []):  {
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-r from-emerald-600 to-emerald-700 rounded-3xl p-12 text-center relative overflow-hidden"
+            className="bg-gradient-to-r from-emerald-600 to-emerald-700 rounded-3xl p-12 text-center relative overflow-hidden&quot;
           >
-            <div className="absolute inset-0 bg-black/20"></div>
-            <div className="relative z-10">
-              <h2 className="text-4xl font-bold text-white mb-6">
+            <div className="absolute inset-0 bg-black/20&quot;></div>
+            <div className="relative z-10&quot;>
+              <h2 className="text-4xl font-bold text-white mb-6&quot;>
                 Ready to Go Green?
               </h2>
-              <p className="text-xl text-emerald-100 mb-8 max-w-2xl mx-auto">
+              <p className="text-xl text-emerald-100 mb-8 max-w-2xl mx-auto&quot;>
                 Make a positive impact on the environment while advancing your technology capabilities.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-emerald-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-300">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center&quot;>
+                <button className="bg-white text-emerald-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-300&quot;>
                   Go Green with Tech
                 </button>
-                <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-emerald-600 transition-colors duration-300">
+                <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-emerald-600 transition-colors duration-300&quot;>
                   Contact Green Team
                 </button>
               </div>

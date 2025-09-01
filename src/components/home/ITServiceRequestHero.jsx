@@ -1,19 +1,19 @@
-import React, { useState } from "react";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
-import { Clock, Globe, Shield, Zap, MapPin, ArrowRight } from "lucide-react";
+import React, { useState } from 'react';
+import { GradientHeading } from '@/components/GradientHeading';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Clock, Globe, Shield, Zap, MapPin, ArrowRight } from 'lucide-react';
 export function ITServiceRequestHero() {
   const [location, setLocation] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     e.preventDefault();
     if (!location.trim()) return;
-    
+
     setIsSubmitting(true);
     // Simulate API call
     setTimeout(() => {
@@ -29,9 +29,9 @@ export function ITServiceRequestHero() {
       y: 0,
       transition: {
         duration: 0.6,
-        staggerChildren: 0.2
-      }
-    }
+        staggerChildren: 0.2,
+      },
+    },
   };
 
   const itemVariants = {
@@ -39,15 +39,19 @@ export function ITServiceRequestHero() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.5 }
-    }
+      transition: { duration: 0.5 },
+    },
   };
 
   const features = [
-    { icon: Clock, text: "24/7 Availability", color: "text-zion-cyan" },
-    { icon: Globe, text: "Global Coverage", color: "text-zion-purple" },
-    { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" },
-    { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" }
+    { icon: Clock, text: '24/7 Availability', color: 'text-zion-cyan' },
+    { icon: Globe, text: 'Global Coverage', color: 'text-zion-purple' },
+    {
+      icon: Shield,
+      text: 'Certified Technicians',
+      color: 'text-zion-cyan-light',
+    },
+    { icon: Zap, text: 'Fast Response', color: 'text-zion-purple-light' },
   ];
 
   return (
@@ -58,11 +62,11 @@ export function ITServiceRequestHero() {
         <div className="absolute bottom-10 left-10 w-48 h-48 bg-zion-purple rounded-full blur-3xl"></div>
       </div>
 
-      <motion.div 
-        className="container mx-auto px-4 relative z-10" 
-        variants={containerVariants} 
-        initial="hidden" 
-        whileInView="visible" 
+      <motion.div
+        className="container mx-auto px-4 relative z-10"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
         viewport={{ once: true }}
       >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -70,7 +74,7 @@ export function ITServiceRequestHero() {
           <motion.div variants={itemVariants} className="text-white">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-2 bg-zion-cyan/20 rounded-lg">
-                <Zap className="w-6 h-6 text-zion-cyan"/>
+                <Zap className="w-6 h-6 text-zion-cyan" />
               </div>
               <span className="text-zion-cyan font-semibold text-sm uppercase tracking-wider">
                 Global IT Services
@@ -82,23 +86,30 @@ export function ITServiceRequestHero() {
             </GradientHeading>
 
             <p className="text-lg md:text-xl text-zion-slate-light mb-8 max-w-lg leading-relaxed">
-              Request professional technicians anywhere in the world, anytime you need them.
-              Fast, reliable, and secure IT solutions for your business.
+              Request professional technicians anywhere in the world, anytime
+              you need them. Fast, reliable, and secure IT solutions for your
+              business.
             </p>
 
             {/* Feature highlights */}
             <div className="space-y-4 mb-8">
               <div className="flex items-center gap-3">
                 <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-                <span className="text-zion-cyan-light">Available 24/7 worldwide</span>
+                <span className="text-zion-cyan-light">
+                  Available 24/7 worldwide
+                </span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-2 h-2 bg-zion-purple rounded-full"></div>
-                <span className="text-zion-purple-light">Certified technicians</span>
+                <span className="text-zion-purple-light">
+                  Certified technicians
+                </span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-2 h-2 bg-zion-blue rounded-full"></div>
-                <span className="text-zion-blue-light">Same-day response guarantee</span>
+                <span className="text-zion-blue-light">
+                  Same-day response guarantee
+                </span>
               </div>
             </div>
 
@@ -113,7 +124,9 @@ export function ITServiceRequestHero() {
                 <div className="text-sm text-zion-slate-light">Support</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-zion-cyan-light">2hr</div>
+                <div className="text-2xl font-bold text-zion-cyan-light">
+                  2hr
+                </div>
                 <div className="text-sm text-zion-slate-light">Response</div>
               </div>
             </div>
@@ -126,13 +139,20 @@ export function ITServiceRequestHero() {
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r from-zion-cyan to-zion-blue mb-4">
                   <MapPin className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-2">Request IT Service</h3>
-                <p className="text-zion-slate-light">Enter your location to find nearby technicians</p>
+                <h3 className="text-2xl font-bold text-white mb-2">
+                  Request IT Service
+                </h3>
+                <p className="text-zion-slate-light">
+                  Enter your location to find nearby technicians
+                </p>
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="location" className="block text-sm font-medium text-zion-slate-light mb-2">
+                  <label
+                    htmlFor="location"
+                    className="block text-sm font-medium text-zion-slate-light mb-2"
+                  >
                     Service Location
                   </label>
                   <div className="relative">
@@ -141,7 +161,7 @@ export function ITServiceRequestHero() {
                       type="text"
                       id="location"
                       value={location}
-                      onChange={(e) => setLocation(e.target.value)}
+                      onChange={e => setLocation(e.target.value)}
                       placeholder="Enter city, address, or coordinates"
                       className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300"
                       required
@@ -173,7 +193,9 @@ export function ITServiceRequestHero() {
                 {features.map((feature, index) => (
                   <div key={index} className="flex items-center gap-3">
                     <feature.icon className={`w-5 h-5 ${feature.color}`} />
-                    <span className="text-sm text-zion-slate-light">{feature.text}</span>
+                    <span className="text-sm text-zion-slate-light">
+                      {feature.text}
+                    </span>
                   </div>
                 ))}
               </div>

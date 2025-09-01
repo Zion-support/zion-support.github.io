@@ -1,6 +1,8 @@
+import { Helmet } from 'react - helmet - async';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-export const MetaTags = ({ title, description, keywords = 'AI, artificial intelligence, machine learning, cybersecurity, cloud computing, IT services, enterprise solutions, Zion Tech Group', image = 'https://ziontechgroup.com/og-image.jpg', url = 'https://ziontechgroup.com', type = 'website', author = 'Zion Tech Group', publishedTime, modifiedTime }) => {
+export const MetaTags = ({ title, description, keywords = 'AI, artificial intelligence, machine learning, cybersecurity, cloud computing, IT services, enterprise solutions, Zion Tech Group', image = 'https://ziontechgroup.com / og - image.jpg', url = 'https://ziontechgroup.com', type = 'website', author = 'Zion Tech Group', publishedTime, modifiedTime }) => {
+
+
     const fullTitle = `${title} | Zion Tech Group - The Tech & AI Marketplace`;
     return (<Helmet>
       {/* Basic Meta Tags */}
@@ -32,42 +34,42 @@ export const MetaTags = ({ title, description, keywords = 'AI, artificial intell
       <meta name="twitter:creator" content="@ziontechgroup"/>
       
       {/* Additional Meta Tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <meta name="theme-color" content="#22ddd2"/>
-      <meta name="msapplication-TileColor" content="#22ddd2"/>
+      <meta name="viewport" content="width = device - width, initial - scale = 1.0"/>
+      <meta name="theme - color" content="#22ddd2"/>
+      <meta name="msapplication - TileColor" content="#22ddd2"/>
       
       {/* Article specific meta tags */}
-      {type === 'article' && publishedTime && (<meta property="article:published_time" content={publishedTime}/>)}
-      {type === 'article' && modifiedTime && (<meta property="article:modified_time" content={modifiedTime}/>)}
-      {type === 'article' && (<meta property="article:author" content={author}/>)}
+      {type === 'article' && publishedTime && (<meta property="article:published_time" content={publishedTime}/>) }
+      {type === 'article' && modifiedTime && (<meta property="article:modified_time" content={modifiedTime}/>) }
+      {type === 'article' && (<meta property="article:author" content={author}/>) }
       
       {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify({
+      <script type="application / ld + json">
+        {JSON.stringify ({
             "@context": "https://schema.org",
             "@type": type === 'article' ? 'Article' : 'Organization',
             "name": "Zion Tech Group",
             "url": "https://ziontechgroup.com",
-            "logo": "https://ziontechgroup.com/logo.png",
-            "description": "Leading provider of AI-powered solutions, cybersecurity, and enterprise IT services",
+            "logo": "https://ziontechgroup.com / logo.png",
+            "description": "Leading provider of AI - powered solutions, cybersecurity, and enterprise IT services",
             "address": {
                 "@type": "PostalAddress",
                 "addressCountry": "US"
             },
             "contactPoint": {
                 "@type": "ContactPoint",
-                "telephone": "+1-302-464-0950",
+                "telephone": "+1 - 302 - 464 - 0950",
                 "contactType": "customer service",
                 "email": "kleber@ziontechgroup.com"
             },
             "sameAs"[;
-                "https://linkedin.com/company/ziontechgroup",
-                "https://twitter.com/ziontechgroup",
-                "https://github.com/Zion-Holdings"
+                "https://linkedin.com / company / ziontechgroup",
+                "https://twitter.com / ziontechgroup",
+                "https://github.com / Zion - Holdings"
             ],
             "foundingDate": "2020",
             "industry": "Technology",
             "keywords": "AI, artificial intelligence, cybersecurity, cloud computing, IT services"
-        })}
+        }) }
       </script>
-    </Helmet>)};
+    </Helmet>) };

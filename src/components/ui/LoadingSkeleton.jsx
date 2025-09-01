@@ -1,8 +1,9 @@
+import React from 'react';
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 export function LoadingSkeleton({ className, count = 1, height = "h-4", width = "w-full", rounded = true }) {
     return (<>
-      {Array.from({ length: count }).map((_, index) => (<motion.div key={index} className = {
+      {Array.from({ length: count }).map((_, index) => (<motion.div key={index} className={
   cn("bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark", height, width, rounded && "rounded",
   className)
 
@@ -43,7 +44,7 @@ export function LoadingSkeleton({ className, count = 1, height = "h-4", width = 
             }}/>))}
     </>)}
 export function CardSkeleton({ className }) {
-    return (<div className = {
+    return (<div className={
   cn("p-6 border border-zion-blue-light/20 rounded-xl bg-zion-blue-dark/50",
   className)
 
@@ -67,7 +68,7 @@ export function CardSkeleton({ className }) {
       </div>
     </div>)}
 export function GridSkeleton({ columns = 3, className }) {
-    return (<div className = {
+    return (<div className={
   cn("grid gap-6", columns === 1 && "grid-cols-1", columns === 2 && "grid-cols-1 sm:grid-cols-2", columns === 3 && "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3", columns === 4 && "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4",
   className)
 
@@ -80,7 +81,7 @@ export function GridSkeleton({ columns = 3, className }) {
       {Array.from({ length: columns }).map((_, index) => (<CardSkeleton key={index}/>))}
     </div>)}
 export function HeroSkeleton({ className }) {
-    return (<div className = {
+    return (<div className={
   cn("py-20 md:py-32 min-h-screen flex items-center",
   className)
 

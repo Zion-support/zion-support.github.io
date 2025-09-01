@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Atom, 
-  Brain, 
-  Zap, 
-  Shield, 
-  TrendingUp, 
-  Users, 
-  Globe, 
+import {
+  Atom,
+  Brain,
+  Zap,
+  Shield,
+  TrendingUp,
+  Users,
+  Globe,
   Cpu,
   Database,
   Lock,
@@ -21,7 +21,7 @@ import {
   Award,
   Target,
   Workflow,
-  Phone
+  Phone,
 } from 'lucide-react';
 import { SEO } from '../../components/SEO';
 
@@ -29,136 +29,148 @@ export default function AIQuantumHybridPlatform() {
   const features = [
     {
       icon: Atom,
-      title: "Quantum-Classical Hybrid Processing",
-      description: "Seamlessly integrate quantum algorithms with classical computing for optimal performance"
+      title: 'Quantum-Classical Hybrid Processing',
+      description:
+        'Seamlessly integrate quantum algorithms with classical computing for optimal performance',
     },
     {
       icon: Brain,
-      title: "AI-Quantum Algorithm Optimization",
-      description: "Machine learning algorithms that automatically optimize quantum circuit designs"
+      title: 'AI-Quantum Algorithm Optimization',
+      description:
+        'Machine learning algorithms that automatically optimize quantum circuit designs',
     },
     {
       icon: Zap,
-      title: "Real-time Quantum Error Correction",
-      description: "Advanced error correction algorithms for reliable quantum computations"
+      title: 'Real-time Quantum Error Correction',
+      description:
+        'Advanced error correction algorithms for reliable quantum computations',
     },
     {
       icon: Shield,
-      title: "Quantum-Safe Cryptography",
-      description: "Post-quantum cryptographic solutions for future-proof security"
+      title: 'Quantum-Safe Cryptography',
+      description:
+        'Post-quantum cryptographic solutions for future-proof security',
     },
     {
       icon: TrendingUp,
-      title: "Quantum Machine Learning",
-      description: "Quantum neural networks and quantum-enhanced ML algorithms"
+      title: 'Quantum Machine Learning',
+      description: 'Quantum neural networks and quantum-enhanced ML algorithms',
     },
     {
       icon: Database,
-      title: "Quantum Database Optimization",
-      description: "Quantum algorithms for database search and optimization problems"
-    }
+      title: 'Quantum Database Optimization',
+      description:
+        'Quantum algorithms for database search and optimization problems',
+    },
   ];
 
   const pricingTiers = [
     {
-      name: "Quantum Starter",
-      price: "$2,999",
-      period: "monthly",
-      description: "Perfect for research institutions and quantum startups",
+      name: 'Quantum Starter',
+      price: '$2,999',
+      period: 'monthly',
+      description: 'Perfect for research institutions and quantum startups',
       features: [
-        "Up to 100 quantum circuit executions per month",
-        "Basic quantum algorithm library",
-        "Standard error correction",
-        "Email support",
-        "Basic analytics dashboard"
+        'Up to 100 quantum circuit executions per month',
+        'Basic quantum algorithm library',
+        'Standard error correction',
+        'Email support',
+        'Basic analytics dashboard',
       ],
-      bestFor: "Research institutions, quantum startups, educational organizations"
+      bestFor:
+        'Research institutions, quantum startups, educational organizations',
     },
     {
-      name: "Quantum Professional",
-      price: "$7,999",
-      period: "monthly",
-      description: "Advanced features for growing quantum computing companies",
+      name: 'Quantum Professional',
+      price: '$7,999',
+      period: 'monthly',
+      description: 'Advanced features for growing quantum computing companies',
       features: [
-        "Up to 1,000 quantum circuit executions per month",
-        "Advanced quantum algorithm library",
-        "Custom error correction algorithms",
-        "Priority support",
-        "Advanced analytics and reporting",
-        "API access",
-        "Custom quantum circuit design"
+        'Up to 1,000 quantum circuit executions per month',
+        'Advanced quantum algorithm library',
+        'Custom error correction algorithms',
+        'Priority support',
+        'Advanced analytics and reporting',
+        'API access',
+        'Custom quantum circuit design',
       ],
-      bestFor: "Quantum computing companies, research labs, enterprise R&D"
+      bestFor: 'Quantum computing companies, research labs, enterprise R&D',
     },
     {
-      name: "Quantum Enterprise",
-      price: "$19,999",
-      period: "monthly",
-      description: "Full-scale quantum computing platform for large enterprises",
+      name: 'Quantum Enterprise',
+      price: '$19,999',
+      period: 'monthly',
+      description:
+        'Full-scale quantum computing platform for large enterprises',
       features: [
-        "Unlimited quantum circuit executions",
-        "Custom quantum algorithm development",
-        "Advanced quantum error correction",
-        "24/7 dedicated support",
-        "Custom integrations",
-        "White-label solutions",
-        "On-premise deployment options",
-        "Quantum consulting services"
+        'Unlimited quantum circuit executions',
+        'Custom quantum algorithm development',
+        'Advanced quantum error correction',
+        '24/7 dedicated support',
+        'Custom integrations',
+        'White-label solutions',
+        'On-premise deployment options',
+        'Quantum consulting services',
       ],
-      bestFor: "Large enterprises, government agencies, quantum computing leaders"
-    }
+      bestFor:
+        'Large enterprises, government agencies, quantum computing leaders',
+    },
   ];
 
   const useCases = [
     {
-      title: "Financial Modeling",
-      description: "Quantum algorithms for portfolio optimization, risk assessment, and derivative pricing",
-      icon: TrendingUp
+      title: 'Financial Modeling',
+      description:
+        'Quantum algorithms for portfolio optimization, risk assessment, and derivative pricing',
+      icon: TrendingUp,
     },
     {
-      title: "Drug Discovery",
-      description: "Quantum chemistry simulations for pharmaceutical research and molecular modeling",
-      icon: Atom
+      title: 'Drug Discovery',
+      description:
+        'Quantum chemistry simulations for pharmaceutical research and molecular modeling',
+      icon: Atom,
     },
     {
-      title: "Logistics Optimization",
-      description: "Quantum algorithms for supply chain optimization and route planning",
-      icon: Workflow
+      title: 'Logistics Optimization',
+      description:
+        'Quantum algorithms for supply chain optimization and route planning',
+      icon: Workflow,
     },
     {
-      title: "Cryptography",
-      description: "Quantum-safe encryption and post-quantum cryptographic solutions",
-      icon: Lock
+      title: 'Cryptography',
+      description:
+        'Quantum-safe encryption and post-quantum cryptographic solutions',
+      icon: Lock,
     },
     {
-      title: "Machine Learning",
-      description: "Quantum-enhanced neural networks and pattern recognition",
-      icon: Brain
+      title: 'Machine Learning',
+      description: 'Quantum-enhanced neural networks and pattern recognition',
+      icon: Brain,
     },
     {
-      title: "Climate Modeling",
-      description: "Complex climate simulations using quantum computing power",
-      icon: Globe
-    }
+      title: 'Climate Modeling',
+      description: 'Complex climate simulations using quantum computing power',
+      icon: Globe,
+    },
   ];
 
   const benefits = [
-    "10-100x faster computation for specific problems",
-    "Future-proof quantum-safe security solutions",
-    "Competitive advantage in research and development",
-    "Access to cutting-edge quantum technologies",
-    "Scalable quantum computing infrastructure",
-    "Expert quantum computing consultation"
+    '10-100x faster computation for specific problems',
+    'Future-proof quantum-safe security solutions',
+    'Competitive advantage in research and development',
+    'Access to cutting-edge quantum technologies',
+    'Scalable quantum computing infrastructure',
+    'Expert quantum computing consultation',
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEO 
+      <SEO
         title="AI Quantum Hybrid Platform - Zion Tech Group"
         description="Revolutionary AI-Quantum hybrid computing platform combining the power of quantum computing with artificial intelligence for unprecedented computational capabilities."
         keywords="quantum computing, AI, hybrid platform, quantum algorithms, quantum machine learning, quantum cryptography"
       />
-      
+
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -176,11 +188,12 @@ export default function AIQuantumHybridPlatform() {
               AI Quantum Hybrid Platform
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the future of computing with our revolutionary AI-Quantum hybrid platform. 
-              Combining artificial intelligence with quantum computing for unprecedented computational power.
+              Experience the future of computing with our revolutionary
+              AI-Quantum hybrid platform. Combining artificial intelligence with
+              quantum computing for unprecedented computational power.
             </p>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -218,8 +231,8 @@ export default function AIQuantumHybridPlatform() {
               Revolutionary Quantum-AI Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our platform combines the best of both worlds: quantum computing's exponential power 
-              and AI's intelligent optimization capabilities.
+              Our platform combines the best of both worlds: quantum computing's
+              exponential power and AI's intelligent optimization capabilities.
             </p>
           </motion.div>
 
@@ -236,7 +249,9 @@ export default function AIQuantumHybridPlatform() {
                 <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-purple-400" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  {feature.title}
+                </h3>
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
@@ -258,8 +273,8 @@ export default function AIQuantumHybridPlatform() {
               Transparent Quantum Computing Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the perfect plan for your quantum computing needs with our transparent, 
-              enterprise-grade pricing structure.
+              Choose the perfect plan for your quantum computing needs with our
+              transparent, enterprise-grade pricing structure.
             </p>
           </motion.div>
 
@@ -272,7 +287,9 @@ export default function AIQuantumHybridPlatform() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
-                  index === 1 ? 'border-purple-500/50 bg-purple-500/10' : 'border-white/10'
+                  index === 1
+                    ? 'border-purple-500/50 bg-purple-500/10'
+                    : 'border-white/10'
                 } hover:border-purple-500/50 transition-all`}
               >
                 {index === 1 && (
@@ -281,14 +298,18 @@ export default function AIQuantumHybridPlatform() {
                     Most Popular
                   </div>
                 )}
-                
-                <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
+
+                <h3 className="text-2xl font-bold text-white mb-2">
+                  {tier.name}
+                </h3>
                 <div className="mb-4">
-                  <span className="text-4xl font-bold text-white">{tier.price}</span>
+                  <span className="text-4xl font-bold text-white">
+                    {tier.price}
+                  </span>
                   <span className="text-gray-400">/{tier.period}</span>
                 </div>
                 <p className="text-gray-300 mb-6">{tier.description}</p>
-                
+
                 <ul className="space-y-3 mb-8">
                   {tier.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start">
@@ -297,11 +318,11 @@ export default function AIQuantumHybridPlatform() {
                     </li>
                   ))}
                 </ul>
-                
+
                 <div className="text-sm text-gray-400 mb-6">
                   <strong>Best for:</strong> {tier.bestFor}
                 </div>
-                
+
                 <a
                   href="/contact"
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-colors ${
@@ -332,8 +353,9 @@ export default function AIQuantumHybridPlatform() {
               Revolutionary Use Cases
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover how our AI-Quantum hybrid platform is transforming industries 
-              and solving previously impossible computational challenges.
+              Discover how our AI-Quantum hybrid platform is transforming
+              industries and solving previously impossible computational
+              challenges.
             </p>
           </motion.div>
 
@@ -350,7 +372,9 @@ export default function AIQuantumHybridPlatform() {
                 <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4">
                   <useCase.icon className="w-6 h-6 text-purple-400" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  {useCase.title}
+                </h3>
                 <p className="text-gray-300">{useCase.description}</p>
               </motion.div>
             ))}
@@ -372,8 +396,8 @@ export default function AIQuantumHybridPlatform() {
               Why Choose Our AI-Quantum Platform?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience unprecedented computational power and intelligent optimization 
-              with our cutting-edge quantum-AI hybrid technology.
+              Experience unprecedented computational power and intelligent
+              optimization with our cutting-edge quantum-AI hybrid technology.
             </p>
           </motion.div>
 
@@ -410,8 +434,8 @@ export default function AIQuantumHybridPlatform() {
               Ready to Experience Quantum Computing?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join the quantum revolution and transform your computational capabilities 
-              with our AI-Quantum hybrid platform.
+              Join the quantum revolution and transform your computational
+              capabilities with our AI-Quantum hybrid platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

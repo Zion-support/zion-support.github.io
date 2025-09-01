@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  BarChart3, 
-  TrendingUp, 
-  DollarSign, 
-  Cloud, 
-  Zap, 
-  Shield, 
-  Brain, 
+import {
+  BarChart3,
+  TrendingUp,
+  DollarSign,
+  Cloud,
+  Zap,
+  Shield,
+  Brain,
   CheckCircle,
   ArrowRight,
   Star,
@@ -43,88 +43,101 @@ import {
   Calculator,
   PieChart,
   Target,
-  AlertTriangle
+  AlertTriangle,
 } from 'lucide-react';
 
 export default function CloudFinOpsOptimizer() {
   const features = [
     {
       icon: Calculator,
-      title: "Cost Optimization Engine",
-      description: "AI-powered cost analysis and optimization recommendations for cloud resources"
+      title: 'Cost Optimization Engine',
+      description:
+        'AI-powered cost analysis and optimization recommendations for cloud resources',
     },
     {
       icon: BarChart3,
-      title: "Real-time Cost Monitoring",
-      description: "Live tracking of cloud spending with instant alerts and notifications"
+      title: 'Real-time Cost Monitoring',
+      description:
+        'Live tracking of cloud spending with instant alerts and notifications',
     },
     {
       icon: Target,
-      title: "Budget Management",
-      description: "Set and enforce budgets with automated cost controls and forecasting"
+      title: 'Budget Management',
+      description:
+        'Set and enforce budgets with automated cost controls and forecasting',
     },
     {
       icon: TrendingUp,
-      title: "Performance Analytics",
-      description: "Comprehensive insights into resource utilization and performance metrics"
+      title: 'Performance Analytics',
+      description:
+        'Comprehensive insights into resource utilization and performance metrics',
     },
     {
       icon: Shield,
-      title: "Compliance Tracking",
-      description: "Monitor and ensure compliance with financial and regulatory requirements"
+      title: 'Compliance Tracking',
+      description:
+        'Monitor and ensure compliance with financial and regulatory requirements',
     },
     {
       icon: Brain,
-      title: "Predictive Cost Modeling",
-      description: "Machine learning models to forecast future costs and optimize spending"
-    }
+      title: 'Predictive Cost Modeling',
+      description:
+        'Machine learning models to forecast future costs and optimize spending',
+    },
   ];
 
   const benefits = [
-    "Reduce cloud costs by up to 40% through intelligent optimization",
-    "Improve resource utilization efficiency by 60%",
-    "Eliminate waste with automated cost anomaly detection",
-    "Achieve better budget predictability and control",
-    "Streamline financial operations and reporting",
-    "Ensure compliance with cost governance policies"
+    'Reduce cloud costs by up to 40% through intelligent optimization',
+    'Improve resource utilization efficiency by 60%',
+    'Eliminate waste with automated cost anomaly detection',
+    'Achieve better budget predictability and control',
+    'Streamline financial operations and reporting',
+    'Ensure compliance with cost governance policies',
   ];
 
   const useCases = [
     {
-      title: "Enterprise Cloud Users",
-      description: "Large organizations managing complex multi-cloud environments"
+      title: 'Enterprise Cloud Users',
+      description:
+        'Large organizations managing complex multi-cloud environments',
     },
     {
-      title: "Startups & Scale-ups",
-      description: "Growing companies optimizing cloud costs during rapid expansion"
+      title: 'Startups & Scale-ups',
+      description:
+        'Growing companies optimizing cloud costs during rapid expansion',
     },
     {
-      title: "Financial Services",
-      description: "Banks and fintech companies with strict cost compliance requirements"
+      title: 'Financial Services',
+      description:
+        'Banks and fintech companies with strict cost compliance requirements',
     },
     {
-      title: "E-commerce & SaaS",
-      description: "Digital businesses with variable cloud usage patterns"
-    }
+      title: 'E-commerce & SaaS',
+      description: 'Digital businesses with variable cloud usage patterns',
+    },
   ];
 
   const optimizationStrategies = [
     {
-      title: "Resource Right-sizing",
-      description: "Automatically adjust resource allocation based on actual usage patterns"
+      title: 'Resource Right-sizing',
+      description:
+        'Automatically adjust resource allocation based on actual usage patterns',
     },
     {
-      title: "Reserved Instance Optimization",
-      description: "Maximize savings through strategic reserved instance purchases"
+      title: 'Reserved Instance Optimization',
+      description:
+        'Maximize savings through strategic reserved instance purchases',
     },
     {
-      title: "Spot Instance Management",
-      description: "Leverage spot instances for non-critical workloads to reduce costs"
+      title: 'Spot Instance Management',
+      description:
+        'Leverage spot instances for non-critical workloads to reduce costs',
     },
     {
-      title: "Storage Tier Optimization",
-      description: "Move data to appropriate storage tiers based on access patterns"
-    }
+      title: 'Storage Tier Optimization',
+      description:
+        'Move data to appropriate storage tiers based on access patterns',
+    },
   ];
 
   return (
@@ -142,16 +155,17 @@ export default function CloudFinOpsOptimizer() {
               <Cloud className="w-4 h-4" />
               <span>Cloud Financial Operations</span>
             </div>
-            
+
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Cloud FinOps Optimizer
             </h1>
-            
+
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-              Master cloud cost management with intelligent FinOps automation, real-time monitoring, 
-              and AI-driven optimization strategies that maximize your cloud investment.
+              Master cloud cost management with intelligent FinOps automation,
+              real-time monitoring, and AI-driven optimization strategies that
+              maximize your cloud investment.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -161,7 +175,7 @@ export default function CloudFinOpsOptimizer() {
                 Start Free Trial
                 <ArrowRight className="inline ml-2 w-5 h-5" />
               </motion.button>
-              
+
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -172,7 +186,7 @@ export default function CloudFinOpsOptimizer() {
             </div>
           </motion.div>
         </div>
-        
+
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-cyan/10 rounded-full blur-3xl"></div>
@@ -193,10 +207,11 @@ export default function CloudFinOpsOptimizer() {
               Comprehensive FinOps Features
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Everything you need to optimize cloud costs and maximize financial efficiency
+              Everything you need to optimize cloud costs and maximize financial
+              efficiency
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
@@ -209,7 +224,9 @@ export default function CloudFinOpsOptimizer() {
                 <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  {feature.title}
+                </h3>
                 <p className="text-zion-slate-light">{feature.description}</p>
               </motion.div>
             ))}
@@ -233,7 +250,7 @@ export default function CloudFinOpsOptimizer() {
               Experience significant cost savings and improved financial control
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-6">
               {benefits.slice(0, 3).map((benefit, index) => (
@@ -245,11 +262,13 @@ export default function CloudFinOpsOptimizer() {
                   className="flex items-start space-x-4"
                 >
                   <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0" />
-                  <span className="text-zion-slate-light text-lg">{benefit}</span>
+                  <span className="text-zion-slate-light text-lg">
+                    {benefit}
+                  </span>
                 </motion.div>
               ))}
             </div>
-            
+
             <div className="space-y-6">
               {benefits.slice(3).map((benefit, index) => (
                 <motion.div
@@ -260,7 +279,9 @@ export default function CloudFinOpsOptimizer() {
                   className="flex items-start space-x-4"
                 >
                   <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0" />
-                  <span className="text-zion-slate-light text-lg">{benefit}</span>
+                  <span className="text-zion-slate-light text-lg">
+                    {benefit}
+                  </span>
                 </motion.div>
               ))}
             </div>
@@ -281,10 +302,11 @@ export default function CloudFinOpsOptimizer() {
               Intelligent Optimization Strategies
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              AI-powered strategies that automatically optimize your cloud infrastructure
+              AI-powered strategies that automatically optimize your cloud
+              infrastructure
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {optimizationStrategies.map((strategy, index) => (
               <motion.div
@@ -299,8 +321,12 @@ export default function CloudFinOpsOptimizer() {
                     <Target className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{strategy.title}</h3>
-                    <p className="text-zion-slate-light">{strategy.description}</p>
+                    <h3 className="text-xl font-semibold text-white mb-2">
+                      {strategy.title}
+                    </h3>
+                    <p className="text-zion-slate-light">
+                      {strategy.description}
+                    </p>
                   </div>
                 </div>
               </motion.div>
@@ -322,10 +348,11 @@ export default function CloudFinOpsOptimizer() {
               Perfect For Your Organization
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Whether you're a startup or enterprise, our FinOps solution scales with your needs
+              Whether you're a startup or enterprise, our FinOps solution scales
+              with your needs
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {useCases.map((useCase, index) => (
               <motion.div
@@ -338,8 +365,12 @@ export default function CloudFinOpsOptimizer() {
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
                   <Cloud className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>
-                <p className="text-zion-slate-light text-sm">{useCase.description}</p>
+                <h3 className="text-lg font-semibold text-white mb-2">
+                  {useCase.title}
+                </h3>
+                <p className="text-zion-slate-light text-sm">
+                  {useCase.description}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -358,9 +389,10 @@ export default function CloudFinOpsOptimizer() {
               Ready to Optimize Your Cloud Costs?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8">
-              Join organizations already saving millions with intelligent FinOps automation
+              Join organizations already saving millions with intelligent FinOps
+              automation
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -370,7 +402,7 @@ export default function CloudFinOpsOptimizer() {
                 Start Optimizing Today
                 <Rocket className="inline ml-2 w-5 h-5" />
               </motion.button>
-              
+
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

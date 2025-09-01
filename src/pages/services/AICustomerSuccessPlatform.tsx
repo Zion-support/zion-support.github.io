@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Users, 
-  MessageSquare, 
-  TrendingUp, 
-  CheckCircle, 
+import {
+  Users,
+  MessageSquare,
+  TrendingUp,
+  CheckCircle,
   ArrowRight,
   Play,
   Settings,
@@ -220,7 +220,7 @@ import {
   UserEdit3,
   UserEditOff,
   UserSearch3,
-  UserSearchOff
+  UserSearchOff,
 } from 'lucide-react';
 
 const AICustomerSuccessPlatform = () => {
@@ -228,33 +228,39 @@ const AICustomerSuccessPlatform = () => {
     {
       icon: Brain,
       title: 'AI-Powered Customer Insights',
-      description: 'Advanced machine learning algorithms analyze customer behavior patterns and predict churn risks'
+      description:
+        'Advanced machine learning algorithms analyze customer behavior patterns and predict churn risks',
     },
     {
       icon: MessageSquare,
       title: 'Intelligent Communication Hub',
-      description: 'Automated, personalized communication workflows based on customer lifecycle stages'
+      description:
+        'Automated, personalized communication workflows based on customer lifecycle stages',
     },
     {
       icon: TrendingUp,
       title: 'Predictive Analytics',
-      description: 'Forecast customer health scores and identify expansion opportunities proactively'
+      description:
+        'Forecast customer health scores and identify expansion opportunities proactively',
     },
     {
       icon: Users,
       title: '360° Customer View',
-      description: 'Comprehensive customer profiles with interaction history and preference analysis'
+      description:
+        'Comprehensive customer profiles with interaction history and preference analysis',
     },
     {
       icon: Target,
       title: 'Automated Success Playbooks',
-      description: 'AI-driven success strategies tailored to customer segments and use cases'
+      description:
+        'AI-driven success strategies tailored to customer segments and use cases',
     },
     {
       icon: Activity,
       title: 'Real-time Health Monitoring',
-      description: 'Continuous monitoring of customer engagement and satisfaction metrics'
-    }
+      description:
+        'Continuous monitoring of customer engagement and satisfaction metrics',
+    },
   ];
 
   const benefits = [
@@ -263,26 +269,30 @@ const AICustomerSuccessPlatform = () => {
     'Automate 70% of routine customer success tasks',
     'Improve customer satisfaction scores by 25%',
     'Enable proactive issue resolution before escalation',
-    'Scale customer success operations efficiently'
+    'Scale customer success operations efficiently',
   ];
 
   const useCases = [
     {
       industry: 'SaaS Companies',
-      description: 'Manage subscription renewals, feature adoption, and expansion opportunities'
+      description:
+        'Manage subscription renewals, feature adoption, and expansion opportunities',
     },
     {
       industry: 'Enterprise Software',
-      description: 'Ensure successful implementation, user adoption, and ROI achievement'
+      description:
+        'Ensure successful implementation, user adoption, and ROI achievement',
     },
     {
       industry: 'E-commerce',
-      description: 'Personalize customer experiences and increase repeat purchase rates'
+      description:
+        'Personalize customer experiences and increase repeat purchase rates',
     },
     {
       industry: 'Financial Services',
-      description: 'Monitor account health and provide proactive financial advisory'
-    }
+      description:
+        'Monitor account health and provide proactive financial advisory',
+    },
   ];
 
   const pricing = [
@@ -295,8 +305,8 @@ const AICustomerSuccessPlatform = () => {
         'Email automation',
         'Customer health scoring',
         'Basic reporting',
-        'Email support'
-      ]
+        'Email support',
+      ],
     },
     {
       plan: 'Professional',
@@ -308,8 +318,8 @@ const AICustomerSuccessPlatform = () => {
         'Custom success playbooks',
         'Advanced reporting',
         'Priority support',
-        'API access'
-      ]
+        'API access',
+      ],
     },
     {
       plan: 'Enterprise',
@@ -321,9 +331,9 @@ const AICustomerSuccessPlatform = () => {
         'White-label options',
         'Dedicated success manager',
         '24/7 phone support',
-        'Custom training'
-      ]
-    }
+        'Custom training',
+      ],
+    },
   ];
 
   const integrations = [
@@ -336,7 +346,7 @@ const AICustomerSuccessPlatform = () => {
     'Google Workspace',
     'Slack',
     'Zapier',
-    'Webhook APIs'
+    'Webhook APIs',
   ];
 
   return (
@@ -357,12 +367,14 @@ const AICustomerSuccessPlatform = () => {
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Transform Customer Success with
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                {' '}AI Intelligence
+                {' '}
+                AI Intelligence
               </span>
             </h1>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-              Leverage artificial intelligence to predict customer needs, automate success workflows, 
-              and drive sustainable business growth through proactive customer success management.
+              Leverage artificial intelligence to predict customer needs,
+              automate success workflows, and drive sustainable business growth
+              through proactive customer success management.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
@@ -399,10 +411,11 @@ const AICustomerSuccessPlatform = () => {
               Powerful AI-Driven Features
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Our platform combines cutting-edge AI with proven customer success methodologies
+              Our platform combines cutting-edge AI with proven customer success
+              methodologies
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
@@ -415,7 +428,9 @@ const AICustomerSuccessPlatform = () => {
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  {feature.title}
+                </h3>
                 <p className="text-zion-slate-light">{feature.description}</p>
               </motion.div>
             ))}
@@ -439,7 +454,7 @@ const AICustomerSuccessPlatform = () => {
               See real results with our AI-powered customer success platform
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
               <motion.div
@@ -473,7 +488,7 @@ const AICustomerSuccessPlatform = () => {
               Tailored solutions for various industries and business models
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
               <motion.div
@@ -483,7 +498,9 @@ const AICustomerSuccessPlatform = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border border-zion-slate-light/20"
               >
-                <h3 className="text-xl font-semibold text-white mb-3">{useCase.industry}</h3>
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  {useCase.industry}
+                </h3>
                 <p className="text-zion-slate-light">{useCase.description}</p>
               </motion.div>
             ))}
@@ -504,10 +521,11 @@ const AICustomerSuccessPlatform = () => {
               Transparent Pricing
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Choose the plan that fits your business needs and scale as you grow
+              Choose the plan that fits your business needs and scale as you
+              grow
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
               <motion.div
@@ -516,14 +534,18 @@ const AICustomerSuccessPlatform = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border ${
-                  index === 1 
-                    ? 'border-blue-500/50 bg-gradient-to-b from-blue-500/10 to-transparent' 
+                  index === 1
+                    ? 'border-blue-500/50 bg-gradient-to-b from-blue-500/10 to-transparent'
                     : 'border-zion-slate-light/20'
                 }`}
               >
                 <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.plan}</h3>
-                  <div className="text-4xl font-bold text-white mb-2">{plan.price}</div>
+                  <h3 className="text-2xl font-bold text-white mb-2">
+                    {plan.plan}
+                  </h3>
+                  <div className="text-4xl font-bold text-white mb-2">
+                    {plan.price}
+                  </div>
                   {index === 1 && (
                     <span className="inline-block bg-blue-500 text-white text-sm px-3 py-1 rounded-full">
                       Most Popular
@@ -532,7 +554,10 @@ const AICustomerSuccessPlatform = () => {
                 </div>
                 <ul className="space-y-3 mb-6">
                   {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center space-x-3">
+                    <li
+                      key={featureIndex}
+                      className="flex items-center space-x-3"
+                    >
                       <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                       <span className="text-zion-slate-light">{feature}</span>
                     </li>
@@ -563,7 +588,7 @@ const AICustomerSuccessPlatform = () => {
               Connect with your existing tools and workflows
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
             {integrations.map((integration, index) => (
               <motion.div
@@ -573,7 +598,9 @@ const AICustomerSuccessPlatform = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-lg p-4 border border-zion-slate-light/20 text-center hover:border-zion-slate-light/40 transition-all duration-300"
               >
-                <span className="text-zion-slate-light font-medium">{integration}</span>
+                <span className="text-zion-slate-light font-medium">
+                  {integration}
+                </span>
               </motion.div>
             ))}
           </div>
@@ -592,7 +619,8 @@ const AICustomerSuccessPlatform = () => {
               Ready to Transform Your Customer Success?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8">
-              Join hundreds of companies using AI to drive customer success and business growth
+              Join hundreds of companies using AI to drive customer success and
+              business growth
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
@@ -628,7 +656,8 @@ const AICustomerSuccessPlatform = () => {
               Get in Touch
             </h2>
             <p className="text-xl text-zion-slate-light mb-8">
-              Ready to discuss how AI can transform your customer success strategy?
+              Ready to discuss how AI can transform your customer success
+              strategy?
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="flex items-center justify-center space-x-3">
@@ -637,11 +666,17 @@ const AICustomerSuccessPlatform = () => {
               </div>
               <div className="flex items-center justify-center space-x-3">
                 <Mail className="w-6 h-6 text-blue-400" />
-                <span className="text-zion-slate-light">kleber@ziontechgroup.com</span>
+                <span className="text-zion-slate-light">
+                  kleber@ziontechgroup.com
+                </span>
               </div>
               <div className="flex items-center justify-center space-x-3">
                 <MapPin className="w-6 h-6 text-blue-400" />
-                <span className="text-zion-slate-light">364 E Main St STE 1008<br />Middletown DE 19709</span>
+                <span className="text-zion-slate-light">
+                  364 E Main St STE 1008
+                  <br />
+                  Middletown DE 19709
+                </span>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

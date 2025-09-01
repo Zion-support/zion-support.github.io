@@ -1,57 +1,56 @@
+import { ErrorBoundary } from 'react - error - boundary';
+import { useDispatch } from 'react - redux';
 import { useEffect } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
-import { useAuth } from '@/hooks/useAuth';
-import { safeStorage } from '@/utils/safeStorage';
-import { LoginContent } from '@/components/auth/login';
-import { ErrorBoundary } from 'react-error-boundary';
-import { useCart } from '@/context/CartContext';
+import { useNavigate, useLocation } from 'react - router - dom';
+import React from 'react';
+import { LoginContent } from '@/components / auth / login';
+import { safeStorage } from '@/utils / safeStorage';
+import { setLoggedIn } from '@/store / authSlice';
+import { toast } from '@/hooks / use - toast';
+import { useAuth } from '@/hooks / useAuth';
+import { useCart } from '@/context / CartContext';
+export default function Login () {
 
-import { toast } from '@/hooks/use-toast';
-import { useDispatch } from 'react-redux';
-import { setLoggedIn } from '@/store/authSlice';
+  const { isAuthenticated, user, isLoading } = useAuth () ;
+  const navigate = useNavigate () ;
+  const location = useLocation () ;
+  const { dispatch } = useCart () ;
+  const reduxDispatch = useDispatch () ;
 
-export default function Login() {
-  const { isAuthenticated, user, isLoading } = useAuth();
-  const navigate = useNavigate();
-  const location = useLocation();
-  const { dispatch } = useCart();
-  const reduxDispatch = useDispatch();
-
-  useEffect(() => {
-    // This effect handles token processing (e.g., from magic link)
-    // It runs when component mounts or location.search changes
+  useEffect ( () => {
+    // This effect handles token processing (e.g., from magic link) // It runs when component mounts or location.search changes
     const queryString = location.search;
-    const params = new URLSearchParams(queryString);
-    const token = params.get('token');
+    const params = new URLSearchParams (queryString) ;
+    const token = params.get ('token') ;
     if (token) {
-      safeStorage.setItem('zion_token', token);
-      // Clear token from URL to prevent re-processing and clean up history
+      safeStorage.setItem ('zion_token', token) ;
+      // Clear token from URL to prevent re - processing and clean up history
       // The actual authentication state will update via useAuth's listeners,
       // which should trigger the other useEffect.
-      navigate(location.pathname, { replace: true });
+      navigate (location.pathname, { replace: true }) ;
     }
-  }, [location.search, location.pathname, navigate]);
+  }, [location.search, location.pathname, navigate]) ;
 
-  useEffect(() => {
+  useEffect ( () => {
     if (!isLoading && isAuthenticated) {
-      reduxDispatch(setLoggedIn(true));
+      reduxDispatch (setLoggedIn (true) ) ;
       const next = location.state?.from?.pathname || '/dashboard';
-      navigate(next, { replace: true });
+      navigate (next, { replace: true }) ;
     }
-  }, [isAuthenticated, isLoading, navigate, reduxDispatch, location.state]);
+  }, [isAuthenticated, isLoading, navigate, reduxDispatch, location.state]) ;
 
   // Render LoginContent if not authenticated and auth is not loading
   if (!isAuthenticated && !isLoading) {
-    return (
-      <ErrorBoundary fallback={<div>Something went wrong. Please try again.</div>}>
+    return (<ErrorBoundary
+        fallback={<div > Something went wrong. Please try again.</div>}
+      >
         <LoginContent />
-      </ErrorBoundary>
-    );
+      </ErrorBoundary>) ;
   }
 
   // Optional: Render a loading indicator while isLoading is true
   if (isLoading) {
-    return <div className="p-4 text-center text-foreground">Loading...</div>; // Or a proper loading spinner component
+    return (<div className="p - 4 text - center text - foreground">Loading...</div>) ; // Or a proper loading spinner component
   }
 
   // If authenticated and isLoading is false, the useEffect above should have navigated.

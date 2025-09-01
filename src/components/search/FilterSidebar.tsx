@@ -36,15 +36,15 @@ export function FilterSidebar({
       {/* Mobile overlay */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+          className="fixed inset-0 bg-black/50 z-40 lg: hidden"
           onClick={onClose}
         />
       )}
 
       {/* Sidebar */}
       <div className={`
-        fixed lg:static inset-y-0 left-0 z-50 w-80 bg-zion-blue-dark/95 backdrop-blur-xl border-r border-zion-blue-light/20 transform transition-transform duration-300 lg:transform-none
-        ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
+        fixed lg: static inset-y-0 left-0 z-50 w-80 bg-zion-blue-dark/95 backdrop-blur-xl border-r border-zion-blue-light/20 transform transition-transform duration-300 lg: transform-none
+        ${isOpen ? 'translate-x-0' : '-translate-x-full lg: translate-x-0'}
       `}>
         <div className="flex items-center justify-between p-4 border-b border-zion-blue-light/20">
           <h3 className="text-lg font-semibold text-white flex items-center gap-2">
@@ -53,7 +53,7 @@ export function FilterSidebar({
           </h3>
           <button
             onClick={onClose}
-            className="lg:hidden p-2 hover:bg-zion-blue-light/20 rounded-lg transition-colors"
+            className="lg: hidden p-2 hover: bg-zion-blue-light/20 rounded-lg transition-colors"
 
             <X className="w-5 h-5 text-zion-slate-light" />
           </button>
@@ -97,7 +97,7 @@ export function FilterSidebar({
 
 
 }
-                        className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-blue-light/30 rounded focus:ring-zion-cyan focus:ring-2"
+                        className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-blue-light/30 rounded focus: ring-zion-cyan focus: ring-2"
                       />
                       <span className="text-sm text-zion-slate-light">
                         {option.label}

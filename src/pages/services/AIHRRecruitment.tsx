@@ -1,3 +1,4 @@
+import React from 'react';
 import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Briefcase, BarChart3 export default function AIHRRecruitment() {
   const features = [
     'AI-powered candidate sourcing and matching',

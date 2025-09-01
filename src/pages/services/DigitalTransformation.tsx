@@ -1,14 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Rocket, 
-  Cpu, 
-  Database, 
-  Cloud, 
-  Shield, 
-  Users, 
-  BarChart3, 
+import {
+  Rocket,
+  Cpu,
+  Database,
+  Cloud,
+  Shield,
+  Users,
+  BarChart3,
   Zap,
   ArrowRight,
   CheckCircle,
@@ -21,7 +21,7 @@ import {
   Workflow,
   FileText,
   Monitor,
-  Smartphone
+  Smartphone,
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
@@ -29,69 +29,98 @@ export default function DigitalTransformation() {
   const services = [
     {
       title: 'Process Automation',
-      description: 'Streamline operations with intelligent automation solutions that reduce manual work and improve efficiency.',
+      description:
+        'Streamline operations with intelligent automation solutions that reduce manual work and improve efficiency.',
       icon: Workflow,
-      features: ['RPA Implementation', 'Workflow Optimization', 'Business Process Mapping', 'Performance Monitoring']
+      features: [
+        'RPA Implementation',
+        'Workflow Optimization',
+        'Business Process Mapping',
+        'Performance Monitoring',
+      ],
     },
     {
       title: 'Cloud Migration',
-      description: 'Seamlessly migrate your infrastructure to the cloud with minimal disruption and maximum benefits.',
+      description:
+        'Seamlessly migrate your infrastructure to the cloud with minimal disruption and maximum benefits.',
       icon: Cloud,
-      features: ['Migration Strategy', 'Data Transfer', 'Application Modernization', 'Performance Optimization']
+      features: [
+        'Migration Strategy',
+        'Data Transfer',
+        'Application Modernization',
+        'Performance Optimization',
+      ],
     },
     {
       title: 'Data Strategy',
-      description: 'Develop a comprehensive data strategy that turns information into actionable business intelligence.',
+      description:
+        'Develop a comprehensive data strategy that turns information into actionable business intelligence.',
       icon: Database,
-      features: ['Data Architecture', 'Analytics Implementation', 'Data Governance', 'Business Intelligence']
+      features: [
+        'Data Architecture',
+        'Analytics Implementation',
+        'Data Governance',
+        'Business Intelligence',
+      ],
     },
     {
       icon: Users,
       title: 'Change Management',
-      description: 'Guide organizations through digital transformation journey'
+      description: 'Guide organizations through digital transformation journey',
     },
     {
       icon: Clock,
       title: 'Agile Implementation',
-      description: 'Rapid deployment with iterative improvement cycles'
+      description: 'Rapid deployment with iterative improvement cycles',
     },
     {
       icon: Search,
       title: 'Performance Monitoring',
-      description: 'Track transformation progress and measure ROI'
-    }
+      description: 'Track transformation progress and measure ROI',
+    },
   ];
 
   const benefits = [
     {
       title: 'Increased Efficiency',
-      description: 'Automate repetitive tasks and optimize workflows to boost productivity by up to 40%.',
-      icon: TrendingUp
+      description:
+        'Automate repetitive tasks and optimize workflows to boost productivity by up to 40%.',
+      icon: TrendingUp,
     },
     {
       title: 'Cost Reduction',
-      description: 'Reduce operational costs through automation and cloud optimization.',
-      icon: BarChart3
+      description:
+        'Reduce operational costs through automation and cloud optimization.',
+      icon: BarChart3,
     },
     {
       title: 'Better Customer Experience',
-      description: 'Deliver faster, more personalized services through digital channels.',
-      icon: Star
+      description:
+        'Deliver faster, more personalized services through digital channels.',
+      icon: Star,
     },
     {
       title: 'Competitive Advantage',
-      description: 'Stay ahead of the competition with cutting-edge digital capabilities.',
-      icon: Target
-    }
+      description:
+        'Stay ahead of the competition with cutting-edge digital capabilities.',
+      icon: Target,
+    },
   ];
 
   const industries = [
-    'Healthcare', 'Finance', 'Manufacturing', 'Retail', 'Education', 'Government', 'Technology', 'Energy'
+    'Healthcare',
+    'Finance',
+    'Manufacturing',
+    'Retail',
+    'Education',
+    'Government',
+    'Technology',
+    'Energy',
   ];
   const contactInfo = {
-    phone: "+1 302 464 0950",
-    email: "kleber@ziontechgroup.com",
-    address: "364 E Main St STE 1008, Middletown DE 19709"
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008, Middletown DE 19709',
   };
   const industries = [
     'Healthcare',
@@ -101,7 +130,7 @@ export default function DigitalTransformation() {
     'Education',
     'Government',
     'Technology',
-    'Transportation'
+    'Transportation',
   ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
@@ -118,17 +147,20 @@ export default function DigitalTransformation() {
               <Zap className="w-4 h-4 mr-2" />
               Digital Transformation Solutions
             </div>
-            
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Digital
-              <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent"> Transformation</span>
+              <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
+                {' '}
+                Transformation
+              </span>
             </h1>
-            
+
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your business for the digital age with our comprehensive 
+              Transform your business for the digital age with our comprehensive
               digital transformation solutions that drive innovation and growth.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-200 flex items-center justify-center">
                 <Play className="w-5 h-5 mr-2" />
@@ -155,7 +187,7 @@ export default function DigitalTransformation() {
               Our Transformation Services
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our platform provides comprehensive tools and strategies for 
+              Our platform provides comprehensive tools and strategies for
               successful digital transformation initiatives.
             </p>
           </motion.div>
@@ -172,7 +204,9 @@ export default function DigitalTransformation() {
                 <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {feature.title}
+                </h3>
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
@@ -193,8 +227,8 @@ export default function DigitalTransformation() {
               Core Transformation Services
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              From strategy to implementation, we provide 
-              end-to-end digital transformation solutions.
+              From strategy to implementation, we provide end-to-end digital
+              transformation solutions.
             </p>
           </motion.div>
 
@@ -212,7 +246,9 @@ export default function DigitalTransformation() {
                     <service.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
+                    <h3 className="text-xl font-semibold text-white mb-2">
+                      {service.title}
+                    </h3>
                     <p className="text-gray-300">{service.description}</p>
                   </div>
                 </div>
@@ -225,7 +261,7 @@ export default function DigitalTransformation() {
       {/* Benefits Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -235,7 +271,8 @@ export default function DigitalTransformation() {
               Industries We Serve
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Experience measurable improvements in efficiency, innovation, and business performance.
+              Experience measurable improvements in efficiency, innovation, and
+              business performance.
             </p>
           </motion.div>
 
@@ -284,8 +321,8 @@ export default function DigitalTransformation() {
               Our Transformation Process
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our digital transformation solutions adapt to various industries, providing 
-              tailored strategies for different business challenges.
+              Our digital transformation solutions adapt to various industries,
+              providing tailored strategies for different business challenges.
             </p>
           </motion.div>
 
@@ -301,7 +338,9 @@ export default function DigitalTransformation() {
                 <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Target className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{useCase.industry}</h3>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {useCase.industry}
+                </h3>
                 <p className="text-gray-300 text-sm">{useCase.description}</p>
               </motion.div>
             ))}
@@ -321,8 +360,9 @@ export default function DigitalTransformation() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join organizations worldwide that use our digital transformation solutions to 
-              innovate, grow, and stay competitive in the digital economy.
+              Join organizations worldwide that use our digital transformation
+              solutions to innovate, grow, and stay competitive in the digital
+              economy.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-200 flex items-center justify-center">
@@ -338,6 +378,6 @@ export default function DigitalTransformation() {
       </section>
     </div>
   );
-};
+}
 
 export default DigitalTransformation;

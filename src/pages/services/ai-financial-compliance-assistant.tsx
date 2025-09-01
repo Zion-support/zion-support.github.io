@@ -1,12 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-import { 
-  Shield, 
-  CheckCircle, 
-  AlertTriangle, 
-  TrendingUp, 
-  BarChart3, 
+import {
+  Shield,
+  CheckCircle,
+  AlertTriangle,
+  TrendingUp,
+  BarChart3,
   ArrowRight,
   Brain,
   FileText,
@@ -40,171 +40,181 @@ import {
   Gavel,
   Building2,
   Globe,
-  Network
+  Network,
 } from 'lucide-react';
 
 const AIFinancialComplianceAssistant = () => {
   const features = [
     {
       icon: Brain,
-      title: "AI-Powered Compliance Monitoring",
-      description: "Advanced machine learning algorithms continuously monitor financial transactions for compliance violations"
+      title: 'AI-Powered Compliance Monitoring',
+      description:
+        'Advanced machine learning algorithms continuously monitor financial transactions for compliance violations',
     },
     {
       icon: Shield,
-      title: "Real-time Risk Detection",
-      description: "Instant identification of potential compliance risks, fraud, and regulatory violations"
+      title: 'Real-time Risk Detection',
+      description:
+        'Instant identification of potential compliance risks, fraud, and regulatory violations',
     },
     {
       icon: FileText,
-      title: "Automated Reporting",
-      description: "Generate comprehensive compliance reports automatically for regulators and internal audits"
+      title: 'Automated Reporting',
+      description:
+        'Generate comprehensive compliance reports automatically for regulators and internal audits',
     },
     {
       icon: AlertTriangle,
-      title: "Proactive Alerts",
-      description: "Early warning system for compliance issues before they become violations"
+      title: 'Proactive Alerts',
+      description:
+        'Early warning system for compliance issues before they become violations',
     },
     {
       icon: BarChart3,
-      title: "Compliance Analytics",
-      description: "Deep insights into compliance patterns, trends, and risk areas"
+      title: 'Compliance Analytics',
+      description:
+        'Deep insights into compliance patterns, trends, and risk areas',
     },
     {
       icon: CheckCircle,
-      title: "Regulatory Updates",
-      description: "Automatic updates on regulatory changes and their impact on your business"
-    }
+      title: 'Regulatory Updates',
+      description:
+        'Automatic updates on regulatory changes and their impact on your business',
+    },
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$199",
-      period: "/month",
-      description: "Perfect for small financial institutions and startups",
+      name: 'Starter',
+      price: '$199',
+      period: '/month',
+      description: 'Perfect for small financial institutions and startups',
       features: [
-        "Up to 10,000 transactions/month",
-        "Basic compliance monitoring",
-        "Standard reporting",
-        "Email alerts",
-        "Email support"
+        'Up to 10,000 transactions/month',
+        'Basic compliance monitoring',
+        'Standard reporting',
+        'Email alerts',
+        'Email support',
       ],
-      popular: false
+      popular: false,
     },
     {
-      name: "Professional",
-      price: "$599",
-      period: "/month",
-      description: "Ideal for growing financial services companies",
+      name: 'Professional',
+      price: '$599',
+      period: '/month',
+      description: 'Ideal for growing financial services companies',
       features: [
-        "Up to 100,000 transactions/month",
-        "Advanced AI compliance detection",
-        "Real-time monitoring",
-        "Custom reporting",
-        "Priority support",
-        "API access",
-        "Advanced analytics",
-        "Multi-user access"
+        'Up to 100,000 transactions/month',
+        'Advanced AI compliance detection',
+        'Real-time monitoring',
+        'Custom reporting',
+        'Priority support',
+        'API access',
+        'Advanced analytics',
+        'Multi-user access',
       ],
-      popular: true
+      popular: true,
     },
     {
-      name: "Enterprise",
-      price: "$1,999",
-      period: "/month",
-      description: "For large financial institutions and multinational corporations",
+      name: 'Enterprise',
+      price: '$1,999',
+      period: '/month',
+      description:
+        'For large financial institutions and multinational corporations',
       features: [
-        "Unlimited transactions",
-        "Custom AI models",
-        "White-label solution",
-        "Dedicated support",
-        "Advanced analytics",
-        "Custom integrations",
-        "On-premise deployment",
-        "SLA guarantees",
-        "Custom training"
+        'Unlimited transactions',
+        'Custom AI models',
+        'White-label solution',
+        'Dedicated support',
+        'Advanced analytics',
+        'Custom integrations',
+        'On-premise deployment',
+        'SLA guarantees',
+        'Custom training',
       ],
-      popular: false
-    }
+      popular: false,
+    },
   ];
 
   const complianceAreas = [
     {
-      title: "Anti-Money Laundering (AML)",
-      description: "Monitor transactions for suspicious patterns and ensure AML compliance",
+      title: 'Anti-Money Laundering (AML)',
+      description:
+        'Monitor transactions for suspicious patterns and ensure AML compliance',
       icon: Shield,
-      color: "from-red-500 to-orange-500"
+      color: 'from-red-500 to-orange-500',
     },
     {
-      title: "Know Your Customer (KYC)",
-      description: "Automated customer verification and identity validation",
+      title: 'Know Your Customer (KYC)',
+      description: 'Automated customer verification and identity validation',
       icon: Users,
-      color: "from-blue-500 to-purple-500"
+      color: 'from-blue-500 to-purple-500',
     },
     {
-      title: "Fraud Detection",
-      description: "AI-powered fraud detection and prevention systems",
+      title: 'Fraud Detection',
+      description: 'AI-powered fraud detection and prevention systems',
       icon: AlertTriangle,
-      color: "from-yellow-500 to-orange-500"
+      color: 'from-yellow-500 to-orange-500',
     },
     {
-      title: "Regulatory Reporting",
-      description: "Automated generation of regulatory reports and filings",
+      title: 'Regulatory Reporting',
+      description: 'Automated generation of regulatory reports and filings',
       icon: FileText,
-      color: "from-green-500 to-emerald-500"
-    }
+      color: 'from-green-500 to-emerald-500',
+    },
   ];
 
   const useCases = [
     {
-      title: "Banks & Credit Unions",
-      description: "Ensure regulatory compliance across all banking operations",
-      icon: Building2
+      title: 'Banks & Credit Unions',
+      description: 'Ensure regulatory compliance across all banking operations',
+      icon: Building2,
     },
     {
-      title: "Investment Firms",
-      description: "Monitor trading activities and ensure SEC compliance",
-      icon: TrendingUp
+      title: 'Investment Firms',
+      description: 'Monitor trading activities and ensure SEC compliance',
+      icon: TrendingUp,
     },
     {
-      title: "Insurance Companies",
-      description: "Compliance monitoring for insurance operations and claims",
-      icon: Shield
+      title: 'Insurance Companies',
+      description: 'Compliance monitoring for insurance operations and claims',
+      icon: Shield,
     },
     {
-      title: "Fintech Startups",
-      description: "Build compliance into your financial technology platform",
-      icon: Zap
-    }
+      title: 'Fintech Startups',
+      description: 'Build compliance into your financial technology platform',
+      icon: Zap,
+    },
   ];
 
   const benefits = [
     {
-      title: "Reduce Compliance Costs",
-      description: "Automate manual compliance processes to save time and money",
-      icon: DollarSign
+      title: 'Reduce Compliance Costs',
+      description:
+        'Automate manual compliance processes to save time and money',
+      icon: DollarSign,
     },
     {
-      title: "Prevent Violations",
-      description: "Proactive detection prevents costly regulatory violations",
-      icon: AlertCircle
+      title: 'Prevent Violations',
+      description: 'Proactive detection prevents costly regulatory violations',
+      icon: AlertCircle,
     },
     {
-      title: "Improve Efficiency",
-      description: "Streamline compliance workflows and reduce manual work",
-      icon: TrendingUp
+      title: 'Improve Efficiency',
+      description: 'Streamline compliance workflows and reduce manual work',
+      icon: TrendingUp,
     },
     {
-      title: "Enhance Security",
-      description: "Advanced security features protect sensitive financial data",
-      icon: Lock
-    }
+      title: 'Enhance Security',
+      description:
+        'Advanced security features protect sensitive financial data',
+      icon: Lock,
+    },
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="AI Financial Compliance Assistant - Zion Tech Group"
         description="Ensure financial compliance with AI-powered monitoring, automated reporting, and real-time risk detection. Stay compliant with regulations while reducing costs."
         keywords="AI financial compliance, AML compliance, KYC automation, fraud detection, regulatory reporting, financial risk management"
@@ -215,7 +225,7 @@ const AIFinancialComplianceAssistant = () => {
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
+          <motion.div
             className="text-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -225,29 +235,30 @@ const AIFinancialComplianceAssistant = () => {
               <Shield className="w-4 h-4 mr-2" />
               AI-Powered Financial Compliance
             </div>
-            
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI Financial
               <span className="block bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">
                 Compliance Assistant
               </span>
             </h1>
-            
+
             <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-              Stay compliant with financial regulations using AI-powered monitoring and automated reporting. 
-              Reduce compliance costs while ensuring regulatory adherence across all financial operations.
+              Stay compliant with financial regulations using AI-powered
+              monitoring and automated reporting. Reduce compliance costs while
+              ensuring regulatory adherence across all financial operations.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="#pricing" 
+              <a
+                href="#pricing"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-blue-500 text-white font-semibold rounded-xl hover:from-emerald-600 hover:to-blue-600 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 View Pricing
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
-              <a 
-                href="mailto:kleber@ziontechgroup.com" 
+              <a
+                href="mailto:kleber@ziontechgroup.com"
                 className="inline-flex items-center px-8 py-4 border border-slate-600 text-white font-semibold rounded-xl hover:border-slate-500 transition-all duration-200"
               >
                 Schedule Demo
@@ -260,7 +271,7 @@ const AIFinancialComplianceAssistant = () => {
       {/* Features Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -274,7 +285,7 @@ const AIFinancialComplianceAssistant = () => {
               Leverage cutting-edge AI technology to ensure financial compliance
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
@@ -288,7 +299,9 @@ const AIFinancialComplianceAssistant = () => {
                 <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-blue-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  {feature.title}
+                </h3>
                 <p className="text-slate-300">{feature.description}</p>
               </motion.div>
             ))}
@@ -299,7 +312,7 @@ const AIFinancialComplianceAssistant = () => {
       {/* Compliance Areas Section */}
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -310,10 +323,11 @@ const AIFinancialComplianceAssistant = () => {
               Comprehensive Compliance Coverage
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Monitor all critical areas of financial compliance with our AI platform
+              Monitor all critical areas of financial compliance with our AI
+              platform
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {complianceAreas.map((area, index) => (
               <motion.div
@@ -324,10 +338,14 @@ const AIFinancialComplianceAssistant = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <div className={`w-16 h-16 bg-gradient-to-br ${area.color} rounded-xl flex items-center justify-center mb-6`}>
+                <div
+                  className={`w-16 h-16 bg-gradient-to-br ${area.color} rounded-xl flex items-center justify-center mb-6`}
+                >
                   <area.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-semibold text-white mb-4">{area.title}</h3>
+                <h3 className="text-2xl font-semibold text-white mb-4">
+                  {area.title}
+                </h3>
                 <p className="text-slate-300 text-lg">{area.description}</p>
               </motion.div>
             ))}
@@ -338,7 +356,7 @@ const AIFinancialComplianceAssistant = () => {
       {/* Benefits Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -352,7 +370,7 @@ const AIFinancialComplianceAssistant = () => {
               Transform your compliance operations with AI-powered automation
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div
@@ -366,7 +384,9 @@ const AIFinancialComplianceAssistant = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-blue-500 rounded-xl flex items-center justify-center mb-4 mx-auto">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  {benefit.title}
+                </h3>
                 <p className="text-slate-300 text-sm">{benefit.description}</p>
               </motion.div>
             ))}
@@ -377,7 +397,7 @@ const AIFinancialComplianceAssistant = () => {
       {/* Use Cases Section */}
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -388,10 +408,11 @@ const AIFinancialComplianceAssistant = () => {
               Industry Applications
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Our platform serves diverse financial institutions and fintech companies
+              Our platform serves diverse financial institutions and fintech
+              companies
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (
               <motion.div
@@ -405,7 +426,9 @@ const AIFinancialComplianceAssistant = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-blue-500 rounded-xl flex items-center justify-center mb-4 mx-auto">
                   <useCase.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  {useCase.title}
+                </h3>
                 <p className="text-slate-300 text-sm">{useCase.description}</p>
               </motion.div>
             ))}
@@ -416,7 +439,7 @@ const AIFinancialComplianceAssistant = () => {
       {/* Pricing Section */}
       <section id="pricing" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -427,17 +450,18 @@ const AIFinancialComplianceAssistant = () => {
               Transparent Pricing
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Choose the plan that fits your compliance needs and transaction volume
+              Choose the plan that fits your compliance needs and transaction
+              volume
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <motion.div
                 key={index}
                 className={`relative rounded-xl p-8 ${
-                  plan.popular 
-                    ? 'bg-gradient-to-br from-emerald-600 to-blue-600 border-2 border-emerald-400' 
+                  plan.popular
+                    ? 'bg-gradient-to-br from-emerald-600 to-blue-600 border-2 border-emerald-400'
                     : 'bg-slate-800/50 border border-slate-700/50'
                 }`}
                 initial={{ opacity: 0, y: 20 }}
@@ -452,16 +476,20 @@ const AIFinancialComplianceAssistant = () => {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <h3 className="text-2xl font-bold text-white mb-2">
+                    {plan.name}
+                  </h3>
                   <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
+                    <span className="text-4xl font-bold text-white">
+                      {plan.price}
+                    </span>
                     <span className="text-slate-300 ml-1">{plan.period}</span>
                   </div>
                   <p className="text-slate-300 mt-2">{plan.description}</p>
                 </div>
-                
+
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
@@ -470,8 +498,8 @@ const AIFinancialComplianceAssistant = () => {
                     </li>
                   ))}
                 </ul>
-                
-                <a 
+
+                <a
                   href="mailto:kleber@ziontechgroup.com?subject=AI Financial Compliance Assistant - {plan.name} Plan"
                   className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
                     plan.popular
@@ -490,7 +518,7 @@ const AIFinancialComplianceAssistant = () => {
       {/* Contact Section */}
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -501,12 +529,13 @@ const AIFinancialComplianceAssistant = () => {
               Ready to Transform Your Compliance?
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Contact us today to learn how AI compliance can protect your business
+              Contact us today to learn how AI compliance can protect your
+              business
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <motion.div 
+            <motion.div
               className="text-center"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -519,8 +548,8 @@ const AIFinancialComplianceAssistant = () => {
               <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
               <p className="text-slate-300">+1 302 464 0950</p>
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               className="text-center"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -530,11 +559,13 @@ const AIFinancialComplianceAssistant = () => {
               <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <Mail className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
+              <h3 className="text-xl font-semibold text-white mb-2">
+                Email Us
+              </h3>
               <p className="text-slate-300">kleber@ziontechgroup.com</p>
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               className="text-center"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -544,19 +575,25 @@ const AIFinancialComplianceAssistant = () => {
               <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <MapPin className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
-              <p className="text-slate-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
+              <h3 className="text-xl font-semibold text-white mb-2">
+                Visit Us
+              </h3>
+              <p className="text-slate-300">
+                364 E Main St STE 1008
+                <br />
+                Middletown DE 19709
+              </p>
             </motion.div>
           </div>
-          
-          <motion.div 
+
+          <motion.div
             className="text-center mt-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <a 
+            <a
               href="mailto:kleber@ziontechgroup.com?subject=AI Financial Compliance Assistant Demo Request"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-blue-500 text-white font-semibold rounded-xl hover:from-emerald-600 hover:to-blue-600 transition-all duration-200 shadow-lg hover:shadow-xl"
             >

@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Cpu, 
-  Network, 
-  Zap, 
-  Globe, 
+import {
+  Cpu,
+  Network,
+  Zap,
+  Globe,
   Shield,
   CheckCircle,
   ArrowRight,
@@ -21,7 +21,7 @@ import {
   Smartphone,
   Server,
   Router,
-  Satellite
+  Satellite,
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
@@ -29,67 +29,81 @@ export default function IoTEdgeComputing() {
   const features = [
     {
       icon: Cpu,
-      title: "Edge Processing",
-      description: "Real-time data processing at the edge for instant decision making"
+      title: 'Edge Processing',
+      description:
+        'Real-time data processing at the edge for instant decision making',
     },
     {
       icon: Network,
-      title: "IoT Connectivity",
-      description: "Seamless integration of IoT devices and sensors across networks"
+      title: 'IoT Connectivity',
+      description:
+        'Seamless integration of IoT devices and sensors across networks',
     },
     {
       icon: Zap,
-      title: "Low Latency",
-      description: "Ultra-fast response times for critical applications and real-time analytics"
+      title: 'Low Latency',
+      description:
+        'Ultra-fast response times for critical applications and real-time analytics',
     },
     {
       icon: Globe,
-      title: "Global Reach",
-      description: "Distributed edge computing infrastructure worldwide"
-    }
+      title: 'Global Reach',
+      description: 'Distributed edge computing infrastructure worldwide',
+    },
   ];
 
   const services = [
     {
-      title: "Edge Computing Infrastructure",
-      description: "Deploy and manage edge computing nodes for optimal performance and reliability",
+      title: 'Edge Computing Infrastructure',
+      description:
+        'Deploy and manage edge computing nodes for optimal performance and reliability',
       icon: Server,
-      features: ["Edge node deployment", "Load balancing", "Failover systems"]
+      features: ['Edge node deployment', 'Load balancing', 'Failover systems'],
     },
     {
-      title: "IoT Device Management",
-      description: "Centralized management and monitoring of IoT devices and sensors",
+      title: 'IoT Device Management',
+      description:
+        'Centralized management and monitoring of IoT devices and sensors',
       icon: Smartphone,
-      features: ["Device provisioning", "Remote monitoring", "Firmware updates"]
+      features: [
+        'Device provisioning',
+        'Remote monitoring',
+        'Firmware updates',
+      ],
     },
     {
-      title: "Real-time Analytics",
-      description: "Process and analyze data streams in real-time at the edge",
+      title: 'Real-time Analytics',
+      description: 'Process and analyze data streams in real-time at the edge',
       icon: BarChart3,
-      features: ["Stream processing", "Real-time dashboards", "Predictive analytics"]
+      features: [
+        'Stream processing',
+        'Real-time dashboards',
+        'Predictive analytics',
+      ],
     },
     {
-      title: "Edge Security",
-      description: "Comprehensive security for edge computing and IoT deployments",
+      title: 'Edge Security',
+      description:
+        'Comprehensive security for edge computing and IoT deployments',
       icon: Shield,
-      features: ["Edge firewall", "Device authentication", "Data encryption"]
-    }
+      features: ['Edge firewall', 'Device authentication', 'Data encryption'],
+    },
   ];
 
   const technologies = [
-    "Edge Computing Platforms",
-    "IoT Protocols (MQTT, CoAP, HTTP)",
-    "5G Network Integration",
-    "Edge AI & Machine Learning",
-    "Container Orchestration",
-    "Edge Database Systems",
-    "Real-time Streaming",
-    "Edge Security Frameworks"
+    'Edge Computing Platforms',
+    'IoT Protocols (MQTT, CoAP, HTTP)',
+    '5G Network Integration',
+    'Edge AI & Machine Learning',
+    'Container Orchestration',
+    'Edge Database Systems',
+    'Real-time Streaming',
+    'Edge Security Frameworks',
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
-      <SEO 
+      <SEO
         title="IoT Edge Computing Services - Zion Tech Group"
         description="Revolutionary IoT and edge computing solutions for real-time processing, low-latency applications, and connected ecosystems."
       />
@@ -101,7 +115,7 @@ export default function IoTEdgeComputing() {
           <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
         </div>
-        
+
         <div className="relative z-10 container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -113,19 +127,20 @@ export default function IoTEdgeComputing() {
               <Cpu className="w-4 h-4 mr-2" />
               Edge Computing
             </div>
-            
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               IoT Edge Computing
               <span className="block bg-gradient-to-r from-green-400 via-blue-500 to-cyan-600 bg-clip-text text-transparent">
                 Solutions
               </span>
             </h1>
-            
+
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with IoT and edge computing that brings processing power closer to your data sources. 
-              Enable real-time insights, reduce latency, and create connected ecosystems.
+              Transform your business with IoT and edge computing that brings
+              processing power closer to your data sources. Enable real-time
+              insights, reduce latency, and create connected ecosystems.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
@@ -158,11 +173,12 @@ export default function IoTEdgeComputing() {
               Edge Computing Features
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              Our IoT edge computing platform combines cutting-edge technology with practical business applications 
-              to deliver real-time processing and insights.
+              Our IoT edge computing platform combines cutting-edge technology
+              with practical business applications to deliver real-time
+              processing and insights.
             </p>
           </motion.div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <motion.div
@@ -175,7 +191,9 @@ export default function IoTEdgeComputing() {
                 <div className="w-12 h-12 bg-gradient-to-br from-green-400/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-green-400/40 group-hover:to-blue-500/40 transition-all duration-200">
                   <feature.icon className="w-6 h-6 text-green-400" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {feature.title}
+                </h3>
                 <p className="text-slate-300">{feature.description}</p>
               </motion.div>
             ))}
@@ -196,11 +214,11 @@ export default function IoTEdgeComputing() {
               Comprehensive IoT Services
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              From edge infrastructure to device management, our IoT services cover every aspect 
-              of your connected ecosystem needs.
+              From edge infrastructure to device management, our IoT services
+              cover every aspect of your connected ecosystem needs.
             </p>
           </motion.div>
-          
+
           <div className="grid md:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <motion.div
@@ -213,11 +231,18 @@ export default function IoTEdgeComputing() {
                 <div className="w-16 h-16 bg-gradient-to-br from-green-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mb-6">
                   <service.icon className="w-8 h-8 text-green-400" />
                 </div>
-                <h3 className="text-2xl font-semibold text-white mb-4">{service.title}</h3>
-                <p className="text-slate-300 text-lg mb-6">{service.description}</p>
+                <h3 className="text-2xl font-semibold text-white mb-4">
+                  {service.title}
+                </h3>
+                <p className="text-slate-300 text-lg mb-6">
+                  {service.description}
+                </p>
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-slate-300">
+                    <li
+                      key={featureIndex}
+                      className="flex items-center text-slate-300"
+                    >
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {feature}
                     </li>
@@ -242,10 +267,11 @@ export default function IoTEdgeComputing() {
               Advanced IoT Technologies
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              Our platform leverages cutting-edge technologies to provide the most advanced IoT and edge computing solutions available.
+              Our platform leverages cutting-edge technologies to provide the
+              most advanced IoT and edge computing solutions available.
             </p>
           </motion.div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {technologies.map((tech, index) => (
               <motion.div
@@ -275,9 +301,10 @@ export default function IoTEdgeComputing() {
               Ready to Transform with IoT Edge Computing?
             </h2>
             <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-              Join the IoT revolution and unlock real-time insights and connected ecosystems for your business.
+              Join the IoT revolution and unlock real-time insights and
+              connected ecosystems for your business.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"

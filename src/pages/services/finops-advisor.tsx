@@ -1,6 +1,5 @@
 import React from 'react.ts';
 import { Helmet  } from 'react-helmet-async.ts';
-import { DollarSign, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart  } from 'lucide-react';
 import { Link  } from 'react-router-dom.ts';
 
 export default function FinOpsAdvisor(...args: []):  {

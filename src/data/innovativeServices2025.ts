@@ -3,7 +3,20 @@ export interface InnovativeService {
   name: string;
   tagline: string;
   description: string;
-  category: 'AI & Machine Learning' | 'Micro SaaS' | 'IT Services' | 'Cybersecurity' | 'Cloud & DevOps' | 'Data & Analytics' | 'Emerging Tech' | 'Digital Transformation' | 'Industry Solutions' | 'Quantum Computing' | 'Blockchain & Web3' | 'Space Technology' | 'Green Technology';
+  category:
+    | 'AI & Machine Learning'
+    | 'Micro SaaS'
+    | 'IT Services'
+    | 'Cybersecurity'
+    | 'Cloud & DevOps'
+    | 'Data & Analytics'
+    | 'Emerging Tech'
+    | 'Digital Transformation'
+    | 'Industry Solutions'
+    | 'Quantum Computing'
+    | 'Blockchain & Web3'
+    | 'Space Technology'
+    | 'Green Technology';
   price: string;
   billing: 'month' | 'project' | 'hour' | 'one-time';
   features: string[];
@@ -36,8 +49,10 @@ export const innovativeServices2025: InnovativeService[] = [
   {
     id: 'ai-autonomous-research-assistant',
     name: 'AI Autonomous Research Assistant',
-    tagline: 'Revolutionary AI that conducts independent research and generates breakthrough insights',
-    description: 'Advanced AI system that autonomously conducts research, analyzes data, generates hypotheses, and produces comprehensive research reports without human intervention.',
+    tagline:
+      'Revolutionary AI that conducts independent research and generates breakthrough insights',
+    description:
+      'Advanced AI system that autonomously conducts research, analyzes data, generates hypotheses, and produces comprehensive research reports without human intervention.',
     category: 'AI & Machine Learning',
     price: '$3,499',
     billing: 'month',
@@ -49,7 +64,7 @@ export const innovativeServices2025: InnovativeService[] = [
       'Real-time research progress tracking',
       'Intelligent citation management',
       'Cross-disciplinary insights generation',
-      'Automated report generation'
+      'Automated report generation',
     ],
     benefits: [
       'Accelerate research by 10x',
@@ -57,37 +72,58 @@ export const innovativeServices2025: InnovativeService[] = [
       '24/7 autonomous operation',
       'Unbiased data analysis',
       'Cross-domain knowledge synthesis',
-      'Real-time research updates'
+      'Real-time research updates',
     ],
-    targetAudience: ['Research Institutions', 'Universities', 'Pharmaceutical Companies', 'Tech Companies', 'Consulting Firms'],
-    marketPosition: 'First truly autonomous research AI with proven breakthrough capabilities',
+    targetAudience: [
+      'Research Institutions',
+      'Universities',
+      'Pharmaceutical Companies',
+      'Tech Companies',
+      'Consulting Firms',
+    ],
+    marketPosition:
+      'First truly autonomous research AI with proven breakthrough capabilities',
     competitors: ['Traditional research tools', 'Basic AI assistants'],
     marketSize: '$28B research and development market',
     growthRate: '30% CAGR',
     implementationTime: '6-8 weeks',
     trialDays: 45,
     roi: '300% within 6 months',
-    useCases: ['Drug discovery', 'Market research', 'Scientific research', 'Policy analysis', 'Technology forecasting'],
-    technicalSpecs: ['GPT-4 integration', 'Advanced NLP', 'Machine learning algorithms', 'Data visualization', 'API integration'],
+    useCases: [
+      'Drug discovery',
+      'Market research',
+      'Scientific research',
+      'Policy analysis',
+      'Technology forecasting',
+    ],
+    technicalSpecs: [
+      'GPT-4 integration',
+      'Advanced NLP',
+      'Machine learning algorithms',
+      'Data visualization',
+      'API integration',
+    ],
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     },
     link: 'https://ziontechgroup.com/services/ai-autonomous-research-assistant',
     icon: '🔬',
     color: 'from-blue-600 to-indigo-700',
     popular: true,
     featured: true,
-    new: true
+    new: true,
   },
 
   // Quantum Computing Services
   {
     id: 'quantum-ai-hybrid-platform',
     name: 'Quantum AI Hybrid Platform',
-    tagline: 'Breakthrough platform combining quantum computing with AI for unprecedented computational power',
-    description: 'Revolutionary platform that integrates quantum computing with artificial intelligence to solve previously unsolvable problems in optimization, cryptography, and scientific research.',
+    tagline:
+      'Breakthrough platform combining quantum computing with AI for unprecedented computational power',
+    description:
+      'Revolutionary platform that integrates quantum computing with artificial intelligence to solve previously unsolvable problems in optimization, cryptography, and scientific research.',
     category: 'Quantum Computing',
     price: '$5,999',
     billing: 'month',
@@ -99,43 +135,68 @@ export const innovativeServices2025: InnovativeService[] = [
       'Financial modeling enhancement',
       'Drug discovery optimization',
       'Climate modeling capabilities',
-      'Quantum machine learning'
+      'Quantum machine learning',
     ],
     benefits: [
       '1000x faster computation for complex problems',
       'Unbreakable encryption standards',
       'Revolutionary scientific breakthroughs',
       'Competitive advantage in research',
-      'Future-proof technology platform'
+      'Future-proof technology platform',
     ],
-    targetAudience: ['Research Institutions', 'Financial Services', 'Pharmaceutical Companies', 'Government Agencies', 'Tech Giants'],
-    marketPosition: 'Leading quantum-AI integration platform with proven quantum advantage',
-    competitors: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum'],
+    targetAudience: [
+      'Research Institutions',
+      'Financial Services',
+      'Pharmaceutical Companies',
+      'Government Agencies',
+      'Tech Giants',
+    ],
+    marketPosition:
+      'Leading quantum-AI integration platform with proven quantum advantage',
+    competitors: [
+      'IBM Quantum',
+      'Google Quantum AI',
+      'Microsoft Azure Quantum',
+    ],
     marketSize: '$65B quantum computing market',
     growthRate: '35% CAGR',
     implementationTime: '8-12 weeks',
     trialDays: 30,
     roi: '500% within 12 months',
-    useCases: ['Financial modeling', 'Drug discovery', 'Climate research', 'Cryptography', 'Optimization problems'],
-    technicalSpecs: ['Quantum processors', 'AI algorithms', 'Hybrid computing', 'Quantum error correction', 'Cloud integration'],
+    useCases: [
+      'Financial modeling',
+      'Drug discovery',
+      'Climate research',
+      'Cryptography',
+      'Optimization problems',
+    ],
+    technicalSpecs: [
+      'Quantum processors',
+      'AI algorithms',
+      'Hybrid computing',
+      'Quantum error correction',
+      'Cloud integration',
+    ],
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     },
     link: 'https://ziontechgroup.com/services/quantum-ai-hybrid-platform',
     icon: '⚛️',
     color: 'from-purple-600 to-violet-700',
     popular: true,
-    featured: true
+    featured: true,
   },
 
   // Blockchain & Web3 Services
   {
     id: 'blockchain-enterprise-solutions',
     name: 'Blockchain Enterprise Solutions',
-    tagline: 'Enterprise-grade blockchain solutions for secure, transparent, and efficient business operations',
-    description: 'Comprehensive blockchain platform designed for enterprise use, offering smart contracts, decentralized applications, and secure digital asset management.',
+    tagline:
+      'Enterprise-grade blockchain solutions for secure, transparent, and efficient business operations',
+    description:
+      'Comprehensive blockchain platform designed for enterprise use, offering smart contracts, decentralized applications, and secure digital asset management.',
     category: 'Blockchain & Web3',
     price: '$2,999',
     billing: 'month',
@@ -147,42 +208,67 @@ export const innovativeServices2025: InnovativeService[] = [
       'Identity verification systems',
       'Cross-chain interoperability',
       'Enterprise security protocols',
-      'Scalable blockchain infrastructure'
+      'Scalable blockchain infrastructure',
     ],
     benefits: [
       'Reduce operational costs by 30%',
       'Enhance security and transparency',
       'Automate complex business processes',
       'Improve supply chain efficiency',
-      'Enable new business models'
+      'Enable new business models',
     ],
-    targetAudience: ['Financial Services', 'Supply Chain Companies', 'Healthcare Organizations', 'Government Agencies', 'Manufacturing'],
-    marketPosition: 'Leading enterprise blockchain platform with proven scalability and security',
-    competitors: ['IBM Blockchain', 'Microsoft Azure Blockchain', 'Amazon Managed Blockchain'],
+    targetAudience: [
+      'Financial Services',
+      'Supply Chain Companies',
+      'Healthcare Organizations',
+      'Government Agencies',
+      'Manufacturing',
+    ],
+    marketPosition:
+      'Leading enterprise blockchain platform with proven scalability and security',
+    competitors: [
+      'IBM Blockchain',
+      'Microsoft Azure Blockchain',
+      'Amazon Managed Blockchain',
+    ],
     marketSize: '$19B blockchain market',
     growthRate: '40% CAGR',
     implementationTime: '10-16 weeks',
     trialDays: 30,
     roi: '250% within 8 months',
-    useCases: ['Supply chain management', 'Financial services', 'Healthcare records', 'Voting systems', 'Digital identity'],
-    technicalSpecs: ['Ethereum compatibility', 'Smart contracts', 'Consensus algorithms', 'API integration', 'Cloud deployment'],
+    useCases: [
+      'Supply chain management',
+      'Financial services',
+      'Healthcare records',
+      'Voting systems',
+      'Digital identity',
+    ],
+    technicalSpecs: [
+      'Ethereum compatibility',
+      'Smart contracts',
+      'Consensus algorithms',
+      'API integration',
+      'Cloud deployment',
+    ],
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     },
     link: 'https://ziontechgroup.com/services/blockchain-enterprise-solutions',
     icon: '🔗',
     color: 'from-green-600 to-emerald-700',
-    popular: true
+    popular: true,
   },
 
   // Space Technology Services
   {
     id: 'space-technology-solutions',
     name: 'Space Technology Solutions',
-    tagline: 'Terrestrial applications of space technology for innovative business solutions',
-    description: 'Cutting-edge space technology adapted for Earth-based applications, including satellite communications, remote sensing, and space-derived innovations.',
+    tagline:
+      'Terrestrial applications of space technology for innovative business solutions',
+    description:
+      'Cutting-edge space technology adapted for Earth-based applications, including satellite communications, remote sensing, and space-derived innovations.',
     category: 'Space Technology',
     price: '$4,499',
     billing: 'month',
@@ -194,42 +280,63 @@ export const innovativeServices2025: InnovativeService[] = [
       'Climate monitoring solutions',
       'Space tourism technology',
       'Satellite internet services',
-      'Space data analytics'
+      'Space data analytics',
     ],
     benefits: [
       'Access to space-grade technology',
       'Global coverage and connectivity',
       'Advanced monitoring capabilities',
       'Innovative material solutions',
-      'Future-ready technology platform'
+      'Future-ready technology platform',
     ],
-    targetAudience: ['Telecommunications', 'Agriculture', 'Environmental Services', 'Logistics', 'Government Agencies'],
-    marketPosition: 'Leading terrestrial space technology applications provider',
+    targetAudience: [
+      'Telecommunications',
+      'Agriculture',
+      'Environmental Services',
+      'Logistics',
+      'Government Agencies',
+    ],
+    marketPosition:
+      'Leading terrestrial space technology applications provider',
     competitors: ['SpaceX Starlink', 'OneWeb', 'Amazon Project Kuiper'],
     marketSize: '$469B space economy',
     growthRate: '8% CAGR',
     implementationTime: '12-20 weeks',
     trialDays: 30,
     roi: '400% within 18 months',
-    useCases: ['Global communications', 'Precision agriculture', 'Environmental monitoring', 'Logistics tracking', 'Disaster response'],
-    technicalSpecs: ['Satellite technology', 'IoT integration', 'Data analytics', 'Cloud computing', 'AI algorithms'],
+    useCases: [
+      'Global communications',
+      'Precision agriculture',
+      'Environmental monitoring',
+      'Logistics tracking',
+      'Disaster response',
+    ],
+    technicalSpecs: [
+      'Satellite technology',
+      'IoT integration',
+      'Data analytics',
+      'Cloud computing',
+      'AI algorithms',
+    ],
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     },
     link: 'https://ziontechgroup.com/services/space-technology-solutions',
     icon: '🚀',
     color: 'from-slate-600 to-gray-700',
-    featured: true
+    featured: true,
   },
 
   // Green Technology Services
   {
     id: 'green-technology-solutions',
     name: 'Green Technology Solutions',
-    tagline: 'Sustainable technology solutions for a greener, more efficient future',
-    description: 'Comprehensive green technology platform offering sustainable solutions for energy, transportation, and environmental management.',
+    tagline:
+      'Sustainable technology solutions for a greener, more efficient future',
+    description:
+      'Comprehensive green technology platform offering sustainable solutions for energy, transportation, and environmental management.',
     category: 'Green Technology',
     price: '$2,799',
     billing: 'month',
@@ -241,42 +348,63 @@ export const innovativeServices2025: InnovativeService[] = [
       'Sustainable building solutions',
       'Waste management optimization',
       'Water conservation systems',
-      'Environmental monitoring'
+      'Environmental monitoring',
     ],
     benefits: [
       'Reduce carbon footprint by 50%',
       'Lower energy costs by 40%',
       'Meet sustainability goals',
       'Enhance brand reputation',
-      'Future-proof operations'
+      'Future-proof operations',
     ],
-    targetAudience: ['Manufacturing', 'Real Estate', 'Transportation', 'Utilities', 'Government'],
-    marketPosition: 'Leading green technology platform with proven environmental impact',
+    targetAudience: [
+      'Manufacturing',
+      'Real Estate',
+      'Transportation',
+      'Utilities',
+      'Government',
+    ],
+    marketPosition:
+      'Leading green technology platform with proven environmental impact',
     competitors: ['Siemens', 'GE Renewable Energy', 'Schneider Electric'],
     marketSize: '$44B green technology market',
     growthRate: '25% CAGR',
     implementationTime: '8-14 weeks',
     trialDays: 30,
     roi: '300% within 10 months',
-    useCases: ['Energy management', 'Building automation', 'Fleet management', 'Waste reduction', 'Water conservation'],
-    technicalSpecs: ['IoT sensors', 'AI algorithms', 'Cloud platform', 'Mobile apps', 'Analytics dashboard'],
+    useCases: [
+      'Energy management',
+      'Building automation',
+      'Fleet management',
+      'Waste reduction',
+      'Water conservation',
+    ],
+    technicalSpecs: [
+      'IoT sensors',
+      'AI algorithms',
+      'Cloud platform',
+      'Mobile apps',
+      'Analytics dashboard',
+    ],
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     },
     link: 'https://ziontechgroup.com/services/green-technology-solutions',
     icon: '🌱',
     color: 'from-green-500 to-emerald-600',
-    popular: true
+    popular: true,
   },
 
   // Advanced Cybersecurity Services
   {
     id: 'ai-cybersecurity-platform',
     name: 'AI Cybersecurity Platform',
-    tagline: 'Next-generation AI-powered cybersecurity for comprehensive threat protection',
-    description: 'Advanced cybersecurity platform that uses artificial intelligence to detect, prevent, and respond to cyber threats in real-time.',
+    tagline:
+      'Next-generation AI-powered cybersecurity for comprehensive threat protection',
+    description:
+      'Advanced cybersecurity platform that uses artificial intelligence to detect, prevent, and respond to cyber threats in real-time.',
     category: 'Cybersecurity',
     price: '$3,299',
     billing: 'month',
@@ -288,35 +416,54 @@ export const innovativeServices2025: InnovativeService[] = [
       'Advanced malware protection',
       'Network security monitoring',
       'Vulnerability assessment',
-      'Compliance management'
+      'Compliance management',
     ],
     benefits: [
       'Detect threats 99.9% faster',
       'Reduce false positives by 80%',
       'Automate security responses',
       '24/7 threat monitoring',
-      'Meet compliance requirements'
+      'Meet compliance requirements',
     ],
-    targetAudience: ['Financial Services', 'Healthcare', 'Government', 'Technology', 'Manufacturing'],
-    marketPosition: 'Leading AI cybersecurity platform with proven threat detection accuracy',
+    targetAudience: [
+      'Financial Services',
+      'Healthcare',
+      'Government',
+      'Technology',
+      'Manufacturing',
+    ],
+    marketPosition:
+      'Leading AI cybersecurity platform with proven threat detection accuracy',
     competitors: ['CrowdStrike', 'SentinelOne', 'Darktrace'],
     marketSize: '$150B cybersecurity market',
     growthRate: '12% CAGR',
     implementationTime: '6-10 weeks',
     trialDays: 30,
     roi: '400% within 6 months',
-    useCases: ['Threat detection', 'Incident response', 'Compliance', 'Risk assessment', 'Security monitoring'],
-    technicalSpecs: ['Machine learning', 'Behavioral analytics', 'Cloud security', 'API protection', 'Zero trust'],
+    useCases: [
+      'Threat detection',
+      'Incident response',
+      'Compliance',
+      'Risk assessment',
+      'Security monitoring',
+    ],
+    technicalSpecs: [
+      'Machine learning',
+      'Behavioral analytics',
+      'Cloud security',
+      'API protection',
+      'Zero trust',
+    ],
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     },
     link: 'https://ziontechgroup.com/services/ai-cybersecurity-platform',
     icon: '🛡️',
     color: 'from-red-600 to-orange-700',
     popular: true,
-    featured: true
+    featured: true,
   },
 
   // Micro SaaS Solutions
@@ -324,7 +471,8 @@ export const innovativeServices2025: InnovativeService[] = [
     id: 'micro-crm-platform',
     name: 'Micro CRM Platform',
     tagline: 'Lightweight, powerful CRM solution for growing businesses',
-    description: 'Streamlined customer relationship management platform designed specifically for small to medium businesses with essential CRM features.',
+    description:
+      'Streamlined customer relationship management platform designed specifically for small to medium businesses with essential CRM features.',
     category: 'Micro SaaS',
     price: '$99',
     billing: 'month',
@@ -336,16 +484,22 @@ export const innovativeServices2025: InnovativeService[] = [
       'Task and appointment scheduling',
       'Basic reporting and analytics',
       'Mobile app access',
-      'API integration capabilities'
+      'API integration capabilities',
     ],
     benefits: [
       'Increase sales by 25%',
       'Improve customer retention',
       'Streamline sales processes',
       'Affordable pricing',
-      'Easy to implement'
+      'Easy to implement',
     ],
-    targetAudience: ['Small Business', 'Startups', 'Sales Teams', 'Consultants', 'Real Estate'],
+    targetAudience: [
+      'Small Business',
+      'Startups',
+      'Sales Teams',
+      'Consultants',
+      'Real Estate',
+    ],
     marketPosition: 'Affordable CRM solution with enterprise-grade features',
     competitors: ['HubSpot', 'Salesforce', 'Pipedrive'],
     marketSize: '$40B CRM market',
@@ -353,17 +507,29 @@ export const innovativeServices2025: InnovativeService[] = [
     implementationTime: '2-4 weeks',
     trialDays: 14,
     roi: '200% within 3 months',
-    useCases: ['Sales management', 'Customer tracking', 'Lead generation', 'Marketing campaigns', 'Customer service'],
-    technicalSpecs: ['Cloud-based', 'Mobile responsive', 'API integration', 'Data encryption', 'Backup systems'],
+    useCases: [
+      'Sales management',
+      'Customer tracking',
+      'Lead generation',
+      'Marketing campaigns',
+      'Customer service',
+    ],
+    technicalSpecs: [
+      'Cloud-based',
+      'Mobile responsive',
+      'API integration',
+      'Data encryption',
+      'Backup systems',
+    ],
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     },
     link: 'https://ziontechgroup.com/services/micro-crm-platform',
     icon: '👥',
     color: 'from-blue-500 to-cyan-600',
-    popular: true
+    popular: true,
   },
 
   // Data Analytics Services
@@ -371,7 +537,8 @@ export const innovativeServices2025: InnovativeService[] = [
     id: 'advanced-data-analytics',
     name: 'Advanced Data Analytics Platform',
     tagline: 'Transform raw data into actionable business intelligence',
-    description: 'Comprehensive data analytics platform that helps businesses make data-driven decisions through advanced analytics, visualization, and machine learning.',
+    description:
+      'Comprehensive data analytics platform that helps businesses make data-driven decisions through advanced analytics, visualization, and machine learning.',
     category: 'Data & Analytics',
     price: '$1,999',
     billing: 'month',
@@ -383,16 +550,22 @@ export const innovativeServices2025: InnovativeService[] = [
       'Data visualization tools',
       'Machine learning integration',
       'Data quality management',
-      'Custom reporting'
+      'Custom reporting',
     ],
     benefits: [
       'Improve decision making by 60%',
       'Identify new business opportunities',
       'Optimize operations',
       'Reduce costs through insights',
-      'Competitive advantage'
+      'Competitive advantage',
     ],
-    targetAudience: ['Enterprise', 'Financial Services', 'Healthcare', 'Retail', 'Manufacturing'],
+    targetAudience: [
+      'Enterprise',
+      'Financial Services',
+      'Healthcare',
+      'Retail',
+      'Manufacturing',
+    ],
     marketPosition: 'Leading data analytics platform with AI-powered insights',
     competitors: ['Tableau', 'Power BI', 'Qlik'],
     marketSize: '$25B business intelligence market',
@@ -400,25 +573,39 @@ export const innovativeServices2025: InnovativeService[] = [
     implementationTime: '8-12 weeks',
     trialDays: 30,
     roi: '350% within 8 months',
-    useCases: ['Business intelligence', 'Performance monitoring', 'Customer analytics', 'Operational optimization', 'Risk assessment'],
-    technicalSpecs: ['Big data processing', 'Machine learning', 'Real-time analytics', 'Cloud deployment', 'API integration'],
+    useCases: [
+      'Business intelligence',
+      'Performance monitoring',
+      'Customer analytics',
+      'Operational optimization',
+      'Risk assessment',
+    ],
+    technicalSpecs: [
+      'Big data processing',
+      'Machine learning',
+      'Real-time analytics',
+      'Cloud deployment',
+      'API integration',
+    ],
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     },
     link: 'https://ziontechgroup.com/services/advanced-data-analytics',
     icon: '📊',
     color: 'from-indigo-600 to-purple-700',
-    popular: true
+    popular: true,
   },
 
   // Cloud & DevOps Services
   {
     id: 'cloud-devops-automation',
     name: 'Cloud DevOps Automation Platform',
-    tagline: 'Streamline development and operations with intelligent automation',
-    description: 'Comprehensive DevOps platform that automates software development, testing, deployment, and operations for faster, more reliable software delivery.',
+    tagline:
+      'Streamline development and operations with intelligent automation',
+    description:
+      'Comprehensive DevOps platform that automates software development, testing, deployment, and operations for faster, more reliable software delivery.',
     category: 'Cloud & DevOps',
     price: '$2,499',
     billing: 'month',
@@ -430,16 +617,22 @@ export const innovativeServices2025: InnovativeService[] = [
       'Monitoring and alerting',
       'Security scanning and compliance',
       'Performance optimization',
-      'Multi-cloud management'
+      'Multi-cloud management',
     ],
     benefits: [
       'Deploy 10x faster',
       'Reduce deployment failures by 80%',
       'Improve code quality',
       'Lower operational costs',
-      'Enhanced security'
+      'Enhanced security',
     ],
-    targetAudience: ['Technology Companies', 'Financial Services', 'Healthcare', 'E-commerce', 'Startups'],
+    targetAudience: [
+      'Technology Companies',
+      'Financial Services',
+      'Healthcare',
+      'E-commerce',
+      'Startups',
+    ],
     marketPosition: 'Leading DevOps automation platform with proven ROI',
     competitors: ['GitLab', 'Jenkins', 'CircleCI'],
     marketSize: '$8B DevOps market',
@@ -447,17 +640,29 @@ export const innovativeServices2025: InnovativeService[] = [
     implementationTime: '6-10 weeks',
     trialDays: 30,
     roi: '300% within 6 months',
-    useCases: ['Software development', 'Application deployment', 'Infrastructure management', 'Quality assurance', 'Security compliance'],
-    technicalSpecs: ['Docker support', 'Kubernetes integration', 'Cloud platforms', 'API management', 'Monitoring tools'],
+    useCases: [
+      'Software development',
+      'Application deployment',
+      'Infrastructure management',
+      'Quality assurance',
+      'Security compliance',
+    ],
+    technicalSpecs: [
+      'Docker support',
+      'Kubernetes integration',
+      'Cloud platforms',
+      'API management',
+      'Monitoring tools',
+    ],
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     },
     link: 'https://ziontechgroup.com/services/cloud-devops-automation',
     icon: '☁️',
     color: 'from-cyan-600 to-blue-700',
-    popular: true
+    popular: true,
   },
 
   // Digital Transformation Services
@@ -465,7 +670,8 @@ export const innovativeServices2025: InnovativeService[] = [
     id: 'digital-transformation-suite',
     name: 'Digital Transformation Suite',
     tagline: 'Comprehensive digital transformation for modern businesses',
-    description: 'End-to-end digital transformation platform that helps businesses modernize operations, improve customer experience, and drive innovation.',
+    description:
+      'End-to-end digital transformation platform that helps businesses modernize operations, improve customer experience, and drive innovation.',
     category: 'Digital Transformation',
     price: '$4,999',
     billing: 'month',
@@ -477,35 +683,54 @@ export const innovativeServices2025: InnovativeService[] = [
       'Data strategy and governance',
       'Change management support',
       'Innovation consulting',
-      'Performance measurement'
+      'Performance measurement',
     ],
     benefits: [
       'Increase operational efficiency by 40%',
       'Improve customer satisfaction',
       'Reduce operational costs',
       'Enable innovation',
-      'Competitive advantage'
+      'Competitive advantage',
     ],
-    targetAudience: ['Enterprise', 'Manufacturing', 'Healthcare', 'Financial Services', 'Retail'],
-    marketPosition: 'Leading digital transformation platform with proven success',
+    targetAudience: [
+      'Enterprise',
+      'Manufacturing',
+      'Healthcare',
+      'Financial Services',
+      'Retail',
+    ],
+    marketPosition:
+      'Leading digital transformation platform with proven success',
     competitors: ['Accenture', 'Deloitte Digital', 'McKinsey Digital'],
     marketSize: '$500B digital transformation market',
     growthRate: '23% CAGR',
     implementationTime: '16-24 weeks',
     trialDays: 30,
     roi: '400% within 18 months',
-    useCases: ['Process automation', 'Customer experience', 'System modernization', 'Cloud adoption', 'Innovation management'],
-    technicalSpecs: ['AI integration', 'Cloud platforms', 'API management', 'Data analytics', 'Mobile solutions'],
+    useCases: [
+      'Process automation',
+      'Customer experience',
+      'System modernization',
+      'Cloud adoption',
+      'Innovation management',
+    ],
+    technicalSpecs: [
+      'AI integration',
+      'Cloud platforms',
+      'API management',
+      'Data analytics',
+      'Mobile solutions',
+    ],
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     },
     link: 'https://ziontechgroup.com/services/digital-transformation-suite',
     icon: '🔄',
     color: 'from-orange-600 to-red-700',
-    featured: true
-  }
+    featured: true,
+  },
 ];
 
 export default innovativeServices2025;

@@ -1,51 +1,86 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Zap, Users, TrendingUp, Shield, Globe, Rocket } from 'lucide-react';
 
 export default function MicroSAASSolutions() {
   const solutions = [
     {
       name: 'AI Content Marketing Automation',
-      description: 'Automate content creation, optimization, and distribution with AI-powered insights',
-      features: ['Content Generation', 'SEO Optimization', 'Social Media Automation', 'Performance Analytics'],
+      description:
+        'Automate content creation, optimization, and distribution with AI-powered insights',
+      features: [
+        'Content Generation',
+        'SEO Optimization',
+        'Social Media Automation',
+        'Performance Analytics',
+      ],
       icon: Zap,
-      category: 'Marketing'
+      category: 'Marketing',
     },
     {
       name: 'AI Supply Chain Optimization',
-      description: 'Optimize supply chain operations with predictive analytics and real-time monitoring',
-      features: ['Demand Forecasting', 'Inventory Management', 'Route Optimization', 'Risk Assessment'],
+      description:
+        'Optimize supply chain operations with predictive analytics and real-time monitoring',
+      features: [
+        'Demand Forecasting',
+        'Inventory Management',
+        'Route Optimization',
+        'Risk Assessment',
+      ],
       icon: TrendingUp,
-      category: 'Operations'
+      category: 'Operations',
     },
     {
       name: 'AI HR Platform',
-      description: 'Streamline HR processes with intelligent automation and data-driven insights',
-      features: ['Recruitment Automation', 'Performance Management', 'Employee Engagement', 'Compliance Tracking'],
+      description:
+        'Streamline HR processes with intelligent automation and data-driven insights',
+      features: [
+        'Recruitment Automation',
+        'Performance Management',
+        'Employee Engagement',
+        'Compliance Tracking',
+      ],
       icon: Users,
-      category: 'Human Resources'
+      category: 'Human Resources',
     },
     {
       name: 'AI Legal Research Platform',
-      description: 'Accelerate legal research with AI-powered document analysis and case law insights',
-      features: ['Document Analysis', 'Case Law Research', 'Legal Precedents', 'Compliance Checking'],
+      description:
+        'Accelerate legal research with AI-powered document analysis and case law insights',
+      features: [
+        'Document Analysis',
+        'Case Law Research',
+        'Legal Precedents',
+        'Compliance Checking',
+      ],
       icon: Shield,
-      category: 'Legal'
+      category: 'Legal',
     },
     {
       name: 'AI Education Platform',
-      description: 'Personalize learning experiences with adaptive AI and intelligent tutoring',
-      features: ['Adaptive Learning', 'Progress Tracking', 'Content Personalization', 'Assessment Automation'],
+      description:
+        'Personalize learning experiences with adaptive AI and intelligent tutoring',
+      features: [
+        'Adaptive Learning',
+        'Progress Tracking',
+        'Content Personalization',
+        'Assessment Automation',
+      ],
       icon: Globe,
-      category: 'Education'
+      category: 'Education',
     },
     {
       name: 'AI Project Management Platform',
-      description: 'Enhance project delivery with intelligent planning, monitoring, and optimization',
-      features: ['Smart Planning', 'Resource Optimization', 'Risk Management', 'Performance Analytics'],
+      description:
+        'Enhance project delivery with intelligent planning, monitoring, and optimization',
+      features: [
+        'Smart Planning',
+        'Resource Optimization',
+        'Risk Management',
+        'Performance Analytics',
+      ],
       icon: Rocket,
-      category: 'Project Management'
-    }
+      category: 'Project Management',
+    },
   ];
 
   return (
@@ -61,7 +96,8 @@ export default function MicroSAASSolutions() {
             Micro SaaS Solutions
           </h1>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            Scalable, focused software solutions designed to solve specific business challenges with transparent pricing and rapid deployment.
+            Scalable, focused software solutions designed to solve specific
+            business challenges with transparent pricing and rapid deployment.
           </p>
         </motion.div>
 
@@ -90,24 +126,27 @@ export default function MicroSAASSolutions() {
                   </span>
                 </div>
               </div>
-              
+
               <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                 {solution.name}
               </h3>
-              
+
               <p className="text-slate-300 mb-4 text-sm">
                 {solution.description}
               </p>
-              
+
               <div className="space-y-2">
                 {solution.features.map((feature, featureIndex) => (
-                  <div key={featureIndex} className="flex items-center space-x-2 text-sm">
+                  <div
+                    key={featureIndex}
+                    className="flex items-center space-x-2 text-sm"
+                  >
                     <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full"></div>
                     <span className="text-slate-300">{feature}</span>
                   </div>
                 ))}
               </div>
-              
+
               <button className="w-full mt-6 px-4 py-2 bg-cyan-500 hover:bg-cyan-600 text-white rounded-lg font-medium transition-colors">
                 Learn More
               </button>
@@ -127,8 +166,9 @@ export default function MicroSAASSolutions() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
-              Our micro SaaS solutions are designed for rapid deployment and immediate impact. 
-              Get started with a free consultation and see how we can help.
+              Our micro SaaS solutions are designed for rapid deployment and
+              immediate impact. Get started with a free consultation and see how
+              we can help.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-lg font-medium transition-colors">

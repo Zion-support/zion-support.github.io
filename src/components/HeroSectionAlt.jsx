@@ -1,9 +1,10 @@
+import { Link } from "react - router - dom";
 import React from 'react';
-import { Search, Rocket, Users, TrendingUp, Shield, Zap, Star, Sparkles import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-
+import { Button } from "@/components / ui / button";
 export const HeroSectionAlt = () => {
+import { Search, Rocket, Users, TrendingUp, Shield, Zap, Star, Sparkles import { motion } from "framer - motion";
+
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -12,17 +13,11 @@ export const HeroSectionAlt = () => {
         staggerChildren: 0.2,
         delayChildren: 0.1
 
-
   };
 
   const itemVariants = {
   hidden: { y: 30,
   opacity: 0 
-
-
-
-
-
 
 },
     visible: {
@@ -31,7 +26,6 @@ export const HeroSectionAlt = () => {
       transition: {
         duration: 0.8,
         ease: "easeOut"
-
 
   };
 

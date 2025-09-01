@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Cloud, 
-  Code, 
-  CheckCircle, 
-  Users, 
-  Clock, 
+import {
+  Cloud,
+  Code,
+  CheckCircle,
+  Users,
+  Clock,
   ArrowRight,
   Play,
   Settings,
@@ -38,7 +38,7 @@ import {
   Rocket,
   RefreshCw,
   Shield,
-  Lock
+  Lock,
 } from 'lucide-react';
 
 const CloudDevOps = () => {
@@ -46,33 +46,38 @@ const CloudDevOps = () => {
     {
       icon: Cloud,
       title: 'Cloud Infrastructure',
-      description: 'Design and implement scalable cloud architectures on AWS, Azure, and GCP'
+      description:
+        'Design and implement scalable cloud architectures on AWS, Azure, and GCP',
     },
     {
       icon: Code,
       title: 'CI/CD Pipelines',
-      description: 'Automated build, test, and deployment pipelines for rapid delivery'
+      description:
+        'Automated build, test, and deployment pipelines for rapid delivery',
     },
     {
       icon: Docker,
       title: 'Containerization',
-      description: 'Docker and Kubernetes implementation for scalable application deployment'
+      description:
+        'Docker and Kubernetes implementation for scalable application deployment',
     },
     {
       icon: GitBranch,
       title: 'GitOps Workflows',
-      description: 'Infrastructure as code and automated deployment management'
+      description: 'Infrastructure as code and automated deployment management',
     },
     {
       icon: Monitor,
       title: 'Monitoring & Logging',
-      description: 'Comprehensive monitoring, alerting, and centralized logging solutions'
+      description:
+        'Comprehensive monitoring, alerting, and centralized logging solutions',
     },
     {
       icon: Shield,
       title: 'Security & Compliance',
-      description: 'DevSecOps practices and compliance automation for cloud environments'
-    }
+      description:
+        'DevSecOps practices and compliance automation for cloud environments',
+    },
   ];
 
   const benefits = [
@@ -81,49 +86,52 @@ const CloudDevOps = () => {
     'Achieve 99.9% uptime with monitoring',
     'Scale applications automatically',
     'Improve team productivity by 60%',
-    'Ensure security and compliance'
+    'Ensure security and compliance',
   ];
 
   const services = [
     {
       icon: Server,
       title: 'Infrastructure as Code',
-      description: 'Terraform, CloudFormation, and ARM templates for automated infrastructure'
+      description:
+        'Terraform, CloudFormation, and ARM templates for automated infrastructure',
     },
     {
       icon: Workflow,
       title: 'CI/CD Automation',
-      description: 'Jenkins, GitHub Actions, and GitLab CI for seamless deployments'
+      description:
+        'Jenkins, GitHub Actions, and GitLab CI for seamless deployments',
     },
     {
       icon: Kubernetes,
       title: 'Container Orchestration',
-      description: 'Kubernetes clusters with Helm charts and automated scaling'
+      description: 'Kubernetes clusters with Helm charts and automated scaling',
     },
     {
       icon: Database,
       title: 'Database Management',
-      description: 'Automated database provisioning, backups, and scaling'
-    }
+      description: 'Automated database provisioning, backups, and scaling',
+    },
   ];
 
   const useCases = [
     {
       industry: 'E-commerce',
-      description: 'Scalable infrastructure for high-traffic online stores'
+      description: 'Scalable infrastructure for high-traffic online stores',
     },
     {
       industry: 'SaaS Platforms',
-      description: 'Multi-tenant applications with automated scaling'
+      description: 'Multi-tenant applications with automated scaling',
     },
     {
       industry: 'Financial Services',
-      description: 'Secure, compliant cloud infrastructure for banking applications'
+      description:
+        'Secure, compliant cloud infrastructure for banking applications',
     },
     {
       industry: 'Healthcare',
-      description: 'HIPAA-compliant cloud solutions for medical applications'
-    }
+      description: 'HIPAA-compliant cloud solutions for medical applications',
+    },
   ];
 
   return (
@@ -142,17 +150,21 @@ const CloudDevOps = () => {
               <Cloud className="w-4 h-4 mr-2" />
               Cloud & DevOps Solutions
             </div>
-            
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Cloud
-              <span className="bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent"> DevOps</span>
+              <span className="bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent">
+                {' '}
+                DevOps
+              </span>
             </h1>
-            
+
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your development and operations with our comprehensive Cloud DevOps 
-              solutions that enable rapid delivery, scalability, and operational excellence.
+              Transform your development and operations with our comprehensive
+              Cloud DevOps solutions that enable rapid delivery, scalability,
+              and operational excellence.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 flex items-center justify-center">
                 <Play className="w-5 h-5 mr-2" />
@@ -180,8 +192,8 @@ const CloudDevOps = () => {
               Comprehensive DevOps Features
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our platform provides all the tools you need to implement modern DevOps 
-              practices and achieve operational excellence.
+              Our platform provides all the tools you need to implement modern
+              DevOps practices and achieve operational excellence.
             </p>
           </motion.div>
 
@@ -197,7 +209,9 @@ const CloudDevOps = () => {
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {feature.title}
+                </h3>
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
@@ -218,8 +232,8 @@ const CloudDevOps = () => {
               Core DevOps Services
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              From infrastructure automation to continuous deployment, we provide 
-              end-to-end DevOps solutions for modern applications.
+              From infrastructure automation to continuous deployment, we
+              provide end-to-end DevOps solutions for modern applications.
             </p>
           </motion.div>
 
@@ -237,7 +251,9 @@ const CloudDevOps = () => {
                     <service.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
+                    <h3 className="text-xl font-semibold text-white mb-2">
+                      {service.title}
+                    </h3>
                     <p className="text-gray-300">{service.description}</p>
                   </div>
                 </div>
@@ -260,7 +276,8 @@ const CloudDevOps = () => {
               Transform Your Operations
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Experience measurable improvements in deployment speed, reliability, and operational efficiency.
+              Experience measurable improvements in deployment speed,
+              reliability, and operational efficiency.
             </p>
           </motion.div>
 
@@ -310,8 +327,8 @@ const CloudDevOps = () => {
               Industry Applications
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our DevOps solutions adapt to various industries, providing tailored 
-              automation and infrastructure for your specific needs.
+              Our DevOps solutions adapt to various industries, providing
+              tailored automation and infrastructure for your specific needs.
             </p>
           </motion.div>
 
@@ -327,7 +344,9 @@ const CloudDevOps = () => {
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Target className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{useCase.industry}</h3>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {useCase.industry}
+                </h3>
                 <p className="text-gray-300 text-sm">{useCase.description}</p>
               </motion.div>
             ))}
@@ -347,8 +366,8 @@ const CloudDevOps = () => {
               Start Your DevOps Journey Today
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join organizations worldwide that use our DevOps solutions to accelerate 
-              development and achieve operational excellence.
+              Join organizations worldwide that use our DevOps solutions to
+              accelerate development and achieve operational excellence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 flex items-center justify-center">
@@ -367,4 +386,3 @@ const CloudDevOps = () => {
 };
 
 export default CloudDevOps;
-

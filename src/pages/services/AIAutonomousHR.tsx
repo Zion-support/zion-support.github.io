@@ -1,9 +1,10 @@
 import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Users, 
-  Brain, 
-  Target, 
-  BarChart3, 
+import { motion } from 'framer-motion.ts';
+import {
+  Users,
+  Brain,
+  Target,
+  BarChart3,
   CheckCircle,
   ArrowRight,
   Star,
@@ -21,41 +22,46 @@ import { Users,
   TrendingUp,
   Zap,
   Shield,
-  Briefcase
- } from 'lucide-react.ts';
+  Briefcase,
+} from 'lucide-react.ts';
 
 const AIAutonomousHR: React.FC = (): JSX.Element => {
   const features = [
     {
       icon: Brain,
       title: 'AI-Powered HR Management',
-      description: 'Advanced machine learning for autonomous HR operations and optimization'
+      description:
+        'Advanced machine learning for autonomous HR operations and optimization',
     },
     {
       icon: Users,
       title: 'Recruitment Automation',
-      description: 'Intelligent candidate sourcing, screening, and hiring with AI-driven insights'
+      description:
+        'Intelligent candidate sourcing, screening, and hiring with AI-driven insights',
     },
     {
       icon: Target,
       title: 'Performance Management',
-      description: 'AI-powered performance tracking and employee development strategies'
+      description:
+        'AI-powered performance tracking and employee development strategies',
     },
     {
       icon: BarChart3,
       title: 'HR Analytics',
-      description: 'Real-time analytics and insights into HR performance and trends'
+      description:
+        'Real-time analytics and insights into HR performance and trends',
     },
     {
       icon: Briefcase,
       title: 'Employee Engagement',
-      description: 'AI-driven employee engagement and retention strategies'
+      description: 'AI-driven employee engagement and retention strategies',
     },
     {
       icon: TrendingUp,
       title: 'Workforce Optimization',
-      description: 'Continuous optimization of HR processes and workforce management'
-    }
+      description:
+        'Continuous optimization of HR processes and workforce management',
+    },
   ];
 
   const benefits = [
@@ -64,7 +70,7 @@ const AIAutonomousHR: React.FC = (): JSX.Element => {
     'Enhance employee retention by 60%',
     'Automate HR processes',
     '24/7 autonomous operation',
-    'Real-time HR insights'
+    'Real-time HR insights',
   ];
 
   return (
@@ -81,17 +87,21 @@ const AIAutonomousHR: React.FC = (): JSX.Element => {
               <Users className="w-4 h-4 mr-2" />
               AI-Powered Autonomous HR
             </div>
-            
+
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Transform Your HR with
-              <span className="bg-gradient-to-r from-violet-400 to-purple-500 bg-clip-text text-transparent"> AI Intelligence</span>
+              <span className="bg-gradient-to-r from-violet-400 to-purple-500 bg-clip-text text-transparent">
+                {' '}
+                AI Intelligence
+              </span>
             </h1>
-            
+
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Revolutionize your HR operations with our AI-powered autonomous platform. 
-              Optimize recruitment, enhance employee engagement, and maximize workforce performance.
+              Revolutionize your HR operations with our AI-powered autonomous
+              platform. Optimize recruitment, enhance employee engagement, and
+              maximize workforce performance.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-violet-500 to-purple-500 text-white rounded-lg font-semibold hover:from-violet-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
@@ -118,12 +128,13 @@ const AIAutonomousHR: React.FC = (): JSX.Element => {
               Advanced HR Features
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI platform provides comprehensive HR capabilities for modern businesses
+              Our AI platform provides comprehensive HR capabilities for modern
+              businesses
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -135,7 +146,9 @@ const AIAutonomousHR: React.FC = (): JSX.Element => {
                 <div className="w-12 h-12 bg-gradient-to-r from-violet-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  {feature.title}
+                </h3>
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
@@ -157,10 +170,11 @@ const AIAutonomousHR: React.FC = (): JSX.Element => {
               Why Choose AI Autonomous HR?
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Experience measurable improvements in HR performance and employee satisfaction
+              Experience measurable improvements in HR performance and employee
+              satisfaction
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -168,7 +182,9 @@ const AIAutonomousHR: React.FC = (): JSX.Element => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
+              <h3 className="text-2xl font-semibold text-white mb-6">
+                Key Benefits
+              </h3>
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-center space-x-3">
@@ -178,7 +194,7 @@ const AIAutonomousHR: React.FC = (): JSX.Element => {
                 ))}
               </div>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -186,9 +202,12 @@ const AIAutonomousHR: React.FC = (): JSX.Element => {
               viewport={{ once: true }}
               className="bg-gradient-to-br from-violet-500/10 to-purple-500/10 border border-violet-500/20 rounded-xl p-8"
             >
-              <h3 className="text-2xl font-semibold text-white mb-6">Ready to Transform HR?</h3>
+              <h3 className="text-2xl font-semibold text-white mb-6">
+                Ready to Transform HR?
+              </h3>
               <p className="text-gray-300 mb-6">
-                Join thousands of businesses already using AI to enhance their HR operations.
+                Join thousands of businesses already using AI to enhance their
+                HR operations.
               </p>
               <button className="w-full px-6 py-3 bg-gradient-to-r from-violet-500 to-purple-500 text-white rounded-lg font-semibold hover:from-violet-600 hover:to-purple-600 transition-all duration-300">
                 Get Started Today
@@ -211,7 +230,8 @@ const AIAutonomousHR: React.FC = (): JSX.Element => {
               Ready to Revolutionize HR?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Start your journey to AI-powered HR with our comprehensive platform.
+              Start your journey to AI-powered HR with our comprehensive
+              platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-violet-500 to-purple-500 text-white rounded-lg font-semibold hover:from-violet-600 hover:to-purple-600 transition-all duration-300">

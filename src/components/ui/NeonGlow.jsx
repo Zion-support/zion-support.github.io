@@ -1,3 +1,4 @@
+import React from 'react';
 import { cn } from '@/lib/utils';
 export function NeonGlow({ children, color = 'zion-cyan', intensity = 'medium', className = '', customColor }) {
     const getGlowStyles = () => {
@@ -20,7 +21,7 @@ export function NeonGlow({ children, color = 'zion-cyan', intensity = 'medium', 
         };
         return intensityMap[intensity]};
     const glowStyles = getGlowStyles();
-    return (<span className = {
+    return (<span className={
   cn('transition-all duration-300',
   className)
 

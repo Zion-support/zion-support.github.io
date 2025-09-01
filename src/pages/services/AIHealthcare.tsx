@@ -1,3 +1,4 @@
+import React from 'react';
 import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Activity, BarChart3 export default function AIHealthcare() {
   const features = [
     'AI-powered medical image analysis and diagnosis',

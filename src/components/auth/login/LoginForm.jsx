@@ -1,19 +1,30 @@
-import { useState } from "react";
-import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { LogIn, User, Eye, EyeOff } from "lucide-react";
-import { useAuth } from "@/hooks/useAuth";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { LogIn, User, Eye, EyeOff } from 'lucide-react';
+import { useAuth } from '@/hooks/useAuth';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from '@/components/ui/form';
+import { Link } from 'react-router-dom';
 
 // Form validation schema
 const loginSchema = z.object({
-  email: z.string().email("Please enter a valid email").min(1, "Email is required"),
-  password: z.string().min(6, "Password must be at least 6 characters"),
+  email: z
+    .string()
+    .email('Please enter a valid email')
+    .min(1, 'Email is required'),
+  password: z.string().min(6, 'Password must be at least 6 characters'),
 });
 
 function LoginForm() {
@@ -25,25 +36,29 @@ function LoginForm() {
   const form = useForm({
     resolver: zodResolver(loginSchema),
     defaultValues: {
-      email: "",
-      password: "",
+      email: '',
+      password: '',
     },
   });
 
-  const onSubmit = async (data) => {
+  const onSubmit = async data => {
     if (isSubmitting) return;
 
     try {
       setIsSubmitting(true);
       const result = await login(data.email, data.password);
-      
+
       if (result.success) {
-        navigate("/");
+        navigate('/');
       } else {
-        form.setError("root", { message: "Login failed. Please check your credentials." });
+        form.setError('root', {
+          message: 'Login failed. Please check your credentials.',
+        });
       }
     } catch (error) {
-      form.setError("root", { message: "An error occurred. Please try again." });
+      form.setError('root', {
+        message: 'An error occurred. Please try again.',
+      });
     } finally {
       setIsSubmitting(false);
     }
@@ -51,7 +66,11 @@ function LoginForm() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" autoComplete="off">
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="space-y-6"
+        autoComplete="off"
+      >
         {form.formState.errors.root && (
           <p className="text-red-400 text-sm" role="alert">
             {form.formState.errors.root.message}
@@ -63,7 +82,9 @@ function LoginForm() {
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-zion-slate-light">Email address</FormLabel>
+              <FormLabel className="text-zion-slate-light">
+                Email address
+              </FormLabel>
               <FormControl>
                 <div className="relative">
                   <Input
@@ -89,7 +110,7 @@ function LoginForm() {
               <FormControl>
                 <div className="relative">
                   <Input
-                    type={showPassword ? "text" : "password"}
+                    type={showPassword ? 'text' : 'password'}
                     placeholder="••••••••"
                     className="bg-zion-blue pl-10 border-zion-blue-light focus:border-zion-purple"
                     {...field}
@@ -109,7 +130,7 @@ function LoginForm() {
                       <Eye className="h-4 w-4" />
                     )}
                     <span className="sr-only">
-                      {showPassword ? "Hide password" : "Show password"}
+                      {showPassword ? 'Hide password' : 'Show password'}
                     </span>
                   </Button>
                 </div>

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Route, BarChart3 export default function AITransportation() {
   const features = [
     'AI-powered route optimization and fleet management',

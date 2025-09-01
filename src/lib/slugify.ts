@@ -18,9 +18,7 @@ export function slugify(text: anystring): string {
  * @returns A readable string
  */
 export function deslugify(slug: string): string {
-  return slug
-    .replace(/-/g, ' ')
-    .replace(/\b\w/g, (char)  => char.toUpperCase());
+  return slug.replace(/-/g, ' ').replace(/\b\w/g, char => char.toUpperCase());
 }
 
 /**
@@ -29,7 +27,10 @@ export function deslugify(slug: string): string {
  * @param existingSlugs - Array of existing slugs to check against
  * @returns A unique slug
  */
-export function generateUniqueSlug(text: string, existingSlugs: string[]): string {
+export function generateUniqueSlug(
+  text: string,
+  existingSlugs: string[]
+): string {
   let slug = slugify(text);
   let counter = 1;
   let uniqueSlug = slug;

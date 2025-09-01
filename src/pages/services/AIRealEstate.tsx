@@ -1,3 +1,4 @@
+import React from 'react';
 import { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Building, BarChart3 export default function AIRealEstate() {
   const features = [
     'AI-powered property valuation and market analysis',

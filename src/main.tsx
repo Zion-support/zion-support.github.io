@@ -1,12 +1,11 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { BrowserRouter as Router } from 'react-router-dom'
-import { HelmetProvider } from 'react-helmet-async'
-import App from './App'
-import './index.css'
-import { registerServiceWorker } from './utils/serviceWorker'
-import { ErrorBoundary } from './components/ErrorBoundary'
-
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
+import App from './App';
+import './index.css';
+import { registerServiceWorker } from './utils/serviceWorker';
+import { ErrorBoundary } from './components/ErrorBoundary';
 
 // Performance monitoring
 const reportWebVitals = (metric: any) => {
@@ -19,7 +18,7 @@ const reportWebVitals = (metric: any) => {
 // Main render function
 const renderApp = () => {
   const root = ReactDOM.createRoot(document.getElementById('root')!);
-  
+
   root.render(
     <React.StrictMode>
       <Router>
@@ -29,7 +28,7 @@ const renderApp = () => {
           </ErrorBoundary>
         </HelmetProvider>
       </Router>
-    </React.StrictMode>,
+    </React.StrictMode>
   );
 };
 
@@ -37,16 +36,16 @@ const renderApp = () => {
 
 try {
   renderApp();
-  
+
   // Register service worker with error handling
-  registerServiceWorker().catch((error) => {
+  registerServiceWorker().catch(error => {
     console.warn('Service worker registration failed:', error);
   });
-  
+
   // Report web vitals if available
   if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
     try {
-      const observer = new PerformanceObserver((list) => {
+      const observer = new PerformanceObserver(list => {
         for (const entry of list.getEntries()) {
           reportWebVitals(entry);
         }
@@ -56,11 +55,9 @@ try {
       console.warn('Performance monitoring failed:', error);
     }
   }
-  
 } catch (error) {
-
   console.error('Failed to render application:', error);
-  
+
   // Fallback error display
   const rootElement = document.getElementById('root');
   if (rootElement) {
@@ -98,5 +95,4 @@ try {
       </div>
     `;
   }
-
 }

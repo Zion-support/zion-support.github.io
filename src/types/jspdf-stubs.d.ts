@@ -1,21 +1,21 @@
 declare module 'jspdf' {
   export class jsPDF {
     constructor(options?: );
-    text(...args: any[]): void;
-    addImage(...args: any[]): void;
-    rect(...args: any[]): void;
-    line(...args: any[]): void;
-    addPage(...args: any[]): void;
-    setFont(...args: any[]): void;
-    setFontSize(...args: any[]): void;
-    setTextColor(...args: any[]): void;
-    setFillColor(...args: any[]): void;
-    setDrawColor(...args: any[]): void;
-    setLineWidth(...args: any[]): void;
+    text(...args: unknown[]): void;
+    addImage(...args: unknown[]): void;
+    rect(...args: unknown[]): void;
+    line(...args: unknown[]): void;
+    addPage(...args: unknown[]): void;
+    setFont(...args: unknown[]): void;
+    setFontSize(...args: unknown[]): void;
+    setTextColor(...args: unknown[]): void;
+    setFillColor(...args: unknown[]): void;
+    setDrawColor(...args: unknown[]): void;
+    setLineWidth(...args: unknown[]): void;
     splitTextToSize(text: string, size: number): string[];
     output(type?: string): ;
   }
-  export function autoTable(...args: any[]): void;
+  export function autoTable(...args: unknown[]): void;
 
 declare module 'jspdf-autotable' {
   const autoTable: ;

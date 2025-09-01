@@ -1,25 +1,26 @@
 import React from 'react.ts';
-import { SEO  } from '../../components/SEO';
-import { MessageCircle, 
-  Brain, 
-  Zap, 
-  Users, 
-  TrendingUp, 
-  Shield, 
+import { SEO } from '../../components/SEO';
+import {
+  MessageCircle,
+  Brain,
+  Zap,
+  Users,
+  TrendingUp,
+  Shield,
   Clock,
   BarChart3,
   Headphones,
-  Bot
- } from 'lucide-react.ts';
+  Bot,
+} from 'lucide-react.ts';
 
 export default function AICustomerSupport(...args: any[]): any {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-      <SEO 
+      <SEO
         title="AI Customer Support - Zion Tech Group"
         description="Intelligent support automation that provides 24/7 customer assistance. Transform your customer support with AI-powered automation."
       />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-purple-900 to-slate-900"></div>
@@ -30,7 +31,9 @@ export default function AICustomerSupport(...args: any[]): any {
                 AI Customer Support
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                Intelligent support automation that provides 24/7 customer assistance. Transform your customer support with AI-powered automation.
+                Intelligent support automation that provides 24/7 customer
+                assistance. Transform your customer support with AI-powered
+                automation.
               </p>
             </div>
             <div className="mb-16">
@@ -56,65 +59,82 @@ export default function AICustomerSupport(...args: any[]): any {
               Transform your customer support with our advanced AI automation
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
               <div className="w-16 h-16 bg-blue-600/20 rounded-2xl flex items-center justify-center mb-6">
                 <Bot className="w-8 h-8 text-blue-400" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">Intelligent Chatbots</h3>
+              <h3 className="text-xl font-bold text-white mb-4">
+                Intelligent Chatbots
+              </h3>
               <p className="text-gray-300">
-                Advanced AI chatbots that understand natural language and provide accurate responses
+                Advanced AI chatbots that understand natural language and
+                provide accurate responses
               </p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
               <div className="w-16 h-16 bg-green-600/20 rounded-2xl flex items-center justify-center mb-6">
                 <Clock className="w-8 h-8 text-green-400" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">24/7 Availability</h3>
+              <h3 className="text-xl font-bold text-white mb-4">
+                24/7 Availability
+              </h3>
               <p className="text-gray-300">
-                Provide instant customer support anytime, anywhere, without human limitations
+                Provide instant customer support anytime, anywhere, without
+                human limitations
               </p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
               <div className="w-16 h-16 bg-purple-600/20 rounded-2xl flex items-center justify-center mb-6">
                 <Brain className="w-8 h-8 text-purple-400" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">Smart Issue Resolution</h3>
+              <h3 className="text-xl font-bold text-white mb-4">
+                Smart Issue Resolution
+              </h3>
               <p className="text-gray-300">
-                AI that learns from customer interactions to provide better solutions over time
+                AI that learns from customer interactions to provide better
+                solutions over time
               </p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
               <div className="w-16 h-16 bg-yellow-600/20 rounded-2xl flex items-center justify-center mb-6">
                 <Users className="w-8 h-8 text-yellow-400" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">Personalized Support</h3>
+              <h3 className="text-xl font-bold text-white mb-4">
+                Personalized Support
+              </h3>
               <p className="text-gray-300">
                 Tailored responses based on customer history and preferences
               </p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
               <div className="w-16 h-16 bg-red-600/20 rounded-2xl flex items-center justify-center mb-6">
                 <TrendingUp className="w-8 h-8 text-red-400" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">Performance Analytics</h3>
+              <h3 className="text-xl font-bold text-white mb-4">
+                Performance Analytics
+              </h3>
               <p className="text-gray-300">
-                Comprehensive insights into support performance and customer satisfaction
+                Comprehensive insights into support performance and customer
+                satisfaction
               </p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
               <div className="w-16 h-16 bg-indigo-600/20 rounded-2xl flex items-center justify-center mb-6">
                 <Shield className="w-8 h-8 text-indigo-400" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">Secure & Compliant</h3>
+              <h3 className="text-xl font-bold text-white mb-4">
+                Secure & Compliant
+              </h3>
               <p className="text-gray-300">
-                Enterprise-grade security with compliance for data protection regulations
+                Enterprise-grade security with compliance for data protection
+                regulations
               </p>
             </div>
           </div>

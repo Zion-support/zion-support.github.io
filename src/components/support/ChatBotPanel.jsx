@@ -1,3 +1,4 @@
+import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -192,7 +193,7 @@ export function ChatBotPanel() {
       </ScrollArea>
 
       {messages.length === 1 && (<div className="px-4 py-3">
-          <p className = {
+          <p className={
   cn("text-sm mb-2",
   theme === "dark" ? "text-gray-300" : "text-gray-600")
 
@@ -210,7 +211,7 @@ export function ChatBotPanel() {
         </div>)}
 
       {failedAttempts >= 3 && (<div className="px-4 py-3 border-t border-zion-purple/10">
-          <p className = {
+          <p className={
   cn("text-sm mb-2 font-medium",
   theme === "dark" ? "text-gray-300" : "text-gray-600")
 
@@ -232,7 +233,7 @@ export function ChatBotPanel() {
           </div>
         </div>)}
       
-      <div className = {
+      <div className={
   cn("p-4 border-t",
   theme === "dark" ? "border-zion-blue-light" : "border-gray-200")
 
@@ -248,7 +249,7 @@ export function ChatBotPanel() {
         
 
 }} className="flex items-center gap-2">
-          <Input ref={inputRef} value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder="Type your question..." className = {
+          <Input ref={inputRef} value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder="Type your question..." className={
   cn("flex-1",
   theme === "dark"
             ? "bg-zion-blue border-zion-blue-light focus-visible:ring-zion-purple"

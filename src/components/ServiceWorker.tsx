@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Download, Wifi, WifiOff, CheckCircle, AlertCircle  } from 'lucide-react.ts';
+export function ServiceWorker (...args: any[]) : any {
+import { motion, AnimatePresence  } from 'framer - motion.ts';
+
 
 interface ServiceWorkerState {
 
@@ -11,137 +12,108 @@ interface ServiceWorkerState {
 
 }
 
-export function ServiceWorker(...args: any[]): any {
-  const [swState, setSwState] = useState<any>({
+  const [swState, setSwState] = useState < any> ({
     isInstalled: anyfalse,
     isOnline: navigator.onLine,
     hasUpdate: false,
     isInstalling: false
-  });
+  }) ;
 
-  useEffect(()  => {
+  useEffect ( () => {
     // Check if service worker is supported
     if ('serviceWorker' in navigator) {
       // Register service worker
       navigator.serviceWorker
-        .register('/sw.js')
-        .then((registration) => {
-          console.log('SW registered: any', registration);
-          setSwState(prev  => ({ ...prev, isInstalled: anytrue }));
+        .register ('/sw.js') .then ( (registration) => {
+          console.log ('SW registered: any', registration) ;
+          setSwState (prev  => ({ ...prev, isInstalled: anytrue }) ) ;
 
           // Check for updates
-          registration.addEventListener('updatefound', ()  => {
+          registration.addEventListener ('updatefound', () => {
             const newWorker = registration.installing;
             if (newWorker) {
-              setSwState(prev => ({ ...prev, isInstalling: anytrue }));
+              setSwState (prev => ({ ...prev, isInstalling: anytrue }) ) ;
               
-              newWorker.addEventListener('statechange', ()  => {
+              newWorker.addEventListener ('statechange', () => {
                 if (newWorker.state = == 'installed') {;
-setSwState(prev: > ({ ;
+setSwState (prev: > ({ ;
                     ...prev, ;
                     isInstalling: anyfalse,;
                     hasUpdate: true ;
-                  }));
+                  }) ) ;
                 }
-              });
+              }) ;
             }
-          });
+          }) ;
 
           // Handle updates
-          navigator.serviceWorker.addEventListener('controllerchange', ()  => {
-            window.location.reload();
-          });
-        })
-        .catch((registrationError) => {
-          console.log('SW registration failed: ', registrationError);
-        });
+          navigator.serviceWorker.addEventListener ('controllerchange', () => {
+            window.location.reload () ;
+          }) ;
+        }) .catch ( (registrationError) => {
+          console.log ('SW registration failed: ', registrationError) ;
+        }) ;
     }
 
-    // Online/offline detection
-    const handleOffline = () => setSwState(prev => ({ ...prev, isOnline: anyfalse }));
+    // Online / offline detection
+    const handleOffline = useCallback ( () => setSwState (prev => ({ ...prev, isOnline: anyfalse }) ) ;
 
-    window.addEventListener('online', handleOnline);
-    window.addEventListener('offline', handleOffline);
+    window.addEventListener ('online', handleOnline) ;
+    window.addEventListener ('offline', handleOffline) ;
 
-    return ()  => {
-      window.removeEventListener('online', handleOnline);
-      window.removeEventListener('offline', handleOffline);
+    return () => {
+      window.removeEventListener ('online', handleOnline) ;
+      window.removeEventListener ('offline', handleOffline) ;
     };
-  }, []);
+  }, []) ;
 
-  const handleUpdate = () => {;
+  const handleUpdate = useCallback ( () => {;
     if ('serviceWorker' in navigator) {;
-      navigator.serviceWorker.ready.then((registration) => {;
-        registration.waiting?.postMessage({ type: 'SKIP_WAITING' });
-      });
+      navigator.serviceWorker.ready.then ( (registration) => {;
+        registration.waiting?.postMessage ({ type: 'SKIP_WAITING' }) ;
+      }) ;
     }
   };
 
   if (!swState.isInstalled) return null;
 
-  return (
-    <AnimatePresence>
-      {swState.hasUpdate && (
-        <motion.div
+  return (<AnimatePresence>
+      {swState.hasUpdate && (<motion.div
           initial = {
   { opacity: 0,
   y: -50 
-
-
-
-
-
 
 }}
           animate = {
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
           exit = {
   { opacity: 0,
   y: -50 
 
-
-
-
-
-
 }}
-          className="fixed top-4 right-4 z-50 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-4 max-w-sm"
+          className="fixed top - 4 right - 4 z - 50 bg - white dark:bg - gray - 800 rounded - lg shadow - lg border border - gray - 200 dark:border - gray - 700 p - 4 max - w-sm"
         >
-          <div className="flex items-center space-x-3">
-            <div className="flex-shrink-0">
-              {swState.isOnline ? (
-                <Wifi className="h-5 w-5 text-green-500" />
-              ) : (
-                <WifiOff className="h-5 w-5 text-red-500" />
-              )}
+          <div role="button" className="flex items - center space - x-3">
+            <div role="button" className="flex - shrink - 0">
+              {swState.isOnline ? (<Wifi className="h - 5 w - 5 text - green - 500" />) : (<WifiOff className="h - 5 w - 5 text - red - 500" />) }
             </div>
-            <div className="flex-1 min-w-0">
-              <p className="text-sm font-medium text-gray-900 dark:text-white">
+            <div role="button" className="flex - 1 min - w-0">
+              <p className="text - sm font - medium text - gray - 900 dark:text - white">
                 {swState.isOnline ? 'Online' : 'Offline'}
               </p>
-              <p className="text-sm text-gray-500 dark:text-gray-400">
+              <p className="text - sm text - gray - 500 dark:text - gray - 400">
                 {swState.hasUpdate ? 'Update available' : 'Up to date'}
               </p>
             </div>
-            {swState.hasUpdate && (
-              <button
-                onClick={handleUpdate}
-                className="flex-shrink-0 bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded-md text-sm font-medium transition-colors"
+            {swState.hasUpdate && (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={handleUpdate}
+                className="flex - shrink - 0 bg - blue - 600 hover:bg - blue - 700 text - white px - 3 py - 1 rounded - md text - sm font - medium transition - colors"
               >
                 Update;
-              </button>;
-            )};
+              </button>;) };
           </div>;
-        </motion.div>;
-      )};
-    </AnimatePresence>;
-  );
+        </motion.div>;) };
+    </AnimatePresence>;) ;
 }

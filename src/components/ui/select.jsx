@@ -1,11 +1,7 @@
 import React from 'react';
 
 export function Select({ children, className = '', value, onValueChange }) {
-  return (
-    <div className={`relative ${className}`}>
-      {children}
-    </div>
-  );
+  return <div className={`relative ${className}`}>{children}</div>;
 }
 
 export function SelectTrigger({ children, className = '', ...props }) {
@@ -25,11 +21,13 @@ export function SelectValue({ placeholder }) {
 
 export function SelectContent({ children, className = '' }) {
   return (
-    <div className={`
+    <div
+      className={`
       absolute top-full left-0 right-0 z-50 mt-1 rounded-md border
       border-white/20 bg-slate-800/90 backdrop-blur-sm
       shadow-lg ${className}
-    `}>
+    `}
+    >
       {children}
     </div>
   );
@@ -37,13 +35,17 @@ export function SelectContent({ children, className = '' }) {
 
 export function SelectItem({ children, className = '', value, ...props }) {
   return (
-    <div className={`
+    <div
+      className={`
       relative flex w-full cursor-pointer select-none items-center
       rounded-sm px-3 py-2 text-sm text-white outline-none
       hover:bg-slate-700/50 focus:bg-slate-700/50
       focus:text-white transition-colors
       ${className}
-    `} data-value={value} {...props}>
+    `}
+      data-value={value}
+      {...props}
+    >
       {children}
     </div>
   );

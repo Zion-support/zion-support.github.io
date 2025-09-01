@@ -89,7 +89,7 @@ import {
   X,
   Check,
   AlertTriangle,
-  Info
+  Info,
 } from 'lucide-react';
 
 export function QuantumAITradingPlatform() {
@@ -97,39 +97,58 @@ export function QuantumAITradingPlatform() {
     {
       icon: Atom,
       title: 'Quantum Computing Power',
-      description: 'Leverage quantum algorithms for superior market analysis and prediction',
-      benefits: ['Quantum speed advantage', 'Complex pattern recognition', 'Quantum machine learning']
+      description:
+        'Leverage quantum algorithms for superior market analysis and prediction',
+      benefits: [
+        'Quantum speed advantage',
+        'Complex pattern recognition',
+        'Quantum machine learning',
+      ],
     },
     {
       icon: Brain,
       title: 'Advanced AI Algorithms',
-      description: 'State-of-the-art machine learning models for market prediction',
-      benefits: ['Neural networks', 'Deep learning', 'Predictive analytics']
+      description:
+        'State-of-the-art machine learning models for market prediction',
+      benefits: ['Neural networks', 'Deep learning', 'Predictive analytics'],
     },
     {
       icon: Shield,
       title: 'Bank-Grade Security',
-      description: 'Military-grade encryption and zero-trust security architecture',
-      benefits: ['End-to-end encryption', 'Multi-factor authentication', 'Regular security audits']
+      description:
+        'Military-grade encryption and zero-trust security architecture',
+      benefits: [
+        'End-to-end encryption',
+        'Multi-factor authentication',
+        'Regular security audits',
+      ],
     },
     {
       icon: BarChart3,
       title: 'Real-Time Analytics',
       description: 'Live market data and instant trading signals',
-      benefits: ['Live market feeds', 'Instant notifications', 'Performance tracking']
+      benefits: [
+        'Live market feeds',
+        'Instant notifications',
+        'Performance tracking',
+      ],
     },
     {
       icon: Rocket,
       title: 'High-Frequency Trading',
       description: 'Ultra-low latency execution for maximum profit potential',
-      benefits: ['Microsecond execution', 'Co-location services', 'Direct market access']
+      benefits: [
+        'Microsecond execution',
+        'Co-location services',
+        'Direct market access',
+      ],
     },
     {
       icon: Cloud,
       title: 'Global Infrastructure',
       description: 'Worldwide data centers for optimal performance',
-      benefits: ['99.99% uptime', 'Global CDN', 'Auto-scaling']
-    }
+      benefits: ['99.99% uptime', 'Global CDN', 'Auto-scaling'],
+    },
   ];
 
   const pricingPlans = [
@@ -144,10 +163,10 @@ export function QuantumAITradingPlatform() {
         'Standard security',
         'Email support',
         'Basic analytics',
-        'Up to 100 trades/month'
+        'Up to 100 trades/month',
       ],
       cta: 'Start Free Trial',
-      popular: false
+      popular: false,
     },
     {
       name: 'Professional',
@@ -162,10 +181,10 @@ export function QuantumAITradingPlatform() {
         'Advanced analytics',
         'Unlimited trades',
         'Custom strategies',
-        'API access'
+        'API access',
       ],
       cta: 'Start Free Trial',
-      popular: true
+      popular: true,
     },
     {
       name: 'Enterprise',
@@ -180,45 +199,58 @@ export function QuantumAITradingPlatform() {
         'Custom algorithms',
         'White-label solutions',
         'On-premise options',
-        'SLA guarantees'
+        'SLA guarantees',
       ],
       cta: 'Contact Sales',
-      popular: false
-    }
+      popular: false,
+    },
   ];
 
   const tradingFeatures = [
     {
       title: 'Quantum Portfolio Optimization',
-      description: 'Use quantum algorithms to find optimal portfolio allocations',
+      description:
+        'Use quantum algorithms to find optimal portfolio allocations',
       icon: Target,
-      benefits: ['Risk minimization', 'Return maximization', 'Portfolio rebalancing']
+      benefits: [
+        'Risk minimization',
+        'Return maximization',
+        'Portfolio rebalancing',
+      ],
     },
     {
       title: 'AI Market Prediction',
       description: 'Advanced machine learning for market trend forecasting',
       icon: TrendingUp,
-      benefits: ['Pattern recognition', 'Sentiment analysis', 'Risk assessment']
+      benefits: [
+        'Pattern recognition',
+        'Sentiment analysis',
+        'Risk assessment',
+      ],
     },
     {
       title: 'High-Frequency Trading',
       description: 'Ultra-fast execution for arbitrage and market making',
       icon: Zap,
-      benefits: ['Microsecond latency', 'Direct market access', 'Co-location services']
+      benefits: [
+        'Microsecond latency',
+        'Direct market access',
+        'Co-location services',
+      ],
     },
     {
       title: 'Risk Management',
       description: 'Comprehensive risk controls and monitoring',
       icon: Shield,
-      benefits: ['Stop-loss automation', 'Position sizing', 'Risk alerts']
-    }
+      benefits: ['Stop-loss automation', 'Position sizing', 'Risk alerts'],
+    },
   ];
 
   const performanceMetrics = [
     { metric: '99.99%', label: 'Uptime' },
     { metric: '<1ms', label: 'Latency' },
     { metric: '1000x', label: 'Speed Improvement' },
-    { metric: '24/7', label: 'Monitoring' }
+    { metric: '24/7', label: 'Monitoring' },
   ];
 
   return (
@@ -240,8 +272,9 @@ export function QuantumAITradingPlatform() {
               Quantum AI Trading Platform
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Experience the future of trading with our quantum-powered AI platform. 
-              Get 1000x faster execution and superior market predictions.
+              Experience the future of trading with our quantum-powered AI
+              platform. Get 1000x faster execution and superior market
+              predictions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -297,8 +330,8 @@ export function QuantumAITradingPlatform() {
               Quantum-Powered Trading Features
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Our platform combines quantum computing with advanced AI to deliver 
-              unprecedented trading performance and accuracy.
+              Our platform combines quantum computing with advanced AI to
+              deliver unprecedented trading performance and accuracy.
             </p>
           </motion.div>
 
@@ -318,7 +351,10 @@ export function QuantumAITradingPlatform() {
                 <p className="text-gray-400 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-300">
+                    <li
+                      key={idx}
+                      className="flex items-center text-sm text-gray-300"
+                    >
                       <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                       {benefit}
                     </li>
@@ -343,8 +379,9 @@ export function QuantumAITradingPlatform() {
               Advanced Trading Capabilities
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              From portfolio optimization to high-frequency trading, our platform 
-              provides everything you need to succeed in today's markets.
+              From portfolio optimization to high-frequency trading, our
+              platform provides everything you need to succeed in today's
+              markets.
             </p>
           </motion.div>
 
@@ -362,11 +399,16 @@ export function QuantumAITradingPlatform() {
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+                    <h3 className="text-xl font-semibold mb-2">
+                      {feature.title}
+                    </h3>
                     <p className="text-gray-400 mb-4">{feature.description}</p>
                     <ul className="space-y-2">
                       {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-300">
+                        <li
+                          key={idx}
+                          className="flex items-center text-sm text-gray-300"
+                        >
                           <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                           {benefit}
                         </li>
@@ -393,7 +435,7 @@ export function QuantumAITradingPlatform() {
               Competitive Pricing for Every Trader
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Choose the plan that fits your trading needs. All plans include 
+              Choose the plan that fits your trading needs. All plans include
               our core quantum AI capabilities and enterprise-grade security.
             </p>
           </motion.div>
@@ -406,8 +448,8 @@ export function QuantumAITradingPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm border rounded-xl p-8 ${
-                  plan.popular 
-                    ? 'border-cyan-500 shadow-lg shadow-cyan-500/20' 
+                  plan.popular
+                    ? 'border-cyan-500 shadow-lg shadow-cyan-500/20'
                     : 'border-gray-700'
                 }`}
               >
@@ -418,7 +460,7 @@ export function QuantumAITradingPlatform() {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center mb-2">
@@ -465,8 +507,8 @@ export function QuantumAITradingPlatform() {
               Ready to Trade with Quantum Speed?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join elite traders already using our quantum AI platform 
-              to gain the competitive edge in today's markets.
+              Join elite traders already using our quantum AI platform to gain
+              the competitive edge in today's markets.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -510,7 +552,11 @@ export function QuantumAITradingPlatform() {
               <div className="flex flex-col items-center">
                 <MapPin className="w-8 h-8 text-cyan-400 mb-4" />
                 <h3 className="font-semibold mb-2">Address</h3>
-                <p className="text-gray-400">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                <p className="text-gray-400">
+                  364 E Main St STE 1008
+                  <br />
+                  Middletown DE 19709
+                </p>
               </div>
             </div>
           </motion.div>

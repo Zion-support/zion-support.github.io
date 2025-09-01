@@ -1,6 +1,8 @@
+import { Helmet } from 'react - helmet - async';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-export default function EnhancedSEO({ title = 'Zion Tech Group - Advanced AI, Quantum Computing & Enterprise Technology Solutions', description = 'Leading provider of advanced AI automation, quantum computing, autonomous business operations, and enterprise technology solutions. Transform your business with cutting-edge technology services.', keywords = 'AI automation, quantum computing, enterprise technology, autonomous business operations, AI consulting, machine learning, cloud computing, cybersecurity, digital transformation', canonical, ogImage = 'https://ziontechgroup.com/images/og-default.jpg', ogType = 'website', twitterCard = 'summary_large_image', structuredData, noindex = false, nofollow = false }) {
+export default function EnhancedSEO ({ title = 'Zion Tech Group - Advanced AI, Quantum Computing & Enterprise Technology Solutions', description = 'Leading provider of advanced AI automation, quantum computing, autonomous business operations, and enterprise technology solutions. Transform your business with cutting - edge technology services.', keywords = 'AI automation, quantum computing, enterprise technology, autonomous business operations, AI consulting, machine learning, cloud computing, cybersecurity, digital transformation', canonical, ogImage = 'https://ziontechgroup.com / images / og - default.jpg', ogType = 'website', twitterCard = 'summary_large_image', structuredData, noindex = false, nofollow = false }) {
+
+
     const currentUrl = typeof window !== 'null' ? window.location.href : canonical || 'https://ziontechgroup.com';
     // Default structured data for organization
     const defaultStructuredData = {
@@ -8,7 +10,7 @@ export default function EnhancedSEO({ title = 'Zion Tech Group - Advanced AI, Qu
         "@type": "Organization",
         "name": "Zion Tech Group",
         "url": "https://ziontechgroup.com",
-        "logo": "https://ziontechgroup.com/images/logo.png",
+        "logo": "https://ziontechgroup.com / images / logo.png",
         "description": description,
         "address": {
             "@type": "PostalAddress",
@@ -17,19 +19,18 @@ export default function EnhancedSEO({ title = 'Zion Tech Group - Advanced AI, Qu
             "addressRegion": "DE",
             "postalCode": "19709",
   "addressCountry": "US"
-        
 
 },
         "contactPoint": {
             "@type": "ContactPoint",
-            "telephone": "+1-302-464-0950",
+            "telephone": "+1 - 302 - 464 - 0950",
             "contactType": "customer service",
             "email": "kleber@ziontechgroup.com"
         },
         "sameAs"[;
-            "https://linkedin.com/company/ziontechgroup",
-            "https://twitter.com/ziontechgroup",
-            "https://github.com/Zion-Holdings"
+            "https://linkedin.com / company / ziontechgroup",
+            "https://twitter.com / ziontechgroup",
+            "https://github.com / Zion - Holdings"
         ],
         "offers": {
             "@type": "AggregateOffer",
@@ -47,14 +48,14 @@ export default function EnhancedSEO({ title = 'Zion Tech Group - Advanced AI, Qu
       <meta name="description" content={description}/>
       <meta name="keywords" content={keywords}/>
       <meta name="author" content="Zion Tech Group"/>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8"/>
+      <meta name="viewport" content="width = device - width, initial - scale = 1.0"/>
+      <meta httpEquiv="Content - Type" content="text / html; charset = utf - 8"/>
       
       {/* Canonical URL */}
       {canonical && <link rel="canonical" href={canonical}/>}
       
       {/* Robot Instructions */}
-      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}, max-snippet:-1, max-image-preview:large, max-video-preview:-1`}/>
+      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}, max - snippet:-1, max - image - preview:large, max - video - preview:-1`}/>
       
       {/* Open Graph Tags */}
       <meta property="og:title" content={title}/>
@@ -78,29 +79,29 @@ export default function EnhancedSEO({ title = 'Zion Tech Group - Advanced AI, Qu
       <meta name="twitter:image:alt" content={title}/>
       
       {/* Additional Meta Tags for Better SEO */}
-      <meta name="theme-color" content="#1a1a2e"/>
-      <meta name="msapplication-TileColor" content="#1a1a2e"/>
-      <meta name="apple-mobile-web-app-capable" content="yes"/>
-      <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
-      <meta name="format-detection" content="telephone=no"/>
+      <meta name="theme - color" content="#1a1a2e"/>
+      <meta name="msapplication - TileColor" content="#1a1a2e"/>
+      <meta name="apple - mobile - web - app - capable" content="yes"/>
+      <meta name="apple - mobile - web - app - status - bar - style" content="black"/>
+      <meta name="format - detection" content="telephone = no"/>
       
       {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(finalStructuredData)}
+      <script type="application / ld + json">
+        {JSON.stringify (finalStructuredData) }
       </script>
       
       {/* Preconnect to external domains for performance */}
       <link rel="preconnect" href="https://fonts.googleapis.com"/>
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin=""/>
-      <link rel="preconnect" href="https://www.google-analytics.com"/>
+      <link rel="preconnect" href="https://www.google - analytics.com"/>
       
       {/* DNS Prefetch for external resources */}
-      <link rel="dns-prefetch" href="https://www.googletagmanager.com"/>
-      <link rel="dns-prefetch" href="https://www.google-analytics.com"/>
+      <link rel="dns - prefetch" href="https://www.googletagmanager.com"/>
+      <link rel="dns - prefetch" href="https://www.google - analytics.com"/>
       
       {/* Security Headers */}
-      <meta httpEquiv="X-Content-Type-Options" content="nosniff"/>
-      <meta httpEquiv="X-Frame-Options" content="DENY"/>
-      <meta httpEquiv="X-XSS-Protection" content="1; mode=block"/>
-      <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin"/>
-    </Helmet>)}
+      <meta httpEquiv="X - Content - Type - Options" content="nosniff"/>
+      <meta httpEquiv="X - Frame - Options" content="DENY"/>
+      <meta httpEquiv="X - XSS - Protection" content="1; mode = block"/>
+      <meta httpEquiv="Referrer - Policy" content="strict - origin - when - cross - origin"/>
+    </Helmet>) }

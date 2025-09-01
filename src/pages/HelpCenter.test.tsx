@@ -1,0 +1,16 @@
+import { render, screen } from '@testing - library / react';
+import React from 'react';
+import HelpCenter from './HelpCenter';
+
+
+describe ('HelpCenter', () => {
+  it ('renders without crashing', () => {
+    render (<HelpCenter />) ;
+    expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () ;
+  }) ;
+
+  it ('displays expected content', () => {
+    render (<HelpCenter />) ;
+    // Add specific test assertions based on component content
+  }) ;
+}) ;

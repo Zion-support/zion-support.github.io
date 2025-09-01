@@ -83,7 +83,7 @@ import {
   Thermometer,
   Compass,
   Map,
-  Navigation
+  Navigation,
 } from 'lucide-react';
 
 export function AICybersecurityPlatform() {
@@ -91,39 +91,62 @@ export function AICybersecurityPlatform() {
     {
       icon: Brain,
       title: 'AI-Powered Threat Detection',
-      description: 'Advanced machine learning algorithms that detect and prevent threats in real-time',
-      benefits: ['Zero-day threat detection', 'Behavioral analysis', 'Predictive security']
+      description:
+        'Advanced machine learning algorithms that detect and prevent threats in real-time',
+      benefits: [
+        'Zero-day threat detection',
+        'Behavioral analysis',
+        'Predictive security',
+      ],
     },
     {
       icon: Shield,
       title: 'Zero-Trust Architecture',
-      description: 'Comprehensive security model that verifies every user and device',
-      benefits: ['Identity verification', 'Device trust scoring', 'Continuous monitoring']
+      description:
+        'Comprehensive security model that verifies every user and device',
+      benefits: [
+        'Identity verification',
+        'Device trust scoring',
+        'Continuous monitoring',
+      ],
     },
     {
       icon: Eye,
       title: '24/7 Security Monitoring',
       description: 'Round-the-clock surveillance with instant threat response',
-      benefits: ['Real-time alerts', 'Automated response', 'Expert security team']
+      benefits: [
+        'Real-time alerts',
+        'Automated response',
+        'Expert security team',
+      ],
     },
     {
       icon: Lock,
       title: 'End-to-End Encryption',
       description: 'Military-grade encryption for data at rest and in transit',
-      benefits: ['AES-256 encryption', 'TLS 1.3 support', 'Key management']
+      benefits: ['AES-256 encryption', 'TLS 1.3 support', 'Key management'],
     },
     {
       icon: Activity,
       title: 'Advanced Analytics',
       description: 'Comprehensive security insights and threat intelligence',
-      benefits: ['Security dashboards', 'Threat intelligence', 'Compliance reporting']
+      benefits: [
+        'Security dashboards',
+        'Threat intelligence',
+        'Compliance reporting',
+      ],
     },
     {
       icon: Cloud,
       title: 'Cloud-Native Security',
-      description: 'Built for modern cloud environments with seamless integration',
-      benefits: ['Multi-cloud support', 'Container security', 'Serverless protection']
-    }
+      description:
+        'Built for modern cloud environments with seamless integration',
+      benefits: [
+        'Multi-cloud support',
+        'Container security',
+        'Serverless protection',
+      ],
+    },
   ];
 
   const pricingPlans = [
@@ -138,10 +161,10 @@ export function AICybersecurityPlatform() {
         'Web filtering',
         'Basic reporting',
         'Email support',
-        'Up to 50 users'
+        'Up to 50 users',
       ],
       cta: 'Start Free Trial',
-      popular: false
+      popular: false,
     },
     {
       name: 'Professional',
@@ -156,10 +179,10 @@ export function AICybersecurityPlatform() {
         'Priority support',
         'Up to 500 users',
         'Compliance tools',
-        'API access'
+        'API access',
       ],
       cta: 'Start Free Trial',
-      popular: true
+      popular: true,
     },
     {
       name: 'Enterprise',
@@ -174,45 +197,50 @@ export function AICybersecurityPlatform() {
         'Unlimited users',
         'Custom deployment',
         'On-premise options',
-        'SLA guarantees'
+        'SLA guarantees',
       ],
       cta: 'Contact Sales',
-      popular: false
-    }
+      popular: false,
+    },
   ];
 
   const securityFeatures = [
     {
       title: 'Threat Intelligence',
-      description: 'Real-time threat intelligence from global security networks',
+      description:
+        'Real-time threat intelligence from global security networks',
       icon: Globe,
-      benefits: ['Global threat feeds', 'IOC sharing', 'Threat hunting']
+      benefits: ['Global threat feeds', 'IOC sharing', 'Threat hunting'],
     },
     {
       title: 'Incident Response',
       description: 'Automated incident response with playbook execution',
       icon: Rocket,
-      benefits: ['Automated workflows', 'Playbook templates', 'Response analytics']
+      benefits: [
+        'Automated workflows',
+        'Playbook templates',
+        'Response analytics',
+      ],
     },
     {
       title: 'Compliance Management',
       description: 'Built-in compliance frameworks and reporting tools',
       icon: Check,
-      benefits: ['SOC2, ISO27001', 'GDPR, HIPAA', 'Automated reporting']
+      benefits: ['SOC2, ISO27001', 'GDPR, HIPAA', 'Automated reporting'],
     },
     {
       title: 'Vulnerability Management',
       description: 'Continuous vulnerability assessment and remediation',
       icon: Bug,
-      benefits: ['Automated scanning', 'Risk scoring', 'Patch management']
-    }
+      benefits: ['Automated scanning', 'Risk scoring', 'Patch management'],
+    },
   ];
 
   const securityMetrics = [
     { metric: '99.99%', label: 'Threat Detection Rate' },
     { metric: '<30s', label: 'Response Time' },
     { metric: '0', label: 'False Positives' },
-    { metric: '24/7', label: 'Protection' }
+    { metric: '24/7', label: 'Protection' },
   ];
 
   const complianceFrameworks = [
@@ -223,7 +251,7 @@ export function AICybersecurityPlatform() {
     'PCI DSS',
     'NIST',
     'FedRAMP',
-    'SOX'
+    'SOX',
   ];
 
   return (
@@ -245,8 +273,9 @@ export function AICybersecurityPlatform() {
               AI Cybersecurity Platform
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Protect your business with the most advanced AI-powered cybersecurity platform. 
-              Detect, prevent, and respond to threats in real-time with zero false positives.
+              Protect your business with the most advanced AI-powered
+              cybersecurity platform. Detect, prevent, and respond to threats in
+              real-time with zero false positives.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -302,8 +331,8 @@ export function AICybersecurityPlatform() {
               Comprehensive Security Features
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Our AI-powered platform provides enterprise-grade security 
-              with intelligent threat detection and automated response.
+              Our AI-powered platform provides enterprise-grade security with
+              intelligent threat detection and automated response.
             </p>
           </motion.div>
 
@@ -323,7 +352,10 @@ export function AICybersecurityPlatform() {
                 <p className="text-gray-400 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-300">
+                    <li
+                      key={idx}
+                      className="flex items-center text-sm text-gray-300"
+                    >
                       <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                       {benefit}
                     </li>
@@ -348,7 +380,7 @@ export function AICybersecurityPlatform() {
               Advanced Security Capabilities
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              From threat intelligence to compliance management, our platform 
+              From threat intelligence to compliance management, our platform
               provides everything you need to secure your business.
             </p>
           </motion.div>
@@ -367,11 +399,16 @@ export function AICybersecurityPlatform() {
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+                    <h3 className="text-xl font-semibold mb-2">
+                      {feature.title}
+                    </h3>
                     <p className="text-gray-400 mb-4">{feature.description}</p>
                     <ul className="space-y-2">
                       {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-300">
+                        <li
+                          key={idx}
+                          className="flex items-center text-sm text-gray-300"
+                        >
                           <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                           {benefit}
                         </li>
@@ -398,8 +435,8 @@ export function AICybersecurityPlatform() {
               Industry Compliance & Standards
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Our platform meets the highest security standards and compliance requirements 
-              across industries and regulations.
+              Our platform meets the highest security standards and compliance
+              requirements across industries and regulations.
             </p>
           </motion.div>
 
@@ -435,7 +472,7 @@ export function AICybersecurityPlatform() {
               Affordable Security for Every Business
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Choose the plan that fits your security needs. All plans include 
+              Choose the plan that fits your security needs. All plans include
               our core AI capabilities and enterprise-grade protection.
             </p>
           </motion.div>
@@ -448,8 +485,8 @@ export function AICybersecurityPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm border rounded-xl p-8 ${
-                  plan.popular 
-                    ? 'border-cyan-500 shadow-lg shadow-cyan-500/20' 
+                  plan.popular
+                    ? 'border-cyan-500 shadow-lg shadow-cyan-500/20'
                     : 'border-gray-700'
                 }`}
               >
@@ -460,7 +497,7 @@ export function AICybersecurityPlatform() {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center mb-2">
@@ -507,7 +544,7 @@ export function AICybersecurityPlatform() {
               Ready to Secure Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already protected by our AI-powered 
+              Join thousands of businesses already protected by our AI-powered
               cybersecurity platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -552,7 +589,11 @@ export function AICybersecurityPlatform() {
               <div className="flex flex-col items-center">
                 <MapPin className="w-8 h-8 text-cyan-400 mb-4" />
                 <h3 className="font-semibold mb-2">Address</h3>
-                <p className="text-gray-400">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                <p className="text-gray-400">
+                  364 E Main St STE 1008
+                  <br />
+                  Middletown DE 19709
+                </p>
               </div>
             </div>
           </motion.div>

@@ -1,12 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Shield, 
-  CheckCircle, 
-  AlertTriangle, 
-  FileText, 
-  Zap, 
-  Brain, 
+import {
+  Shield,
+  CheckCircle,
+  AlertTriangle,
+  FileText,
+  Zap,
+  Brain,
   BarChart3,
   ArrowRight,
   Star,
@@ -45,88 +45,102 @@ import {
   Scale,
   Gavel,
   Clipboard,
-  BookOpen
+  BookOpen,
 } from 'lucide-react';
 
 export default function AIComplianceAssistant() {
   const features = [
     {
       icon: Shield,
-      title: "Automated Compliance Monitoring",
-      description: "24/7 monitoring of regulatory requirements and compliance status across all systems"
+      title: 'Automated Compliance Monitoring',
+      description:
+        '24/7 monitoring of regulatory requirements and compliance status across all systems',
     },
     {
       icon: CheckCircle,
-      title: "Real-time Risk Assessment",
-      description: "Instant identification and evaluation of compliance risks and violations"
+      title: 'Real-time Risk Assessment',
+      description:
+        'Instant identification and evaluation of compliance risks and violations',
     },
     {
       icon: FileText,
-      title: "Document Management",
-      description: "Intelligent document review, classification, and compliance verification"
+      title: 'Document Management',
+      description:
+        'Intelligent document review, classification, and compliance verification',
     },
     {
       icon: Brain,
-      title: "AI-Powered Auditing",
-      description: "Machine learning algorithms that continuously improve compliance detection accuracy"
+      title: 'AI-Powered Auditing',
+      description:
+        'Machine learning algorithms that continuously improve compliance detection accuracy',
     },
     {
       icon: AlertTriangle,
-      title: "Proactive Alerts",
-      description: "Early warning system for potential compliance issues before they become violations"
+      title: 'Proactive Alerts',
+      description:
+        'Early warning system for potential compliance issues before they become violations',
     },
     {
       icon: BarChart3,
-      title: "Comprehensive Reporting",
-      description: "Detailed compliance reports and analytics for stakeholders and regulators"
-    }
+      title: 'Comprehensive Reporting',
+      description:
+        'Detailed compliance reports and analytics for stakeholders and regulators',
+    },
   ];
 
   const benefits = [
-    "Reduce compliance violations by up to 90% through proactive monitoring",
-    "Automate 80% of routine compliance tasks and documentation",
-    "Achieve 100% audit readiness with real-time compliance tracking",
-    "Reduce compliance costs by 60% through intelligent automation",
-    "Improve regulatory reporting accuracy and timeliness",
-    "Ensure consistent compliance across all business units and locations"
+    'Reduce compliance violations by up to 90% through proactive monitoring',
+    'Automate 80% of routine compliance tasks and documentation',
+    'Achieve 100% audit readiness with real-time compliance tracking',
+    'Reduce compliance costs by 60% through intelligent automation',
+    'Improve regulatory reporting accuracy and timeliness',
+    'Ensure consistent compliance across all business units and locations',
   ];
 
   const complianceAreas = [
     {
-      title: "GDPR & Data Privacy",
-      description: "Personal data protection, consent management, and privacy compliance"
+      title: 'GDPR & Data Privacy',
+      description:
+        'Personal data protection, consent management, and privacy compliance',
     },
     {
-      title: "SOX & Financial Compliance",
-      description: "Financial reporting, internal controls, and audit requirements"
+      title: 'SOX & Financial Compliance',
+      description:
+        'Financial reporting, internal controls, and audit requirements',
     },
     {
-      title: "HIPAA & Healthcare",
-      description: "Patient data protection and healthcare information security"
+      title: 'HIPAA & Healthcare',
+      description:
+        'Patient data protection and healthcare information security',
     },
     {
-      title: "ISO Standards",
-      description: "Quality management, information security, and environmental standards"
-    }
+      title: 'ISO Standards',
+      description:
+        'Quality management, information security, and environmental standards',
+    },
   ];
 
   const useCases = [
     {
-      title: "Financial Services",
-      description: "Banks, insurance companies, and fintech firms with strict regulatory requirements"
+      title: 'Financial Services',
+      description:
+        'Banks, insurance companies, and fintech firms with strict regulatory requirements',
     },
     {
-      title: "Healthcare Organizations",
-      description: "Hospitals, clinics, and health tech companies handling sensitive patient data"
+      title: 'Healthcare Organizations',
+      description:
+        'Hospitals, clinics, and health tech companies handling sensitive patient data',
     },
     {
-      title: "E-commerce & Retail",
-      description: "Online businesses managing customer data and payment compliance"
+      title: 'E-commerce & Retail',
+      description:
+        'Online businesses managing customer data and payment compliance',
     },
     {
-      title: "Manufacturing & Supply Chain",
-      description: "Companies with complex regulatory requirements across multiple jurisdictions"
-    }
+      title: 'Manufacturing & Supply Chain',
+      description:
+        'Companies with complex regulatory requirements across multiple jurisdictions',
+    },
   ];
 
   return (
@@ -144,16 +158,17 @@ export default function AIComplianceAssistant() {
               <Shield className="w-4 h-4" />
               <span>AI-Powered Compliance</span>
             </div>
-            
+
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI Compliance Assistant
             </h1>
-            
+
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-              Stay ahead of regulatory requirements with intelligent compliance automation, 
-              real-time monitoring, and AI-driven risk assessment that keeps your business compliant 24/7.
+              Stay ahead of regulatory requirements with intelligent compliance
+              automation, real-time monitoring, and AI-driven risk assessment
+              that keeps your business compliant 24/7.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -163,7 +178,7 @@ export default function AIComplianceAssistant() {
                 Start Free Trial
                 <ArrowRight className="inline ml-2 w-5 h-5" />
               </motion.button>
-              
+
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -174,7 +189,7 @@ export default function AIComplianceAssistant() {
             </div>
           </motion.div>
         </div>
-        
+
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-cyan/10 rounded-full blur-3xl"></div>
@@ -195,10 +210,11 @@ export default function AIComplianceAssistant() {
               Intelligent Compliance Features
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Advanced AI capabilities that automate and streamline your compliance operations
+              Advanced AI capabilities that automate and streamline your
+              compliance operations
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
@@ -211,7 +227,9 @@ export default function AIComplianceAssistant() {
                 <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  {feature.title}
+                </h3>
                 <p className="text-zion-slate-light">{feature.description}</p>
               </motion.div>
             ))}
@@ -232,10 +250,11 @@ export default function AIComplianceAssistant() {
               Transform Your Compliance Operations
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Experience significant improvements in compliance efficiency and risk reduction
+              Experience significant improvements in compliance efficiency and
+              risk reduction
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-6">
               {benefits.slice(0, 3).map((benefit, index) => (
@@ -247,11 +266,13 @@ export default function AIComplianceAssistant() {
                   className="flex items-start space-x-4"
                 >
                   <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0" />
-                  <span className="text-zion-slate-light text-lg">{benefit}</span>
+                  <span className="text-zion-slate-light text-lg">
+                    {benefit}
+                  </span>
                 </motion.div>
               ))}
             </div>
-            
+
             <div className="space-y-6">
               {benefits.slice(3).map((benefit, index) => (
                 <motion.div
@@ -262,7 +283,9 @@ export default function AIComplianceAssistant() {
                   className="flex items-start space-x-4"
                 >
                   <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0" />
-                  <span className="text-zion-slate-light text-lg">{benefit}</span>
+                  <span className="text-zion-slate-light text-lg">
+                    {benefit}
+                  </span>
                 </motion.div>
               ))}
             </div>
@@ -286,7 +309,7 @@ export default function AIComplianceAssistant() {
               Support for major regulatory frameworks and industry standards
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {complianceAreas.map((area, index) => (
               <motion.div
@@ -301,7 +324,9 @@ export default function AIComplianceAssistant() {
                     <Scale className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{area.title}</h3>
+                    <h3 className="text-xl font-semibold text-white mb-2">
+                      {area.title}
+                    </h3>
                     <p className="text-zion-slate-light">{area.description}</p>
                   </div>
                 </div>
@@ -327,7 +352,7 @@ export default function AIComplianceAssistant() {
               Tailored compliance solutions for various industry requirements
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {useCases.map((useCase, index) => (
               <motion.div
@@ -340,8 +365,12 @@ export default function AIComplianceAssistant() {
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
                   <Shield className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>
-                <p className="text-zion-slate-light text-sm">{useCase.description}</p>
+                <h3 className="text-lg font-semibold text-white mb-2">
+                  {useCase.title}
+                </h3>
+                <p className="text-zion-slate-light text-sm">
+                  {useCase.description}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -360,9 +389,10 @@ export default function AIComplianceAssistant() {
               Ready to Simplify Compliance?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8">
-              Join organizations already automating their compliance operations with AI
+              Join organizations already automating their compliance operations
+              with AI
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -372,7 +402,7 @@ export default function AIComplianceAssistant() {
                 Start Compliant Today
                 <Rocket className="inline ml-2 w-5 h-5" />
               </motion.button>
-              
+
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

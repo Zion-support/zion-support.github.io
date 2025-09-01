@@ -2,34 +2,34 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 
-export function LoadingSpinner({ 
-  size = 'md', 
-  color = 'primary', 
-  showText = false, 
-  text = 'Loading...', 
+export function LoadingSpinner({
+  size = 'md',
+  color = 'primary',
+  showText = false,
+  text = 'Loading...',
   className = '',
-  customColor = ''
+  customColor = '',
 }) {
   const sizeClasses = {
     xs: 'w-4 h-4',
     sm: 'w-6 h-6',
     md: 'w-8 h-8',
     lg: 'w-12 h-12',
-    xl: 'w-16 h-16'
+    xl: 'w-16 h-16',
   };
 
   const colorClasses = {
     primary: 'border-zion-purple',
     secondary: 'border-zion-cyan',
     white: 'border-white',
-    custom: ''
+    custom: '',
   };
 
   const borderColor = customColor || colorClasses[color];
 
   return (
     <div className={cn('flex flex-col items-center justify-center', className)}>
-      <motion.div 
+      <motion.div
         className={cn(
           'border-2 border-t-transparent rounded-full animate-spin',
           sizeClasses[size],
@@ -39,14 +39,14 @@ export function LoadingSpinner({
         transition={{
           duration: 1,
           repeat: Infinity,
-          ease: "linear"
+          ease: 'linear',
         }}
         role="status"
         aria-label="Loading"
       />
 
       {showText && (
-        <motion.p 
+        <motion.p
           className="mt-3 text-sm text-zion-slate-light text-center"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -79,7 +79,9 @@ export function SkeletonLoader({ className, lines = 3, height = 'h-4' }) {
 // Page loading component
 export function PageLoader({ text = 'Loading page...', className }) {
   return (
-    <div className={cn('min-h-screen flex items-center justify-center', className)}>
+    <div
+      className={cn('min-h-screen flex items-center justify-center', className)}
+    >
       <div className="text-center">
         <LoadingSpinner size="xl" color="primary" showText text={text} />
       </div>

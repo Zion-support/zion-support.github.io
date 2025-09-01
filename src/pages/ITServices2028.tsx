@@ -1,7 +1,10 @@
+import { Link } from 'react - router - dom';
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+export default ITServices2028;}}
 import {
+import { motion } from 'framer - motion';
+
+
   Brain, Zap, Shield, Users, Globe, ArrowRight, CheckCircle, Star,
   Server, Cloud, Database, Network, Lock, Code, Rocket, Building,
   Search, Phone, Mail, Cpu, Monitor, Smartphone, Wifi, Bluetooth,
@@ -14,23 +17,23 @@ import {
   Percent, Euro, Pound, Yen, CreditCard, Wallet, Banknote, Coins,
   PiggyBank, Safe, Vault, LockKeyhole, Key, Fingerprint, QrCode,
   Barcode, Scan, Camera, VideoOff, Mic, MicOff, Volume2, VolumeX
- } from 'lucide-react';
+ } from 'lucide - react';
 
 const itServices2028 = [
   {
-    id: 'quantum-cloud-infrastructure',
+    id: 'quantum - cloud - infrastructure',
     name: 'Quantum Cloud Infrastructure',
-    tagline: 'Next-generation quantum-ready cloud infrastructure',
+    tagline: 'Next - generation quantum - ready cloud infrastructure',
     price: '$45,999',
     period: '/month',
-    description: 'Revolutionary quantum-ready cloud infrastructure that provides unprecedented performance, security, and scalability for enterprise applications.',
+    description: 'Revolutionary quantum - ready cloud infrastructure that provides unprecedented performance, security, and scalability for enterprise applications.',
     features[;
-      'Quantum-ready computing nodes',
+      'Quantum - ready computing nodes',
       'Advanced AI optimization',
-      'Zero-latency networking',
+      'Zero - latency networking',
       'Quantum encryption',
-      'Auto-scaling infrastructure',
-      'Real-time monitoring',
+      'Auto - scaling infrastructure',
+      'Real - time monitoring',
       'Disaster recovery',
       'Global CDN',
       'API management',
@@ -38,7 +41,7 @@ const itServices2028 = [
     ],;
     popular: true,
     icon: Cloud,
-    color: 'from-blue-600 to-cyan-700',
+    color: 'from - blue - 600 to - cyan - 700',
     category: 'Cloud & Infrastructure',
     realService: true,
     marketSize: '$18.5B cloud infrastructure market',
@@ -48,16 +51,16 @@ const itServices2028 = [
     customers: 45
   },
   {
-    id: 'ai-powered-cybersecurity',
-    name: 'AI-Powered Cybersecurity Suite',
+    id: 'ai - powered - cybersecurity',
+    name: 'AI - Powered Cybersecurity Suite',
     tagline: 'Intelligent threat detection and response',
     price: '$32,999',
     period: '/month',
-    description: 'Advanced AI-powered cybersecurity platform that provides real-time threat detection, automated response, and predictive security analytics.',
+    description: 'Advanced AI - powered cybersecurity platform that provides real - time threat detection, automated response, and predictive security analytics.',
     features[;
       'AI threat detection',
       'Behavioral analysis',
-      'Zero-trust architecture',
+      'Zero - trust architecture',
       'Automated incident response',
       'Threat intelligence',
       'Compliance automation',
@@ -68,7 +71,7 @@ const itServices2028 = [
     ],;
     popular: true,
     icon: Shield,
-    color: 'from-red-600 to-pink-700',
+    color: 'from - red - 600 to - pink - 700',
     category: 'Cybersecurity',
     realService: true,
     marketSize: '$15.2B cybersecurity market',
@@ -78,18 +81,18 @@ const itServices2028 = [
     customers: 156
   },
   {
-    id: 'quantum-database-platform',
+    id: 'quantum - database - platform',
     name: 'Quantum Database Platform',
-    tagline: 'Quantum-powered database management system',
+    tagline: 'Quantum - powered database management system',
     price: '$28,999',
     period: '/month',
     description: 'Revolutionary quantum database platform that provides unprecedented speed, security, and scalability for enterprise data management.',
     features[;
       'Quantum query optimization',
-      'Real-time data processing',
+      'Real - time data processing',
       'Advanced encryption',
-      'Auto-scaling storage',
-      'Multi-model support',
+      'Auto - scaling storage',
+      'Multi - model support',
       'Data analytics',
       'Backup automation',
       'Disaster recovery',
@@ -98,7 +101,7 @@ const itServices2028 = [
     ],;
     popular: false,
     icon: Database,
-    color: 'from-green-600 to-emerald-700',
+    color: 'from - green - 600 to - emerald - 700',
     category: 'Database & Storage',
     realService: true,
     marketSize: '$8.9B database market',
@@ -108,12 +111,12 @@ const itServices2028 = [
     customers: 67
   },
   {
-    id: 'ai-network-optimization',
+    id: 'ai - network - optimization',
     name: 'AI Network Optimization',
     tagline: 'Intelligent network performance and security',
     price: '$22,999',
     period: '/month',
-    description: 'AI-powered network optimization platform that automatically manages, secures, and optimizes enterprise network infrastructure.',
+    description: 'AI - powered network optimization platform that automatically manages, secures, and optimizes enterprise network infrastructure.',
     features[;
       'AI network monitoring',
       'Automatic optimization',
@@ -128,7 +131,7 @@ const itServices2028 = [
     ],;
     popular: true,
     icon: Network,
-    color: 'from-purple-600 to-indigo-700',
+    color: 'from - purple - 600 to - indigo - 700',
     category: 'Networking',
     realService: true,
     marketSize: '$12.3B network management market',
@@ -138,14 +141,14 @@ const itServices2028 = [
     customers: 98
   },
   {
-    id: 'quantum-devops-automation',
+    id: 'quantum - devops - automation',
     name: 'Quantum DevOps Automation',
-    tagline: 'Next-generation development and operations automation',
+    tagline: 'Next - generation development and operations automation',
     price: '$35,999',
     period: '/month',
-    description: 'Advanced quantum-powered DevOps platform that automates software development, testing, deployment, and operations processes.',
+    description: 'Advanced quantum - powered DevOps platform that automates software development, testing, deployment, and operations processes.',
     features[;
-      'AI-powered CI/CD',
+      'AI - powered CI / CD',
       'Automated testing',
       'Deployment automation',
       'Performance monitoring',
@@ -158,7 +161,7 @@ const itServices2028 = [
     ],;
     popular: true,
     icon: Rocket,
-    color: 'from-orange-600 to-red-700',
+    color: 'from - orange - 600 to - red - 700',
     category: 'DevOps & Automation',
     realService: true,
     marketSize: '$9.8B DevOps market',
@@ -168,15 +171,15 @@ const itServices2028 = [
     customers: 134
   },
   {
-    id: 'ai-data-analytics-platform',
+    id: 'ai - data - analytics - platform',
     name: 'AI Data Analytics Platform',
     tagline: 'Intelligent business intelligence and analytics',
     price: '$25,999',
     period: '/month',
-    description: 'Comprehensive AI-powered data analytics platform that provides real-time insights, predictive analytics, and automated reporting.',
+    description: 'Comprehensive AI - powered data analytics platform that provides real - time insights, predictive analytics, and automated reporting.',
     features[;
-      'Real-time data processing',
-      'AI-powered insights',
+      'Real - time data processing',
+      'AI - powered insights',
       'Predictive analytics',
       'Data visualization',
       'Automated reporting',
@@ -188,7 +191,7 @@ const itServices2028 = [
     ],;
     popular: false,
     icon: BarChart3,
-    color: 'from-emerald-600 to-teal-700',
+    color: 'from - emerald - 600 to - teal - 700',
     category: 'Data & Analytics',
     realService: true,;
     marketSize: '$11.2B data analytics market',;
@@ -203,8 +206,5 @@ const itServices2028 = [
           </motion.div>;
         </div>;
       </section>;
-    </div>;
-  );
+    </div>;) ;
 };
-
-export default ITServices2028;}}

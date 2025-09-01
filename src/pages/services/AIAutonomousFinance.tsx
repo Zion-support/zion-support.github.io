@@ -1,9 +1,10 @@
 import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { DollarSign, 
-  Brain, 
-  Target, 
-  BarChart3, 
+import { motion } from 'framer-motion.ts';
+import {
+  DollarSign,
+  Brain,
+  Target,
+  BarChart3,
   CheckCircle,
   ArrowRight,
   Star,
@@ -21,41 +22,47 @@ import { DollarSign,
   TrendingUp,
   Zap,
   Shield,
-  Calculator
- } from 'lucide-react.ts';
+  Calculator,
+} from 'lucide-react.ts';
 
 const AIAutonomousFinance: React.FC = (): JSX.Element => {
   const features = [
     {
       icon: Brain,
       title: 'AI-Powered Financial Management',
-      description: 'Advanced machine learning for autonomous financial planning and optimization'
+      description:
+        'Advanced machine learning for autonomous financial planning and optimization',
     },
     {
       icon: DollarSign,
       title: 'Budget Optimization',
-      description: 'Intelligent budget planning and expense optimization with AI-driven insights'
+      description:
+        'Intelligent budget planning and expense optimization with AI-driven insights',
     },
     {
       icon: Target,
       title: 'Investment Management',
-      description: 'AI-powered investment strategies and portfolio optimization'
+      description:
+        'AI-powered investment strategies and portfolio optimization',
     },
     {
       icon: BarChart3,
       title: 'Financial Analytics',
-      description: 'Real-time analytics and insights into financial performance and trends'
+      description:
+        'Real-time analytics and insights into financial performance and trends',
     },
     {
       icon: Calculator,
       title: 'Risk Assessment',
-      description: 'AI-driven financial risk assessment and mitigation strategies'
+      description:
+        'AI-driven financial risk assessment and mitigation strategies',
     },
     {
       icon: TrendingUp,
       title: 'Revenue Optimization',
-      description: 'Continuous optimization of financial processes and revenue generation'
-    }
+      description:
+        'Continuous optimization of financial processes and revenue generation',
+    },
   ];
 
   const benefits = [
@@ -64,7 +71,7 @@ const AIAutonomousFinance: React.FC = (): JSX.Element => {
     'Optimize investments by 80%',
     'Automate financial processes',
     '24/7 autonomous operation',
-    'Real-time financial insights'
+    'Real-time financial insights',
   ];
 
   return (
@@ -81,17 +88,21 @@ const AIAutonomousFinance: React.FC = (): JSX.Element => {
               <DollarSign className="w-4 h-4 mr-2" />
               AI-Powered Autonomous Finance
             </div>
-            
+
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Transform Your Finance with
-              <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent"> AI Intelligence</span>
+              <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+                {' '}
+                AI Intelligence
+              </span>
             </h1>
-            
+
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Revolutionize your financial operations with our AI-powered autonomous platform. 
-              Optimize budgets, manage investments, and maximize financial performance.
+              Revolutionize your financial operations with our AI-powered
+              autonomous platform. Optimize budgets, manage investments, and
+              maximize financial performance.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-500 text-white rounded-lg font-semibold hover:from-yellow-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
@@ -118,12 +129,13 @@ const AIAutonomousFinance: React.FC = (): JSX.Element => {
               Advanced Financial Features
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI platform provides comprehensive financial capabilities for modern businesses
+              Our AI platform provides comprehensive financial capabilities for
+              modern businesses
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+            {features.map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -135,7 +147,9 @@ const AIAutonomousFinance: React.FC = (): JSX.Element => {
                 <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  {feature.title}
+                </h3>
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
@@ -157,10 +171,11 @@ const AIAutonomousFinance: React.FC = (): JSX.Element => {
               Why Choose AI Autonomous Finance?
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Experience measurable improvements in financial performance and risk management
+              Experience measurable improvements in financial performance and
+              risk management
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -168,7 +183,9 @@ const AIAutonomousFinance: React.FC = (): JSX.Element => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
+              <h3 className="text-2xl font-semibold text-white mb-6">
+                Key Benefits
+              </h3>
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-center space-x-3">
@@ -178,7 +195,7 @@ const AIAutonomousFinance: React.FC = (): JSX.Element => {
                 ))}
               </div>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -186,9 +203,12 @@ const AIAutonomousFinance: React.FC = (): JSX.Element => {
               viewport={{ once: true }}
               className="bg-gradient-to-br from-yellow-500/10 to-orange-500/10 border border-yellow-500/20 rounded-xl p-8"
             >
-              <h3 className="text-2xl font-semibold text-white mb-6">Ready to Transform Finance?</h3>
+              <h3 className="text-2xl font-semibold text-white mb-6">
+                Ready to Transform Finance?
+              </h3>
               <p className="text-gray-300 mb-6">
-                Join thousands of businesses already using AI to enhance their financial performance.
+                Join thousands of businesses already using AI to enhance their
+                financial performance.
               </p>
               <button className="w-full px-6 py-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white rounded-lg font-semibold hover:from-yellow-600 hover:to-orange-600 transition-all duration-300">
                 Get Started Today
@@ -211,7 +231,8 @@ const AIAutonomousFinance: React.FC = (): JSX.Element => {
               Ready to Revolutionize Finance?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Start your journey to AI-powered finance with our comprehensive platform.
+              Start your journey to AI-powered finance with our comprehensive
+              platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-500 text-white rounded-lg font-semibold hover:from-yellow-600 hover:to-orange-600 transition-all duration-300">

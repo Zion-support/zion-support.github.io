@@ -1,12 +1,13 @@
 import React from 'react.ts';
-import { Helmet  } from 'react-helmet-async.ts';
-import { Rocket, 
-  Zap, 
-  Code, 
-  Database, 
-  Cloud, 
-  Users, 
-  Target, 
+import { Helmet } from 'react-helmet-async.ts';
+import {
+  Rocket,
+  Zap,
+  Code,
+  Database,
+  Cloud,
+  Users,
+  Target,
   ArrowRight,
   CheckCircle,
   Star,
@@ -33,62 +34,107 @@ import { Rocket,
   Settings,
   Play,
   Pause,
-  RefreshCw
- } from 'lucide-react.ts';
+  RefreshCw,
+} from 'lucide-react.ts';
 
 export default function MicroSAASPlatform(...args: any[]): any {
   const features = [
     {
       icon: Rocket,
       title: 'Rapid Development',
-      description: 'Build and deploy production-ready micro SAAS applications in weeks, not months, with our pre-built components and templates.',
-      benefits: ['Pre-built templates', 'Component library', 'Auto-scaling', 'Instant deployment']
+      description:
+        'Build and deploy production-ready micro SAAS applications in weeks, not months, with our pre-built components and templates.',
+      benefits: [
+        'Pre-built templates',
+        'Component library',
+        'Auto-scaling',
+        'Instant deployment',
+      ],
     },
     {
       icon: Brain,
       title: 'AI-Powered Features',
-      description: 'Integrate advanced AI capabilities like chatbots, analytics, and automation into your micro SAAS with simple APIs.',
-      benefits: ['AI chatbots', 'Predictive analytics', 'Process automation', 'Smart insights']
+      description:
+        'Integrate advanced AI capabilities like chatbots, analytics, and automation into your micro SAAS with simple APIs.',
+      benefits: [
+        'AI chatbots',
+        'Predictive analytics',
+        'Process automation',
+        'Smart insights',
+      ],
     },
     {
       icon: Cloud,
       title: 'Cloud-Native Architecture',
-      description: 'Built on modern cloud infrastructure with automatic scaling, high availability, and global distribution.',
-      benefits: ['Auto-scaling', '99.9% uptime', 'Global CDN', 'Multi-region deployment']
+      description:
+        'Built on modern cloud infrastructure with automatic scaling, high availability, and global distribution.',
+      benefits: [
+        'Auto-scaling',
+        '99.9% uptime',
+        'Global CDN',
+        'Multi-region deployment',
+      ],
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-grade security with SOC 2 compliance, encryption, and advanced threat protection built-in.',
-      benefits: ['SOC 2 certified', 'End-to-end encryption', 'Threat protection', 'Compliance ready']
-    }
+      description:
+        'Bank-grade security with SOC 2 compliance, encryption, and advanced threat protection built-in.',
+      benefits: [
+        'SOC 2 certified',
+        'End-to-end encryption',
+        'Threat protection',
+        'Compliance ready',
+      ],
+    },
   ];
 
   const platformCapabilities = [
     {
       icon: Code,
       title: 'Development Tools',
-      description: 'Full-stack development environment with modern frameworks and tools',
-      features: ['React/Next.js frontend', 'Node.js/Python backend', 'Database management', 'API development']
+      description:
+        'Full-stack development environment with modern frameworks and tools',
+      features: [
+        'React/Next.js frontend',
+        'Node.js/Python backend',
+        'Database management',
+        'API development',
+      ],
     },
     {
       icon: Database,
       title: 'Data Management',
       description: 'Scalable database solutions with real-time synchronization',
-      features: ['PostgreSQL/MySQL', 'Real-time sync', 'Data backup', 'Analytics dashboard']
+      features: [
+        'PostgreSQL/MySQL',
+        'Real-time sync',
+        'Data backup',
+        'Analytics dashboard',
+      ],
     },
     {
       icon: Users,
       title: 'User Management',
       description: 'Complete user authentication and authorization system',
-      features: ['OAuth integration', 'Role-based access', 'User profiles', 'Team management']
+      features: [
+        'OAuth integration',
+        'Role-based access',
+        'User profiles',
+        'Team management',
+      ],
     },
     {
       icon: BarChart3,
       title: 'Analytics & Insights',
       description: 'Built-in analytics and reporting for business intelligence',
-      features: ['User analytics', 'Business metrics', 'Custom reports', 'Data export']
-    }
+      features: [
+        'User analytics',
+        'Business metrics',
+        'Custom reports',
+        'Data export',
+      ],
+    },
   ];
 
   const pricingPlans = [
@@ -104,10 +150,10 @@ export default function MicroSAASPlatform(...args: any[]): any {
         'Cloud hosting',
         'Basic analytics',
         'Email support',
-        'SSL certificate'
+        'SSL certificate',
       ],
       cta: 'Get Started',
-      popular: false
+      popular: false,
     },
     {
       name: 'Growth',
@@ -122,10 +168,10 @@ export default function MicroSAASPlatform(...args: any[]): any {
         'Custom branding',
         'API access',
         'White-label options',
-        'Phone support'
+        'Phone support',
       ],
       cta: 'Start Free Trial',
-      popular: true
+      popular: true,
     },
     {
       name: 'Enterprise',
@@ -140,77 +186,111 @@ export default function MicroSAASPlatform(...args: any[]): any {
         'Custom integrations',
         'On-premise option',
         'Dedicated success manager',
-        'SLA guarantees'
+        'SLA guarantees',
       ],
       cta: 'Contact Sales',
-      popular: false
-    }
+      popular: false,
+    },
   ];
 
   const useCases = [
     {
       title: 'E-commerce Platforms',
-      description: 'Build online stores with inventory management, payment processing, and customer analytics',
-      metrics: ['50% faster development', 'Built-in payment processing', 'Inventory automation', 'Customer insights']
+      description:
+        'Build online stores with inventory management, payment processing, and customer analytics',
+      metrics: [
+        '50% faster development',
+        'Built-in payment processing',
+        'Inventory automation',
+        'Customer insights',
+      ],
     },
     {
       title: 'SaaS Applications',
-      description: 'Create subscription-based software with user management and billing',
-      metrics: ['Subscription management', 'User analytics', 'Payment processing', 'Customer support']
+      description:
+        'Create subscription-based software with user management and billing',
+      metrics: [
+        'Subscription management',
+        'User analytics',
+        'Payment processing',
+        'Customer support',
+      ],
     },
     {
       title: 'Business Tools',
-      description: 'Develop internal tools for project management, CRM, and operations',
-      metrics: ['Process automation', 'Team collaboration', 'Data visualization', 'Integration ready']
+      description:
+        'Develop internal tools for project management, CRM, and operations',
+      metrics: [
+        'Process automation',
+        'Team collaboration',
+        'Data visualization',
+        'Integration ready',
+      ],
     },
     {
       title: 'Marketplace Platforms',
       description: 'Build multi-vendor marketplaces with advanced features',
-      metrics: ['Vendor management', 'Commission tracking', 'Payment distribution', 'Analytics dashboard']
-    }
+      metrics: [
+        'Vendor management',
+        'Commission tracking',
+        'Payment distribution',
+        'Analytics dashboard',
+      ],
+    },
   ];
 
   const developmentProcess = [
     {
       step: '01',
       title: 'Ideation & Planning',
-      description: 'Define your product vision, target market, and core features',
-      duration: '1-2 weeks'
+      description:
+        'Define your product vision, target market, and core features',
+      duration: '1-2 weeks',
     },
     {
       step: '02',
       title: 'Design & Prototyping',
       description: 'Create user experience designs and interactive prototypes',
-      duration: '2-3 weeks'
+      duration: '2-3 weeks',
     },
     {
       step: '03',
       title: 'Development & Testing',
-      description: 'Build your application using our platform and test thoroughly',
-      duration: '4-6 weeks'
+      description:
+        'Build your application using our platform and test thoroughly',
+      duration: '4-6 weeks',
     },
     {
       step: '04',
       title: 'Launch & Scale',
       description: 'Deploy to production and scale based on user growth',
-      duration: '1-2 weeks'
-    }
+      duration: '1-2 weeks',
+    },
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-purple-50 to-indigo-50">
       <Helmet>
         <title>Micro SAAS Platform - Zion Tech Group</title>
-        <meta name="description" content="Build and launch micro SAAS applications in weeks with our comprehensive platform. Rapid development, AI features, and enterprise-grade infrastructure." />
-        <meta name="keywords" content="micro SAAS, rapid development, SAAS platform, application development, cloud platform, business software" />
-        <link rel="canonical" href="https://ziontechgroup.com/services/micro-saas-platform" />
+        <meta
+          name="description"
+          content="Build and launch micro SAAS applications in weeks with our comprehensive platform. Rapid development, AI features, and enterprise-grade infrastructure."
+        />
+        <meta
+          name="keywords"
+          content="micro SAAS, rapid development, SAAS platform, application development, cloud platform, business software"
+        />
+        <link
+          rel="canonical"
+          href="https://ziontechgroup.com/services/micro-saas-platform"
+        />
       </Helmet>
 
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20 lg:py-32">
         <div className="absolute inset-0 bg-black/30"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-indigo-600/20 to-blue-600/20"></div>
-        
+
         {/* Background Elements */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
           <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
@@ -223,17 +303,18 @@ export default function MicroSAASPlatform(...args: any[]): any {
             <Rocket className="w-4 h-4 text-purple-300" />
             <span>Micro SAAS Platform</span>
           </div>
-          
+
           <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
             Build & Launch
             <span className="block bg-gradient-to-r from-purple-400 via-indigo-400 to-blue-400 bg-clip-text text-transparent">
               Micro SAAS in Weeks
             </span>
           </h1>
-          
+
           <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto mb-10 leading-relaxed">
-            Transform your business idea into a profitable micro SAAS application with our comprehensive platform. 
-            Rapid development, AI-powered features, and enterprise-grade infrastructure.
+            Transform your business idea into a profitable micro SAAS
+            application with our comprehensive platform. Rapid development,
+            AI-powered features, and enterprise-grade infrastructure.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -278,25 +359,33 @@ export default function MicroSAASPlatform(...args: any[]): any {
               Platform Features That Accelerate Development
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our micro SAAS platform provides everything you need to build, launch, and scale 
-              your application with enterprise-grade quality and speed.
+              Our micro SAAS platform provides everything you need to build,
+              launch, and scale your application with enterprise-grade quality
+              and speed.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8 lg:gap-12">
-            {features.map((feature, index)  => (
+            {features.map((feature, index) => (
               <div key={index} className="group">
                 <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
-                  
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{feature.title}</h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">{feature.description}</p>
-                  
+
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    {feature.description}
+                  </p>
+
                   <ul className="space-y-3">
                     {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center gap-3 text-gray-700">
+                      <li
+                        key={idx}
+                        className="flex items-center gap-3 text-gray-700"
+                      >
                         <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
                         <span>{benefit}</span>
                       </li>
@@ -317,26 +406,34 @@ export default function MicroSAASPlatform(...args: any[]): any {
               Comprehensive Development Platform
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Everything you need to build a complete micro SAAS application, from frontend to backend, 
-              with built-in security and scalability.
+              Everything you need to build a complete micro SAAS application,
+              from frontend to backend, with built-in security and scalability.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
-            {platformCapabilities.map((capability, index)  => (
-              <div key={index} className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-8 border border-gray-200">
+            {platformCapabilities.map((capability, index) => (
+              <div
+                key={index}
+                className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-8 border border-gray-200"
+              >
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-xl flex items-center justify-center">
                     <capability.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900">{capability.title}</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">
+                    {capability.title}
+                  </h3>
                 </div>
-                
+
                 <p className="text-gray-600 mb-6">{capability.description}</p>
-                
+
                 <ul className="space-y-3">
                   {capability.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center gap-3 text-gray-700">
+                    <li
+                      key={idx}
+                      className="flex items-center gap-3 text-gray-700"
+                    >
                       <Code className="w-5 h-5 text-purple-500 flex-shrink-0" />
                       <span>{feature}</span>
                     </li>
@@ -356,20 +453,29 @@ export default function MicroSAASPlatform(...args: any[]): any {
               Proven Use Cases
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              See how entrepreneurs and businesses are using our platform to build successful 
-              micro SAAS applications across various industries.
+              See how entrepreneurs and businesses are using our platform to
+              build successful micro SAAS applications across various
+              industries.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
-            {useCases.map((useCase, index)  => (
-              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{useCase.title}</h3>
+            {useCases.map((useCase, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200"
+              >
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  {useCase.title}
+                </h3>
                 <p className="text-gray-600 mb-6">{useCase.description}</p>
-                
+
                 <div className="space-y-3">
                   {useCase.metrics.map((metric, idx) => (
-                    <div key={idx} className="flex items-center gap-3 text-gray-700">
+                    <div
+                      key={idx}
+                      className="flex items-center gap-3 text-gray-700"
+                    >
                       <TrendingUp className="w-5 h-5 text-purple-500 flex-shrink-0" />
                       <span className="font-semibold">{metric}</span>
                     </div>
@@ -389,18 +495,20 @@ export default function MicroSAASPlatform(...args: any[]): any {
               From Idea to Launch in 8-12 Weeks
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our proven development process ensures you can build and launch your micro SAAS 
-              application quickly and efficiently.
+              Our proven development process ensures you can build and launch
+              your micro SAAS application quickly and efficiently.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-            {developmentProcess.map((phase, index)  => (
+            {developmentProcess.map((phase, index) => (
               <div key={index} className="text-center group">
                 <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white group-hover:scale-110 transition-transform duration-300">
                   {phase.step}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{phase.title}</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                  {phase.title}
+                </h3>
                 <p className="text-gray-600 mb-3">{phase.description}</p>
                 <div className="inline-flex items-center gap-2 text-purple-600 font-semibold">
                   <Clock className="w-4 h-4" />
@@ -420,16 +528,21 @@ export default function MicroSAASPlatform(...args: any[]): any {
               Transparent Platform Pricing
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Choose the plan that best fits your development needs. All plans include 
-              our core platform features and dedicated support.
+              Choose the plan that best fits your development needs. All plans
+              include our core platform features and dedicated support.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
-            {pricingPlans.map((plan, index)  => (
-              <div key={index} className={`relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 ${
-                plan.popular ? 'border-purple-500 ring-4 ring-purple-500/20' : 'border-gray-200'
-              }`}>
+            {pricingPlans.map((plan, index) => (
+              <div
+                key={index}
+                className={`relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 ${
+                  plan.popular
+                    ? 'border-purple-500 ring-4 ring-purple-500/20'
+                    : 'border-gray-200'
+                }`}
+              >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-purple-500 to-indigo-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -439,18 +552,25 @@ export default function MicroSAASPlatform(...args: any[]): any {
                 )}
 
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                    {plan.name}
+                  </h3>
                   <p className="text-gray-600 mb-4">{plan.description}</p>
-                  
+
                   <div className="flex items-baseline justify-center gap-1">
-                    <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
+                    <span className="text-4xl font-bold text-gray-900">
+                      {plan.price}
+                    </span>
                     <span className="text-gray-600">{plan.period}</span>
                   </div>
                 </div>
 
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center gap-3 text-gray-700">
+                    <li
+                      key={idx}
+                      className="flex items-center gap-3 text-gray-700"
+                    >
                       <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
                       <span>{feature}</span>
                     </li>
@@ -472,7 +592,9 @@ export default function MicroSAASPlatform(...args: any[]): any {
           </div>
 
           <div className="text-center mt-12">
-            <p className="text-gray-600 mb-4">Need a custom development solution?</p>
+            <p className="text-gray-600 mb-4">
+              Need a custom development solution?
+            </p>
             <a
               href="/contact"
               className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 font-semibold"
@@ -491,8 +613,9 @@ export default function MicroSAASPlatform(...args: any[]): any {
             Ready to Build Your Micro SAAS?
           </h2>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-10">
-            Join hundreds of entrepreneurs and businesses already building successful 
-            micro SAAS applications with our platform. Start your journey today.
+            Join hundreds of entrepreneurs and businesses already building
+            successful micro SAAS applications with our platform. Start your
+            journey today.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
