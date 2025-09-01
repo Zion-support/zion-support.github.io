@@ -1,11 +1,23 @@
-import React, { Suspense, lazy, useState } from 'react';
+import React, { Suspense, lazy, useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { ErrorBoundary } from 'react-error-boundary';
+import { ErrorBoundary } from './components/error/ErrorBoundary';
 import { Header } from './components/header/Header';
 import { Footer } from './components/layout/Footer';
+import { SEOHead } from './components/seo/SEOHead';
+import { LoadingSpinner } from './components/ui/LoadingSpinner';
+import { PerformanceMonitor } from './components/performance/PerformanceMonitor';
 
-// Temporary placeholder components to get build working
-const LoadingSpinner = () => <div>Loading...</div>;
+// Service Worker Registration
+const registerServiceWorker = async () => {
+  if ('serviceWorker' in navigator) {
+    try {
+      const registration = await navigator.serviceWorker.register('/sw.js');
+      console.log('Service Worker registered successfully:', registration);
+    } catch (error) {
+      console.error('Service Worker registration failed:', error);
+    }
+  }
+};
 
 // Enhanced lazy loading with preloading hints
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
@@ -42,20 +54,22 @@ const AIThreatIntelligence = lazy(() => import('./backup-pages/src-pages/service
 const BlockchainSupplyChain = lazy(() => import('./backup-pages/src-pages/services/blockchain-supply-chain-platform').then(module => ({ default: module.BlockchainSupplyChainPlatform })));
 const AdvancedServicesShowcase = lazy(() => import('./backup-pages/src-pages/AdvancedServicesShowcase2028').then(module => ({ default: module.AdvancedServicesShowcase2028 })));
 
-// Loading component
+// Enhanced loading component
 const PageLoader = () => (
   <div className="flex items-center justify-center min-h-screen bg-gray-900">
-    <div className="text-center">
-      <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-cyan-500 mx-auto mb-4"></div>
-      <p className="text-gray-400">Loading...</p>
-    </div>
+    <LoadingSpinner size="xl" color="primary" text="Loading page..." />
   </div>
 );
 
 function App() {
+  useEffect(() => {
+    registerServiceWorker();
+  }, []);
+
   return (
-    <ErrorBoundary fallback={<div>Something went wrong. Please refresh the page.</div>}>
+    <ErrorBoundary>
       <div className="App min-h-screen flex flex-col">
+        <SEOHead />
         <Header />
         <main className="flex-1">
           <Suspense fallback={<PageLoader />}>
@@ -101,6 +115,7 @@ function App() {
           </Suspense>
         </main>
         <Footer />
+        <PerformanceMonitor />
       </div>
     </ErrorBoundary>
   );

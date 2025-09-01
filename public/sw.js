@@ -1,1 +1,225 @@
-// Service Worker for Zion Tech Group // Provides offline support, caching, and performance improvements ; const CACHE_NAME = "zion-tech-group-v1.0.0"; ; const STATIC_CACHE = "zion-static-v1.0.0"; const DYNAMIC_CACHE = "zion-dynamic-v1.0.0"; // Files to cache immediately; const STATIC_FILES = [ "/",/static/js/main.js",/static/css/main.css",/favicon.ico",/manifest.json" ]; // Install event - cache static files self.addEventListener("install", (event) => { console.log("Service Worker installing..."); event.waitUntil( // // // // // // // console.log("Caching static files"); // Use addAll with individual error handling for each file return Promise.allSettled( STATIC_FILES.map(url => cache.add(url).catch(error => { // // // // // // // console.warn(`Failed to cache ${url}:`, error); // Try to fetch and cache manually if add() fails return fetch(url) .then(response => { if (response.ok) { return cache.put(url, response); throw new Error(`HTTP ${response.status}`); }) .catch(fetchError => { // // // // // // // console.warn(`Manual fetch failed for ${url}:`, fetchError); return null; // Continue with other files }); }) ) ); }) .then((results) => { const successful = results.filter(r => r.status === "fulfilled").length; const failed = results.filter(r => r.status === "rejected").length; // // // // // // // console.log(`Static files cached: ${successful} successful, ${failed} failed`); return self.skipWaiting(); }) .catch((error) => { // // // // // // // console.error("Error in service worker install:", error); caches.open(STATIC_CACHE) .then((cache) => { console.log("Caching static files"); return cache.addAll(STATIC_FILES); }) .catch((error) => { console.log("Cache install failed:", error); }) ); self.skipWaiting(); "/about",/contact",/offline",/manifest.json",/favicon.ico",/icons/icon-192x192.png",/icons/icon-512x512.png" ]; // Install event - cache resources self.addEventListener("install", (event) => { event.waitUntil( caches.open(CACHE_NAME) .then((cache) => { console.log("Opened cache"); return cache.addAll(urlsToCache); }) ); }); // Fetch event - serve from cache when offline self.addEventListener("fetch", (event) => { event.respondWith( caches.match(event.request) .then((response) => { // Return cached version or fetch from network if (response) { return response; } return fetch(event.request) .then((response) => { // Check if we received a valid response if (!response || response.status !== 200 || response.type !== "basic") { return response; } // Clone the response const responseToCache = response.clone(); caches.open(CACHE_NAME) .then((cache) => { cache.put(event.request, responseToCache); }); return response; }) .catch(() => { // Return offline page for navigation requests if (event.request.mode === "navigate") { return caches.match("/offline"); } }); }) ); }); // Activate event - clean up old caches self.addEventListener("activate", (event) => { event.waitUntil( caches.keys().then((cacheNames) => { return Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { console.log("Deleting old cache:", cacheName); return caches.delete(cacheName); } }) ); }) ); }); // Background sync for offline actions self.addEventListener("sync", (event) => { if (event.tag === "background-sync") { event.waitUntil(doBackgroundSync()); } }); // Push notifications self.addEventListener("push", (event) => { const options = { body: event.data ? event.data.text() : "New update available!", icon: "/icon-192x192.png", badge: "/icon-72x72.png", vibrate: [100, 50, 100], data: { dateOfArrival: Date.now(), primaryKey: 1 }, actions: [ { action: "explore", title: "View", icon: "/icon-72x72.png" }, { action: "close", title: "Close", icon: "/icon-72x72.png" } ] }; event.waitUntil( self.registration.showNotification("Zion Tech Group", options) ); }); // Notification click handling self.addEventListener("notificationclick", (event) => { event.notification.close(); if (event.action === "explore") { event.waitUntil( clients.openWindow("/") ); } }); // Background sync function async function doBackgroundSync() { try { // Perform background sync operations console.log("Background sync completed"); } catch (error) { console.error("Background sync failed:", error); } } 
+const CACHE_NAME = 'zion-tech-group-v1';
+const STATIC_CACHE = 'zion-static-v1';
+const DYNAMIC_CACHE = 'zion-dynamic-v1';
+
+// Assets to cache immediately
+const STATIC_ASSETS = [
+  '/',
+  '/static/js/bundle.js',
+  '/static/css/main.css',
+  '/manifest.json',
+  '/favicon.ico',
+  '/images/zion-tech-group-logo.png'
+];
+
+// Install event - cache static assets
+self.addEventListener('install', (event) => {
+  console.log('Service Worker installing...');
+  event.waitUntil(
+    caches.open(STATIC_CACHE)
+      .then((cache) => {
+        console.log('Caching static assets');
+        return cache.addAll(STATIC_ASSETS);
+      })
+      .then(() => {
+        console.log('Service Worker installed');
+        return self.skipWaiting();
+      })
+      .catch((error) => {
+        console.error('Service Worker installation failed:', error);
+      })
+  );
+});
+
+// Activate event - clean up old caches
+self.addEventListener('activate', (event) => {
+  console.log('Service Worker activating...');
+  event.waitUntil(
+    caches.keys()
+      .then((cacheNames) => {
+        return Promise.all(
+          cacheNames.map((cacheName) => {
+            if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
+              console.log('Deleting old cache:', cacheName);
+              return caches.delete(cacheName);
+            }
+          })
+        );
+      })
+      .then(() => {
+        console.log('Service Worker activated');
+        return self.clients.claim();
+      })
+  );
+});
+
+// Fetch event - implement caching strategies
+self.addEventListener('fetch', (event) => {
+  const { request } = event;
+  const url = new URL(request.url);
+
+  // Skip non-GET requests
+  if (request.method !== 'GET') {
+    return;
+  }
+
+  // Skip chrome-extension and other non-http requests
+  if (!url.protocol.startsWith('http')) {
+    return;
+  }
+
+  // Handle different types of requests
+  if (url.origin === location.origin) {
+    // Same-origin requests
+    event.respondWith(handleSameOriginRequest(request));
+  } else {
+    // Cross-origin requests (images, fonts, etc.)
+    event.respondWith(handleCrossOriginRequest(request));
+  }
+});
+
+// Handle same-origin requests with network-first strategy
+async function handleSameOriginRequest(request) {
+  try {
+    // Try network first
+    const networkResponse = await fetch(request);
+    
+    if (networkResponse.ok) {
+      // Cache successful responses
+      const cache = await caches.open(DYNAMIC_CACHE);
+      cache.put(request, networkResponse.clone());
+    }
+    
+    return networkResponse;
+  } catch (error) {
+    console.log('Network failed, trying cache:', error);
+    
+    // Fallback to cache
+    const cachedResponse = await caches.match(request);
+    if (cachedResponse) {
+      return cachedResponse;
+    }
+    
+    // If no cache, return offline page for navigation requests
+    if (request.mode === 'navigate') {
+      return caches.match('/offline.html') || new Response('Offline', {
+        status: 503,
+        statusText: 'Service Unavailable'
+      });
+    }
+    
+    throw error;
+  }
+}
+
+// Handle cross-origin requests with cache-first strategy
+async function handleCrossOriginRequest(request) {
+  const cache = await caches.open(DYNAMIC_CACHE);
+  const cachedResponse = await cache.match(request);
+  
+  if (cachedResponse) {
+    return cachedResponse;
+  }
+  
+  try {
+    const networkResponse = await fetch(request);
+    
+    if (networkResponse.ok) {
+      // Cache successful responses
+      cache.put(request, networkResponse.clone());
+    }
+    
+    return networkResponse;
+  } catch (error) {
+    console.log('Cross-origin request failed:', error);
+    throw error;
+  }
+}
+
+// Background sync for offline form submissions
+self.addEventListener('sync', (event) => {
+  if (event.tag === 'background-sync') {
+    event.waitUntil(doBackgroundSync());
+  }
+});
+
+async function doBackgroundSync() {
+  try {
+    // Get pending form submissions from IndexedDB
+    const pendingSubmissions = await getPendingSubmissions();
+    
+    for (const submission of pendingSubmissions) {
+      try {
+        await fetch('/api/contact', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(submission.data)
+        });
+        
+        // Remove from pending submissions
+        await removePendingSubmission(submission.id);
+      } catch (error) {
+        console.error('Background sync failed for submission:', submission.id, error);
+      }
+    }
+  } catch (error) {
+    console.error('Background sync failed:', error);
+  }
+}
+
+// Push notifications
+self.addEventListener('push', (event) => {
+  if (event.data) {
+    const data = event.data.json();
+    const options = {
+      body: data.body,
+      icon: '/images/zion-tech-group-logo.png',
+      badge: '/images/zion-tech-group-logo.png',
+      vibrate: [100, 50, 100],
+      data: {
+        dateOfArrival: Date.now(),
+        primaryKey: data.primaryKey
+      },
+      actions: [
+        {
+          action: 'explore',
+          title: 'View Details',
+          icon: '/images/checkmark.png'
+        },
+        {
+          action: 'close',
+          title: 'Close',
+          icon: '/images/xmark.png'
+        }
+      ]
+    };
+    
+    event.waitUntil(
+      self.registration.showNotification(data.title, options)
+    );
+  }
+});
+
+// Notification click handler
+self.addEventListener('notificationclick', (event) => {
+  event.notification.close();
+  
+  if (event.action === 'explore') {
+    event.waitUntil(
+      clients.openWindow('/')
+    );
+  }
+});
+
+// Helper functions for IndexedDB operations
+async function getPendingSubmissions() {
+  // Implementation would depend on your IndexedDB setup
+  return [];
+}
+
+async function removePendingSubmission(id) {
+  // Implementation would depend on your IndexedDB setup
+  return Promise.resolve();
+}

@@ -4,6 +4,8 @@ import { ArrowRight, Star, Users, Award, CheckCircle, Play, Sparkles, Phone, Mai
 import { motion, AnimatePresence } from 'framer-motion';
 import ServiceShowcase from '../components/ServiceShowcase';
 import { contactInfo } from '../data/services';
+import { SEOHead } from '../components/seo/SEOHead';
+import { LazyImage } from '../components/performance/LazyImage';
 
 // Optimized futuristic animated background component with reduced re-renders
 const FuturisticBackground: React.FC = React.memo(() => {
@@ -370,22 +372,31 @@ FeaturesSection.displayName = 'FeaturesSection';
 // Main Home Component with Suspense for better performance
 const HomePage: React.FC = () => {
   return (
-    <div className="min-h-screen">
-      <HeroSection />
-      <FeaturesSection />
-      <Suspense fallback={
-        <div className="py-20 bg-slate-900">
-          <div className="container mx-auto px-4 text-center">
-            <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-cyan-500 mx-auto mb-4"></div>
-            <p className="text-gray-400">Loading services...</p>
+    <>
+      <SEOHead
+        title="Zion Tech Group - Advanced AI & Technology Solutions"
+        description="Leading provider of AI-powered technology solutions, cybersecurity, cloud infrastructure, and digital transformation services. Expert consulting and implementation for modern businesses."
+        keywords="AI services, technology consulting, cybersecurity, cloud solutions, digital transformation, machine learning, automation, IT services, software development, Zion Tech Group"
+        url="/"
+        type="website"
+      />
+      <div className="min-h-screen">
+        <HeroSection />
+        <FeaturesSection />
+        <Suspense fallback={
+          <div className="py-20 bg-slate-900">
+            <div className="container mx-auto px-4 text-center">
+              <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-cyan-500 mx-auto mb-4"></div>
+              <p className="text-gray-400">Loading services...</p>
+            </div>
           </div>
-        </div>
-      }>
-        <ServiceShowcase />
-      </Suspense>
-      <StatsSection />
-      <FloatingActionButton />
-    </div>
+        }>
+          <ServiceShowcase />
+        </Suspense>
+        <StatsSection />
+        <FloatingActionButton />
+      </div>
+    </>
   );
 };
 
