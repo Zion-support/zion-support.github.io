@@ -15,7 +15,7 @@ CYAN='\033[0;36m'
 NC='\033[0m' # No Color
 
 # Project configuration
-PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ENHANCED_ECOSYSTEM="$PROJECT_ROOT/ecosystem.enhanced.cjs"
 ORIGINAL_ECOSYSTEM="$PROJECT_ROOT/ecosystem.config.cjs"
 BACKUP_ECOSYSTEM="$PROJECT_ROOT/ecosystem.config.backup.$(date +%s).cjs"
@@ -96,8 +96,8 @@ stop_existing_processes() {
 start_enhanced_system() {
     log "Starting Enhanced PM2 Automation System..."
     
-    # Start the enhanced ecosystem
-    pm2 start "$ENHANCED_ECOSYSTEM"
+    # Start the enhanced ecosystem using PM2
+    pm2 start ecosystem.enhanced.cjs
     
     # Wait for processes to start
     sleep 5

@@ -5,8 +5,16 @@
       "severity": 1,
       "message": "innerHTML assignment detected",
       "rule": "no-inner-html",
+      "file": "/workspace/src/components/SecurityEnhancer.tsx",
+      "line": 146
+    },
+    {
+      "type": "pattern",
+      "severity": 1,
+      "message": "innerHTML assignment detected",
+      "rule": "no-inner-html",
       "file": "/workspace/src/components/unused/BrokenLinkFixer.jsx",
-      "line": 185
+      "line": 153
     },
     {
       "type": "pattern",
@@ -14,31 +22,7 @@
       "message": "innerHTML assignment detected",
       "rule": "no-inner-html",
       "file": "/workspace/src/components/unused/ContentQualityEnhancer.jsx",
-      "line": 260
-    },
-    {
-      "type": "pattern",
-      "severity": 2,
-      "message": "eval() usage detected",
-      "rule": "no-eval",
-      "file": "/workspace/src/hooks/useAICodeGeneration.js.jsx",
-      "line": 459
-    },
-    {
-      "type": "pattern",
-      "severity": 1,
-      "message": "document.write() usage detected",
-      "rule": "no-document-write",
-      "file": "/workspace/src/hooks/useAICodeGeneration.js.jsx",
-      "line": 398
-    },
-    {
-      "type": "pattern",
-      "severity": 2,
-      "message": "eval() usage detected",
-      "rule": "no-eval",
-      "file": "/workspace/src/hooks/useAICodeGeneration.jsx",
-      "line": 459
+      "line": 248
     },
     {
       "type": "pattern",
@@ -46,29 +30,13 @@
       "message": "document.write() usage detected",
       "rule": "no-document-write",
       "file": "/workspace/src/hooks/useAICodeGeneration.jsx",
-      "line": 398
-    },
-    {
-      "type": "pattern",
-      "severity": 1,
-      "message": "innerHTML assignment detected",
-      "rule": "no-inner-html",
-      "file": "/workspace/src/main.js.jsx",
-      "line": 48
-    },
-    {
-      "type": "pattern",
-      "severity": 1,
-      "message": "innerHTML assignment detected",
-      "rule": "no-inner-html",
-      "file": "/workspace/src/main.jsx",
-      "line": 69
+      "line": 543
     }
   ],
   "summary": {
-    "total": 0,
+    "total": 4,
     "high": 0,
-    "medium": 0,
+    "medium": 4,
     "low": 0
   }
 }
