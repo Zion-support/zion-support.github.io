@@ -27,7 +27,7 @@ const nextConfig = {
   // Performance optimizations
   experimental: {
     optimizeCss: true,
-    optimizePackageImports: ['lucide-react',framer-motion']
+    optimizePackageImports: ['lucide-react', 'framer-motion']
   },
 
   // Restrict Next.js to only pick up .page.tsx files in /pages to avoid legacy conflicts

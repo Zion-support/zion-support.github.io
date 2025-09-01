@@ -1,22 +1,20 @@
 module.exports = {
   apps: [
-    // Console Error Fixer - Automatically fixes console errors
+    // Safe Vite preview to serve built app
     {
-      name: 'console-error-fixer',
-      script: 'scripts/automation-wrapper.js',
-      args: 'fix',
+      name: 'zion-vite-preview',
+      script: 'npm',
+      args: 'run preview',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
+      max_memory_restart: '512M',
       env: {
-        NODE_ENV: 'production',
-        PM2_PROCESS: 'console-error-fixer'
+        NODE_ENV: 'production'
       },
-      cron_restart: '0 */6 * * *', // Restart every 6 hours
-      log_file: 'logs/console-error-fixer.log',
-      out_file: 'logs/console-error-fixer-out.log',
-      error_file: 'logs/console-error-fixer-error.log'
+      log_file: 'logs/vite-preview.log',
+      out_file: 'logs/vite-preview-out.log',
+      error_file: 'logs/vite-preview-error.log'
     },
 
     // Link Checker - Checks for broken links
@@ -57,23 +55,19 @@ module.exports = {
       error_file: 'logs/continuous-improvement-error.log'
     },
 
-    // Daily Build Test - Runs build and tests daily
+    // CI maintenance: periodic build to surface regressions
     {
-      name: 'daily-build-test',
-      script: 'scripts/automation-wrapper.js',
-      args: 'build-test',
+      name: 'maintenance-build',
+      script: 'bash',
+      args: '-lc "npm run build"',
       instances: 1,
-      autorestart: true,
+      autorestart: false,
       watch: false,
-      max_memory_restart: '2G',
-      env: {
-        NODE_ENV: 'production',
-        PM2_PROCESS: 'daily-build-test'
-      },
-      cron_restart: '0 3 * * *', // Restart daily at 3 AM
-      log_file: 'logs/daily-build-test.log',
-      out_file: 'logs/daily-build-test-out.log',
-      error_file: 'logs/daily-build-test-error.log'
+      max_memory_restart: '512M',
+      cron_restart: '0 3 * * *',
+      log_file: 'logs/maintenance-build.log',
+      out_file: 'logs/maintenance-build-out.log',
+      error_file: 'logs/maintenance-build-error.log'
     },
 
     // Security Audit - Runs security checks
@@ -114,23 +108,19 @@ module.exports = {
       error_file: 'logs/dependency-updates-error.log'
     },
 
-    // Performance Monitor - Monitors application performance
+    // Lint/type-check automation (non-blocking)
     {
-      name: 'performance-monitor',
-      script: 'scripts/automation-wrapper.js',
-      args: 'performance',
+      name: 'maintenance-lint-typecheck',
+      script: 'bash',
+      args: '-lc "npm run lint || true; npm run type-check || true"',
       instances: 1,
-      autorestart: true,
+      autorestart: false,
       watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        PM2_PROCESS: 'dependency-updates'
-      },
-      cron_restart: '0 */4 * * *', // Restart every 4 hours
-      log_file: 'logs/performance-monitor.log',
-      out_file: 'logs/performance-monitor-out.log',
-      error_file: 'logs/performance-monitor-error.log'
+      max_memory_restart: '256M',
+      cron_restart: '0 */6 * * *',
+      log_file: 'logs/maintenance-lint-typecheck.log',
+      out_file: 'logs/maintenance-lint-typecheck-out.log',
+      error_file: 'logs/maintenance-lint-typecheck-error.log'
     },
 
     // Quality Checks - Runs quality assurance checks

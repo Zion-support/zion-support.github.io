@@ -1,3 +1,29 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+mkdir -p logs
+
+if ! command -v pm2 >/dev/null 2>&1; then
+  npm i -g pm2
+fi
+
+# Build once before starting preview
+npm run build || true
+
+# Start/Reload ecosystem (avoid npm install in sub-scripts by setting CI)
+export CI=true
+pm2 startOrReload ecosystem.config.cjs --update-env
+pm2 save
+
+# Enable logrotate
+pm2 install pm2-logrotate || true
+pm2 set pm2-logrotate:max_size 10M
+pm2 set pm2-logrotate:retain 14
+pm2 set pm2-logrotate:compress true
+pm2 set pm2-logrotate:rotateInterval '0 0 * * *'
+
+echo "PM2 processes running:" | tee -a logs/pm2-bootstrap.log
+pm2 status | cat
 #!/bin/bash
 
 # PM2 Automation Script - Replaces GitHub Actions

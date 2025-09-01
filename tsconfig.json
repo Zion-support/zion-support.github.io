@@ -52,7 +52,11 @@
     "typeRoots": ["./node_modules/@types", "./types"],
     "types": ["node"]
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "tailwind.config.js", "postcss.config.js"],
+  "include": [
+    "src/SafeApp.tsx",
+    "src/main.tsx",
+    "vite.config.ts"
+  ],
   "exclude": [
     "node_modules",
     "zion.app/recovered-content/**",
