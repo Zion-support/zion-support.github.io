@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
+import React from 'react';
+import { Link  } from 'react-router-dom';
 
 export const AIServicesShowcase = () => {
   return (
@@ -39,11 +39,11 @@ export const AIServicesShowcase = () => {
             <p className="text-gray-300 mb-4">Streamline operations with intelligent automation</p>
             <Link to="/services/automation" className="text-cyan-400 hover:text-cyan-300">
               Learn More →
-            </Link>;
-          </div>;
-        </div>;
-      </div>;
-    </section>;
+            </Link>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 
