@@ -962,143 +962,39 @@ export default function HomePage() {
                 <h3 className="text-lg font-semibold text-green-400 mb-2">Contact</h3>
                 <p className="text-white/70 text-sm">Talk with our team</p>
               </Link>
-              <Link href="/privacy" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-slate-400/30 transition-all duration-300 text-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-slate-400 to-slate-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-xl">🛡️</span>
-                </div>
-                <h3 className="text-lg font-semibold text-slate-300 mb-2">Privacy</h3>
-                <p className="text-white/70 text-sm">Your data matters</p>
-              </Link>
-              <Link href="/reports/updates/update-2025-08-15-0406" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-orange-400/30 transition-all duration-300 text-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-amber-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-xl">🗞️</span>
-                </div>
-                <h3 className="text-lg font-semibold text-orange-300 mb-2">Updates</h3>
-                <p className="text-white/70 text-sm">Latest reports & news</p>
-              </Link>
-            </div>
-          </section>
 
-          {/* Featured Blog Posts */}
-          <section className="mx-auto max-w-7xl px-6 pb-16">
-            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">📝 Featured Blog Posts</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              <Link href="/blog/ai-automation-trends-2025" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
-                <h3 className="text-lg font-semibold">AI Automation Trends 2025</h3>
-                <p className="mt-1 text-sm text-white/75">What’s next in intelligent automation.</p>
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Read <span aria-hidden>→</span></div>
-              </Link>
-              <Link href="/blog/cloud-native-automation" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
-                <h3 className="text-lg font-semibold">Cloud-Native Automation</h3>
-                <p className="mt-1 text-sm text-white/75">Designing resilient, scalable systems.</p>
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Read <span aria-hidden>→</span></div>
-              </Link>
-              <Link href="/blog/performance-optimization" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
-                <h3 className="text-lg font-semibold">Performance Optimization</h3>
-                <p className="mt-1 text-sm text-white/75">Speed, reliability, and efficiency.</p>
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Read <span aria-hidden>→</span></div>
-              </Link>
-              <Link href="/blog/autonomous-content-generation" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
-                <h3 className="text-lg font-semibold">Autonomous Content Generation</h3>
-                <p className="mt-1 text-sm text-white/75">Scaling high-quality content with AI.</p>
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Read <span aria-hidden>→</span></div>
-              </Link>
-              <Link href="/blog/ai-ethics-automation" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
-                <h3 className="text-lg font-semibold">AI Ethics in Automation</h3>
-                <p className="mt-1 text-sm text-white/75">Responsible development at scale.</p>
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Read <span aria-hidden>→</span></div>
-              </Link>
-              <Link href="/blog/future-of-work" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
-                <h3 className="text-lg font-semibold">The Future of Work</h3>
-                <p className="mt-1 text-sm text-white/75">Humans and AI building together.</p>
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Read <span aria-hidden>→</span></div>
-              </Link>
-
-              <Link href="/privacy" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-slate-400/30 transition-all duration-300 text-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-slate-400 to-slate-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-xl">⚖️</span>
-                </div>
-                <h3 className="text-lg font-semibold text-slate-300 mb-2">Privacy</h3>
-                <p className="text-white/70 text-sm">Your data & trust</p>
-              </Link>
-            </div>
-          </section>
-
-          {/* Site Directory */}
-          <section className="mx-auto max-w-7xl px-6 pb-16">
-            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">🗂️ Site Directory</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              <Link href="/about" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300">
-                <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-lg font-semibold text-cyan-400">About</h3>
-                  <span className="text-xl">🏢</span>
-                </div>
-                <p className="text-white/70 text-sm">Mission, vision, and what we build</p>
-              </Link>
-
-              <Link href="/services" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-fuchsia-400/30 transition-all duration-300">
-                <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-lg font-semibold text-fuchsia-400">Services</h3>
-                  <span className="text-xl">🚀</span>
-                </div>
-                <p className="text-white/70 text-sm">AI automation, orchestration, deployment</p>
-              </Link>
-
-              <Link href="/resources" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-blue-400/30 transition-all duration-300">
-                <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-lg font-semibold text-blue-400">Resources</h3>
-                  <span className="text-xl">📚</span>
-                </div>
-                <p className="text-white/70 text-sm">Case studies, whitepapers, and tools</p>
-              </Link>
-
-              <Link href="/case-studies" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-yellow-400/30 transition-all duration-300">
-                <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-lg font-semibold text-yellow-400">Case Studies</h3>
-                  <span className="text-xl">📊</span>
-                </div>
-                <p className="text-white/70 text-sm">Outcomes delivered with our platform</p>
-              </Link>
-
-              <Link href="/blog" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-purple-400/30 transition-all duration-300">
-                <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-lg font-semibold text-purple-400">Blog</h3>
-                  <span className="text-xl">✍️</span>
-                </div>
-                <p className="text-white/70 text-sm">Thoughts on AI, automation, and infra</p>
-              </Link>
-
-              <Link href="/privacy" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-amber-400/30 transition-all duration-300">
-                <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-lg font-semibold text-amber-300">Privacy</h3>
+              <Link href="/privacy" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-rose-400/30 transition-all duration-300 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-rose-400 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <span className="text-xl">🔐</span>
                 </div>
-                <p className="text-white/70 text-sm">How we protect your data</p>
+                <h3 className="text-lg font-semibold text-rose-400 mb-2">Privacy Policy</h3>
+                <p className="text-white/70 text-sm">Your data, protected</p>
               </Link>
+            </div>
+          </section>
 
-              <Link href="/contact" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-green-400/30 transition-all duration-300">
-                <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-lg font-semibold text-green-400">Contact</h3>
-                  <span className="text-xl">💬</span>
-                </div>
-                <p className="text-white/70 text-sm">Talk with us about your goals</p>
+          {/* Featured Insights */}
+          <section className="mx-auto max-w-7xl px-6 pb-16">
+            <h2 className="text-center text-4xl font-bold tracking-wide text-white/90 mb-12">🧭 Featured Insights</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <Link href="/blog/ai-automation-trends-2025" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-fuchsia-400/30">
+                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-cyan-500/0 via-fuchsia-400/10 to-cyan-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+                <h3 className="text-lg font-semibold">AI Automation Trends 2025</h3>
+                <p className="mt-1 text-sm text-white/75">What&apos;s next in intelligent automation.</p>
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-fuchsia-300/90">Read <span aria-hidden>→</span></div>
               </Link>
-
-              <Link href="/reports/updates/update-2025-08-15-0406" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all duration-300">
-                <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-lg font-semibold text-cyan-300">Latest Update</h3>
-                  <span className="text-xl">🗞️</span>
-                </div>
-                <p className="text-white/70 text-sm">Newest autonomous report</p>
+              <Link href="/blog/performance-optimization" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
+                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+                <h3 className="text-lg font-semibold">Performance Optimization</h3>
+                <p className="mt-1 text-sm text-white/75">Techniques for faster, smarter systems.</p>
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Read <span aria-hidden>→</span></div>
               </Link>
-
-              <a href="https://github.com/Zion-Holdings/zion.app" target="_blank" rel="noopener noreferrer" className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
-                <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-lg font-semibold text-white">GitHub Repository</h3>
-                  <span className="text-xl">🌐</span>
-                </div>
-                <p className="text-white/70 text-sm">Browse source, docs, and workflows</p>
-              </a>
+              <Link href="/blog/cloud-native-automation" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-emerald-400/30">
+                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-emerald-500/0 via-green-400/10 to-emerald-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+                <h3 className="text-lg font-semibold">Cloud-Native Automation</h3>
+                <p className="mt-1 text-sm text-white/75">Best practices from the field.</p>
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-emerald-300/90">Read <span aria-hidden>→</span></div>
+              </Link>
             </div>
           </section>
 
