@@ -46,7 +46,17 @@
     "cypress:run": "cypress run --browser chrome",
     "test:accessibility": "vitest run tests/Accessibility.test.tsx",
     "test:e2e": "playwright test",
-    "es:index": "node scripts/index-elasticsearch.js"
+    "seed": "prisma db seed",
+    "es:index": "node scripts/index-elasticsearch.js",
+    "devnet": "node scripts/start-devnet.js",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test:node": "node -v",
+    "check-updates": "ncu",
+    "audit-vulnerabilities": "npm audit",
+    "watchdog": "node scripts/watchdog.js"
+  },
+  "prisma": {
+    "seed": "ts-node prisma/seed.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",
