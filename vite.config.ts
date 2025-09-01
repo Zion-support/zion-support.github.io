@@ -8,9 +8,6 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import compression from 'vite-plugin-compression'
 import { resolve } from 'path'
-import tailwindcss from 'tailwindcss'
-import autoprefixer from 'autoprefixer'
-import cssnano from 'cssnano'
 
 // https://vitejs.dev/config/
 >>>>>>> cursor/add-new-services-and-advertise-them-971c
@@ -43,9 +40,22 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ['react', 'react-dom', 'react-router-dom'],
-          ui: ['framer-motion', 'lucide-react'],
-          utils: ['clsx', 'tailwind-merge', 'class-variance-authority'],
+          // Core React libraries
+          'react-core': ['react', 'react-dom'],
+          // Routing
+          'routing': ['react-router-dom'],
+          // UI and animations
+          'ui-animations': ['framer-motion', 'lucide-react'],
+          // Form handling
+          'forms': ['react-hook-form', '@hookform/resolvers', 'zod'],
+          // Utilities
+          'utils': ['clsx', 'tailwind-merge', 'class-variance-authority'],
+          // Charts and data visualization
+          'charts': ['recharts', 'd3-color', 'd3-format', 'd3-path', 'd3-time-format'],
+          // AI and ML related
+          'ai-ml': ['fuse.js', 'embla-carousel-react'],
+          // Enterprise features
+          'enterprise': ['@reduxjs/toolkit', 'react-redux', 'axios'],
         },
         chunkFileNames: (chunkInfo) => {
           const facadeModuleId = chunkInfo.facadeModuleId
@@ -66,7 +76,8 @@ export default defineConfig({
         },
       },
     },
-    chunkSizeWarningLimit: 1000,
+    chunkSizeWarningLimit: 800, // Reduced from 1000
+    reportCompressedSize: true,
   },
   optimizeDeps: {
     include: [
@@ -107,6 +118,7 @@ export default defineConfig({
   },
   esbuild: {
     drop: process.env.NODE_ENV === 'production' ? ['console', 'debugger'] : [],
+    pure: process.env.NODE_ENV === 'production' ? ['console.log', 'console.info'] : [],
   },
   worker: {
     format: 'es',
