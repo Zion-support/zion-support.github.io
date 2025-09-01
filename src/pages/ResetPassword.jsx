@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react'; // Added React import
+import { useParams, useNavigate, Link } from 'react-router-dom'; // Added Link
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { PasswordStrengthMeter } from '@/components/PasswordStrengthMeter'; // Assuming this component exists'
