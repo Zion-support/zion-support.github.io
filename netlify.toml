@@ -96,32 +96,20 @@
 
 # New intelligence generators
 [[scheduled.functions]]
-  name = "ai-alt-text-generator-runner"
+  name = "performance-audit-runner"
   schedule = "*/30 * * * *" # every 30 minutes
 
 [[scheduled.functions]]
-  name = "content-keywords-runner"
-  schedule = "*/30 * * * *" # every 30 minutes
+  name = "license-compliance-runner"
+  schedule = "0 2 * * *" # daily 02:00 UTC
 
 [[scheduled.functions]]
-  name = "content-staleness-auditor"
-  schedule = "*/15 * * * *" # every 15 minutes
+  name = "content-freshness-runner"
+  schedule = "*/6 * * * *" # every 6 minutes
 
 [[scheduled.functions]]
-  name = "image-lazyload-auditor"
-  schedule = "*/20 * * * *" # every 20 minutes
-
-[[scheduled.functions]]
-  name = "internal-link-orphan-audit"
-  schedule = "*/25 * * * *" # every 25 minutes
-
-[[scheduled.functions]]
-  name = "css-bloat-report"
-  schedule = "*/30 * * * *" # every 30 minutes
-
-[[scheduled.functions]]
-  name = "automation-guardian"
-  schedule = "*/10 * * * *"
+  name = "dead-code-report"
+  schedule = "7 */6 * * *"
 
 [[scheduled.functions]]
   name = "security-audit-runner"

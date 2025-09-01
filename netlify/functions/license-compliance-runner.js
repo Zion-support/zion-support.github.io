@@ -7,7 +7,7 @@ function runNode(relPath, args = []) {
   return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
 }
 
-exports.config = { schedule: '*/30 * * * *' };
+exports.config = { schedule: '0 2 * * *' }; // daily at 02:00 UTC
 
 exports.handler = async () => {
   const logs = [];
@@ -20,7 +20,7 @@ exports.handler = async () => {
     return status;
   }
 
-  step('perf:audit', 'automation/performance-audit.cjs');
+  step('license:scan', 'automation/license-compliance.cjs');
   step('git:sync', 'automation/advanced-git-sync.cjs');
 
   return { statusCode: 200, body: logs.join('\n') };
