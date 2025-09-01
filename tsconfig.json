@@ -14,7 +14,7 @@
     "strict": false,
     "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -25,18 +25,18 @@
     "declarationMap": true,
     "sourceMap": true,
     "removeComments": false,
-    "noImplicitAny": false,
+    "noImplicitAny": true,
     "noImplicitReturns": false,
-    "noImplicitThis": false,
+    "noImplicitThis": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "exactOptionalPropertyTypes": false,
-    "noImplicitOverride": false,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noUncheckedIndexedAccess": false,
-    "allowUnusedLabels": true,
-    "allowUnreachableCode": true,
-    "noFallthroughCasesInSwitch": false,
+    "allowUnusedLabels": false,
+    "allowUnreachableCode": false,
+    "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
     "paths": {
       "@/*": [
@@ -86,24 +86,28 @@
     "types": [
       "node"
     ],
-    "strictNullChecks": false,
-    "strictFunctionTypes": false,
-    "strictBindCallApply": false,
-    "strictPropertyInitialization": false,
-    "alwaysStrict": false
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": [
-    "src/**/*",
-    "tailwind.config.js",
-    "postcss.config.js"
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.js",
+    "**/*.jsx"
   ],
   "exclude": [
     "node_modules",
-    "zion.app/recovered-content/**",
-    "services.disabled.temp/**",
-    "data.temp/**",
-    "src_backup/**",
+    ".next",
+    "out",
+    "dist",
+    "automation",
+    "components.disabled",
     "**/*.disabled",
-    "**/*.disabled/**"
+    "**/*.backup",
+    "**/*.tsbackup"
   ]
 }

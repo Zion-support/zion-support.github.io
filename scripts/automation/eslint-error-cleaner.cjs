@@ -26,7 +26,7 @@ class ESLintErrorCleaner {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}`;
     console.log(logMessage);
-    
+
     const logFile = path.join(this.logsPath, 'eslint-error-cleaner.log');
     fs.appendFileSync(logFile, logMessage + '\n');
   }
@@ -34,10 +34,10 @@ class ESLintErrorCleaner {
   async runESLintCheck() {
     try {
       this.log('🔍 Running ESLint check...');
-      const result = execSync('npm run lint', { 
-        cwd: this.workspacePath, 
+      const result = execSync('npm run lint', {
+        cwd: this.workspacePath,
         encoding: 'utf8',
-        stdio: 'pipe'
+        stdio: 'pipe',
       });
       this.log('✅ ESLint check passed - no errors found');
       return { success: true, output: result, errors: [] };
@@ -54,7 +54,7 @@ class ESLintErrorCleaner {
   parseESLintErrors(output) {
     const errors = [];
     const lines = output.split('\n');
-    
+
     for (const line of lines) {
       if (line.includes('error') || line.includes('warning')) {
         const match = line.match(/(.+):(\d+):(\d+)\s*(\w+)\s+(.+)/);
@@ -64,18 +64,18 @@ class ESLintErrorCleaner {
             line: parseInt(match[2]),
             column: parseInt(match[3]),
             severity: match[4],
-            message: match[5].trim()
+            message: match[5].trim(),
           });
         }
       }
     }
-    
+
     return errors;
   }
 
   async fixESLintError(error) {
     const filePath = path.resolve(this.workspacePath, error.file);
-    
+
     if (!fs.existsSync(filePath)) {
       this.log(`⚠️ File not found: ${filePath}`, 'WARN');
       return false;
@@ -85,7 +85,7 @@ class ESLintErrorCleaner {
       let content = fs.readFileSync(filePath, 'utf8');
       const lines = content.split('\n');
       const lineIndex = error.line - 1;
-      
+
       if (lineIndex < 0 || lineIndex >= lines.length) {
         return false;
       }
@@ -99,16 +99,28 @@ class ESLintErrorCleaner {
         fixedLine = await this.fixUnusedVariableError(error, lines, lineIndex);
         fixed = fixedLine !== originalLine;
       } else if (error.message.includes('no-console')) {
-        fixedLine = await this.fixConsoleStatementError(error, lines, lineIndex);
+        fixedLine = await this.fixConsoleStatementError(
+          error,
+          lines,
+          lineIndex
+        );
         fixed = fixedLine !== originalLine;
       } else if (error.message.includes('no-undef')) {
-        fixedLine = await this.fixUndefinedVariableError(error, lines, lineIndex);
+        fixedLine = await this.fixUndefinedVariableError(
+          error,
+          lines,
+          lineIndex
+        );
         fixed = fixedLine !== originalLine;
       } else if (error.message.includes('no-extra-semi')) {
         fixedLine = await this.fixExtraSemicolonError(error, lines, lineIndex);
         fixed = fixedLine !== originalLine;
       } else if (error.message.includes('no-prototype-builtins')) {
-        fixedLine = await this.fixPrototypeBuiltinsError(error, lines, lineIndex);
+        fixedLine = await this.fixPrototypeBuiltinsError(
+          error,
+          lines,
+          lineIndex
+        );
         fixed = fixedLine !== originalLine;
       } else if (error.message.includes('no-useless-escape')) {
         fixedLine = await this.fixUselessEscapeError(error, lines, lineIndex);
@@ -122,118 +134,141 @@ class ESLintErrorCleaner {
       if (fixed) {
         lines[lineIndex] = fixedLine;
         fs.writeFileSync(filePath, lines.join('\n'));
-        this.log(`✅ Fixed ESLint error in ${error.file}:${error.line} (${error.message})`);
+        this.log(
+          `✅ Fixed ESLint error in ${error.file}:${error.line} (${error.message})`
+        );
         return true;
       }
 
       return false;
     } catch (fixError) {
-      this.log(`❌ Failed to fix error in ${error.file}:${error.line}: ${fixError.message}`, 'ERROR');
+      this.log(
+        `❌ Failed to fix error in ${error.file}:${error.line}: ${fixError.message}`,
+        'ERROR'
+      );
       return false;
     }
   }
 
   async fixUnusedVariableError(error, lines, lineIndex) {
     const line = lines[lineIndex];
-    
+
     // Comment out unused variables
-    if (line.includes('import') || line.includes('const') || line.includes('let') || line.includes('var')) {
+    if (
+      line.includes('import') ||
+      line.includes('const') ||
+      line.includes('let') ||
+      line.includes('var')
+    ) {
       return '// ' + line;
     }
-    
+
     // For function parameters, add underscore prefix
     if (line.includes('function') || line.includes('=>')) {
       return line.replace(/(\w+)(?=\s*[,\)])/g, '_$1');
     }
-    
+
     return line;
   }
 
   async fixConsoleStatementError(error, lines, lineIndex) {
     const line = lines[lineIndex];
-    
+
     // Comment out console statements
-    if (line.includes('console.log') || line.includes('console.error') || line.includes('console.warn')) {
+    if (
+      line.includes('console.log') ||
+      line.includes('console.error') ||
+      line.includes('console.warn')
+    ) {
       return '// ' + line;
     }
-    
+
     return line;
   }
 
   async fixUndefinedVariableError(error, lines, lineIndex) {
     const line = lines[lineIndex];
-    
+
     // Try to find the variable definition
     const variableMatch = line.match(/(\w+)/);
     if (variableMatch) {
       const variable = variableMatch[1];
-      
+
       // Look for variable definition in previous lines
       for (let i = lineIndex - 1; i >= Math.max(0, lineIndex - 10); i--) {
         const prevLine = lines[i];
-        if (prevLine.includes(`const ${variable}`) || prevLine.includes(`let ${variable}`) || prevLine.includes(`var ${variable}`)) {
+        if (
+          prevLine.includes(`const ${variable}`) ||
+          prevLine.includes(`let ${variable}`) ||
+          prevLine.includes(`var ${variable}`)
+        ) {
           // Variable is defined, this might be a scope issue
           return line;
         }
       }
-      
+
       // Variable not found, add declaration
       if (line.includes('=')) {
         return `const ${line}`;
       }
     }
-    
+
     return line;
   }
 
   async fixExtraSemicolonError(error, lines, lineIndex) {
     const line = lines[lineIndex];
-    
+
     // Remove extra semicolons
     return line.replace(/;;+/g, ';');
   }
 
   async fixPrototypeBuiltinsError(error, lines, lineIndex) {
     const line = lines[lineIndex];
-    
+
     // Replace direct prototype access with safer alternatives
     if (line.includes('.hasOwnProperty(')) {
       return line.replace(/\.hasOwnProperty\(/g, '.hasOwnProperty.call(this, ');
     }
-    
+
     return line;
   }
 
   async fixUselessEscapeError(error, lines, lineIndex) {
     const line = lines[lineIndex];
-    
+
     // Remove unnecessary escape characters
     return line.replace(/\\([^\\])/g, '$1');
   }
 
   async fixGenericESLintError(error, lines, lineIndex) {
     const line = lines[lineIndex];
-    
+
     // Generic fixes for common issues
     let fixedLine = line;
-    
+
     // Fix missing semicolons
-    if (line.trim() && !line.trim().endsWith(';') && !line.trim().endsWith('{') && !line.trim().endsWith('}')) {
+    if (
+      line.trim() &&
+      !line.trim().endsWith(';') &&
+      !line.trim().endsWith('{') &&
+      !line.trim().endsWith('}')
+    ) {
       fixedLine = line + ';';
     }
-    
+
     // Fix extra spaces
     fixedLine = fixedLine.replace(/\s+/g, ' ');
-    
+
     // Fix trailing spaces
     fixedLine = fixedLine.replace(/\s+$/, '');
-    
+
     return fixedLine;
   }
 
   async attemptFixes(errors) {
     this.log(`🔧 Attempting to fix ${errors.length} ESLint errors...`);
-    
+
     let fixedCount = 0;
     const fixResults = [];
 
@@ -243,24 +278,29 @@ class ESLintErrorCleaner {
         if (fixed) {
           fixedCount++;
         }
-        
+
         fixResults.push({
           error,
           fixed,
-          timestamp: new Date().toISOString()
+          timestamp: new Date().toISOString(),
         });
-        
+
         // Track fix attempts
         const errorKey = `${error.file}:${error.line}:${error.message}`;
-        this.fixAttempts.set(errorKey, (this.fixAttempts.get(errorKey) || 0) + 1);
-        
+        this.fixAttempts.set(
+          errorKey,
+          (this.fixAttempts.get(errorKey) || 0) + 1
+        );
       } catch (fixError) {
-        this.log(`❌ Error fixing ${error.file}:${error.line}: ${fixError.message}`, 'ERROR');
+        this.log(
+          `❌ Error fixing ${error.file}:${error.line}: ${fixError.message}`,
+          'ERROR'
+        );
         fixResults.push({
           error,
           fixed: false,
           error: fixError.message,
-          timestamp: new Date().toISOString()
+          timestamp: new Date().toISOString(),
         });
       }
     }
@@ -272,10 +312,10 @@ class ESLintErrorCleaner {
   async runAutoFix() {
     try {
       this.log('🔧 Running ESLint auto-fix...');
-      const result = execSync('npm run lint:fix', { 
-        cwd: this.workspacePath, 
+      const result = execSync('npm run lint:fix', {
+        cwd: this.workspacePath,
         encoding: 'utf8',
-        stdio: 'pipe'
+        stdio: 'pipe',
       });
       this.log('✅ ESLint auto-fix completed');
       return { success: true, output: result };
@@ -287,61 +327,70 @@ class ESLintErrorCleaner {
 
   async generateReport(fixResults) {
     this.log('📊 Generating ESLint error cleaning report...');
-    
+
     const report = {
       timestamp: new Date().toISOString(),
       summary: {
         totalErrors: fixResults.totalErrors,
         fixedErrors: fixResults.fixedCount,
-        successRate: fixResults.totalErrors > 0 ? (fixResults.fixedCount / fixResults.totalErrors * 100).toFixed(2) : 100
+        successRate:
+          fixResults.totalErrors > 0
+            ? ((fixResults.fixedCount / fixResults.totalErrors) * 100).toFixed(
+                2
+              )
+            : 100,
       },
       fixResults: fixResults.results,
       recommendations: [
         'Review any remaining errors manually',
         'Consider adding ESLint disable comments for intentional violations',
         'Run npm run lint to verify fixes',
-        'Monitor for recurring error patterns'
-      ]
+        'Monitor for recurring error patterns',
+      ],
     };
 
-    const reportFile = path.join(this.reportsPath, 'eslint-error-cleaner-report.json');
+    const reportFile = path.join(
+      this.reportsPath,
+      'eslint-error-cleaner-report.json'
+    );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    
+
     this.log(`📄 Report generated: ${reportFile}`);
     return report;
   }
 
   async run() {
     this.log('🚀 Starting ESLint Error Cleaner...');
-    
+
     try {
       // Step 1: Try auto-fix first
       const autoFixResult = await this.runAutoFix();
-      
+
       // Step 2: Run ESLint check to see remaining errors
       const checkResult = await this.runESLintCheck();
-      
+
       if (checkResult.success) {
         this.log('🎉 No ESLint errors found after auto-fix!');
         return { success: true, errors: [], fixed: 0 };
       }
-      
+
       // Step 3: Attempt manual fixes for remaining errors
       const fixResults = await this.attemptFixes(checkResult.errors);
-      
+
       // Step 4: Generate report
       const report = await this.generateReport(fixResults);
-      
+
       this.log('🎉 ESLint Error Cleaner completed!');
-      this.log(`📊 Fixed ${fixResults.fixedCount} out of ${fixResults.totalErrors} errors`);
-      
+      this.log(
+        `📊 Fixed ${fixResults.fixedCount} out of ${fixResults.totalErrors} errors`
+      );
+
       return {
         success: fixResults.fixedCount > 0,
         errors: checkResult.errors,
         fixed: fixResults.fixedCount,
-        report
+        report,
       };
-      
     } catch (error) {
       this.log(`💥 ESLint Error Cleaner failed: ${error.message}`, 'ERROR');
       throw error;

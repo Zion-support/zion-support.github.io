@@ -179,11 +179,11 @@ The system automatically performs health checks every 5 minutes and logs results
 
 ### Environment Variables
 
-| Variable | Description | Required |
-|----------|-------------|----------|
-| `NETLIFY_SITE_ID` | Your Netlify site ID | Yes (for Netlify features) |
-| `NETLIFY_TOKEN` | Your Netlify API token | Yes (for Netlify features) |
-| `NODE_ENV` | Node.js environment | No (defaults to production) |
+| Variable          | Description            | Required                    |
+| ----------------- | ---------------------- | --------------------------- |
+| `NETLIFY_SITE_ID` | Your Netlify site ID   | Yes (for Netlify features)  |
+| `NETLIFY_TOKEN`   | Your Netlify API token | Yes (for Netlify features)  |
+| `NODE_ENV`        | Node.js environment    | No (defaults to production) |
 
 ### PM2 Configuration
 

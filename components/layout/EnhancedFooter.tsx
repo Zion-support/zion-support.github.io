@@ -69,8 +69,9 @@ const EnhancedFooter: React.FC = () => {
               <li><Link href="/terms-of-service"><a className="hover:text-blue-400 transition-colors">Terms of Service</a></Link></li>
             </ul>
             <div className="mt-4 pt-4 border-t border-gray-700">
-              <p className="text-sm text-gray-400">Email: info@ziontechgroup.com</p>
-              <p className="text-sm text-gray-400">Phone: +1 (555) 123-4567</p>
+              <p className="text-sm text-gray-400">Email: <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-400 transition-colors">kleber@ziontechgroup.com</a></p>
+              <p className="text-sm text-gray-400">Mobile: <a href="tel:+13024640950" className="hover:text-blue-400 transition-colors">+1 302 464 0950</a></p>
+              <p className="text-sm text-gray-400">Address: 364 E Main St STE 1008, Middletown, DE 19709</p>
             </div>
           </div>
         </div>

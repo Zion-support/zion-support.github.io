@@ -1,15 +1,10 @@
-import { render, screen } from '@testing - library / react';
-import React from 'react';
-import Header from './Header';
 
 describe ('Header', () => {
   it ('renders without crashing', () => {
-    render (<Header />) ;
-    expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () ;
-  }) ;
+    render (<Header  />) ;
+    expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
 
   it ('displays expected content', () => {
-    render (<Header />) ;
+    render (<Header  />) ;
     // Add specific test assertions based on component content
-  }) ;
-}) ;
+  }) }) ;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Link  } from 'react - router - dom.ts';
 import React from 'react.ts';
 export const UltimateServicesShowcase2027 = () => {
@@ -37,8 +38,11 @@ export default UltimateServicesShowcase2027;
             <Link to="/services / iot - edge" className="text - cyan - 400 hover:text - cyan - 300">
               Learn More →
             </Link>;
+=======
+export 
+>>>>>>> main
           </div>;
         </div>;
       </div>;
-    </section>;) ;
-};
+    </section>;) };export default UltimateServicesShowcase2027;
+'"

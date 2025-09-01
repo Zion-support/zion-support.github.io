@@ -1,15 +1,10 @@
-import { render, screen } from '@testing - library / react';
-import React from 'react';
-import EnhancedAccessibility from './EnhancedAccessibility';
 
 describe ('EnhancedAccessibility', () => {
   it ('renders without crashing', () => {
-    render (<EnhancedAccessibility />) ;
-    expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () ;
-  }) ;
+    render (<EnhancedAccessibility  />) ;
+    expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
 
   it ('displays expected content', () => {
-    render (<EnhancedAccessibility />) ;
+    render (<EnhancedAccessibility  />) ;
     // Add specific test assertions based on component content
-  }) ;
-}) ;
+  }) }) ;

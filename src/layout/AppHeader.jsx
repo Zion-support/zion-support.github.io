@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 import { motion } from 'framer-motion';
 import {
+
   Menu,
   X,
   ChevronDown,
@@ -15,8 +16,7 @@ import {
   Cloud,
   Users,
   Database,
-  Shield,
-} from 'lucide-react';
+  Shield} from 'lucide-react';
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -54,56 +54,69 @@ export function AppHeader() {
       dropdown: [
         {
           name: 'AI & Machine Learning',
-          path: '/services?category=ai-ml',
+          path: '/services/ai',
           icon: Brain,
-          color: 'from-purple-500 to-pink-500',
+          color: 'from-purple-500 to-pink-500'
         },
         {
-          name: 'Quantum Computing',
-          path: '/services?category=quantum',
-          icon: Zap,
-          color: 'from-blue-500 to-cyan-500',
-        },
-        {
-          name: 'Blockchain & Web3',
-          path: '/services?category=blockchain',
-          icon: Lock,
-          color: 'from-green-500 to-emerald-500',
-        },
-        {
-          name: 'IoT & Edge Computing',
-          path: '/services?category=iot',
+          name: 'Cloud & DevOps',
+          path: '/services/cloud',
           icon: Cloud,
-          color: 'from-orange-500 to-red-500',
-        },
-        {
-          name: 'AR/VR Development',
-          path: '/services?category=ar-vr',
-          icon: Users,
-          color: 'from-indigo-500 to-purple-500',
-        },
-        {
-          name: 'FinTech Solutions',
-          path: '/services?category=fintech',
-          icon: Database,
-          color: 'from-yellow-500 to-orange-500',
-        },
-        {
-          name: 'Green Technology',
-          path: '/services?category=green-tech',
-          icon: Shield,
-          color: 'from-green-400 to-teal-500',
+          color: 'from-blue-500 to-cyan-500'
         },
         {
           name: 'Cybersecurity',
-          path: '/services?category=cybersecurity',
+          path: '/services/cybersecurity',
           icon: Lock,
-          color: 'from-red-500 to-pink-500',
+          color: 'from-red-500 to-pink-500'
         },
-      ],
+        {
+          name: 'All Services',
+          path: '/services',
+          icon: Database,
+          color: 'from-green-500 to-emerald-500'
+        },
+        {
+          name: 'AI Quantum Trading',
+          path: '/services/AIQuantumFinancialTrading',
+          icon: Zap,
+          color: 'from-yellow-500 to-orange-500'
+        }
+      ]
     },
     { name: 'About', path: '/about', icon: null },
-    { name: 'Contact', path: '/contact', icon: null },
+    { 
+      name: 'Resources', 
+      path: '#', 
+      icon: null,
+      dropdown: [
+        {
+          name: 'Blog & Insights',
+          path: '/blog',
+          icon: Users,
+          color: 'from-blue-500 to-purple-500'
+        },
+        {
+          name: 'FAQ',
+          path: '/faq',
+          icon: Users,
+          color: 'from-green-500 to-blue-500'
+        },
+        {
+          name: 'Careers',
+          path: '/careers',
+          icon: Users,
+          color: 'from-orange-500 to-red-500'
+        },
+        {
+          name: 'Partners',
+          path: '/partners',
+          icon: Users,
+          color: 'from-purple-500 to-pink-500'
+        }
+      ]
+    },
+    { name: 'Contact', path: '/contact', icon: null }
   ];
 
   const isActiveRoute = path => {

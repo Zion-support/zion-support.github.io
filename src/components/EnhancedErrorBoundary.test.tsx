@@ -1,15 +1,10 @@
-import { render, screen } from '@testing - library / react';
-import React from 'react';
-import EnhancedErrorBoundary from './EnhancedErrorBoundary';
 
 describe ('EnhancedErrorBoundary', () => {
   it ('renders without crashing', () => {
-    render (<EnhancedErrorBoundary />) ;
-    expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () ;
-  }) ;
+    render (<EnhancedErrorBoundary  />) ;
+    expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
 
   it ('displays expected content', () => {
-    render (<EnhancedErrorBoundary />) ;
+    render (<EnhancedErrorBoundary  />) ;
     // Add specific test assertions based on component content
-  }) ;
-}) ;
+  }) }) ;

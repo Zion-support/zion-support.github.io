@@ -7,14 +7,12 @@ export interface PageInfo {
   status: 'working' | 'broken' | 'missing' | 'external';
   page: string;
   anchor?: string;
-  error?: string;
-}
+  error?: string}
 
   path: string;
   title: string;
   links: LinkInfo[];
-  exists: boolean;
-}
+  exists: boolean}
 
   private baseUrl: string;
   private visitedUrls: Set < string> = new Set () ;
@@ -22,35 +20,27 @@ export interface PageInfo {
   private missingPages: string[] = [];
 
   constructor (baseUrl: string = 'https://ziontechgroup.com') {
-    this.baseUrl = baseUrl;
-  }
+    this.baseUrl = baseUrl}
 
   // Check if a link is internal or external
   isInternalLink (url: string) : boolean {
     try {
-      const urlObj = new URL (url, this.baseUrl) ;
-      return urlObj.hostname === new URL (this.baseUrl) .hostname;
-    } catch {
-      return false;
-    }
+      
+      return urlObj.hostname === new URL (this.baseUrl) .hostname} catch {
+      return false}
   }
 
   // Normalize URL to handle relative paths
   normalizeUrl (url: string, basePage: string) : string {
     try {
       if (url.startsWith ('http') ) {
-        return url;
-      }
+        return url}
       if (url.startsWith ('/') ) {
-        return `${this.baseUrl}${url}`;
-      }
+        return `${this.baseUrl}${url}`}
       if (url.startsWith ('#') ) {
-        return `${this.baseUrl}${basePage}${url}`;
-      }
-      return `${this.baseUrl}${basePage}/${url}`;
-    } catch {
-      return url;
-    }
+        return `${this.baseUrl}${basePage}${url}`}
+      return `${this.baseUrl}${basePage}/${url}`} catch {
+      return url}
   }
 
   // Extract all links from a page
@@ -58,92 +48,80 @@ export interface PageInfo {
     const links: LinkInfo[] = [];
 
     // Extract href attributes from anchor tags
-    const hrefRegex = /href=["'] ([^"']+) ["']/g;
+    
     let match;
 
     while ( (match = hrefRegex.exec (pageContent) ) !== null) {
-      const url = match[1];
+      
       if (url &&
         !url.startsWith ('javascript:') &&
         !url.startsWith ('mailto:') &&
         !url.startsWith ('tel:') ) {
-        const normalizedUrl = this.normalizeUrl (url, pagePath) ;
+        
         links.push ({
           url: normalizedUrl,
           status: 'working',
           page: pagePath,
           anchor: url.startsWith ('#') ? url : undefined,
-        }) ;
-      }
+        }) }
     }
 
     // Extract src attributes from img, script, and link tags
-    const srcRegex = / (src | href) =["'] ([^"']+) ["']/g;
+    
     while ( (match = srcRegex.exec (pageContent) ) !== null) {
-      const url = match[2];
+      
       if (url && !url.startsWith ('data:') && !url.startsWith ('blob:') ) {
-        const normalizedUrl = this.normalizeUrl (url, pagePath) ;
+        
         links.push ({
           url: normalizedUrl,
           status: 'working',
           page: pagePath,
-        }) ;
-      }
+        }) }
     }
 
-    return links;
-  }
+    return links}
 
   // Check if a page exists
-  async checkPageExists (url: string) : Promise < any> {
+  async checkPageExists (url: string: any): Promise < any> {
     try {
-      const response = await fetch (url, { method: 'HEAD' }) ;
-      return response.ok;
-    } catch {
-      return false;
-    }
+      
+      return response.ok} catch {
+      return false}
   }
 
   // Check all links on a page
-  async checkPageLinks (pagePath: string, pageContent: string) : Promise < any> {
-    const links = this.extractLinks (pageContent, pagePath) ;
+  async checkPageLinks (pagePath: string, pageContent: string: any): Promise < any> {
+    
     const checkedLinks: LinkInfo[] = [];
 
     for (const link of links) {
       if (this.visitedUrls.has (link.url) ) {
-        continue;
-      }
+        continue}
 
       this.visitedUrls.add (link.url) ;
 
       if (this.isInternalLink (link.url) ) {
-        const exists = await this.checkPageExists (link.url) ;
+        
         if (exists) {
-          link.status = 'working';
-        } else {
+          link.status = 'working'} else {
           link.status = 'missing';
-          this.missingPages.push (link.url) ;
-        }
+          this.missingPages.push (link.url) }
       } else {
-        link.status = 'external';
-      }
+        link.status = 'external'}
 
-      checkedLinks.push (link) ;
-    }
+      checkedLinks.push (link) }
 
     return {
       path: pagePath,
       title: this.extractPageTitle (pageContent) ,
       links: checkedLinks,
       exists: true,
-    };
-  }
+    }}
 
   // Extract page title
   private extractPageTitle (content: string) : string {
-    const titleMatch = content.match (/<title[^>]*> ([^<]+) <\/title>/i) ;
-    return titleMatch ? titleMatch[1].trim () : 'Untitled';
-  }
+    
+    return titleMatch ? titleMatch[1].trim () : 'Untitled'}
 
   // Get analysis summary
   getSummary () {
@@ -152,17 +130,14 @@ export interface PageInfo {
       brokenLinks: this.brokenLinks.length,
       missingPages: this.missingPages.length,
       externalLinks: Array.from (this.visitedUrls) .filter (url => !this.isInternalLink (url) ) .length,
-    };
-  }
+    }}
 
   // Get all broken links
   getBrokenLinks () : LinkInfo[] {
-    return this.brokenLinks;
-  }
+    return this.brokenLinks}
 
   // Get all missing pages
   getMissingPages () : string[] {
-    return this.missingPages;
-  }
+    return this.missingPages}
 }
 

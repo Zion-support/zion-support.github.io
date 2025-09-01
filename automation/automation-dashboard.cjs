@@ -33,17 +33,72 @@ class AutomationDashboard {
 
   loadAutomationSystems() {
     const systems = [
-      { name: 'lint-monitor', path: 'lint-monitor.js', category: 'code-quality', status: 'available' },
-      { name: 'lint-fixer', path: 'lint-error-fixer.js', category: 'code-quality', status: 'available' },
-      { name: 'lint-manager', path: 'lint-automation-manager.js', category: 'code-quality', status: 'available' },
-      { name: 'code-quality', path: 'code-quality-monitor.js', category: 'analysis', status: 'available' },
-      { name: 'performance', path: 'performance-optimizer.js', category: 'optimization', status: 'available' },
-      { name: 'content-generator', path: 'content-generator.js', category: 'generation', status: 'available' },
-      { name: 'seo-optimizer', path: 'seo-optimizer.js', category: 'seo', status: 'available' },
-      { name: 'security-scanner', path: 'security-scanner.js', category: 'security', status: 'available' },
-      { name: 'test-generator', path: 'test-generator.js', category: 'testing', status: 'available' },
-      { name: 'intelligent-orchestrator', path: 'intelligent-orchestrator.js', category: 'orchestration', status: 'available' },
-      { name: 'automation-factory', path: 'automation-factory.js', category: 'factory', status: 'available' }
+      {
+        name: 'lint-monitor',
+        path: 'lint-monitor.js',
+        category: 'code-quality',
+        status: 'available',
+      },
+      {
+        name: 'lint-fixer',
+        path: 'lint-error-fixer.js',
+        category: 'code-quality',
+        status: 'available',
+      },
+      {
+        name: 'lint-manager',
+        path: 'lint-automation-manager.js',
+        category: 'code-quality',
+        status: 'available',
+      },
+      {
+        name: 'code-quality',
+        path: 'code-quality-monitor.js',
+        category: 'analysis',
+        status: 'available',
+      },
+      {
+        name: 'performance',
+        path: 'performance-optimizer.js',
+        category: 'optimization',
+        status: 'available',
+      },
+      {
+        name: 'content-generator',
+        path: 'content-generator.js',
+        category: 'generation',
+        status: 'available',
+      },
+      {
+        name: 'seo-optimizer',
+        path: 'seo-optimizer.js',
+        category: 'seo',
+        status: 'available',
+      },
+      {
+        name: 'security-scanner',
+        path: 'security-scanner.js',
+        category: 'security',
+        status: 'available',
+      },
+      {
+        name: 'test-generator',
+        path: 'test-generator.js',
+        category: 'testing',
+        status: 'available',
+      },
+      {
+        name: 'intelligent-orchestrator',
+        path: 'intelligent-orchestrator.js',
+        category: 'orchestration',
+        status: 'available',
+      },
+      {
+        name: 'automation-factory',
+        path: 'automation-factory.js',
+        category: 'factory',
+        status: 'available',
+      },
     ];
 
     for (const system of systems) {
@@ -58,7 +113,7 @@ class AutomationDashboard {
           totalExecutionTime: 0,
           averageExecutionTime: 0,
           uptime: 0,
-          isRunning: false
+          isRunning: false,
         });
       }
     }
@@ -82,9 +137,11 @@ class AutomationDashboard {
         timestamp: new Date().toISOString(),
         isRunning: system.isRunning,
         lastRun: system.lastRun,
-        successRate: system.successCount / (system.successCount + system.failureCount) || 0,
+        successRate:
+          system.successCount / (system.successCount + system.failureCount) ||
+          0,
         averageExecutionTime: system.averageExecutionTime,
-        uptime: system.uptime
+        uptime: system.uptime,
       };
 
       this.metrics.set(name, metrics);
@@ -95,14 +152,15 @@ class AutomationDashboard {
     this.alerts = [];
 
     for (const [name, system] of this.automationSystems) {
-      const successRate = system.successCount / (system.successCount + system.failureCount) || 0;
-      
+      const successRate =
+        system.successCount / (system.successCount + system.failureCount) || 0;
+
       if (successRate < 0.8) {
         this.alerts.push({
           type: 'warning',
           system: name,
           message: `Low success rate: ${(successRate * 100).toFixed(1)}%`,
-          timestamp: new Date().toISOString()
+          timestamp: new Date().toISOString(),
         });
       }
 
@@ -111,16 +169,19 @@ class AutomationDashboard {
           type: 'warning',
           system: name,
           message: `Slow execution time: ${system.averageExecutionTime}ms`,
-          timestamp: new Date().toISOString()
+          timestamp: new Date().toISOString(),
         });
       }
 
-      if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {
+      if (
+        !system.lastRun ||
+        Date.now() - system.lastRun.getTime() > 30 * 60 * 1000
+      ) {
         this.alerts.push({
           type: 'error',
           system: name,
           message: 'System not running recently',
-          timestamp: new Date().toISOString()
+          timestamp: new Date().toISOString(),
         });
       }
     }
@@ -138,21 +199,21 @@ class AutomationDashboard {
 
     try {
       this.log(`🚀 Running system: ${systemName}`);
-      
-      const result = execSync(`node "${system.path}"`, { 
+
+      const result = execSync(`node "${system.path}"`, {
         encoding: 'utf8',
-        stdio: 'pipe'
+        stdio: 'pipe',
       });
-      
+
       const executionTime = Date.now() - startTime;
       this.updateSystemMetrics(systemName, true, executionTime);
-      
+
       this.log(`✅ System completed: ${systemName} (${executionTime}ms)`);
       return { success: true, output: result, executionTime };
     } catch (error) {
       const executionTime = Date.now() - startTime;
       this.updateSystemMetrics(systemName, false, executionTime);
-      
+
       this.log(`❌ System failed: ${systemName} - ${error.message}`);
       return { success: false, error: error.message, executionTime };
     } finally {
@@ -171,24 +232,25 @@ class AutomationDashboard {
     }
 
     system.totalExecutionTime += executionTime;
-    system.averageExecutionTime = system.totalExecutionTime / (system.successCount + system.failureCount);
+    system.averageExecutionTime =
+      system.totalExecutionTime / (system.successCount + system.failureCount);
     system.lastRun = new Date();
   }
 
   async runAllSystems() {
     this.log('🚀 Running all automation systems...');
-    
+
     const results = [];
     for (const [name, system] of this.automationSystems) {
       if (system.status === 'available') {
         const result = await this.runSystem(name);
         results.push({ name, ...result });
-        
+
         // Add delay between systems
         await this.sleep(2000);
       }
     }
-    
+
     this.log(`📊 Completed ${results.length} systems`);
     return results;
   }
@@ -213,12 +275,16 @@ class AutomationDashboard {
         
         <!-- System Status -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-            ${systems.map(system => `
+            ${systems
+              .map(
+                system => `
                 <div class="bg-white rounded-lg shadow-md p-6">
                     <div class="flex items-center justify-between mb-4">
                         <h3 class="text-lg font-semibold text-gray-800">${system.name}</h3>
                         <span class="px-2 py-1 rounded-full text-xs font-medium ${
-                            system.isRunning ? 'bg-green-100 text-green-800' : 'bg-gray-100 text-gray-800'
+                          system.isRunning
+                            ? 'bg-green-100 text-green-800'
+                            : 'bg-gray-100 text-gray-800'
                         }">
                             ${system.isRunning ? 'Running' : 'Idle'}
                         </span>
@@ -230,20 +296,32 @@ class AutomationDashboard {
                         <p>Last Run: ${system.lastRun ? new Date(system.lastRun).toLocaleString() : 'Never'}</p>
                     </div>
                 </div>
-            `).join('')}
+            `
+              )
+              .join('')}
         </div>
 
         <!-- Alerts -->
         <div class="bg-white rounded-lg shadow-md p-6 mb-8">
             <h2 class="text-xl font-semibold text-gray-800 mb-4">Alerts</h2>
-            ${alerts.length > 0 ? alerts.map(alert => `
+            ${
+              alerts.length > 0
+                ? alerts
+                    .map(
+                      alert => `
                 <div class="p-3 rounded-lg mb-2 ${
-                    alert.type === 'error' ? 'bg-red-100 text-red-800' : 'bg-yellow-100 text-yellow-800'
+                  alert.type === 'error'
+                    ? 'bg-red-100 text-red-800'
+                    : 'bg-yellow-100 text-yellow-800'
                 }">
                     <strong>${alert.system}:</strong> ${alert.message}
                     <span class="text-xs ml-2">${new Date(alert.timestamp).toLocaleString()}</span>
                 </div>
-            `).join('') : '<p class="text-gray-500">No alerts</p>'}
+            `
+                    )
+                    .join('')
+                : '<p class="text-gray-500">No alerts</p>'
+            }
         </div>
 
         <!-- Performance Chart -->
@@ -333,14 +411,16 @@ class AutomationDashboard {
       timestamp: new Date().toISOString(),
       summary: {
         totalSystems: this.automationSystems.size,
-        runningSystems: Array.from(this.automationSystems.values()).filter(s => s.isRunning).length,
+        runningSystems: Array.from(this.automationSystems.values()).filter(
+          s => s.isRunning
+        ).length,
         totalAlerts: this.alerts.length,
-        averageSuccessRate: this.calculateAverageSuccessRate()
+        averageSuccessRate: this.calculateAverageSuccessRate(),
       },
       systems: {},
       metrics: {},
       alerts: this.alerts,
-      recommendations: this.generateRecommendations()
+      recommendations: this.generateRecommendations(),
     };
 
     // System details
@@ -351,10 +431,12 @@ class AutomationDashboard {
         isRunning: system.isRunning,
         successCount: system.successCount,
         failureCount: system.failureCount,
-        successRate: system.successCount / (system.successCount + system.failureCount) || 0,
+        successRate:
+          system.successCount / (system.successCount + system.failureCount) ||
+          0,
         averageExecutionTime: system.averageExecutionTime,
         lastRun: system.lastRun?.toISOString(),
-        uptime: system.uptime
+        uptime: system.uptime,
       };
     }
 
@@ -369,10 +451,11 @@ class AutomationDashboard {
   calculateAverageSuccessRate() {
     const systems = Array.from(this.automationSystems.values());
     const totalSuccessRate = systems.reduce((sum, system) => {
-      const rate = system.successCount / (system.successCount + system.failureCount) || 0;
+      const rate =
+        system.successCount / (system.successCount + system.failureCount) || 0;
       return sum + rate;
     }, 0);
-    
+
     return systems.length > 0 ? totalSuccessRate / systems.length : 0;
   }
 
@@ -380,14 +463,15 @@ class AutomationDashboard {
     const recommendations = [];
 
     for (const [name, system] of this.automationSystems) {
-      const successRate = system.successCount / (system.successCount + system.failureCount) || 0;
-      
+      const successRate =
+        system.successCount / (system.successCount + system.failureCount) || 0;
+
       if (successRate < 0.8) {
         recommendations.push({
           type: 'performance',
           system: name,
           message: `Improve ${name} reliability - current success rate: ${(successRate * 100).toFixed(1)}%`,
-          priority: 'high'
+          priority: 'high',
         });
       }
 
@@ -396,16 +480,19 @@ class AutomationDashboard {
           type: 'optimization',
           system: name,
           message: `Optimize ${name} performance - average execution time: ${system.averageExecutionTime}ms`,
-          priority: 'medium'
+          priority: 'medium',
         });
       }
 
-      if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {
+      if (
+        !system.lastRun ||
+        Date.now() - system.lastRun.getTime() > 30 * 60 * 1000
+      ) {
         recommendations.push({
           type: 'maintenance',
           system: name,
           message: `Schedule regular runs for ${name} - last run: ${system.lastRun ? new Date(system.lastRun).toLocaleString() : 'Never'}`,
-          priority: 'low'
+          priority: 'low',
         });
       }
     }
@@ -438,11 +525,13 @@ class AutomationDashboard {
 
         case '/api/status':
           res.writeHead(200);
-          res.end(JSON.stringify({
-            systems: Array.from(this.automationSystems.entries()),
-            metrics: Array.from(this.metrics.entries()),
-            alerts: this.alerts
-          }));
+          res.end(
+            JSON.stringify({
+              systems: Array.from(this.automationSystems.entries()),
+              metrics: Array.from(this.metrics.entries()),
+              alerts: this.alerts,
+            })
+          );
           break;
 
         case '/api/run-all':
@@ -460,7 +549,7 @@ class AutomationDashboard {
         case '/api/run':
           if (req.method === 'POST') {
             let body = '';
-            req.on('data', chunk => body += chunk);
+            req.on('data', chunk => (body += chunk));
             req.on('end', () => {
               const { system } = JSON.parse(body);
               this.runSystem(system).then(result => {
@@ -521,7 +610,9 @@ switch (command) {
     });
     break;
   default:
-    console.log('Usage: node automation-dashboard.js [start|status|run-all] [port]');
+    console.log(
+      'Usage: node automation-dashboard.js [start|status|run-all] [port]'
+    );
     console.log('\nCommands:');
     console.log('  start    - Start the dashboard server');
     console.log('  status   - Show current status');

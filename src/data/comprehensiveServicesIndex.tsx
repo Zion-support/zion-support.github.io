@@ -2,41 +2,54 @@
 // This file exports all our innovative technology services
 
 // Core Innovative Services
-export { EXPANDED_INNOVATIVE_SERVICES_2025 } from "./expandedInnovativeServices2025";
+export { EXPANDED_INNOVATIVE_SERVICES_2025 } from "./expandedInnovativeServices2025";"
 export type { ExpandedInnovativeService } from "./expandedInnovativeServices2025";
 
-// Emerging Technology Services
-export { EMERGING_TECH_SERVICES_2025 } from "./emergingTechServices2025";
+// Emerging Technology Services"
+export { EMERGING_TECH_SERVICES_2025 } from "./emergingTechServices2025";"
 export type { EmergingTechService } from "./emergingTechServices2025";
 
-// Ultimate Micro SAAS Services
-export { ULTIMATE_MICRO_SAAS_SERVICES_2025 } from "./ultimateMicroSaasServices2025";
+// Ultimate Micro SAAS Services"
+export { ULTIMATE_MICRO_SAAS_SERVICES_2025 } from "./ultimateMicroSaasServices2025";"
 export type { UltimateMicroSaasService } from "./ultimateMicroSaasServices2025";
 
+:src/data/comprehensiveServicesIndex.tsx
+// Combined Services Array;
+export 
 // Combined Services Array
-export const ALL_COMPREHENSIVE_SERVICES = [;
+export 
   ...EXPANDED_INNOVATIVE_SERVICES_2025,;
   ...EMERGING_TECH_SERVICES_2025,;
   ...ULTIMATE_MICRO_SAAS_SERVICES_2025;
 ];
 
+:src/data/comprehensiveServicesIndex.tsx
+// Service Categories;
+export 
+=======
+  'AI & Analytics','
+  'AI & Customer Experience','
+  'AI & Supply Chain','
+  'AI & Legal Tech','
+  'AI & Healthcare','
+  'AI & Financial Services','
+  'AI & Content Marketing','
+  'Cybersecurity & AI','
+  'Cybersecurity & Quantum','
+  'Blockchain & Supply Chain','
+  'IoT & Edge Computing','
+  'Quantum Computing','
+  'AR/VR & Immersive Tech','
+  '5G & Telecommunications','
+  'Space Technology',;'
+  'Neuromorphic Computing',;'
+  'Digital Twin & Simulation',;'
+  'Synthetic Biology',;'
+  'Brain-Computer Interface',;'
+  'Sustainability & Energy',;'
 // Service Categories
-export const SERVICE_CATEGORIES = [
-  'AI & Analytics',
-  'AI & Customer Experience',
-  'AI & Supply Chain',
-  'AI & Legal Tech',
-  'AI & Healthcare',
-  'AI & Financial Services',
-  'AI & Content Marketing',
-  'Cybersecurity & AI',
-  'Cybersecurity & Quantum',
-  'Blockchain & Supply Chain',
-  'IoT & Edge Computing',
-  'Quantum Computing',
-  'AR/VR & Immersive Tech',
-  '5G & Telecommunications',
-  'Space Technology',;
+export 
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   'Neuromorphic Computing',;
   'Digital Twin & Simulation',;
   'Synthetic Biology',;
@@ -46,21 +59,54 @@ export const SERVICE_CATEGORIES = [
 ];
 
 // Innovation Levels
-export const INNOVATION_LEVELS = [;
+<<<<<<< HEAD
+export 
+=======
+:src/data/comprehensiveServicesIndex.tsx
+export const INNOVATION_LEVELS = [;'
+  'Cutting-edge',;'
+  'Advanced',;'
+export 
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   'Cutting-edge',;
   'Advanced',;
   'Professional';
 ];
 
 // Support Levels
-export const SUPPORT_LEVELS = [;
+<<<<<<< HEAD
+export 
+=======
+:src/data/comprehensiveServicesIndex.tsx
+export const SUPPORT_LEVELS = [;'
+  'enterprise',;'
+  'professional',;'
+export 
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   'enterprise',;
   'professional',;
   'basic';
 ];
 
 // Pricing Models
-export const PRICING_MODELS = [;
+<<<<<<< HEAD
+export 
+  'monthly',;
+  'annual',;
+  'one-time',;
+=======
+:src/data/comprehensiveServicesIndex.tsx
+export const PRICING_MODELS = [;'
+  'monthly',;'
+  'annual',;'
+  'one-time',;'
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+  'usage-based';
+];
+
+// Contact Information;
+export 
+export 
   'monthly',;
   'annual',;
   'one-time',;
@@ -68,63 +114,72 @@ export const PRICING_MODELS = [;
 ];
 
 // Contact Information
-export const CONTACT_INFO = {
-  phone: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  website: 'https://ziontechgroup.com',
-  address: '364 E Main St STE 1008,;
+export 
   ;
   ;
   ;
   ;
+<<<<<<< HEAD
   Middletown DE 19709';
 ;
 
 };
+=======
+  Middletown DE 19709'};
+>>>>>>> main
 
+:src/data/comprehensiveServicesIndex.tsx
+// Service Statistics;
+export 
 // Service Statistics
-export const SERVICE_STATS = {
-  totalServices: ALL_COMPREHENSIVE_SERVICES.length,
-  categories: SERVICE_CATEGORIES.length,
-  innovationLevels: INNOVATION_LEVELS.length,
-  supportLevels: SUPPORT_LEVELS.length,;
+export 
   ;
   ;
   ;
   ;
-  pricingModels: PRICING_MODELS.length;
+  pricingModels: PRICING_MODELS.length};
+
+:src/data/comprehensiveServicesIndex.tsx
+// Helper Functions;
+export 
+  return ALL_COMPREHENSIVE_SERVICES.filter(service => service.category === category)};
 ;
+export 
+  return ALL_COMPREHENSIVE_SERVICES.filter(service => service.innovationLevel === level)};
 
+<<<<<<< HEAD
+=======
+export 
+>>>>>>> main
 };
-
-// Helper Functions
-export const getServicesByCategory = (category: string) => {;
-  return ALL_COMPREHENSIVE_SERVICES.filter(service => service.category === category);
-};
-
-export const getServicesByInnovationLevel = (level: string) => {;
-  return ALL_COMPREHENSIVE_SERVICES.filter(service => service.innovationLevel === level);
-};
-
-export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
-  return ALL_COMPREHENSIVE_SERVICES.filter(service =>
-    service.price >= minPrice && service.price <= maxPrice
-  );
-};
-
-export const getServicesByTags = (tags: string[]) => {;
+;
+export 
   return ALL_COMPREHENSIVE_SERVICES.filter(service =>;
     tags.some(tag => service.tags.includes(tag));
-  );
+  )};
+;
+export 
+// Helper Functions
+export 
+  return ALL_COMPREHENSIVE_SERVICES.filter(service => service.category === category)};
+
+export 
+  return ALL_COMPREHENSIVE_SERVICES.filter(service => service.innovationLevel === level)};
+
+export 
 };
 
-export const searchTerm = query.toLowerCase();
+export 
+  return ALL_COMPREHENSIVE_SERVICES.filter(service =>;
+    tags.some(tag => service.tags.includes(tag));
+  )};
+
+export 
   return ALL_COMPREHENSIVE_SERVICES.filter(service = >;
     service.title.toLowerCase().includes(searchTerm) ||;
     service.description.toLowerCase().includes(searchTerm) ||;
     service.tags.some(tag => tag.toLowerCase().includes(searchTerm)) ||;
     service.category.toLowerCase().includes(searchTerm);
-  );
-};
+  )};
 
-export default ALL_COMPREHENSIVE_SERVICES;
+export default ALL_COMPREHENSIVE_SERVICES;'"

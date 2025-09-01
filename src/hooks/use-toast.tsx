@@ -1,51 +1,67 @@
-import React, { useState } from 'react';
-import { useState, useCallback } from 'react';
+<<<<<<< HEAD
+=======
+:src/hooks/use-toast.tsx
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
 interface Toast {
-
   id: string;
   title?: string;
   description?: string;
   variant?: 'default' | 'destructive' | 'success';
-  duration?: number}
-
+  duration?: number
+}
+;
 export function useToast(...args[]):  {
+
+:src/hooks/use-toast.tsx
   const [toasts, setToasts] = useState<any>([]);
 
-  const toast = useCallback(({ title, description, variant = 'default', duration = 5000 }: Omit<Toast, 'id'>) => {;
-    const id = Math.random().toString(36).substr(2, 9);
+  
+    
     const newToast: Toast = { id, title, description, variant, duration };
 
     setToasts(prev => [...prev, newToast]);
 
     if (duration > 0) {
+
       setTimeout(() => {
-        setToasts(prev => prev.filter(toast => toast.id !== id));
-      }, duration);
-    }
+        setToasts(prev => prev.filter(toast => toast.id !== id))}, duration)}
 
-    return id;
-  }, []);
+    return id}, []);
 
-  const dismiss = useCallback((id: string) => {;
-    setToasts(prev => prev.filter(toast => toast.id !== id));
-  }, []);
+:src/hooks/use-toast.tsx
+  
+    setToasts(prev => prev.filter(toast => toast.id !== id))}, []);
 
-  const dismissAll = useCallback(() => {;
-    setToasts([]);
-  }, []);
+  
+    setToasts([])}, []);
+  
+    setToasts(prev => prev.filter(toast => toast.id !== id))}, []);
+
+  
+    setToasts([])}, []);
 
   return {
+
     toasts,
     toast,
     dismiss,
+:src/hooks/use-toast.tsx
+    dismissAll'
+  // // // // // // // // console.log('Toast:', { title, description, variant, duration })}}}
+
+// Export a default toast function for backward compatibility'
+export 
+  // In a real implementation, this would dispatch to a global toast system;
+  // console.log('Toast:', { title, description, variant, duration })};
+<<<<<<< HEAD
+=======
+'
     dismissAll
-  // // // // // // // console.log('Toast:', { title, description, variant, duration });
-};
-  }}
+  // // // // // // // console.log('Toast:', { title, description, variant, duration })}}}
 
 // Export a default toast function for backward compatibility
-export const toast = ({ title, description, variant = 'default', duration = 5000 }: Omit<Toast, 'id'>) => {;
+export 
   // In a real implementation, this would dispatch to a global toast system;
-  console.log('Toast:', { title, description, variant, duration });
-};
+  console.log('Toast:', { title, description, variant, duration })};
+>>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954

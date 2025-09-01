@@ -1,14 +1,14 @@
 #!/usr/bin/env node
-
+;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
+;
 class CodeQualityMonitor {
   constructor() {
     this.projectRoot = process.cwd();
-    this.logFile = path.join(this.projectRoot, 'logs/pm2/code-quality-monitor.log');
-    this.reportFile = path.join(this.projectRoot, 'logs/pm2/code-quality-report.json');
+    this.logFile = path.join(this.projectRoot,logs/pm2/code-quality-monitor.log');
+    this.reportFile = path.join(this.projectRoot,logs/pm2/code-quality-report.json');
     this.lastReport = null;
     this.startTime = Date.now();
 
@@ -23,7 +23,7 @@ class CodeQualityMonitor {
 
   async analyzeFile(filePath) {
     try {
-      const content = fs.readFileSync(filePath, 'utf8');
+      const content = fs.readFileSync(filePath,utf8');
       const stats = fs.statSync(filePath);
 
       const analysis = {
@@ -122,7 +122,7 @@ class CodeQualityMonitor {
 
         } else if (stat.isFile()) {
           const ext = path.extname(fullPath);
-          if (['.js', '.jsx', '.ts', '.tsx'].includes(ext)) {
+          if (['.js',.jsx',.ts',.tsx'].includes(ext)) {
             const analysis = await this.analyzeFile(fullPath);
             if (analysis) {
               analyses.push(analysis);
@@ -289,7 +289,7 @@ class CodeQualityMonitor {
 
 
 
-// Run the code quality monitor
+// Run the code quality monitor;
 const monitor = new CodeQualityMonitor();
 monitor.run().catch(error => {
   process.exit(1);

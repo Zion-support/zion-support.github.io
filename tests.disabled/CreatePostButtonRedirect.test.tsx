@@ -4,10 +4,10 @@ import { vi } from 'vitest';
 import * as auth from '@/hooks/useAuth';
 import * as router from 'react-router-dom';
 import CreatePostButton from '@/components/community/CreatePostButton';
-test('redirects to login when user is not authenticated', () => {
+test'redirects to login when user is not authenticated': unknown, (: unknown {
   const navigateMock = vi.fn();
-  vi.spyOn(router, 'useNavigate').mockReturnValue(navigateMock);
-  vi.spyOn(auth, 'useAuth').mockReturnValue({ user: null } as );
+  vi.spyOn(router,useNavigate').mockReturnValue(navigateMock);
+  vi.spyOn(auth,useAuth').mockReturnValue({ user: null } as );
   render(
     <MemoryRouter>
       <CreatePostButton />

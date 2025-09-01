@@ -1,22 +1,34 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
+=======
+'use client';
+>>>>>>> main
 import * as React from 'react';
-  export const useTheme = () => {
+
+const ThemeContext = React.createContext({
+
+  theme: 'dark',
+  setTheme: () => null});
+
 export const ThemeProvider = ({ children }) => {
 
-    'use client';
+  const [theme, setTheme] = React.useState('dark');
 
-    const ThemeContext = React.createContext ({
-      theme: 'dark',
-      setTheme: () => null,
-    }) ;
+  React.useEffect(() => {
+    const root = window.document.documentElement;
+    root.classList.remove('light',dark');
+    root.classList.add(theme);
+  }, [theme]);
 
-    const [theme, setTheme] = React.useState ('dark') ;
+  const value = {
 
-    React.useEffect ( () => {
-      const root = window.document.documentElement;
-      root.classList.remove ('light', 'dark') ;
-      root.classList.add (theme) ;
-    }, [theme]) ;
+    theme,
+    setTheme};
+
+  return()
+    <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
+  );
+};
 
     const value = {
       theme,
@@ -28,7 +40,8 @@ export const ThemeProvider = ({ children }) => {
 
   const context = React.useContext (ThemeContext) ;
   if (context === null) {
-    throw new Error ('useTheme must be used within a ThemeProvider') ;
+
+    throw new Error('useTheme must be used within a ThemeProvider');
   }
   return context;
 };

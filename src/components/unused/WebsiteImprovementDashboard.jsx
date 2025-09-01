@@ -2,9 +2,11 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChartBarIcon, CogIcon, ExclamationTriangleIcon, CheckCircleIcon, InformationCircleIcon, XMarkIcon, ArrowUpIcon, ArrowDownIcon, MinusIcon, EyeIcon, GlobeAltIcon } from '@heroicons/react/24/outline';
 const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => {
+
     const [isOpen, setIsOpen] = useState(showOnLoad);
     const [activeTab, setActiveTab] = useState('overview');
     const [metrics, setMetrics] = useState({
+
         loadTime: 0,
         firstContentfulPaint: 0,
         largestContentfulPaint: 0,
@@ -13,10 +15,12 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
         timeToInteractive: 0
     });
     const [seoAnalysis, setSeoAnalysis] = useState({
+
         score: 0,
         issues[],;
         suggestions[],;
         metaTags: {
+
             title: false,
             description: false,
             keywords: false,
@@ -25,6 +29,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
             twitterTags: false
     });
     const [accessibilityReport, setAccessibilityReport] = useState({
+
         score: 0,
         issues[],;
         wcagCompliance: 'Non-Compliant',
@@ -39,6 +44,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
         await new Promise(resolve => setTimeout(resolve, 2000));
         // Mock performance data (in a real app, you'd use Web Vitals API)
         const mockMetrics = {
+
   loadTime: Math.random() * 3000 + 1000, // 1-4 seconds
             firstContentfulPaint: Math.random() * 2000 + 500, // 0.5-2.5 seconds
             largestContentfulPaint: Math.random() * 3000 + 1000, // 1-4 seconds

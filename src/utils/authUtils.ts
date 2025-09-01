@@ -1,62 +1,40 @@
-      export const isAuthenticated = () : boolean => {
-    export const getUserData = () : unknown => {
-  export const getAuthToken = () : string | null => {
-export const cleanupAuthState = () => {
+export 
+      sessionStorage.removeItem('auth')}
+  } catch (error) {
 
-        // Clean up stored authentication state
-        try {
-          if (typeof window !== 'undefined') {
-            // Clear any stored tokens or user data
+    // console.error('Error cleaning up auth state:', error)}
+};
 
-            localStorage.removeItem ('auth') ;
-            sessionStorage.removeItem ('auth') ;
-          }
-        } catch (error) {
-          console.error ('Error cleaning up auth state:', error) ;
-        }
-      };
+export 
+      return !!auth}
+    return false} catch (error) {
 
-      try {
-        if (typeof window !== 'undefined') {
-          const auth = localStorage.getItem ('auth') || sessionStorage.getItem ('auth') ;
-          return !!auth;
-        }
-        return false;
-      } catch (error) {
-        console.error ('Error checking authentication status:', error) ;
+    // console.error('Error checking authentication status:', error);
+    return false}
+};
 
-        return false;
-      }
-    };
+export 
+      if (auth) {
 
-    try {
-      if (typeof window !== 'undefined') {
-        const auth = localStorage.getItem ('auth') || sessionStorage.getItem ('auth') ;
-        if (auth) {
-          const parsed = JSON.parse (auth) ;
-          return parsed.token || null;
-        }
-      }
-      return null;
-    } catch (error) {
-      console.error ('Error getting auth token:', error) ;
-
-      return null;
+        
+        return parsed.token || null}
     }
+    return null} catch (error) {
+
+    // console.error('Error getting auth token:', error);
+
+      return null}
   };
 
-  try {
-    if (typeof window !== 'undefined') {
-      const auth = localStorage.getItem ('auth') || sessionStorage.getItem ('auth') ;
+export 
       if (auth) {
-        const parsed = JSON.parse (auth) ;
-        return parsed.user || null;
-      }
-    }
-    return null;
-  } catch (error) {
-    console.error ('Error getting user data:', error) ;
 
-    return null;
-  }
+        
+        return parsed.user || null}
+    }
+    return null} catch (error) {
+
+    // console.error('Error getting user data:', error);
+
+    return null}
 };

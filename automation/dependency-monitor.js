@@ -1,17 +1,17 @@
 #!/usr/bin/env node
-
+;
 const fs = require('fs');
 const path = require('path');
 const { execSync, spawn } = require('child_process');
 const cron = require('node-cron');
-
+;
 class DependencyMonitor {
   constructor() {
     this.projectRoot = process.cwd();
     this.vulnerabilitiesFound = 0;
     this.dependenciesUpdated = 0;
     this.monitoring = false;
-    this.logFile = path.join(this.projectRoot, 'logs', 'dependency.log');
+    this.logFile = path.join(this.projectRoot,logs',dependency.log');
 
     // Ensure logs directory exists
     this.ensureLogsDirectory();
@@ -74,13 +74,15 @@ class DependencyMonitor {
       const issues = await this.detectDependencyIssues();
 
       if (issues.length > 0) {
-        this.log(`Found ${issues.length} dependency issues, attempting fixes...`);
+        this.log(
+          `Found ${issues.length} dependency issues, attempting fixes...`
+        );
         await this.autoFixDependencyIssues(issues);
       } else {
         this.log('No dependency issues detected, all packages are up to date');
       }
     } catch (error) {
-      this.log(`Dependency check failed: ${error.message}`, 'ERROR');
+      this.log(`Dependency check failed: ${error.message}`,ERROR');
     } finally {
       this.monitoring = false;
     }
@@ -88,17 +90,19 @@ class DependencyMonitor {
 
   async detectDependencyIssues() {
     const issues = [];
-    
+
     try {
       // Check for outdated packages
-      const outdatedResult = execSync('npm outdated --json', { encoding: 'utf8' });
+      const outdatedResult = execSync('npm outdated --json', {
+        encoding: 'utf8',
+      });
       const outdated = JSON.parse(outdatedResult);
-      
+
       if (Object.keys(outdated).length > 0) {
         issues.push({
           type: 'outdated',
           packages: Object.keys(outdated),
-          severity: 'medium'
+          severity: 'medium',
         });
       }
     } catch (error) {
@@ -109,12 +113,15 @@ class DependencyMonitor {
       // Check for security vulnerabilities
       const auditResult = execSync('npm audit --json', { encoding: 'utf8' });
       const audit = JSON.parse(auditResult);
-      
-      if (audit.vulnerabilities && Object.keys(audit.vulnerabilities).length > 0) {
+
+      if (
+        audit.vulnerabilities &&
+        Object.keys(audit.vulnerabilities).length > 0
+      ) {
         issues.push({
           type: 'vulnerability',
           packages: Object.keys(audit.vulnerabilities),
-          severity: 'high'
+          severity: 'high',
         });
       }
     } catch (error) {
@@ -128,39 +135,43 @@ class DependencyMonitor {
     for (const issue of issues) {
       try {
         if (issue.type === 'vulnerability') {
-          this.log(`Attempting to fix vulnerability in ${issue.packages.join(', ')}`);
+          this.log(
+            `Attempting to fix vulnerability in ${issue.packages.join(',)}`
+          );
           execSync('npm audit fix', { stdio: 'inherit' });
           this.vulnerabilitiesFound++;
         } else if (issue.type === 'outdated') {
-          this.log(`Updating outdated packages: ${issue.packages.join(', ')}`);
+          this.log(`Updating outdated packages: ${issue.packages.join(',)}`);
           execSync('npm update', { stdio: 'inherit' });
           this.dependenciesUpdated++;
         }
       } catch (error) {
-        this.log(`Failed to fix issue ${issue.type}: ${error.message}`, 'ERROR');
+        this.log(
+          `Failed to fix issue ${issue.type}: ${error.message}`,ERROR'
+        );
       }
     }
   }
 
   async performSecurityAudit() {
     this.log('Performing security audit...');
-    
+
     try {
       execSync('npm audit', { stdio: 'inherit' });
       this.log('Security audit completed');
     } catch (error) {
-      this.log(`Security audit failed: ${error.message}`, 'ERROR');
+      this.log(`Security audit failed: ${error.message}`,ERROR');
     }
   }
 
   async performWeeklyUpdates() {
     this.log('Performing weekly dependency updates...');
-    
+
     try {
       execSync('npm update', { stdio: 'inherit' });
       this.log('Weekly updates completed');
     } catch (error) {
-      this.log(`Weekly updates failed: ${error.message}`, 'ERROR');
+      this.log(`Weekly updates failed: ${error.message}`,ERROR');
     }
   }
 
@@ -169,7 +180,7 @@ class DependencyMonitor {
       vulnerabilitiesFound: this.vulnerabilitiesFound,
       dependenciesUpdated: this.dependenciesUpdated,
       isMonitoring: this.monitoring,
-      lastCheck: new Date().toISOString()
+      lastCheck: new Date().toISOString(),
     };
   }
 
@@ -185,14 +196,14 @@ module.exports = DependencyMonitor;
 // If running directly, start the monitor
 if (require.main === module) {
   const monitor = new DependencyMonitor();
-  
+
   // Handle graceful shutdown
   process.on('SIGINT', () => {
     monitor.log('Shutting down Dependency Monitor...');
     monitor.stop();
     process.exit(0);
   });
-  
+
   process.on('SIGTERM', () => {
     monitor.log('Shutting down Dependency Monitor...');
     monitor.stop();

@@ -32,26 +32,26 @@ class LintMonitor {
   async checkLintStatus() {
     try {
       this.log('🔍 Checking lint status...');
-      const result = execSync('npm run lint', { 
+      const result = execSync('npm run lint', {
         encoding: 'utf8',
         stdio: 'pipe',
-        cwd: path.join(__dirname, '..')
+        cwd: path.join(__dirname, '..'),
       });
-      
+
       this.errorCount = 0;
       this.lastCheck = new Date();
       this.log('✅ Lint check passed - no errors found');
       return { success: true, errors: 0 };
     } catch (error) {
       const errorOutput = error.stdout || error.message;
-      const errorLines = errorOutput.split('\n').filter(line => 
-        line.includes('error') || line.includes('Error')
-      );
-      
+      const errorLines = errorOutput
+        .split('\n')
+        .filter(line => line.includes('error') || line.includes('Error'));
+
       this.errorCount = errorLines.length;
       this.lastCheck = new Date();
       this.log(`❌ Lint check failed - ${this.errorCount} errors found`);
-      
+
       return { success: false, errors: this.errorCount, output: errorOutput };
     }
   }
@@ -59,10 +59,10 @@ class LintMonitor {
   async autoFix() {
     try {
       this.log('🔧 Attempting auto-fix...');
-      const result = execSync('npm run lint -- --fix', { 
+      const result = execSync('npm run lint -- --fix', {
         encoding: 'utf8',
         stdio: 'pipe',
-        cwd: path.join(__dirname, '..')
+        cwd: path.join(__dirname, '..'),
       });
       this.log('✅ Auto-fix completed successfully');
       return true;
@@ -74,7 +74,7 @@ class LintMonitor {
 
   startContinuousMonitoring() {
     this.log('👀 Starting continuous lint monitoring...');
-    
+
     // Check every 30 seconds
     const checkInterval = setInterval(async () => {
       if (!this.isRunning) {
@@ -83,11 +83,13 @@ class LintMonitor {
       }
 
       const status = await this.checkLintStatus();
-      
+
       if (!status.success && status.errors > 0) {
-        this.log(`🚨 Found ${status.errors} lint errors - attempting auto-fix...`);
+        this.log(
+          `🚨 Found ${status.errors} lint errors - attempting auto-fix...`
+        );
         const fixed = await this.autoFix();
-        
+
         if (fixed) {
           // Re-check after fix
           setTimeout(async () => {
@@ -103,19 +105,22 @@ class LintMonitor {
 
   startFileWatcher() {
     this.log('📁 Starting file watcher...');
-    
-    const watcher = chokidar.watch([
-      'pages/**/*.{js,jsx,ts,tsx}',
-      'components/**/*.{js,jsx,ts,tsx}',
-      'utils/**/*.{js,jsx,ts,tsx}',
-      'hooks/**/*.{js,jsx,ts,tsx}'
-    ], {
-      ignored: /(node_modules|\.git|\.next)/,
-      persistent: true
-    });
+
+    const watcher = chokidar.watch(
+      [
+        'pages/**/*.{js,jsx,ts,tsx}',
+        'components/**/*.{js,jsx,ts,tsx}',
+        'utils/**/*.{js,jsx,ts,tsx}',
+        'hooks/**/*.{js,jsx,ts,tsx}',
+      ],
+      {
+        ignored: /(node_modules|\.git|\.next)/,
+        persistent: true,
+      }
+    );
 
     let debounceTimer;
-    watcher.on('change', (filePath) => {
+    watcher.on('change', filePath => {
       clearTimeout(debounceTimer);
       debounceTimer = setTimeout(async () => {
         this.log(`📝 File changed: ${filePath}`);
@@ -129,22 +134,22 @@ class LintMonitor {
 
   async handleFileChange(filePath) {
     this.log(`🔍 Checking file: ${filePath}`);
-    
+
     try {
       // Check if the specific file has lint issues
-      const result = execSync(`npx eslint "${filePath}"`, { 
+      const result = execSync(`npx eslint "${filePath}"`, {
         encoding: 'utf8',
-        stdio: 'pipe'
+        stdio: 'pipe',
       });
       this.log(`✅ File ${filePath} passed lint check`);
     } catch (error) {
       this.log(`❌ Lint issues found in ${filePath}`);
-      
+
       // Try to auto-fix the specific file
       try {
-        execSync(`npx eslint "${filePath}" --fix`, { 
+        execSync(`npx eslint "${filePath}" --fix`, {
           encoding: 'utf8',
-          stdio: 'pipe'
+          stdio: 'pipe',
         });
         this.log(`✅ Auto-fixed issues in ${filePath}`);
       } catch (fixError) {
@@ -176,17 +181,17 @@ class LintMonitor {
 
   stop() {
     this.isRunning = false;
-    
+
     if (this.checkInterval) {
       clearInterval(this.checkInterval);
       this.checkInterval = null;
     }
-    
+
     if (this.watcher) {
       this.watcher.close();
       this.watcher = null;
     }
-    
+
     this.log('🛑 Lint Monitor stopped');
   }
 
@@ -195,13 +200,15 @@ class LintMonitor {
       running: this.isRunning,
       errorCount: this.errorCount,
       lastCheck: this.lastCheck,
-      uptime: this.isRunning ? Date.now() - (this.lastCheck?.getTime() || Date.now()) : 0
+      uptime: this.isRunning
+        ? Date.now() - (this.lastCheck?.getTime() || Date.now())
+        : 0,
     };
-    
+
     this.log(`📊 Status: ${status.running ? 'Running' : 'Stopped'}`);
     this.log(`📊 Error Count: ${status.errorCount}`);
     this.log(`📊 Last Check: ${status.lastCheck?.toISOString() || 'Never'}`);
-    
+
     return status;
   }
 
@@ -210,17 +217,25 @@ class LintMonitor {
       totalChecks: 0,
       totalErrors: 0,
       autoFixes: 0,
-      filesWatched: 0
+      filesWatched: 0,
     };
 
     try {
       const logContent = fs.readFileSync(this.logFile, 'utf8');
       const lines = logContent.split('\n');
-      
-      stats.totalChecks = lines.filter(line => line.includes('Checking lint status')).length;
-      stats.totalErrors = lines.filter(line => line.includes('errors found')).length;
-      stats.autoFixes = lines.filter(line => line.includes('Auto-fix completed')).length;
-      stats.filesWatched = lines.filter(line => line.includes('File changed')).length;
+
+      stats.totalChecks = lines.filter(line =>
+        line.includes('Checking lint status')
+      ).length;
+      stats.totalErrors = lines.filter(line =>
+        line.includes('errors found')
+      ).length;
+      stats.autoFixes = lines.filter(line =>
+        line.includes('Auto-fix completed')
+      ).length;
+      stats.filesWatched = lines.filter(line =>
+        line.includes('File changed')
+      ).length;
     } catch (error) {
       this.log('❌ Could not read stats from log file');
     }

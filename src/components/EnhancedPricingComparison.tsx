@@ -1,8 +1,5 @@
-import { Link  } from 'react - router - dom.ts';
-import React from 'react.ts';
-export const EnhancedPricingComparison = () => {
-export default EnhancedPricingComparison;
 
+<<<<<<< HEAD
   return (<section className="py - 20 bg - gradient - to - br from - slate - 800 to - slate - 900">
       <div className="max - w-7xl mx - auto px - 6">
         <div className="text - center mb - 16">
@@ -71,8 +68,11 @@ export default EnhancedPricingComparison;
             <Link to="/pricing" className="block w - full text - center bg - cyan - 600 hover:bg - cyan - 700 text - white font - semibold py - 3 px - 6 rounded - lg transition - colors">
               Contact Sales
             </Link>;
+=======
+export 
+>>>>>>> main
           </div>;
         </div>;
       </div>;
-    </section>;) ;
-};
+    </section>;) };
+export default EnhancedPricingComparison;'"

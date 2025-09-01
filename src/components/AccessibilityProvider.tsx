@@ -1,11 +1,13 @@
+<<<<<<< HEAD
 import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react.ts';
 export const AccessibilityProvider: React.FC < AccessibilityProviderProps> = ({ children }) => {
 export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = ({
 export const useAccessibility = () => {;
 import { motion, AnimatePresence  } from 'framer - motion.ts';
+=======
+>>>>>>> main
 
 interface AccessibilityContextType {
-
   highContrast: boolean;
   toggleHighContrast: () => void;
   reducedMotion: boolean;
@@ -19,100 +21,96 @@ interface AccessibilityContextType {
   voiceNavigation: boolean;
   toggleVoiceNavigation: () => void}
 
-const AccessibilityContext = createContext < AccessibilityContextType | null> (null) ;
 
-  const context = useContext (AccessibilityContext) ;
+export 
   if (!context) {
-    throw new Error ('useAccessibility must be used within an AccessibilityProvider') }
+    throw new Error('useAccessibility must be used within an AccessibilityProvider')}
   return context};
 
 interface AccessibilityProviderProps extends React.PropsWithChildren<{}> {
-
   children: ReactNode}
 
-  const [highContrast, setHighContrast] = useState (false) ;
-  const [reducedMotion, setReducedMotion] = useState (false) ;
-  const [fontSize, setFontSize] = useState (16) ;
-  const [showSkipLinks, setShowSkipLinks] = useState (false) ;
-  const [voiceNavigation, setVoiceNavigation] = useState (false) ;
+export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {
+  const [highContrast, setHighContrast] = useState(false);
+  const [reducedMotion, setReducedMotion] = useState(false);
+  const [fontSize, setFontSize] = useState(16);
+  const [showSkipLinks, setShowSkipLinks] = useState(false);
+  const [voiceNavigation, setVoiceNavigation] = useState(false);
 
   // Load accessibility preferences from localStorage
-  useEffect ( () => {
-    const savedVoiceNavigation = localStorage.getItem ('zion - voice - navigation') === 'true';
-
-    setHighContrast (savedHighContrast) ;
-    setReducedMotion (savedReducedMotion) ;
-    setFontSize (savedFontSize ? parseInt (savedFontSize) : 16) ;
-    setVoiceNavigation (savedVoiceNavigation) }, []) ;
+  useEffect(() => {
+    
+    
+    
+    
+    setHighContrast(savedHighContrast);
+    setReducedMotion(savedReducedMotion);
+    setFontSize(savedFontSize ? parseInt(savedFontSize) : 16);
+    setVoiceNavigation(savedVoiceNavigation)}, []);
 
   // Apply accessibility settings to document
-  useEffect ( () => {
-    const root = document.documentElement;
-
+  useEffect(() => {
+    
     // Apply high contrast
     if (highContrast) {
-      root.classList.add ('high - contrast') } else {
-      root.classList.remove ('high - contrast') }
+      root.classList.add('high-contrast')} else {
+      root.classList.remove('high-contrast')}
 
     // Apply reduced motion
     if (reducedMotion) {
-      root.classList.add ('reduce - motion') } else {
-      root.classList.remove ('reduce - motion') }
+      root.classList.add('reduce-motion')} else {
+      root.classList.remove('reduce-motion')}
 
     // Apply font size
-    root.style.fontSize = `${fontSize}px`}, [highContrast, reducedMotion, fontSize]) ;
+    root.style.fontSize = `${fontSize}px`}, [highContrast, reducedMotion, fontSize]);
 
   // Keyboard navigation support
-  useEffect ( () => {
-        setTimeout ( () => setShowSkipLinks (false) , 5000) }
+  useEffect(() => {
+    
+        setTimeout(() => setShowSkipLinks(false), 5000)}
 
-      // High contrast toggle (Alt + H) if (event.altKey && event.key = == 'h') {;
-        event.preventDefault () ;
-        toggleHighContrast () }
+      // High contrast toggle (Alt + H)
+      if (event.altKey && event.key === 'h') {
+        event.preventDefault();
+        toggleHighContrast()}
 
-      // Font size controls (Alt + Plus / Minus) if (event.altKey && event.key = == '+') {;
-        event.preventDefault () ;
-        increaseFontSize () ;
-      }
-      if (event.altKey && event.key = == '-') {;
-        event.preventDefault () ;
-        decreaseFontSize () }
+      // Font size controls (Alt + Plus/Minus)
+      if (event.altKey && event.key === '+') {
+        event.preventDefault();
+        increaseFontSize()}
+      if (event.altKey && event.key === '-') {
+        event.preventDefault();
+        decreaseFontSize()}
     };
 
-    document.addEventListener ('keydown', handleKeyDown) ;
-    return () => document.removeEventListener ('keydown', handleKeyDown) }, []) ;
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown)}, []);
 
-  const toggleHighContrast = () => {;
-    const newValue = !highContrast;
-    setHighContrast (newValue) ;
-    localStorage.setItem ('zion - high - contrast', newValue.toString () ) };
+  
+    setHighContrast(newValue);
+    localStorage.setItem('zion-high-contrast', newValue.toString())};
 
-  const toggleReducedMotion = () => {;
-    const newValue = !reducedMotion;
-    setReducedMotion (newValue) ;
-    localStorage.setItem ('zion - reduced - motion', newValue.toString () ) };
+  
+    setReducedMotion(newValue);
+    localStorage.setItem('zion-reduced-motion', newValue.toString())};
 
-  const increaseFontSize = () => {;
-    const newSize = Math.min (fontSize + 2, 24) ;
-    setFontSize (newSize) ;
-    localStorage.setItem ('zion - font - size', newSize.toString () ) };
+  
+    setFontSize(newSize);
+    localStorage.setItem('zion-font-size', newSize.toString())};
 
-  const decreaseFontSize = () => {;
-    const newSize = Math.max (fontSize - 2, 12) ;
-    setFontSize (newSize) ;
-    localStorage.setItem ('zion - font - size', newSize.toString () ) };
+  
+    setFontSize(newSize);
+    localStorage.setItem('zion-font-size', newSize.toString())};
 
-  const resetFontSize = () => {;
-    setFontSize (16) ;
-    localStorage.setItem ('zion - font - size', '16') };
+  
+    localStorage.setItem('zion-font-size', '16')};
 
-  const toggleVoiceNavigation = () => {;
-    const newValue = !voiceNavigation;
-    setVoiceNavigation (newValue) ;
-    localStorage.setItem ('zion - voice - navigation', newValue.toString () ) };
+  
+    setVoiceNavigation(newValue);
+    localStorage.setItem('zion-voice-navigation', newValue.toString())};
 
-  const value = {
-  highContrast,
+  const contextValue: AccessibilityContextType = {
+    highContrast,
     toggleHighContrast,
     reducedMotion,
     toggleReducedMotion,
@@ -123,19 +121,16 @@ interface AccessibilityProviderProps extends React.PropsWithChildren<{}> {
     showSkipLinks,
     setShowSkipLinks,
     voiceNavigation,
-    toggleVoiceNavigation,;
-  ;
-  ;
-  ;
-  ;
-  ;
-  ;
+    toggleVoiceNavigation,
+  };
 
-};
-
-  return (<AccessibilityContext.Provider value = {value}>
+  return (
+    <AccessibilityContext.Provider value={contextValue}>
+      {children}
+      
       {/* Skip Links */}
       <AnimatePresence>
+<<<<<<< HEAD
         {showSkipLinks && (<motion.div
             initial = {
   { opacity: 0,
@@ -159,24 +154,32 @@ interface AccessibilityProviderProps extends React.PropsWithChildren<{}> {
                 href="#main - content"
                 className="px - 4 py - 2 bg - white rounded - lg font - semibold hover:bg - gray - 100 focus:outline - none focus:ring - 2 focus:ring - black"
 
+=======
+        {showSkipLinks && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="fixed top-0 left-0 right-0 z-50 bg-blue-600 text-white p-2 text-center"
+          >
+            <div className="flex justify-center space-x-4">
+              <a href="#main-content" className="hover:underline focus:outline-none focus:ring-2 focus:ring-white rounded px-2 py-1">
+>>>>>>> main
                 Skip to main content
               </a>
-              <a
-                href="#navigation"
-                className="px - 4 py - 2 bg - white rounded - lg font - semibold hover:bg - gray - 100 focus:outline - none focus:ring - 2 focus:ring - black"
-
+              <a href="#navigation" className="hover:underline focus:outline-none focus:ring-2 focus:ring-white rounded px-2 py-1">
                 Skip to navigation
-              </a>;
-              <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={ () => setShowSkipLinks (false) }
-                className="px - 4 py - 2 bg - white rounded - lg font - semibold hover:bg - gray - 100 focus:outline - none focus:ring - 2 focus:ring - black"
-
-                Close
-              </button>
-            </div>;
-          </motion.div>) }
+              </a>
+              <a href="#footer" className="hover:underline focus:outline-none focus:ring-2 focus:ring-white rounded px-2 py-1">
+                Skip to footer
+              </a>
+            </div>
+          </motion.div>
+        )}
       </AnimatePresence>
 
       {/* Accessibility Controls */}
+<<<<<<< HEAD
       <div role="button" className="fixed bottom - 4 left - 4 z - 40">;
         <motion.div
           initial = {
@@ -187,86 +190,71 @@ interface AccessibilityProviderProps extends React.PropsWithChildren<{}> {
           animate = {
   { opacity: 1,
   x: 0
+=======
+      <div className="fixed bottom-4 right-4 z-50 flex flex-col space-y-2">
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={toggleHighContrast}
+          className={`p-3 rounded-full shadow-lg transition-colors ${
+            highContrast ? 'bg-yellow-500 text-black' : 'bg-gray-700 text-white'
+          }`}
+          title="Toggle high contrast"
+        >
+          <Sun className="w-5 h-5"  />
+        </motion.button>
 
-}}
-          className="bg - zion - slate border border - zion - cyan / 20 rounded - lg p - 2 shadow - 2xl"
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={toggleReducedMotion}
+          className={`p-3 rounded-full shadow-lg transition-colors ${
+            reducedMotion ? 'bg-green-500 text-white' : 'bg-gray-700 text-white'
+          }`}
+          title="Toggle reduced motion"
+        >
+          <Braille className="w-5 h-5"  />
+        </motion.button>
+>>>>>>> main
 
-          <div role="button" className="flex flex - col gap - 2">
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={toggleHighContrast}
-              className={`p - 2 rounded - md transition - colors duration - 300 focus:outline - none focus:ring - 2 focus:ring - zion - cyan ${
-                highContrast ? 'bg - zion - cyan text - black' : 'bg - zion - slate - light text - zion - cyan hover:bg - zion - cyan / 10'
-              }`}
-              aria - label="Toggle high contrast"
-              title="Toggle high contrast (Alt + H) "
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={toggleVoiceNavigation}
+          className={`p-3 rounded-full shadow-lg transition-colors ${
+            voiceNavigation ? 'bg-blue-500 text-white' : 'bg-gray-700 text-white'
+          }`}
+          title="Toggle voice navigation"
+        >
+          {voiceNavigation ? <Volume2 className="w-5 h-5" /> : <VolumeX className="w-5 h-5"  />}
+        </motion.button>
 
-              <Braille className="w - 4 h - 4" />
+        <div className="bg-white rounded-lg shadow-lg p-2">
+          <div className="flex items-center space-x-2">
+            <button
+              onClick={decreaseFontSize}
+              className="p-1 rounded hover:bg-gray-100"
+              title="Decrease font size"
+            >
+              <span className="text-sm font-bold">A-</span>
             </button>
-
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={toggleReducedMotion}
-              className={`p - 2 rounded - md transition - colors duration - 300 focus:outline - none focus:ring - 2 focus:ring - zion - cyan ${
-                reducedMotion ? 'bg - zion - cyan text - black' : 'bg - zion - slate - light text - zion - cyan hover:bg - zion - cyan / 10'
-              }`}
-              aria - label="Toggle reduced motion"
-              title="Toggle reduced motion"
-
-              {reducedMotion ? <VolumeX className="w - 4 h - 4" /> : <Volume2 className="w - 4 h - 4" />}
-            </button>
-
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={increaseFontSize}
-              className="p - 2 rounded - md bg - zion - slate - light text - zion - cyan hover:bg - zion - cyan / 10 transition - colors duration - 300 focus:outline - none focus:ring - 2 focus:ring - zion - cyan"
-              aria - label="Increase font size"
-              title="Increase font size (Alt + +) "
-
-              A+
-            </button>
-
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={decreaseFontSize}
-              className="p - 2 rounded - md bg - zion - slate - light text - zion - cyan hover:bg - zion - cyan / 10 transition - colors duration - 300 focus:outline - none focus:ring - 2 focus:ring - zion - cyan"
-              aria - label="Decrease font size"
-              title="Decrease font size (Alt + -) "
-
-              A-
-            </button>
-
-            <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" onClick={resetFontSize}
-              className="p - 2 rounded - md bg - zion - slate - light text - zion - cyan hover:bg - zion - cyan / 10 transition - colors duration - 300 focus:outline - none focus:ring - 2 focus:ring - zion - cyan"
-              aria - label="Reset font size"
-              title="Reset font size"
-
-              A
+            <span className="text-xs text-gray-600 min-w-[2rem] text-center">{fontSize}px</span>
+            <button
+              onClick={increaseFontSize}
+              className="p-1 rounded hover:bg-gray-100"
+              title="Increase font size"
+            >
+              <span className="text-sm font-bold">A+</span>
             </button>
           </div>
-        </motion.div>;
-      </div>;
-;
-      {children};
-    </AccessibilityContext.Provider>;) ;
-};
-
-// Focus trap component for modals
-  children,
-  isActive = true
-}) => {
-  const [focusedElement, setFocusedElement] = useState < HTMLElement | null> (null) ;
-
-  useEffect ( () => {
-    if (!isActive) return;
-
-    const focusableElements = document.querySelectorAll (;
-      'button, [href], input, select, textarea, [tabindex]:not ([tabindex="-1"]) ';) ;
-
-    const firstElement = focusableElements[0] as HTMLElement;
-    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
-
-          lastElement.focus () }
-      } else {
-        if (document.activeElement = == lastElement) {;
-          event.preventDefault () ;
-          firstElement.focus () }
-      }
-    };
-
-    document.addEventListener ('keydown', handleKeyDown) ;
-    return () => document.removeEventListener ('keydown', handleKeyDown) }, [isActive]) ;
-
-  return <>{children}</>};
+          <button
+            onClick={resetFontSize}
+            className="w-full mt-1 text-xs text-gray-500 hover:text-gray-700"
+            title="Reset font size"
+          >
+            Reset
+          </button>
+        </div>
+      </div>
+    </AccessibilityContext.Provider>
+  )};

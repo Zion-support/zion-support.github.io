@@ -5,6 +5,7 @@ A comprehensive automated system for monitoring and fixing project health issues
 ## 🚀 Overview
 
 This system automatically detects, fixes, and prevents common project issues including:
+
 - **TypeScript/JSX syntax errors** (98+ errors detected in current project)
 - **Corrupted dependencies** (esbuild installation failures)
 - **Package.json issues** (invalid versions, missing fields)
@@ -15,6 +16,7 @@ This system automatically detects, fixes, and prevents common project issues inc
 ## 🔧 Components
 
 ### 1. Project Health Monitor (`project-health-monitor.cjs`)
+
 - **Schedule**: Every 15 minutes
 - **Purpose**: Comprehensive health scanning and auto-fixing
 - **Features**:
@@ -27,6 +29,7 @@ This system automatically detects, fixes, and prevents common project issues inc
   - Health reports generation
 
 ### 2. TypeScript Syntax Fixer (`typescript-syntax-fixer.cjs`)
+
 - **Schedule**: Every 10 minutes
 - **Purpose**: Fix common TypeScript/JSX syntax errors
 - **Features**:
@@ -38,6 +41,7 @@ This system automatically detects, fixes, and prevents common project issues inc
   - Git commit of fixes
 
 ### 3. Dependency Manager (`dependency-manager.cjs`)
+
 - **Schedule**: Every 2 hours
 - **Purpose**: Manage and fix dependency issues
 - **Features**:
@@ -49,6 +53,7 @@ This system automatically detects, fixes, and prevents common project issues inc
   - Git commit of changes
 
 ### 4. Project Health Dashboard (`project-health-dashboard.cjs`)
+
 - **Schedule**: Every 5 minutes
 - **Purpose**: Real-time health monitoring and reporting
 - **Features**:
@@ -62,6 +67,7 @@ This system automatically detects, fixes, and prevents common project issues inc
 ## 📊 Current Project Issues Detected
 
 ### TypeScript Compilation Errors: 98 errors in 14 files
+
 - **ServicesShowcase.jsx**: Missing JSX closing tags
 - **TermsOfService.tsx**: JSX structure issues
 - **AutonomousBusinessOperationsPlatform.jsx**: 44 syntax errors
@@ -70,27 +76,32 @@ This system automatically detects, fixes, and prevents common project issues inc
 - **Multiple other files**: Import/export syntax corruption
 
 ### Dependency Issues
+
 - **Corrupted node_modules**: esbuild installation failures
 - **Package.json**: Invalid version strings
 - **Missing dependencies**: Critical packages not accessible
 
 ### Build Configuration Issues
+
 - **Vite config**: Valid but may need optimization
 - **TypeScript config**: Valid but strict settings may cause issues
 
 ## 🚀 Quick Start
 
 ### 1. Install PM2 (if not already installed)
+
 ```bash
 npm install -g pm2
 ```
 
 ### 2. Start the Health Automation System
+
 ```bash
 ./scripts/start-health-automation.sh
 ```
 
 ### 3. Monitor the System
+
 ```bash
 # View all processes
 pm2 list
@@ -127,16 +138,17 @@ logs/
 
 ## 🔄 Automation Schedules
 
-| Process | Frequency | Purpose |
-|---------|-----------|---------|
-| **Project Health Monitor** | Every 15 minutes | Comprehensive health scanning |
-| **TypeScript Syntax Fixer** | Every 10 minutes | Syntax error correction |
-| **Dependency Manager** | Every 2 hours | Dependency maintenance |
-| **Health Dashboard** | Every 5 minutes | Real-time monitoring |
+| Process                     | Frequency        | Purpose                       |
+| --------------------------- | ---------------- | ----------------------------- |
+| **Project Health Monitor**  | Every 15 minutes | Comprehensive health scanning |
+| **TypeScript Syntax Fixer** | Every 10 minutes | Syntax error correction       |
+| **Dependency Manager**      | Every 2 hours    | Dependency maintenance        |
+| **Health Dashboard**        | Every 5 minutes  | Real-time monitoring          |
 
 ## 🛠️ Manual Commands
 
 ### Start Individual Processes
+
 ```bash
 # Health Monitor
 pm2 start ./scripts/automation/project-health-monitor.cjs --name "project-health-monitor"
@@ -152,6 +164,7 @@ pm2 start ./scripts/automation/project-health-dashboard.cjs --name "project-heal
 ```
 
 ### Stop/Manage Processes
+
 ```bash
 # Stop all automations
 pm2 stop all
@@ -167,6 +180,7 @@ pm2 show project-health-dashboard
 ```
 
 ### View Logs
+
 ```bash
 # All logs
 pm2 logs
@@ -192,17 +206,20 @@ The system generates a comprehensive HTML dashboard at `./logs/health-dashboard/
 ## 🔍 Monitoring and Debugging
 
 ### Check Process Status
+
 ```bash
 pm2 list
 pm2 monit
 ```
 
 ### View Real-time Logs
+
 ```bash
 pm2 logs --follow
 ```
 
 ### Check Health Dashboard
+
 ```bash
 # Open in browser
 open ./logs/health-dashboard/index.html
@@ -212,6 +229,7 @@ cat ./logs/health-dashboard/health-data.json
 ```
 
 ### Manual Health Check
+
 ```bash
 # Run health monitor manually
 node ./scripts/automation/project-health-monitor.cjs
@@ -231,16 +249,19 @@ node ./scripts/automation/project-health-dashboard.cjs
 ### Common Issues
 
 1. **PM2 not found**
+
    ```bash
    npm install -g pm2
    ```
 
 2. **Permission denied on scripts**
+
    ```bash
    chmod +x scripts/start-health-automation.sh
    ```
 
 3. **Processes not starting**
+
    ```bash
    pm2 delete all
    pm2 start ecosystem.config.cjs
@@ -253,6 +274,7 @@ node ./scripts/automation/project-health-dashboard.cjs
    ```
 
 ### Reset System
+
 ```bash
 # Stop and delete all processes
 pm2 stop all
@@ -302,6 +324,7 @@ For issues with the automation system:
 ## 🔄 Continuous Improvement
 
 The system automatically:
+
 - Detects new types of issues
 - Applies fixes based on patterns
 - Generates recommendations

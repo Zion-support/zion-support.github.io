@@ -31,433 +31,192 @@ class MasterErrorFixer {
     };
   }
 
-  ensureLogsDirectory() {
-    const logsDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logsDir)) {
-      fs.mkdirSync(logsDir, { recursive: true });
-    }
-  }
+// Get automation interval from environment variable (default: 1 hour)
+const AUTOMATION_INTERVAL =
+  parseInt(process.env.AUTOMATION_INTERVAL) || 3600000; // 1 hour
 
-  log(message, type = 'info') {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}\n`;
-    
-    fs.appendFileSync(this.logFile, logMessage);
-    
-    if (type === 'error') {
-      fs.appendFileSync(this.errorLogFile, logMessage);
-    }
-    
-    console.log(`[${type.toUpperCase()}] ${message}`);
-  }
+async function runMasterErrorFixer() {
+  try {
+    console.log(`🔧 Running master error fixer at ${new Date().toISOString()}`);
 
-  async runCommand(command, options = {}) {
-    return new Promise((resolve, reject) => {
-      const child = spawn(command, options.args || [], {
-        stdio: 'pipe',
-        shell: true,
-        cwd: this.projectRoot,
-        ...options
-      });
+    let totalFixes = 0;
+    const results = {};
 
-      let stdout = '';
-      let stderr = '';
-
-      child.stdout.on('data', (data) => {
-        stdout += data.toString();
-      });
-
-      child.stderr.on('data', (data) => {
-        stderr += data.toString();
-      });
-
-      child.on('close', (code) => {
-        if (code === 0) {
-          resolve({ stdout, stderr, code });
-        } else {
-          reject({ stdout, stderr, code });
-        }
-      });
-
-      child.on('error', (error) => {
-        reject({ error, stdout, stderr });
-      });
-    });
-  }
-
-  async detectErrors() {
-    this.log('Starting error detection...');
-
-    // Detect TypeScript errors
+    // 1. Run comprehensive error fixer
+    console.log('🔧 Running comprehensive error fixer...');
     try {
-      const result = await this.runCommand('npm', { args: ['run', 'type-check'] });
-      this.log('TypeScript check completed successfully');
+      const comprehensiveScript = path.join(
+        __dirname,
+        'comprehensive-error-fixer.cjs'
+      );
+      if (fs.existsSync(comprehensiveScript)) {
+        const result = await runErrorFixerScript(comprehensiveScript);
+        results.comprehensive = result;
+        totalFixes += result.fixes || 0;
+        console.log(
+          `  ✅ Comprehensive error fixer completed: ${result.fixes || 0} fixes`
+        );
+      }
     } catch (error) {
       this.log(`TypeScript errors detected: ${error.stderr}`, 'error');
       this.errors.typescript = this.parseTypeScriptErrors(error.stderr);
     }
 
-    // Detect ESLint errors
+    // 2. Run TypeScript error fixer
+    console.log('🔧 Running TypeScript error fixer...');
     try {
-      const result = await this.runCommand('npm', { args: ['run', 'lint'] });
-      this.log('ESLint check completed successfully');
+      const typescriptScript = path.join(
+        __dirname,
+        'typescript-error-fixer.cjs'
+      );
+      if (fs.existsSync(typescriptScript)) {
+        const result = await runErrorFixerScript(typescriptScript);
+        results.typescript = result;
+        totalFixes += result.fixes || 0;
+        console.log(
+          `  ✅ TypeScript error fixer completed: ${result.fixes || 0} fixes`
+        );
+      }
     } catch (error) {
       this.log(`ESLint errors detected: ${error.stderr}`, 'error');
       this.errors.eslint = this.parseESLintErrors(error.stderr);
     }
 
-    // Detect build errors
+    // 3. Run JSX error fixer
+    console.log('🔧 Running JSX error fixer...');
     try {
-      const result = await this.runCommand('npm', { args: ['run', 'build'] });
-      this.log('Build check completed successfully');
+      const jsxScript = path.join(__dirname, 'jsx-error-fixer.cjs');
+      if (fs.existsSync(jsxScript)) {
+        const result = await runErrorFixerScript(jsxScript);
+        results.jsx = result;
+        totalFixes += result.fixes || 0;
+        console.log(
+          `  ✅ JSX error fixer completed: ${result.fixes || 0} fixes`
+        );
+      }
     } catch (error) {
       this.log(`Build errors detected: ${error.stderr}`, 'error');
       this.errors.build = this.parseBuildErrors(error.stderr);
     }
 
-    // Detect dependency issues
+    // 4. Run console error fixer
+    console.log('🔧 Running console error fixer...');
     try {
-      const result = await this.runCommand('npm', { args: ['audit'] });
-      this.log('Dependency audit completed successfully');
+      const consoleScript = path.join(__dirname, 'console-error-fixer.cjs');
+      if (fs.existsSync(consoleScript)) {
+        const result = await runErrorFixerScript(consoleScript);
+        results.console = result;
+        totalFixes += result.fixes || 0;
+        console.log(
+          `  ✅ Console error fixer completed: ${result.fixes || 0} fixes`
+        );
+      }
     } catch (error) {
       this.log(`Dependency issues detected: ${error.stderr}`, 'error');
       this.errors.dependency = this.parseDependencyErrors(error.stderr);
     }
 
-    this.log(`Error detection completed. Found: ${this.getTotalErrors()} errors`);
+    // 5. Run final validation
+    console.log('🔧 Running final validation...');
+    const validationResults = await runFinalValidation();
+    results.validation = validationResults;
+
+    // Generate master error fixer report
+    console.log('📊 Generating master error fixer report...');
+    const report = {
+      timestamp: new Date().toISOString(),
+      totalFixes: totalFixes,
+      individualResults: results,
+      summary: 'Master error fixer completed',
+      status: 'completed',
+    };
+
+    const reportPath = path.join(
+      process.cwd(),
+      'master-error-fixer-report.json'
+    );
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    console.log(`✅ Master error fixer report saved to ${reportPath}`);
+
+    console.log(
+      `✅ Master error fixer completed successfully. Total fixes applied: ${totalFixes}`
+    );
+  } catch (error) {
+    console.error('❌ Master error fixer failed:', error.message);
   }
 
-  parseTypeScriptErrors(stderr) {
-    const errors = [];
-    const lines = stderr.split('\n');
-    
-    for (const line of lines) {
-      if (line.includes('error TS')) {
-        const match = line.match(/(.+\.tsx?):(\d+):(\d+)/);
-        if (match) {
-          errors.push({
-            file: match[1],
-            line: parseInt(match[2]),
-            column: parseInt(match[3]),
-            message: line.split(' - ')[1] || line,
-            type: 'typescript'
-          });
+async function runErrorFixerScript(scriptPath) {
+  return new Promise((resolve, reject) => {
+    try {
+      // Create a temporary script to extract the fix count
+      const tempScript = `
+        const originalLog = console.log;
+        let fixCount = 0;
+        
+        console.log = (...args) => {
+          const message = args.join(' ');
+          if (message.includes('✅ Fixed') || message.includes('fixes applied')) {
+            const match = message.match(/(\d+)/);
+            if (match) {
+              fixCount = parseInt(match[1]);
+            }
+          }
+          originalLog(...args);
+        };
+        
+        try {
+          require('${scriptPath}');
+          setTimeout(() => {
+            process.exit(0);
+          }, 5000);
+        } catch (error) {
+          console.error('Script error:', error.message);
+          process.exit(1);
         }
+      `;
+
+      const tempScriptPath = path.join(__dirname, 'temp-error-fixer.js');
+      fs.writeFileSync(tempScriptPath, tempScript);
+
+      execSync(`node "${tempScriptPath}"`, { stdio: 'pipe', timeout: 10000 });
+
+      // Clean up temp script
+      if (fs.existsSync(tempScriptPath)) {
+        fs.unlinkSync(tempScriptPath);
       }
-    }
-    
-    return errors;
-  }
 
-  parseESLintErrors(stderr) {
-    const errors = [];
-    const lines = stderr.split('\n');
-    
-    for (const line of lines) {
-      if (line.includes('error')) {
-        const match = line.match(/(.+\.(jsx?|tsx?)):(\d+):(\d+)/);
-        if (match) {
-          errors.push({
-            file: match[1],
-            line: parseInt(match[3]),
-            column: parseInt(match[4]),
-            message: line.split(' - ')[1] || line,
-            type: 'eslint'
-          });
-        }
-      }
-    }
-    
-    return errors;
-  }
-
-  parseBuildErrors(stderr) {
-    const errors = [];
-    const lines = stderr.split('\n');
-    
-    for (const line of lines) {
-      if (line.includes('Error:') || line.includes('error')) {
-        errors.push({
-          message: line,
-          type: 'build'
-        });
-      }
-    }
-    
-    return errors;
-  }
-
-  parseDependencyErrors(stderr) {
-    const errors = [];
-    const lines = stderr.split('\n');
-    
-    for (const line of lines) {
-      if (line.includes('vulnerability') || line.includes('deprecated')) {
-        errors.push({
-          message: line,
-          type: 'dependency'
-        });
-      }
-    }
-    
-    return errors;
-  }
-
-  getTotalErrors() {
-    return Object.values(this.errors).reduce((total, errorArray) => total + errorArray.length, 0);
-  }
-
-  async applyFixes() {
-    this.log('Starting to apply fixes...');
-
-    // Fix TypeScript errors
-    if (this.errors.typescript.length > 0) {
-      await this.fixTypeScriptErrors();
-    }
-
-    // Fix ESLint errors
-    if (this.errors.eslint.length > 0) {
-      await this.fixESLintErrors();
-    }
-
-    // Fix import errors
-    if (this.errors.import.length > 0) {
-      await this.fixImportErrors();
-    }
-
-    // Fix syntax errors
-    if (this.errors.syntax.length > 0) {
-      await this.fixSyntaxErrors();
-    }
-
-    // Fix dependency issues
-    if (this.errors.dependency.length > 0) {
-      await this.fixDependencyIssues();
-    }
-
-    this.log('All fixes applied');
-  }
-
-  async fixTypeScriptErrors() {
-    this.log('Fixing TypeScript errors...');
-    
-    for (const error of this.errors.typescript) {
-      try {
-        await this.fixTypeScriptError(error);
-        this.fixes.applied.push({
-          type: 'typescript',
-          error,
-          timestamp: new Date().toISOString()
-        });
-      } catch (fixError) {
-        this.fixes.failed.push({
-          type: 'typescript',
-          error,
-          fixError: fixError.message,
-          timestamp: new Date().toISOString()
-        });
-      }
+      resolve({ fixes: 0, status: 'completed' });
+    } catch (error) {
+      resolve({ fixes: 0, status: 'failed', error: error.message });
     }
   }
 
-  async fixTypeScriptError(error) {
-    if (!fs.existsSync(error.file)) {
-      this.log(`File not found: ${error.file}`, 'warn');
-      return;
-    }
+async function runFinalValidation() {
+  const results = {
+    linting: { status: 'unknown', errors: 0, warnings: 0 },
+    typescript: { status: 'unknown', errors: 0 },
+    build: { status: 'unknown', success: false },
+  };
 
-    const content = fs.readFileSync(error.file, 'utf8');
-    const lines = content.split('\n');
-
-    // Common TypeScript fixes
-    if (error.message.includes('Cannot find module')) {
-      // Fix import issues
-      await this.fixImportIssue(error.file, error.message);
-    } else if (error.message.includes('Property') && error.message.includes('does not exist')) {
-      // Fix property access issues
-      await this.fixPropertyAccessIssue(error.file, error.line, error.message);
-    } else if (error.message.includes('Type') && error.message.includes('is not assignable')) {
-      // Fix type assignment issues
-      await this.fixTypeAssignmentIssue(error.file, error.line, error.message);
-    }
-  }
-
-  async fixImportIssue(file, message) {
-    const moduleMatch = message.match(/Cannot find module ['"]([^'"]+)['"]/);
-    if (!moduleMatch) return;
-
-    const missingModule = moduleMatch[1];
-    const content = fs.readFileSync(file, 'utf8');
-
-    // Try to fix common import issues
-    if (missingModule.startsWith('@/')) {
-      // Fix path alias imports
-      const fixedContent = content.replace(
-        new RegExp(`from ['"]${missingModule}['"]`, 'g'),
-        `from '${missingModule.replace('@/', './')}'`
-      );
-      fs.writeFileSync(file, fixedContent);
-    } else if (missingModule.includes('react')) {
-      // Fix React imports
-      const fixedContent = content.replace(
-        /import React from ['"]react['"]/g,
-        "import React from 'react'"
-      );
-      fs.writeFileSync(file, fixedContent);
-    }
-  }
-
-  async fixPropertyAccessIssue(file, line, message) {
-    const content = fs.readFileSync(file, 'utf8');
-    const lines = content.split('\n');
-    
-    if (line <= lines.length) {
-      const targetLine = lines[line - 1];
-      
-      // Add optional chaining for property access
-      const fixedLine = targetLine.replace(
-        /(\w+)\.(\w+)/g,
-        '$1?.$2'
-      );
-      
-      lines[line - 1] = fixedLine;
-      fs.writeFileSync(file, lines.join('\n'));
-    }
-  }
-
-  async fixTypeAssignmentIssue(file, line, message) {
-    const content = fs.readFileSync(file, 'utf8');
-    const lines = content.split('\n');
-    
-    if (line <= lines.length) {
-      const targetLine = lines[line - 1];
-      
-      // Add type assertions for assignment issues
-      const fixedLine = targetLine.replace(
-        /(\w+)\s*=\s*([^;]+);/g,
-        '$1 = $2 as any;'
-      );
-      
-      lines[line - 1] = fixedLine;
-      fs.writeFileSync(file, lines.join('\n'));
-    }
-  }
-
-  async fixESLintErrors() {
-    this.log('Fixing ESLint errors...');
-    
+  try {
+    // Check linting
+    console.log('  🔍 Checking linting status...');
     try {
       // Try to auto-fix ESLint errors
       await this.runCommand('npm', { args: ['run', 'lint', '--', '--fix'] });
       this.log('ESLint auto-fix completed');
     } catch (error) {
-      this.log('ESLint auto-fix failed, applying manual fixes', 'warn');
-      
-      for (const error of this.errors.eslint) {
-        try {
-          await this.fixESLintError(error);
-          this.fixes.applied.push({
-            type: 'eslint',
-            error,
-            timestamp: new Date().toISOString()
-          });
-        } catch (fixError) {
-          this.fixes.failed.push({
-            type: 'eslint',
-            error,
-            fixError: fixError.message,
-            timestamp: new Date().toISOString()
-          });
-        }
-      }
-    }
-  }
+      const errorOutput = error.message;
+      const errorMatch = errorOutput.match(/(\d+)\s+errors?/);
+      const warningMatch = errorOutput.match(/(\d+)\s+warnings?/);
 
-  async fixESLintError(error) {
-    if (!fs.existsSync(error.file)) {
-      this.log(`File not found: ${error.file}`, 'warn');
-      return;
+      results.linting.status = 'failed';
+      results.linting.errors = errorMatch ? parseInt(errorMatch[1]) : 0;
+      results.linting.warnings = warningMatch ? parseInt(warningMatch[1]) : 0;
     }
 
-    const content = fs.readFileSync(error.file, 'utf8');
-    const lines = content.split('\n');
-
-    if (error.message.includes('unused variable')) {
-      // Remove unused variables
-      const fixedContent = content.replace(
-        /const\s+(\w+)\s*=\s*[^;]+;\s*\/\/\s*unused/g,
-        ''
-      );
-      fs.writeFileSync(error.file, fixedContent);
-    } else if (error.message.includes('missing semicolon')) {
-      // Add missing semicolons
-      if (error.line <= lines.length) {
-        const targetLine = lines[error.line - 1];
-        if (!targetLine.trim().endsWith(';') && !targetLine.trim().endsWith('{') && !targetLine.trim().endsWith('}')) {
-          lines[error.line - 1] = targetLine + ';';
-          fs.writeFileSync(error.file, lines.join('\n'));
-        }
-      }
-    }
-  }
-
-  async fixImportErrors() {
-    this.log('Fixing import errors...');
-    
-    for (const error of this.errors.import) {
-      try {
-        await this.fixImportError(error);
-        this.fixes.applied.push({
-          type: 'import',
-          error,
-          timestamp: new Date().toISOString()
-        });
-      } catch (fixError) {
-        this.fixes.failed.push({
-          type: 'import',
-          error,
-          fixError: fixError.message,
-          timestamp: new Date().toISOString()
-        });
-      }
-    }
-  }
-
-  async fixImportError(error) {
-    // Implementation for fixing import errors
-    this.log(`Fixing import error in ${error.file}`);
-  }
-
-  async fixSyntaxErrors() {
-    this.log('Fixing syntax errors...');
-    
-    for (const error of this.errors.syntax) {
-      try {
-        await this.fixSyntaxError(error);
-        this.fixes.applied.push({
-          type: 'syntax',
-          error,
-          timestamp: new Date().toISOString()
-        });
-      } catch (fixError) {
-        this.fixes.failed.push({
-          type: 'syntax',
-          error,
-          fixError: fixError.message,
-          timestamp: new Date().toISOString()
-        });
-      }
-    }
-  }
-
-  async fixSyntaxError(error) {
-    // Implementation for fixing syntax errors
-    this.log(`Fixing syntax error: ${error.message}`);
-  }
-
-  async fixDependencyIssues() {
-    this.log('Fixing dependency issues...');
-    
+    // Check TypeScript
+    console.log('  🔍 Checking TypeScript status...');
     try {
       // Try to fix vulnerabilities
       await this.runCommand('npm', { args: ['audit', 'fix'] });
@@ -469,75 +228,15 @@ class MasterErrorFixer {
         timestamp: new Date().toISOString()
       });
     } catch (error) {
-      this.log('Dependency fix failed', 'error');
-      
-      this.fixes.failed.push({
-        type: 'dependency',
-        error: error.message,
-        timestamp: new Date().toISOString()
-      });
-    }
-  }
+      const errorOutput = error.message;
+      const errorMatch = errorOutput.match(/Found\s+(\d+)\s+errors?/);
 
-  generateReport() {
-    const report = {
-      timestamp: new Date().toISOString(),
-      summary: {
-        totalErrors: this.getTotalErrors(),
-        errorsByType: Object.fromEntries(
-          Object.entries(this.errors).map(([type, errors]) => [type, errors.length])
-        ),
-        fixesApplied: this.fixes.applied.length,
-        fixesFailed: this.fixes.failed.length,
-        fixesSkipped: this.fixes.skipped.length
-      },
-      errors: this.errors,
-      fixes: this.fixes,
-      recommendations: this.generateRecommendations()
-    };
-
-    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    this.log(`Report generated: ${this.reportFile}`);
-    
-    return report;
-  }
-
-  generateRecommendations() {
-    const recommendations = [];
-
-    if (this.errors.typescript.length > 0) {
-      recommendations.push({
-        type: 'typescript',
-        priority: 'high',
-        message: 'Consider adding proper TypeScript types and interfaces',
-        action: 'Review and add missing type definitions'
-      });
+      results.typescript.status = 'failed';
+      results.typescript.errors = errorMatch ? parseInt(errorMatch[1]) : 0;
     }
 
-    if (this.errors.eslint.length > 0) {
-      recommendations.push({
-        type: 'eslint',
-        priority: 'medium',
-        message: 'Consider updating ESLint configuration',
-        action: 'Review ESLint rules and update configuration'
-      });
-    }
-
-    if (this.errors.dependency.length > 0) {
-      recommendations.push({
-        type: 'dependency',
-        priority: 'high',
-        message: 'Update dependencies to fix security vulnerabilities',
-        action: 'Run npm update and review package.json'
-      });
-    }
-
-    return recommendations;
-  }
-
-  async run() {
-    this.log('Starting Master Error Fixer...');
-    
+    // Check build
+    console.log('  🔍 Checking build status...');
     try {
       await this.detectErrors();
       
@@ -555,21 +254,45 @@ class MasterErrorFixer {
       this.log(`Master Error Fixer failed: ${error.message}`, 'error');
       throw error;
     }
+  } catch (error) {
+    console.log(`  ⚠️  Validation failed: ${error.message}`);
   }
+
+  return results;
 }
 
-// Run the master error fixer
-if (require.main === module) {
-  const fixer = new MasterErrorFixer();
-  fixer.run()
-    .then((report) => {
-      console.log('Master Error Fixer completed successfully');
-      process.exit(0);
-    })
-    .catch((error) => {
-      console.error('Master Error Fixer failed:', error);
-      process.exit(1);
-    });
+// Main continuous loop
+async function runContinuous() {
+  console.log(
+    `🚀 Starting master error fixer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`
+  );
+
+  // Run initial error fixer
+  await runMasterErrorFixer();
+
+  // Set up continuous execution
+  setInterval(async () => {
+    await runMasterErrorFixer();
+  }, AUTOMATION_INTERVAL);
+
+  console.log(
+    `✅ Master error fixer running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`
+  );
 }
 
-module.exports = MasterErrorFixer;
+// Handle graceful shutdown
+process.on('SIGINT', () => {
+  console.log('🛑 Received SIGINT, shutting down gracefully...');
+  process.exit(0);
+});
+
+process.on('SIGTERM', () => {
+  console.log('🛑 Received SIGTERM, shutting down gracefully...');
+  process.exit(0);
+});
+
+// Start the master error fixer
+runContinuous().catch(error => {
+  console.error('❌ Failed to start master error fixer:', error);
+  process.exit(1);
+});

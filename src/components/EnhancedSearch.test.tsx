@@ -1,15 +1,10 @@
-import { render, screen } from '@testing - library / react';
-import React from 'react';
-import EnhancedSearch from './EnhancedSearch';
 
 describe ('EnhancedSearch', () => {
   it ('renders without crashing', () => {
-    render (<EnhancedSearch />) ;
-    expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () ;
-  }) ;
+    render (<EnhancedSearch  />) ;
+    expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
 
   it ('displays expected content', () => {
-    render (<EnhancedSearch />) ;
+    render (<EnhancedSearch  />) ;
     // Add specific test assertions based on component content
-  }) ;
-}) ;
+  }) }) ;
