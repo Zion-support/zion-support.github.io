@@ -18,6 +18,13 @@ export function EnhancedFooter() {
         { name: 'AI Content Intelligence Platform', href: '/services/ai-content-intelligence-platform', icon: Brain, featured: true },
         { name: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics', icon: Users, featured: true },
         { name: 'AI Financial Risk Management', href: '/services/ai-financial-risk-management', icon: Shield, featured: true },
+        { name: 'AI Autonomous Business Operations', href: '/services/ai-autonomous-business-operations-platform', icon: Cpu, featured: true },
+        { name: 'AI Data Governance Platform', href: '/services/ai-data-governance-platform', icon: Database, featured: true },
+        { name: 'AI Digital Twin Platform', href: '/services/ai-digital-twin-platform', icon: Globe, featured: true },
+        { name: 'AI ESG Compliance Platform', href: '/services/ai-esg-compliance-platform', icon: Leaf, featured: true },
+        { name: 'AI Edge Computing Platform', href: '/services/ai-edge-computing-platform', icon: CpuIcon, featured: true },
+        { name: 'AI Supply Chain Risk Management', href: '/services/ai-supply-chain-risk-management-platform', icon: Shield, featured: true },
+        { name: 'Quantum AI Cybersecurity Platform', href: '/services/quantum-ai-cybersecurity-platform', icon: Lock, featured: true },
         { name: '2025 Services Showcase', href: '/innovative-services-showcase-2025', icon: Sparkles, featured: true },
         { name: '2029 Cutting-Edge Services', href: '/zion-cutting-edge-services-2029', icon: Sparkles, featured: true },
         { name: 'AI-Powered Micro SAAS', href: '/zion-cutting-edge-services-2029', icon: Brain, featured: true }

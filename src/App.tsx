@@ -119,6 +119,13 @@ const AIHealthcareAnalyticsPlatform = lazy(() => import('./pages/services/AI-Hea
 const AIContentIntelligencePlatform = lazy(() => import('./pages/services/AI-Content-Intelligence-Platform'));
 const AICustomerExperienceAnalytics = lazy(() => import('./pages/services/AI-Customer-Experience-Analytics'));
 const AIFinancialRiskManagement = lazy(() => import('./pages/services/AI-Financial-Risk-Management'));
+const AIAutonomousBusinessOperationsPlatform = lazy(() => import('./pages/services/AI-Autonomous-Business-Operations-Platform'));
+const AIDataGovernancePlatform = lazy(() => import('./pages/services/AI-Data-Governance-Platform'));
+const AIDigitalTwinPlatform = lazy(() => import('./pages/services/AI-Digital-Twin-Platform'));
+const AIESGCompliancePlatform = lazy(() => import('./pages/services/AI-ESG-Compliance-Platform'));
+const AIEdgeComputingPlatform = lazy(() => import('./pages/services/AI-Edge-Computing-Platform'));
+const AISupplyChainRiskManagementPlatform = lazy(() => import('./pages/services/AI-Supply-Chain-Risk-Management-Platform'));
+const QuantumAICybersecurityPlatform = lazy(() => import('./pages/services/Quantum-AI-Cybersecurity-Platform'));
 
 // Sitemap-aligned pages
 const AiSolutions = lazy(() => import('./pages/AiSolutions'));
@@ -149,6 +156,13 @@ const AIESGCompliancePlatform = createLazyComponent(() => import('./pages/servic
 const AIDigitalTwinPlatform = createLazyComponent(() => import('./pages/services/AI-Digital-Twin-Platform'));
 const AIEdgeComputingPlatform = createLazyComponent(() => import('./pages/services/AI-Edge-Computing-Platform'));
 const AIQuantumMachineLearning = createLazyComponent(() => import('./pages/services/AI-Quantum-Machine-Learning'));
+
+// New Innovative Services
+const AIAutonomousBusinessOperationsPlatform = createLazyComponent(() => import('./pages/services/AI-Autonomous-Business-Operations-Platform'));
+const QuantumAICybersecurityPlatform = createLazyComponent(() => import('./pages/services/Quantum-AI-Cybersecurity-Platform'));
+const AISpaceTechnologyPlatform = createLazyComponent(() => import('./pages/services/AI-Space-Technology-Platform'));
+const AIFinancialTechnologyPlatform = createLazyComponent(() => import('./pages/services/AI-Financial-Technology-Platform'));
+const AISupplyChainRiskManagementPlatform = createLazyComponent(() => import('./pages/services/AI-Supply-Chain-Risk-Management-Platform'));
 
 // Quantum Computing Services
 const QuantumComputing = createLazyComponent(() => import('./pages/services/QuantumComputing'));
@@ -420,6 +434,17 @@ function App() {
                   <Route path="/services/ai-content-generation-platform" element={<AIContentGenerationPlatform />} />
                   <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
                   <Route path="/services/ai-edge-computing-platform" element={<AIEdgeComputingPlatform />} />
+                  
+                  {/* New Innovative Services Routes */}
+                  <Route path="/services/AI-Autonomous-Business-Operations-Platform" element={<AIAutonomousBusinessOperationsPlatform />} />
+                  <Route path="/services/Quantum-AI-Cybersecurity-Platform" element={<QuantumAICybersecurityPlatform />} />
+                  <Route path="/services/AI-Space-Technology-Platform" element={<AISpaceTechnologyPlatform />} />
+                  <Route path="/services/AI-Financial-Technology-Platform" element={<AIFinancialTechnologyPlatform />} />
+                  <Route path="/services/AI-Data-Governance-Platform" element={<AIDataGovernancePlatform />} />
+                  <Route path="/services/AI-ESG-Compliance-Platform" element={<AIESGCompliancePlatform />} />
+                  <Route path="/services/AI-Digital-Twin-Platform" element={<AIDigitalTwinPlatform />} />
+                  <Route path="/services/AI-Edge-Computing-Platform" element={<AIEdgeComputingPlatform />} />
+                  <Route path="/services/AI-Supply-Chain-Risk-Management-Platform" element={<AISupplyChainRiskManagementPlatform />} />
 
                   {/* Additional service routes */}
                   <Route path="/services/ai-sales-copilot" element={<AISalesCopilot />} />
@@ -479,6 +504,13 @@ function App() {
                   <Route path="/services/ai-content-intelligence-platform" element={<AIContentIntelligencePlatform />} />
                   <Route path="/services/ai-customer-experience-analytics" element={<AICustomerExperienceAnalytics />} />
                   <Route path="/services/ai-financial-risk-management" element={<AIFinancialRiskManagement />} />
+                  <Route path="/services/ai-autonomous-business-operations-platform" element={<AIAutonomousBusinessOperationsPlatform />} />
+                  <Route path="/services/ai-data-governance-platform" element={<AIDataGovernancePlatform />} />
+                  <Route path="/services/ai-digital-twin-platform" element={<AIDigitalTwinPlatform />} />
+                  <Route path="/services/ai-esg-compliance-platform" element={<AIESGCompliancePlatform />} />
+                  <Route path="/services/ai-edge-computing-platform" element={<AIEdgeComputingPlatform />} />
+                  <Route path="/services/ai-supply-chain-risk-management-platform" element={<AISupplyChainRiskManagementPlatform />} />
+                  <Route path="/services/quantum-ai-cybersecurity-platform" element={<QuantumAICybersecurityPlatform />} />
 
                   {/* 404 Page */}
                   <Route

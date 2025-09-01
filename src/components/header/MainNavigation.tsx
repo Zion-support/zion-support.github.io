@@ -181,6 +181,41 @@ export function MainNavigation({ className = '' }) {
                         AI Financial Risk Management
                       </Link>
                     </li>
+                    <li>
+                      <Link to="/services/ai-autonomous-business-operations-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                        AI Autonomous Business
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-data-governance-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                        AI Data Governance
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-digital-twin-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                        AI Digital Twin
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-esg-compliance-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                        AI ESG Compliance
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-edge-computing-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                        AI Edge Computing
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-supply-chain-risk-management-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                        AI Supply Chain Risk
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/quantum-ai-cybersecurity-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                        Quantum AI Cybersecurity
+                      </Link>
+                    </li>
                   </ul>
                 </div>
               </div>
