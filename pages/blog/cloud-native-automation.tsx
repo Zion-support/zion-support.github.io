@@ -36,160 +36,171 @@ export default function CloudNativeAutomation() {
                   Building Cloud-Native Automation Infrastructure
                 </h1>
                 <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                  Discover how Zion Tech Group leverages cloud-native technologies to build automation systems 
-                  that scale seamlessly and maintain high availability across global deployments.
+                  Discover how Zion Tech Group leverages cloud-native principles to build automation systems 
+                  that scale effortlessly and maintain high reliability in production environments.
                 </p>
               </header>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-cyan-400">The Foundation of Modern Automation</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-cyan-400">The Cloud-Native Advantage</h2>
                 <p className="text-white/90 mb-4">
                   Cloud-native automation represents a paradigm shift in how we build and deploy intelligent systems. 
-                  By embracing containerization, microservices, and cloud-native patterns, we can create automation 
-                  infrastructure that's both resilient and infinitely scalable.
+                  By embracing cloud-native principles, we can create automation infrastructure that's not just 
+                  scalable, but also resilient, maintainable, and cost-effective.
                 </p>
                 <p className="text-white/90 mb-4">
-                  Our cloud-native approach ensures that automation systems can:
+                  Our cloud-native approach delivers several key benefits:
                 </p>
                 <ul className="space-y-2 text-white/80 mb-6">
-                  <li>• Scale horizontally to handle increasing workloads</li>
-                  <li>• Maintain high availability across multiple regions</li>
-                  <li>• Deploy updates without service interruption</li>
-                  <li>• Automatically recover from failures</li>
-                  <li>• Optimize resource utilization dynamically</li>
+                  <li>• Horizontal scaling that adapts to workload demands automatically</li>
+                  <li>• Fault tolerance through distributed architecture and redundancy</li>
+                  <li>• Reduced operational overhead with managed cloud services</li>
+                  <li>• Cost optimization through pay-as-you-use pricing models</li>
+                  <li>• Global deployment capabilities for low-latency performance</li>
                 </ul>
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-fuchsia-400">Containerization and Orchestration</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-fuchsia-400">Microservices Architecture</h2>
                 <p className="text-white/90 mb-4">
-                  At the heart of our cloud-native automation infrastructure lies containerization technology. 
-                  By packaging automation components into lightweight, portable containers, we ensure consistency 
-                  across development, testing, and production environments.
-                </p>
-                <p className="text-white/90 mb-4">
-                  Kubernetes orchestration provides the management layer that makes this infrastructure truly powerful:
+                  At the heart of our cloud-native automation platform is a microservices architecture that 
+                  breaks down complex automation workflows into manageable, independently deployable services. 
+                  This approach provides several advantages:
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div className="bg-white/10 rounded-lg p-4 border border-white/20">
-                    <h4 className="font-semibold text-cyan-400 mb-2">Auto-scaling</h4>
+                    <h4 className="font-semibold text-cyan-400 mb-2">Independent Deployment</h4>
                     <p className="text-white/80 text-sm">
-                      Automatic scaling based on demand, ensuring optimal resource utilization 
-                      and cost efficiency.
+                      Each service can be updated, scaled, and maintained independently without affecting 
+                      the entire system.
                     </p>
                   </div>
                   
                   <div className="bg-white/10 rounded-lg p-4 border border-white/20">
-                    <h4 className="font-semibold text-fuchsia-400 mb-2">Load Balancing</h4>
+                    <h4 className="font-semibold text-fuchsia-400 mb-2">Technology Diversity</h4>
                     <p className="text-white/80 text-sm">
-                      Intelligent distribution of automation tasks across available resources 
-                      for optimal performance.
+                      Different services can use the most appropriate technology stack for their specific 
+                      requirements and use cases.
                     </p>
                   </div>
                 </div>
+                <p className="text-white/90 mb-4">
+                  Our microservices communicate through well-defined APIs, enabling seamless integration 
+                  while maintaining loose coupling between components.
+                </p>
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-green-400">Microservices Architecture</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-green-400">Container Orchestration</h2>
                 <p className="text-white/90 mb-4">
-                  Our automation systems are built using a microservices architecture that breaks down complex 
-                  automation workflows into smaller, manageable services. This approach provides several key benefits:
+                  Kubernetes serves as the backbone of our automation infrastructure, providing robust 
+                  container orchestration capabilities that ensure high availability and efficient resource utilization.
+                </p>
+                <p className="text-white/90 mb-4">
+                  Key features of our Kubernetes implementation include:
                 </p>
                 <ul className="space-y-2 text-white/80 mb-6">
-                  <li>• Independent development and deployment of automation components</li>
-                  <li>• Fault isolation - failures in one service don't cascade to others</li>
-                  <li>• Technology diversity - each service can use the best technology for its purpose</li>
-                  <li>• Easier testing and maintenance of individual components</li>
+                  <li>• Automatic scaling based on CPU, memory, and custom metrics</li>
+                  <li>• Self-healing capabilities that restart failed containers automatically</li>
+                  <li>• Load balancing across multiple instances for improved performance</li>
+                  <li>• Rolling updates that ensure zero-downtime deployments</li>
+                  <li>• Resource quotas and limits to prevent resource exhaustion</li>
                 </ul>
-                <p className="text-white/90 mb-4">
-                  Each microservice handles a specific aspect of automation, from data processing to decision-making 
-                  to action execution, creating a robust and flexible system.
-                </p>
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-blue-400">Observability and Monitoring</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-blue-400">Event-Driven Architecture</h2>
                 <p className="text-white/90 mb-4">
-                  Cloud-native automation requires comprehensive observability to ensure systems are performing 
-                  optimally and to quickly identify and resolve issues. Our infrastructure includes:
+                  Modern automation systems need to respond to events in real-time. Our cloud-native 
+                  infrastructure uses event-driven architecture to enable asynchronous, scalable processing 
+                  of automation triggers and workflows.
                 </p>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-                  <div className="bg-white/10 rounded-lg p-4 border border-white/20 text-center">
-                    <h4 className="font-semibold text-cyan-400 mb-2">Metrics</h4>
+                <p className="text-white/90 mb-4">
+                  We leverage Apache Kafka and similar technologies to:
+                </p>
+                <ul className="space-y-2 text-white/80 mb-6">
+                  <li>• Decouple event producers from consumers for better scalability</li>
+                  <li>• Ensure reliable message delivery with persistence and replication</li>
+                  <li>• Enable real-time stream processing for immediate automation responses</li>
+                  <li>• Support multiple consumers for parallel processing of events</li>
+                </ul>
+              </section>
+              
+              <section className="mb-12">
+                <h2 className="text-2xl font-semibold mb-6 text-yellow-400">Monitoring and Observability</h2>
+                <p className="text-white/90 mb-4">
+                  Cloud-native automation requires comprehensive monitoring and observability to maintain 
+                  system health and performance. Our infrastructure includes:
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                  <div className="bg-white/10 rounded-lg p-4 border border-white/20">
+                    <h4 className="font-semibold text-cyan-400 mb-2">Metrics Collection</h4>
                     <p className="text-white/80 text-sm">
-                      Real-time performance metrics and KPIs for automation workflows
+                      Prometheus-based metrics collection for system performance, resource utilization, 
+                      and business metrics.
                     </p>
                   </div>
                   
-                  <div className="bg-white/10 rounded-lg p-4 border border-white/20 text-center">
-                    <h4 className="font-semibold text-fuchsia-400 mb-2">Logging</h4>
+                  <div className="bg-white/10 rounded-lg p-4 border border-white/20">
+                    <h4 className="font-semibold text-fuchsia-400 mb-2">Distributed Tracing</h4>
                     <p className="text-white/80 text-sm">
-                      Centralized logging with structured data for easy analysis
-                    </p>
-                  </div>
-                  
-                  <div className="bg-white/10 rounded-lg p-4 border border-white/20 text-center">
-                    <h4 className="font-semibold text-green-400 mb-2">Tracing</h4>
-                    <p className="text-white/80 text-sm">
-                      Distributed tracing to understand request flows across services
+                      Jaeger integration for tracing requests across microservices and identifying 
+                      performance bottlenecks.
                     </p>
                   </div>
                 </div>
+                <p className="text-white/90 mb-4">
+                  This observability stack enables us to proactively identify and resolve issues 
+                  before they impact automation workflows.
+                </p>
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-yellow-400">Security and Compliance</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-purple-400">Security and Compliance</h2>
                 <p className="text-white/90 mb-4">
                   Security is paramount in cloud-native automation systems. Our infrastructure implements 
-                  multiple layers of security to protect sensitive data and ensure compliance with 
-                  industry standards:
+                  multiple layers of security:
                 </p>
                 <ul className="space-y-2 text-white/80 mb-6">
-                  <li>• Zero-trust security model with identity-based access control</li>
-                  <li>• Encryption at rest and in transit for all data</li>
-                  <li>• Regular security audits and vulnerability assessments</li>
-                  <li>• Compliance with SOC 2, GDPR, and other relevant standards</li>
+                  <li>• Network policies that control communication between services</li>
+                  <li>• Role-based access control (RBAC) for fine-grained permissions</li>
+                  <li>• Secrets management for secure storage of credentials and API keys</li>
+                  <li>• Regular security scanning and vulnerability assessments</li>
+                  <li>• Compliance with industry standards and regulations</li>
                 </ul>
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-purple-400">Looking Ahead</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-indigo-400">Looking Forward</h2>
                 <p className="text-white/90 mb-4">
-                  As cloud-native technologies continue to evolve, we're constantly exploring new approaches 
-                  to improve our automation infrastructure. The future holds exciting possibilities for:
+                  As we continue to evolve our cloud-native automation infrastructure, we're exploring 
+                  emerging technologies like:
                 </p>
                 <ul className="space-y-2 text-white/80 mb-6">
-                  <li>• Serverless automation functions for event-driven workflows</li>
-                  <li>• Edge computing integration for real-time automation</li>
-                  <li>• AI-powered infrastructure optimization</li>
-                  <li>• Cross-cloud automation orchestration</li>
+                  <li>• Serverless computing for event-driven automation workflows</li>
+                  <li>• Edge computing for low-latency automation in distributed environments</li>
+                  <li>• AI-powered auto-scaling and resource optimization</li>
+                  <li>• Multi-cloud strategies for enhanced reliability and cost optimization</li>
                 </ul>
                 <p className="text-white/90 mb-4">
-                  At Zion Tech Group, we're committed to staying at the forefront of cloud-native automation, 
-                  ensuring our clients benefit from the most advanced and reliable automation infrastructure available.
+                  The future of automation lies in cloud-native architectures that can adapt, scale, 
+                  and evolve with the changing needs of modern businesses.
                 </p>
               </section>
               
-              <div className="mt-12 pt-8 border-t border-white/20">
+              <div className="mt-12 p-6 bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-xl border border-cyan-500/20">
                 <h3 className="text-xl font-semibold mb-4 text-white">Ready to Transform Your Automation?</h3>
-                <p className="text-white/80 mb-6">
+                <p className="text-white/80 mb-4">
                   Discover how our cloud-native automation infrastructure can revolutionize your business processes. 
                   Contact us to learn more about our approach and see it in action.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Link 
-                    href="/contact"
-                    className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300 text-center"
-                  >
-                    Get Started Today
-                  </Link>
-                  <Link 
-                    href="/case-studies"
-                    className="px-6 py-3 border border-cyan-400/50 text-cyan-400 rounded-lg hover:bg-cyan-400/10 transition-all duration-300 text-center"
-                  >
-                    View Case Studies
-                  </Link>
-                </div>
+                <Link 
+                  href="/contact"
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
+                >
+                  Get Started Today
+                  <span aria-hidden>→</span>
+                </Link>
               </div>
             </article>
           </div>
