@@ -1,118 +1,138 @@
+// PM2 Ecosystem Configuration for Ultimate Redundancy V2
+// Comprehensive PM2 process management for ultimate redundancy system
+
 module.exports = {
   apps: [
-    // Ultimate Redundancy Master V2
     {
-      name: "ultimate-redundancy-master-v2",
-      script: "automation/ultimate-redundancy-master-v2.cjs",
-      interpreter: "node",
-      cwd: __dirname,
-      watch: false,
-      autorestart: true,
-      max_restarts: 10,
-      exp_backoff_restart_delay: 500,
+      name: 'ultimate-redundancy-v2-master',
+      script: './automation/ultimate-redundancy-system-v2.cjs',
+      instances: 1,
+      exec_mode: 'cluster',
       env: {
-        NODE_ENV: "production",
-        REDUNDANCY_TYPE: "ultimate-master-v2",
-        MONITORING_INTERVAL: "60000",
-        AUTO_HEALING: "true",
-        HEALTH_SCORE_THRESHOLD: "80"
+        NODE_ENV: 'production',
+        REDUNDANCY_LEVEL: 'ultimate',
+        VERSION: 'v2',
+        LOG_LEVEL: 'info'
       },
-      log_date_format: "YYYY-MM-DD HH:mm:ss Z",
-      error_file: "automation/logs/ultimate-master-v2-error.log",
-      out_file: "automation/logs/ultimate-master-v2-out.log",
-      time: true
+      env_production: {
+        NODE_ENV: 'production',
+        REDUNDANCY_LEVEL: 'ultimate',
+        VERSION: 'v2',
+        LOG_LEVEL: 'info'
+      },
+      error_file: './automation/logs/ultimate-redundancy-v2-master-error.log',
+      out_file: './automation/logs/ultimate-redundancy-v2-master-out.log',
+      log_file: './automation/logs/ultimate-redundancy-v2-master-combined.log',
+      time: true,
+      max_memory_restart: '1G',
+      restart_delay: 5000,
+      max_restarts: 10,
+      min_uptime: '10s',
+      watch: false,
+      ignore_watch: ['node_modules', 'logs', '.git'],
+      autorestart: true,
+      cron_restart: '0 2 * * *', // Daily restart at 2 AM
+      exp_backoff_restart_delay: 100
     },
-
-    // Enhanced PM2 Redundancy Manager
     {
-      name: "enhanced-pm2-redundancy-v2",
-      script: "automation/enhanced-pm2-redundancy.cjs",
-      interpreter: "node",
-      cwd: __dirname,
-      watch: false,
-      autorestart: true,
-      max_restarts: 10,
-      exp_backoff_restart_delay: 500,
+      name: 'ultimate-redundancy-v2-monitor',
+      script: './automation/ultimate-redundancy-status-reporter.cjs',
+      instances: 1,
+      exec_mode: 'fork',
       env: {
-        NODE_ENV: "production",
-        REDUNDANCY_TYPE: "enhanced-pm2",
-        HEALTH_CHECK_INTERVAL: "30000",
-        MAX_RESTART_ATTEMPTS: "5",
-        AUTO_RECOVERY: "true"
+        NODE_ENV: 'production',
+        REDUNDANCY_LEVEL: 'ultimate',
+        VERSION: 'v2',
+        LOG_LEVEL: 'info'
       },
-      log_date_format: "YYYY-MM-DD HH:mm:ss Z",
-      error_file: "automation/logs/enhanced-pm2-v2-error.log",
-      out_file: "automation/logs/enhanced-pm2-v2-out.log",
-      time: true
+      error_file: './automation/logs/ultimate-redundancy-v2-monitor-error.log',
+      out_file: './automation/logs/ultimate-redundancy-v2-monitor-out.log',
+      log_file: './automation/logs/ultimate-redundancy-v2-monitor-combined.log',
+      time: true,
+      max_memory_restart: '512M',
+      restart_delay: 3000,
+      max_restarts: 5,
+      min_uptime: '5s',
+      watch: false,
+      ignore_watch: ['node_modules', 'logs', '.git'],
+      autorestart: true,
+      cron_restart: '0 3 * * *', // Daily restart at 3 AM
+      exp_backoff_restart_delay: 100
     },
-
-    // Enhanced GitHub Actions Redundancy Manager
     {
-      name: "enhanced-github-redundancy-v2",
-      script: "automation/enhanced-github-actions-redundancy.cjs",
-      interpreter: "node",
-      cwd: __dirname,
-      watch: false,
-      autorestart: true,
-      max_restarts: 10,
-      exp_backoff_restart_delay: 500,
+      name: 'ultimate-redundancy-v2-orchestrator',
+      script: './automation/ultimate-redundancy-orchestrator.cjs',
+      instances: 1,
+      exec_mode: 'cluster',
       env: {
-        NODE_ENV: "production",
-        REDUNDANCY_TYPE: "enhanced-github-actions",
-        HEALTH_CHECK_INTERVAL: "60000",
-        MAX_FAILURE_THRESHOLD: "3",
-        AUTO_TRIGGER: "true"
+        NODE_ENV: 'production',
+        REDUNDANCY_LEVEL: 'ultimate',
+        VERSION: 'v2',
+        LOG_LEVEL: 'info'
       },
-      log_date_format: "YYYY-MM-DD HH:mm:ss Z",
-      error_file: "automation/logs/enhanced-github-v2-error.log",
-      out_file: "automation/logs/enhanced-github-v2-out.log",
-      time: true
+      env_production: {
+        NODE_ENV: 'production',
+        REDUNDANCY_LEVEL: 'ultimate',
+        VERSION: 'v2',
+        LOG_LEVEL: 'info'
+      },
+      error_file: './automation/logs/ultimate-redundancy-v2-orchestrator-error.log',
+      out_file: './automation/logs/ultimate-redundancy-v2-orchestrator-out.log',
+      log_file: './automation/logs/ultimate-redundancy-v2-orchestrator-combined.log',
+      time: true,
+      max_memory_restart: '1G',
+      restart_delay: 5000,
+      max_restarts: 10,
+      min_uptime: '10s',
+      watch: false,
+      ignore_watch: ['node_modules', 'logs', '.git'],
+      autorestart: true,
+      cron_restart: '0 4 * * *', // Daily restart at 4 AM
+      exp_backoff_restart_delay: 100
     },
-
-    // Enhanced Netlify Functions Redundancy Manager
     {
-      name: "enhanced-netlify-redundancy-v2",
-      script: "automation/enhanced-netlify-functions-redundancy.cjs",
-      interpreter: "node",
-      cwd: __dirname,
-      watch: false,
-      autorestart: true,
-      max_restarts: 10,
-      exp_backoff_restart_delay: 500,
+      name: 'ultimate-redundancy-v2-automation',
+      script: './automation/ultimate-redundancy-automation-system.cjs',
+      instances: 1,
+      exec_mode: 'cluster',
       env: {
-        NODE_ENV: "production",
-        REDUNDANCY_TYPE: "enhanced-netlify-functions",
-        HEALTH_CHECK_INTERVAL: "120000",
-        MAX_FAILURE_THRESHOLD: "2",
-        AUTO_REGENERATE: "true"
+        NODE_ENV: 'production',
+        REDUNDANCY_LEVEL: 'ultimate',
+        VERSION: 'v2',
+        LOG_LEVEL: 'info'
       },
-      log_date_format: "YYYY-MM-DD HH:mm:ss Z",
-      error_file: "automation/logs/enhanced-netlify-v2-error.log",
-      out_file: "automation/logs/enhanced-netlify-v2-out.log",
-      time: true
-    },
-
-    // Comprehensive Redundancy Orchestrator V2
-    {
-      name: "comprehensive-redundancy-orchestrator-v2",
-      script: "automation/comprehensive-redundancy-orchestrator-v2.cjs",
-      interpreter: "node",
-      cwd: __dirname,
-      watch: false,
-      autorestart: true,
+      env_production: {
+        NODE_ENV: 'production',
+        REDUNDANCY_LEVEL: 'ultimate',
+        VERSION: 'v2',
+        LOG_LEVEL: 'info'
+      },
+      error_file: './automation/logs/ultimate-redundancy-v2-automation-error.log',
+      out_file: './automation/logs/ultimate-redundancy-v2-automation-out.log',
+      log_file: './automation/logs/ultimate-redundancy-v2-automation-combined.log',
+      time: true,
+      max_memory_restart: '1G',
+      restart_delay: 5000,
       max_restarts: 10,
-      exp_backoff_restart_delay: 500,
-      env: {
-        NODE_ENV: "production",
-        REDUNDANCY_TYPE: "comprehensive-orchestrator-v2",
-        MONITORING_INTERVAL: "45000",
-        AUTO_HEALING: "true",
-        HEALTH_SCORE_THRESHOLD: "85"
-      },
-      log_date_format: "YYYY-MM-DD HH:mm:ss Z",
-      error_file: "automation/logs/comprehensive-orchestrator-v2-error.log",
-      out_file: "automation/logs/comprehensive-orchestrator-v2-out.log",
-      time: true
+      min_uptime: '10s',
+      watch: false,
+      ignore_watch: ['node_modules', 'logs', '.git'],
+      autorestart: true,
+      cron_restart: '0 5 * * *', // Daily restart at 5 AM
+      exp_backoff_restart_delay: 100
     }
-  ]
+  ],
+
+  deploy: {
+    production: {
+      user: 'ubuntu',
+      host: 'localhost',
+      ref: 'origin/main',
+      repo: 'https://github.com/Zion-Holdings/zion.app.git',
+      path: '/workspace',
+      'pre-deploy-local': 'echo "This is a local deployment"',
+      'post-deploy': 'npm install && npm run build && pm2 reload ecosystem.ultimate-redundancy-v2.pm2.cjs',
+      'pre-setup': 'echo "Setting up deployment environment"'
+    }
+  }
 };
