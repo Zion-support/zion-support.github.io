@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { useRouter } from "next/router"; // Changed from react-router-dom
-import Link from "next/link"; // Added for potential Link usage, though not explicitly used in original for navigation actions
+import { logDev, logError } from '@/utils/productionLogger';
+import { useRouter } from 'next/router';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ProductListing } from "@/types/listings";
@@ -47,6 +47,24 @@ export function ProductListingCard({
   
   // Handle navigating to listing detail
   const handleViewListing = () => {
+    // Debug logging for development
+    if (process.env.NODE_ENV === 'development') {
+      logDev('[ProductCard] Navigating to:', `${detailBasePath}/${listing.id}`);
+      logDev('[ProductCard] Listing ID:', listing.id);
+      logDev('[ProductCard] Listing Title:', listing.title);
+    }
+    
+    // Validate listing ID exists before navigation
+    if (!listing.id) {
+      logError('[ProductCard] Missing listing ID, cannot navigate');
+      toast({
+        title: "Navigation Error",
+        description: "Product information is incomplete",
+        variant: "destructive",
+      });
+      return;
+    }
+    
     router.push(`${detailBasePath}/${listing.id}`);
   };
 

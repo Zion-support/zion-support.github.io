@@ -245,3 +245,195 @@ global.ResizeObserver = jest.fn().mockImplementation(() => ({
   unobserve: jest.fn(),
   disconnect: jest.fn(),
 }));
+
+// Polyfill for URL.revokeObjectURL
+if (typeof URL.revokeObjectURL === 'undefined') {
+  URL.revokeObjectURL = jest.fn();
+}
+
+// Polyfill for BroadcastChannel
+if (typeof BroadcastChannel === 'undefined') {
+  // @ts-expect-error - BroadcastChannel polyfill for test environment
+  global.BroadcastChannel = class BroadcastChannelMock {
+    constructor(name: string) {
+      // @ts-expect-error - Mock name property assignment
+      this.name = name;
+    }
+    postMessage = jest.fn();
+    close = jest.fn();
+    onmessage = null;
+    onmessageerror = null;
+    addEventListener = jest.fn();
+    removeEventListener = jest.fn();
+    dispatchEvent = jest.fn();
+  };
+}
+
+// Polyfill for window.scrollTo
+if (typeof window.scrollTo === 'undefined') {
+  window.scrollTo = jest.fn();
+}
+
+// Mock axios.create to return axios itself
+import axios from 'axios';
+// @ts-ignore
+axios.create = jest.fn(() => axios);
+
+// -----------------------------
+// Vitest Compatibility Layer for Jest
+// -----------------------------
+// Some test files were originally written for Vitest and import utilities from 'vitest'.
+// To keep migrating gradually while still running the Jest suite successfully, we create
+// a lightweight shim that re-maps the most common Vitest helpers to their Jest equivalents.
+// This avoids individual test failures like "Vitest cannot be imported in a CommonJS module".
+//
+// NOTE: When the test suite is fully migrated to Vitest this shim can be removed together
+// with the associated `moduleNameMapper` entry in `jest.config.cjs`.
+// ---------------------------------------------------------------------------
+jest.mock('vitest', () => {
+  const jestFn = (...args: unknown[]) => jest.fn(...(args as []));
+  return {
+    // Named export expected in `import { vi } from 'vitest'` statements
+    vi: {
+      fn: jestFn,
+      spyOn: jest.spyOn.bind(jest),
+      mock: jest.mock.bind(jest),
+      clearAllMocks: jest.clearAllMocks,
+      resetAllMocks: jest.resetAllMocks,
+      // Provide a simple implementation of `import.meta` mocking helpers
+      // frequently used in Vitest examples
+      // (no-op implementations because Jest already handles env vars via `process.env`).
+      importActual: jest.requireActual,
+      mockResolvedValue: <T = unknown>(value: T) => jest.fn().mockResolvedValue(value),
+      mockRejectedValue: <T = unknown>(value: T) => jest.fn().mockRejectedValue(value),
+      restoreAllMocks: jest.restoreAllMocks,
+    },
+
+    // Re-export common testing globals so that `import { expect, test } from 'vitest'`
+    // continues to work inside the Jest environment.
+    describe: global.describe,
+    it: global.it,
+    test: global.test,
+    expect: global.expect,
+    beforeEach: global.beforeEach,
+    afterEach: global.afterEach,
+    beforeAll: global.beforeAll,
+    afterAll: global.afterAll,
+  } as unknown as Record<string, unknown>;
+});
+
+// -----------------------------
+// Lightweight Context & Redux mocks to avoid provider runtime errors
+// -----------------------------
+
+// Auth Context
+jest.mock('@/context/auth/AuthProvider', () => {
+  const useAuth = () => ({
+    isAuthenticated: false,
+    isLoading: false,
+    user: null,
+    login: jest.fn(),
+    logout: jest.fn(),
+    signUp: jest.fn(),
+  });
+
+  const AuthProvider = ({ children }: any) => children;
+
+  return {
+    __esModule: true,
+    AuthProvider,
+    default: AuthProvider,
+    useAuth,
+  };
+});
+
+// Analytics Context
+jest.mock('@/context/AnalyticsContext', () => {
+  const useAnalytics = () => ({
+    trackEvent: jest.fn(),
+    trackPageView: jest.fn(),
+  });
+  const AnalyticsProvider = ({ children }: any) => children;
+  return {
+    __esModule: true,
+    AnalyticsProvider,
+    default: AnalyticsProvider,
+    useAnalytics,
+  };
+});
+
+// Whitelabel Context
+jest.mock('@/context/WhitelabelContext', () => {
+  const useWhitelabel = () => ({
+    brand: 'default',
+    theme: 'light',
+  });
+  const WhitelabelProvider = ({ children }: any) => children;
+  return {
+    __esModule: true,
+    WhitelabelProvider,
+    default: WhitelabelProvider,
+    useWhitelabel,
+  };
+});
+
+// Feedback Context
+jest.mock('@/context/FeedbackContext', () => {
+  const useFeedback = () => ({
+    open: jest.fn(),
+  });
+  const FeedbackProvider = ({ children }: any) => children;
+  return {
+    __esModule: true,
+    FeedbackProvider,
+    default: FeedbackProvider,
+    useFeedback,
+  };
+});
+
+// react-redux hooks
+jest.mock('react-redux', () => {
+  const actualRedux = jest.requireActual('react-redux');
+  return {
+    ...actualRedux,
+    useDispatch: () => jest.fn(),
+    useSelector: jest.fn(() => ({})),
+  };
+});
+
+// Mock Sentry
+jest.mock('@sentry/nextjs', () => ({
+  init: jest.fn(),
+  captureException: jest.fn(),
+  captureMessage: jest.fn(),
+  addBreadcrumb: jest.fn(),
+  withScope: jest.fn((callback) => callback({ setTag: jest.fn(), setContext: jest.fn(), setLevel: jest.fn() })),
+  // Add any other Sentry methods used in your application
+}));
+
+// Mock performance API
+if (typeof window !== 'undefined' && !window.performance) {
+  // @ts-ignore
+  window.performance = {};
+}
+if (typeof window !== 'undefined' && !window.performance.getEntriesByType) {
+  window.performance.getEntriesByType = jest.fn().mockReturnValue([]);
+}
+if (typeof window !== 'undefined' && !window.performance.mark) {
+  window.performance.mark = jest.fn();
+}
+if (typeof window !== 'undefined' && !window.performance.measure) {
+  window.performance.measure = jest.fn();
+}
+
+// Mock navigator.serviceWorker
+if (typeof navigator !== 'undefined' && !navigator.serviceWorker) {
+  // @ts-ignore
+  navigator.serviceWorker = {
+    addEventListener: jest.fn(),
+    removeEventListener: jest.fn(),
+    register: jest.fn(() => Promise.resolve({})), // Mock common methods
+    ready: Promise.resolve({}),
+    // Add other properties/methods if needed by your application
+  };
+}

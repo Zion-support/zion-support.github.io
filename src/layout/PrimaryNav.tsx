@@ -1,3 +1,25 @@
+import { useState } from 'react';
+import { logDev, logError } from '@/utils/productionLogger';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { Logo } from '@/components/header/Logo';
+import { PointsBadge } from '@/components/loyalty/PointsBadge';
+import { UserMenu } from '@/components/header/UserMenu';
+import { LanguageSelector } from '@/components/header/LanguageSelector';
+import { ModeToggle } from '@/components/ModeToggle';
+import { useAuth } from '@/hooks/useAuth';
+import { useIsMobile } from '@/hooks/use-mobile';
+import { useMessaging } from '@/context/MessagingContext';
+import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput';
+import { generateSearchSuggestions } from '@/data/marketplaceData';
+import { slugify } from '@/lib/slugify';
+import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation';
+import { MobileMenu } from '@/components/header/MobileMenu';
+import { MobileBottomNav } from '@/components/header/MobileBottomNav';
+import { Menu, X } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import { CartDrawer } from '@/components/cart/CartDrawer';
+import { LoginModal } from '@/components/auth/LoginModal';
 
       // // // // // // // // console.log('PrimaryNav search submit:', query);
 <<<<<<< HEAD
@@ -13,10 +35,16 @@
       setQuery('')}
 // Theme toggle component;
 
-  const [isDark, setIsDark] = useState<typeof false>(false);
-
-  const toggleTheme = (...args: unknown[]): unknown => {;    setIsDark(!isDark);
-    // Add theme switching logic here
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const trimmed = query.trim();
+    if (trimmed) {
+      logDev('PrimaryNav search submit:', trimmed);
+      router
+        .push(`/search?q=${encodeURIComponent(trimmed)}`)
+        .then(() => setQuery(''))
+        .catch((err) => logError('Search navigation failed', err));
+    }
   };
 
   return ()
@@ -34,15 +62,16 @@
           <div className="hidden md:block order-1 flex-shrink-0">
             <ResponsiveNavigation  />
           </div>
-
-                  // // // // // // // // console.log('PrimaryNav search suggestion selected:', sugg);
-                onSelectSuggestion = {
-
-  (sugg) => {
-
-                  // // // // // console.log('PrimaryNav search suggestion selected:',;
-  ;
-  sugg);
+          
+          {/* Actions container with responsive layout */}
+          <div className="hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
+            {/* Search form with clamped width */}
+            <form onSubmit={handleSubmit} className="flex-shrink-0" style={{ width: 'clamp(12rem, 20vw, 16rem)' }}>
+              <EnhancedSearchInput
+                value={query}
+                onChange={setQuery}
+                onSelectSuggestion={(sugg) => {
+                  logDev('PrimaryNav search suggestion selected:', sugg);
                   // Handle different suggestion types with proper navigation
                   if(sugg.id) {
 

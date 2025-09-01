@@ -60,20 +60,31 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
     ...globalInterceptors.response.handlers
   );
 
-  async function request<T>(url: string, method: string, init: RequestConfig): Promise<AxiosResponse<T>> {
-    let reqInit: RequestConfig = { ...init };
-    // Run request interceptors
-    for (const h of instance.interceptors.request.handlers) {
-      if (h) { // Added null check for h
-        try {
-          if (h.fulfilled) {
-            const res = await h.fulfilled(reqInit);
-            if (res) reqInit = res;
-          }
-        } catch (err) {
-          if (h.rejected) { // h is not null here
-            await h.rejected(err);
-          }
+import { setCorrelationId } from '@/utils/correlationManager';
+
+// ... (other imports and code)
+
+  // Response interceptor
+  instance.interceptors.response.use(
+    (response: any) => {
+      const correlationId = response.headers?.['x-correlation-id'] || response.headers?.['X-Correlation-ID'];
+      if (correlationId) {
+        setCorrelationId(correlationId as string);
+      }
+      return response;
+    },
+    (error: any) => {
+      // Also try to get correlation ID from error responses if the server includes it
+      const correlationId = error.response?.headers?.['x-correlation-id'] || error.response?.headers?.['X-Correlation-ID'];
+      if (correlationId) {
+        setCorrelationId(correlationId as string);
+      }
+
+      if (error?.response?.status === 401) {
+        // Handle unauthorized access
+        if (typeof window !== 'undefined') {
+          safeStorage.removeItem('auth-token');
+          window.location.href = '/auth/login';
         }
       }
     }

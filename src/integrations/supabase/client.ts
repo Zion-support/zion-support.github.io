@@ -1,13 +1,30 @@
-import { createClient } from '@supabase/supabase-js';
-import { supabaseStorageAdapter } from './safeStorageAdapter';
+// Re-export from the SSR client to maintain backward compatibility
+export { supabase, createClient } from '@/utils/supabase/client';
+import { logWarn, logDev } from '@/utils/productionLogger';
 
 const supabaseUrl =
   process.env.NEXT_PUBLIC_SUPABASE_URL;
 const supabaseAnonKey =
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-if (!supabaseUrl || !supabaseAnonKey) {
-  throw new Error('Missing Supabase environment variables');
+// Improved configuration check - recognizes real Supabase credentials
+export const isSupabaseConfigured = !!(
+  supabaseUrl && 
+  supabaseAnonKey && 
+  supabaseUrl.includes('supabase.co') &&
+  supabaseAnonKey.startsWith('eyJ') && // JWT tokens start with eyJ
+  !supabaseUrl.includes('your-project') && 
+  !supabaseAnonKey.includes('your-anon-key')
+);
+
+// Only log in development and when debug is enabled
+if (process.env.NODE_ENV === 'development' && process.env.DEBUG_ENV_CONFIG === 'true') {
+  logDev('Supabase client initialized:', {
+    url: `${supabaseUrl.substring(0, 30)}...`,
+    configured: isSupabaseConfigured,
+    hasValidUrl: supabaseUrl.includes('supabase.co'),
+    hasValidKey: supabaseAnonKey.startsWith('eyJ')
+  });
 }
 
 // Create Supabase client with proper configuration

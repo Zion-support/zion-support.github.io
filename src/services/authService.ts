@@ -1,4 +1,11 @@
-import { apiClient } from '@/utils/apiClient';
+import axios from 'axios';
+import { toast } from '@/hooks/use-toast';
+import { safeStorage } from '@/utils/safeStorage';
+import { store } from '@/store';
+import { setToken } from '@/store/authSlice';
+import { logDev, logError } from '@/utils/productionLogger';
+
+const API_URL = process.env.NEXT_PUBLIC_API_URL || '';
 
 export async function loginUser(email: string, password: string) {
   const res = await apiClient('/api/auth/login', {
@@ -13,8 +20,15 @@ export async function loginUser(email: string, password: string) {
   return { res, data };
 }
 
-export const auth = {
-  login,
-};
-
-export default auth;
+export async function registerUser(name: string, email: string, password: string) {
+  const endpoint = `${API_URL}/auth/register`;
+  try {
+    const res = await axios.post(endpoint, { name, email, password });
+    logDev('Register API Response Status:', res.status);
+    logDev('Register API Response Body:', res.data);
+    return { res, data: res.data };
+  } catch (err) {
+    logError('Register API error:', err);
+    throw err;
+  }
+}
