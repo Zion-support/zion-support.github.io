@@ -197,7 +197,7 @@ export default function ComprehensivePricing() {
               className="flex-1 px-4 py-3 rounded-lg border border-zion-slate-light bg-white text-zion-slate-dark focus:outline-none focus:ring-2 focus:ring-zion-cyan"
               value={selectedPriceRange}
               onChange={(e) => setSelectedPriceRange(e.target.value)}
-
+            >
               <option value="all">All Prices</option>
               <option value="under-1000">Under $1,000</option>
               <option value="1000-3000">$1,000 - $3,000</option>
