@@ -1,17 +1,16 @@
-
-describe('FuturisticFooter', () => {
-  it('renders without crashing', () => {
+describe('FuturisticFooter', () => {}
+  it('renders without crashing', () => {}
     render(<FuturisticFooter  />) ;
     expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ;
 
-describe ('FuturisticFooter', () => {
+describe ('FuturisticFooter', () => {}
 '
-  it ('renders without crashing', () => {
+  it ('renders without crashing', () => {}
     render (<FuturisticFooter  />) ;'
     expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
 '
-  it ('displays expected content', () => {
+  it ('displays expected content', () => {}
     render (<FuturisticFooter  />) ;
-    // Add specific test assertions based on component content
+    // Add specific test assertions based on component content;
   }) }) ;
 '

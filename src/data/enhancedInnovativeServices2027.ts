@@ -1,4 +1,4 @@
-export interface EnhancedService2027 {
+export interface EnhancedService2027 {}
   id: string;
   title: string;
   description: string;
@@ -14,12 +14,11 @@ export interface EnhancedService2027 {
   ctaLabel: string;
   href: string;
   external?: boolean;
-contactInfo: {
-
+contactInfo: {}
     phone: string;
     email: string;
     website: string;
-    address: string
+    address: string;
 };
   competitors: string[];
   roi: string;
@@ -44,7 +43,7 @@ export '
   'Federated Learning Solutions';
 ];
 ;
-export 
-export 
-export 
+export;
+export;
+export;
 '

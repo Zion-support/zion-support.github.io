@@ -1,4 +1,4 @@
-    ],;
+],;
     popular: true,
     icon: Cloud,
     color: 'from-blue-600 to-cyan-700','
@@ -8,9 +8,9 @@
     growthRate: '320% annual growth',
     rating: 4.9,
     reviews: 89,
-    customers: 45
+    customers: 45;
   },
-  {
+  {}
 '
     id: 'ai-powered-cybersecurity','
     name: 'AI-Powered Cybersecurity Suite','
@@ -30,9 +30,9 @@
     growthRate: '280% annual growth',
     rating: 4.8,
     reviews: 234,
-    customers: 156
+    customers: 156;
   },
-  {
+  {}
 '
     id: 'quantum-database-platform','
     name: 'Quantum Database Platform','
@@ -52,9 +52,9 @@
     growthRate: '240% annual growth',
     rating: 4.7,
     reviews: 123,
-    customers: 67
+    customers: 67;
   },
-  {
+  {}
 '
     id: 'ai-network-optimization','
     name: 'AI Network Optimization','
@@ -74,9 +74,9 @@
     growthRate: '260% annual growth',
     rating: 4.8,
     reviews: 189,
-    customers: 98
+    customers: 98;
   },
-  {
+  {}
 '
     id: 'quantum-devops-automation','
     name: 'Quantum DevOps Automation','
@@ -96,9 +96,9 @@
     growthRate: '300% annual growth',
     rating: 4.9,
     reviews: 267,
-    customers: 134
+    customers: 134;
   },
-  {
+  {}
 '
     id: 'ai-data-analytics-platform','
     name: 'AI Data Analytics Platform','

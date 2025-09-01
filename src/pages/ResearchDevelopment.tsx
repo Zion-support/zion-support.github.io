@@ -1,1 +1,1 @@
-export default React.memo (function ResearchDevelopment() {
+export default React.memo (function ResearchDevelopment(function ResearchDevelopment() {): any {}

@@ -1,17 +1,14 @@
 import { motion } from 'framer-motion';'
-export const FuturisticNeonButton = ({ children, onClick, type = 'button', variant = 'primary', size = 'md', disabled = false, className = '', fullWidth = false, icon, loading = false, glowIntensity = 'medium' }) => {
-
-    const getVariantStyles = () => {
-        const intensityMultiplier = {
-
+export const FuturisticNeonButton = ({ children, onClick, type = 'button', variant = 'primary', size = 'md', disabled = false, className = '', fullWidth = false, icon, loading = false, glowIntensity = 'medium' }) => {}
+    const getVariantStyles = () => {}
+        const intensityMultiplier = {}
   low: 0.3,
             medium: 0.5,
-  high: 0.8
+  high: 0.8;
 };
         const multiplier = intensityMultiplier[glowIntensity];
-        const baseStyles = {
-
-  primary: {
+        const baseStyles = {}
+  primary: {}
 '
                 bg: 'bg-zion-cyan/20','
                 border: 'border-zion-cyan','
@@ -21,7 +18,7 @@ export const FuturisticNeonButton = ({ children, onClick, type = 'button', varia
 })]`,``
                 hoverGlow: `hover:shadow-[0_0_30px_rgba(0,255,255,${Math.min(multiplier + 0.3, 1)})]`
             },
-            secondary: {
+            secondary: {}
 '
                 bg: 'bg-zion-purple/20','
                 border: 'border-zion-purple','`
@@ -29,7 +26,7 @@ export const FuturisticNeonButton = ({ children, onClick, type = 'button', varia
                 glow: `shadow-[0_0_20px_rgba(147,51,234,${multiplier})]`,``
                 hoverGlow: `hover:shadow-[0_0_30px_rgba(147,51,234,${Math.min(multiplier + 0.3, 1)})]`
             },
-            success: {
+            success: {}
 '
                 bg: 'bg-emerald-500/20','
                 border: 'border-emerald-500','`
@@ -37,7 +34,7 @@ export const FuturisticNeonButton = ({ children, onClick, type = 'button', varia
                 glow: `shadow-[0_0_20px_rgba(16,185,129,${multiplier})]`,``
                 hoverGlow: `hover:shadow-[0_0_30px_rgba(16,185,129,${Math.min(multiplier + 0.3, 1)})]`
             },
-            warning: {
+            warning: {}
 '
                 bg: 'bg-amber-500/20','
                 border: 'border-amber-500','`
@@ -45,7 +42,7 @@ export const FuturisticNeonButton = ({ children, onClick, type = 'button', varia
                 glow: `shadow-[0_0_20px_rgba(245,158,11,${multiplier})]`,``
                 hoverGlow: `hover:shadow-[0_0_30px_rgba(245,158,11,${Math.min(multiplier + 0.3, 1)})]`
             },
-            danger: {
+            danger: {}
 '
                 bg: 'bg-red-500/20','
                 border: 'border-red-500','`
@@ -54,8 +51,8 @@ export const FuturisticNeonButton = ({ children, onClick, type = 'button', varia
                 hoverGlow: `hover:shadow-[0_0_30px_rgba(239,68,68,${Math.min(multiplier + 0.3, 1)})]`
         };
         return baseStyles[variant]};
-    const getSizeStyles = () => {
-        const sizeStyles = {
+    const getSizeStyles = () => {}
+        const sizeStyles = {}
 '
   sm: 'px-3 py-1.5 text-sm','
             md: 'px-4 py-2 text-base','`

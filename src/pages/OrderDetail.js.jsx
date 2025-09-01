@@ -6,11 +6,11 @@ import { generateInvoicePdf } from '@/utils/generateInvoicePdf';'
 import { useAuth } from '@/hooks/useAuth';'
 import { supabase } from '@/integrations/supabase/client';'
 import { toast } from '@/hooks/use-toast';
-export default function OrderDetailPage() {
+export default function OrderDetailPage() {}
   const { orderId } = useParams();
   const { user } = useAuth();
   const { data: order, isLoading } = useGetOrderQuery(orderId);
-  const handleDownload = async () => {
+  const handleDownload = async () => {}
     if (!order) return;
     const blob = await generateInvoicePdf(order);
     const url = URL.createObjectURL(blob);'
@@ -22,39 +22,37 @@ export default function OrderDetailPage() {
     document.body.removeChild(link);
     URL.revokeObjectURL(url);
   };
-  const handleResend = async () => {
+  const handleResend = async () => {}
     if (!order || !user?.email) return;
-    try {
+    try {}
 '
-      await supabase.functions.invoke('send-email', {
-
-        body: {
+      await supabase.functions.invoke('send-email', {}
+        body: {}
 `
           to: user.email,``
           subject: `Receipt for order ${order.orderId}`,``
           html: `<p>Thank you for your purchase. Total ${order.total}.</p>`}});'
       toast({ title: 'Receipt sent!' });
-    } catch (err) {
+    } catch (err) {}
 '
       toast({ title: 'Failed to send receipt', variant: 'destructive' });
     }
   };
-  if (isLoading || !order) {
-
+  if (isLoading || !order) {}
     return()
-      <div className="container max-w-3xl py-10">""
+      <div className="container max-w-3xl py-10">"""
         <Skeleton className="h-6 w-full" />
       </div>
     );
-  }"
-  return (""
-    <div className="container max-w-3xl py-10 space-y-6">""
+  }""
+  return ("""
+    <div className="container max-w-3xl py-10 space-y-6">"""
       <h1 className="text-3xl font-bold">Order #{order.orderId}</h1>
-"
-      <div>""
-        <h2 className="font-semibold mb-2">Items</h2>""
-        <ul className="space-y-1">"
-          {order.items.map((item, idx) => (""
+""
+      <div>"""
+        <h2 className="font-semibold mb-2">Items</h2>"""
+        <ul className="space-y-1">""
+          {order.items.map((item, idx) => ("""
             <li key={idx} className="flex justify-between">
               <span>
                 {item.name} x {item.quantity}
@@ -64,8 +62,8 @@ export default function OrderDetailPage() {
           ))}
         </ul>
       </div>
-"
-      <div>""
+""
+      <div>"""
         <h2 className="font-semibold mb-2">Shipping Address</h2>
         <p>{order.shippingAddress.name}</p>
         <p>{order.shippingAddress.street}</p>
@@ -73,17 +71,17 @@ export default function OrderDetailPage() {
           {order.shippingAddress.city}, {order.shippingAddress.state}{' '}
           {order.shippingAddress.zip}
         </p>
-      </div>"
-""
-      <div className="flex gap-3">"
-        <Button onClick={handleDownload}>Download PDF Invoice</Button>""
+      </div>""
+"""
+      <div className="flex gap-3">""
+        <Button onClick={handleDownload}>Download PDF Invoice</Button>"""
         <Button variant="outline" onClick={handleResend}>
-          Resend Receipt
+          Resend Receipt;
         </Button>
-      </div>"
-""
+      </div>""
+"""
       <Link to="/orders" className="text-zion-purple underline">
-        Back to orders
+        Back to orders;
       </Link>
     </div>
   );

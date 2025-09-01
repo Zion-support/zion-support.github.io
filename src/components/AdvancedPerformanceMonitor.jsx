@@ -15,8 +15,8 @@ import React, { useState, useRef, useEffect } from 'react';
   CheckCircle,'
   Download} from 'lucide-react';
 
-const mockSystemMetrics = [
-  {
+const mockSystemMetrics = []
+  {}
 '
     id: '1','
     name: 'CPU Usage',
@@ -28,7 +28,7 @@ const mockSystemMetrics = [
     change: 5.2,'
     category: 'Processor','
     lastUpdated: '2024-01-15T10:00:00.000Z'},
-  {
+  {}
 '
     id: '2','
     name: 'Memory Usage',
@@ -40,7 +40,7 @@ const mockSystemMetrics = [
     change: 0.8,'
     category: 'Memory','
     lastUpdated: '2024-01-15T10:00:00.000Z'},
-  {
+  {}
 '
     id: '3','
     name: 'Disk I/O',
@@ -52,7 +52,7 @@ const mockSystemMetrics = [
     change: -2.1,'
     category: 'Storage','
     lastUpdated: '2024-01-15T10:00:00.000Z'},
-  {
+  {}
 '
     id: '4','
     name: 'Network Latency',
@@ -64,7 +64,7 @@ const mockSystemMetrics = [
     change: 0.5,'
     category: 'Network','
     lastUpdated: '2024-01-15T10:00:00.000Z'},
-  {
+  {}
 '
     id: '5','
     name: 'Database Connections',
@@ -76,7 +76,7 @@ const mockSystemMetrics = [
     change: 8.7,'
     category: 'Database','
     lastUpdated: '2024-01-15T10:00:00.000Z'},
-  {
+  {}
 '
     id: '6','
     name: 'Response Time',
@@ -87,11 +87,11 @@ const mockSystemMetrics = [
     trend: 'down',
     change: -3.2,'
     category: 'Performance','
-    lastUpdated: '2024-01-15T10:00:00.000Z'},
+    lastUpdated: '2024-01-15T10:00:00.000Z'}
 ];
 
-const mockPerformanceAlerts = [
-  {
+const mockPerformanceAlerts = []
+  {}
 '
     id: '1','
     type: 'performance','
@@ -102,10 +102,10 @@ const mockPerformanceAlerts = [
     timestamp: '2024-01-15T10:00:00.000Z','
     affected: ['Web Server 1',Application Server 2'],'
     recommendations: [''
-      'Scale horizontally',Optimize database queries',Review background processes',
+      'Scale horizontally',Optimize database queries',Review background processes'
     ],'
     status: 'active'},
-  {
+  {}
 '
     id: '2','
     type: 'scalability','
@@ -116,13 +116,12 @@ const mockPerformanceAlerts = [
     timestamp: '2024-01-15T09:45:00.000Z','
     affected: ['Database Cluster',Application Servers'],'
     recommendations: [''
-      'Increase connection pool size',Implement connection pooling',Monitor query performance',
+      'Increase connection pool size',Implement connection pooling',Monitor query performance'
     ],'
-    status: 'active'},
+    status: 'active'}
 ];
 
-export function AdvancedPerformanceMonitor({ enabled = true }) {
-
+export function AdvancedPerformanceMonitor({ enabled = true }) {}
   const [isExpanded, setIsExpanded] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
   const [selectedMetric, setSelectedMetric] = useState(null);
@@ -136,26 +135,25 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {
 
   const containerRef = useRef(null) ;
 
-  useEffect(() => {
+  useEffect(() => {}
     if(!enabled) return;
 
-    const interval = setInterval(() => {
+    const interval = setInterval(() => {}
       refreshMetrics () ;
     }, refreshInterval) ;
 
     return () => clearInterval(interval) ;
   }, [enabled, refreshInterval]) ;
 
-  const refreshMetrics = async () => {
+  const refreshMetrics = async () => {}
     setIsRefreshing(true) ;
-    // Simulate API call
+    // Simulate API call;
     await new Promise(resolve => setTimeout (resolve, 1000) ) ;
     setIsRefreshing(false) ;
   };
 
-  const getStatusColor = status => {
-
-    switch (status) {
+  const getStatusColor = status => {}
+    switch (status) {}
 '
       case 'critical':''
         return 'text-red-500';'
@@ -168,70 +166,68 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {
     }
   };
 
-  const getStatusIcon = status => {
-
-    switch (status) {
+  const getStatusIcon = status => {}
+    switch (status) {}
 '
-      case 'critical':
-        return <AlertTriangle className="w-4 h-4 text-red-500" />;'"
-      case 'warning':""
-        return <AlertTriangle className="w-4 h-4 text-yellow-500" />;'"
-      case 'normal':""
-        return <CheckCircle className="w-4 h-4 text-green-500" />;"
-      default:""
+      case 'critical': any;
+        return <AlertTriangle className="w-4 h-4 text-red-500" />;'""
+      case 'warning':"""
+        return <AlertTriangle className="w-4 h-4 text-yellow-500" />;'""
+      case 'normal':"""
+        return <CheckCircle className="w-4 h-4 text-green-500" />;""
+      default:"""
         return <Activity className="w-4 h-4 text-gray-500" />;
     }
   };
 
-  const getTrendIcon = trend => {
-
-    switch (trend) {
-'"
-      case 'up':""
+  const getTrendIcon = trend => {}
+    switch (trend) {}
+'""
+      case 'up':"""
         return <TrendingUp className="w-4 h-4 text-red-500" />;'
-      case 'down':"
-        return (""
+      case 'down':""
+        return ("""
           <TrendingUp className="w-4 h-4 text-green-500 transform rotate-180" />
-        );'"
-      case 'stable':""
-        return <BarChart3 className="w-4 h-4 text-blue-500" />;"
-      default:""
+        );'""
+      case 'stable':"""
+        return <BarChart3 className="w-4 h-4 text-blue-500" />;""
+      default:"""
         return <Activity className="w-4 h-4 text-gray-500" />;
     }
   };
 
   if(!enabled) return null;
 
-  if (isMinimized) {
-"
-    return (""
+  if (isMinimized) {}
+""
+    return ("""
       <div className="fixed bottom-4 right-4 z-50">
-        <button"
-          onClick={() => setIsMinimized(false)}""
-          className="bg-zion-blue text-white p-3 rounded-full shadow-lg hover:bg-zion-blue/80 transition-all duration-300""
-        >""
+        <button""
+          onClick={() => setIsMinimized(false)}"""
+          className="bg-zion-blue text-white p-3 rounded-full shadow-lg hover:bg-zion-blue/80 transition-all duration-300"""
+        >"""
           <Maximize2 className="w-5 h-5" />
         </button>
       </div>) ;
   }
 
   return ()
-    <div
+    <div;
       ref={containerRef}
-      className={`fixed bottom-4 right-4 z-50 bg-white dark:bg-zion-slate-dark rounded-lg shadow-2xl border border-zion-slate-light/20 transition-all duration-300 ${
+      className={`fixed bottom-4 right-4 z-50 bg-white dark:bg-zion-slate-dark rounded-lg shadow-2xl border border-zion-slate-light/20 transition-all duration-300 ${}
 '`
         isExpanded ? 'w-96 h-96' : 'w-80 h-64'``
       }`}
-    >"
-      {/* Header */}""
-      <div className="flex items-center justify-between p-4 border-b border-zion-slate-light/20">""
-        <div className="flex items-center space-x-2">""
-          <Activity className="w-5 h-5 text-zion-cyan" />""
+    >""
+      {/* Header */}"""
+      <div className="flex items-center justify-between p-4 border-b border-zion-slate-light/20">"""
+        <div className="flex items-center space-x-2">"""
+          <Activity className="w-5 h-5 text-zion-cyan" />"""
           <h3 className="font-semibold text-zion-slate-dark dark:text-white">
-            Performance Monitor
+            Performance Monitor;
           </h3>`
           <div``
-            className={`w-2 h-2 rounded-full ${
+            className={`w-2 h-2 rounded-full ${}
 '
               systemHealth === 'good'''
                 ? 'bg-green-500'''
@@ -239,77 +235,77 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {
                   ? 'bg-yellow-500'''`
                   : 'bg-red-500'``
             }`}
-          />"
-        </div>""
+          />""
+        </div>"""
         <div className="flex items-center space-x-2">
-          <button"
-            onClick={() => setShowAlerts(!showAlerts)}""
-            className="p-1 hover:bg-zion-slate-light/20 rounded transition-colors"
+          <button""
+            onClick={() => setShowAlerts(!showAlerts)}"""
+            className="p-1 hover:bg-zion-slate-light/20 rounded transition-colors""
           >'`
             <AlertTriangle'`'`
               className={`w-4 h-4 ${showAlerts ? 'text-yellow-500' : 'text-gray-400'}`}
             />
           </button>
-          <button
-            onClick={refreshMetrics}"
-            disabled={isRefreshing}""
-            className="p-1 hover:bg-zion-slate-light/20 rounded transition-colors disabled:opacity-50"
+          <button;
+            onClick={refreshMetrics}""
+            disabled={isRefreshing}"""
+            className="p-1 hover:bg-zion-slate-light/20 rounded transition-colors disabled:opacity-50""
           >'`
             <RefreshCw'`'`
               className={`w-4 h-4 ${isRefreshing ? 'animate-spin' : ''}`}
             />
           </button>
-          <button"
-            onClick={() => setIsExpanded(!isExpanded)}""
-            className="p-1 hover:bg-zion-slate-light/20 rounded transition-colors"
-          >"
-            {isExpanded ? (""
-              <Minimize2 className="w-4 h-4" />"
-            ) : (""
+          <button""
+            onClick={() => setIsExpanded(!isExpanded)}"""
+            className="p-1 hover:bg-zion-slate-light/20 rounded transition-colors""
+          >""
+            {isExpanded ? ("""
+              <Minimize2 className="w-4 h-4" />""
+            ) : ("""
               <Maximize2 className="w-4 h-4" />
             )}
           </button>
-          <button"
-            onClick={() => setIsMinimized(true)}""
-            className="p-1 hover:bg-zion-slate-light/20 rounded transition-colors""
-          >""
+          <button""
+            onClick={() => setIsMinimized(true)}"""
+            className="p-1 hover:bg-zion-slate-light/20 rounded transition-colors"""
+          >"""
             <X className="w-4 h-4" />
           </button>
         </div>
       </div>
-"
-      {/* Content */}""
-      <div className="p-4 space-y-4 overflow-y-auto h-full">"
-        {/* Performance Score */}""
-        <div className="text-center">""
+""
+      {/* Content */}"""
+      <div className="p-4 space-y-4 overflow-y-auto h-full">""
+        {/* Performance Score */}"""
+        <div className="text-center">"""
           <div className="text-2xl font-bold text-zion-cyan">
-            {performanceScore}"
-          </div>""
+            {performanceScore}""
+          </div>"""
           <div className="text-sm text-zion-slate-light">Performance Score</div>
         </div>
-"
-        {/* Key Metrics */}""
+""
+        {/* Key Metrics */}"""
         <div className="grid grid-cols-2 gap-3">
           {mockSystemMetrics.slice(0, 4).map(metric => (
-            <div"
-              key={metric.id}""
-              className="p-3 bg-zion-slate-light/10 rounded-lg cursor-pointer hover:bg-zion-slate-light/20 transition-colors"
-              onClick={() => setSelectedMetric(metric)}"
-            >""
-              <div className="flex items-center justify-between mb-2">""
+            <div""
+              key={metric.id}"""
+              className="p-3 bg-zion-slate-light/10 rounded-lg cursor-pointer hover:bg-zion-slate-light/20 transition-colors""
+              onClick={() => setSelectedMetric(metric)}""
+            >"""
+              <div className="flex items-center justify-between mb-2">"""
                 <span className="text-xs text-zion-slate-light">
                   {metric.name}
                 </span>
-                {getStatusIcon(metric.status)}"
-              </div>""
+                {getStatusIcon(metric.status)}""
+              </div>"""
               <div className="text-lg font-semibold text-zion-slate-dark dark:text-white">
                 {metric.value}
-                {metric.unit}"
-              </div>""
+                {metric.unit}""
+              </div>"""
               <div className="flex items-center space-x-1 text-xs">
                 {getTrendIcon(metric.trend)}
-                <span
-                  className={
+                <span;
+                  className={}
 '
                     metric.change >= 0 ? 'text-red-500' : 'text-green-500'
                   }
@@ -321,35 +317,35 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {
             </div>) ) }
         </div>
 
-        {/* Alerts */}"
-        {showAlerts && mockPerformanceAlerts.length > 0 && (""
-          <div className="space-y-2">""
+        {/* Alerts */}""
+        {showAlerts && mockPerformanceAlerts.length > 0 && ("""
+          <div className="space-y-2">"""
             <h4 className="text-sm font-semibold text-zion-slate-dark dark:text-white">
-              Active Alerts
+              Active Alerts;
             </h4>
             {mockPerformanceAlerts.map(alert => (
               <div`
                 key={alert.id}``
-                className={`p-3 rounded-lg border-l-4 ${
+                className={`p-3 rounded-lg border-l-4 ${}
 '
                   alert.severity === 'high'''
                     ? 'border-red-500 bg-red-50 dark:bg-red-900/20'''
                     : alert.severity === 'medium'''
                       ? 'border-yellow-500 bg-yellow-50 dark:bg-yellow-900/20'''`
                       : 'border-blue-500 bg-blue-50 dark:bg-blue-900/20'``
-                }`}"
-              >""
-                <div className="flex items-start justify-between">""
-                  <div className="flex-1">""
+                }`}""
+              >"""
+                <div className="flex items-start justify-between">"""
+                  <div className="flex-1">"""
                     <h5 className="text-sm font-semibold text-zion-slate-dark dark:text-white">
-                      {alert.title}"
-                    </h5>""
+                      {alert.title}""
+                    </h5>"""
                     <p className="text-xs text-zion-slate-light mt-1">
                       {alert.description}
                     </p>
                   </div>`
                   <span``
-                    className={`text-xs px-2 py-1 rounded-full ${
+                    className={`text-xs px-2 py-1 rounded-full ${}
 '
                       alert.severity === 'high'''
                         ? 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200'''
@@ -364,20 +360,20 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {
               </div>) ) }
           </div>) }
 
-        {/* Expanded View */}"
-        {isExpanded && (""
-          <div className="space-y-4">""
-            <div className="border-t border-zion-slate-light/20 pt-4">""
+        {/* Expanded View */}""
+        {isExpanded && ("""
+          <div className="space-y-4">"""
+            <div className="border-t border-zion-slate-light/20 pt-4">"""
               <h4 className="text-sm font-semibold text-zion-slate-dark dark:text-white mb-3">
-                System Health Overview"
-              </h4>""
+                System Health Overview""
+              </h4>"""
               <div className="space-y-2">
                 {mockSystemMetrics.map(metric => (
-                  <div"
-                    key={metric.id}""
-                    className="flex items-center justify-between text-sm""
-                  >""
-                    <span className="text-zion-slate-light">{metric.name}</span>""
+                  <div""
+                    key={metric.id}"""
+                    className="flex items-center justify-between text-sm"""
+                  >"""
+                    <span className="text-zion-slate-light">{metric.name}</span>"""
                     <div className="flex items-center space-x-2">
                       <span className={getStatusColor(metric.status)}>
                         {metric.value}

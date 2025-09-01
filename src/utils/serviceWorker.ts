@@ -1,24 +1,21 @@
-// Service Worker Registration Utility
-export function registerServiceWorker(): void {
-
-  if ('serviceWorker' in navigator) {
-
-    navigator.serviceWorker
+// Service Worker Registration Utility;
+export function registerServiceWorker(): void {}
+  if ('serviceWorker' in navigator) {}
+    navigator.serviceWorker;
       .register(swUrl)
-      .then((registration) => {
+      .then((registration) => {}
 '
-        registration.addEventListener('updatefound', () => {
-          if (newWorker) {
+        registration.addEventListener('updatefound', () => {}
+          if (newWorker) {}
 '
-            newWorker.addEventListener('statechange', () => {
+            newWorker.addEventListener('statechange', () => {}
 '
-              if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-
-                // New content available
+              if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {}
+                // New content available;
               }
             })}
         })})
-      .catch(() => {
+      .catch(() => {}
         // console.error('SW registration failed')
         return undefined;
       });
@@ -26,15 +23,13 @@ export function registerServiceWorker(): void {
   return Promise.resolve(undefined);
 }
 
-export function unregisterServiceWorker(): void {
+export function unregisterServiceWorker(): void {}
 '
-  if ('serviceWorker' in navigator) {
-
-    navigator.serviceWorker.ready
-      .then((registration) => {
-
+  if ('serviceWorker' in navigator) {}
+    navigator.serviceWorker.ready;
+      .then((registration) => {}
         registration.unregister()})
-      .catch(() => {
+      .catch(() => {}
         // console.error('Unregister failed')
         return false;
       });

@@ -25,8 +25,8 @@ export type InnovativeService = {;
   startup?: boolean;
   smb?: boolean};
 ;
-export const innovativeServices2026: InnovativeService[] = [// MICRO SAAS SERVICES
-  {
+export const innovativeServices2026: InnovativeService[] = [// MICRO SAAS SERVICES;
+  {}
 '
     id: 'ai-powered-customer-churn-predictor','
     title: 'AI-Powered Customer Churn Predictor','
@@ -57,9 +57,9 @@ export const innovativeServices2026: InnovativeService[] = [// MICRO SAAS SERVIC
     mobile: true,
     enterprise: true,
     startup: true,
-    smb: true
+    smb: true;
   },
-  {
+  {}
 '
     id: 'intelligent-inventory-optimization','
     title: 'Intelligent Inventory Optimization','
@@ -90,10 +90,10 @@ export const innovativeServices2026: InnovativeService[] = [// MICRO SAAS SERVIC
     mobile: true,
     enterprise: true,
     startup: true,
-    smb: true
+    smb: true;
   },
-  // NEW INNOVATIVE MICRO SAAS SERVICES
-  {
+  // NEW INNOVATIVE MICRO SAAS SERVICES;
+  {}
 '
     id: 'smart-energy-consumption-monitor','
     title: 'Smart Energy Consumption Monitor','
@@ -124,9 +124,9 @@ export const innovativeServices2026: InnovativeService[] = [// MICRO SAAS SERVIC
     mobile: true,
     enterprise: true,
     startup: true,
-    smb: true
+    smb: true;
   },
-  {
+  {}
 '
     id: 'automated-compliance-monitor','
     title: 'Automated Compliance Monitor','
@@ -157,9 +157,9 @@ export const innovativeServices2026: InnovativeService[] = [// MICRO SAAS SERVIC
     mobile: true,
     enterprise: true,
     startup: true,
-    smb: true
+    smb: true;
   },
-  {
+  {}
 '
     id: 'autonomous-customer-service-agent','
     title: 'Autonomous Customer Service Agent','
@@ -190,9 +190,9 @@ export const innovativeServices2026: InnovativeService[] = [// MICRO SAAS SERVIC
     mobile: true,
     enterprise: true,
     startup: true,
-    smb: true
+    smb: true;
   },
-  {
+  {}
 '
     id: 'predictive-maintenance-platform','
     title: 'Predictive Maintenance Platform','
@@ -223,9 +223,9 @@ export const innovativeServices2026: InnovativeService[] = [// MICRO SAAS SERVIC
     mobile: true,
     enterprise: true,
     startup: true,
-    smb: true
+    smb: true;
   },
-  {
+  {}
 '
     id: 'ai-powered-fraud-detection','
     title: 'AI-Powered Fraud Detection','
@@ -256,11 +256,11 @@ export const innovativeServices2026: InnovativeService[] = [// MICRO SAAS SERVIC
     mobile: true,
     enterprise: true,
     startup: true,
-    smb: true
+    smb: true;
   },
 
-  // ADVANCED IT SERVICES
-  {
+  // ADVANCED IT SERVICES;
+  {}
 '
     id: 'cloud-migration-accelerator','
     title: 'Cloud Migration Accelerator','
@@ -291,9 +291,9 @@ export const innovativeServices2026: InnovativeService[] = [// MICRO SAAS SERVIC
     mobile: false,
     enterprise: true,
     startup: false,
-    smb: false
+    smb: false;
   },
-  {
+  {}
 '
     id: 'cybersecurity-posture-assessment','
     title: 'Cybersecurity Posture Assessment','
@@ -324,9 +324,9 @@ export const innovativeServices2026: InnovativeService[] = [// MICRO SAAS SERVIC
     mobile: false,
     enterprise: true,
     startup: true,
-    smb: true
+    smb: true;
   },
-  {
+  {}
 '
     id: 'digital-transformation-consulting','
     title: 'Digital Transformation Consulting','
@@ -357,11 +357,11 @@ export const innovativeServices2026: InnovativeService[] = [// MICRO SAAS SERVIC
     mobile: false,
     enterprise: true,
     startup: true,
-    smb: true
+    smb: true;
   },
 
-  // EMERGING TECHNOLOGY SOLUTIONS
-  {
+  // EMERGING TECHNOLOGY SOLUTIONS;
+  {}
 '
     id: 'quantum-computing-as-a-service','
     title: 'Quantum Computing as a Service','
@@ -392,9 +392,9 @@ export const innovativeServices2026: InnovativeService[] = [// MICRO SAAS SERVIC
     mobile: false,
     enterprise: true,
     startup: false,
-    smb: false
+    smb: false;
   },
-  {
+  {}
 '
     id: 'blockchain-supply-chain-tracking','
     title: 'Blockchain Supply Chain Tracking','
@@ -425,9 +425,9 @@ export const innovativeServices2026: InnovativeService[] = [// MICRO SAAS SERVIC
     mobile: true,
     enterprise: true,
     startup: true,
-    smb: true
+    smb: true;
   },
-  {
+  {}
 '
     id: 'metaverse-commerce-platform','
     title: 'Metaverse Commerce Platform','
@@ -458,15 +458,14 @@ export const innovativeServices2026: InnovativeService[] = [// MICRO SAAS SERVIC
     mobile: true,
     enterprise: true,
     startup: true,
-    smb: true
+    smb: true;
   }
 ];
 
-// Combine original services with new services
-
+// Combine original services with new services;
 export default allServices;
 
-export 
+export;
   };
   {;'
     name: 'Emerging Technologies',;'

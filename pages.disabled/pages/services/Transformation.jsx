@@ -1,25 +1,34 @@
 import React from 'react';'
 import { Link } from 'react-router-dom';
-const DigitalTransformation = () => {
+const DigitalTransformation = () => {}
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">""
       <section className="pt-24 pb-16 bg-gradient-to-r from-slate-900 to-slate-800 text-white">""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
           <div className="text-center">""
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
+<<<<<<< HEAD:pages.disabled/pages/services/Transformation.jsx
               Digital Transformation"
+=======
+              Digital Transformation;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/Transformation.jsx
             </h1>""
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Modernize your business processes and operations.
             </p>
           </div>
+<<<<<<< HEAD:pages.disabled/pages/services/Transformation.jsx
         </div>"
+=======
+        </div>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/Transformation.jsx
       </section>""
       <section className="py-16 bg-white">""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">""
             <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl">""
               <h3 className="text-xl font-semibold text-slate-900 mb-4">
+<<<<<<< HEAD:pages.disabled/pages/services/Transformation.jsx
                 Process Automation"
               </h3>""
               <p className="text-slate-600">
@@ -37,12 +46,32 @@ const DigitalTransformation = () => {
             <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl">""
               <h3 className="text-xl font-semibold text-slate-900 mb-4">
                 Change Management"
+=======
+                Process Automation;
+              </h3>""
+              <p className="text-slate-600">
+                Streamline workflows with intelligent automation.
+              </p>
+            </div>""
+            <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl">""
+              <h3 className="text-xl font-semibold text-slate-900 mb-4">
+                Legacy Modernization;
+              </h3>""
+              <p className="text-slate-600">
+                Update and integrate legacy systems.
+              </p>
+            </div>""
+            <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl">""
+              <h3 className="text-xl font-semibold text-slate-900 mb-4">
+                Change Management;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/Transformation.jsx
               </h3>""
               <p className="text-slate-600">
                 Guide your team through digital adoption.
               </p>
             </div>
           </div>
+<<<<<<< HEAD:pages.disabled/pages/services/Transformation.jsx
         </div>"
       </section>""
       <section className="py-16 bg-gradient-to-r from-blue-600 to-cyan-600 text-white">""
@@ -51,8 +80,18 @@ const DigitalTransformation = () => {
           <Link""
             to="/contact""
             className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300"
+=======
+        </div>
+      </section>""
+      <section className="py-16 bg-gradient-to-r from-blue-600 to-cyan-600 text-white">""
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">""
+          <h2 className="text-3xl font-bold mb-6">Transform Your Business</h2>
+          <Link""
+            to="/contact""
+            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/Transformation.jsx
           >
-            Get Started
+            Get Started;
           </Link>
         </div>
       </section>
@@ -60,5 +99,10 @@ const DigitalTransformation = () => {
   );
 };
 export { DigitalTransformation };
+<<<<<<< HEAD:pages.disabled/pages/services/Transformation.jsx
 export default DigitalTransformation;'"
 '"'"
+=======
+export default DigitalTransformation;
+'""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/Transformation.jsx

@@ -1,17 +1,16 @@
-
-describe('EnhancedAnalytics', () => {
-  it('renders without crashing', () => {
+describe('EnhancedAnalytics', () => {}
+  it('renders without crashing', () => {}
     render(<EnhancedAnalytics  />) ;
     expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ;
 
-describe ('EnhancedAnalytics', () => {
+describe ('EnhancedAnalytics', () => {}
 '
-  it ('renders without crashing', () => {
+  it ('renders without crashing', () => {}
     render (<EnhancedAnalytics  />) ;'
     expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
 '
-  it ('displays expected content', () => {
+  it ('displays expected content', () => {}
     render (<EnhancedAnalytics  />) ;
-    // Add specific test assertions based on component content
+    // Add specific test assertions based on component content;
   }) }) ;
 '

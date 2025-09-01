@@ -1,20 +1,18 @@
 import React from 'react';'
 import { motion } from 'framer-motion';
-export function GradientHeading({
-
+export function GradientHeading({}
   children,'
   className = '','
   size = '4xl','
   gradient = 'zion',
-  customColors}) {
-
-  const sizeClasses = {
+  customColors}) {}
+  const sizeClasses = {}
 '
     sm: 'text-sm','
     md: 'text-base','
     lg: 'text-lg','
     xl: 'text-xl',2xl': 'text-2xl',3xl': 'text-3xl',4xl': 'text-4xl',5xl': 'text-5xl',6xl': 'text-6xl',7xl': 'text-7xl'};
-  const gradientClasses = {
+  const gradientClasses = {}
 '
     zion: 'bg-gradient-to-r from-zion-purple via-zion-cyan to-zion-blue bg-clip-text text-transparent','
     cyber:''
@@ -28,7 +26,7 @@ export function GradientHeading({
       : ''};``
   const baseClasses = `${sizeClasses[size]} font-bold leading-tight ${gradientClasses[gradient]} ${className}`;
   return()
-    <motion.h1
+    <motion.h1;
       className={baseClasses}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}'

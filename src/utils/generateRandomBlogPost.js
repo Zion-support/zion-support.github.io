@@ -1,6 +1,5 @@
-export const generateRandomBlogPost = () => {
-  return {
-
+export const generateRandomBlogPost = () => {}
+  return {}
     id: Math.random().toString(36).substr(2, 9),
     title: 'Sample Blog Post','
     excerpt: 'This is a sample blog post excerpt for demonstration purposes.','

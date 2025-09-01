@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import {
-
+import {}
   BarChart3,
   TrendingUp,
   Brain,
@@ -14,8 +13,8 @@ import {
   Minimize2,
   Calendar,'
   Activity} from 'lucide-react';
-const mockModels = [
-  {
+const mockModels = []
+  {}
 '
     id: 'model-1','
     name: 'Customer Lifetime Value Predictor',
@@ -24,7 +23,7 @@ const mockModels = [
     status: 'active',
     predictions: 15420,'
     category: 'Customer Analytics'},
-  {
+  {}
 '
     id: 'model-2','
     name: 'Revenue Forecasting Model',
@@ -33,7 +32,7 @@ const mockModels = [
     status: 'active',
     predictions: 2847500,'
     category: 'Financial Analytics'},
-  {
+  {}
 '
     id: 'model-3','
     name: 'Churn Prediction Model',
@@ -41,9 +40,9 @@ const mockModels = [
     lastTrained: '2024-01-12T00:00:00.000Z','
     status: 'training',
     predictions: 15420,'
-    category: 'Customer Analytics'},
+    category: 'Customer Analytics'}
 ];
-export function AdvancedBusinessIntelligence() {
+export function AdvancedBusinessIntelligence() {}
   const [isOpen, setIsOpen] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);'
@@ -61,40 +60,37 @@ export function AdvancedBusinessIntelligence() {
     { value: '7d', label: '7 Days' },'
     { value: '30d', label: '30 Days' },'
     { value: '90d', label: '90 Days' },'
-    { value: '1y', label: '1 Year' },
+    { value: '1y', label: '1 Year' }
   ];'
   const filteredMetrics =''
     selectedCategory === 'all'
-      ? data
+      ? data;
       : data.filter(metric => metric.category === selectedCategory);
-  const refreshData = async () => {
+  const refreshData = async () => {}
     setIsRefreshing(true);
-    // Simulate API call
+    // Simulate API call;
     await new Promise(resolve => setTimeout(resolve, 1500));
     setIsRefreshing(false);
   };
-  useEffect(() => {
-    if(autoRefresh) {
-
-      const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
+  useEffect(() => {}
+    if(autoRefresh) {}
+      const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds;
       return () => clearInterval(interval);
     }
   }, [autoRefresh]);
-  const getTrendIcon = trend => {
-
-    switch (trend) {
+  const getTrendIcon = trend => {}
+    switch (trend) {}
 '
-      case 'up':
-        return <TrendingUp className="w-4 h-4 text-green-500" />;'"
-      case 'down':""
-        return <TrendingUp className="w-4 h-4 text-red-500 rotate-180" />;"
-      default:""
+      case 'up': any;
+        return <TrendingUp className="w-4 h-4 text-green-500" />;'""
+      case 'down':"""
+        return <TrendingUp className="w-4 h-4 text-red-500 rotate-180" />;""
+      default:"""
         return <Activity className="w-4 h-4 text-gray-500" />;
     }
   };
-  const getPriorityColor = priority => {
-
-    switch (priority) {
+  const getPriorityColor = priority => {}
+    switch (priority) {}
 '
       case 'high':''
         return 'border-red-500 bg-red-50 dark:bg-red-900/20';'
@@ -104,64 +100,61 @@ export function AdvancedBusinessIntelligence() {
         return 'border-green-500 bg-green-50 dark:bg-green-900/20';
     }
   };
-  const getInsightIcon = type => {
-
-    switch (type) {
-'"
-      case 'prediction':""
-        return <Brain className="w-5 h-5 text-blue-500" />;'"
-      case 'anomaly':""
-        return <AlertTriangle className="w-5 h-5 text-red-500" />;'"
-      case 'opportunity':""
-        return <Target className="w-5 h-5 text-green-500" />;'"
-      case 'risk':""
-        return <AlertTriangle className="w-5 h-5 text-orange-500" />;"
-      default:""
+  const getInsightIcon = type => {}
+    switch (type) {}
+'""
+      case 'prediction':"""
+        return <Brain className="w-5 h-5 text-blue-500" />;'""
+      case 'anomaly':"""
+        return <AlertTriangle className="w-5 h-5 text-red-500" />;'""
+      case 'opportunity':"""
+        return <Target className="w-5 h-5 text-green-500" />;'""
+      case 'risk':"""
+        return <AlertTriangle className="w-5 h-5 text-orange-500" />;""
+      default:"""
         return <Zap className="w-5 h-5 text-purple-500" />;
     }
   };
-  const formatValue = (value, unit) => {
+  const formatValue = (value, unit) => {}
 '
-    if (unit === 'USD') {
+    if (unit === 'USD') {}
 '
-      return new Intl.NumberFormat('en-US', {
+      return new Intl.NumberFormat('en-US', {}
 '
         style: 'currency','
         currency: 'USD',
         minimumFractionDigits: 0,
         maximumFractionDigits: 0}).format(value);
     }'
-    if (unit === '%') {
-
+    if (unit === '%') {}
       return `${value.toFixed(1)}%`;
     }'
     return new Intl.NumberFormat('en-US').format(value);
   };
-  if(!isOpen) {
-
+  if(!isOpen) {}
     return()
-      <button"
-        onClick={() => setIsOpen(true)}""
-        className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-40""
-        title="Open Business Intelligence Dashboard""
-      >""
+      <button""
+        onClick={() => setIsOpen(true)}"""
+        className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-40"""
+        title="Open Business Intelligence Dashboard"""
+      >"""
         <Brain className="w-6 h-6" />
       </button>
     );
   }
-  if (isMinimized) {
-"
-    return (""
-      <div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50">""
-        <div className="flex items-center gap-2 p-3">""
-          <Brain className="w-5 h-5 text-zion-purple" />""
+  if (isMinimized) {}
+""
+    return ("""
+      <div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50">"""
+        <div className="flex items-center gap-2 p-3">"""
+          <Brain className="w-5 h-5 text-zion-purple" />"""
           <span className="text-sm font-medium text-zion-slate">
-            BI Dashboard
+            BI Dashboard;
           </span>
-          <button"
-            onClick={() => setIsMinimized(false)}""
-            className="ml-auto p-1 hover:bg-zion-slate-light rounded""
-          >""
+          <button""
+            onClick={() => setIsMinimized(false)}"""
+            className="ml-auto p-1 hover:bg-zion-slate-light rounded"""
+          >"""
             <Maximize2 className="w-4 h-4" />
           </button>
         </div>
@@ -172,25 +165,25 @@ export function AdvancedBusinessIntelligence() {
     <div'`'`
       className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1200px] h-[800px]'}`}
       ref={containerRef}
-    >"
-      {/* Header */}""
-      <div className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-4 flex items-center justify-between">""
-        <div className="flex items-center gap-3">""
-          <Brain className="w-6 h-6" />"
-          <div>""
+    >""
+      {/* Header */}"""
+      <div className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-4 flex items-center justify-between">"""
+        <div className="flex items-center gap-3">"""
+          <Brain className="w-6 h-6" />""
+          <div>"""
             <h2 className="text-lg font-bold">
-              Advanced Business Intelligence"
-            </h2>""
+              Advanced Business Intelligence""
+            </h2>"""
             <p className="text-sm opacity-90">
-              AI-Powered Insights & Analytics
+              AI-Powered Insights & Analytics;
             </p>
-          </div>"
-        </div>""
+          </div>""
+        </div>"""
         <div className="flex items-center gap-2">
           <button'`
             onClick={() => setAutoRefresh(!autoRefresh)}'`'`
             className={`p-2 rounded-lg transition-colors ${autoRefresh ? 'bg-white/20' : 'hover:bg-white/10'}`}
-            title={
+            title={}
 '
               autoRefresh ? 'Auto-refresh enabled' : 'Auto-refresh disabled'
             }
@@ -199,39 +192,39 @@ export function AdvancedBusinessIntelligence() {
               className={`w-4 h-4 ${autoRefresh ? 'animate-spin' : ''}`}
             />
           </button>
-          <button"
-            onClick={() => setIsMinimized(true)}""
-            className="p-2 hover:bg-white/10 rounded-lg transition-colors""
-          >""
+          <button""
+            onClick={() => setIsMinimized(true)}"""
+            className="p-2 hover:bg-white/10 rounded-lg transition-colors"""
+          >"""
             <Minimize2 className="w-4 h-4" />
           </button>
-          <button"
-            onClick={() => setIsFullscreen(!isFullscreen)}""
-            className="p-2 hover:bg-white/10 rounded-lg transition-colors"
-          >"
-            {isFullscreen ? (""
-              <Minimize2 className="w-4 h-4" />"
-            ) : (""
+          <button""
+            onClick={() => setIsFullscreen(!isFullscreen)}"""
+            className="p-2 hover:bg-white/10 rounded-lg transition-colors""
+          >""
+            {isFullscreen ? ("""
+              <Minimize2 className="w-4 h-4" />""
+            ) : ("""
               <Maximize2 className="w-4 h-4" />
             )}
           </button>
-          <button"
-            onClick={() => setIsOpen(false)}""
-            className="p-2 hover:bg-white/10 rounded-lg transition-colors""
-          >""
+          <button""
+            onClick={() => setIsOpen(false)}"""
+            className="p-2 hover:bg-white/10 rounded-lg transition-colors"""
+          >"""
             <X className="w-4 h-4" />
           </button>
         </div>
       </div>
-"
-      {/* Controls */}""
-      <div className="bg-zion-slate-light/50 p-4 border-b border-zion-slate-light">""
-        <div className="flex items-center justify-between">""
+""
+      {/* Controls */}"""
+      <div className="bg-zion-slate-light/50 p-4 border-b border-zion-slate-light">"""
+        <div className="flex items-center justify-between">"""
           <div className="flex items-center gap-4">
-            <select
-              value={selectedCategory}"
-              onChange={e => setSelectedCategory(e.target.value)}""
-              className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-zion-slate"
+            <select;
+              value={selectedCategory}""
+              onChange={e => setSelectedCategory(e.target.value)}"""
+              className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-zion-slate""
             >
               {categories.map(category => (
                 <option key={category} value={category}>'
@@ -239,10 +232,10 @@ export function AdvancedBusinessIntelligence() {
                 </option>
               ))}
             </select>
-            <select
-              value={timeRange}"
-              onChange={e => setTimeRange(e.target.value)}""
-              className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-zion-slate"
+            <select;
+              value={timeRange}""
+              onChange={e => setTimeRange(e.target.value)}"""
+              className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-zion-slate""
             >
               {timeRanges.map(range => (
                 <option key={range.value} value={range.value}>
@@ -250,86 +243,85 @@ export function AdvancedBusinessIntelligence() {
                 </option>
               ))}
             </select>
-            <button
-              onClick={refreshData}"
-              disabled={isRefreshing}""
-              className="px-4 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/90 transition-colors disabled:opacity-50 flex items-center gap-2"
+            <button;
+              onClick={refreshData}""
+              disabled={isRefreshing}"""
+              className="px-4 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/90 transition-colors disabled:opacity-50 flex items-center gap-2""
             >'`
               <RefreshCw'`'`
                 className={`w-4 h-4 ${isRefreshing ? 'animate-spin' : ''}`}
               />
-              Refresh
-            </button>"
-          </div>""
-          <div className="flex items-center gap-4">""
-            <label className="flex items-center gap-2 text-sm text-zion-slate">"
-              <input""
-                type="checkbox"
-                checked={showPredictions}"
-                onChange={e => setShowPredictions(e.target.checked)}""
-                className="rounded"
+              Refresh;
+            </button>""
+          </div>"""
+          <div className="flex items-center gap-4">"""
+            <label className="flex items-center gap-2 text-sm text-zion-slate">""
+              <input"""
+                type="checkbox""
+                checked={showPredictions}""
+                onChange={e => setShowPredictions(e.target.checked)}"""
+                className="rounded""
               />
-              Show Predictions"
-            </label>""
-            <button className="px-4 py-2 bg-zion-purple text-white rounded-lg hover:bg-zion-purple/90 transition-colors flex items-center gap-2">""
+              Show Predictions""
+            </label>"""
+            <button className="px-4 py-2 bg-zion-purple text-white rounded-lg hover:bg-zion-purple/90 transition-colors flex items-center gap-2">"""
               <Download className="w-4 h-4" />
-              Export Report
+              Export Report;
             </button>
           </div>
         </div>
       </div>
-"
-      {/* Tabs */}""
+""
+      {/* Tabs */}"""
       <div className="flex border-b border-zion-slate-light">'
         {[''
           { id: 'overview', label: 'Overview', icon: BarChart3 },'
           { id: 'insights', label: 'AI Insights', icon: Brain },'
           { id: 'models', label: 'ML Models', icon: Zap },'
-          { id: 'analytics', label: 'Analytics', icon: TrendingUp },
-        ].map(tab => {
-
+          { id: 'analytics', label: 'Analytics', icon: TrendingUp }
+        ].map(tab => {}
           const Icon = tab.icon;
           return ()
-            <button
+            <button;
               key={tab.id}`
               onClick={() => setActiveTab(tab.id)}``
-              className={`flex items-center gap-2 px-6 py-3 border-b-2 transition-colors ${
+              className={`flex items-center gap-2 px-6 py-3 border-b-2 transition-colors ${}
 '
                 activeTab === tab.id''
                   ? 'border-zion-purple text-zion-purple bg-zion-purple/5'''`
                   : 'border-transparent text-zion-slate-light hover:text-zion-slate hover:bg-zion-slate-light/20'``
-              }`}"
-            >""
+              }`}""
+            >"""
               <Icon className="w-4 h-4" />
               {tab.label}
             </button>
           );
         })}
       </div>
-"
-      {/* Content */}""
-      <div className="p-6 overflow-y-auto h-[calc(100%-200px)]">'"
-        {activeTab === 'overview' && (""
-          <div className="space-y-6">"
-            {/* Key Metrics Grid */}""
+""
+      {/* Content */}"""
+      <div className="p-6 overflow-y-auto h-[calc(100%-200px)]">'""
+        {activeTab === 'overview' && ("""
+          <div className="space-y-6">""
+            {/* Key Metrics Grid */}"""
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {filteredMetrics.map(metric => (
                 <div`
                   key={metric.id}``
-                  className={`p-4 rounded-xl border-2 ${getPriorityColor(metric.priority)} transition-all duration-300 hover:shadow-lg`}"
-                >""
-                  <div className="flex items-center justify-between mb-3">""
+                  className={`p-4 rounded-xl border-2 ${getPriorityColor(metric.priority)} transition-all duration-300 hover:shadow-lg`}""
+                >"""
+                  <div className="flex items-center justify-between mb-3">"""
                     <h3 className="font-semibold text-zion-slate">
                       {metric.name}
                     </h3>
-                    {getTrendIcon(metric.trend)}"
-                  </div>""
+                    {getTrendIcon(metric.trend)}""
+                  </div>"""
                   <div className="text-2xl font-bold text-zion-slate mb-2">
-                    {formatValue(metric.value, metric.unit)}"
-                  </div>""
+                    {formatValue(metric.value, metric.unit)}""
+                  </div>"""
                   <div className="flex items-center justify-between text-sm">`
                     <span``
-                      className={`font-medium ${
+                      className={`font-medium ${}
 '
                         metric.trend === 'up'''
                           ? 'text-green-600'''
@@ -339,19 +331,19 @@ export function AdvancedBusinessIntelligence() {
                       }`}
                     >'
                       {metric.trend === 'up' ? '+' : ''}
-                      {metric.change}%"
-                    </span>""
+                      {metric.change}%""
+                    </span>"""
                     <span className="text-zion-slate-light">
                       Target: {formatValue(metric.target, metric.unit)}
                     </span>
-                  </div>"
-                  {showPredictions && (""
-                    <div className="mt-3 pt-3 border-t border-zion-slate-light/30">""
+                  </div>""
+                  {showPredictions && ("""
+                    <div className="mt-3 pt-3 border-t border-zion-slate-light/30">"""
                       <div className="text-xs text-zion-slate-light">'
                         AI Prediction:{' '}
                         {formatValue()
                           metric.value * (1 + metric.change / 100),
-                          metric.unit
+                          metric.unit;
                         )}
                       </div>
                     </div>
@@ -359,40 +351,39 @@ export function AdvancedBusinessIntelligence() {
                 </div>
               ))}
             </div>
-"
-            {/* Quick Actions */}""
-            <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 p-4 rounded-xl border border-zion-cyan/20">""
-              <h3 className="font-semibold text-zion-slate mb-3 flex items-center gap-2">""
+""
+            {/* Quick Actions */}"""
+            <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 p-4 rounded-xl border border-zion-cyan/20">"""
+              <h3 className="font-semibold text-zion-slate mb-3 flex items-center gap-2">"""
                 <Zap className="w-5 h-5 text-zion-cyan" />
-                Quick Actions"
-              </h3>""
+                Quick Actions""
+              </h3>"""
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                {[
-                  {
+                {[]
+                  {}
 '
                     label: 'Generate Report',
                     icon: Download,
                     action: () => {}},
-                  {
+                  {}
 '
                     label: 'Schedule Review',
                     icon: Calendar,
                     action: () => {}},
-                  {
+                  {}
 '
                     label: 'Set Alerts',
                     icon: AlertTriangle,
                     action: () => {}},'
-                  { label: 'Export Data', icon: Download, action: () => {} },
-                ].map((item, index) => {
-
+                  { label: 'Export Data', icon: Download, action: () => {} }
+                ].map((item, index) => {}
                   const Icon = item.icon;
                   return ()
-                    <button
-                      key={index}"
-                      onClick={item.action}""
-                      className="p-3 bg-white dark:bg-zion-slate rounded-lg border border-zion-slate-light hover:border-zion-cyan transition-colors text-sm font-medium text-zion-slate hover:text-zion-cyan""
-                    >""
+                    <button;
+                      key={index}""
+                      onClick={item.action}"""
+                      className="p-3 bg-white dark:bg-zion-slate rounded-lg border border-zion-slate-light hover:border-zion-cyan transition-colors text-sm font-medium text-zion-slate hover:text-zion-cyan"""
+                    >"""
                       <Icon className="w-4 h-4 mx-auto mb-2" />
                       {item.label}
                     </button>
@@ -402,23 +393,23 @@ export function AdvancedBusinessIntelligence() {
             </div>
           </div>
         )}
-'"
-        {activeTab === 'insights' && (""
+'""
+        {activeTab === 'insights' && ("""
           <div className="space-y-4">
             {insights.map(insight => (
-              <div"
-                key={insight.id}""
-                className="p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow""
-              >""
-                <div className="flex items-start gap-3">"
-                  {getInsightIcon(insight.type)}""
-                  <div className="flex-1">""
-                    <div className="flex items-center gap-3 mb-2">""
+              <div""
+                key={insight.id}"""
+                className="p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow"""
+              >"""
+                <div className="flex items-start gap-3">""
+                  {getInsightIcon(insight.type)}"""
+                  <div className="flex-1">"""
+                    <div className="flex items-center gap-3 mb-2">"""
                       <h3 className="font-semibold text-zion-slate">
                         {insight.title}
                       </h3>`
                       <span``
-                        className={`px-2 py-1 rounded-full text-xs font-medium ${
+                        className={`px-2 py-1 rounded-full text-xs font-medium ${}
 '
                           insight.impact === 'high'''
                             ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300'''
@@ -427,25 +418,25 @@ export function AdvancedBusinessIntelligence() {
                               : 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300'``
                         }`}
                       >
-                        {insight.impact} Impact"
-                      </span>""
+                        {insight.impact} Impact""
+                      </span>"""
                       <span className="text-sm text-zion-slate-light">
-                        {insight.confidence}% confidence
-                      </span>"
-                    </div>""
+                        {insight.confidence}% confidence;
+                      </span>""
+                    </div>"""
                     <p className="text-zion-slate-light mb-3">
                       {insight.description}
                     </p>
-                    {insight.actionable && ("
-                      <div>""
+                    {insight.actionable && (""
+                      <div>"""
                         <h4 className="font-medium text-zion-slate mb-2">
-                          Recommended Actions:"
-                        </h4>""
+                          Recommended Actions:""
+                        </h4>"""
                         <div className="flex flex-wrap gap-2">
                           {insight.actions.map((action, index) => (
-                            <span"
-                              key={index}""
-                              className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan rounded-full text-sm border border-zion-cyan/20"
+                            <span""
+                              key={index}"""
+                              className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan rounded-full text-sm border border-zion-cyan/20""
                             >
                               {action}
                             </span>
@@ -459,20 +450,20 @@ export function AdvancedBusinessIntelligence() {
             ))}
           </div>
         )}
-'"
-        {activeTab === 'models' && (""
+'""
+        {activeTab === 'models' && ("""
           <div className="space-y-4">
             {models.map(model => (
-              <div"
-                key={model.id}""
-                className="p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow""
-              >""
-                <div className="flex items-center justify-between mb-3">""
+              <div""
+                key={model.id}"""
+                className="p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow"""
+              >"""
+                <div className="flex items-center justify-between mb-3">"""
                   <h3 className="font-semibold text-zion-slate">
                     {model.name}
                   </h3>`
                   <span``
-                    className={`px-3 py-1 rounded-full text-sm font-medium ${
+                    className={`px-3 py-1 rounded-full text-sm font-medium ${}
 '
                       model.status === 'active'''
                         ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300'''
@@ -482,29 +473,29 @@ export function AdvancedBusinessIntelligence() {
                     }`}
                   >
                     {model.status}
-                  </span>"
-                </div>""
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">"
-                  <div>""
-                    <span className="text-zion-slate-light">Accuracy:</span>""
+                  </span>""
+                </div>"""
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">""
+                  <div>"""
+                    <span className="text-zion-slate-light">Accuracy:</span>"""
                     <div className="font-semibold text-zion-slate">
                       {model.accuracy}%
                     </div>
-                  </div>"
-                  <div>""
-                    <span className="text-zion-slate-light">Category:</span>""
+                  </div>""
+                  <div>"""
+                    <span className="text-zion-slate-light">Category:</span>"""
                     <div className="font-semibold text-zion-slate">
                       {model.category}
                     </div>
-                  </div>"
-                  <div>""
-                    <span className="text-zion-slate-light">Last Trained:</span>""
+                  </div>""
+                  <div>"""
+                    <span className="text-zion-slate-light">Last Trained:</span>"""
                     <div className="font-semibold text-zion-slate">
                       {new Date(model.lastTrained).toLocaleDateString()}
                     </div>
-                  </div>"
-                  <div>""
-                    <span className="text-zion-slate-light">Predictions:</span>""
+                  </div>""
+                  <div>"""
+                    <span className="text-zion-slate-light">Predictions:</span>"""
                     <div className="font-semibold text-zion-slate">'
                       {new Intl.NumberFormat('en-US').format(model.predictions)}
                     </div>
@@ -514,11 +505,11 @@ export function AdvancedBusinessIntelligence() {
             ))}
           </div>
         )}
-'"
-        {activeTab === 'analytics' && (""
-          <div className="space-y-6">""
-            <div className="text-center text-zion-slate-light">""
-              <TrendingUp className="w-16 h-16 mx-auto mb-4 opacity-50" />""
+'""
+        {activeTab === 'analytics' && ("""
+          <div className="space-y-6">"""
+            <div className="text-center text-zion-slate-light">"""
+              <TrendingUp className="w-16 h-16 mx-auto mb-4 opacity-50" />"""
               <h3 className="text-lg font-semibold mb-2">Advanced Analytics</h3>
               <p>Detailed analytics and custom reports coming soon...</p>
             </div>

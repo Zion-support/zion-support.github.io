@@ -1,4 +1,4 @@
-export interface IoTEdgeService {
+export interface IoTEdgeService {}
   id: string;
   title: string;
   description: string;
@@ -9,12 +9,11 @@ export interface IoTEdgeService {
   features: string[];
   benefits: string[];
   useCases: string[];
-pricing: {
-
+pricing: {}
     starter: string;
     professional: string;
     enterprise: string;
-    custom: string
+    custom: string;
 };
   estimatedTime: string;
   technologies: string[];
@@ -25,8 +24,8 @@ pricing: {
   status: 'active' | 'beta' | 'coming-soon';
   scalability: string;
   deployment: string};
-export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
-  {
+export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = []
+  {}
 '
     id: 'smart-city-platform','
     title: 'Smart City IoT Platform','
@@ -44,7 +43,7 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
     useCases[;'
       'Municipal governments',City planners',Urban developers',Smart city initiatives'
     ],;
-    pricing: {
+    pricing: {}
 '
       starter: '$5,999/month','
       professional: '$15,999/month','
@@ -60,7 +59,7 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
     scalability: 'City-wide deployment','
     deployment: 'Phased rollout with pilot programs'
   },
-  {
+  {}
 '
     id: 'industrial-iot-suite','
     title: 'Industrial IoT Suite','
@@ -78,7 +77,7 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
     useCases[;'
       'Manufacturing plants',Industrial facilities',Warehouses',Processing plants'
     ],;
-    pricing: {
+    pricing: {}
 '
       starter: '$3,999/month','
       professional: '$9,999/month','
@@ -94,7 +93,7 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
     scalability: 'Plant-wide deployment','
     deployment: 'Modular installation with existing systems'
   },
-  {
+  {}
 '
     id: 'edge-ai-platform','
     title: 'Edge AI Computing Platform','
@@ -112,7 +111,7 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
     useCases[;'
       'Autonomous vehicles',Smart cameras',Industrial robots',Edge devices'
     ],;
-    pricing: {
+    pricing: {}
 '
       starter: '$2,999/month','
       professional: '$7,999/month','
@@ -128,7 +127,7 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
     scalability: 'Edge device deployment','
     deployment: 'Edge device installation with cloud management'
   },
-  {
+  {}
 '
     id: 'connected-device-management','
     title: 'Connected Device Management Platform','
@@ -146,7 +145,7 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
     useCases[;'
       'IoT deployments',Device manufacturers',Service providers',Enterprise IoT'
     ],;
-    pricing: {
+    pricing: {}
 '
       starter: '$1,999/month','
       professional: '$4,999/month','
@@ -162,7 +161,7 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
     scalability: 'Unlimited device support','
     deployment: 'Cloud-based with device agents'
   },
-  {
+  {}
 '
     id: 'sensor-network-platform','
     title: 'IoT Sensor Network Platform','
@@ -180,7 +179,7 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
     useCases[;'
       'Environmental monitoring',Agricultural IoT',Infrastructure monitoring',Research applications'
     ],;
-    pricing: {
+    pricing: {}
 '
       starter: '$1,499/month','
       professional: '$3,999/month','
@@ -196,7 +195,7 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
     scalability: 'Network expansion support','
     deployment: 'Sensor deployment with network setup'
   },
-  {
+  {}
 '
     id: 'edge-computing-infrastructure','
     title: 'Edge Computing Infrastructure','
@@ -214,7 +213,7 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
     useCases[;'
       'Edge applications',Distributed systems',Content delivery',Edge computing'
     ],;
-    pricing: {
+    pricing: {}
 '
       starter: '$2,499/month','
       professional: '$6,999/month','
@@ -230,7 +229,7 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
     scalability: 'Multi-node deployment','
     deployment: 'Edge node installation with management'
   },
-  {
+  {}
 '
     id: 'iot-security-platform','
     title: 'IoT Security & Privacy Platform','
@@ -248,7 +247,7 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
     useCases[;'
       'IoT deployments',Smart cities',Industrial IoT',Connected devices'
     ],;
-    pricing: {
+    pricing: {}
 '
       starter: '$2,999/month','
       professional: '$7,999/month','
@@ -264,7 +263,7 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
     scalability: 'Security across all devices','
     deployment: 'Security layer integration'
   },
-  {
+  {}
 '
     id: 'iot-data-analytics','
     title: 'IoT Data Analytics Platform','
@@ -282,7 +281,7 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
     useCases[;'
       'IoT deployments',Smart cities',Industrial monitoring',Environmental tracking'
     ],;
-    pricing: {
+    pricing: {}
 '
       starter: '$1,999/month','
       professional: '$4,999/month','
@@ -304,6 +303,6 @@ export '
     return IOT_EDGE_COMPUTING_SERVICES_2025;
 
   return IOT_EDGE_COMPUTING_SERVICES_2025.filter(service => service.category === category)};
-export 
+export;
   return IOT_EDGE_COMPUTING_SERVICES_2025};
 '

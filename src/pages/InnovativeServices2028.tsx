@@ -1,9 +1,9 @@
-        return a.price - b.price;''
-      case 'roi':;''
+return a.price - b.price;''
+      case 'roi': any;''
         return parseInt(b.roi.split('%')[0]) - parseInt(a.roi.split('%')[0]);''
-      case 'name':;
+      case 'name': any;
         return a.name.localeCompare (b.name) ;
-      default:;
+      default: any;
         return 0}
   }) ;
 
@@ -12,4 +12,4 @@
         </div>;
       </section>;
     </div>;) }'
-'"'"
+'"'""

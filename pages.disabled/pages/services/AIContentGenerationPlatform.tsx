@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
 <<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
 import React from 'react';
 import { motion } from 'framer-motion';
@@ -12,6 +13,9 @@ import {
 ========
 import {
 
+=======
+import {}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
   PenTool, 
   FileText, 
   Brain, 
@@ -36,6 +40,7 @@ import {
  } from 'lucide-react';
 ;
 export { function };
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
 export default function AIContentGenerationPlatform(...args[]):  {
 
     },;
@@ -65,12 +70,38 @@ export default function AIContentGenerationPlatform(...args[]):  {
       benefits['Plagiarism detection',Content filtering',Quality scoring',Compliance checking']},;
     {
 '
+=======
+export default function AIContentGenerationPlatform(...args[]):  {}
+    },;
+    {}
+      icon: Palette,
+      title: 'Visual Content Creation',
+      description: 'Generate stunning images, graphics, and visual assets using cutting-edge AI image generation technology.',
+      benefits['Custom brand styling',High-resolution output',Style transfer',Batch generation']},;
+    {}
+      icon: Video,
+      title: 'Video Content Generation',
+      description: 'Create professional videos, animations, and multimedia content with AI-powered video generation tools.',
+      benefits['Auto-script generation',Voice synthesis',Background music',Template library']},;
+    {}
+      icon: Code,
+      title: 'Technical Content',
+      description: 'Generate technical documentation, code comments, and developer resources with specialized AI models.',
+      benefits['Code documentation',API guides',Tutorial generation',Technical writing']},;
+    {}
+      icon: Shield,
+      title: 'Content Moderation',
+      description: 'Built-in AI content filtering and moderation to ensure all generated content meets quality and safety standards.',
+      benefits['Plagiarism detection',Content filtering',Quality scoring',Compliance checking']},;
+    {}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
       benefits['Real-time editing',Approval workflows',Version history',Team analytics']};
       icon: Users,;'
       title: 'Team Collaboration',;'
       description: 'Collaborative workspace for teams to create, edit, and manage content with version control and approval workflows.',;'
       benefits: ['Real-time editing',Approval workflows',Version history',Team analytics']};
   ]},;
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
     {
 '
       industry: 'E-commerce','
@@ -91,11 +122,32 @@ export default function AIContentGenerationPlatform(...args[]):  {
       description: 'Create professional reports, presentations, and corporate communications with consistent branding.',;'
       metrics: ['55% faster report creation',50% improvement in brand consistency',35% reduction in review cycles']};
   ];
+=======
+    {}
+      industry: 'E-commerce',
+      title: 'Product Descriptions & Marketing',
+      description: 'Create compelling product descriptions, marketing copy, and visual assets for online stores.',
+      metrics['60% faster product onboarding',35% improvement in conversion rates',25% increase in SEO traffic']},;
+    {}
+      industry: 'Publishing & Media',
+      title: 'Content Production',
+      description: 'Generate articles, blog posts, and multimedia content for digital publishing platforms.',
+      metrics['70% increase in content output',45% reduction in editorial time',40% improvement in reader engagement']},;
+    {}
+      metrics['55% faster report creation',50% improvement in brand consistency',35% reduction in review cycles']};
+      industry: 'Corporate Communications',;
+      title: 'Business Content',;
+      description: 'Create professional reports, presentations, and corporate communications with consistent branding.',;
+      metrics: ['55% faster report creation',50% improvement in brand consistency',35% reduction in review cycles']};
+  ];
+
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
     {;
       icon: TrendingUp,;'
       title: 'Scalability',;'
       description: 'Scale content production without proportional increases in resources.',;'
       value: '10x'};
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
   ];'
     'Machine Learning',;'
     'Cloud Computing',;'
@@ -113,26 +165,54 @@ export default function AIContentGenerationPlatform(...args[]):  {
         'Basic templates',''
         'Email support','        'Standard quality output''
       ],;''
+=======
+  ];
+
+    'Machine Learning',;
+    'Cloud Computing',;
+    'Real-time Processing',;
+    'API Integration',;
+    'Content Management',;
+    'Analytics & Insights';
+  ];
+
+        '10,000 words per month',100 AI-generated images',5 video generations',Basic templates',Email support',Standard quality output'
+      ],;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
       cta: 'Start Free Trial',
-      popular: false
+      popular: false;
     },
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
     {
 '
       plan: 'Professional','
       price: '$299','
       period: '/month','
+=======
+    {}
+      plan: 'Professional',
+      price: '$299',
+      period: '/month',
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
       description: 'Ideal for growing businesses and marketing teams',
       features[;'
         '100,000 words per month',1,000 AI-generated images',50 video generations',Advanced templates',Priority support',High-quality output',Team collaboration',Brand voice training'
       ],;'
       cta: 'Start Free Trial',
-      popular: true
+      popular: true;
     },
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
     {
 '
       plan: 'Enterprise','
       price: '$999','
       period: '/month','
+=======
+    {}
+      plan: 'Enterprise',
+      price: '$999',
+      period: '/month',
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
       description: 'For large organizations with high-volume content needs',
       features[;'
         'Unlimited words',Unlimited images',Unlimited videos',Custom templates',Dedicated support',Highest quality output',Advanced analytics',;'
@@ -144,8 +224,9 @@ export default function AIContentGenerationPlatform(...args[]):  {
   ];
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
 
-  return ("
+  return (""
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
 <<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
       <SEO
 ========
@@ -163,35 +244,49 @@ export default function AIContentGenerationPlatform(...args[]):  {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIContentGenerationPlatform.tsx
         title="AI Content Generation Platform - Zion Tech Group""        description="Transform your content creation with our AI-powered platform. Generate high-quality text, images, videos, and more with advanced AI technology."
        />"
+=======
+      <SEO ""
+        title="AI Content Generation Platform - Zion Tech Group""
+        description="Transform your content creation with our AI-powered platform. Generate high-quality text, images, videos, and more with advanced AI technology.""
+       />
+
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
       {/* Hero Section */}""
       <section className="relative overflow-hidden py-20">""
         <div className="container mx-auto px-4">
-          <motion.div
-            initial = {
-
+          <motion.div;
+            initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
   y: 30
 
 =======
   y: 30 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIContentGenerationPlatform.tsx
+=======
+  y: 30;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
 }}
-            animate = {
-
+            animate = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
   y: 0
 
+=======
+  y: 0;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
 }}
-            transition={{ duration: 0.8 }}"
-            className="text-center mb-16"
-"
-            <div className="w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-8">"
+            transition={{ duration: 0.8 }}""
+            className="text-center mb-16""
+""
+            <div className="w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-8">""
               <PenTool className="w-10 h-10 text-white"  />
             </div>"            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI-Powered"
+              AI-Powered""
               <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-600 bg-clip-text text-transparent">
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
 =======
   y: 0 
 }}"
@@ -213,11 +308,26 @@ export default function AIContentGenerationPlatform(...args[]):  {
               exceptional quality and brand consistency."
             </p>""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+=======
+                {' '}Content Generation;
+              </span>
+            </h1>""
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
+              Revolutionize your content creation with our advanced AI platform. Generate high-quality text, images,
+              videos, and multimedia content in minutes, not hours. Scale your content production while maintaining;
+              exceptional quality and brand consistency.
+            </p>""
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
               <a""
                 href="/contact""
                 className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-400 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-500 hover:to-pink-600 transition-all duration-300 transform hover:scale-105""
                 <span>Start Free Trial</span>""
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
                 <ArrowRight className="w-5 h-5"  />              </a>"
+=======
+                <ArrowRight className="w-5 h-5"  />              </a>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
               <a""
                 href="#pricing""
                 className="inline-flex items-center space-x-2 border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300""
@@ -226,9 +336,8 @@ export default function AIContentGenerationPlatform(...args[]):  {
             </div>
           </motion.div>;
           {/* Stats */}
-          <motion.div
-            initial = {
-
+          <motion.div;
+            initial = {}
   { opacity: 0,
 <<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
   y: 30 ;
@@ -236,9 +345,13 @@ export default function AIContentGenerationPlatform(...args[]):  {
 }}
 ========
   y: 30 }}
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
 >>>>>>>> main:backup-pages/src-pages/services/AIContentGenerationPlatform.tsx
             animate = {
 
+=======
+            animate = {}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
   { opacity: 1,
 <<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
   y: 0 ;
@@ -246,6 +359,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
 }}
 ========
   y: 0 }}
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
 >>>>>>>> main:backup-pages/src-pages/services/AIContentGenerationPlatform.tsx
             transition = {
 
@@ -265,15 +379,24 @@ export default function AIContentGenerationPlatform(...args[]):  {
             <div className="text-center">;"
               <div className="text-3xl font-bold text-white mb-2">80-90%</div>"
 >>>>>>>> main:backup-pages/src-pages/services/AIContentGenerationPlatform.tsx
+=======
+            transition = {}
+  { duration: 0.8,
+  delay: 0.2 }}"            className="grid grid-cols-2 md:grid-cols-4 gap-8""
+""
+            <div className="text-center">;""
+              <div className="text-3xl font-bold text-white mb-2">80-90%</div>""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
               <div className="text-slate-400">Time Savings</div>
-            </div>"
-            <div className="text-center">"
-              <div className="text-3xl font-bold text-white mb-2">40-60%</div>"
+            </div>""
+            <div className="text-center">""
+              <div className="text-3xl font-bold text-white mb-2">40-60%</div>""
               <div className="text-slate-400">Cost Reduction</div>
-            </div>"
-            <div className="text-center">"
-              <div className="text-3xl font-bold text-white mb-2">95%+</div>"
+            </div>""
+            <div className="text-center">""
+              <div className="text-3xl font-bold text-white mb-2">95%+</div>""
               <div className="text-slate-400">Quality Score</div>
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
             </div>"
             <div className="text-center">"
               <div className="text-3xl font-bold text-white mb-2">10x</div>"
@@ -296,38 +419,55 @@ export default function AIContentGenerationPlatform(...args[]):  {
             <div className="text-center">""
               <div className="text-3xl font-bold text-white mb-2">10x</div>""
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIContentGenerationPlatform.tsx
+=======
+            </div>""
+            <div className="text-center">""
+              <div className="text-3xl font-bold text-white mb-2">10x</div>""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
               <div className="text-slate-400">Scalability</div>
             </div>
           </motion.div>
         </div>
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
       </section>"
+=======
+      </section>
+
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
       {/* Features Section */}""
       <section className="py-20 bg-slate-800/30">;""
         <div className="container mx-auto px-4">
-          <motion.div
-            initial = {
-
+          <motion.div;
+            initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
   y: 30
 
 =======
   y: 30 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIContentGenerationPlatform.tsx
+=======
+  y: 30;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
 }}
-            whileInView = {
-
+            whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
   y: 0
 
+=======
+  y: 0;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
 }}
-            transition={{ duration: 0.8 }}"
-            className="text-center mb-16"
-"
+            transition={{ duration: 0.8 }}""
+            className="text-center mb-16""
+""
             <h2 className="text-4xl font-bold text-white mb-6">
-              Powerful Features for"
+              Powerful Features for""
               <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
 =======
   y: 0 
 }}"
@@ -340,40 +480,54 @@ export default function AIContentGenerationPlatform(...args[]):  {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIContentGenerationPlatform.tsx
                 {' '}Content Creators
               </span>"
+=======
+                {' '}Content Creators;
+              </span>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
             </h2>""
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              Our AI content generation platform combines cutting-edge technology with intuitive design
+              Our AI content generation platform combines cutting-edge technology with intuitive design;
               to deliver exceptional content creation capabilities.
             </p>
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
           </motion.div>"
+=======
+          </motion.div>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
 ""
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index 
-              <motion.div
+            {features.map((feature, index;
+              <motion.div;
                 key={index}
-                initial = {
-
+                initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
   y: 30
 
 =======
   y: 30 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIContentGenerationPlatform.tsx
+=======
+  y: 30;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
 }}
-                whileInView = {
-
+                whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
   y: 0
 
 =======
   y: 0 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIContentGenerationPlatform.tsx
+=======
+  y: 0;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
 }}
-                transition = {
-
+                transition = {}
   { duration: 0.8,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
   delay: index * 0.1
 
@@ -381,11 +535,19 @@ export default function AIContentGenerationPlatform(...args[]):  {
                 className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300"
 "
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-xl flex items-center justify-center mb-6">"
+=======
+  delay: index * 0.1;
+}}""
+                className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300""
+""
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-xl flex items-center justify-center mb-6">""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
                   <feature.icon className="w-8 h-8 text-white" />
-                </div>"
-                <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>"
-                <p className="text-slate-300 mb-6 leading-relaxed">{feature.description}</p>"
+                </div>""
+                <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>""
+                <p className="text-slate-300 mb-6 leading-relaxed">{feature.description}</p>""
                 <ul className="space-y-2">
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
                   {feature.benefits.map((benefit, idx) => ("
                     <li key={idx} className="flex items-center space-x-2 text-sm">"
 =======
@@ -402,6 +564,10 @@ export default function AIContentGenerationPlatform(...args[]):  {
                   {feature.benefits.map((benefit, idx) => (""
                     <li key={idx} className="flex items-center space-x-2 text-sm">""
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIContentGenerationPlatform.tsx
+=======
+                  {feature.benefits.map((benefit, idx) => (""
+                    <li key={idx} className="flex items-center space-x-2 text-sm">""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
                       <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0"  />"                      <span className="text-slate-300">{benefit}</span>
                     </li>
                   ))}
@@ -410,34 +576,46 @@ export default function AIContentGenerationPlatform(...args[]):  {
             ))}
           </div>
         </div>
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
       </section>"
+=======
+      </section>
+
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
       {/* Use Cases Section */}""
       <section className="py-20">;""
         <div className="container mx-auto px-4">
-          <motion.div
-            initial = {
-
+          <motion.div;
+            initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
   y: 30
 
 =======
   y: 30 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIContentGenerationPlatform.tsx
+=======
+  y: 30;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
 }}
-            whileInView = {
-
+            whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
   y: 0
 
+=======
+  y: 0;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
 }}
-            transition={{ duration: 0.8 }}"
-            className="text-center mb-16"
-"
+            transition={{ duration: 0.8 }}""
+            className="text-center mb-16""
+""
             <h2 className="text-4xl font-bold text-white mb-6">
-              Real-World"
+              Real-World""
               <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
 =======
   y: 0 
 }}"
@@ -450,39 +628,53 @@ export default function AIContentGenerationPlatform(...args[]):  {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIContentGenerationPlatform.tsx
                 {' '}Applications
               </span>"
+=======
+                {' '}Applications;
+              </span>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
             </h2>""
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
               See how our AI content generation platform is transforming industries and driving measurable results.
             </p>
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
           </motion.div>"
+=======
+          </motion.div>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
 ""
           <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-            {useCases.map(useCase: unknown, index: unknown 
-              <motion.div
+            {useCases.map(useCase: unknown, index: unknown;
+              <motion.div;
                 key={index}
-                initial = {
-
+                initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
   y: 30
 
 =======
   y: 30 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIContentGenerationPlatform.tsx
+=======
+  y: 30;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
 }}
-                whileInView = {
-
+                whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
   y: 0
 
 =======
   y: 0 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIContentGenerationPlatform.tsx
+=======
+  y: 0;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
 }}
-                transition = {
-
+                transition = {}
   { duration: 0.8,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
   delay: index * 0.1
 
@@ -492,19 +684,32 @@ export default function AIContentGenerationPlatform(...args[]):  {
                 <div className="flex items-center space-x-3 mb-4">"
 =======
   delay: index * 0.1 "
+=======
+  delay: index * 0.1;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
 }}""
                 className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300""
 ""
                 <div className="flex items-center space-x-3 mb-4">""
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIContentGenerationPlatform.tsx
                   <span className="px-3 py-1 bg-purple-400/20 text-purple-400 text-sm rounded-full">
                     {useCase.industry}
                   </span>"
+=======
+                  <span className="px-3 py-1 bg-purple-400/20 text-purple-400 text-sm rounded-full">
+                    {useCase.industry}
+                  </span>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
                 </div>""
                 <h3 className="text-2xl font-bold text-white mb-4">{useCase.title}</h3>""
                 <p className="text-slate-300 mb-6 leading-relaxed">{useCase.description}</p>""
                 <div className="space-y-3">""
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
                   <h4 className="text-white font-semibold">Key Results: any</h4>"
+=======
+                  <h4 className="text-white font-semibold">Key Results: any</h4>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
                   {useCase.metrics.map((metric, idx)  => (""
                     <div key={idx} className="flex items-center space-x-2 text-sm">""
                       <Star className="w-4 h-4 text-yellow-400 flex-shrink-0"  />"                      <span className="text-slate-300">{metric}</span>
@@ -515,34 +720,46 @@ export default function AIContentGenerationPlatform(...args[]):  {
             ))}
           </div>
         </div>
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
       </section>"
+=======
+      </section>
+
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
       {/* Benefits Section */}""
       <section className="py-20 bg-slate-800/30">;""
         <div className="container mx-auto px-4">
-          <motion.div
-            initial = {
-
+          <motion.div;
+            initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
   y: 30
 
 =======
   y: 30 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIContentGenerationPlatform.tsx
+=======
+  y: 30;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
 }}
-            whileInView = {
-
+            whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
   y: 0
 
+=======
+  y: 0;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
 }}
-            transition={{ duration: 0.8 }}"
-            className="text-center mb-16"
-"
+            transition={{ duration: 0.8 }}""
+            className="text-center mb-16""
+""
             <h2 className="text-4xl font-bold text-white mb-6">
-              Measurable"
+              Measurable""
               <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
 =======
   y: 0 
 }}"
@@ -555,39 +772,57 @@ export default function AIContentGenerationPlatform(...args[]):  {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIContentGenerationPlatform.tsx
                 {' '}Business Impact
               </span>"
+=======
+                {' '}Business Impact;
+              </span>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
             </h2>""
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
               Our AI content generation platform delivers quantifiable results that directly impact your content strategy.
             </p>
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
           </motion.div>"
 ""
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map(benefit: unknown, index: unknown()
               <motion.div
+=======
+          </motion.div>
+""
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map(benefit: unknown, index: unknown (
+              <motion.div;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
                 key={index}
-                initial = {
-
+                initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
   y: 30
 
 =======
   y: 30 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIContentGenerationPlatform.tsx
+=======
+  y: 30;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
 }}
-                whileInView = {
-
+                whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
   y: 0
 
 =======
   y: 0 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIContentGenerationPlatform.tsx
+=======
+  y: 0;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
 }}
-                transition = {
-
+                transition = {}
   { duration: 0.8,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
   delay: index * 0.1
 
@@ -610,39 +845,62 @@ export default function AIContentGenerationPlatform(...args[]):  {
                 <div className="text-4xl font-bold text-white mb-4">{benefit.value}</div>""
                 <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>""
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIContentGenerationPlatform.tsx
+=======
+  delay: index * 0.1;
+}}""
+                className="text-center""
+""
+                <div className="w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6">""
+                  <benefit.icon className="w-10 h-10 text-white" />
+                </div>""
+                <div className="text-4xl font-bold text-white mb-4">{benefit.value}</div>""
+                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
                 <p className="text-slate-300 leading-relaxed">{benefit.description}</p>
               </motion.div>;
             ))}
           </div>
         </div>
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
       </section>"
+=======
+      </section>
+
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
       {/* Technologies Section */}""
       <section className="py-20">;""
         <div className="container mx-auto px-4">
-          <motion.div
-            initial = {
-
+          <motion.div;
+            initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
   y: 30
 
 =======
   y: 30 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIContentGenerationPlatform.tsx
+=======
+  y: 30;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
 }}
-            whileInView = {
-
+            whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
   y: 0
 
+=======
+  y: 0;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
 }}
-            transition={{ duration: 0.8 }}"
-            className="text-center mb-16"
-"
+            transition={{ duration: 0.8 }}""
+            className="text-center mb-16""
+""
             <h2 className="text-4xl font-bold text-white mb-6">
-              Cutting-Edge"
+              Cutting-Edge""
               <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
 =======
   y: 0 
 }}"
@@ -655,39 +913,57 @@ export default function AIContentGenerationPlatform(...args[]):  {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIContentGenerationPlatform.tsx
                 {' '}Technologies
               </span>"
+=======
+                {' '}Technologies;
+              </span>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
             </h2>""
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
               Built on the latest AI and machine learning technologies to deliver superior content generation capabilities.
             </p>
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
           </motion.div>"
 ""
           <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-4 gap-4">
             {technologies.map(tech: unknown, index: unknown()
               <motion.div
+=======
+          </motion.div>
+""
+          <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-4 gap-4">
+            {technologies.map(tech: unknown, index: unknown (
+              <motion.div;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
                 key={index}
-                initial = {
-
+                initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
   scale: 0.9
 
 =======
   scale: 0.9 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIContentGenerationPlatform.tsx
+=======
+  scale: 0.9;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
 }}
-                whileInView = {
-
+                whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
   scale: 1
 
 =======
   scale: 1 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIContentGenerationPlatform.tsx
+=======
+  scale: 1;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
 }}
-                transition = {
-
+                transition = {}
   { duration: 0.6,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
   delay: index * 0.05
 
@@ -700,39 +976,57 @@ export default function AIContentGenerationPlatform(...args[]):  {
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300 text-center""
 ""
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIContentGenerationPlatform.tsx
+=======
+  delay: index * 0.05;
+}}""
+                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300 text-center""
+""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
                 <div className="text-white font-semibold">{tech}</div>
               </motion.div>;
             ))}
           </div>
         </div>
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
       </section>"
+=======
+      </section>
+
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
       {/* Pricing Section */}""
       <section id="pricing" className="py-20 bg-slate-800/30">;""
         <div className="container mx-auto px-4">
-          <motion.div
-            initial = {
-
+          <motion.div;
+            initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
   y: 30
 
 =======
   y: 30 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIContentGenerationPlatform.tsx
+=======
+  y: 30;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
 }}
-            whileInView = {
-
+            whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
   y: 0
 
+=======
+  y: 0;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
 }}
-            transition={{ duration: 0.8 }}"
-            className="text-center mb-16"
-"
+            transition={{ duration: 0.8 }}""
+            className="text-center mb-16""
+""
             <h2 className="text-4xl font-bold text-white mb-6">
-              Transparent"
+              Transparent""
               <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
 =======
   y: 0 
 }}"
@@ -745,39 +1039,57 @@ export default function AIContentGenerationPlatform(...args[]):  {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIContentGenerationPlatform.tsx
                 {' '}Pricing
               </span>"
+=======
+                {' '}Pricing;
+              </span>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
             </h2>""
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
               Choose the perfect plan for your content creation needs. All plans include a 14-day free trial.
             </p>
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
           </motion.div>"
 ""
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricing.map(plan: unknown, index: unknown()
               <motion.div
+=======
+          </motion.div>
+""
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricing.map(plan: unknown, index: unknown (
+              <motion.div;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
                 key={index}
-                initial = {
-
+                initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
   y: 30
 
 =======
   y: 30 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIContentGenerationPlatform.tsx
+=======
+  y: 30;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
 }}
-                whileInView = {
-
+                whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
   y: 0
 
 =======
   y: 0 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIContentGenerationPlatform.tsx
+=======
+  y: 0;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
 }}
-                transition = {
-
+                transition = {}
   { duration: 0.8,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
   delay: index * 0.1
 
@@ -791,29 +1103,53 @@ export default function AIContentGenerationPlatform(...args[]):  {
                     ? 'border-purple-400/50 scale-105'''`
                     : 'border-slate-700/50 hover:border-purple-400/50'``
                 }`}"
+=======
+  delay: index * 0.1;
+}}
+                className={`relative bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 ${}
+                  plan.popular'
+                    ? 'border-purple-400/50 scale-105''
+                    : 'border-slate-700/50 hover:border-purple-400/50'`
+                }`}
+
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
                 {plan.popular && (;""
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                     <span className="bg-gradient-to-r from-purple-400 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
+                      Most Popular;
                     </span>
                   </div>
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
                 )}"
+=======
+                )}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
 ""
                 <div className="text-center mb-8">""
                   <h3 className="text-2xl font-bold text-white mb-4">{plan.plan}</h3>""
                   <div className="flex items-baseline justify-center mb-2">""
                     <span className="text-4xl font-bold text-white">{plan.price}</span>""
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
                     <span className="text-slate-400 ml-2">{plan.period}</span>"
                   </div>""
                   <p className="text-slate-300">{plan.description}</p>
                 </div>"
 ""
                 <ul className="space-y-4 mb-8">"
+=======
+                    <span className="text-slate-400 ml-2">{plan.period}</span>
+                  </div>""
+                  <p className="text-slate-300">{plan.description}</p>
+                </div>
+""
+                <ul className="space-y-4 mb-8">
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
                   {plan.features.map((feature, idx) => (""
                     <li key={idx} className="flex items-center space-x-3">""
                       <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0"  />"                      <span className="text-slate-300">{feature}</span>
                     </li>
                   ))}
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
                 </ul>'
                 <a''`
                   href={plan.plan === 'Enterprise' ? '/contact' : '/signup'}``
@@ -822,6 +1158,16 @@ export default function AIContentGenerationPlatform(...args[]):  {
                     plan.popular''
                       ? 'bg-gradient-to-r from-purple-400 to-pink-500 text-white hover:from-purple-500 hover:to-pink-600'''`
                       : 'border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white'``
+=======
+                </ul>
+
+                <a'
+                  href={plan.plan === 'Enterprise' ? '/contact' : '/signup'}`
+                  className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
+                    plan.popular'
+                      ? 'bg-gradient-to-r from-purple-400 to-pink-500 text-white hover:from-purple-500 hover:to-pink-600''
+                      : 'border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white'`
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
                   }`}
                   {plan.cta}
                 </a>;
@@ -829,24 +1175,32 @@ export default function AIContentGenerationPlatform(...args[]):  {
             ))}
           </div>
         </div>
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
       </section>"
+=======
+      </section>
+
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
       {/* CTA Section */}""
       <section className="py-20">;""
         <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial = {
-
+          <motion.div;
+            initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
   y: 30
 
 =======
   y: 30 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIContentGenerationPlatform.tsx
+=======
+  y: 30;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
 }}
-            whileInView = {
-
+            whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
   y: 0
 
@@ -867,16 +1221,41 @@ export default function AIContentGenerationPlatform(...args[]):  {
               with our AI-powered content generation platform."
             </p>""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+=======
+  y: 0;
+}}
+            transition={{ duration: 0.8 }}
+""
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your""
+              <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+                {' '}Content Creation?
+              </span>
+            </h2>""
+            <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
+              Join thousands of content creators who have already revolutionized their workflow;
+              with our AI-powered content generation platform.
+            </p>""
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
               <a""
                 href="/contact""
                 className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-400 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-500 hover:to-pink-600 transition-all duration-300 transform hover:scale-105""
                 <span>Start Free Trial</span>""
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
                 <ArrowRight className="w-5 h-5"  />              </a>"
+=======
+                <ArrowRight className="w-5 h-5"  />              </a>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
               <a""
                 href="tel:+13024640950""
                 className="inline-flex items-center space-x-2 border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300""
                 <span>Call +1 302 464 0950</span>""
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
                 <ArrowRight className="w-5 h-5"  />              </a>"
+=======
+                <ArrowRight className="w-5 h-5"  />              </a>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx
             </div>""
             <div className="mt-6 text-slate-400">""
               <p>Questions? Email us at <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300">kleber@ziontechgroup.com</a></p>""
@@ -886,5 +1265,10 @@ export default function AIContentGenerationPlatform(...args[]):  {
         </div>;
       </section>;
     </div>;
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
   )}'"`
 '"`'"`
+=======
+  )}
+'"`
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentGenerationPlatform.tsx

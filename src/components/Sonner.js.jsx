@@ -1,4 +1,4 @@
-export function Sonner({ position = 'bottom-right', richColors = true, closeButton = true }) {
+export function Sonner({ position = 'bottom-right', richColors = true, closeButton = true }) {}
 '
     return (<div className={`fixed ${position === 'top-left' ? 'top-4 left-4' :''
             position === 'top-right' ? 'top-4 right-4' :''`
@@ -6,7 +6,7 @@ export function Sonner({ position = 'bottom-right', richColors = true, closeButt
                     'bottom-4 right-4'} z-50`}>
       {/* Sonner toast container */}
     </div>)}
-export const toast = {
+export const toast = {}
 '
   success: (message) => // console.log('Success:', message),'
     error: (message) => // console.log('Error:', message),'
@@ -19,10 +19,9 @@ export const toast = {
 '
   position = 'bottom - right',
   richColors = true,
-  closeButton = true}) {
-
+  closeButton = true}) {}
   return (<div`
-      className={`fixed ${
+      className={`fixed ${}
 '
         position === 'top - left''
           ? 'top - 4 left - 4''

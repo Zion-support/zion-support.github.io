@@ -1,14 +1,13 @@
 import React from 'react';'
 import { cn } from '@/lib/utils';
-export const Step = ({ children, className, isActive, isCompleted }) => {
-
+export const Step = ({ children, className, isActive, isCompleted }) => {}
   return()
     <div'
       className={cn(''
         'flex items-center space-x-2','
         isActive && 'text-primary','
         isCompleted && 'text-green-600',
-        className
+        className;
       )}
     >
       <div'

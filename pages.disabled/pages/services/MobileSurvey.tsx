@@ -1,10 +1,19 @@
 
+<<<<<<< HEAD:pages.disabled/pages/services/MobileSurvey.tsx
 export default function MobileSurvey() {
     'Mobile-first NPS/CSAT/CES templates',;'
     'QR code and link campaigns',;'
     'AI topic clustering and sentiment',;'
     'Webhooks to CRM/Slack',;'
     'Kiosk mode for in-person feedback',;'
+=======
+export default function MobileSurvey(function MobileSurvey() {): any {}
+    'Mobile-first NPS/CSAT/CES templates',;
+    'QR code and link campaigns',;
+    'AI topic clustering and sentiment',;
+    'Webhooks to CRM/Slack',;
+    'Kiosk mode for in-person feedback',;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/MobileSurvey.tsx
     'Multilingual with auto-translate';
   ];
   '
@@ -17,6 +26,7 @@ export default function MobileSurvey() {
       <section className="bg-gradient-to-r from-zion-cyan to-zion-purple py-20 text-center text-white">""
         <div className="max-w-5xl mx-auto px-6">""
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 mb-6">""
+<<<<<<< HEAD:pages.disabled/pages/services/MobileSurvey.tsx
             <Smartphone className="w-4 h-4 mr-2" /> Capture feedback anywhere, anytime"
           </div>""
           <h1 className="text-4xl md:text-6xl font-bold mb-4">Mobile Feedback Surveys</h1>"          <p className="text-white/90 text-xl">Modern, fast surveys with AI insights to improve customer experience.</p>
@@ -33,12 +43,31 @@ export default function MobileSurvey() {
         <div className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">""
           <h3 className="text-2xl font-semibold text-zion-slate-dark mb-4">Pricing</h3>""
           <div className="grid md:grid-cols-3 gap-4">"
+=======
+            <Smartphone className="w-4 h-4 mr-2" /> Capture feedback anywhere, anytime;
+          </div>""
+          <h1 className="text-4xl md:text-6xl font-bold mb-4">Mobile Feedback Surveys</h1>"          <p className="text-white/90 text-xl">Modern, fast surveys with AI insights to improve customer experience.</p>
+        </div>
+      </section>""
+      <section className="py-16 max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10">
+        <div>""
+          <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Features</h2>""
+          <ul className="space-y-3">
+            {features.map((f) => (""
+              <li key={f} className="flex items-start"><Check className="w-5 h-5 text-zion-cyan mr-3 mt-0.5" /><span className="text-zion-slate-dark">{f}</span></li>            ))}
+          </ul>
+        </div>""
+        <div className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">""
+          <h3 className="text-2xl font-semibold text-zion-slate-dark mb-4">Pricing</h3>""
+          <div className="grid md:grid-cols-3 gap-4">
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/MobileSurvey.tsx
             {pricing.map((p) => (""
               <div key={p.name} className="rounded-lg p-4 border border-zion-slate-light/30">""
                 <div className="text-lg font-semibold mb-1">{p.name}</div>""
                 <div className="text-2xl font-bold text-zion-cyan mb-2">{p.price}</div>""
                 <ul className="text-sm text-zion-slate-dark space-y-1">{p.details.map((d) => (<li key={d}>{d}</li>))}</ul>
               </div>
+<<<<<<< HEAD:pages.disabled/pages/services/MobileSurvey.tsx
             ))}"
           </div>""
           <div className="mt-6 flex gap-3">""
@@ -47,12 +76,26 @@ export default function MobileSurvey() {
       </section>""
       <section className="pb-16 max-w-6xl mx-auto px-6">""
         <div className="grid md:grid-cols-3 gap-6">'"
+=======
+            ))}
+          </div>""
+          <div className="mt-6 flex gap-3">""
+            <a href="/pricing" className="px-5 py-3 bg-zion-cyan/10 text-zion-slate-dark rounded-lg hover:bg-zion-cyan/20 inline-flex items-center">View Full Pricing <ArrowRight className="w-4 h-4 ml-2" /></a>          </div>
+        </div>
+      </section>""
+      <section className="pb-16 max-w-6xl mx-auto px-6">""
+        <div className="grid md:grid-cols-3 gap-6">
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/MobileSurvey.tsx
           {[{icon: MessageSquare, t: 'Conversational UX'}, {icon: Users, t: 'High Completion'}, {icon: BarChart2, t: 'AI Insights'}].map((c) => (""
             <div key={c.t} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">""
               <c.icon className="w-6 h-6 text-zion-cyan mb-3" />""
               <div className="text-zion-slate-dark font-semibold">{c.t}</div>
             </div>
+<<<<<<< HEAD:pages.disabled/pages/services/MobileSurvey.tsx
           ))}"
+=======
+          ))}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/MobileSurvey.tsx
         </div>""
         <div className="mt-10 text-center">""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">;""
@@ -60,5 +103,10 @@ export default function MobileSurvey() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-zion-cyan text-zion-cyan rounded-lg"><Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com</a>;          </div>;
         </div>;
       </section>;
+<<<<<<< HEAD:pages.disabled/pages/services/MobileSurvey.tsx
     </div>;'"
   )}}'"'"
+=======
+    </div>;
+  )}}'""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/MobileSurvey.tsx

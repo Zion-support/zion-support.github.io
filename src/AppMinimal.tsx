@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AppMinimal: React.FC = () => {
+const AppMinimal: React.FC = () => {}
   return (<div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#0b1220', color: '#fff' }}>
       <div style={{ textAlign: 'center' }}>
         <h1 style={{ fontSize: '2rem', marginBottom: '0.75rem' }}>Zion App</h1>

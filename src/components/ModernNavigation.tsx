@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
-export default function Page() {
+export default function Page(function Page() {): any {}
 ,
         { id: 'cybersecurity', label: 'Cybersecurity', href: '#cybersecurity' },
         { id: 'cloud', label: 'Cloud Infrastructure', href: '#cloud' },
@@ -8,7 +8,7 @@ export default function Page() {
         { id: 'devops', label: 'DevOps & Automation', href: '#devops' }
       ]
     },
-    {
+    {}
       id: 'solutions',
       label: 'Solutions',
       href: '#solutions',
@@ -19,7 +19,7 @@ export default function Page() {
         { id: 'retail', label: 'Retail & E-commerce', href: '#retail' }
       ]
     },
-    {
+    {}
       id: 'company',
       label: 'Company',
       href: '#company',
@@ -30,7 +30,7 @@ export default function Page() {
         { id: 'contact', label: 'Contact', href: '#contact' }
       ]
     },
-    {
+    {}
       id: 'resources',
       label: 'Resources',
       href: '#resources',
@@ -43,28 +43,28 @@ export default function Page() {
     }
   ];
 
-  const toggleDropdown = (id: string) => {
+  const toggleDropdown: any = (id: string) => {}
     setActiveDropdown(activeDropdown === id ? null : id);
   };
 
-  const closeDropdown = () => {
+  const closeDropdown: any = () => {}
     setActiveDropdown(null);
   };
 
-  const toggleDarkMode = () => {
+  const toggleDarkMode: any = () => {}
     setIsDarkMode(!isDarkMode);
-    // Here you would typically update the global theme context
+    // Here you would typically update the global theme context;
   };
 
-  return (<nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled 
+  return (<nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled;
         ? 'bg-gray-900/95 backdrop-blur-md border-b border-gray-700' 
         : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <motion.div 
-            className="flex items-center"
+          <motion.div;
+            className="flex items-center""
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
@@ -83,9 +83,9 @@ export default function Page() {
           <div className="hidden lg:flex items-center space-x-8">
             {navigationItems.map((item) => (
               <div key={item.id} className="relative group">
-                <button
+                <button;
                   onClick={() => toggleDropdown(item.id)}
-                  className="flex items-center space-x-1 text-gray-300 hover:text-white transition-colors duration-200 py-2"
+                  className="flex items-center space-x-1 text-gray-300 hover:text-white transition-colors duration-200 py-2""
                 >
                   <span>{item.label}</span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item.id ? 'rotate-180' : ''
@@ -95,19 +95,19 @@ export default function Page() {
                 {/* Dropdown Menu */}
                 <AnimatePresence>
                   {activeDropdown === item.id && (
-                    <motion.div
+                    <motion.div;
                       initial={{ opacity: 0, y: 10, scale: 0.95 }}
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: 10, scale: 0.95 }}
                       transition={{ duration: 0.2 }}
-                      className="absolute top-full left-0 mt-2 w-64 bg-gray-800 rounded-lg shadow-xl border border-gray-700 py-2"
+                      className="absolute top-full left-0 mt-2 w-64 bg-gray-800 rounded-lg shadow-xl border border-gray-700 py-2""
                       onMouseLeave={closeDropdown}
                     >
                       {item.children?.map((child) => (
-                        <a
+                        <a;
                           key={child.id}
                           href={child.href}
-                          className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-700 transition-colors duration-200"
+                          className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-700 transition-colors duration-200""
                         >
                           {child.label}
                         </a>
@@ -133,9 +133,9 @@ export default function Page() {
             </button>
 
             {/* Theme Toggle */}
-            <button
+            <button;
               onClick={toggleDarkMode}
-              className="text-gray-300 hover:text-white transition-colors duration-200"
+              className="text-gray-300 hover:text-white transition-colors duration-200""
             >
               {isDarkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
             </button>
@@ -156,28 +156,28 @@ export default function Page() {
               {/* User Dropdown */}
               <div className="absolute top-full right-0 mt-2 w-48 bg-gray-800 rounded-lg shadow-xl border border-gray-700 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                 <a href="#profile" className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-700 transition-colors duration-200">
-                  Profile
+                  Profile;
                 </a>
                 <a href="#settings" className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-700 transition-colors duration-200">
-                  Settings
+                  Settings;
                 </a>
                 <a href="#logout" className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-700 transition-colors duration-200">
-                  Logout
+                  Logout;
                 </a>
               </div>
             </div>
 
             {/* CTA Button */}
             <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105">
-              Get Started
+              Get Started;
             </button>
           </div>
 
           {/* Mobile menu button */}
           <div className="lg:hidden">
-            <button
+            <button;
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-white transition-colors duration-200"
+              className="text-gray-300 hover:text-white transition-colors duration-200""
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -188,19 +188,19 @@ export default function Page() {
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden bg-gray-900 border-t border-gray-700"
+            className="lg:hidden bg-gray-900 border-t border-gray-700""
           >
             <div className="px-4 py-6 space-y-4">
               {navigationItems.map((item) => (
                 <div key={item.id}>
-                  <button
+                  <button;
                     onClick={() => toggleDropdown(item.id)}
-                    className="flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-200 py-2"
+                    className="flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-200 py-2""
                   >
                     <span>{item.label}</span>
                     <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item.id ? 'rotate-180' : ''
@@ -210,10 +210,10 @@ export default function Page() {
                   {activeDropdown === item.id && item.children && (
                     <div className="ml-4 mt-2 space-y-2">
                       {item.children.map((child) => (
-                        <a
+                        <a;
                           key={child.id}
                           href={child.href}
-                          className="block text-gray-400 hover:text-white transition-colors duration-200 py-1"
+                          className="block text-gray-400 hover:text-white transition-colors duration-200 py-1""
                         >
                           {child.label}
                         </a>
@@ -226,7 +226,7 @@ export default function Page() {
               {/* Mobile CTA */}
               <div className="pt-4 border-t border-gray-700">
                 <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300">
-                  Get Started
+                  Get Started;
                 </button>
               </div>
             </div>

@@ -1,4 +1,5 @@
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
 <<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
@@ -11,6 +12,8 @@ import { Brain,
   BarChart3,
 ========
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentMarketingAutomation.tsx
 import { Brain, 
   PenTool, 
   TrendingUp, 
@@ -39,49 +42,49 @@ import { Brain,
  } from 'lucide-react';
 ;
 export { function };
-export default function AIContentMarketingAutomation(...args[]):  {
-
-  const features = [
-    "AI-powered content generation for multiple formats","
-    "Multi-channel content distribution automation","
-    "Intelligent audience targeting and segmentation","
-    "Real-time performance analytics and optimization","
-    "SEO-optimized content creation","
-    "Social media scheduling and automation",;"
-    "Email marketing campaign automation",;"
-    "Content calendar management",;"
-    "Brand voice consistency maintenance",;"
-    "A/B testing and optimization",;"
-    "Competitor analysis and insights",;"
+export default function AIContentMarketingAutomation(...args[]):  {}
+  const features: any = []
+    "AI-powered content generation for multiple formats",""
+    "Multi-channel content distribution automation",""
+    "Intelligent audience targeting and segmentation",""
+    "Real-time performance analytics and optimization",""
+    "SEO-optimized content creation",""
+    "Social media scheduling and automation",;""
+    "Email marketing campaign automation",;""
+    "Content calendar management",;""
+    "Brand voice consistency maintenance",;""
+    "A/B testing and optimization",;""
+    "Competitor analysis and insights",;""
     "ROI tracking and attribution modeling";
   ];
 
-  const benefits = [;"
-    "Increase content production by 300%",;"
-    "Improve engagement rates by 45%",;"
-    "Reduce content creation costs by 60%",;"
-    "Boost SEO rankings by 35%",;"
+  const benefits: any = [;""
+    "Increase content production by 300%",;""
+    "Improve engagement rates by 45%",;""
+    "Reduce content creation costs by 60%",;""
+    "Boost SEO rankings by 35%",;""
     "Automate 80% of marketing workflows";
   ];
 
-  const useCases = ["
-    "E-commerce content marketing","
-    "B2B lead generation campaigns",;"
-    "Social media management",;"
-    "Email marketing automation",;"
-    "Blog and article creation",;"
-    "Video content marketing",;"
-    "Influencer collaboration",;"
+  const useCases: any = [""
+    "E-commerce content marketing",""
+    "B2B lead generation campaigns",;""
+    "Social media management",;""
+    "Email marketing automation",;""
+    "Blog and article creation",;""
+    "Video content marketing",;""
+    "Influencer collaboration",;""
     "Event marketing campaigns";
   ];
 
-  const pricing = [
-    {
-"
-      name: "Starter","
-      price: "$299","
-      period: "/month","
+  const pricing: any = []
+    {}
+""
+      name: "Starter",""
+      price: "$299",""
+      period: "/month",""
       description: "Perfect for small businesses and startups",
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
       features[;"
         "AI content generation (50 pieces/month)","
         "Basic social media automation","
@@ -94,16 +97,33 @@ export default function AIContentMarketingAutomation(...args[]):  {
 =======
       ],;""
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIContentMarketingAutomation.tsx
+=======
+      features[;""
+        "AI content generation (50 pieces/month)",""
+        "Basic social media automation",""
+        "Email campaign templates",""
+        "Basic analytics dashboard",""
+        "Email support""
+      ],;""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentMarketingAutomation.tsx
       cta: "Start Free Trial",
-      popular: false
+      popular: false;
     },
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
     {
 "
+=======
+    {}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentMarketingAutomation.tsx
 ""
       name: "Professional",""
       price: "$799",""
       period: "/month",""
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
       description: "Ideal for growing businesses and marketing teams","
+=======
+      description: "Ideal for growing businesses and marketing teams",
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentMarketingAutomation.tsx
       features[;""
         "AI content generation (200 pieces/month)",""
         "Advanced social media automation",""
@@ -113,15 +133,23 @@ export default function AIContentMarketingAutomation(...args[]):  {
         "Priority support""
       ],;""
       cta: "Start Free Trial",
-      popular: true
+      popular: true;
     },
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
     {
 "
+=======
+    {}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentMarketingAutomation.tsx
 ""
       name: "Enterprise",""
       price: "$1,999",""
       period: "/month",""
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
       description: "For large organizations with complex needs","
+=======
+      description: "For large organizations with complex needs",
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentMarketingAutomation.tsx
       features[;""
         "Unlimited AI content generation",""
         "Custom AI model training",""
@@ -129,15 +157,20 @@ export default function AIContentMarketingAutomation(...args[]):  {
         "White-label solutions",""
         "API access",;""
         "Dedicated account manager",;""
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
         "24/7 phone support";"
+=======
+        "24/7 phone support";
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentMarketingAutomation.tsx
       ],;""
       cta: "Contact Sales",;
       popular: false};
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
   ];
 
-  return ("
+  return (""
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
 <<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
       <SEO
 ========
@@ -156,23 +189,33 @@ export default function AIContentMarketingAutomation(...args[]):  {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIContentMarketingAutomation.tsx
         title="AI Content Marketing Automation Platform - Zion Tech Group""        description="Transform your content marketing with AI-powered automation. Generate, distribute, and optimize content across all channels automatically."
        />"
+=======
+      <SEO ""
+        title="AI Content Marketing Automation Platform - Zion Tech Group""
+        description="Transform your content marketing with AI-powered automation. Generate, distribute, and optimize content across all channels automatically.""
+       />
+
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentMarketingAutomation.tsx
       {/* Hero Section */}""
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial = {
-
+          <motion.div;
+            initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
   y: 20
 
 =======
   y: 20 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIContentMarketingAutomation.tsx
+=======
+  y: 20;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentMarketingAutomation.tsx
 }}
-            animate = {
-
+            animate = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
   y: 0
 
@@ -207,28 +250,67 @@ export default function AIContentMarketingAutomation(...args[]):  {
                 whileTap={{ scale: 0.95 }}""
                 className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200"
                 Watch Demo
+=======
+  y: 0;
+}}
+            transition={{ duration: 0.8 }}
+""
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium mb-6">""
+              <Brain className="w-4 h-4 mr-2"  />              AI-Powered Marketing;
+            </div>""
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              AI Content Marketing""
+              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">""
+                {" "}Automation Platform;
+              </span>
+            </h1>""
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Revolutionize your content marketing with AI that generates, distributes, and optimizes content across all channels automatically.
+              Increase engagement, reduce costs, and scale your marketing efforts effortlessly.
+            </p>""
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button;
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}""
+                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-200""
+                Start Free Trial;
+              </motion.button>
+              <motion.button;
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}""
+                className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200""
+                Watch Demo;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentMarketingAutomation.tsx
               </motion.button>
             </div>
           </motion.div>;
         </div>
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
       </section>"
+=======
+      </section>
+
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentMarketingAutomation.tsx
       {/* Features Section */}""
       <section className="py-20 px-4 sm:px-6 lg:px-8">;""
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial = {
-
+          <motion.div;
+            initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
   y: 20
 
 =======
   y: 20 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIContentMarketingAutomation.tsx
+=======
+  y: 20;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentMarketingAutomation.tsx
 }}
-            whileInView = {
-
+            whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
   y: 0
 
@@ -245,39 +327,62 @@ export default function AIContentMarketingAutomation(...args[]):  {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIContentMarketingAutomation.tsx
             <h2 className="text-4xl font-bold text-white mb-4">
               Powerful Features for Modern Marketing"
+=======
+  y: 0;
+}}
+            transition={{ duration: 0.8 }}""
+            className="text-center mb-16""
+""
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Powerful Features for Modern Marketing;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentMarketingAutomation.tsx
             </h2>""
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Everything you need to automate and optimize your content marketing strategy
+              Everything you need to automate and optimize your content marketing strategy;
             </p>
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
           </motion.div>"
 ""
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index()
               <motion.div
+=======
+          </motion.div>
+""
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index (
+              <motion.div;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentMarketingAutomation.tsx
                 key={index}
-                initial = {
-
+                initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
   y: 20
 
 =======
   y: 20 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIContentMarketingAutomation.tsx
+=======
+  y: 20;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentMarketingAutomation.tsx
 }}
-                whileInView = {
-
+                whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
   y: 0
 
 =======
   y: 0 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIContentMarketingAutomation.tsx
+=======
+  y: 0;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentMarketingAutomation.tsx
 }}
-                transition = {
-
+                transition = {}
   { duration: 0.5,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
   delay: index * 0.1
 
@@ -285,6 +390,13 @@ export default function AIContentMarketingAutomation(...args[]):  {
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-purple-500 transition-all duration-300"
 "
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mb-4">"
+=======
+  delay: index * 0.1;
+}}""
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-purple-500 transition-all duration-300""
+""
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mb-4">""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentMarketingAutomation.tsx
                   <CheckCircle className="w-6 h-6 text-white"  />
 =======
   delay: index * 0.1 "
@@ -299,24 +411,32 @@ export default function AIContentMarketingAutomation(...args[]):  {
             ))}
           </div>
         </div>
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
       </section>"
+=======
+      </section>
+
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentMarketingAutomation.tsx
       {/* Benefits Section */}""
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;""
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial = {
-
+          <motion.div;
+            initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
   y: 20
 
 =======
   y: 20 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIContentMarketingAutomation.tsx
+=======
+  y: 20;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentMarketingAutomation.tsx
 }}
-            whileInView = {
-
+            whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
   y: 0
 
@@ -333,39 +453,62 @@ export default function AIContentMarketingAutomation(...args[]):  {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIContentMarketingAutomation.tsx
             <h2 className="text-4xl font-bold text-white mb-4">
               Transform Your Marketing Results"
+=======
+  y: 0;
+}}
+            transition={{ duration: 0.8 }}""
+            className="text-center mb-16""
+""
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Transform Your Marketing Results;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentMarketingAutomation.tsx
             </h2>""
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              See measurable improvements in your content marketing performance
+              See measurable improvements in your content marketing performance;
             </p>
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
           </motion.div>"
 ""
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map(benefit: unknown, index: unknown()
               <motion.div
+=======
+          </motion.div>
+""
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map(benefit: unknown, index: unknown (
+              <motion.div;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentMarketingAutomation.tsx
                 key={index}
-                initial = {
-
+                initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
   y: 20
 
 =======
   y: 20 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIContentMarketingAutomation.tsx
+=======
+  y: 20;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentMarketingAutomation.tsx
 }}
-                whileInView = {
-
+                whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
   y: 0
 
 =======
   y: 0 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIContentMarketingAutomation.tsx
+=======
+  y: 0;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentMarketingAutomation.tsx
 }}
-                transition = {
-
+                transition = {}
   { duration: 0.5,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
   delay: index * 0.1
 
@@ -373,6 +516,13 @@ export default function AIContentMarketingAutomation(...args[]):  {
                 className="text-center"
 "
                 <div className="w-20 h-20 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">"
+=======
+  delay: index * 0.1;
+}}""
+                className="text-center""
+""
+                <div className="w-20 h-20 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentMarketingAutomation.tsx
                   <TrendingUp className="w-10 h-10 text-white"  />
 =======
   delay: index * 0.1 "
@@ -387,24 +537,32 @@ export default function AIContentMarketingAutomation(...args[]):  {
             ))}
           </div>
         </div>
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
       </section>"
+=======
+      </section>
+
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentMarketingAutomation.tsx
       {/* Pricing Section */}""
       <section className="py-20 px-4 sm:px-6 lg:px-8">;""
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial = {
-
+          <motion.div;
+            initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
   y: 20
 
 =======
   y: 20 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIContentMarketingAutomation.tsx
+=======
+  y: 20;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentMarketingAutomation.tsx
 }}
-            whileInView = {
-
+            whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
   y: 0
 
@@ -421,39 +579,62 @@ export default function AIContentMarketingAutomation(...args[]):  {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIContentMarketingAutomation.tsx
             <h2 className="text-4xl font-bold text-white mb-4">
               Simple, Transparent Pricing"
+=======
+  y: 0;
+}}
+            transition={{ duration: 0.8 }}""
+            className="text-center mb-16""
+""
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Simple, Transparent Pricing;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentMarketingAutomation.tsx
             </h2>""
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Choose the plan that fits your business needs and scale as you grow
+              Choose the plan that fits your business needs and scale as you grow;
             </p>
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
           </motion.div>"
 ""
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
             {pricing.map(plan: unknown, index: unknown()
               <motion.div
+=======
+          </motion.div>
+""
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+            {pricing.map(plan: unknown, index: unknown (
+              <motion.div;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentMarketingAutomation.tsx
                 key={index}
-                initial = {
-
+                initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
   y: 20
 
 =======
   y: 20 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIContentMarketingAutomation.tsx
+=======
+  y: 20;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentMarketingAutomation.tsx
 }}
-                whileInView = {
-
+                whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
   y: 0
 
 =======
   y: 0 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIContentMarketingAutomation.tsx
+=======
+  y: 0;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentMarketingAutomation.tsx
 }}
-                transition = {
-
+                transition = {}
   { duration: 0.5,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
   delay: index * 0.1
 
@@ -467,13 +648,27 @@ export default function AIContentMarketingAutomation(...args[]):  {
                     ? 'border-purple-500 ring-2 ring-purple-500/20'''`
                     : 'border-gray-700'``
                 }`}"
+=======
+  delay: index * 0.1;
+}}
+                className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${}
+                  plan.popular'
+                    ? 'border-purple-500 ring-2 ring-purple-500/20''
+                    : 'border-gray-700'`
+                }`}
+
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentMarketingAutomation.tsx
                 {plan.popular && (;""
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                     <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-medium">
-                      Most Popular
+                      Most Popular;
                     </span>
                   </div>
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
                 )}"
+=======
+                )}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentMarketingAutomation.tsx
 ""
                 <div className="text-center mb-8">""
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>""
@@ -482,15 +677,22 @@ export default function AIContentMarketingAutomation(...args[]):  {
                     <span className="text-4xl font-bold text-white">{plan.price}</span>""
                     <span className="text-gray-400 ml-1">{plan.period}</span>
                   </div>
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
                 </div>"
 ""
                 <ul className="space-y-4 mb-8">"
+=======
+                </div>
+""
+                <ul className="space-y-4 mb-8">
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentMarketingAutomation.tsx
                   {plan.features.map((feature, featureIndex) => (""
                     <li key={featureIndex} className="flex items-start">""
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0"  />"                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
                 <motion.button
                   whileHover={{ scale: 1.02 }}`
                   whileTap={{ scale: 0.98 }}``
@@ -499,6 +701,16 @@ export default function AIContentMarketingAutomation(...args[]):  {
                     plan.popular''
                       ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700'''`
                       : 'bg-gray-700 text-white hover:bg-gray-600'``
+=======
+
+                <motion.button;
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}`
+                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${}
+                    plan.popular'
+                      ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700''
+                      : 'bg-gray-700 text-white hover:bg-gray-600'`
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentMarketingAutomation.tsx
                   }`}
                   {plan.cta}
                 </motion.button>;
@@ -506,24 +718,32 @@ export default function AIContentMarketingAutomation(...args[]):  {
             ))}
           </div>
         </div>
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
       </section>"
+=======
+      </section>
+
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentMarketingAutomation.tsx
       {/* Use Cases Section */}""
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;""
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial = {
-
+          <motion.div;
+            initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
   y: 20
 
 =======
   y: 20 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIContentMarketingAutomation.tsx
+=======
+  y: 20;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentMarketingAutomation.tsx
 }}
-            whileInView = {
-
+            whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
   y: 0
 
@@ -540,39 +760,62 @@ export default function AIContentMarketingAutomation(...args[]):  {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIContentMarketingAutomation.tsx
             <h2 className="text-4xl font-bold text-white mb-4">
               Perfect for Every Marketing Need"
+=======
+  y: 0;
+}}
+            transition={{ duration: 0.8 }}""
+            className="text-center mb-16""
+""
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Perfect for Every Marketing Need;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentMarketingAutomation.tsx
             </h2>""
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              From startups to enterprises, our platform adapts to your business requirements
+              From startups to enterprises, our platform adapts to your business requirements;
             </p>
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
           </motion.div>"
 ""
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
             {useCases.map(useCase: unknown, index: unknown()
               <motion.div
+=======
+          </motion.div>
+""
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map(useCase: unknown, index: unknown (
+              <motion.div;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentMarketingAutomation.tsx
                 key={index}
-                initial = {
-
+                initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
   y: 20
 
 =======
   y: 20 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIContentMarketingAutomation.tsx
+=======
+  y: 20;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentMarketingAutomation.tsx
 }}
-                whileInView = {
-
+                whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
   y: 0
 
 =======
   y: 0 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIContentMarketingAutomation.tsx
+=======
+  y: 0;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentMarketingAutomation.tsx
 }}
-                transition = {
-
+                transition = {}
   { duration: 0.5,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
   delay: index * 0.1
 
@@ -580,6 +823,13 @@ export default function AIContentMarketingAutomation(...args[]):  {
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-purple-500 transition-all duration-300"
 "
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mx-auto mb-4">"
+=======
+  delay: index * 0.1;
+}}""
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-purple-500 transition-all duration-300""
+""
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mx-auto mb-4">""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentMarketingAutomation.tsx
                   <Target className="w-8 h-8 text-white"  />
 =======
   delay: index * 0.1 "
@@ -594,24 +844,32 @@ export default function AIContentMarketingAutomation(...args[]):  {
             ))}
           </div>
         </div>
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
       </section>"
+=======
+      </section>
+
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentMarketingAutomation.tsx
       {/* CTA Section */}""
       <section className="py-20 px-4 sm:px-6 lg:px-8">;""
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial = {
-
+          <motion.div;
+            initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
   y: 20
 
 =======
   y: 20 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/AIContentMarketingAutomation.tsx
+=======
+  y: 20;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentMarketingAutomation.tsx
 }}
-            whileInView = {
-
+            whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
   y: 0
 
@@ -640,18 +898,52 @@ export default function AIContentMarketingAutomation(...args[]):  {
                 className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200"
                 Schedule Demo
               </motion.button>"
+=======
+  y: 0;
+}}
+            transition={{ duration: 0.8 }}
+""
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Content Marketing?
+            </h2>""
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of businesses that have already automated their content marketing with AI;
+            </p>""
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button;
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}""
+                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-200""
+                Start Free Trial;
+              </motion.button>
+              <motion.button;
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}""
+                className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200""
+                Schedule Demo;
+              </motion.button>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentMarketingAutomation.tsx
             </div>""
             <p className="text-sm text-gray-400 mt-4">
-              No credit card required • 14-day free trial • Cancel time
+              No credit card required • 14-day free trial • Cancel time;
             </p>
           </motion.div>
         </div>
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
       </section>"
+=======
+      </section>
+
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentMarketingAutomation.tsx
       {/* Contact Info */}""
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-800/50">;""
         <div className="max-w-4xl mx-auto text-center">""
           <p className="text-gray-400 mb-4">
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
             Need help choosing the right plan? Contact our sales team"
+=======
+            Need help choosing the right plan? Contact our sales team;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentMarketingAutomation.tsx
           </p>""
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-gray-400">
             <span>📞 +1 302 464 0950</span>
@@ -661,5 +953,10 @@ export default function AIContentMarketingAutomation(...args[]):  {
         </div>;
       </section>;
     </div>;
+<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
   )}'"`
 '"`'"`
+=======
+  )}
+'"`
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIContentMarketingAutomation.tsx

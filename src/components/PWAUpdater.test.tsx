@@ -1,17 +1,16 @@
-
-describe('PWAUpdater', () => {
-  it('renders without crashing', () => {
+describe('PWAUpdater', () => {}
+  it('renders without crashing', () => {}
     render(<PWAUpdater  />) ;
     expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ;
 
-describe ('PWAUpdater', () => {
+describe ('PWAUpdater', () => {}
 '
-  it ('renders without crashing', () => {
+  it ('renders without crashing', () => {}
     render (<PWAUpdater  />) ;'
     expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
 '
-  it ('displays expected content', () => {
+  it ('displays expected content', () => {}
     render (<PWAUpdater  />) ;
-    // Add specific test assertions based on component content
+    // Add specific test assertions based on component content;
   }) }) ;
 '

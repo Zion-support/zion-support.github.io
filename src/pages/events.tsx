@@ -1,7 +1,7 @@
 import { Link  } from 'react-router-dom';
-export default function Page() {
+export default function Page(function Page() {): any {}
 ,
-  {
+  {}
     id: 4,
     title: 'Data Analytics & Business Intelligence',
     type: 'Webinar',
@@ -10,7 +10,7 @@ export default function Page() {
     location: 'Virtual',
     status: 'upcoming',
     category: 'Data Analytics',
-    description:
+    description: any;
       'Discover how data analytics can transform your business decisions with real - world case studies and practical implementation strategies.',
     speakers: ['Data Scientist Emily Chen', 'BI Consultant Robert Wilson'],
     attendees: 200,
@@ -18,11 +18,11 @@ export default function Page() {
     highlights: ['Data visualization techniques',
       'Predictive analytics models',
       'Business intelligence tools',
-      'ROI measurement strategies',
+      'ROI measurement strategies'
     ],
-    image: '/images / data - analytics - webinar.jpg',
+    image: '/images / data - analytics - webinar.jpg'
   },
-  {
+  {}
     id: 5,
     title: 'IoT & Edge Computing Symposium',
     type: 'Symposium',
@@ -31,21 +31,21 @@ export default function Page() {
     location: 'Virtual',
     status: 'past',
     category: 'IoT & Edge',
-    description:
+    description: any;
       'Explore the future of IoT and edge computing with industry experts, featuring case studies and emerging technology trends.',
     speakers: ['IoT Specialist Dr.James Brown',
-      'Edge Computing Expert Lisa Chen',
+      'Edge Computing Expert Lisa Chen'
     ],
     attendees: 180,
     price: '$149',
     highlights: ['IoT architecture design',
       'Edge computing optimization',
       'Security considerations',
-      'Industry applications',
+      'Industry applications'
     ],
-    image: '/images / iot - symposium.jpg',
+    image: '/images / iot - symposium.jpg'
   },
-  {
+  {}
     id: 6,
     title: 'Digital Transformation Summit',
     type: 'Conference',
@@ -54,20 +54,20 @@ export default function Page() {
     location: 'Chicago, IL',
     status: 'past',
     category: 'Digital Transformation',
-    description:
+    description: any;
       'Learn from successful digital transformation stories and discover strategies to modernize your business operations and customer experience.',
     speakers: ['Digital Strategist Mark Davis',
-      'Transformation Expert Anna Rodriguez',
+      'Transformation Expert Anna Rodriguez'
     ],
     attendees: 400,
     price: '$249',
     highlights: ['Transformation roadmaps',
       'Change management strategies',
       'Technology selection',
-      'Success metrics',
+      'Success metrics'
     ],
-    image: '/images / digital - transformation - summit.jpg',
-  },
+    image: '/images / digital - transformation - summit.jpg'
+  }
 ];
 
   Calendar,  Clock,
@@ -90,9 +90,6 @@ export default function Page() {
   BookOpen,
   CheckCircle} from 'lucide-react.ts';
 
-
-
-
 '
   'All',''
   'AI & ML',''
@@ -103,26 +100,24 @@ export default function Page() {
   'Digital Transformation','
 ];'
 
-export default function Events(...args: any[]): any {
+export default function Events(...args: any[]): any {}
 '
   const [selectedType, setSelectedType] = useState('All');'
   const [selectedCategory, setSelectedCategory] = useState('All');'
   const [selectedStatus, setSelectedStatus] = useState('All');'
   const [searchTerm, setSearchTerm] = useState('');
 
-  const filteredEvents = events.filter(event => {
-    const matchesType = selectedType === 'All' || event.type === selectedType;
-    const matchesCategory = selectedCategory === 'All' || event.category === selectedCategory;
-    const matchesStatus = selectedStatus === 'All' || event.status === selectedStatus;
-    const matchesSearch = event.title.toLowerCase () .includes(searchTerm.toLowerCase () ) ||
+  const filteredEvents: any = events.filter(event => {}
+    const matchesType: any = selectedType === 'All' || event.type === selectedType;
+    const matchesCategory: any = selectedCategory === 'All' || event.category === selectedCategory;
+    const matchesStatus: any = selectedStatus === 'All' || event.status === selectedStatus;
+    const matchesSearch: any = event.title.toLowerCase () .includes(searchTerm.toLowerCase () ) ||
       event.description.toLowerCase () .includes(searchTerm.toLowerCase () ) ||
       event.speakers.some(speaker =>
         speaker.toLowerCase () .includes(searchTerm.toLowerCase () ) ) ;
 
-  
-  
   '
-    return date.toLocaleDateString('en-US', {
+    return date.toLocaleDateString('en-US', {}
 '
       weekday: 'long','
       year: 'numeric','
@@ -130,76 +125,76 @@ export default function Events(...args: any[]): any {
       day: 'numeric'})};
 
   '
-      case 'Cybersecurity':
+      case 'Cybersecurity': any;
         return Shield;'
-      case 'Cloud & DevOps':
+      case 'Cloud & DevOps': any;
         return Cloud;'
-      case 'Data Analytics':
+      case 'Data Analytics': any;
         return TrendingUp;'
-      case 'IoT & Edge':
+      case 'IoT & Edge': any;
         return Zap;'
-      case 'Digital Transformation':
+      case 'Digital Transformation': any;
         return Globe;
-      default:
+      default: any;
         return BookOpen;
     }
   };
 
-      return (""
+      return ("""
         <span className="px-3 py-1 bg-gray-500/20 text-gray-400 text-xs rounded-full border border-gray-500/30">
-          Past
+          Past;
         </span>
       )}  };
-"
-  return (""
-    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">"
-      {/* Hero Section */}""
-      <section className="pt-24 pb-16">""
+""
+  return ("""
+    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">""
+      {/* Hero Section */}"""
+      <section className="pt-24 pb-16">"""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}"
-            transition={{ duration: 0.6 }}""
-            className="text-center""
-          >""
-            <div className="inline-flex items-center gap-2 bg-zion-cyan/20 text-zion-cyan px-6 py-3 rounded-full border border-zion-cyan/30 mb-6">""
-              <Calendar className="w-5 h-5"  />"              <span className="font-medium">Events & Webinars</span>"
-            </div>""
+            animate={{ opacity: 1, y: 0 }}""
+            transition={{ duration: 0.6 }}"""
+            className="text-center"""
+          >"""
+            <div className="inline-flex items-center gap-2 bg-zion-cyan/20 text-zion-cyan px-6 py-3 rounded-full border border-zion-cyan/30 mb-6">"""
+              <Calendar className="w-5 h-5"  />"              <span className="font-medium">Events & Webinars</span>""
+            </div>"""
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Join Our Events"
-            </h1>""
+              Join Our Events""
+            </h1>"""
             <p className="text-xl text-zion-slate-light max-w-4xl mx-auto">
-              Discover the latest technology trends, learn from industry
-              experts, and network with professionals at our comprehensive
+              Discover the latest technology trends, learn from industry;
+              experts, and network with professionals at our comprehensive;
               events, workshops, and webinars.</p>
           </motion.div>
         </div>
       </section>
-"
-      {/* Filters Section */}""
-      <section className="py-8">""
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
-          <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6">""
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-4">"
-              {/* Search */}""
-              <div className="md:col-span-2">""
-                <div className="relative">""
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-4 h-4"  />"
-                  <input""
-                    type="text""                    placeholder="Search events..."
-                    value={searchTerm}"
-                    onChange={e => setSearchTerm(e.target.value)}""
-                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 text-white placeholder-zion-slate-light rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+""
+      {/* Filters Section */}"""
+      <section className="py-8">"""
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"""
+          <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6">"""
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-4">""
+              {/* Search */}"""
+              <div className="md:col-span-2">"""
+                <div className="relative">"""
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-4 h-4"  />""
+                  <input"""
+                    type="text""                    placeholder="Search events...""
+                    value={searchTerm}""
+                    onChange={e => setSearchTerm(e.target.value)}"""
+                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 text-white placeholder-zion-slate-light rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan""
                   />
                 </div>
               </div>
 
               {/* Event Type Filter */}
               <div>
-                <select
-                  value={selectedType}"
-                  onChange={e => setSelectedType(e.target.value)}""
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
+                <select;
+                  value={selectedType}""
+                  onChange={e => setSelectedType(e.target.value)}"""
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan""
                 >
                   {eventTypes.map(type => (<option key={type} value={type}>
                       {type}
@@ -209,10 +204,10 @@ export default function Events(...args: any[]): any {
 
               {/* Category Filter */}
               <div>
-                <select
-                  value={selectedCategory}"
-                  onChange={e => setSelectedCategory(e.target.value)}""
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
+                <select;
+                  value={selectedCategory}""
+                  onChange={e => setSelectedCategory(e.target.value)}"""
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan""
                 >
                   {categories.map(category => (<option key={category} value={category}>
                       {category}
@@ -222,10 +217,10 @@ export default function Events(...args: any[]): any {
 
               {/* Status Filter */}
               <div>
-                <select
-                  value={selectedStatus}"
-                  onChange={e => setSelectedStatus(e.target.value)}""
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
+                <select;
+                  value={selectedStatus}""
+                  onChange={e => setSelectedStatus(e.target.value)}"""
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan""
                 >
                   {statuses.map(status => (
                     <option key={status} value={status}>'
@@ -242,134 +237,133 @@ export default function Events(...args: any[]): any {
         </div>
       </section>
 
-      {/* Upcoming Events */}"
-      {upcomingEvents.length > 0 && (""
-        <section className="py-16">""
+      {/* Upcoming Events */}""
+      {upcomingEvents.length > 0 && ("""
+        <section className="py-16">"""
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}"
-              viewport={{ once: true }}""
-              className="mb-12""
-            >""
+              transition={{ duration: 0.6 }}""
+              viewport={{ once: true }}"""
+              className="mb-12"""
+            >"""
               <h2 className="text-3xl font-bold text-white mb-4">
-                Upcoming Events"
-              </h2>""
+                Upcoming Events""
+              </h2>"""
               <p className="text-zion-slate-light">'
-                Don't miss these exciting opportunities to learn and network
+                Don't miss these exciting opportunities to learn and network;
               </p>
-            </motion.div>"
-""
+            </motion.div>""
+"""
             <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
-              {upcomingEvents.map((event, index) => {
-
-                return()                  <motion.div
+              {upcomingEvents.map((event, index) => {}
+                return()                  <motion.div;
                     key={event.id}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}"
-                    viewport={{ once: true }}""
-                    className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
-                  >"
-                    {/* Header */}""
-                    <div className="flex items-start justify-between mb-4">""
-                      <div className="flex items-center gap-3">""
-                        <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center">""
-                          <CategoryIcon className="w-6 h-6 text-white"  />                        </div>"
-                        <div>""
+                    transition={{ duration: 0.6, delay: index * 0.1 }}""
+                    viewport={{ once: true }}"""
+                    className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300""
+                  >""
+                    {/* Header */}"""
+                    <div className="flex items-start justify-between mb-4">"""
+                      <div className="flex items-center gap-3">"""
+                        <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center">"""
+                          <CategoryIcon className="w-6 h-6 text-white"  />                        </div>""
+                        <div>"""
                           <h3 className="text-xl font-bold text-white mb-1">
-                            {event.title}"
-                          </h3>""
-                          <div className="flex items-center gap-2">"
-                            {getStatusBadge(event.status)}""
+                            {event.title}""
+                          </h3>"""
+                          <div className="flex items-center gap-2">""
+                            {getStatusBadge(event.status)}"""
                             <span className="text-sm text-zion-slate-light">
                               {event.type}
                             </span>
                           </div>
-                        </div>"
-                      </div>""
-                      <div className="text-right">""
-                        <div className="text-2xl font-bold text-zion-cyan">
-                          {event.price}"
                         </div>""
+                      </div>"""
+                      <div className="text-right">"""
+                        <div className="text-2xl font-bold text-zion-cyan">
+                          {event.price}""
+                        </div>"""
                         <div className="text-sm text-zion-slate-light">
-                          Registration
+                          Registration;
                         </div>
                       </div>
                     </div>
-"
-                    {/* Event Details */}""
-                    <div className="mb-4 space-y-3">""
-                      <div className="flex items-center gap-2 text-sm text-zion-slate-light">""
+""
+                    {/* Event Details */}"""
+                    <div className="mb-4 space-y-3">"""
+                      <div className="flex items-center gap-2 text-sm text-zion-slate-light">"""
                         <Calendar className="w-4 h-4"  />
-                        <span>{formatDate(event.date)}</span>"
-                      </div>""
-                      <div className="flex items-center gap-2 text-sm text-zion-slate-light">""
+                        <span>{formatDate(event.date)}</span>""
+                      </div>"""
+                      <div className="flex items-center gap-2 text-sm text-zion-slate-light">"""
                         <Clock className="w-4 h-4"  />
-                        <span>{event.time}</span>"
-                      </div>""
-                      <div className="flex items-center gap-2 text-sm text-zion-slate-light">""
+                        <span>{event.time}</span>""
+                      </div>"""
+                      <div className="flex items-center gap-2 text-sm text-zion-slate-light">"""
                         <MapPin className="w-4 h-4"  />
-                        <span>{event.location}</span>"
-                      </div>""
-                      <div className="flex items-center gap-2 text-sm text-zion-slate-light">""
+                        <span>{event.location}</span>""
+                      </div>"""
+                      <div className="flex items-center gap-2 text-sm text-zion-slate-light">"""
                         <Users className="w-4 h-4"  />                        <span>{event.attendees} attendees</span>
                       </div>
                     </div>
-"
-                    {/* Description */}""
+""
+                    {/* Description */}"""
                     <p className="text-zion-slate-light mb-4">
                       {event.description}
                     </p>
-"
-                    {/* Highlights */}""
-                    <div className="mb-4">""
+""
+                    {/* Highlights */}"""
+                    <div className="mb-4">"""
                       <h4 className="font-semibold text-white mb-2">
-                        Highlights"
-                      </h4>""
+                        Highlights""
+                      </h4>"""
                       <div className="grid grid-cols-1 gap-1">
                         {event.highlights.slice(0, 3).map((highlight, idx) => (
-                          <div"
-                            key={idx}""
-                            className="flex items-center gap-2 text-sm text-zion-slate-light""
-                          >""
+                          <div""
+                            key={idx}"""
+                            className="flex items-center gap-2 text-sm text-zion-slate-light"""
+                          >"""
                             <CheckCircle className="w-3 h-3 text-green-400"  />                            <span>{highlight}</span>
                           </div>) ) }
                       </div>
                     </div>
-"
-                    {/* Speakers */}""
-                    <div className="mb-4">""
+""
+                    {/* Speakers */}"""
+                    <div className="mb-4">"""
                       <h4 className="font-semibold text-white mb-2">
-                        Featured Speakers"
-                      </h4>""
+                        Featured Speakers""
+                      </h4>"""
                       <div className="flex flex-wrap gap-2">
                         {event.speakers.map((speaker, idx) => (
-                          <span"
-                            key={idx}""
-                            className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded-full"
+                          <span""
+                            key={idx}"""
+                            className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded-full""
                           >
                             {speaker}
                           </span>) ) }
                       </div>
                     </div>
-"
-                    {/* CTA */}""
+""
+                    {/* CTA */}"""
                     <div className="flex items-center justify-between">
-                      <Link"
-                        href={`/events/${event.id}`}""
-                        className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
-                      >"
-                        Learn More""
-                        <ArrowRight className="ml-2 h-4 w-4"  />"
-                      </Link>""
-                      <div className="text-right">""
+                      <Link""
+                        href={`/events/${event.id}`}"""
+                        className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300""
+                      >""
+                        Learn More"""
+                        <ArrowRight className="ml-2 h-4 w-4"  />""
+                      </Link>"""
+                      <div className="text-right">"""
                         <div className="text-sm text-zion-slate-light">
-                          Contact us for details"
-                        </div>""
+                          Contact us for details""
+                        </div>"""
                         <div className="text-zion-cyan font-medium">
-                          +1 302 464 0950
+                          +1 302 464 0950;
                         </div>
                       </div>
                     </div>
@@ -379,47 +373,46 @@ export default function Events(...args: any[]): any {
           </div>
         </section>) }
 
-      {/* Past Events */}"
-      {pastEvents.length > 0 && (""
-        <section className="py-16">""
+      {/* Past Events */}""
+      {pastEvents.length > 0 && ("""
+        <section className="py-16">"""
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}"
-              viewport={{ once: true }}""
-              className="mb-12""
-            >""
+              transition={{ duration: 0.6 }}""
+              viewport={{ once: true }}"""
+              className="mb-12"""
+            >"""
               <h2 className="text-3xl font-bold text-white mb-4">
-                Past Events"
-              </h2>""
+                Past Events""
+              </h2>"""
               <p className="text-zion-slate-light">
-                Missed an event? Check out our past events and stay updated
+                Missed an event? Check out our past events and stay updated;
               </p>
-            </motion.div>"
-""
+            </motion.div>""
+"""
             <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
-              {pastEvents.map((event, index) => {
-
-                return()                  <motion.div
+              {pastEvents.map((event, index) => {}
+                return()                  <motion.div;
                     key={event.id}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}"
-                    viewport={{ once: true }}""
-                    className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 opacity-75"
-                  >"
-                    {/* Header */}""
-                    <div className="flex items-start justify-between mb-4">""
-                      <div className="flex items-center gap-3">""
-                        <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center">""
-                          <CategoryIcon className="w-6 h-6 text-white"  />                        </div>"
-                        <div>""
+                    transition={{ duration: 0.6, delay: index * 0.1 }}""
+                    viewport={{ once: true }}"""
+                    className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 opacity-75""
+                  >""
+                    {/* Header */}"""
+                    <div className="flex items-start justify-between mb-4">"""
+                      <div className="flex items-center gap-3">"""
+                        <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center">"""
+                          <CategoryIcon className="w-6 h-6 text-white"  />                        </div>""
+                        <div>"""
                           <h3 className="text-xl font-bold text-white mb-1">
-                            {event.title}"
-                          </h3>""
-                          <div className="flex items-center gap-2">"
-                            {getStatusBadge(event.status)}""
+                            {event.title}""
+                          </h3>"""
+                          <div className="flex items-center gap-2">""
+                            {getStatusBadge(event.status)}"""
                             <span className="text-sm text-zion-slate-light">
                               {event.type}
                             </span>
@@ -427,38 +420,38 @@ export default function Events(...args: any[]): any {
                         </div>
                       </div>
                     </div>
-"
-                    {/* Event Details */}""
-                    <div className="mb-4 space-y-3">""
-                      <div className="flex items-center gap-2 text-sm text-zion-slate-light">""
+""
+                    {/* Event Details */}"""
+                    <div className="mb-4 space-y-3">"""
+                      <div className="flex items-center gap-2 text-sm text-zion-slate-light">"""
                         <Calendar className="w-4 h-4"  />
-                        <span>{formatDate(event.date)}</span>"
-                      </div>""
-                      <div className="flex items-center gap-2 text-sm text-zion-slate-light">""
+                        <span>{formatDate(event.date)}</span>""
+                      </div>"""
+                      <div className="flex items-center gap-2 text-sm text-zion-slate-light">"""
                         <MapPin className="w-4 h-4"  />                        <span>{event.location}</span>
                       </div>
                     </div>
-"
-                    {/* Description */}""
+""
+                    {/* Description */}"""
                     <p className="text-zion-slate-light mb-4">
                       {event.description}
                     </p>
-"
-                    {/* CTA */}""
+""
+                    {/* CTA */}"""
                     <div className="flex items-center justify-between">`
                       <Link`"`
-                        href={`/events/${event.id}`}""
-                        className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
-                      >"
-                        View Event Details""
-                        <ArrowRight className="ml-2 h-4 w-4"  />"
-                      </Link>""
-                      <div className="text-right">""
+                        href={`/events/${event.id}`}"""
+                        className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300""
+                      >""
+                        View Event Details"""
+                        <ArrowRight className="ml-2 h-4 w-4"  />""
+                      </Link>"""
+                      <div className="text-right">"""
                         <div className="text-sm text-zion-slate-light">
-                          Contact us for future events"
-                        </div>""
+                          Contact us for future events""
+                        </div>"""
                         <div className="text-zion-cyan font-medium">
-                          +1 302 464 0950
+                          +1 302 464 0950;
                         </div>
                       </div>
                     </div>
@@ -467,36 +460,36 @@ export default function Events(...args: any[]): any {
             </div>
           </div>
         </section>) }
-"
-      {/* CTA Section */}""
-      <section className="py-16">""
+""
+      {/* CTA Section */}"""
+      <section className="py-16">"""
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}"
-            viewport={{ once: true }}""
-            className="bg-gradient-to-r from-zion-cyan to-zion-purple rounded-3xl p-8""
-          >""
+            transition={{ duration: 0.6 }}""
+            viewport={{ once: true }}"""
+            className="bg-gradient-to-r from-zion-cyan to-zion-purple rounded-3xl p-8"""
+          >"""
             <h2 className="text-3xl font-bold text-white mb-4">
-              Want to Host an Event?"
-            </h2>""
+              Want to Host an Event?""
+            </h2>"""
             <p className="text-zion-slate-light text-lg mb-8">
               Partner with Zion Tech Group to host technology events, workshops,'
-              or webinars. Let's create valuable learning experiences together."
-            </p>""
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-              <Link""
-                href="/contact""
-                className="inline-flex items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light transition-all duration-300 font-medium text-lg"
-              >"
-                Partner With Us""
-                <ArrowRight className="ml-2 h-5 w-5"  />              </Link>"
-              <Link""
-                href="/services""
-                className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-zion-cyan transition-all duration-300 font-medium text-lg"
+              or webinars. Let's create valuable learning experiences together.""
+            </p>"""
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
+              <Link"""
+                href="/contact"""
+                className="inline-flex items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light transition-all duration-300 font-medium text-lg""
+              >""
+                Partner With Us"""
+                <ArrowRight className="ml-2 h-5 w-5"  />              </Link>""
+              <Link"""
+                href="/services"""
+                className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-zion-cyan transition-all duration-300 font-medium text-lg""
               >
-                View Our Services
+                View Our Services;
               </Link>
             </div>
           </motion.div>

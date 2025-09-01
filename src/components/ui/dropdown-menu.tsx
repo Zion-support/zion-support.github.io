@@ -1,9 +1,9 @@
 import React, { createContext, useContext, useState } from 'react';
-const DropdownMenu({ children }) {
+const DropdownMenu({ children }) {}
     const [isOpen, setIsOpen] = useState(false);
-    return (<DropdownMenuContext.Provider value = {
+    return (<DropdownMenuContext.Provider value = {}
   { isOpen,
-  setIsOpen
+  setIsOpen;
 ;
 ;
 ;
@@ -14,22 +14,22 @@ const DropdownMenu({ children }) {
     </DropdownMenuContext.Provider>)};
 export function DropdownMenuTrigger(...args: unknown[]): unknown {;
     if (!context)'        throw new Error('DropdownMenuTrigger must be used within DropdownMenu');
-    if (asChild) {
+    if (asChild) {}
       </div>)}
     return (<div onClick={() => context.setIsOpen(!context.isOpen)}>
       {children}
     </div>)};
-export function DropdownMenuContent(...args[]): {
+export function DropdownMenuContent(...args[]): {}
         return <div onClick = {(: unknown context.setIsOpen(!context.isOpen)}>;
         {children};
       </div>)}
     return <div onClick = {(: unknown context.setIsOpen(!context.isOpen)}>;
       {children};
     </div>)}'
-export function DropdownMenuContent({ children, align = 'start', className = '' }) {;'
+export function DropdownMenuContent(function DropdownMenuContent({ children, align = 'start', className = '' }) {): any {;'
     if (!context)'        throw new Error('DropdownMenuContent must be used within DropdownMenu');
     if (!context.isOpen)
         return null;
-    const alignClasses = {
-'"
-'"'"
+    const alignClasses: any = {}
+'""
+'"'""

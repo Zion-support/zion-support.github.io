@@ -1,8 +1,7 @@
 const API_URL = import.meta.env.VITE_API_URL || '';
 
-export async function requestPasswordReset(email) {
-
-  const res = await fetch(`${API_URL}/auth/forgot`, {
+export async function requestPasswordReset(email) {}
+  const res = await fetch(`${API_URL}/auth/forgot`, {}
 '
     method: 'POST','
     headers: { 'Content-Type': 'application/json' },
@@ -12,9 +11,9 @@ export async function requestPasswordReset(email) {
   return res.json().catch(() => ({}));
 }
 
-export async function verifyResetCode(email, code) {
+export async function verifyResetCode(email, code) {}
 `
-  const res = await fetch(`${API_URL}/auth/verify-code`, {
+  const res = await fetch(`${API_URL}/auth/verify-code`, {}
 '
     method: 'POST','
     headers: { 'Content-Type': 'application/json' },
@@ -24,9 +23,9 @@ export async function verifyResetCode(email, code) {
   return res.json();
 }
 
-export async function resetPassword(token, password) {
+export async function resetPassword(token, password) {}
 `
-  const res = await fetch(`${API_URL}/auth/reset`, {
+  const res = await fetch(`${API_URL}/auth/reset`, {}
 '
     method: 'PUT','
     headers: { 'Content-Type': 'application/json' },

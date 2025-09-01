@@ -1,5 +1,6 @@
 module.exports = {
   apps: [
+<<<<<<< HEAD
     // PM2 Error Prevention Automation - runs every 5 minutes (HIGHEST PRIORITY)
     {
       name: 'pm2-error-prevention',
@@ -18,37 +19,85 @@ module.exports = {
     },
 
     // Console Error Fixer - Automatically fixes console errors
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a
     {
-      name: 'console-error-fixer',
-      script: 'scripts/automation-wrapper.js',
-      args: 'fix',
+      name: 'error-monitor',
+      script: './scripts/error-monitor.js',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
+      max_memory_restart: '500M',
       env: {
-        NODE_ENV: 'production',
-        PM2_PROCESS: 'console-error-fixer'
+        NODE_ENV: 'production'
       },
-      cron_restart: '0 */6 * * *', // Restart every 6 hours
-      log_file: 'logs/console-error-fixer.log',
-      out_file: 'logs/console-error-fixer-out.log',
-      error_file: 'logs/console-error-fixer-error.log'
+      error_file: './logs/error-monitor-error.log',
+      out_file: './logs/error-monitor-out.log',
+      log_file: './logs/error-monitor-combined.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+      merge_logs: true,
+      max_restarts: 10,
+      min_uptime: '5s',
+      restart_delay: 2000,
+      cron_restart: '*/10 * * * *', // Run every 10 minutes
+      pmx: true
     },
-
-    // Link Checker - Checks for broken links
     {
-      name: 'link-checker',
-      script: 'scripts/automation-wrapper.js',
-      args: 'check-links',
+      name: 'health-checker',
+      script: './scripts/health-checker.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '300M',
+      env: {
+        NODE_ENV: 'production'
+      },
+      error_file: './logs/health-checker-error.log',
+      out_file: './logs/health-checker-out.log',
+      log_file: './logs/health-checker-combined.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+      merge_logs: true,
+      max_restarts: 5,
+      min_uptime: '5s',
+      restart_delay: 2000,
+      cron_restart: '*/5 * * * *', // Run every 5 minutes
+      pmx: true
+    },
+    {
+      name: 'auto-fixer',
+      script: './scripts/auto-fixer.js',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production',
-        PM2_PROCESS: 'link-checker'
+        NODE_ENV: 'production'
       },
+      error_file: './logs/auto-fixer-error.log',
+      out_file: './logs/auto-fixer-out.log',
+      log_file: './logs/auto-fixer-combined.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+      merge_logs: true,
+      max_restarts: 3,
+      min_uptime: '10s',
+      restart_delay: 5000,
+      cron_restart: '0 */2 * * *', // Run every 2 hours
+      pmx: true
+    },
+    {
+      name: 'log-cleaner',
+      script: './scripts/log-cleaner.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '200M',
+      env: {
+        NODE_ENV: 'production'
+      },
+<<<<<<< HEAD
       cron_restart: '0 2 * * 1', // Restart every Monday at 2 AM
       log_file: 'logs/link-checker.log',
       out_file: 'logs/link-checker-out.log',
@@ -364,17 +413,32 @@ module.exports = {
       log_file: 'logs/dev-watch-build.log',
       out_file: 'logs/dev-watch-build-out.log',
       error_file: 'logs/dev-watch-build-error.log'
+=======
+      error_file: './logs/log-cleaner-error.log',
+      out_file: './logs/log-cleaner-out.log',
+      log_file: './logs/log-cleaner-combined.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+      merge_logs: true,
+      max_restarts: 3,
+      min_uptime: '5s',
+      restart_delay: 2000,
+      cron_restart: '0 2 * * *', // Run daily at 2 AM
+      pmx: true
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a
     }
   ],
 
   deploy: {
     production: {
-      user: 'node',
+      user: 'ubuntu',
       host: 'localhost',
       ref: 'origin/main',
-      repo: 'git@github.com:username/repo.git',
-      path: '/var/www/production',
-      'post-deploy': 'npm install && pm2 reload ecosystem.config.cjs --env production'
+      repo: 'https://github.com/Zion-Holdings/zion.app.git',
+      path: '/var/www/zion.app',
+      'pre-deploy-local': '',
+      'post-deploy': 'npm install --legacy-peer-deps && npm run build && pm2 reload ecosystem.config.cjs --env production',
+      'pre-setup': 'mkdir -p /var/www/zion.app/logs'
     }
   }
 };

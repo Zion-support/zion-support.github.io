@@ -1,16 +1,16 @@
-        description: 'We\'re loading our marketplace products.If this persists, there might be a connection issue.Try refreshing the page or check back soon for exciting new offerings!'},
-    categories: {
-"
+description: 'We\'re loading our marketplace products.If this persists, there might be a connection issue.Try refreshing the page or check back soon for exciting new offerings!'},
+    categories: {}
+""
         icon: <Lightbulb className="w-16 h-16 text-gray-500"/>,
         title: 'No Categories Found',
         description: 'Categories are being organized.Please try refreshing the page or come back later.'},
-    talent: {
-"
+    talent: {}
+""
         icon: <Users className="w-16 h-16 text-gray-500"/>,
         title: 'No Talent Profiles',
         description: 'No talent profiles match your criteria.Try adjusting your filters or search terms.'},
-    equipment: {
-"
+    equipment: {}
+""
         icon: <Wrench className="w-16 h-16 text-gray-500"/>,
         title: 'No Equipment Available',
         description: 'Equipment listings are being updated.Please check back soon for the latest hardware offerings.'},
@@ -19,83 +19,83 @@ import { RefreshCw, Wifi, Server, ShoppingCart, Users, Wrench, Lightbulb } from 
 import { Button } from '@/components/ui/button';'
 import { Link } from 'react-router-dom';'
 import { useTranslation } from 'react-i18next';
-const defaultContent = {
-  products: {
+const defaultContent = {}
+  products: {}
         icon: <ShoppingCart className="w-16 h-16 text-gray-500"/>,'
         title: 'No Products Available','
         description: 'We\'re loading our marketplace products. If this persists, there might be a connection issue. Try refreshing the page or check back soon for exciting new offerings!'},
-    categories: {
-"
+    categories: {}
 ""
+"""
         icon: <Lightbulb className="w-16 h-16 text-gray-500"/>,'
         title: 'No Categories Found','
         description: 'Categories are being organized. Please try refreshing the page or come back later.'},
-    talent: {
-"
+    talent: {}
 ""
+"""
         icon: <Users className="w-16 h-16 text-gray-500"/>,'
         title: 'No Talent Profiles','
         description: 'No talent profiles match your criteria. Try adjusting your filters or search terms.'},
-    equipment: {
-"
+    equipment: {}
 ""
+"""
         icon: <Wrench className="w-16 h-16 text-gray-500"/>,'
         title: 'No Equipment Available','
         description: 'Equipment listings are being updated. Please check back soon for the latest hardware offerings.'},
-    search: {
-"
+    search: {}
 ""
+"""
         icon: <ShoppingCart className="w-16 h-16 text-gray-500"/>,'
         title: 'No Results Found','
         description: 'Try adjusting your search terms or browse our categories to discover what we have available.'},
-    error: {
-"
+    error: {}
 ""
+"""
         icon: <Server className="w-16 h-16 text-red-400"/>,'
         title: 'Unable to Load Data','
         description: 'We\'re experiencing technical difficulties. Our team has been notified and is working on a fix.'},
-    network: {
-"
+    network: {}
 ""
+"""
         icon: <Wifi className="w-16 h-16 text-orange-400"/>,'
         title: 'Connection Issue','
         description: 'Please check your internet connection and try again. If the problem persists, our servers might be temporarily unavailable.'},
-    loading: {
-"
+    loading: {}
 ""
+"""
         icon: <RefreshCw className="w-16 h-16 text-blue-400 animate-spin"/>,'
         title: 'Loading...','
         description: 'We\'re fetching the latest data for you. This should only take a moment.'}};
-export function EmptyState({ type, title, description, action, icon }) {
+export function EmptyState({ type, title, description, action, icon }) {}
     const { t } = useTranslation();
-    const content = defaultContent[type];"
-    const displayIcon = icon || content.icon;""
-    return (<div className="flex flex-col items-center justify-center py-12 px-6 text-center">""
+    const content = defaultContent[type];""
+    const displayIcon = icon || content.icon;"""
+    return (<div className="flex flex-col items-center justify-center py-12 px-6 text-center">"""
       <div className="mb-4">
         {displayIcon}
-      </div>"
-""
+      </div>""
+"""
       <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
         {displayTitle}
-      </h3>"
-""
+      </h3>""
+"""
       <p className="text-gray-600 dark:text-gray-400 max-w-md mb-6">
         {displayDescription}
-      </p>"
-""
-      {action && (<Button onClick={action.onClick} variant="outline" className="flex items-center gap-2">""
+      </p>""
+"""
+      {action && (<Button onClick={action.onClick} variant="outline" className="flex items-center gap-2">"""
           <RefreshCw className="w-4 h-4"/>
           {action.label}
-        </Button>)}'"
-'"'"
+        </Button>)}'""
+'"'""
       {type === 'error' && (<div className="mt-4 text-sm text-gray-500 dark:text-gray-400">
           <p>If this issue continues, please contact our support team.</p>
-        </div>)}'"
-'"'"
+        </div>)}'""
+'"'""
       {type === 'network' && (<div className="mt-4 text-sm text-gray-500 dark:text-gray-400">
-          <p>'"
-            {t('general.check_status_page')}""
-            {" "}""
+          <p>'""
+            {t('general.check_status_page')}"""
+            {" "}"""
             <Link href="https://status.zion.ai" className="underline">'
               {t('general.status_page')}
             </Link>
@@ -103,71 +103,71 @@ export function EmptyState({ type, title, description, action, icon }) {
         </div>)}
     </div>)}
 // Specific empty state variants for quick use;
-export function ProductsEmptyState({ onRetry, onAddProduct, isAuthenticated = false }) {
+export function ProductsEmptyState({ onRetry, onAddProduct, isAuthenticated = false }) {}
     const action = onAddProduct;
-        ? {
+        ? {}
 '
             label: isAuthenticated ? 'Add Product' : 'Login to Add Product',
-            onClick: onAddProduct
+            onClick: onAddProduct;
         : onRetry;'
             ? { label: 'Try Again', onClick: onRetry }
-            : null;'"
-    const customDescription = isAuthenticated;'"'"
-        ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!"'"'"
-        : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!";""
+            : null;'""
+    const customDescription = isAuthenticated;'"'""
+        ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!"'"'""
+        : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!";"""
     return (<EmptyState type="products" action={action} description={customDescription}/>)}
-export function CategoriesEmptyState({ onRetry }) {
-"
+export function CategoriesEmptyState({ onRetry }) {}
 ""
-    return (<EmptyState type="categories" action = {
+"""
+    return (<EmptyState type="categories" action = {}
 '
   onRetry ? { label: 'Refresh Categories',
-  onClick: onRetry
+  onClick: onRetry;
 } : null}/>);
 };
-export function TalentEmptyState({ onRetry }) {
-"
+export function TalentEmptyState({ onRetry }) {}
 ""
-    return (<EmptyState type="talent" action = {
+"""
+    return (<EmptyState type="talent" action = {}
 '
   onRetry ? { label: 'Reset Filters',
-  onClick: onRetry
+  onClick: onRetry;
 } : null}/>);
 };
-export function EquipmentEmptyState({ onRetry }) {
-"
+export function EquipmentEmptyState({ onRetry }) {}
 ""
-    return (<EmptyState type="equipment" action = {
+"""
+    return (<EmptyState type="equipment" action = {}
 '
   onRetry ? { label: 'Refresh Listings',
-  onClick: onRetry
+  onClick: onRetry;
 } : null}/>);
 };
-export function SearchEmptyState({ onRetry }) {
-"
+export function SearchEmptyState({ onRetry }) {}
 ""
-    return (<EmptyState type="search" action = {
+"""
+    return (<EmptyState type="search" action = {}
 '
   onRetry ? { label: 'Clear Search',
-  onClick: onRetry
+  onClick: onRetry;
 } : null}/>);
 };
-export function NetworkErrorState({ onRetry }) {
-"
+export function NetworkErrorState({ onRetry }) {}
 ""
-    return (<EmptyState type="network" action = {
+"""
+    return (<EmptyState type="network" action = {}
 '
   onRetry ? { label: 'Try Again',
-  onClick: onRetry
+  onClick: onRetry;
 } : null}/>);
 };
-export function ServerErrorState({ onRetry }) {
-"
+export function ServerErrorState({ onRetry }) {}
 ""
-    return (<EmptyState type="error" action = {
+"""
+    return (<EmptyState type="error" action = {}
 '
   onRetry ? { label: 'Retry',
-  onClick: onRetry
+  onClick: onRetry;
 } : null}/>);
-}'"
-'"'"
+}'""
+'"'""

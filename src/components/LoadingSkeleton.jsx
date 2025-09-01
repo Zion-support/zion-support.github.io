@@ -1,21 +1,15 @@
 import React from 'react';'
 import { cn } from '@/lib/utils';'
-export function Skeleton({ className, width, height, rounded = 'md', animated = true }) {
-
-    const roundedClasses = {
+export function Skeleton({ className, width, height, rounded = 'md', animated = true }) {}
+    const roundedClasses = {}
 '
   none: '','
         sm: 'rounded-sm','
         md: 'rounded-md','
         lg: 'rounded-lg','
   full: 'rounded-full'
-    
 
-
-
-
-
-    const roundedClasses = {
+    const roundedClasses = {}
 '
   none: '','
         sm: 'rounded - sm','
@@ -24,21 +18,15 @@ export function Skeleton({ className, width, height, rounded = 'md', animated = 
   full: 'rounded - full'
 
 };
-    return (<div className = {
+    return (<div className = {}
 '
   cn('bg-muted', roundedClasses[rounded], animated && 'animate-pulse',
   className)
 
-
-
-
-
 }
 
-} style = {
-
-  {
-
+} style = {}
+  {}
             width: width,
             height: height,
 '

@@ -1,15 +1,13 @@
 import React from 'react';'
 import { cn } from '@/lib/utils';
 
-export function GradientHeading({
-
+export function GradientHeading({}
   children,'
   variant = 'primary','
   size = '2xl','
   className = '',
-  customGradient}) {
-
-  const gradients = {
+  customGradient}) {}
+  const gradients = {}
 '
     primary:''
       'bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent','
@@ -21,12 +19,12 @@ export function GradientHeading({
       customGradient ||''
       'bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent'};
 
-  const getGradientClasses = () => {
+  const getGradientClasses = () => {}
     return gradients[variant];
   };
 
-  const getSizeClasses = () => {
-    const sizes = {
+  const getSizeClasses = () => {}
+    const sizes = {}
 '
       xs: 'text-xs','
       sm: 'text-sm','
@@ -42,7 +40,7 @@ export function GradientHeading({
         'font-bold leading-tight',
         getSizeClasses(),
         getGradientClasses(),
-        className
+        className;
       )}
     >
       {children}

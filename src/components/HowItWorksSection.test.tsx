@@ -1,17 +1,16 @@
-
-describe('HowItWorksSection', () => {
-  it('renders without crashing', () => {
+describe('HowItWorksSection', () => {}
+  it('renders without crashing', () => {}
     render(<HowItWorksSection  />) ;
     expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ;
 
-describe ('HowItWorksSection', () => {
+describe ('HowItWorksSection', () => {}
 '
-  it ('renders without crashing', () => {
+  it ('renders without crashing', () => {}
     render (<HowItWorksSection  />) ;'
     expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
 '
-  it ('displays expected content', () => {
+  it ('displays expected content', () => {}
     render (<HowItWorksSection  />) ;
-    // Add specific test assertions based on component content
+    // Add specific test assertions based on component content;
   }) }) ;
 '

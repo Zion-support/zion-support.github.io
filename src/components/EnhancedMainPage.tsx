@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion  } from 'framer-motion';
-export default function Page() {
+export default function Page(function Page() {): any {}
 ,
-    {
+    {}
       id: 'cloud-infrastructure',
       name: 'Cloud Infrastructure',
       description: 'Scalable cloud solutions for growing businesses',
@@ -11,7 +11,7 @@ export default function Page() {
       features: ['Multi-cloud Management', 'Auto-scaling', 'Disaster Recovery', 'Cost Optimization'],
       pricing: 'Starting at $999/month'
     },
-    {
+    {}
       id: 'devops-automation',
       name: 'DevOps Automation',
       description: 'Streamline development and deployment processes',
@@ -20,7 +20,7 @@ export default function Page() {
       features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Monitoring', 'Performance Optimization'],
       pricing: 'Starting at $1,499/month'
     },
-    {
+    {}
       id: 'quantum-computing',
       name: 'Quantum Computing',
       description: 'Cutting-edge quantum solutions for complex problems',
@@ -29,7 +29,7 @@ export default function Page() {
       features: ['Quantum Algorithms', 'Hybrid Computing', 'Research Support', 'Custom Solutions'],
       pricing: 'Contact for pricing'
     },
-    {
+    {}
       id: 'global-expansion',
       name: 'Global Expansion',
       description: 'International business development and localization',
@@ -40,7 +40,7 @@ export default function Page() {
     }
   ];
 
-  const categories = [{ id: 'all', name: 'All Services', count: services.length },
+  const categories: any = [{ id: 'all', name: 'All Services', count: services.length },
     { id: 'ai', name: 'AI & Machine Learning', count: services.filter(s => s.category === 'ai').length },
     { id: 'security', name: 'Cybersecurity', count: services.filter(s => s.category === 'security').length },
     { id: 'infrastructure', name: 'Infrastructure', count: services.filter(s => s.category === 'infrastructure').length },
@@ -49,11 +49,11 @@ export default function Page() {
     { id: 'business', name: 'Business Services', count: services.filter(s => s.category === 'business').length }
   ];
 
-  const filteredServices = activeTab === 'all' 
-    ? services 
+  const filteredServices: any = activeTab === 'all' 
+    ? services;
     : services.filter(service => service.category === activeTab);
 
-  const contact = {
+  const contact: any = {}
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -62,29 +62,29 @@ export default function Page() {
 
   return (<div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900">
       {/* Hero Section */}
-      <motion.section 
-        className="relative py-20 overflow-hidden"
+      <motion.section;
+        className="relative py-20 overflow-hidden""
         initial={{ opacity: 0 }}
         animate={{ opacity: isVisible ? 1 : 0 }}
         transition={{ duration: 1 }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.h1 
-            className="text-6xl md:text-7xl font-bold text-white mb-8"
+          <motion.h1;
+            className="text-6xl md:text-7xl font-bold text-white mb-8""
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Zion Tech Group
+              Zion Tech Group;
             </span>
             <br />
             <span className="text-white">2032</span>
           </motion.h1>
           
-          <motion.p 
-            className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed"
+          <motion.p;
+            className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed""
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -92,8 +92,8 @@ export default function Page() {
             Pioneering the future with cutting-edge AI, cybersecurity, and quantum computing solutions.Transform your business with our innovative services and expert guidance.</motion.p>
 
           {/* Contact Information */}
-          <motion.div 
-            className="flex flex-wrap justify-center gap-6 text-gray-300 mb-12"
+          <motion.div;
+            className="flex flex-wrap justify-center gap-6 text-gray-300 mb-12""
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -113,17 +113,17 @@ export default function Page() {
           </motion.div>
 
           {/* CTA Buttons */}
-          <motion.div 
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+          <motion.div;
+            className="flex flex-col sm:flex-row gap-4 justify-center""
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
             <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105">
-              Get Started
+              Get Started;
             </button>
             <button className="border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
-              Learn More
+              Learn More;
             </button>
           </motion.div>
         </div>
@@ -132,8 +132,8 @@ export default function Page() {
       {/* Services Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            className="text-center mb-16"
+          <motion.div;
+            className="text-center mb-16""
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -143,23 +143,23 @@ export default function Page() {
               Our <span className="text-blue-400">Services</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover our comprehensive range of innovative solutions designed to drive your business forward
+              Discover our comprehensive range of innovative solutions designed to drive your business forward;
             </p>
           </motion.div>
 
           {/* Category Tabs */}
-          <motion.div 
-            className="flex flex-wrap justify-center gap-4 mb-12"
+          <motion.div;
+            className="flex flex-wrap justify-center gap-4 mb-12""
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
             {categories.map((category) => (
-              <button
+              <button;
                 key={category.id}
                 onClick={() => setActiveTab(category.id)}
-                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${activeTab === category.id
+                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${activeTab === category.id;
                     ? 'bg-blue-600 text-white'
                     : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                 }`}
@@ -170,15 +170,15 @@ export default function Page() {
           </motion.div>
 
           {/* Services Grid */}
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          <motion.div;
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8""
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
           >
             {filteredServices.map((service, index) => (
-              <motion.div
+              <motion.div;
                 key={service.id}
                 className={`bg-gray-800 rounded-xl p-6 border-2 transition-all duration-300 hover:scale-105 ${service.popular ? 'border-blue-500 bg-gray-800/80' : 'border-gray-700 hover:border-blue-500'
                 }`}
@@ -190,7 +190,7 @@ export default function Page() {
                 {service.popular && (
                   <div className="inline-flex items-center gap-2 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium mb-4">
                     <Star className="w-4 h-4" />
-                    Most Popular
+                    Most Popular;
                   </div>
                 )}
                 
@@ -230,8 +230,8 @@ export default function Page() {
       {/* Stats Section */}
       <section className="py-20 bg-gray-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
+          <motion.div;
+            className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center""
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -260,7 +260,7 @@ export default function Page() {
       {/* CTA Section */}
       <section className="py-20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -273,10 +273,10 @@ export default function Page() {
               Join hundreds of companies already leveraging our cutting-edge solutions to stay ahead of the competition.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105">
-                Schedule a Consultation
+                Schedule a Consultation;
               </button>
               <button className="border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
-                View Case Studies
+                View Case Studies;
               </button>
             </div>
           </motion.div>

@@ -1,5 +1,4 @@
-import {
-
+import {}
   Search, 
   Filter, 
   X, 
@@ -34,7 +33,7 @@ import {
   Tag as TagIcon''
 } from 'lucide-react';
 
-interface SearchResult {
+interface SearchResult {}
   id: string;'
   type: 'service' | 'talent' | 'equipment' | 'comp';
   title: string;
@@ -47,7 +46,7 @@ interface SearchResult {
   lastUpdated: string;
   icon: unknown;
   featured?: boolean;
-export default function SearchPage() {
+export default function SearchPage(function SearchPage() {): any {}
   const [searchParams, setSearchParams] = useSearchParams();'
   const [searchQuery, setSearchQuery] = useState(searchParams.get('q') || '');
   const [isSearching, setIsSearching] = useState(false);
@@ -56,10 +55,10 @@ export default function SearchPage() {
   const [sortBy, setSortBy] = useState<'relevance' | 'date' | 'popularity'>('relevance');
   const [showFilters, setShowFilters] = useState(false);
 
-  // Mock search results - in a real app, this would come from an API
-  const mockSearchResults: SearchResult[] = [
-    // AI Services
-    {
+  // Mock search results - in a real app, this would come from an API;
+  const mockSearchResults: SearchResult[] = []
+    // AI Services;
+    {}
 '
       id: 'ai-bi','
       title: 'AI Business Intelligence','
@@ -71,9 +70,9 @@ export default function SearchPage() {
       relevance: 0.95,'
       lastUpdated: '2024-12-01',
       icon: Brain,
-      featured: true
+      featured: true;
     },
-    {
+    {}
 '
       id: 'ai-compliance','
       title: 'AI Compliance Assistant','
@@ -84,9 +83,9 @@ export default function SearchPage() {
       tags: ['AI',Compliance',Regulatory',Automation',Risk Management'],
       relevance: 0.92,'
       lastUpdated: '2024-11-28',
-      icon: Shield
+      icon: Shield;
     },
-    {
+    {}
 '
       id: 'ai-sales','
       title: 'AI Sales Copilot','
@@ -97,11 +96,11 @@ export default function SearchPage() {
       tags: ['AI',Sales',CRM',Automation',Lead Generation'],
       relevance: 0.89,'
       lastUpdated: '2024-11-25',
-      icon: Users
+      icon: Users;
     },
 
-    // Cloud Services
-    {
+    // Cloud Services;
+    {}
 '
       id: 'cloud-devops','
       title: 'Cloud DevOps Platform','
@@ -112,9 +111,9 @@ export default function SearchPage() {
       tags: ['Cloud',DevOps',Automation',Infrastructure',AWS',Azure'],
       relevance: 0.87,'
       lastUpdated: '2024-11-20',
-      icon: Cloud
+      icon: Cloud;
     },
-    {
+    {}
 '
       id: 'it-infrastructure','
       title: 'IT Infrastructure Management','
@@ -125,11 +124,11 @@ export default function SearchPage() {
       tags: ['Infrastructure',IT',Enterprise',Networking',Security'],
       relevance: 0.84,'
       lastUpdated: '2024-11-18',
-      icon: Server
+      icon: Server;
     },
 
-    // Security Services
-    {
+    // Security Services;
+    {}
 '
       id: 'ai-cybersecurity','
       title: 'AI Cybersecurity Platform','
@@ -141,9 +140,9 @@ export default function SearchPage() {
       relevance: 0.91,'
       lastUpdated: '2024-11-22',
       icon: Shield,
-      featured: true
+      featured: true;
     },
-    {
+    {}
 '
       id: 'zero-trust','
       title: 'Zero Trust Network Access','
@@ -154,11 +153,11 @@ export default function SearchPage() {
       tags: ['Zero Trust',Security',Network',Access Control',Compliance'],
       relevance: 0.86,'
       lastUpdated: '2024-11-15',
-      icon: Lock
+      icon: Lock;
     },
 
-    // Quantum Computing
-    {
+    // Quantum Computing;
+    {}
 '
       id: 'quantum-computing','
       title: 'Quantum Computing Solutions','
@@ -169,11 +168,11 @@ export default function SearchPage() {
       tags: ['Quantum Computing',Optimization',Cryptography',AI',Research'],
       relevance: 0.88,'
       lastUpdated: '2024-11-10',
-      icon: Atom
+      icon: Atom;
     },
 
-    // Blog Posts
-    {
+    // Blog Posts;
+    {}
 '
       id: 'ai-trends-2024','
       title: 'AI Trends to Watch in 2024','
@@ -184,9 +183,9 @@ export default function SearchPage() {
       tags: ['AI',Trends',Technology',2024',Innovation'],
       relevance: 0.82,'
       lastUpdated: '2024-12-01',
-      icon: BookOpen
+      icon: BookOpen;
     },
-    {
+    {}
 '
       id: 'cloud-migration-guide','
       title: 'Complete Guide to Cloud Migration','
@@ -197,11 +196,11 @@ export default function SearchPage() {
       tags: ['Cloud Migration',Guide',Best Practices',Infrastructure'],
       relevance: 0.79,'
       lastUpdated: '2024-11-28',
-      icon: Cloud
+      icon: Cloud;
     },
 
-    // Case Studies
-    {
+    // Case Studies;
+    {}
 '
       id: 'healthcare-ai-case-study','
       title: 'AI Transformation in Healthcare','
@@ -212,11 +211,11 @@ export default function SearchPage() {
       tags: ['AI',Healthcare',Case Study',Transformation',Patient Care'],
       relevance: 0.85,'
       lastUpdated: '2024-11-20',
-      icon: FileText
+      icon: FileText;
     }
   ];
 
-  const filterOptions = [{ id: 'ai - services', name: 'AI Services', icon: Brain, count: 0 },
+  const filterOptions: any = [{ id: 'ai - services', name: 'AI Services', icon: Brain, count: 0 },
     { id: 'cloud - infrastructure', name: 'Cloud & Infrastructure', icon: Cloud, count: 0 },
     { id: 'security', name: 'Security & Compliance', icon: Shield, count: 0 },
     { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: 0 },
@@ -226,24 +225,24 @@ export default function SearchPage() {
     { id: 'documentation', name: 'Documentation', icon: Code, count: 0 }
   ];
 
-  useEffect(() => {
-    if(searchQuery) {
+  useEffect(() => {}
+    if(searchQuery) {}
       performSearch () ;
     }
   }, [searchQuery, selectedFilters, sortBy]) ;
 
-  const performSearch = async () => {
+  const performSearch: any = async () => {}
     setIsSearching(true) ;
 
-    // Simulate API call delay
+    // Simulate API call delay;
     await new Promise(resolve => setTimeout (resolve, 800) ) ;
 
-    let filtered = mockSearchResults.filter(result => {
-      const matchesQuery = result.title.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
+    let filtered = mockSearchResults.filter(result => {}
+      const matchesQuery: any = result.title.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
                           result.description.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
                           result.tags.some(tag => tag.toLowerCase () .includes(searchQuery.toLowerCase () ) ) ;
 
-      const matchesFilters = selectedFilters.size === 0 ||
+      const matchesFilters: any = selectedFilters.size === 0 ||
                            selectedFilters.has(result.category.toLowerCase () .replace(/\s+/g, '-') ) ||
                            selectedFilters.has(result.type) ;
 
@@ -251,16 +250,15 @@ export default function SearchPage() {
     }) ;
 
       return matchesQuery && matchesFilters}) ;
-    // Sort results
-    filtered.sort((a, b) => {
-
-      switch (sortBy) {
+    // Sort results;
+    filtered.sort((a, b) => {}
+      switch (sortBy) {}
 '
-        case 'date':
+        case 'date': any;
           return new Date(b.lastUpdated).getTime() - new Date(a.lastUpdated).getTime();'
-        case 'popularity':
+        case 'popularity': any;
           return b.relevance - a.relevance;
-        default:
+        default: any;
           return b.relevance - a.relevance;
       }
     }) ;
@@ -269,15 +267,15 @@ export default function SearchPage() {
     setIsSearching(false) ;
   };
 
-  const toggleFilter = (filterType: keyof typeof activeFilters, value: string) => {
-    setActiveFilters(prev => ({
+  const toggleFilter: any = (filterType: keyof typeof activeFilters, value: string) => {}
+    setActiveFilters(prev => ({}
       ...prev,
       [filterType]: prev[filterType].includes (value) ? prev[filterType].filter(v => v !== value) : [...prev[filterType], value]
     }) ) ;
   };
 
-  const clearAllFilters = () => {
-    setActiveFilters({
+  const clearAllFilters: any = () => {}
+    setActiveFilters({}
       type: [],
       category: [],
       location: [],
@@ -286,27 +284,27 @@ export default function SearchPage() {
     }) ;
   };
 
-  // Handle search
-  const handleSearch = useCallback((e: React.FormEvent) => {
+  // Handle search;
+  const handleSearch: any = useCallback((e: React.FormEvent) => {}
     e.preventDefault () ;
-    if(searchQuery.trim () ) {
+    if(searchQuery.trim () ) {}
       setSearchParams({ q: searchQuery.trim () }) ;
       setIsSearching(true) ;
       setTimeout(() => setIsSearching(false) , 1000) ;
     }
   };
 
-  const toggleFilter = (filterId: string) => {
-    const newFilters = new Set(selectedFilters) ;
-    if(newFilters.has (filterId) ) {
+  const toggleFilter: any = (filterId: string) => {}
+    const newFilters: any = new Set(selectedFilters) ;
+    if(newFilters.has (filterId) ) {}
       newFilters.delete(filterId) ;
-    } else {
+    } else {}
       newFilters.add(filterId) ;
     }
     setSelectedFilters(newFilters) ;
   };
 
-  // Clear all filters
+  // Clear all filters;
   '
     setSelectedTags([]);'    setSearchQuery('');
     setSearchParams({})};
@@ -331,8 +329,8 @@ export default function SearchPage() {
       case 'documentation': return 'from-orange-500 to-red-500';'
       default: return 'from-gray-500 to-slate-500'}  };
 
-  // Calculate filter counts
-  filterOptions.forEach(filter => {
+  // Calculate filter counts;
+  filterOptions.forEach(filter => {}
     filter.count = mockSearchResults.filter (result =>
       result.category.toLowerCase () .replace(/\s+/g, '-') === filter.id ||
       result.type === filter.id) .length;
@@ -340,101 +338,100 @@ export default function SearchPage() {
 
     filter.count = mockSearchResults.filter(result =>'
       result.category.toLowerCase().replace(/\s+/g,-') === filter.id ||
-      result.type === filter.id
+      result.type === filter.id;
     ).length});
 
   return()
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">"
-      {/* Header */}""
-      <div className="bg-white border-b border-gray-200">""
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">""
+      {/* Header */}"""
+      <div className="bg-white border-b border-gray-200">"""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}"
-            transition={{ duration: 0.5 }}""
-            className="text-center""
-          >""
-            <h1 className="text-3xl font-bold text-gray-900 mb-4">Search Zion Tech Group</h1>""
+            animate={{ opacity: 1, y: 0 }}""
+            transition={{ duration: 0.5 }}"""
+            className="text-center"""
+          >"""
+            <h1 className="text-3xl font-bold text-gray-900 mb-4">Search Zion Tech Group</h1>"""
             <p className="text-gray-600 max-w-2xl mx-auto">
               Find services, documentation, case studies, and insights across our comprehensive technology portfolio.
             </p>
           </motion.div>
         </div>
-      </div>"
-""
+      </div>""
+"""
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Search Form */}
-        <motion.div
+        <motion.div;
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}"
-          transition={{ duration: 0.5, delay: 0.1 }}""
-          className="mb-8""
-        >""
-          <form onSubmit={handleSearch} className="max-w-3xl mx-auto">""
-            <div className="relative">""
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-6 w-6 text-gray-400"  />"
-              <input"                type="text"
-                value={searchQuery}"
-                onChange={(e) => setSearchQuery(e.target.value)}""
-                placeholder="Search for services, solutions, documentation, or insights...""
-                className="w-full pl-12 pr-4 py-4 text-lg border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              />"
-              <button""
-                type="submit""
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200"
+          animate={{ opacity: 1, y: 0 }}""
+          transition={{ duration: 0.5, delay: 0.1 }}"""
+          className="mb-8"""
+        >"""
+          <form onSubmit={handleSearch} className="max-w-3xl mx-auto">"""
+            <div className="relative">"""
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-6 w-6 text-gray-400"  />""
+              <input"                type="text""
+                value={searchQuery}""
+                onChange={(e) => setSearchQuery(e.target.value)}"""
+                placeholder="Search for services, solutions, documentation, or insights..."""
+                className="w-full pl-12 pr-4 py-4 text-lg border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500""
+              />""
+              <button"""
+                type="submit"""
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200""
               >
-                Search
+                Search;
               </button>
             </div>
           </form>
         </motion.div>
-"
-        {/* Filters and Results */}""
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">"
-          {/* Filters Sidebar */}""
-          <div className="lg:col-span-1">""
-            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">""
-              <div className="flex items-center justify-between mb-4">""
+""
+        {/* Filters and Results */}"""
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">""
+          {/* Filters Sidebar */}"""
+          <div className="lg:col-span-1">"""
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">"""
+              <div className="flex items-center justify-between mb-4">"""
                 <h3 className="text-lg font-semibold text-gray-900">Filters</h3>
-                <button"
-                  onClick={clearFilters}""
-                  className="text-sm text-blue-600 hover:text-blue-700"
+                <button""
+                  onClick={clearFilters}"""
+                  className="text-sm text-blue-600 hover:text-blue-700""
                 >
-                  Clear All
+                  Clear All;
                 </button>
               </div>
-"
-              {/* Sort Options */}""
-              <div className="mb-6">""
+""
+              {/* Sort Options */}"""
+              <div className="mb-6">"""
                 <label className="block text-sm font-medium text-gray-700 mb-2">Sort By</label>
-                <select
-                  value={sortBy}"
-                  onChange={(e) => setSortBy(e.target.value as any)}""
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500""
-                >""
-                  <option value="relevance">Relevance</option>""
-                  <option value="date">Date</option>""
+                <select;
+                  value={sortBy}""
+                  onChange={(e) => setSortBy(e.target.value as any)}"""
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"""
+                >"""
+                  <option value="relevance">Relevance</option>"""
+                  <option value="date">Date</option>"""
                   <option value="popularity">Popularity</option>
                 </select>
               </div>
-"
-              {/* Filter Options */}""
+""
+              {/* Filter Options */}"""
               <div className="space-y-3">
                 {filterOptions.map(filter => (
-                  <button
+                  <button;
                     key={filter.id}
                     onClick={() => toggleFilter(filter.id)}
-                    className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${
-
+                    className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${}
                       selectedFilters.has(filter.id)'
                         ? 'bg-blue-50 border border-blue-200'''`
                         : 'hover:bg-gray-50'``
-                    }`}"
-                  >""
-                    <div className="flex items-center space-x-3">""
-                      <filter.icon className="h-5 w-5 text-gray-600" />""
-                      <span className="text-sm font-medium text-gray-700">{filter.name}</span>"
-                    </div>""
+                    }`}""
+                  >"""
+                    <div className="flex items-center space-x-3">"""
+                      <filter.icon className="h-5 w-5 text-gray-600" />"""
+                      <span className="text-sm font-medium text-gray-700">{filter.name}</span>""
+                    </div>"""
                     <span className="text-sm text-gray-500">{filter.count}</span>
                   </button>
                 ))}
@@ -444,53 +441,53 @@ export default function SearchPage() {
         </motion.div>
 
         {/* Search Results */}
-        <motion.div
+        <motion.div;
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}"
-          transition={{ duration: 0.6, delay: 0.4 }}""
-          className="max-w-6xl mx-auto"
-        >"
-          {/* Results Count */}""
+          animate={{ opacity: 1, y: 0 }}""
+          transition={{ duration: 0.6, delay: 0.4 }}"""
+          className="max-w-6xl mx-auto""
+        >""
+          {/* Results Count */}"""
           <div className="mb-6">""`
             <p className="text-slate-300">"`"`
               {searchQuery ? `Found ${filteredResults.length} results for "${searchQuery}"` : `Showing ${filteredResults.length} items`}
             </p>
           </div>
-"
-          {/* Results Grid */}""
+""
+          {/* Results Grid */}"""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <AnimatePresence>
-              {filteredResults.map((result, index) => (<motion.div
+              {filteredResults.map((result, index) => (<motion.div;
                   key={result.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.4, delay: index * 0.05 }}
                 >
-                  <Link"
-                    to={result.path}""
-                    className="block p-6 bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-300 group h-full""
-                  >""
-                    <div className="flex items-start justify-between mb-4">""
-                      <div className="w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">""
+                  <Link""
+                    to={result.path}"""
+                    className="block p-6 bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-300 group h-full"""
+                  >"""
+                    <div className="flex items-start justify-between mb-4">"""
+                      <div className="w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">"""
                         <result.icon className="w-6 h-6 text-cyan-400" />
-                      </div>"
-                      {result.featured && (""
+                      </div>""
+                      {result.featured && ("""
                         <Star className="w-5 h-5 text-yellow-400"  />                      )}
-                    </div>"
-                    ""
+                    </div>""
+                    """
                     <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                       {result.title}
-                    </h3>"
-                    ""
+                    </h3>""
+                    """
                     <p className="text-sm text-slate-400 mb-4 group-hover:text-slate-300 transition-colors">
                       {result.description}
-                    </p>"
-                    ""
-                    <div className="flex items-center justify-between">""
+                    </p>""
+                    """
+                    <div className="flex items-center justify-between">"""
                       <span className="text-xs text-slate-500 bg-slate-700/50 px-2 py-1 rounded">
-                        {result.category}"
-                      </span>""
+                        {result.category}""
+                      </span>"""
                       <ArrowRight className="w-4 h-4 text-slate-500 group-hover:text-cyan-400 transition-colors"  />                    </div>
                   </Link>
                 </motion.div>) ) }
@@ -498,12 +495,12 @@ export default function SearchPage() {
           </div>
 
           {/* No Results */}
-          {filteredResults.length === 0 && (<motion.div
-              initial={{ opacity: 0 }}"
-              animate={{ opacity: 1 }}""
-              className="text-center py-12""
-            >""
-              <div className="w-16 h-16 bg-slate-700/50 rounded-full flex items-center justify-center mx-auto mb-4">""
+          {filteredResults.length === 0 && (<motion.div;
+              initial={{ opacity: 0 }}""
+              animate={{ opacity: 1 }}"""
+              className="text-center py-12"""
+            >"""
+              <div className="w-16 h-16 bg-slate-700/50 rounded-full flex items-center justify-center mx-auto mb-4">"""
                 <Search className="w-8 h-8 text-slate-400"  />              </div>
             )}
           </div>

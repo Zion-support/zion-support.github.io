@@ -1,4 +1,4 @@
-export type AddedService = {
+export type AddedService = {}
   id: string;
   title: string;
   description: string;
@@ -8,11 +8,11 @@ export type AddedService = {
   features: string[];
   benefits: string[];
   ctaLabel: string;
-  href: string; // external or internal URL
+  href: string; // external or internal URL;
 };
 
-export const ADDED_SERVICES_2025: AddedService[] = [
-  {
+export const ADDED_SERVICES_2025: AddedService[] = []
+  {}
 '
     id: 'ai-sales-email-copilot','
     title: 'AI Sales Email Copilot','
@@ -33,7 +33,7 @@ export const ADDED_SERVICES_2025: AddedService[] = [
     ctaLabel: 'Start 14‑day Trial','
     href: 'https://ziontechgroup.com/contact'
   },
-  {
+  {}
 '
     id: 'enterprise-rag-chat','
     title: 'Enterprise RAG Knowledge Chat','
@@ -54,7 +54,7 @@ export const ADDED_SERVICES_2025: AddedService[] = [
     ctaLabel: 'Book Demo','
     href: 'https://ziontechgroup.com/services'
   },
-  {
+  {}
 '
     id: 'meeting-notes-agent','
     title: 'Meeting Notes & Action Items Agent','
@@ -75,7 +75,7 @@ export const ADDED_SERVICES_2025: AddedService[] = [
     ctaLabel: 'Start Now','
     href: 'https://ziontechgroup.com/services'
   },
-  {
+  {}
 '
     id: 'cloud-cost-optimizer-pro','
     title: 'Cloud Cost Optimizer Pro','
@@ -96,7 +96,7 @@ export const ADDED_SERVICES_2025: AddedService[] = [
     ctaLabel: 'Get Assessment','
     href: 'https://ziontechgroup.com/contact'
   },
-  {
+  {}
 '
     id: 'soc2-compliance-automation','
     title: 'SOC 2 Compliance Automation','
@@ -117,7 +117,7 @@ export const ADDED_SERVICES_2025: AddedService[] = [
     ctaLabel: 'Request Quote','
     href: 'https://ziontechgroup.com/contact'
   },
-  {
+  {}
 '
     id: 'm365-security-copilot','
     title: 'Microsoft 365 Security Copilot','
@@ -138,7 +138,7 @@ export const ADDED_SERVICES_2025: AddedService[] = [
     ctaLabel: 'Schedule Assessment','
     href: 'https://ziontechgroup.com/services'
   },
-  {
+  {}
 '
     id: 'devops-release-automation','
     title: 'DevOps Release Automation','
@@ -159,7 +159,7 @@ export const ADDED_SERVICES_2025: AddedService[] = [
     ctaLabel: 'Get Proposal','
     href: 'https://ziontechgroup.com/contact'
   },
-  {
+  {}
 '
     id: 'data-governance-observability','
     title: 'Data Governance & Observability','
@@ -180,7 +180,7 @@ export const ADDED_SERVICES_2025: AddedService[] = [
     ctaLabel: 'Talk to Data Team','
     href: 'https://ziontechgroup.com/contact'
   },
-  {
+  {}
 '
     id: 'developer-productivity-copilot','
     title: 'Developer Productivity Copilot','
@@ -201,7 +201,7 @@ export const ADDED_SERVICES_2025: AddedService[] = [
     ctaLabel: 'Try Copilot','
     href: 'https://ziontechgroup.com/services'
   },
-  {
+  {}
 '
     id: 'customer-support-chatbot-pro','
     title: 'Customer Support Chatbot Pro','
@@ -222,7 +222,7 @@ export const ADDED_SERVICES_2025: AddedService[] = [
     ctaLabel: 'Launch Bot','
     href: 'https://ziontechgroup.com/services'
   },
-  {
+  {}
 '
     id: 'landing-page-generator','
     title: 'Landing Page Generator','
@@ -243,7 +243,7 @@ export const ADDED_SERVICES_2025: AddedService[] = [
     ctaLabel: 'Generate a Page','
     href: 'https://ziontechgroup.com/services'
   },
-  {
+  {}
 '
     id: 'managed-kubernetes-sre','
     title: 'Managed Kubernetes SRE','
@@ -264,7 +264,7 @@ export const ADDED_SERVICES_2025: AddedService[] = [
     ctaLabel: 'Engage SRE Team','
     href: 'https://ziontechgroup.com/contact'
   },
-  {
+  {}
 '
     id: 'mlops-platform-setup','
     title: 'MLOps Platform Setup','
@@ -285,7 +285,7 @@ export const ADDED_SERVICES_2025: AddedService[] = [
     ctaLabel: 'Plan Your Platform','
     href: 'https://ziontechgroup.com/contact'
   },
-  {
+  {}
 '
     id: 'bi-dashboards-dbt-duckdb','
     title: 'BI Dashboards with dbt + DuckDB','
@@ -308,4 +308,4 @@ export const ADDED_SERVICES_2025: AddedService[] = [
   }
 ];
 
-'"
+'""

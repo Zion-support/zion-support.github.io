@@ -1,4 +1,5 @@
 <<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
+<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
 <<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
@@ -12,6 +13,8 @@ import { Brain,
   CheckCircle,
 ========
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-project-management-platform.tsx
 import { Brain, 
   Users, 
   Calendar, 
@@ -36,9 +39,7 @@ import { Brain,
  } from 'lucide-react';
 ;
 export { function };
-export default function AIProjectManagementPlatform(...args: []):  {
-
-  
+export default function AIProjectManagementPlatform(...args: []):  {}
     },;
     {;
       icon: Zap,;
@@ -46,7 +47,6 @@ export default function AIProjectManagementPlatform(...args: []):  {
       description: 'Intelligent report generation with customizable dashboards and stakeholder updates'};
   ];
 
-  
         'Custom AI model training',;
         'On-premise deployment options',;
         'SLA guarantees';
@@ -61,13 +61,17 @@ export default function AIProjectManagementPlatform(...args: []):  {
     {;
       title: 'Event Planning',;
       description: 'Streamline event coordination with AI-driven task management and vendor coordination',;
+<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
 =======
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-project-management-platform.tsx
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-project-management-platform.tsx
       icon: Calendar};
   ];
   return()
 <<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
 <<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
       <SEO
 ========
@@ -84,23 +88,33 @@ export default function AIProjectManagementPlatform(...args: []):  {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-project-management-platform.tsx
         title="AI Project Management Platform - Zion Tech Group""        description="Revolutionize your project management with AI-powered task prioritization, predictive analytics, and intelligent team collaboration. Start from $299/month."
        />"
+=======
+      <SEO ""
+        title="AI Project Management Platform - Zion Tech Group""
+        description="Revolutionize your project management with AI-powered task prioritization, predictive analytics, and intelligent team collaboration. Start from $299/month.""
+       />
+
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-project-management-platform.tsx
       {/* Hero Section */}""
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial = {
-
+          <motion.div;
+            initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
   y: 20
 
 =======
   y: 20 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-project-management-platform.tsx
+=======
+  y: 20;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-project-management-platform.tsx
 }}
-            animate = {
-
+            animate = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
   y: 0
 
@@ -118,40 +132,70 @@ export default function AIProjectManagementPlatform(...args: []):  {
               The Future of""
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Project Management</span>
             </h1>"
+=======
+  y: 0;
+}}
+            transition={{ duration: 0.8 }}
+""
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium mb-6">""
+              <Brain className="w-4 h-4 mr-2"  />              AI-Powered Project Management;
+            </div>
+""
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              The Future of""
+              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Project Management</span>
+            </h1>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-project-management-platform.tsx
 ""
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your project delivery with intelligent automation, predictive analytics, and AI-driven insights.
               Manage teams smarter, deliver faster, and achieve more with our cutting-edge platform.
+<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
             </p>"
 ""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""
               <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial"
+=======
+            </p>
+""
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
+              <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-project-management-platform.tsx
               </button>""
               <button className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">
-                Schedule Demo
+                Schedule Demo;
               </button>
             </div>
           </motion.div>
         </div>
+<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
       </section>;"
+=======
+      </section>;
+
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-project-management-platform.tsx
       {/* Features Section */}""
       <section className="py-20 px-4 sm:px-6 lg:px-8">;""
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial = {
-
+          <motion.div;
+            initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
   y: 20
 
 =======
   y: 20 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-project-management-platform.tsx
+=======
+  y: 20;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-project-management-platform.tsx
 }}
-            whileInView = {
-
+            whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
   y: 0
 
@@ -160,53 +204,80 @@ export default function AIProjectManagementPlatform(...args: []):  {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-project-management-platform.tsx
 }}
             transition={{ duration: 0.8 }}"
+=======
+  y: 0;
+}}
+            transition={{ duration: 0.8 }}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-project-management-platform.tsx
             viewport={{ once: true }}""
             className="text-center mb-16""
 ""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
               Powered by Advanced AI"
+=======
+              Powered by Advanced AI;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-project-management-platform.tsx
             </h2>""
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our platform leverages cutting-edge artificial intelligence to revolutionize how you manage projects
+              Our platform leverages cutting-edge artificial intelligence to revolutionize how you manage projects;
             </p>
+<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
           </motion.div>"
 ""
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index()
               <motion.div
+=======
+          </motion.div>
+""
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index (
+              <motion.div;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-project-management-platform.tsx
                 key={index}
-                initial = {
-
+                initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
   y: 20
 
 =======
   y: 20 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-project-management-platform.tsx
+=======
+  y: 20;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-project-management-platform.tsx
 }}
-                whileInView = {
-
+                whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
   y: 0
 
 =======
   y: 0 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-project-management-platform.tsx
+=======
+  y: 0;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-project-management-platform.tsx
 }}
-                transition = {
-
+                transition = {}
   { duration: 0.8,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
   delay: index * 0.1
 
+=======
+  delay: index * 0.1;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-project-management-platform.tsx
 }}
-                viewport={{ once: true }}"
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-purple-500 transition-all duration-300"
-"
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mb-4">"
+                viewport={{ once: true }}""
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-purple-500 transition-all duration-300""
+""
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mb-4">""
                   <feature.icon className="w-6 h-6 text-white" />
+<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
                 </div>"
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>"
 =======
@@ -220,29 +291,41 @@ export default function AIProjectManagementPlatform(...args: []):  {
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>""
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-project-management-platform.tsx
+=======
+                </div>""
+                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-project-management-platform.tsx
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>;
             ))}
           </div>
         </div>
+<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
       </section>"
+=======
+      </section>
+
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-project-management-platform.tsx
       {/* Benefits Section */}""
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;""
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial = {
-
+          <motion.div;
+            initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
   y: 20
 
 =======
   y: 20 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-project-management-platform.tsx
+=======
+  y: 20;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-project-management-platform.tsx
 }}
-            whileInView = {
-
+            whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
   y: 0
 
@@ -251,53 +334,80 @@ export default function AIProjectManagementPlatform(...args: []):  {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-project-management-platform.tsx
 }}
             transition={{ duration: 0.8 }}"
+=======
+  y: 0;
+}}
+            transition={{ duration: 0.8 }}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-project-management-platform.tsx
             viewport={{ once: true }}""
             className="text-center mb-16""
 ""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
               Proven Results"
+=======
+              Proven Results;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-project-management-platform.tsx
             </h2>""
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Join thousands of teams already experiencing the benefits of AI-powered project management
+              Join thousands of teams already experiencing the benefits of AI-powered project management;
             </p>
+<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
           </motion.div>"
 ""
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map(benefit: unknown, index: unknown()
               <motion.div
+=======
+          </motion.div>
+""
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map(benefit: unknown, index: unknown (
+              <motion.div;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-project-management-platform.tsx
                 key={index}
-                initial = {
-
+                initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
   y: 20
 
 =======
   y: 20 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-project-management-platform.tsx
+=======
+  y: 20;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-project-management-platform.tsx
 }}
-                whileInView = {
-
+                whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
   y: 0
 
 =======
   y: 0 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-project-management-platform.tsx
+=======
+  y: 0;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-project-management-platform.tsx
 }}
-                transition = {
-
+                transition = {}
   { duration: 0.8,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
   delay: index * 0.1
 
+=======
+  delay: index * 0.1;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-project-management-platform.tsx
 }}
-                viewport={{ once: true }}"
-                className="text-center"
-"
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">"
+                viewport={{ once: true }}""
+                className="text-center""
+""
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">""
                   <benefit.icon className="w-8 h-8 text-white" />
+<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
                 </div>"
                 <h3 className="text-2xl font-bold text-white mb-2">{benefit.title}</h3>"
 =======
@@ -311,29 +421,41 @@ export default function AIProjectManagementPlatform(...args: []):  {
                 </div>""
                 <h3 className="text-2xl font-bold text-white mb-2">{benefit.title}</h3>""
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-project-management-platform.tsx
+=======
+                </div>""
+                <h3 className="text-2xl font-bold text-white mb-2">{benefit.title}</h3>""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-project-management-platform.tsx
                 <p className="text-gray-300">{benefit.description}</p>
               </motion.div>;
             ))}
           </div>
         </div>
+<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
       </section>"
+=======
+      </section>
+
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-project-management-platform.tsx
       {/* Use Cases Section */}""
       <section className="py-20 px-4 sm:px-6 lg:px-8">;""
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial = {
-
+          <motion.div;
+            initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
   y: 20
 
 =======
   y: 20 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-project-management-platform.tsx
+=======
+  y: 20;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-project-management-platform.tsx
 }}
-            whileInView = {
-
+            whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
   y: 0
 
@@ -342,53 +464,80 @@ export default function AIProjectManagementPlatform(...args: []):  {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-project-management-platform.tsx
 }}
             transition={{ duration: 0.8 }}"
+=======
+  y: 0;
+}}
+            transition={{ duration: 0.8 }}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-project-management-platform.tsx
             viewport={{ once: true }}""
             className="text-center mb-16""
 ""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
               Perfect for Every Industry"
+=======
+              Perfect for Every Industry;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-project-management-platform.tsx
             </h2>""
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our platform adapts to your specific needs, regardless of your industry or project type
+              Our platform adapts to your specific needs, regardless of your industry or project type;
             </p>
+<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
           </motion.div>"
 ""
           <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
             {useCases.map(useCase: unknown, index: unknown()
               <motion.div
+=======
+          </motion.div>
+""
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
+            {useCases.map(useCase: unknown, index: unknown (
+              <motion.div;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-project-management-platform.tsx
                 key={index}
-                initial = {
-
+                initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
   x: index % 2 === 0 ? -20 : 20
 
 =======
   x: index % 2 === 0 ? -20 : 20 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-project-management-platform.tsx
+=======
+  x: index % 2 === 0 ? -20 : 20;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-project-management-platform.tsx
 }}
-                whileInView = {
-
+                whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
   x: 0
 
 =======
   x: 0 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-project-management-platform.tsx
+=======
+  x: 0;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-project-management-platform.tsx
 }}
-                transition = {
-
+                transition = {}
   { duration: 0.8,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
   delay: index * 0.1
 
+=======
+  delay: index * 0.1;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-project-management-platform.tsx
 }}
-                viewport={{ once: true }}"
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700"
-"
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mb-6">"
+                viewport={{ once: true }}""
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700""
+""
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mb-6">""
                   <useCase.icon className="w-8 h-8 text-white" />
+<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
                 </div>"
                 <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>"
 =======
@@ -402,29 +551,41 @@ export default function AIProjectManagementPlatform(...args: []):  {
                 </div>""
                 <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>""
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-project-management-platform.tsx
+=======
+                </div>""
+                <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-project-management-platform.tsx
                 <p className="text-gray-300 text-lg">{useCase.description}</p>
               </motion.div>;
             ))}
           </div>
         </div>
+<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
       </section>"
+=======
+      </section>
+
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-project-management-platform.tsx
       {/* Pricing Section */}""
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;""
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial = {
-
+          <motion.div;
+            initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
   y: 20
 
 =======
   y: 20 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-project-management-platform.tsx
+=======
+  y: 20;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-project-management-platform.tsx
 }}
-            whileInView = {
-
+            whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
   y: 0
 
@@ -433,44 +594,67 @@ export default function AIProjectManagementPlatform(...args: []):  {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-project-management-platform.tsx
 }}
             transition={{ duration: 0.8 }}"
+=======
+  y: 0;
+}}
+            transition={{ duration: 0.8 }}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-project-management-platform.tsx
             viewport={{ once: true }}""
             className="text-center mb-16""
 ""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
               Choose Your Plan"
+=======
+              Choose Your Plan;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-project-management-platform.tsx
             </h2>""
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Flexible pricing options designed to scale with your business needs
+              Flexible pricing options designed to scale with your business needs;
             </p>
+<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
           </motion.div>"
 ""
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
             {pricingPlans.map(plan: unknown, index: unknown()
               <motion.div
+=======
+          </motion.div>
+""
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+            {pricingPlans.map(plan: unknown, index: unknown (
+              <motion.div;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-project-management-platform.tsx
                 key={index}
-                initial = {
-
+                initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
   y: 20
 
 =======
   y: 20 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-project-management-platform.tsx
+=======
+  y: 20;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-project-management-platform.tsx
 }}
-                whileInView = {
-
+                whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
   y: 0
 
 =======
   y: 0 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-project-management-platform.tsx
+=======
+  y: 0;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-project-management-platform.tsx
 }}
-                transition = {
-
+                transition = {}
   { duration: 0.8,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
   delay: index * 0.1
 
@@ -485,13 +669,28 @@ export default function AIProjectManagementPlatform(...args: []):  {
                     ? 'border-purple-500 ring-2 ring-purple-500/20'''`
                     : 'border-gray-700'``
                 }`}"
+=======
+  delay: index * 0.1;
+}}
+                viewport={{ once: true }}
+                className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${}
+                  plan.popular'
+                    ? 'border-purple-500 ring-2 ring-purple-500/20''
+                    : 'border-gray-700'`
+                }`}
+
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-project-management-platform.tsx
                 {plan.popular && (;""
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                     <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
+                      Most Popular;
                     </span>
                   </div>
+<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
                 )}"
+=======
+                )}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-project-management-platform.tsx
 ""
                 <div className="text-center mb-8">""
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>""
@@ -500,14 +699,21 @@ export default function AIProjectManagementPlatform(...args: []):  {
                     <span className="text-4xl font-bold text-white">{plan.price}</span>""
                     <span className="text-gray-300 ml-1">{plan.period}</span>
                   </div>
+<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
                 </div>"
 ""
                 <ul className="space-y-4 mb-8">"
+=======
+                </div>
+""
+                <ul className="space-y-4 mb-8">
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-project-management-platform.tsx
                   {plan.features.map((feature, featureIndex) => (""
                     <li key={featureIndex} className="flex items-start">""
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0"  />"                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
+<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
                 </ul>`
 ``
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
@@ -515,31 +721,47 @@ export default function AIProjectManagementPlatform(...args: []):  {
                   plan.popular''
                     ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700'''`
                     : 'bg-gray-700 text-white hover:bg-gray-600'``
+=======
+                </ul>
+`
+                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
+                  plan.popular'
+                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700''
+                    : 'bg-gray-700 text-white hover:bg-gray-600'`
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-project-management-platform.tsx
                 }`}>
-                  Get Started
+                  Get Started;
                 </button>
               </motion.div>;
             ))}
           </div>
         </div>
+<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
       </section>"
+=======
+      </section>
+
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-project-management-platform.tsx
       {/* CTA Section */}""
       <section className="py-20 px-4 sm:px-6 lg:px-8">;""
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial = {
-
+          <motion.div;
+            initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
   y: 20
 
 =======
   y: 20 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/ai-project-management-platform.tsx
+=======
+  y: 20;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-project-management-platform.tsx
 }}
-            whileInView = {
-
+            whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
   y: 0
 
@@ -560,11 +782,32 @@ export default function AIProjectManagementPlatform(...args: []):  {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""
               <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial"
+=======
+  y: 0;
+}}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+""
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Project Management?
+            </h2>""
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of teams already experiencing the future of project management;
+            </p>
+""
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
+              <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-project-management-platform.tsx
               </button>""
               <button className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">
-                Contact Sales
+                Contact Sales;
               </button>
+<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
             </div>"
+=======
+            </div>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-project-management-platform.tsx
 ""
             <p className="text-gray-400 mt-6">
               No credit card required • 14-day free trial • Cancel anytime;
@@ -572,5 +815,10 @@ export default function AIProjectManagementPlatform(...args: []):  {
           </motion.div>;
         </div>;
       </section>;
+<<<<<<< HEAD:pages.disabled/pages/services/ai-project-management-platform.tsx
     </div>;'"`
   )}}}}}}'"`'"`
+=======
+    </div>;
+  )}}}}}}'"`
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-project-management-platform.tsx

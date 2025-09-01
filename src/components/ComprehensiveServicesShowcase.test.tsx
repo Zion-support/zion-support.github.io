@@ -1,17 +1,16 @@
-
-describe('ComprehensiveServicesShowcase', () => {
-  it('renders without crashing', () => {
+describe('ComprehensiveServicesShowcase', () => {}
+  it('renders without crashing', () => {}
     render(<ComprehensiveServicesShowcase  />) ;
     expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ;
 
-describe ('ComprehensiveServicesShowcase', () => {
+describe ('ComprehensiveServicesShowcase', () => {}
 '
-  it ('renders without crashing', () => {
+  it ('renders without crashing', () => {}
     render (<ComprehensiveServicesShowcase  />) ;'
     expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
 '
-  it ('displays expected content', () => {
+  it ('displays expected content', () => {}
     render (<ComprehensiveServicesShowcase  />) ;
-    // Add specific test assertions based on component content
+    // Add specific test assertions based on component content;
   }) }) ;
 '

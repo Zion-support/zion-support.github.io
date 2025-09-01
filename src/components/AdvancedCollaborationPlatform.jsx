@@ -2,8 +2,8 @@ import { Users, Video, Mic, MicOff, VideoOff, MessageSquare, FileText, Monitor, 
  : p))};
 import React, { useState, useRef } from 'react';'
 import { Users, Video, Mic, MicOff, VideoOff, MessageSquare, FileText, Monitor, X, Maximize2, Minimize2, Plus, MoreVertical, PhoneOff, ScreenShare, Square, Hand, Clock, CheckCircle, UserPlus } from 'lucide-react';
-const mockMeetings = [
-    {
+const mockMeetings = []
+    {}
 '
         id: '1','
         title: 'Q4 2024 Review Meeting','
@@ -15,7 +15,7 @@ const mockMeetings = [
         password: 'Q4Review2024'
 
 ];
-export function AdvancedCollaborationPlatform() {
+export function AdvancedCollaborationPlatform() {}
     const [isOpen, setIsOpen] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);
     const [isFullscreen, setIsFullscreen] = useState(false);'
@@ -33,22 +33,20 @@ export function AdvancedCollaborationPlatform() {
     const [meetings, setMeetings] = useState(mockMeetings);'
     const [searchQuery, setSearchQuery] = useState('');
     const containerRef = useRef(null);
-    const toggleMute = () => {
+    const toggleMute = () => {}
         setIsMuted(!isMuted);'
         setParticipants(prev => prev.map(p => p.id === '1' ? { ...p, isMuted: !isMuted } : p))};
-    const toggleVideo = () => {
+    const toggleVideo = () => {}
         setIsVideoOff(!isVideoOff);'
         setParticipants(prev => prev.map(p => p.id === '1' ? { ...p, isVideoOff: !isVideoOff } : p))};
-    const toggleScreenShare = () => {
+    const toggleScreenShare = () => {}
         setIsScreenSharing(!isScreenSharing);'
         setParticipants(prev => prev.map(p => p.id === '1' ? { ...p, isScreenSharing: !isScreenSharing } : p))};
-    const toggleRecording = () => {
+    const toggleRecording = () => {}
         setIsRecording(!isRecording) };
-    const sendChatMessage = () => {
-        if(chatMessage.trim()) {
-
-            const newMessage = {
-
+    const sendChatMessage = () => {}
+        if(chatMessage.trim()) {}
+            const newMessage = {}
   id: Date.now().toString(),'
                 senderId: '1','
                 senderName: 'Sarah Johnson',

@@ -1,6 +1,4 @@
-
-
-  'Quantum Computing Hardware',;'
+'Quantum Computing Hardware',;'
   'Data Science Consulting',;'
   'Blockchain Development Service',;'
   'Machine Learning Platform',;'
@@ -26,7 +24,7 @@
   ['Network',Security',Threat Detection'];
 ];
 '
-const sampleImages = [;''
+const sampleImages: any = [;''
   'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80',;''
   'https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',;''
   'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',;''
@@ -64,10 +62,8 @@ const categories: Array<any> = [''
   'Innovation Labs',;'  'FutureTech Systems';
 ];
 
-export function generateRandomListing(): MarketplaceItem {
-
-  return {
-
+export function generateRandomListing(): MarketplaceItem {}
+  return {}
     id: `listing-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,'
     title: sampleTitles[randomIndex] || 'Default Title','
     category: category || 'products','
@@ -80,7 +76,7 @@ export function generateRandomListing(): MarketplaceItem {
     image: image || 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib = rb-4.0.3&auto=format&fit=crop&w=2072&q=80','
     tags: sampleTags[randomIndex] || ['Technology',Solution'],
     featured: Math.random() > 0.7,
-    seller: {
+    seller: {}
 '
       name: sellerName || 'Default Seller',
       rating: 4.0 + Math.random() * 1.0,;
@@ -89,11 +85,9 @@ export function generateRandomListing(): MarketplaceItem {
     availability: Math.random() > 0.8 ? 'limited' : 'available',;'`'`
     deliveryTime: category === 'talent' ? 'Immediate' : `${Math.floor(Math.random() * 8) + 2}-${Math.floor(Math.random() * 4) + 4} weeks`,;'`'`
     warranty: category === 'talent' ? 'N/A' : `${Math.floor(Math.random() * 3) + 1} year${Math.floor(Math.random() * 3) + 1 > 1 ? 's' : ''}`};
-export function generateRandomListings(count: number): MarketplaceItem[] {
-
+export function generateRandomListings(count: number): MarketplaceItem[] {}
   const listings: MarketplaceItem[] = [];
-  for(let i = 0; i < count; i++) {
-
+  for(let i = 0; i < count; i++) {}
     listings.push(generateRandomListing());
 '`
   return listings}}}'`'`

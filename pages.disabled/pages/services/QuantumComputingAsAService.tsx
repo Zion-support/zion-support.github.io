@@ -1,10 +1,15 @@
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
 const QuantumComputingAsAService: React.FC = (): JSX.Element => {
 
+=======
+const QuantumComputingAsAService: React.FC = (): JSX.Element => {}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
     {;
       icon: Target,;
       title: 'Quantum Simulation',;'
       description: 'Molecular modeling, material science, and chemical reaction simulations',;'
       color: 'from-indigo-500 to-purple-500'};
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
   ];'
         'On-premise deployment options',;'
         'Research partnerships';
@@ -16,6 +21,13 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
         'Custom integrations',;''
         'On-premise deployment options',;'        'Research partnerships';'
       ],;''
+=======
+  ];
+
+        'On-premise deployment options',;
+        'Research partnerships';
+      ],;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
       cta: 'Contact Sales',;
       popular: false};
   ]},;
@@ -23,9 +35,16 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
       title: 'Logistics & Supply Chain',;'
       description: 'Route optimization, inventory management, and supply chain optimization',;'
       metrics: ['40% cost reduction',Optimal route planning',Real-time optimization']};
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
   ];'
     'Python',Qiskit',Cirq',PennyLane',Q#',Julia',MATLAB',;'
     'AWS Braket',Azure Quantum',Google Cloud',IBM Quantum',;'
+=======
+  ];
+
+    'Python',Qiskit',Cirq',PennyLane',Q#',Julia',MATLAB',;
+    'AWS Braket',Azure Quantum',Google Cloud',IBM Quantum',;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
     'REST APIs',GraphQL',Webhooks',Docker',Kubernetes';
   ]},;
     {;
@@ -35,6 +54,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
   return()
 <<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
 <<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
       <SEO
 ========
@@ -51,34 +71,48 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/QuantumComputingAsAService.tsx
         title="Quantum Computing as a Service - Zion Tech Group""        description="Access cutting-edge quantum computing power without infrastructure investment. Solve complex problems 100x faster with our quantum computing platform and expert support."
        />"
+=======
+      <SEO ""
+        title="Quantum Computing as a Service - Zion Tech Group""
+        description="Access cutting-edge quantum computing power without infrastructure investment. Solve complex problems 100x faster with our quantum computing platform and expert support.""
+       />
+
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
       {/* Hero Section */}""
       <section className="relative overflow-hidden py-20">""
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20"></div>""
         <div className="container mx-auto px-4 relative z-10">
-          <motion.div
-            initial = {
-
+          <motion.div;
+            initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
   y: 20
 
 =======
   y: 20 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/QuantumComputingAsAService.tsx
+=======
+  y: 20;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
 }}
-            animate = {
-
+            animate = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
   y: 0
 
+=======
+  y: 0;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
 }}
-            transition={{ duration: 0.6 }}"
-            className="text-center max-w-4xl mx-auto"
-"
-            <div className="flex justify-center mb-6">"
-              <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center">"
+            transition={{ duration: 0.6 }}""
+            className="text-center max-w-4xl mx-auto""
+""
+            <div className="flex justify-center mb-6">""
+              <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center">""
                 <Atom className="w-10 h-10 text-white"  />              </div>
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
             </div>"
 =======
   y: 0 
@@ -99,33 +133,61 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
               simulation, and machine learning problems with our enterprise-grade quantum platform."
             </p>""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+=======
+            </div>""
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Quantum Computing as a Service;
+            </h1>""
+            <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
+              Access the power of quantum computing without the complexity. Solve complex optimization, 
+              simulation, and machine learning problems with our enterprise-grade quantum platform.
+            </p>""
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
               <a""
                 href="/contact""
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 shadow-lg hover:shadow-xl""
                 Start Free Trial""
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
                 <ArrowRight className="ml-2 w-5 h-5"  />              </a>"
               <a""
                 href="#demo""
                 className="inline-flex items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all duration-200 border border-slate-600"
+=======
+                <ArrowRight className="ml-2 w-5 h-5"  />              </a>
+              <a""
+                href="#demo""
+                className="inline-flex items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all duration-200 border border-slate-600""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
               >
-                Watch Demo
+                Watch Demo;
               </a>
             </div>
           </motion.div>
         </div>
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
       </section>"
+=======
+      </section>
+
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
       {/* Key Benefits */}""
       <section className="py-16 bg-slate-800/50">;""
         <div className="container mx-auto px-4">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
               Transform Your Computing Power"
+=======
+              Transform Your Computing Power;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
             </h2>""
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Our quantum computing platform delivers unprecedented performance for complex problems
+              Our quantum computing platform delivers unprecedented performance for complex problems;
             </p>
 <<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
           </div>
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
 <<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
 
 ========
@@ -138,30 +200,42 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
           <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index()
               <motion.div
+=======
+          ""
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index (
+              <motion.div;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
                 key={index}
-                initial = {
-
+                initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
   y: 20
 
 =======
   y: 20 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/QuantumComputingAsAService.tsx
+=======
+  y: 20;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
 }}
-                whileInView = {
-
+                whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
   y: 0
 
 =======
   y: 0 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/QuantumComputingAsAService.tsx
+=======
+  y: 0;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
 }}
-                transition = {
-
+                transition = {}
   { duration: 0.6,
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
   delay: index * 0.1
 
@@ -182,6 +256,16 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
                 </div>""
                 <h3 className="text-2xl font-bold text-white mb-2">{benefit.title}</h3>""
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/QuantumComputingAsAService.tsx
+=======
+  delay: index * 0.1;
+}}""
+                className="text-center p-6""
+""
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">""
+                  <benefit.icon className="w-8 h-8 text-white" />
+                </div>""
+                <h3 className="text-2xl font-bold text-white mb-2">{benefit.title}</h3>""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
                 <p className="text-slate-300">{benefit.description}</p>
               </motion.div>;
             ))}
@@ -195,34 +279,45 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Advanced Quantum Computing Features
+              Advanced Quantum Computing Features;
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Everything you need to harness the power of quantum computing for your business
+              Everything you need to harness the power of quantum computing for your business;
             </p>
           </div>
 
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)  => (
-              <motion.div
+              <motion.div;
                 key={index}
-                initial = {
+                initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
   y: 20
 
+=======
+  y: 20;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
 }}
-                whileInView = {
+                whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
   y: 0
 
+=======
+  y: 0;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
 }}
-                transition = {
+                transition = {}
   { duration: 0.6,
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
   delay: index * 0.1
 
+=======
+  delay: index * 0.1;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
 }}
-                className="bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-200"
-
+                className="bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-200""
                 <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
@@ -239,7 +334,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Transparent Pricing for Quantum Computing
+              Transparent Pricing for Quantum Computing;
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               Choose the plan that fits your quantum computing needs. All plans include a 14-day free trial.
@@ -248,25 +343,37 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
 
           <div className="grid md: grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index)  => (
-              <motion.div
+              <motion.div;
                 key={index}
-                initial = {
+                initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
   y: 20
 
+=======
+  y: 20;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
 }}
-                whileInView = {
+                whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
   y: 0
 
+=======
+  y: 0;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
 }}
-                transition = {
+                transition = {}
   { duration: 0.6,
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
   delay: index * 0.1
 
+=======
+  delay: index * 0.1;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
 }}
-                className={`bg-slate-800 rounded-xl p-8 border-2 ${
-                  plan.popular
+                className={`bg-slate-800 rounded-xl p-8 border-2 ${}
+                  plan.popular;
                     ? 'border-purple-500 relative'
                     : 'border-slate-700'
                 }`}
@@ -274,7 +381,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
                 {plan.popular && (;
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
+                      Most Popular;
                     </span>
                   </div>
                 )}
@@ -297,10 +404,10 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
                   ))}
                 </ul>
 
-                <a
-                  href="/contact"
-                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
-                    plan.popular
+                <a;
+                  href="/contact""
+                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${}
+                    plan.popular;
                       ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600'
                       : 'bg-slate-700 text-white hover:bg-slate-600'
                   }`}
@@ -313,20 +420,28 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
         </div>
       </section>
 
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
 =======
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/QuantumComputingAsAService.tsx
       {/* Features Grid */}"
       <section className="py-16">;"
         <div className="container mx-auto px-4">"
           <div className="text-center mb-16">"
+=======
+      {/* Features Grid */}""
+      <section className="py-16">;""
+        <div className="container mx-auto px-4">""
+          <div className="text-center mb-16">""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Advanced Quantum Computing Features
-            </h2>"
+              Advanced Quantum Computing Features;
+            </h2>""
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Everything you need to harness the power of quantum computing for your business
+              Everything you need to harness the power of quantum computing for your business;
             </p>
 <<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
           </div>
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
 <<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
 
           <div className="grid md: grid-cols-3 gap-8">
@@ -342,30 +457,42 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
             {features.map((feature, index)  => (
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/QuantumComputingAsAService.tsx
               <motion.div
+=======
+          ""
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map(feature: unknown, index: unknown (
+              <motion.div;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
                 key={index}
-                initial = {
-
+                initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
   y: 20
 
 =======
   y: 20 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/QuantumComputingAsAService.tsx
+=======
+  y: 20;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
 }}
-                whileInView = {
-
+                whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
   y: 0
 
 =======
   y: 0 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/QuantumComputingAsAService.tsx
+=======
+  y: 0;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
 }}
-                transition = {
-
+                transition = {}
   { duration: 0.6,
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
   delay: index * 0.1
 
@@ -375,78 +502,136 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
 }}"
                 className="bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-200"
                 <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>"
+=======
+  delay: index * 0.1;
+}}""
+                className="bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-200""
+                <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
                   <feature.icon className="w-6 h-6 text-white" />
-                </div>"
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>"
+                </div>""
+                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>""
                 <p className="text-slate-300">{feature.description}</p>
               </motion.div>;
             ))}
           </div>
         </div>
       </section>
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
       {/* Pricing Section */}"
       <section className="py-16 bg-slate-800/50">;"
         <div className="container mx-auto px-4">"
           <div className="text-center mb-16">"
+=======
+
+      {/* Pricing Section */}""
+      <section className="py-16 bg-slate-800/50">;""
+        <div className="container mx-auto px-4">""
+          <div className="text-center mb-16">""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Transparent Pricing for Quantum Computing
-            </h2>"
+              Transparent Pricing for Quantum Computing;
+            </h2>""
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               Choose the plan that fits your quantum computing needs. All plans include a 14-day free trial.
             </p>
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
           </div>"
           <div className="grid md: grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index)  => (
               <motion.div
+=======
+          </div>
+          ""
+          <div className="grid md: grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricingPlans.map(plan: unknown, index: unknown (
+              <motion.div;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
                 key={index}
-                initial = {
-
+                initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
   y: 20 
+=======
+  y: 20;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
 }}
-                whileInView = {
-
+                whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
   y: 0 
+=======
+  y: 0;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
 }}
-                transition = {
-
+                transition = {}
   { duration: 0.6,
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
   delay: index * 0.1 
+=======
+  delay: index * 0.1;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
 }}`
-                className={`bg-slate-800 rounded-xl p-8 border-2 ${
-
+                className={`bg-slate-800 rounded-xl p-8 border-2 ${}
                   plan.popular'
                     ? 'border-purple-500 relative''
                     : 'border-slate-700'`
                 }`}
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
                 {plan.popular && (;"
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
+=======
+
+                {plan.popular && (;""
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
                     <span className="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
+                      Most Popular;
                     </span>
                   </div>
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
                 )}"
                 <div className="text-center mb-6">"
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>"
                   <div className="mb-4">"
                     <span className="text-4xl font-bold text-white">{plan.price}</span>"
+=======
+                )}
+""
+                <div className="text-center mb-6">""
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>""
+                  <div className="mb-4">""
+                    <span className="text-4xl font-bold text-white">{plan.price}</span>""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
                     <span className="text-slate-400">{plan.period}</span>
-                  </div>"
+                  </div>""
                   <p className="text-slate-300">{plan.description}</p>
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
                 </div>"
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => ("
                     <li key={featureIndex} className="flex items-center text-slate-300">"
                       <CheckCircle className="w-5 h-5 text-purple-500 mr-3 flex-shrink-0"   />
+=======
+                </div>
+""
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((feature, featureIndex) => (""
+                    <li key={featureIndex} className="flex items-center text-slate-300">""
+                      <CheckCircle className="w-5 h-5 text-purple-500 mr-3 flex-shrink-0"  />
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
                       {feature}
                     </li>
                   ))}
                 </ul>
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
                 <a"
-                  href="/contact"`
-                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
+=======
 
+                <a""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
+                  href="/contact"`
+                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${}
                     plan.popular'
                       ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600''
                       : 'bg-slate-700 text-white hover:bg-slate-600'`
@@ -576,43 +761,69 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
             ))}
           </div>
         </div>
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
       </section>"
+=======
+      </section>
+
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
       {/* Use Cases */}""
       <section className="py-16">;""
         <div className="container mx-auto px-4">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
               Proven Results Across Industries"
+=======
+              Proven Results Across Industries;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
             </h2>""
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              See how different industries are leveraging quantum computing for breakthrough results
+              See how different industries are leveraging quantum computing for breakthrough results;
             </p>
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
           </div>"
+=======
+          </div>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
           ""
           <div className="grid md: grid-cols-3 gap-8">
-            {useCases.map(useCase: unknown, index: unknown 
-              <motion.div
+            {useCases.map(useCase: unknown, index: unknown;
+              <motion.div;
                 key={index}
-                initial = {
-
+                initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
   y: 20 
+=======
+  y: 20;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
 }}
-                whileInView = {
-
+                whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
   y: 0 
+=======
+  y: 0;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
 }}
-                transition = {
-
+                transition = {}
   { duration: 0.6,
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
   delay: index * 0.1 "
+=======
+  delay: index * 0.1;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
 }}""
                 className="bg-slate-800 rounded-xl p-6 border border-slate-700""
 ""
                 <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>""
                 <p className="text-slate-300 mb-4">{useCase.description}</p>""
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
                 <ul className="space-y-2">"
+=======
+                <ul className="space-y-2">
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
                   {useCase.metrics.map((metric, metricIndex) => (""
                     <li key={metricIndex} className="flex items-center text-slate-300">""
                       <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0"  />
@@ -624,19 +835,29 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
             ))}
           </div>
         </div>
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
       </section>"
+=======
+      </section>
+
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
       {/* Integrations */}""
       <section className="py-16 bg-slate-800/50">;""
         <div className="container mx-auto px-4">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
               Seamless Integrations"
+=======
+              Seamless Integrations;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
             </h2>""
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Connect with your existing development tools and cloud platforms
+              Connect with your existing development tools and cloud platforms;
             </p>
 <<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
           </div>
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
 <<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
 
 ========
@@ -649,30 +870,42 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
           <div className="grid grid-cols-2 md: grid-cols-4 lg:grid-cols-6 gap-6">
             {integrations.map(integration: unknown, index: unknown()
               <motion.div
+=======
+          ""
+          <div className="grid grid-cols-2 md: grid-cols-4 lg:grid-cols-6 gap-6">
+            {integrations.map(integration: unknown, index: unknown (
+              <motion.div;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
                 key={index}
-                initial = {
-
+                initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
   scale: 0.8
 
 =======
   scale: 0.8 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/QuantumComputingAsAService.tsx
+=======
+  scale: 0.8;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
 }}
-                whileInView = {
-
+                whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
   scale: 1
 
 =======
   scale: 1 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/QuantumComputingAsAService.tsx
+=======
+  scale: 1;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
 }}
-                transition = {
-
+                transition = {}
   { duration: 0.6,
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
   delay: index * 0.05
 
@@ -685,48 +918,74 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
                 className="bg-slate-800 rounded-lg p-4 border border-slate-700 text-center hover:border-slate-600 transition-all duration-200""
 ""
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/QuantumComputingAsAService.tsx
+=======
+  delay: index * 0.05;
+}}""
+                className="bg-slate-800 rounded-lg p-4 border border-slate-700 text-center hover:border-slate-600 transition-all duration-200""
+""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
                 <span className="text-slate-300 font-medium">{integration}</span>
               </motion.div>
             ))}
           </div>
         </div>
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
       </section>"
+=======
+      </section>
+
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
       {/* Security & Compliance */}""
       <section className="py-16">;""
         <div className="container mx-auto px-4">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
               Enterprise-Grade Security & Compliance"
+=======
+              Enterprise-Grade Security & Compliance;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
             </h2>""
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Your quantum computing workloads are protected with the highest security standards
+              Your quantum computing workloads are protected with the highest security standards;
             </p>
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
           </div>"
+=======
+          </div>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
 ""
           <div className="grid md:grid-cols-3 gap-8">
-            <motion.div
-              initial = {
-
+            <motion.div;
+              initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
   y: 20
 
 =======
   y: 20 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/QuantumComputingAsAService.tsx
+=======
+  y: 20;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
 }}
-              whileInView = {
-
+              whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
   y: 0
 
+=======
+  y: 0;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
 }}
-              transition={{ duration: 0.6 }}"
-              className="bg-slate-800 rounded-xl p-6 border border-slate-700 text-center"
-"
-              <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">"
+              transition={{ duration: 0.6 }}""
+              className="bg-slate-800 rounded-xl p-6 border border-slate-700 text-center""
+""
+              <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">""
                 <Lock className="w-8 h-8 text-white"  />
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
               </div>"
 =======
   y: 0 
@@ -742,28 +1001,42 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
             </motion.div>
             <motion.div
               initial = {
+=======
+              </div>""
+              <h3 className="text-xl font-semibold text-white mb-2">Quantum-Safe Security</h3>"              <p className="text-slate-300">Post-quantum cryptography and quantum-resistant encryption protocols</p>
+            </motion.div>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
 
+            <motion.div;
+              initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
   y: 20
 
 =======
   y: 20 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/QuantumComputingAsAService.tsx
+=======
+  y: 20;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
 }}
-              whileInView = {
-
+              whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
   y: 0
 
 =======
   y: 0 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/QuantumComputingAsAService.tsx
+=======
+  y: 0;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
 }}
-              transition = {
-
+              transition = {}
   { duration: 0.6,
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
   delay: 0.2
 
@@ -786,28 +1059,48 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
             </motion.div>
             <motion.div
               initial = {
+=======
+  delay: 0.2;
+}}""
+              className="bg-slate-800 rounded-xl p-6 border border-slate-700 text-center""
+""
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">""
+                <Shield className="w-8 h-8 text-white"  />
+              </div>""
+              <h3 className="text-xl font-semibold text-white mb-2">SOC 2 Type II</h3>"              <p className="text-slate-300">SOC 2 Type II certification for enterprise-grade security and reliability</p>
+            </motion.div>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
 
+            <motion.div;
+              initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
   y: 20
 
 =======
   y: 20 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/QuantumComputingAsAService.tsx
+=======
+  y: 20;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
 }}
-              whileInView = {
-
+              whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
   y: 0
 
 =======
   y: 0 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/QuantumComputingAsAService.tsx
+=======
+  y: 0;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
 }}
-              transition = {
-
+              transition = {}
   { duration: 0.6,
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
   delay: 0.4
 
@@ -826,28 +1119,45 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
                 <Activity className="w-8 h-8 text-white"  />"
               </div>""
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/QuantumComputingAsAService.tsx
+=======
+  delay: 0.4;
+}}""
+              className="bg-slate-800 rounded-xl p-6 border border-slate-700 text-center""
+""
+              <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">""
+                <Activity className="w-8 h-8 text-white"  />
+              </div>""
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
               <h3 className="text-xl font-semibold text-white mb-2">Real-Time Monitoring</h3>"              <p className="text-slate-300">24/7 quantum system monitoring with automated threat detection</p>
             </motion.div>
           </div>
         </div>
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
       </section>"
+=======
+      </section>
+
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
       {/* CTA Section */}""
       <section className="py-20">;""
         <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial = {
-
+          <motion.div;
+            initial = {}
   { opacity: 0,
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
   y: 20
 
 =======
   y: 20 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ef9f:src/pages/services/QuantumComputingAsAService.tsx
+=======
+  y: 20;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
 }}
-            whileInView = {
-
+            whileInView = {}
   { opacity: 1,
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
 <<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
   y: 0
 
@@ -870,28 +1180,59 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
             </p>"
 ""
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">"
+=======
+  y: 0;
+}}
+            transition={{ duration: 0.6 }}""
+            className="max-w-4xl mx-auto""
+""
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Harness Quantum Power?
+            </h2>""
+            <p className="text-xl text-slate-300 mb-8">
+              Join forward-thinking companies already using quantum computing to solve impossible problems;
+            </p>
+""
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
               <a""
                 href="/contact""
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 shadow-lg hover:shadow-xl""
                 Start Free Trial""
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
                 <ArrowRight className="ml-2 w-5 h-5"  />              </a>"
+=======
+                <ArrowRight className="ml-2 w-5 h-5"  />              </a>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
               <a""
                 href="tel:+13024640950""
                 className="inline-flex items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all duration-200 border border-slate-600""
 ""
                 <Phone className="w-5 h-5 mr-2"  />
-                Call Us
+                Call Us;
               </a>
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
             </div>"
+=======
+            </div>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
 ""
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-slate-400">""
               <div className="flex items-center">""
                 <CheckCircle className="w-5 h-5 text-purple-500 mr-2"  />
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
                 <span>14-day free trial</span>"
               </div>""
               <div className="flex items-center">""
                 <CheckCircle className="w-5 h-5 text-purple-500 mr-2"  />
                 <span>No credit card required</span>"
+=======
+                <span>14-day free trial</span>
+              </div>""
+              <div className="flex items-center">""
+                <CheckCircle className="w-5 h-5 text-purple-500 mr-2"  />
+                <span>No credit card required</span>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
               </div>""
               <div className="flex items-center">""
                 <CheckCircle className="w-5 h-5 text-purple-500 mr-2"  />
@@ -899,7 +1240,12 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
             </div>
           </motion.div>
         </div>
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
       </section>"
+=======
+      </section>
+
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
       {/* Contact Information */}""
       <section className="py-16 bg-slate-800/50">;""
         <div className="container mx-auto px-4">""
@@ -910,21 +1256,31 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
                 <Phone className="w-8 h-8 text-purple-500 mb-4"  />""
                 <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>""
                 <a href="tel:+13024640950" className="text-slate-300 hover:text-white transition-colors">
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
                   +1 302 464 0950
                 </a>"
+=======
+                  +1 302 464 0950;
+                </a>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
               </div>""
               <div className="flex flex-col items-center">""
                 <Mail className="w-8 h-8 text-purple-500 mb-4"  />""
                 <h3 className="text-xl font-semibold text-white mb-2">Email</h3>""
                 <a href="mailto:kleber@ziontechgroup.com" className="text-slate-300 hover:text-white transition-colors">
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
                   kleber@ziontechgroup.com
                 </a>"
+=======
+                  kleber@ziontechgroup.com;
+                </a>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx
               </div>""
               <div className="flex flex-col items-center">""
                 <ExternalLink className="w-8 h-8 text-purple-500 mb-4"  />""
                 <h3 className="text-xl font-semibold text-white mb-2">Website</h3>""
                 <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-white transition-colors">
-                  ziontechgroup.com
+                  ziontechgroup.com;
                 </a>
               </div>
             </div>
@@ -932,5 +1288,11 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
         </div>
       </section>
     </div>
+<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
   )};'"`
 export default QuantumComputingAsAService}}}}}'"`'"`
+=======
+  )};
+
+export default QuantumComputingAsAService}}}}}'"`
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/QuantumComputingAsAService.tsx

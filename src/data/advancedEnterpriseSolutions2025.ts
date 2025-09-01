@@ -1,4 +1,4 @@
-export interface EnterpriseSolution {
+export interface EnterpriseSolution {}
   id: string;
   title: string;
   description: string;
@@ -9,12 +9,11 @@ export interface EnterpriseSolution {
   features: string[];
   benefits: string[];
   useCases: string[];
-pricing: {
-
+pricing: {}
     starter: string;
     professional: string;
     enterprise: string;
-    custom: string
+    custom: string;
 };
   estimatedTime: string;
   technologies: string[];
@@ -25,8 +24,8 @@ pricing: {
   status: 'active' | 'beta' | 'coming-soon';
   sla: string;
   support: string};
-export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
-  {
+export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = []
+  {}
 '
     id: 'enterprise-cloud-migration','
     title: 'Enterprise Cloud Migration & Strategy','
@@ -44,7 +43,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     useCases[;'
       'Large enterprises',Financial institutions',Healthcare organizations',Government agencies'
     ],;
-    pricing: {
+    pricing: {}
 '
       starter: '$50,000','
       professional: '$150,000','
@@ -60,7 +59,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     sla: '99.9% uptime guarantee','
     support: '24/7 dedicated support team'
   },
-  {
+  {}
 '
     id: 'enterprise-cybersecurity','
     title: 'Enterprise Cybersecurity Framework','
@@ -78,7 +77,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     useCases[;'
       'Fortune 500 companies',Financial services',Healthcare systems',Government entities'
     ],;
-    pricing: {
+    pricing: {}
 '
       starter: '$75,000','
       professional: '$200,000','
@@ -94,7 +93,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     sla: '99.99% security guarantee','
     support: '24/7 SOC team support'
   },
-  {
+  {}
 '
     id: 'digital-transformation','
     title: 'Digital Transformation Consulting','
@@ -112,7 +111,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     useCases[;'
       'Traditional enterprises',Manufacturing companies',Retail chains',Service organizations'
     ],;
-    pricing: {
+    pricing: {}
 '
       starter: '$100,000','
       professional: '$300,000','
@@ -128,7 +127,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     sla: 'Transformation success guarantee','
     support: 'Dedicated transformation team'
   },
-  {
+  {}
 '
     id: 'enterprise-data-analytics','
     title: 'Enterprise Data Analytics Platform','
@@ -146,7 +145,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     useCases[;'
       'Financial services',Healthcare systems',Manufacturing',Retail chains'
     ],;
-    pricing: {
+    pricing: {}
 '
       starter: '$60,000','
       professional: '$180,000','
@@ -162,7 +161,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     sla: '99.9% data availability','
     support: '24/7 analytics support'
   },
-  {
+  {}
 '
     id: 'enterprise-automation','
     title: 'Enterprise Process Automation','
@@ -180,7 +179,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     useCases[;'
       'Finance & accounting',Human resources',Customer service',Supply chain management'
     ],;
-    pricing: {
+    pricing: {}
 '
       starter: '$40,000','
       professional: '$120,000','
@@ -196,7 +195,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     sla: '95% automation success rate','
     support: 'Automation support team'
   },
-  {
+  {}
 '
     id: 'enterprise-integration','
     title: 'Enterprise System Integration','
@@ -214,7 +213,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     useCases[;'
       'ERP integration',CRM systems',Legacy system modernization',Cloud-to-on-premise'
     ],;
-    pricing: {
+    pricing: {}
 '
       starter: '$35,000','
       professional: '$100,000','
@@ -230,7 +229,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     sla: '99.5% integration uptime','
     support: 'Integration support team'
   },
-  {
+  {}
 '
     id: 'enterprise-infrastructure','
     title: 'Enterprise Infrastructure Modernization','
@@ -248,7 +247,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     useCases[;'
       'Data centers',Network infrastructure',Storage systems',Computing resources'
     ],;
-    pricing: {
+    pricing: {}
 '
       starter: '$80,000','
       professional: '$250,000','
@@ -264,7 +263,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     sla: '99.9% infrastructure uptime','
     support: '24/7 infrastructure support'
   },
-  {
+  {}
 '
     id: 'enterprise-consulting','
     title: 'Strategic IT Consulting','
@@ -282,7 +281,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     useCases[;'
       'Technology strategy',Digital transformation',System selection',Risk management'
     ],;
-    pricing: {
+    pricing: {}
 '
       starter: '$25,000','
       professional: '$75,000','
@@ -304,6 +303,6 @@ export '
     return ADVANCED_ENTERPRISE_SOLUTIONS_2025;
 
   return ADVANCED_ENTERPRISE_SOLUTIONS_2025.filter(solution => solution.category === category)};
-export 
+export;
   return ADVANCED_ENTERPRISE_SOLUTIONS_2025};
 '

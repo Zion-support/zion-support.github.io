@@ -14,42 +14,37 @@ import RefreshCw from 'lucide-react/dist/esm/icons/refresh-cw';'
 import X from 'lucide-react/dist/esm/icons/x';'
 import Info from 'lucide-react/dist/esm/icons/info';'
 import { cn } from '@/lib/utils';
-export function PerformanceDashboard({
-
+export function PerformanceDashboard({}
   className,
   showDetails = false,
-  onClose}) {
-
+  onClose}) {}
   const { metrics, observers, performanceScore, logMetrics } = usePerformance();
   const [isExpanded, setIsExpanded] = useState(showDetails);
-  const getScoreColor = score => {
+  const getScoreColor = score => {}
 '
     if (score >= 90) return 'text-green-500';'
     if (score >= 70) return 'text-yellow-500';'
     return 'text-red-500';
   };
-  const getScoreEmoji = score => {
+  const getScoreEmoji = score => {}
 '
     if (score >= 90) return '🚀';'
     if (score >= 70) return '⚠️';'
     return '🐌';
   };
-  const getMetricIcon = metricName => {
-
-    const icons = {
-
-      FCP: <Eye className="w-4 h-4" />,""
-      LCP: <Eye className="w-4 h-4" />,""
-      FID: <MousePointer className="w-4 h-4" />,""
-      CLS: <BarChart3 className="w-4 h-4" />,""
-      TTFB: <Clock className="w-4 h-4" />,""
-      DOMLOAD: <Activity className="w-4 h-4" />,""
-      WINDOWLOAD: <Activity className="w-4 h-4" />};""
+  const getMetricIcon = metricName => {}
+    const icons = {}
+      FCP: <Eye className="w-4 h-4" />,"""
+      LCP: <Eye className="w-4 h-4" />,"""
+      FID: <MousePointer className="w-4 h-4" />,"""
+      CLS: <BarChart3 className="w-4 h-4" />,"""
+      TTFB: <Clock className="w-4 h-4" />,"""
+      DOMLOAD: <Activity className="w-4 h-4" />,"""
+      WINDOWLOAD: <Activity className="w-4 h-4" />};"""
     return icons[metricName] || <Activity className="w-4 h-4" />;
   };
-  const getMetricDescription = metricName => {
-
-    const descriptions = {
+  const getMetricDescription = metricName => {}
+    const descriptions = {}
 '
       FCP: 'First Contentful Paint - Time to first content','
       LCP: 'Largest Contentful Paint - Time to largest content','
@@ -60,7 +55,7 @@ export function PerformanceDashboard({
       WINDOWLOAD: 'Window Load - Full page load time'};'
     return descriptions[metricName] || 'Performance metric';
   };
-  const formatMetricValue = (metricName, value) => {
+  const formatMetricValue = (metricName, value) => {}
 '
     if (metricName === 'CLS') return value.toFixed(3);'
     if (metricName === 'FID') return `${value.toFixed(0)}ms`;``
@@ -71,40 +66,40 @@ export function PerformanceDashboard({
       className={cn('fixed bottom-4 right-4 z-50 max-w-sm', className)}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3 }}"
-    >""
-      <Card className="bg-zion-blue-dark/95 backdrop-blur-md border-zion-purple/20 text-white shadow-2xl">""
-        <CardHeader className="pb-3">""
-          <div className="flex items-center justify-between">""
-            <CardTitle className="text-lg flex items-center gap-2">""
+      transition={{ duration: 0.3 }}""
+    >"""
+      <Card className="bg-zion-blue-dark/95 backdrop-blur-md border-zion-purple/20 text-white shadow-2xl">"""
+        <CardHeader className="pb-3">"""
+          <div className="flex items-center justify-between">"""
+            <CardTitle className="text-lg flex items-center gap-2">"""
               <Activity className="w-5 h-5 text-zion-cyan" />
-              Performance"
-            </CardTitle>""
-            <div className="flex items-center gap-2">"
-              <Button""
-                variant="ghost""
-                size="sm""
-                onClick={() => setIsExpanded(!isExpanded)}""
-                className="p-1 h-8 w-8 text-zion-slate-light hover:text-zion-cyan""
-              >""
+              Performance""
+            </CardTitle>"""
+            <div className="flex items-center gap-2">""
+              <Button"""
+                variant="ghost"""
+                size="sm"""
+                onClick={() => setIsExpanded(!isExpanded)}"""
+                className="p-1 h-8 w-8 text-zion-slate-light hover:text-zion-cyan"""
+              >"""
                 <TrendingUp className="w-4 h-4" />
               </Button>
-              {onClose && ("
-                <Button""
-                  variant="ghost""
-                  size="sm""
-                  onClick={onClose}""
-                  className="p-1 h-8 w-8 text-zion-slate-light hover:text-zion-cyan""
-                >""
+              {onClose && (""
+                <Button"""
+                  variant="ghost"""
+                  size="sm"""
+                  onClick={onClose}"""
+                  className="p-1 h-8 w-8 text-zion-slate-light hover:text-zion-cyan"""
+                >"""
                   <X className="w-4 h-4" />
                 </Button>
               )}
             </div>
           </div>
-"
-          {/* Performance Score */}""
-          <div className="flex items-center justify-between">""
-            <div className="flex items-center gap-2">""
+""
+          {/* Performance Score */}"""
+          <div className="flex items-center justify-between">"""
+            <div className="flex items-center gap-2">"""
               <span className="text-sm text-zion-slate-light">Score:</span>
               <span'
                 className={cn(''
@@ -112,16 +107,16 @@ export function PerformanceDashboard({
                   getScoreColor(performanceScore)
                 )}
               >
-                {performanceScore}"
-              </span>""
+                {performanceScore}""
+              </span>"""
               <span className="text-lg">{getScoreEmoji(performanceScore)}</span>
-            </div>"
-            <Button""
-              variant="ghost""
-              size="sm""
-              onClick={logMetrics}""
-              className="text-zion-cyan hover:text-zion-cyan-light""
-            >""
+            </div>""
+            <Button"""
+              variant="ghost"""
+              size="sm"""
+              onClick={logMetrics}"""
+              className="text-zion-cyan hover:text-zion-cyan-light"""
+            >"""
               <RefreshCw className="w-4 h-4" />
             </Button>
           </div>
@@ -129,35 +124,35 @@ export function PerformanceDashboard({
 
         <AnimatePresence>
           {isExpanded && (
-            <motion.div
+            <motion.div;
               initial={{ height: 0, opacity: 0 }}'
               animate={{ height: 'auto', opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.3 }}"
-            >""
-              <CardContent className="pt-0 space-y-3">"
-                {/* Metrics Grid */}""
+              transition={{ duration: 0.3 }}""
+            >"""
+              <CardContent className="pt-0 space-y-3">""
+                {/* Metrics Grid */}"""
                 <div className="grid grid-cols-1 gap-2">
                   {observers.map(({ name, value, rating }) => (
-                    <div"
-                      key={name}""
-                      className="flex items-center justify-between p-2 bg-zion-slate-dark/30 rounded-lg""
-                    >""
+                    <div""
+                      key={name}"""
+                      className="flex items-center justify-between p-2 bg-zion-slate-dark/30 rounded-lg"""
+                    >"""
                       <div className="flex items-center gap-2">
-                        {getMetricIcon(name)}"
-                        <div>""
-                          <div className="text-sm font-medium">{name}</div>""
+                        {getMetricIcon(name)}""
+                        <div>"""
+                          <div className="text-sm font-medium">{name}</div>"""
                           <div className="text-xs text-zion-slate-light">
                             {getMetricDescription(name)}
                           </div>
-                        </div>"
-                      </div>""
-                      <div className="flex items-center gap-2">""
+                        </div>""
+                      </div>"""
+                      <div className="flex items-center gap-2">"""
                         <span className="text-sm font-mono">
                           {formatMetricValue(name, value)}
                         </span>
-                        <Badge
-                          variant={
+                        <Badge;
+                          variant={}
 '
                             rating === 'good'''
                               ? 'default'''
@@ -180,15 +175,15 @@ export function PerformanceDashboard({
                     </div>
                   ))}
                 </div>
-"
-                {/* Performance Tips */}""
-                <div className="p-3 bg-zion-purple/10 border border-zion-purple/20 rounded-lg">""
-                  <div className="flex items-center gap-2 mb-2">""
-                    <Info className="w-4 h-4 text-zion-purple" />""
+""
+                {/* Performance Tips */}"""
+                <div className="p-3 bg-zion-purple/10 border border-zion-purple/20 rounded-lg">"""
+                  <div className="flex items-center gap-2 mb-2">"""
+                    <Info className="w-4 h-4 text-zion-purple" />"""
                     <span className="text-sm font-medium text-zion-purple">
-                      Tips
-                    </span>"
-                  </div>""
+                      Tips;
+                    </span>""
+                  </div>"""
                   <div className="text-xs text-zion-slate-light space-y-1">
                     {performanceScore < 90 && (
                       <>
@@ -212,9 +207,8 @@ export function PerformanceDashboard({
     </motion.div>
   );
 }
-// Compact performance indicator
-export function PerformanceIndicator({ className }) {
-
+// Compact performance indicator;
+export function PerformanceIndicator({ className }) {}
   const { performanceScore } = usePerformance();'
   return (''
     <div className={cn('flex items-center gap-2', className)}>
@@ -226,10 +220,10 @@ export function PerformanceIndicator({ className }) {
             : performanceScore >= 70''
               ? 'bg-yellow-500'''
               : 'bg-red-500'
-        )}"
-      />""
+        )}""
+      />"""
       <span className="text-xs text-zion-slate-light">
-        {performanceScore}/100
+        {performanceScore}/100;
       </span>
     </div>
   );

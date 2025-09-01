@@ -1,11 +1,11 @@
 import React from 'react';
-export const ChatMessage = ({ message }) => {
+export const ChatMessage = ({ message }) => {}
 '
   const isUser = message.sender === 'user';'
   return (''
     <div className={`flex ${isUser ? 'justify-end' : 'justify-start'} mb-4`}>`
       <div``
-        className={`max-w-xs lg:max-w-md px-4 py-2 rounded-lg ${
+        className={`max-w-xs lg:max-w-md px-4 py-2 rounded-lg ${}
 '
           isUser''
             ? 'bg-blue-500 text-white'''`

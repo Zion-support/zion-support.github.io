@@ -1,14 +1,16 @@
-  QuotesFilter,
+QuotesFilter,
   QuotesTable''
  } from '@/components/admin/quotes';
 export { function };
-export default function QuoteManager(...args[]):  {
+export default function QuoteManager(...args[]):  {}
 '
   const { user } = useAuth();''
-  const isAdmin = user?.userType === 'admin';  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
+  const isAdmin: any = user?.userType === 'admin';  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
   const [showDetails, setShowDetails] = useState<typeof false>(false);
-  const {
-
+  const {}
+  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
+  const [showDetails, setShowDetails] = useState<typeof false>(false);
+  const {}
     quotes,
     isLoading,
     error,
@@ -22,9 +24,9 @@ export default function QuoteManager(...args[]):  {
     setDateRange,
     updateStatus,
     toggleArchive,
-    deleteQuote
+    deleteQuote;
   } = useAdminQuotes();
-  // Count quotes by status
-  const statusCounts = {
+  // Count quotes by status;
+  const statusCounts: any = {}
 '
-'"'"
+'"'""

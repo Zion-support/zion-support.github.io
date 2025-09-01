@@ -12,7 +12,7 @@
       targetAudience: 'AI research institutions, Government agencies,'
   Ethics committees';
 
-},;    {
+},;    {}
 '
 ''
       name: 'Quantum Financial Trading AI',''
@@ -27,7 +27,7 @@
       features['Quantum market analysis',Predictive trading',Risk management'],;'
       targetAudience: 'Hedge funds, Investment banks, Trading firms'
     },
-    {
+    {}
 '
       name: 'Quantum Healthcare AI','
       price: '$28,999','
@@ -43,7 +43,7 @@
 
   ],;
   microSAAS[;
-    {
+    {}
 '
       name: 'AI Content Creator Pro','
       price: '$299','
@@ -57,7 +57,7 @@
       features['AI article generation',Content optimization',Multi-language support'],;'
       targetAudience: 'Content marketers, Digital agencies, Small businesses'
     },
-    {
+    {}
 '
       name: 'AI Image Generator Plus','
       price: '$199','
@@ -71,7 +71,7 @@
       features['High-resolution generation',Brand customization',Commercial rights'],;'
       targetAudience: 'Designers, Marketing agencies, E-commerce businesses'
     },
-    {
+    {}
 '
       name: 'AI Code Generator Pro','
       price: '$499','
@@ -87,7 +87,7 @@
 
   ],;
   itServices[;
-    {
+    {}
 '
       name: 'Quantum Cloud Infrastructure','
       price: '$45,999','
@@ -101,7 +101,7 @@
       features['Quantum-ready nodes',Zero-latency networking',Auto-scaling'],;'
       targetAudience: 'Enterprises, Cloud providers, Data centers'
     },
-    {
+    {}
 '
       name: 'AI-Powered Cybersecurity Suite','
       price: '$32,999','
@@ -115,7 +115,7 @@
       features['AI threat detection',Zero-trust architecture',Automated response'],;'
       targetAudience: 'Enterprises, Government agencies, Financial institutions'
     },
-    {
+    {}
 '
       name: 'Quantum DevOps Automation','
       price: '$35,999','
@@ -156,8 +156,6 @@ const ComprehensivePricingGuide2028: React.FC = () => {;''
       ...pricingData2028.microSAAS.map(service => ({ ...service, type: 'Micro SAAS' })),;'      ...pricingData2028.itServices.map(service => ({ ...service, type: 'IT Services' }));
     ]};
 
-  
-    
     let matchesPrice = true;'
     if (priceRange === 'low') matchesPrice = price < 500;'
     else if (priceRange === 'medium') matchesPrice = price >= 500 && price <= 10000;'
@@ -169,132 +167,128 @@ const ComprehensivePricingGuide2028: React.FC = () => {;''
   '
     return parseInt(roi.replace('%',))};
 
-  
-  return()    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">"
-      {/* Hero Section */}""
-      <section className="relative py-20 overflow-hidden">""
-        <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10"></div>""
+  return()    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">""
+      {/* Hero Section */}"""
+      <section className="relative py-20 overflow-hidden">"""
+        <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10"></div>"""
         <div className="relative z-10 container mx-auto px-6 text-center">
-          <motion.h1
+          <motion.h1;
             initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}"
-            transition={{ duration: 0.8 }}""
-            className="text-5xl md:text-7xl font-bold mb-6 text-gradient"
-
-            Comprehensive Pricing Guide 2028
+            animate={{ opacity: 1, y: 0 }}""
+            transition={{ duration: 0.8 }}"""
+            className="text-5xl md:text-7xl font-bold mb-6 text-gradient""
+            Comprehensive Pricing Guide 2028;
           </motion.h1>
-          <motion.p
+          <motion.p;
             initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}"
-            transition={{ duration: 0.8, delay: 0.2 }}""
-            className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto"
-
-            Complete pricing analysis, ROI calculations, and market positioning for all our innovative services
+            animate={{ opacity: 1, y: 0 }}""
+            transition={{ duration: 0.8, delay: 0.2 }}"""
+            className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto""
+            Complete pricing analysis, ROI calculations, and market positioning for all our innovative services;
           </motion.p>
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}"
-            transition={{ duration: 0.8, delay: 0.4 }}""
-            className="flex flex-wrap justify-center gap-4""
-""
+            animate={{ opacity: 1, y: 0 }}""
+            transition={{ duration: 0.8, delay: 0.4 }}"""
+            className="flex flex-wrap justify-center gap-4"""
+"""
             <div className="bg-zion-cyan/20 backdrop-blur-sm border border-zion-cyan/30 rounded-full px-6 py-3 text-zion-cyan font-semibold">
-              💰 Transparent Pricing"
-            </div>""
+              💰 Transparent Pricing""
+            </div>"""
             <div className="bg-zion-purple/20 backdrop-blur-sm border border-zion-purple/30 rounded-full px-6 py-3 text-zion-purple font-semibold">
-              📊 ROI Analysis"
-            </div>""
+              📊 ROI Analysis""
+            </div>"""
             <div className="bg-zion-blue/20 backdrop-blur-sm border border-zion-blue/30 rounded-full px-6 py-3 text-zion-blue font-semibold">
-              🎯 Market Positioning
+              🎯 Market Positioning;
             </div>
           </motion.div>
         </div>;
       </section>
-"
-      {/* Market Overview */}""
-      <section className="py-20 bg-zion-slate-dark/50">;""
-        <div className="container mx-auto px-6">
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}"
-            transition={{ duration: 0.8 }}""
-            className="text-4xl font-bold text-center mb-12 text-gradient"
-
-            Market Overview & Growth Potential"
-          </motion.h2>""
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}"
-              transition={{ duration: 0.8, delay: 0.1 }}""
-              className="text-center""
 ""
-              <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4">""
-                <TrendingUp className="w-10 h-10 text-white"  />"
-              </div>""
-              <h3 className="text-2xl font-bold text-white mb-2">Total Market Size</h3>""
+      {/* Market Overview */}"""
+      <section className="py-20 bg-zion-slate-dark/50">;"""
+        <div className="container mx-auto px-6">
+          <motion.h2;
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}""
+            transition={{ duration: 0.8 }}"""
+            className="text-4xl font-bold text-center mb-12 text-gradient""
+            Market Overview & Growth Potential""
+          </motion.h2>"""
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <motion.div;
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}""
+              transition={{ duration: 0.8, delay: 0.1 }}"""
+              className="text-center"""
+"""
+              <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4">"""
+                <TrendingUp className="w-10 h-10 text-white"  />""
+              </div>"""
+              <h3 className="text-2xl font-bold text-white mb-2">Total Market Size</h3>"""
               <p className="text-4xl font-bold text-zion-cyan mb-2">$89.2B</p>"              <p className="text-zion-slate-light">Combined market value across all service categories</p>
             </motion.div>
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}"
-              transition={{ duration: 0.8, delay: 0.2 }}""
-              className="text-center""
-""
-              <div className="w-20 h-20 bg-gradient-to-br from-zion-purple to-zion-pink rounded-full flex items-center justify-center mx-auto mb-4">""
-                <Rocket className="w-10 h-10 text-white"  />"
-              </div>""
-              <h3 className="text-2xl font-bold text-white mb-2">Average Growth Rate</h3>""
+              whileInView={{ opacity: 1, y: 0 }}""
+              transition={{ duration: 0.8, delay: 0.2 }}"""
+              className="text-center"""
+"""
+              <div className="w-20 h-20 bg-gradient-to-br from-zion-purple to-zion-pink rounded-full flex items-center justify-center mx-auto mb-4">"""
+                <Rocket className="w-10 h-10 text-white"  />""
+              </div>"""
+              <h3 className="text-2xl font-bold text-white mb-2">Average Growth Rate</h3>"""
               <p className="text-4xl font-bold text-zion-purple mb-2">320%</p>"              <p className="text-zion-slate-light">Annual growth rate across all service categories</p>
             </motion.div>
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}"
-              transition={{ duration: 0.8, delay: 0.3 }}""
-              className="text-center""
-""
-              <div className="w-20 h-20 bg-gradient-to-br from-zion-green to-zion-emerald rounded-full flex items-center justify-center mx-auto mb-4">""
-                <DollarSign className="w-10 h-10 text-white"  />"
-              </div>""
-              <h3 className="text-2xl font-bold text-white mb-2">Average ROI</h3>""
+              whileInView={{ opacity: 1, y: 0 }}""
+              transition={{ duration: 0.8, delay: 0.3 }}"""
+              className="text-center"""
+"""
+              <div className="w-20 h-20 bg-gradient-to-br from-zion-green to-zion-emerald rounded-full flex items-center justify-center mx-auto mb-4">"""
+                <DollarSign className="w-10 h-10 text-white"  />""
+              </div>"""
+              <h3 className="text-2xl font-bold text-white mb-2">Average ROI</h3>"""
               <p className="text-4xl font-bold text-zion-green mb-2">550%</p>"              <p className="text-zion-slate-light">Average return on investment for customers</p>
             </motion.div>
           </div>
         </div>
       </section>
-"
-      {/* Filters */}""
-      <section className="py-12 bg-zion-slate-dark/30">;""
-        <div className="container mx-auto px-6">""
-          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">"
-            {/* Category Filter */}""
+""
+      {/* Filters */}"""
+      <section className="py-12 bg-zion-slate-dark/30">;"""
+        <div className="container mx-auto px-6">"""
+          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">""
+            {/* Category Filter */}"""
             <div className="flex flex-wrap gap-3">
               {categories.map((category) => (
-                <motion.button
+                <motion.button;
                   key={category.id}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => setSelectedCategory(category.id)}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300 ${
+                  className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300 ${}
 '
                     selectedCategory === category.id''
                       ? 'bg-gradient-to-r ' + category.color + ' text-white shadow-lg'''`
                       : 'bg-zion-slate/50 text-zion-slate-light hover:bg-zion-slate/70'``
-                  }`}"
-""
+                  }`}""
+"""
                   <category.icon className="w-4 h-4" />
                   {category.name}
                 </motion.button>;) ) }
             </div>
-"
-            {/* Price Range Filter */}""
+""
+            {/* Price Range Filter */}"""
             <div className="flex flex-wrap gap-3">
               {priceRanges.map((range) => (
-                <motion.button
+                <motion.button;
                   key={range.id}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}`
                   onClick={() => setPriceRange(range.id)}``
-                  className={`px-4 py-2 rounded-lg transition-all duration-300 ${
+                  className={`px-4 py-2 rounded-lg transition-all duration-300 ${}
 '
                     priceRange === range.id''
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg'''`
@@ -307,168 +301,160 @@ const ComprehensivePricingGuide2028: React.FC = () => {;''
           </div>
         </div>
       </section>
-"
-      {/* Services Grid */}""
-      <section className="py-20">;""
-        <div className="container mx-auto px-6">""
+""
+      {/* Services Grid */}"""
+      <section className="py-20">;"""
+        <div className="container mx-auto px-6">"""
           <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
             {sortedServices.map((service, index)  => (`
               <motion.div``
                 key={`${service.type}-${service.name}`}
-                initial = {
+                initial = {}
   { opacity: 0,
-  y: 30
-
+  y: 30;
 }}
-                animate = {
+                animate = {}
   { opacity: 1,
-  y: 0
-
+  y: 0;
 }}
-                transition = {
+                transition = {}
   { duration: 0.6,
-  delay: index * 0.1
-
+  delay: index * 0.1;
 }}
-                className="group relative bg-zion - slate / 30 backdrop - blur - sm border border-zion - slate / 40 rounded-2xl p - 8 hover:border-zion - cyan / 50 transition - all duration - 300 hover:shadow-2xl hover:shadow-zion -cyan / 20"
-
-
-
-
-"
-}}""
-                className="group relative bg-zion-slate/30 backdrop-blur-sm border border-zion-slate/40 rounded-2xl p-8 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20"
-"
-                {/* Service Type Badge */}""
+                className="group relative bg-zion - slate / 30 backdrop - blur - sm border border-zion - slate / 40 rounded-2xl p - 8 hover:border-zion - cyan / 50 transition - all duration - 300 hover:shadow-2xl hover:shadow-zion -cyan / 20""
+""
+}}"""
+                className="group relative bg-zion-slate/30 backdrop-blur-sm border border-zion-slate/40 rounded-2xl p-8 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20""
+""
+                {/* Service Type Badge */}"""
                 <div className="absolute -top-3 -left-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
                   {service.type}
                 </div>
-"
-                {/* Service Header */}""
-                <div className="mb-6">;""
+""
+                {/* Service Header */}"""
+                <div className="mb-6">;"""
                   <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors duration-300">
-                    {service.name}"
-                  </h3>""
+                    {service.name}""
+                  </h3>"""
                   <p className="text-zion-slate-light text-sm mb-4">
                     {service.category}
                   </p>
                 </div>;
-"
-                {/* Pricing */}""
-                <div className="mb-6">""
-                  <div className="flex items-baseline gap-2 mb-2">""
-                    <span className="text-4xl font-bold text-zion-cyan">{service.price}</span>""
-                    <span className="text-zion-slate-light">{service.period}</span>"
-                  </div>""
+""
+                {/* Pricing */}"""
+                <div className="mb-6">"""
+                  <div className="flex items-baseline gap-2 mb-2">"""
+                    <span className="text-4xl font-bold text-zion-cyan">{service.price}</span>"""
+                    <span className="text-zion-slate-light">{service.period}</span>""
+                  </div>"""
                   <div className="flex items-center gap-4 text-sm text-zion-slate-light">
                     <span>Setup: {service.setupTime}</span>
                     <span>Trial: {service.trialDays} days</span>
                   </div>
                 </div>
-"
-                {/* Market Info */}""
-                <div className="grid grid-cols-3 gap-4 mb-6">""
-                  <div className="text-center">""
-                    <div className="text-lg font-bold text-zion-cyan">{service.marketSize}</div>""
-                    <div className="text-xs text-zion-slate-light">Market Size</div>"
-                  </div>""
-                  <div className="text-center">""
-                    <div className="text-lg font-bold text-zion-purple">{service.growthRate}</div>""
-                    <div className="text-xs text-zion-slate-light">Growth Rate</div>"
-                  </div>""
-                  <div className="text-center">""
-                    <div className="text-lg font-bold text-zion-green">{service.roi}</div>""
+""
+                {/* Market Info */}"""
+                <div className="grid grid-cols-3 gap-4 mb-6">"""
+                  <div className="text-center">"""
+                    <div className="text-lg font-bold text-zion-cyan">{service.marketSize}</div>"""
+                    <div className="text-xs text-zion-slate-light">Market Size</div>""
+                  </div>"""
+                  <div className="text-center">"""
+                    <div className="text-lg font-bold text-zion-purple">{service.growthRate}</div>"""
+                    <div className="text-xs text-zion-slate-light">Growth Rate</div>""
+                  </div>"""
+                  <div className="text-center">"""
+                    <div className="text-lg font-bold text-zion-green">{service.roi}</div>"""
                     <div className="text-xs text-zion-slate-light">ROI</div>
                   </div>
                 </div>
-"
-                {/* Features */}""
-                <div className="mb-6">""
-                  <h4 className="font-semibold text-white mb-3">Key Features</h4>""
-                  <div className="space-y-2">"
-                    {service.features.map((feature, idx) => (""
-                      <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">""
+""
+                {/* Features */}"""
+                <div className="mb-6">"""
+                  <h4 className="font-semibold text-white mb-3">Key Features</h4>"""
+                  <div className="space-y-2">""
+                    {service.features.map((feature, idx) => ("""
+                      <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">"""
                         <CheckCircle className="w-4 h-4 text-zion-cyan"  />                        {feature}
                       </div>) ) }
                   </div>
                 </div>
-"
-                {/* Target Audience */}""
-                <div className="mb-6">""
-                  <h4 className="font-semibold text-white mb-3">Target Audience</h4>""
+""
+                {/* Target Audience */}"""
+                <div className="mb-6">"""
+                  <h4 className="font-semibold text-white mb-3">Target Audience</h4>"""
                   <p className="text-sm text-zion-slate-light">{service.targetAudience}</p>
                 </div>
-"
-                {/* CTA */}""
-                <div className="text-center">""
-                  <button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-3 px-6 rounded-lg font-semibold group-hover:shadow-lg group-hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2">"
-                    Get Started""
+""
+                {/* CTA */}"""
+                <div className="text-center">"""
+                  <button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-3 px-6 rounded-lg font-semibold group-hover:shadow-lg group-hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2">""
+                    Get Started"""
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300"  />                  </button>
                 </div>
               </motion.div>) ) }
           </div>
         </div>
       </section>
-"
-      {/* ROI Calculator */}""
-      <section className="py-20 bg-zion-slate-dark/50">;""
+""
+      {/* ROI Calculator */}"""
+      <section className="py-20 bg-zion-slate-dark/50">;"""
         <div className="container mx-auto px-6">
-          <motion.h2
+          <motion.h2;
             initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}"
-            transition={{ duration: 0.8 }}""
-            className="text-4xl font-bold text-center mb-12 text-gradient"
-
-            ROI Calculator"
-          </motion.h2>""
-          <div className="max-w-4xl mx-auto bg-zion-slate/30 backdrop-blur-sm border border-zion-slate/40 rounded-2xl p-8">""
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">"
-              <div>""
-                <h3 className="text-2xl font-bold text-white mb-6">Calculate Your ROI</h3>""
-                <div className="space-y-4">"
-                  <div>""
-                    <label className="block text-zion-slate-light mb-2">Service Category</label>""
+            whileInView={{ opacity: 1, y: 0 }}""
+            transition={{ duration: 0.8 }}"""
+            className="text-4xl font-bold text-center mb-12 text-gradient""
+            ROI Calculator""
+          </motion.h2>"""
+          <div className="max-w-4xl mx-auto bg-zion-slate/30 backdrop-blur-sm border border-zion-slate/40 rounded-2xl p-8">"""
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">""
+              <div>"""
+                <h3 className="text-2xl font-bold text-white mb-6">Calculate Your ROI</h3>"""
+                <div className="space-y-4">""
+                  <div>"""
+                    <label className="block text-zion-slate-light mb-2">Service Category</label>"""
                     <select className="w-full px-4 py-2 bg-zion-slate/50 border border-zion-slate/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50">
                       <option>AI Services</option>
                       <option>Micro SAAS</option>
                       <option>IT Services</option>
                     </select>
-                  </div>"
-                  <div>""
-                    <label className="block text-zion-slate-light mb-2">Current Monthly Cost</label>"
-                    <input""
-                      type="number""
-                      placeholder="$0""
-                      className="w-full px-4 py-2 bg-zion-slate/50 border border-zion-slate/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50"
+                  </div>""
+                  <div>"""
+                    <label className="block text-zion-slate-light mb-2">Current Monthly Cost</label>""
+                    <input"""
+                      type="number"""
+                      placeholder="$0"""
+                      className="w-full px-4 py-2 bg-zion-slate/50 border border-zion-slate/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50""
                     />
-                  </div>"
-                  <div>""
-                    <label className="block text-zion-slate-light mb-2">Expected Efficiency Gain (%)</label>"
-                    <input""
-                      type="number""
-                      placeholder="25""
-                      className="w-full px-4 py-2 bg-zion-slate/50 border border-zion-slate/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50"
+                  </div>""
+                  <div>"""
+                    <label className="block text-zion-slate-light mb-2">Expected Efficiency Gain (%)</label>""
+                    <input"""
+                      type="number"""
+                      placeholder="25"""
+                      className="w-full px-4 py-2 bg-zion-slate/50 border border-zion-slate/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50""
                     />
                   </div>
-                </div>"
-              </div>""
-              <div className="bg-zion-slate/20 rounded-xl p-6">""
-                <h4 className="text-xl font-bold text-white mb-4">ROI Projection</h4>""
-                <div className="space-y-3">""
-                  <div className="flex justify-between">""
-                    <span className="text-zion-slate-light">Monthly Savings:</span>""
-                    <span className="text-zion-cyan font-bold">$2,500</span>"
-                  </div>""
-                  <div className="flex justify-between">""
-                    <span className="text-zion-slate-light">Annual Savings:</span>""
-                    <span className="text-zion-cyan font-bold">$30,000</span>"
-                  </div>""
-                  <div className="flex justify-between">""
-                    <span className="text-zion-slate-light">ROI:</span>""
-                    <span className="text-zion-green font-bold">400%</span>"
-                  </div>""
-                  <div className="flex justify-between">""
-                    <span className="text-zion-slate-light">Payback Period:</span>""
+                </div>""
+              </div>"""
+              <div className="bg-zion-slate/20 rounded-xl p-6">"""
+                <h4 className="text-xl font-bold text-white mb-4">ROI Projection</h4>"""
+                <div className="space-y-3">"""
+                  <div className="flex justify-between">"""
+                    <span className="text-zion-slate-light">Monthly Savings:</span>"""
+                    <span className="text-zion-cyan font-bold">$2,500</span>""
+                  </div>"""
+                  <div className="flex justify-between">"""
+                    <span className="text-zion-slate-light">Annual Savings:</span>"""
+                    <span className="text-zion-cyan font-bold">$30,000</span>""
+                  </div>"""
+                  <div className="flex justify-between">"""
+                    <span className="text-zion-slate-light">ROI:</span>"""
+                    <span className="text-zion-green font-bold">400%</span>""
+                  </div>"""
+                  <div className="flex justify-between">"""
+                    <span className="text-zion-slate-light">Payback Period:</span>"""
                     <span className="text-zion-purple font-bold">3 months</span>
                   </div>
                 </div>
@@ -477,43 +463,41 @@ const ComprehensivePricingGuide2028: React.FC = () => {;''
           </div>
         </div>
       </section>
-"
-      {/* Contact Section */}""
-      <section className="py-20">;""
+""
+      {/* Contact Section */}"""
+      <section className="py-20">;"""
         <div className="container mx-auto px-6 text-center">
-          <motion.h2
+          <motion.h2;
             initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}"
-            transition={{ duration: 0.8 }}""
-            className="text-4xl md:text-5xl font-bold mb-6 text-gradient"
-
+            whileInView={{ opacity: 1, y: 0 }}""
+            transition={{ duration: 0.8 }}"""
+            className="text-4xl md:text-5xl font-bold mb-6 text-gradient""
             Ready to Maximize Your ROI?
           </motion.h2>
-          <motion.p
+          <motion.p;
             initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}"
-            transition={{ duration: 0.8, delay: 0.2 }}""
-            className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto"
-
-            Contact our team to discuss how our innovative services can deliver exceptional returns on your investment
+            whileInView={{ opacity: 1, y: 0 }}""
+            transition={{ duration: 0.8, delay: 0.2 }}"""
+            className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto""
+            Contact our team to discuss how our innovative services can deliver exceptional returns on your investment;
           </motion.p>
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}"
-            transition={{ duration: 0.8, delay: 0.4 }}""
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-"
-            <a""
-              href="tel:+13024640950""
-              className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2""
+            whileInView={{ opacity: 1, y: 0 }}""
+            transition={{ duration: 0.8, delay: 0.4 }}"""
+            className="flex flex-col sm:flex-row gap-4 justify-center""
 ""
-              <Phone className="w-5 h-5"  />              +1 302 464 0950
-            </a>"
-            <a""
-              href="mailto:kleber@ziontechgroup.com""
-              className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2""
-""
-              <Mail className="w-5 h-5"  />              kleber@ziontechgroup.com
+            <a"""
+              href="tel:+13024640950"""
+              className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"""
+"""
+              <Phone className="w-5 h-5"  />              +1 302 464 0950;
+            </a>""
+            <a"""
+              href="mailto:kleber@ziontechgroup.com"""
+              className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"""
+"""
+              <Mail className="w-5 h-5"  />              kleber@ziontechgroup.com;
             </a>;
           </motion.div>;
         </div>;

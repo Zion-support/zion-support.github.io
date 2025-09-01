@@ -1,20 +1,16 @@
-
-import {
-
+import {}
   RequestsHeader,
-  QuoteRequestsList""
-} from "@/components/quotes";"
+  QuoteRequestsList"""
+} from "@/components/quotes";""
 ;
 export { function };
-export default function RequestsPanel(...args[]):  {
-
+export default function RequestsPanel(...args[]):  {}
   const { user } = useAuth();
 
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
   const [showDetails, setShowDetails] = useState<typeof false>(false);
 
-  const {
-
+  const {}
     quotes,
     unreadCount,
     isLoading,
@@ -24,18 +20,17 @@ export default function RequestsPanel(...args[]):  {
     setArchiveFilter,
     markAsViewed,
     markAsResponded,
-    toggleArchive
+    toggleArchive;
   } = useTalentQuotes();
 
     if (quote.status = == 'new') {;
       markAsViewed(quote.id)};
 
-  // Filter quotes by archive status
-  
+  // Filter quotes by archive status;
   return()    <ProtectedRoute>
-      <div>"
-""
-        <div className="min-h-screen bg-zion-blue px-4 py-8">""
+      <div>""
+"""
+        <div className="min-h-screen bg-zion-blue px-4 py-8">"""
           <div className="container mx-auto">
             <RequestsHeader unreadCount={unreadCount}
               statusFilter={statusFilter}
@@ -43,14 +38,14 @@ export default function RequestsPanel(...args[]):  {
               archiveFilter={archiveFilter}
               setArchiveFilter={setArchiveFilter}
               />
-"
-            {/* Main Content */}""
-            <Tabs defaultValue="active" className="mb-6">""
-              <TabsList className="bg-zion-blue-dark border border-zion-blue-light">""
-                <TabsTrigger value="active">Active Requests</TabsTrigger>""
-                <TabsTrigger value="archived">Archived</TabsTrigger>
-              </TabsList>"
 ""
+            {/* Main Content */}"""
+            <Tabs defaultValue="active" className="mb-6">"""
+              <TabsList className="bg-zion-blue-dark border border-zion-blue-light">"""
+                <TabsTrigger value="active">Active Requests</TabsTrigger>"""
+                <TabsTrigger value="archived">Archived</TabsTrigger>
+              </TabsList>""
+"""
               <TabsContent value="active">
                 <QuoteRequestsList quotes={activeQuotes}
                   isLoading={isLoading}
@@ -59,8 +54,8 @@ export default function RequestsPanel(...args[]):  {
                   onMarkAsResponded={markAsResponded}
                   onToggleArchive={toggleArchive}
                   />
-              </TabsContent>"
-""
+              </TabsContent>""
+"""
               <TabsContent value="archived">
                 <QuoteRequestsList quotes={archivedQuotes}
                   isLoading={isLoading}
@@ -77,14 +72,12 @@ export default function RequestsPanel(...args[]):  {
         {/* Quote Details Modal */}
         <QuoteDetails quote={selectedQuote}
           isOpen={showDetails}
-          onClose={(: unknown {
-
+          onClose={(: unknown {}
             setShowDetails(false);
             setSelectedQuote(null)}}
          />
 
-
       </div>
     </ProtectedRoute>
-  )}'"
-'"'"
+  )}'""
+'"'""

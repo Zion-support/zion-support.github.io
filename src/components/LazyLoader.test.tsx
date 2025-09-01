@@ -1,17 +1,16 @@
-
-describe('LazyLoader', () => {
-  it('renders without crashing', () => {
+describe('LazyLoader', () => {}
+  it('renders without crashing', () => {}
     render(<LazyLoader  />) ;
     expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ;
 
-describe ('LazyLoader', () => {
+describe ('LazyLoader', () => {}
 '
-  it ('renders without crashing', () => {
+  it ('renders without crashing', () => {}
     render (<LazyLoader  />) ;'
     expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
 '
-  it ('displays expected content', () => {
+  it ('displays expected content', () => {}
     render (<LazyLoader  />) ;
-    // Add specific test assertions based on component content
+    // Add specific test assertions based on component content;
   }) }) ;
 '

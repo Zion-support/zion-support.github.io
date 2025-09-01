@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
+import {}
   Brain, 
   Shield, 
   Cloud, 
@@ -14,46 +14,46 @@ import {
   Phone,
   Mail,
   MapPin,
-  ChevronRight
+  ChevronRight;
 } from 'lucide-react';
-import { allServices, contactInfo } from '../data/services.js';
+import { allServices, contactInfo } from '../data/services';
 
-const ServicesPage: React.FC = () => {
+const ServicesPage: React.FC = () => {}
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
 
-  const categories = ['All', 'AI Services', 'IT Services', 'Enterprise AI', 'Quantum Technology', 'Blockchain Technology', 'Strategic Consulting', 'Compliance Consulting'];
+  const categories: any = ['All', 'AI Services', 'IT Services', 'Enterprise AI', 'Quantum Technology', 'Blockchain Technology', 'Strategic Consulting', 'Compliance Consulting'];
 
-  const filteredServices = useMemo(() => {
-    return allServices.filter(service => {
-      const categoryMatch = selectedCategory === 'All' || service.category === selectedCategory;
-      const searchMatch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
+  const filteredServices: any = useMemo(() => {}
+    return allServices.filter(service => {}
+      const categoryMatch: any = selectedCategory === 'All' || service.category === selectedCategory;
+      const searchMatch: any = service.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
       return categoryMatch && searchMatch;
     });
   }, [selectedCategory, searchTerm]);
 
-  const serviceIcons = {
+  const serviceIcons: any = {}
     'AI Services': Brain,
     'IT Services': Shield,
     'Enterprise AI': Database,
     'Quantum Technology': Zap,
     'Blockchain Technology': Users,
     'Strategic Consulting': Cloud,
-    'Compliance Consulting': Check
+    'Compliance Consulting': Check;
   };
 
-  const containerVariants = {
+  const containerVariants: any = {}
     hidden: { opacity: 0 },
-    visible: {
+    visible: {}
       opacity: 1,
-      transition: {
-        staggerChildren: 0.1
+      transition: {}
+        staggerChildren: 0.1;
       }
     }
   };
 
-  const cardVariants = {
+  const cardVariants: any = {}
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0 }
   };
@@ -62,40 +62,40 @@ const ServicesPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-24">
       <div className="container mx-auto px-4 py-16">
         {/* Header */}
-        <motion.div 
-          className="text-center mb-16"
+        <motion.div;
+          className="text-center mb-16""
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Our
+            Our;
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-              {' '}Services
+              {' '}Services;
             </span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Comprehensive technology solutions to drive your business forward with cutting-edge AI, cybersecurity, and digital transformation services.
           </p>
-          
+
           {/* Contact Information */}
           <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-400 mb-8">
-            <motion.div 
-              className="flex items-center gap-2 hover:text-cyan-400 transition-colors cursor-pointer"
+            <motion.div;
+              className="flex items-center gap-2 hover:text-cyan-400 transition-colors cursor-pointer""
               whileHover={{ scale: 1.05 }}
             >
               <Phone className="w-4 h-4" />
               <a href={`tel:${contactInfo.mobile}`}>{contactInfo.mobile}</a>
             </motion.div>
-            <motion.div 
-              className="flex items-center gap-2 hover:text-cyan-400 transition-colors cursor-pointer"
+            <motion.div;
+              className="flex items-center gap-2 hover:text-cyan-400 transition-colors cursor-pointer""
               whileHover={{ scale: 1.05 }}
             >
               <Mail className="w-4 h-4" />
               <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
             </motion.div>
-            <motion.div 
-              className="flex items-center gap-2 hover:text-cyan-400 transition-colors"
+            <motion.div;
+              className="flex items-center gap-2 hover:text-cyan-400 transition-colors""
               whileHover={{ scale: 1.05 }}
             >
               <MapPin className="w-4 h-4" />
@@ -105,34 +105,34 @@ const ServicesPage: React.FC = () => {
         </motion.div>
 
         {/* Service Categories Overview */}
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
+        <motion.div;
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16""
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
         >
-          {categories.slice(1).map((category, index) => {
-            const Icon = serviceIcons[category] || Brain;
-            const serviceCount = allServices.filter(s => s.category === category).length;
-            
+          {categories.slice(1).map((category, index) => {}
+            const Icon: any = serviceIcons[category] || Brain;
+            const serviceCount: any = allServices.filter(s => s.category === category).length;
+
             return (
-              <motion.div
+              <motion.div;
                 key={category}
-                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 cursor-pointer group"
+                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 cursor-pointer group""
                 whileHover={{ y: -5, scale: 1.02 }}
                 onClick={() => setSelectedCategory(category)}
               >
                 <div className="flex items-center justify-between mb-4">
                   <Icon className="w-8 h-8 text-cyan-400 group-hover:text-white transition-colors" />
                   <span className="text-xs bg-cyan-400/20 text-cyan-400 px-2 py-1 rounded-full">
-                    {serviceCount} services
+                    {serviceCount} services;
                   </span>
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                   {category}
                 </h3>
                 <p className="text-sm text-gray-300 group-hover:text-gray-200 transition-colors">
-                  Professional {category.toLowerCase()} solutions
+                  Professional {category.toLowerCase()} solutions;
                 </p>
               </motion.div>
             );
@@ -140,26 +140,26 @@ const ServicesPage: React.FC = () => {
         </motion.div>
 
         {/* Search and Filter */}
-        <motion.div 
-          className="flex flex-col md:flex-row gap-4 mb-12"
+        <motion.div;
+          className="flex flex-col md:flex-row gap-4 mb-12""
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
         >
           <div className="flex-1">
-            <input
-              type="text"
-              placeholder="Search services..."
+            <input;
+              type="text""
+              placeholder="Search services...""
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400""
             />
           </div>
           <div className="md:w-64">
-            <select
+            <select;
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
+              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400""
             >
               {categories.map(category => (
                 <option key={category} value={category} className="bg-slate-800">
@@ -171,20 +171,20 @@ const ServicesPage: React.FC = () => {
         </motion.div>
 
         {/* Services Grid */}
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
+        <motion.div;
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16""
           variants={containerVariants}
-          initial="hidden"
-          animate="visible"
+          initial="hidden""
+          animate="visible""
         >
-          {filteredServices.map(service => {
-            const Icon = serviceIcons[service.category] || Brain;
-            
+          {filteredServices.map(service => {}
+            const Icon: any = serviceIcons[service.category] || Brain;
+
             return (
-              <motion.div
+              <motion.div;
                 key={service.id}
                 variants={cardVariants}
-                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group"
+                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group""
                 whileHover={{ y: -5, scale: 1.02 }}
               >
                 {/* Service Header */}
@@ -227,7 +227,7 @@ const ServicesPage: React.FC = () => {
                     ))}
                     {service.features.length > 3 && (
                       <li className="text-xs text-cyan-400">
-                        +{service.features.length - 3} more features
+                        +{service.features.length - 3} more features;
                       </li>
                     )}
                   </ul>
@@ -247,20 +247,20 @@ const ServicesPage: React.FC = () => {
 
                 {/* CTA */}
                 <div className="space-y-2">
-                  <motion.a
+                  <motion.a;
                     href={service.url}
-                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-2 px-4 rounded-lg text-sm font-medium hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 flex items-center justify-center group"
+                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-2 px-4 rounded-lg text-sm font-medium hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 flex items-center justify-center group""
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    Learn More
+                    Learn More;
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </motion.a>
-                  <a
+                  <a;
                     href={`mailto:${contactInfo.email}?subject=Interest in ${service.name}`}
-                    className="w-full border border-cyan-400/50 text-cyan-400 py-2 px-4 rounded-lg text-sm hover:bg-cyan-400/10 transition-colors flex items-center justify-center"
+                    className="w-full border border-cyan-400/50 text-cyan-400 py-2 px-4 rounded-lg text-sm hover:bg-cyan-400/10 transition-colors flex items-center justify-center""
                   >
-                    Get Quote
+                    Get Quote;
                   </a>
                 </div>
               </motion.div>
@@ -269,8 +269,8 @@ const ServicesPage: React.FC = () => {
         </motion.div>
 
         {/* CTA Section */}
-        <motion.div 
-          className="text-center"
+        <motion.div;
+          className="text-center""
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.8 }}
@@ -284,22 +284,22 @@ const ServicesPage: React.FC = () => {
               Get started with a free consultation and discover how our solutions can drive your success.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <motion.a
+              <motion.a;
                 href={`tel:${contactInfo.mobile}`}
-                className="bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-3 rounded-lg font-medium hover:from-green-600 hover:to-green-700 transition-all duration-200 flex items-center"
+                className="bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-3 rounded-lg font-medium hover:from-green-600 hover:to-green-700 transition-all duration-200 flex items-center""
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <Phone className="w-5 h-5 mr-2" />
-                Call Now for Free Consultation
+                Call Now for Free Consultation;
               </motion.a>
-              <motion.a
-                href="/pricing"
-                className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-medium hover:bg-cyan-400/10 transition-all duration-200 flex items-center"
+              <motion.a;
+                href="/pricing""
+                className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-medium hover:bg-cyan-400/10 transition-all duration-200 flex items-center""
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                View Pricing
+                View Pricing;
                 <ChevronRight className="w-5 h-5 ml-2" />
               </motion.a>
             </div>

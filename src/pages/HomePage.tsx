@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import {
+import {}
   ArrowRight,
   Star,
   CheckCircle,
@@ -19,44 +19,44 @@ import {
   MapPin,
   ChevronUp,
   Play,
-  Sparkles
+  Sparkles;
 } from 'lucide-react';
 import ServiceShowcase from '../components/ServiceShowcase.tsx';
-import { contactInfo } from '../data/services.js';
+import { contactInfo } from '../data/services';
 
-// Optimized futuristic animated background component
-const FuturisticBackground: React.FC = () => {
-  const particles = Array.from({ length: 20 }, (_, i) => ({
+// Optimized futuristic animated background component;
+const FuturisticBackground: React.FC = () => {}
+  const particles: any = Array.from({ length: 20 }, (_, i) => ({}
     id: i,
     left: `${Math.random() * 100}%`,
     top: `${Math.random() * 100}%`,
     duration: 3 + Math.random() * 4,
-    delay: Math.random() * 2
+    delay: Math.random() * 2;
   }));
 
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
       {/* Animated grid with neon effect */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.15)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.15)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
-      
+
       {/* Optimized floating particles */}
       {particles.map((particle) => (
-        <motion.div
+        <motion.div;
           key={particle.id}
-          className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-80 shadow-lg shadow-cyan-400/50"
-          style={{
+          className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-80 shadow-lg shadow-cyan-400/50""
+          style={{}
             left: particle.left,
-            top: particle.top
+            top: particle.top;
           }}
-          animate={{
+          animate={{}
             y: [0, -20, 0],
             opacity: [0.8, 0.4, 0.8]
           }}
-          transition={{
+          transition={{}
             duration: particle.duration,
             delay: particle.delay,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: "easeInOut""
           }}
         />
       ))}
@@ -68,16 +68,16 @@ const FuturisticBackground: React.FC = () => {
   );
 };
 
-// Floating Action Button Component
-const FloatingActionButton: React.FC = () => {
+// Floating Action Button Component;
+const FloatingActionButton: React.FC = () => {}
   const [isVisible, setIsVisible] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
 
-  useEffect(() => {
-    const toggleVisibility = () => {
-      if (window.pageYOffset > 300) {
+  useEffect(() => {}
+    const toggleVisibility: any = () => {}
+      if (window.pageYOffset > 300) {}
         setIsVisible(true);
-      } else {
+      } else {}
         setIsVisible(false);
       }
     };
@@ -89,8 +89,8 @@ const FloatingActionButton: React.FC = () => {
   return (
     <AnimatePresence>
       {isVisible && (
-        <motion.div
-          className="fixed bottom-8 right-8 z-50"
+        <motion.div;
+          className="fixed bottom-8 right-8 z-50""
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0 }}
@@ -100,24 +100,24 @@ const FloatingActionButton: React.FC = () => {
             {/* Quick Actions */}
             <AnimatePresence>
               {isExpanded && (
-                <motion.div
-                  className="absolute bottom-16 right-0 space-y-3"
+                <motion.div;
+                  className="absolute bottom-16 right-0 space-y-3""
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 20 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <motion.a
+                  <motion.a;
                     href={`tel:${contactInfo.mobile}`}
-                    className="block w-12 h-12 bg-green-500 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center"
+                    className="block w-12 h-12 bg-green-500 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center""
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                   >
                     <Phone className="w-5 h-5" />
                   </motion.a>
-                  <motion.a
+                  <motion.a;
                     href={`mailto:${contactInfo.email}`}
-                    className="block w-12 h-12 bg-blue-500 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center"
+                    className="block w-12 h-12 bg-blue-500 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center""
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                   >
@@ -128,13 +128,13 @@ const FloatingActionButton: React.FC = () => {
             </AnimatePresence>
 
             {/* Main FAB */}
-            <motion.button
+            <motion.button;
               onClick={() => setIsExpanded(!isExpanded)}
-              className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center"
+              className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center""
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              <motion.div
+              <motion.div;
                 animate={{ rotate: isExpanded ? 45 : 0 }}
                 transition={{ duration: 0.2 }}
               >
@@ -148,9 +148,9 @@ const FloatingActionButton: React.FC = () => {
   );
 };
 
-// Stats Component
-const StatsSection: React.FC = () => {
-  const stats = [
+// Stats Component;
+const StatsSection: React.FC = () => {}
+  const stats: any = []
     { number: '500+', label: 'Projects Completed', icon: Award },
     { number: '98%', label: 'Client Satisfaction', icon: Star },
     { number: '24/7', label: 'Support Available', icon: Shield },
@@ -162,9 +162,9 @@ const StatsSection: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
-            <motion.div
+            <motion.div;
               key={index}
-              className="text-center"
+              className="text-center""
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -183,17 +183,17 @@ const StatsSection: React.FC = () => {
   );
 };
 
-// Hero Section Component
-const HeroSection: React.FC = () => {
+// Hero Section Component;
+const HeroSection: React.FC = () => {}
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white overflow-hidden">
       <FuturisticBackground />
-      
+
       <div className="container mx-auto px-4 py-32 relative z-10">
         <div className="text-center max-w-5xl mx-auto">
           {/* Hero Badge */}
-          <motion.div
-            className="inline-flex items-center bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-6 py-2 mb-8"
+          <motion.div;
+            className="inline-flex items-center bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-6 py-2 mb-8""
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -203,54 +203,54 @@ const HeroSection: React.FC = () => {
           </motion.div>
 
           {/* Hero Title */}
-          <motion.h1
-            className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6"
+          <motion.h1;
+            className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6""
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Transform Your Business with
+            Transform Your Business with;
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 block">
-              Cutting-Edge Technology
+              Cutting-Edge Technology;
             </span>
           </motion.h1>
 
           {/* Hero Subtitle */}
-          <motion.p
-            className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed"
+          <motion.p;
+            className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed""
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Zion Tech Group delivers innovative AI, cybersecurity, and digital transformation solutions
+            Zion Tech Group delivers innovative AI, cybersecurity, and digital transformation solutions;
             to accelerate your business growth and competitive advantage.
           </motion.p>
 
           {/* CTA Buttons */}
-          <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
+          <motion.div;
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16""
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <Link
-              to="/services"
-              className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 flex items-center group shadow-lg hover:shadow-xl"
+            <Link;
+              to="/services""
+              className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 flex items-center group shadow-lg hover:shadow-xl""
             >
-              Explore Our Services
+              Explore Our Services;
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <a
+            <a;
               href={`tel:${contactInfo.mobile}`}
-              className="border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 hover:border-white/50 transition-all duration-200 backdrop-blur-sm"
+              className="border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 hover:border-white/50 transition-all duration-200 backdrop-blur-sm""
             >
-              Get Free Consultation
+              Get Free Consultation;
             </a>
           </motion.div>
 
           {/* Contact Info */}
-          <motion.div
-            className="flex flex-wrap justify-center gap-6 text-sm text-gray-400"
+          <motion.div;
+            className="flex flex-wrap justify-center gap-6 text-sm text-gray-400""
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.8 }}
@@ -272,15 +272,15 @@ const HeroSection: React.FC = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+      <motion.div;
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2""
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 1 }}
       >
         <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-          <motion.div
-            className="w-1 h-3 bg-white rounded-full mt-2"
+          <motion.div;
+            className="w-1 h-3 bg-white rounded-full mt-2""
             animate={{ y: [0, 12, 0] }}
             transition={{ duration: 1.5, repeat: Infinity }}
           />
@@ -290,8 +290,8 @@ const HeroSection: React.FC = () => {
   );
 };
 
-// Main Home Component
-const Home: React.FC = () => {
+// Main Home Component;
+const Home: React.FC = () => {}
   return (
     <div className="min-h-screen">
       <HeroSection />

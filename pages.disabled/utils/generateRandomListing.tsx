@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages.disabled/utils/generateRandomListing.tsx
 export function generateRandomListing () : MarketplaceItem {
 
 export function generateRandomListings (count: number) : MarketplaceItem[] {
@@ -13,6 +14,10 @@ const sampleTitles = [
 
 
 >>>>>>> main:src/utils/generateRandomListing.tsx
+=======
+export function generateRandomListing () : MarketplaceItem {}
+export function generateRandomListings (count: number) : MarketplaceItem[] {}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/utils/generateRandomListing.tsx
   'Quantum Computing Hardware',;
   'Data Science Consulting',;
   'Blockchain Development Service',;
@@ -55,7 +60,11 @@ const sampleTitles = [
   'https://images.unsplash.com / photo - 1507003211169 - 0a1dd7228f2d?ixlib = rb - 4.0.3 & auto = format & fit = crop & w=2070 & q=80';
 ];
 
+<<<<<<< HEAD:pages.disabled/utils/generateRandomListing.tsx
 const categories: Array < any> = ['
+=======
+const categories: Array < any> = []
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/utils/generateRandomListing.tsx
   'products',talent',equipment',services'
 ];
 
@@ -81,12 +90,20 @@ const categories: Array < any> = ['
   
   
   
+<<<<<<< HEAD:pages.disabled/utils/generateRandomListing.tsx
   return {
 
     id: `listing-${Date.now () }-${Math.random () .toString (36) .substr (2, 9) }`,'
     title: sampleTitles[randomIndex] || 'Default Title','
     category: category || 'products','
     description: sampleDescriptions[randomIndex] || 'Default description','
+=======
+  return {}
+    id: `listing-${Date.now () }-${Math.random () .toString (36) .substr (2, 9) }`,
+    title: sampleTitles[randomIndex] || 'Default Title',
+    category: category || 'products',
+    description: sampleDescriptions[randomIndex] || 'Default description',
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/utils/generateRandomListing.tsx
     price: price || '$1,000',
     rating: 4.0 + Math.random () * 1.0,
     reviews: Math.floor (Math.random () * 200) + 10,
@@ -95,8 +112,12 @@ const categories: Array < any> = ['
     image: image || 'https://images.unsplash.com / photo - 1451187580459 - 43490279c0fa?ixlib = rb - 4.0.3 & auto = format & fit = crop & w=2072 & q=80','
     tags: sampleTags[randomIndex] || ['Technology',Solution'],
     featured: Math.random () > 0.7,
+<<<<<<< HEAD:pages.disabled/utils/generateRandomListing.tsx
     seller: {
 '
+=======
+    seller: {}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/utils/generateRandomListing.tsx
       name: sellerName || 'Default Seller',
       rating: 4.0 + Math.random () * 1.0,;
       verified: Math.random () > 0.3},;'
@@ -106,8 +127,12 @@ const categories: Array < any> = ['
     warranty: category === 'talent' ? 'N / A' : `${Math.floor (Math.random () * 3) + 1} year${Math.floor (Math.random () * 3) + 1 > 1 ? 's' : ''}`};
 
   const listings: MarketplaceItem[] = [];
+<<<<<<< HEAD:pages.disabled/utils/generateRandomListing.tsx
   for (let i = 0; i < count; i++) {
 
+=======
+  for (let i = 0; i < count; i++) {}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/utils/generateRandomListing.tsx
     listings.push (generateRandomListing () ) ;
 
   return listings}}}'`

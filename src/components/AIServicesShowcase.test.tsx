@@ -1,17 +1,16 @@
-
-describe('AIServicesShowcase', () => {
-  it('renders without crashing', () => {
+describe('AIServicesShowcase', () => {}
+  it('renders without crashing', () => {}
     render(<AIServicesShowcase  />) ;
     expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ;
 
-describe ('AIServicesShowcase', () => {
+describe ('AIServicesShowcase', () => {}
 '
-  it ('renders without crashing', () => {
+  it ('renders without crashing', () => {}
     render (<AIServicesShowcase  />) ;'
     expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
 '
-  it ('displays expected content', () => {
+  it ('displays expected content', () => {}
     render (<AIServicesShowcase  />) ;
-    // Add specific test assertions based on component content
+    // Add specific test assertions based on component content;
   }) }) ;
 '
