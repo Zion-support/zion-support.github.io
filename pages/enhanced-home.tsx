@@ -1,20 +1,13 @@
-import type { NextPage } from 'next';
 import Head from 'next/head';
 
-const EnhancedHome: NextPage = () => {
+export default function EnhancedHomePage() {
   return (
-    <div>
-      <Head>
-        <title>EnhancedHome - Zion Tech Solutions</title>
-        <meta name="description" content="EnhancedHome page" />
-      </Head>
-      
-      <main>
-        <h1>EnhancedHome</h1>
-        <p>This page is under construction.</p>
-      </main>
-    </div>
+    <>
+      <Head><title>Enhanced Home - Zion</title></Head>
+      <div className="py-12">
+        <h1 className="text-3xl font-bold">Enhanced Home</h1>
+        <p className="mt-2 text-gray-600">Coming soon.</p>
+      </div>
+    </>
   );
-};
-
-export default EnhancedHome;
+}

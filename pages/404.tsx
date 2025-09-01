@@ -1,10 +1,10 @@
-import React from 'react';
-
-export default function Custom404() {
+export default function NotFoundPage() {
   return (
-    <div className="container mx-auto px-4 py-10">
-      <h1 className="text-2xl font-bold">404 - Page Not Found</h1>
-      <p className="text-gray-600 dark:text-gray-400 mt-2">The page you are looking for does not exist.</p>
+    <div className="min-h-[50vh] grid place-items-center">
+      <div className="text-center">
+        <h1 className="text-3xl font-bold">404 — Page Not Found</h1>
+        <p className="mt-2 text-gray-600">The page you’re looking for doesn’t exist.</p>
+      </div>
     </div>
   );
 }

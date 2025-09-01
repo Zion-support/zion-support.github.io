@@ -1,4 +1,3 @@
-import React from 'react';
 import type { AppProps } from 'next/app';
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 import '../styles/globals.css';
