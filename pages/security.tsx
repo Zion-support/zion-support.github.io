@@ -1,369 +1,294 @@
 import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 
-export default function Security() {
+export default function SecurityPage() {
   return (
     <>
       <Head>
-        <title>Security — Zion Tech Group</title>
-        <meta name="description" content="Comprehensive security information and practices for Zion Tech Group's autonomous systems and services." />
-        <meta property="og:title" content="Security — Zion Tech Group" />
-        <meta property="og:description" content="Comprehensive security information and practices for Zion Tech Group's autonomous systems and services." />
+        <title>Security & Monitoring — Zion Tech Group | Autonomous Innovation Hub</title>
+        <meta name="description" content="Advanced security systems with continuous monitoring, automated threat response, vulnerability assessment, and intelligent security orchestration." />
+        <meta property="og:title" content="Security & Monitoring — Zion Tech Group" />
+        <meta property="og:description" content="Advanced security systems with continuous monitoring and automated threat response." />
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
-          <section className="text-center mb-16">
-            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
-              Security
+          {/* Hero Section */}
+          <section className="text-center mb-20">
+            <h1 className="text-5xl md:text-6xl font-extrabold mb-8 bg-gradient-to-r from-red-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
+              Security & Monitoring
             </h1>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto">
-              Protecting your data and systems with enterprise-grade security measures and autonomous threat detection.
+            <p className="text-xl text-white/80 max-w-3xl mx-auto mb-8">
+              Advanced autonomous security systems that continuously monitor, detect, and respond to threats 
+              in real-time with zero human intervention.
             </p>
+            <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-xl rounded-full px-6 py-2 border border-white/20">
+              <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+              <span className="text-sm text-white/80">32+ Security Automations Active</span>
+            </div>
           </section>
 
-          <div className="max-w-6xl mx-auto">
-            {/* Security Overview */}
-            <section className="mb-16 p-8 bg-gradient-to-r from-green-500/10 to-cyan-500/10 rounded-2xl border border-green-500/20">
-              <h2 className="text-3xl font-bold mb-6 text-green-400">Security Overview</h2>
-              <p className="text-white/80 mb-6">
-                At Zion Tech Group, security is at the core of everything we do. Our autonomous systems are built with 
-                security-first principles, implementing multiple layers of protection to ensure your data and infrastructure 
-                remain secure at all times.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="text-center">
-                  <div className="text-4xl mb-2">🔒</div>
-                  <h3 className="text-xl font-semibold text-white mb-2">End-to-End Encryption</h3>
-                  <p className="text-white/70 text-sm">All data is encrypted in transit and at rest</p>
+          {/* Security Features */}
+          <section className="mb-20">
+            <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">
+              Comprehensive Security Features
+            </h2>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {/* Continuous Security Scanning */}
+              <div className="bg-gradient-to-br from-red-500/10 to-pink-500/10 backdrop-blur-xl rounded-2xl p-8 border border-red-500/20">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-br from-red-400 to-pink-500 rounded-xl flex items-center justify-center">
+                    <span className="text-2xl">🔍</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-red-400">Continuous Security Scanning</h3>
                 </div>
-                <div className="text-center">
-                  <div className="text-4xl mb-2">🛡️</div>
-                  <h3 className="text-xl font-semibold text-white mb-2">24/7 Monitoring</h3>
-                  <p className="text-white/70 text-sm">Continuous autonomous threat detection</p>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl mb-2">✅</div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Compliance Ready</h3>
-                  <p className="text-white/70 text-sm">Meets industry security standards</p>
-                </div>
-              </div>
-            </section>
-
-            {/* Security Features */}
-            <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-8 text-cyan-400">Security Features</h2>
-              
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                {/* Authentication & Access Control */}
-                <div className="bg-white/5 p-8 rounded-2xl border border-white/10">
-                  <h3 className="text-xl font-semibold mb-4 text-white">Authentication & Access Control</h3>
-                  <ul className="space-y-3 text-white/80">
-                    <li className="flex items-start">
-                      <span className="text-green-400 mr-2">✓</span>
-                      Multi-factor authentication (MFA) support
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-green-400 mr-2">✓</span>
-                      Role-based access control (RBAC)
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-green-400 mr-2">✓</span>
-                      Single sign-on (SSO) integration
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-green-400 mr-2">✓</span>
-                      Session management and timeout controls
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-green-400 mr-2">✓</span>
-                      API key management and rotation
-                    </li>
-                  </ul>
-                </div>
-
-                {/* Data Protection */}
-                <div className="bg-white/5 p-8 rounded-2xl border border-white/10">
-                  <h3 className="text-xl font-semibold mb-4 text-white">Data Protection</h3>
-                  <ul className="space-y-3 text-white/80">
-                    <li className="flex items-start">
-                      <span className="text-green-400 mr-2">✓</span>
-                      AES-256 encryption for data at rest
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-green-400 mr-2">✓</span>
-                      TLS 1.3 for data in transit
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-green-400 mr-2">✓</span>
-                      Automatic data backup and recovery
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-green-400 mr-2">✓</span>
-                      Data anonymization and pseudonymization
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-green-400 mr-2">✓</span>
-                      Secure data deletion and retention policies
-                    </li>
-                  </ul>
-                </div>
-
-                {/* Network Security */}
-                <div className="bg-white/5 p-8 rounded-2xl border border-white/10">
-                  <h3 className="text-xl font-semibold mb-4 text-white">Network Security</h3>
-                  <ul className="space-y-3 text-white/80">
-                    <li className="flex items-start">
-                      <span className="text-green-400 mr-2">✓</span>
-                      DDoS protection and mitigation
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-green-400 mr-2">✓</span>
-                      Web application firewall (WAF)
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-green-400 mr-2">✓</span>
-                      Intrusion detection and prevention
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-green-400 mr-2">✓</span>
-                      Network segmentation and isolation
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-green-400 mr-2">✓</span>
-                      VPN and secure remote access
-                    </li>
-                  </ul>
-                </div>
-
-                {/* Monitoring & Incident Response */}
-                <div className="bg-white/5 p-8 rounded-2xl border border-white/10">
-                  <h3 className="text-xl font-semibold mb-4 text-white">Monitoring & Incident Response</h3>
-                  <ul className="space-y-3 text-white/80">
-                    <li className="flex items-start">
-                      <span className="text-green-400 mr-2">✓</span>
-                      24/7 autonomous security monitoring
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-green-400 mr-2">✓</span>
-                      Real-time threat intelligence feeds
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-green-400 mr-2">✓</span>
-                      Automated incident response workflows
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-green-400 mr-2">✓</span>
-                      Security event logging and analysis
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-green-400 mr-2">✓</span>
-                      Incident escalation and notification
-                    </li>
-                  </ul>
+                <p className="text-white/80 mb-6 leading-relaxed">
+                  24/7 automated security scanning across all systems, dependencies, and infrastructure. 
+                  Real-time vulnerability detection with instant threat assessment.
+                </p>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <span className="w-2 h-2 bg-red-400 rounded-full"></span>
+                    <span className="text-white/70">Dependency Vulnerability Scanning</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="w-2 h-2 bg-red-400 rounded-full"></span>
+                    <span className="text-white/70">Infrastructure Security Audits</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="w-2 h-2 bg-red-400 rounded-full"></span>
+                    <span className="text-white/70">Code Security Analysis</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="w-2 h-2 bg-red-400 rounded-full"></span>
+                    <span className="text-white/70">Real-time Threat Detection</span>
+                  </div>
                 </div>
               </div>
-            </section>
 
-            {/* Compliance & Certifications */}
-            <section className="mb-16 p-8 bg-white/5 rounded-2xl border border-white/10">
-              <h2 className="text-3xl font-bold mb-6 text-fuchsia-400">Compliance & Certifications</h2>
-              <p className="text-white/80 mb-6">
-                Our security practices align with industry standards and regulatory requirements to ensure your data 
-                protection needs are met across various compliance frameworks.
-              </p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div className="bg-slate-900 p-6 rounded-lg text-center">
-                  <div className="text-3xl mb-3">🔐</div>
-                  <h3 className="text-lg font-semibold text-white mb-2">SOC 2 Type II</h3>
-                  <p className="text-white/70 text-sm">Service Organization Control compliance</p>
+              {/* Automated Threat Response */}
+              <div className="bg-gradient-to-br from-orange-500/10 to-yellow-500/10 backdrop-blur-xl rounded-2xl p-8 border border-orange-500/20">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-yellow-500 rounded-xl flex items-center justify-center">
+                    <span className="text-2xl">⚡</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-orange-400">Automated Threat Response</h3>
                 </div>
-                <div className="bg-slate-900 p-6 rounded-lg text-center">
-                  <div className="text-3xl mb-3">🌍</div>
-                  <h3 className="text-lg font-semibold text-white mb-2">GDPR</h3>
-                  <p className="text-white/70 text-sm">General Data Protection Regulation</p>
-                </div>
-                <div className="bg-slate-900 p-6 rounded-lg text-center">
-                  <div className="text-3xl mb-3">🏥</div>
-                  <h3 className="text-lg font-semibold text-white mb-2">HIPAA</h3>
-                  <p className="text-white/70 text-sm">Healthcare data protection standards</p>
-                </div>
-                <div className="bg-slate-900 p-6 rounded-lg text-center">
-                  <div className="text-3xl mb-3">💳</div>
-                  <h3 className="text-lg font-semibold text-white mb-2">PCI DSS</h3>
-                  <p className="text-white/70 text-sm">Payment card industry standards</p>
-                </div>
-                <div className="bg-slate-900 p-6 rounded-lg text-center">
-                  <div className="text-3xl mb-3">🏛️</div>
-                  <h3 className="text-lg font-semibold text-white mb-2">FedRAMP</h3>
-                  <p className="text-white/70 text-sm">Federal risk and authorization</p>
-                </div>
-                <div className="bg-slate-900 p-6 rounded-lg text-center">
-                  <div className="text-3xl mb-3">⚡</div>
-                  <h3 className="text-lg font-semibold text-white mb-2">ISO 27001</h3>
-                  <p className="text-white/70 text-sm">Information security management</p>
+                <p className="text-white/80 mb-6 leading-relaxed">
+                  Intelligent threat response systems that automatically contain, isolate, and remediate 
+                  security incidents without human intervention.
+                </p>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <span className="w-2 h-2 bg-orange-400 rounded-full"></span>
+                    <span className="text-white/70">Instant Incident Containment</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="w-2 h-2 bg-orange-400 rounded-full"></span>
+                    <span className="text-white/70">Automated Remediation</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="w-2 h-2 bg-orange-400 rounded-full"></span>
+                    <span className="text-white/70">Threat Intelligence Integration</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="w-2 h-2 bg-orange-400 rounded-full"></span>
+                    <span className="text-white/70">Response Orchestration</span>
+                  </div>
                 </div>
               </div>
-            </section>
 
-            {/* Security Practices */}
-            <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-8 text-yellow-400">Security Practices</h2>
-              
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                {/* Development Security */}
-                <div className="bg-white/5 p-8 rounded-2xl border border-white/10">
-                  <h3 className="text-xl font-semibold mb-4 text-white">Secure Development</h3>
-                  <p className="text-white/80 mb-4">
-                    Our development process follows security-first principles with automated security testing and code analysis.
-                  </p>
-                  <ul className="space-y-2 text-white/80">
-                    <li>• Static application security testing (SAST)</li>
-                    <li>• Dynamic application security testing (DAST)</li>
-                    <li>• Dependency vulnerability scanning</li>
-                    <li>• Secure code review processes</li>
-                    <li>• Automated security testing in CI/CD</li>
-                  </ul>
+              {/* Compliance Monitoring */}
+              <div className="bg-gradient-to-br from-blue-500/10 to-cyan-500/10 backdrop-blur-xl rounded-2xl p-8 border border-blue-500/20">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-xl flex items-center justify-center">
+                    <span className="text-2xl">📋</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-blue-400">Compliance Monitoring</h3>
                 </div>
-
-                {/* Employee Security */}
-                <div className="bg-white/5 p-8 rounded-2xl border border-white/10">
-                  <h3 className="text-xl font-semibold mb-4 text-white">Employee Security</h3>
-                  <p className="text-white/80 mb-4">
-                    Our team undergoes regular security training and background checks to maintain the highest security standards.
-                  </p>
-                  <ul className="space-y-2 text-white/80">
-                    <li>• Background checks for all employees</li>
-                    <li>• Regular security awareness training</li>
-                    <li>• Non-disclosure agreements (NDAs)</li>
-                    <li>• Principle of least privilege access</li>
-                    <li>• Security incident reporting procedures</li>
-                  </ul>
-                </div>
-
-                {/* Third-Party Security */}
-                <div className="bg-white/5 p-8 rounded-2xl border border-white/10">
-                  <h3 className="text-xl font-semibold mb-4 text-white">Third-Party Security</h3>
-                  <p className="text-white/80 mb-4">
-                    We maintain strict security standards for all third-party vendors and service providers.
-                  </p>
-                  <ul className="space-y-2 text-white/80">
-                    <li>• Vendor security assessments</li>
-                    <li>• Service level agreements (SLAs)</li>
-                    <li>• Regular security audits</li>
-                    <li>• Incident response coordination</li>
-                    <li>• Data processing agreements</li>
-                  </ul>
-                </div>
-
-                {/* Business Continuity */}
-                <div className="bg-white/5 p-8 rounded-2xl border border-white/10">
-                  <h3 className="text-xl font-semibold mb-4 text-white">Business Continuity</h3>
-                  <p className="text-white/80 mb-4">
-                    Our disaster recovery and business continuity plans ensure service availability even during security incidents.
-                  </p>
-                  <ul className="space-y-2 text-white/80">
-                    <li>• Disaster recovery planning</li>
-                    <li>• Business continuity procedures</li>
-                    <li>• Regular backup testing</li>
-                    <li>• Incident response playbooks</li>
-                    <li>• Recovery time objectives (RTO)</li>
-                  </ul>
+                <p className="text-white/80 mb-6 leading-relaxed">
+                  Continuous compliance monitoring across multiple frameworks and standards. 
+                  Automated reporting and audit trail generation for regulatory requirements.
+                </p>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                    <span className="text-white/70">GDPR Compliance</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                    <span className="text-white/70">SOC 2 Type II</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                    <span className="text-white/70">ISO 27001 Standards</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                    <span className="text-white/70">Automated Audit Reports</span>
+                  </div>
                 </div>
               </div>
-            </section>
 
-            {/* Security Dashboard */}
-            <section className="mb-16 p-8 bg-slate-900 rounded-2xl border border-white/10">
-              <h2 className="text-3xl font-bold mb-6 text-blue-400">Live Security Status</h2>
-              <p className="text-white/80 mb-6">
-                Real-time security metrics and system health indicators from our autonomous monitoring systems.
-              </p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div className="text-center p-4 bg-green-500/20 rounded-lg border border-green-500/30">
-                  <div className="text-2xl font-bold text-green-400">99.9%</div>
-                  <div className="text-white/80 text-sm">Uptime</div>
+              {/* Intelligent Monitoring */}
+              <div className="bg-gradient-to-br from-green-500/10 to-emerald-500/10 backdrop-blur-xl rounded-2xl p-8 border border-green-500/20">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-emerald-500 rounded-xl flex items-center justify-center">
+                    <span className="text-2xl">🧠</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-green-400">Intelligent Monitoring</h3>
                 </div>
-                <div className="text-center p-4 bg-blue-500/20 rounded-lg border border-blue-500/30">
-                  <div className="text-2xl font-bold text-blue-400">0</div>
-                  <div className="text-white/80 text-sm">Active Threats</div>
-                </div>
-                <div className="text-center p-4 bg-yellow-500/20 rounded-lg border border-yellow-500/30">
-                  <div className="text-2xl font-bold text-yellow-400">24/7</div>
-                  <div className="text-white/80 text-sm">Monitoring</div>
-                </div>
-                <div className="text-center p-4 bg-purple-500/20 rounded-lg border border-purple-500/30">
-                  <div className="text-2xl font-bold text-purple-400">100%</div>
-                  <div className="text-white/80 text-sm">Encrypted</div>
+                <p className="text-white/80 mb-6 leading-relaxed">
+                  AI-powered monitoring systems that learn from patterns, predict potential threats, 
+                  and adapt security measures in real-time.
+                </p>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <span className="w-2 h-2 bg-green-400 rounded-full"></span>
+                    <span className="text-white/70">Behavioral Analysis</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="w-2 h-2 bg-green-400 rounded-full"></span>
+                    <span className="text-white/70">Threat Prediction</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="w-2 h-2 bg-green-400 rounded-full"></span>
+                    <span className="text-white/70">Adaptive Security</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="w-2 h-2 bg-green-400 rounded-full"></span>
+                    <span className="text-white/70">Machine Learning</span>
+                  </div>
                 </div>
               </div>
-              
-              <div className="mt-6 text-center">
-                <a href="/reports/performance-metrics" className="text-cyan-400 hover:text-cyan-300 text-sm">
-                  View detailed security metrics →
-                </a>
-              </div>
-            </section>
+            </div>
+          </section>
 
-            {/* Security Resources */}
-            <section className="mb-16 p-8 bg-white/5 rounded-2xl border border-white/10">
-              <h2 className="text-3xl font-bold mb-6 text-indigo-400">Security Resources</h2>
-              <p className="text-white/80 mb-6">
-                Access our security documentation, best practices, and incident response procedures.
-              </p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-slate-900 p-6 rounded-lg">
-                  <h3 className="text-lg font-semibold text-white mb-3">Security Documentation</h3>
-                  <ul className="space-y-2 text-white/80">
-                    <li><a href="/api-documentation" className="text-cyan-400 hover:text-cyan-300">API Security Guide</a></li>
-                    <li><a href="/reports" className="text-cyan-400 hover:text-cyan-300">Security Reports</a></li>
-                    <li><a href="/automation" className="text-cyan-400 hover:text-cyan-300">Automation Security</a></li>
-                  </ul>
-                </div>
-                
-                <div className="bg-slate-900 p-6 rounded-lg">
-                  <h3 className="text-lg font-semibold text-white mb-3">Incident Response</h3>
-                  <ul className="space-y-2 text-white/80">
-                    <li><a href="/contact" className="text-cyan-400 hover:text-cyan-300">Report Security Issue</a></li>
-                    <li><a href="/reports/automation-overview-2025" className="text-cyan-400 hover:text-cyan-300">Security Status</a></li>
-                    <li><a href="/contact" className="text-cyan-400 hover:text-cyan-300">Emergency Contact</a></li>
-                  </ul>
-                </div>
+          {/* Security Metrics */}
+          <section className="mb-20">
+            <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">
+              Security Performance Metrics
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 text-center">
+                <div className="text-4xl font-bold text-green-400 mb-2">99.99%</div>
+                <div className="text-white/70 mb-4">Uptime</div>
+                <div className="text-sm text-white/50">Continuous monitoring ensures maximum availability</div>
               </div>
-            </section>
+              
+              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 text-center">
+                <div className="text-4xl font-bold text-blue-400 mb-2">&lt;1s</div>
+                <div className="text-white/70 mb-4">Response Time</div>
+                <div className="text-sm text-white/50">Instant threat detection and response</div>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 text-center">
+                <div className="text-4xl font-bold text-purple-400 mb-2">0</div>
+                <div className="text-white/70 mb-4">Security Breaches</div>
+                <div className="text-sm text-white/50">Zero successful attacks in production</div>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 text-center">
+                <div className="text-4xl font-bold text-red-400 mb-2">24/7</div>
+                <div className="text-white/70 mb-4">Monitoring</div>
+                <div className="text-sm text-white/50">Round-the-clock security surveillance</div>
+              </div>
+            </div>
+          </section>
 
-            {/* Contact Security Team */}
-            <section className="p-8 bg-gradient-to-r from-red-500/10 to-orange-500/10 rounded-2xl border border-red-500/20">
-              <h2 className="text-3xl font-bold mb-6 text-red-400">Report Security Issues</h2>
-              <p className="text-white/80 mb-6">
-                If you've discovered a security vulnerability or have security concerns, please report them immediately. 
-                Our security team is available 24/7 to respond to security incidents.
-              </p>
-              
-              <div className="flex flex-wrap gap-4">
-                <a href="/contact" className="px-6 py-3 bg-red-500 hover:bg-red-600 text-white rounded-lg transition-colors">
-                  Report Security Issue
-                </a>
-                <a href="mailto:security@zion.tech" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-colors">
-                  Email Security Team
-                </a>
-                <a href="/reports" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-colors">
-                  View Security Status
-                </a>
-              </div>
-              
-              <div className="mt-6 p-4 bg-slate-900 rounded-lg">
-                <h3 className="text-lg font-semibold text-white mb-2">Emergency Contact</h3>
-                <p className="text-white/80 text-sm">
-                  For critical security incidents requiring immediate attention, contact our 24/7 security hotline: 
-                  <span className="text-red-400 font-mono ml-2">+1-800-SECURITY</span>
+          {/* Security Technologies */}
+          <section className="mb-20">
+            <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">
+              Advanced Security Technologies
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover:border-red-400/30 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-red-400 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <span className="text-3xl">🔐</span>
+                </div>
+                <h3 className="text-2xl font-bold text-red-400 mb-4 text-center">Zero Trust Architecture</h3>
+                <p className="text-white/80 text-center mb-6">
+                  Never trust, always verify approach with continuous authentication and authorization
                 </p>
               </div>
-            </section>
-          </div>
+
+              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover:border-orange-400/30 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-yellow-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <span className="text-3xl">🛡️</span>
+                </div>
+                <h3 className="text-2xl font-bold text-orange-400 mb-4 text-center">Intrusion Prevention</h3>
+                <p className="text-white/80 text-center mb-6">
+                  Advanced IPS/IDS systems with machine learning threat detection
+                </p>
+              </div>
+
+              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover:border-blue-400/30 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <span className="text-3xl">🔒</span>
+                </div>
+                <h3 className="text-2xl font-bold text-blue-400 mb-4 text-center">Encryption at Rest</h3>
+                <p className="text-white/80 text-center mb-6">
+                  AES-256 encryption for all stored data and communications
+                </p>
+              </div>
+
+              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover:border-green-400/30 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <span className="text-3xl">📊</span>
+                </div>
+                <h3 className="text-2xl font-bold text-green-400 mb-4 text-center">Security Analytics</h3>
+                <p className="text-white/80 text-center mb-6">
+                  Real-time security intelligence and predictive analytics
+                </p>
+              </div>
+
+              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover:border-purple-400/30 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <span className="text-3xl">🌐</span>
+                </div>
+                <h3 className="text-2xl font-bold text-purple-400 mb-4 text-center">Web Application Firewall</h3>
+                <p className="text-white/80 text-center mb-6">
+                  Advanced WAF protection against OWASP Top 10 vulnerabilities
+                </p>
+              </div>
+
+              <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover:border-indigo-400/30 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-indigo-400 to-violet-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <span className="text-3xl">🚨</span>
+                </div>
+                <h3 className="text-2xl font-bold text-indigo-400 mb-4 text-center">Incident Response</h3>
+                <p className="text-white/80 text-center mb-6">
+                  Automated incident response with playbook execution
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Call to Action */}
+          <section className="text-center mb-20">
+            <div className="bg-gradient-to-r from-red-500/10 via-pink-500/10 to-purple-500/10 backdrop-blur-xl rounded-3xl p-12 border border-white/20">
+              <h2 className="text-3xl font-bold mb-6 text-white">
+                Secure Your Digital Infrastructure
+              </h2>
+              <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
+                Experience enterprise-grade security with autonomous monitoring and response. 
+                Let our systems protect your assets 24/7.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 rounded-xl text-white font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-red-500/25">
+                  Get Security Assessment
+                </Link>
+                <Link href="/automation" className="px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl text-white font-semibold transition-all duration-300 hover:scale-105">
+                  Learn About Automation
+                </Link>
+              </div>
+            </div>
+          </section>
         </main>
       </div>
     </>
