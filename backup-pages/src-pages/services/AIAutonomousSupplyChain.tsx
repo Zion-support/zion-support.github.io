@@ -1,122 +1,3 @@
-<<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousSupplyChain.tsx
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Truck,
-  Brain,
-  Shield,
-  Zap,
-  BarChart3,
-  Target,
-  CheckCircle,
-========
-<<<<<<< HEAD
-import { Truck, 
-  Brain, 
-  Shield, 
-  Zap, 
-  BarChart3, 
-  Target, 
-  CheckCircle, 
->>>>>>>> main:backup-pages/src-pages/services/AIAutonomousSupplyChain.tsx
-  Star,
-  ArrowRight,
-  Cpu,
-  Lock,
-  Globe,
-  Users,
-  Clock,
-  Phone,
-  Mail,
-  MapPin,
-  Package,
-  Route,
-  Warehouse,
-  TrendingUp,
-  AlertTriangle,
-  Database,
-  Network,
-  Smartphone,
-  Eye,
-  ShoppingCart,
-  Heart,
-  Leaf'
- } from 'lucide-react.ts';
-;
-
-    {;"
-      title: "End-to-End Visibility",;"
-      description: "Complete transparency across the entire supply chain from raw materials to final delivery",;
-      icon: Eye,;"
-      color: "from-cyan-500 to-blue-500"};
-  ];
-
-  const pricingPlans = [
-    {
-"
-      name: "Starter","
-      price: "$1,999","
-      period: "/month","
-      description: "Perfect for small to medium businesses",
-      features: ["
-        "AI demand forecasting","
-        "Basic inventory management","
-        "Route optimization","
-        "Up to 5 warehouses","
-        "Email support","
-        "Mobile app access"
-      ],
-      popular: false
-    },
-    {
-"
-      name: "Professional","
-      price: "$4,999","
-      period: "/month","
-      description: "Ideal for growing enterprises",
-      features: ["
-        "Advanced AI algorithms","
-        "Multi-warehouse management","
-        "Predictive maintenance","
-        "Supplier risk assessment","
-        "Priority support","
-        "API access","
-        "Custom integrations"
-      ],
-      popular: true
-    },
-    {
-"
-      name: "Enterprise","
-      price: "$12,999","
-      period: "/month","
-      description: "For large corporations and global operations",
-      features: ["
-        "Custom AI model development","
-        "Global supply chain visibility","
-        "Advanced analytics dashboard","
-        "Dedicated support team",;"
-        "SLA guarantees",;"
-        "On-premise deployment",;"
-        "White-label solutions";
-      ],;
-      popular: false};
-  ]},;
-    {;"
-      title: "Risk Mitigation",;"
-      description: "Identify and prevent supply chain disruptions proactively",;"
-      metric: "80% risk reduction"};
-  ];
-
-  
-    {;"
-      title: "Food & Beverage",;"
-      description: "Manage perishable inventory, optimize delivery routes, and reduce food waste",;
-      icon: Leaf,;"
-      color: "from-green-500 to-emerald-500"};
-  ];
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}"
@@ -125,16 +6,12 @@ import { Truck,
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial = {
-
   { opacity: 0,
-  y: 20
-
+  y: 20 
 }}
             animate = {
-
   { opacity: 1,
-  y: 0
-
+  y: 0 
 }}
             transition={{ duration: 0.8 }}
           >"
@@ -144,7 +21,7 @@ import { Truck,
               </h1>
             </div>"
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Transform your supply chain with AI-powered automation. Optimize operations, reduce costs,
+              Transform your supply chain with AI-powered automation. Optimize operations, reduce costs, 
               and gain unprecedented visibility across your entire network.
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -164,22 +41,17 @@ import { Truck,
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}"
       <section className="py-20">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
-
   { opacity: 0,
-  y: 20
-
+  y: 20 
 }}
             whileInView = {
-
   { opacity: 1,
-  y: 0
-
+  y: 0 
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"
@@ -189,7 +61,7 @@ import { Truck,
               Intelligent Supply Chain Solutions
             </h2>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI platform provides comprehensive supply chain management with predictive analytics,
+              Our AI platform provides comprehensive supply chain management with predictive analytics, 
               autonomous optimization, and real-time visibility.
             </p>
           </motion.div>
@@ -199,22 +71,16 @@ import { Truck,
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
-  y: 20
-
+  y: 20 
 }}
                 whileInView = {
-
   { opacity: 1,
-  y: 0
-
+  y: 0 
 }}
                 transition = {
-
   { duration: 0.6,
-  delay: index * 0.1
-
+  delay: index * 0.1 
 }}
                 viewport={{ once: true }}"
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600 hover:border-blue-400 transition-all duration-300 hover:transform hover:scale-105"
@@ -229,22 +95,17 @@ import { Truck,
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}"
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
-
   { opacity: 0,
-  y: 20
-
+  y: 20 
 }}
             whileInView = {
-
   { opacity: 1,
-  y: 0
-
+  y: 0 
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"
@@ -263,22 +124,16 @@ import { Truck,
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
-  y: 20
-
+  y: 20 
 }}
                 whileInView = {
-
   { opacity: 1,
-  y: 0
-
+  y: 0 
 }}
                 transition = {
-
   { duration: 0.6,
-  delay: index * 0.1
-
+  delay: index * 0.1 
 }}
                 viewport={{ once: true }}"
                 className="text-center"
@@ -293,22 +148,17 @@ import { Truck,
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}"
       <section className="py-20">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
-
   { opacity: 0,
-  y: 20
-
+  y: 20 
 }}
             whileInView = {
-
   { opacity: 1,
-  y: 0
-
+  y: 0 
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"
@@ -327,22 +177,16 @@ import { Truck,
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
-  y: 20
-
+  y: 20 
 }}
                 whileInView = {
-
   { opacity: 1,
-  y: 0
-
+  y: 0 
 }}
                 transition = {
-
   { duration: 0.6,
-  delay: index * 0.1
-
+  delay: index * 0.1 
 }}
                 viewport={{ once: true }}"
                 className="text-center"
@@ -355,22 +199,17 @@ import { Truck,
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}"
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
-
   { opacity: 0,
-  y: 20
-
+  y: 20 
 }}
             whileInView = {
-
   { opacity: 1,
-  y: 0
-
+  y: 0 
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"
@@ -389,35 +228,22 @@ import { Truck,
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
-  y: 20
-
+  y: 20 
 }}
                 whileInView = {
-
   { opacity: 1,
-  y: 0
-
+  y: 0 
 }}
                 transition = {
-
   { duration: 0.6,
-  delay: index * 0.1
-
+  delay: index * 0.1 
 }}
                 viewport={{ once: true }}`
                 className={`relative bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border-2 ${
-<<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousSupplyChain.tsx
-                  plan.popular
-                    ? 'border-blue-400 shadow-2xl shadow-blue-500/20'
-                    : 'border-slate-600'
-========
-
                   plan.popular '
                     ? 'border-blue-400 shadow-2xl shadow-blue-500/20' '
                     : 'border-slate-600'`
->>>>>>>> main:backup-pages/src-pages/services/AIAutonomousSupplyChain.tsx
                 }`}
               >
                 {plan.popular && ("
@@ -427,19 +253,11 @@ import { Truck,
                     </span>
                   </div>
                 )}
-<<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousSupplyChain.tsx
-
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-5xl font-bold text-blue-400">{plan.price}</span>
-========
                 "
                 <div className="text-center mb-8">"
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>"
                   <div className="flex items-baseline justify-center">"
                     <span className="text-5xl font-bold text-blue-400">{plan.price}</span>"
->>>>>>>> main:backup-pages/src-pages/services/AIAutonomousSupplyChain.tsx
                     <span className="text-gray-400 ml-1">{plan.period}</span>
                   </div>"
                   <p className="text-gray-300 mt-2">{plan.description}</p>
@@ -452,11 +270,9 @@ import { Truck,
                     </li>
                   ))}
                 </ul>
-
                 <a"
                   href="/contact"`
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-
                     plan.popular'
                       ? 'bg-gradient-to-r from-blue-500 to-green-500 text-white hover:from-blue-600 hover:to-green-600''
                       : 'bg-slate-600 text-white hover:bg-slate-500'`
@@ -469,22 +285,17 @@ import { Truck,
           </div>
         </div>
       </section>
-
       {/* CTA Section */}"
       <section className="py-20 bg-gradient-to-r from-blue-900/20 to-green-900/20">"
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial = {
-
   { opacity: 0,
-  y: 20
-
+  y: 20 
 }}
             whileInView = {
-
   { opacity: 1,
-  y: 0
-
+  y: 0 
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -512,7 +323,6 @@ import { Truck,
           </motion.div>
         </div>
       </section>
-
       {/* Contact Information */}"
       <section className="py-16 bg-slate-800">"
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">"
@@ -541,5 +351,4 @@ import { Truck,
       </section>;
     </div>;
   )};
-
 export default AIAutonomousSupplyChain;'"`

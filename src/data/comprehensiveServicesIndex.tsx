@@ -26,7 +26,6 @@ export
 :src/data/comprehensiveServicesIndex.tsx
 // Service Categories;
 export 
-=======
   'AI & Analytics','
   'AI & Customer Experience','
   'AI & Supply Chain','
@@ -49,7 +48,6 @@ export
   'Sustainability & Energy',;'
 // Service Categories
 export 
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   'Neuromorphic Computing',;
   'Digital Twin & Simulation',;
   'Synthetic Biology',;
@@ -59,48 +57,33 @@ export
 ];
 
 // Innovation Levels
-<<<<<<< HEAD
-export 
-=======
 :src/data/comprehensiveServicesIndex.tsx
 export const INNOVATION_LEVELS = [;'
   'Cutting-edge',;'
   'Advanced',;'
 export 
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   'Cutting-edge',;
   'Advanced',;
   'Professional';
 ];
 
 // Support Levels
-<<<<<<< HEAD
-export 
-=======
 :src/data/comprehensiveServicesIndex.tsx
 export const SUPPORT_LEVELS = [;'
   'enterprise',;'
   'professional',;'
 export 
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   'enterprise',;
   'professional',;
   'basic';
 ];
 
 // Pricing Models
-<<<<<<< HEAD
-export 
-  'monthly',;
-  'annual',;
-  'one-time',;
-=======
 :src/data/comprehensiveServicesIndex.tsx
 export const PRICING_MODELS = [;'
   'monthly',;'
   'annual',;'
   'one-time',;'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   'usage-based';
 ];
 

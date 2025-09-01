@@ -1,105 +1,20 @@
-<<<<<<< HEAD
-import {
-
-<<<<<<< HEAD
-import { motion } from 'framer - motion';
-
- * CaseStudiesSection function
- * @param {*} params - Function parameters
- * @returns {*} Function return value
- */
-function CaseStudiesSection () {
-
-=======
->>>>>>> main
-
-  TrendingUp,
-  Users,
-  DollarSign,
-  Clock,
-  ArrowRight,
-  Star,
-  CheckCircle'
-} from 'lucide-react';
-
-      color: 'from-purple-500 to-pink-500'};
-  ];
-const caseStudies = [
-  {
-
-<<<<<<< HEAD
-  return (<section className = "py - 20 bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
-      <div className="max - w-7xl mx - auto px - 6">
-        <motion.div
-          className="text - center mb - 16"
-=======
-    id: 1,
-    title: "AI-Powered Supply Chain Optimization","
-    company: "Global Manufacturing Corp","
-    industry: "Manufacturing","
-    challenge: "Inefficient supply chain causing 30% cost overruns and delays","
-    solution: "Implemented AI-driven demand forecasting and route optimization",
-    results: ["
-      "Reduced costs by 25%","
-      "Improved delivery times by 40%","
-      "Increased efficiency by 35%"
-    ],"
-    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400","
-    color: "from-blue-500 to-cyan-500"
-  },
-  {
-
-    id: 2,"
-    title: "Quantum Computing Financial Modeling","
-    company: "FinTech Innovations Ltd","
-    industry: "Financial Services","
-    challenge: "Complex financial models taking days to compute","
-    solution: "Deployed quantum computing algorithms for portfolio optimization",
-    results: ["
-      "1000x faster computation","
-      "Improved accuracy by 60%","
-      "Reduced risk by 45%"
-    ],"
-    image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400","
-    color: "from-purple-500 to-pink-500"
-  },
-  {
-
-    id: 3,"
-    title: "Blockchain Supply Chain Transparency","
-    company: "Organic Foods Inc","
-    industry: "Food & Beverage","
-    challenge: "Lack of transparency in food supply chain","
-    solution: "Implemented blockchain-based tracking system",
-    results: ["
-      "100% supply chain visibility",;"
-      "Reduced fraud by 99%",;"
-      "Improved customer trust by 80%";
-    ],;"
-    image: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=400",;"
-    color: "from-green-500 to-emerald-500"};
-];
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
 export function CaseStudiesSection() {
-
   return ("
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <div className="max-w-7xl mx-auto px-6">
         <motion.div "
           className="text-center mb-16"
->>>>>>> main
           initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
           whileInView = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
           viewport={{ once: true }}
@@ -122,20 +37,20 @@ export function CaseStudiesSection() {
               initial = {
 
   { opacity: 0,
-  y: 30
+  y: 30 
 
 }}
               whileInView = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
               viewport={{ once: true }}
               transition = {
 
   { duration: 0.6,
-  delay: index * 0.1
+  delay: index * 0.1 
 
 }}
             >"
@@ -179,30 +94,25 @@ export function CaseStudiesSection() {
             </motion.div>) ) }
         </div>
 
-<<<<<<< HEAD
-        <motion.div
-          className="mt - 16 text - center"
-=======
         <motion.div "
           className="mt-16 text-center"
->>>>>>> main
           initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
           whileInView = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
           viewport={{ once: true }}
           transition = {
 
   { duration: 0.6,
-  delay: 0.4
+  delay: 0.4 
 
 }}
         >"

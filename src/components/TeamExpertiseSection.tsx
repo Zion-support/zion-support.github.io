@@ -1,77 +1,21 @@
-<<<<<<< HEAD
-import {
-
-<<<<<<< HEAD
-import { motion } from 'framer - motion';
-
- * TeamExpertiseSection function
- * @param {*} params - Function parameters
- * @returns {*} Function return value
- */
-function TeamExpertiseSection () {
-
-=======
->>>>>>> main
-
-  Award,
-  Users,
-  Brain,
-  Shield,
-  Cloud,
-  Zap,
-  Star,
-  CheckCircle,
-  Globe,
-  Rocket'
-} from 'lucide-react';
-
-      projects: '50+'};
-  ];
-
-  {;"
-    icon: "🚀",;"
-    title: "Successful Projects",;"
-    description: "Successfully delivered complex technology solutions for Fortune 500 companies",;"
-    count: "500+"};
 ];
 
-const coreExpertise = ["
-  "Artificial Intelligence & Machine Learning","
-  "Quantum Computing & Algorithms",;"
-  "Blockchain & Web3 Technologies",;"
-  "Cloud Infrastructure & DevOps",;"
-  "Cybersecurity & Compliance",;"
-  "Data Science & Analytics",;"
-  "IoT & Edge Computing",;"
-  "Mobile & Web Development";
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-];
-
-<<<<<<< HEAD
-  return (<section className = "py - 20 bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
-      <div className="max - w-7xl mx - auto px - 6">
-        <motion.div
-          className="text - center mb - 16"
-=======
 export function TeamExpertiseSection() {
-
   return ("
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <div className="max-w-7xl mx-auto px-6">
         <motion.div "
           className="text-center mb-16"
->>>>>>> main
           initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
           whileInView = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
           viewport={{ once: true }}
@@ -89,19 +33,19 @@ export function TeamExpertiseSection() {
           initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
           whileInView = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
           transition = {
 
   { duration: 0.6,
-  delay: 0.1
+  delay: 0.1 
 
 }}"
           className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"
@@ -131,18 +75,6 @@ export function TeamExpertiseSection() {
               <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">"
                 <span className="text-3xl">{expertise.icon}</span>
               </div>
-<<<<<<< HEAD
-
-              <div className="text - 4xl font - bold text - blue - 400 mb - 3 group - hover:text - blue - 300 transition - colors duration - 200">
-                {expertise.count}
-              </div>
-
-              <h3 className="text - xl font - bold text - white mb - 3 group - hover:text - blue - 400 transition - colors duration - 200">
-                {expertise.title}
-              </h3>
-
-              <p className="text - gray - 400 text - sm leading - relaxed">
-=======
               "
               <div className="text-4xl font-bold text-blue-400 mb-3 group-hover:text-blue-300 transition-colors duration-200">
                 {expertise.count}
@@ -153,36 +85,30 @@ export function TeamExpertiseSection() {
               </h3>
               "
               <p className="text-gray-400 text-sm leading-relaxed">
->>>>>>> main
                 {expertise.description}
               </p>
             </motion.div>) ) }
         </div>
 
-<<<<<<< HEAD
-        <motion.div
-          className="text - center mb - 12"
-=======
         <motion.div "
           className="text-center mb-12"
->>>>>>> main
           initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
           whileInView = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
           viewport={{ once: true }}
           transition = {
 
   { duration: 0.6,
-  delay: 0.3
+  delay: 0.3 
 
 }}
         >"

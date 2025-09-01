@@ -1,57 +1,6 @@
-<<<<<<< HEAD
-import {
-
-<<<<<<< HEAD
-import { motion } from 'framer - motion';
-=======
->>>>>>> main
-
-  Phone,
-  Mail,
-  MapPin,
-  Globe,
-  Linkedin,
-  Twitter,
-  Facebook,
-  Instagram,
-  ArrowUp,
-  Heart,
-  Shield,
-  Zap,
-  Brain,
-  Cloud,
-  Server,
-  Rocket,
-  Users,
-  Briefcase,
-  FileText,
-  HelpCircle,
-  MessageCircle,
-  Zap as ZapIcon'
-} from 'lucide-react';
-export const FuturisticFooter: React.FC = () => {;
-  
-    window.scrollTo({ top: 0, behavior: 'smooth' })};
-  
-  const footerSections = [
-    {
-
-      title: "Services",
-      links[;"
-        { name: "AI & Machine Learning", href: "/ai-services" },"
-        { name: "Micro SAAS Solutions", href: "/micro-saas" },"
-        { name: "IT Infrastructure", href: "/it-services" },"
-        { name: "Emerging Technologies", href: "/emerging-tech" },"
-        { name: "Cybersecurity", href: "/it-services/cybersecurity" },"
-        { name: "Cloud Solutions", href: "/it-services/cloud" },"
-        { name: "DevOps & Automation", href: "/it-services/devops" },"
-        { name: "Data Management", href: "/it-services/data" }
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ]
     },;
     {
-
 "
       title: "Solutions",
       links[;"
@@ -66,7 +15,6 @@ export const FuturisticFooter: React.FC = () => {;
       ]
     },;
     {
-
 "
       title: "Comp",
       links[;"
@@ -81,7 +29,6 @@ export const FuturisticFooter: React.FC = () => {;
       ]
     },;
     {
-
 "
       title: "Resources",
       links[;"
@@ -114,13 +61,13 @@ export const FuturisticFooter: React.FC = () => {;
                 initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
                 whileInView = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
                 viewport={{ once: true }}
@@ -163,20 +110,20 @@ export const FuturisticFooter: React.FC = () => {;
                   initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
                   whileInView = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
                   viewport={{ once: true }}
                   transition = {
 
   { duration: 0.6,
-  delay: index * 0.1
+  delay: index * 0.1 
 
 }}
                 >"
@@ -205,20 +152,20 @@ export const FuturisticFooter: React.FC = () => {;
             initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
             whileInView = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
             viewport={{ once: true }}
             transition = {
 
   { duration: 0.6,
-  delay: 0.4
+  delay: 0.4 
 
 
 

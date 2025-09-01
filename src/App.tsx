@@ -37,13 +37,15 @@ const Support = lazy(() => import('./pages/Support').then(module => ({ default: 
 const Training = lazy(() => import('./pages/Training').then(module => ({ default: module.default })));
 const Helpdesk = lazy(() => import('./pages/Helpdesk').then(module => ({ default: module.default })));
 const RevolutionaryServicesPage = lazy(() => import('./pages/RevolutionaryServicesPage').then(module => ({ default: module.RevolutionaryServicesPage })));
-const EnhancedNewServices2025 = lazy(() => import('./pages/EnhancedNewServices2025').then(module => ({ default: module.EnhancedNewServices2025 })));
+const EnhancedNewServices2025 = lazy(() => import('./pages/EnhancedNewServices2025').then(module => ({ default: module.default || module.EnhancedNewServices2025 })));
 const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ default: module.PricingPage })));
+const TermsOfServicePage = lazy(() => import('./pages/TermsOfServicePage').then(module => ({ default: module.TermsOfServicePage })));
+const CookiePolicyPage = lazy(() => import('./pages/CookiePolicyPage').then(module => ({ default: module.CookiePolicyPage })));
 
 // Service Pages
-const AISolutions = lazy(() => import('./pages/AiSolutions').then(module => ({ default: module.default })));
-const QuantumComputing = lazy(() => import('./pages/QuantumComputing').then(module => ({ default: module.default })));
-const Cybersecurity = lazy(() => import('./pages/Cybersecurity').then(module => ({ default: module.default })));
+const AISolutions = lazy(() => import('./pages/services/AISolutionsPage').then(module => ({ default: module.AISolutionsPage })));
+const QuantumComputing = lazy(() => import('./pages/services/QuantumComputingPage').then(module => ({ default: module.QuantumComputingPage })));
+const Cybersecurity = lazy(() => import('./pages/services/CybersecurityPage').then(module => ({ default: module.CybersecurityPage })));
 
 // Loading component
 const PageLoader = () => (
@@ -55,26 +57,6 @@ const PageLoader = () => (
   </div>
 );
 
-// Lazy load pages - only import existing ones
-const Home = createLazyComponent(() => import('./pages/Home'));
-const About = createLazyComponent(() => import('./pages/About'));
-const Contact = createLazyComponent(() => import('./pages/Contact'));
-const Services = createLazyComponent(() => import('./pages/Services'));
-const Solutions = createLazyComponent(() => import('./pages/Solutions'));
-const RequestQuote = createLazyComponent(() => import('./pages/RequestQuote'));
-const Dashboard = createLazyComponent(() => import('./pages/Dashboard'));
-const Login = createLazyComponent(() => import('./pages/Login'));
-const FAQ = createLazyComponent(() => import('./pages/FAQ'));
-const Privacy = createLazyComponent(() => import('./pages/Privacy'));
-const Terms = createLazyComponent(() => import('./pages/Terms'));
-const Cookies = createLazyComponent(() => import('./pages/Cookies'));
-const Pricing = createLazyComponent(() => import('./pages/Pricing'));
-const Help = createLazyComponent(() => import('./pages/Help'));
-const News = createLazyComponent(() => import('./pages/News'));
-const Careers = createLazyComponent(() => import('./pages/Careers'));
-const WhitePapers = createLazyComponent(() => import('./pages/WhitePapers'));
-const ComprehensivePricing = createLazyComponent(() => import('./pages/ComprehensivePricing'));
-
 function App() {
   const [sidebarOpen, setSidebarOpen] = React.useState(false);
 
@@ -83,7 +65,7 @@ function App() {
       <div className="App">
         <Header />
         <div className="flex pt-16">
-          <Sidebar isOpen={sidebarOpen} onToggle={() => setSidebarOpen(!sidebarOpen)} />
+          <Sidebar />
           <main className="flex-1 ml-64 min-h-screen">
             <Suspense fallback={<PageLoader />}>
               <Routes>
@@ -119,8 +101,8 @@ function App() {
                 <Route path="/sitemap" element={<Sitemap />} />
                 <Route path="/comprehensive-sitemap" element={<ComprehensiveSitemap />} />
                 <Route path="/privacy-policy" element={<BlogPage />} />
-                <Route path="/terms-of-service" element={<BlogPage />} />
-                <Route path="/cookie-policy" element={<BlogPage />} />
+                <Route path="/terms-of-service" element={<TermsOfServicePage />} />
+                <Route path="/cookie-policy" element={<CookiePolicyPage />} />
                 <Route path="/request-quote" element={<ContactPage />} />
                 <Route path="*" element={<NotFoundPage />} />
               </Routes>

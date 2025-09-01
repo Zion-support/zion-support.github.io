@@ -1,123 +1,4 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-=======
-<<<<<<< HEAD
->>>>>>> main
-import {
-
-  Brain,
-  Shield,
-  Cloud,
-  Zap,
-  Globe,
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  Code,
-  Rocket,
-  Users,
-  BarChart3,
-  FileImage,
-  TrendingUp,
-  MessageCircle,
-  Video,
-  FileText,
-  Heart,
-  ShoppingCart,
-  Settings,
-  HelpCircle,
-  BookOpen,
-  Briefcase,
-  Award,
-  Target,
-  Lightbulb,
-  ShieldCheck,
-  Server,
-  Smartphone,
-  Monitor,
-  Wifi,
-  Bluetooth,
-  Satellite,
-  Atom,
-  Dna,
-  Microscope,
-  Flask,
-  TestTube,
-  Syringe,
-  Stethoscope,
-  HeartPulse,
-  BrainCircuit,
-  Eye,
-  Ear,
-  Hand,
-  Foot,
-  Bone,
-  Tooth,
-  Pill,
-  Bandage,
-  Thermometer,
-  Scale,
-  Calculator,
-  ChartBar,
-  PieChart,
-  LineChart,
-  Activity,
-  TrendingDown,
-  Minus,
-  Plus,
-  Equal,
-  Divide,
-  Percent,
-  DollarSign,
-  Euro,
-  Pound,
-  Yen,
-  Bitcoin,
-  Ethereum,
-  CreditCard,
-  Wallet,
-  Banknote,
-  Coins,
-  PiggyBank,
-  Safe,
-  Vault,
-  LockKeyhole,
-  Key,
-  Fingerprint,
-  QrCode,
-  Barcode,
-  Scan,
-  Camera,
-  VideoOff,
-  Mic,
-  MicOff,
-  Volume2,
-  VolumeX'
-} from 'lucide-react';
-;
-const QuickAccess: React.FC = props {;
-  const [hoveredCategory, setHoveredCategory] = useState<string | null>(null);
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-;
-const QuickAccess: React.FC = (): JSX.Element => {
-
-    };
   ];
-
-  const categories = ["
-    { name: "Technology", count: 15, color: "from-purple-500 to-pink-500" },"
-    { name: "Security", count: 8, color: "from-red-500 to-orange-500" },"
-    { name: "Infrastructure", count: 12, color: "from-blue-500 to-cyan-500" },"
-    { name: "Consulting", count: 6, color: "from-yellow-500 to-orange-500" },"
-    { name: "Innovation", count: 10, color: "from-green-500 to-teal-500" },;"
-    { name: "Business", count: 14, color: "from-indigo-500 to-purple-500" };
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-  ];
-
   return ("
     <section className = "py-16 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800">"
       <div className="max-w-7xl mx-auto px-6">"
@@ -127,7 +8,6 @@ const QuickAccess: React.FC = (): JSX.Element => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}"
             className="text-3xl md:text-4xl font-bold text-white mb-4"
-
             Quick Access to Our Services
           </motion.h2>
           <motion.p
@@ -135,14 +15,11 @@ const QuickAccess: React.FC = (): JSX.Element => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}"
             className="text-lg text-gray-300 max-w-2xl mx-auto"
-
             Find the perfect solution for your business needs with our organized service categories
           </motion.p>
         </div>
-
 }}
             whileInView = {
-
   { opacity: 1,
   y: 0 }}
             transition={{ duration: 0.6 }}"
@@ -157,63 +34,23 @@ const QuickAccess: React.FC = (): JSX.Element => {
       features: ["AI Lead Scoring", "Customer Feedback", "Compliance Tools", "Analytics"],;"
       stats: { solutions: "25+", deployment: "<1hr", success: "90%" }};
   ];
-
-  
     visible: {
-
       opacity: 1,;
       transition: {
-
         staggerChildren: 0.1}}};
-
-<<<<<<< HEAD
-  const itemVariants = {
-
-  hidden: { opacity: 0, y: 20,
-  scale: 0.95
-
-},
-    visible: {
-
-      opacity: 1,
-      y: 0, ;
-=======
-  
->>>>>>> main
       scale: 1,;
       transition: {
-
         duration: 0.5,;"
         ease: "easeOut"}}};
-
   const hoverVariants = {
-
-<<<<<<< HEAD
   hover: {
-
-      y: -8,
-=======
-
-  hover: {
-
       y: -8, 
->>>>>>> main
       scale: 1.02,
       transition: {
-
         duration: 0.3,;"  ease: "easeOut";
       ;
 }}};
-
-<<<<<<< HEAD
-};
-    };
-  };
-
-  return (
-=======
   return ("
->>>>>>> main
     <section className = "py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black relative overflow-hidden">
       {/* Background Elements */}"
       <div className="absolute inset-0 opacity-30">"
@@ -226,16 +63,12 @@ const QuickAccess: React.FC = (): JSX.Element => {
         {/* Header */}
         <motion.div
           initial = {
-
   { opacity: 0,
-  y: 30
-
+  y: 30 
 }}
           whileInView = {
-
   { opacity: 1,
-  y: 0
-
+  y: 0 
 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}"
@@ -245,41 +78,32 @@ const QuickAccess: React.FC = (): JSX.Element => {
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
             transition = {
-
   { duration: 0.6,
-  delay: 0.2
-
+  delay: 0.2 
 }}
             viewport={{ once: true }}"
             className="inline-flex items-center gap-2 px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full text-zion-cyan mb-6"
           >
             Quick Access to Our Services
           </motion.h2>
-          <motion.p
+          <motion.p 
             initial = {
-
   { opacity: 0,
-  y: 20
-
+  y: 20 
 }}
             whileInView = {
-
   { opacity: 1,
-  y: 0
-
+  y: 0 
 }}
             transition = {
-
   { duration: 0.6,
-  delay: 0.2
-
+  delay: 0.2 
 }}"
             className="text-lg text-gray-300 max-w-2xl mx-auto"
           >
             Find the perfect solution for your business needs with our organized service categories
           </motion.p>
         </div>
-
         {/* Quick Links Grid */}"
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {quickLinks.map((link, index <motion.div
@@ -300,14 +124,12 @@ const QuickAccess: React.FC = (): JSX.Element => {
                 >"
                   <link.icon className="w-6 h-6 text-white" />
                 </motion.div>
-
                 <motion.div
                   animate={{ rotate: hoveredCategory === link.title ? 90 : 0 }}
                   transition={{ duration: 0.3 }}
                 >"
                   <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-zion-cyan transition-colors"  />                </motion.div>
               </div>
-
               {/* Content */}"
               <div className="mb-4">"
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">
@@ -317,7 +139,6 @@ const QuickAccess: React.FC = (): JSX.Element => {
                   {link.description}
                 </p>
               </div>
-
               {/* Features Preview */}"
               <div className="mb-4">"
                 <div className="grid grid-cols-2 gap-2">
@@ -325,22 +146,16 @@ const QuickAccess: React.FC = (): JSX.Element => {
                     <motion.div
                       key={feature}
                       initial = {
-
   { opacity: 0,
-  x: -10
-
+  x: -10 
 }}
                       whileInView = {
-
   { opacity: 1,
-  x: 0
-
+  x: 0 
 }}
                       transition = {
-
   { duration: 0.4,
-  delay: 0.1 + idx * 0.1
-
+  delay: 0.1 + idx * 0.1 
 }}
                       viewport={{ once: true }}"
                       className="flex items-center gap-2 text-xs text-gray-400"
@@ -351,7 +166,6 @@ const QuickAccess: React.FC = (): JSX.Element => {
                   ))}
                 </div>
               </div>
-
               {/* Stats */}"
               <div className="mb-4">"
                 <div className="flex items-center justify-between text-sm">
@@ -359,22 +173,16 @@ const QuickAccess: React.FC = (): JSX.Element => {
                     <motion.div
                       key={key}
                       initial = {
-
   { opacity: 0,
-  scale: 0.8
-
+  scale: 0.8 
 }}
                       whileInView = {
-
   { opacity: 1,
-  scale: 1
-
+  scale: 1 
 }}
                       transition = {
-
   { duration: 0.4,
-  delay: 0.2 + idx * 0.1
-
+  delay: 0.2 + idx * 0.1 
 }}
                       viewport={{ once: true }}"
                       className="text-center"
@@ -385,7 +193,6 @@ const QuickAccess: React.FC = (): JSX.Element => {
                   ))}
                 </div>
               </div>
-
               {/* CTA */}
               <motion.div
                 whileHover={{ scale: 1.05 }}
@@ -402,7 +209,6 @@ const QuickAccess: React.FC = (): JSX.Element => {
             </motion.div>
           ))}
         </div>
-
         {/* Service Categories Overview */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -434,7 +240,6 @@ const QuickAccess: React.FC = (): JSX.Element => {
             ))}
           </div>
         </motion.div>;
-
         {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -463,66 +268,33 @@ const QuickAccess: React.FC = (): JSX.Element => {
             </div>
           </div>
         </motion.div>
-
         {/* Enhanced CTA Section */}
         <motion.div
           initial = {
-
   { opacity: 0,
-<<<<<<< HEAD
-  y: 30 ;
-
-}}
-=======
   y: 30 }}
->>>>>>> main
           whileInView = {
-
   { opacity: 1,
-<<<<<<< HEAD
-  y: 0 ;
-
-}}
-=======
   y: 0 }}
->>>>>>> main
           transition = {
-
   { duration: 0.8,
-<<<<<<< HEAD
-  delay: 0.4 ;
-
-}}
-          viewport={{ once: true }}
-          className="text-center"
-        >
-          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-2xl p-8 border border-cyan-500/20">
-            <h3 className="text-2xl font-bold text-white mb-4">Can't Find What You're Looking For?</h3>
-=======
   delay: 0.4 }}
           viewport={{ once: true }}"          className="text-center"
         >"
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-2xl p-8 border border-cyan-500/20">'"
             <h3 className="text-2xl font-bold text-white mb-4">Can't Find What You're Looking For?</h3>"
->>>>>>> main
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Our team of experts is ready to help you find the perfect solution or create a custom one for your specific needs
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
-              <Link
-=======
               <Link "
->>>>>>> main
                 to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
-
                 Contact Our Team
               </Link>
               <Link"
                 to="/services"
                 className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-white transition-all duration-300"
-
                 Browse All Services
               </Link>
             </div>;

@@ -1,32 +1,4 @@
-<<<<<<< HEAD
-import { Link  } from 'react - router - dom.ts';
-import React, { useState, useEffect, memo } from 'react.ts';
-export default EnhancedHeroSection;
-import { ArrowRight,
-import { motion, AnimatePresence  } from 'framer - motion.ts';
-=======
-<<<<<<< HEAD
-import { ArrowRight, 
->>>>>>> main
-
-  Play,
-  Star,
-  CheckCircle,
-  ChevronLeft,
-  ChevronRight,
-  Zap,
-  Shield,
-  Globe,
-  Brain,
-  Rocket,
-  Target,
-  TrendingUp'
- } from 'lucide-react'} from 'lucide-react';
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 interface HeroSlide {
-
   title: string;
   subtitle: string;
   description: string;
@@ -35,15 +7,9 @@ interface HeroSlide {
   path: string;
   features: string[];
   gradient: string;
-<<<<<<< HEAD
-  icon: React.ComponentType < any>;
-  stats: { label: string; value: string; icon: React.ComponentType < any>
-}[]}
-=======
   icon: React.ComponentType<any>;
   stats: { label: string; value: string; icon: React.ComponentType<any> }[];
   badge?: string}
->>>>>>> main
 
 const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): any {
 
@@ -68,7 +34,6 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
       ]
     },;
     {
-
 "
       title: "Comprehensive IT Services","
       subtitle: "End-to-end technology solutions for modern businesses","
@@ -86,7 +51,6 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
       ]
     },;
     {
-
 "
       title: "Green IT Solutions","
       subtitle: "Sustainable technology for a better future","
@@ -106,7 +70,6 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
   ];
 
   useEffect(() => {
-
     if (!isAutoPlaying) return;
 
     
@@ -124,7 +87,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
           }}
           transition={{ duration: 20, repeat: Infinity }}
         ></motion.div>
-
+        
         {/* Floating particles */}
         {[...Array(6)].map((_, i) => (
           <motion.div
@@ -159,13 +122,13 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
             initial = {
 
   { opacity: 0,
-  x: -50
+  x: -50 
 
 }}
             animate = {
 
   { opacity: 1,
-  x: 0
+  x: 0 
 
 }}
             transition={{ duration: 0.8 }}"
@@ -177,19 +140,19 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
                 initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
                 animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
                 exit = {
 
   { opacity: 0,
-  y: -20
+  y: -20 
 
 }}
                 transition={{ duration: 0.5 }}
@@ -228,13 +191,13 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
                       initial = {
 
   { opacity: 0,
-  x: -20
+  x: -20 
 
 }}
                       animate = {
 
   { opacity: 1,
-  x: 0
+  x: 0 
 
 }}
                       transition={{ delay: index * 0.1 }}"
@@ -294,13 +257,13 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
                       animate = {
 
   { rotate: [0,
-  360]
+  360] 
 
 }}
                       transition = {
 
   { duration: 20,
-  repeat: Infinity
+  repeat: Infinity 
 
 }}
                     >"
@@ -320,13 +283,13 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
                   initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
                   animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
                   transition={{ delay: 0.5 + index * 0.1 }}"
@@ -417,7 +380,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
           animate = {
 
   { y: [0, 10,
-  0]
+  0] 
 
 }}
           transition = {
@@ -429,13 +392,13 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
             animate = {
 
   { y: [0, 12,
-  0]
+  0] 
 
 }}
             transition = {
 
   { duration: 2,
-  repeat: Infinity
+  repeat: Infinity 
 
 
 

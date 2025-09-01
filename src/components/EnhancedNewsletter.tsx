@@ -1,32 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer - motion.ts';
-=======
-<<<<<<< HEAD
->>>>>>> main
-
-interface NewsletterFormData {
-
-  email: string;
-  firstName: string;
-  interests: string[];
-  frequency: 'weekly' | 'monthly' | 'quarterly'}
-
-
-  { id: 'ai-solutions', label: 'AI Solutions', icon: Zap },;
-  { id: 'cloud-services', label: 'Cloud Services', icon: Shield },;
-  { id: 'cybersecurity', label: 'Cybersecurity', icon: Shield },;
-  { id: 'digital-transformation', label: 'Digital Transformation', icon: Zap },;
-  { id: 'it-consulting', label: 'IT Consulting', icon: Gift },;
-  { id: 'industry-insights', label: 'Industry Insights', icon: Zap };
-];
-
-
-  { value: 'weekly', label: 'Weekly', description: 'Stay updated with latest trends' },;
-  { value: 'monthly', label: 'Monthly', description: 'Monthly digest of insights' },;
-  { value: 'quarterly', label: 'Quarterly', description: 'Quarterly strategic updates' };
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 ];
 
   '
@@ -55,26 +26,18 @@ interface NewsletterFormData {
     setStatus('loading');
 
     try {
-
       // Simulate API call
       await new Promise (resolve => setTimeout (resolve, 2000) ) ;
 
       // Here you would typically send the data to your newsletter service'
-      // // // // // // // // // // // console.log('Newsletter subscription:', formData);
+      // // // // // // // // console.log('Newsletter subscription:', formData);
 
-<<<<<<< HEAD
-      console.log ('Newsletter subscription: ', formData) ;
-
-      setStatus ('success') ;
-=======
-      // // // // console.log('Newsletter subscription: ', formData);
+      // console.log('Newsletter subscription: ', formData);
       '
       setStatus('success');
->>>>>>> main
 
       // Reset form after successful submission
       setTimeout(() => {
-
         setFormData({
 
           email: '',
@@ -82,19 +45,11 @@ interface NewsletterFormData {
           interests[],;
           frequency: 'monthly'
         });
-      // // // // // // // // // // // console.error('Newsletter subscription error:', error);
-<<<<<<< HEAD
-    }
-        setStatus('idle')}, 3000)} catch (error) {
-
-      setStatus('error');
-=======
+      // // // // // // // // console.error('Newsletter subscription error:', error);
     }'        setStatus('idle')}, 3000)} catch (error) {
-
 '
       setStatus('error');'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      // // // // console.error('Newsletter subscription error:', error)}
+      // console.error('Newsletter subscription error:', error)}
   };
 
       setErrors (prev => ({ ...prev, interests: null }) ) }
@@ -107,14 +62,8 @@ interface NewsletterFormData {
     if (errors[field]) {
 
       setErrors(prev => ({ ...prev, [field]: null }));
-<<<<<<< HEAD
-    }
-  };
-
-=======
     }  };
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   if (status = == 'success') {
 
     return()
@@ -122,13 +71,13 @@ interface NewsletterFormData {
         initial = {
 
   { opacity: 0,
-  scale: 0.95
+  scale: 0.95 
 
 }}
         animate = {
 
   { opacity: 1,
-  scale: 1
+  scale: 1 
 
 }}
         className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-2xl p-8 text-center border border-green-200 dark:border-green-800"
@@ -151,10 +100,9 @@ interface NewsletterFormData {
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition = {
-
 "
   { delay: 0.1, type: "spring",
-  bounce: 0.4
+  bounce: 0.4 
 
 
 
@@ -170,13 +118,13 @@ interface NewsletterFormData {
           initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
           animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
           transition={{ delay: 0.2 }}"
@@ -189,13 +137,13 @@ interface NewsletterFormData {
           initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
           animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
           transition={{ delay: 0.3 }}"
@@ -209,13 +157,13 @@ interface NewsletterFormData {
         initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
         animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
         transition={{ delay: 0.4 }}
@@ -407,13 +355,13 @@ className: {`w-full py-4 px-6 rounded-lg font-semibold text-white transition-all
             initial = {
 
   { opacity: 0,
-  y: 10
+  y: 10 
 
 }}
             animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 
 

@@ -1,94 +1,3 @@
-<<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { SEO  } from '@/components/SEO';
-import { Brain,
-  PenTool,
-  TrendingUp,
-  Target,
-  Users,
-  BarChart3,
-========
-<<<<<<< HEAD
-import { Brain, 
-  PenTool, 
-  TrendingUp, 
-  Target, 
-  Users, 
-  BarChart3, 
->>>>>>>> main:backup-pages/src-pages/services/AIContentMarketingAutomation.tsx
-  Calendar,
-  Zap,
-  CheckCircle,
-  Star,
-  ArrowRight,
-  Globe,
-  Smartphone,
-  Monitor,
-  BookOpen,
-  MessageSquare,
-  Share2,
-  Analytics,
-  Palette,
-  Clock,
-  DollarSign,
-  Shield,
-  Headphones,
-  Rocket'
- } from 'lucide-react';
-;
-export { function };
-export default function AIContentMarketingAutomation(...args[]):  {
-
-  const features = [
-    "AI-powered content generation for multiple formats","
-    "Multi-channel content distribution automation","
-    "Intelligent audience targeting and segmentation","
-    "Real-time performance analytics and optimization","
-    "SEO-optimized content creation","
-    "Social media scheduling and automation",;"
-    "Email marketing campaign automation",;"
-    "Content calendar management",;"
-    "Brand voice consistency maintenance",;"
-    "A/B testing and optimization",;"
-    "Competitor analysis and insights",;"
-    "ROI tracking and attribution modeling";
-  ];
-
-  const benefits = [;"
-    "Increase content production by 300%",;"
-    "Improve engagement rates by 45%",;"
-    "Reduce content creation costs by 60%",;"
-    "Boost SEO rankings by 35%",;"
-    "Automate 80% of marketing workflows";
-  ];
-
-  const useCases = ["
-    "E-commerce content marketing","
-    "B2B lead generation campaigns",;"
-    "Social media management",;"
-    "Email marketing automation",;"
-    "Blog and article creation",;"
-    "Video content marketing",;"
-    "Influencer collaboration",;"
-    "Event marketing campaigns";
-  ];
-
-  const pricing = [
-    {
-"
-      name: "Starter","
-      price: "$299","
-      period: "/month","
-      description: "Perfect for small businesses and startups",
-      features[;"
-        "AI content generation (50 pieces/month)","
-        "Basic social media automation","
-        "Email campaign templates","
-        "Basic analytics dashboard","
-        "Email support"
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ],;"
       cta: "Start Free Trial",
       popular: false
@@ -128,38 +37,22 @@ export default function AIContentMarketingAutomation(...args[]):  {
       cta: "Contact Sales",;
       popular: false};
   ];
-
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-<<<<<<<< HEAD:pages.disabled/pages/services/AIContentMarketingAutomation.tsx
-      <SEO
-========
       <SEO "
-<<<<<<< HEAD
->>>>>>>> main:backup-pages/src-pages/services/AIContentMarketingAutomation.tsx
-        title="AI Content Marketing Automation Platform - Zion Tech Group"
-        description="Transform your content marketing with AI-powered automation. Generate, distribute, and optimize content across all channels automatically."
-       />
-=======
         title="AI Content Marketing Automation Platform - Zion Tech Group""        description="Transform your content marketing with AI-powered automation. Generate, distribute, and optimize content across all channels automatically."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
       {/* Hero Section */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial = {
-
   { opacity: 0,
-  y: 20
-
+  y: 20 
 }}
             animate = {
-
   { opacity: 1,
-  y: 0
-
+  y: 0 
 }}
             transition={{ duration: 0.8 }}
 "
@@ -181,36 +74,29 @@ export default function AIContentMarketingAutomation(...args[]):  {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
                 className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-200"
-
                 Start Free Trial
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
                 className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200"
-
                 Watch Demo
               </motion.button>
             </div>
           </motion.div>;
         </div>
       </section>
-
       {/* Features Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">;"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
-
   { opacity: 0,
-  y: 20
-
+  y: 20 
 }}
             whileInView = {
-
   { opacity: 1,
-  y: 0
-
+  y: 0 
 }}
             transition={{ duration: 0.8 }}"
             className="text-center mb-16"
@@ -228,22 +114,16 @@ export default function AIContentMarketingAutomation(...args[]):  {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
-  y: 20
-
+  y: 20 
 }}
                 whileInView = {
-
   { opacity: 1,
-  y: 0
-
+  y: 0 
 }}
                 transition = {
-
   { duration: 0.5,
-  delay: index * 0.1
-
+  delay: index * 0.1 
 }}"
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-purple-500 transition-all duration-300"
 "
@@ -255,22 +135,17 @@ export default function AIContentMarketingAutomation(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
-
   { opacity: 0,
-  y: 20
-
+  y: 20 
 }}
             whileInView = {
-
   { opacity: 1,
-  y: 0
-
+  y: 0 
 }}
             transition={{ duration: 0.8 }}"
             className="text-center mb-16"
@@ -288,22 +163,16 @@ export default function AIContentMarketingAutomation(...args[]):  {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
-  y: 20
-
+  y: 20 
 }}
                 whileInView = {
-
   { opacity: 1,
-  y: 0
-
+  y: 0 
 }}
                 transition = {
-
   { duration: 0.5,
-  delay: index * 0.1
-
+  delay: index * 0.1 
 }}"
                 className="text-center"
 "
@@ -315,22 +184,17 @@ export default function AIContentMarketingAutomation(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">;"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
-
   { opacity: 0,
-  y: 20
-
+  y: 20 
 }}
             whileInView = {
-
   { opacity: 1,
-  y: 0
-
+  y: 0 
 }}
             transition={{ duration: 0.8 }}"
             className="text-center mb-16"
@@ -348,30 +212,22 @@ export default function AIContentMarketingAutomation(...args[]):  {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
-  y: 20
-
+  y: 20 
 }}
                 whileInView = {
-
   { opacity: 1,
-  y: 0
-
+  y: 0 
 }}
                 transition = {
-
   { duration: 0.5,
-  delay: index * 0.1
-
+  delay: index * 0.1 
 }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-
                   plan.popular'
                     ? 'border-purple-500 ring-2 ring-purple-500/20''
                     : 'border-gray-700'`
                 }`}
-
                 {plan.popular && (;"
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
                     <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-medium">
@@ -396,17 +252,14 @@ export default function AIContentMarketingAutomation(...args[]):  {
                     </li>
                   ))}
                 </ul>
-
                 <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}`
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
-
                     plan.popular'
                       ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700''
                       : 'bg-gray-700 text-white hover:bg-gray-600'`
                   }`}
-
                   {plan.cta}
                 </motion.button>;
               </motion.div>
@@ -414,22 +267,17 @@ export default function AIContentMarketingAutomation(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;"
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
-
   { opacity: 0,
-  y: 20
-
+  y: 20 
 }}
             whileInView = {
-
   { opacity: 1,
-  y: 0
-
+  y: 0 
 }}
             transition={{ duration: 0.8 }}"
             className="text-center mb-16"
@@ -447,22 +295,16 @@ export default function AIContentMarketingAutomation(...args[]):  {
               <motion.div
                 key={index}
                 initial = {
-
   { opacity: 0,
-  y: 20
-
+  y: 20 
 }}
                 whileInView = {
-
   { opacity: 1,
-  y: 0
-
+  y: 0 
 }}
                 transition = {
-
   { duration: 0.5,
-  delay: index * 0.1
-
+  delay: index * 0.1 
 }}"
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-purple-500 transition-all duration-300"
 "
@@ -474,22 +316,17 @@ export default function AIContentMarketingAutomation(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">;"
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial = {
-
   { opacity: 0,
-  y: 20
-
+  y: 20 
 }}
             whileInView = {
-
   { opacity: 1,
-  y: 0
-
+  y: 0 
 }}
             transition={{ duration: 0.8 }}
 "
@@ -504,14 +341,12 @@ export default function AIContentMarketingAutomation(...args[]):  {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
                 className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-200"
-
                 Start Free Trial
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
                 className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200"
-
                 Schedule Demo
               </motion.button>
             </div>"
@@ -521,7 +356,6 @@ export default function AIContentMarketingAutomation(...args[]):  {
           </motion.div>
         </div>
       </section>
-
       {/* Contact Info */}"
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-800/50">;"
         <div className="max-w-4xl mx-auto text-center">"

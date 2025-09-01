@@ -359,14 +359,8 @@ export function AdvancedAnalytics({
 
         // Page visible - track session resume
         setSessionStart (Date.now () ) ;
-<<<<<<< HEAD
-      }
-    };
-
-=======
       }    };
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     document.addEventListener('visibilitychange', handleVisibilityChange);
 
     // Cleanup
@@ -397,14 +391,8 @@ export function AdvancedAnalytics({
               largestContentfulPaint: lastEntry.startTime
             }
           }) ) ;
-<<<<<<< HEAD
-        }
-      });
-
-=======
         }      });
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
       return () => lcpObserver.disconnect () } catch (error) {
@@ -416,14 +404,8 @@ export function AdvancedAnalytics({
   
     try {
       
-<<<<<<< HEAD
-      // Send to analytics endpoint'
-      await fetch('/api/analytics', {
-
-=======
       // Send to analytics endpoint'      await fetch('/api/analytics', {
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         method: 'POST',
         headers: {
 

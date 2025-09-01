@@ -1,5 +1,4 @@
 import {
-
   CheckCircle,
   Brain,
   TrendingUp,
@@ -15,30 +14,8 @@ import {
   Target,
   Users,
   Database,
-<<<<<<< HEAD
-  Lock,
-  PieChart} from 'lucide-react.ts';
-
-const AIFinTechPlatform: React.FC = (): JSX.Element => {
-
-  return()
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO"
-        title="AI FinTech Platform - Zion Tech Group"
-        description="Revolutionary AI-powered financial technology platform that provides intelligent banking, fraud detection, and financial analytics with 99.9% accuracy and real-time processing."
-      />
-
-      {/* Hero Section */}"
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
-        <div className="max-w-7xl mx-auto text-center">"
-          <div className="mb-8">"
-            <Badge variant="secondary" className="mb-4">"
-              <Brain className="w-4 h-4 mr-2"  />
-              AI-Powered FinTech
-=======
   Lock,'
   PieChart} from 'lucide-react.ts';              AI-Powered FinTech
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
             </Badge>"
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-emerald-400 via-teal-500 to-cyan-400 bg-clip-text text-transparent">
               AI FinTech Platform
@@ -67,7 +44,6 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {
           </div>
         </div>
       </section>
-
       {/* Key Benefits */}"
       <section className="py-16 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto">"
@@ -129,7 +105,6 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {
           </div>
         </div>
       </section>
-
       {/* Features */}"
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">"
         <div className="max-w-7xl mx-auto">"
@@ -246,7 +221,6 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {
           </div>
         </div>
       </section>
-
       {/* Financial Solutions */}"
       <section className="py-16 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto">"
@@ -330,7 +304,6 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {
           </div>
         </div>
       </section>
-
       {/* Pricing */}"
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">"
         <div className="max-w-7xl mx-auto">"
@@ -449,7 +422,6 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {
           </div>
         </div>
       </section>
-
       {/* Market Information */}"
       <section className="py-16 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto">"
@@ -481,7 +453,6 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {
           </div>
         </div>
       </section>
-
       {/* Contact Section */}"
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">"
         <div className="max-w-4xl mx-auto text-center">"
@@ -533,6 +504,5 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {
       </section>
     </div>
   )};
-
 export default AIFinTechPlatform;
 '"

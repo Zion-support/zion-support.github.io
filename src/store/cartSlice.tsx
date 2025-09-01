@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 :src/store/cartSlice.tsx
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
 interface CartState {
 
@@ -32,12 +29,8 @@ const initialState: CartState = {
   };
 >>>>>>> main
 
-<<<<<<< HEAD
-const cartSlice:  createSlice({;
-=======
 :src/store/cartSlice.tsx
 const cartSlice:  createSlice({;'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   name: anycart',;
 const cartSlice:  createSlice({;
   name: anycart',;

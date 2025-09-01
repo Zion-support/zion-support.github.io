@@ -1,67 +1,7 @@
-<<<<<<< HEAD
-import React, { useState } from 'react.ts';
-export default ComprehensiveNewServicesShowcase2025;
-export function ComprehensiveNewServicesShowcase2025 (...args: any[]) : any {
-
-import {
-
-import { comprehensiveNewServices2025 } from '../data / comprehensiveNewServices2025';
-import { motion } from 'framer - motion.ts';
-
-  Search,
-=======
-<<<<<<< HEAD
-import { Search,
->>>>>>> main
-  Filter,
-  Star,
-  TrendingUp,
-  Users,
-  Shield,
-  Zap,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  Globe,
-  CheckCircle,
-  DollarSign,
-  Clock,
-  Target,
-  Award,
-  Rocket,
-  Brain,
-  Atom,
-  Lock,
-  Heart,
-  GraduationCap,
-  BarChart3,
-  Satellite,
-  Cpu'
- } from 'lucide-react.ts';
-
-export function ComprehensiveNewServicesShowcase2025(...args: any[]): any {
-
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('featured');
-
-  
-  
-    .filter(service => {
-
-      return matchesSearch && matchesCategory})
-    .sort((a, b) => {
-
-      if (sortBy === 'featured') return b.featured ? 1 : -1;
-      if (sortBy === 'price-low') return parseFloat(a.pricing.monthly.replace(/[^0-9]/g,)) - parseFloat(b.pricing.monthly.replace(/[^0-9]/g,));
-      if (sortBy === 'price-high') return parseFloat(b.pricing.monthly.replace(/[^0-9]/g,)) - parseFloat(a.pricing.monthly.replace(/[^0-9]/g,));
-=======
 '
       if (sortBy === 'featured') return b.featured ? 1 : -1;'
       if (sortBy === 'price-low') return parseFloat(a.pricing.monthly.replace(/[^0-9]/g, '')) - parseFloat(b.pricing.monthly.replace(/[^0-9]/g, ''));'
       if (sortBy === 'price-high') return parseFloat(b.pricing.monthly.replace(/[^0-9]/g, '')) - parseFloat(a.pricing.monthly.replace(/[^0-9]/g, ''));
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       return 0}) ;
 
   
@@ -96,12 +36,7 @@ export function ComprehensiveNewServicesShowcase2025(...args: any[]): any {
             <div className="relative flex-1 max-w-md">"
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
               <input"
-<<<<<<< HEAD
-                type="text"
-                placeholder="Search services..."
-=======
                 type="text""                placeholder="Search services..."
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}"
                 className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"

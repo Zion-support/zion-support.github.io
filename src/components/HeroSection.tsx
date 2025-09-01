@@ -1,50 +1,3 @@
-<<<<<<< HEAD
-import {
-
-<<<<<<< HEAD
-import { motion, AnimatePresence } from 'framer - motion';
-
- * HeroSection function
- * @param {*} params - Function parameters
- * @returns {*} Function return value
- */
-function HeroSection () {
-
-=======
->>>>>>> main
-
-  ArrowRight,
-  Play,
-  Star,
-  CheckCircle,
-  ChevronLeft,
-  ChevronRight,
-  Zap,
-  Shield,
-  Globe,
-  Brain,
-  Rocket,
-  Target,
-  TrendingUp,
-  Pause} from 'lucide-react';
-
-interface HeroSlide {
-
-  id: string;
-  title: string;
-  subtitle: string;
-  description: string;
-  image: string;
-  cta: string;
-  path: string;
-  features: string[];
-  gradient: string;
-  icon: React.ComponentType < any>;
-  stats: { label: string; value: string; icon: React.ComponentType < any> }[]}
-;
-const heroSlides: HeroSlide[] = [
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   {
 
     id: 'ai-solutions',
@@ -133,7 +86,6 @@ const heroSlides: HeroSlide[] = [
   );
   // Auto-play functionality with pause on hover
   useEffect(() => {
-
     if (!isAutoPlaying) return;
 
     
@@ -143,16 +95,12 @@ const heroSlides: HeroSlide[] = [
 
   // Handle keyboard navigation
   useEffect ( () => {
-
+    
       if (e.key === 'ArrowRight') nextSlide();
       if (e.key === ' ') {
-
-=======
 '
       if (e.key === 'ArrowLeft') prevSlide();'
       if (e.key === 'ArrowRight') nextSlide();'      if (e.key === ' ') {
-
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
         e.preventDefault();
         setIsAutoPlaying(!isAutoPlaying)}
@@ -163,7 +111,7 @@ const heroSlides: HeroSlide[] = [
 
   // Handle image loading
   useEffect ( () => {
-
+    
           img.onload = resolve;
           img.onerror = resolve;
           img.src = slide.image}) }) ;

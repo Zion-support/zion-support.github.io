@@ -2,134 +2,86 @@
 
 // React stubs
 declare module 'react' {
-
-  export type FC<P = any> = props: anyP ;
-  export type ReactNode = ;
+  export type FC<P = any> = (props: P) => JSX.Element;
+  export type ReactNode = any;
   export interface ChangeEvent<T = any> { target: T }
   export interface FormEvent<T = any> {}
-  export interface KeyboardEvent<T = any> {};
-  export interface RefObject<T> { current: T };
-  export type RefCallback<T> = value: anyT void;
+  export interface KeyboardEvent<T = any> {}
+  export interface RefObject<T> { current: T | null }
+  export type RefCallback<T> = (value: T | null) => void;
   export type Ref<T> = RefObject<T> | RefCallback<T> | null;
   export type LegacyRef<T> = Ref<T>;
   export function useRef<T = any>(initial: T): { current: T };
-  const react: ;
-  export default react}
-<<<<<<< HEAD
+  export function useEffect(effect: () => void | (() => void), deps?: any[]): void;
+  const react: any;
+  export default react;
+}
 
 declare module 'react/jsx-runtime' {
-
-  export {}}
-=======
-'declare module 'react/jsx-runtime' {
-
-  export {}}
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+  export {};
+}
 
 declare namespace JSX {
-
   interface Element {
-
-}
+    type: any;
+    props: any;
+  }
   interface IntrinsicElements {
-
-<<<<<<< HEAD
-
-    [elemName: string]: ;
-
-}
-=======
-    [elemName: string]: }
->>>>>>> main
-}
-
-declare module 'react-dom' {
-
-  export function reactDom: ;
-  export default reactDom}
-<<<<<<< HEAD
-
-declare module 'react-router-dom' {
-
-=======
-'declare module 'react-router-dom' {
-
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-  export function useNavigate(): ;
-  export const Link: ;
-  export const Routes: ;
-  export const Navigate: ;
-  const rr: ;
-  export default rr}
-<<<<<<< HEAD
-
-declare module 'react-hook-form' {
-
-=======
-'declare module 'react-hook-form' {
-
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-  export function useForm<T = any>(...args: unknown[]): ;
-  const rhf: ;
-  export default rhf}
-
-declare module '@hookform/resolvers/zod' {
-
-  export function zodResolver(...args: unknown[]): }
-<<<<<<< HEAD
-
-declare module '@tanstack/react-query' {
-
-=======
-'declare module '@tanstack/react-query' {
-
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-  export function useMutation<T = any>(...args: unknown[]): ;
-  const rq: ;
-  export default rq}
-
-declare module 'jspdf' {
-
-  export class jsPDF {
-
-    constructor(...args: unknown[]);
-    [key: string]: ;
-<<<<<<< HEAD
+    [elemName: string]: any;
   }
 }
 
-=======
-  }}
-'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-declare module 'path' {
-
-  const path: ;
-  export default path}
-
-declare module 'jspdf-autotable' {
-
-  const autotable: ;
-  export default autotable}
-<<<<<<< HEAD
-
-declare module 'zod' {
-
-=======
-'declare module 'zod' {
-
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-  export type infer<T> = ;
-  const z: ;
-  export { z };
-<<<<<<< HEAD
-  export default z;
+declare module 'react-dom' {
+  export function render(element: any, container: any): void;
+  const reactDom: any;
+  export default reactDom;
 }
 
-=======
-  export default z}
+declare module 'react-router-dom' {
+  export function useNavigate(): (path: string) => void;
+  export const Link: any;
+  export const Routes: any;
+  export const Navigate: any;
+  const rr: any;
+  export default rr;
+}
 
-;
->>>>>>> main
-export default useEffect;
-export default useRef;
+declare module 'react-hook-form' {
+  export function useForm<T = any>(...args: unknown[]): any;
+  const rhf: any;
+  export default rhf;
+}
+
+declare module '@hookform/resolvers/zod' {
+  export function zodResolver(...args: unknown[]): any;
+}
+
+declare module '@tanstack/react-query' {
+  export function useMutation<T = any>(...args: unknown[]): any;
+  const rq: any;
+  export default rq;
+}
+
+declare module 'jspdf' {
+  export class jsPDF {
+    constructor(...args: unknown[]);
+    [key: string]: any;
+  }
+}
+
+declare module 'path' {
+  const path: any;
+  export default path;
+}
+
+declare module 'jspdf-autotable' {
+  const autotable: any;
+  export default autotable;
+}
+
+declare module 'zod' {
+  export type infer<T> = any;
+  const z: any;
+  export { z };
+  export default z;
+}

@@ -1,5 +1,4 @@
 import {
-
   Atom,
   Cpu,
   Zap,
@@ -21,13 +20,7 @@ import {
   Rocket,
   Microscope,
   TestTube} from 'lucide-react.ts';
-
 const QuantumComputingElite: React.FC = (): JSX.Element => {
-
-  
-  
-  
-  
   return()    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}"
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
@@ -66,7 +59,6 @@ const QuantumComputingElite: React.FC = (): JSX.Element => {
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto">
@@ -109,7 +101,6 @@ const QuantumComputingElite: React.FC = (): JSX.Element => {
           </div>
         </div>
       </section>
-
       {/* Quantum Applications Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate">"
         <div className="max-w-7xl mx-auto">
@@ -148,7 +139,6 @@ const QuantumComputingElite: React.FC = (): JSX.Element => {
           </div>
         </div>
       </section>
-
       {/* Quantum Technologies Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto">
@@ -187,7 +177,6 @@ const QuantumComputingElite: React.FC = (): JSX.Element => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate">"
         <div className="max-w-7xl mx-auto">
@@ -217,7 +206,6 @@ const QuantumComputingElite: React.FC = (): JSX.Element => {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-zion-slate-dark p-8 rounded-xl border-2 ${
-
                   plan.popular'
                     ? 'border-blue-500 shadow-2xl shadow-blue-500/25''
                     : 'border-zion-slate-light'`
@@ -255,7 +243,6 @@ const QuantumComputingElite: React.FC = (): JSX.Element => {
                     </li>
                   ))}
                 </ul>
-
                 <a"
                   href="https://ziontechgroup.com/contact"
                   className="w-full inline-flex justify-center items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
@@ -267,7 +254,6 @@ const QuantumComputingElite: React.FC = (): JSX.Element => {
           </div>
         </div>
       </section>
-
       {/* Contact Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto">
@@ -297,12 +283,7 @@ const QuantumComputingElite: React.FC = (): JSX.Element => {
                 Call Quantum Team
               </h3>
               <a"
-<<<<<<< HEAD
-                href="tel:+13024640950"
-                className="text-zion-slate-light hover:text-white transition-colors duration-300"
-=======
                 href="tel:+13024640950""                className="text-zion-slate-light hover:text-white transition-colors duration-300"
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
               >
                 +1 (302) 464-0950
               </a>
@@ -316,12 +297,7 @@ const QuantumComputingElite: React.FC = (): JSX.Element => {
                 Email Quantum Team
               </h3>
               <a"
-<<<<<<< HEAD
-                href="mailto:kleber@ziontechgroup.com"
-                className="text-zion-slate-light hover:text-white transition-colors duration-300"
-=======
                 href="mailto:kleber@ziontechgroup.com""                className="text-zion-slate-light hover:text-white transition-colors duration-300"
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
               >
                 kleber@ziontechgroup.com
               </a>
@@ -351,7 +327,6 @@ const QuantumComputingElite: React.FC = (): JSX.Element => {
           </div>
         </div>
       </section>
-
       {/* Footer */}"
       <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-zion-slate-light">"
         <div className="max-w-7xl mx-auto text-center">"
@@ -382,6 +357,5 @@ const QuantumComputingElite: React.FC = (): JSX.Element => {
       </footer>
     </div>
   )};
-
 export default QuantumComputingElite;
 '"`

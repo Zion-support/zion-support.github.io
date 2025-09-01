@@ -1,44 +1,3 @@
-<<<<<<< HEAD
-import {
-
-<<<<<<< HEAD
-import { Badge } from './ui / badge';
-import { Button } from './ui / button';
-import { Card, CardContent, CardHeader, CardTitle } from './ui / card';
-import { Progress } from './ui / progress';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui / tabs';
-=======
->>>>>>> main
-
-  User,
-  Settings,
-  Palette,
-  Eye,
-  MousePointer,
-  Smartphone,
-  Monitor,
-  Zap,
-  Heart,
-  Star,
-  MessageCircle,
-  TrendingUp,
-  Accessibility,
-  Languages,
-  ShoppingCart,
-  Activity} from 'lucide-react';
-
-interface UserPreference {
-
-  id: string;
-  name: string;
-  value: string | boolean | number;
-  type: 'boolean' | 'string' | 'number' | 'select';
-  options?: string[];
-  category: 'appearance' | 'accessibility' | 'performance' | 'language';
-  description: string}
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 interface UserActivity {
 
   id: string;
@@ -55,7 +14,6 @@ interface AccessibilityFeature {
   description: string;
   impact: 'high' | 'medium' | 'low';
 const InteractiveUserExperience: React.FC = () => {
-
   const [preferences, setPreferences] = useState<UserPreference[]>([]);
   const [userActivities, setUserActivities] = useState<UserActivity[]>([]);
   const [accessibilityFeatures, setAccessibilityFeatures] = useState<
@@ -66,7 +24,6 @@ const InteractiveUserExperience: React.FC = () => {
 
   // Initialize sample data
   useEffect ( () => {
-
     const samplePreferences: UserPreference[] = [
       {
 

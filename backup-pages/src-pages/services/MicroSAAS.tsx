@@ -1,12 +1,9 @@
-
-
       icon: Globe,;"
       title: "Cloud Deployment",;"
       description: "Scalable cloud infrastructure and deployment solutions",;"
       price: "From $15,000/month",;"
       features: ["AWS/Azure deployment", "Container orchestration", "Auto-scaling", "Monitoring"]};
   ];
-
   const benefits = [;"
     "Lower development costs and faster time to market",;"
     "Scalable architecture that grows with your business",;"
@@ -15,8 +12,6 @@
     "Flexible subscription models and pricing strategies",;"
     "Continuous updates and feature improvements";
   ];
-
-  
     {;"
       name: "Cloud",;"
       description: "AWS, Azure, GCP with containerization and orchestration",;
@@ -27,7 +22,6 @@
       title: "E-commerce",;"      description: "Online marketplace and retail management solutions",;
       icon: Package};
   ];
-
   return ("
     <div className = "min-h-screen bg-slate-900 text-white">
       {/* Hero Section */}"
@@ -56,7 +50,6 @@
           </div>
         </div>
       </section>
-
       {/* MicroSAAS Services Grid */}"
       <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto">"
@@ -92,7 +85,6 @@
           </div>
         </div>
       </section>
-
       {/* Technologies */}"
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">"
         <div className="max-w-7xl mx-auto">"
@@ -126,7 +118,6 @@
           </div>
         </div>
       </section>
-
       {/* Industries */}"
       <section className="py-16 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto">"
@@ -153,7 +144,6 @@
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}"
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">"
         <div className="max-w-7xl mx-auto">"
@@ -179,12 +169,7 @@
               <div className="text-center">"
                 <Rocket className="w-24 h-24 text-indigo-400 mx-auto mb-4" />"
                 <h3 className="text-2xl font-bold text-white mb-2">SAAS Success</h3>"
-<<<<<<< HEAD
-                <p className="text-gray-300 mb-6">
-                  We've helped numerous entrepreneurs build successful SAAS businesses
-=======
                 <p className="text-gray-300 mb-6">'                  We've helped numerous entrepreneurs build successful SAAS businesses
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   that generate millions in recurring revenue.
                 </p>"
                 <div className="text-sm text-gray-400">
@@ -197,7 +182,6 @@
           </div>
         </div>
       </section>
-
       {/* CTA Section */}"
       <section className="py-16 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-4xl mx-auto text-center">"
@@ -220,5 +204,4 @@
       </section>;
     </div>;
   )};
-
 export default MicroSAAS}}}}'"

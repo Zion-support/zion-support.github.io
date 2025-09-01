@@ -1,116 +1,20 @@
-<<<<<<< HEAD
-import {
-
-<<<<<<< HEAD
-import { motion } from 'framer - motion';
-
- * ClientSuccessStoriesSection function
- * @param {*} params - Function parameters
- * @returns {*} Function return value
- */
-function ClientSuccessStoriesSection () {
-
-=======
->>>>>>> main
-
-  Star,
-  Quote,
-  TrendingUp,
-  Users,
-  Award,
-  CheckCircle,
-  ArrowRight,
-  Heart'
-} from 'lucide-react';
-
-      metrics['8 Week Launch',MVP Ready',Scalable Architecture']};
-  ];
-
-  
-    { label: 'Average Rating', value: '4.9/5', icon: Star };
-  ];
-const successStories = [
-  {
-
-<<<<<<< HEAD
-  return (<section className = "py - 20 bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
-      <div className="max - w-7xl mx - auto px - 6">
-        <motion.div
-          className="text - center mb - 16"
-=======
-    id: 1,
-    client: "TechCorp Solutions","
-    industry: "Technology","
-    challenge: "Legacy systems causing 40% productivity loss","
-    solution: "Modernized infrastructure with AI-powered automation",
-    results: ["
-      "Increased productivity by 60%","
-      "Reduced operational costs by 35%","
-      "Improved customer satisfaction by 45%"
-    ],"
-    testimonial: "Zion Tech Group transformed our entire operation. The results exceeded our expectations.","
-    author: "Sarah Johnson","
-    position: "CTO",
-    rating: 5,"
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400"
-  },
-  {
-
-    id: 2,"
-    client: "Global Finance Ltd","
-    industry: "Financial Services","
-    challenge: "Security vulnerabilities and compliance issues","
-    solution: "Comprehensive cybersecurity and compliance platform",
-    results: ["
-      "100% compliance achievement","
-      "Zero security breaches","
-      "Reduced audit time by 70%"
-    ],"
-    testimonial: "Their security solutions are world-class. We feel completely protected now.","
-    author: "Michael Chen","
-    position: "CISO",
-    rating: 5,"
-    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400"
-  },
-  {
-
-    id: 3,"
-    client: "HealthTech Innovations","
-    industry: "Healthcare","
-    challenge: "Patient data management inefficiencies","
-    solution: "AI-powered healthcare analytics platform",
-    results: ["
-      "Improved patient outcomes by 30%","
-      "Reduced administrative overhead by 50%","
-      "Enhanced data accuracy by 95%"
-    ],;"
-    testimonial: "The AI platform revolutionized how we handle patient data and make decisions.",;"
-    author: "Dr. Emily Rodriguez",;"
-    position: "Chief Medical Officer",;
-    rating: 5,;"
-    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400"};
-];
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
 export function ClientSuccessStoriesSection() {
-
   return ("
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <div className="max-w-7xl mx-auto px-6">
         <motion.div "
           className="text-center mb-16"
->>>>>>> main
           initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
           whileInView = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
           viewport={{ once: true }}
@@ -128,19 +32,19 @@ export function ClientSuccessStoriesSection() {
           initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
           whileInView = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
           transition = {
 
   { duration: 0.6,
-  delay: 0.1
+  delay: 0.1 
 
 }}"
           className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"
@@ -172,20 +76,20 @@ export function ClientSuccessStoriesSection() {
               initial = {
 
   { opacity: 0,
-  y: 30
+  y: 30 
 
 }}
               whileInView = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
               viewport={{ once: true }}
               transition = {
 
   { duration: 0.6,
-  delay: index * 0.1
+  delay: index * 0.1 
 
 }}
             >"
@@ -206,36 +110,6 @@ export function ClientSuccessStoriesSection() {
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
-
-              <div className="p - 6">
-                <h3 className="text - xl font - bold text - white mb - 2">
-                  {story.client}
-                </h3>
-
-                <div className="mb - 4">
-                  <h4 className="text - sm font - semibold text - gray - 300 mb - 2">Challenge:</h4>
-                  <p className="text - gray - 400 text - sm">{story.challenge}</p>
-                </div>
-
-                <div className="mb - 4">
-                  <h4 className="text - sm font - semibold text - gray - 300 mb - 2">Solution:</h4>
-                  <p className="text - gray - 400 text - sm">{story.solution}</p>
-                </div>
-
-                <div className="mb - 4">
-                  <h4 className="text - sm font - semibold text - gray - 300 mb - 2">Results:</h4>
-                  <ul className="space - y-1">
-                    {story.results.map ( (result, resultIndex) => (<li key={resultIndex} className="flex items - center gap - 2 text - sm">
-                        <div className="w - 2 h - 2 bg - green - 400 rounded - full"></div>
-                        <span className="text - gray - 300">{result}</span>
-                      </li>) ) }
-                  </ul>
-                </div>
-
-                <div className="border - t border - slate - 700 pt - 4">
-                  <blockquote className="text - gray - 300 text - sm italic mb - 3">
-=======
               "
               <div className="p-6">"
                 <h3 className="text-xl font-bold text-white mb-2">
@@ -266,7 +140,6 @@ export function ClientSuccessStoriesSection() {
                 "
                 <div className="border-t border-slate-700 pt-4">"
                   <blockquote className="text-gray-300 text-sm italic mb-3">"
->>>>>>> main
                     "{story.testimonial}"
                   </blockquote>"
                   <div className="flex items-center gap-3">"
@@ -286,30 +159,25 @@ export function ClientSuccessStoriesSection() {
         </div>
 
         {/* Success Metrics */}
-<<<<<<< HEAD
-        <motion.div
-          className="mb - 16";
-=======
         <motion.div "
           className="mb-16";
->>>>>>> main
           initial = {
 
   { opacity: 0,
-  y: 30
+  y: 30 
 
 }}
           whileInView = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
           viewport={{ once: true }}
           transition = {
 
   { duration: 0.6,
-  delay: 0.4
+  delay: 0.4 
 
 }}
         >"
@@ -317,25 +185,6 @@ export function ClientSuccessStoriesSection() {
             <h3 className="text-2xl font-bold text-white text-center mb-8">
               Success by the Numbers
             </h3>
-<<<<<<< HEAD
-
-            <div className="grid grid - cols - 2 md:grid - cols - 4 gap - 8">
-              <div className="text - center">
-                <div className="text - 4xl font - bold text - blue - 400 mb - 2">98%</div>
-                <div className="text - gray - 300 text - sm">Client Satisfaction</div>
-              </div>
-              <div className="text - center">
-                <div className="text - 4xl font - bold text - green - 400 mb - 2">500+</div>
-                <div className="text - gray - 300 text - sm">Projects Delivered</div>
-              </div>
-              <div className="text - center">
-                <div className="text - 4xl font - bold text - purple - 400 mb - 2">25+</div>
-                <div className="text - gray - 300 text - sm">Industries Served</div>
-              </div>
-              <div className="text - center">
-                <div className="text - 4xl font - bold text - orange - 400 mb - 2">99.9%</div>
-                <div className="text - gray - 300 text - sm">Uptime Guarantee</div>
-=======
             "
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">"
               <div className="text-center">"
@@ -353,36 +202,30 @@ export function ClientSuccessStoriesSection() {
               <div className="text-center">"
                 <div className="text-4xl font-bold text-orange-400 mb-2">99.9%</div>"
                 <div className="text-gray-300 text-sm">Uptime Guarantee</div>
->>>>>>> main
               </div>
             </div>
           </div>
         </motion.div>
 
-<<<<<<< HEAD
-        <motion.div
-          className="text - center"
-=======
         <motion.div "
           className="text-center"
->>>>>>> main
           initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
           whileInView = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
           viewport={{ once: true }}
           transition = {
 
   { duration: 0.6,
-  delay: 0.6
+  delay: 0.6 
 
 }}
         >"

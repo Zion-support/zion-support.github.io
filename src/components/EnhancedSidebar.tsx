@@ -1,150 +1,6 @@
-<<<<<<< HEAD
-import {
-
-<<<<<<< HEAD
-import { motion, AnimatePresence } from 'framer - motion';
-=======
->>>>>>> main
-
-  Home,
-  Brain,
-  Cloud,
-  Server,
-  Rocket,
-  Users,
-  Briefcase,
-  FileText,
-  HelpCircle,
-  MessageCircle,
-  Settings,
-  BarChart3,
-  Shield,
-  Zap,
-  Globe,
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  Code,
-  ShoppingCart,
-  Target,
-  Lightbulb,
-  Award,
-  TrendingUp,
-  BookOpen,
-  Calendar,
-  MapPin,
-  Phone,
-  Mail,
-  ChevronRight,
-  ChevronDown,
-  Handshake,
-  Atom,
-  Link as LinkIcon,
-  Wifi,
-  HeartPulse,
-  DollarSign,
-  Leaf,
-  Building} from 'lucide-react';
-  User,
-  Factory,
-  Heart,
-  PenTool,
-  Eye,
-  Smartphone,
-  Truck,
-  Car,
-  City,
-  CheckCircle,
-  ArrowUpRight,
-  Play,
-  MailIcon,
-  User as UserIcon,
-  Handshake as HandshakeIcon,
-  Briefcase as BriefcaseIcon,
-  FileText as FileTextIcon,
-  HelpCircle as HelpCircleIcon,
-  MessageCircle as MessageCircleIcon,
-  Settings as SettingsIcon,
-  BarChart3 as BarChart3Icon,
-  Shield as ShieldIcon,
-  Zap as ZapIcon,
-  Globe as GlobeIcon,
-  Cpu as CpuIcon,
-  Database as DatabaseIcon,
-  Network as NetworkIcon,
-  Lock as LockIcon,
-  Code as CodeIcon,
-  ShoppingCart as ShoppingCartIcon,
-  Target as TargetIcon,
-  Lightbulb as LightbulbIcon,
-  Award as AwardIcon,
-  TrendingUp as TrendingUpIcon,
-  BookOpen as BookOpenIcon,
-  Calendar as CalendarIcon,
-  MapPin as MapPinIcon,
-  Phone as PhoneIcon,
-  Mail as MailIcon,
-  ChevronRight as ChevronRightIcon,
-  ChevronDown as ChevronDownIcon,
-  Handshake as HandshakeIcon2,
-  Atom as AtomIcon,
-  Link as LinkIcon2,
-  Wifi as WifiIcon,
-  HeartPulse as HeartPulseIcon,
-  DollarSign as DollarSignIcon,
-  Leaf as LeafIcon,
-  Building as BuildingIcon,
-  User as UserIcon2,
-  Factory as FactoryIcon,
-  Heart as HeartIcon,
-  PenTool as PenToolIcon,
-  Eye as EyeIcon,
-  Smartphone as SmartphoneIcon,
-  Truck as TruckIcon,
-  Car as CarIcon,
-  City as CityIcon,
-  CheckCircle as CheckCircleIcon,
-  ArrowUpRight as ArrowUpRightIcon,
-  Play as PlayIcon,
-  MailIcon as MailIcon2'
-} from 'lucide-react';
-
-export const EnhancedSidebar: React.FC = () => {;
-  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['Services']));
-  
-  
-    
-    if (newExpanded.has(section)) {
-
-      newExpanded.delete(section)} else {
-
-      newExpanded.add(section)}
-    setExpandedSections(newExpanded)};
-
-  
-  const navigationSections = [
-    {
-
-      title: "Main Navigation",
-      icon: Home,
-      items[;"
-        { name: "Home", href: "/", icon: Home },"
-        { name: "Solutions", href: "/solutions", icon: Target },"
-        { name: "Services", href: "/services", icon: Zap },"
-        { name: "Case Studies", href: "/case-studies", icon: FileText },"
-        { name: "Blog", href: "/blog", icon: FileText },"
-        { name: "Partners", href: "/partners", icon: Handshake },"
-        { name: "About", href: "/about", icon: Users },"
-        { name: "Contact", href: "/contact", icon: MessageCircle },"
-        { name: "Careers", href: "/careers", icon: Briefcase },"
-        { name: "Partners", href: "/partners", icon: Handshake }
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ]
     },;
     {
-
 "
       title: "Service Areas",
       icon: Zap,
@@ -162,7 +18,6 @@ export const EnhancedSidebar: React.FC = () => {;
       ]
     },;
     {
-
 "
       title: "Security & Compliance",
       icon: Shield,
@@ -205,13 +60,13 @@ export const EnhancedSidebar: React.FC = () => {;
           initial = {
 
   { opacity: 0,
-  y: -20
+  y: -20 
 
 }}
           animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
           transition={{ duration: 0.5 }}
@@ -231,19 +86,19 @@ export const EnhancedSidebar: React.FC = () => {;
           initial = {
 
   { opacity: 0,
-  y: -20
+  y: -20 
 
 }}
           animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
           transition = {
 
   { duration: 0.5,
-  delay: 0.1
+  delay: 0.1 
 
 }}
         >"
@@ -255,19 +110,19 @@ export const EnhancedSidebar: React.FC = () => {;
                 initial = {
 
   { opacity: 0,
-  x: -20
+  x: -20 
 
 }}
                 animate = {
 
   { opacity: 1,
-  x: 0
+  x: 0 
 
 }}
                 transition = {
 
   { duration: 0.3,
-  delay: index * 0.1
+  delay: index * 0.1 
 
 }}
               >
@@ -293,19 +148,19 @@ export const EnhancedSidebar: React.FC = () => {;
               initial = {
 
   { opacity: 0,
-  y: -20
+  y: -20 
 
 }}
               animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
               transition = {
 
   { duration: 0.5,
-  delay: sectionIndex * 0.1
+  delay: sectionIndex * 0.1 
 
 }}
             >
@@ -319,28 +174,11 @@ export const EnhancedSidebar: React.FC = () => {;
                     {section.title}
                   </span>
                 </div>
-<<<<<<< HEAD
-                <ChevronDown
-                  className={`w - 4 h - 4 text - slate - 400 transition - transform duration - 200 ${
-
-                    expandedSections.has (section.title) ? 'rotate - 180' : ''
-                  }`}
-                />
-=======
                 <ChevronDown `
                   className={`w-4 h-4 text-slate-400 transition-transform duration-200 ${
-
-<<<<<<< HEAD
-
-                    expandedSections.has(section.title) ? 'rotate-180' : ''`
-                  }`} 
-                 />
-=======
 '
                     expandedSections.has(section.title) ? 'rotate-180' : ''`                  }`} 
                  />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
->>>>>>> main
               </button>
 
               <AnimatePresence>
@@ -348,19 +186,19 @@ export const EnhancedSidebar: React.FC = () => {;
                     initial = {
 
   { opacity: 0,
-  height: 0
+  height: 0 
 
 }}
                     animate = {
 
   { opacity: 1,
-  height: 'auto'
+  height: 'auto' 
 
 }}
                     exit = {
 
   { opacity: 0,
-  height: 0
+  height: 0 
 
 }}
                     transition={{ duration: 0.3 }}"
@@ -371,19 +209,19 @@ export const EnhancedSidebar: React.FC = () => {;
                         initial = {
 
   { opacity: 0,
-  x: -20
+  x: -20 
 
 }}
                         animate = {
 
   { opacity: 1,
-  x: 0
+  x: 0 
 
 }}
                         transition = {
 
   { duration: 0.2,
-  delay: itemIndex * 0.05
+  delay: itemIndex * 0.05 
 
 }}
                       >"
@@ -406,19 +244,19 @@ export const EnhancedSidebar: React.FC = () => {;
           initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
           animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
           transition = {
 
   { duration: 0.5,
-  delay: 0.5
+  delay: 0.5 
 
 }}
         >"

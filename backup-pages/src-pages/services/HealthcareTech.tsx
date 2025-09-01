@@ -1,72 +1,40 @@
-
 export default function HealthcareTech(...args: []):  {
-
-  
     {;
       icon: Activity,;
       title: 'Predictive Analytics',;
       description: 'Early warning systems and preventive care insights',;
       color: 'from-indigo-500 to-purple-500'};
   ];
-
-  
     {;
       title: 'Medical Device Integration',;
       description: 'IoT integration for medical devices and wearables',;
       price: 'From $18,000',;
       features: ['Device connectivity',Data collection',Real-time monitoring',Alert systems']};
   ];
-
-<<<<<<< HEAD
-  
-    { name: 'Diagnostics', icon: Microscope, description: 'AI-powered disease detection' },;
-    { name: 'Telemedicine', icon: Activity, description: 'Remote patient consultations' },;
-    { name: 'Patient Monitoring', icon: Activity, description: 'Continuous health tracking' },;
-    { name: 'Drug Discovery', icon: Pill, description: 'AI-assisted pharmaceutical research' },;
-    { name: 'Medical Imaging', icon: Brain, description: 'Radiology and pathology analysis' },;
-    { name: 'Clinical Trials', icon: FileText, description: 'Research and trial management' };
-=======
   const applications = [;'
     { name: 'Diagnostics', icon: Microscope, description: 'AI-powered disease detection' },;'
     { name: 'Telemedicine', icon: Activity, description: 'Remote patient consultations' },;'
     { name: 'Patient Monitoring', icon: Activity, description: 'Continuous health tracking' },;'
     { name: 'Drug Discovery', icon: Pill, description: 'AI-assisted pharmaceutical research' },;'
     { name: 'Medical Imaging', icon: Brain, description: 'Radiology and pathology analysis' },;'    { name: 'Clinical Trials', icon: FileText, description: 'Research and trial management' };
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
-
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-<<<<<<<< HEAD:pages.disabled/pages/services/HealthcareTech.tsx
-      <SEO
-========
       <SEO "
-<<<<<<< HEAD
->>>>>>>> main:backup-pages/src-pages/services/HealthcareTech.tsx
-        title="Healthcare Technology Services - Zion Tech Group"
-        description="Transform healthcare delivery with cutting-edge technology solutions. From AI diagnostics to telemedicine, we help healthcare providers deliver better patient care."
-       />
-=======
         title="Healthcare Technology Services - Zion Tech Group""        description="Transform healthcare delivery with cutting-edge technology solutions. From AI diagnostics to telemedicine, we help healthcare providers deliver better patient care."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20">"
         <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 to-pink-600/20"></div>"
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial = {
-
   { opacity: 0,
-  y: 20
-
+  y: 20 
 }}
             animate = {
-
   { opacity: 1,
-  y: 0
-
+  y: 0 
 }}
             transition={{ duration: 0.6 }}"
             className="text-center max-w-4xl mx-auto"
@@ -90,36 +58,29 @@ export default function HealthcareTech(...args: []):  {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
                 className="px-8 py-4 bg-gradient-to-r from-red-500 to-pink-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-pink-600 transition-all duration-300"
-
                 Get Started
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
                 className="px-8 py-4 border border-slate-600 text-white font-semibold rounded-lg hover:border-slate-500 hover:bg-slate-800/50 transition-all duration-300"
-
                 Learn More
               </motion.button>
             </div>
           </motion.div>;
         </div>
       </section>
-
       {/* Features Section */}"
       <section className="py-20">;"
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
-
   { opacity: 0,
-  y: 20
-
+  y: 20 
 }}
             whileInView = {
-
   { opacity: 1,
-  y: 0
-
+  y: 0 
 }}
             transition={{ duration: 0.6 }}"
             className="text-center mb-16"
@@ -138,25 +99,18 @@ export default function HealthcareTech(...args: []):  {
               <motion.div
                 key={feature.title}
                 initial = {
-
   { opacity: 0,
-  y: 20
-
+  y: 20 
 }}
                 whileInView = {
-
   { opacity: 1,
-  y: 0
-
+  y: 0 
 }}
                 transition = {
-
   { duration: 0.6,
-  delay: index * 0.1
-
+  delay: index * 0.1 
 }}"
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300"
-
                 <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>"
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>"
@@ -167,22 +121,17 @@ export default function HealthcareTech(...args: []):  {
           </div>
         </div>
       </section>
-
       {/* Services & Pricing */}"
       <section className="py-20 bg-slate-800/30">;"
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
-
   { opacity: 0,
-  y: 20
-
+  y: 20 
 }}
             whileInView = {
-
   { opacity: 1,
-  y: 0
-
+  y: 0 
 }}
             transition={{ duration: 0.6 }}"
             className="text-center mb-16"
@@ -201,22 +150,16 @@ export default function HealthcareTech(...args: []):  {
               <motion.div
                 key={service.title}
                 initial = {
-
   { opacity: 0,
-  y: 20
-
+  y: 20 
 }}
                 whileInView = {
-
   { opacity: 1,
-  y: 0
-
+  y: 0 
 }}
                 transition = {
-
   { duration: 0.6,
-  delay: index * 0.1
-
+  delay: index * 0.1 
 }}"
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300"
 "
@@ -235,7 +178,6 @@ export default function HealthcareTech(...args: []):  {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}"
                   className="w-full mt-6 px-4 py-2 bg-gradient-to-r from-red-500 to-pink-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-pink-600 transition-all duration-300"
-
                   Get Quote
                 </motion.button>;
               </motion.div>
@@ -243,22 +185,17 @@ export default function HealthcareTech(...args: []):  {
           </div>
         </div>
       </section>
-
       {/* Applications */}"
       <section className="py-20">;"
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
-
   { opacity: 0,
-  y: 20
-
+  y: 20 
 }}
             whileInView = {
-
   { opacity: 1,
-  y: 0
-
+  y: 0 
 }}
             transition={{ duration: 0.6 }}"
             className="text-center mb-16"
@@ -277,22 +214,16 @@ export default function HealthcareTech(...args: []):  {
               <motion.div
                 key={app.name}
                 initial = {
-
   { opacity: 0,
-  scale: 0.8
-
+  scale: 0.8 
 }}
                 whileInView = {
-
   { opacity: 1,
-  scale: 1
-
+  scale: 1 
 }}
                 transition = {
-
   { duration: 0.6,
-  delay: index * 0.1
-
+  delay: index * 0.1 
 }}"
                 className="text-center group"
 "
@@ -306,22 +237,17 @@ export default function HealthcareTech(...args: []):  {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}"
       <section className="py-20 bg-gradient-to-r from-red-600/20 to-pink-600/20">;"
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial = {
-
   { opacity: 0,
-  y: 20
-
+  y: 20 
 }}
             whileInView = {
-
   { opacity: 1,
-  y: 0
-
+  y: 0 
 }}
             transition={{ duration: 0.6 }}
 "
@@ -337,7 +263,6 @@ export default function HealthcareTech(...args: []):  {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
                 className="px-8 py-4 bg-gradient-to-r from-red-500 to-pink-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-pink-600 transition-all duration-300"
-
                 Schedule Consultation
               </motion.button>
               <motion.button

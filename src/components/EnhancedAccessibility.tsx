@@ -1,46 +1,9 @@
-<<<<<<< HEAD
-import {
-
-<<<<<<< HEAD
-import {
-
-import { motion, AnimatePresence } from 'framer - motion';
-import { motion, AnimatePresence } from 'framer - motion';
-=======
->>>>>>> main
-
-  Volume2,
-  VolumeX,
-  Eye,
-  EyeOff,
-  Keyboard,
-  MousePointer,
-  Accessibility,
-  Settings,
-<<<<<<< HEAD
-  X
- } from 'lucide - react';
-  Eye,
-  EyeOff,
-  Volume2,
-  VolumeX,
-  ZoomIn,
-  ZoomOut,
-  Sun,
-=======
-  X'
- } from 'lucide-react';
-
-  Eye, 
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   EyeOff, 
   Volume2, 
   VolumeX, 
   ZoomIn, 
   ZoomOut, 
   Sun, 
->>>>>>> main
   Moon,
   Accessibility,
   Keyboard,
@@ -61,7 +24,6 @@ interface AccessibilitySettings {
 }
 
 interface EnhancedAccessibilityProps {
-
   // Add your props here
 
 ;  enabled?: boolean;
@@ -79,7 +41,6 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   colorBlindness: 'normal' | 'protanopia' | 'deuteranopia' | 'tritanopia';
   fontSize: 'small' | 'medium' | 'large' | 'xlarge'}
 export const EnhancedAccessibility: React.FC = () => {
-
   const [isOpen, setIsOpen] = useState(false);
   const [settings, setSettings] = useState<AccessibilitySettings>({
 
@@ -108,7 +69,7 @@ export const EnhancedAccessibility: React.FC = () => {
 
   // Apply accessibility settings
   useEffect ( () => {
-
+    
     // High contrast
     if (settings.highContrast) {
 
@@ -122,13 +83,7 @@ export const EnhancedAccessibility: React.FC = () => {
     if (settings.reducedMotion) {
 
       root.style.setProperty('--reduced-motion',reduce')} else {
-
-<<<<<<< HEAD
-
-      root.style.removeProperty('--reduced-motion');
-=======
 '      root.style.removeProperty('--reduced-motion');
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     // Focus indicator
     if (settings.focusIndicator) {
@@ -158,7 +113,6 @@ export const EnhancedAccessibility: React.FC = () => {
     localStorage.setItem('accessibility-settings', JSON.stringify(settings))}, [settings]);
 
   useEffect(() => {
-
     // Load saved settings'
     const saved = localStorage.getItem('accessibility-settings');    if (saved) {
 
@@ -169,29 +123,20 @@ export const EnhancedAccessibility: React.FC = () => {
       [key]: !prev[key]}) ) };
 
   // Screen reader announcements'
-<<<<<<< HEAD
-  
-    announcement.setAttribute('aria-live',polite');
-    announcement.setAttribute('aria-atomic',true');
-    announcement.className = 'sr-only';
-=======
   const announcement = document.createElement('div');'
     announcement.setAttribute('aria-live', 'polite');'
     announcement.setAttribute('aria-atomic', 'true');'    announcement.className = 'sr-only';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     announcement.textContent = message;
 
     document.body.appendChild (announcement) ;
 
     // Remove after announcement
     setTimeout ( () => {
-
       document.body.removeChild (announcement) }, 1000) ;
 
     setAnnouncements (prev => [...prev, message]) }, []) ;
   // Enhanced keyboard navigation
   useEffect ( () => {
-
     if (!settings.keyboardNavigation) return;
 
     
@@ -210,14 +155,8 @@ export const EnhancedAccessibility: React.FC = () => {
 
             target.style.outline = '';
             target.style.outlineOffset = '';
-<<<<<<< HEAD
-          }, 2000) ;
-          break;
-
-=======
           }, 2000) ;          break;
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         case 'Enter':'
         case ' ':'
           if (target.tagName = == 'BUTTON' || target.getAttribute('role') === 'button') {;
@@ -236,7 +175,6 @@ modals.forEach(modal:  > {;
 
   // Keyboard navigation support
   useEffect ( () => {
-
     if (!settings.keyboardNavigation) return;
 
     
@@ -279,24 +217,14 @@ modals.forEach(modal:  > {;
 
   // Skip to main content link
   useEffect(() => {
-
-<<<<<<< HEAD
-
-    
-    skipLink.href = '#main-content';
-    skipLink.textContent = 'Skip to main content';
-    skipLink.className = 'skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
-=======
 '
     const skipLink = document.createElement('a');'
     skipLink.href = '#main-content';'
     skipLink.textContent = 'Skip to main content';'    skipLink.className = 'skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     document.body.insertBefore (skipLink, document.body.firstChild) ;
 
     return : unknown {
-
       if (skipLink.parentNode) {
 
         skipLink.parentNode.removeChild(skipLink)}}, []) ;
@@ -308,7 +236,6 @@ modals.forEach(modal:  > {;
       icon: Contrast,
       label: 'Toggle High Contrast',
       action: : unknown {
-
         const newSettings = {
 
   ...settings,;  ;
@@ -325,7 +252,6 @@ modals.forEach(modal:  > {;
       icon: Type,
       label: 'Toggle Large Text',
       action: : unknown {
-
         const newSettings = {
 
   ...settings,;  ;
@@ -342,7 +268,7 @@ modals.forEach(modal:  > {;
       icon: ZoomIn,
       label: 'Increase Zoom',
       action: () => {
-
+        
         const newZoom = Math.min(currentZoom + 0.1, 2.0);`
         document.documentElement.style.fontSize = `${newZoom * 16}px`;`
         announce(`Zoom increased to ${Math.round(newZoom * 100)}%`)},      active: false // Zoom actions are not toggleable, so they are not active
@@ -352,7 +278,7 @@ modals.forEach(modal:  > {;
       icon: ZoomOut,
       label: 'Decrease Zoom',
       action: () => {
-
+        
         const newZoom = Math.max(currentZoom - 0.1, 0.5);`
         document.documentElement.style.fontSize = `${newZoom * 16}px`;`
         announce(`Zoom decreased to ${Math.round(newZoom * 100)}%`)},      active: false // Zoom actions are not toggleable, so they are not active
@@ -374,48 +300,26 @@ modals.forEach(modal:  > {;
       announcement.setAttribute('aria-live',polite');
       announcement.setAttribute('aria-atomic',true');
       announcement.className = 'sr-only';
-=======
 '
       const announcement = document.createElement('div');'
       announcement.setAttribute('aria-live', 'polite');'
       announcement.setAttribute('aria-atomic', 'true');'      announcement.className = 'sr-only';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       announcement.textContent = message;
       document.body.appendChild (announcement) ;
-
+      
       setTimeout ( () => {
-
         document.body.removeChild (announcement) }, 1000) }
   };
 
   
     setSettings (prev => ({ ...prev, [key]: newValue }) ) ;
-
+    
     // Announce changes to screen readers
-<<<<<<< HEAD
-    const settingNames = {
-
-      highContrast: 'High contrast',
-      largeText: 'Large text',
-      reducedMotion: 'Reduced motion',
-      screenReader: 'Screen reader',
-      keyboardNavigation: 'Keyboard navigation',
-      focusIndicator: 'Focus indicator',
-      colorBlindness: 'Color blindness',
-      fontSize: 'Font size'
-    };
-
-    announceToScreenReader (`${settingNames[key]} ${newValue ? 'enabled' : 'disabled'}`) ;
-  };
-
-  return (<>
-=======
     
     '`
     announceToScreenReader(`${settingNames[key]} ${newValue ? 'enabled' : 'disabled'}`)};
   return()
     <>
->>>>>>> main
       {/* Accessibility Toggle Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}"
@@ -456,7 +360,7 @@ modals.forEach(modal:  > {;
                         onClick = {
 
   () => {
-
+                          
   ;
   ;
   ;
@@ -504,15 +408,9 @@ className: {`inline-block h-4 w-4 transform rounded-full bg-white transition-tra
                 <h3 className="font-semibold text-zion-cyan flex items-center">"
                   <Eye className="w-4 h-4 mr-2"  />                  Visual
                 </h3>
-<<<<<<< HEAD
-
-                <label className="flex items - center space - x-3 cursor - pointer">
-                  <input
-=======
                 "
                 <label className="flex items-center space-x-3 cursor-pointer">
                   <input"
->>>>>>> main
                     type="checkbox"
                     checked={settings.highContrast}
                     onChange={() => toggleSetting('highContrast')}"
@@ -565,15 +463,9 @@ className: {`inline-block h-4 w-4 transform rounded-full bg-white transition-tra
                 <h3 className="font-semibold text-zion-cyan flex items-center">"
                   <MousePointer className="w-4 h-4 mr-2"  />                  Motion
                 </h3>
-<<<<<<< HEAD
-
-                <label className="flex items - center space - x-3 cursor - pointer">
-                  <input
-=======
                 "
                 <label className="flex items-center space-x-3 cursor-pointer">
                   <input"
->>>>>>> main
                     type="checkbox"
                     checked={settings.reducedMotion}
                     onChange={() => toggleSetting('reducedMotion')}"
@@ -588,15 +480,9 @@ className: {`inline-block h-4 w-4 transform rounded-full bg-white transition-tra
                 <h3 className="font-semibold text-zion-cyan flex items-center">"
                   <Keyboard className="w-4 h-4 mr-2"  />                  Navigation
                 </h3>
-<<<<<<< HEAD
-
-                <label className="flex items - center space - x-3 cursor - pointer">
-                  <input
-=======
                 "
                 <label className="flex items-center space-x-3 cursor-pointer">
                   <input"
->>>>>>> main
                     type="checkbox"
                     checked={settings.keyboardNavigation}
                     onChange={() => toggleSetting('keyboardNavigation')}"
@@ -622,15 +508,9 @@ className: {`inline-block h-4 w-4 transform rounded-full bg-white transition-tra
                   <Volume2 className="w-4 h-4 mr-2" />
                   Screen Reader
                 </h3>
-<<<<<<< HEAD
-
-                <label className="flex items - center space - x-3 cursor - pointer">
-                  <input
-=======
                 "
                 <label className="flex items-center space-x-3 cursor-pointer">
                   <input"
->>>>>>> main
                     type="checkbox"
                     checked={settings.screenReader}
                     onChange={() => toggleSetting('screenReader')}"
@@ -725,6 +605,7 @@ const accessibilityStyles = `
 // Inject styles'
 if (typeof document !== 'undefined') {
 
+  
   style.textContent = accessibilityStyles;
   document.head.appendChild (style) }
 export default EnhancedAccessibility;

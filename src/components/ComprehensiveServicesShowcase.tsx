@@ -1,43 +1,3 @@
-<<<<<<< HEAD
-import {
-
-<<<<<<< HEAD
-import { EMERGING_TECH_SERVICES_2025 } from "../data / emergingTechServices2025";
-import { EXPANDED_INNOVATIVE_SERVICES_2025 } from "../data / expandedInnovativeServices2025";
-import { motion } from 'framer - motion';
-=======
->>>>>>> main
-
-  Brain,
-  Cpu,
-  Cloud,
-  Shield,
-  Rocket,
-  Zap,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Users,
-  Target,
-  Award,
-  Globe,
-  Settings,
-  Database,
-  Network,
-  Lock,
-  Eye,
-  TrendingUp,
-  Clock,
-  DollarSign,
-  Phone,
-  Mail,
-  ExternalLink,
-  Search'
-} from 'lucide-react';
-interface Service {
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   id: string;
   title: string;
   description: string;
@@ -69,16 +29,9 @@ contactInfo: {
     apiEndpoints: number;
     uptime: string;
     security: string[]}}
-<<<<<<< HEAD
-const ComprehensiveServicesShowcase: React.FC = () => {;
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<string>('all');
-  const [searchTerm, setSearchTerm] = useState<string>('');
-=======
 const ComprehensiveServicesShowcase: React.FC = () => {;'
   const [selectedCategory, setSelectedCategory] = useState<string>('all');'
   const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<string>('all');'  const [searchTerm, setSearchTerm] = useState<string>('');
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   // Combine all services
   const allServices: Service[] = [
     ...EXPANDED_INNOVATIVE_SERVICES_2025,
@@ -88,14 +41,8 @@ const ComprehensiveServicesShowcase: React.FC = () => {;'
   
     return cats}, [allServices]) ;
   // Get unique innovation levels
-<<<<<<< HEAD
-  
-    
-    return levels}, [allServices]);
-=======
   const innovationLevels = useMemo(() => {;'
     const levels = ['all', ...Array.from(new Set(allServices.map(service => service.innovationLevel)))];    return levels}, [allServices]);
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   // Filter services
   
     return allServices.filter(service => {;
@@ -140,12 +87,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;'
         return <Rocket className="h-6 w-6"  />;
       default:"
         return <Star className = "h-6 w-6"  />};
-<<<<<<< HEAD
-  };
-        return 'bg-gradient-to-r from-gray-600 to-slate-600'}
-=======
   };'        return 'bg-gradient-to-r from-gray-600 to-slate-600'}
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   };
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100">
@@ -192,16 +134,9 @@ const ComprehensiveServicesShowcase: React.FC = () => {;'
             <div className="flex items-center gap-2">"
               <Globe className="h-5 w-5 text-zion-cyan"  />
               <a"
-<<<<<<< HEAD
-                href="https://ziontechgroup.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-medium text-zion-blue hover:text-zion-cyan transition-colors"
-=======
                 href="https://ziontechgroup.com""
                 target="_blank""
                 rel="noopener noreferrer""                className="font-medium text-zion-blue hover:text-zion-cyan transition-colors"
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
                 ziontechgroup.com
               </a>
@@ -269,19 +204,19 @@ const ComprehensiveServicesShowcase: React.FC = () => {;'
                 initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
                 animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
                 transition = {
 
   { duration: 0.5,
-  delay: index * 0.1
+  delay: index * 0.1 
 
 
 

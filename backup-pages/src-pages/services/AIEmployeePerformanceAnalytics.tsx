@@ -1,126 +1,3 @@
-<<<<<<<< HEAD:pages.disabled/pages/services/AIEmployeePerformanceAnalytics.tsx
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { SEO  } from '../../components/SEO';
-import { Users,
-  TrendingUp,
-  BarChart3,
-  Zap,
-  Globe,
-  Lock,
-========
-<<<<<<< HEAD
-import { Users, 
-  TrendingUp, 
-  BarChart3, 
-  Zap, 
-  Globe, 
-  Lock, 
->>>>>>>> main:backup-pages/src-pages/services/AIEmployeePerformanceAnalytics.tsx
-  Eye,
-  Star,
-  Cpu,
-  Database,
-  Search,
-  Filter,
-  Download,
-  Share2,
-  Play,
-  ArrowRight,
-  CheckCircle,
-  AlertTriangle,
-  FileText,
-  Clock,
-  Award,
-  Brain,
-  Target,
-  PieChart,
-  Activity,
-  UserCheck,
-  Shield,
-  Settings,
-  DollarSign,
-  AlertCircle,
-  Calendar,
-  MapPin,
-  GraduationCap,
-  Heart,
-  TrendingDown,
-  Lightbulb'
- } from 'lucide-react.ts';
-
-export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
-
-  
-    },;
-    {;
-      icon: Activity,;"
-      title: "Engagement & Wellness Monitoring",;"
-      description: "Track employee engagement, burnout indicators, and wellness metrics to support employee well-being."};
-  ]},;
-    {;
-      icon: Clock,;"
-      title: "Time Savings",;"
-      description: "Automate performance reviews and analytics, saving HR teams hours of manual work each month."};
-  ];
-
-  const pricingPlans = [
-    {
-"
-      name: "Starter","
-      price: "$399","
-      period: "/month","
-      description: "Perfect for small teams and startups beginning their performance analytics journey",
-      features: ["
-        "Up to 50 employees","
-        "Basic performance scoring","
-        "Email support","
-        "Standard integrations","
-        "Basic reporting","
-        "Goal tracking","
-        "Mobile app access"
-      ],"
-      cta: "Start Free Trial",
-      popular: false
-    },
-    {
-"
-      name: "Professional","
-      price: "$999","
-      period: "/month","
-      description: "Ideal for growing companies with advanced performance management needs",
-      features: ["
-        "Up to 500 employees","
-        "Advanced AI analytics","
-        "Priority support","
-        "Custom integrations","
-        "Advanced reporting & dashboards","
-        "Predictive insights","
-        "API access","
-        "360-degree feedback","
-        "Engagement monitoring"
-      ],"
-      cta: "Start Free Trial",
-      popular: true
-    },
-    {
-"
-      name: "Enterprise","
-      price: "$2,999","
-      period: "/month","
-      description: "For large organizations requiring enterprise-grade performance analytics",
-      features: ["
-        "Unlimited employees","
-        "Custom AI models","
-        "Dedicated account manager","
-        "White-label solutions","
-        "Advanced security features","
-        "Custom reporting","
-        "On-premise deployment",;"
-        "SLA guarantees",;"
-        "24/7 support";
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ],;"
       cta: "Contact Sales",;
       popular: false};
@@ -129,7 +6,6 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
       industry: "Finance",;"      description: "Track financial advisor performance, client satisfaction, and investment portfolio management",;
       icon: DollarSign};
   ];
-
   const integrations = [
     {
 "
@@ -164,7 +40,6 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
       label: "ROI",;"
       description: "Return on investment for performance analytics"};
   ];
-
   const performanceIndicators = [
     {
 "
@@ -183,44 +58,24 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
     {;"
       category: "Growth Metrics",;"
       indicators: ["Skill Development", "Learning Progress", "Career Advancement", "Certifications"]};  ];
-
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
-<<<<<<< HEAD
-        title="AI Employee Performance Analytics - Zion Tech Group"
-        description="Transform employee performance management with AI-powered analytics. Track productivity, predict retention, and optimize team performance."
-      />
-<<<<<<<< HEAD:pages.disabled/pages/services/AIEmployeePerformanceAnalytics.tsx
-
-      {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 lg:py-32">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-pink-900/20"></div>
-
-========
-=======
         title="AI Employee Performance Analytics - Zion Tech Group""        description="Transform employee performance management with AI-powered analytics. Track productivity, predict retention, and optimize team performance."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 lg:py-32">"
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-pink-900/20"></div>
         "
->>>>>>>> main:backup-pages/src-pages/services/AIEmployeePerformanceAnalytics.tsx
         <div className="relative max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
-
   { opacity: 0,
-  y: 20
-
+  y: 20 
 }}
             animate = {
-
   { opacity: 1,
-  y: 0
-
+  y: 0 
 }}
             transition={{ duration: 0.8 }}
           >"
@@ -234,7 +89,7 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
               </span>
             </h1>"
             <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-              Transform employee performance management with AI-powered analytics.
+              Transform employee performance management with AI-powered analytics. 
               Track productivity, predict retention, and optimize team performance with data-driven insights.
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
@@ -249,7 +104,6 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
           </motion.div>
         </div>
       </section>
-
       {/* Key Metrics Section */}"
       <section className="py-20">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
@@ -258,22 +112,16 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
               <motion.div
                 key={metric.metric}
                 initial = {
-
   { opacity: 0,
-  y: 20
-
+  y: 20 
 }}
                 whileInView = {
-
   { opacity: 1,
-  y: 0
-
+  y: 0 
 }}
                 transition = {
-
   { duration: 0.5,
-  delay: index * 0.1
-
+  delay: index * 0.1 
 }}
                 viewport={{ once: true }}"
                 className="text-center"
@@ -292,22 +140,17 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
           </div>
         </div>
       </section>
-
       {/* Features Section */}"
       <section className="py-20 bg-slate-800/50">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
-
   { opacity: 0,
-  y: 20
-
+  y: 20 
 }}
             whileInView = {
-
   { opacity: 1,
-  y: 0
-
+  y: 0 
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"
@@ -326,22 +169,16 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
               <motion.div
                 key={feature.title}
                 initial = {
-
   { opacity: 0,
-  y: 20
-
+  y: 20 
 }}
                 whileInView = {
-
   { opacity: 1,
-  y: 0
-
+  y: 0 
 }}
                 transition = {
-
   { duration: 0.5,
-  delay: index * 0.1
-
+  delay: index * 0.1 
 }}
                 viewport={{ once: true }}"
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50"
@@ -352,7 +189,6 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                 </div>
-
                 {/* Content */}
                 <div>"
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors duration-300">
@@ -362,7 +198,6 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
                     {feature.description}
                   </p>
                 </div>
-
                 {/* Hover Effect */}"
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </motion.div>
@@ -370,22 +205,17 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
           </div>
         </div>
       </section>
-
       {/* Performance Indicators Section */}"
       <section className="py-20">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
-
   { opacity: 0,
-  y: 20
-
+  y: 20 
 }}
             whileInView = {
-
   { opacity: 1,
-  y: 0
-
+  y: 0 
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"
@@ -404,22 +234,16 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
               <motion.div
                 key={category.category}
                 initial = {
-
   { opacity: 0,
-  y: 20
-
+  y: 20 
 }}
                 whileInView = {
-
   { opacity: 1,
-  y: 0
-
+  y: 0 
 }}
                 transition = {
-
   { duration: 0.5,
-  delay: index * 0.1
-
+  delay: index * 0.1 
 }}
                 viewport={{ once: true }}"
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50"
@@ -439,22 +263,17 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}"
       <section className="py-20 bg-slate-800/50">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
-
   { opacity: 0,
-  y: 20
-
+  y: 20 
 }}
             whileInView = {
-
   { opacity: 1,
-  y: 0
-
+  y: 0 
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"
@@ -473,22 +292,16 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
               <motion.div
                 key={benefit.title}
                 initial = {
-
   { opacity: 0,
-  y: 20
-
+  y: 20 
 }}
                 whileInView = {
-
   { opacity: 1,
-  y: 0
-
+  y: 0 
 }}
                 transition = {
-
   { duration: 0.5,
-  delay: index * 0.1
-
+  delay: index * 0.1 
 }}
                 viewport={{ once: true }}"
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50"
@@ -499,7 +312,6 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
                     <benefit.icon className="w-8 h-8 text-white" />
                   </div>
                 </div>
-
                 {/* Content */}
                 <div>"
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors duration-300">
@@ -509,7 +321,6 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
                     {benefit.description}
                   </p>
                 </div>
-
                 {/* Hover Effect */}"
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </motion.div>
@@ -517,22 +328,17 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}"
       <section className="py-20">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
-
   { opacity: 0,
-  y: 20
-
+  y: 20 
 }}
             whileInView = {
-
   { opacity: 1,
-  y: 0
-
+  y: 0 
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"
@@ -551,35 +357,22 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
               <motion.div
                 key={plan.name}
                 initial = {
-
   { opacity: 0,
-  y: 20
-
+  y: 20 
 }}
                 whileInView = {
-
   { opacity: 1,
-  y: 0
-
+  y: 0 
 }}
                 transition = {
-
   { duration: 0.5,
-  delay: index * 0.1
-
+  delay: index * 0.1 
 }}
                 viewport={{ once: true }}
                 className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${
-<<<<<<<< HEAD:pages.disabled/pages/services/AIEmployeePerformanceAnalytics.tsx
-                  plan.popular
-                    ? 'border-purple-500/50 bg-gradient-to-br from-purple-500/10 to-pink-500/10'
-                    : 'border-white/10 hover:border-purple-500/50'
-========
-
                   plan.popular '
                     ? 'border-purple-500/50 bg-gradient-to-br from-purple-500/10 to-pink-500/10' '
                     : 'border-white/10 hover:border-purple-500/50'`
->>>>>>>> main:backup-pages/src-pages/services/AIEmployeePerformanceAnalytics.tsx
                 }`}
               >
                 {plan.popular && ("
@@ -608,7 +401,6 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
                 </ul>
 `
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-
                   plan.popular'
                     ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700''
                     : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'`
@@ -620,22 +412,17 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}"
       <section className="py-20 bg-slate-800/50">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
-
   { opacity: 0,
-  y: 20
-
+  y: 20 
 }}
             whileInView = {
-
   { opacity: 1,
-  y: 0
-
+  y: 0 
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"
@@ -654,22 +441,16 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
               <motion.div
                 key={useCase.industry}
                 initial = {
-
   { opacity: 0,
-  y: 20
-
+  y: 20 
 }}
                 whileInView = {
-
   { opacity: 1,
-  y: 0
-
+  y: 0 
 }}
                 transition = {
-
   { duration: 0.5,
-  delay: index * 0.1
-
+  delay: index * 0.1 
 }}
                 viewport={{ once: true }}"
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50"
@@ -680,7 +461,6 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
                     <useCase.icon className="w-8 h-8 text-white" />
                   </div>
                 </div>
-
                 {/* Content */}
                 <div>"
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors duration-300">
@@ -690,7 +470,6 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
                     {useCase.description}
                   </p>
                 </div>
-
                 {/* Hover Effect */}"
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </motion.div>
@@ -698,22 +477,17 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
           </div>
         </div>
       </section>
-
       {/* Integrations Section */}"
       <section className="py-20">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
-
   { opacity: 0,
-  y: 20
-
+  y: 20 
 }}
             whileInView = {
-
   { opacity: 1,
-  y: 0
-
+  y: 0 
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"
@@ -732,22 +506,16 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
               <motion.div
                 key={integration.name}
                 initial = {
-
   { opacity: 0,
-  y: 20
-
+  y: 20 
 }}
                 whileInView = {
-
   { opacity: 1,
-  y: 0
-
+  y: 0 
 }}
                 transition = {
-
   { duration: 0.5,
-  delay: index * 0.1
-
+  delay: index * 0.1 
 }}
                 viewport={{ once: true }}"
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50"
@@ -770,22 +538,17 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}"
       <section className="py-20 bg-gradient-to-r from-purple-900/20 to-pink-900/20">"
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
-
   { opacity: 0,
-  y: 20
-
+  y: 20 
 }}
             whileInView = {
-
   { opacity: 1,
-  y: 0
-
+  y: 0 
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -794,7 +557,7 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {
               Ready to Transform Employee Performance?
             </h2>"
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join thousands of organizations already using AI-powered performance analytics
+              Join thousands of organizations already using AI-powered performance analytics 
               to optimize team performance and drive business success.
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"

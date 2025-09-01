@@ -1,46 +1,3 @@
-<<<<<<< HEAD
-import { Link } from 'react - router - dom';
-import React, { useState } from 'react';
-export /**
-export default FloatingCTA;
-import { motion, AnimatePresence } from 'framer - motion';
-
- * FloatingCTA function
- * @param {*} params - Function parameters
- * @returns {*} Function return value
- */
-function FloatingCTA () {
-
-} from 'lucide - react';
-=======
-<<<<<<< HEAD
-} from 'lucide-react';
->>>>>>> main
-
-const FloatingCTA: React.FC = () : JSX.Element => {;
-  const [isOpen, setIsOpen] = useState (false) ;
-  const [isVisible, setIsVisible] = useState (false) ;
-
-  useEffect ( () => {
-
-    // Show CTA after 5 seconds
-    
-      setIsVisible (true) }, 5000) ;
-
-    return () => clearTimeout (timer) }, []) };
-  ];
-
-  const quickServices = ["
-    { name: "AI Solutions", icon: Brain, link: "/ai-services" },"
-    { name: "Cybersecurity", icon: Shield, link: "/cybersecurity" },"
-    { name: "Cloud Services", icon: Cloud, link: "/cloud-solutions" },;"
-    { name: "Digital Transformation", icon: Zap, link: "/digital-transformation" };
-  ];
-
-  if (!isVisible) return null;
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   const [isExpanded, setIsExpanded] = useState (false) ;
 
   return()
@@ -53,7 +10,7 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
         transition = {
 
   { duration: 0.3,
-  delay: 2
+  delay: 2 
 
 }}
       >"
@@ -76,19 +33,19 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
                 initial = {
 
   { opacity: 0, scale: 0.8,
-  y: 10
+  y: 10 
 
 }}
                 animate = {
 
   { opacity: 1, scale: 1,
-  y: 0
+  y: 0 
 
 }}
                 exit = {
 
   { opacity: 0, scale: 0.8,
-  y: 10
+  y: 10 
 
 }}
                 transition={{ duration: 0.2 }}
@@ -105,13 +62,8 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
                       <div className="text-sm text-gray-400">Get in touch</div>
                     </div>
                   </Link>
-<<<<<<< HEAD
-
-                  <Link
-=======
                   
                   <Link"
->>>>>>> main
                     to="/services"
                     className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-700 transition-colors duration-200 text-white"
                     onClick={() => setIsExpanded(false)}
@@ -122,13 +74,8 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
                       <div className="text-sm text-gray-400">Explore solutions</div>
                     </div>
                   </Link>
-<<<<<<< HEAD
-
-                  <Link
-=======
                   
                   <Link"
->>>>>>> main
                     to="/quote"
                     className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-700 transition-colors duration-200 text-white"
                     onClick={() => setIsExpanded(false)}
@@ -139,16 +86,6 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
                       <div className="text-sm text-gray-400">Request pricing</div>
                     </div>
                   </Link>
-<<<<<<< HEAD
-
-                  <div role="button" className="border - t border - slate - 600 pt - 3">
-                    <div role="button" className="text - center text - sm text - gray - 400 mb - 2">
-                      Available 24 / 7
-                    </div>
-                    <div role="button" className="flex items - center justify - center gap - 2">
-                      <div role="button" className="w - 2 h - 2 bg - green - 400 rounded - full animate - pulse"></div>
-                      <span className="text - green - 400 text - sm font - semibold">Online Now</span>
-=======
                   "
                   <div className="border-t border-slate-600 pt-3">"
                     <div className="text-center text-sm text-gray-400 mb-2">
@@ -157,7 +94,6 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
                     <div className="flex items-center justify-center gap-2">"
                       <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>"
                       <span className="text-green-400 text-sm font-semibold">Online Now</span>
->>>>>>> main
                     </div>
                   </div>
                 </div>

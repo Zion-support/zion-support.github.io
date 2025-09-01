@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-      description: "Get exclusive access to tech trends and analysis";
-    },;
-=======
-      description: "Get exclusive access to tech trends and analysis"},;
->>>>>>> main
-    {;
-      icon: Zap,;"
-      title: "Early Access",;"
-      description: "Be the first to know about beta programs and launches"};
-  ];
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   if (isSubscribed) {
 
@@ -23,13 +8,13 @@
             initial = {
 
   { opacity: 0,
-  scale: 0.8
+  scale: 0.8 
 
 }}
             animate = {
 
   { opacity: 1,
-  scale: 1
+  scale: 1 
 
 }}
             transition={{ duration: 0.5 }}"
@@ -39,12 +24,7 @@
               <CheckCircle className="w-10 h-10 text-white"  />
             </div>"
             <h2 className="text-3xl font-bold text-white mb-4">Welcome to the Zion Tech Group Community!</h2>"
-<<<<<<< HEAD
-            <p className="text-gray-300 text-lg mb-6">
-              You're now subscribed to our newsletter. We'll keep you updated with the latest technology insights,
-=======
             <p className="text-gray-300 text-lg mb-6">'              You're now subscribed to our newsletter. We'll keep you updated with the latest technology insights,
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
               service announcements, and exclusive content.
             </p>
             <button
@@ -65,13 +45,13 @@
             initial = {
 
   { opacity: 0,
-  x: -30
+  x: -30 
 
 }}
             whileInView = {
 
   { opacity: 1,
-  x: 0
+  x: 0 
 
 }}
             transition={{ duration: 0.6 }}
@@ -91,19 +71,19 @@
                   initial = {
 
   { opacity: 0,
-  x: -20
+  x: -20 
 
 }}
                   whileInView = {
 
   { opacity: 1,
-  x: 0
+  x: 0 
 
 }}
                   transition = {
 
   { duration: 0.5,
-  delay: index * 0.1
+  delay: index * 0.1 
 
 
 
@@ -133,19 +113,19 @@
             initial = {
 
   { opacity: 0,
-  x: 30
+  x: 30 
 
 }}
             whileInView = {
 
   { opacity: 1,
-  x: 0
+  x: 0 
 
 }}
             transition = {
 
   { duration: 0.6,
-  delay: 0.2
+  delay: 0.2 
 
 }}
           >"

@@ -1,147 +1,22 @@
-<<<<<<< HEAD
-import {
-
-<<<<<<< HEAD
-import { motion } from 'framer - motion';
-
- * SecurityComplianceSection function
- * @param {*} params - Function parameters
- * @returns {*} Function return value
- */
-function SecurityComplianceSection () {
-
-=======
->>>>>>> main
-
-  Shield,
-  Lock,
-  CheckCircle,
-  AlertTriangle,
-  Users,
-  Award,
-  FileText,
-  Globe,
-  Server,
-  Eye'
-} from 'lucide-react';
-
-      benefits['Firewall protection',IDS/IPS systems',DDoS mitigation',VPN solutions']};
-  ];
-const securityFeatures = [
-  {
-
-    title: "SOC 2 Type II Compliance","
-    description: "Annual third-party audits ensuring data security, availability, and confidentiality","
-    icon: "🔒","
-    status: "Certified","
-    color: "from-green-500 to-emerald-600"
-  },
-  {
-
-"
-    title: "ISO 27001","
-    description: "International standard for information security management systems","
-    icon: "🌐","
-    status: "Certified","
-    color: "from-blue-500 to-cyan-600"
-  },
-  {
-
-"
-    title: "GDPR Compliance","
-    description: "Full compliance with European data protection regulations","
-    icon: "🇪🇺","
-    status: "Compliant","
-    color: "from-purple-500 to-pink-600"
-  },
-  {
-
-"
-    title: "HIPAA Compliance","
-    description: "Healthcare data protection standards for medical information","
-    icon: "🏥","
-    status: "Compliant","
-    color: "from-orange-500 to-red-600"
-  },
-  {
-
-"
-    title: "Zero Trust Architecture","
-    description: "Never trust, always verify security model implementation","
-    icon: "🛡️","
-    status: "Implemented","
-    color: "from-indigo-500 to-purple-600"
-  },
-  {;"
-    title: "End-to-End Encryption",;"
-    description: "256-bit AES encryption for all data in transit and at rest",;"
-    icon: "🔐",;"
-    status: "Active",;"
-    color: "from-teal-500 to-green-600"};
-];
-;
-const complianceFeatures = [
-  {
-
-"
-    category: "Data Protection",
-    features: ["
-      "Automated data classification","
-      "Real-time threat detection","
-      "Automated incident response","
-      "Data loss prevention (DLP)"
-    ]
-  },
-  {
-
-"
-    category: "Access Control",
-    features: ["
-      "Multi-factor authentication (MFA)","
-      "Role-based access control (RBAC)","
-      "Privileged access management","
-      "Single sign-on (SSO) integration"
-    ]
-  },
-  {
-
-"
-    category: "Monitoring & Auditing",
-    features: [;"
-      "24/7 security monitoring",;"
-      "Comprehensive audit logs",;"
-      "Real-time alerts",;"
-      "Automated compliance reporting";
     ]};
-=======
-    ]};
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 ];
 
-<<<<<<< HEAD
-  return (<section className = "py - 20 bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">
-      <div className="max - w-7xl mx - auto px - 6">
-        <motion.div
-          className="text - center mb - 16"
-=======
 export function SecurityComplianceSection() {
-
   return ("
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <div className="max-w-7xl mx-auto px-6">
         <motion.div "
           className="text-center mb-16"
->>>>>>> main
           initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
           whileInView = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
           viewport={{ once: true }}
@@ -159,19 +34,19 @@ export function SecurityComplianceSection() {
           initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
           whileInView = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
           transition = {
 
   { duration: 0.6,
-  delay: 0.1
+  delay: 0.1 
 
 }}"
           className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"
@@ -191,20 +66,20 @@ export function SecurityComplianceSection() {
               initial = {
 
   { opacity: 0,
-  y: 30
+  y: 30 
 
 }}
               whileInView = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
               viewport={{ once: true }}
               transition = {
 
   { duration: 0.6,
-  delay: index * 0.1
+  delay: index * 0.1 
 
 }}
             >"
@@ -229,48 +104,36 @@ export function SecurityComplianceSection() {
         </div>
 
         {/* Compliance Features */}
-<<<<<<< HEAD
-        <motion.div
-          className="mb - 16"
-=======
         <motion.div "
           className="mb-16"
->>>>>>> main
           initial = {
 
   { opacity: 0,
-  y: 30
+  y: 30 
 
 }}
           whileInView = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
           viewport={{ once: true }}
           transition = {
 
   { duration: 0.6,
-  delay: 0.4
+  delay: 0.4 
 
 }}
         >"
           <h3 className="text-3xl font-bold text-white text-center mb-8">
             Comprehensive Security Features
           </h3>
-<<<<<<< HEAD
-
-          <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">
-            {complianceFeatures.map ( (category, index) => (<div key={category.category} className="bg - slate - 800 border border - slate - 700 rounded - xl p - 6">
-                <h4 className="text - xl font - bold text - white mb - 4 text - center">
-=======
           "
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {complianceFeatures.map((category, index) => ("
               <div key={category.category} className="bg-slate-800 border border-slate-700 rounded-xl p-6">"
                 <h4 className="text-xl font-bold text-white mb-4 text-center">
->>>>>>> main
                   {category.category}
                 </h4>"
                 <ul className="space-y-3">
@@ -286,30 +149,25 @@ export function SecurityComplianceSection() {
         </motion.div>
 
         {/* Security Metrics */}
-<<<<<<< HEAD
-        <motion.div
-          className="mb - 16"
-=======
         <motion.div "
           className="mb-16"
->>>>>>> main
           initial = {
 
   { opacity: 0,
-  y: 30
+  y: 30 
 
 }}
           whileInView = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
           viewport={{ once: true }}
           transition = {
 
   { duration: 0.6,
-  delay: 0.6
+  delay: 0.6 
 
 }}
         >"
@@ -340,30 +198,25 @@ export function SecurityComplianceSection() {
         </motion.div>
 
         {/* Call to Action */}
-<<<<<<< HEAD
-        <motion.div
-          className="text - center"
-=======
         <motion.div "
           className="text-center"
->>>>>>> main
           initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
           whileInView = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
           viewport={{ once: true }}
           transition = {
 
   { duration: 0.6,
-  delay: 0.8
+  delay: 0.8 
 
 }}
         >"

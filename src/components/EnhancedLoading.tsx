@@ -1,38 +1,3 @@
-<<<<<<< HEAD
-import {
-
-<<<<<<< HEAD
-import { motion, AnimatePresence } from 'framer - motion';
-=======
->>>>>>> main
-
-  Loader2,
-  CheckCircle,
-  AlertCircle,
-  Zap,
-  Sparkles,
-  TrendingUp,
-  Cpu,
-  Database,
-  Network,
-  Shield'
- } from 'lucide-react';
-
-interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
-
-  size?: 'sm' | 'md' | 'lg';
-  text?: string;
-  fullScreen?: boolean}
-
-export function LoadingSpinner({
-
-  size = 'md',
-  text = 'Loading...',
-  fullScreen = false}: LoadingSpinnerProps) {
-
-  ;
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   ;
@@ -54,7 +19,6 @@ export function LoadingSpinner({
             scale: [1, 1.1, 1]
           }}
           transition={{
-
 "
             rotate: { duration: 2, repeat: Infinity, ease: "linear" },"
             scale: { duration: 2, repeat: Infinity, ease: "easeInOut" }
@@ -76,7 +40,7 @@ export function LoadingSpinner({
               transition = {
 
   { duration: 3,
-  repeat: Infinity
+  repeat: Infinity 
 
 }}
             />"
@@ -89,13 +53,13 @@ export function LoadingSpinner({
             animate = {
 
   { opacity: [0.3, 0.6,
-  0.3]
+  0.3] 
 
 }}
             transition = {
 
   { duration: 2,
-  repeat: Infinity
+  repeat: Infinity 
 
 }}
           />
@@ -107,13 +71,13 @@ export function LoadingSpinner({
           animate = {
 
   { opacity: [0.5, 1,
-  0.5]
+  0.5] 
 
 }}
           transition = {
 
   { duration: 1.5,
-  repeat: Infinity
+  repeat: Infinity 
 
 }}
         >
@@ -173,7 +137,7 @@ export function PageLoader(...args[]):  {
             transition = {
 
   { duration: 4,
-  repeat: Infinity
+  repeat: Infinity 
 
 }}
           />
@@ -191,7 +155,7 @@ export function PageLoader(...args[]):  {
             transition = {
 
   { duration: 4, repeat: Infinity,
-  delay: 1
+  delay: 1 
 
 }}
           />
@@ -202,13 +166,13 @@ export function PageLoader(...args[]):  {
           initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
           animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
           transition={{ duration: 0.5 }}"
@@ -221,14 +185,8 @@ export function PageLoader(...args[]):  {
               animate={{ rotate: 360 }}
               transition = {
 
-<<<<<<< HEAD
-  { duration: 1, repeat: Infinity,
-  ease: "linear"
-=======
-
   { duration: 1, repeat: Infinity,"
   ease: "linear" 
->>>>>>> main
 
 }}
             />"
@@ -242,13 +200,13 @@ export function PageLoader(...args[]):  {
             animate = {
 
   { opacity: [0.7, 1,
-  0.7]
+  0.7] 
 
 }}
             transition = {
 
   { duration: 2,
-  repeat: Infinity
+  repeat: Infinity 
 
 }}
           >
@@ -260,13 +218,13 @@ export function PageLoader(...args[]):  {
             animate = {
 
   { opacity: [0.5, 1,
-  0.5]
+  0.5] 
 
 }}
             transition = {
 
   { duration: 2, repeat: Infinity,
-  delay: 0.5
+  delay: 0.5 
 
 }}
           >
@@ -282,14 +240,8 @@ export function PageLoader(...args[]):  {
                 animate={{ width: "100%" }}
                 transition = {
 
-<<<<<<< HEAD
-  { duration: 3,
-  ease: "easeInOut"
-=======
-
   { duration: 3,"
   ease: "easeInOut" 
->>>>>>> main
 
 }}
               />

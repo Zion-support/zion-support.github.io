@@ -1,247 +1,375 @@
-import { motion } from "framer-motion";
-import React from 'react';
-import { SEO } from '../../components/SEO';
-
-
-
-
-
-
-
-
-
-const AIEducationPlatform: React.FC = () => {
-
-  const serviceData = {
-
-    title: "AI-Powered Education Platform",
-    subtitle: "Intelligent learning platform that personalizes education, adapts to student needs, and improves learning outcomes",
-    description: "Revolutionize education with our AI-powered platform that creates personalized learning experiences, provides intelligent tutoring, and tracks student progress in real-time. Improve learning outcomes by 200%, reduce dropout rates by 60%, and create engaging educational experiences.",
-    heroImage: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&h=600",
-    category: "AI & Education Technology",
-    price: 1399,
-    currency: "$",
-    pricingModel: "monthly",
-    marketPrice: "$1,399 - $4,999/month",
-    website: "https://ziontechgroup.com/services/ai-education-platform",
-    contactEmail: "kleber@ziontechgroup.com",
-    contactPhone: "+1 302 464 0950"
-  };
-
-  const features = [
-    {
-
-      title: "Personalized Learning Paths",
-      description: "AI algorithms create customized learning experiences based on individual student needs and learning styles",
-      icon: "🎯"
-    },
-    {
-
-      title: "Intelligent Tutoring",
-      description: "AI-powered virtual tutors that provide personalized guidance and support 24/7",
-      icon: "🤖"
-    },
-    {
-
-      title: "Adaptive Content",
-      description: "Dynamic content that adjusts difficulty and presentation based on student performance",
-      icon: "📚"
-    },
-    {
-
-      title: "Progress Analytics",
-      description: "Real-time tracking of student progress with detailed insights and recommendations",
-      icon: "📊"
-    },
-    {
-
-      title: "Interactive Assessments",
-      description: "AI-generated assessments that adapt to student knowledge and provide instant feedback",
-      icon: "✅"
-    },
-    {
-
-      title: "Collaborative Learning",
-      description: "AI-facilitated group learning and peer collaboration tools",
-      icon: "👥"
-    }
-  ];
-
-  const benefits = [
-    "Improve learning outcomes by 200%",
-    "Reduce student dropout rates by 60%",
-    "Personalize education for every student",
-    "Provide 24/7 intelligent tutoring",
-    "Track progress in real-time",
-    "Create engaging learning experiences"
-  ];
-
-  const useCases = [
-    {
-
-      title: "K-12 Education",
-      description: "Comprehensive learning platform for primary and secondary education institutions",
-      industry: "K-12 Education"
-    },
-    {
-
-      title: "Higher Education",
-      description: "Advanced learning platform for universities and colleges",
-      industry: "Higher Education"
-    },
-    {
-
-      title: "Corporate Training",
-      description: "Employee training and development platform for businesses",
-      industry: "Corporate Training"
-    },
-    {
-
-      title: "Online Learning",
-      description: "Virtual learning platform for remote and hybrid education",
-      industry: "Online Education"
-    }
-  ];
-
-  const pricingPlans = [
-    {
-
-      name: "Professional",
-      price: 1399,
-      currency: "$",
-      period: "month",
-      features: [
-        "Up to 1000 students",
-        "Basic AI personalization",
-        "Learning management system",
-        "Progress tracking",
-        "Basic analytics dashboard",
-        "Email support"
-      ],
+      ],;"
+      cta: "Start Free Trial",
       popular: false
     },
     {
-
-      name: "Enterprise",
-      price: 2999,
-      currency: "$",
-      period: "month",
-      features: [
-        "Up to 10000 students",
-        "Advanced AI personalization",
-        "Intelligent tutoring",
-        "Advanced analytics & reporting",
-        "Custom learning paths",
-        "Priority support",
-        "Custom integrations"
-      ],
+"
+      name: "District","
+      price: "$799","
+      period: "/month","
+      description: "Ideal for school districts and larger institutions",
+      features[;"
+        "AI learning paths (unlimited students)","
+        "Advanced content recommendation","
+        "Comprehensive analytics","
+        "Parent portals","
+        "Priority support","
+        "Up to 500 teachers","
+        "API access"
+      ],;"
+      cta: "Start Free Trial",
       popular: true
     },
     {
-
-      name: "Global",
-      price: 4999,
-      currency: "$",
-      period: "month",
-      features: [
-        "Unlimited students",
-        "Custom AI models",
-        "White-label solutions",
-        "Multi-language support",
-        "Dedicated account manager",
-        "Custom compliance features",
-        "On-premise deployment"
-      ],
-      popular: false
-    }
+"
+      name: "Enterprise","
+      price: "$1,999","
+      period: "/month","
+      description: "For large educational organizations and corporations",
+      features[;"
+        "Custom AI model training","
+        "White-label solutions","
+        "Advanced integrations","
+        "Custom content creation","
+        "Dedicated account manager",;"
+        "24/7 phone support",;"
+        "Unlimited users";
+      ],;"
+      cta: "Contact Sales",;
+      popular: false};
   ];
-
-  const competitors = [
-    {
-
-      name: "Blackboard",
-      price: "$3,000 - $10,000/month",
-      pros: ["Market leader", "Comprehensive features"],
-      cons: ["Very expensive", "Complex interface"]
-    },
-    {
-
-      name: "Canvas",
-      price: "$2,500 - $8,000/month",
-      pros: ["User-friendly", "Good features"],
-      cons: ["High cost", "Limited AI"]
-    },
-    {
-
-      name: "Zion Tech Group AI Education",
-      price: "$1,399 - $4,999/month",
-      pros: ["Advanced AI", "Cost-effective", "Easy to use"],
-      cons: ["Newer platform", "Growing ecosystem"]
-    }
-  ];
-
-  const faqs = [
-    {
-
-      question: "How does AI personalize learning for each student?",
-      answer: "Our AI analyzes student performance, learning styles, and preferences to create customized learning paths, content recommendations, and adaptive assessments that optimize learning outcomes."
-    },
-    {
-
-      question: "What subjects and grade levels do you support?",
-      answer: "We support all major subjects including math, science, language arts, social studies, and more, across all grade levels from K-12 to higher education and corporate training."
-    },
-    {
-
-      question: "Can I integrate with my existing educational software?",
-      answer: "Yes! We support integration with major learning management systems including Blackboard, Canvas, Moodle, Google Classroom, and many others through our comprehensive API."
-    },
-    {
-
-      question: "How do you ensure student data privacy and security?",
-      answer: "We implement enterprise-grade security measures and comply with FERPA, COPPA, and other educational privacy regulations to protect student data."
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="AI-Powered Education Platform - Zion Tech Group"
-        description="Revolutionize education with AI-powered learning. Improve outcomes by 200%, reduce dropouts by 60%, and personalize education for every student."
-        keywords="AI education platform, personalized learning, intelligent tutoring, educational technology, learning analytics"
-      />
-      
-      <ServiceHero 
-        title={serviceData.title}
-        subtitle={serviceData.subtitle}
-        description={serviceData.description}
-        image={serviceData.heroImage}
-        category={serviceData.category}
-        price={serviceData.price}
-        currency={serviceData.currency}
-        pricingModel={serviceData.pricingModel}
-        marketPrice={serviceData.marketPrice}
-        website={serviceData.website}
-        contactEmail={serviceData.contactEmail}
-        contactPhone={serviceData.contactPhone}
-      />
-
-      <ServiceFeatures features={features} />
-      <ServiceBenefits benefits={benefits} />
-      <ServiceUseCases useCases={useCases} />
-      <ServicePricing plans={pricingPlans} />
-      <ServiceComparison competitors={competitors} />
-      <ServiceFAQ faqs={faqs} />
-      <ServiceCTA 
-        title="Transform Education Today"
-        description="Join the future of education with our AI-powered platform and see 200% improvement in learning outcomes."
-        buttonText="Get Education Demo"
-        buttonLink="/contact"
-        contactEmail={serviceData.contactEmail}
-        contactPhone={serviceData.contactPhone}
-      />
-    </div>
-  );
-};
-
-export default AIEducationPlatform;
+  return ("
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO "
+        title="AI Education Platform - Zion Tech Group""        description="Transform education with AI-powered personalized learning, intelligent content, and adaptive teaching. Improve outcomes and engage every student."
+       />
+      {/* Hero Section */}"
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition={{ duration: 0.8 }}
+"
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-teal-600 to-cyan-600 text-white text-sm font-medium mb-6">"
+              <Brain className="w-4 h-4 mr-2"  />              AI-Powered Education
+            </div>"
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              AI Education"
+              <span className="bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent">"
+                {" "}Platform
+              </span>
+            </h1>"
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Revolutionize education with AI that personalizes learning, adapts to each student, and empowers teachers.
+              Improve outcomes, increase engagement, and scale quality education globally.
+            </p>"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}"
+                className="px-8 py-4 bg-gradient-to-r from-teal-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-teal-700 hover:to-cyan-700 transition-all duration-200"
+                Start Free Trial
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}"
+                className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200"
+                Watch Demo
+              </motion.button>
+            </div>
+          </motion.div>;
+        </div>
+      </section>
+      {/* Features Section */}"
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;"
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition={{ duration: 0.8 }}"
+            className="text-center mb-16"
+"
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Comprehensive Educational Intelligence
+            </h2>"
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Everything you need to create engaging, personalized learning experiences
+            </p>
+          </motion.div>
+"
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index (
+              <motion.div
+                key={index}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+}}"
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-teal-500 transition-all duration-300"
+"
+                <div className="w-12 h-12 bg-gradient-to-r from-teal-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4">"
+                  <CheckCircle className="w-6 h-6 text-white"  />
+                </div>"                <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
+              </motion.div>;
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Benefits Section */}"
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;"
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition={{ duration: 0.8 }}"
+            className="text-center mb-16"
+"
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Transform Educational Outcomes
+            </h2>"
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              See measurable improvements in student learning and teacher effectiveness
+            </p>
+          </motion.div>
+"
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map(benefit: unknown, index: unknown (
+              <motion.div
+                key={index}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+}}"
+                className="text-center"
+"
+                <div className="w-20 h-20 bg-gradient-to-r from-teal-600 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">"
+                  <TrendingUp className="w-10 h-10 text-white"  />
+                </div>"                <p className="text-lg text-white font-medium">{benefit}</p>
+              </motion.div>;
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Use Cases Section */}"
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;"
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition={{ duration: 0.8 }}"
+            className="text-center mb-16"
+"
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Industry-Leading Solutions
+            </h2>"
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Proven solutions across diverse educational institutions and programs
+            </p>
+          </motion.div>
+"
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map(useCase: unknown, index: unknown (
+              <motion.div
+                key={index}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+}}"
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-teal-500 transition-all duration-300"
+"
+                <div className="w-16 h-16 bg-gradient-to-r from-teal-600 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-4">"
+                  <GraduationCap className="w-8 h-8 text-white"  />
+                </div>"                <h3 className="text-lg font-semibold text-white">{useCase}</h3>
+              </motion.div>;
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Pricing Section */}"
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;"
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition={{ duration: 0.8 }}"
+            className="text-center mb-16"
+"
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Flexible Pricing for Every Institution
+            </h2>"
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Scale your educational platform as your institution grows
+            </p>
+          </motion.div>
+"
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+            {pricing.map(plan: unknown, index: unknown (
+              <motion.div
+                key={index}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+}}
+                className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
+                  plan.popular'
+                    ? 'border-teal-500 ring-2 ring-teal-500/20''
+                    : 'border-gray-700'`
+                }`}
+                {plan.popular && (;"
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
+                    <span className="bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-medium">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+"
+                <div className="text-center mb-8">"
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>"
+                  <p className="text-gray-400 mb-4">{plan.description}</p>"
+                  <div className="flex items-baseline justify-center">"
+                    <span className="text-4xl font-bold text-white">{plan.price}</span>"
+                    <span className="text-gray-400 ml-1">{plan.period}</span>
+                  </div>
+                </div>
+"
+                <ul className="space-y-4 mb-8">
+                  {plan.features.map((feature, featureIndex) => ("
+                    <li key={featureIndex} className="flex items-start">"
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0"  />"                      <span className="text-gray-300">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}`
+                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
+                    plan.popular'
+                      ? 'bg-gradient-to-r from-teal-600 to-cyan-600 text-white hover:from-teal-700 hover:to-cyan-700''
+                      : 'bg-gray-700 text-white hover:bg-gray-600'`
+                  }`}
+                  {plan.cta}
+                </motion.button>;
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* CTA Section */}"
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;"
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition={{ duration: 0.8 }}
+"
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Education?
+            </h2>"
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of educational institutions that have already revolutionized learning with AI
+            </p>"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}"
+                className="px-8 py-4 bg-gradient-to-r from-teal-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-teal-700 hover:to-cyan-700 transition-all duration-200"
+                Start Free Trial
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}"
+                className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200"
+                Schedule Demo
+              </motion.button>
+            </div>"
+            <p className="text-sm text-gray-400 mt-4">
+              No credit card required • 14-day free trial • Cancel time
+            </p>
+          </motion.div>
+        </div>
+      </section>
+      {/* Contact Info */}"
+      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-800/50">;"
+        <div className="max-w-4xl mx-auto text-center">"
+          <p className="text-gray-400 mb-4">
+            Need help choosing the right plan? Contact our sales team
+          </p>"
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-gray-400">
+            <span>📞 +1 302 464 0950</span>
+            <span>📧 kleber@ziontechgroup.com</span>
+            <span>🌐 https://ziontechgroup.com</span>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
+  )}
+'"`

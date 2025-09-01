@@ -1,5 +1,4 @@
 import {
-
   CheckCircle,
   TrendingUp,
   Target,
@@ -12,27 +11,13 @@ import {
   Brain,
   Search,
   PenTool} from 'lucide-react.ts';
-
 export default function AIContentOptimizer(...args: any[]): any {
-
-  
-  
-  
-  
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO"
-<<<<<<< HEAD
-        title="AI Content Optimizer - Intelligent Content Optimization Platform | Zion Tech Group"
-        description="Transform your content performance with AI-powered SEO optimization, analytics, and multi-platform content creation. Start free trial today."
-        keywords="AI content optimization, content SEO, content analytics, content performance, AI content creation"
-      />
-=======
         title="AI Content Optimizer - Intelligent Content Optimization Platform | Zion Tech Group""
         description="Transform your content performance with AI-powered SEO optimization, analytics, and multi-platform content creation. Start free trial today.""        keywords="AI content optimization, content SEO, content analytics, content performance, AI content creation"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
       {/* Hero Section */}"
       <section className="relative py-20 overflow-hidden">"
         <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 via-blue-600/20 to-purple-600/20" />'"
@@ -63,7 +48,6 @@ export default function AIContentOptimizer(...args: any[]): any {
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}"
       <section className="py-20 relative">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -108,7 +92,6 @@ export default function AIContentOptimizer(...args: any[]): any {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}"
       <section className="py-20 bg-gradient-to-r from-white/5 to-white/10 relative">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -152,7 +135,6 @@ export default function AIContentOptimizer(...args: any[]): any {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}"
       <section className="py-20 relative">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -197,7 +179,6 @@ export default function AIContentOptimizer(...args: any[]): any {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}"
       <section className="py-20 bg-gradient-to-r from-white/5 to-white/10 relative">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -222,7 +203,6 @@ export default function AIContentOptimizer(...args: any[]): any {
               <motion.div
                 key={index}`
                 className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
-
                   plan.popular'
                     ? 'border-blue-500/50 bg-blue-500/10''
                     : 'border-white/10'`
@@ -263,10 +243,8 @@ export default function AIContentOptimizer(...args: any[]): any {
                     </li>
                   ))}
                 </ul>
-
                 <button`
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-
                     plan.popular'
                       ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white hover:from-green-700 hover:to-blue-700''
                       : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'`
@@ -279,7 +257,6 @@ export default function AIContentOptimizer(...args: any[]): any {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}"
       <section className="py-20 bg-gradient-to-r from-green-600/20 to-blue-600/20 relative">"
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

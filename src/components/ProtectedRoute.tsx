@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-import { Navigate, useLocation  } from 'react - router - dom.ts';
-import React from 'react.ts';
-import { useAuth  } from '@/hooks / useAuth';
-export function ProtectedRoute (...args: any[]) : any {;
-=======
-<<<<<<< HEAD
->>>>>>> main
-
-interface ProtectedRouteProps extends React.PropsWithChildren<{}> {
-
-  children: React.ReactNode;
-  requireAuth?: boolean;
-  roles?: string[]}
-
-  const { user, isAuthenticated, isLoading } = useAuth () ;
-  
-  if (isLoading) {
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     return()
       <div className = "flex items-center justify-center min-h-screen">;"
@@ -27,12 +6,10 @@ interface ProtectedRouteProps extends React.PropsWithChildren<{}> {
     )}
 
   if (requireAuth && !isAuthenticated) {
-
 "
     return <Navigate to="/login" state={{ from: location }} replace  />}
 
   if (roles.length > 0 && user && !roles.includes(user.role || 'user')) {
-
 "
     return <Navigate to="/unauthorized" replace  />}
 

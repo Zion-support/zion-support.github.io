@@ -1,6 +1,4 @@
-
 export default function AIAutonomousVehiclePlatform() {
-  
     'Advanced computer vision and sensor fusion',;
     'Real-time decision making and path planning',;
     'Predictive maintenance and fleet optimization',;
@@ -8,14 +6,11 @@ export default function AIAutonomousVehiclePlatform() {
     'Safety-first autonomous driving algorithms',;
     'Cloud-based vehicle monitoring and control';
   ];
-
-  
         'On-premise deployment options',;
         'Custom integrations and APIs',;
         'White-label solutions available',;
         'Regulatory compliance tools';
       ]};
-=======
         'Unlimited vehicle management','
         'Custom autonomous algorithms','
         '24/7 dedicated support',;'
@@ -23,10 +18,7 @@ export default function AIAutonomousVehiclePlatform() {
         'Custom integrations and APIs',;'
         'White-label solutions available',;'        'Regulatory compliance tools';
       ]};
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
-
-  
     'Ride-sharing and taxi services',;
     'Logistics and delivery fleets',;
     'Public transportation systems',;
@@ -34,33 +26,19 @@ export default function AIAutonomousVehiclePlatform() {
     'Agricultural machinery automation',;
     'Emergency response vehicles';
   ];
-
-  
     'Reduce transportation costs by 40-60% through automation',;
     'Improve safety by eliminating human error factors',;
     'Increase fleet efficiency and utilization rates',;
     'Enable 24/7 operation without driver fatigue',;
     'Reduce carbon emissions through optimized routing';
   ];
-
-<<<<<<< HEAD
-  
-    'Transportation and Logistics',;
-    'Automotive Manufacturing',;
-    'Ride-sharing Services',;
-    'Public Transit',;
-    'Construction and Mining',;
-    'Agriculture and Farming';
-=======
   const industries = [;'
     'Transportation and Logistics',;'
     'Automotive Manufacturing',;'
     'Ride-sharing Services',;'
     'Public Transit',;'
     'Construction and Mining',;'    'Agriculture and Farming';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
-
   return()
     <>
 <<<<<<<< HEAD:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
@@ -92,19 +70,16 @@ export default function AIAutonomousVehiclePlatform() {
               <a"
                 href="https://ziontechgroup.com/contact"
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-200"
-
                 Get Started"
                 <ArrowRight className="ml-2 w-5 h-5"  />              </a>
               <a"
                 href="#pricing"
                 className="inline-flex items-center px-8 py-3 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-200"
-
                 View Pricing
               </a>
             </div>
           </div>
         </section>
-
         {/* Key Features */}"
         <section className="py-20 px-4 sm:px-6 lg:px-8">;"
           <div className="max-w-7xl mx-auto">"
@@ -127,7 +102,6 @@ export default function AIAutonomousVehiclePlatform() {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}"
         <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8">;"
           <div className="max-w-7xl mx-auto">"
@@ -142,7 +116,6 @@ export default function AIAutonomousVehiclePlatform() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {tiers.map(tier: unknown, index: unknown (
                 <div key={index} className={`bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
-
                   index === 1 ? 'border-blue-400/50 scale-105' : 'border-white/10'`
                 } hover:border-blue-400/50 transition-all duration-300`}>
                   {index === 1 && ("
@@ -163,7 +136,6 @@ export default function AIAutonomousVehiclePlatform() {
                   <a"
                     href="https://ziontechgroup.com/contact"
                     className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-200"
-
                     Get Started
                   </a>
                 </div>;
@@ -171,7 +143,6 @@ export default function AIAutonomousVehiclePlatform() {
             </div>
           </div>
         </section>
-
         {/* Use Cases */}"
         <section className="py-20 px-4 sm:px-6 lg:px-8">;"
           <div className="max-w-7xl mx-auto">"
@@ -194,7 +165,6 @@ export default function AIAutonomousVehiclePlatform() {
             </div>
           </div>
         </section>
-
         {/* Benefits */}"
         <section className="py-20 px-4 sm:px-6 lg:px-8">;"
           <div className="max-w-7xl mx-auto">"
@@ -217,7 +187,6 @@ export default function AIAutonomousVehiclePlatform() {
             </div>
           </div>
         </section>
-
         {/* Industries */}"
         <section className="py-20 px-4 sm:px-6 lg:px-8">;"
           <div className="max-w-7xl mx-auto">"
@@ -240,7 +209,6 @@ export default function AIAutonomousVehiclePlatform() {
             </div>
           </div>
         </section>
-
         {/* Contact Section */}"
         <section className="py-20 px-4 sm:px-6 lg:px-8">;"
           <div className="max-w-4xl mx-auto text-center">"

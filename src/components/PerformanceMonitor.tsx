@@ -122,12 +122,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           setMetrics(prev =>
             prev ? { ...prev, fcp: fcpEntry.startTime } : null
           )}
-<<<<<<< HEAD
-      });
-      fcpObserver.observe({ entryTypes: ['paint'] });
-=======
       });'      fcpObserver.observe({ entryTypes: ['paint'] });
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   
       
@@ -137,12 +132,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           setMetrics(prev =>
             prev ? { ...prev, lcp: lcpEntry.startTime } : null
           )}
-<<<<<<< HEAD
-      });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-=======
       });'      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       // Observe FID
 
@@ -155,12 +145,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               ? { ...prev, fid: fidEntry.processingStart - fidEntry.startTime }
               : null
           )}
-<<<<<<< HEAD
-      });
-      fidObserver.observe({ entryTypes: ['first-input'] });
-=======
       });'      fidObserver.observe({ entryTypes: ['first-input'] });
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     if (tips.length === 0) {
 

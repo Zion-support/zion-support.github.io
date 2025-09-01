@@ -1,208 +1,6 @@
-<<<<<<< HEAD
-import {
-
-<<<<<<< HEAD
-import { MobileSidebarToggle } from './MobileSidebarToggle';
-import { motion, AnimatePresence } from 'framer - motion';
-=======
->>>>>>> main
-
-  Menu,
-  X,
-  Search,
-  User,
-  Bell,
-  ChevronDown,
-  Brain,
-  Shield,
-  Cloud,
-  Zap,
-  Globe,
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  Code,
-  Rocket,
-  Users,
-  BarChart3,
-  FileImage,
-  TrendingUp,
-  MessageCircle,
-  Video,
-  FileText,
-  Heart,
-  PanelLeft,
-  ShoppingCart,
-  Settings,
-  HelpCircle,
-  BookOpen,
-  Briefcase,
-  Award,
-  Target,
-  Lightbulb,
-  ShieldCheck,
-  Server,
-  Smartphone,
-  Monitor,
-  Wifi,
-  Bluetooth,
-  Satellite,
-  Atom,
-  Dna,
-  Microscope,
-  Flask,
-  TestTube,
-  Syringe,
-  Stethoscope,
-  HeartPulse,
-  BrainCircuit,
-  Eye,
-  Ear,
-  Hand,
-  Foot,
-  Bone,
-  Tooth,
-  Pill,
-  Bandage,
-  Thermometer,
-  Scale,
-  Calculator,
-  ChartBar,
-  PieChart,
-  LineChart,
-  Activity,
-  TrendingDown,
-  Minus,
-  Plus,
-  Equal,
-  Divide,
-  Percent,
-  DollarSign,
-  Euro,
-  Pound,
-  Yen,
-  Bitcoin,
-  Ethereum,
-  CreditCard,
-  Wallet,
-  Banknote,
-  Coins,
-  PiggyBank,
-  Safe,
-  Vault,
-  LockKeyhole,
-  Key,
-  Fingerprint,
-  QrCode,
-  Barcode,
-  Scan,
-  Camera,
-  VideoOff,
-  Mic,
-  MicOff,
-  Volume2,
-  VolumeX,
-  HeartHandshake,
-  Play,
-  Pause,
-  Stop,
-  SkipBack,
-  SkipForward,
-  Rewind,
-  FastForward,
-  Shuffle,
-  Repeat,
-  Repeat1,
-  Shuffle2,
-  SkipBack2,
-  SkipForward2,
-  PlayCircle,
-  PauseCircle,
-  StopCircle,
-  SkipBackCircle,
-  SkipForwardCircle,
-  RewindCircle,
-  FastForwardCircle,
-  ShuffleCircle,
-  RepeatCircle,
-  Repeat1Circle,
-  Shuffle2Circle,
-  SkipBack2Circle,
-  SkipForward2Circle,
-  PlaySquare,
-  PauseSquare,
-  StopSquare,
-  SkipBackSquare,
-  SkipForwardSquare,
-  RewindSquare,
-  FastForwardSquare,
-  ShuffleSquare,
-  RepeatSquare,
-  Repeat1Square,
-  Shuffle2Square,
-  SkipBack2Square,
-  SkipForward2Square,
-  PlayTriangle,
-  PauseTriangle,
-  StopTriangle,
-  SkipBackTriangle,
-  SkipForwardTriangle,
-  RewindTriangle,
-  FastForwardTriangle,
-  ShuffleTriangle,
-  RepeatTriangle,
-  Repeat1Triangle,
-  Shuffle2Triangle,
-  SkipBack2Triangle,
-  SkipForward2Triangle,
-  PlayOctagon,
-  PauseOctagon,
-  StopOctagon,
-  SkipBackOctagon,
-  SkipForwardOctagon,
-  RewindOctagon,
-  FastForwardOctagon,
-  ShuffleOctagon,
-  RepeatOctagon,
-  Repeat1Octagon,
-  Shuffle2Octagon,
-  SkipBack2Octagon,
-  SkipForward2Octagon,
-  PlayDodecagon,
-  PauseDodecagon,
-  StopDodecagon,
-  SkipBackDodecagon,
-  SkipForwardDodecagon,
-  RewindDodecagon,
-  FastForwardDodecagon,
-  ShuffleDodecagon,
-  RepeatDodecagon,
-  Repeat1Dodecagon,
-  Shuffle2Dodecagon,
-  SkipBack2Dodecagon,
-  SkipForward2Dodecagon'
-} from 'lucide-react';
-export const FuturisticNavigation: React.FC = () => {;
-  const [searchQuery, setSearchQuery] = useState('');
-  const [activeDropdown, setActiveDropdown] = useState<any>(null);
-  const [scrolled, setScrolled] = useState(false);
-  
   useEffect(() => {
-
-      setScrolled(window.scrollY > 20)};
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll)}, []);
-  useEffect(() => {
-
     setActiveDropdown(null)}, [location.pathname]);
   
-=======
-  useEffect(() => {
-
-    setActiveDropdown(null)}, [location.pathname]);
-  
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     e.preventDefault();
     if (searchQuery.trim()) {
 
@@ -221,7 +19,6 @@ export const FuturisticNavigation: React.FC = () => {;
         { name: 'AI Supply Chain', href: '/ai-services/supply-chain', icon: Truck, description: 'AI-powered supply chain optimization' },
         { name: 'View All AI Services', href: '/ultimate-services-2027', icon: Sparkles, description: 'Complete AI services showcase' },
         { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' }
-=======
       dropdown[;'
         { name: 'AI Autonomous Trading', href: '/ai-services/autonomous-trading', icon: DollarSign, description: 'AI-powered financial trading platform' },'
         { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator', icon: Brain, description: 'Quantum AI consciousness research' },'
@@ -230,11 +27,9 @@ export const FuturisticNavigation: React.FC = () => {;
         { name: 'AI Content Creation', href: '/ai-services/content-creation', icon: FileText, description: 'Autonomous content generation' },'
         { name: 'AI Supply Chain', href: '/ai-services/supply-chain', icon: Truck, description: 'AI-powered supply chain optimization' },'
         { name: 'View All AI Services', href: '/ultimate-services-2027', icon: Sparkles, description: 'Complete AI services showcase' },'        { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' }
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ]
     },;
     {
-
 "
       name: "Micro SAAS Solutions",
       icon: Cloud,
@@ -248,7 +43,6 @@ export const FuturisticNavigation: React.FC = () => {;
       ]
     },;
     {
-
 "
       name: "IT Infrastructure",
       icon: Server,
@@ -262,7 +56,6 @@ export const FuturisticNavigation: React.FC = () => {;
       ]
     },;
     {
-
 "
       name: "Emerging Technologies",
       icon: Rocket,
@@ -304,13 +97,13 @@ export const FuturisticNavigation: React.FC = () => {;
               initial = {
 
   { opacity: 0,
-  x: -20
+  x: -20 
 
 }}
               animate = {
 
   { opacity: 1,
-  x: 0
+  x: 0 
 
 }}
               transition={{ duration: 0.5 }}
@@ -338,19 +131,19 @@ export const FuturisticNavigation: React.FC = () => {;
                 initial = {
 
   { opacity: 0,
-  y: -20
+  y: -20 
 
 }}
                 animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
                 transition = {
 
   { duration: 0.5,
-  delay: 0.1
+  delay: 0.1 
 
 }}
               >
@@ -365,19 +158,19 @@ export const FuturisticNavigation: React.FC = () => {;
                 initial = {
 
   { opacity: 0,
-  y: -20
+  y: -20 
 
 }}
                 animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
                 transition = {
 
   { duration: 0.5,
-  delay: 0.15
+  delay: 0.15 
 
 }}
               >
@@ -395,19 +188,19 @@ export const FuturisticNavigation: React.FC = () => {;
                     initial = {
 
   { opacity: 0,
-  y: -20
+  y: -20 
 
 }}
                     animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
                     transition = {
 
   { duration: 0.5,
-  delay: (index + 2) * 0.1
+  delay: (index + 2) * 0.1 
 
 }}
                     onClick={() => toggleDropdown(category.name)}`
@@ -431,19 +224,19 @@ export const FuturisticNavigation: React.FC = () => {;
                         initial = {
 
   { opacity: 0, y: -10,
-  scale: 0.95
+  scale: 0.95 
 
 }}
                         animate = {
 
   { opacity: 1, y: 0,
-  scale: 1
+  scale: 1 
 
 }}
                         exit = {
 
   { opacity: 0, y: -10,
-  scale: 0.95
+  scale: 0.95 
 
 }}
                         transition={{ duration: 0.2 }}"
@@ -461,19 +254,19 @@ export const FuturisticNavigation: React.FC = () => {;
                                 initial = {
 
   { opacity: 0,
-  x: -20
+  x: -20 
 
 }}
                                 animate = {
 
   { opacity: 1,
-  x: 0
+  x: 0 
 
 }}
                                 transition = {
 
   { duration: 0.3,
-  delay: subIndex * 0.05
+  delay: subIndex * 0.05 
 
 }}
                               >

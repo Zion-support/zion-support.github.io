@@ -8,14 +8,8 @@ interface ThemeToggleProps {
 
 
   className?: string}
-<<<<<<< HEAD
-
-export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {;
-  const [theme, setTheme] = useState<Theme>('system');
-=======
 '
 export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {;'  const [theme, setTheme] = useState<Theme>('system');
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -107,12 +101,7 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
     
     
     
-<<<<<<< HEAD
-
-    root.classList.remove('light',dark');
-=======
 '    root.classList.remove('light', 'dark');
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     root.classList.add(effectiveTheme);
     
     // Update CSS custom properties for smooth transitions'

@@ -1,53 +1,4 @@
 export function UserExperienceOptimizer ({
-
-<<<<<<< HEAD
-import {
-
-  Users,
-  TrendingUp,
-  MousePointer,
-  Eye,
-  Clock,
-  Target,
-  BarChart3,
-  PieChart,
-  Activity,
-  Zap,
-  Lightbulb,
-  CheckCircle,
-  AlertTriangle,
-  Info,
-  Settings,
-  RefreshCw,
-  Download,
-  Share2,
-  Maximize2,
-  Minimize2,
-  X,
-  Search,
-  Filter,
-  Calendar,
-  Smartphone,
-  Monitor,
-  Globe,
-  Heart,
-  Star,
-  ThumbsUp} from 'lucide-react';
-
-interface UserBehavior {
-
-  id: string;
-  action: string;
-  timestamp: Date;
-  duration: number;
-  success: boolean;
-  userType: 'new' | 'returning' | 'power';
-  device: 'desktop' | 'mobile' | 'tablet';
-  location: string;
-  sessionId: string}
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 interface UXMetric {
 
   id: string;
@@ -70,7 +21,6 @@ interface OptimizationSuggestion {
   estimatedImprovement: number;
   implementation: string}
 interface UserExperienceOptimizerProps {
-
   // Add your props here
 
 
@@ -142,7 +92,6 @@ export function UserExperienceOptimizer({
 
     // Simulate analysis process
     setTimeout(() => {
-
       generateUserBehaviors();
       generateUXMetrics();
       generateOptimizationSuggestions();
@@ -167,23 +116,19 @@ export function UserExperienceOptimizer({
   ]);
   // Auto - analyze when component opens
   useEffect ( () => {
-
     if (autoAnalyze && isOpen && !analysisComplete) {
 
       startUXAnalysis()}
   }, [autoAnalyze, isOpen, analysisComplete, startUXAnalysis]) ;
   // Setup real - time updates
   useEffect ( () => {
-
     if (showRealTime && isOpen && analysisComplete) {
 
       analysisIntervalRef.current = setInterval(() => {
-
         generateUserBehaviors();
         generateUXMetrics()}, 45000); // Update every 45 seconds
 
       return () => {
-
         if (analysisIntervalRef.current) {
 
           clearInterval(analysisIntervalRef.current)}
@@ -359,7 +304,6 @@ export function UserExperienceOptimizer({
                                     : 'bg-red-500'`
                               }`}
                               style={{
-
 `
                                 width: `${Math.min((overallScore / targetScore) * 100, 100)}%`}}
                             ></div>
@@ -469,7 +413,6 @@ export function UserExperienceOptimizer({
                                         : 'bg-red-500'`
                                   }`}
                                   style={{
-
 `
                                     width: `${Math.min((metric.value / metric.target) * 100, 100)}%`}}
                                 ></div>

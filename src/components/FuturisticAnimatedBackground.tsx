@@ -1,15 +1,10 @@
 export const FuturisticAnimatedBackground: React.FC = () => {;
 export default FuturisticAnimatedBackground;
 
-<<<<<<< HEAD
-  const canvasRef = useRef < HTMLCanvasElement> (null) ;
-
-=======
 
   
->>>>>>> main
   useEffect ( () => {
-
+    
     if (!canvas) return;
 
     
@@ -23,47 +18,23 @@ export default FuturisticAnimatedBackground;
     window.addEventListener('resize', resizeCanvas);
 
     // Add enhanced grid background'
-<<<<<<< HEAD
-    
-    
-    if (gridCtx) {
-
-=======
     const gridCanvas = document.createElement('canvas');'
     const gridCtx = gridCanvas.getContext('2d');    if (gridCtx) {
 
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
       gridCanvas.width = canvas.width;
       gridCanvas.height = canvas.height;
-<<<<<<< HEAD
-
-      // Draw enhanced grid
-      gridCtx.strokeStyle = 'rgba (6, 182, 212, 0.1) ';
-=======
       
       // Draw enhanced grid'
       gridCtx.strokeStyle = 'rgba(6, 182, 212, 0.1);
->>>>>>> main
       gridCtx.lineWidth = 1;
-
+      
       for (let x = 0; x < gridCanvas.width; x += 40) {
-
-<<<<<<< HEAD
-        gridCtx.beginPath () ;
-        gridCtx.moveTo (x, 0) ;
-        gridCtx.lineTo (x, gridCanvas.height) ;
-        gridCtx.stroke () ;
-      }
-
-=======
 
         gridCtx.beginPath();
         gridCtx.moveTo(x, 0);
         gridCtx.lineTo(x, gridCanvas.height);
         gridCtx.stroke()}
       
->>>>>>> main
       for (let y = 0; y < gridCanvas.height; y += 40) {
 
         gridCtx.beginPath();
@@ -120,6 +91,7 @@ export default FuturisticAnimatedBackground;
       // Update and draw particles
       for (let i = particles.length - 1; i >= 0; i--) {
 
+        
         // Update position
         particle.x += particle.vx;
         particle.y += particle.vy;
@@ -195,12 +167,7 @@ export default FuturisticAnimatedBackground;
 
       // Floating circle
       
-<<<<<<< HEAD
-
-      ctx.strokeStyle = 'rgba(56, 189, 248, 0.5);
-=======
 '      ctx.strokeStyle = 'rgba(56, 189, 248, 0.5)';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ctx.beginPath();
       ctx.arc(circleX, circleY, circleSize, 0, Math.PI * 2);
       ctx.stroke();
@@ -214,6 +181,7 @@ export default FuturisticAnimatedBackground;
 
       for (let i = 0; i < 3; i++) {
 
+        
         ctx.beginPath () ;
         ctx.moveTo (waveOffset - 100, waveY) ;
         ctx.lineTo (waveOffset, waveY + 20) ;

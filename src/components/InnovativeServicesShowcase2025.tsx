@@ -1,63 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react.ts';
-import { INNOVATIVE_SERVICES_2025, INNOVATIVE_SERVICE_CATEGORIES_2025, INNOVATIVE_SERVICE_SUBCATEGORIES_2025, INNOVATIVE_PRICING_TIERS_2025, INNOVATIVE_CONTACT_INFO_2025, INNOVATIVE_SERVICE_GUARANTEES_2025  } from '@/data / innovativeServices2025';
-export default React.memo (function InnovativeServicesShowcase2025 (...args: any[]) : any {
-
-import { Brain,
-import { motion, AnimatePresence  } from 'framer - motion.ts';
-=======
-<<<<<<< HEAD
-import { Brain, 
->>>>>>> main
-
-  Shield,
-  Cloud,
-  Rocket,
-  BarChart3,
-  Briefcase,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  Search,
-  Filter,
-  Grid,
-  List,
-  Zap,
-  Lock,
-  Database,
-  Users,
-  TrendingUp,
-  Globe,
-  Cpu,
-  Heart,
-  ShoppingCart,
-  BookOpen,
-  MessageCircle,
-  HelpCircle,
-  DollarSign,
-  Gauge,
-  Workflow,
-  Atom,
-  Target,
-  Award,
-  Code,
-  Truck,
-  Building,
-  PenTool,
-  Eye,
-  Server,
-  Smartphone,
-  Network,
-  Clock,
-  X'
- } from 'lucide-react.ts';
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 export default function InnovativeServicesShowcase2025(...args: any[]): any {
 
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -68,21 +8,6 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
   const [selectedService, setSelectedService] = useState<any>(null);
   const [showModal, setShowModal] = useState(false);
 
-<<<<<<< HEAD
-  const filteredServices = INNOVATIVE_SERVICES_2025.filter (service => {
-
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = service.title.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
-                         service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||
-                         service.tags.some (tag => tag.toLowerCase () .includes (searchTerm.toLowerCase () ) ) ;
-    return matchesCategory && matchesSearch;
-  }) ;
-
-  const sortedServices = [...filteredServices].sort ( (a, b) => {
-
-    let aValue, bValue;
-
-=======
   
   
     
@@ -92,7 +17,6 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
     return matchesCategory && matchesSearch});
 
   
->>>>>>> main
     switch (sortBy) {
 
       case 'price':
@@ -122,20 +46,10 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
       return aValue < bValue ? 1 : -1}
   }) ;
 
-<<<<<<< HEAD
-  const getCategoryIcon = (category: anystring) => {
-
-    if (category === 'all') return < Rocket className="w - 6 h - 6" />;
-    return INNOVATIVE_SERVICE_CATEGORIES_2025[category]?.icon ?
-      <span className="text - 2xl">{INNOVATIVE_SERVICE_CATEGORIES_2025[category].icon}</span> :
-      <Rocket className="w - 6 h - 6" />;
-  };
-=======
   
     return INNOVATIVE_SERVICE_CATEGORIES_2025[category]?.icon ? "
       <span className="text-2xl">{INNOVATIVE_SERVICE_CATEGORIES_2025[category].icon}</span> : "
       <Rocket className="w-6 h-6"  />};
->>>>>>> main
 
   
     return INNOVATIVE_SERVICE_CATEGORIES_2025[category]?.color || 'from-gray-500 to-slate-500'};
@@ -143,24 +57,6 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
   
     setShowModal(true)};
 
-<<<<<<< HEAD
-  const closeModal = () => {
-
-    setShowModal (false) ;
-    setSelectedService (null) ;
-  };
-
-  return (<div role="button" className="min - h-screen futuristic - bg">
-      {/* Matrix Rain Background Effect */}
-      <div role="button" className="matrix - rain"></div>
-
-      {/* Hero Section */}
-      <div role="button" className="relative overflow - hidden">
-        <div role="button" className="absolute inset - 0 bg - gradient - to - r from - blue - 600 / 20 to - purple - 600 / 20"></div>
-        <div role="button" className="relative max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 24">
-          <motion.div
-            className="text - center"
-=======
   
     setSelectedService (null) };
   return ("
@@ -174,7 +70,6 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div "
             className="text-center"
->>>>>>> main
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -250,12 +145,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
             <div className="relative flex-1 max-w-md">"
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
               <input"
-<<<<<<< HEAD
-                type="text"
-                placeholder="Search services..."
-=======
                 type="text""                placeholder="Search services..."
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}"
                 className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
@@ -370,17 +260,6 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                           <span className="text-sm text-cyan-400 font-semibold">{service.aiScore}%</span>
                         </div>
                       </div>
-<<<<<<< HEAD
-
-                      <div role="button" className="flex items - center justify - between">
-                        <span className="text - sm text - gray - 400">Market Price:</span>
-                        <span className="text - sm text - green - 400">{service.marketPrice}</span>
-                      </div>
-
-                      <div role="button" className="flex items - center justify - between">
-                        <span className="text - sm text - gray - 400">ROI:</span>
-                        <span className="text - sm text - yellow - 400">{service.roi}</span>
-=======
                       "
                       <div className="flex items-center justify-between">"
                         <span className="text-sm text-gray-400">Market Price:</span>"
@@ -390,7 +269,6 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                       <div className="flex items-center justify-between">"
                         <span className="text-sm text-gray-400">ROI:</span>"
                         <span className="text-sm text-yellow-400">{service.roi}</span>
->>>>>>> main
                       </div>
                     </div>
 "
@@ -414,16 +292,6 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                     <div className={`p-4 rounded-lg bg-gradient-to-r ${getCategoryColor(service.category)}`}>
                       {getCategoryIcon(service.category)}
                     </div>
-<<<<<<< HEAD
-
-                    <div role="button" className="flex - 1">
-                      <div role="button" className="flex items - center gap - 4 mb - 2">
-                        <h3 className="text - xl font - bold text - white">{service.title}</h3>
-                        <span className="text - sm text - gray - 400 capitalize">{service.category}</span>
-                        <div role="button" className="flex items - center gap - 1">
-                          <Star className="w - 4 h - 4 text - yellow - 400 fill - current" />
-                          <span className="text - sm text - gray - 300">{service.rating}</span>
-=======
                     "
                     <div className="flex-1">"
                       <div className="flex items-center gap-4 mb-2">"
@@ -431,7 +299,6 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                         <span className="text-sm text-gray-400 capitalize">{service.category}</span>"
                         <div className="flex items-center gap-1">"
                           <Star className="w-4 h-4 text-yellow-400 fill-current"  />"                          <span className="text-sm text-gray-300">{service.rating}</span>
->>>>>>> main
                         </div>
                       </div>"
                       <p className="text-gray-300 mb-3">{service.description}</p>"
@@ -441,17 +308,10 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                         <span>ROI: <span className="text-yellow-400">{service.roi}</span></span>
                       </div>
                     </div>
-<<<<<<< HEAD
-
-                    <div role="button" className="text - right">
-                      <div role="button" className="text - 2xl font - bold text - cyan - 400 mb - 3">
-                        {service.currency}{service.price.toLocaleString () }
-=======
                     "
                     <div className="text-right">"
                       <div className="text-2xl font-bold text-cyan-400 mb-3">
                         {service.currency}{service.price.toLocaleString()}
->>>>>>> main
                       </div>
                       <motion.button
                         whileHover={{ scale: 1.05 }}
@@ -519,20 +379,6 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                   >"
                     <X className="w-6 h-6"  />                  </button>
                 </div>
-<<<<<<< HEAD
-
-                <div role="button" className="grid grid - cols - 1 lg:grid - cols - 2 gap - 8">
-                  <div>
-                    <h3 className="text - xl font - bold text - white mb - 4">Service Overview</h3>
-                    <p className="text - gray - 300 mb - 6">{selectedService.description}</p>
-
-                    <div role="button" className="space - y-4 mb - 6">
-                      <div role="button" className="flex items - center justify - between">
-                        <span className="text - gray - 400">AI Score:</span>
-                        <div role="button" className="flex items - center gap - 2">
-                          <div role="button" className="w - 24 bg - gray - 700 rounded - full h - 3">
-                            <div role="button" className="bg - gradient - to - r from - cyan - 500 to - blue - 500 h - 3 rounded - full"
-=======
 "
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                   <div>"
@@ -546,29 +392,12 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                           <div className="w-24 bg-gray-700 rounded-full h-3">
                             <div "
                               className="bg-gradient-to-r from-cyan-500 to-blue-500 h-3 rounded-full"`
->>>>>>> main
                               style={{ width: `${selectedService.aiScore}%` }}
                             ></div>
                           </div>"
                           <span className="text-cyan-400 font-semibold">{selectedService.aiScore}%</span>
                         </div>
                       </div>
-<<<<<<< HEAD
-
-                      <div role="button" className="flex items - center justify - between">
-                        <span className="text - gray - 400">Market Price:</span>
-                        <span className="text - green - 400 font - semibold">{selectedService.marketPrice}</span>
-                      </div>
-
-                      <div role="button" className="flex items - center justify - between">
-                        <span className="text - gray - 400">ROI:</span>
-                        <span className="text - yellow - 400 font - semibold">{selectedService.roi}</span>
-                      </div>
-
-                      <div role="button" className="flex items - center justify - between">
-                        <span className="text - gray - 400">Setup Time:</span>
-                        <span className="text - white">{selectedService.setupTime}</span>
-=======
                       "
                       <div className="flex items-center justify-between">"
                         <span className="text-gray-400">Market Price:</span>"
@@ -583,7 +412,6 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                       <div className="flex items-center justify-between">"
                         <span className="text-gray-400">Setup Time:</span>"
                         <span className="text-white">{selectedService.setupTime}</span>
->>>>>>> main
                       </div>
                     </div>
 "
@@ -601,16 +429,6 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                     </div>
                   </div>
 
-<<<<<<< HEAD
-                  <div>
-                    <div role="button" className="mb - 6">
-                      <h3 className="text - 2xl font - bold text - cyan - 400 mb - 2">
-                        {selectedService.currency}{selectedService.price.toLocaleString () }
-                      </h3>
-                      <p className="text - gray - 400 mb - 4">One - time setup fee</p>
-
-                      <div role="button" className="space - y-3">
-=======
                   <div>"
                     <div className="mb-6">"
                       <h3 className="text-2xl font-bold text-cyan-400 mb-2">
@@ -619,7 +437,6 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                       <p className="text-gray-400 mb-4">One-time setup fee</p>
                       "
                       <div className="space-y-3">
->>>>>>> main
                         <motion.button
                           whileHover={{ scale: 1.02 }}
                           whileTap={{ scale: 0.98 }}"
@@ -628,7 +445,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                         >
                           Get Started
                         </motion.button>
-
+                        
                         <motion.button
                           whileHover={{ scale: 1.02 }}
                           whileTap={{ scale: 0.98 }}"
@@ -674,16 +491,10 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
           <h2 className="futuristic-heading text-4xl mb-4">Our Guarantees</h2>"
           <p className="futuristic-subheading text-xl">We stand behind every service with comprehensive guarantees</p>
         </div>
-<<<<<<< HEAD
-
-        <div role="button" className="grid grid - cols - 1 md: anygrid - cols - 2 lg:grid - cols - 3 gap - 6">
-          {Object.entries (INNOVATIVE_SERVICE_GUARANTEES_2025) .map ( ([key, value]) => (<motion.div
-=======
         "
         <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
           {Object.entries(INNOVATIVE_SERVICE_GUARANTEES_2025).map(([key, value])  => (
             <motion.div
->>>>>>> main
               key={key}
               whileHover={{ scale: 1.05 }}"
               className="futuristic-card p-6 text-center"
@@ -704,15 +515,9 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
           <p className="futuristic-subheading text-xl mb-8 max-w-3xl mx-auto">
             Contact us today to discuss how our innovative services can drive your business forward and deliver exceptional ROI.
           </p>
-<<<<<<< HEAD
-
-          <div role="button" className="flex flex - col sm:flex - row gap - 4 justify - center">
-            <motion.a
-=======
           "
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.a`
->>>>>>> main
               href={`tel:${INNOVATIVE_CONTACT_INFO_2025.phone}`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}"
@@ -720,13 +525,8 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
             >"
               <Phone className="w-5 h-5 mr-2"  />              Call {INNOVATIVE_CONTACT_INFO_2025.phone}
             </motion.a>
-<<<<<<< HEAD
-
-            <motion.a
-=======
             
             <motion.a`
->>>>>>> main
               href={`mailto:${INNOVATIVE_CONTACT_INFO_2025.email}`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}"
@@ -735,17 +535,10 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
               <Mail className="w-5 h-5 mr-2"  />              Email Us
             </motion.a>
           </div>
-<<<<<<< HEAD
-
-          <div role="button" className="mt - 8 text - center">
-            <p className="text - gray - 400 mb - 2">{INNOVATIVE_CONTACT_INFO_2025.hours}</p>
-            <p className="text - cyan - 400 font - semibold">{INNOVATIVE_CONTACT_INFO_2025.emergency}</p>
-=======
           "
           <div className="mt-8 text-center">"
             <p className="text-gray-400 mb-2">{INNOVATIVE_CONTACT_INFO_2025.hours}</p>"
             <p className="text-cyan-400 font-semibold">{INNOVATIVE_CONTACT_INFO_2025.emergency}</p>
->>>>>>> main
           </div>
         </div>
       </div>

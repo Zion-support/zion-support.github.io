@@ -123,10 +123,8 @@ interface AccessibilitySettings {
           
           (focusableElements[prevIndex] as HTMLElement)?.focus();
           break;
-=======
             currentIndex <= 0 ? focusableElements.length - 1 : currentIndex - 1;          (focusableElements[prevIndex] as HTMLElement)?.focus();
           break;'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         case 'Home':
           event.preventDefault();
           (focusableElements[0] as HTMLElement)?.focus();
@@ -158,16 +156,9 @@ interface AccessibilitySettings {
 
         target.style.outline = '';
         target.style.outlineOffset = '';
-<<<<<<< HEAD
-      }
-    };
-
-    document.addEventListener('focusin', handleFocusChange);
-=======
       }    };
 '
     document.addEventListener('focusin', handleFocusChange);'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     document.addEventListener('focusout', handleFocusOut);
 
     return () => {

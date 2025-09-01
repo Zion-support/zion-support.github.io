@@ -1,66 +1,19 @@
-<<<<<<< HEAD
-export interface Message {
-
-  id: string;
-  role: 'user' | 'assistant';
-  message: string;
-  timestamp: Date;
-  read?: boolean
-};
-export interface ChatAssistantProps extends React.PropsWithChildren<{}> {
-
-  isOpen?: boolean;
-  onClose?: () => void}
-export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {;
-  const [isChatOpen, setIsChatOpen] = useState(isOpen);
-  const [messages, setMessages] = useState<any>([]);
-  const [inputMessage, setInputMessage] = useState('');
-  
-      timestamp: new Date(),;
-  ;
-  ;
-  ;
-<<<<<<< HEAD
-  ;
-
-};
-=======
-  };
->>>>>>> main
-    setMessages(prev => [...prev, userMessage]);
-    setInputMessage('');
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     // Simulate AI response
     setTimeout(: unknown {
-
       const aiMessage: Message = {
-
   id: (Date.now() + 1).toString(),
         role: 'assistant',
         message: 'Thank you for your message! Our team will get back to you soon.',
         timestamp: new Date(),;
   ;
   ;
-<<<<<<< HEAD
-  ;
-  ;
-
-};
-      setMessages(prev => [...prev, aiMessage]);
-    }, 1000);
-=======
->>>>>>> main
   };
-  
     e.preventDefault();
     handleSendMessage(inputMessage)};
-  
     setIsChatOpen(!isChatOpen)};
   const closeChat = (...args: unknown[]): unknown => {;    setIsChatOpen(false);
     if (onClose) onClose()};
   if (!isChatOpen) {
-
     return()
       <button
         onClick = {toggleChat}
@@ -79,7 +32,6 @@ export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
         <button
           onClick={closeChat}"
           className="text-zion-blue-dark hover:text-zion-blue-dark/80 transition-colors"
-
           <X size={20}   />
         </button>
       </div>
@@ -93,10 +45,8 @@ export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
             <div
               key={message.id}
               className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}
-
               <div`
                 className={`max-w-xs px-4 py-2 rounded-lg ${
-
                   message.role === 'user''
                     ? 'bg-zion-cyan text-zion-blue-dark''
                     : 'bg-gray-100 text-gray-800'`

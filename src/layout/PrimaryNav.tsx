@@ -1,14 +1,8 @@
 
-      // // // // // // // // // // // console.log('PrimaryNav search submit:', query);
-<<<<<<< HEAD
-      router.push(`/search/${slugify(query)}`);
-      setQuery('');
-
-=======
+      // // // // // // // // console.log('PrimaryNav search submit:', query);
       router.push(`/search/${slugify(query)}`);'      setQuery('');
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      // // // // // // // // console.log('PrimaryNav search submit:', query);`
+      // // // // // console.log('PrimaryNav search submit:', query);`
       router.push(`/search/${slugify(query)}`);
       setQuery('')}
 // Theme toggle component;
@@ -35,12 +29,12 @@
             <ResponsiveNavigation  />
           </div>
 
-                  // // // // // // // // // // // console.log('PrimaryNav search suggestion selected:', sugg);
+                  // // // // // // // // console.log('PrimaryNav search suggestion selected:', sugg);
                 onSelectSuggestion = {
 
   (sugg) => {
 
-                  // // // // // // // // console.log('PrimaryNav search suggestion selected:',;
+                  // // // // // console.log('PrimaryNav search suggestion selected:',;
   ;
   sugg);
                   // Handle different suggestion types with proper navigation
@@ -148,19 +142,34 @@
               initial = {
 
   { opacity: 0,
-  height: 0
+  height: 0 
+
+
+
+
+
 
 }}
               animate = {
 
   { opacity: 1,
-  height: 'auto'
+  height: 'auto' 
+
+
+
+
+
 
 }}
               exit = {
 
   { opacity: 0,
-  height: 0
+  height: 0 
+
+
+
+
+
 
 }}
               transition={{ duration: 0.3 }}"
@@ -186,48 +195,30 @@
                     </div>
                   </div>
                 ))}
-<<<<<<< HEAD
-
-                <div className="pt-4 border-t border-white/10 space-y-2">
-                  <Link
-=======
                 "
                 <div className="pt-4 border-t border-white/10 space-y-2">
                   <Link "
->>>>>>> main
                     to="/solutions"
                     className="block text-gray-300 hover:text-white transition-colors duration-200"
                     onClick={: unknown setIsOpen(false)}
                   >
                     Solutions
                   </Link>
-<<<<<<< HEAD
-                  <Link
-=======
                   <Link "
->>>>>>> main
                     to="/about"
                     className="block text-gray-300 hover:text-white transition-colors duration-200"
                     onClick={: unknown setIsOpen(false)}
                   >
                     About
                   </Link>
-<<<<<<< HEAD
-                  <Link
-=======
                   <Link "
->>>>>>> main
                     to="/blog"
                     className="block text-gray-300 hover:text-white transition-colors duration-200"
                     onClick={: unknown setIsOpen(false)}
                   >
                     Blog
                   </Link>
-<<<<<<< HEAD
-                  <Link
-=======
                   <Link "
->>>>>>> main
                     to="/contact"
                     className="block text-gray-300 hover:text-white transition-colors duration-200"
                     onClick={: unknown setIsOpen(false)}

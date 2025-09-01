@@ -41,13 +41,11 @@ export
 
 :src/hooks/useAccessibility.tsx
     
-=======
 '
   highContrast: window.matchMedia('(prefers-contrast: high)'),'
       reducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)'),'
       largeText: window.matchMedia('(prefers-reduced-motion: reduce)'),;
     
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   ;
@@ -137,7 +135,6 @@ export
       '[tabindex]:not([tabindex="-1"]),;'"
       '[contenteditable="true"]';
     ].join(',);
-=======
       'button:not([disabled])',;'
       'input:not([disabled])',;'
       'select:not([disabled])',;'
@@ -153,7 +150,6 @@ export
       '[tabindex]:not([tabindex="-1"])',;
       '[contenteditable="true"]';
     ].join(', ');
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     return Array.from(container.querySelectorAll(selector)) as HTMLElement[]}, []);
 
@@ -221,12 +217,6 @@ activeElements.forEach(element:  > {;
   // Screen reader announcements'
   
     if (!enableScreenReaderSupport) return;
-<<<<<<< HEAD
-
-    
-    announcement.setAttribute('aria-live', priority);
-    announcement.setAttribute('aria-atomic',true');
-=======
 '
     const announcement = document.createElement('div');'
     announcement.setAttribute('aria-live', priority);'
@@ -238,7 +228,6 @@ activeElements.forEach(element:  > {;
     
     announcement.setAttribute('aria-live', priority);
     announcement.setAttribute('aria-atomic', 'true');
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     announcement.className = 'sr-only';
     announcement.textContent = message;
 
@@ -314,9 +303,6 @@ activeElements.forEach(element:  > {;
     
     
     
-<<<<<<< HEAD
-
-=======
 '
     if (highContrast) document.documentElement.classList.add('high-contrast');'
     if (reducedMotion) document.documentElement.classList.add('reduced-motion');'
@@ -324,7 +310,6 @@ activeElements.forEach(element:  > {;
     
     
     
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     if (highContrast) document.documentElement.classList.add('high-contrast');
     if (reducedMotion) document.documentElement.classList.add('reduced-motion');
     if (largeText) document.documentElement.classList.add('large-text');

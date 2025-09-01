@@ -1,102 +1,14 @@
-<<<<<<< HEAD
-import {
-
-<<<<<<< HEAD
-import { motion, AnimatePresence } from 'framer - motion';
-=======
->>>>>>> main
-
-  CheckCircle,
-  AlertTriangle,
-  Info,
-  X,
-  Bell,
-  Settings,
-  Volume2,
-  VolumeX,
-  Zap,
-  Star,
-  MessageSquare,
-  Shield,
-  Clock'
- } from 'lucide-react';
-
-export type NotificationType = 'success' | 'warning' | 'error' | 'info' | 'achievement';
-
-export interface Notification {
-
-  id: string;
-  type: NotificationType;
-  title: string;
-  message: string;
-  duration?: number;
-  timestamp: Date;
-  read: boolean;
-action?: {
-
-    label: string;
-    onClick: ()  => void};
-  priority: 'low' | 'medium' | 'high';
-  category?: string;
-  icon?: React.ReactNode}
-
-interface NotificationSystemProps extends React.PropsWithChildren<{}> {
-
-  maxNotifications?: number;
-  position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
-  enableSound?: boolean;
-  enableVibration?: boolean;
-  autoDismiss?: boolean;
-  defaultDuration?: number}
-
-interface NotificationSettings {
-
-  sound: boolean;
-  vibration: boolean;
-  autoDismiss: boolean;
-  position: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
-  maxNotifications: number;
-  defaultDuration: number}
-
-export const NotificationSystem: React.FC<NotificationSystemProps> = ({
-
-  maxNotifications = 5,
-  position = 'top-right',
-enableSound:  true,;
-  enableVibration = true,;
-  autoDismiss = true,;
-  defaultDuration = 5000}) => {;
-  const [notifications, setNotifications] = useState<Notification[]>([]);
-  const [settings, setSettings] = useState<NotificationSettings>({
-
-    sound: enableSound,
-    vibration: enableVibration,
-    autoDismiss: autoDismiss,
-    position,
-    maxNotifications,
-    defaultDuration
-  }) ;
-  const [showSettings, setShowSettings] = useState (false) ;
-  const [isOpen, setIsOpen] = useState (false) ;
-  const [unreadCount, setUnreadCount] = useState (0) ;
-  
-  // Initialize audio for notification sounds
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   useEffect ( () => {
-
     if (settings.sound) {
 
       audioRef.current = new Audio('/notification-sound.mp3'); // You can add a custom sound file
       audioRef.current.volume = 0.3}}, [settings.sound]) ;
   // Update unread count
   useEffect ( () => {
-
     setUnreadCount (notifications.filter (n => !n.read) .length) }, [notifications]) ;
 
   // Auto - dismiss notifications
   useEffect ( () => {
-
     if (!settings.autoDismiss) return;
 
     const timeouts: NodeJS.Timeout[] = [];
@@ -105,19 +17,19 @@ enableSound:  true,;
 
       if (notification.duration !== 0) {
 
+        
         }, notification.duration || settings.defaultDuration);
         timeouts.push(timeout)}
     }) ;
     return () => {
-
       timeouts.forEach (timeout => clearTimeout (timeout) ) }}, [notifications, settings.autoDismiss, settings.defaultDuration]) ;
 
   // Play notification sound'
-        // // // // // // // // // // // console.warn('Could not play notification sound:', error)}    }
+        // // // // // // // // console.warn('Could not play notification sound:', error)}    }
   }, [settings.sound]) ;
 
   // Trigger vibration'
-        // // // // // // // // // // // console.warn('Could not trigger vibration:', error)}    }
+        // // // // // // // // console.warn('Could not trigger vibration:', error)}    }
   }, [settings.vibration]) ;
 
   // Add notification'
@@ -182,14 +94,8 @@ enableSound:  true,;
       case 'top-right':'
         return 'top-4 right-4';
       case 'bottom-left':'
-<<<<<<< HEAD
-        return 'bottom-4 left-4';
-      case 'bottom-right':'
-        return 'bottom-4 right-4';
-=======
         return 'bottom-4 left-4';'
       case 'bottom-right':'        return 'bottom-4 right-4';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       default:'
         return 'top-4 right-4'}
   };
@@ -200,7 +106,6 @@ enableSound:  true,;
   // Expose addNotification method globally for external use
   useEffect ( () => { (window as) .addNotification = addNotification;
     return () => {
-
       delete (window as) .addNotification}}, [addNotification]) ;
 
   return()
@@ -238,19 +143,19 @@ enableSound:  true,;
             initial = {
 
   { opacity: 0, scale: 0.9,
-  y: -10
+  y: -10 
 
 }}
             animate = {
 
   { opacity: 1, scale: 1,
-  y: 0
+  y: 0 
 
 }}
             exit = {
 
   { opacity: 0, scale: 0.9,
-  y: -10
+  y: -10 
 
 
 
@@ -326,19 +231,19 @@ enableSound:  true,;
             initial = {
 
   { opacity: 0, scale: 0.9,
-  y: -10
+  y: -10 
 
 }}
             animate = {
 
   { opacity: 1, scale: 1,
-  y: 0
+  y: 0 
 
 }}
             exit = {
 
   { opacity: 0, scale: 0.9,
-  y: -10
+  y: -10 
 
 
 
@@ -376,24 +281,23 @@ enableSound:  true,;
                       initial = {
 
   { opacity: 0,
-  x: 50
+  x: 50 
 
 }}
                       animate = {
 
   { opacity: 1,
-  x: 0
+  x: 0 
 
 }}
                       exit = {
 
   { opacity: 0, x: -50,
-  height: 0
+  height: 0 
 
 }}
                       layout
                       className = {
-
 `
   `p-4 rounded-xl ${getNotificationStyles(notification.type,;
   notification.priority)
@@ -444,7 +348,6 @@ enableSound:  true,;
                               {notification.action && (
                                 <button
                                   onClick={() => {
-
                                     notification.action!.onClick();
                                     markAsRead(notification.id)}}"                                  className = "text-xs px-2 py-1 bg-zion-cyan/10 hover:bg-zion-cyan/20 text-zion-cyan rounded transition-colors"
                                 >
@@ -481,9 +384,7 @@ export
 // Utility functions for common notification types
 export 
         priority: 'medium',;
-=======
 })};'        priority: 'medium',;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   ...options;
@@ -503,8 +404,7 @@ export
       }) }
   },
 
-  error: (title: string, message: string, options?: Partial<Notification>) => {
-
+  error: (title: string, message: string, options?: Partial<Notification>)  => {
     if ((window as ).addNotification) {
 
       (window as ).addNotification({
@@ -517,8 +417,7 @@ export
       }) }
   },
 
-  info: (title: string, message: string, options?: Partial<Notification>) => {
-
+  info: (title: string, message: string, options?: Partial<Notification>)  => {
     if ((window as ).addNotification) {
 
       (window as ).addNotification({
@@ -531,8 +430,7 @@ export
       }) }
   },
 
-  achievement: (title: string, message: string, options?: Partial<Notification>) => {
-
+  achievement: (title: string, message: string, options?: Partial<Notification>)  => {
     if ((window as ).addNotification) {
 
       (window as ).addNotification({

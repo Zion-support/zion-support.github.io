@@ -1,67 +1,3 @@
-<<<<<<< HEAD
-import {
-
-<<<<<<< HEAD
-import { motion, AnimatePresence } from 'framer - motion';
-=======
->>>>>>> main
-
-  Mail,
-  Phone,
-  MapPin,
-  Send,
-  CheckCircle,
-  AlertCircle,
-  CheckCircle,
-  Clock,
-  MessageSquare,
-  Building,
-  Globe'
- } from 'lucide-react';
-
-interface ContactFormData {
-
-  name: string;
-  email: string;
-  phone: string;
-  comp: string;
-  service: string;
-  message: string
-}
-
-interface ContactFormErrors {
-
-  [key: string]: string}
-
-export function EnhancedContact(...args[]):  {
-
-  const [formData, setFormData] = useState<any>({
-
-    name: '',;
-    email: '',;
-    phone: '',;
-    comp: '',;
-    service: 'general',;
-    message: ''
-  }) ;
-
-  const [errors, setErrors] = useState<any> ({}) ;
-  const [isSubmitting, setIsSubmitting] = useState (false) ;
-  const [isSubmitted, setIsSubmitted] = useState (false) ;
-
-  
-    { value: 'cloud-infrastructure', label: 'Cloud Infrastructure' },;
-    { value: 'cybersecurity', label: 'Cybersecurity' },;
-    { value: 'digital-transformation', label: 'Digital Transformation' },;
-    { value: 'consulting', label: 'IT Consulting' },;
-    { value: 'quantum-computing', label: 'Quantum Computing' },;
-    { value: 'green-it', label: 'Green IT Solutions' };
-  ];
-
-  
-    const newErrors: ContactFormErrors = {};
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     if (!formData.name.trim()) {
 
@@ -82,19 +18,12 @@ export function EnhancedContact(...args[]):  {
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0};
 
-      // // // // // // // // // // // console.error('Error submitting form:', error)} finally {
+      // // // // // // // // console.error('Error submitting form:', error)} finally {
 
       setIsSubmitting(false);
-<<<<<<< HEAD
-    }
-      })} catch (error) {
-
-=======
     }      })} catch (error) {
-
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      // // // // console.error('Error submitting form:', error)} finally {
+      // console.error('Error submitting form:', error)} finally {
 
       setIsSubmitting(false)}
   };
@@ -113,13 +42,13 @@ export function EnhancedContact(...args[]):  {
         initial = {
 
   { opacity: 0,
-  scale: 0.8
+  scale: 0.8 
 
 }}
         animate = {
 
   { opacity: 1,
-  scale: 1
+  scale: 1 
 
 }}
         className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center py-20"
@@ -130,14 +59,8 @@ export function EnhancedContact(...args[]):  {
             animate={{ scale: 1 }}
             transition = {
 
-<<<<<<< HEAD
-  { delay: 0.2,
-  type: "spring"
-=======
-
   { delay: 0.2,"
   type: "spring" 
->>>>>>> main
 
 
 
@@ -153,13 +76,13 @@ export function EnhancedContact(...args[]):  {
             initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
             animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
             transition={{ delay: 0.3 }}"
@@ -172,13 +95,13 @@ export function EnhancedContact(...args[]):  {
             initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
             animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
             transition={{ delay: 0.4 }}"
@@ -191,13 +114,13 @@ export function EnhancedContact(...args[]):  {
             initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
             animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
             transition={{ delay: 0.5 }}
@@ -216,13 +139,13 @@ export function EnhancedContact(...args[]):  {
           initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
           animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 
 
@@ -247,13 +170,13 @@ export function EnhancedContact(...args[]):  {
             initial = {
 
   { opacity: 0,
-  x: -50
+  x: -50 
 
 }}
             animate = {
 
   { opacity: 1,
-  x: 0
+  x: 0 
 
 }}
             transition={{ delay: 0.2 }}
@@ -267,13 +190,13 @@ export function EnhancedContact(...args[]):  {
                   initial = {
 
   { opacity: 0,
-  x: -20
+  x: -20 
 
 }}
                   animate = {
 
   { opacity: 1,
-  x: 0
+  x: 0 
 
 }}
                   transition={{ delay: 0.3 + index * 0.1 }}"
@@ -295,13 +218,13 @@ export function EnhancedContact(...args[]):  {
               initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
               animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
               transition={{ delay: 0.6 }}"
@@ -334,13 +257,13 @@ export function EnhancedContact(...args[]):  {
             initial = {
 
   { opacity: 0,
-  x: 50
+  x: 50 
 
 }}
             animate = {
 
   { opacity: 1,
-  x: 0
+  x: 0 
 
 }}
             transition={{ delay: 0.3 }}"
@@ -383,19 +306,19 @@ export function EnhancedContact(...args[]):  {
                       initial = {
 
   { opacity: 0,
-  y: -10
+  y: -10 
 
 }}
                       animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
                       exit = {
 
   { opacity: 0,
-  y: -10
+  y: -10 
 
 
 
@@ -405,12 +328,7 @@ export function EnhancedContact(...args[]):  {
 }}"
                       className="text-red-400 text-sm mt-1 flex items-center"
                     >"
-<<<<<<< HEAD
-                      <AlertCircle className="w-4 h-4 mr-1"  />
-                      {errors['name']}
-=======
                       <AlertCircle className="w-4 h-4 mr-1"  />'                      {errors['name']}
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     </motion.p>) }
                 </AnimatePresence>
               </div>
@@ -449,19 +367,19 @@ export function EnhancedContact(...args[]):  {
                       initial = {
 
   { opacity: 0,
-  y: -10
+  y: -10 
 
 }}
                       animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
                       exit = {
 
   { opacity: 0,
-  y: -10
+  y: -10 
 
 
 
@@ -471,12 +389,7 @@ export function EnhancedContact(...args[]):  {
 }}"
                       className="text-red-400 text-sm mt-1 flex items-center"
                     >"
-<<<<<<< HEAD
-                      <AlertCircle className="w-4 h-4 mr-1"  />
-                      {errors['email']}
-=======
                       <AlertCircle className="w-4 h-4 mr-1"  />'                      {errors['email']}
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     </motion.p>) }
                 </AnimatePresence>
               </div>
@@ -591,19 +504,19 @@ export function EnhancedContact(...args[]):  {
                       initial = {
 
   { opacity: 0,
-  y: -10
+  y: -10 
 
 }}
                       animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
                       exit = {
 
   { opacity: 0,
-  y: -10
+  y: -10 
 
 
 
@@ -613,12 +526,7 @@ export function EnhancedContact(...args[]):  {
 }}"
                       className="text-red-400 text-sm mt-1 flex items-center"
                     >"
-<<<<<<< HEAD
-                      <AlertCircle className="w-4 h-4 mr-1"  />
-                      {errors['message']}
-=======
                       <AlertCircle className="w-4 h-4 mr-1"  />'                      {errors['message']}
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     </motion.p>) }
                 </AnimatePresence>
               </div>

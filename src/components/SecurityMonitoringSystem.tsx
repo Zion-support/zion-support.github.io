@@ -1,55 +1,4 @@
-<<<<<<< HEAD
-import {
-
-<<<<<<< HEAD
-import { motion, AnimatePresence } from 'framer - motion';
-=======
->>>>>>> main
-
-  Shield,
-  AlertTriangle,
-  CheckCircle,
-  XCircle,
-  Eye,
-  Lock,
-  Activity,
-  Zap,
-  Target,
-  AlertCircle,
-  Info,
-  Settings,
-  RefreshCw,
-  Download,
-  Share2,
-  Maximize2,
-  Minimize2,
-  X,
-  BarChart3,
-  TrendingUp,
-  TrendingDown,
-  Clock,
-  Database,
-  Network,
-  Server,
-  Smartphone,
-  Globe} from 'lucide-react';
-
-interface SecurityThreat {
-
-  id: string;
-  type: 'critical' | 'high' | 'medium' | 'low';
-  severity: number;
-  description: string;
-  source: string;
-  timestamp: Date;
-  status: 'active' | 'resolved' | 'investigating';
-  affectedSystems: string[];
-  recommendations: string[]}
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 interface VulnerabilityAssessment {
-
   id: string;
   category: 'network' | 'application' | 'infrastructure' | 'data';
   risk: 'critical' | 'high' | 'medium' | 'low';
@@ -60,7 +9,6 @@ interface VulnerabilityAssessment {
   remediation: string;
   estimatedTime: string}
 interface ComplianceStatus {
-
   framework: string;
   status: 'compliant' | 'non-compliant' | 'partial';
   score: number;
@@ -73,7 +21,6 @@ interface ComplianceStatus {
     nonCompliant: number;
     pending: number}}
 interface SecurityMonitoringSystemProps {
-
   // Add your props here
 
 
@@ -138,7 +85,6 @@ export function SecurityMonitoringSystem({
     
     const newVulnerabilities: VulnerabilityAssessment[] = categories.map()
       (category, index) => ({
-
 `
         id: `vuln-${index}`,
         category: category as any,
@@ -163,6 +109,9 @@ export function SecurityMonitoringSystem({
     const newCompliance: ComplianceStatus[] = frameworks.map()
       (framework, index) => {
 
+        
+        
+        
         return {
 
           framework,
@@ -190,7 +139,6 @@ export function SecurityMonitoringSystem({
 
     // Simulate scan process
     setTimeout(() => {
-
       generateSecurityThreats();
       generateVulnerabilities();
       generateComplianceStatus();
@@ -212,24 +160,20 @@ export function SecurityMonitoringSystem({
   ]);
   // Auto-scan when component opens
   useEffect(() => {
-
     if (autoScan && isOpen && !scanComplete) {
 
       startSecurityScan()}
   }, [autoScan, isOpen, scanComplete, startSecurityScan]) ;
   // Setup real - time updates
   useEffect ( () => {
-
     if (showRealTime && isOpen && scanComplete) {
 
       scanIntervalRef.current = setInterval(() => {
-
         generateSecurityThreats();
         generateVulnerabilities();
         generateComplianceStatus()}, 60000); // Update every minute
 
       return () => {
-
         if (scanIntervalRef.current) {
 
           clearInterval(scanIntervalRef.current)}
@@ -398,7 +342,6 @@ export function SecurityMonitoringSystem({
                                     : 'bg-red-500'`
                               }`}
                               style={{
-
 `
                                 width: `${Math.min((securityScore / targetScore) * 100, 100)}%`}}
                             ></div>

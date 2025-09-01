@@ -1,5 +1,4 @@
 import {
-
   Brain,
   BarChart3,
   TrendingUp,
@@ -29,26 +28,12 @@ import {
   Calendar,
   DollarSign,
   Percent} from 'lucide-react.ts';
-
-
-  
-  
-  
-  
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900 text-white">
       <SEO"
-<<<<<<< HEAD
-        title="AI Business Intelligence Analytics | Zion Tech Group"
-        description="Revolutionary AI-powered business intelligence and analytics platform that transforms data into actionable insights and predictive business intelligence."
-        keywords="AI business intelligence, analytics platform, data insights, predictive analytics, business analytics, Zion Tech Group"
-      />
-=======
         title="AI Business Intelligence Analytics | Zion Tech Group""
         description="Revolutionary AI-powered business intelligence and analytics platform that transforms data into actionable insights and predictive business intelligence.""        keywords="AI business intelligence, analytics platform, data insights, predictive analytics, business analytics, Zion Tech Group"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">"
         <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-emerald-600/20"></div>"
@@ -93,7 +78,6 @@ import {
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto">
@@ -134,7 +118,6 @@ import {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">"
         <div className="max-w-7xl mx-auto">
@@ -171,7 +154,6 @@ import {
           </div>
         </div>
       </section>
-
       {/* Capabilities Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto">
@@ -235,7 +217,6 @@ import {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">"
         <div className="max-w-7xl mx-auto">
@@ -272,7 +253,6 @@ import {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto">
@@ -300,7 +280,6 @@ import {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${
-
                   plan.name === 'Professional''
                     ? 'border-green-400/50 bg-gradient-to-b from-green-500/10 to-transparent''
                     : 'border-green-400/20'`
@@ -343,7 +322,6 @@ import {
           </div>
         </div>
       </section>
-
       {/* Contact Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">"
         <div className="max-w-7xl mx-auto">
@@ -382,7 +360,6 @@ import {
                 Call Now
               </a>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -401,7 +378,6 @@ import {
                 Send Email
               </a>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -417,16 +393,9 @@ import {
                 364 E Main St STE 1008, Middletown DE 19709
               </p>
               <a"
-<<<<<<< HEAD
-                href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-green-400 hover:text-green-300 transition-colors duration-300"
-=======
                 href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709""
                 target="_blank""
                 rel="noopener noreferrer""                className="text-green-400 hover:text-green-300 transition-colors duration-300"
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
               >
                 View on Map
               </a>
@@ -436,6 +405,5 @@ import {
       </section>
     </div>
   )};
-
 export default AIBusinessIntelligenceAnalytics;
 '"`

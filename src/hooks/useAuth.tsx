@@ -22,7 +22,6 @@ interface AuthState {
 }
 ;
 export function useAuth(...args: unknown[]): unknown {
-
   const [authState, setAuthState] = useState<AuthState>({
 
     user: null,
@@ -30,7 +29,6 @@ export function useAuth(...args: unknown[]): unknown {
     isLoading: true});
 
   useEffect(: unknown {
-
     // Check if user is logged in (e.g., check localStorage, cookies, etc.)
 :src/hooks/useAuth.tsx
     
@@ -38,7 +36,7 @@ export function useAuth(...args: unknown[]): unknown {
       if (storedUser && token) {
 
         try {
-
+          
           setAuthState({
 
             user,
@@ -46,17 +44,18 @@ export function useAuth(...args: unknown[]): unknown {
 :src/hooks/useAuth.tsx
             isLoading: false})} catch (error) {
 
-          // // // // console.error('Error parsing stored user:', error);
-            isLoading: false})} catch (error) {
-
-          // // // console.error('Error parsing stored user:', error);
+          // console.error('Error parsing stored user:', error);
+            isLoading: false,
+          })} catch (error) {
+          console.error('Error parsing stored user:', error);
           setAuthState({
 
             user: null,
             isAuthenticated: false,
 :src/hooks/useAuth.tsx
             isLoading: false})}
-            isLoading: false})}
+            isLoading: false,
+          })}
       } else {
 
         setAuthState({
@@ -70,7 +69,8 @@ export function useAuth(...args: unknown[]): unknown {
     checkAuth()}, []);
 
   
-          isLoading: false})}
+          isLoading: false,
+        })}
     };
 
     checkAuth()}, []);
@@ -137,8 +137,6 @@ export function useAuth(...args: unknown[]): unknown {
     register,
 :src/hooks/useAuth.tsx
     updateProfile}}
-<<<<<<< HEAD
-=======
 '
-    updateProfile}}
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+    updateProfile,
+  }}

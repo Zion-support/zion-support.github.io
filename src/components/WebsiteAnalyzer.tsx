@@ -1,42 +1,7 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react.ts';
-export const WebsiteAnalyzer: React.FC = () : JSX.Element => {
-
-export default WebsiteAnalyzer;
-import { CheckCircle,
-import { LinkChecker, LinkInfo, PageInfo  } from '../utils / linkChecker';
-=======
-<<<<<<< HEAD
-import { CheckCircle, 
->>>>>>> main
-
-  XCircle,
-  AlertTriangle,
-  ExternalLink,
-  Search,
-  FileText,
-  Link as LinkIcon,
-  Download,
-  RefreshCw'
- } from 'lucide-react.ts';
-
-interface AnalysisResult {
-
-summary: {
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     totalLinks: number;
     brokenLinks: number;
     missingPages: number;
-<<<<<<< HEAD
-    externalLinks: number;
-
-};
-  pages: PageInfo[];
-=======
     externalLinks: number};  pages: PageInfo[];
->>>>>>> main
   brokenLinks: LinkInfo[];
   missingPages: string[]}
 
@@ -47,39 +12,27 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
   const [currentPage, setCurrentPage] = useState('');
   const [progress, setProgress] = useState(0);
 
-<<<<<<< HEAD
-  const analyzeWebsite = async () => {
-
-    setIsAnalyzing (true) ;
-    setProgress (0) ;
-
-    const linkChecker = new LinkChecker ('https://ziontechgroup.com') ;
-    const results: PageInfo[] = [];
-=======
   
   
     setProgress(0);
     '
     const linkChecker = new LinkChecker('https://ziontechgroup.com');    const results: PageInfo[] = [];
->>>>>>> main
     const allBrokenLinks: LinkInfo[] = [];
     const allMissingPages: string[] = [];
 
     try {
-
       for (let i = 0; i < pagesToAnalyze.length; i++) {
 
+        
         setCurrentPage (page) ;
         setProgress ( (i / pagesToAnalyze.length) * 100) ;
 
         try {
-
           // Simulate page content analysis (in real implementation, this would fetch actual page content) 
           
           results.push (pageResult) } catch (error) {
-
 `
-          // // // // console.error(`Error analyzing ${page}:`, error)}
+          // console.error(`Error analyzing ${page}:`, error)}
 
         // Add delay to prevent overwhelming the server
         await new Promise (resolve => setTimeout (resolve, 100) ) }
@@ -95,7 +48,7 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
         missingPages
       }) } catch (error) {
 
-      // // // // console.error('Analysis failed:', error)} finally {
+      // console.error('Analysis failed:', error)} finally {
 
       setIsAnalyzing(false);
       setProgress(100);
@@ -107,12 +60,7 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
     
     
     
-<<<<<<< HEAD
-    a.href = url;
-    a.download = 'zion-website-analysis.json';
-=======
     a.href = url;'    a.download = 'zion-website-analysis.json';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
@@ -159,12 +107,7 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
                 <RefreshCw className="w-4 h-4 mr-2 animate-spin"  />
               ) : ("
                 <Search className="w-4 h-4 mr-2"  />
-<<<<<<< HEAD
-              )}
-              {isAnalyzing ? 'Analyzing...' : 'Start Analysis'}
-=======
               )}'              {isAnalyzing ? 'Analyzing...' : 'Start Analysis'}
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
             </button>
             {analysisResult && (
               <button
@@ -208,45 +151,17 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
-
-              <div role="button" className="bg - green - 50 p - 4 rounded - lg border border - green - 200">
-                <div role="button" className="flex items - center">
-                  <CheckCircle className="w - 8 h - 8 text - green - 600 mr - 3" />
-                  <div>
-                    <p className="text - 2xl font - bold text - green - 900">
-=======
               "
               <div className="bg-green-50 p-4 rounded-lg border border-green-200">"
                 <div className="flex items-center">"
                   <CheckCircle className="w-8 h-8 text-green-600 mr-3"  />
                   <div>"                    <p className="text-2xl font-bold text-green-900">
->>>>>>> main
                       {analysisResult.summary.totalLinks - analysisResult.summary.brokenLinks - analysisResult.summary.missingPages}
                     </p>"
                     <p className="text-sm text-green-700">Working Links</p>
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
-
-              <div role="button" className="bg - red - 50 p - 4 rounded - lg border border - red - 200">
-                <div role="button" className="flex items - center">
-                  <XCircle className="w - 8 h - 8 text - red - 600 mr - 3" />
-                  <div>
-                    <p className="text - 2xl font - bold text - red - 900">{analysisResult.summary.brokenLinks}</p>
-                    <p className="text - sm text - red - 700">Broken Links</p>
-                  </div>
-                </div>
-              </div>
-
-              <div role="button" className="bg - yellow - 50 p - 4 rounded - lg border border - yellow - 200">
-                <div role="button" className="flex items - center">
-                  <AlertTriangle className="w - 8 h - 8 text - yellow - 600 mr - 3" />
-                  <div>
-                    <p className="text - 2xl font - bold text - yellow - 900">{analysisResult.summary.missingPages}</p>
-                    <p className="text - sm text - yellow - 700">Missing Pages</p>
-=======
               "
               <div className="bg-red-50 p-4 rounded-lg border border-red-200">"
                 <div className="flex items-center">"
@@ -262,7 +177,6 @@ export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
                   <AlertTriangle className="w-8 h-8 text-yellow-600 mr-3"  />
                   <div>"
                     <p className="text-2xl font-bold text-yellow-900">{analysisResult.summary.missingPages}</p>"                    <p className="text-sm text-yellow-700">Missing Pages</p>
->>>>>>> main
                   </div>
                 </div>
               </div>

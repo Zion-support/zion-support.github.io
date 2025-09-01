@@ -1,41 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-export /**
-export default BenefitsSection;}}}}</motion.div></motion.div></motion.div>}
-import { GradientHeading } from './ui / GradientHeading';
-import { motion, AnimatePresence } from 'framer - motion';
-
- * BenefitsSection function
- * @param {*} params - Function parameters
- * @returns {*} Function return value
- */
-function BenefitsSection () {
-
-=======
-<<<<<<< HEAD
->>>>>>> main
-
-interface Benefit {
-
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-  color: string;
-  bgColor: string;
-  stats: string;
-  features: string[];
-;
-const benefits: Benefit[] = [;
-  {
-
-    title: "AI-Powered Matchmaking","
-    description: "Our advanced algorithms match your needs with the perfect service providers or products, saving you time and ensuring optimal results.","
-    icon: <Bot className="w-8 h-8"  />,"
-    color: "from-zion-cyan to-zion-cyan-dark","
-    bgColor: "from-zion-cyan/20 to-zion-cyan-dark/20","
-    stats: "95% Match Rate",
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     features: ["
       "Intelligent service matching","
       "Real-time availability","
@@ -45,7 +7,6 @@ const benefits: Benefit[] = [;
   
 },
   {
-
 "
     title: "Global Availability","
     description: "Access a worldwide network of tech talents, products, and services to find the best solutions regardless of geographic limitations.","
@@ -60,7 +21,6 @@ const benefits: Benefit[] = [;
     ]
   },
   {
-
 "
     title: "24/7 Support","
     description: "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey.","
@@ -75,7 +35,6 @@ const benefits: Benefit[] = [;
     ]
   },
   {
-
 "
     title: "Cost Reduction","
     description: "Eliminate middlemen and reduce costs by up to 40% through direct connections with service providers and product vendors.","

@@ -1,63 +1,4 @@
-<<<<<<< HEAD
-import {
-
-<<<<<<< HEAD
-import { motion, AnimatePresence } from 'framer - motion';
-=======
->>>>>>> main
-
-  Star,
-  MessageCircle,
-  ThumbsUp,
-  ThumbsDown,
-  Send,
-  Heart,
-  Award,
-  TrendingUp,
-  Users,
-  Clock,
-  Flag,
-  Share2,
-  Download,
-  Filter,
-  Search'
- } from 'lucide-react';
-
-  verified: boolean}
-
-interface FeedbackStats {
-
-  totalFeedback: number;
-  averageRating: number;
-  positivePercentage: number;
-  responseRate: number;
-  topCategories: Array < any>}
-
-interface CustomerFeedbackSystemProps extends React.PropsWithChildren<{}> {
-
-  showStats?: boolean;
-  showFilters?: boolean;
-  maxFeedback?: number}
-
-export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
-
-showStats:  true,;
-  showFilters = true,;
-  maxFeedback = 10}) => {;
-  const [feedback, setFeedback] = useState<Feedback[]>([]);
-  const [filteredFeedback, setFilteredFeedback] = useState<Feedback[]>([]);
-  const [stats, setStats] = useState<FeedbackStats>({
-
-    totalFeedback: 0,
-    averageRating: 0,
-    positivePercentage: 0,
-    responseRate: 0,
-    topCategories[]});
-  const [selectedCategory, setSelectedCategory] = useState<any>('all');
-  const [selectedRating, setSelectedRating] = useState<any>(0);
-=======
   const [selectedRating, setSelectedRating] = useState<any>(0);'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   const [searchQuery, setSearchQuery] = useState('');
   const [showFeedbackForm, setShowFeedbackForm] = useState(false);
   const [newFeedback, setNewFeedback] = useState({
@@ -69,7 +10,6 @@ showStats:  true,;
 
   // Sample feedback data
   useEffect(() => {
-
     const sampleFeedback: Feedback[] = [
       {
 
@@ -148,9 +88,11 @@ showStats:  true,;
 
   // Calculate stats
   useEffect(() => {
-
     if (feedback.length > 0) {
 
+      
+      
+      
       const responseRate = 95; // Simulated response rate
 
       const categoryCounts = feedback.reduce ( (acc, f) => {;        acc[f.category] = (acc[f.category] || 0) + 1;
@@ -173,7 +115,6 @@ showStats:  true,;
 
   // Filter feedback
   useEffect ( () => {
-
     let filtered = feedback;
 
     if (selectedCategory !== 'all') {
@@ -218,12 +159,7 @@ showStats:  true,;
   ;
   verified: false;
     };
-<<<<<<< HEAD
-
-    setFeedback(prev  => [feedback, ...prev]);
-=======
     setFeedback(prev  => [feedback, ...prev]);'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     setNewFeedback({ rating: 0, comment: '', category: 'overall' });
     setShowFeedbackForm(false)};
 
@@ -238,29 +174,20 @@ showStats:  true,;
 
   // Get sentiment color
   
-<<<<<<< HEAD
-    switch (sentiment) {;
-      case 'positive': return 'text-green-400 bg-green-400/20';
-      case 'negative': return 'text-red-400 bg-red-400/20';
-      default: return 'text-yellow-400 bg-yellow-400/20'}
-=======
     switch (sentiment) {;'
       case 'positive': return 'text-green-400 bg-green-400/20';'
       case 'negative': return 'text-red-400 bg-red-400/20';'      default: return 'text-yellow-400 bg-yellow-400/20'}
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   };
 
   // Get category color
   
   ;
   ;
-=======
 '
   'service': 'text-blue-400 bg-blue-400/20','
       'product': 'text-green-400 bg-green-400/20','
       'support': 'text-purple-400 bg-purple-400/20',;  ;
   ;'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   'overall': 'text-zion-cyan bg-zion-cyan/20';
     };
     return colors[category as keyof typeof colors] || 'text-zinc-400 bg-zinc-400/20'};
@@ -279,13 +206,13 @@ showStats:  true,;
             initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
             animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 
 
@@ -303,13 +230,13 @@ showStats:  true,;
             initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
             animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
             transition={{ delay: 0.1 }}"
@@ -333,13 +260,13 @@ showStats:  true,;
             initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
             animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
             transition={{ delay: 0.2 }}"
@@ -353,13 +280,13 @@ showStats:  true,;
             initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
             animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
             transition={{ delay: 0.3 }}"
@@ -381,13 +308,13 @@ showStats:  true,;
                 initial = {
 
   { opacity: 0,
-  scale: 0.9
+  scale: 0.9 
 
 }}
                 animate = {
 
   { opacity: 1,
-  scale: 1
+  scale: 1 
 
 }}
                 transition={{ delay: index * 0.1 }}"
@@ -457,19 +384,19 @@ showStats:  true,;
             initial = {
 
   { height: 0,
-  opacity: 0
+  opacity: 0 
 
 }}
             animate = {
 
   { height: 'auto',
-  opacity: 1
+  opacity: 1 
 
 }}
             exit = {
 
   { height: 0,
-  opacity: 0
+  opacity: 0 
 
 }}
             transition={{ duration: 0.3 }}"
@@ -480,14 +407,6 @@ showStats:  true,;
 "
               <div className="space-y-4">
                 {/* Rating */}
-<<<<<<< HEAD
-                <div>
-                  <label className="block text - sm font - medium text - zinc - 300 mb - 2">Rating</label>
-                  <div role="button" className="flex gap - 2">
-                    {[1, 2, 3, 4, 5].map ( (star) => (<button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" key={star}
-                        onClick = { () => setNewFeedback (prev => ({ ...prev,
-  rating: star
-=======
                 <div>"
                   <label className="block text-sm font-medium text-zinc-300 mb-2">Rating</label>"
                   <div className="flex gap-2">
@@ -498,7 +417,6 @@ showStats:  true,;
 
   () => setNewFeedback(prev => ({ ...prev,
   rating: star 
->>>>>>> main
 
 
 
@@ -522,15 +440,10 @@ showStats:  true,;
                   <label className="block text-sm font-medium text-zinc-300 mb-2">Category</label>
                   <select
                     value={newFeedback.category}
-<<<<<<< HEAD
-                    onChange = { (e) => setNewFeedback (prev => ({ ...prev,
-  category: e.target.value as Feedback['category']
-=======
                     onChange = {
 
   (e) => setNewFeedback(prev => ({ ...prev,
   category: e.target.value as Feedback['category'] 
->>>>>>> main
 
 
 
@@ -552,15 +465,10 @@ showStats:  true,;
                   <label className="block text-sm font-medium text-zinc-300 mb-2">Your Feedback</label>
                   <textarea
                     value={newFeedback.comment}
-<<<<<<< HEAD
-                    onChange = { (e) => setNewFeedback (prev => ({ ...prev,
-  comment: e.target.value
-=======
                     onChange = {
 
   (e) => setNewFeedback(prev => ({ ...prev,
   comment: e.target.value 
->>>>>>> main
 
 
 
@@ -603,13 +511,13 @@ showStats:  true,;
             initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
             animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
             transition={{ delay: index * 0.1 }}"
@@ -648,15 +556,8 @@ showStats:  true,;
             <div className="flex items-center gap-2 mb-3">;
               {[1, 2, 3, 4, 5].map((star) => (;
                 <Star
-<<<<<<< HEAD
-                  key={star}`
-                  className={`w-5 h-5 ${
-
-=======
                   key={star}`                  className={`w-5 h-5 ${
-
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     star <= item.rating ? 'text-yellow-400 fill-current' : 'text-zinc-600'`
                   }`}
                 />

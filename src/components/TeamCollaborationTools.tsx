@@ -1,182 +1,3 @@
-<<<<<<< HEAD
-import {
-
-<<<<<<< HEAD
-import { motion, AnimatePresence } from 'framer - motion';
-=======
->>>>>>> main
-
-  Users,
-  MessageCircle,
-  FileText,
-  Calendar,
-  CheckCircle,
-  Clock,
-  AlertCircle,
-  Plus,
-  Search,
-  Filter,
-  Download,
-  Share2,
-  Edit,
-  Trash2,
-  Eye,
-  Star,
-  Award,
-  Zap,
-  Brain,
-  Cloud,
-  Shield,
-  Globe,
-  Database,
-  Server,
-  Lock,
-  Unlock,
-  Wifi,
-  Smartphone,
-  Monitor,
-  Tablet,
-  Video,
-  Phone,
-  Mail,
-  Send,
-  Paperclip,
-  Image,
-  File,
-  Folder,
-  Tag,
-  UserPlus,
-  Settings,
-  Bell,
-  Heart,
-  ThumbsUp,
-  ThumbsDown,
-  Reply,
-  Forward,
-  Archive,
-  Pin,
-  Bookmark,
-  Link,
-  Copy,
-  MoreHorizontal,
-  ChevronDown,
-  ChevronUp,
-  ArrowRight,
-  ArrowLeft,
-  RefreshCw,
-  TrendingUp,
-  Activity,
-  Target,
-  BarChart3,
-  PieChart'
- } from 'lucide-react';
-
-interface TeamMember {
-
-  id: string;
-  name: string;
-  role: string;
-  department: string;
-  avatar: string;
-  status: 'online' | 'away' | 'busy' | 'offline';
-  lastSeen: string;
-  skills: string[];
-  projects: string[];
-  availability: 'available' | 'busy' | 'unavailable'}
-
-interface Project {
-
-  id: string;
-  name: string;
-  description: string;
-  status: 'planning' | 'active' | 'review' | 'completed' | 'on-hold';
-  priority: 'low' | 'medium' | 'high' | 'critical';
-  progress: number;
-  startDate: string;
-  endDate: string;
-  teamMembers: string[];
-  tasks: Task[];
-  budget: number;
-  client: string;
-  tags: string[]
-}
-
-interface Task {
-
-  id: string;
-  title: string;
-  description: string;
-  status: 'todo' | 'in-progress' | 'review' | 'completed';
-  priority: 'low' | 'medium' | 'high' | 'critical';
-  assignee: string;
-  dueDate: string;
-  estimatedHours: number;
-  actualHours: number;
-  dependencies: string[];
-  tags: string[];
-  comments: Comment[]
-}
-
-interface Comment {
-
-  id: string;
-  author: string;
-  content: string;
-  timestamp: string;
-  likes: number;
-  replies: Comment[]
-}
-
-interface Message {
-
-  id: string;
-  sender: string;
-  content: string;
-  timestamp: string;
-  type: 'text' | 'file' | 'image' | 'link';
-  attachments?: string[];
-<<<<<<< HEAD
-  reactions: { type: string; count: number
-=======
-  reactions: { type: string; count: number 
-
->>>>>>> main
-}[];
-  isRead: boolean}
-
-interface FileItem {
-
-  id: string;
-  name: string;
-  type: 'document' | 'image' | 'video' | 'audio' | 'archive' | 'other';
-  size: number;
-  uploadedBy: string;
-  uploadDate: string;
-  lastModified: string;
-  tags: string[];
-  sharedWith: string[];
-  permissions: 'view' | 'edit' | 'admin';
-  version: string
-}
-
-interface TeamCollaborationToolsProps extends React.PropsWithChildren<{}> {
-
-  showTeamMembers?: boolean;
-  showProjects?: boolean;
-  showCommunication?: boolean;
-  showFileSharing?: boolean;
-  maxItems?: number}
-
-export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
-
-  showTeamMembers = true,
-showProjects:  true,;
-  showCommunication = true,;
-  showFileSharing = true,;
-  maxItems = 20}) => {;
-  const [activeTab, setActiveTab] = useState<'team' | 'projects' | 'communication' | 'files'>('team');
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]);
   const [projects, setProjects] = useState<Project[]>([]);
   const [messages, setMessages] = useState<Message[]>([]);
@@ -190,7 +11,6 @@ showProjects:  true,;
 
   // Sample data
   useEffect ( () => {
-
     const sampleFiles: FileItem[] = [
       {
 
@@ -272,18 +92,10 @@ showProjects:  true,;
       <div className="flex items-center justify-center mb-8">"
         <div className="flex items-center gap-1 p-1 bg-zinc-900/30 rounded-lg">
           {['"
-<<<<<<< HEAD
-            { id: 'team', label: 'Team Members', icon: <Users className="w-4 h-4"  /> },"
-            { id: 'projects', label: 'Projects', icon: <Target className="w-4 h-4"  /> },"
-            { id: 'communication', label: 'Communication', icon: <MessageCircle className="w-4 h-4"  /> },"
-            { id: 'files', label: 'File Sharing', icon: <FileText className="w-4 h-4"  /> }
-          ].map((tab) => (
-=======
             { id: 'team', label: 'Team Members', icon: <Users className="w-4 h-4"  /> },'"
             { id: 'projects', label: 'Projects', icon: <Target className="w-4 h-4"  /> },'"
             { id: 'communication', label: 'Communication', icon: <MessageCircle className="w-4 h-4"  /> },'"
             { id: 'files', label: 'File Sharing', icon: <FileText className="w-4 h-4"  /> }          ].map((tab) => (
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id as )}
@@ -306,13 +118,13 @@ showProjects:  true,;
           initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
           animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 
 
@@ -328,13 +140,13 @@ showProjects:  true,;
               initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
               animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 
 
@@ -352,13 +164,13 @@ showProjects:  true,;
               initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
               animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
               transition={{ delay: 0.1 }}"
@@ -374,13 +186,13 @@ showProjects:  true,;
               initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
               animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
               transition={{ delay: 0.2 }}"
@@ -396,13 +208,13 @@ showProjects:  true,;
               initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
               animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
               transition={{ delay: 0.3 }}"
@@ -423,13 +235,13 @@ showProjects:  true,;
                 initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
                 animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
                 transition={{ delay: index * 0.1 }}"
@@ -523,13 +335,13 @@ showProjects:  true,;
           initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
           animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 
 
@@ -545,13 +357,13 @@ showProjects:  true,;
               initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
               animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 
 
@@ -569,13 +381,13 @@ showProjects:  true,;
               initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
               animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
               transition={{ delay: 0.1 }}"
@@ -591,13 +403,13 @@ showProjects:  true,;
               initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
               animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
               transition={{ delay: 0.2 }}"
@@ -613,13 +425,13 @@ showProjects:  true,;
               initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
               animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
               transition={{ delay: 0.3 }}"
@@ -640,13 +452,13 @@ showProjects:  true,;
                 initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
                 animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
                 transition={{ delay: index * 0.1 }}"
@@ -697,7 +509,7 @@ showProjects:  true,;
                       transition = {
 
   { duration: 1,
-  delay: index * 0.1
+  delay: index * 0.1 
 
 
 
@@ -760,13 +572,13 @@ showProjects:  true,;
           initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
           animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 
 
@@ -782,13 +594,13 @@ showProjects:  true,;
               initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
               animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 
 
@@ -806,13 +618,13 @@ showProjects:  true,;
               initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
               animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
               transition={{ delay: 0.1 }}"
@@ -828,13 +640,13 @@ showProjects:  true,;
               initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
               animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
               transition={{ delay: 0.2 }}"
@@ -855,13 +667,13 @@ showProjects:  true,;
                 initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
                 animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
                 transition={{ delay: index * 0.1 }}`
@@ -954,13 +766,13 @@ showProjects:  true,;
           initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
           animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 
 
@@ -976,13 +788,13 @@ showProjects:  true,;
               initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
               animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 
 
@@ -1000,13 +812,13 @@ showProjects:  true,;
               initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
               animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
               transition={{ delay: 0.1 }}"
@@ -1022,13 +834,13 @@ showProjects:  true,;
               initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
               animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
               transition={{ delay: 0.2 }}"
@@ -1044,13 +856,13 @@ showProjects:  true,;
               initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
               animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
               transition={{ delay: 0.3 }}"
@@ -1071,13 +883,13 @@ showProjects:  true,;
                 initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
                 animate = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
                 transition={{ delay: index * 0.1 }}"

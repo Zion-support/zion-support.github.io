@@ -1,13 +1,9 @@
 
-<<<<<<< HEAD
-=======
 import {
-
   Smartphone, 
   Tablet, 
   Monitor, 
 
->>>>>>> main
   Smartphone,
   Tablet,
   Monitor,
@@ -35,7 +31,6 @@ interface TouchGesture {
   duration?: number}
 
 interface MobileExperienceEnhancerProps {
-
   enabled?: boolean;
   showControls?: boolean}
 export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> = ({
@@ -55,7 +50,9 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
 
   // Detect device type and orientation
   useEffect ( () => {
-
+    
+      
+      
       setIsMobile (isMobileDevice) ;
       setIsTablet (isTabletDevice) ;
 
@@ -66,20 +63,13 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
 
         setDeviceOrientation('landscape')}
     }} else {
-
         setOrientation('landscape')}
     }} else {
 
           setDeviceOrientation('landscape')}
       }, 100) };
-<<<<<<< HEAD
-
-    checkDevice();
-    window.addEventListener('resize', handleResize);
-=======
     checkDevice();'
     window.addEventListener('resize', handleResize);'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     window.addEventListener('orientationchange', handleOrientationChange);
 
     return () => {
@@ -88,7 +78,6 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
       window.removeEventListener('orientationchange', handleOrientationChange)}}, []) ;
   // Touch gesture handling
   useEffect(() => {
-
     if (!enabled || !enableSwipeNavigation) return;
 
     const handleTouchStart = (e: TouchEvent) => {
@@ -97,7 +86,8 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
 
         x: touch.clientX,
         y: touch.clientY,
-        time: Date.now () }) }};
+        time: Date.now () ,
+      }) }};
 
     
       
@@ -116,7 +106,8 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
 
           type: 'swipe',
           distance,
-          duration: deltaTime};
+          duration: deltaTime,
+        };
 
         if (Math.abs(deltaX) > Math.abs(deltaY)) {
 
@@ -130,14 +121,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
             if (window.history.length > 1) {
 
               window.history.forward();
-<<<<<<< HEAD
-            }
-          } else if (gesture.direction === 'right') {
-
-=======
             }'          } else if (gesture.direction === 'right') {
-
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
             // Swipe right - go back
             if (window.history.length > 1) {
@@ -161,7 +145,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
         setGestureHistory(prev => [gesture, ...prev.slice(0, 9)]);
         
         // Log gesture for debugging'
-        // // // // console.log('Touch Gesture:', gesture)}
+        // console.log('Touch Gesture:', gesture)}
     };
 
     document.addEventListener('touchstart', handleTouchStart, { passive: false });
@@ -183,12 +167,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
         if (searchInput) {
 
           searchInput.focus()}
-<<<<<<< HEAD
-        break;
-      case 'menu':
-=======
         break;'      case 'menu':
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         setShowMobileMenu(!showMobileMenu);
         break;
       case 'back':
@@ -204,7 +183,6 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
 
   // Mobile - specific optimizations
   useEffect ( () => {
-
     if (!enabled || !isMobile) return;
 
     // Add mobile-specific CSS classes'
@@ -214,31 +192,6 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
     
     if (viewport) {
 
-<<<<<<< HEAD
-    // Add touch - action CSS for better touch handling
-    const style = document.createElement ('style') ;
-    style.textContent = `
-      .mobile - device * {
-
-        touch - action: manipulation;
-        -webkit - tap - highlight - color: transparent;
-      }
-
-      .mobile - device button,
-      .mobile - device [role="button"] {
-
-        min - height: 44px;
-        min - width: 44px;
-      }
-
-      .mobile - device input,
-      .mobile - device select,
-      .mobile - device textarea {
-
-        font - size: 16px;
-      }
-    `;
-=======
       viewport.setAttribute('content',width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')}
 
     // Add touch-action CSS for better touch handling'
@@ -259,7 +212,6 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
       .mobile-device textarea {
 
         font-size: 16px}`    `;
->>>>>>> main
     document.head.appendChild (style) ;
 
     return () => {
@@ -454,12 +406,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
           className="fixed top-20 left-4 z-40 px-3 py-2 bg-slate-800 text-white text-xs rounded-lg shadow-lg"
         >"
           <div className="flex items-center space-x-2">"
-<<<<<<< HEAD
-            {isMobile ? <Smartphone className="w-4 h-4"  /> : <Tablet className="w-4 h-4"  />}
-            <span>{isMobile ? 'Mobile' : 'Tablet'}</span>
-=======
             {isMobile ? <Smartphone className="w-4 h-4"  /> : <Tablet className="w-4 h-4"  />}'            <span>{isMobile ? 'Mobile' : 'Tablet'}</span>
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
           </div>"
           <div className="text-slate-300">{deviceOrientation}</div>
         </motion.div>

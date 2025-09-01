@@ -1,5 +1,4 @@
 import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Sparkles, Target, TrendingUp, Shield, Briefcase, Award export default function AIHRTalentPlatform() {
-  
     'Intelligent interview scheduling and feedback',;
     'Employee performance analytics and insights',;
     'Predictive turnover analysis and retention strategies',;
@@ -7,8 +6,6 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
     'Diversity and inclusion analytics',;
     'Compliance monitoring and reporting';
   ];
-
-  
     'Reduce time-to-hire by 60%',;
     'Improve candidate quality by 40%',;
     'Reduce hiring costs by 30%',;
@@ -16,23 +13,11 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
     'Automate routine HR tasks',;
     'Data-driven decision making';
   ];
-
-  
-<<<<<<< HEAD
-    { ;
-      name: 'Enterprise', ;
-      price: '$999/mo', ;
-      features: ['Unlimited employees',Full AI suite',Custom AI training',Dedicated support',White-label solutions',Advanced compliance'],;
-      popular: false};
-=======
     { ;'
       name: 'Enterprise', ;'
       price: '$999/mo', ;'      features: ['Unlimited employees', 'Full AI suite', 'Custom AI training', 'Dedicated support', 'White-label solutions', 'Advanced compliance'],;
       popular: false};
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
-
-  
     'Recruitment and talent acquisition',;
     'Employee performance management',;
     'Learning and development',;
@@ -40,15 +25,12 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
     'Compliance and HR operations',;
     'Employee engagement and retention';
   ];
-
-  
     'Learning & Development',;
     'Workforce Analytics',;
     'Employee Engagement',;
     'Compliance & Reporting',;
     'Onboarding & Offboarding',;
     'Succession Planning';
-=======
     'Talent Acquisition','
     'Performance Management',;'
     'Learning & Development',;'
@@ -56,9 +38,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
     'Employee Engagement',;'
     'Compliance & Reporting',;'
     'Onboarding & Offboarding',;'    'Succession Planning';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ];
-
   return()
     <div className = "min-h-screen bg-white">
       {/* Hero Section */}"
@@ -81,7 +61,6 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
           </div>
         </div>
       </section>
-
       {/* Features Section */}"
       <section className="py-16 max-w-6xl mx-auto px-6">"
         <div className="text-center mb-16">"
@@ -113,7 +92,6 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
           </div>
         </div>
       </section>
-
       {/* Platform Modules Section */}"
       <section className="py-16 bg-gray-50">"
         <div className="max-w-6xl mx-auto px-6">"
@@ -131,7 +109,6 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}"
       <section className="py-16 max-w-6xl mx-auto px-6">"
         <div className="text-center mb-12">"
@@ -147,7 +124,6 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
           ))}
         </div>
       </section>
-
       {/* AI Capabilities Section */}"
       <section className="py-16 bg-orange-50">"
         <div className="max-w-6xl mx-auto px-6">"
@@ -174,7 +150,6 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}"
       <section id="pricing" className="py-16 bg-gray-50">"
         <div className="max-w-6xl mx-auto px-6">"
@@ -186,7 +161,6 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
           <div className="grid md:grid-cols-3 gap-8">
             {pricing.map(plan: unknown, index: unknown (
               <div key={index} className={`relative bg-white rounded-xl p-8 shadow-lg border-2 ${
-
                 plan.popular ? 'border-orange-500 ring-2 ring-orange-500/20' : 'border-gray-200'`
               }`}>
                 {plan.popular && ("
@@ -212,7 +186,6 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
                 </ul>
 `
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
-
                   plan.popular'
                     ? 'bg-orange-600 text-white hover:bg-orange-700''
                     : 'bg-gray-100 text-gray-900 hover:bg-gray-200'`
@@ -231,7 +204,6 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
           </div>
         </div>
       </section>
-
       {/* ROI Section */}"
       <section className="py-16 bg-orange-50">"
         <div className="max-w-6xl mx-auto px-6 text-center">"
@@ -252,7 +224,6 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
           </div>
         </div>
       </section>
-
       {/* CTA Section */}"
       <section className="py-16 bg-gray-900 text-white">"
         <div className="max-w-4xl mx-auto px-6 text-center">"
@@ -270,7 +241,6 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
           </div>
         </div>
       </section>
-
       {/* Contact Section */}"
       <section className="py-16 max-w-4xl mx-auto px-6 text-center">'"
         <h2 className="text-3xl font-bold text-gray-900 mb-8">Questions? We're Here to Help</h2>"

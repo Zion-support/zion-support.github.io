@@ -281,12 +281,7 @@ export default function EnhancedMobileNavigation() {
 
 
 
-<<<<<<< HEAD
-}}
-          className={`relative ${depth > 0 ? 'ml-4' : ''}`}
-=======
 }}'          className={`relative ${depth > 0 ? 'ml-4' : ''}`}
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
           <Link
             to={item.path}
@@ -312,15 +307,9 @@ export default function EnhancedMobileNavigation() {
             </div>
             {hasChildren && (
               <ChevronDown
-<<<<<<< HEAD
-                size={16}`
-                className={`transition-transform duration-200 ${
-
-=======
                 size={16}`                className={`transition-transform duration-200 ${
 
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   isExpanded ? 'rotate-180' : ''`
                 }`}
               />) }          </Link>
@@ -332,15 +321,9 @@ export default function EnhancedMobileNavigation() {
               aria-label={`${isExpanded ? 'Collapse' : 'Expand'} ${item.label} submenu`}
 
               <ChevronDown
-<<<<<<< HEAD
-                size={16}`
-                className={`transition-transform duration-200 ${
-
-=======
                 size={16}`                className={`transition-transform duration-200 ${
 
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   isExpanded ? 'rotate-180' : ''`
                 }`}
               />

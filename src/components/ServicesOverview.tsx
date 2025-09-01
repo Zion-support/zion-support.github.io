@@ -1,47 +1,3 @@
-<<<<<<< HEAD
-import {
-
-<<<<<<< HEAD
-import { motion } from 'framer - motion';
-=======
->>>>>>> main
-
-  Brain,
-  Shield,
-  Rocket,
-  Lock,
-  Cpu,
-  Code,
-  Users,
-  Globe,
-  Heart,
-  TrendingUp,
-  Zap,
-  Database,
-  Network,
-  Server,
-  Cloud,
-  FileText,
-  BarChart3,
-  MessageCircle,
-  Phone,
-  Mail,
-  MapPin,
-  ArrowRight,
-  Star,
-  CheckCircle,
-  Clock'
- } from 'lucide-react';
-
-export function ServicesOverview(...args[]):  {
-
-      icon: Heart,;
-      color: 'from-zion-pink to-zion-purple',;
-      description: 'Healthcare artificial intelligence solutions',;
-      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category.includes('Healthcare'))};
-  ];
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   return()
     <div className = "py-20 bg-futuristic relative overflow-hidden">
@@ -57,13 +13,13 @@ export function ServicesOverview(...args[]):  {
           initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
           whileInView = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
           transition={{ duration: 0.6 }}
@@ -89,19 +45,19 @@ export function ServicesOverview(...args[]):  {
               initial = {
 
   { opacity: 0,
-  y: 30
+  y: 30 
 
 }}
               whileInView = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
               transition = {
 
   { duration: 0.6,
-  delay: index * 0.1
+  delay: index * 0.1 
 
 }}
               whileHover={{ y: -10 }}
@@ -146,13 +102,13 @@ export function ServicesOverview(...args[]):  {
           initial = {
 
   { opacity: 0,
-  y: 20
+  y: 20 
 
 }}
           whileInView = {
 
   { opacity: 1,
-  y: 0
+  y: 0 
 
 }}
           transition={{ duration: 0.6 }}
@@ -169,19 +125,19 @@ export function ServicesOverview(...args[]):  {
                 initial = {
 
   { opacity: 0,
-  x: index % 2 === 0 ? -30 : 30
+  x: index % 2 === 0 ? -30 : 30 
 
 }}
                 whileInView = {
 
   { opacity: 1,
-  x: 0
+  x: 0 
 
 }}
                 transition = {
 
   { duration: 0.6,
-  delay: index * 0.1
+  delay: index * 0.1 
 
 }}
                 whileHover={{ y: -5 }}
